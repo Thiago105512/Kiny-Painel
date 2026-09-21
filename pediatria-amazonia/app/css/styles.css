@@ -249,3 +249,12 @@ details .body { padding: .3rem 0 .4rem; font-size: .93rem; }
   main { padding: 0; max-width: none; }
   .card { box-shadow: none; }
 }
+
+/* Tabela de doses de emergência: empilha em telas estreitas */
+@media (max-width: 640px) {
+  .dosetable tr:first-child { display: none; }
+  .dosetable tr { display: block; border-bottom: 2px solid var(--line); padding: .4rem 0; }
+  .dosetable td { display: block; border: none; padding: .15rem 0; }
+  .dosetable td[data-l="Dose"] { color: var(--green); }
+  .dosetable td[data-l="Via"]::before { content: 'Via: '; color: var(--muted); font-size: .8rem; }
+}

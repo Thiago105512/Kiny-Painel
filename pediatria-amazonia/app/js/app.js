@@ -131,7 +131,7 @@ window.PED = window.PED || {};
       if (d.concentracaoMgMl) { const ml = dose / d.concentracaoMgMl; valor += ` = <strong>${f(ml)} mL</strong>`; formula += ` ÷ ${f(d.concentracaoMgMl, 3)} mg/mL = ${f(ml)} mL`; }
     } else if (d.mgKg != null) { valor = `${f(d.mgKg)} ${d.unidade}/kg${d.doseMax ? ' (máx. ' + f(d.doseMax) + ' ' + d.unidade + ')' : ''}`; formula = 'Informe o peso para calcular'; }
     else { valor = d.obs || '—'; }
-    return `<tr><td><strong>${esc(d.nome)}</strong><br><small class="muted">${esc(d.indicacao || '')}${d.apresentacao ? ' · ' + esc(d.apresentacao) : ''}</small></td><td>${valor}${d.verificar ? ' <span class="chip amber">verificar</span>' : ''}<br><small class="muted">${esc(formula)}</small></td><td>${esc(d.via || '')}${d.repeticao ? '<br><small>' + esc(d.repeticao) + '</small>' : ''}${d.obs && d.mgKg != null ? '<br><small class="muted">' + esc(d.obs) + '</small>' : ''}</td></tr>`;
+    return `<tr><td data-l="Droga"><strong>${esc(d.nome)}</strong><br><small class="muted">${esc(d.indicacao || '')}${d.apresentacao ? ' · ' + esc(d.apresentacao) : ''}</small></td><td data-l="Dose">${valor}${d.verificar ? ' <span class="chip amber">verificar</span>' : ''}<br><small class="muted">${esc(formula)}</small></td><td data-l="Via">${esc(d.via || '')}${d.repeticao ? '<br><small>' + esc(d.repeticao) + '</small>' : ''}${d.obs && d.mgKg != null ? '<br><small class="muted">' + esc(d.obs) + '</small>' : ''}</td></tr>`;
   }
 
   /* ---------------- Telas ---------------- */
@@ -276,7 +276,7 @@ window.PED = window.PED || {};
     const feitas = S.where('vacinasRealizadas', v => v.pacienteId === p.id);
     const isDone = (vid, i) => feitas.find(v => v.vacinaId === vid && v.doseIndex === i);
     const rows = []; let pend = 0, atras = 0;
-    (D().vacinas || []).forEach(v => (v.doses || []).forEach((d, i) => {
+    (D().vacinas || []).filter(v => !v.descontinuada).forEach(v => (v.doses || []).forEach((d, i) => {
       const done = isDone(v.id, i); const due = d.idadeMeses <= m; const late = !done && d.idadeMeses + 1 < m && due; if (!done && due) pend++; if (late) atras++;
       rows.push(`<tr class="${done ? '' : late ? 'late' : ''}"><td>${esc(v.nome)}</td><td>${esc(d.rotulo)}${d.dose ? '<br><small class="muted">' + esc(d.dose) + '</small>' : ''}</td><td>${done ? `<span class="chip green">feita ${U.fmtDate(done.data)}</span>` : late ? '<span class="chip red">atrasada</span>' : due ? '<span class="chip amber">pendente</span>' : '<span class="chip gray">futura</span>'}</td><td>${done ? `<button class="btn sm ghost" data-act="desfazerVacina" data-id="${done.id}" data-pid="${p.id}">desfazer</button>` : `<button class="btn sm ${due ? '' : 'ghost'}" data-act="marcarVacina" data-pid="${p.id}" data-vid="${v.id}" data-i="${i}">marcar</button>`}</td></tr>`);
     }));
@@ -407,6 +407,8 @@ window.PED = window.PED || {};
   }
 
   /** Painel de cálculo de dose de um medicamento (usado no fluxo e na tela do medicamento) */
+  const TIPO_UN = { comprimido: 'comprimido', capsula: 'cápsula', injetavel: 'frasco-ampola', ampola: 'ampola', aerossol: 'jato', supositorio: 'supositório', sache: 'sachê', envelope: 'envelope', drageas: 'drágea', gotas: 'gota' };
+  const unidadeAp = (ap) => ap ? (TIPO_UN[ap.tipo] || ap.tipo || 'unidade') : 'unidade';
   function painelDoseMed(med, peso, opts) {
     opts = opts || {};
     const idade = idadePaciente();
@@ -425,7 +427,7 @@ window.PED = window.PED || {};
         if (d.doseMaxDia && dia > d.doseMaxDia) al.push(`Dose diária (${f(dia)} ${un}) excede o máximo diário de ${f(d.doseMaxDia)} ${un}: reduzir.`);
         let vol = null, conc = null; if (ap && ap.ml) { conc = ap.mg / ap.ml; vol = dose / conc; }
         const comp = (ap && !ap.ml && ap.mg) ? dose / ap.mg : null;
-        res = `<div class="result ${al.length ? 'warn' : ''}"><div class="big">${f(dose)} ${esc(un)}${vol != null ? ' = ' + f(vol) + ' mL' : ''}${comp != null ? ' = ' + f(comp, 2) + ' ' + esc(ap.tipo || 'unidade') + '(s)' : ''}</div><div>por administração · ${esc(d.frequencia)} · ${esc(d.via)}${d.duracao ? ' · ' + esc(d.duracao) : ''}</div>
+        res = `<div class="result ${al.length ? 'warn' : ''}"><div class="big">${f(dose)} ${esc(un)}${vol != null ? ' = ' + f(vol) + ' mL' : ''}${comp != null ? ' = ' + f(comp, 2) + ' ' + esc(unidadeAp(ap)) + '(s)' : ''}</div><div>por administração · ${esc(d.frequencia)} · ${esc(d.via)}${d.duracao ? ' · ' + esc(d.duracao) : ''}</div>
           <div class="formula">Dose = ${f(mgkg)} ${un}/kg × ${f(peso)} kg = ${f(mgkg * peso)} ${un}${d.mgKgDose == null ? ` (a partir de ${f(d.mgKgDia)} ${un}/kg/dia ÷ ${d.vezesDia})` : ''}${vol != null ? `\nConcentração = ${f(ap.mg)} ${un} ÷ ${f(ap.ml)} mL = ${f(conc)} ${un}/mL\nVolume = ${f(dose)} ${un} ÷ ${f(conc)} ${un}/mL = ${f(vol)} mL` : ''}\nDose diária = ${f(dose)} × ${d.vezesDia || 1} = ${f(dia)} ${un}/dia (${f(dia / peso)} ${un}/kg/dia)</div>
           ${d.faixasPeso ? `<div><small class="muted">Esquema prático por faixa de peso: ${esc(d.faixasPeso)}</small></div>` : ''}
           ${al.map(a => `<div class="alert amber" style="margin:.4rem 0 0">${esc(a)}</div>`).join('')}</div>`;
@@ -450,7 +452,7 @@ window.PED = window.PED || {};
     const mgkg = d.mgKgDose != null ? d.mgKgDose : (d.mgKgDia != null && d.vezesDia ? d.mgKgDia / d.vezesDia : null);
     let doseTxt = '', calc = '';
     const un = d.unidade || (ap && ap.unidade) || 'mg';
-    if (mgkg != null && peso) { let dose = mgkg * peso; if (d.doseMaxDose && dose > d.doseMaxDose) dose = d.doseMaxDose; doseTxt = `${f(dose)} ${un}`; if (ap && ap.ml) doseTxt += ` (${f(dose / (ap.mg / ap.ml))} mL de ${ap.descricao})`; else if (ap && ap.mg) doseTxt += ` (${f(dose / ap.mg, 2)} ${ap.tipo || 'un'} de ${ap.descricao})`; calc = `${f(mgkg)} ${un}/kg × ${f(peso)} kg`; }
+    if (mgkg != null && peso) { let dose = mgkg * peso; if (d.doseMaxDose && dose > d.doseMaxDose) dose = d.doseMaxDose; doseTxt = `${f(dose)} ${un}`; if (ap && ap.ml) doseTxt += ` (${f(dose / (ap.mg / ap.ml))} mL de ${ap.descricao})`; else if (ap && ap.mg) doseTxt += ` (${f(dose / ap.mg, 2)} ${unidadeAp(ap)}(s) de ${ap.descricao})`; calc = `${f(mgkg)} ${un}/kg × ${f(peso)} kg`; }
     else if (d.mlKgDose != null && peso) { doseTxt = `${f(d.mlKgDose * peso)} mL`; calc = `${f(d.mlKgDose)} mL/kg × ${f(peso)} kg`; }
     else if (d.doseFixa) { doseTxt = d.doseFixa; calc = d.faixasPeso ? 'Faixa de peso: ' + d.faixasPeso : ''; }
     else doseTxt = d.obs || 'definir';
@@ -553,7 +555,7 @@ window.PED = window.PED || {};
     return `<div class="section-title"><h1>${e.icone || '🚨'} ${esc(e.nome)}</h1><span class="chip red">${esc(e.cor || 'emergência')}</span></div>${pesoBox()}
       <div class="card"><h2>Reconhecimento</h2>${U.list(e.reconhecimento)}</div>
       <div class="card"><h2>Passos</h2><ol>${(e.passos || []).map(x => `<li>${esc(x)}</li>`).join('')}</ol></div>
-      <div class="card"><h2>Doses ${peso ? `<span class="chip green">${f(peso)} kg</span>` : '<span class="chip red">informe o peso</span>'}</h2><div class="tablewrap"><table><tr><th>Droga</th><th>Dose calculada</th><th>Via / repetição</th></tr>${(e.doses || []).map(d => doseRow(peso, d)).join('')}</table></div>${idade && idade.totalMeses < 1 ? '<div class="alert amber">Recém-nascido: usar protocolos neonatais específicos (reanimação neonatal SBP).</div>' : ''}</div>
+      <div class="card"><h2>Doses ${peso ? `<span class="chip green">${f(peso)} kg</span>` : '<span class="chip red">informe o peso</span>'}</h2><div class="tablewrap"><table class="dosetable"><tr><th>Droga</th><th>Dose calculada</th><th>Via / repetição</th></tr>${(e.doses || []).map(d => doseRow(peso, d)).join('')}</table></div>${idade && idade.totalMeses < 1 ? '<div class="alert amber">Recém-nascido: usar protocolos neonatais específicos (reanimação neonatal SBP).</div>' : ''}</div>
       ${(e.materiais || []).length ? `<div class="card"><h2>Materiais</h2>${U.list(e.materiais)}</div>` : ''}
       ${(e.criteriosUTI || []).length ? `<div class="card"><h2>Critérios de UTI / transferência</h2>${U.list(e.criteriosUTI)}</div>` : ''}
       <div class="card compact">${U.fontes(e)}</div>${disclaimer}`;
