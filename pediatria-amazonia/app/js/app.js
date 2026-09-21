@@ -118,7 +118,10 @@ window.PED = window.PED || {};
   function doseRow(peso, d) {
     // d: {nome, mgKg, unidade, doseMax, concentracaoMgMl, via, apresentacao, doseFixa, porGravidade, repeticao, obs, faixaPesoMin, faixaPesoMax, verificar}
     let valor = '', formula = '';
-    if (d.porGravidade) { valor = Object.entries(d.porGravidade).map(([k, v]) => `${k}: ${v}`).join(' · '); formula = 'Dose por gravidade (não depende do peso)'; }
+    if (d.porGravidade) {
+      const pg = Array.isArray(d.porGravidade) ? d.porGravidade.map(g => `<b>${esc(g.gravidade)}</b>: ${g.ampolasMin != null ? (g.ampolasMax != null && g.ampolasMax !== g.ampolasMin ? f(g.ampolasMin) + '–' + f(g.ampolasMax) : f(g.ampolasMin)) : esc(g.dose || '')} ${esc(g.unidade || d.unidade || 'ampolas')}`) : Object.entries(d.porGravidade).map(([k, v]) => `<b>${esc(k)}</b>: ${esc(v)}`);
+      valor = pg.join('<br>'); formula = 'Dose por gravidade clínica – igual para crianças e adultos (não depende do peso)';
+    }
     else if (d.doseFixa != null) { if (d.faixaPesoMin != null && peso != null && (peso < d.faixaPesoMin || (d.faixaPesoMax != null && peso >= d.faixaPesoMax))) return ''; valor = `${f(d.doseFixa)} ${d.unidade}`; formula = 'Dose fixa'; }
     else if (d.mgKg != null && peso) {
       let dose = d.mgKg * peso; let lim = '';
