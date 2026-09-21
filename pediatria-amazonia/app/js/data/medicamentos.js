@@ -2432,5 +2432,138 @@ PED.data.medicamentos = [
     fontes: [{nome: 'ACEP – Clinical Practice Guideline for Emergency Department Ketamine Dissociative Sedation', ano: 2011}, {nome: 'PALS – Pediatric Advanced Life Support, AHA', ano: 2020}, {nome: 'Harriet Lane Handbook, 23rd ed.', ano: 2023}, {nome: 'Bula ANVISA – Cloridrato de cetamina', ano: 2024}],
     atualizadoEm: '2026-09',
     verificar: false
+  },
+  // ---- Soros antivenenos: dose por GRAVIDADE (não por peso), igual para crianças e adultos ----
+  {
+    id: 'soro_antibotropico',
+    nome: 'Soro antibotrópico (SAB)',
+    classe: 'Soro heterólogo antiveneno (imunoglobulina equina)',
+    apresentacoes: [{ descricao: 'Ampola 10 mL (dose expressa em ampolas)', mg: null, ml: 10, tipo: 'injetavel', via: 'IV', unidade: 'ampolas' }],
+    indicacoes: ['Acidente botrópico (Bothrops – jararaca, jararacuçu, surucucurana)'],
+    doses: [{
+      indicacao: 'Acidente botrópico (Bothrops – jararaca, jararacuçu, surucucurana)', mgKgDose: null, mgKgDia: null, vezesDia: 1, frequencia: 'Dose única (repetir apenas se persistir incoagulabilidade/piora após 12 a 24 h, conforme protocolo)', via: 'IV (diluído em SF 0,9% ou SG 5%, infusão em 20 a 60 min)', doseMaxDose: null, doseMaxDia: null, duracao: 'Dose única', faixaEtaria: 'Todas as idades', unidade: 'ampolas',
+      doseFixa: 'Leve: 2 a 4 ampolas; Moderado: 4 a 8 ampolas; Grave: 12 ampolas', faixasPeso: 'A dose NÃO depende do peso ou da idade: crianças recebem o mesmo número de ampolas que adultos, definido pela gravidade.',
+      obs: 'Classificação pela intensidade do edema, dor, sangramento e tempo de coagulação (MS 2001). Dose definida pela classificação clínica de gravidade, igual para crianças e adultos. Administrar o mais precocemente possível; não usar via IM/local. Pré-medicação com anti-histamínico e corticoide não previne reações graves; manter adrenalina, O2 e material de reanimação à beira do leito. Observar reações precoces (urticária, broncoespasmo, hipotensão) por 24 h e reação tardia (doença do soro) em 5 a 24 dias.'
+    }],
+    diluicao: 'Diluir as ampolas em SF 0,9% ou SG 5% (volume conforme idade/peso, ex.: 100 a 250 mL em crianças), infundir em 20 a 60 min; em crianças pequenas com risco de sobrecarga, reduzir o volume de diluição.',
+    infusao: '20 a 60 min IV; interromper temporariamente se reação e tratar (adrenalina IM 0,01 mg/kg, anti-histamínico, corticoide, broncodilatador); reiniciar em velocidade menor após controle.',
+    contraindicacoes: ['Não há contraindicação absoluta quando há indicação clínica (risco de morte); reação prévia a soro heterólogo exige preparo para anafilaxia.'],
+    interacoes: ['Nenhuma interação medicamentosa relevante; evitar heparina e anticoagulantes em coagulopatia por veneno.'],
+    ajusteRenal: 'Não requer ajuste; monitorar função renal (lesão renal aguda é complicação do envenenamento).',
+    ajusteHepatico: 'Não requer ajuste.',
+    efeitosAdversos: ['Reações precoces (até 2 h): urticária, prurido, tosse, broncoespasmo, hipotensão, anafilaxia.', 'Reação tardia (doença do soro, 5 a 24 dias): febre, artralgia, urticária, linfadenopatia.', 'Reação pirogênica.'],
+    fontes: [{ nome: 'Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos – Ministério da Saúde/FUNASA', ano: 2001 }, { nome: 'Guia de Vigilância em Saúde – Ministério da Saúde', ano: 2024 }, { nome: 'Instituto Butantan – Bulas dos soros antivenenos', ano: 2023 }],
+    atualizadoEm: '2026-09',
+    verificar: false
+  },
+  {
+    id: 'soro_antilaquetico',
+    nome: 'Soro antibotrópico-laquético (SABL)',
+    classe: 'Soro heterólogo antiveneno (imunoglobulina equina)',
+    apresentacoes: [{ descricao: 'Ampola 10 mL (dose expressa em ampolas)', mg: null, ml: 10, tipo: 'injetavel', via: 'IV', unidade: 'ampolas' }],
+    indicacoes: ['Acidente laquético (Lachesis muta – surucucu-pico-de-jaca)'],
+    doses: [{
+      indicacao: 'Acidente laquético (Lachesis muta – surucucu-pico-de-jaca)', mgKgDose: null, mgKgDia: null, vezesDia: 1, frequencia: 'Dose única (repetir apenas se persistir incoagulabilidade/piora após 12 a 24 h, conforme protocolo)', via: 'IV (diluído em SF 0,9% ou SG 5%, infusão em 20 a 60 min)', doseMaxDose: null, doseMaxDia: null, duracao: 'Dose única', faixaEtaria: 'Todas as idades', unidade: 'ampolas',
+      doseFixa: 'Moderado: 10 ampolas; Grave: 20 ampolas', faixasPeso: 'A dose NÃO depende do peso ou da idade: crianças recebem o mesmo número de ampolas que adultos, definido pela gravidade.',
+      obs: 'Considerar quadro botrópico com manifestações vagais (bradicardia, hipotensão, diarreia) na região amazônica. Dose definida pela classificação clínica de gravidade, igual para crianças e adultos. Administrar o mais precocemente possível; não usar via IM/local. Pré-medicação com anti-histamínico e corticoide não previne reações graves; manter adrenalina, O2 e material de reanimação à beira do leito. Observar reações precoces (urticária, broncoespasmo, hipotensão) por 24 h e reação tardia (doença do soro) em 5 a 24 dias.'
+    }],
+    diluicao: 'Diluir as ampolas em SF 0,9% ou SG 5% (volume conforme idade/peso, ex.: 100 a 250 mL em crianças), infundir em 20 a 60 min; em crianças pequenas com risco de sobrecarga, reduzir o volume de diluição.',
+    infusao: '20 a 60 min IV; interromper temporariamente se reação e tratar (adrenalina IM 0,01 mg/kg, anti-histamínico, corticoide, broncodilatador); reiniciar em velocidade menor após controle.',
+    contraindicacoes: ['Não há contraindicação absoluta quando há indicação clínica (risco de morte); reação prévia a soro heterólogo exige preparo para anafilaxia.'],
+    interacoes: ['Nenhuma interação medicamentosa relevante; evitar heparina e anticoagulantes em coagulopatia por veneno.'],
+    ajusteRenal: 'Não requer ajuste; monitorar função renal (lesão renal aguda é complicação do envenenamento).',
+    ajusteHepatico: 'Não requer ajuste.',
+    efeitosAdversos: ['Reações precoces (até 2 h): urticária, prurido, tosse, broncoespasmo, hipotensão, anafilaxia.', 'Reação tardia (doença do soro, 5 a 24 dias): febre, artralgia, urticária, linfadenopatia.', 'Reação pirogênica.'],
+    fontes: [{ nome: 'Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos – Ministério da Saúde/FUNASA', ano: 2001 }, { nome: 'Guia de Vigilância em Saúde – Ministério da Saúde', ano: 2024 }, { nome: 'Instituto Butantan – Bulas dos soros antivenenos', ano: 2023 }],
+    atualizadoEm: '2026-09',
+    verificar: false
+  },
+  {
+    id: 'soro_anticrotalico',
+    nome: 'Soro anticrotálico (SAC)',
+    classe: 'Soro heterólogo antiveneno (imunoglobulina equina)',
+    apresentacoes: [{ descricao: 'Ampola 10 mL (dose expressa em ampolas)', mg: null, ml: 10, tipo: 'injetavel', via: 'IV', unidade: 'ampolas' }],
+    indicacoes: ['Acidente crotálico (Crotalus durissus – cascavel)'],
+    doses: [{
+      indicacao: 'Acidente crotálico (Crotalus durissus – cascavel)', mgKgDose: null, mgKgDia: null, vezesDia: 1, frequencia: 'Dose única (repetir apenas se persistir incoagulabilidade/piora após 12 a 24 h, conforme protocolo)', via: 'IV (diluído em SF 0,9% ou SG 5%, infusão em 20 a 60 min)', doseMaxDose: null, doseMaxDia: null, duracao: 'Dose única', faixaEtaria: 'Todas as idades', unidade: 'ampolas',
+      doseFixa: 'Leve: 5 ampolas; Moderado: 10 ampolas; Grave: 20 ampolas', faixasPeso: 'A dose NÃO depende do peso ou da idade: crianças recebem o mesmo número de ampolas que adultos, definido pela gravidade.',
+      obs: 'Fácies miastênica, mialgia, urina escura (rabdomiólise); monitorar função renal. Dose definida pela classificação clínica de gravidade, igual para crianças e adultos. Administrar o mais precocemente possível; não usar via IM/local. Pré-medicação com anti-histamínico e corticoide não previne reações graves; manter adrenalina, O2 e material de reanimação à beira do leito. Observar reações precoces (urticária, broncoespasmo, hipotensão) por 24 h e reação tardia (doença do soro) em 5 a 24 dias.'
+    }],
+    diluicao: 'Diluir as ampolas em SF 0,9% ou SG 5% (volume conforme idade/peso, ex.: 100 a 250 mL em crianças), infundir em 20 a 60 min; em crianças pequenas com risco de sobrecarga, reduzir o volume de diluição.',
+    infusao: '20 a 60 min IV; interromper temporariamente se reação e tratar (adrenalina IM 0,01 mg/kg, anti-histamínico, corticoide, broncodilatador); reiniciar em velocidade menor após controle.',
+    contraindicacoes: ['Não há contraindicação absoluta quando há indicação clínica (risco de morte); reação prévia a soro heterólogo exige preparo para anafilaxia.'],
+    interacoes: ['Nenhuma interação medicamentosa relevante; evitar heparina e anticoagulantes em coagulopatia por veneno.'],
+    ajusteRenal: 'Não requer ajuste; monitorar função renal (lesão renal aguda é complicação do envenenamento).',
+    ajusteHepatico: 'Não requer ajuste.',
+    efeitosAdversos: ['Reações precoces (até 2 h): urticária, prurido, tosse, broncoespasmo, hipotensão, anafilaxia.', 'Reação tardia (doença do soro, 5 a 24 dias): febre, artralgia, urticária, linfadenopatia.', 'Reação pirogênica.'],
+    fontes: [{ nome: 'Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos – Ministério da Saúde/FUNASA', ano: 2001 }, { nome: 'Guia de Vigilância em Saúde – Ministério da Saúde', ano: 2024 }, { nome: 'Instituto Butantan – Bulas dos soros antivenenos', ano: 2023 }],
+    atualizadoEm: '2026-09',
+    verificar: false
+  },
+  {
+    id: 'soro_antielapidico',
+    nome: 'Soro antielapídico (SAEl)',
+    classe: 'Soro heterólogo antiveneno (imunoglobulina equina)',
+    apresentacoes: [{ descricao: 'Ampola 10 mL (dose expressa em ampolas)', mg: null, ml: 10, tipo: 'injetavel', via: 'IV', unidade: 'ampolas' }],
+    indicacoes: ['Acidente elapídico (Micrurus – coral verdadeira)'],
+    doses: [{
+      indicacao: 'Acidente elapídico (Micrurus – coral verdadeira)', mgKgDose: null, mgKgDia: null, vezesDia: 1, frequencia: 'Dose única (repetir apenas se persistir incoagulabilidade/piora após 12 a 24 h, conforme protocolo)', via: 'IV (diluído em SF 0,9% ou SG 5%, infusão em 20 a 60 min)', doseMaxDose: null, doseMaxDia: null, duracao: 'Dose única', faixaEtaria: 'Todas as idades', unidade: 'ampolas',
+      doseFixa: 'Todos os casos considerados potencialmente graves: 10 ampolas', faixasPeso: 'A dose NÃO depende do peso ou da idade: crianças recebem o mesmo número de ampolas que adultos, definido pela gravidade.',
+      obs: 'Risco de insuficiência respiratória por bloqueio neuromuscular; suporte ventilatório disponível. Dose definida pela classificação clínica de gravidade, igual para crianças e adultos. Administrar o mais precocemente possível; não usar via IM/local. Pré-medicação com anti-histamínico e corticoide não previne reações graves; manter adrenalina, O2 e material de reanimação à beira do leito. Observar reações precoces (urticária, broncoespasmo, hipotensão) por 24 h e reação tardia (doença do soro) em 5 a 24 dias.'
+    }],
+    diluicao: 'Diluir as ampolas em SF 0,9% ou SG 5% (volume conforme idade/peso, ex.: 100 a 250 mL em crianças), infundir em 20 a 60 min; em crianças pequenas com risco de sobrecarga, reduzir o volume de diluição.',
+    infusao: '20 a 60 min IV; interromper temporariamente se reação e tratar (adrenalina IM 0,01 mg/kg, anti-histamínico, corticoide, broncodilatador); reiniciar em velocidade menor após controle.',
+    contraindicacoes: ['Não há contraindicação absoluta quando há indicação clínica (risco de morte); reação prévia a soro heterólogo exige preparo para anafilaxia.'],
+    interacoes: ['Nenhuma interação medicamentosa relevante; evitar heparina e anticoagulantes em coagulopatia por veneno.'],
+    ajusteRenal: 'Não requer ajuste; monitorar função renal (lesão renal aguda é complicação do envenenamento).',
+    ajusteHepatico: 'Não requer ajuste.',
+    efeitosAdversos: ['Reações precoces (até 2 h): urticária, prurido, tosse, broncoespasmo, hipotensão, anafilaxia.', 'Reação tardia (doença do soro, 5 a 24 dias): febre, artralgia, urticária, linfadenopatia.', 'Reação pirogênica.'],
+    fontes: [{ nome: 'Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos – Ministério da Saúde/FUNASA', ano: 2001 }, { nome: 'Guia de Vigilância em Saúde – Ministério da Saúde', ano: 2024 }, { nome: 'Instituto Butantan – Bulas dos soros antivenenos', ano: 2023 }],
+    atualizadoEm: '2026-09',
+    verificar: false
+  },
+  {
+    id: 'soro_antiescorpionico',
+    nome: 'Soro antiescorpiônico (SAEsc)',
+    classe: 'Soro heterólogo antiveneno (imunoglobulina equina)',
+    apresentacoes: [{ descricao: 'Ampola 10 mL (dose expressa em ampolas)', mg: null, ml: 10, tipo: 'injetavel', via: 'IV', unidade: 'ampolas' }],
+    indicacoes: ['Escorpionismo (Tityus) moderado ou grave'],
+    doses: [{
+      indicacao: 'Escorpionismo (Tityus) moderado ou grave', mgKgDose: null, mgKgDia: null, vezesDia: 1, frequencia: 'Dose única (repetir apenas se persistir incoagulabilidade/piora após 12 a 24 h, conforme protocolo)', via: 'IV (diluído em SF 0,9% ou SG 5%, infusão em 20 a 60 min)', doseMaxDose: null, doseMaxDia: null, duracao: 'Dose única', faixaEtaria: 'Todas as idades', unidade: 'ampolas',
+      doseFixa: 'Moderado: 2 a 3 ampolas; Grave: 4 a 6 ampolas', faixasPeso: 'A dose NÃO depende do peso ou da idade: crianças recebem o mesmo número de ampolas que adultos, definido pela gravidade.',
+      obs: 'Casos leves (dor local apenas) não recebem soro: analgesia e observação por 6 a 12 h. Crianças < 7 anos têm maior risco de gravidade. Dose definida pela classificação clínica de gravidade, igual para crianças e adultos. Administrar o mais precocemente possível; não usar via IM/local. Pré-medicação com anti-histamínico e corticoide não previne reações graves; manter adrenalina, O2 e material de reanimação à beira do leito. Observar reações precoces (urticária, broncoespasmo, hipotensão) por 24 h e reação tardia (doença do soro) em 5 a 24 dias.'
+    }],
+    diluicao: 'Diluir as ampolas em SF 0,9% ou SG 5% (volume conforme idade/peso, ex.: 100 a 250 mL em crianças), infundir em 20 a 60 min; em crianças pequenas com risco de sobrecarga, reduzir o volume de diluição.',
+    infusao: '20 a 60 min IV; interromper temporariamente se reação e tratar (adrenalina IM 0,01 mg/kg, anti-histamínico, corticoide, broncodilatador); reiniciar em velocidade menor após controle.',
+    contraindicacoes: ['Não há contraindicação absoluta quando há indicação clínica (risco de morte); reação prévia a soro heterólogo exige preparo para anafilaxia.'],
+    interacoes: ['Nenhuma interação medicamentosa relevante; evitar heparina e anticoagulantes em coagulopatia por veneno.'],
+    ajusteRenal: 'Não requer ajuste; monitorar função renal (lesão renal aguda é complicação do envenenamento).',
+    ajusteHepatico: 'Não requer ajuste.',
+    efeitosAdversos: ['Reações precoces (até 2 h): urticária, prurido, tosse, broncoespasmo, hipotensão, anafilaxia.', 'Reação tardia (doença do soro, 5 a 24 dias): febre, artralgia, urticária, linfadenopatia.', 'Reação pirogênica.'],
+    fontes: [{ nome: 'Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos – Ministério da Saúde/FUNASA', ano: 2001 }, { nome: 'Guia de Vigilância em Saúde – Ministério da Saúde', ano: 2024 }, { nome: 'Instituto Butantan – Bulas dos soros antivenenos', ano: 2023 }],
+    atualizadoEm: '2026-09',
+    verificar: false
+  },
+  {
+    id: 'soro_antiaracnidico',
+    nome: 'Soro antiaracnídico (SAAr)',
+    classe: 'Soro heterólogo antiveneno (imunoglobulina equina)',
+    apresentacoes: [{ descricao: 'Ampola 10 mL (dose expressa em ampolas)', mg: null, ml: 10, tipo: 'injetavel', via: 'IV', unidade: 'ampolas' }],
+    indicacoes: ['Araneísmo por Phoneutria (armadeira) moderado/grave; escorpionismo quando SAEsc indisponível'],
+    doses: [{
+      indicacao: 'Araneísmo por Phoneutria (armadeira) moderado/grave; escorpionismo quando SAEsc indisponível', mgKgDose: null, mgKgDia: null, vezesDia: 1, frequencia: 'Dose única (repetir apenas se persistir incoagulabilidade/piora após 12 a 24 h, conforme protocolo)', via: 'IV (diluído em SF 0,9% ou SG 5%, infusão em 20 a 60 min)', doseMaxDose: null, doseMaxDia: null, duracao: 'Dose única', faixaEtaria: 'Todas as idades', unidade: 'ampolas',
+      doseFixa: 'Phoneutria moderado: 2 a 4 ampolas; grave: 5 a 10 ampolas. Loxosceles (soro antiloxoscélico/antiaracnídico): forma cutânea 5 ampolas; cutâneo-visceral 10 ampolas', faixasPeso: 'A dose NÃO depende do peso ou da idade: crianças recebem o mesmo número de ampolas que adultos, definido pela gravidade.',
+      obs: 'Latrodectus: soro antilatrodéctico 1 a 2 ampolas IM quando disponível. Dose definida pela classificação clínica de gravidade, igual para crianças e adultos. Administrar o mais precocemente possível; não usar via IM/local. Pré-medicação com anti-histamínico e corticoide não previne reações graves; manter adrenalina, O2 e material de reanimação à beira do leito. Observar reações precoces (urticária, broncoespasmo, hipotensão) por 24 h e reação tardia (doença do soro) em 5 a 24 dias.'
+    }],
+    diluicao: 'Diluir as ampolas em SF 0,9% ou SG 5% (volume conforme idade/peso, ex.: 100 a 250 mL em crianças), infundir em 20 a 60 min; em crianças pequenas com risco de sobrecarga, reduzir o volume de diluição.',
+    infusao: '20 a 60 min IV; interromper temporariamente se reação e tratar (adrenalina IM 0,01 mg/kg, anti-histamínico, corticoide, broncodilatador); reiniciar em velocidade menor após controle.',
+    contraindicacoes: ['Não há contraindicação absoluta quando há indicação clínica (risco de morte); reação prévia a soro heterólogo exige preparo para anafilaxia.'],
+    interacoes: ['Nenhuma interação medicamentosa relevante; evitar heparina e anticoagulantes em coagulopatia por veneno.'],
+    ajusteRenal: 'Não requer ajuste; monitorar função renal (lesão renal aguda é complicação do envenenamento).',
+    ajusteHepatico: 'Não requer ajuste.',
+    efeitosAdversos: ['Reações precoces (até 2 h): urticária, prurido, tosse, broncoespasmo, hipotensão, anafilaxia.', 'Reação tardia (doença do soro, 5 a 24 dias): febre, artralgia, urticária, linfadenopatia.', 'Reação pirogênica.'],
+    fontes: [{ nome: 'Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos – Ministério da Saúde/FUNASA', ano: 2001 }, { nome: 'Guia de Vigilância em Saúde – Ministério da Saúde', ano: 2024 }, { nome: 'Instituto Butantan – Bulas dos soros antivenenos', ano: 2023 }],
+    atualizadoEm: '2026-09',
+    verificar: false
   }
 ];
