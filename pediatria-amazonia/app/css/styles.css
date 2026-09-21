@@ -22,6 +22,7 @@
   --nav-h: 64px;
   --side-w: 232px;
   --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;   /* identidade clínica clara: evita inversão de campos no modo escuro do aparelho */
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
