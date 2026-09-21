@@ -15,8 +15,9 @@ Mucurinha é um mini sistema de apoio à decisão clínica pediátrica voltado a
 │  • Motor de diferenciais      • Painel de dose por peso         │
 │  • Gerador de prescrição      • Evolução SOAP e comparação      │
 ├─────────────────────────────────────────────────────────────────┤
-│  Camada de domínio (app/js/calculators.js, utils.js)            │
-│  • 18 calculadoras   • Idade/IMC/SC   • Percentis OMS (aprox.)  │
+│  Camada de domínio (calculators.js, seguranca.js, utils.js)     │
+│  • 20 calculadoras   • Idade/IMC/SC   • Escore-z OMS oficial    │
+│  • Trava de faixa etária/peso  • Alergia por classe             │
 ├─────────────────────────────────────────────────────────────────┤
 │  Camada de conhecimento clínico (app/js/data/*.js)              │
 │  • doenças • medicamentos • queixas • sinais de gravidade       │
@@ -34,7 +35,8 @@ Mucurinha é um mini sistema de apoio à decisão clínica pediátrica voltado a
 | Princípio | Como se materializa |
 |---|---|
 | Apoio, não substituição | Nenhuma tela emite diagnóstico. A saída é sempre "diagnósticos diferenciais a considerar", "compatível com", "avaliar", "confirmar conforme protocolo". |
-| Segurança terapêutica | O sistema não inventa doses: só usa valores presentes na base (`medicamentos.js`, `emergencias.js`), cada um com `fontes` e `atualizadoEm`. Itens incertos recebem `verificar: true` e um selo visual. |
+| Segurança terapêutica | O sistema não inventa doses: só usa valores presentes na base (`medicamentos.js`, `emergencias.js`), cada um com `fontes` e `atualizadoEm`. Itens incertos recebem `verificar: true`, aparecem na tela de revisão clínica e só saem de lá quando a médica registra a conferência. |
+| Alerta antes da prescrição | Faixa etária, peso, alergia por classe, duplicidade e sobreposição com medicamentos em uso viram alerta automático na tela de dose e na prescrição. O alerta pede confirmação explícita, nunca decide sozinho. |
 | Fórmula sempre visível | Toda dose ou cálculo mostra a fórmula utilizada (peso × mg/kg → mg → ÷ concentração → mL). |
 | Simplicidade operacional | Sem build, sem dependências, sem servidor. Abre em qualquer navegador; funciona offline após o primeiro acesso. |
 | Contexto amazônico embutido | O contexto epidemiológico (zona rural, ribeirinha, indígena, mata, água de rio, garimpo, açaí, malária prévia…) alimenta as regras de diferenciais. |
@@ -71,7 +73,7 @@ Contratos documentados em `app/js/data/CONTRATO.md`. Todos os arquivos atribuem 
 |---|---|
 | MVP (atual) | Web app estático + PWA offline, dados locais, bases clínicas iniciais. |
 | Fase 2 | Backend (Node/NestJS ou Django) + PostgreSQL (esquema em `docs/schema.sql`), autenticação, múltiplos profissionais, auditoria. |
-| Fase 3 | App híbrido (Capacitor) reutilizando a mesma base; sincronização offline-first; z-score por LMS oficial. |
+| Fase 3 | App híbrido (Capacitor) reutilizando a mesma base; sincronização offline-first. |
 | Fase 4 | Integração com e-SUS/PEC, SINAN (notificações compulsórias: malária, dengue, leishmanioses, acidentes por animais peçonhentos). |
 
 ## 1.5 Segurança e LGPD (MVP)

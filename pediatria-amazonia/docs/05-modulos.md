@@ -21,7 +21,8 @@ pediatria-amazonia/
     └── js/
         ├── utils.js              ← idade, IMC, SC, formatação, escape
         ├── store.js              ← persistência local (coleções)
-        ├── calculators.js        ← 18 calculadoras declarativas
+        ├── seguranca.js          ← faixa etária, alergia por classe, conferência da prescrição
+        ├── calculators.js        ← 20 calculadoras declarativas + motor de escore-z
         ├── app.js                ← roteador, telas, fluxo, prescrição, SOAP
         └── data/                 ← conhecimento clínico (com fontes/data)
             ├── CONTRATO.md       ← esquema de cada base
@@ -51,7 +52,11 @@ pediatria-amazonia/
 | **Crescimento** | Percentis aproximados OMS, marcos, sinais vitais por idade | crescimento, calculators |
 | **Prescrição** | Rascunho a partir do fluxo/banco; itens editáveis; confirmação obrigatória; impressão | store, medicamentos |
 | **Evolução SOAP** | Registro por atendimento; pré-preenchimento; comparação lado a lado | store |
-| **Dados** | Exportar/importar/apagar; contagem das bases | store |
+| **Segurança** | Trava de faixa etária e peso, alergia por classe com reatividade cruzada, duplicidade e sobreposição na prescrição, duas vias para antimicrobianos | seguranca, medicamentos, paciente |
+| **Neonatologia** | Protocolos do recém-nascido, limiares de fototerapia por hora de vida, reanimação, sepse neonatal | neonatal, medicamentos |
+| **Notificação** | Agravos compulsórios separados por prazo, com dados da ficha pré-preenchidos pelo paciente e pelo atendimento | notificacao, paciente, atendimento |
+| **Revisão clínica** | Lista os itens sinalizados nas bases e registra quem conferiu e quando | bases, store |
+| **Dados** | Exportar/importar/apagar; cópia de segurança com lembrete; contagem das bases | store |
 
 ## Convenções de código
 - Sem módulos ES (funciona em `file://`); namespaces `PED.util`, `PED.store`, `PED.calc`, `PED.data`, `PED.app`.
