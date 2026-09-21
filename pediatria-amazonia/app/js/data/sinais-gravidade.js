@@ -1,4 +1,4 @@
-window.PED = window.PED || {}; PED.data = PED.data || {};
+window.PED = window.PED || {}; var PED = window.PED; PED.data = PED.data || {};
 
 // Sinais de gravidade (bandeiras vermelhas) usados pelas queixas.
 // Linguagem de apoio à decisão. Valores de corte conforme AIDPI/OMS, PALS/AHA, MS e SBP.

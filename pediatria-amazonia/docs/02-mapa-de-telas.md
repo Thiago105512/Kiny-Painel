@@ -13,7 +13,7 @@ Rotas do protótipo (`#/…`). Cada tela indica objetivo, conteúdo e ações.
 | 7 | `?tab=prescricoes` | Paciente – Prescrições | Rascunhos e emitidas; nova. |
 | 8 | `?tab=crescimento` | Paciente – Crescimento | Percentis aproximados (peso/idade, estatura/idade, PC/idade, IMC/idade, peso/estatura), marcos do desenvolvimento com alerta de atraso, registro de medidas seriadas. |
 | 9 | `?tab=vacinas` | Paciente – Vacinas | Calendário vs. doses realizadas: feitas, pendentes, atrasadas; marcar dose com data. |
-| 10 | `#/queixas` | Queixas | Grade de 46 queixas por grupo (febre, respiratório, GI, neurológico, geral, pele, urinário, acidentes, RN). |
+| 10 | `#/queixas` | Queixas | Grade de 45 queixas por grupo (febre, respiratório, GI, neurológico, geral, pele, urinário, acidentes, RN). |
 | 11 | `#/queixas/:id` | Fluxo da queixa (8 etapas) | 1 Sintomas → 2 Contexto epidemiológico → 3 Sinais de gravidade → 4 Diferenciais → 5 Exames → 6 Protocolos → 7 Tratamento/doses → 8 Prescrição/registro. |
 | 12 | `#/doencas` · `#/doencas/:id` | Doenças e protocolos | Lista por categoria; protocolo com 18 seções padronizadas, links para exames e medicamentos com cálculo. |
 | 13 | `#/amazonia` | Amazônia | Doenças regionais em destaque, perguntas-chave de contexto, atalhos para emergências regionais. |

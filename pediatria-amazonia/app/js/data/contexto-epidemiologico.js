@@ -1,4 +1,4 @@
-window.PED = window.PED || {}; PED.data = PED.data || {};
+window.PED = window.PED || {}; var PED = window.PED; PED.data = PED.data || {};
 
 // Contexto epidemiológico (anamnese ambiental/regional – Amazonas).
 // tags = ids usados nas regras `se.contexto` das queixas.

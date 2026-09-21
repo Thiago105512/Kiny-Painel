@@ -25,7 +25,7 @@ No celular, abra a URL e use "Adicionar à tela inicial" para instalar como app.
 
 | Módulo | Quantidade |
 |---|---|
-| Queixas com fluxo guiado | 46 |
+| Queixas com fluxo guiado | 45 |
 | Doenças com protocolo padronizado (18 seções) | ver `docs/06-doencas.md` |
 | Medicamentos com cálculo mg/kg → mL | ver `docs/07-medicamentos.md` |
 | Calculadoras | 18 |

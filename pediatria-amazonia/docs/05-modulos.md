@@ -25,7 +25,7 @@ pediatria-amazonia/
         ├── app.js                ← roteador, telas, fluxo, prescrição, SOAP
         └── data/                 ← conhecimento clínico (com fontes/data)
             ├── CONTRATO.md       ← esquema de cada base
-            ├── queixas.js        ← 46 queixas, sintomas, regras de diferenciais
+            ├── queixas.js        ← 45 queixas, sintomas, regras de diferenciais
             ├── sinais-gravidade.js
             ├── contexto-epidemiologico.js
             ├── doencas.js        ← protocolos padronizados

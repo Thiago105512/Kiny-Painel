@@ -411,30 +411,34 @@ window.PED = window.PED || {};
     const aps = (med.apresentacoes || []).filter(a => a.mg != null);
     const sel = opts.doseIdx != null ? opts.doseIdx : 0, apIdx = opts.apIdx != null ? opts.apIdx : 0;
     const d = doses[sel]; const ap = aps[apIdx];
+    const un = (d && d.unidade) || (ap && ap.unidade) || 'mg';   // mg, UI, jatos, comprimidos…
     let res = '';
     if (d && peso) {
       const mgkg = d.mgKgDose != null ? d.mgKgDose : (d.mgKgDia != null && d.vezesDia ? d.mgKgDia / d.vezesDia : null);
       if (mgkg != null) {
         let dose = mgkg * peso; const al = [];
-        if (d.doseMaxDose && dose > d.doseMaxDose) { al.push(`Dose por administração limitada ao máximo de ${f(d.doseMaxDose)} mg.`); dose = d.doseMaxDose; }
+        if (d.doseMaxDose && dose > d.doseMaxDose) { al.push(`Dose por administração limitada ao máximo de ${f(d.doseMaxDose)} ${un}.`); dose = d.doseMaxDose; }
         const dia = dose * (d.vezesDia || 1);
-        if (d.doseMaxDia && dia > d.doseMaxDia) al.push(`Dose diária (${f(dia)} mg) excede o máximo diário de ${f(d.doseMaxDia)} mg: reduzir.`);
+        if (d.doseMaxDia && dia > d.doseMaxDia) al.push(`Dose diária (${f(dia)} ${un}) excede o máximo diário de ${f(d.doseMaxDia)} ${un}: reduzir.`);
         let vol = null, conc = null; if (ap && ap.ml) { conc = ap.mg / ap.ml; vol = dose / conc; }
-        const comp = (ap && !ap.ml) ? dose / ap.mg : null;
-        res = `<div class="result ${al.length ? 'warn' : ''}"><div class="big">${f(dose)} mg${vol != null ? ' = ' + f(vol) + ' mL' : ''}${comp != null ? ' = ' + f(comp, 2) + ' ' + esc(ap.tipo || 'unidade') + '(s)' : ''}</div><div>por administração · ${esc(d.frequencia)} · ${esc(d.via)}${d.duracao ? ' · ' + esc(d.duracao) : ''}</div>
-          <div class="formula">Dose = ${f(mgkg)} mg/kg × ${f(peso)} kg = ${f(mgkg * peso)} mg${d.mgKgDose == null ? ` (a partir de ${f(d.mgKgDia)} mg/kg/dia ÷ ${d.vezesDia})` : ''}${vol != null ? `\nConcentração = ${f(ap.mg)} mg ÷ ${f(ap.ml)} mL = ${f(conc)} mg/mL\nVolume = ${f(dose)} mg ÷ ${f(conc)} mg/mL = ${f(vol)} mL` : ''}\nDose diária = ${f(dose)} × ${d.vezesDia || 1} = ${f(dia)} mg/dia (${f(dia / peso)} mg/kg/dia)</div>
+        const comp = (ap && !ap.ml && ap.mg) ? dose / ap.mg : null;
+        res = `<div class="result ${al.length ? 'warn' : ''}"><div class="big">${f(dose)} ${esc(un)}${vol != null ? ' = ' + f(vol) + ' mL' : ''}${comp != null ? ' = ' + f(comp, 2) + ' ' + esc(ap.tipo || 'unidade') + '(s)' : ''}</div><div>por administração · ${esc(d.frequencia)} · ${esc(d.via)}${d.duracao ? ' · ' + esc(d.duracao) : ''}</div>
+          <div class="formula">Dose = ${f(mgkg)} ${un}/kg × ${f(peso)} kg = ${f(mgkg * peso)} ${un}${d.mgKgDose == null ? ` (a partir de ${f(d.mgKgDia)} ${un}/kg/dia ÷ ${d.vezesDia})` : ''}${vol != null ? `\nConcentração = ${f(ap.mg)} ${un} ÷ ${f(ap.ml)} mL = ${f(conc)} ${un}/mL\nVolume = ${f(dose)} ${un} ÷ ${f(conc)} ${un}/mL = ${f(vol)} mL` : ''}\nDose diária = ${f(dose)} × ${d.vezesDia || 1} = ${f(dia)} ${un}/dia (${f(dia / peso)} ${un}/kg/dia)</div>
+          ${d.faixasPeso ? `<div><small class="muted">Esquema prático por faixa de peso: ${esc(d.faixasPeso)}</small></div>` : ''}
           ${al.map(a => `<div class="alert amber" style="margin:.4rem 0 0">${esc(a)}</div>`).join('')}</div>`;
       } else if (d.mlKgDose != null) {
         res = `<div class="result"><div class="big">${f(d.mlKgDose * peso)} mL</div><div>${esc(d.frequencia)} · ${esc(d.via)}</div><div class="formula">${f(d.mlKgDose)} mL/kg × ${f(peso)} kg = ${f(d.mlKgDose * peso)} mL</div></div>`;
+      } else if (d.doseFixa) {
+        res = `<div class="result"><div class="big" style="font-size:1.1rem">${esc(d.doseFixa)}</div><div>${esc(d.frequencia)} · ${esc(d.via)}</div>${d.faixasPeso ? `<div class="formula">Por faixa de peso (paciente: ${f(peso)} kg): ${esc(d.faixasPeso)}</div>` : ''}${d.faixasIdade ? `<div class="formula">Por idade: ${esc(d.faixasIdade)}</div>` : ''}</div>`;
       } else res = `<div class="alert blue">Esquema sem dose por kg cadastrada: ${esc(d.obs || 'ver protocolo')}</div>`;
     } else if (!peso) res = '<div class="alert amber">Informe o peso para calcular.</div>';
     const idadeAlert = (d && d.faixaEtaria && idade) ? `<small class="muted">Faixa etária do esquema: ${esc(d.faixaEtaria)} · paciente: ${esc(idade.texto)}</small>` : '';
     const p = paciente();
     const alergia = (p && p.alergias && U.normalize(p.alergias).includes(U.normalize(med.nome).slice(0, 6))) ? `<div class="alert red"><strong>⚠️ Alergia registrada</strong>${esc(p.alergias)}</div>` : '';
     return `<div class="card" id="painelDose" data-med="${med.id}"><h2>💊 ${esc(med.nome)} <small class="muted">${esc(med.classe)}</small></h2>${alergia}
-      <div class="fields"><div class="field full"><label>Esquema / indicação</label><select id="doseSel">${doses.map((x, i) => `<option value="${i}" ${i === sel ? 'selected' : ''}>${esc(x.indicacao)} – ${x.mgKgDose != null ? f(x.mgKgDose) + ' mg/kg/dose' : x.mgKgDia != null ? f(x.mgKgDia) + ' mg/kg/dia' : x.mlKgDose != null ? f(x.mlKgDose) + ' mL/kg' : 'ver obs.'} ${esc(x.frequencia)} ${esc(x.via)}</option>`).join('')}</select></div>
+      <div class="fields"><div class="field full"><label>Esquema / indicação</label><select id="doseSel">${doses.map((x, i) => `<option value="${i}" ${i === sel ? 'selected' : ''}>${esc(x.indicacao)} – ${x.mgKgDose != null ? f(x.mgKgDose) + ' ' + (x.unidade || 'mg') + '/kg/dose' : x.mgKgDia != null ? f(x.mgKgDia) + ' ' + (x.unidade || 'mg') + '/kg/dia' : x.mlKgDose != null ? f(x.mlKgDose) + ' mL/kg' : x.doseFixa ? 'dose fixa/por faixa' : 'ver obs.'} ${esc(x.frequencia)} ${esc(x.via)}</option>`).join('')}</select></div>
       <div class="field full"><label>Apresentação</label><select id="apSel">${aps.map((a, i) => `<option value="${i}" ${i === apIdx ? 'selected' : ''}>${esc(a.descricao)}</option>`).join('')}</select></div></div>
-      ${d ? `<p><small class="muted">${esc(d.obs || '')}${d.doseMaxDose ? ' · Máx./dose: ' + f(d.doseMaxDose) + ' mg' : ''}${d.doseMaxDia ? ' · Máx./dia: ' + f(d.doseMaxDia) + ' mg' : ''}</small></p>${idadeAlert}` : ''}
+      ${d ? `<p><small class="muted">${esc(d.obs || '')}${d.doseMaxDose ? ' · Máx./dose: ' + f(d.doseMaxDose) + ' ' + esc(un) : ''}${d.doseMaxDia ? ' · Máx./dia: ' + f(d.doseMaxDia) + ' ' + esc(un) : ''}</small></p>${idadeAlert}` : ''}
       ${res}
       <div class="btnrow"><button class="btn" data-act="addItemDraft" data-med="${med.id}" data-dose="${sel}" data-ap="${apIdx}">➕ Adicionar à prescrição</button><a class="btn ghost sm" href="#/medicamentos/${med.id}">ficha completa</a></div>${U.fontes(med)}</div>`;
   }
@@ -442,8 +446,10 @@ window.PED = window.PED || {};
     const d = (med.doses || [])[doseIdx] || {}; const aps = (med.apresentacoes || []).filter(a => a.mg != null); const ap = aps[apIdx];
     const mgkg = d.mgKgDose != null ? d.mgKgDose : (d.mgKgDia != null && d.vezesDia ? d.mgKgDia / d.vezesDia : null);
     let doseTxt = '', calc = '';
-    if (mgkg != null && peso) { let dose = mgkg * peso; if (d.doseMaxDose && dose > d.doseMaxDose) dose = d.doseMaxDose; doseTxt = `${f(dose)} mg`; if (ap && ap.ml) doseTxt += ` (${f(dose / (ap.mg / ap.ml))} mL de ${ap.descricao})`; else if (ap) doseTxt += ` (${f(dose / ap.mg, 2)} ${ap.tipo || 'un'} de ${ap.descricao})`; calc = `${f(mgkg)} mg/kg × ${f(peso)} kg`; }
+    const un = d.unidade || (ap && ap.unidade) || 'mg';
+    if (mgkg != null && peso) { let dose = mgkg * peso; if (d.doseMaxDose && dose > d.doseMaxDose) dose = d.doseMaxDose; doseTxt = `${f(dose)} ${un}`; if (ap && ap.ml) doseTxt += ` (${f(dose / (ap.mg / ap.ml))} mL de ${ap.descricao})`; else if (ap && ap.mg) doseTxt += ` (${f(dose / ap.mg, 2)} ${ap.tipo || 'un'} de ${ap.descricao})`; calc = `${f(mgkg)} ${un}/kg × ${f(peso)} kg`; }
     else if (d.mlKgDose != null && peso) { doseTxt = `${f(d.mlKgDose * peso)} mL`; calc = `${f(d.mlKgDose)} mL/kg × ${f(peso)} kg`; }
+    else if (d.doseFixa) { doseTxt = d.doseFixa; calc = d.faixasPeso ? 'Faixa de peso: ' + d.faixasPeso : ''; }
     else doseTxt = d.obs || 'definir';
     const n = d.vezesDia || 1; const horarios = n === 1 ? '08h' : n === 2 ? '08h – 20h' : n === 3 ? '06h – 14h – 22h' : n === 4 ? '06h – 12h – 18h – 24h' : n === 6 ? '4/4 h' : `${n}x/dia`;
     return { medicamento: med.nome, apresentacao: ap ? ap.descricao : '', dose: doseTxt, via: d.via || '', intervalo: d.frequencia || '', horarios, duracao: d.duracao || '', orientacoes: d.obs || '', calculo: calc, fonte: (med.fontes || []).map(x => x.nome).join('; ') };
@@ -504,7 +510,7 @@ window.PED = window.PED || {};
     const peso = pesoAtivo();
     return `${pesoBox()}${painelDoseMed(m, peso)}
       <div class="card"><h2>Ficha</h2><dl class="kv"><dt>Classe</dt><dd>${esc(m.classe)}</dd><dt>Indicações</dt><dd>${(m.indicacoes || []).map(esc).join('; ')}</dd><dt>Apresentações</dt><dd>${U.list((m.apresentacoes || []).map(a => a.descricao + (a.reconstituicao ? ' – ' + a.reconstituicao : '')))}</dd></dl>
-        <h3>Esquemas posológicos</h3><div class="tablewrap"><table><tr><th>Indicação</th><th>Dose</th><th>Freq.</th><th>Via</th><th>Máximo</th><th>Duração</th></tr>${(m.doses || []).map(d => `<tr><td>${esc(d.indicacao)}${d.faixaEtaria ? '<br><small class="muted">' + esc(d.faixaEtaria) + '</small>' : ''}</td><td>${d.mgKgDose != null ? f(d.mgKgDose) + ' mg/kg/dose' : ''}${d.mgKgDia != null ? '<br>' + f(d.mgKgDia) + ' mg/kg/dia' : ''}${d.mlKgDose != null ? f(d.mlKgDose) + ' mL/kg' : ''}${d.verificar ? ' <span class="chip amber">verificar</span>' : ''}</td><td>${esc(d.frequencia)}</td><td>${esc(d.via)}</td><td>${d.doseMaxDose ? f(d.doseMaxDose) + ' mg/dose' : ''}${d.doseMaxDia ? '<br>' + f(d.doseMaxDia) + ' mg/dia' : ''}</td><td>${esc(d.duracao || '')}</td></tr>${d.obs ? `<tr><td colspan="6"><small class="muted">${esc(d.obs)}</small></td></tr>` : ''}`).join('')}</table></div>
+        <h3>Esquemas posológicos</h3><div class="tablewrap"><table><tr><th>Indicação</th><th>Dose</th><th>Freq.</th><th>Via</th><th>Máximo</th><th>Duração</th></tr>${(m.doses || []).map(d => `<tr><td>${esc(d.indicacao)}${d.faixaEtaria ? '<br><small class="muted">' + esc(d.faixaEtaria) + '</small>' : ''}</td><td>${d.mgKgDose != null ? f(d.mgKgDose) + ' ' + esc(d.unidade || 'mg') + '/kg/dose' : ''}${d.mgKgDia != null ? '<br>' + f(d.mgKgDia) + ' ' + esc(d.unidade || 'mg') + '/kg/dia' : ''}${d.mlKgDose != null ? f(d.mlKgDose) + ' mL/kg' : ''}${d.doseFixa && d.mgKgDose == null && d.mlKgDose == null ? esc(d.doseFixa) : ''}${d.verificar ? ' <span class="chip amber">verificar</span>' : ''}</td><td>${esc(d.frequencia)}</td><td>${esc(d.via)}</td><td>${d.doseMaxDose ? f(d.doseMaxDose) + ' ' + esc(d.unidade || 'mg') + '/dose' : ''}${d.doseMaxDia ? '<br>' + f(d.doseMaxDia) + ' ' + esc(d.unidade || 'mg') + '/dia' : ''}</td><td>${esc(d.duracao || '')}</td></tr>${d.obs ? `<tr><td colspan="6"><small class="muted">${esc(d.obs)}</small></td></tr>` : ''}`).join('')}</table></div>
         <dl class="kv" style="margin-top:.8rem"><dt>Diluição</dt><dd>${esc(m.diluicao || '—')}</dd><dt>Infusão</dt><dd>${esc(m.infusao || '—')}</dd><dt>Contraindicações</dt><dd>${U.list(m.contraindicacoes)}</dd><dt>Interações</dt><dd>${U.list(m.interacoes)}</dd><dt>Ajuste renal</dt><dd>${esc(m.ajusteRenal || '—')}</dd><dt>Ajuste hepático</dt><dd>${esc(m.ajusteHepatico || '—')}</dd><dt>Efeitos adversos</dt><dd>${U.list(m.efeitosAdversos)}</dd></dl>${U.fontes(m)}</div>${disclaimer}`;
   });
 
