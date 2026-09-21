@@ -3,7 +3,7 @@
    permitindo migração futura para backend (IndexedDB/PostgreSQL). */
 window.PED = window.PED || {};
 PED.store = (function () {
-  const KEY = 'pedamazonia.v1';
+  const KEY = 'mucurinha.v1';
   const empty = () => ({
     pacientes: [],        // cadastro
     atendimentos: [],     // cada atendimento: queixa, sintomas, contexto, gravidade, hipóteses
@@ -11,7 +11,9 @@ PED.store = (function () {
     prescricoes: [],      // prescrições emitidas
     vacinasRealizadas: [],// {pacienteId, vacinaId, doseIndex, data}
     medidas: [],          // {pacienteId, data, peso, altura, pc}
-    prefs: { pesoRapido: null, ultimoPacienteId: null }
+    prefs: { pesoRapido: null, ultimoPacienteId: null,
+      // Profissional responsável (editável em Dados › Profissional)
+      profissional: { nome: 'Catarina Ribeiro de Queiroz', tratamento: 'Dra.', especialidade: 'Pediatra', crm: 'CRM/AM 10.677', rqe: 'RQE 6.706' } }
   });
   let db = null;
 
@@ -20,6 +22,8 @@ PED.store = (function () {
     try {
       const raw = localStorage.getItem(KEY);
       db = raw ? Object.assign(empty(), JSON.parse(raw)) : empty();
+      db.prefs = Object.assign(empty().prefs, db.prefs || {});
+      if (!db.prefs.profissional) db.prefs.profissional = empty().prefs.profissional;
     } catch (e) { console.warn('store: falha ao ler', e); db = empty(); }
     return db;
   }

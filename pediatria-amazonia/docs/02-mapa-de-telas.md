@@ -25,7 +25,7 @@ Rotas do protótipo (`#/…`). Cada tela indica objetivo, conteúdo e ações.
 | 19 | `#/crescimento` | Crescimento | Sinais vitais por idade, marcos, tabelas OMS. |
 | 20 | `#/prescricao/nova` · `#/prescricao/:id` · `?print=1` | Prescrição | Itens editáveis (medicamento, dose, via, intervalo, horários, duração, orientações), confirmação obrigatória, impressão. |
 | 21 | `#/evolucao/nova` · `#/evolucao/:id` | Evolução SOAP | Sinais vitais + S/O/A/P; pré-preenchida a partir do fluxo de queixa. |
-| 22 | `#/config` | Dados | Exportar/importar JSON, apagar, contagem das bases carregadas. |
+| 22 | `#/config` | Dados | Profissional responsável (nome, especialidade, CRM, RQE – padrão: Dra. Catarina Ribeiro de Queiroz, Pediatra, CRM/AM 10.677, RQE 6.706), exportar/importar JSON, apagar, contagem das bases carregadas. |
 
 ## Elementos globais
 - **Barra superior**: logotipo, busca global (queixas, doenças, medicamentos, calculadoras, emergências, exames, vacinas, pacientes) e chip do paciente ativo (nome, idade, peso).

@@ -1,8 +1,10 @@
-# PedAmazônia – mini sistema médico pediátrico para o Amazonas
+# Mucurinha – mini sistema médico pediátrico para o Amazonas
 
 Ferramenta de **apoio acadêmico e clínico** para atendimento infantil no contexto amazônico: paciente → queixa → sintomas → contexto epidemiológico → sinais de gravidade → diagnósticos diferenciais → exames → protocolos → tratamento → medicações → prescrição → evolução.
 
 > Não substitui a avaliação e a decisão médica. Nenhuma tela emite diagnóstico automático. Toda dose e conduta deve ser conferida em protocolos oficiais (Ministério da Saúde, SBP, OMS/OPAS) e bulas antes de prescrever.
+
+**Médica responsável (padrão do sistema):** Dra. Catarina Ribeiro de Queiroz · Pediatra · CRM/AM 10.677 · RQE 6.706 — identificação impressa na prescrição e registrada na evolução; editável em *Dados › Profissional responsável*.
 
 ## Executar o protótipo
 

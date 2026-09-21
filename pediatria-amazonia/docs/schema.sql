@@ -1,4 +1,4 @@
--- PedAmazônia – esquema relacional alvo (PostgreSQL 14+)
+-- Mucurinha – esquema relacional alvo (PostgreSQL 14+)
 -- Fase 2: backend. O MVP usa localStorage com coleções homônimas (ver docs/03-banco-de-dados.md).
 
 CREATE TYPE zona_t AS ENUM ('urbana','rural','indigena','ribeirinha');
@@ -47,7 +47,8 @@ CREATE TABLE evolucao (
   atendimento_id UUID REFERENCES atendimento(id) ON DELETE SET NULL,
   data          TIMESTAMPTZ NOT NULL DEFAULT now(),
   peso_kg NUMERIC(5,2), temp_c NUMERIC(3,1), fc SMALLINT, fr SMALLINT, sat SMALLINT, pa TEXT,
-  s TEXT, o TEXT, a TEXT, p TEXT
+  s TEXT, o TEXT, a TEXT, p TEXT,
+  profissional TEXT
 );
 
 CREATE TABLE prescricao (
@@ -56,6 +57,7 @@ CREATE TABLE prescricao (
   atendimento_id UUID REFERENCES atendimento(id) ON DELETE SET NULL,
   confirmada    BOOLEAN NOT NULL DEFAULT FALSE,
   emitida_em    TIMESTAMPTZ,
+  profissional  TEXT,                       -- nome, especialidade, CRM e RQE no momento da emissão
   orientacoes_gerais TEXT,
   retorno       TEXT,
   criado_em     TIMESTAMPTZ NOT NULL DEFAULT now()

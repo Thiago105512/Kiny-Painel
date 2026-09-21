@@ -1,4 +1,4 @@
-/* PedAmazônia – aplicação (roteador hash + telas). Sem dependências externas. */
+/* Mucurinha – aplicação (roteador hash + telas). Sem dependências externas. */
 window.PED = window.PED || {};
 (function () {
   const U = PED.util, S = PED.store, esc = U.esc, f = U.fmt;
@@ -15,6 +15,8 @@ window.PED = window.PED || {};
   const paciente = () => state.pacienteId ? S.byId('pacientes', state.pacienteId) : null;
   function idadePaciente(p) { p = p || paciente(); return p ? U.idade(p.dataNascimento) : null; }
   function pesoAtivo() { const p = paciente(); if (p && p.peso) return Number(p.peso); const q = S.pref('pesoRapido'); return q ? Number(q) : null; }
+  const profissional = () => S.pref('profissional') || {};
+  const profissionalLinha = () => { const pr = profissional(); return [pr.tratamento, pr.nome].filter(Boolean).join(' ') + [pr.especialidade, pr.crm, pr.rqe].filter(Boolean).map(x => ' · ' + x).join(''); };
   function setPaciente(id) { state.pacienteId = id; S.pref('ultimoPacienteId', id); renderChrome(); }
 
   const NAV = [
@@ -135,8 +137,9 @@ window.PED = window.PED || {};
     const destaque = ['febre', 'febre_calafrios', 'febre_exantema', 'tosse', 'dispneia', 'diarreia', 'vomitos', 'convulsao', 'acidente_ofidico', 'rn_febre', 'lesoes_pele', 'ictericia'];
     return `
       <div class="card" style="background:linear-gradient(135deg,#e3f3f5,#e4f5ec);border:none">
-        <h1>PedAmazônia</h1>
+        <h1>Mucurinha</h1>
         <p>Apoio à decisão clínica em pediatria para o contexto amazônico: queixas, diagnósticos diferenciais, protocolos, doses por peso e emergências.</p>
+        <p class="muted"><small>${esc(profissionalLinha())}</small></p>
         <div class="btnrow">
           <a class="btn" href="#/queixas">🩺 Iniciar por queixa</a>
           <a class="btn danger" href="#/emergencias">🚨 Emergências</a>
@@ -612,9 +615,9 @@ window.PED = window.PED || {};
     if (q.print) {
       const p = S.byId('pacientes', pr.pacienteId); const idade = p ? U.idade(p.dataNascimento) : null;
       if (!pr.confirmada) return `<div class="alert amber"><strong>Prescrição não confirmada</strong>Revise e confirme antes de emitir.</div><a class="btn" href="#/prescricao/${pr.id}">Voltar à edição</a>`;
-      return `<div class="prescricao"><h3>Prescrição pediátrica</h3><p><b>Paciente:</b> ${esc(p ? p.nome : '—')}${idade ? ' · ' + esc(idade.texto) : ''}${p && p.peso ? ' · ' + f(p.peso) + ' kg' : ''}<br><b>Data:</b> ${U.fmtDateTime(pr.emitidaEm || pr.atualizadoEm)}</p><hr>
+      return `<div class="prescricao"><h3>Prescrição pediátrica</h3><p class="muted" style="margin-top:-.3rem"><small>${esc(profissionalLinha())}</small></p><p><b>Paciente:</b> ${esc(p ? p.nome : '—')}${idade ? ' · ' + esc(idade.texto) : ''}${p && p.peso ? ' · ' + f(p.peso) + ' kg' : ''}<br><b>Data:</b> ${U.fmtDateTime(pr.emitidaEm || pr.atualizadoEm)}</p><hr>
         ${(pr.itens || []).map((i, n) => `<div class="item"><b>${n + 1}. ${esc(i.medicamento)}</b>${i.apresentacao ? ' – ' + esc(i.apresentacao) : ''}<br>${esc(i.dose)} · ${esc(i.via)} · ${esc(i.intervalo)}${i.horarios ? ' (' + esc(i.horarios) + ')' : ''} · ${esc(i.duracao)}${i.orientacoes ? '<br><i>' + esc(i.orientacoes) + '</i>' : ''}</div>`).join('')}
-        ${pr.orientacoesGerais ? `<p><b>Orientações:</b> ${esc(pr.orientacoesGerais)}</p>` : ''}${pr.retorno ? `<p><b>Retorno:</b> ${esc(pr.retorno)}</p>` : ''}<br><p>_____________________________________<br>Assinatura e carimbo</p></div>
+        ${pr.orientacoesGerais ? `<p><b>Orientações:</b> ${esc(pr.orientacoesGerais)}</p>` : ''}${pr.retorno ? `<p><b>Retorno:</b> ${esc(pr.retorno)}</p>` : ''}<br><p>_____________________________________<br>${esc([profissional().tratamento, profissional().nome].filter(Boolean).join(' '))}<br>${esc([profissional().especialidade, profissional().crm, profissional().rqe].filter(Boolean).join(' · '))}</p></div>
         <div class="btnrow no-print"><button class="btn" onclick="window.print()">🖨️ Imprimir</button><a class="btn ghost" href="#/prescricao/${pr.id}">Editar</a></div>`;
     }
     return `<h1>Prescrição</h1>${prescricaoForm(pr)}${disclaimer}`;
@@ -645,9 +648,11 @@ window.PED = window.PED || {};
     <div class="card"><h2>Armazenamento local</h2><p class="muted">Os dados ficam apenas neste navegador (localStorage). Exporte regularmente. Não inclua dados sensíveis em dispositivos compartilhados.</p>
       <div class="btnrow"><button class="btn" data-act="exportar">⬇️ Exportar JSON</button><label class="btn secondary" style="cursor:pointer">⬆️ Importar JSON<input type="file" id="importFile" accept="application/json" style="display:none"></label><button class="btn danger" data-act="resetar">Apagar tudo</button></div>
       <p>Pacientes: ${S.col('pacientes').length} · Atendimentos: ${S.col('atendimentos').length} · Evoluções: ${S.col('evolucoes').length} · Prescrições: ${S.col('prescricoes').length}</p></div>
+    <div class="card"><h2>👩‍⚕️ Profissional responsável</h2><p class="muted">Aparece na prescrição, na evolução e na tela inicial.</p>
+      <form id="formProf"><div class="fields"><div class="field"><label>Tratamento</label><input name="tratamento" value="${esc(profissional().tratamento || '')}"></div><div class="field full"><label>Nome</label><input name="nome" value="${esc(profissional().nome || '')}"></div><div class="field"><label>Especialidade</label><input name="especialidade" value="${esc(profissional().especialidade || '')}"></div><div class="field"><label>CRM</label><input name="crm" value="${esc(profissional().crm || '')}"></div><div class="field"><label>RQE</label><input name="rqe" value="${esc(profissional().rqe || '')}"></div></div><div class="btnrow"><button class="btn" type="submit">💾 Salvar</button></div></form></div>
     <div class="card"><h2>Bases clínicas carregadas</h2><dl class="kv"><dt>Doenças</dt><dd>${(D().doencas || []).length}</dd><dt>Medicamentos</dt><dd>${(D().medicamentos || []).length}</dd><dt>Queixas</dt><dd>${(D().queixas || []).length}</dd><dt>Calculadoras</dt><dd>${PED.calc.calculadoras.length}</dd><dt>Emergências</dt><dd>${(D().emergencias || []).length}</dd><dt>Exames</dt><dd>${(D().exames || []).length}</dd><dt>Vacinas</dt><dd>${(D().vacinas || []).length}</dd></dl>
       <p class="muted"><small>Cada item exibe suas fontes (MS, SBP, OMS/OPAS, PALS, bulas) e a data da última atualização. O sistema não gera diagnóstico automático e não substitui a decisão médica.</small></p></div>
-    <div class="card"><h2>Sobre</h2><p>PedAmazônia – protótipo MVP de apoio à decisão clínica pediátrica no Amazonas. Versão 0.1.0.</p></div>`);
+    <div class="card"><h2>Sobre</h2><p>Mucurinha – protótipo MVP de apoio à decisão clínica pediátrica no Amazonas. Versão 0.1.0.</p></div>`);
 
   /* ---------------- Eventos ---------------- */
   function formData(form) { const o = {}; new FormData(form).forEach((v, k) => o[k] = typeof v === 'string' ? v.trim() : v); return o; }
@@ -698,13 +703,14 @@ window.PED = window.PED || {};
       const pid = (prev && prev.pacienteId) || d.pacienteId || (state.prescricaoDraft && state.prescricaoDraft.pacienteId) || state.pacienteId;
       if (!pid) { U.toast('Selecione o paciente'); return; }
       const obj = Object.assign({}, prev || {}, { pacienteId: pid, itens, orientacoesGerais: d.orientacoesGerais, retorno: d.retorno, confirmada: !!d.confirmada, atendimentoId: (state.atendimento && state.atendimento.id) || (prev && prev.atendimentoId) || null });
-      if (obj.confirmada && !obj.emitidaEm) obj.emitidaEm = new Date().toISOString();
+      if (obj.confirmada && !obj.emitidaEm) { obj.emitidaEm = new Date().toISOString(); obj.profissional = profissionalLinha(); }
       if (!fpr.dataset.id) { delete obj.id; }
       const saved = S.upsert('prescricoes', obj); state.prescricaoDraft = null; U.toast(obj.confirmada ? 'Prescrição emitida' : 'Rascunho salvo'); go('/prescricao/' + saved.id + (obj.confirmada ? '?print=1' : ''));
     });
     // SOAP
     const fs = $('#formSoap');
-    if (fs) fs.addEventListener('submit', (e) => { e.preventDefault(); const d = formData(fs); const prev = fs.dataset.id ? S.byId('evolucoes', fs.dataset.id) : null; const obj = Object.assign({}, prev || {}, d, { data: d.data ? new Date(d.data).toISOString() : new Date().toISOString() }); if (!fs.dataset.id) delete obj.id; S.upsert('evolucoes', obj); const p = S.byId('pacientes', d.pacienteId); if (p && d.peso && Number(d.peso) !== p.peso) { p.peso = Number(d.peso); S.upsert('pacientes', p); } U.toast('Evolução salva'); go('/pacientes/' + d.pacienteId + '?tab=evolucao'); });
+    if (fs) fs.addEventListener('submit', (e) => { e.preventDefault(); const d = formData(fs); const prev = fs.dataset.id ? S.byId('evolucoes', fs.dataset.id) : null; const obj = Object.assign({}, prev || {}, d, { data: d.data ? new Date(d.data).toISOString() : new Date().toISOString(), profissional: profissionalLinha() }); if (!fs.dataset.id) delete obj.id; S.upsert('evolucoes', obj); const p = S.byId('pacientes', d.pacienteId); if (p && d.peso && Number(d.peso) !== p.peso) { p.peso = Number(d.peso); S.upsert('pacientes', p); } U.toast('Evolução salva'); go('/pacientes/' + d.pacienteId + '?tab=evolucao'); });
+    const fprof = $('#formProf'); if (fprof) fprof.addEventListener('submit', (e) => { e.preventDefault(); S.pref('profissional', formData(fprof)); U.toast('Profissional salvo'); render(); });
     // Importar
     const imp = $('#importFile'); if (imp) imp.addEventListener('change', () => { const fr = new FileReader(); fr.onload = () => { try { S.importJSON(fr.result); U.toast('Dados importados'); render(); } catch (e) { alert('Arquivo inválido: ' + e.message); } }; fr.readAsText(imp.files[0]); });
   }
@@ -736,7 +742,7 @@ window.PED = window.PED || {};
       delMedida() { S.remove('medidas', el.dataset.id); render(); },
       marcarVacina() { const data = prompt('Data da dose (AAAA-MM-DD):', U.today()); if (!data) return; S.upsert('vacinasRealizadas', { pacienteId: el.dataset.pid, vacinaId: el.dataset.vid, doseIndex: Number(el.dataset.i), data }); render(); },
       desfazerVacina() { S.remove('vacinasRealizadas', el.dataset.id); render(); },
-      exportar() { const blob = new Blob([S.exportJSON()], { type: 'application/json' }); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'pedamazonia-' + U.today() + '.json'; a.click(); },
+      exportar() { const blob = new Blob([S.exportJSON()], { type: 'application/json' }); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'mucurinha-' + U.today() + '.json'; a.click(); },
       resetar() { if (confirm('Apagar todos os dados locais?')) { S.reset(); setPaciente(null); render(); } },
     };
     if (acts[act]) { e.preventDefault(); acts[act](); }

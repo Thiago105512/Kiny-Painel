@@ -1,4 +1,4 @@
-/* Utilitários gerais – PedAmazônia */
+/* Utilitários gerais – Mucurinha */
 window.PED = window.PED || {};
 PED.util = (function () {
   const esc = (s) => String(s == null ? '' : s)

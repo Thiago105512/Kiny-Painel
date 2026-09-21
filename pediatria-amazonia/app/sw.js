@@ -1,5 +1,5 @@
 /* Service worker simples: cache-first para uso offline em campo (ribeirinho/rural). */
-const CACHE = 'pedamazonia-v1';
+const CACHE = 'mucurinha-v1';
 const ASSETS = ['./', './index.html', './css/styles.css', './manifest.webmanifest',
   './js/utils.js', './js/store.js', './js/calculators.js', './js/app.js',
   './js/data/sinais-gravidade.js', './js/data/contexto-epidemiologico.js', './js/data/queixas.js', './js/data/doencas.js',

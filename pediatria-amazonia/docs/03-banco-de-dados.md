@@ -34,7 +34,7 @@ vacina, vacina_dose, marco_desenvolvimento, curva_oms, sinal_vital_ref, fonte
 | `atendimento_hipotese` | atendimento_id, doenca_id (nullable), nome_livre, ordem |
 | `atendimento_exame` | atendimento_id, exame_id, solicitado (bool), resultado |
 | `evolucao` | id, paciente_id, atendimento_id, data, peso, temp, fc, fr, sat, pa, s, o, a, p |
-| `prescricao` | id, paciente_id, atendimento_id, confirmada, emitida_em, orientacoes_gerais, retorno |
+| `prescricao` | id, paciente_id, atendimento_id, confirmada, emitida_em, profissional, orientacoes_gerais, retorno |
 | `prescricao_item` | id, prescricao_id, medicamento_id (nullable), medicamento, apresentacao, dose, via, intervalo, horarios, duracao, orientacoes, calculo, fonte |
 | `medida` | id, paciente_id, data, peso_kg, altura_cm, pc_cm |
 | `vacina_realizada` | id, paciente_id, vacina_id, dose_index, data, lote |
@@ -73,6 +73,6 @@ vacina, vacina_dose, marco_desenvolvimento, curva_oms, sinal_vital_ref, fonte
   "prescricoes": [ { "id": "…", "pacienteId": "…", "confirmada": true, "emitidaEm": "…", "itens": [ { "medicamento": "Paracetamol", "dose": "140 mg (7 mL de Solução oral 200 mg/mL…)", "via": "VO", "intervalo": "6/6 h", "horarios": "06h – 12h – 18h – 24h", "duracao": "se dor/febre", "calculo": "10 mg/kg × 14 kg" } ] } ],
   "vacinasRealizadas": [ { "pacienteId": "…", "vacinaId": "pentavalente", "doseIndex": 0, "data": "2022-05-10" } ],
   "medidas": [ { "pacienteId": "…", "data": "2026-09-21", "peso": 14, "altura": 96 } ],
-  "prefs": { "pesoRapido": null, "ultimoPacienteId": "…" }
+  "prefs": { "pesoRapido": null, "ultimoPacienteId": "…", "profissional": { "tratamento": "Dra.", "nome": "Catarina Ribeiro de Queiroz", "especialidade": "Pediatra", "crm": "CRM/AM 10.677", "rqe": "RQE 6.706" } }
 }
 ```
