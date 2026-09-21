@@ -31,7 +31,10 @@ window.PED = window.PED || {};
     { path: '/exames', nome: 'Exames', ic: '🧪' },
     { path: '/vacinas', nome: 'Vacinas', ic: '💉' },
     { path: '/crescimento', nome: 'Crescimento', ic: '📈' },
-    { path: '/config', nome: 'Dados', ic: '⚙️' },
+    { path: '/neonatal', nome: 'Recém-nascido', ic: '👶' },
+    { path: '/notificacao', nome: 'Notificação', ic: '📢' },
+    { path: '/revisao', nome: 'Revisão', ic: '⚙️' },
+    { path: '/config', nome: 'Dados', ic: '🗄️' },
   ];
 
   /* ---------------- Roteador ---------------- */
@@ -108,6 +111,21 @@ window.PED = window.PED || {};
   const nomeMed = (id) => { const m = (D().medicamentos || []).find(x => x.id === id); return m ? m.nome : id; };
   const linkExames = (ids) => (ids || []).map(id => { const e = (D().exames || []).find(x => x.id === id); return e ? `<a class="chip" href="#/exames/${e.id}">${esc(e.nome)}</a>` : `<span class="chip gray">${esc(id)}</span>`; }).join(' ');
   const linkDoencas = (ids) => (ids || []).map(id => { const d = (D().doencas || []).find(x => x.id === id); return d ? `<a class="chip ${d.amazonia ? 'green' : ''}" href="#/doencas/${d.id}">${esc(d.nome)}</a>` : `<span class="chip gray">${esc(id)}</span>`; }).join(' ');
+  /** Caixa de peso destacada para uso em emergência, com estimativa por idade. */
+  function pesoBoxEmergencia() {
+    const p = paciente(); const peso = pesoAtivo(); const idade = idadePaciente();
+    const est = idade ? U.pesoEstimado(idade.totalMeses) : null;
+    return `<div class="card compact pesoEmerg">
+      <div class="lbl">⚖️ Peso</div>
+      <input type="number" step="0.1" inputmode="decimal" id="pesoRapido" value="${peso || ''}" placeholder="kg" ${p ? 'disabled' : ''}>
+      <div style="flex:1;min-width:150px">
+        ${p ? `<strong>${esc(p.nome)}</strong><br><small class="muted">${idade ? esc(idade.texto) : ''} · peso do cadastro</small>`
+            : `<small class="muted">Todas as doses desta tela usam este peso.</small>`}
+        ${(!p && est) ? `<br><button class="btn sm ghost" data-act="usarPesoEstimado" data-v="${est.toFixed(1)}">usar estimativa ${f(est, 1)} kg</button>` : ''}
+      </div>
+      ${p ? '<button class="btn sm ghost" data-act="trocarPaciente">Trocar</button>' : '<button class="btn sm" data-act="setPesoRapido">OK</button>'}
+      ${!peso ? '<div class="alert red" style="flex-basis:100%;margin:.3rem 0 0"><strong>Peso não informado</strong>Sem o peso, as doses desta tela não são calculadas. Na ausência de balança, considerar estimativa por idade e corrigir assim que possível.</div>' : ''}</div>`;
+  }
   function pesoBox(ctxLabel) {
     const p = paciente(); const peso = pesoAtivo();
     return `<div class="card compact" style="display:flex;gap:.6rem;align-items:center;flex-wrap:wrap">
@@ -134,6 +152,59 @@ window.PED = window.PED || {};
     return `<tr><td data-l="Droga"><strong>${esc(d.nome)}</strong><br><small class="muted">${esc(d.indicacao || '')}${d.apresentacao ? ' · ' + esc(d.apresentacao) : ''}</small></td><td data-l="Dose">${valor}${d.verificar ? ' <span class="chip amber">verificar</span>' : ''}<br><small class="muted">${esc(formula)}</small></td><td data-l="Via">${esc(d.via || '')}${d.repeticao ? '<br><small>' + esc(d.repeticao) + '</small>' : ''}${d.obs && d.mgKg != null ? '<br><small class="muted">' + esc(d.obs) + '</small>' : ''}</td></tr>`;
   }
 
+  /* ---------------- Notificação compulsória ---------------- */
+  const notifDe = (doencaId) => ((D().notificacao && D().notificacao.doencas) || []).find(n => n.doencaId === doencaId) || null;
+  /** Tarja de notificação para a tela de uma doença. */
+  function tarjaNotificacao(doencaId) {
+    const n = notifDe(doencaId); if (!n) return '';
+    const im = n.tipo === 'imediata';
+    return `<div class="alert ${im ? 'red' : 'amber'}"><strong>\u{1F4E2} Notifica\u00e7\u00e3o compuls\u00f3ria \u2013 ${im ? 'imediata (24 h)' : 'semanal'}</strong>
+      ${esc(n.criterio)}.<br><b>Sistema:</b> ${esc(n.sistema)} \u00b7 <b>Ficha:</b> ${esc(n.ficha)}<br><b>Prazo:</b> ${esc(n.prazo)}
+      ${n.verificar ? '<br><span class="chip amber">confirmar na lista vigente da Portaria GM/MS</span>' : ''}
+      <div class="btnrow" style="margin:.5rem 0 0"><a class="btn sm ${im ? 'danger' : 'secondary'}" href="#/notificacao/${esc(doencaId)}">Abrir dados da notifica\u00e7\u00e3o</a></div></div>`;
+  }
+  /** Aviso dentro do fluxo de queixa quando alguma hipótese é notificável. */
+  function avisoNotificacaoHipoteses(hipoteses) {
+    const ns = (hipoteses || []).map(h => notifDe(h.doencaId)).filter(Boolean);
+    if (!ns.length) return '';
+    const im = ns.filter(x => x.tipo === 'imediata');
+    return `<div class="alert ${im.length ? 'red' : 'amber'}"><strong>\u{1F4E2} Hip\u00f3tese(s) de notifica\u00e7\u00e3o compuls\u00f3ria</strong>
+      ${ns.map(n => `${esc(n.nome)}: ${n.tipo === 'imediata' ? '<b>imediata, em at\u00e9 24 h</b>' : 'semanal'} \u00b7 ${esc(n.sistema)}`).join('<br>')}
+      <br><small>${esc((D().notificacao || {}).aviso || '')}</small>
+      <div class="btnrow" style="margin:.5rem 0 0">${ns.map(n => `<a class="btn sm ${n.tipo === 'imediata' ? 'danger' : 'secondary'}" href="#/notificacao/${esc(n.doencaId)}">Ficha de ${esc(n.nome)}</a>`).join('')}</div></div>`;
+  }
+
+  /* ---------------- Revisão clínica das bases ---------------- */
+  /* Registra que a médica conferiu um item sinalizado, com data e responsável.
+     O software não valida conteúdo clínico: apenas guarda a conferência humana. */
+  const revisao = {
+    chave: (tipo, id, sub) => tipo + '|' + id + (sub != null ? '|' + sub : ''),
+    get(tipo, id, sub) { return (S.pref('revisoes') || {})[revisao.chave(tipo, id, sub)] || null; },
+    marcar(tipo, id, sub, nota) {
+      const r = S.pref('revisoes') || {};
+      r[revisao.chave(tipo, id, sub)] = { em: new Date().toISOString(), por: profissionalLinha(), nota: nota || '' };
+      S.pref('revisoes', r); return r;
+    },
+    desmarcar(tipo, id, sub) { const r = S.pref('revisoes') || {}; delete r[revisao.chave(tipo, id, sub)]; S.pref('revisoes', r); },
+    /** Todos os itens das bases que pedem conferência humana. */
+    pendencias() {
+      const out = [];
+      (D().medicamentos || []).forEach(m => {
+        if (m.verificar) out.push({ tipo: 'medicamento', id: m.id, sub: null, titulo: m.nome, contexto: m.classe, texto: 'Ficha inteira sinalizada para conferência.', fontes: m.fontes, href: '#/medicamentos/' + m.id });
+        (m.doses || []).forEach((d, i) => { if (d.verificar) out.push({ tipo: 'medicamento', id: m.id, sub: i, titulo: m.nome + ' — ' + d.indicacao, contexto: (d.mgKgDose != null ? f(d.mgKgDose) + ' ' + (d.unidade || 'mg') + '/kg/dose ' : '') + d.frequencia + ' ' + d.via, texto: d.obs || 'Esquema sinalizado para conferência.', fontes: m.fontes, href: '#/medicamentos/' + m.id }); });
+      });
+      (D().emergencias || []).forEach(e => (e.doses || []).forEach((d, i) => { if (d.verificar) out.push({ tipo: 'emergencia', id: e.id, sub: i, titulo: e.nome + ' — ' + d.nome, contexto: d.indicacao || '', texto: d.obs || 'Dose sinalizada para conferência.', fontes: e.fontes, href: '#/emergencias/' + e.id }); }));
+      (D().vacinas || []).forEach(v => { if (v.verificar) out.push({ tipo: 'vacina', id: v.id, sub: null, titulo: v.nome, contexto: v.via || '', texto: v.situacoesEspeciais || 'Esquema sujeito a atualização sazonal.', fontes: v.fontes, href: '#/vacinas' }); });
+      (D().doencas || []).forEach(x => { if (x.verificar) out.push({ tipo: 'doenca', id: x.id, sub: null, titulo: x.nome, contexto: x.categoria, texto: 'Protocolo sinalizado para conferência.', fontes: x.fontes, href: '#/doencas/' + x.id }); });
+      return out;
+    }
+  };
+  /** Selo de conferência para exibir ao lado de um item sinalizado. */
+  function seloRevisao(tipo, id, sub) {
+    const r = revisao.get(tipo, id, sub);
+    return r ? `<span class="chip green" title="${esc(r.por)}">conferido em ${U.fmtDate(r.em.slice(0, 10))}</span>` : '<span class="chip amber">a conferir</span>';
+  }
+
   /* ---------------- Telas ---------------- */
   route('/', () => {
     const p = paciente(); const q = D().queixas || [];
@@ -150,6 +221,7 @@ window.PED = window.PED || {};
         </div>
       </div>
       ${pesoBox('Informe o peso para calcular doses nas telas de medicamentos e emergências.')}
+      ${bannerBackup()}
       ${p ? '' : `<div class="alert blue"><strong>Dica</strong>Cadastre ou selecione um paciente para preencher automaticamente idade, peso, altura e contexto epidemiológico em todas as telas.</div>`}
       <div class="section-title"><h2>Queixas frequentes</h2><a href="#/queixas">ver todas</a></div>
       <div class="grid">${destaque.map(id => q.find(x => x.id === id)).filter(Boolean).map(x => `<a class="tile" href="#/queixas/${x.id}"><span class="ic">${x.icone || '•'}</span>${esc(x.nome)}</a>`).join('')}</div>
@@ -161,6 +233,8 @@ window.PED = window.PED || {};
         <a class="tile" href="#/exames"><span class="ic">🧪</span>Exames</a>
         <a class="tile" href="#/vacinas"><span class="ic">💉</span>Vacinas</a>
         <a class="tile" href="#/crescimento"><span class="ic">📈</span>Crescimento</a>
+        <a class="tile" href="#/neonatal"><span class="ic">👶</span>Recém-nascido<small>fototerapia, sepse</small></a>
+        <a class="tile" href="#/notificacao"><span class="ic">📢</span>Notificação<small>compulsória</small></a>
       </div>
       ${disclaimer}`;
   });
@@ -252,13 +326,23 @@ window.PED = window.PED || {};
     const idade = U.idade(p.dataNascimento); const C = D().crescimento || {}; const cur = C.curvasOMS;
     const meds = S.where('medidas', m => m.pacienteId === p.id).sort((a, b) => a.data.localeCompare(b.data));
     const m = idade ? idade.totalMeses : null; let perc = '';
+    if (m != null && p.sexo && PED.zscore && PED.data.zscore) {
+      const av = PED.zscore.avaliar({ sexo: p.sexo, idadeMeses: m, peso: p.peso ? Number(p.peso) : null, altura: p.altura ? Number(p.altura) : null, pc: p.pc ? Number(p.pc) : null });
+      const cor = { vermelho: 'red', ambar: 'amber', amarelo: 'amber', laranja: 'amber', verde: 'green' };
+      const criticos = av.filter(a => a.faixa && a.faixa.conduta && (cor[a.faixa.cor] || 'gray') !== 'green');
+      if (av.length) perc = `<div class="card"><h2>\u{1F4C8} Estado nutricional (escore-z, OMS)</h2>
+        <div class="tablewrap"><table class="dosetable"><tr><th>\u00cdndice</th><th>Medida</th><th>Escore-z</th><th>Classifica\u00e7\u00e3o</th></tr>
+        ${av.map(a => `<tr><td data-l="\u00cdndice">${esc(a.rotulo)}</td><td data-l="Medida">${f(a.valor, 1)}</td><td data-l="Dose"><strong>${a.z > 0 ? '+' : ''}${f(a.z, 2)}</strong>${a.extrapolado ? ' <small class="muted">extrapolado</small>' : ''}</td><td data-l="Via">${a.faixa ? `<span class="chip ${cor[a.faixa.cor] || 'gray'}">${esc(a.faixa.rotulo)}</span>` : '\u2014'}</td></tr>`).join('')}</table></div>
+        ${criticos.map(a => `<div class="alert ${cor[a.faixa.cor] || 'amber'}"><strong>${esc(a.rotulo)}: ${esc(a.faixa.rotulo)}</strong>${esc(a.faixa.conduta)}</div>`).join('')}
+        <small class="muted">${esc(PED.data.zscore.nota || '')}</small>${U.fontes(PED.data.zscore)}</div>`;
+    }
     if (cur && m != null && p.sexo) {
       const rows = [];
       const add = (label, val, tab, key) => { if (val == null || !tab) return; const pc = PED.calc.percentilAprox(Number(val), PED.calc.linhaCurva(tab, p.sexo, key)); rows.push(`<tr><td>${label}</td><td>${f(val)}</td><td>${pc ? pc.p : '—'}</td><td>${pc && (pc.p === '< 3' || pc.p === '> 97') ? '<span class="chip red">alerta</span>' : pc ? '<span class="chip green">faixa habitual</span>' : ''}</td></tr>`); };
       add('Peso/idade', p.peso, cur.pesoIdade, m); add('Estatura/idade', p.altura, cur.estaturaIdade, m); if (m <= 36) add('PC/idade', p.pc, cur.perimetroCefalico, m);
       const imc = U.imc(p.peso, p.altura); if (imc) add('IMC/idade', imc.toFixed(1), cur.imcIdade, m);
       if (p.peso && p.altura && cur.pesoEstatura) add('Peso/estatura', p.peso, cur.pesoEstatura, Number(p.altura));
-      perc = `<div class="card"><h2>📈 Percentis (OMS, aproximado)</h2><div class="tablewrap"><table><tr><th>Índice</th><th>Valor</th><th>Percentil</th><th></th></tr>${rows.join('')}</table></div><small class="muted">Interpolação aproximada entre percentis das tabelas OMS 2006. Confirmar nas curvas oficiais da Caderneta da Criança.</small></div>`;
+      perc += `<details><summary>Percentis (OMS, aproximado)</summary><div class="body"><div class="tablewrap"><table><tr><th>Índice</th><th>Valor</th><th>Percentil</th><th></th></tr>${rows.join('')}</table></div><small class="muted">Interpolação aproximada entre percentis das tabelas OMS 2006. O escore-z acima usa as tabelas oficiais e é o parâmetro de decisão.</small></div></details>`;
     }
     const marcos = (C.marcos || []).filter(x => m != null && x.idadeMeses <= m + 0.01);
     const proximos = (C.marcos || []).filter(x => m != null && x.idadeMeses > m).slice(0, 6);
@@ -372,6 +456,7 @@ window.PED = window.PED || {};
       body = `${alertaLactente}<div class="card"><h2>4. Diagnósticos diferenciais a considerar</h2>
         <p class="muted">Hipóteses compatíveis com: <b>${esc(queixa.nome)}</b>${at.sintomas.length ? ' + ' + at.sintomas.map(s => { const x = (queixa.sintomasAssociados || []).find(y => y.id === s); return esc(x ? x.nome : s); }).join(', ') : ''}${tags.length ? ' · contexto: ' + tags.map(t => `<span class="chip green">${esc(t)}</span>`).join(' ') : ''}</p>
         <div class="alert blue"><strong>Apoio à decisão</strong>Lista ordenada por compatibilidade com sintomas e contexto. Não constitui diagnóstico. Selecione as hipóteses em consideração para orientar exames e protocolos.</div>
+        ${avisoNotificacaoHipoteses(at.hipoteses)}
         <div class="list">${dx.map(h => { const on = at.hipoteses.some(x => (x.doencaId || x.nome) === (h.doencaId || h.nome)); const d = h.doencaId ? (D().doencas || []).find(x => x.id === h.doencaId) : null; return `<div class="row" style="${on ? 'border-color:var(--primary);background:var(--primary-soft)' : ''}"><input type="checkbox" data-act="togHip" data-key="${esc(h.doencaId || h.nome)}" ${on ? 'checked' : ''} style="width:22px;height:22px"><div class="grow"><div class="title">${esc(h.nome)} ${h.reforcada ? '<span class="chip amber">reforçada pelo contexto</span>' : ''} ${d && d.amazonia ? '<span class="chip green">Amazônia</span>' : ''}</div>${h.notas.length ? `<div class="sub">${h.notas.map(esc).join(' · ')}</div>` : ''}</div>${d ? `<a class="btn sm ghost" href="#/doencas/${d.id}">protocolo</a>` : ''}</div>`; }).join('') || '<div class="empty">Sem hipóteses cadastradas para esta combinação.</div>'}</div>
         ${nav(true, true)}</div>`;
     } else if (at.etapa === 4) {
@@ -392,7 +477,7 @@ window.PED = window.PED || {};
         <h3>Itens já adicionados à prescrição</h3>${itensPrescricaoDraft()}
         ${nav(true, true, 'Ir para prescrição')}</div>`;
     } else {
-      body = `<div class="card"><h2>8. Prescrição e registro</h2>
+      body = `${avisoNotificacaoHipoteses(at.hipoteses)}<div class="card"><h2>8. Prescrição e registro</h2>
         ${p ? `<p>Paciente: <b>${esc(p.nome)}</b></p>` : '<div class="alert amber"><strong>Sem paciente</strong>Selecione ou cadastre um paciente para salvar o atendimento e emitir a prescrição.</div>'}
         <p>Itens na prescrição: <b>${(state.prescricaoDraft && state.prescricaoDraft.itens.length) || 0}</b></p>
         <div class="btnrow">${p ? `<button class="btn green" data-act="salvarAtendimento">💾 Salvar atendimento</button><button class="btn" data-act="irPrescricao">📄 Revisar e emitir prescrição</button><a class="btn secondary" href="#/evolucao/nova?pacienteId=${p.id}">📝 Evolução SOAP</a>` : `<a class="btn" href="#/pacientes/novo">➕ Cadastrar paciente</a><a class="btn secondary" href="#/pacientes">Selecionar paciente</a>`}<button class="btn ghost" data-act="reiniciarAt">Reiniciar fluxo</button></div>
@@ -407,6 +492,31 @@ window.PED = window.PED || {};
   }
 
   /** Painel de cálculo de dose de um medicamento (usado no fluxo e na tela do medicamento) */
+  /** Reúne os alertas de segurança de um medicamento/esquema para o paciente ativo. */
+  function alertasMedicamento(med, esquema, p, peso) {
+    if (!PED.seguranca) return [];
+    const idade = p ? U.idade(p.dataNascimento) : null;
+    const im = idade ? idade.totalMeses : null;
+    let a = [];
+    if (p && p.alergias) a = a.concat(PED.seguranca.checarAlergia(med, p.alergias));
+    if (esquema) a = a.concat(PED.seguranca.checarEsquema(esquema, im, peso));
+    a = a.concat(PED.seguranca.checarContraindicacoes(med, im));
+    if (p && p.medicamentosUso) {
+      const nb = U.normalize(med.nome).split(/[\s(]/)[0];
+      if (nb.length > 4 && U.normalize(p.medicamentosUso).includes(nb)) a.push({ nivel: 'atencao', texto: 'Este medicamento já consta em "medicamentos em uso" do cadastro. Conferir duplicidade e dose diária total.' });
+    }
+    return a;
+  }
+  const NIVEL = { bloqueio: { cls: 'red', ic: '⛔', t: 'Verificar antes de prescrever' }, atencao: { cls: 'amber', ic: '⚠️', t: 'Atenção' }, info: { cls: 'blue', ic: 'ℹ️', t: 'Observação' } };
+  function alertasHtml(alertas) {
+    if (!alertas || !alertas.length) return '';
+    const ordem = { bloqueio: 0, atencao: 1, info: 2 };
+    return alertas.slice().sort((x, y) => ordem[x.nivel] - ordem[y.nivel]).map(a => {
+      const n = NIVEL[a.nivel] || NIVEL.info;
+      return `<div class="alert ${n.cls}"><strong>${n.ic} ${n.t}</strong>${esc(a.texto)}</div>`;
+    }).join('');
+  }
+
   const TIPO_UN = { comprimido: 'comprimido', capsula: 'cápsula', injetavel: 'frasco-ampola', ampola: 'ampola', aerossol: 'jato', supositorio: 'supositório', sache: 'sachê', envelope: 'envelope', drageas: 'drágea', gotas: 'gota' };
   const unidadeAp = (ap) => ap ? (TIPO_UN[ap.tipo] || ap.tipo || 'unidade') : 'unidade';
   function painelDoseMed(med, peso, opts) {
@@ -439,13 +549,14 @@ window.PED = window.PED || {};
     } else if (!peso) res = '<div class="alert amber">Informe o peso para calcular.</div>';
     const idadeAlert = (d && d.faixaEtaria && idade) ? `<small class="muted">Faixa etária do esquema: ${esc(d.faixaEtaria)} · paciente: ${esc(idade.texto)}</small>` : '';
     const p = paciente();
-    const alergia = (p && p.alergias && U.normalize(p.alergias).includes(U.normalize(med.nome).slice(0, 6))) ? `<div class="alert red"><strong>⚠️ Alergia registrada</strong>${esc(p.alergias)}</div>` : '';
+    const alergia = alertasHtml(alertasMedicamento(med, d, p, peso));
     return `<div class="card" id="painelDose" data-med="${med.id}"><h2>💊 ${esc(med.nome)} <small class="muted">${esc(med.classe)}</small></h2>${alergia}
       <div class="fields"><div class="field full"><label>Esquema / indicação</label><select id="doseSel">${doses.map((x, i) => `<option value="${i}" ${i === sel ? 'selected' : ''}>${esc(x.indicacao)} – ${x.mgKgDose != null ? f(x.mgKgDose) + ' ' + (x.unidade || 'mg') + '/kg/dose' : x.mgKgDia != null ? f(x.mgKgDia) + ' ' + (x.unidade || 'mg') + '/kg/dia' : x.mlKgDose != null ? f(x.mlKgDose) + ' mL/kg' : x.doseFixa ? 'dose fixa/por faixa' : 'ver obs.'} ${esc(x.frequencia)} ${esc(x.via)}</option>`).join('')}</select></div>
       <div class="field full"><label>Apresentação</label><select id="apSel">${aps.map((a, i) => `<option value="${i}" ${i === apIdx ? 'selected' : ''}>${esc(a.descricao)}</option>`).join('')}</select></div></div>
+      ${d && (d.verificar || med.verificar) ? `<div class="alert amber"><strong>⚙️ Item sinalizado para conferência</strong>Os protocolos divergem neste ponto. ${seloRevisao('medicamento', med.id, d.verificar ? sel : null)} <a href="#/revisao">abrir revisão clínica</a></div>` : ''}
       ${d ? `<p><small class="muted">${esc(d.obs || '')}${d.doseMaxDose ? ' · Máx./dose: ' + f(d.doseMaxDose) + ' ' + esc(un) : ''}${d.doseMaxDia ? ' · Máx./dia: ' + f(d.doseMaxDia) + ' ' + esc(un) : ''}</small></p>${idadeAlert}` : ''}
       ${res}
-      <div class="btnrow"><button class="btn" data-act="addItemDraft" data-med="${med.id}" data-dose="${sel}" data-ap="${apIdx}">➕ Adicionar à prescrição</button><a class="btn ghost sm" href="#/medicamentos/${med.id}">ficha completa</a></div>${U.fontes(med)}</div>`;
+      <div class="btnrow"><button class="btn${alergia.includes('alert red') ? ' danger' : ''}" data-act="addItemDraft" data-med="${med.id}" data-dose="${sel}" data-ap="${apIdx}" data-bloqueio="${alergia.includes('alert red') ? '1' : ''}">➕ Adicionar à prescrição</button><a class="btn ghost sm" href="#/medicamentos/${med.id}">ficha completa</a></div>${U.fontes(med)}</div>`;
   }
   function montarItem(med, doseIdx, apIdx, peso) {
     const d = (med.doses || [])[doseIdx] || {}; const aps = (med.apresentacoes || []).filter(a => a.mg != null); const ap = aps[apIdx];
@@ -457,11 +568,11 @@ window.PED = window.PED || {};
     else if (d.doseFixa) { doseTxt = d.doseFixa; calc = d.faixasPeso ? 'Faixa de peso: ' + d.faixasPeso : ''; }
     else doseTxt = d.obs || 'definir';
     const n = d.vezesDia || 1; const horarios = n === 1 ? '08h' : n === 2 ? '08h – 20h' : n === 3 ? '06h – 14h – 22h' : n === 4 ? '06h – 12h – 18h – 24h' : n === 6 ? '4/4 h' : `${n}x/dia`;
-    return { medicamento: med.nome, apresentacao: ap ? ap.descricao : '', dose: doseTxt, via: d.via || '', intervalo: d.frequencia || '', horarios, duracao: d.duracao || '', orientacoes: d.obs || '', calculo: calc, fonte: (med.fontes || []).map(x => x.nome).join('; ') };
+    return { medId: med.id, medicamento: med.nome, apresentacao: ap ? ap.descricao : '', dose: doseTxt, via: d.via || '', intervalo: d.frequencia || '', horarios, duracao: d.duracao || '', orientacoes: d.obs || '', calculo: calc, fonte: (med.fontes || []).map(x => x.nome).join('; ') };
   }
 
   /* ---- Doenças ---- */
-  const CATS = { amazonia: 'Amazônia', respiratoria: 'Respiratórias', gastrointestinal: 'Gastrointestinais', infecciosa: 'Infecciosas', dermatologica: 'Pele', nutricional: 'Nutricionais', neurologica: 'Neurológicas', urinaria: 'Urinárias', toxicologica: 'Toxicológicas' };
+  const CATS = { amazonia: 'Amazônia', neonatal: 'Neonatologia', respiratoria: 'Respiratórias', gastrointestinal: 'Gastrointestinais', infecciosa: 'Infecciosas', dermatologica: 'Pele', nutricional: 'Nutricionais', neurologica: 'Neurológicas', urinaria: 'Urinárias', toxicologica: 'Toxicológicas' };
   route('/doencas', (p, q) => {
     const ds = (D().doencas || []).slice().sort((a, b) => a.nome.localeCompare(b.nome)); const cats = {};
     ds.forEach(d => (cats[d.categoria] = cats[d.categoria] || []).push(d));
@@ -472,6 +583,7 @@ window.PED = window.PED || {};
     const sec = (t, html) => `<details><summary>${t}</summary><div class="body">${html}</div></details>`;
     const peso = pesoAtivo();
     return `<div class="section-title"><h1>${esc(d.nome)}</h1><span>${d.amazonia ? '<span class="chip green">Amazônia</span>' : ''}${d.cid10 ? '<span class="chip gray">CID-10 ' + esc(d.cid10) + '</span>' : ''}</span></div>
+      ${tarjaNotificacao(d.id)}
       <div class="card"><p>${esc(d.definicao)}</p>${(d.sinaisAlarme || []).length ? `<div class="alert red"><strong>Sinais de alarme</strong>${U.list(d.sinaisAlarme)}</div>` : ''}</div>
       ${sec('Epidemiologia (Amazonas)', `<p>${esc(d.epidemiologia)}</p>`)}
       ${sec('Agente, transmissão e incubação', `<dl class="kv"><dt>Agente</dt><dd>${esc(d.agente)}</dd><dt>Transmissão</dt><dd>${esc(d.transmissao)}</dd><dt>Incubação</dt><dd>${esc(d.incubacao)}</dd></dl>`)}
@@ -508,7 +620,7 @@ window.PED = window.PED || {};
     ms.forEach(m => { const k = String(m.classe || 'Outros').split(' –')[0].split(' (')[0]; (cls[k] = cls[k] || []).push(m); });
     return `<h1>Medicamentos pediátricos</h1>${pesoBox('Informe o peso para calcular doses ao abrir um medicamento.')}
       <div class="field"><input id="filtroMed" placeholder="Filtrar por nome ou classe…"></div>
-      <div id="listaMed">${Object.keys(cls).sort().map(c => `<div class="section-title"><h2>${esc(c)}</h2></div><div class="list">${cls[c].map(m => `<a class="row medrow" data-n="${esc(U.normalize(m.nome + ' ' + m.classe))}" href="#/medicamentos/${m.id}"><span class="ic">💊</span><div class="grow"><div class="title">${esc(m.nome)} ${m.verificar ? '<span class="chip amber">verificar</span>' : ''}</div><div class="sub">${esc(m.classe)} · ${(m.doses || []).length} esquema(s)</div></div></a>`).join('')}</div>`).join('')}</div>${disclaimer}`;
+      <div id="listaMed">${Object.keys(cls).sort().map(c => `<div class="section-title"><h2>${esc(c)}</h2></div><div class="list">${cls[c].map(m => `<a class="row medrow" data-n="${esc(U.normalize(m.nome + ' ' + m.classe))}" href="#/medicamentos/${m.id}"><span class="ic">💊</span><div class="grow"><div class="title">${esc(m.nome)} ${(m.verificar || (m.doses || []).some(x => x.verificar)) ? seloRevisao('medicamento', m.id, m.verificar ? null : (m.doses || []).findIndex(x => x.verificar)) : ''}</div><div class="sub">${esc(m.classe)} · ${(m.doses || []).length} esquema(s)</div></div></a>`).join('')}</div>`).join('')}</div>${disclaimer}`;
   });
   route('/medicamentos/:id', ({ id }) => {
     const m = (D().medicamentos || []).find(x => x.id === id); if (!m) return '<div class="empty">Não encontrado.</div>';
@@ -545,14 +657,14 @@ window.PED = window.PED || {};
   /* ---- Emergências ---- */
   route('/emergencias', () => {
     const es = D().emergencias || [];
-    return `<div class="card" style="background:var(--red-soft);border-color:#f3c1bd"><h1>🚨 Emergências pediátricas</h1><p>Informe o peso: as doses das drogas de emergência são calculadas automaticamente. Confirmar sempre com a equipe e o protocolo institucional.</p></div>${pesoBox()}
+    return `<div class="card" style="background:var(--red-soft);border-color:#f3c1bd"><h1>🚨 Emergências pediátricas</h1><p>Informe o peso: as doses das drogas de emergência são calculadas automaticamente. Confirmar sempre com a equipe e o protocolo institucional.</p></div>${pesoBoxEmergencia()}
       <div class="grid">${es.map(e => `<a class="tile red" href="#/emergencias/${e.id}"><span class="ic">${e.icone || '🚨'}</span>${esc(e.nome)}</a>`).join('')}</div>
-      <div class="btnrow"><a class="btn secondary" href="#/calculadoras/tubo">🩺 Tubo e materiais por idade</a><a class="btn secondary" href="#/calculadoras/sinaisvitais">❤️ Sinais vitais por idade</a></div>${disclaimer}`;
+      <div class="btnrow"><a class="btn secondary" href="#/neonatal">👶 Recém-nascido</a><a class="btn secondary" href="#/calculadoras/tubo">🩺 Tubo e materiais por idade</a><a class="btn secondary" href="#/calculadoras/sinaisvitais">❤️ Sinais vitais por idade</a></div>${disclaimer}`;
   });
   route('/emergencias/:id', ({ id }) => {
     const e = (D().emergencias || []).find(x => x.id === id); if (!e) return '<div class="empty">Não encontrada.</div>';
     const peso = pesoAtivo(); const idade = idadePaciente();
-    return `<div class="section-title"><h1>${e.icone || '🚨'} ${esc(e.nome)}</h1><span class="chip red">${esc(e.cor || 'emergência')}</span></div>${pesoBox()}
+    return `<div class="section-title"><h1>${e.icone || '🚨'} ${esc(e.nome)}</h1><span class="chip red">${esc(e.cor || 'emergência')}</span></div>${pesoBoxEmergencia()}
       <div class="card"><h2>Reconhecimento</h2>${U.list(e.reconhecimento)}</div>
       <div class="card"><h2>Passos</h2><ol>${(e.passos || []).map(x => `<li>${esc(x)}</li>`).join('')}</ol></div>
       <div class="card"><h2>Doses ${peso ? `<span class="chip green">${f(peso)} kg</span>` : '<span class="chip red">informe o peso</span>'}</h2><div class="tablewrap"><table class="dosetable"><tr><th>Droga</th><th>Dose calculada</th><th>Via / repetição</th></tr>${(e.doses || []).map(d => doseRow(peso, d)).join('')}</table></div>${idade && idade.totalMeses < 1 ? '<div class="alert amber">Recém-nascido: usar protocolos neonatais específicos (reanimação neonatal SBP).</div>' : ''}</div>
@@ -598,6 +710,15 @@ window.PED = window.PED || {};
   });
 
   /* ---- Prescrição ---- */
+  /** Conferência automática da prescrição: duplicidade, alergia, faixa etária, interação, duas vias. */
+  function conferenciaHtml(pr, p) {
+    if (!PED.seguranca || !(pr.itens || []).length) return '';
+    const al = PED.seguranca.conferirPrescricao(pr.itens, p || (pr.pacienteId ? S.byId('pacientes', pr.pacienteId) : null));
+    const bloq = al.filter(a => a.nivel === 'bloqueio').length, aten = al.filter(a => a.nivel === 'atencao').length;
+    const resumo = bloq ? `<span class="chip red">${bloq} alerta(s) a resolver</span>` : aten ? `<span class="chip amber">${aten} ponto(s) de atenção</span>` : '<span class="chip green">Sem alertas automáticos</span>';
+    return `<div class="card compact" style="background:var(--bg-soft)"><h3 style="margin:0 0 .3rem">🛡️ Conferência automática ${resumo}</h3>
+      ${al.length ? alertasHtml(al) : '<p class="muted" style="margin:0"><small>Nenhuma duplicidade, alergia, restrição de idade ou interação detectada nas bases. A conferência é apoio e não substitui a revisão da médica.</small></p>'}</div>`;
+  }
   function prescricaoForm(pr) {
     const p = pr.pacienteId ? S.byId('pacientes', pr.pacienteId) : null; const idade = p ? U.idade(p.dataNascimento) : null;
     const item = (i, idx) => `<div class="card compact prescItem" data-i="${idx}"><div class="fields">
@@ -612,6 +733,7 @@ window.PED = window.PED || {};
       <div class="btnrow"><button type="button" class="btn secondary sm" data-act="addItemVazio">➕ Item em branco</button><a class="btn secondary sm" href="#/medicamentos">💊 Adicionar pelo banco de medicamentos</a></div>
       <div class="field"><label>Orientações gerais</label><textarea name="orientacoesGerais">${esc(pr.orientacoesGerais || '')}</textarea></div>
       <div class="field"><label>Retorno</label><input name="retorno" value="${esc(pr.retorno || '')}" placeholder="ex.: reavaliar em 48 h ou antes se sinais de alarme"></div>
+      ${conferenciaHtml(pr, p)}
       <div class="check"><input type="checkbox" name="confirmada" ${pr.confirmada ? 'checked' : ''}><div><b>Revisei e confirmo esta prescrição</b><br><small class="muted">A emissão exige revisão e confirmação pela médica responsável. Doses calculadas são sugestões e devem ser conferidas.</small></div></div>
       <div class="btnrow"><button class="btn" type="submit">💾 Salvar</button>${pr.id ? `<a class="btn secondary" href="#/prescricao/${pr.id}?print=1">🖨️ Visualizar / imprimir</a>` : ''}</div></form>`;
   }
@@ -626,10 +748,13 @@ window.PED = window.PED || {};
     if (q.print) {
       const p = S.byId('pacientes', pr.pacienteId); const idade = p ? U.idade(p.dataNascimento) : null;
       if (!pr.confirmada) return `<div class="alert amber"><strong>Prescrição não confirmada</strong>Revise e confirme antes de emitir.</div><a class="btn" href="#/prescricao/${pr.id}">Voltar à edição</a>`;
-      return `<div class="prescricao"><h3>Prescrição pediátrica</h3><p class="muted" style="margin-top:-.3rem"><small>${esc(profissionalLinha())}</small></p><p><b>Paciente:</b> ${esc(p ? p.nome : '—')}${idade ? ' · ' + esc(idade.texto) : ''}${p && p.peso ? ' · ' + f(p.peso) + ' kg' : ''}<br><b>Data:</b> ${U.fmtDateTime(pr.emitidaEm || pr.atualizadoEm)}</p><hr>
+      const duasVias = PED.seguranca && PED.seguranca.temAntimicrobiano(pr.itens);
+      const via = (rotulo) => `<div class="prescricao${rotulo ? ' via' : ''}">${rotulo ? `<div class="viaTag">${esc(rotulo)}</div>` : ''}<h3>${duasVias ? 'Receita de Controle Especial' : 'Prescrição pediátrica'}</h3><p class="muted" style="margin-top:-.3rem"><small>${esc(profissionalLinha())}</small></p><p><b>Paciente:</b> ${esc(p ? p.nome : '—')}${idade ? ' · ' + esc(idade.texto) : ''}${p && p.peso ? ' · ' + f(p.peso) + ' kg' : ''}${p && p.responsavel ? '<br><b>Responsável:</b> ' + esc(p.responsavel) : ''}${p && p.municipio ? '<br><b>Município:</b> ' + esc(p.municipio) : ''}<br><b>Data:</b> ${U.fmtDateTime(pr.emitidaEm || pr.atualizadoEm)}</p><hr>
         ${(pr.itens || []).map((i, n) => `<div class="item"><b>${n + 1}. ${esc(i.medicamento)}</b>${i.apresentacao ? ' – ' + esc(i.apresentacao) : ''}<br>${esc(i.dose)} · ${esc(i.via)} · ${esc(i.intervalo)}${i.horarios ? ' (' + esc(i.horarios) + ')' : ''} · ${esc(i.duracao)}${i.orientacoes ? '<br><i>' + esc(i.orientacoes) + '</i>' : ''}</div>`).join('')}
-        ${pr.orientacoesGerais ? `<p><b>Orientações:</b> ${esc(pr.orientacoesGerais)}</p>` : ''}${pr.retorno ? `<p><b>Retorno:</b> ${esc(pr.retorno)}</p>` : ''}<br><p>_____________________________________<br>${esc([profissional().tratamento, profissional().nome].filter(Boolean).join(' '))}<br>${esc([profissional().especialidade, profissional().crm, profissional().rqe].filter(Boolean).join(' · '))}</p></div>
-        <div class="btnrow no-print"><button class="btn" onclick="window.print()">🖨️ Imprimir</button><a class="btn ghost" href="#/prescricao/${pr.id}">Editar</a></div>`;
+        ${pr.orientacoesGerais ? `<p><b>Orientações:</b> ${esc(pr.orientacoesGerais)}</p>` : ''}${pr.retorno ? `<p><b>Retorno:</b> ${esc(pr.retorno)}</p>` : ''}<br><p>_____________________________________<br>${esc([profissional().tratamento, profissional().nome].filter(Boolean).join(' '))}<br>${esc([profissional().especialidade, profissional().crm, profissional().rqe].filter(Boolean).join(' · '))}</p></div>`;
+      return (duasVias ? via('1ª via – paciente') + via('2ª via – retida na farmácia') : via('')) +
+        (duasVias ? `<div class="alert blue no-print"><strong>Antimicrobiano na prescrição</strong>Impressa em duas vias conforme a RDC 20/2011: a segunda via fica retida na farmácia.</div>` : '') +
+        `<div class="btnrow no-print"><button class="btn" onclick="window.print()">🖨️ Imprimir</button><a class="btn ghost" href="#/prescricao/${pr.id}">Editar</a></div>`;
     }
     return `<h1>Prescrição</h1>${prescricaoForm(pr)}${disclaimer}`;
   });
@@ -654,6 +779,125 @@ window.PED = window.PED || {};
   });
   route('/evolucao/:id', ({ id }) => { const e = S.byId('evolucoes', id); if (!e) return '<div class="empty">Não encontrada.</div>'; return `<h1>📝 Evolução</h1>${soapForm(e)}${disclaimer}`; });
 
+  /* ---- Neonatologia ---- */
+  route('/neonatal', () => {
+    const N = D().neonatal; if (!N) return '<div class="empty">M\u00f3dulo indispon\u00edvel.</div>';
+    const F = N.fototerapia, R = N.reanimacao, SP = N.sepseNeonatal;
+    const prot = (N.protocolos || []).map(x => `<a class="tile" href="#/doencas/${x.id}"><span class="ic">\u{1F476}</span>${esc(x.nome)}</a>`).join('');
+    return `<h1>\u{1F476} Recém-nascido</h1>
+      <p class="muted">Protocolos, limiares de fototerapia, reanima\u00e7\u00e3o em sala de parto e sepse neonatal.</p>
+      <div class="grid">${prot}<a class="tile" href="#/calculadoras/fototerapia"><span class="ic">\u{1F4A1}</span>Calculadora de fototerapia</a><a class="tile" href="#/calculadoras/tuboneonatal"><span class="ic">\u{1FA7A}</span>Tubo e satura\u00e7\u00e3o</a></div>
+
+      <div class="card"><h2>\u{1F4A1} Ictericia: limiares por hora de vida</h2>
+        ${F.verificar || F.aproximado ? `<div class="alert amber"><strong>\u2699\uFE0F Conferir no gr\u00e1fico oficial</strong>${esc(F.nota || '')} ${seloRevisao('neonatal', 'fototerapia', null)}</div>` : ''}
+        ${(F.observacoes || []).length ? U.list(F.observacoes) : ''}
+        <h3>Fototerapia (mg/dL)</h3><div class="tablewrap"><table><tr><th>Hora de vida</th>${F.grupos.map(g => `<th>${esc(g.rotulo)}</th>`).join('')}</tr>
+        ${F.limiaresFototerapia.map(r => `<tr><td>${r.horas} h</td>${F.grupos.map(g => `<td>${f(r[g.id], 1)}</td>`).join('')}</tr>`).join('')}</table></div>
+        <h3>Exsanguineotransfus\u00e3o (mg/dL)</h3><div class="tablewrap"><table><tr><th>Hora de vida</th>${F.grupos.map(g => `<th>${esc(g.rotulo)}</th>`).join('')}</tr>
+        ${F.limiaresExsanguineo.map(r => `<tr><td>${r.horas} h</td>${F.grupos.map(g => `<td>${f(r[g.id], 1)}</td>`).join('')}</tr>`).join('')}</table></div>
+        <h3>Fatores de risco</h3>${U.list(F.fatoresRisco)}
+        <h3>Zonas de Kramer</h3><div class="tablewrap"><table><tr><th>Zona</th><th>\u00c1rea</th><th>Bilirrubina aproximada</th></tr>${(F.zonasKramer || []).map(z => `<tr><td>${z.zona}</td><td>${esc(z.area)}</td><td>${esc(z.bilirrubinaAprox)}</td></tr>`).join('')}</table></div>
+        <div class="alert red"><strong>Sinais de alarme</strong>${U.list(F.sinaisAlarme)}</div>
+        <div class="btnrow"><a class="btn" href="#/calculadoras/fototerapia">Calcular para um RN</a></div>${U.fontes(F)}</div>
+
+      <div class="card"><h2>\u{1FAC1} Reanima\u00e7\u00e3o em sala de parto</h2><ol>${(R.passos || []).map(x => `<li>${esc(x)}</li>`).join('')}</ol>
+        <h3>Apgar</h3><div class="tablewrap"><table><tr><th>Item</th><th>0</th><th>1</th><th>2</th></tr>${(R.apgar || []).map(a => `<tr><td>${esc(a.item)}</td><td>${esc(a.p0)}</td><td>${esc(a.p1)}</td><td>${esc(a.p2)}</td></tr>`).join('')}</table></div>
+        <h3>Tubo por peso</h3><div class="tablewrap"><table><tr><th>Peso</th><th>IG</th><th>Tubo</th><th>Profundidade</th></tr>${(R.tamanhoTubo || []).map(x => `<tr><td>${f(x.pesoMin, 1)} a ${x.pesoMax > 50 ? '+' : f(x.pesoMax, 1)} kg</td><td>${esc(x.igSemanas)} sem</td><td>${f(x.tubo, 1)} mm</td><td>${esc(x.profundidadeCm)} cm</td></tr>`).join('')}</table></div>
+        <h3>Metas de satura\u00e7\u00e3o</h3>${U.list((R.metasSaturacao || []).map(m => (m.minutos != null ? m.minutos + ' min de vida' : m.rotulo) + ': ' + (m.alvo || m.sato2)))}
+        <h3>Materiais</h3>${U.list(R.materiais)}
+        ${(R.contextoAmazonia || []).length ? `<h3>Contexto amaz\u00f4nico</h3>${U.list(R.contextoAmazonia)}` : ''}${U.fontes(R)}</div>
+
+      <div class="card"><h2>\u{1F9EB} Sepse neonatal</h2>
+        <h3>Fatores de risco \u2013 precoce (&lt; 72 h)</h3>${U.list(SP.fatoresRiscoPrecoce)}
+        <h3>Fatores de risco \u2013 tardia</h3>${U.list(SP.fatoresRiscoTardia)}
+        <h3>Sinais cl\u00ednicos</h3>${U.list(SP.sinaisClinicos)}
+        <h3>Exames iniciais</h3>${U.list(SP.examesIniciais)}
+        <h3>Antibioticoterapia emp\u00edrica</h3><div class="tablewrap"><table><tr><th>Situa\u00e7\u00e3o</th><th>Esquema</th><th></th></tr>${(SP.antibioticoterapiaEmpirica || []).map(a => `<tr><td>${esc(a.situacao)}</td><td>${esc(a.esquema)}${a.obs ? '<br><small class="muted">' + esc(a.obs) + '</small>' : ''}</td><td>${(a.medIds || []).map(id => `<a class="chip" href="#/medicamentos/${esc(id)}">${esc(nomeMed(id))}</a>`).join(' ')}</td></tr>`).join('')}</table></div>${U.fontes(SP)}</div>
+      ${disclaimer}`;
+  });
+
+  /* ---- Notificação compulsória ---- */
+  route('/notificacao', () => {
+    const N = D().notificacao; if (!N) return '<div class="empty">M\u00f3dulo indispon\u00edvel.</div>';
+    const im = N.doencas.filter(x => x.tipo === 'imediata'), sem = N.doencas.filter(x => x.tipo !== 'imediata');
+    const linha = (n) => `<a class="row" href="#/notificacao/${esc(n.doencaId || 'x-' + U.normalize(n.nome).replace(/\s+/g, '_'))}"><span class="ic">${n.tipo === 'imediata' ? '\u{1F6A8}' : '\u{1F4C5}'}</span><div class="grow"><div class="title">${esc(n.nome)}</div><div class="sub">${esc(n.sistema)} \u00b7 ${esc(n.ficha)}</div></div></a>`;
+    return `<h1>\u{1F4E2} Notifica\u00e7\u00e3o compuls\u00f3ria</h1>
+      <div class="alert blue"><strong>Regra geral</strong>${esc(N.aviso)}</div>
+      <div class="alert red"><strong>Notifica\u00e7\u00e3o imediata</strong>${esc(N.avisoImediata)}</div>
+      ${N.avisoSoros ? `<div class="alert amber"><strong>Acidentes por animais pe\u00e7onhentos</strong>${esc(N.avisoSoros)}</div>` : ''}
+      ${N.avisoIndigena ? `<div class="alert green"><strong>Popula\u00e7\u00e3o ind\u00edgena</strong>${esc(N.avisoIndigena)}</div>` : ''}
+      <div class="section-title"><h2>Imediatas (24 h)</h2><span class="chip red">${im.length}</span></div><div class="list">${im.map(linha).join('')}</div>
+      <div class="section-title"><h2>Semanais</h2><span class="chip amber">${sem.length}</span></div><div class="list">${sem.map(linha).join('')}</div>
+      ${U.fontes(N)}${disclaimer}`;
+  });
+  route('/notificacao/:id', ({ id }) => {
+    const N = D().notificacao; if (!N) return '<div class="empty">M\u00f3dulo indispon\u00edvel.</div>';
+    const n = N.doencas.find(x => x.doencaId === id) || N.doencas.find(x => 'x-' + U.normalize(x.nome).replace(/\s+/g, '_') === id);
+    if (!n) return '<div class="empty">Agravo n\u00e3o encontrado.</div>';
+    const p = paciente(); const idade = idadePaciente();
+    const at = state.atendimento;
+    const valor = {
+      agravo: n.nome,
+      dataNotificacao: U.fmtDate(U.today()),
+      paciente: p ? p.nome : '', dataNascimento: p ? U.fmtDate(p.dataNascimento) : '', idade: idade ? idade.texto : '',
+      sexo: p ? (p.sexo === 'F' ? 'Feminino' : 'Masculino') : '',
+      municipioResidencia: p ? (p.municipio || '') : '', zona: p ? (p.zona || '') : '',
+      comorbidades: p ? (p.comorbidades || '') : '', situacaoVacinal: p ? (p.historicoVacinal || '') : '',
+      telefoneContato: p ? (p.responsavel || '') : '',
+      sinaisSintomas: at ? [at.queixaNome].concat(at.sintomas || []).join(', ') : '',
+      localProvavelInfeccao: at && at.contexto ? (at.contexto.municipio || (p && p.municipio) || '') : (p ? p.municipio || '' : ''),
+      viagemRecente: at && at.contexto && at.contexto.viagem_recente ? 'Sim' : '',
+      examesRealizados: at ? (at.examesSelecionados || []).map(nomeExame).join(', ') : '',
+      responsavelNotificacao: profissionalLinha()
+    };
+    const im = n.tipo === 'imediata';
+    return `<div class="section-title"><h1>\u{1F4E2} ${esc(n.nome)}</h1><span class="chip ${im ? 'red' : 'amber'}">${im ? 'imediata' : 'semanal'}</span></div>
+      <div class="alert ${im ? 'red' : 'amber'}"><strong>${im ? 'Comunicar em at\u00e9 24 horas' : 'Notifica\u00e7\u00e3o semanal'}</strong>${esc(n.prazo)}<br><small>${esc(im ? N.avisoImediata : N.aviso)}</small></div>
+      <div class="card"><dl class="kv">
+        <dt>Quando notificar</dt><dd>${esc(n.criterio)}</dd>
+        <dt>Sistema</dt><dd>${esc(n.sistema)}</dd>
+        <dt>Ficha</dt><dd>${esc(n.ficha)}</dd>
+        <dt>Enviar a</dt><dd>${esc((n.instancia || []).join('; '))}</dd>
+        ${n.surto ? `<dt>Surto</dt><dd>${esc(n.surto)}</dd>` : ''}
+        ${n.observacao ? `<dt>Observa\u00e7\u00e3o</dt><dd>${esc(n.observacao)}</dd>` : ''}
+      </dl>${n.verificar ? '<div class="alert amber"><strong>Confirmar classifica\u00e7\u00e3o</strong>Conferir o prazo vigente na Portaria GM/MS e com a vigil\u00e2ncia local antes de usar como refer\u00eancia.</div>' : ''}</div>
+      <div class="card"><h2>Dados para a ficha</h2><p class="muted">Preenchidos com o paciente e o atendimento ativos. Confira e complete antes de transcrever para o sistema oficial.</p>
+        <div class="tablewrap"><table><tr><th>Campo</th><th>Valor</th></tr>
+        ${N.camposFicha.map(c => `<tr><td>${esc(c.rotulo)}</td><td>${esc(valor[c.id] || '\u2014')}</td></tr>`).join('')}</table></div>
+        ${(n.dadosNecessarios || []).length ? `<h3>Espec\u00edfico deste agravo</h3>${U.list(n.dadosNecessarios)}` : ''}
+        <div class="btnrow"><button class="btn" data-act="copiarFicha" data-id="${esc(n.doencaId || '')}">\u{1F4CB} Copiar dados</button><button class="btn secondary" onclick="window.print()">\u{1F5A8}\uFE0F Imprimir</button>${n.doencaId ? `<a class="btn ghost" href="#/doencas/${esc(n.doencaId)}">protocolo</a>` : ''}</div></div>
+      ${U.fontes(N)}${disclaimer}`;
+  });
+
+  /* ---- Revisão clínica ---- */
+  route('/revisao', (params, q) => {
+    const itens = revisao.pendencias();
+    const feitos = itens.filter(x => revisao.get(x.tipo, x.id, x.sub));
+    const pend = itens.filter(x => !revisao.get(x.tipo, x.id, x.sub));
+    const mostrar = q.ver === 'todos' ? itens : pend;
+    const linha = (x) => {
+      const r = revisao.get(x.tipo, x.id, x.sub);
+      const ch = revisao.chave(x.tipo, x.id, x.sub);
+      return `<div class="card compact">
+        <div style="display:flex;gap:.5rem;align-items:flex-start;flex-wrap:wrap">
+          <div style="flex:1;min-width:200px"><strong>${esc(x.titulo)}</strong> ${seloRevisao(x.tipo, x.id, x.sub)}<br><small class="muted">${esc(x.contexto || '')}</small></div>
+          <a class="btn sm ghost" href="${x.href}">abrir</a>
+        </div>
+        <p style="margin:.4rem 0 .2rem"><small>${esc(x.texto)}</small></p>
+        <small class="muted">Fontes: ${esc((x.fontes || []).map(ff => ff.nome + (ff.ano ? ' (' + ff.ano + ')' : '')).join('; ') || '—')}</small>
+        ${r ? `<div class="btnrow" style="margin:.4rem 0 0"><small class="muted" style="flex:1">Conferido por ${esc(r.por)} em ${U.fmtDateTime(r.em)}${r.nota ? ' · ' + esc(r.nota) : ''}</small><button class="btn sm ghost" data-act="desfazerRevisao" data-k="${esc(ch)}">desfazer</button></div>`
+            : `<div class="btnrow" style="margin:.4rem 0 0"><input class="notaRev" data-k="${esc(ch)}" placeholder="observação da conferência (opcional)" style="flex:1;min-width:160px"><button class="btn sm green" data-act="marcarRevisao" data-k="${esc(ch)}">✓ Conferi este item</button></div>`}
+      </div>`;
+    };
+    return `<h1>⚙️ Revisão clínica</h1>
+      <div class="alert blue"><strong>Para que serve esta tela</strong>Os itens abaixo são pontos em que os protocolos divergem entre si ou mudam com frequência. O sistema não decide por eles: cabe à médica conferir na fonte oficial e registrar aqui a conferência, com data e responsável.</div>
+      <div class="card compact"><strong>${feitos.length} de ${itens.length} conferidos</strong>
+        <div style="background:var(--line);border-radius:999px;height:8px;margin:.4rem 0"><div style="background:var(--green);height:8px;border-radius:999px;width:${itens.length ? Math.round(100 * feitos.length / itens.length) : 0}%"></div></div>
+        <div class="btnrow" style="margin:0"><a class="btn sm ${q.ver === 'todos' ? 'ghost' : ''}" href="#/revisao">pendentes (${pend.length})</a><a class="btn sm ${q.ver === 'todos' ? '' : 'ghost'}" href="#/revisao?ver=todos">todos (${itens.length})</a></div></div>
+      ${mostrar.length ? mostrar.map(linha).join('') : '<div class="empty">Nenhum item pendente de conferência.</div>'}
+      ${disclaimer}`;
+  });
+
   /* ---- Configurações / dados ---- */
   route('/config', () => `<h1>⚙️ Dados e configurações</h1>
     <div class="card"><h2>Armazenamento local</h2><p class="muted">Os dados ficam apenas neste navegador (localStorage). Exporte regularmente. Não inclua dados sensíveis em dispositivos compartilhados.</p>
@@ -663,6 +907,9 @@ window.PED = window.PED || {};
       <form id="formProf"><div class="fields"><div class="field"><label>Tratamento</label><input name="tratamento" value="${esc(profissional().tratamento || '')}"></div><div class="field full"><label>Nome</label><input name="nome" value="${esc(profissional().nome || '')}"></div><div class="field"><label>Especialidade</label><input name="especialidade" value="${esc(profissional().especialidade || '')}"></div><div class="field"><label>CRM</label><input name="crm" value="${esc(profissional().crm || '')}"></div><div class="field"><label>RQE</label><input name="rqe" value="${esc(profissional().rqe || '')}"></div></div><div class="btnrow"><button class="btn" type="submit">💾 Salvar</button></div></form></div>
     <div class="card"><h2>Bases clínicas carregadas</h2><dl class="kv"><dt>Doenças</dt><dd>${(D().doencas || []).length}</dd><dt>Medicamentos</dt><dd>${(D().medicamentos || []).length}</dd><dt>Queixas</dt><dd>${(D().queixas || []).length}</dd><dt>Calculadoras</dt><dd>${PED.calc.calculadoras.length}</dd><dt>Emergências</dt><dd>${(D().emergencias || []).length}</dd><dt>Exames</dt><dd>${(D().exames || []).length}</dd><dt>Vacinas</dt><dd>${(D().vacinas || []).length}</dd></dl>
       <p class="muted"><small>Cada item exibe suas fontes (MS, SBP, OMS/OPAS, PALS, bulas) e a data da última atualização. O sistema não gera diagnóstico automático e não substitui a decisão médica.</small></p></div>
+    <div class="card"><h2>⚙️ Revisão clínica</h2><p class="muted">Itens das bases que pedem conferência da médica antes do uso assistencial.</p>
+      <p><strong>${revisao.pendencias().filter(x => revisao.get(x.tipo, x.id, x.sub)).length} de ${revisao.pendencias().length}</strong> conferidos.</p>
+      <div class="btnrow"><a class="btn" href="#/revisao">Abrir revisão clínica</a></div></div>
     <div class="card"><h2>Sobre</h2><p>Mucurinha – protótipo MVP de apoio à decisão clínica pediátrica no Amazonas. Versão 0.1.0.</p></div>`);
 
   /* ---------------- Eventos ---------------- */
@@ -713,6 +960,11 @@ window.PED = window.PED || {};
       const prev = fpr.dataset.id ? S.byId('prescricoes', fpr.dataset.id) : null;
       const pid = (prev && prev.pacienteId) || d.pacienteId || (state.prescricaoDraft && state.prescricaoDraft.pacienteId) || state.pacienteId;
       if (!pid) { U.toast('Selecione o paciente'); return; }
+      if (d.confirmada && PED.seguranca) {
+        const alertas = PED.seguranca.conferirPrescricao(itens, S.byId('pacientes', pid));
+        const bloq = alertas.filter(a => a.nivel === 'bloqueio');
+        if (bloq.length && !confirm('A conferência automática encontrou ' + bloq.length + ' alerta(s) que pedem verificação:\n\n' + bloq.map(a => '• ' + a.texto).join('\n\n') + '\n\nEmitir a prescrição assim mesmo?')) return;
+      }
       const obj = Object.assign({}, prev || {}, { pacienteId: pid, itens, orientacoesGerais: d.orientacoesGerais, retorno: d.retorno, confirmada: !!d.confirmada, atendimentoId: (state.atendimento && state.atendimento.id) || (prev && prev.atendimentoId) || null });
       if (obj.confirmada && !obj.emitidaEm) { obj.emitidaEm = new Date().toISOString(); obj.profissional = profissionalLinha(); }
       if (!fpr.dataset.id) { delete obj.id; }
@@ -731,6 +983,7 @@ window.PED = window.PED || {};
     const el = e.target.closest('[data-act]'); if (!el) return; const act = el.dataset.act; const at = state.atendimento;
     const acts = {
       setPesoRapido() { const v = $('#pesoRapido').value; S.pref('pesoRapido', v ? Number(v) : null); render(); },
+      usarPesoEstimado() { S.pref('pesoRapido', Number(el.dataset.v)); U.toast('Peso estimado por idade: confirmar na balança assim que possível'); render(); },
       trocarPaciente() { go('/pacientes'); },
       limparPaciente() { setPaciente(null); render(); },
       ativarPaciente() { setPaciente(el.dataset.id); U.toast('Paciente selecionado'); render(); },
@@ -740,7 +993,9 @@ window.PED = window.PED || {};
       togSintoma() { const id = el.dataset.id; const i = at.sintomas.indexOf(id); if (i >= 0) at.sintomas.splice(i, 1); else at.sintomas.push(id); el.classList.toggle('on'); },
       togGrav() { const id = el.dataset.id; const i = at.gravidade.indexOf(id); if (i >= 0) at.gravidade.splice(i, 1); else at.gravidade.push(id); render(); },
       calcMed() { const med = (D().medicamentos || []).find(x => x.id === el.dataset.id); $('#calcMedBox').innerHTML = painelDoseMed(med, pesoAtivo()); bindMain(); $('#calcMedBox').scrollIntoView({ behavior: 'smooth' }); },
-      addItemDraft() { const med = (D().medicamentos || []).find(x => x.id === el.dataset.med); const item = montarItem(med, Number(el.dataset.dose), Number(el.dataset.ap), pesoAtivo()); state.prescricaoDraft = state.prescricaoDraft || { pacienteId: state.pacienteId, itens: [] }; state.prescricaoDraft.itens.push(item); U.toast('Item adicionado à prescrição'); if (at && location.hash.includes('/queixas/')) render(); },
+      addItemDraft() { const med = (D().medicamentos || []).find(x => x.id === el.dataset.med);
+        if (el.dataset.bloqueio && !confirm('Há alerta de segurança para este medicamento neste paciente (alergia, idade ou peso fora da faixa do esquema).\n\nAdicionar mesmo assim à prescrição?')) return;
+        const item = montarItem(med, Number(el.dataset.dose), Number(el.dataset.ap), pesoAtivo()); state.prescricaoDraft = state.prescricaoDraft || { pacienteId: state.pacienteId, itens: [] }; state.prescricaoDraft.itens.push(item); U.toast('Item adicionado à prescrição'); if (at && location.hash.includes('/queixas/')) render(); },
       delItemDraft() { state.prescricaoDraft.itens.splice(Number(el.dataset.i), 1); render(); },
       delItemPresc() { const idx = Number(el.dataset.i); if (state.prescricaoDraft) state.prescricaoDraft.itens.splice(idx, 1); const form = $('#formPresc'); if (form.dataset.id) { const pr = S.byId('prescricoes', form.dataset.id); pr.itens.splice(idx, 1); S.upsert('prescricoes', pr); } render(); },
       addItemVazio() { const form = $('#formPresc'); const item = { medicamento: '', apresentacao: '', dose: '', via: 'VO', intervalo: '', horarios: '', duracao: '', orientacoes: '' }; if (form.dataset.id) { const pr = S.byId('prescricoes', form.dataset.id); pr.itens.push(item); S.upsert('prescricoes', pr); } else { state.prescricaoDraft = state.prescricaoDraft || { pacienteId: state.pacienteId, itens: [] }; state.prescricaoDraft.itens.push(item); } render(); },
@@ -753,15 +1008,73 @@ window.PED = window.PED || {};
       delMedida() { S.remove('medidas', el.dataset.id); render(); },
       marcarVacina() { const data = prompt('Data da dose (AAAA-MM-DD):', U.today()); if (!data) return; S.upsert('vacinasRealizadas', { pacienteId: el.dataset.pid, vacinaId: el.dataset.vid, doseIndex: Number(el.dataset.i), data }); render(); },
       desfazerVacina() { S.remove('vacinasRealizadas', el.dataset.id); render(); },
-      exportar() { const blob = new Blob([S.exportJSON()], { type: 'application/json' }); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'mucurinha-' + U.today() + '.json'; a.click(); },
+      copiarFicha() {
+        const linhas = Array.from(document.querySelectorAll('#main table tr')).slice(1).map(tr => { const td = tr.querySelectorAll('td'); return td.length > 1 ? td[0].textContent + ': ' + td[1].textContent : ''; }).filter(Boolean);
+        const txt = document.querySelector('#main h1').textContent.trim() + '\n\n' + linhas.join('\n');
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(() => U.toast('Dados copiados')).catch(() => U.toast('N\u00e3o foi poss\u00edvel copiar'));
+        else U.toast('C\u00f3pia n\u00e3o dispon\u00edvel neste navegador');
+      },
+      marcarRevisao() { const [tipo, id, sub] = el.dataset.k.split('|'); const nota = (document.querySelector('.notaRev[data-k="' + el.dataset.k + '"]') || {}).value || ''; revisao.marcar(tipo, id, sub === undefined ? null : sub, nota); U.toast('Conferência registrada'); render(); },
+      desfazerRevisao() { const [tipo, id, sub] = el.dataset.k.split('|'); revisao.desmarcar(tipo, id, sub === undefined ? null : sub); render(); },
+      exportar() { const blob = new Blob([S.exportJSON()], { type: 'application/json' }); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'mucurinha-' + U.today() + '.json'; a.click(); S.pref('ultimoBackup', new Date().toISOString()); U.toast('Cópia gerada'); render(); },
+      copiarBackup() { const txt = S.exportJSON();
+        const ok = () => { S.pref('ultimoBackup', new Date().toISOString()); U.toast('Dados copiados: cole em um bloco de notas ou mensagem para guardar'); render(); };
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(ok).catch(() => mostrarBackupTexto(txt));
+        else mostrarBackupTexto(txt); },
       resetar() { if (confirm('Apagar todos os dados locais?')) { S.reset(); setPaciente(null); render(); } },
     };
     if (acts[act]) { e.preventDefault(); acts[act](); }
   });
 
+  function mostrarBackupTexto(txt) {
+    const w = document.createElement('div');
+    w.className = 'card'; w.style.cssText = 'position:fixed;inset:5%;z-index:200;overflow:auto';
+    w.innerHTML = `<h3>Cópia dos dados</h3><p class="muted"><small>Selecione todo o texto, copie e guarde em um arquivo ou mensagem. Para restaurar, use Dados › Importar.</small></p><textarea style="height:50vh">${esc(txt)}</textarea><div class="btnrow"><button class="btn" id="fecharBackup">Fechar</button></div>`;
+    document.body.appendChild(w);
+    w.querySelector('textarea').select();
+    w.querySelector('#fecharBackup').onclick = () => { w.remove(); S.pref('ultimoBackup', new Date().toISOString()); render(); };
+  }
+
   /* ---------------- Init ---------------- */
+  const temaAtual = () => { try { return localStorage.getItem('mucurinha.tema') || 'claro'; } catch (e) { return 'claro'; } };
+  function alternarTema() {
+    const novo = temaAtual() === 'dark' ? 'claro' : 'dark';
+    try { localStorage.setItem('mucurinha.tema', novo); } catch (e) {}
+    if (novo === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    else document.documentElement.removeAttribute('data-theme');
+    const b = $('#themeBtn'); if (b) b.textContent = novo === 'dark' ? '☀️' : '🌙';
+  }
+
+  /* ---------- Copia de seguranca ---------- */
+  const DIAS_BACKUP = 7;
+  function diasSemBackup() {
+    const ult = S.pref('ultimoBackup');
+    if (!S.col('pacientes').length) return null;
+    if (!ult) return 999;
+    return Math.floor((Date.now() - new Date(ult).getTime()) / 86400000);
+  }
+  function bannerBackup() {
+    const d = diasSemBackup();
+    if (d == null || d < DIAS_BACKUP) return '';
+    return `<div class="alert amber"><strong>💾 Cópia de segurança pendente</strong>Os dados ficam apenas neste navegador e somem se ele for limpo ou o aparelho trocado. ${d === 999 ? 'Nenhuma cópia foi feita ainda.' : 'Última cópia há ' + d + ' dias.'}
+      <div class="btnrow" style="margin:.5rem 0 0"><button class="btn sm" data-act="exportar">⬇️ Baixar cópia</button><button class="btn sm secondary" data-act="copiarBackup">📋 Copiar dados</button></div></div>`;
+  }
+
+  /** Junta as bases complementares à lista principal de doenças, uma única vez. */
+  function juntarBases() {
+    const D0 = PED.data || {};
+    if (D0._juntadas) return; D0._juntadas = true;
+    D0.doencas = D0.doencas || [];
+    const ids = new Set(D0.doencas.map(d => d.id));
+    const somar = (lista) => (lista || []).forEach(d => { if (d && d.id && !ids.has(d.id)) { ids.add(d.id); D0.doencas.push(d); } });
+    somar(D0.doencasExtra);
+    somar(D0.neonatal && D0.neonatal.protocolos);
+  }
+
   function init() {
+    juntarBases();
     bindSearch();
+    const tb = $('#themeBtn'); if (tb) { tb.textContent = temaAtual() === 'dark' ? '☀️' : '🌙'; tb.onclick = alternarTema; }
     if ('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('sw.js').catch(() => {});
     render();
   }

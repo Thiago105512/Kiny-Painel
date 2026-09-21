@@ -33,7 +33,32 @@ No celular, abra a URL e use "Adicionar à tela inicial" para instalar como app.
 | Exames com referências por idade | 39 |
 | Vacinas (PNI) | calendário 0–14 anos |
 | Módulo Amazônia | doenças regionais em destaque |
+| Protocolos neonatais com limiares de fototerapia | 6 |
+| Agravos de notificação compulsória com dados da ficha | 43 |
 | Cadastro de pacientes, prescrição editável com confirmação, evolução SOAP com comparação | ✔ |
+
+## Segurança da prescrição
+
+O sistema confere automaticamente cada item antes da emissão e exibe o alerta na tela de dose e na prescrição:
+
+- **Faixa etária e de peso** de cada esquema, extraída das bases. Exemplo: primaquina abaixo de 6 meses e doxiciclina abaixo de 8 anos são bloqueadas com pedido de confirmação.
+- **Alergia por classe e princípio ativo**, com reatividade cruzada entre penicilinas e cefalosporinas e entre anti-inflamatórios e dipirona. Restrições dirigidas à gestante ou à lactante não geram alerta no paciente pediátrico.
+- **Duplicidade de princípio ativo** na mesma prescrição e sobreposição com os medicamentos em uso do cadastro.
+- **Antimicrobianos** são impressos em duas vias, conforme a RDC 20/2011.
+
+Nenhum alerta impede a prescrição: ele pede confirmação explícita, e a decisão continua sendo da médica.
+
+## Estado nutricional
+
+O escore-z usa as tabelas oficiais da OMS (2006 e 2007) para peso/idade, estatura/idade, peso/estatura, IMC/idade e perímetro cefálico, com a classificação do SISVAN. Desnutrição aguda grave, baixa estatura e microcefalia aparecem com a conduta correspondente.
+
+## Testes
+
+```bash
+cd pediatria-amazonia && node testes/testes.js
+```
+
+Cobrem as fórmulas das calculadoras, o escore-z contra valores conhecidos da OMS, as regras de segurança da prescrição e a integridade cruzada das bases.
 
 ## Documentação (entregáveis)
 1. [Arquitetura](docs/01-arquitetura.md)

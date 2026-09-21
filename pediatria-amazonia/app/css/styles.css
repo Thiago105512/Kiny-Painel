@@ -22,8 +22,53 @@
   --nav-h: 64px;
   --side-w: 232px;
   --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color-scheme: light;   /* identidade clínica clara: evita inversão de campos no modo escuro do aparelho */
+  color-scheme: light;   /* identidade clínica clara por padrão */
 }
+
+/* Modo noturno para plantão: mesmas matizes, superfícies escuras.
+   Ativado apenas por escolha explícita, para preservar a identidade clara em uso diurno. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #101b20;
+  --bg-soft: #0b1418;
+  --card: #16242a;
+  --text: #e4eef1;
+  --muted: #9ab0b8;
+  --line: #273d45;
+  --primary: #3fb3c8;
+  --primary-dark: #7ad4e4;
+  --primary-soft: #16323a;
+  --green: #4cc38a;
+  --green-soft: #12312a;
+  --amber: #e0a648;
+  --amber-soft: #352a15;
+  --red: #ef6f66;
+  --red-soft: #3a1f1d;
+  --purple: #9b8ae0;
+  --purple-soft: #262040;
+  --shadow: 0 1px 3px rgba(0,0,0,.4), 0 4px 14px rgba(0,0,0,.3);
+}
+:root[data-theme="dark"] input,
+:root[data-theme="dark"] select,
+:root[data-theme="dark"] textarea { background: #0e1a1f; color: var(--text); }
+:root[data-theme="dark"] .btn.secondary,
+:root[data-theme="dark"] .btn.ghost { background: transparent; }
+:root[data-theme="dark"] .toggle { background: var(--card); color: var(--text); }
+:root[data-theme="dark"] .prescricao { background: var(--card); }
+:root[data-theme="dark"] .alert.red { color: #ffc9c4; }
+:root[data-theme="dark"] .alert.amber { color: #f3d9a4; }
+:root[data-theme="dark"] .alert.green { color: #b6e8cd; }
+:root[data-theme="dark"] .steps span, :root[data-theme="dark"] th { color: var(--muted); }
+:root[data-theme="dark"] .steps span:not(.done):not(.cur) { background: #1b2c33; }
+:root[data-theme="dark"] .row, :root[data-theme="dark"] details, :root[data-theme="dark"] .search-results { background: var(--card); }
+:root[data-theme="dark"] .moremenu a { background: #1b2c33; }
+
+/* Peso em destaque no modo emergência */
+.pesoEmerg { display: flex; align-items: center; gap: .7rem; flex-wrap: wrap; background: var(--red-soft); border-color: #f3c1bd; }
+.pesoEmerg input { font-size: 1.6rem; font-weight: 700; text-align: center; width: 128px; padding: .4rem; }
+.pesoEmerg .lbl { font-weight: 700; color: var(--red); font-size: 1rem; }
+.themebtn { background: none; border: 1px solid var(--line); border-radius: 999px; width: 38px; height: 38px; cursor: pointer; font-size: 1.05rem; color: var(--text); flex: 0 0 auto; }
+
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 body {
@@ -259,3 +304,8 @@ details .body { padding: .3rem 0 .4rem; font-size: .93rem; }
   .dosetable td[data-l="Dose"] { color: var(--green); }
   .dosetable td[data-l="Via"]::before { content: 'Via: '; color: var(--muted); font-size: .8rem; }
 }
+
+/* Prescrição em duas vias (antimicrobianos – RDC 20/2011) */
+.prescricao.via { position: relative; margin-bottom: 1rem; }
+.prescricao .viaTag { position: absolute; top: .6rem; right: .9rem; font-family: var(--font); font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+@media print { .prescricao.via { page-break-after: always; border: none; } .prescricao.via:last-of-type { page-break-after: auto; } }

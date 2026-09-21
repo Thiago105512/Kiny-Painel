@@ -1,4 +1,4 @@
-# 8. Calculadoras pediátricas (18)
+# 8. Calculadoras pediátricas (20)
 
 Todas autopreenchem peso, altura, idade e sexo do paciente ativo (ou o "peso rápido") e exibem a fórmula.
 
@@ -21,6 +21,8 @@ Todas autopreenchem peso, altura, idade e sexo do paciente ativo (ou o "peso rá
 | 15 | Correção de cálcio | Ca corrigido = Ca + 0,8 × (4 − albumina); gluconato 10 % 0,5–1 mL/kg | Eletrólitos |
 | 16 | Osmolaridade | 2 × Na + glicose/18 + ureia/6; gap osmolar | Eletrólitos |
 | 17 | Clearance estimado | Schwartz revisada: 0,413 × altura ÷ creatinina | Eletrólitos |
-| 18 | Tubo e materiais por idade | Sem cuff = idade/4 + 4; com cuff = idade/4 + 3,5; profundidade = 3 × DI; peso estimado | Emergência |
+| 18 | Icterícia neonatal: fototerapia | Bilirrubina total comparada aos limiares de fototerapia e exsanguineotransfusão por hora de vida, idade gestacional e fatores de risco | Neonatal |
+| 19 | Tubo e Apgar do recém-nascido | Tubo e profundidade por peso e idade gestacional; metas de saturação por minuto de vida | Neonatal |
+| 20 | Tubo e materiais por idade | Sem cuff = idade/4 + 4; com cuff = idade/4 + 3,5; profundidade = 3 × DI; peso estimado | Emergência |
 
-Limitações declaradas: percentis são aproximados (interpolação linear); a versão 2 deve usar tabelas LMS oficiais para z-score exato. Correções eletrolíticas exigem confirmação em protocolo institucional.
+O escore-z usa as tabelas oficiais da OMS e substituiu o percentil aproximado como parâmetro de decisão nutricional; o percentil permanece como consulta secundária. Os limiares de fototerapia são conservadores e sinalizados para conferência no gráfico oficial do serviço. Correções eletrolíticas exigem confirmação em protocolo institucional.

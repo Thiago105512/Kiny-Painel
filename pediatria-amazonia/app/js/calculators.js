@@ -307,3 +307,153 @@ PED.calc = (function () {
 
   return { calculadoras, hollidaySegar, schwartz, paMinima, sinaisVitaisFaixa, percentilAprox, linhaCurva };
 })();
+
+/* ---------- Escore-z pelas tabelas oficiais da OMS (PED.data.zscore) ---------- */
+PED.zscore = (function () {
+  const Z = [-3, -2, -1, 0, 1, 2, 3];
+  const KEYS = ['sd3neg', 'sd2neg', 'sd1neg', 'sd0', 'sd1', 'sd2', 'sd3'];
+  const tabela = (indice) => (PED.data.zscore && PED.data.zscore.indices && PED.data.zscore.indices[indice]) || null;
+  const chaveDe = (r) => (r.meses != null ? r.meses : r.cm);
+
+  /** Interpola a linha da tabela para a idade em meses (ou comprimento em cm) exata. */
+  function linha(indice, sexo, chave) {
+    const t = tabela(indice); if (!t || !t[sexo] || chave == null) return null;
+    const rows = t[sexo].slice().sort((a, b) => chaveDe(a) - chaveDe(b));
+    if (chave <= chaveDe(rows[0])) return rows[0];
+    if (chave >= chaveDe(rows[rows.length - 1])) return rows[rows.length - 1];
+    for (let i = 0; i < rows.length - 1; i++) {
+      const a = rows[i], b = rows[i + 1], ka = chaveDe(a), kb = chaveDe(b);
+      if (chave >= ka && chave <= kb) {
+        const t0 = (chave - ka) / (kb - ka), o = {};
+        KEYS.forEach(k => o[k] = a[k] + (b[k] - a[k]) * t0);
+        return o;
+      }
+    }
+    return null;
+  }
+
+  /** Escore-z de um valor medido. Fora de -3 a +3 o valor é extrapolado e sinalizado. */
+  function calcular(indice, sexo, chave, valor) {
+    const l = linha(indice, sexo, chave); if (!l || valor == null || isNaN(valor)) return null;
+    const v = KEYS.map(k => l[k]);
+    let z, extrapolado = false;
+    if (valor <= v[0]) { const passo = v[1] - v[0]; z = -3 - (v[0] - valor) / (passo || 1); extrapolado = true; }
+    else if (valor >= v[6]) { const passo = v[6] - v[5]; z = 3 + (valor - v[6]) / (passo || 1); extrapolado = true; }
+    else { for (let i = 0; i < 6; i++) if (valor >= v[i] && valor <= v[i + 1]) { z = Z[i] + (valor - v[i]) / (v[i + 1] - v[i]); break; } }
+    if (z == null) return null;
+    return { z: Math.round(z * 100) / 100, extrapolado, referencia: l };
+  }
+
+  /** Faixa de classificação (SISVAN/OMS) correspondente ao escore-z. */
+  function classificar(indice, z) {
+    const faixas = (PED.data.zscore && PED.data.zscore.classificacao && PED.data.zscore.classificacao[indice]) || null;
+    if (!faixas || z == null) return null;
+    for (const fx of faixas) {
+      const t = String(fx.z).replace(/\s/g, '').replace(/−/g, '-');
+      let m;
+      if ((m = t.match(/^<(-?\d+(?:[.,]\d+)?)$/))) { if (z < parseFloat(m[1].replace(',', '.'))) return fx; continue; }
+      if ((m = t.match(/^>(\+?)(-?\d+(?:[.,]\d+)?)$/))) { if (z > parseFloat(m[2].replace(',', '.'))) return fx; continue; }
+      if ((m = t.match(/^<=(\+?)(-?\d+(?:[.,]\d+)?)$/))) { if (z <= parseFloat(m[2].replace(',', '.'))) return fx; continue; }
+      if ((m = t.match(/^>=(\+?)(-?\d+(?:[.,]\d+)?)$/))) { if (z >= parseFloat(m[2].replace(',', '.'))) return fx; continue; }
+      if ((m = t.match(/^(-?\d+(?:[.,]\d+)?)a<?(\+?)(-?\d+(?:[.,]\d+)?)$/))) {
+        const a = parseFloat(m[1].replace(',', '.')), b = parseFloat(m[3].replace(',', '.'));
+        if (z >= a && z <= b) return fx; continue;
+      }
+    }
+    return null;
+  }
+
+  /** Avalia todos os índices disponíveis para um paciente. */
+  function avaliar({ sexo, idadeMeses, peso, altura, pc, imc }) {
+    if (!sexo) return [];
+    const out = [];
+    const add = (indice, rotulo, chave, valor) => {
+      if (valor == null || chave == null || !tabela(indice)) return;
+      const r = calcular(indice, sexo, chave, Number(valor)); if (!r) return;
+      out.push({ indice, rotulo, valor: Number(valor), z: r.z, extrapolado: r.extrapolado, faixa: classificar(indice, r.z) });
+    };
+    add('pesoIdade', 'Peso para idade', idadeMeses, peso);
+    add('estaturaIdade', 'Estatura para idade', idadeMeses, altura);
+    add('imcIdade', 'IMC para idade', idadeMeses, imc != null ? imc : (peso && altura ? peso / Math.pow(altura / 100, 2) : null));
+    if (altura != null) add('pesoEstatura', 'Peso para estatura', Number(altura), peso);
+    if (idadeMeses != null && idadeMeses <= 60) add('perimetroCefalico', 'Perímetro cefálico para idade', idadeMeses, pc);
+    return out;
+  }
+
+  return { calcular, classificar, avaliar, linha };
+})();
+
+/* ---------- Calculadoras neonatais (dependem de PED.data.neonatal) ---------- */
+(function () {
+  const f = PED.util.fmt;
+  const num = (x) => (x === '' || x == null || isNaN(Number(x))) ? null : Number(x);
+  const foto = () => (PED.data.neonatal && PED.data.neonatal.fototerapia) || null;
+
+  /** Limiar interpolado para a hora de vida informada. */
+  function limiar(tabela, horas, grupo) {
+    if (!tabela || !tabela.length) return null;
+    const rows = tabela.slice().sort((a, b) => a.horas - b.horas);
+    if (horas <= rows[0].horas) return rows[0][grupo];
+    if (horas >= rows[rows.length - 1].horas) return rows[rows.length - 1][grupo];
+    for (let i = 0; i < rows.length - 1; i++) {
+      const a = rows[i], b = rows[i + 1];
+      if (horas >= a.horas && horas <= b.horas) return a[grupo] + (b[grupo] - a[grupo]) * (horas - a.horas) / (b.horas - a.horas);
+    }
+    return null;
+  }
+
+  PED.calc.calculadoras.push({
+    id: 'fototerapia', nome: 'Icterícia neonatal: fototerapia', icone: '💡', grupo: 'Neonatal',
+    descricao: 'Compara a bilirrubina total com os limiares de fototerapia e de exsanguineotransfusão para a hora de vida, a idade gestacional e os fatores de risco.',
+    campos: [
+      { id: 'horas', label: 'Hora de vida (h)', tipo: 'number', step: '1', placeholder: 'ex.: 48' },
+      { id: 'bt', label: 'Bilirrubina total (mg/dL)', tipo: 'number', step: '0.1' },
+      { id: 'grupo', label: 'Idade gestacional e risco', tipo: 'select', opcoes: (((PED.data.neonatal || {}).fototerapia || {}).grupos || []).map(g => [g.id, g.rotulo]) },
+    ],
+    calc(v) {
+      const F = foto(); if (!F) return null;
+      const h = num(v.horas), bt = num(v.bt), g = v.grupo || (F.grupos[0] && F.grupos[0].id);
+      if (h == null || bt == null || !g) return null;
+      const lf = limiar(F.limiaresFototerapia, h, g), le = limiar(F.limiaresExsanguineo, h, g);
+      const rotulo = (F.grupos.find(x => x.id === g) || {}).rotulo || g;
+      const res = [
+        { label: 'Bilirrubina total informada', valor: f(bt, 1), unidade: 'mg/dL', destaque: true },
+        { label: 'Limiar de fototerapia', valor: f(lf, 1), unidade: 'mg/dL' },
+        { label: 'Limiar de exsanguineotransfusão', valor: f(le, 1), unidade: 'mg/dL' },
+      ];
+      const alertas = [];
+      if (le != null && bt >= le) { res.unshift({ label: 'Situação', valor: 'Acima do limiar de exsanguineotransfusão', unidade: '', destaque: true }); alertas.push('Bilirrubina em nível de exsanguineotransfusão: iniciar fototerapia intensiva imediatamente, acionar a equipe e considerar transferência para unidade com suporte. Confirmar no gráfico oficial antes de indicar o procedimento.'); }
+      else if (lf != null && bt >= lf) { res.unshift({ label: 'Situação', valor: 'Acima do limiar de fototerapia', unidade: '', destaque: true }); alertas.push('Bilirrubina no nível de indicação de fototerapia para esta hora de vida. Avaliar causa da icterícia, hidratação e amamentação, e repetir dosagem conforme protocolo.'); }
+      else { res.unshift({ label: 'Situação', valor: 'Abaixo do limiar de fototerapia', unidade: '', destaque: true }); alertas.push('Abaixo do limiar nesta hora de vida. Manter vigilância: a bilirrubina sobe com as horas e o limiar muda; reavaliar conforme protocolo e sinais de alarme.'); }
+      if (h < 24) alertas.push('Icterícia nas primeiras 24 horas de vida é sempre patológica: investigar doença hemolítica, incompatibilidade e infecção.');
+      if (F.verificar || F.aproximado) alertas.push('Limiares conservadores para apoio rápido. A leitura definitiva deve ser feita no gráfico oficial adotado pelo serviço, que varia por semana de idade gestacional. ' + (F.nota || ''));
+      return {
+        resultados: res, alertas,
+        formula: `Grupo: ${rotulo}\nHora de vida: ${f(h, 0)} h\nLimiares interpolados entre as linhas da tabela para a hora informada.`,
+        fontes: [(F.fonte || 'AAP/SBP'), F.nota].filter(Boolean)
+      };
+    }
+  });
+
+  PED.calc.calculadoras.push({
+    id: 'tuboneonatal', nome: 'Tubo e Apgar do recém-nascido', icone: '👶', grupo: 'Neonatal',
+    descricao: 'Tamanho do tubo traqueal e profundidade por peso e idade gestacional, com as metas de saturação por minuto de vida.',
+    campos: [{ id: 'peso', label: 'Peso (kg)', tipo: 'number', step: '0.05', fromPatient: 'peso' }],
+    calc(v) {
+      const R = (PED.data.neonatal && PED.data.neonatal.reanimacao) || null; if (!R) return null;
+      const p = num(v.peso); if (p == null) return null;
+      const faixa = (R.tamanhoTubo || []).find(x => p >= x.pesoMin && p < x.pesoMax);
+      if (!faixa) return null;
+      return {
+        resultados: [
+          { label: 'Tubo traqueal', valor: f(faixa.tubo, 1), unidade: 'mm', destaque: true },
+          { label: 'Profundidade na rima labial', valor: String(faixa.profundidadeCm), unidade: 'cm', destaque: true },
+          { label: 'Idade gestacional correspondente', valor: String(faixa.igSemanas), unidade: 'semanas' },
+        ],
+        alertas: (R.metasSaturacao || []).length ? ['Metas de saturação por minuto de vida: ' + R.metasSaturacao.map(m => (m.minutos != null ? m.minutos + ' min' : (m.minuto || m.rotulo)) + ': ' + (m.alvo || m.sato2 || m.meta)).join(' · ')] : [],
+        formula: 'Faixa de peso e idade gestacional conforme o programa de reanimação neonatal.',
+        fontes: (R.fontes || []).map(x => x.nome + (x.ano ? ' (' + x.ano + ')' : ''))
+      };
+    }
+  });
+})();

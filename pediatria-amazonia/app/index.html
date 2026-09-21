@@ -9,6 +9,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f8a9e'/%3E%3Ctext x='32' y='42' font-size='34' text-anchor='middle'%3E🌿%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/styles.css">
+  <script>try{var _t=localStorage.getItem("mucurinha.tema");if(_t)document.documentElement.setAttribute("data-theme",_t);}catch(e){}</script>
 </head>
 <body>
   <header class="topbar">
@@ -17,6 +18,7 @@
       <input id="globalSearch" type="search" placeholder="Buscar queixa, doença, medicamento, exame…" autocomplete="off">
       <div id="searchResults" class="search-results" style="display:none"></div>
     </div>
+    <button id="themeBtn" class="themebtn" type="button" title="Alternar modo noturno" aria-label="Alternar modo noturno">🌙</button>
     <div id="patientChip" class="patient-chip none">👤 Sem paciente</div>
   </header>
 
@@ -35,11 +37,16 @@
   <script src="js/data/contexto-epidemiologico.js"></script>
   <script src="js/data/queixas.js"></script>
   <script src="js/data/doencas.js"></script>
+  <script src="js/data/doencas-extra.js"></script>
+  <script src="js/data/neonatal.js"></script>
   <script src="js/data/medicamentos.js"></script>
   <script src="js/data/emergencias.js"></script>
   <script src="js/data/exames.js"></script>
   <script src="js/data/vacinas.js"></script>
   <script src="js/data/crescimento.js"></script>
+  <script src="js/data/zscore.js"></script>
+  <script src="js/data/notificacao.js"></script>
+  <script src="js/seguranca.js"></script>
   <script src="js/calculators.js"></script>
   <script src="js/app.js"></script>
 </body>
