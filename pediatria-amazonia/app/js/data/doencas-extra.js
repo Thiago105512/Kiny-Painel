@@ -2329,7 +2329,7 @@ PED.data.doencasExtra = [
       { medId: null, nome: 'Analgésico opioide (por exemplo, morfina)', esquema: 'Dor intensa não controlada pelos analgésicos habituais: indicação, dose e monitorização conforme protocolo do serviço e bula, confirmar conforme protocolo.' },
       { medId: null, nome: 'Anestésico local sem vasoconstritor (por exemplo, lidocaína)', esquema: 'Infiltração local ou bloqueio regional para controle da dor e para exploração da ferida, conforme protocolo do serviço e bula, confirmar conforme protocolo.' },
       { medId: 'sulfametoxazol_trimetoprim', esquema: 'Cobertura para Aeromonas em ferimento de ambiente aquático: 40 mg/kg/dia de sulfametoxazol e 8 mg/kg/dia de trimetoprima VO dividida 12/12 h, conforme protocolo do serviço. Contraindicado em menores de 2 meses.' },
-      { medId: null, nome: 'Ciprofloxacino', esquema: 'Alternativa com boa cobertura para Aeromonas em adolescentes ou conforme avaliação individual: dose e duração conforme protocolo do serviço e bula, confirmar conforme protocolo.' },
+      { medId: 'ciprofloxacino', nome: 'Ciprofloxacino', esquema: 'Alternativa com boa cobertura para Aeromonas em adolescentes ou conforme avaliação individual: dose e duração conforme protocolo do serviço e bula, confirmar conforme protocolo.' },
       { medId: 'amoxicilina_clavulanato', esquema: 'Cobertura para flora cutânea e anaeróbios, habitualmente associada a cobertura para Aeromonas: 45 a 50 mg/kg/dia do componente amoxicilina VO dividida 12/12 h, conforme protocolo do serviço.' },
       { medId: 'ceftriaxona', esquema: 'Infecção grave com internação: 50 a 100 mg/kg/dia IV, associada conforme necessidade a cobertura antiestafilocócica e para Aeromonas, segundo protocolo do serviço.' },
       { medId: 'soro_fisiologico', esquema: 'Lavagem abundante da ferida e curativos diários com SF 0,9%.' },
@@ -2466,7 +2466,7 @@ PED.data.doencasExtra = [
     ],
     medicamentos: [
       { medId: 'sulfametoxazol_trimetoprim', esquema: 'Cobertura para Aeromonas em ferimento de ambiente aquático: 40 mg/kg/dia de sulfametoxazol e 8 mg/kg/dia de trimetoprima VO dividida 12/12 h por 7 a 10 dias, conforme protocolo do serviço. Contraindicado em menores de 2 meses.' },
-      { medId: null, nome: 'Ciprofloxacino', esquema: 'Alternativa com boa atividade contra Aeromonas e Vibrio, conforme avaliação individual e disponibilidade: dose e duração conforme protocolo do serviço e bula, confirmar conforme protocolo.' },
+      { medId: 'ciprofloxacino', nome: 'Ciprofloxacino', esquema: 'Alternativa com boa atividade contra Aeromonas e Vibrio, conforme avaliação individual e disponibilidade: dose e duração conforme protocolo do serviço e bula, confirmar conforme protocolo.' },
       { medId: 'cefalexina', esquema: 'Cobertura para estafilococos e estreptococos, associada a um agente com atividade contra Aeromonas (não usar isoladamente em ferimento de ambiente aquático): 50 a 100 mg/kg/dia VO dividida a cada 6 horas, conforme protocolo.' },
       { medId: 'amoxicilina_clavulanato', esquema: 'Cobertura para flora cutânea, anaeróbios e mordeduras, associada a agente com atividade contra Aeromonas: 45 a 50 mg/kg/dia do componente amoxicilina VO dividida 12/12 h, conforme protocolo do serviço.' },
       { medId: 'ceftriaxona', esquema: 'Infecção grave com internação: 50 a 100 mg/kg/dia IV, associada a cobertura antiestafilocócica e para Aeromonas conforme protocolo do serviço e antibiograma.' },
