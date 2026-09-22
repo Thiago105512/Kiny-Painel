@@ -33,6 +33,7 @@ window.PED = window.PED || {};
     { path: '/crescimento', nome: 'Crescimento', ic: '📈' },
     { path: '/unidades', nome: 'Unidades', ic: '🏥' },
     { path: '/violencia', nome: 'Proteção', ic: '🛡️' },
+    { path: '/entender', nome: 'Entender', ic: '📖' },
     { path: '/aprender', nome: 'Aprender', ic: '💡' },
     { path: '/notificacao', nome: 'Notificação', ic: '📢' },
     { path: '/revisao', nome: 'Revisão', ic: '⚙️' },
@@ -99,6 +100,7 @@ window.PED = window.PED || {};
     ((D().notificacao || {}).doencas || []).forEach(x => { if (U.normalize(x.nome).includes(q)) push('Notificação', x.nome, '/notificacao/' + (x.doencaId || 'x-' + U.normalize(x.nome).replace(/\s+/g, '_')), x.tipo === 'imediata' ? 'imediata, 24 h' : 'semanal'); });
     ((D().violencia || {}).tipos || []).forEach(x => { if (U.normalize(x.nome).includes(q) || q.length > 3 && 'violencia'.includes(q)) push('Proteção', x.nome, '/violencia/' + x.id); });
     (((D().locais || {}).unidades) || []).concat(minhasUnidades()).forEach(x => { if (U.normalize(x.nome).includes(q)) push('Unidade', x.nome, '/unidades?cidade=' + encodeURIComponent(x.cidade), x.cidade); });
+    (((D().didatica || {}).conceitos) || []).forEach(x => { if (U.normalize(x.termo).includes(q) || (x.sinonimos || []).some(sn => U.normalize(sn).includes(q))) push('Entender', x.termo, '/entender/' + x.id); });
     ((D().curiosidades || {}).explicarFamilia || []).forEach(x => { if (U.normalize(x.assunto).includes(q)) push('Explicar', x.assunto, '/aprender?aba=familia'); });
     Object.keys((D().curiosidades || {}).porLugar || {}).forEach(l => { if (U.normalize(l).includes(q)) push('Lugar', l, '/aprender?aba=lugar&lugar=' + encodeURIComponent(l)); });
     S.col('pacientes').forEach(x => { if (U.normalize(x.nome).includes(q)) push('Paciente', x.nome, '/pacientes/' + x.id); });
@@ -167,6 +169,38 @@ window.PED = window.PED || {};
     return `<tr><td data-l="Droga"><strong>${esc(d.nome)}</strong><br><small class="muted">${esc(d.indicacao || '')}${d.apresentacao ? ' · ' + esc(d.apresentacao) : ''}</small></td><td data-l="Dose">${valor}${d.verificar ? ' <span class="chip amber">verificar</span>' : ''}<br><small class="muted">${esc(formula)}</small></td><td data-l="Via">${esc(d.via || '')}${d.repeticao ? '<br><small>' + esc(d.repeticao) + '</small>' : ''}${d.obs && d.mgKg != null ? '<br><small class="muted">' + esc(d.obs) + '</small>' : ''}</td></tr>`;
   }
 
+  /* ---------------- Camada didática: entender o que está acontecendo ---------------- */
+  const conceito = (id) => (((D().didatica || {}).conceitos) || []).find(c => c.id === id) || null;
+  const conceitosDaQueixa = (queixaId) => (((D().didatica || {}).porQueixa) || {})[queixaId] || [];
+  const conceitosDaCategoria = (cat) => (((D().didatica || {}).porCategoria) || {})[cat] || [];
+  /** Conceitos relevantes para uma doença: categoria + sintomas que ela produz. */
+  function conceitosDaDoenca(d) {
+    const DI = D().didatica; if (!DI || !d) return [];
+    const out = new Set(conceitosDaCategoria(d.categoria));
+    for (const c of DI.conceitos || []) {
+      if ((d.tags || []).includes(c.id)) out.add(c.id);
+      else if ((c.sinonimos || []).some(sn => (d.tags || []).includes(U.normalize(sn).replace(/\s+/g, '_')))) out.add(c.id);
+    }
+    return Array.from(out).slice(0, 4);
+  }
+  /** Cartão didático sempre visível: o que é, por que acontece, o que muda na criança. */
+  function blocoEntenda(ids, titulo) {
+    const DI = D().didatica; if (!DI) return '';
+    const cs = (ids || []).map(conceito).filter(Boolean);
+    if (!cs.length) return '';
+    return `<div class="card entenda"><h2>📖 ${esc(titulo || 'Entenda')}</h2>
+      ${cs.map(c => `<div class="conceito">
+        <h3>${esc(c.termo)}</h3>
+        <p>${esc(c.oQueE)}</p>
+        <details><summary>Por que acontece</summary><div class="body"><p>${esc(c.porQueAcontece)}</p>${c.naCrianca ? `<p><b>Na criança:</b> ${esc(c.naCrianca)}</p>` : ''}</div></details>
+        ${(c.quandoPreocupa || []).length ? `<details><summary>Quando preocupa</summary><div class="body">${U.list(c.quandoPreocupa)}</div></details>` : ''}
+        ${(c.mitos || []).length ? `<details><summary>Mitos frequentes</summary><div class="body">${c.mitos.map(m => `<p><b>Mito:</b> ${esc(m.mito)}<br><b>Na verdade:</b> ${esc(m.verdade)}</p>`).join('')}</div></details>` : ''}
+        ${c.explicarFamilia ? `<div class="falaFamilia"><b>🗣️ Para explicar à família</b><p>${esc(c.explicarFamilia)}</p><button class="btn sm ghost" data-act="copiarTexto" data-t="${esc(c.explicarFamilia)}">📋 copiar</button></div>` : ''}
+        ${(c.relacionado || []).length ? `<div style="margin-top:.3rem">${c.relacionado.map(rid => { const rc = conceito(rid); return rc ? `<a class="chip" href="#/entender/${esc(rid)}">${esc(rc.termo)}</a>` : ''; }).join(' ')}</div>` : ''}
+      </div>`).join('')}
+      <small class="muted">${esc(DI.aviso || '')}</small></div>`;
+  }
+
   /* ---------------- Curiosidades e conversa com a família ---------------- */
   /* Aparecem sempre no fim da tela, recolhidas, para nunca atrapalhar a conduta. */
   function curiosidades(escopo, chave) {
@@ -180,10 +214,31 @@ window.PED = window.PED || {};
     const R = C.rotulosTipo || {};
     const familia = itens.filter(x => x.tipo === 'explicarFamilia');
     const resto = itens.filter(x => x.tipo !== 'explicarFamilia');
-    return `<details class="curio"><summary>💡 ${esc(titulo || 'Para saber e para contar')} <span class="chip gray">${itens.length}</span></summary><div class="body">
-      ${resto.map(x => { const t = R[x.tipo] || { rotulo: x.tipo, icone: '•' }; return `<p><b>${t.icone} ${esc(t.rotulo)}:</b> ${esc(x.texto)}</p>`; }).join('')}
+    const linha = (x) => { const t = R[x.tipo] || { rotulo: x.tipo, icone: '•' }; return `<p class="curioItem"><b>${t.icone} ${esc(t.rotulo)}:</b> ${esc(x.texto)}</p>`; };
+    const visiveis = resto.slice(0, 2), ocultos = resto.slice(2);
+    return `<div class="card curioCard"><h2>💡 ${esc(titulo || 'Para saber e para contar')}</h2>
+      ${visiveis.map(linha).join('')}
+      ${ocultos.length ? `<details><summary>mais ${ocultos.length}</summary><div class="body">${ocultos.map(linha).join('')}</div></details>` : ''}
       ${familia.map(x => `<div class="falaFamilia"><b>🗣️ Para explicar à família</b><p>${esc(x.texto)}</p><button class="btn sm ghost" data-act="copiarTexto" data-t="${esc(x.texto)}">📋 copiar</button></div>`).join('')}
-      <small class="muted">${esc(C.aviso || '')}</small></div></details>`;
+      <small class="muted">${esc(C.aviso || '')}</small></div>`;
+  }
+
+  /* Dica curta que aparece em todas as telas de consulta, sempre visível. */
+  let _dicaIdx = Math.floor(Math.random() * 1000);
+  function dicaRotativa(filtro) {
+    const C = D().curiosidades; if (!C) return '';
+    const pool = [];
+    for (const [id, lista] of Object.entries(C.porDoenca || {})) for (const x of lista) if (x.tipo !== 'explicarFamilia') pool.push({ escopo: 'doenca', id, x });
+    for (const [id, lista] of Object.entries(C.porMedicamento || {})) for (const x of lista) if (x.tipo !== 'explicarFamilia') pool.push({ escopo: 'medicamento', id, x });
+    const lista = filtro ? pool.filter(filtro) : pool;
+    if (!lista.length) return '';
+    const it = lista[_dicaIdx++ % lista.length];
+    const R = (C.rotulosTipo || {})[it.x.tipo] || { rotulo: 'Você sabia', icone: '💡' };
+    const href = it.escopo === 'doenca' ? '#/doencas/' + it.id : '#/medicamentos/' + it.id;
+    const nome = it.escopo === 'doenca' ? nomeDoenca(it.id) : nomeMed(it.id);
+    return `<div class="card compact curioDia"><div style="display:flex;justify-content:space-between;align-items:center;gap:.5rem;flex-wrap:wrap">
+      <b>${R.icone} ${esc(R.rotulo)}</b><div><a href="${href}" class="chip">${esc(nome)}</a> <button class="btn sm ghost" data-act="outraDica" title="outra dica">↻</button></div></div>
+      <p style="margin:.3rem 0 0">${esc(it.x.texto)}</p></div>`;
   }
   /** Uma curiosidade por dia na tela inicial, sem atrapalhar. */
   function curiosidadeDoDia() {
@@ -371,7 +426,7 @@ window.PED = window.PED || {};
       ${pesoBox('Informe o peso para calcular doses nas telas de medicamentos e emergências.')}
       ${bannerBackup()}
       ${p ? '' : `<div class="alert blue"><strong>Dica</strong>Cadastre ou selecione um paciente para preencher automaticamente idade, peso, altura e contexto epidemiológico em todas as telas.</div>`}
-      ${curiosidadeDoDia()}
+      ${dicaRotativa()}
       <div class="section-title"><h2>Queixas frequentes</h2><a href="#/queixas">ver todas</a></div>
       <div class="grid">${destaque.map(id => q.find(x => x.id === id)).filter(Boolean).map(x => `<a class="tile" href="#/queixas/${x.id}"><span class="ic">${x.icone || '•'}</span>${esc(x.nome)}</a>`).join('')}</div>
       <div class="section-title"><h2>Atalhos</h2></div>
@@ -385,6 +440,7 @@ window.PED = window.PED || {};
         <a class="tile" href="#/notificacao"><span class="ic">📢</span>Notificação<small>compulsória</small></a>
         <a class="tile" href="#/unidades"><span class="ic">🏥</span>Unidades<small>para onde encaminhar</small></a>
         <a class="tile red" href="#/violencia"><span class="ic">🛡️</span>Proteção<small>violência</small></a>
+        <a class="tile" href="#/entender"><span class="ic">📖</span>Entender<small>o que é e por que acontece</small></a>
         <a class="tile" href="#/aprender"><span class="ic">💡</span>Aprender<small>e explicar à família</small></a>
       </div>
       ${disclaimer}`;
@@ -578,7 +634,7 @@ window.PED = window.PED || {};
   route('/queixas', (p, q) => {
     const qs = D().queixas || []; const grupos = {};
     qs.forEach(x => { (grupos[x.grupo] = grupos[x.grupo] || []).push(x); });
-    return `<h1>Queixa principal</h1><p class="muted">Escolha a queixa para iniciar o fluxo: sintomas associados → contexto epidemiológico → sinais de gravidade → diagnósticos diferenciais → exames → protocolos → tratamento → prescrição.</p>
+    return `${dicaRotativa()}<h1>Queixa principal</h1><p class="muted">Escolha a queixa para iniciar o fluxo: sintomas associados → contexto epidemiológico → sinais de gravidade → diagnósticos diferenciais → exames → protocolos → tratamento → prescrição.</p>
       ${pesoBox()}
       ${Object.keys(GRUPOS).filter(g => grupos[g]).map(g => `<div class="section-title"><h2>${GRUPOS[g]}</h2></div><div class="grid">${grupos[g].map(x => `<a class="tile ${g === 'acidentes' ? 'red' : ''}" href="#/queixas/${x.id}"><span class="ic">${x.icone || '•'}</span>${esc(x.nome)}</a>`).join('')}</div>`).join('')}
       ${disclaimer}`;
@@ -635,7 +691,7 @@ window.PED = window.PED || {};
     const alertaLactente = lactenteJovem ? `<div class="alert red"><strong>Lactente jovem (&lt; 3 meses) com febre</strong>Considerar avaliação completa para infecção bacteriana grave conforme protocolo (hemograma, urina, hemocultura; líquor conforme idade e estado clínico). Baixo limiar para internação.</div>` : '';
 
     if (at.etapa === 0) {
-      body = `<div class="card"><h2>1. Sintomas associados</h2><p class="muted">Marque o que está presente.</p>
+      body = `${blocoEntenda(conceitosDaQueixa(queixa.id), 'Entenda: ' + queixa.nome)}<div class="card"><h2>1. Sintomas associados</h2><p class="muted">Marque o que está presente.</p>
         <div class="toggles">${(queixa.sintomasAssociados || []).map(s => `<span class="toggle ${at.sintomas.includes(s.id) ? 'on' : ''}" data-act="togSintoma" data-id="${s.id}">${esc(s.nome)}</span>`).join('')}</div>
         <h3 style="margin-top:1rem">Anamnese dirigida <small class="muted">toque na resposta</small></h3>
         ${(queixa.perguntas || []).map((q, i) => PED.entrada.perguntas.html('p' + i, q, (at.respostas || {})['p' + i])).join('')}
@@ -788,7 +844,7 @@ window.PED = window.PED || {};
   route('/doencas', (p, q) => {
     const ds = (D().doencas || []).slice().sort((a, b) => a.nome.localeCompare(b.nome)); const cats = {};
     ds.forEach(d => (cats[d.categoria] = cats[d.categoria] || []).push(d));
-    return `<h1>Doenças e protocolos</h1><p class="muted">${ds.length} protocolos padronizados (definição, epidemiologia, clínica, alarme, exames, gravidade, tratamento, internação, alta, orientações, prevenção).</p>
+    return `${dicaRotativa(x => x.escopo === 'doenca')}<h1>Doenças e protocolos</h1><p class="muted">${ds.length} protocolos padronizados (definição, epidemiologia, clínica, alarme, exames, gravidade, tratamento, internação, alta, orientações, prevenção).</p>
       ${Object.keys(cats).map(c => `<div class="section-title"><h2>${CATS[c] || c}</h2></div><div class="list">${cats[c].map(d => `<a class="row" href="#/doencas/${d.id}"><span class="ic">${d.amazonia ? '🌳' : '📘'}</span><div class="grow"><div class="title">${esc(d.nome)}</div><div class="sub">${esc((d.definicao || '').slice(0, 110))}…</div></div></a>`).join('')}</div>`).join('')}${disclaimer}`;
   });
   function telaDoenca(d) {
@@ -813,6 +869,7 @@ window.PED = window.PED || {};
       ${sec('Orientação aos responsáveis', U.list(d.orientacoes))}
       ${sec('Retorno', `<p>${esc(d.retorno)}</p>`)}
       ${sec('Prevenção', U.list(d.prevencao))}
+      ${blocoEntenda(conceitosDaDoenca(d), 'Entenda o que está por trás')}
       ${blocoCuriosidades('doenca', d.id)}
       <div class="card compact">${U.fontes(d)}</div>${disclaimer}`;
   }
@@ -823,6 +880,7 @@ window.PED = window.PED || {};
     const ordem = ['malaria', 'dengue', 'oropouche', 'mayaro', 'chikungunya', 'zika', 'febre_amarela', 'leishmaniose_visceral', 'leishmaniose_tegumentar', 'doenca_chagas', 'leptospirose', 'tuberculose', 'hanseniase', 'parasitoses_intestinais', 'acidente_ofidico', 'escorpionismo', 'araneismo'];
     const ds = D().doencas || []; const lista = ordem.map(id => ds.find(d => d.id === id)).filter(Boolean).concat(ds.filter(d => d.amazonia && !ordem.includes(d.id)));
     return `<div class="card" style="background:linear-gradient(135deg,#e4f5ec,#e3f3f5);border:none"><h1>🌳 Amazônia</h1><p>Doenças prevalentes na região amazônica com epidemiologia regional, sintomas, diagnóstico, exames, tratamento e sinais de gravidade. Sempre perguntar: município, zona (rural, ribeirinha, indígena), entrada em mata, contato com água de rio, viagem recente.</p></div>
+      ${dicaRotativa(x => { const d = (D().doencas || []).find(y => y.id === x.id); return d && d.amazonia; })}
       <div class="grid wide">${lista.map(d => `<a class="tile amazon" href="#/doencas/${d.id}"><span class="ic">${{ malaria: '🦟', dengue: '🦟', oropouche: '🦟', mayaro: '🦟', chikungunya: '🦟', zika: '🦟', febre_amarela: '🦟', leishmaniose_visceral: '🐕', leishmaniose_tegumentar: '🩹', doenca_chagas: '🫐', leptospirose: '🌊', tuberculose: '🫁', hanseniase: '🖐️', parasitoses_intestinais: '🪱', acidente_ofidico: '🐍', escorpionismo: '🦂', araneismo: '🕷️' }[d.id] || '🌿'}</span>${esc(d.nome)}<small>${esc((d.agente || '').slice(0, 40))}</small></a>`).join('')}</div>
       <div class="card"><h2>Contexto epidemiológico – perguntas-chave</h2>${U.list((D().contextoEpidemiologico || []).map(c => c.pergunta))}</div>
       <div class="card"><h2>Emergências regionais</h2><div class="btnrow"><a class="btn danger" href="#/emergencias/acidente_ofidico">🐍 Acidente ofídico</a><a class="btn danger" href="#/emergencias/escorpionismo">🦂 Escorpionismo</a><a class="btn secondary" href="#/doencas/malaria">🦟 Malária grave</a><a class="btn secondary" href="#/doencas/dengue">🦟 Dengue grave</a></div></div>${disclaimer}`;
@@ -832,7 +890,7 @@ window.PED = window.PED || {};
   route('/medicamentos', (p, q) => {
     const ms = (D().medicamentos || []).slice().sort((a, b) => a.nome.localeCompare(b.nome)); const cls = {};
     ms.forEach(m => { const k = String(m.classe || 'Outros').split(' –')[0].split(' (')[0]; (cls[k] = cls[k] || []).push(m); });
-    return `<h1>Medicamentos pediátricos</h1>${pesoBox('Informe o peso para calcular doses ao abrir um medicamento.')}
+    return `${dicaRotativa(x => x.escopo === 'medicamento')}<h1>Medicamentos pediátricos</h1>${pesoBox('Informe o peso para calcular doses ao abrir um medicamento.')}
       <div class="field"><input id="filtroMed" placeholder="Digite 3 letras: genérico, marca ou classe" autocomplete="off" autofocus></div>
       <div id="listaMed">${Object.keys(cls).sort().map(c => `<div class="section-title"><h2>${esc(c)}</h2></div><div class="list">${cls[c].map(m => `<a class="row medrow" data-n="${esc(U.normalize(m.nome + ' ' + m.classe + ' ' + ((comerciaisDe(m.id) || {}).marcas || []).join(' ')))}" href="#/medicamentos/${m.id}"><span class="ic">💊</span><div class="grow"><div class="title">${esc(m.nome)} ${(m.verificar || (m.doses || []).some(x => x.verificar)) ? seloRevisao('medicamento', m.id, m.verificar ? null : (m.doses || []).findIndex(x => x.verificar)) : ''}</div><div class="sub">${marcasCurto(m.id) ? esc(marcasCurto(m.id)) + ' · ' : ''}${esc(m.classe)}</div></div></a>`).join('')}</div>`).join('')}</div>${disclaimer}`;
   });
@@ -1084,6 +1142,28 @@ window.PED = window.PED || {};
       <div class="list">${lista.filter(u => !(ref.includes(u) && !tipo && !zona)).map(linha).join('') || '<div class="empty">Nenhuma unidade com esse filtro.</div>'}</div>
       ${(L.referencias || []).length ? `<div class="card"><h2>Refer\u00eancias estaduais por assunto</h2><div class="tablewrap"><table><tr><th>Assunto</th><th>Unidade</th></tr>${L.referencias.map(x => `<tr><td>${esc(x.assunto)}</td><td>${esc(x.unidade)}${x.obs ? '<br><small class="muted">' + esc(x.obs) + '</small>' : ''}</td></tr>`).join('')}</table></div></div>` : ''}
       <div class="alert amber"><strong>Conferir antes de encaminhar</strong>${esc(L.aviso || '')}</div>${U.fontes(L)}${disclaimer}`;
+  });
+
+  /* ---- Entender: conceitos ---- */
+  route('/entender', (params, q) => {
+    const DI = D().didatica; if (!DI || !DI.conceitos) return '<div class="empty">M\u00f3dulo em prepara\u00e7\u00e3o.</div>';
+    const busca = U.normalize(q.q || '');
+    const cs = DI.conceitos.filter(c => !busca || U.normalize(c.termo).includes(busca) || (c.sinonimos || []).some(x => U.normalize(x).includes(busca)));
+    return `<h1>📖 Entender</h1>
+      <p class="muted">${DI.conceitos.length} conceitos explicados: o que é, por que acontece, o que muda na criança, quando preocupa, quais mitos desfazer e como explicar à família.</p>
+      <div class="list">${cs.map(c => `<a class="row" href="#/entender/${esc(c.id)}"><span class="ic">📖</span><div class="grow"><div class="title">${esc(c.termo)}</div><div class="sub">${esc(c.oQueE.slice(0, 110))}…</div></div></a>`).join('')}</div>
+      ${U.fontes(DI)}${disclaimer}`;
+  });
+  route('/entender/:id', ({ id }) => {
+    const c = conceito(id); if (!c) return '<div class="empty">Conceito n\u00e3o encontrado.</div>';
+    return `<h1>📖 ${esc(c.termo)}</h1>
+      <div class="card"><h2>O que é</h2><p>${esc(c.oQueE)}</p></div>
+      <div class="card"><h2>Por que acontece</h2><p>${esc(c.porQueAcontece)}</p>${c.naCrianca ? `<h3>Na criança</h3><p>${esc(c.naCrianca)}</p>` : ''}</div>
+      ${(c.quandoPreocupa || []).length ? `<div class="card" style="border-color:#f3c1bd"><h2>Quando preocupa</h2>${U.list(c.quandoPreocupa)}</div>` : ''}
+      ${(c.mitos || []).length ? `<div class="card"><h2>Mitos frequentes</h2>${c.mitos.map(m => `<div class="linhaTrat naorecomendado"><p><b>Mito:</b> ${esc(m.mito)}</p><p><b>Na verdade:</b> ${esc(m.verdade)}</p></div>`).join('')}</div>` : ''}
+      ${c.explicarFamilia ? `<div class="card"><h2>Para explicar à família</h2><div class="falaFamilia"><p>${esc(c.explicarFamilia)}</p><button class="btn sm ghost" data-act="copiarTexto" data-t="${esc(c.explicarFamilia)}">📋 copiar</button></div></div>` : ''}
+      ${(c.relacionado || []).length ? `<div class="card compact"><b>Relacionados:</b> ${c.relacionado.map(rid => { const rc = conceito(rid); return rc ? `<a class="chip" href="#/entender/${esc(rid)}">${esc(rc.termo)}</a>` : ''; }).join(' ')}</div>` : ''}
+      ${U.fontes(c)}${disclaimer}`;
   });
 
   /* ---- Aprender e explicar ---- */
@@ -1454,6 +1534,7 @@ window.PED = window.PED || {};
         salvarCompUnidade(id, { endereco: end.trim(), telefone: (tel || '').trim() });
         U.toast('Registrado neste aparelho'); render();
       },
+      outraDica() { render(); },
       abaAprender() { go('/aprender?aba=' + el.dataset.aba); },
       copiarTexto() { const t = el.dataset.t;
         if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(() => U.toast('Copiado')).catch(() => U.toast('N\u00e3o foi poss\u00edvel copiar'));

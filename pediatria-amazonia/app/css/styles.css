@@ -342,3 +342,20 @@ details.curio summary { color: var(--muted); font-weight: 600; }
 .falaFamilia { background: var(--primary-soft); border-radius: 12px; padding: .6rem .8rem; margin: .5rem 0; }
 .falaFamilia p { margin: .3rem 0; font-size: .95rem; }
 details.quiz summary { font-weight: 600; }
+
+/* Curiosidades sempre visíveis */
+.curioCard { background: linear-gradient(180deg, var(--bg-soft), var(--card)); border-style: dashed; }
+.curioCard h2 { font-size: 1.02rem; color: var(--primary-dark); }
+.curioItem { font-size: .93rem; margin: .4rem 0; }
+.curioCard details { border: none; background: none; padding: 0; margin: .2rem 0; }
+.curioCard details summary { font-size: .85rem; color: var(--primary-dark); }
+
+/* Camada didática */
+.entenda { border-left: 4px solid var(--primary); }
+.entenda h2 { font-size: 1.02rem; color: var(--primary-dark); }
+.entenda .conceito { padding: .5rem 0; border-bottom: 1px solid var(--line); }
+.entenda .conceito:last-of-type { border-bottom: none; }
+.entenda .conceito h3 { margin: 0 0 .25rem; font-size: .98rem; }
+.entenda .conceito > p { font-size: .93rem; margin: 0 0 .4rem; }
+.entenda details { border: none; background: none; padding: 0; margin: .2rem 0; }
+.entenda details summary { font-size: .85rem; color: var(--primary-dark); padding: .15rem 0; }
