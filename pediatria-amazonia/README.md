@@ -39,6 +39,8 @@ No celular, abra a URL e use "Adicionar à tela inicial" para instalar como app.
 | Municípios do Amazonas | 62 |
 | Tipos de violência com protocolo | 8 |
 | Sinais de gravidade e perguntas de contexto | 25 e 23 |
+| Conceitos explicados na camada didática | 55 |
+| Mitos desfeitos com a correção | 146 |
 | Perguntas de autoavaliação | 55 |
 | Cadastro de pacientes, prescrição com confirmação, evolução SOAP | ✔ |
 
@@ -65,6 +67,18 @@ Cada doença traz, além da primeira escolha, as alternativas em alergia, a segu
 ## Proteção contra violência
 
 Rastreio dentro do fluxo do atendimento, com oito tipos de violência. Ao marcar a suspeita, o aplicativo mostra as janelas de tempo das profilaxias, o que fazer em ordem, o que não fazer, as obrigações legais e para onde encaminhar. A suspeita já obriga a notificar, independentemente de confirmação ou de boletim de ocorrência.
+
+## Entender: a camada didática
+
+Cada tela ensina. Ao abrir uma queixa, o aplicativo explica primeiro o que aquilo é. São 55 conceitos, de febre e infecção viral a sepse, escore-z, arbovirose e resistência antimicrobiana, cada um com cinco partes:
+
+- **O que é**, com a definição precisa e os números que importam.
+- **Por que acontece**, com o mecanismo fisiológico completo, sem diluir.
+- **O que muda na criança**, e no lactente e no recém-nascido quando é o caso.
+- **Quando preocupa**, com os sinais que mudam a conduta.
+- **Mitos frequentes**, com a correção. São 146 pares, incluindo os que circulam entre profissionais: hemograma não decide vírus ou bactéria, proteína C reativa baixa não tranquiliza, pressão normal não exclui choque.
+
+Cada conceito traz ainda a frase pronta para explicar à família, em palavras simples, com botão de copiar. A tela Entender reúne todos, com busca, e a busca global também os encontra.
 
 ## Aprender e explicar
 
