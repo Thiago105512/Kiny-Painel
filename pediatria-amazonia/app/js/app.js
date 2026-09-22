@@ -31,6 +31,7 @@ window.PED = window.PED || {};
     { path: '/exames', nome: 'Exames', ic: '🧪' },
     { path: '/vacinas', nome: 'Vacinas', ic: '💉' },
     { path: '/crescimento', nome: 'Crescimento', ic: '📈' },
+    { path: '/acidentes', nome: 'Acidentes', ic: '🚩' },
     { path: '/unidades', nome: 'Unidades', ic: '🏥' },
     { path: '/violencia', nome: 'Proteção', ic: '🛡️' },
     { path: '/entender', nome: 'Entender', ic: '📖' },
@@ -447,6 +448,7 @@ window.PED = window.PED || {};
         <a class="tile" href="#/vacinas"><span class="ic">💉</span>Vacinas</a>
         <a class="tile" href="#/crescimento"><span class="ic">📈</span>Crescimento</a>
         <a class="tile" href="#/notificacao"><span class="ic">📢</span>Notificação<small>compulsória</small></a>
+        <a class="tile red" href="#/acidentes"><span class="ic">🚩</span>Acidentes<small>queimadura, engasgo, intoxicação</small></a>
         <a class="tile" href="#/unidades"><span class="ic">🏥</span>Unidades<small>para onde encaminhar</small></a>
         <a class="tile red" href="#/violencia"><span class="ic">🛡️</span>Proteção<small>violência</small></a>
         <a class="tile" href="#/entender"><span class="ic">📖</span>Entender<small>o que é e por que acontece</small></a>
@@ -849,7 +851,7 @@ window.PED = window.PED || {};
   }
 
   /* ---- Doenças ---- */
-  const CATS = { amazonia: 'Amazônia', neonatal: 'Neonatologia', respiratoria: 'Respiratórias', gastrointestinal: 'Gastrointestinais', infecciosa: 'Infecciosas', dermatologica: 'Pele', nutricional: 'Nutricionais', neurologica: 'Neurológicas', urinaria: 'Urinárias', toxicologica: 'Toxicológicas' };
+  const CATS = { amazonia: 'Amazônia', acidente: 'Acidentes do dia a dia', neonatal: 'Neonatologia', respiratoria: 'Respiratórias', gastrointestinal: 'Gastrointestinais', infecciosa: 'Infecciosas', dermatologica: 'Pele', nutricional: 'Nutricionais', neurologica: 'Neurológicas', urinaria: 'Urinárias', toxicologica: 'Toxicológicas' };
   route('/doencas', (p, q) => {
     const ds = (D().doencas || []).slice().sort((a, b) => a.nome.localeCompare(b.nome)); const cats = {};
     ds.forEach(d => (cats[d.categoria] = cats[d.categoria] || []).push(d));
@@ -922,9 +924,11 @@ window.PED = window.PED || {};
     const c = PED.calc.calculadoras.find(x => x.id === id); if (!c) return '<div class="empty">Não encontrada.</div>';
     const p = paciente(); const idade = idadePaciente(); const pesoQ = pesoAtivo();
     const auto = { peso: pesoQ, altura: p && p.altura, idadeMeses: idade ? Math.round(idade.totalMeses) : null, sexo: p && p.sexo, pc: p && p.pc };
+    const guardados = (state.calcValores && state.calcValores[c.id]) || {};
     return `<h1>${c.icone} ${esc(c.nome)}</h1><p class="muted">${esc(c.descricao)}</p>
       <form id="formCalc" class="card" data-id="${c.id}"><div class="fields">${c.campos.map(k => {
-        const v = k.fromPatient && auto[k.fromPatient] != null ? auto[k.fromPatient] : (k.default != null ? k.default : '');
+        const v = guardados[k.id] != null && guardados[k.id] !== '' ? guardados[k.id]
+          : (k.fromPatient && auto[k.fromPatient] != null ? auto[k.fromPatient] : (k.default != null ? k.default : ''));
         if (k.tipo === 'select') return `<div class="field"><label>${esc(k.label)}</label><select name="${k.id}">${k.opcoes.map(o => `<option value="${esc(o[0])}" ${String(v) === String(o[0]) ? 'selected' : ''}>${esc(o[1])}</option>`).join('')}</select></div>`;
         return `<div class="field"><label>${esc(k.label)}</label><input type="number" name="${k.id}" step="${k.step || 'any'}" value="${v == null ? '' : v}" placeholder="${esc(k.placeholder || '')}"></div>`;
       }).join('')}</div><div class="btnrow"><button class="btn" type="submit">Calcular</button></div><div id="calcOut"></div></form>${disclaimer}`;
@@ -940,7 +944,7 @@ window.PED = window.PED || {};
     const es = D().emergencias || [];
     return `<div class="card" style="background:var(--red-soft);border-color:#f3c1bd"><h1>🚨 Emergências pediátricas</h1><p>Informe o peso: as doses das drogas de emergência são calculadas automaticamente. Confirmar sempre com a equipe e o protocolo institucional.</p></div>${pesoBoxEmergencia()}
       <div class="grid">${es.map(e => `<a class="tile red" href="#/emergencias/${e.id}"><span class="ic">${e.icone || '🚨'}</span>${esc(e.nome)}</a>`).join('')}</div>
-      <div class="btnrow"><a class="btn secondary" href="#/neonatal">👶 Recém-nascido</a><a class="btn secondary" href="#/calculadoras/tubo">🩺 Tubo e materiais por idade</a><a class="btn secondary" href="#/calculadoras/sinaisvitais">❤️ Sinais vitais por idade</a></div>${disclaimer}`;
+      <div class="btnrow"><a class="btn danger" href="#/acidentes">🚩 Acidentes do dia a dia</a><a class="btn secondary" href="#/neonatal">👶 Recém-nascido</a><a class="btn secondary" href="#/calculadoras/tubo">🩺 Tubo e materiais por idade</a><a class="btn secondary" href="#/calculadoras/sinaisvitais">❤️ Sinais vitais por idade</a></div>${disclaimer}`;
   });
   route('/emergencias/:id', ({ id }) => {
     const e = (D().emergencias || []).find(x => x.id === id); if (!e) return '<div class="empty">Não encontrada.</div>';
@@ -1101,7 +1105,69 @@ window.PED = window.PED || {};
       ${disclaimer}`;
   });
 
-  /* ---- Unidades de saúde ---- */
+  /* ---- Acidentes do dia a dia ---- */
+  route('/acidentes', (params, q) => {
+    const A = D().acidentes; if (!A || !A.protocolos) return '<div class="empty">M\u00f3dulo em prepara\u00e7\u00e3o.</div>';
+    const F = A.ferramentas || {};
+    const ic = { queimadura: '\u{1F525}', intoxicacao_medicamentosa: '\u{1F48A}', intoxicacao_domestica: '\u{1F9F4}', ingestao_caustico: '\u26A0\uFE0F', ingestao_pilha_botao: '\u{1F50B}', corpo_estranho_via_aerea: '\u{1F62E}', corpo_estranho_digestivo: '\u{1F529}', corpo_estranho_nasal_auricular: '\u{1F443}', afogamento: '\u{1F30A}', traumatismo_cranioencefalico: '\u{1FA79}', queda: '\u{1F930}', mordedura_cao: '\u{1F415}', choque_eletrico: '\u26A1', ferimento_cortocontuso: '\u{1FA78}', intoxicacao_planta: '\u{1F33F}', intoxicacao_fumaca: '\u{1F32B}\uFE0F' };
+    return `<h1>\u{1F6A9} Acidentes do dia a dia</h1>
+      ${(F.nuncaFazer || []).length ? `<div class="alert red"><strong>\u26D4 Nunca fazer</strong>${U.list(F.nuncaFazer)}</div>` : ''}
+      ${(F.telefones || []).length ? `<div class="card compact"><b>Telefones</b><div class="toggles" style="margin-top:.3rem">${F.telefones.map(t => `<a class="chip red" href="tel:${esc(String(t.numero).replace(/\D/g, ''))}">${esc(t.nome)}: ${esc(t.numero)}</a>`).join('')}</div>${F.telefones.some(t => t.obs) ? `<small class="muted">${esc((F.telefones.find(t => t.obs) || {}).obs || '')}</small>` : ''}</div>` : ''}
+      <div class="grid">${A.protocolos.map(p2 => `<a class="tile red" href="#/doencas/${esc(p2.id)}"><span class="ic">${ic[p2.id] || '\u{1F6A9}'}</span>${esc(p2.nome)}</a>`).join('')}</div>
+      <div class="section-title"><h2>Ferramentas</h2></div>
+      <div class="grid">
+        <a class="tile" href="#/calculadoras/queimadura"><span class="ic">\u{1F525}</span>Superfície queimada<small>e Parkland</small></a>
+        <a class="tile" href="#/acidentes/pecarn"><span class="ic">\u{1FA79}</span>Trauma de crânio<small>quando tomografar</small></a>
+        <a class="tile" href="#/acidentes/raiva"><span class="ic">\u{1F415}</span>Profilaxia da raiva</a>
+        <a class="tile" href="#/acidentes/tetano"><span class="ic">\u{1F489}</span>Profilaxia do tétano</a>
+        <a class="tile" href="#/acidentes/toxicos"><span class="ic">\u2623\uFE0F</span>Agentes tóxicos<small>${(F.agentesToxicos || []).length} agentes</small></a>
+        <a class="tile" href="#/emergencias"><span class="ic">\u{1F6A8}</span>Emergências</a>
+      </div>
+      ${U.fontes(A)}${disclaimer}`;
+  });
+
+  route('/acidentes/:ferramenta', ({ ferramenta }) => {
+    const A = D().acidentes; const F = (A && A.ferramentas) || {};
+    if (!A) return '<div class="empty">M\u00f3dulo em prepara\u00e7\u00e3o.</div>';
+    if (ferramenta === 'pecarn') {
+      const P = F.pecarn; if (!P) return '<div class="empty">Indispon\u00edvel.</div>';
+      const bloco = (t, b) => b ? `<div class="card"><h2>${t}</h2>
+        ${(b.criteriosAltoRisco || []).length ? `<h3>Alto risco</h3>${U.list(b.criteriosAltoRisco)}` : ''}
+        ${(b.criteriosIntermediarios || []).length ? `<h3>Risco intermediário</h3>${U.list(b.criteriosIntermediarios)}` : ''}
+        ${b.conduta ? `<h3>Conduta</h3><dl class="kv">${Object.entries(b.conduta).map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>` : ''}</div>` : '';
+      const idade = idadePaciente();
+      return `<h1>\u{1FA79} Trauma de crânio: quando tomografar</h1>
+        ${idade ? `<div class="alert blue"><strong>Paciente ativo</strong>${esc(idade.texto)} \u2013 usar a regra de ${idade.totalMeses < 24 ? 'menores de 2 anos' : '2 anos ou mais'}.</div>` : ''}
+        <div class="alert amber"><strong>Regra de apoio, não de substituição</strong>${esc(P.nota || 'A regra identifica quem tem risco muito baixo de lesão intracraniana clinicamente importante. A decisão final é clínica.')}</div>
+        ${bloco('Menores de 2 anos', P.menor2anos)}${bloco('2 anos ou mais', P.maior2anos)}${U.fontes(P)}${disclaimer}`;
+    }
+    if (ferramenta === 'raiva') {
+      const R = F.profilaxiaRaiva; if (!R) return '<div class="empty">Indispon\u00edvel.</div>';
+      return `<h1>\u{1F415} Profilaxia da raiva</h1>
+        <div class="alert red"><strong>Decisão que não espera</strong>A conduta depende do tipo de exposição e da condição do animal. Na dúvida, iniciar e reavaliar.</div>
+        <div class="card"><h2>Tipo de exposição</h2>${(R.tiposExposicao || []).map(t => `<div class="linhaTrat"><b>${esc(t.tipo)}</b>${(t.exemplos || []).length ? `<br><small class="muted">${esc(t.exemplos.join('; '))}</small>` : ''}<p>${esc(t.conduta)}</p></div>`).join('')}</div>
+        <div class="card"><h2>Condição do animal</h2>${(R.condicaoAnimal || []).map(c => `<div class="linhaTrat"><b>${esc(c.situacao)}</b><p>${esc(c.conduta)}</p></div>`).join('')}</div>
+        ${R.esquema ? `<div class="card"><h2>Esquema vacinal</h2><p>${esc(R.esquema)}</p>${R.soro ? `<h3>Soro ou imunoglobulina</h3><p>${esc(R.soro)}</p>` : ''}${(R.observacoes || []).length ? U.list(R.observacoes) : ''}</div>` : ''}
+        ${U.fontes(R)}${disclaimer}`;
+    }
+    if (ferramenta === 'tetano') {
+      const T = F.profilaxiaTetano; if (!T) return '<div class="empty">Indispon\u00edvel.</div>';
+      return `<h1>\u{1F489} Profilaxia do tétano</h1>
+        <div class="tablewrap"><table class="dosetable"><tr><th>Situação vacinal</th><th>Ferimento limpo e superficial</th><th>Ferimento sujo, profundo ou com corpo estranho</th></tr>
+        ${(T.tabela || []).map(l => `<tr><td data-l="Situação"><b>${esc(l.situacaoVacinal)}</b></td><td data-l="Dose">${esc(l.ferimentoLimpo)}</td><td data-l="Via">${esc(l.ferimentoSujo)}</td></tr>`).join('')}</table></div>
+        ${(T.observacoes || []).length ? `<div class="card">${U.list(T.observacoes)}</div>` : ''}${U.fontes(T)}${disclaimer}`;
+    }
+    if (ferramenta === 'toxicos') {
+      const ag = F.agentesToxicos || [];
+      return `<h1>\u2623\uFE0F Agentes tóxicos</h1>
+        ${(F.nuncaFazer || []).length ? `<div class="alert red"><strong>\u26D4 Nunca fazer</strong>${U.list(F.nuncaFazer)}</div>` : ''}
+        <div class="field"><input id="filtroTox" placeholder="Digite 3 letras do agente" autocomplete="off" autofocus></div>
+        <div id="listaTox">${ag.map(a => `<details class="toxRow" data-n="${esc(U.normalize(a.agente))}"><summary>${esc(a.agente)}${a.antidoto ? ` <span class="chip green">antídoto</span>` : ''}${a.verificar ? ' <span class="chip amber">confirmar</span>' : ''}</summary><div class="body">
+          <dl class="kv">${a.doseToxica ? `<dt>Dose tóxica</dt><dd>${esc(a.doseToxica)}</dd>` : ''}${a.quadro ? `<dt>Quadro</dt><dd>${esc(a.quadro)}</dd>` : ''}${a.antidoto ? `<dt>Antídoto</dt><dd>${esc(a.antidoto)}</dd>` : ''}${a.carvao ? `<dt>Carvão ativado</dt><dd>${esc(a.carvao)}</dd>` : ''}${a.conduta ? `<dt>Conduta</dt><dd>${esc(a.conduta)}</dd>` : ''}</dl></div></details>`).join('')}</div>
+        ${U.fontes(A)}${disclaimer}`;
+    }
+    return '<div class="empty">Ferramenta não encontrada.</div>';
+  });
   /** Endereço e telefone que a própria médica preencheu ficam guardados no aparelho. */
   const compUnidade = (id) => ((S.pref('unidadesComp') || {})[id]) || {};
   function salvarCompUnidade(id, dados) { const c = S.pref('unidadesComp') || {}; c[id] = Object.assign({}, c[id], dados); S.pref('unidadesComp', c); }
@@ -1453,7 +1519,22 @@ window.PED = window.PED || {};
 
     // Calculadora
     const fc = $('#formCalc');
-    if (fc) { const run = () => { const c = PED.calc.calculadoras.find(x => x.id === fc.dataset.id); const r = c.calc(formData(fc), paciente()); $('#calcOut').innerHTML = renderCalcOut(r); }; fc.addEventListener('submit', (e) => { e.preventDefault(); run(); }); fc.addEventListener('input', run); run(); }
+    if (fc) {
+      const cal = PED.calc.calculadoras.find(x => x.id === fc.dataset.id);
+      const run = () => {
+        const dados = formData(fc);
+        state.calcValores = state.calcValores || {}; state.calcValores[cal.id] = dados;
+        $('#calcOut').innerHTML = renderCalcOut(cal.calc(dados, paciente()));
+      };
+      fc.addEventListener('submit', (e) => { e.preventDefault(); run(); });
+      fc.addEventListener('input', run);
+      // campos que mudam a própria estrutura do formulário exigem redesenho
+      (cal.recarregaEm || []).forEach(nome => {
+        const el2 = fc.querySelector('[name="' + nome + '"]');
+        if (el2) el2.addEventListener('change', () => { run(); render(); });
+      });
+      run();
+    }
 
     // Painel de dose (selects)
     const painel = $('#painelDose');
@@ -1484,6 +1565,7 @@ window.PED = window.PED || {};
     if (fs) fs.addEventListener('submit', (e) => { e.preventDefault(); const d = formData(fs); const prev = fs.dataset.id ? S.byId('evolucoes', fs.dataset.id) : null; const quando = (d.dataISO ? d.dataISO : U.today()) + 'T' + ((d.hora && /^\d{1,2}:?\d{0,2}$/.test(d.hora)) ? (d.hora.includes(':') ? d.hora : d.hora.padStart(4, '0').replace(/(\d{2})(\d{2})/, '$1:$2')) : '12:00');
         const obj = Object.assign({}, prev || {}, d, { data: new Date(quando).toISOString(), profissional: profissionalLinha() }); if (!fs.dataset.id) delete obj.id; S.upsert('evolucoes', obj); const p = S.byId('pacientes', d.pacienteId); if (p && d.peso && Number(d.peso) !== p.peso) { p.peso = Number(d.peso); S.upsert('pacientes', p); } U.toast('Evolução salva'); go('/pacientes/' + d.pacienteId + '?tab=evolucao'); });
     const fprof = $('#formProf'); if (fprof) fprof.addEventListener('submit', (e) => { e.preventDefault(); S.pref('profissional', formData(fprof)); U.toast('Profissional salvo'); render(); });
+    const ft = $('#filtroTox'); if (ft) ft.addEventListener('input', () => { const q2 = U.normalize(ft.value); $$('.toxRow', main).forEach(x => x.style.display = !q2 || x.dataset.n.includes(q2) ? '' : 'none'); });
     const uc = $('#uniCidade'); if (uc) uc.addEventListener('change', () => go('/unidades?cidade=' + encodeURIComponent(uc.value)));
     // Importar
     const imp = $('#importFile'); if (imp) imp.addEventListener('change', () => { const fr = new FileReader(); fr.onload = () => { try { S.importJSON(fr.result); U.toast('Dados importados'); render(); } catch (e) { alert('Arquivo inválido: ' + e.message); } }; fr.readAsText(imp.files[0]); });
@@ -1609,6 +1691,13 @@ window.PED = window.PED || {};
     const somar = (lista) => (lista || []).forEach(d => { if (d && d.id && !ids.has(d.id)) { ids.add(d.id); D0.doencas.push(d); } });
     somar(D0.doencasExtra);
     somar(D0.neonatal && D0.neonatal.protocolos);
+    somar(D0.acidentes && D0.acidentes.protocolos);
+    // queixas de acidentes entram na mesma lista das demais
+    if (D0.acidentes && D0.acidentes.queixas) {
+      D0.queixas = D0.queixas || [];
+      const qids = new Set(D0.queixas.map(q => q.id));
+      for (const q of D0.acidentes.queixas) if (q && q.id && !qids.has(q.id)) { qids.add(q.id); D0.queixas.push(q); }
+    }
   }
 
   function init() {

@@ -457,3 +457,89 @@ PED.zscore = (function () {
     }
   });
 })();
+
+/* ---------- Superfície queimada (Lund-Browder) e reposição de Parkland ---------- */
+(function () {
+  const f = PED.util.fmt;
+  const num = (x) => (x === '' || x == null || isNaN(Number(x))) ? null : Number(x);
+  const LB = () => (((PED.data.acidentes || {}).ferramentas || {}).lundBrowder) || null;
+
+  const ROTULOS = {
+    cabeca: 'Cabeça', pescoco: 'Pescoço', troncoAnterior: 'Tronco anterior', troncoPosterior: 'Tronco posterior',
+    tronco: 'Tronco', nadegaCada: 'Nádega (cada)', genitalia: 'Genitália',
+    bracoCada: 'Braço (cada)', antebracoCada: 'Antebraço (cada)', maoCada: 'Mão (cada)',
+    coxaCada: 'Coxa (cada)', pernaCada: 'Perna (cada)', peCada: 'Pé (cada)',
+    membroSuperiorCada: 'Membro superior (cada)', membroInferiorCada: 'Membro inferior (cada)'
+  };
+  const rotulo = (k) => ROTULOS[k] || k.replace(/Cada$/, ' (cada)').replace(/([A-Z])/g, ' $1').replace(/^./, c => c.toUpperCase());
+
+  /** Segmentos e percentuais para a faixa etária escolhida. */
+  function segmentos(faixaIdx) {
+    const lb = LB(); if (!lb) return [];
+    const fx = (lb.faixas || [])[faixaIdx] || {};
+    const out = [];
+    for (const [k, v] of Object.entries(fx)) {
+      if (typeof v !== 'number') continue;
+      const dobro = /Cada$/.test(k);
+      out.push({ id: k, rotulo: rotulo(k), pct: v, dobro });
+    }
+    for (const sf of lb.segmentosFixos || []) {
+      const k = 'fixo_' + PED.util.normalize(sf.segmento).replace(/\W+/g, '_');
+      if (out.some(o => PED.util.normalize(o.rotulo) === PED.util.normalize(sf.segmento))) continue;
+      out.push({ id: k, rotulo: sf.segmento, pct: sf.pct, dobro: /cada/i.test(sf.segmento) });
+    }
+    return out;
+  }
+
+  PED.calc.calculadoras.push({
+    id: 'queimadura', nome: 'Superfície queimada e Parkland', icone: '🔥', grupo: 'Emergência', recarregaEm: ['faixa'],
+    descricao: 'Estima a superfície corporal queimada pela tabela de Lund-Browder, que corrige a proporção maior da cabeça na criança, e calcula a reposição das primeiras 24 horas.',
+    get campos() {
+      const lb = LB();
+      const faixas = (lb && lb.faixas) ? lb.faixas.map((x, i) => [String(i), x.idade || ('faixa ' + (i + 1))]) : [['0', 'informe a base de acidentes']];
+      const segs = segmentos(0);
+      return [
+        { id: 'peso', label: 'Peso (kg)', tipo: 'number', step: '0.1', fromPatient: 'peso' },
+        { id: 'faixa', label: 'Faixa etária', tipo: 'select', opcoes: faixas },
+        { id: 'horasDesde', label: 'Horas desde a queimadura', tipo: 'number', step: '0.5', placeholder: 'ex.: 1' },
+      ].concat(segs.map(s => ({ id: 'seg_' + s.id, label: s.rotulo + ' — ' + f(s.pct, 1) + '%' + (s.dobro ? ' cada' : ''), tipo: 'select', opcoes: s.dobro ? [['0', 'não'], ['1', 'um lado'], ['2', 'os dois']] : [['0', 'não'], ['1', 'sim']] })));
+    },
+    calc(v) {
+      const lb = LB(); if (!lb) return null;
+      const peso = num(v.peso), faixaIdx = Number(v.faixa || 0), horas = num(v.horasDesde);
+      const segs = segmentos(faixaIdx);
+      let scq = 0; const usados = [];
+      for (const s of segs) {
+        const n = Number(v['seg_' + s.id] || 0);
+        if (!n) continue;
+        scq += s.pct * n;
+        usados.push(s.rotulo + (s.dobro && n === 2 ? ' (dois)' : '') + ' ' + f(s.pct * n, 1) + '%');
+      }
+      if (!scq) return null;
+      const res = [{ label: 'Superfície corporal queimada', valor: f(scq, 1), unidade: '%', destaque: true }];
+      const alertas = [];
+      let formula = 'Lund-Browder, faixa ' + ((lb.faixas || [])[faixaIdx] || {}).idade + '\n' + usados.join(' + ') + ' = ' + f(scq, 1) + '%';
+      if (peso) {
+        const total = 4 * peso * scq;
+        res.push({ label: 'Parkland: total em 24 h (Ringer lactato)', valor: f(total, 0), unidade: 'mL', destaque: true });
+        res.push({ label: 'Primeiras 8 h (metade)', valor: f(total / 2, 0), unidade: 'mL' });
+        res.push({ label: 'Nas 8 h iniciais', valor: f(total / 2 / 8, 0), unidade: 'mL/h' });
+        res.push({ label: '16 h seguintes', valor: f(total / 2, 0), unidade: 'mL' });
+        res.push({ label: 'Nas 16 h seguintes', valor: f(total / 2 / 16, 0), unidade: 'mL/h' });
+        formula += '\nParkland = 4 mL × ' + f(peso) + ' kg × ' + f(scq, 1) + '% = ' + f(total, 0) + ' mL em 24 h';
+        const manut = PED.calc.hollidaySegar(peso);
+        if (manut) { res.push({ label: 'Manutenção a somar (Holliday-Segar)', valor: f(manut.dia, 0), unidade: 'mL/dia' }); formula += '\nEm criança, somar a manutenção: ' + f(manut.dia, 0) + ' mL/dia (' + f(manut.hora, 1) + ' mL/h)'; }
+        if (horas != null && horas > 0) {
+          const jaDevido = (total / 2) * Math.min(horas, 8) / 8;
+          res.push({ label: 'Já deveria ter recebido até agora', valor: f(jaDevido, 0), unidade: 'mL' });
+          formula += '\nA contagem das 24 h começa no horário da queimadura, não na chegada: já se passaram ' + f(horas, 1) + ' h.';
+        }
+      } else alertas.push('Informe o peso para calcular a reposição.');
+      if (scq >= 10) alertas.push('Queimadura de 10% ou mais da superfície corporal em criança: considerar reposição venosa e avaliar encaminhamento a centro de referência em queimados.');
+      if (scq >= 20) alertas.push('Superfície extensa: avaliar via aérea, sonda vesical para controle de diurese, analgesia e transferência.');
+      (lb.observacoes || (lb.nota ? [lb.nota] : [])).forEach(x => alertas.push(x));
+      if (lb.regraPalma) alertas.push(lb.regraPalma);
+      return { resultados: res, alertas, formula, fontes: (lb.fontes || []).map(x => x.nome + (x.ano ? ' (' + x.ano + ')' : '')) };
+    }
+  });
+})();
