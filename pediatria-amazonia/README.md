@@ -25,12 +25,14 @@ No celular, abra a URL e use "Adicionar à tela inicial" para instalar como app.
 
 | Módulo | Quantidade |
 |---|---|
-| Queixas com fluxo guiado | 45 |
-| Doenças com protocolo padronizado | 56 |
+| Queixas com fluxo guiado | 54 |
+| Doenças com protocolo padronizado | 72 |
 | Doenças com destaque amazônico | 24 |
 | Medicamentos com cálculo por peso e nome comercial | 67 |
+| Acidentes do dia a dia com protocolo | 16 |
+| Agentes tóxicos com antídoto e conduta | 35 |
 | Alternativas, segunda linha e off-label | 296 linhas, 733 opções |
-| Calculadoras | 20 |
+| Calculadoras | 21 |
 | Emergências com doses por peso | 14 |
 | Exames com referências por idade | 39 |
 | Vacinas do calendário nacional | 19 |
@@ -67,6 +69,18 @@ Cada doença traz, além da primeira escolha, as alternativas em alergia, a segu
 ## Proteção contra violência
 
 Rastreio dentro do fluxo do atendimento, com oito tipos de violência. Ao marcar a suspeita, o aplicativo mostra as janelas de tempo das profilaxias, o que fazer em ordem, o que não fazer, as obrigações legais e para onde encaminhar. A suspeita já obriga a notificar, independentemente de confirmação ou de boletim de ocorrência.
+
+## Acidentes do dia a dia
+
+Dezesseis protocolos para o que enche o pronto-socorro pediátrico: queimadura, ingestão de medicamento, intoxicação doméstica, cáustico, pilha botão, engasgo, corpo estranho digestivo e nasal, afogamento, traumatismo cranioencefálico, queda, mordedura de cão, choque elétrico, ferimento cortocontuso, intoxicação por planta e por fumaça.
+
+Com as ferramentas que a decisão exige na hora:
+
+- **Superfície queimada por Lund-Browder**, que corrige a proporção maior da cabeça na criança, com Parkland, separação das primeiras oito horas, soma da manutenção hídrica e contagem a partir do horário da queimadura.
+- **Quando tomografar no trauma de crânio**, com a regra PECARN separada para menores de 2 anos e para 2 anos ou mais.
+- **Profilaxia da raiva** por tipo de exposição e condição do animal, e **profilaxia do tétano** por situação vacinal e tipo de ferimento.
+- **35 agentes tóxicos** com dose tóxica, quadro, antídoto, indicação de carvão ativado e conduta, com busca por três letras.
+- **27 condutas a nunca fazer**, começando por não provocar vômito em nenhuma intoxicação.
 
 ## Entender: a camada didática
 

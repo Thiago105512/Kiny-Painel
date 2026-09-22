@@ -473,23 +473,34 @@ PED.zscore = (function () {
   };
   const rotulo = (k) => ROTULOS[k] || k.replace(/Cada$/, ' (cada)').replace(/([A-Z])/g, ' $1').replace(/^./, c => c.toUpperCase());
 
-  /** Segmentos e percentuais para a faixa etária escolhida. */
+  /** Segmentos e percentuais para a faixa etária escolhida.
+      As chaves terminadas em Metade são variantes do mesmo segmento (face anterior ou posterior)
+      e por isso não viram um segmento separado: viram a opção "metade" do segmento base. */
   function segmentos(faixaIdx) {
     const lb = LB(); if (!lb) return [];
     const fx = (lb.faixas || [])[faixaIdx] || {};
     const out = [];
     for (const [k, v] of Object.entries(fx)) {
-      if (typeof v !== 'number') continue;
-      const dobro = /Cada$/.test(k);
-      out.push({ id: k, rotulo: rotulo(k), pct: v, dobro });
+      if (typeof v !== 'number' || /Metade$/.test(k)) continue;
+      out.push({ id: k, rotulo: rotulo(k), pct: v, dobro: /Cada$/.test(k), metade: typeof fx[k + 'Metade'] === 'number' ? fx[k + 'Metade'] : null });
     }
     for (const sf of lb.segmentosFixos || []) {
       const k = 'fixo_' + PED.util.normalize(sf.segmento).replace(/\W+/g, '_');
-      if (out.some(o => PED.util.normalize(o.rotulo) === PED.util.normalize(sf.segmento))) continue;
-      out.push({ id: k, rotulo: sf.segmento, pct: sf.pct, dobro: /cada/i.test(sf.segmento) });
+      const base = (t) => PED.util.normalize(t).replace(/\(cada\)/g, '').replace(/\s+/g, ' ').trim();
+      if (out.some(o => base(o.rotulo) === base(sf.segmento))) continue;
+      out.push({ id: k, rotulo: sf.segmento.replace(/\s*\(cada\)\s*/i, ''), pct: sf.pct, dobro: /\(cada\)/i.test(sf.segmento), metade: sf.pct / 2 });
     }
     return out;
   }
+  /** Opções de extensão de cada segmento e o percentual que cada uma vale. */
+  function opcoesSegmento(s) {
+    const op = [['0', 'não']];
+    if (s.metade != null) op.push(['m', 'metade']);
+    op.push(['1', s.dobro ? 'um inteiro' : 'inteiro']);
+    if (s.dobro) op.push(['2', 'os dois']);
+    return op;
+  }
+  const pctSegmento = (s, escolha) => escolha === 'm' ? (s.metade || s.pct / 2) : escolha === '1' ? s.pct : escolha === '2' ? s.pct * 2 : 0;
 
   PED.calc.calculadoras.push({
     id: 'queimadura', nome: 'Superfície queimada e Parkland', icone: '🔥', grupo: 'Emergência', recarregaEm: ['faixa'],
@@ -502,7 +513,7 @@ PED.zscore = (function () {
         { id: 'peso', label: 'Peso (kg)', tipo: 'number', step: '0.1', fromPatient: 'peso' },
         { id: 'faixa', label: 'Faixa etária', tipo: 'select', opcoes: faixas },
         { id: 'horasDesde', label: 'Horas desde a queimadura', tipo: 'number', step: '0.5', placeholder: 'ex.: 1' },
-      ].concat(segs.map(s => ({ id: 'seg_' + s.id, label: s.rotulo + ' — ' + f(s.pct, 1) + '%' + (s.dobro ? ' cada' : ''), tipo: 'select', opcoes: s.dobro ? [['0', 'não'], ['1', 'um lado'], ['2', 'os dois']] : [['0', 'não'], ['1', 'sim']] })));
+      ].concat(segs.map(s => ({ id: 'seg_' + s.id, label: s.rotulo + ' — ' + f(s.pct, 1) + '%' + (s.dobro ? ' cada' : ''), tipo: 'select', opcoes: opcoesSegmento(s) })));
     },
     calc(v) {
       const lb = LB(); if (!lb) return null;
@@ -510,10 +521,12 @@ PED.zscore = (function () {
       const segs = segmentos(faixaIdx);
       let scq = 0; const usados = [];
       for (const s of segs) {
-        const n = Number(v['seg_' + s.id] || 0);
-        if (!n) continue;
-        scq += s.pct * n;
-        usados.push(s.rotulo + (s.dobro && n === 2 ? ' (dois)' : '') + ' ' + f(s.pct * n, 1) + '%');
+        const escolha = v['seg_' + s.id];
+        const pct = pctSegmento(s, escolha);
+        if (!pct) continue;
+        scq += pct;
+        const rot = escolha === 'm' ? ' (metade)' : escolha === '2' ? ' (os dois)' : '';
+        usados.push(s.rotulo + rot + ' ' + f(pct, 1) + '%');
       }
       if (!scq) return null;
       const res = [{ label: 'Superfície corporal queimada', valor: f(scq, 1), unidade: '%', destaque: true }];

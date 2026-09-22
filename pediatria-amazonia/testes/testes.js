@@ -10,7 +10,7 @@ for (const f of ['utils', 'store', 'seguranca', 'entrada',
   'data/zscore', 'data/notificacao', 'calculators']) {
   try { require(path.join(APP, f + '.js')); } catch (e) { console.error('Falha ao carregar ' + f + ': ' + e.message); process.exit(1); }
 }
-for (const f of ['doencas-extra', 'neonatal', 'comerciais', 'alternativas', 'locais', 'violencia', 'curiosidades']) {
+for (const f of ['doencas-extra', 'neonatal', 'acidentes', 'comerciais', 'alternativas', 'locais', 'violencia', 'curiosidades', 'didatica']) {
   try { require(path.join(APP, 'data', f + '.js')); } catch (e) { console.error('AVISO: ' + f + ' não carregou (' + e.message.slice(0, 40) + ')'); }
 }
 
@@ -148,7 +148,7 @@ t('Prescrição: antimicrobiano exige duas vias', () => {
 });
 
 /* ---------- 5. Integridade das bases ---------- */
-const doencas = (D.doencas || []).concat(D.doencasExtra || [], (D.neonatal && D.neonatal.protocolos) || []);
+const doencas = (D.doencas || []).concat(D.doencasExtra || [], (D.neonatal && D.neonatal.protocolos) || [], (D.acidentes && D.acidentes.protocolos) || []);
 const idsDoenca = new Set(doencas.map(d => d.id));
 const idsMed = new Set((D.medicamentos || []).map(m => m.id));
 const idsExame = new Set((D.exames || []).map(e => e.id));
@@ -322,9 +322,66 @@ if (D.curiosidades) {
   });
 }
 
+/* ---------- 8. Acidentes do dia a dia ---------- */
+if (D.acidentes) {
+  const A = D.acidentes, F = A.ferramentas || {};
+  t('Superfície corporal soma exatamente 100% em toda faixa etária', () => {
+    const c = C.calculadoras.find(x => x.id === 'queimadura');
+    if (!c) throw new Error('calculadora ausente');
+    (F.lundBrowder.faixas || []).forEach((fx, i) => {
+      const v = { peso: 10, faixa: String(i) };
+      for (const campo of c.campos.slice(3)) v[campo.id] = campo.opcoes.some(o => o[0] === '2') ? '2' : '1';
+      const soma = Number(String(c.calc(v).resultados[0].valor).replace(',', '.'));
+      if (Math.abs(soma - 100) > 0.05) throw new Error(fx.idade + ' soma ' + soma + '%');
+    });
+  });
+  t('Parkland calcula 4 mL por kg por porcentagem queimada', () => {
+    const c = C.calculadoras.find(x => x.id === 'queimadura');
+    const v = { peso: 10, faixa: '0', seg_cabeca: '1' };   // cabeça = 19% na faixa 0 a 1 ano
+    const r = c.calc(v);
+    perto(num(res(r, 'Superfície corporal queimada').valor), 19, 0.1);
+    perto(num(res(r, 'total em 24 h').valor), 4 * 10 * 19, 1, 'total Parkland:');
+    perto(num(res(r, 'Primeiras 8 h').valor), 380, 1);
+  });
+  t('Queimadura extensa gera alerta de encaminhamento', () => {
+    const c = C.calculadoras.find(x => x.id === 'queimadura');
+    const r = c.calc({ peso: 10, faixa: '0', seg_cabeca: '1' });
+    if (!r.alertas.some(a => /queimados|refer/i.test(a))) throw new Error('faltou o alerta de centro de referência');
+  });
+  t('Protocolos de acidente têm todos os campos e medicamentos válidos', () => {
+    const ruins = [];
+    for (const x of A.protocolos) {
+      for (const k of ['definicao', 'manifestacoes', 'sinaisAlarme', 'tratamento', 'criteriosInternacao', 'orientacoes', 'prevencao', 'fontes'])
+        if (!x[k] || (Array.isArray(x[k]) && !x[k].length)) ruins.push(x.id + ' sem ' + k);
+      for (const m of x.medicamentos || []) if (m.medId && !idsMed.has(m.medId)) ruins.push(x.id + ' med ' + m.medId);
+    }
+    if (ruins.length) throw new Error(ruins.slice(0, 5).join(', '));
+  });
+  t('Queixas de acidente apontam para protocolos existentes', () => {
+    const pids = new Set(A.protocolos.map(x => x.id));
+    const ruins = [];
+    for (const q of A.queixas) for (const r of q.diferenciais || []) for (const h of r.hipoteses || [])
+      if (h.doencaId && !pids.has(h.doencaId) && !idsDoenca.has(h.doencaId)) ruins.push(q.id + ' → ' + h.doencaId);
+    if (ruins.length) throw new Error(ruins.join(', '));
+  });
+  t('Só telefones verificáveis foram registrados', () => {
+    const permitidos = ['0800 722 6001', '192', '193', '190', '180', '100'];
+    const ruins = (F.telefones || []).filter(x => !permitidos.includes(String(x.numero))).map(x => x.nome + ': ' + x.numero);
+    if (ruins.length) throw new Error(ruins.join(', '));
+  });
+  t('As regras de PECARN e as profilaxias estão presentes', () => {
+    for (const k of ['pecarn', 'profilaxiaRaiva', 'profilaxiaTetano', 'agentesToxicos', 'nuncaFazer']) if (!F[k]) throw new Error('falta ' + k);
+    if (!F.pecarn.menor2anos || !F.pecarn.maior2anos) throw new Error('PECARN sem as duas faixas');
+    if ((F.profilaxiaTetano.tabela || []).length < 3) throw new Error('tabela de tétano incompleta');
+  });
+  t('Nunca provocar vômito está escrito de forma explícita', () => {
+    if (!(F.nuncaFazer || []).some(x => /v[oô]mito/i.test(x))) throw new Error('não consta');
+  });
+}
+
 /* ---------- Resultado ---------- */
 console.log('\nMucurinha – suíte de testes');
-const extras = [D.comerciais && 'comerciais', D.alternativas && 'alternativas', D.locais && 'locais', D.violencia && 'violência', D.curiosidades && 'curiosidades'].filter(Boolean);
+const extras = [D.acidentes && 'acidentes', D.didatica && 'didática', D.comerciais && 'comerciais', D.alternativas && 'alternativas', D.locais && 'locais', D.violencia && 'violência', D.curiosidades && 'curiosidades'].filter(Boolean);
 console.log('  módulos: ' + (extras.join(', ') || 'nenhum módulo complementar carregado'));
 console.log('  bases: ' + doencas.length + ' doenças, ' + D.medicamentos.length + ' medicamentos, ' + D.queixas.length + ' queixas, ' +
   D.emergencias.length + ' emergências, ' + D.exames.length + ' exames, ' + D.vacinas.length + ' vacinas, ' + C.calculadoras.length + ' calculadoras');
