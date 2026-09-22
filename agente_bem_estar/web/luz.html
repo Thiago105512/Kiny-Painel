@@ -1,0 +1,1161 @@
+<title>Luz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --bg: #eef1f6;
+    --surface: #ffffff;
+    --ink: #1d2433;
+    --muted: #5d6679;
+    --line: #dde2ec;
+    --accent: #c77a1a;
+    --accent-ink: #ffffff;
+    --glow: #fbe8cc;
+    --calm: #4f74a0;
+    --calm-soft: #e3ebf5;
+    --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+    --sans: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #11161f; --surface: #1a212d; --ink: #e7ebf2; --muted: #9aa4b6; --line: #2a3342;
+      --accent: #f0b356; --accent-ink: #1d1406; --glow: #3a2d17; --calm: #8fb0d6; --calm-soft: #1f2a3a;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #11161f; --surface: #1a212d; --ink: #e7ebf2; --muted: #9aa4b6; --line: #2a3342;
+    --accent: #f0b356; --accent-ink: #1d1406; --glow: #3a2d17; --calm: #8fb0d6; --calm-soft: #1f2a3a;
+  }
+  [hidden] { display: none !important; }
+  html, body { height: 100%; }
+  body {
+    background: var(--bg); color: var(--ink); font: 16px/1.55 var(--sans);
+    padding-inline: 16px;
+  }
+  .app { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; min-height: 100%; padding-block: 20px 16px; gap: 14px; }
+  header { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .sun { width: 38px; height: 38px; border-radius: 50%; background: radial-gradient(circle at 50% 60%, var(--accent) 0 38%, var(--glow) 39% 100%); flex: none; }
+  h1 { font: 400 2.4rem/1 var(--serif); margin: 0; letter-spacing: .01em; }
+  .tag { color: var(--muted); font-size: .9rem; margin: 2px 0 0; }
+  .apoio { font-size: .85rem; color: var(--muted); }
+  .apoio summary { cursor: pointer; width: fit-content; }
+  .apoio p { margin: 6px 0 0; }
+  .apoio a { color: var(--calm); }
+  nav { display: flex; gap: 0; border-bottom: 1px solid var(--line); overflow-x: auto; scrollbar-width: none; }
+  nav button { white-space: nowrap; flex: none; }
+  nav button {
+    font: 500 .95rem var(--sans); color: var(--muted); background: none; border: 0;
+    padding: 10px 10px; border-bottom: 2px solid transparent; margin-bottom: -1px; cursor: pointer;
+  }
+  nav button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+  button:focus-visible, textarea:focus-visible, input:focus-visible { outline: 2px solid var(--calm); outline-offset: 2px; }
+  section { display: flex; flex-direction: column; gap: 12px; flex: 1; }
+
+  /* Conversa */
+  .log { display: flex; flex-direction: column; gap: 12px; flex: 1; min-height: 280px; }
+  .msg { max-width: 88%; padding: 10px 14px; border-radius: 16px; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .msg.luz { background: var(--surface); border: 1px solid var(--line); border-bottom-left-radius: 4px; align-self: flex-start; }
+  .msg.eu { background: var(--accent); color: var(--accent-ink); border-bottom-right-radius: 4px; align-self: flex-end; }
+  .msg.wait { color: var(--muted); font-style: italic; }
+  .crisis { background: var(--calm-soft); color: var(--ink); border-radius: 12px; padding: 10px 14px; font-size: .9rem; align-self: flex-start; max-width: 88%; }
+  .crisis a { color: var(--calm); }
+  .ideas { display: flex; flex-wrap: wrap; gap: 8px; }
+  #ideas .chip { text-align: left; }
+  .chip { font: 500 .88rem var(--sans); background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+  .chip:hover { border-color: var(--accent); }
+  form.send { display: flex; gap: 8px; align-items: flex-end; position: sticky; bottom: 0; background: var(--bg); padding-block: 8px calc(8px + env(safe-area-inset-bottom, 0px)); }
+  textarea {
+    flex: 1; resize: none; font: 16px/1.4 var(--sans); color: var(--ink); background: var(--surface);
+    border: 1px solid var(--line); border-radius: 14px; padding: 10px 12px; min-height: 46px; max-height: 160px;
+  }
+  .btn { font: 600 .95rem var(--sans); border: 0; border-radius: 12px; padding: 12px 16px; cursor: pointer; background: var(--accent); color: var(--accent-ink); }
+  .btn.ghost { background: transparent; color: var(--muted); border: 1px solid var(--line); }
+  .btn:disabled { opacity: .5; cursor: default; }
+  .note { color: var(--muted); font-size: .85rem; margin: 0; }
+
+  /* Metas */
+  .seguir { background: var(--glow); border-radius: 14px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; }
+  .seguir p { margin: 0; }
+  .metas { display: flex; flex-direction: column; gap: 8px; }
+  .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; padding: 10px 0; border-top: 1px solid var(--line); }
+  .meta:first-child { border-top: 0; }
+  .meta span.txt { flex: 1 1 14em; overflow-wrap: anywhere; }
+  .meta.feita span.txt { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--accent); }
+  .meta small { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .estado { font-size: .8rem; font-weight: 600; border-radius: 999px; padding: 2px 10px; background: var(--calm-soft); color: var(--calm); }
+  .estado.feita { background: var(--glow); color: var(--accent); }
+  .nova-meta { display: flex; gap: 8px; }
+  .nova-meta input { flex: 1; min-width: 0; }
+  .placar { font: 400 1.25rem/1.3 var(--serif); margin: 0; }
+
+  /* Humor */
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+  h2 { font: 400 1.6rem/1.15 var(--serif); margin: 0; text-wrap: balance; }
+  .scale { display: grid; grid-template-columns: repeat(11, 1fr); gap: 4px; }
+  .scale button { font: 600 .95rem var(--sans); font-variant-numeric: tabular-nums; padding: 10px 0; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); cursor: pointer; }
+  .scale button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .ends { display: flex; justify-content: space-between; font-size: .8rem; color: var(--muted); }
+  input[type="text"] { font: 16px var(--sans); color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+  .hist { display: flex; flex-direction: column; gap: 8px; }
+  .row { display: grid; grid-template-columns: 7.5em 1fr 2em; gap: 10px; align-items: center; font-size: .9rem; }
+  .row time { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .bar { height: 10px; background: var(--calm-soft); border-radius: 5px; overflow: hidden; }
+  .bar i { display: block; height: 100%; background: var(--calm); border-radius: 5px; }
+  .row b { font-variant-numeric: tabular-nums; text-align: right; }
+  .row small { grid-column: 2 / -1; color: var(--muted); margin-top: -4px; }
+  .avg { font-size: .95rem; }
+  #memoria-texto { min-height: 200px; max-height: none; resize: vertical; }
+  .acoes { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  /* Respirar */
+  .breath { align-items: center; text-align: center; }
+  .orb-wrap { width: min(260px, 70vw); aspect-ratio: 1; max-width: 100%; display: grid; place-items: center; }
+  .orb { width: 40%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 50% 45%, var(--accent), var(--glow) 72%); transition: width 4s ease-in-out; }
+  .phase { font: 400 2rem/1.1 var(--serif); margin: 0; }
+  .count { color: var(--muted); font-variant-numeric: tabular-nums; margin: 0; }
+  @media (prefers-reduced-motion: reduce) { .orb { transition: none; } }
+
+  /* Check-in, dia difícil, ouvir */
+  header .chip[aria-pressed="true"] { background: var(--calm); color: var(--bg); border-color: var(--calm); }
+  .checkin { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+  .checkin p { margin: 0; font-weight: 500; }
+  .caras { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .caras button { display: flex; flex-direction: column; align-items: center; gap: 2px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 8px 2px; cursor: pointer; color: var(--ink); font: 500 .72rem var(--sans); }
+  .caras button span { font-size: 1.7rem; line-height: 1; }
+  .caras button:hover { border-color: var(--accent); }
+  .plano-card { background: var(--calm-soft); border-radius: 14px; padding: 12px 14px; font-size: .95rem; display: flex; flex-direction: column; gap: 6px; }
+  .plano-card p { margin: 0; }
+  .plano-card b { font-weight: 600; }
+  .ouvir { display: block; margin-top: 8px; font: 500 .8rem var(--sans); color: var(--muted); background: none; border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; cursor: pointer; }
+
+  /* Plano e vitórias */
+  .grupo { display: flex; flex-direction: column; gap: 8px; }
+  .grupo h3 { font: 600 1rem var(--sans); margin: 0; }
+  .itens { display: flex; flex-wrap: wrap; gap: 6px; }
+  .item { display: inline-flex; align-items: center; gap: 6px; background: var(--glow); color: var(--ink); border-radius: 999px; padding: 5px 6px 5px 12px; font-size: .9rem; }
+  .item button { background: none; border: 0; color: var(--muted); cursor: pointer; font-size: .95rem; padding: 0 4px; }
+  .sugestoes .chip::before { content: "+ "; color: var(--accent); }
+  .vitorias { display: flex; flex-direction: column; gap: 4px; font-size: .92rem; }
+  .vitorias div { display: flex; gap: 10px; }
+  .vitorias small { color: var(--muted); font-variant-numeric: tabular-nums; min-width: 3.2em; }
+
+  /* Gráfico e resumo */
+  .grafico { width: 100%; height: auto; display: block; }
+  .grafico .grade { stroke: var(--line); stroke-width: 1; }
+  .grafico .rotulo { fill: var(--muted); font: 10px var(--sans); }
+  .grafico .linha { fill: none; stroke: var(--calm); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .grafico .area { fill: var(--calm-soft); stroke: none; }
+  .grafico .ponto { fill: var(--calm); stroke: var(--surface); stroke-width: 1.5; }
+  .grafico .ultimo { fill: var(--accent); stroke: var(--surface); stroke-width: 1.5; }
+  .resumo { white-space: pre-wrap; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 12px; font-size: .95rem; }
+</style>
+
+<div class="app">
+  <header>
+    <div class="brand">
+      <div class="sun" aria-hidden="true"></div>
+      <div>
+        <h1>Luz</h1>
+        <p class="tag">Apoio para os dias difíceis. Um passo de cada vez.</p>
+      </div>
+    </div>
+    <button class="chip" id="dia-dificil" type="button" aria-pressed="false">🌧 Dia difícil</button>
+  </header>
+
+  <nav role="tablist">
+    <button role="tab" id="tab-conversa" aria-selected="true" data-tab="conversa">Conversar</button>
+    <button role="tab" id="tab-metas" aria-selected="false" data-tab="metas">Metas</button>
+    <button role="tab" id="tab-humor" aria-selected="false" data-tab="humor">Humor</button>
+    <button role="tab" id="tab-plano" aria-selected="false" data-tab="plano">Meu plano</button>
+    <button role="tab" id="tab-respirar" aria-selected="false" data-tab="respirar">Respirar</button>
+    <button role="tab" id="tab-memoria" aria-selected="false" data-tab="memoria">Memória</button>
+  </nav>
+
+  <section id="conversa" role="tabpanel">
+    <div class="checkin" id="checkin" hidden>
+      <p>Como você está agora? Um toque basta.</p>
+      <div class="caras" id="caras"></div>
+    </div>
+    <div class="plano-card" id="plano-card" hidden></div>
+    <div class="log" id="log" aria-live="polite"></div>
+    <div class="seguir" id="seguir" hidden>
+      <p id="seguir-texto"></p>
+      <div class="ideas">
+        <button class="chip" type="button" data-estado="feita">Consegui!</button>
+        <button class="chip" type="button" data-estado="mais_ou_menos">Mais ou menos</button>
+        <button class="chip" type="button" data-estado="nao_deu">Não deu</button>
+      </div>
+    </div>
+    <div class="ideas" id="ideas" aria-label="Respostas rápidas"></div>
+    <form class="send" id="send">
+      <textarea id="entrada" rows="1" placeholder="Escreva como você está…" aria-label="Sua mensagem"></textarea>
+      <button class="btn" id="enviar" type="submit">Enviar</button>
+    </form>
+    <p class="note" id="aviso">A Luz é uma IA. Ela não substitui psicólogo ou psiquiatra. <span class="onde-salva">Tudo fica salvo neste aparelho.</span> <button class="chip" id="limpar" type="button">Começar conversa nova</button></p>
+  </section>
+
+  <section id="metas" role="tabpanel" hidden>
+    <div class="card">
+      <h2>Passos pequenos</h2>
+      <p class="placar" id="placar"></p>
+      <p class="note">Metas pequenas que você e a Luz combinaram. Ela pergunta depois como foi. Se não deu, tudo bem: vocês ajustam para algo menor.</p>
+      <div class="metas" id="lista-metas"></div>
+      <form class="nova-meta" id="form-meta">
+        <input type="text" id="nova-meta" placeholder="Ex.: tomar sol por 10 minutos" aria-label="Nova meta">
+        <button class="btn" type="submit">Adicionar</button>
+      </form>
+    </div>
+    <div class="card">
+      <h2>Pequenas vitórias</h2>
+      <p class="placar" id="placar-vitorias"></p>
+      <p class="note">Nos dias de depressão, levantar da cama já é uma vitória. Toque para registrar. A Luz lembra de você disso nos dias ruins.</p>
+      <div class="itens sugestoes" id="sugestoes-vitorias"></div>
+      <form class="nova-meta" id="form-vitoria">
+        <input type="text" id="nova-vitoria" placeholder="Outra vitória de hoje" aria-label="Nova vitória">
+        <button class="btn" type="submit">Registrar</button>
+      </form>
+      <div class="vitorias" id="lista-vitorias"></div>
+    </div>
+  </section>
+
+  <section id="humor" role="tabpanel" hidden>
+    <div class="card">
+      <h2>Como você está agora?</h2>
+      <div class="scale" id="escala" role="group" aria-label="Nota de 0 a 10"></div>
+      <div class="ends"><span>0 · péssimo</span><span>10 · ótimo</span></div>
+      <input type="text" id="nota-texto" placeholder="Quer anotar algo sobre o dia? (opcional)">
+      <button class="btn" id="salvar-humor" type="button" disabled>Registrar</button>
+      <p class="note" id="humor-ok" hidden>Registrado. Obrigado por cuidar de você.</p>
+    </div>
+    <div class="card">
+      <h2>Seus últimos dias</h2>
+      <p class="avg" id="media"></p>
+      <div id="grafico"></div>
+      <div class="hist" id="hist"></div>
+      <p class="note">A Luz lê esses registros para acompanhar como você está. <span class="onde-salva">Tudo fica salvo neste aparelho.</span></p>
+    </div>
+    <div class="card">
+      <h2>Resumo para a consulta</h2>
+      <p class="note">Um texto pronto com como foram as últimas semanas (humor, metas, vitórias, o que ajudou) para mostrar ao psicólogo ou psiquiatra. Leva alguns segundos.</p>
+      <button class="btn" id="gerar-resumo" type="button">Preparar resumo</button>
+      <div class="resumo" id="resumo" hidden></div>
+      <button class="btn ghost" id="copiar-resumo" type="button" hidden>Copiar texto</button>
+    </div>
+  </section>
+
+  <section id="plano" role="tabpanel" hidden>
+    <div class="card">
+      <h2>Meu plano para os dias ruins</h2>
+      <p class="note">Monte num dia mais leve, tocando nas sugestões ou escrevendo. Quando você ligar o modo Dia difícil, a Luz te mostra este plano.</p>
+      <div class="grupo" data-grupo="ajuda">
+        <h3>O que me ajuda</h3>
+        <div class="itens"></div>
+        <div class="itens sugestoes"></div>
+        <form class="nova-meta"><input type="text" placeholder="Outra coisa que ajuda" aria-label="O que me ajuda"><button class="btn" type="submit">Adicionar</button></form>
+      </div>
+      <div class="grupo" data-grupo="pessoas">
+        <h3>Com quem posso falar</h3>
+        <div class="itens"></div>
+        <div class="itens sugestoes"></div>
+        <form class="nova-meta"><input type="text" placeholder="Nome de alguém" aria-label="Com quem posso falar"><button class="btn" type="submit">Adicionar</button></form>
+      </div>
+      <div class="grupo" data-grupo="bem">
+        <h3>Coisas que já me fizeram bem</h3>
+        <div class="itens"></div>
+        <div class="itens sugestoes"></div>
+        <form class="nova-meta"><input type="text" placeholder="Algo que já te fez bem" aria-label="Coisas que já me fizeram bem"><button class="btn" type="submit">Adicionar</button></form>
+      </div>
+      <p class="note"><span class="onde-salva">Tudo fica salvo neste aparelho.</span></p>
+    </div>
+  </section>
+
+  <section id="respirar" role="tabpanel" hidden>
+    <div class="card breath">
+      <h2>Respiração 4-7-8</h2>
+      <p class="note">Inspire por 4 segundos, segure por 7 e solte devagar por 8. São três ciclos, cerca de um minuto.</p>
+      <div class="orb-wrap"><div class="orb" id="orb"></div></div>
+      <p class="phase" id="fase">Pronto quando você estiver</p>
+      <p class="count" id="contagem">&nbsp;</p>
+      <button class="btn" id="comecar" type="button">Começar</button>
+    </div>
+  </section>
+
+  <section id="memoria" role="tabpanel" hidden>
+    <div class="card">
+      <h2>O que a Luz lembra de você</h2>
+      <p class="note">A Luz vai anotando sozinha o que é importante enquanto vocês conversam: do que você gosta, pessoas importantes, o que ajudou, metas combinadas. Assim você não precisa recomeçar do zero. Você pode corrigir, completar ou apagar essas anotações quando quiser.</p>
+      <textarea id="memoria-texto" rows="10" placeholder="Ainda não há anotações. Elas aparecem aqui depois de algumas mensagens. Se quiser, já escreva algo sobre você (como gosta de ser chamado, do que gosta…)."></textarea>
+      <div class="acoes">
+        <button class="btn" id="salvar-memoria" type="button">Salvar</button>
+        <button class="btn ghost" id="apagar-memoria" type="button">Apagar memória</button>
+      </div>
+      <p class="note" id="memoria-status"></p>
+      <p class="note"><span class="onde-salva">Tudo fica salvo neste aparelho.</span></p>
+    </div>
+    <div class="card">
+      <h2>Cópia de segurança</h2>
+      <p class="note">Tudo já fica guardado na sua conta e aparece igual no PC e no celular. Se quiser uma garantia extra, baixe uma cópia de tempos em tempos. Ela serve para restaurar tudo se algo se perder.</p>
+      <div class="acoes">
+        <button class="btn" id="baixar-copia" type="button">Baixar cópia</button>
+        <label class="btn ghost" for="arquivo-copia">Restaurar de uma cópia</label>
+        <input type="file" id="arquivo-copia" accept="application/json,.json" hidden>
+      </div>
+      <p class="note" id="copia-status"></p>
+    </div>
+  </section>
+
+  <details class="apoio">
+    <summary>Contatos de apoio</summary>
+    <p>CVV: ligue 188 (24h, gratuito) ou use o chat em <a href="https://cvv.org.br" target="_blank" rel="noopener">cvv.org.br</a>. SAMU: 192. Atendimento gratuito em saúde mental: CAPS e UBS da sua cidade, pelo SUS.</p>
+  </details>
+</div>
+
+<script>
+(() => {
+  const K_CHAT = "luz.conversa", K_HUMOR = "luz.humor", K_MEM = "luz.memoria", K_PEND = "luz.pendentes";
+  const ler = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } };
+  const gravar = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
+
+  const saudacao = () => memoria.texto
+    ? "Oi de novo, Thiago. Que bom te ver por aqui. Como você está hoje?"
+    : "Oi, Thiago. Que bom que você está aqui. Como você está se sentindo hoje?";
+  const RISCO = ["me matar", "suicid", "tirar minha vida", "tirar a minha vida",
+    "não quero mais viver", "nao quero mais viver", "quero morrer", "me machucar", "me cortar"];
+  let avisouApoio = false;
+
+  const REGRAS = `Você é "Luz", uma companhia de apoio emocional em português do Brasil. Você conversa com o Thiago, que está lidando com depressão e quer se sentir melhor e retomar a própria vida. Chame-o pelo nome de vez em quando, com naturalidade.
+
+O Thiago prefere tocar em respostas prontas a digitar: depois de cada mensagem sua aparecem botões com respostas para ele. Por isso, quando fizer uma pergunta, prefira perguntas com respostas claras (escolher entre opções, sim/não, uma escala) em vez de perguntas muito abertas.
+
+Quem é a pessoa para você: alguém inteiro, com história, interesses, relações, planos e qualidades, não um "caso" ou um risco a ser gerenciado. Tenha curiosidade genuína por ela: do que ela gosta ou já gostou, o que dá sentido à vida dela, quem é importante, o que está funcionando, mesmo que pouco.
+
+Como você age:
+- Acolha primeiro. Valide o que a pessoa sente sem julgar e sem pressa de "consertar".
+- Fale de forma calorosa, simples e natural, como uma boa amiga que entende do assunto. Respostas curtas (2 a 6 frases), a não ser que a pessoa peça mais. Texto simples, sem Markdown.
+- Nem toda resposta precisa terminar com pergunta. Muitas vezes é melhor só acolher, afirmar algo verdadeiro, compartilhar uma ideia ou fazer um convite. Faça no máximo uma pergunta, e só quando ela ajudar de verdade; evite terminar duas respostas seguidas com pergunta.
+- Tristeza, cansaço, desânimo, choro, "não aguento mais" ou "estou mal" fazem parte da depressão e merecem acolhimento e conversa, não alarme. Não fale de suicídio, crise ou números de emergência a menos que a própria pessoa traga esse assunto.
+- Ajude de forma prática quando fizer sentido: uma pequena ação concreta para hoje, perguntas gentis para olhar pensamentos muito duros de outro ângulo, respiração, sono, rotina, sol, movimento, contato com pessoas, retomar algo que a pessoa gostava, autocompaixão, pequenas vitórias.
+- Celebre qualquer avanço, por menor que seja, e lembre a pessoa dos progressos que aparecem no registro de humor e nas metas.
+- Metas: quando fizer sentido, proponha UMA meta bem pequena e concreta para hoje ou amanhã (ex.: "abrir a janela e tomar sol por 5 minutos"). Se a pessoa topar, registre com a ferramenta combinar_meta. Se houver metas em aberto de dias anteriores, pergunte com leveza como foi; quando a pessoa contar, use marcar_meta. Se ela não conseguiu, zero julgamento: acolha e ajuste para algo ainda menor. Não empurre metas quando a pessoa só quer desabafar.
+- Quando for natural na conversa, e sem repetir toda hora, incentive o cuidado com um profissional (psicólogo, psiquiatra, CAPS/UBS pelo SUS, clínicas-escola de psicologia gratuitas ou de baixo custo). Não faça diagnósticos nem indique remédios.
+- Não suponha nada que a pessoa não disse. Só mencione fatos da vida dela que estejam na conversa ou nas suas anotações; se não sabe, não insinue ("com tudo o que você tem lidado").
+
+Só se a pessoa falar claramente em se matar, se machucar ou não querer mais viver: continue calorosa e presente, pergunte com cuidado se ela está segura agora e mencione uma vez o CVV (188, 24h, gratuito, ou chat em cvv.org.br) e chamar alguém de confiança. Depois siga a conversa normalmente, com a pessoa, e não em cima do assunto.`;
+
+  let turnos = ler(K_CHAT, []);
+  let humor = ler(K_HUMOR, []);
+  let memoria = ler(K_MEM, { texto: "", atualizado: "" });
+  let pendentes = ler(K_PEND, 0);  // mensagens ainda não resumidas na memória
+  const K_METAS = "luz.metas";
+  let metas = ler(K_METAS, []);
+  const hoje = () => new Date().toLocaleDateString("sv-SE");
+
+  // Guarda na conta do Claude (privado, só a própria pessoa vê) e, de reserva, neste aparelho.
+  let db = null, uid = null;
+  const filas = {};
+  function guardar(nome, chave, valor, nuvem) {
+    gravar(chave, valor);
+    if (!db || !uid) return;
+    filas[nome] = (filas[nome] || Promise.resolve())
+      .then(() => db.doc(`data/users/${uid}/${nome}`).set(nuvem))
+      .catch(() => {});
+  }
+  const guardarConversa = () => {
+    turnos = turnos.slice(-60);
+    gravar(K_PEND, pendentes);
+    guardar("conversa", K_CHAT, turnos, { turnos, pendentes });
+  };
+  const guardarHumor = () => { humor = humor.slice(-400); guardar("humor", K_HUMOR, humor, { registros: humor }); };
+  const guardarMemoria = () => guardar("memoria", K_MEM, memoria, memoria);
+  const guardarMetas = () => { metas = metas.slice(-200); guardar("metas", K_METAS, metas, { itens: metas }); };
+  const K_VIT = "luz.vitorias", K_PLANO = "luz.plano", K_PREFS = "luz.prefs";
+  let vitorias = ler(K_VIT, []);
+  let plano = ler(K_PLANO, { ajuda: [], pessoas: [], bem: [] });
+  let prefs = ler(K_PREFS, { diaDificil: false, diaDificilEm: "" });
+  const guardarVitorias = () => { vitorias = vitorias.slice(-300); guardar("vitorias", K_VIT, vitorias, { itens: vitorias }); };
+  const guardarPlano = () => guardar("plano", K_PLANO, plano, plano);
+  const guardarPrefs = () => guardar("prefs", K_PREFS, prefs, prefs);
+
+  const carregamento = (async () => {
+    try {
+      const [d, u] = await Promise.all([window.claude?.use?.("db"), window.claude?.use?.("user")]);
+      uid = u ? await u.id() : null;
+      db = uid ? d : null;
+    } catch { db = null; }
+    if (!db) return;
+    try {
+      const [c, h, m, mt, vt, pl, pf] = await Promise.all(["conversa", "humor", "memoria", "metas", "vitorias", "plano", "prefs"].map(n => db.doc(`data/users/${uid}/${n}`).get()));
+      if (vt.exists) { vitorias = vt.data().itens ?? []; gravar(K_VIT, vitorias); } else if (vitorias.length) guardarVitorias();
+      if (pl.exists) { plano = { ajuda: [], pessoas: [], bem: [], ...pl.data() }; gravar(K_PLANO, plano); }
+      else if (plano.ajuda.length + plano.pessoas.length + plano.bem.length) guardarPlano();
+      if (pf.exists) { prefs = { ...prefs, ...pf.data() }; gravar(K_PREFS, prefs); }
+      if (mt.exists) { metas = mt.data().itens ?? []; gravar(K_METAS, metas); }
+      else if (metas.length) guardarMetas();
+      if (c.exists) { turnos = c.data().turnos ?? []; pendentes = c.data().pendentes ?? 0; gravar(K_CHAT, turnos); gravar(K_PEND, pendentes); }
+      else if (turnos.length) guardarConversa();
+      if (h.exists) { humor = h.data().registros ?? []; gravar(K_HUMOR, humor); }
+      else if (humor.length) guardarHumor();
+      if (m.exists) { memoria = { texto: m.data().texto ?? "", atualizado: m.data().atualizado ?? "" }; gravar(K_MEM, memoria); }
+      else if (memoria.texto) guardarMemoria();
+      document.querySelectorAll(".onde-salva").forEach(e => { e.textContent = "Tudo fica guardado na sua conta, e só você vê."; });
+    } catch { db = null; }
+    renderizarConversa(); renderizarHumor(); renderizarMemoria(); renderizarMetas();
+    renderizarVitorias(); renderizarPlano(); renderizarModo(); renderizarCheckin();
+  })();
+
+  // Abas
+  const abas = document.querySelectorAll("nav button");
+  abas.forEach(b => b.addEventListener("click", () => {
+    abas.forEach(x => x.setAttribute("aria-selected", String(x === b)));
+    document.querySelectorAll("section").forEach(s => { s.hidden = s.id !== b.dataset.tab; });
+  }));
+
+  // Conversa
+  const log = document.getElementById("log");
+  const entrada = document.getElementById("entrada");
+  const enviar = document.getElementById("enviar");
+  const ideas = document.getElementById("ideas");
+
+  function bolha(quem, texto) {
+    const d = document.createElement("div");
+    d.className = "msg " + quem;
+    d.textContent = texto;
+    log.appendChild(d);
+    if (quem === "luz") botaoOuvir(d, texto);
+    return d;
+  }
+  // Ouvir a mensagem em voz alta (quando o aparelho permite).
+  const podeFalar = "speechSynthesis" in window && typeof SpeechSynthesisUtterance === "function";
+  let falando = null;
+  function botaoOuvir(el, texto) {
+    if (!podeFalar || !texto) return;
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "ouvir"; b.textContent = "🔊 Ouvir";
+    b.addEventListener("click", () => {
+      const parar = falando === b;
+      try { speechSynthesis.cancel(); } catch {}
+      document.querySelectorAll(".ouvir").forEach(x => { x.textContent = "🔊 Ouvir"; });
+      falando = null;
+      if (parar) return;
+      try {
+        const u = new SpeechSynthesisUtterance(texto);
+        u.lang = "pt-BR"; u.rate = 0.95;
+        const voz = speechSynthesis.getVoices().find(v => v.lang?.toLowerCase().startsWith("pt-br")) ||
+                    speechSynthesis.getVoices().find(v => v.lang?.toLowerCase().startsWith("pt"));
+        if (voz) u.voice = voz;
+        u.onend = u.onerror = () => { if (falando === b) { b.textContent = "🔊 Ouvir"; falando = null; } };
+        falando = b; b.textContent = "⏹ Parar";
+        speechSynthesis.speak(u);
+      } catch { b.textContent = "🔊 Ouvir"; falando = null; }
+    });
+    el.appendChild(b);
+  }
+  function alertaCrise() {
+    const d = document.createElement("div");
+    d.className = "crisis";
+    d.innerHTML = 'Se estiver pesado demais agora, o CVV atende 24h pelo 188 ou pelo chat em <a href="https://cvv.org.br" target="_blank" rel="noopener">cvv.org.br</a>. A Luz continua aqui com você.';
+    log.appendChild(d);
+  }
+  function renderizarConversa() {
+    log.textContent = "";
+    bolha("luz", saudacao());
+    for (const t of turnos) bolha(t.role === "user" ? "eu" : "luz", t.content);
+    const ultimo = turnos.at(-1);
+    if (!ultimo) mostrarOpcoes(iniciais());
+    else if (ultimo.role !== "assistant") mostrarOpcoes([]);
+    else if (ultimo.opcoes?.length) mostrarOpcoes(ultimo.opcoes);
+    else garantirOpcoes();
+  }
+  const INICIAIS_NORMAL = ["Estou sem energia para nada", "Minha cabeça não para de pensar", "Hoje estou um pouco melhor",
+    "Me dá uma tarefa pequena para hoje", "Tive uma pequena vitória hoje"];
+  const INICIAIS_DIFICIL = ["Tá muito pesado hoje", "Só quero companhia", "Não quero falar muito",
+    "Me lembra do meu plano", "Me ajuda a respirar"];
+  const iniciais = () => prefs.diaDificil ? INICIAIS_DIFICIL : INICIAIS_NORMAL;
+  const RESERVA = ["Obrigado, ajudou", "Não é bem isso", "Quero só desabafar", "Me dá uma ideia simples", "Quero falar de outra coisa"];
+  function mostrarOpcoes(lista) {
+    ideas.textContent = "";
+    for (const texto of lista.slice(0, 5)) {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "chip"; b.textContent = texto;
+      b.addEventListener("click", () => mandar(texto));
+      ideas.appendChild(b);
+    }
+    ideas.hidden = !lista.length;
+  }
+  // Se a última mensagem da Luz ficou sem opções (versão antiga, falha), gera agora.
+  const gerando = new WeakSet();
+  function garantirOpcoes() {
+    const ultimo = turnos.at(-1);
+    if (!ultimo || ultimo.role !== "assistant" || ultimo.opcoes?.length) return;
+    if (!sample) { mostrarOpcoes(RESERVA); return; }
+    if (gerando.has(ultimo)) return;
+    const fala = turnos.slice(0, -1).reverse().find(t => t.role === "user")?.content ?? "";
+    carregarOpcoes(ultimo, fala);
+  }
+  // Gera 5 respostas rápidas ligadas à ÚLTIMA mensagem da Luz (uma chamada rápida à parte).
+  async function carregarOpcoes(turno, falaPessoa) {
+    gerando.add(turno);
+    ideas.hidden = false;
+    ideas.innerHTML = '<span class="note">Preparando respostas rápidas…</span>';
+    let lista = [];
+    try {
+      const r = await sample.json(`A "Luz", uma companhia de apoio emocional, acabou de mandar a mensagem abaixo para uma pessoa com depressão. Crie exatamente 5 respostas curtas (no máximo 7 palavras cada) que a pessoa poderia tocar para responder, em primeira pessoa e em português do Brasil, com linguagem simples e natural.
+
+Regras:
+- Se a Luz fez uma pergunta, TODAS as 5 opções respondem diretamente a ESSA pergunta, com respostas diferentes entre si: cubra cada alternativa que a Luz ofereceu, uma mistura delas, e um "não sei dizer" ou "prefiro não responder agora" do jeito da pessoa. A pessoa não quer digitar, então as opções precisam cobrir as respostas mais prováveis.
+- Se a Luz não fez pergunta, 4 opções reagem ao que ela disse (concordar, discordar, contar mais, pedir uma ideia prática) e a 5ª é uma saída leve, como "Quero falar de outra coisa".
+- Nada genérico que serviria para qualquer mensagem. Sem aspas, sem emojis.${prefs.diaDificil ? "\n- Hoje é um dia muito difícil para a pessoa: opções bem curtas e simples (até 4 palavras), sem exigir esforço." : ""}
+
+O que a pessoa tinha dito: ${falaPessoa}
+
+Mensagem da Luz: ${turno.content}
+
+Responda só com JSON: {"opcoes": ["...", "...", "...", "...", "..."]}`, { modelTier: "quick", cache: false });
+      lista = (Array.isArray(r?.opcoes) ? r.opcoes : []).map(o => String(o).trim()).filter(o => o && o.length <= 80).slice(0, 5);
+    } catch {}
+    gerando.delete(turno);
+    turno.opcoes = lista;  // vazio = tenta de novo na próxima vez que abrir
+    if (lista.length) guardarConversa();
+    if (turnos.at(-1) === turno) mostrarOpcoes(lista.length ? lista : RESERVA);
+  }
+
+  // Separa o texto da resposta das opções de resposta rápida (<<opcoes>> a | b | c).
+  function separar(texto) {
+    const i = texto.indexOf("<<");
+    if (i < 0) return { texto: texto.trim(), opcoes: [] };
+    const opcoes = texto.slice(i).replace(/^<<\s*op[cç][oõ]es\s*>>/i, "").split(/[|\n]/)
+      .map(o => o.trim().replace(/^["“]|["”]$/g, "")).filter(o => o && !o.startsWith("<") && o.length <= 80).slice(0, 5);
+    return { texto: texto.slice(0, i).trim(), opcoes };
+  }
+  function rolar() { window.scrollTo({ top: document.body.scrollHeight }); }
+
+  function resumoHumor() {
+    if (!humor.length) return "A pessoa ainda não registrou o humor.";
+    const ult = humor.slice(-10);
+    const media = ult.reduce((s, r) => s + r.nota, 0) / ult.length;
+    return "Registro de humor recente (0 = péssimo, 10 = ótimo):\n" +
+      ult.map(r => `- ${r.data}: ${r.nota}/10${r.texto ? " — " + r.texto : ""}`).join("\n") +
+      `\nMédia: ${media.toFixed(1)}`;
+  }
+
+  const MSG_ERRO = {
+    not_granted: "A Luz precisa da sua permissão para usar o Claude. Recarregue a página e permita quando for perguntado.",
+    sampling_disabled: "O Claude não está disponível nesta conta.",
+    rate_limited: "Muitas mensagens em pouco tempo. Espere um pouco e tente de novo.",
+    prompt_too_large: "A conversa ficou longa demais. Toque em “Começar conversa nova” (a Luz continua lembrando de você).",
+    refused: "Não consegui responder a isso. Pode tentar dizer de outro jeito?",
+  };
+
+  let sample = null, podeFerramentas = false;
+  (async () => {
+    try { sample = await window.claude?.use?.("sample"); } catch { sample = null; }
+    if (sample) { try { podeFerramentas = !!(await sample.limits())?.tools; } catch { podeFerramentas = false; } }
+    if (sample) garantirOpcoes();
+    if (!sample) {
+      enviar.disabled = true;
+      entrada.placeholder = "A conversa só funciona dentro do Claude.";
+    }
+  })();
+
+  let ocupado = false;
+  async function mandar(texto) {
+    texto = texto.trim();
+    if (!texto || ocupado || !sample) return;
+    ocupado = true;
+    enviar.disabled = true;
+    await carregamento;
+    entrada.value = "";
+    mostrarOpcoes([]);
+    bolha("eu", texto);
+    const baixo = texto.toLowerCase();
+    if (!avisouApoio && RISCO.some(p => baixo.includes(p))) { avisouApoio = true; alertaCrise(); }
+    turnos.push({ role: "user", content: texto });
+    pendentes++;
+    guardarConversa();
+
+    let recente = turnos.slice(-20);
+    while (recente.length && recente[0].role !== "user") recente = recente.slice(1);
+    const lembrancas = memoria.texto
+      ? "Suas anotações sobre a pessoa, de conversas anteriores (use com naturalidade, sem recitar):\n" + memoria.texto
+      : "Vocês ainda não se conhecem bem: aos poucos, com leveza, procure conhecer a pessoa.";
+    const contexto = REGRAS + "\n\n" + lembrancas + "\n\n" + resumoHumor() +
+      `\n\nVocê já cumprimentou a pessoa com: "${saudacao()}"\n\nMensagem da pessoa:\n`;
+    const extras = [resumoMetas(), resumoVitorias(), resumoPlano(), prefs.diaDificil ? MODO_DIFICIL : ""].filter(Boolean).join("\n\n");
+    const contextoCompleto = contexto.replace("\n\nMensagem da pessoa:\n", "\n\n" + extras + "\n\nMensagem da pessoa:\n");
+    const input = recente.map((t, i) => ({ role: t.role, content: i === 0 ? contextoCompleto + t.content : t.content }));
+    const opcoes = { onText: ({ text }) => { const v = separar(text).texto; if (v) { resp.classList.remove("wait"); resp.textContent = v; rolar(); } } };
+    if (podeFerramentas) opcoes.tools = ferramentasMetas(); else opcoes.cache = false;
+
+    const resp = bolha("luz wait", "Luz está escrevendo…");
+    rolar();
+    try {
+      const { text } = await sample(input, opcoes);
+      const r = separar(text);
+      resp.classList.remove("wait");
+      resp.textContent = r.texto || text;
+      botaoOuvir(resp, r.texto || text);
+      const turno = { role: "assistant", content: r.texto || text, opcoes: [] };
+      turnos.push(turno);
+      carregarOpcoes(turno, texto);
+      guardarConversa();
+      if (pendentes >= 3) atualizarMemoria();
+    } catch (e) {
+      turnos.pop();
+      pendentes = Math.max(0, pendentes - 1);
+      guardarConversa();
+      // Devolve o texto para a caixa, para a pessoa poder tentar de novo sem reescrever.
+      if (!entrada.value) entrada.value = texto;
+      const anterior = turnos.at(-1);
+      mostrarOpcoes(!anterior ? iniciais() : anterior.opcoes?.length ? anterior.opcoes : RESERVA);
+      resp.classList.remove("wait");
+      resp.textContent = (e?.text && separar(e.text).texto) || (MSG_ERRO[e?.code] ?? "Não consegui responder agora. Tente de novo em instantes.");
+      if (e?.code === "not_granted" || e?.code === "sampling_disabled") { sample = null; return; }
+    } finally {
+      ocupado = false;
+      if (sample) enviar.disabled = false;
+      rolar();
+    }
+  }
+
+  document.getElementById("send").addEventListener("submit", ev => { ev.preventDefault(); mandar(entrada.value); });
+  entrada.addEventListener("keydown", ev => {
+    if (ev.key === "Enter" && !ev.shiftKey) { ev.preventDefault(); mandar(entrada.value); }
+  });
+  entrada.addEventListener("input", () => { entrada.style.height = "auto"; entrada.style.height = entrada.scrollHeight + "px"; });
+
+  const limpar = document.getElementById("limpar");
+  let confirmar = false;
+  limpar.addEventListener("click", async () => {
+    if (!confirmar) { confirmar = true; limpar.textContent = "Toque de novo para confirmar (a Luz continua lembrando de você)"; setTimeout(() => { if (confirmar) { confirmar = false; limpar.textContent = "Começar conversa nova"; } }, 5000); return; }
+    confirmar = false;
+    limpar.disabled = true; limpar.textContent = "Guardando o que é importante…";
+    if (pendentes > 0) await atualizarMemoria();
+    limpar.disabled = false; limpar.textContent = "Começar conversa nova";
+    turnos = []; pendentes = 0; guardarConversa(); renderizarConversa();
+  });
+
+  // Humor
+  const escala = document.getElementById("escala");
+  const salvarHumor = document.getElementById("salvar-humor");
+  let notaEscolhida = null;
+  for (let n = 0; n <= 10; n++) {
+    const b = document.createElement("button");
+    b.type = "button"; b.textContent = n; b.setAttribute("aria-pressed", "false");
+    b.addEventListener("click", () => {
+      notaEscolhida = n;
+      escala.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+      salvarHumor.disabled = false;
+    });
+    escala.appendChild(b);
+  }
+  salvarHumor.addEventListener("click", () => {
+    if (notaEscolhida === null) return;
+    const agora = new Date();
+    const data = agora.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" }) + " " +
+      agora.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
+    const campo = document.getElementById("nota-texto");
+    humor.push({ data, dia: hoje(), nota: notaEscolhida, texto: campo.value.trim() });
+    guardarHumor();
+    campo.value = ""; notaEscolhida = null; salvarHumor.disabled = true;
+    escala.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", "false"));
+    const ok = document.getElementById("humor-ok"); ok.hidden = false; setTimeout(() => ok.hidden = true, 3500);
+    renderizarHumor();
+  });
+  function renderizarHumor() {
+    const hist = document.getElementById("hist"), media = document.getElementById("media");
+    hist.textContent = "";
+    if (!humor.length) { media.textContent = "Nenhum registro ainda. Registre como você está agora para começar."; return; }
+    desenharGrafico();
+    renderizarCheckin();
+    const ult = humor.slice(-14);
+    const m = ult.reduce((s, r) => s + r.nota, 0) / ult.length;
+    media.textContent = `Média dos últimos ${ult.length} registros: ${m.toFixed(1)} de 10`;
+    for (const r of ult.slice().reverse()) {
+      const row = document.createElement("div"); row.className = "row";
+      const t = document.createElement("time"); t.textContent = r.data;
+      const bar = document.createElement("div"); bar.className = "bar";
+      const i = document.createElement("i"); i.style.width = (r.nota * 10) + "%"; bar.appendChild(i);
+      const b = document.createElement("b"); b.textContent = r.nota;
+      row.append(t, bar, b);
+      if (r.texto) { const s = document.createElement("small"); s.textContent = r.texto; row.appendChild(s); }
+      hist.appendChild(row);
+    }
+  }
+
+  // Metas
+  const NOMES_ESTADO = { aberta: "em aberto", feita: "feita", mais_ou_menos: "mais ou menos", nao_deu: "não deu" };
+  const dataCurta = d => d.split("-").reverse().slice(0, 2).join("/");
+  function novaMeta(texto) {
+    const meta = { id: Date.now().toString(36) + Math.random().toString(36).slice(2, 5), texto: texto.trim().slice(0, 200), dia: hoje(), estado: "aberta" };
+    metas.push(meta); guardarMetas(); renderizarMetas();
+    return meta;
+  }
+  function marcarMeta(id, estado) {
+    const m = metas.find(x => x.id === id);
+    if (!m || !NOMES_ESTADO[estado]) return null;
+    m.estado = estado; m.quando = hoje();
+    guardarMetas(); renderizarMetas();
+    return m;
+  }
+  function resumoMetas() {
+    const hj = hoje();
+    const rel = metas.filter(m => m.estado === "aberta" || (m.quando && m.quando >= hj)).slice(-8);
+    const feitas7 = metas.filter(m => m.estado === "feita" && m.quando && (new Date(hj) - new Date(m.quando)) / 864e5 < 7).length;
+    if (!rel.length) return `Hoje é ${dataCurta(hj)}. Nenhuma meta em aberto.` + (feitas7 ? ` Metas cumpridas nos últimos 7 dias: ${feitas7}.` : "");
+    return `Hoje é ${dataCurta(hj)}. Metas (id | combinada em | estado | texto):\n` +
+      rel.map(m => `- ${m.id} | ${dataCurta(m.dia)} | ${NOMES_ESTADO[m.estado]} | ${m.texto}`).join("\n") +
+      `\nMetas cumpridas nos últimos 7 dias: ${feitas7}.`;
+  }
+  function ferramentasMetas() {
+    return [
+      {
+        name: "combinar_meta",
+        description: "Registra uma meta pequena e concreta que a pessoa ACEITOU fazer (ex.: 'caminhar 10 minutos amanhã de manhã'). Use só depois que ela concordar. Retorna a meta criada.",
+        inputSchema: { type: "object", properties: { texto: { type: "string", description: "A meta, curta, em português" } }, required: ["texto"] },
+        execute: ({ texto }) => {
+          texto = String(texto ?? "").trim();
+          if (!texto) throw new Error("texto vazio");
+          const m = novaMeta(texto);
+          return { id: m.id, texto: m.texto };
+        },
+      },
+      {
+        name: "marcar_meta",
+        description: "Atualiza uma meta quando a pessoa contar como foi. estado: 'feita', 'mais_ou_menos' ou 'nao_deu'. Retorna a meta atualizada.",
+        inputSchema: { type: "object", properties: { id: { type: "string" }, estado: { type: "string", enum: ["feita", "mais_ou_menos", "nao_deu"] } }, required: ["id", "estado"] },
+        execute: ({ id, estado }) => {
+          const m = marcarMeta(String(id), String(estado));
+          if (!m) throw new Error("meta não encontrada");
+          return { id: m.id, estado: m.estado };
+        },
+      },
+    ];
+  }
+  const seguir = document.getElementById("seguir");
+  let metaSeguida = null;
+  function renderizarSeguir() {
+    metaSeguida = metas.filter(m => m.estado === "aberta" && m.dia < hoje()).at(-1) || null;
+    seguir.hidden = !metaSeguida || prefs.diaDificil;
+    if (metaSeguida) document.getElementById("seguir-texto").textContent =
+      `Vocês combinaram em ${dataCurta(metaSeguida.dia)}: “${metaSeguida.texto}”. Como foi?`;
+  }
+  seguir.querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
+    if (!metaSeguida || ocupado || !sample) return;
+    const m = metaSeguida;
+    marcarMeta(m.id, b.dataset.estado);
+    mandar(`Sobre a meta “${m.texto}”: ${b.textContent.toLowerCase()}`);
+  }));
+  function renderizarMetas() {
+    const lista = document.getElementById("lista-metas");
+    lista.textContent = "";
+    const hj = hoje();
+    const feitas7 = metas.filter(m => m.estado === "feita" && m.quando && (new Date(hj) - new Date(m.quando)) / 864e5 < 7).length;
+    document.getElementById("placar").textContent = feitas7
+      ? `${feitas7} ${feitas7 === 1 ? "passo dado" : "passos dados"} nos últimos 7 dias.`
+      : "Um passo pequeno já conta.";
+    const mostrar = metas.slice(-20).reverse();
+    if (!mostrar.length) {
+      const p = document.createElement("p"); p.className = "note";
+      p.textContent = "Nenhuma meta ainda. Peça uma para a Luz ou escreva uma abaixo.";
+      lista.appendChild(p);
+    }
+    for (const m of mostrar) {
+      const row = document.createElement("div"); row.className = "meta" + (m.estado === "feita" ? " feita" : "");
+      const t = document.createElement("span"); t.className = "txt"; t.textContent = m.texto;
+      const d = document.createElement("small"); d.textContent = dataCurta(m.dia);
+      row.append(t, d);
+      if (m.estado === "aberta") {
+        for (const [estado, rotulo] of [["feita", "Feita"], ["nao_deu", "Não deu"]]) {
+          const b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.textContent = rotulo;
+          b.addEventListener("click", () => marcarMeta(m.id, estado));
+          row.appendChild(b);
+        }
+      } else {
+        const e = document.createElement("span"); e.className = "estado" + (m.estado === "feita" ? " feita" : "");
+        e.textContent = NOMES_ESTADO[m.estado]; row.appendChild(e);
+      }
+      lista.appendChild(row);
+    }
+    renderizarSeguir();
+  }
+  document.getElementById("form-meta").addEventListener("submit", ev => {
+    ev.preventDefault();
+    const campo = document.getElementById("nova-meta");
+    if (campo.value.trim()) { novaMeta(campo.value); campo.value = ""; }
+  });
+
+  // Modo dia difícil
+  const MODO_DIFICIL = "MODO DIA DIFÍCIL (ligado agora): o Thiago está num dia muito pesado. Respostas bem curtas (1 a 3 frases), calor e presença. Nada de metas, tarefas ou conselhos longos. Se perguntar algo, só sim/não ou uma escolha simples. Se ajudar, lembre com delicadeza um item do plano dele (acima) ou uma vitória recente.";
+  const botaoDificil = document.getElementById("dia-dificil");
+  const planoCard = document.getElementById("plano-card");
+  function renderizarModo() {
+    // O modo desliga sozinho no dia seguinte.
+    if (prefs.diaDificil && prefs.diaDificilEm && prefs.diaDificilEm < hoje()) { prefs.diaDificil = false; guardarPrefs(); }
+    botaoDificil.setAttribute("aria-pressed", String(!!prefs.diaDificil));
+    planoCard.textContent = "";
+    planoCard.hidden = !prefs.diaDificil;
+    if (prefs.diaDificil) {
+      const titulo = document.createElement("p");
+      titulo.innerHTML = "<b>Modo dia difícil ligado.</b> Sem cobranças hoje. A Luz fica mais breve e mais perto.";
+      planoCard.appendChild(titulo);
+      const linhas = [["O que te ajuda", plano.ajuda], ["Com quem falar", plano.pessoas], ["O que já te fez bem", plano.bem]]
+        .filter(([, l]) => l.length);
+      if (!linhas.length) {
+        const p = document.createElement("p"); p.textContent = "Num dia mais leve, monte seu plano na aba Meu plano. Ele vai aparecer aqui.";
+        planoCard.appendChild(p);
+      }
+      for (const [rotulo, lista] of linhas) {
+        const p = document.createElement("p");
+        const b = document.createElement("b"); b.textContent = rotulo + ": ";
+        p.append(b, document.createTextNode(lista.join(" · ")));
+        planoCard.appendChild(p);
+      }
+      const recentes = vitorias.slice(-3).map(v => v.texto);
+      if (recentes.length) {
+        const p = document.createElement("p");
+        const b = document.createElement("b"); b.textContent = "Suas últimas vitórias: ";
+        p.append(b, document.createTextNode(recentes.join(" · ")));
+        planoCard.appendChild(p);
+      }
+    }
+    renderizarSeguir();
+    if (!turnos.length) mostrarOpcoes(iniciais());
+  }
+  function mudarModo(ligado) {
+    prefs = { ...prefs, diaDificil: ligado, diaDificilEm: ligado ? hoje() : "" };
+    guardarPrefs(); renderizarModo();
+  }
+  botaoDificil.addEventListener("click", () => mudarModo(!prefs.diaDificil));
+
+  // Check-in de um toque
+  const CARAS = [["😞", "Muito mal", 1], ["🙁", "Mal", 3], ["😐", "Mais ou menos", 5], ["🙂", "Bem", 7], ["😊", "Muito bem", 9]];
+  const checkin = document.getElementById("checkin");
+  const caras = document.getElementById("caras");
+  for (const [cara, rotulo, nota] of CARAS) {
+    const b = document.createElement("button");
+    b.type = "button"; b.setAttribute("aria-label", rotulo);
+    const e = document.createElement("span"); e.textContent = cara;
+    b.append(e, document.createTextNode(rotulo));
+    b.addEventListener("click", () => {
+      const agora = new Date();
+      const data = agora.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" }) + " " +
+        agora.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
+      humor.push({ data, dia: hoje(), nota, texto: "" });
+      guardarHumor(); renderizarHumor();
+      if (nota <= 3 && !prefs.diaDificil) mudarModo(true);
+      if (sample) mandar(`Check-in: hoje estou ${rotulo.toLowerCase()}.`);
+    });
+    caras.appendChild(b);
+  }
+  function renderizarCheckin() {
+    checkin.hidden = humor.some(r => diaDoRegistro(r) === hoje());
+  }
+
+  // Pequenas vitórias
+  const SUGESTOES_VITORIAS = ["Levantei da cama", "Tomei banho", "Comi direito", "Bebi água", "Saí de casa",
+    "Falei com alguém", "Tomei sol", "Arrumei algo", "Fiz a meta do dia"];
+  function renderizarVitorias() {
+    const hj = hoje();
+    const semana = vitorias.filter(v => (new Date(hj) - new Date(v.dia)) / 864e5 < 7).length;
+    document.getElementById("placar-vitorias").textContent = semana
+      ? `${semana} ${semana === 1 ? "vitória" : "vitórias"} nos últimos 7 dias.`
+      : "Toda vitória conta, até as menores.";
+    const sug = document.getElementById("sugestoes-vitorias");
+    sug.textContent = "";
+    const deHoje = new Set(vitorias.filter(v => v.dia === hj).map(v => v.texto));
+    for (const t of SUGESTOES_VITORIAS.filter(t => !deHoje.has(t))) {
+      const b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.textContent = t;
+      b.addEventListener("click", () => registrarVitoria(t));
+      sug.appendChild(b);
+    }
+    const lista = document.getElementById("lista-vitorias");
+    lista.textContent = "";
+    for (const v of vitorias.slice(-12).reverse()) {
+      const row = document.createElement("div");
+      const d = document.createElement("small"); d.textContent = dataCurta(v.dia);
+      const t = document.createElement("span"); t.textContent = v.texto;
+      row.append(d, t); lista.appendChild(row);
+    }
+  }
+  function registrarVitoria(texto) {
+    texto = texto.trim().slice(0, 120);
+    if (!texto) return;
+    vitorias.push({ texto, dia: hoje() });
+    guardarVitorias(); renderizarVitorias(); renderizarModo();
+  }
+  document.getElementById("form-vitoria").addEventListener("submit", ev => {
+    ev.preventDefault();
+    const c = document.getElementById("nova-vitoria");
+    registrarVitoria(c.value); c.value = "";
+  });
+  function resumoVitorias() {
+    const hj = hoje();
+    const rec = vitorias.filter(v => (new Date(hj) - new Date(v.dia)) / 864e5 < 7);
+    return rec.length ? "Pequenas vitórias dos últimos 7 dias:\n" + rec.map(v => `- ${dataCurta(v.dia)}: ${v.texto}`).join("\n") : "";
+  }
+
+  // Plano para dias ruins
+  const SUGESTOES_PLANO = {
+    ajuda: ["Tomar banho", "Ouvir música", "Tomar sol", "Caminhar um pouco", "Beber água e comer algo", "Deitar e respirar", "Sair de casa um pouco"],
+    pessoas: ["Mãe", "Pai", "Irmão ou irmã", "Um amigo", "Meu psicólogo", "CVV (188)"],
+    bem: ["Uma música especial", "Um filme ou série", "Estar na natureza", "Cozinhar", "Um animal de estimação", "Lembrar de uma conquista"],
+  };
+  function renderizarPlano() {
+    document.querySelectorAll("#plano .grupo").forEach(g => {
+      const chave = g.dataset.grupo;
+      const [itens, sug] = g.querySelectorAll(".itens");
+      itens.textContent = ""; sug.textContent = "";
+      plano[chave].forEach((t, i) => {
+        const el = document.createElement("span"); el.className = "item"; el.textContent = t;
+        const x = document.createElement("button"); x.type = "button"; x.textContent = "✕"; x.setAttribute("aria-label", "Remover " + t);
+        x.addEventListener("click", () => { plano[chave].splice(i, 1); guardarPlano(); renderizarPlano(); renderizarModo(); });
+        el.appendChild(x); itens.appendChild(el);
+      });
+      for (const t of SUGESTOES_PLANO[chave].filter(t => !plano[chave].includes(t))) {
+        const b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.textContent = t;
+        b.addEventListener("click", () => adicionarPlano(chave, t));
+        sug.appendChild(b);
+      }
+    });
+  }
+  function adicionarPlano(chave, texto) {
+    texto = texto.trim().slice(0, 80);
+    if (!texto || plano[chave].includes(texto)) return;
+    plano[chave].push(texto); guardarPlano(); renderizarPlano(); renderizarModo();
+  }
+  document.querySelectorAll("#plano .grupo form").forEach(f => f.addEventListener("submit", ev => {
+    ev.preventDefault();
+    const c = f.querySelector("input");
+    adicionarPlano(f.closest(".grupo").dataset.grupo, c.value); c.value = "";
+  }));
+  function resumoPlano() {
+    const partes = [["O que ajuda", plano.ajuda], ["Com quem pode falar", plano.pessoas], ["O que já fez bem", plano.bem]]
+      .filter(([, l]) => l.length).map(([r, l]) => `- ${r}: ${l.join(", ")}`);
+    return partes.length ? "Plano do Thiago para dias ruins (escrito por ele):\n" + partes.join("\n") : "";
+  }
+
+  // Gráfico do humor (média por dia, últimos 30 dias)
+  function diaDoRegistro(r) {
+    if (r.dia) return r.dia;
+    const [dd, mm] = (r.data || "").split(" ")[0].split("/");
+    return dd && mm ? `${new Date().getFullYear()}-${mm}-${dd}` : "";
+  }
+  function desenharGrafico() {
+    const alvo = document.getElementById("grafico");
+    alvo.textContent = "";
+    const porDia = {};
+    for (const r of humor) { const d = diaDoRegistro(r); if (d) (porDia[d] ||= []).push(r.nota); }
+    const fim = new Date(hoje() + "T12:00:00");
+    const dias = [];
+    for (let i = 29; i >= 0; i--) { const d = new Date(fim); d.setDate(d.getDate() - i); dias.push(d.toLocaleDateString("sv-SE")); }
+    const pontos = dias.map((d, i) => porDia[d] ? { i, d, v: porDia[d].reduce((a, b) => a + b, 0) / porDia[d].length } : null).filter(Boolean);
+    if (pontos.length < 2) {
+      const p = document.createElement("p"); p.className = "note";
+      p.textContent = "O gráfico aparece a partir de 2 dias com registro.";
+      alvo.appendChild(p); return;
+    }
+    const W = 320, H = 150, L = 22, R = 8, T = 8, B = 22;
+    const x = i => L + (i / 29) * (W - L - R), y = v => T + (1 - v / 10) * (H - T - B);
+    const ns = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(ns, "svg");
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("class", "grafico");
+    svg.setAttribute("role", "img"); svg.setAttribute("aria-label", "Humor por dia nos últimos 30 dias");
+    const el = (tag, attrs, texto) => { const e = document.createElementNS(ns, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (texto != null) e.textContent = texto; svg.appendChild(e); return e; };
+    for (const v of [0, 5, 10]) {
+      el("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), class: "grade" });
+      el("text", { x: L - 6, y: y(v) + 3, "text-anchor": "end", class: "rotulo" }, v);
+    }
+    const caminho = pontos.map((p, k) => `${k ? "L" : "M"}${x(p.i).toFixed(1)},${y(p.v).toFixed(1)}`).join(" ");
+    el("path", { d: `${caminho} L${x(pontos.at(-1).i).toFixed(1)},${y(0)} L${x(pontos[0].i).toFixed(1)},${y(0)} Z`, class: "area" });
+    el("path", { d: caminho, class: "linha" });
+    pontos.forEach((p, k) => el("circle", { cx: x(p.i), cy: y(p.v), r: k === pontos.length - 1 ? 4 : 2.5, class: k === pontos.length - 1 ? "ultimo" : "ponto" }));
+    el("text", { x: L, y: H - 6, class: "rotulo" }, dataCurta(dias[0]));
+    el("text", { x: W - R, y: H - 6, "text-anchor": "end", class: "rotulo" }, "hoje");
+    alvo.appendChild(svg);
+  }
+
+  // Resumo para a consulta
+  const botaoResumo = document.getElementById("gerar-resumo");
+  const caixaResumo = document.getElementById("resumo");
+  const copiarResumo = document.getElementById("copiar-resumo");
+  botaoResumo.addEventListener("click", async () => {
+    if (!sample) { caixaResumo.hidden = false; caixaResumo.textContent = "O resumo só funciona dentro do Claude."; return; }
+    botaoResumo.disabled = true; botaoResumo.textContent = "Preparando…";
+    caixaResumo.hidden = false; caixaResumo.textContent = "";
+    copiarResumo.hidden = true;
+    const hj = hoje();
+    const recente = d => (new Date(hj) - new Date(d)) / 864e5 < 31;
+    const hum = humor.filter(r => recente(diaDoRegistro(r))).map(r => `- ${diaDoRegistro(r)}: ${r.nota}/10${r.texto ? " (" + r.texto + ")" : ""}`).join("\n") || "(sem registros)";
+    const met = metas.filter(m => recente(m.dia)).map(m => `- ${m.dia}: ${m.texto} — ${NOMES_ESTADO[m.estado]}`).join("\n") || "(nenhuma)";
+    const vit = vitorias.filter(v => recente(v.dia)).map(v => `- ${v.dia}: ${v.texto}`).join("\n") || "(nenhuma)";
+    const prompt = `Escreva um resumo para o Thiago mostrar ao psicólogo ou psiquiatra dele, sobre os últimos 30 dias. Escreva em primeira pessoa, como se fosse ele, em português do Brasil, texto simples sem Markdown, no máximo 250 palavras.
+
+Inclua: como o humor variou (média, tendência, dias piores e melhores), o que parece ter ajudado, metas combinadas e como foram, pequenas vitórias, temas que apareceram, e 2 ou 3 perguntas que ele pode levar para a consulta. Seja fiel aos dados; não invente, não faça diagnóstico e não sugira remédios.
+
+Humor (0 a 10):
+${hum}
+
+Metas:
+${met}
+
+Pequenas vitórias:
+${vit}
+
+Anotações da Luz sobre ele:
+${memoria.texto || "(nenhuma)"}
+
+${resumoPlano()}`;
+    try {
+      const { text } = await sample(prompt, { cache: false, onText: ({ text }) => { caixaResumo.textContent = text; } });
+      caixaResumo.textContent = text;
+      copiarResumo.hidden = false;
+    } catch (e) {
+      caixaResumo.textContent = e?.text || (MSG_ERRO[e?.code] ?? "Não consegui preparar agora. Tente de novo em instantes.");
+    } finally {
+      botaoResumo.disabled = false; botaoResumo.textContent = "Preparar de novo";
+    }
+  });
+  copiarResumo.addEventListener("click", () => {
+    const texto = caixaResumo.textContent;
+    const selecionar = () => { const r = document.createRange(); r.selectNodeContents(caixaResumo); const s = getSelection(); s.removeAllRanges(); s.addRange(r); copiarResumo.textContent = "Texto selecionado: copie pelo menu"; };
+    try {
+      navigator.clipboard.writeText(texto).then(() => { copiarResumo.textContent = "Copiado"; }, selecionar);
+    } catch { selecionar(); }
+  });
+
+  // Cópia de segurança
+  const copiaStatus = document.getElementById("copia-status");
+  document.getElementById("baixar-copia").addEventListener("click", async () => {
+    const dados = { app: "luz", versao: 1, exportado: new Date().toISOString(),
+      conversa: { turnos, pendentes }, humor, memoria, metas, vitorias, plano, prefs };
+    let downloads = null;
+    try { downloads = await window.claude?.use?.("downloads"); } catch {}
+    if (!downloads) { copiaStatus.textContent = "Não consegui baixar aqui. Tente abrir a Luz pelo navegador."; return; }
+    try {
+      const r = await downloads.save({ filename: `luz-copia-${hoje()}.json`, data: JSON.stringify(dados, null, 2) });
+      copiaStatus.textContent = r?.status === "saved" ? "Cópia salva." : "Pronto.";
+    } catch (e) {
+      copiaStatus.textContent = e?.code === "cancelled" || e?.code === "declined" ? "" : "Não consegui baixar agora.";
+    }
+  });
+  let copiaPendente = null;
+  document.getElementById("arquivo-copia").addEventListener("change", async ev => {
+    const f = ev.target.files?.[0];
+    ev.target.value = "";
+    if (!f) return;
+    try {
+      const d = JSON.parse(await f.text());
+      if (d?.app !== "luz") throw new Error();
+      copiaPendente = d;
+      copiaStatus.textContent = `Cópia de ${new Date(d.exportado).toLocaleDateString("pt-BR")} carregada. Isso substitui o que está na Luz agora. `;
+      const b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.textContent = "Confirmar restauração";
+      b.addEventListener("click", () => {
+        const c = copiaPendente; copiaPendente = null;
+        turnos = Array.isArray(c.conversa?.turnos) ? c.conversa.turnos : [];
+        pendentes = Number(c.conversa?.pendentes) || 0;
+        humor = Array.isArray(c.humor) ? c.humor : [];
+        memoria = { texto: String(c.memoria?.texto ?? ""), atualizado: String(c.memoria?.atualizado ?? "") };
+        metas = Array.isArray(c.metas) ? c.metas : [];
+        vitorias = Array.isArray(c.vitorias) ? c.vitorias : [];
+        plano = { ajuda: [], pessoas: [], bem: [], ...(c.plano || {}) };
+        prefs = { diaDificil: false, diaDificilEm: "", ...(c.prefs || {}) };
+        guardarConversa(); guardarHumor(); guardarMemoria(); guardarMetas(); guardarVitorias(); guardarPlano(); guardarPrefs();
+        renderizarConversa(); renderizarHumor(); renderizarMemoria(); renderizarMetas();
+        renderizarVitorias(); renderizarPlano(); renderizarModo(); renderizarCheckin();
+        copiaStatus.textContent = "Tudo restaurado.";
+      });
+      copiaStatus.appendChild(b);
+    } catch {
+      copiaStatus.textContent = "Esse arquivo não é uma cópia da Luz.";
+    }
+  });
+
+  // Memória de longo prazo
+  const memTexto = document.getElementById("memoria-texto");
+  const memStatus = document.getElementById("memoria-status");
+  let atualizando = null;
+  function renderizarMemoria() {
+    memTexto.value = memoria.texto;
+    memStatus.textContent = memoria.atualizado
+      ? "Atualizada em " + new Date(memoria.atualizado).toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }) + "."
+      : "";
+  }
+  function atualizarMemoria() {
+    if (!sample || atualizando) return atualizando;
+    const recente = turnos.slice(-2 * Math.max(pendentes, 4))
+      .map(t => (t.role === "user" ? "Pessoa: " : "Luz: ") + t.content).join("\n");
+    if (!recente) return null;
+    const resumidas = pendentes;
+    const prompt = `Você cuida das anotações de memória da "Luz", uma companhia de apoio emocional, sobre a pessoa com quem ela conversa. Essas anotações permitem que a Luz continue de onde parou em vez de recomeçar do zero.
+
+Atualize as anotações atuais com o que for importante na conversa recente. Guarde, quando aparecer: como a pessoa gosta de ser chamada; pessoas importantes; interesses e coisas de que gosta ou gostava; rotina, trabalho ou estudo; o que está pesando agora; o que ajudou e o que não ajudou; metas e pequenas tarefas combinadas e se foram feitas; conquistas; se faz acompanhamento profissional ou toma remédio.
+
+Regras: tópicos curtos, em português, no máximo 1500 caracteres no total. Mantenha o que continua válido, atualize o que mudou e remova o que ficou velho. Não invente nada. Não guarde detalhes de crise além de uma linha neutra, se necessário. Responda só com JSON no formato {"memoria": "..."}.
+
+Anotações atuais:
+${memoria.texto || "(nenhuma ainda)"}
+
+Conversa recente:
+${recente}`;
+    atualizando = sample.json(prompt, { modelTier: "quick", cache: false })
+      .then(r => {
+        if (typeof r?.memoria === "string" && r.memoria.trim()) {
+          memoria = { texto: r.memoria.trim().slice(0, 4000), atualizado: new Date().toISOString() };
+          pendentes = Math.max(0, pendentes - resumidas);
+          guardarMemoria(); guardarConversa();
+          if (document.activeElement !== memTexto) renderizarMemoria();
+        }
+      })
+      .catch(() => {})
+      .finally(() => { atualizando = null; });
+    return atualizando;
+  }
+  document.getElementById("salvar-memoria").addEventListener("click", () => {
+    memoria = { texto: memTexto.value.trim().slice(0, 4000), atualizado: new Date().toISOString() };
+    guardarMemoria(); renderizarMemoria();
+    memStatus.textContent = "Salvo.";
+  });
+  const apagarMem = document.getElementById("apagar-memoria");
+  let confirmarMem = false;
+  apagarMem.addEventListener("click", () => {
+    if (!confirmarMem) { confirmarMem = true; apagarMem.textContent = "Toque de novo para apagar tudo"; setTimeout(() => { confirmarMem = false; apagarMem.textContent = "Apagar memória"; }, 5000); return; }
+    confirmarMem = false; apagarMem.textContent = "Apagar memória";
+    memoria = { texto: "", atualizado: "" }; pendentes = 0;
+    guardarMemoria(); guardarConversa(); renderizarMemoria();
+    memStatus.textContent = "Memória apagada.";
+  });
+
+  // Respirar
+  const orb = document.getElementById("orb"), fase = document.getElementById("fase"),
+        contagem = document.getElementById("contagem"), comecar = document.getElementById("comecar");
+  const espera = ms => new Promise(r => setTimeout(r, ms));
+  comecar.addEventListener("click", async () => {
+    comecar.disabled = true;
+    const passos = [["Inspire pelo nariz", 4, "86%"], ["Segure", 7, "86%"], ["Solte pela boca", 8, "40%"]];
+    for (let c = 1; c <= 3; c++) {
+      for (const [nome, seg, tam] of passos) {
+        fase.textContent = nome;
+        orb.style.transitionDuration = seg + "s";
+        orb.style.width = tam;
+        for (let s = seg; s > 0; s--) { contagem.textContent = `${s} · ciclo ${c} de 3`; await espera(1000); }
+      }
+    }
+    fase.textContent = "Muito bem.";
+    contagem.textContent = "Como está seu corpo agora?";
+    comecar.disabled = false; comecar.textContent = "De novo";
+  });
+
+  renderizarConversa();
+  renderizarHumor();
+  renderizarMemoria();
+  renderizarMetas();
+  renderizarVitorias();
+  renderizarPlano();
+  renderizarModo();
+  renderizarCheckin();
+})();
+</script>
