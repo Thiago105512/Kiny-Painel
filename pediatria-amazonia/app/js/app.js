@@ -96,8 +96,13 @@ window.PED = window.PED || {};
     (D().emergencias || []).forEach(x => { if (U.normalize(x.nome).includes(q)) push('Emergência', x.nome, '/emergencias/' + x.id); });
     (D().exames || []).forEach(x => { if (U.normalize(x.nome).includes(q)) push('Exame', x.nome, '/exames/' + x.id); });
     (D().vacinas || []).forEach(x => { if (U.normalize(x.nome).includes(q)) push('Vacina', x.nome, '/vacinas'); });
+    ((D().notificacao || {}).doencas || []).forEach(x => { if (U.normalize(x.nome).includes(q)) push('Notificação', x.nome, '/notificacao/' + (x.doencaId || 'x-' + U.normalize(x.nome).replace(/\s+/g, '_')), x.tipo === 'imediata' ? 'imediata, 24 h' : 'semanal'); });
+    ((D().violencia || {}).tipos || []).forEach(x => { if (U.normalize(x.nome).includes(q) || q.length > 3 && 'violencia'.includes(q)) push('Proteção', x.nome, '/violencia/' + x.id); });
+    (((D().locais || {}).unidades) || []).concat(minhasUnidades()).forEach(x => { if (U.normalize(x.nome).includes(q)) push('Unidade', x.nome, '/unidades?cidade=' + encodeURIComponent(x.cidade), x.cidade); });
+    ((D().curiosidades || {}).explicarFamilia || []).forEach(x => { if (U.normalize(x.assunto).includes(q)) push('Explicar', x.assunto, '/aprender?aba=familia'); });
+    Object.keys((D().curiosidades || {}).porLugar || {}).forEach(l => { if (U.normalize(l).includes(q)) push('Lugar', l, '/aprender?aba=lugar&lugar=' + encodeURIComponent(l)); });
     S.col('pacientes').forEach(x => { if (U.normalize(x.nome).includes(q)) push('Paciente', x.nome, '/pacientes/' + x.id); });
-    return out.slice(0, 25);
+    return out.slice(0, 30);
   }
   function bindSearch() {
     const inp = $('#globalSearch'), box = $('#searchResults');

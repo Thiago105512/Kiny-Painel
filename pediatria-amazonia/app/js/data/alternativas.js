@@ -1412,6 +1412,324 @@ PED.data.alternativas = {
       fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Diretrizes do Programa de Reanimação Neonatal', ano: 2022 }, { nome: 'ILCOR - Consenso internacional sobre reanimação neonatal', ano: 2023 } ],
       atualizadoEm: '2026-09'
     }
+,
+    sarampo: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - vitamina A universal e suporte', tipo: 'primeira',
+          opcoes: [
+            { medId: 'vitamina_a', nome: 'Vitamina A', esquema: 'VO no dia do diagnóstico e repetida no dia seguinte: menor de 6 meses 50.000 UI por dose, de 6 a 11 meses 100.000 UI por dose, 12 meses ou mais 200.000 UI por dose. Terceira dose após 4 a 6 semanas se houver sinais de deficiência de vitamina A ou desnutrição grave', quando: 'Toda criança com sarampo, independentemente do estado nutricional', obs: 'Reduz mortalidade e complicações oculares. É a única medida medicamentosa específica com benefício demonstrado no sarampo.' },
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula', quando: 'Febre e dor', obs: '' },
+            { medId: 'sais_reidratacao_oral', nome: 'Sais de reidratação oral', esquema: 'Após cada evacuação líquida ou vômito, conforme plano A ou B do Ministério da Saúde', quando: 'Prevenção e tratamento da desidratação, muito frequente pela diarreia e pelas lesões orais', obs: 'Manter aleitamento materno e alimentação.' }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa antitérmica', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'dipirona', nome: 'Dipirona', esquema: '10 a 15 mg/kg/dose VO ou IV a cada 6 h, conforme bula', quando: 'Alternativa quando o paracetamol não controla a febre ou não está disponível na comunidade', obs: 'Não usar em menores de 3 meses ou abaixo de 5 kg.' }
+          ] },
+        { ordem: 3, rotulo: 'Segunda linha - complicação bacteriana', tipo: 'segunda',
+          opcoes: [
+            { medId: 'amoxicilina', nome: 'Amoxicilina', esquema: '50 mg/kg/dia VO dividida a cada 8 ou 12 h, podendo chegar a 80 a 90 mg/kg/dia conforme a diretriz, por 7 a 10 dias', quando: 'Otite média aguda ou pneumonia não grave complicando o sarampo, complicações bacterianas frequentes nessa doença', obs: 'Antibiótico apenas na complicação documentada ou fortemente suspeitada, não de rotina.' },
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: '50 a 100 mg/kg/dia IV, conforme protocolo do serviço', quando: 'Complicação bacteriana grave com internação, como pneumonia grave ou sepse', obs: '' },
+            { medId: 'zinco', nome: 'Zinco', esquema: '10 mg/dia VO em menores de 6 meses e 20 mg/dia em maiores de 6 meses, por 10 a 14 dias', quando: 'Diarreia associada ao sarampo', obs: '' }
+          ] },
+        { ordem: 4, rotulo: 'Adjuvante - profilaxia pós-exposição dos contatos', tipo: 'adjuvante',
+          opcoes: [
+            { medId: null, nome: 'Vacina tríplice viral ou tetraviral (bloqueio vacinal)', esquema: 'Contatos suscetíveis em até 72 h da exposição, conforme idade e situação vacinal, incluindo dose zero de 6 a 11 meses, que não substitui o esquema de rotina', quando: 'Bloqueio de contatos suscetíveis, ação prioritária da vigilância', obs: 'Confirmar conforme o Calendário Nacional de Vacinação e a orientação da vigilância epidemiológica.', verificar: true },
+            { medId: null, nome: 'Imunoglobulina humana normal', esquema: 'Preferencialmente em até 6 dias da exposição, dose e via conforme protocolo do CRIE e bula', quando: 'Contatos suscetíveis com contraindicação à vacina: menores de 6 meses, gestantes e imunossuprimidos', obs: 'Confirmar conforme protocolo/bula e disponibilidade no CRIE de referência.', verificar: true }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Ácido acetilsalicílico (AAS)', esquema: '', quando: '', obs: 'Evitar em viroses exantemáticas da infância pela associação com síndrome de Reye. Usar paracetamol ou dipirona.' },
+            { medId: 'amoxicilina', nome: 'Antibiótico profilático de rotina no sarampo não complicado', esquema: '', quando: '', obs: 'Não indicado na criança sem sinais de complicação bacteriana. Aumenta resistência sem reduzir complicações nesse contexto.' },
+            { medId: null, nome: 'Antiviral para sarampo', esquema: '', quando: '', obs: 'Não há antiviral com eficácia comprovada. O cuidado é de suporte, vitamina A e vigilância de complicações.' },
+            { medId: null, nome: 'Atender caso suspeito sem isolamento respiratório por aerossóis', esquema: '', quando: '', obs: 'O sarampo é altamente transmissível. A falta de isolamento na unidade gera surtos com casos secundários em lactentes e imunossuprimidos.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Notificação imediata e investigação de contatos pela vigilância epidemiológica.',
+        'Isolamento respiratório por aerossóis desde a suspeita até 4 dias após o início do exantema, e durante toda a doença em imunossuprimidos.',
+        'Higiene ocular com soro fisiológico e avaliação oftalmológica na fotofobia intensa, secreção purulenta ou suspeita de úlcera de córnea.',
+        'Oxigênio suplementar se saturação abaixo de 92% e avaliação de suporte ventilatório na insuficiência respiratória.',
+        'Busca ativa de não vacinados na comunidade, com atenção a áreas ribeirinhas e indígenas com cobertura vacinal mais baixa.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Guia de vigilância em saúde, sarampo', ano: 2023 }, { nome: 'OMS - Measles vaccines and clinical management position paper', ano: 2021 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    rubeola: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - sintomático', tipo: 'primeira',
+          opcoes: [
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula', quando: 'Febre e dor, quadro habitualmente leve e autolimitado', obs: 'Não há antiviral específico.' }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa para febre, dor e artralgia', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'dipirona', nome: 'Dipirona', esquema: '10 a 15 mg/kg/dose VO ou IV a cada 6 h, conforme bula', quando: 'Alternativa quando o paracetamol não controla a febre ou não está disponível', obs: 'Não usar em menores de 3 meses ou abaixo de 5 kg.' },
+            { medId: 'ibuprofeno', nome: 'Ibuprofeno', esquema: '5 a 10 mg/kg/dose VO a cada 6 a 8 h, conforme bula', quando: 'Artralgia ou artrite, mais comum em adolescentes, quando não houver sangramento nem plaquetopenia', obs: 'Evitar enquanto dengue não estiver afastada e na púrpura trombocitopênica.' }
+          ] },
+        { ordem: 3, rotulo: 'Adjuvante - bloqueio vacinal e proteção de gestantes', tipo: 'adjuvante',
+          opcoes: [
+            { medId: null, nome: 'Vacina tríplice viral (bloqueio vacinal)', esquema: 'Contatos suscetíveis não gestantes em até 72 h da exposição, conforme o Calendário Nacional de Vacinação', quando: 'Bloqueio de contatos, medida de vigilância', obs: 'Contraindicada na gestação e na imunossupressão grave. Confirmar conforme protocolo e orientação da vigilância.', verificar: true },
+            { medId: null, nome: 'Encaminhamento de gestante exposta ao pré-natal', esquema: 'Sorologia e acompanhamento conforme protocolo obstétrico', quando: 'Gestante suscetível exposta, principal risco da rubéola', obs: 'A gravidade da rubéola está na síndrome da rubéola congênita, não no caso índice.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Ácido acetilsalicílico (AAS)', esquema: '', quando: '', obs: 'Evitar em virose exantemática pela associação com síndrome de Reye e pelo risco de sangramento na púrpura pós-infecciosa.' },
+            { medId: null, nome: 'Antibiótico para o exantema febril', esquema: '', quando: '', obs: 'Não indicado. O exantema da rubéola é viral e o antibiótico apenas expõe a criança a eventos adversos e a confusão com exantema medicamentoso.' },
+            { medId: 'ibuprofeno', nome: 'Anti-inflamatório na vigência de plaquetopenia', esquema: '', quando: '', obs: 'Evitar na púrpura trombocitopênica pós-rubéola, pelo risco de sangramento.' },
+            { medId: null, nome: 'Vacinar gestante como bloqueio', esquema: '', quando: '', obs: 'Contraindicado. A proteção da gestante suscetível exposta é feita por afastamento do caso e acompanhamento no pré-natal.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Notificação imediata e investigação de contatos, com verificação da situação vacinal e sorológica das gestantes expostas.',
+        'Afastamento de creche, escola e atividades coletivas até 7 dias após o início do exantema.',
+        'Evitar rigorosamente contato com gestantes suscetíveis durante todo o período de transmissibilidade.',
+        'Recém-nascido com suspeita de rubéola congênita: precauções de contato prolongadas e avaliação auditiva, oftalmológica, cardiológica e neurológica.',
+        'Revisão da cobertura vacinal da família e da comunidade.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Guia de vigilância em saúde, rubéola e síndrome da rubéola congênita', ano: 2023 }, { nome: 'OPAS - Eliminação do sarampo e da rubéola nas Américas', ano: 2022 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    varicela: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - medidas gerais e conforto', tipo: 'primeira',
+          opcoes: [
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula', quando: 'Febre e dor na criança previamente hígida', obs: 'Antitérmico de escolha na varicela.' },
+            { medId: null, nome: 'Cuidados com a pele', esquema: 'Banho diário com água e sabonete neutro, unhas curtas e limpas, roupas leves', quando: 'Todos os casos', obs: 'Não usar talco, pomadas com corante nem preparações caseiras sobre as lesões.' }
+          ] },
+        { ordem: 2, rotulo: 'Antiviral em grupos de maior risco', tipo: 'alternativa',
+          opcoes: [
+            { medId: null, nome: 'Aciclovir oral', esquema: '20 mg/kg/dose VO 4 vezes ao dia, máximo 800 mg por dose, por 5 dias, iniciado idealmente nas primeiras 24 a 48 h do exantema', quando: 'Avaliar em grupos de maior risco: maiores de 12 anos, segundo caso no domicílio, doença cutânea ou pulmonar crônica, uso de corticoide sistêmico ou de ácido acetilsalicílico crônico', obs: 'Não indicado de rotina na criança previamente hígida maior de 2 anos com quadro leve. Confirmar conforme protocolo do serviço e bula.', verificar: true },
+            { medId: null, nome: 'Aciclovir intravenoso', esquema: '10 mg/kg/dose IV a cada 8 h, equivalente a 30 mg/kg/dia, por 7 a 10 dias, com hidratação adequada', quando: 'Imunossuprimidos, recém-nascidos e formas complicadas: pneumonia, encefalite, varicela disseminada', obs: 'Manter boa hidratação pelo risco de nefrotoxicidade. Confirmar conforme protocolo do serviço e bula.', verificar: true }
+          ] },
+        { ordem: 3, rotulo: 'Segunda linha - infecção bacteriana secundária de pele', tipo: 'segunda',
+          opcoes: [
+            { medId: 'cefalexina', nome: 'Cefalexina', esquema: '50 a 100 mg/kg/dia VO dividida a cada 6 h por 7 a 10 dias, conforme protocolo', quando: 'Infecção bacteriana secundária de pele não complicada, complicação mais frequente da varicela', obs: 'Novo pico febril após o terceiro dia sugere infecção secundária e motiva reavaliação.' },
+            { medId: 'amoxicilina_clavulanato', nome: 'Amoxicilina + clavulanato', esquema: '45 a 50 mg/kg/dia do componente amoxicilina VO dividida a cada 12 h por 7 a 10 dias', quando: 'Piodermite extensa ou falha da cefalexina', obs: '' },
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: '50 a 100 mg/kg/dia IV, associada a cobertura antiestafilocócica conforme protocolo do serviço', quando: 'Celulite extensa ou infecção invasiva com necessidade de internação', obs: 'Fasciíte necrotizante e choque tóxico exigem avaliação cirúrgica imediata.' }
+          ] },
+        { ordem: 4, rotulo: 'Adjuvante - prurido e profilaxia pós-exposição', tipo: 'adjuvante',
+          opcoes: [
+            { medId: null, nome: 'Anti-histamínico oral', esquema: 'Dose conforme idade, peso e bula do produto disponível', quando: 'Prurido intenso que leva à escoriação e à infecção secundária', obs: 'Confirmar conforme protocolo/bula.', verificar: true },
+            { medId: null, nome: 'Vacina varicela (monovalente ou tetraviral)', esquema: 'Contato suscetível a partir de 9 meses, em até 5 dias da exposição, preferencialmente nas primeiras 72 h', quando: 'Profilaxia pós-exposição de contatos suscetíveis', obs: 'Confirmar conforme o Calendário Nacional e o CRIE.', verificar: true },
+            { medId: null, nome: 'Imunoglobulina humana anti-varicela-zóster (IGHAVZ)', esquema: 'Preferencialmente em até 96 h da exposição, dose conforme protocolo do CRIE e bula', quando: 'Suscetíveis de alto risco: imunossuprimidos, gestantes, recém-nascido de mãe com varicela de 5 dias antes a 2 dias após o parto, prematuros conforme critério', obs: 'Confirmar conforme protocolo/bula e disponibilidade no CRIE. Em comunidade distante, acionar a referência precocemente pelo prazo curto.', verificar: true }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Ácido acetilsalicílico (AAS) na varicela', esquema: '', quando: '', obs: 'Contraindicado. A associação entre salicilato, varicela e síndrome de Reye é clássica e bem documentada, com encefalopatia e disfunção hepática graves. Substituir por paracetamol.' },
+            { medId: 'ibuprofeno', nome: 'Ibuprofeno e outros anti-inflamatórios não esteroidais na fase aguda', esquema: '', quando: '', obs: 'Evitar na varicela pela associação descrita com infecção invasiva de pele e partes moles, incluindo fasciíte necrotizante por Streptococcus pyogenes.' },
+            { medId: null, nome: 'Talco, pomadas com corante, mertiolate e preparações caseiras sobre as lesões', esquema: '', quando: '', obs: 'Práticas comuns que mascaram a evolução das lesões, dificultam a avaliação de infecção secundária e causam dermatite de contato.' },
+            { medId: null, nome: 'Aciclovir de rotina na criança hígida com quadro leve', esquema: '', quando: '', obs: 'Benefício clínico pequeno e sem impacto em complicações na criança previamente hígida. Reservar para os grupos de risco e para as formas graves.' },
+            { medId: null, nome: 'Liberar para creche ou escola antes de todas as lesões estarem em crosta', esquema: '', quando: '', obs: 'Mantém a transmissão. O afastamento vai até que todas as lesões estejam em crosta.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Isolamento domiciliar e afastamento de creche e escola até que todas as lesões estejam em crosta; no hospital, precauções de aerossol e contato.',
+        'Banho diário, unhas curtas e roupas leves para reduzir escoriação e infecção secundária.',
+        'Hidratação oral e dieta pastosa e fria quando houver lesões orais dolorosas.',
+        'Vigilância de novo pico febril, que deve motivar reavaliação imediata por suspeita de complicação bacteriana.',
+        'Identificação precoce de contatos de alto risco no domicílio e na comunidade, para profilaxia dentro do prazo.'
+      ],
+      fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre varicela', ano: 2022 }, { nome: 'Ministério da Saúde - Manual dos Centros de Referência para Imunobiológicos Especiais (CRIE)', ano: 2023 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    exantema_subito: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - sintomático', tipo: 'primeira',
+          opcoes: [
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula', quando: 'Febre alta na fase pré-exantemática, que é a queixa principal', obs: 'O objetivo é o conforto da criança, não a normalização estrita da temperatura.' },
+            { medId: 'sais_reidratacao_oral', nome: 'Sais de reidratação oral', esquema: 'Conforme plano A do Ministério da Saúde', quando: 'Diarreia associada ou risco de desidratação pela febre alta', obs: 'Manter aleitamento materno e alimentação conforme aceitação.' }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa antitérmica', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'dipirona', nome: 'Dipirona', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula', quando: 'Alternativa quando o paracetamol não controla o desconforto ou não está disponível', obs: 'Não usar em menores de 3 meses ou abaixo de 5 kg.' },
+            { medId: 'ibuprofeno', nome: 'Ibuprofeno', esquema: '5 a 10 mg/kg/dose VO a cada 6 a 8 h, conforme bula', quando: 'Alternativa antitérmica e analgésica', obs: 'Evitar em desidratação, sangramento ou suspeita de dengue, diagnóstico diferencial relevante em área endêmica.' }
+          ] },
+        { ordem: 3, rotulo: 'Situação especial', tipo: 'segunda',
+          opcoes: [
+            { medId: null, nome: 'Conduta antiviral definida por infectologia', esquema: 'Indicação, fármaco e dose definidos por serviço especializado', quando: 'Imunossuprimidos ou quadros graves atribuídos ao herpes-vírus humano 6', obs: 'Não há indicação de antiviral na criança imunocompetente. Confirmar conforme protocolo do serviço.', verificar: true }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Antibiótico no exantema súbito', esquema: '', quando: '', obs: 'Não tem indicação. Causa frequente de erro: a febre alta por 3 a 5 dias leva à prescrição de antibiótico e, quando o exantema surge justamente com a queda da febre, ele é interpretado como alergia ao antibiótico, rotulando a criança indevidamente como alérgica por anos.' },
+            { medId: null, nome: 'Banhos gelados, álcool e compressas frias agressivas', esquema: '', quando: '', obs: 'Causam desconforto, tremor e vasoconstrição, sem reduzir a febre de forma sustentada. O álcool ainda tem risco de absorção e intoxicação.' },
+            { medId: null, nome: 'Alternância rotineira de dois antitérmicos sem orientação', esquema: '', quando: '', obs: 'Aumenta o risco de erro de dose e de intoxicação, sem benefício comprovado sobre o conforto.' },
+            { medId: null, nome: 'Anticonvulsivante profilático após crise febril simples', esquema: '', quando: '', obs: 'Não indicado. A crise febril simples é benigna. A conduta é orientar a família sobre o manejo da crise e os sinais de alarme.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Orientação estruturada sobre crise febril: decúbito lateral, não conter os movimentos, não colocar nada na boca, marcar o tempo e procurar atendimento.',
+        'Hidratação oral frequente e manutenção do aleitamento materno.',
+        'Explicar o padrão da doença: febre alta por 3 a 5 dias com criança em bom estado geral e exantema que surge quando a febre cede.',
+        'Reavaliação obrigatória se a febre persistir além de 5 dias ou se surgir qualquer sinal de alarme.',
+        'Evitar exames e antibióticos desnecessários quando o quadro é típico e a criança está em bom estado geral.'
+      ],
+      fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre exantemas na infância', ano: 2022 }, { nome: 'Ministério da Saúde - Guia de vigilância em saúde, doenças exantemáticas', ano: 2023 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    eritema_infeccioso: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - sintomático na forma clássica', tipo: 'primeira',
+          opcoes: [
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula', quando: 'Febre e dor, quando presentes, na forma clássica e autolimitada', obs: 'Não há antiviral específico e a maioria dos casos não exige medicação.' }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa para febre, dor e artralgia', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'dipirona', nome: 'Dipirona', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula', quando: 'Alternativa antitérmica e analgésica', obs: 'Não usar em menores de 3 meses ou abaixo de 5 kg.' },
+            { medId: 'ibuprofeno', nome: 'Ibuprofeno', esquema: '5 a 10 mg/kg/dose VO a cada 6 a 8 h, conforme bula', quando: 'Artralgia e artrite, mais frequentes em adolescentes e em meninas', obs: 'Evitar se houver plaquetopenia, sangramento ou suspeita de dengue.' }
+          ] },
+        { ordem: 3, rotulo: 'Segunda linha - crise aplástica transitória', tipo: 'segunda',
+          opcoes: [
+            { medId: null, nome: 'Concentrado de hemácias', esquema: 'Transfusão conforme limiar clínico e protocolo do serviço de hemoterapia', quando: 'Crise aplástica transitória com anemia sintomática, sobretudo em criança com anemia falciforme, esferocitose ou outra hemólise crônica', obs: 'Monitorizar hemoglobina e reticulócitos. Manter precaução de gotículas, pois esses pacientes são altamente transmissíveis, ao contrário do caso clássico já exantemático.' }
+          ] },
+        { ordem: 4, rotulo: 'Uso off-label', tipo: 'offlabel',
+          opcoes: [
+            { medId: null, nome: 'Imunoglobulina humana intravenosa', esquema: 'Indicação, dose e duração definidas por hematologia e infectologia', quando: 'Aplasia pura de série vermelha persistente por parvovírus B19 em criança imunossuprimida', obs: 'Off-label: a imunoglobulina intravenosa não tem registro em bula para infecção por parvovírus B19. O uso é apoiado por séries de casos e por recomendações de sociedades de hematologia, com base na ausência de anticorpos neutralizantes próprios nesses pacientes. Confirmar conforme protocolo do serviço e bula.', verificar: true }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Antibiótico na forma clássica', esquema: '', quando: '', obs: 'Não indicado. O exantema em face esbofeteada e rendilhado é viral, e a prescrição leva a rótulo equivocado de alergia medicamentosa.' },
+            { medId: 'prednisolona', nome: 'Corticoide na forma clássica', esquema: '', quando: '', obs: 'Sem indicação. O exantema é imunomediado e autolimitado.' },
+            { medId: null, nome: 'Afastamento escolar após o surgimento do exantema', esquema: '', quando: '', obs: 'Desnecessário. A transmissibilidade ocorre na fase prodrômica, antes do exantema. O afastamento apenas prejudica a criança sem benefício epidemiológico.' },
+            { medId: null, nome: 'Tranquilizar gestante exposta sem encaminhamento', esquema: '', quando: '', obs: 'A gestante exposta precisa de sorologia e de acompanhamento ecográfico no pré-natal de alto risco, pelo risco de hidropisia fetal.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Orientar que o exantema pode recidivar por semanas com sol, calor e exercício, sem significar reinfecção nem falha de tratamento.',
+        'Hidratação e manutenção das atividades habituais, sem indicação de repouso prolongado.',
+        'Identificação de crianças com hemólise crônica na família e na comunidade, que são o grupo de risco para crise aplástica.',
+        'Encaminhamento de gestante exposta ou infectada ao pré-natal de alto risco.',
+        'Precaução de gotículas apenas nos casos de crise aplástica e em imunossuprimidos, que eliminam vírus de forma prolongada.'
+      ],
+      fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre exantemas na infância', ano: 2022 }, { nome: 'Ministério da Saúde - Guia de vigilância em saúde, doenças exantemáticas', ano: 2023 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    mao_pe_boca: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - analgesia programada e hidratação', tipo: 'primeira',
+          opcoes: [
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula, administrado cerca de 30 min antes das refeições', quando: 'Dor oral e febre, principal obstáculo à aceitação de líquidos', obs: 'A analgesia programada, e não conforme a necessidade, é o que permite manter a hidratação e evitar internação.' },
+            { medId: 'sais_reidratacao_oral', nome: 'Sais de reidratação oral', esquema: 'Pequenos volumes frequentes, conforme plano A ou B do Ministério da Saúde', quando: 'Prevenção e tratamento da desidratação', obs: 'Oferecer líquidos gelados, sorvete, gelatina, leite e iogurte; evitar sucos ácidos, alimentos salgados, quentes ou condimentados.' }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa analgésica', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'dipirona', nome: 'Dipirona', esquema: '10 a 15 mg/kg/dose VO ou IV a cada 6 h, conforme bula', quando: 'Alternativa quando o paracetamol não controla a dor oral ou quando a via oral está muito comprometida', obs: 'Não usar em menores de 3 meses ou abaixo de 5 kg.' },
+            { medId: 'ibuprofeno', nome: 'Ibuprofeno', esquema: '5 a 10 mg/kg/dose VO a cada 6 a 8 h, conforme bula', quando: 'Alternativa analgésica com componente anti-inflamatório', obs: 'Evitar se houver desidratação instalada.' }
+          ] },
+        { ordem: 3, rotulo: 'Segunda linha - recusa oral e desidratação', tipo: 'segunda',
+          opcoes: [
+            { medId: 'soro_fisiologico', nome: 'Soro fisiológico 0,9%', esquema: 'Expansão e hidratação venosa conforme plano C ou protocolo do serviço', quando: 'Recusa completa da via oral ou desidratação moderada a grave', obs: 'Reavaliar a analgesia, pois a recusa em geral é por dor e não por intolerância.' },
+            { medId: 'ringer_lactato', nome: 'Ringer lactato', esquema: 'Alternativa cristaloide para expansão, conforme protocolo do serviço', quando: 'Alternativa ao soro fisiológico na desidratação moderada a grave', obs: '' },
+            { medId: 'cefalexina', nome: 'Cefalexina', esquema: '50 a 100 mg/kg/dia VO dividida a cada 6 h por 7 dias, conforme protocolo', quando: 'Infecção bacteriana secundária das lesões cutâneas', obs: 'Apenas com sinais de infecção secundária, não de rotina.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Antibiótico na doença mão-pé-boca', esquema: '', quando: '', obs: 'Etiologia viral, por enterovírus e coxsackievírus. Antibiótico não altera a evolução e expõe a criança a efeitos adversos.' },
+            { medId: null, nome: 'Soluções orais com anestésico tópico em lactentes', esquema: '', quando: '', obs: 'Evitar pelo risco de aspiração, de perda do reflexo de proteção da via aérea e de toxicidade sistêmica, incluindo metemoglobinemia com benzocaína. Em crianças maiores, apenas conforme prescrição e bula.' },
+            { medId: null, nome: 'Corticoide tópico nas lesões orais e preparações caseiras', esquema: '', quando: '', obs: 'Sem benefício comprovado e com risco de agravar a lesão e de infecção secundária.' },
+            { medId: null, nome: 'Exigir desaparecimento completo das lesões para retorno à creche', esquema: '', quando: '', obs: 'O retorno não depende do desaparecimento das lesões nem da eliminação viral fecal, que é prolongada. O critério é ausência de febre, de sialorreia por dor e de lesões vesiculares ativas.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Analgesia em horários regulares, cerca de 30 min antes das refeições, para viabilizar a aceitação oral.',
+        'Oferta de alimentos frios, pastosos e não ácidos, com líquidos em pequenos volumes e alta frequência.',
+        'Higiene das lesões cutâneas com água e sabonete neutro.',
+        'Monitorar sinais neurológicos e cardíacos, como mioclonias, ataxia, sonolência e taquicardia desproporcional, que indicam internação e avaliação especializada.',
+        'Orientar sobre a descamação de mãos e pés e a possível queda de unhas semanas depois, fenômenos benignos que não exigem tratamento.'
+      ],
+      fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre exantemas na infância', ano: 2022 }, { nome: 'OPAS - Vigilância de enterovírus e doença mão-pé-boca', ano: 2023 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    escarlatina: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha', tipo: 'primeira',
+          opcoes: [
+            { medId: 'penicilina_benzatina', nome: 'Penicilina G benzatina', esquema: 'Dose única IM: 600.000 UI se peso abaixo de 27 kg e 1.200.000 UI se peso igual ou acima de 27 kg. Observar por 30 min após a aplicação', quando: 'Escarlatina confirmada ou com forte suspeita clínica, sobretudo quando há risco de baixa adesão ao esquema oral', obs: 'Dose única supervisionada resolve o problema da adesão e é a opção preferencial em comunidade ribeirinha ou indígena com retorno difícil.' },
+            { medId: 'amoxicilina', nome: 'Amoxicilina', esquema: '50 mg/kg/dia VO, máximo 1 g ao dia, em 1 ou 2 tomadas por 10 dias', quando: 'Alternativa oral de primeira escolha, com boa aceitação em crianças pequenas', obs: 'A duração de 10 dias é essencial para a erradicação e não deve ser encurtada, mesmo com melhora rápida dos sintomas.' }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa em alergia a penicilina', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'cefalexina', nome: 'Cefalexina', esquema: '40 a 50 mg/kg/dia VO dividida a cada 12 h, máximo 1 g ao dia, por 10 dias', quando: 'Alergia não anafilática à penicilina', obs: 'Evitar se houve anafilaxia, angioedema ou reação cutânea grave a betalactâmico.' },
+            { medId: 'azitromicina', nome: 'Azitromicina', esquema: '12 mg/kg/dia VO uma vez ao dia, máximo 500 mg ao dia, por 5 dias, conforme bula', quando: 'Alergia grave à penicilina', obs: 'Considerar o perfil de resistência local dos estreptococos a macrolídeos.' },
+            { medId: 'claritromicina', nome: 'Claritromicina', esquema: '15 mg/kg/dia VO dividida a cada 12 h, máximo 500 mg por dose, por 10 dias', quando: 'Alternativa de macrolídeo em alergia grave à penicilina', obs: '' }
+          ] },
+        { ordem: 3, rotulo: 'Segunda linha - falha terapêutica ou forma invasiva', tipo: 'segunda',
+          opcoes: [
+            { medId: null, nome: 'Reavaliação em 48 a 72 h antes de trocar o antibiótico', esquema: '', quando: 'Persistência da febre após 48 a 72 h de antibiótico adequado', obs: 'Investigar complicação supurativa, como abscesso periamigdaliano e adenite supurada, má adesão ou diagnóstico alternativo, como mononucleose.' },
+            { medId: 'penicilina_cristalina', nome: 'Penicilina G cristalina', esquema: '200.000 a 400.000 UI/kg/dia IV dividida a cada 4 ou 6 h, associada a clindamicina, conforme protocolo do serviço', quando: 'Infecção invasiva ou síndrome do choque tóxico estreptocócico, com internação', obs: 'A associação com clindamicina reduz a produção de toxinas. Expansão volêmica e avaliação cirúrgica são parte do manejo.' }
+          ] },
+        { ordem: 4, rotulo: 'Adjuvante / sintomático', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula', quando: 'Dor de garganta e febre', obs: '' },
+            { medId: 'ibuprofeno', nome: 'Ibuprofeno', esquema: '5 a 10 mg/kg/dose VO a cada 6 a 8 h, conforme bula', quando: 'Odinofagia importante', obs: 'Evitar diante de suspeita de infecção invasiva de pele e partes moles ou de desidratação.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: 'amoxicilina', nome: 'Encurtar o curso oral para menos de 10 dias', esquema: '', quando: '', obs: 'A erradicação do estreptococo e a prevenção da febre reumática dependem dos 10 dias completos. A melhora clínica ocorre bem antes e não autoriza a suspensão.' },
+            { medId: 'prednisolona', nome: 'Corticoide de rotina', esquema: '', quando: '', obs: 'Sem indicação. Reservar para obstrução de via aérea conforme avaliação especializada.' },
+            { medId: null, nome: 'Tratamento de portadores assintomáticos de rotina', esquema: '', quando: '', obs: 'Não indicado. O portador assintomático tem baixo risco de complicação e de transmissão, e o tratamento gera uso desnecessário de antibiótico.' },
+            { medId: null, nome: 'Dispensar a vigilância de complicações após a alta', esquema: '', quando: '', obs: 'Orientar retorno em 1 a 3 semanas para sinais de glomerulonefrite, como edema, urina escura e oligúria, e em 2 a 4 semanas para febre reumática, como artrite, cardite e coreia.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Hidratação oral, dieta leve e fria, com atenção à aceitação de líquidos.',
+        'Retorno à escola cerca de 24 h após o início do antibiótico eficaz, se a criança estiver afebril.',
+        'Avaliação e tratamento de contatos domiciliares sintomáticos.',
+        'Orientação escrita sobre sinais de glomerulonefrite e de febre reumática, com data de retorno definida.',
+        'Em comunidade de difícil acesso, preferir a dose única intramuscular e registrar o retorno combinado com o agente comunitário.'
+      ],
+      fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre infecções estreptocócicas', ano: 2022 }, { nome: 'OMS - Rheumatic fever and rheumatic heart disease, technical report', ano: 2021 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    coqueluche: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - tratamento e quimioprofilaxia', tipo: 'primeira',
+          opcoes: [
+            { medId: 'azitromicina', nome: 'Azitromicina', esquema: 'Menores de 6 meses: 10 mg/kg/dia VO uma vez ao dia por 5 dias. Maiores de 6 meses: 10 mg/kg no 1o dia, máximo 500 mg, e 5 mg/kg/dia do 2o ao 5o dia, máximo 250 mg ao dia', quando: 'Tratamento do caso e quimioprofilaxia dos contatos, em qualquer idade, inclusive no menor de 1 mês', obs: 'Macrolídeo preferido no menor de 1 mês, situação em que a eritromicina é evitada pelo risco de estenose hipertrófica de piloro. Iniciada na fase catarral pode atenuar a evolução; após os paroxismos, mantém indicação para bloquear a transmissão.' }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa quando o macrolídeo de escolha não está disponível ou é contraindicado', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'claritromicina', nome: 'Claritromicina', esquema: '15 mg/kg/dia VO dividida a cada 12 h, máximo 1 g ao dia, por 7 dias', quando: 'Alternativa em maiores de 1 mês, inclusive quando a azitromicina não está disponível na unidade', obs: '' },
+            { medId: 'sulfametoxazol_trimetoprim', nome: 'Sulfametoxazol + trimetoprima', esquema: '40 mg/kg/dia de sulfametoxazol e 8 mg/kg/dia de trimetoprima VO dividida a cada 12 h por 14 dias', quando: 'Alternativa em maiores de 2 meses com contraindicação ou intolerância a macrolídeos', obs: 'Contraindicado em menores de 2 meses e na deficiência de G6PD.' }
+          ] },
+        { ordem: 3, rotulo: 'Uso off-label', tipo: 'offlabel',
+          opcoes: [
+            { medId: 'azitromicina', nome: 'Azitromicina em recém-nascido e lactente menor de 6 meses', esquema: '10 mg/kg/dia VO uma vez ao dia por 5 dias', quando: 'Coqueluche confirmada ou suspeita, e quimioprofilaxia, em recém-nascido e lactente pequeno, faixa de maior letalidade', obs: 'Off-label: a bula brasileira não contempla essa faixa etária. A recomendação é explícita no Guia de Vigilância em Saúde e nas orientações do CDC, que preferem a azitromicina à eritromicina abaixo de 1 mês pelo menor risco de estenose hipertrófica de piloro. Monitorar vômitos em jato e ganho de peso nas semanas seguintes. Confirmar conforme protocolo e bula.', verificar: true }
+          ] },
+        { ordem: 4, rotulo: 'Adjuvante - suporte do lactente', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'soro_fisiologico', nome: 'Soro fisiológico 0,9%', esquema: 'Aspiração e higiene nasal suave antes das mamadas, e hidratação venosa quando houver intolerância oral, conforme protocolo do serviço', quando: 'Obstrução nasal e vômitos pós-tosse no lactente', obs: 'Aspiração suave, pois manipulação excessiva desencadeia paroxismos.' },
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula', quando: 'Desconforto ou febre associada', obs: 'Febre alta não é típica da coqueluche e sugere complicação, como pneumonia bacteriana.' },
+            { medId: null, nome: 'Vacina penta, DTP e dTpa', esquema: 'Esquema básico aos 2, 4 e 6 meses com reforços aos 15 meses e 4 anos; dTpa em gestantes a cada gestação a partir da 20a semana e em profissionais de saúde', quando: 'Atualização do esquema da criança e dos contatos, e estratégia do casulo em torno do lactente', obs: 'A doença não confere imunidade duradoura, a vacinação segue indicada após o episódio. Confirmar conforme o Calendário Nacional de Vacinação.', verificar: true }
+          ] },
+        { ordem: 5, rotulo: 'Segunda linha - coqueluche maligna', tipo: 'segunda',
+          opcoes: [
+            { medId: null, nome: 'Suporte intensivo com manejo de hipertensão pulmonar e consideração de exsanguineotransfusão ou leucoaférese', esquema: 'Indicação e técnica conforme protocolo do serviço de referência', quando: 'Coqueluche maligna do lactente: hiperleucocitose, hipertensão pulmonar, insuficiência respiratória e choque', obs: 'Letalidade alta. Transferir precocemente para unidade de terapia intensiva pediátrica antes da deterioração. Confirmar conforme protocolo do serviço de referência.', verificar: true }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: 'salbutamol', nome: 'Broncodilatadores na coqueluche', esquema: '', quando: '', obs: 'Sem benefício comprovado sobre os paroxismos, conforme revisões sistemáticas. Reservar apenas para sibilância concomitante documentada.' },
+            { medId: 'prednisolona', nome: 'Corticoide na coqueluche', esquema: '', quando: '', obs: 'Sem benefício comprovado sobre a duração ou a gravidade da tosse. Não recomendado de rotina.' },
+            { medId: null, nome: 'Antitussígenos, anti-histamínicos e xaropes para a tosse', esquema: '', quando: '', obs: 'Sem eficácia demonstrada nos paroxismos e com risco de eventos adversos em lactentes, incluindo sedação e depressão respiratória.' },
+            { medId: null, nome: 'Aguardar confirmação laboratorial para iniciar o antibiótico e a profilaxia dos contatos', esquema: '', quando: '', obs: 'O bloqueio da transmissão depende do início precoce. Iniciar na suspeita clínica e epidemiológica, conforme o Guia de Vigilância em Saúde.' },
+            { medId: null, nome: 'Dispensar a vacinação após o episódio por acreditar em imunidade definitiva', esquema: '', quando: '', obs: 'A imunidade pós-doença não é duradoura. Atualizar o esquema da criança e dos contatos.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Notificação imediata e investigação de comunicantes pela vigilância epidemiológica.',
+        'Quimioprofilaxia de todos os contatos domiciliares e dos contatos próximos de risco: lactentes menores de 1 ano, gestantes no terceiro trimestre, imunossuprimidos, profissionais e crianças de creches.',
+        'Isolamento respiratório por gotículas e afastamento de creche e escola até completar 5 dias de antibiótico eficaz.',
+        'Monitorização cardiorrespiratória e oximetria contínua no lactente, com oxigênio durante e após os paroxismos e ambiente calmo.',
+        'Alimentação fracionada em pequenos volumes após os paroxismos, com sonda ou hidratação venosa se vômitos repetidos ou risco de aspiração.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Guia de vigilância em saúde, coqueluche', ano: 2023 }, { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre coqueluche', ano: 2022 } ],
+      atualizadoEm: '2026-09'
+    },
   },
 
   rotulosTipo: {

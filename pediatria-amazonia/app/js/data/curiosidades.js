@@ -192,6 +192,90 @@ PED.data.curiosidades = {
       { tipo: 'pratica', texto: 'Na prática: a criança gravemente desnutrida faz hipoglicemia e hipotermia com facilidade e infecta sem febre e sem sinais clássicos. Reintroduzir energia rápido demais pode precipitar a síndrome de realimentação, por isso a fase inicial é deliberadamente lenta e cuidadosa.' },
       { tipo: 'regional', texto: 'No Amazonas a insegurança alimentar convive com abundância de peixe e de fruta: o gargalo costuma ser a renda, o transporte e o preço do alimento industrializado que substituiu o alimento local, não a ausência de comida na região.' },
       { tipo: 'explicarFamilia', texto: 'Para explicar em casa: vamos recuperar o peso devagar de propósito. Se der muita comida de uma vez, o corpo dela, que está fraco, pode piorar. Serão refeições pequenas e frequentes, de dia e de noite, e cada semana a gente pesa para ver o caminho. Nada aqui é culpa da senhora, e a gente vai fazer isso junto.' }
+    ],
+
+    sarampo: [
+      { tipo: 'historia', texto: 'O médico persa Al-Razi, no século X, escreveu o primeiro tratado que separou o sarampo da varíola, duas doenças até então confundidas. As manchas de Koplik, na mucosa da bochecha, foram descritas por Henry Koplik em 1896 e aparecem um a dois dias antes do exantema: é a única janela em que se pode diagnosticar antes da mancha na pele.' },
+      { tipo: 'sabia', texto: 'O sarampo apaga parte da memória imunológica já adquirida, fenômeno estudado como amnésia imune: a criança que se recupera fica meses mais suscetível a outras infecções contra as quais já estava protegida. Isso ajuda a entender a mortalidade indireta que se segue aos surtos.' },
+      { tipo: 'regional', texto: 'O Brasil perdeu em 2019 o certificado de eliminação do sarampo depois de surtos que atingiram com força a região Norte, em contexto de queda de cobertura vacinal e de intenso fluxo migratório. Onde a cobertura cai, o vírus volta: ele é o mais transmissível dos vírus humanos conhecidos.' },
+      { tipo: 'pratica', texto: 'A vitamina A é indicada para toda criança com sarampo, independentemente do estado nutricional, em duas doses, no dia do diagnóstico e no dia seguinte. É uma das poucas medidas que reduzem mortalidade numa doença sem antiviral.' },
+      { tipo: 'explicarFamilia', texto: 'Para explicar em casa: essa doença pega no ar, só de estar no mesmo cômodo, e por isso a criança fica em casa e longe de bebê pequeno e de grávida. Não existe remédio que corte o sarampo: o que trata é líquido, alimento, cuidado com o olho e a boca, e a vitamina que vou dar hoje e amanhã. Quem mora na casa precisa conferir a caderneta de vacina agora, não depois.' }
+    ],
+
+    rubeola: [
+      { tipo: 'historia', texto: 'Em 1941, o oftalmologista australiano Norman Gregg estranhou o número de bebês com catarata congênita em sua sala de espera e descobriu, conversando com as mães, que quase todas tinham tido rubéola na gravidez. Foi a primeira demonstração de que um vírus podia causar malformação no feto, e mudou para sempre a medicina pré-natal.' },
+      { tipo: 'sabia', texto: 'O nome vem do latim rubellus, avermelhado. Ficou conhecida como sarampo alemão porque médicos alemães do século XVIII foram os primeiros a defendê-la como doença distinta do sarampo e da escarlatina.' },
+      { tipo: 'pratica', texto: 'Na criança a rubéola é habitualmente branda e o exantema é discreto e fugaz. A linfadenopatia retroauricular e occipital, dolorosa, costuma preceder a mancha e é o achado que mais ajuda no exame.' },
+      { tipo: 'explicarFamilia', texto: 'Para explicar em casa: nela a doença é fraquinha e passa sozinha em poucos dias. O perigo não é para a criança, é para mulher grávida que nunca teve e nunca se vacinou, porque pode afetar o bebê na barriga. Então, por alguns dias, nada de visita de grávida e nada de levar a criança onde tem gestante.' }
+    ],
+
+    varicela: [
+      { tipo: 'sabia', texto: 'Catapora vem do tupi e é geralmente traduzida como fogo que salta, pela lesão que pinta e se espalha. O mesmo vírus causa a catapora na infância e o herpes-zóster décadas depois: ele fica latente nos gânglios sensitivos, e essa identidade só foi provada quando Thomas Weller conseguiu cultivá-lo, em 1954.' },
+      { tipo: 'pratica', texto: 'O que distingue a varicela é o polimorfismo: mácula, pápula, vesícula e crosta convivendo na mesma região ao mesmo tempo. A transmissão começa um a dois dias antes da primeira lesão e vai até todas estarem em crosta.' },
+      { tipo: 'historia', texto: 'A síndrome de Reye, com encefalopatia e degeneração gordurosa do fígado, foi associada ao uso de ácido acetilsalicílico em crianças com varicela e influenza. Depois das campanhas dos anos 1980 desaconselhando o salicilato na infância, a síndrome praticamente desapareceu, num dos exemplos mais claros de farmacovigilância que funcionou.' },
+      { tipo: 'explicarFamilia', texto: 'Para explicar em casa: nada de remédio para febre com ácido acetilsalicílico, o da caixinha branca de dor de cabeça de adulto, porque nessa doença ele pode fazer mal ao fígado e ao cérebro da criança. Corte as unhas bem curtas e dê banho normal: quem coça e fere é quem fica com marca. Se a pele em volta de uma bolha ficar vermelha, quente e inchada, ou a febre voltar depois de já ter passado, traga de volta.' }
+    ],
+
+    exantema_subito: [
+      { tipo: 'sabia', texto: 'O nome exantema súbito descreve exatamente a cena: três a cinco dias de febre alta numa criança que, apesar da temperatura, brinca e come razoavelmente bem, e então a febre cede e a mancha aparece de repente. O agente é o herpesvírus humano tipo 6, descoberto apenas em 1986.' },
+      { tipo: 'pratica', texto: 'É uma das causas mais comuns de primeira crise febril no lactente e um dos motivos mais frequentes de antibiótico prescrito à toa: a criança tem febre alta sem foco por dias e o diagnóstico só se fecha quando a febre acaba e a mancha surge.' },
+      { tipo: 'explicarFamilia', texto: 'Para explicar em casa: se depois de três ou quatro dias de febre alta a febre passar e aí aparecer a mancha rosada no corpo, é boa notícia, não é piora nem alergia ao remédio. A mancha é o fim da doença. Ela some sozinha em um a três dias, não coça e não precisa de pomada.' }
+    ],
+
+    eritema_infeccioso: [
+      { tipo: 'sabia', texto: 'É chamada de quinta doença porque entrou como quinta num numeração de exantemas da infância organizada por volta de 1900, junto com sarampo, escarlatina, rubéola e outras. O agente, o parvovírus B19, só foi identificado em 1975, e por acaso, numa triagem de doadores de sangue.' },
+      { tipo: 'pratica', texto: 'Quando aparece a face esbofeteada, a criança já não transmite mais: a fase contagiosa é a da febre inespecífica, que passou dias antes. Por isso não há motivo para afastar da escola depois que o exantema surge.' },
+      { tipo: 'regional', texto: 'O mesmo vírus provoca crise aplástica em quem tem anemia hemolítica crônica, como a doença falciforme, e pode causar hidropisia no feto de gestante suscetível. Numa criança com doença falciforme e palidez súbita, o parvovírus entra na lista.' },
+      { tipo: 'explicarFamilia', texto: 'Para explicar em casa: a mancha vai e volta por semanas, principalmente quando a criança toma sol, entra em água quente ou corre muito. Isso é normal e não quer dizer que a doença voltou. Ela pode ir para a escola, porque quando a mancha aparece ela já não passa mais para ninguém.' }
+    ],
+
+    mao_pe_boca: [
+      { tipo: 'sabia', texto: 'Semanas depois do quadro agudo, algumas crianças perdem as unhas das mãos e dos pés, uma de cada vez e sem dor. Chama-se onicomadese, é consequência da pausa no crescimento da unha durante a infecção, e a unha nasce de novo normal. Avisar a família evita uma volta apavorada ao consultório.' },
+      { tipo: 'pratica', texto: 'O que faz a criança sofrer não são as lesões da mão e do pé, e sim as úlceras da boca, que levam à recusa de líquido e à desidratação. O foco do tratamento é analgesia e hidratação, não a pele.' },
+      { tipo: 'regional', texto: 'A maioria dos casos é por coxsackievírus A16, de curso benigno. O enterovírus 71, responsável por grandes surtos na Ásia, é o que se associa a complicação neurológica, e por isso sinais como sonolência, tremor, marcha cambaleante ou vômitos persistentes mudam completamente a avaliação.' },
+      { tipo: 'explicarFamilia', texto: 'Para explicar em casa: a boca é que dói, e criança com a boca doendo recusa até água. Ofereça coisa gelada e sem acidez, como água gelada, leite gelado, gelatina ou fruta batida gelada, e evite suco de laranja, limão e cupuaçu, que ardem. O que eu mais quero saber é se ela está bebendo e fazendo xixi.' }
+    ],
+
+    escarlatina: [
+      { tipo: 'sabia', texto: 'A erupção da escarlatina não é causada pela bactéria em si, mas por uma toxina que só algumas cepas do Streptococcus pyogenes produzem. É por isso que a mesma bactéria pode dar só dor de garganta numa criança e escarlatina em outra, e por isso é possível ter escarlatina mais de uma vez.' },
+      { tipo: 'pratica', texto: 'O tato ajuda mais que o olho: a pele tem textura de lixa fina. Somam-se a língua em framboesa, as linhas de Pastia nas dobras e a palidez ao redor da boca. A descamação vem depois, em lâminas nas mãos e nos pés, e não significa que o tratamento falhou.' },
+      { tipo: 'historia', texto: 'No século XIX a escarlatina era uma das principais causas de morte de crianças na Europa e nos Estados Unidos, e sua letalidade despencou décadas antes de existir antibiótico. A explicação mais aceita envolve mudança nas cepas circulantes e melhora das condições de vida, e o episódio segue sendo um dos grandes enigmas da epidemiologia histórica.' },
+      { tipo: 'explicarFamilia', texto: 'Para explicar em casa: o antibiótico aqui não é para a mancha, que passaria sozinha. É para proteger o coração dela, porque essa bactéria mal tratada pode voltar semanas depois atacando as juntas e o coração. Por isso vai até o último dia, mesmo com a criança ótima no terceiro. Depois a pele vai descascar nas mãos e nos pés, e isso é o esperado.' }
+    ],
+
+    coqueluche: [
+      { tipo: 'sabia', texto: 'Na China a coqueluche é chamada de tosse dos cem dias, descrição que continua exata mais de mil anos depois. A bactéria foi isolada em 1906 por Jules Bordet e Octave Gengou, e o meio de cultura usado até hoje leva o nome dos dois.' },
+      { tipo: 'pratica', texto: 'O lactente pequeno muitas vezes não faz o guincho: ele faz apneia, cianose ou engasgo, e pode ser levado ao serviço por causa de uma parada respiratória sem que ninguém tenha valorizado a tosse. Leucocitose com linfocitose acentuada é achado clássico e se correlaciona com gravidade nessa faixa.' },
+      { tipo: 'regional', texto: 'O bebê menor de seis meses é o que adoece grave e ainda não completou o esquema. Quem o protege é a vacina dTpa aplicada na gestante a partir da vigésima semana, em toda gestação, e a vacinação em dia dos irmãos e dos adultos da casa: na maioria das vezes o caso-índice é alguém de dentro de casa com tosse arrastada.' },
+      { tipo: 'explicarFamilia', texto: 'Para explicar em casa: a tosse vai demorar semanas para ir embora, mesmo com o antibiótico certo, e isso não quer dizer que o remédio não funcionou. O antibiótico serve principalmente para ela parar de passar para os outros. O que me preocupa é ela ficar roxa, parar de respirar no meio da tosse ou vomitar tudo depois do acesso: se acontecer, traga na hora.' }
+    ],
+
+    mononucleose: [
+      { tipo: 'historia', texto: 'O vírus Epstein-Barr foi o primeiro vírus humano associado a câncer: Anthony Epstein, Yvonne Barr e Bert Achong o encontraram em 1964 em amostras do linfoma que Denis Burkitt descrevera em crianças africanas. A mesma infecção que dá uma faringite arrastada na adolescência tem essa história por trás.' },
+      { tipo: 'pratica', texto: 'O exantema que surge depois de amoxicilina ou ampicilina na mononucleose não é alergia à penicilina e não contraindica o antibiótico no futuro. Rotular essa criança como alérgica por causa disso é um erro com consequências para o resto da vida dela.' },
+      { tipo: 'sabia', texto: 'Em lugares com maior aglomeração domiciliar a primoinfecção acontece cedo, na primeira infância, e quase sempre passa despercebida ou parece um resfriado. A síndrome clássica, com febre prolongada, adenomegalia e amigdalite exsudativa, é mais típica de quem encontra o vírus já adolescente.' },
+      { tipo: 'explicarFamilia', texto: 'Para explicar em casa: o cansaço e a moleza vão durar algumas semanas e isso é da própria doença, não é preguiça nem falta de vitamina. Enquanto o baço estiver grande, nada de futebol, luta, carregar peso ou brincadeira de esbarrão, porque um trauma na barriga nessa fase é perigoso. Eu digo quando puder voltar.' }
+    ],
+
+    caxumba: [
+      { tipo: 'historia', texto: 'Hipócrates descreveu, na ilha de Tasos, uma epidemia com inchaço perto das orelhas que em alguns jovens era seguido de dor e aumento dos testículos. É uma das descrições clínicas mais antigas que ainda se reconhece de imediato hoje.' },
+      { tipo: 'sabia', texto: 'Antes da vacina, a caxumba era a principal causa de surdez neurossensorial adquirida na infância, quase sempre de um ouvido só, e uma das principais causas de meningite viral em crianças. Os dois desfechos praticamente desapareceram onde a tríplice viral alcançou boa cobertura.' },
+      { tipo: 'pratica', texto: 'A transmissão começa antes do inchaço aparecer, o que torna o isolamento tardio pouco eficaz e explica a rapidez dos surtos em escola e alojamento. O aumento da parótida apaga o ângulo da mandíbula, detalhe que ajuda a diferenciar de adenomegalia cervical alta.' },
+      { tipo: 'explicarFamilia', texto: 'Para explicar em casa: evite dar coisa azeda, como limão, laranja e tucupi, porque a glândula dói mais quando trabalha. Comida pastosa e morna, bastante líquido e compressa para aliviar. Se aparecer dor de cabeça forte com vômito, pescoço duro, ou dor e inchaço nos testículos no menino maior, traga na hora.' }
+    ],
+
+    hepatite_a: [
+      { tipo: 'sabia', texto: 'Quanto menor a criança, menos amarela ela fica: abaixo de seis anos a maioria das infecções passa sem icterícia e pode parecer apenas uma virose com diarreia. Isso significa que quem mais espalha o vírus na comunidade é justamente quem não aparenta estar doente.' },
+      { tipo: 'regional', texto: 'Onde a água vem do rio, do poço ou da chuva sem tratamento e a fossa transborda na cheia, a hepatite A circula cedo e em surtos comunitários e de creche. É uma das doenças em que a conversa sobre água tratada vale tanto quanto qualquer prescrição.' },
+      { tipo: 'pratica', texto: 'A hepatite A não cronifica. O que exige atenção é a forma fulminante, rara mas possível, e os sinais de alerta são mudança de comportamento, sonolência, confusão, vômitos persistentes e sangramento.' },
+      { tipo: 'explicarFamilia', texto: 'Para explicar em casa: não existe dieta especial nem chá que cure o fígado, e comida sem sal ou sem gordura não acelera nada. O que ele precisa é comer o que aceitar, beber bastante e descansar. Nada de remédio por conta própria nessa fase, porque tudo passa pelo fígado. E a casa toda: água fervida ou clorada e mão lavada depois do banheiro.' }
+    ],
+
+    febre_tifoide: [
+      { tipo: 'historia', texto: 'O nome vem do grego typhos, névoa ou torpor, pelo estado de obnubilação dos doentes graves. A cozinheira Mary Mallon, nos Estados Unidos do início do século XX, infectou dezenas de pessoas sem nunca ter adoecido: foi o caso que revelou o portador crônico assintomático, que abriga a bactéria na vesícula biliar.' },
+      { tipo: 'regional', texto: 'A febre tifoide segue endêmica no Norte e no Nordeste, com os maiores coeficientes historicamente registrados em estados amazônicos, ligada à água não tratada de rio e igarapé e ao alimento manipulado sem higiene. Os surtos de fonte comum em comunidade ribeirinha aumentam na cheia, quando a contaminação fecal da água cresce.' },
+      { tipo: 'pratica', texto: 'A febre da tifoide sobe em degraus ao longo de dias, em vez de picos com intervalos livres, e pode vir com bradicardia relativa. As roséolas tíficas, máculas rosadas discretas no tronco, são pouco vistas em pele mais pigmentada e sua ausência não afasta nada.' },
+      { tipo: 'explicarFamilia', texto: 'Para explicar em casa: essa doença vem de água ou comida com sujeira de fezes, mesmo quando a água parece limpa. Ferva a água ou use hipoclorito, lave bem a mão antes de mexer na comida, principalmente quem cozinha para a família. Se outra pessoa da casa começar com febre desse jeito, traga junto: a gente investiga tudo de uma vez.' }
     ]
 
   }
