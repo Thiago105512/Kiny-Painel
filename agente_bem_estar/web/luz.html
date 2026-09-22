@@ -1,0 +1,389 @@
+<title>Luz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --bg: #eef1f6;
+    --surface: #ffffff;
+    --ink: #1d2433;
+    --muted: #5d6679;
+    --line: #dde2ec;
+    --accent: #c77a1a;
+    --accent-ink: #ffffff;
+    --glow: #fbe8cc;
+    --calm: #4f74a0;
+    --calm-soft: #e3ebf5;
+    --alert: #b3372f;
+    --alert-soft: #fbe5e2;
+    --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+    --sans: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #11161f; --surface: #1a212d; --ink: #e7ebf2; --muted: #9aa4b6; --line: #2a3342;
+      --accent: #f0b356; --accent-ink: #1d1406; --glow: #3a2d17; --calm: #8fb0d6; --calm-soft: #1f2a3a;
+      --alert: #f08a80; --alert-soft: #3a1e1c;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #11161f; --surface: #1a212d; --ink: #e7ebf2; --muted: #9aa4b6; --line: #2a3342;
+    --accent: #f0b356; --accent-ink: #1d1406; --glow: #3a2d17; --calm: #8fb0d6; --calm-soft: #1f2a3a;
+    --alert: #f08a80; --alert-soft: #3a1e1c;
+  }
+  html, body { height: 100%; }
+  body {
+    background: var(--bg); color: var(--ink); font: 16px/1.55 var(--sans);
+    padding-inline: 16px;
+  }
+  .app { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; min-height: 100%; padding-block: 20px 16px; gap: 14px; }
+  header { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .sun { width: 38px; height: 38px; border-radius: 50%; background: radial-gradient(circle at 50% 60%, var(--accent) 0 38%, var(--glow) 39% 100%); flex: none; }
+  h1 { font: 400 2.4rem/1 var(--serif); margin: 0; letter-spacing: .01em; }
+  .tag { color: var(--muted); font-size: .9rem; margin: 2px 0 0; }
+  .sos {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; font-size: .88rem;
+    background: var(--calm-soft); color: var(--ink); border-radius: 12px; padding: 10px 14px;
+  }
+  .sos strong { font-weight: 600; }
+  .sos a { color: var(--calm); }
+  nav { display: flex; gap: 6px; border-bottom: 1px solid var(--line); }
+  nav button {
+    font: 500 .95rem var(--sans); color: var(--muted); background: none; border: 0;
+    padding: 10px 12px; border-bottom: 2px solid transparent; margin-bottom: -1px; cursor: pointer;
+  }
+  nav button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+  button:focus-visible, textarea:focus-visible, input:focus-visible { outline: 2px solid var(--calm); outline-offset: 2px; }
+  section { display: flex; flex-direction: column; gap: 12px; flex: 1; }
+
+  /* Conversa */
+  .log { display: flex; flex-direction: column; gap: 12px; flex: 1; min-height: 280px; }
+  .msg { max-width: 88%; padding: 10px 14px; border-radius: 16px; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .msg.luz { background: var(--surface); border: 1px solid var(--line); border-bottom-left-radius: 4px; align-self: flex-start; }
+  .msg.eu { background: var(--accent); color: var(--accent-ink); border-bottom-right-radius: 4px; align-self: flex-end; }
+  .msg.wait { color: var(--muted); font-style: italic; }
+  .crisis { background: var(--alert-soft); border: 1px solid var(--alert); color: var(--ink); border-radius: 12px; padding: 12px 14px; font-size: .95rem; }
+  .crisis strong { color: var(--alert); }
+  .ideas { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { font: 500 .88rem var(--sans); background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+  .chip:hover { border-color: var(--accent); }
+  form.send { display: flex; gap: 8px; align-items: flex-end; position: sticky; bottom: 0; background: var(--bg); padding-block: 8px calc(8px + env(safe-area-inset-bottom, 0px)); }
+  textarea {
+    flex: 1; resize: none; font: 16px/1.4 var(--sans); color: var(--ink); background: var(--surface);
+    border: 1px solid var(--line); border-radius: 14px; padding: 10px 12px; min-height: 46px; max-height: 160px;
+  }
+  .btn { font: 600 .95rem var(--sans); border: 0; border-radius: 12px; padding: 12px 16px; cursor: pointer; background: var(--accent); color: var(--accent-ink); }
+  .btn.ghost { background: transparent; color: var(--muted); border: 1px solid var(--line); }
+  .btn:disabled { opacity: .5; cursor: default; }
+  .note { color: var(--muted); font-size: .85rem; margin: 0; }
+
+  /* Humor */
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+  h2 { font: 400 1.6rem/1.15 var(--serif); margin: 0; text-wrap: balance; }
+  .scale { display: grid; grid-template-columns: repeat(11, 1fr); gap: 4px; }
+  .scale button { font: 600 .95rem var(--sans); font-variant-numeric: tabular-nums; padding: 10px 0; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); cursor: pointer; }
+  .scale button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .ends { display: flex; justify-content: space-between; font-size: .8rem; color: var(--muted); }
+  input[type="text"] { font: 16px var(--sans); color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+  .hist { display: flex; flex-direction: column; gap: 8px; }
+  .row { display: grid; grid-template-columns: 7.5em 1fr 2em; gap: 10px; align-items: center; font-size: .9rem; }
+  .row time { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .bar { height: 10px; background: var(--calm-soft); border-radius: 5px; overflow: hidden; }
+  .bar i { display: block; height: 100%; background: var(--calm); border-radius: 5px; }
+  .row b { font-variant-numeric: tabular-nums; text-align: right; }
+  .row small { grid-column: 2 / -1; color: var(--muted); margin-top: -4px; }
+  .avg { font-size: .95rem; }
+
+  /* Respirar */
+  .breath { align-items: center; text-align: center; }
+  .orb-wrap { width: min(260px, 70vw); aspect-ratio: 1; max-width: 100%; display: grid; place-items: center; }
+  .orb { width: 40%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 50% 45%, var(--accent), var(--glow) 72%); transition: width 4s ease-in-out; }
+  .phase { font: 400 2rem/1.1 var(--serif); margin: 0; }
+  .count { color: var(--muted); font-variant-numeric: tabular-nums; margin: 0; }
+  @media (prefers-reduced-motion: reduce) { .orb { transition: none; } }
+</style>
+
+<div class="app">
+  <header>
+    <div class="brand">
+      <div class="sun" aria-hidden="true"></div>
+      <div>
+        <h1>Luz</h1>
+        <p class="tag">Apoio para os dias difíceis. Um passo de cada vez.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="sos" role="note">
+    <span><strong>Em crise?</strong> CVV <strong>188</strong> (24h, gratuito)</span>
+    <a href="https://cvv.org.br" target="_blank" rel="noopener">chat em cvv.org.br</a>
+    <span>SAMU <strong>192</strong></span>
+  </div>
+
+  <nav role="tablist">
+    <button role="tab" id="tab-conversa" aria-selected="true" data-tab="conversa">Conversar</button>
+    <button role="tab" id="tab-humor" aria-selected="false" data-tab="humor">Meu humor</button>
+    <button role="tab" id="tab-respirar" aria-selected="false" data-tab="respirar">Respirar</button>
+  </nav>
+
+  <section id="conversa" role="tabpanel">
+    <div class="log" id="log" aria-live="polite"></div>
+    <div class="ideas" id="ideas">
+      <button class="chip" type="button">Estou sem energia para nada</button>
+      <button class="chip" type="button">Minha cabeça não para de pensar</button>
+      <button class="chip" type="button">Me dá uma tarefa pequena para hoje</button>
+      <button class="chip" type="button">Tive uma pequena vitória hoje</button>
+    </div>
+    <form class="send" id="send">
+      <textarea id="entrada" rows="1" placeholder="Escreva como você está…" aria-label="Sua mensagem"></textarea>
+      <button class="btn" id="enviar" type="submit">Enviar</button>
+    </form>
+    <p class="note" id="aviso">A Luz é uma IA. Ela não substitui psicólogo ou psiquiatra. A conversa fica salva só neste aparelho. <button class="chip" id="limpar" type="button">Apagar conversa</button></p>
+  </section>
+
+  <section id="humor" role="tabpanel" hidden>
+    <div class="card">
+      <h2>Como você está agora?</h2>
+      <div class="scale" id="escala" role="group" aria-label="Nota de 0 a 10"></div>
+      <div class="ends"><span>0 · péssimo</span><span>10 · ótimo</span></div>
+      <input type="text" id="nota-texto" placeholder="Quer anotar algo sobre o dia? (opcional)">
+      <button class="btn" id="salvar-humor" type="button" disabled>Registrar</button>
+      <p class="note" id="humor-ok" hidden>Registrado. Obrigado por cuidar de você.</p>
+    </div>
+    <div class="card">
+      <h2>Seus últimos dias</h2>
+      <p class="avg" id="media"></p>
+      <div class="hist" id="hist"></div>
+      <p class="note">A Luz lê esses registros para acompanhar como você está. Eles ficam salvos só neste aparelho.</p>
+    </div>
+  </section>
+
+  <section id="respirar" role="tabpanel" hidden>
+    <div class="card breath">
+      <h2>Respiração 4-7-8</h2>
+      <p class="note">Inspire por 4 segundos, segure por 7 e solte devagar por 8. São três ciclos, cerca de um minuto.</p>
+      <div class="orb-wrap"><div class="orb" id="orb"></div></div>
+      <p class="phase" id="fase">Pronto quando você estiver</p>
+      <p class="count" id="contagem">&nbsp;</p>
+      <button class="btn" id="comecar" type="button">Começar</button>
+    </div>
+  </section>
+</div>
+
+<script>
+(() => {
+  const K_CHAT = "luz.conversa", K_HUMOR = "luz.humor";
+  const ler = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } };
+  const gravar = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
+
+  const SAUDACAO = "Oi. Que bom que você está aqui. Como você está se sentindo hoje?";
+  const RISCO = ["me matar", "suicid", "tirar minha vida", "tirar a minha vida", "acabar com tudo",
+    "acabar com a minha vida", "não quero mais viver", "nao quero mais viver", "quero morrer",
+    "me machucar", "me cortar", "sumir pra sempre", "melhor sem mim"];
+
+  const REGRAS = `Você é "Luz", um agente de apoio emocional em português do Brasil, conversando com uma pessoa que está lidando com depressão e quer se sentir melhor.
+
+Como você age:
+- Acolha primeiro. Valide o que a pessoa sente sem julgar e sem pressa de "consertar".
+- Fale de forma calorosa, simples e humana. Respostas curtas (2 a 6 frases), a não ser que a pessoa peça mais. No máximo uma pergunta por vez. Texto simples, sem Markdown.
+- Use técnicas com base em evidências, de forma prática e leve, quando fizer sentido: ativação comportamental (uma única ação pequena e concreta para hoje), TCC (notar pensamentos automáticos e buscar visões mais equilibradas com perguntas gentis), respiração e grounding (5-4-3-2-1), sono, rotina, sol e movimento, autocompaixão, pequenas vitórias e gratidão.
+- Celebre qualquer avanço, por menor que seja.
+- Incentive com carinho a ajuda profissional (psicólogo, psiquiatra, CAPS/UBS pelo SUS, clínicas-escola de psicologia gratuitas ou de baixo custo) e o contato com pessoas de confiança. Você complementa, não substitui, esse cuidado.
+- Não faça diagnósticos e não indique ou ajuste remédios; oriente conversar com um médico.
+- Use o registro de humor abaixo para perceber padrões e progresso, com naturalidade.
+
+Segurança (prioridade máxima): se houver qualquer sinal de risco (ideação suicida, autolesão, desesperança intensa, plano ou meio), acolha com calma, pergunte diretamente se a pessoa está segura agora, incentive a ligar para o CVV (188, 24h, gratuito, ou chat em cvv.org.br), SAMU (192) ou ir a um pronto-socorro, e a chamar alguém de confiança para ficar junto. Continue presente.`;
+
+  let turnos = ler(K_CHAT, []);
+  let humor = ler(K_HUMOR, []);
+
+  // Abas
+  const abas = document.querySelectorAll("nav button");
+  abas.forEach(b => b.addEventListener("click", () => {
+    abas.forEach(x => x.setAttribute("aria-selected", String(x === b)));
+    document.querySelectorAll("section").forEach(s => { s.hidden = s.id !== b.dataset.tab; });
+  }));
+
+  // Conversa
+  const log = document.getElementById("log");
+  const entrada = document.getElementById("entrada");
+  const enviar = document.getElementById("enviar");
+  const ideas = document.getElementById("ideas");
+
+  function bolha(quem, texto) {
+    const d = document.createElement("div");
+    d.className = "msg " + quem;
+    d.textContent = texto;
+    log.appendChild(d);
+    return d;
+  }
+  function alertaCrise() {
+    const d = document.createElement("div");
+    d.className = "crisis";
+    d.innerHTML = '<strong>Você não precisa passar por isso sozinho(a).</strong> Ligue agora para o CVV no <strong>188</strong> (24h, gratuito) ou use o chat em <a href="https://cvv.org.br" target="_blank" rel="noopener">cvv.org.br</a>. Em perigo imediato, ligue 192 (SAMU) ou vá a um pronto-socorro. Se puder, chame alguém de confiança para ficar com você.';
+    log.appendChild(d);
+  }
+  function renderizarConversa() {
+    log.textContent = "";
+    bolha("luz", SAUDACAO);
+    for (const t of turnos) bolha(t.role === "user" ? "eu" : "luz", t.content);
+    ideas.hidden = turnos.length > 0;
+  }
+  function rolar() { window.scrollTo({ top: document.body.scrollHeight }); }
+
+  function resumoHumor() {
+    if (!humor.length) return "A pessoa ainda não registrou o humor.";
+    const ult = humor.slice(-10);
+    const media = ult.reduce((s, r) => s + r.nota, 0) / ult.length;
+    return "Registro de humor recente (0 = péssimo, 10 = ótimo):\n" +
+      ult.map(r => `- ${r.data}: ${r.nota}/10${r.texto ? " — " + r.texto : ""}`).join("\n") +
+      `\nMédia: ${media.toFixed(1)}`;
+  }
+
+  const MSG_ERRO = {
+    not_granted: "A Luz precisa da sua permissão para usar o Claude. Recarregue a página e permita quando for perguntado.",
+    sampling_disabled: "O Claude não está disponível nesta conta.",
+    rate_limited: "Muitas mensagens em pouco tempo. Espere um pouco e tente de novo.",
+    prompt_too_large: "A conversa ficou longa demais. Apague a conversa para recomeçar.",
+    refused: "Não consegui responder a isso. Se você estiver em perigo, ligue 188 (CVV) ou 192 (SAMU).",
+  };
+
+  let sample = null;
+  (async () => {
+    try { sample = await window.claude?.use?.("sample"); } catch { sample = null; }
+    if (!sample) {
+      enviar.disabled = true;
+      entrada.placeholder = "A conversa só funciona dentro do Claude.";
+    }
+  })();
+
+  async function mandar(texto) {
+    texto = texto.trim();
+    if (!texto || enviar.disabled) return;
+    if (!sample) return;
+    entrada.value = "";
+    ideas.hidden = true;
+    bolha("eu", texto);
+    const baixo = texto.toLowerCase();
+    if (RISCO.some(p => baixo.includes(p))) alertaCrise();
+    turnos.push({ role: "user", content: texto });
+    gravar(K_CHAT, turnos);
+
+    let recente = turnos.slice(-20);
+    while (recente.length && recente[0].role !== "user") recente = recente.slice(1);
+    const contexto = REGRAS + "\n\n" + resumoHumor() +
+      `\n\nVocê já cumprimentou a pessoa com: "${SAUDACAO}"\n\nMensagem da pessoa:\n`;
+    const input = recente.map((t, i) => i === 0 ? { role: "user", content: contexto + t.content } : t);
+
+    const resp = bolha("luz wait", "Luz está escrevendo…");
+    enviar.disabled = true;
+    rolar();
+    try {
+      const { text } = await sample(input, {
+        cache: false,
+        onText: ({ text }) => { resp.classList.remove("wait"); resp.textContent = text; rolar(); },
+      });
+      resp.classList.remove("wait");
+      resp.textContent = text;
+      turnos.push({ role: "assistant", content: text });
+      gravar(K_CHAT, turnos);
+    } catch (e) {
+      turnos.pop();
+      gravar(K_CHAT, turnos);
+      resp.classList.remove("wait");
+      resp.textContent = e?.text || (MSG_ERRO[e?.code] ?? "Não consegui responder agora. Tente de novo em instantes.");
+      if (e?.code === "not_granted" || e?.code === "sampling_disabled") { sample = null; return; }
+    } finally {
+      if (sample) enviar.disabled = false;
+      rolar();
+    }
+  }
+
+  document.getElementById("send").addEventListener("submit", ev => { ev.preventDefault(); mandar(entrada.value); });
+  entrada.addEventListener("keydown", ev => {
+    if (ev.key === "Enter" && !ev.shiftKey) { ev.preventDefault(); mandar(entrada.value); }
+  });
+  entrada.addEventListener("input", () => { entrada.style.height = "auto"; entrada.style.height = entrada.scrollHeight + "px"; });
+  ideas.querySelectorAll(".chip").forEach(c => c.addEventListener("click", () => mandar(c.textContent)));
+
+  const limpar = document.getElementById("limpar");
+  let confirmar = false;
+  limpar.addEventListener("click", () => {
+    if (!confirmar) { confirmar = true; limpar.textContent = "Toque de novo para apagar"; setTimeout(() => { confirmar = false; limpar.textContent = "Apagar conversa"; }, 4000); return; }
+    confirmar = false; limpar.textContent = "Apagar conversa";
+    turnos = []; gravar(K_CHAT, turnos); renderizarConversa();
+  });
+
+  // Humor
+  const escala = document.getElementById("escala");
+  const salvarHumor = document.getElementById("salvar-humor");
+  let notaEscolhida = null;
+  for (let n = 0; n <= 10; n++) {
+    const b = document.createElement("button");
+    b.type = "button"; b.textContent = n; b.setAttribute("aria-pressed", "false");
+    b.addEventListener("click", () => {
+      notaEscolhida = n;
+      escala.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+      salvarHumor.disabled = false;
+    });
+    escala.appendChild(b);
+  }
+  salvarHumor.addEventListener("click", () => {
+    if (notaEscolhida === null) return;
+    const agora = new Date();
+    const data = agora.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" }) + " " +
+      agora.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
+    const campo = document.getElementById("nota-texto");
+    humor.push({ data, nota: notaEscolhida, texto: campo.value.trim() });
+    gravar(K_HUMOR, humor);
+    campo.value = ""; notaEscolhida = null; salvarHumor.disabled = true;
+    escala.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", "false"));
+    const ok = document.getElementById("humor-ok"); ok.hidden = false; setTimeout(() => ok.hidden = true, 3500);
+    renderizarHumor();
+  });
+  function renderizarHumor() {
+    const hist = document.getElementById("hist"), media = document.getElementById("media");
+    hist.textContent = "";
+    if (!humor.length) { media.textContent = "Nenhum registro ainda. Registre como você está agora para começar."; return; }
+    const ult = humor.slice(-14);
+    const m = ult.reduce((s, r) => s + r.nota, 0) / ult.length;
+    media.textContent = `Média dos últimos ${ult.length} registros: ${m.toFixed(1)} de 10`;
+    for (const r of ult.slice().reverse()) {
+      const row = document.createElement("div"); row.className = "row";
+      const t = document.createElement("time"); t.textContent = r.data;
+      const bar = document.createElement("div"); bar.className = "bar";
+      const i = document.createElement("i"); i.style.width = (r.nota * 10) + "%"; bar.appendChild(i);
+      const b = document.createElement("b"); b.textContent = r.nota;
+      row.append(t, bar, b);
+      if (r.texto) { const s = document.createElement("small"); s.textContent = r.texto; row.appendChild(s); }
+      hist.appendChild(row);
+    }
+  }
+
+  // Respirar
+  const orb = document.getElementById("orb"), fase = document.getElementById("fase"),
+        contagem = document.getElementById("contagem"), comecar = document.getElementById("comecar");
+  const espera = ms => new Promise(r => setTimeout(r, ms));
+  comecar.addEventListener("click", async () => {
+    comecar.disabled = true;
+    const passos = [["Inspire pelo nariz", 4, "86%"], ["Segure", 7, "86%"], ["Solte pela boca", 8, "40%"]];
+    for (let c = 1; c <= 3; c++) {
+      for (const [nome, seg, tam] of passos) {
+        fase.textContent = nome;
+        orb.style.transitionDuration = seg + "s";
+        orb.style.width = tam;
+        for (let s = seg; s > 0; s--) { contagem.textContent = `${s} · ciclo ${c} de 3`; await espera(1000); }
+      }
+    }
+    fase.textContent = "Muito bem.";
+    contagem.textContent = "Como está seu corpo agora?";
+    comecar.disabled = false; comecar.textContent = "De novo";
+  });
+
+  renderizarConversa();
+  renderizarHumor();
+})();
+</script>
