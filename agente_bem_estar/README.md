@@ -8,7 +8,16 @@ TCC, respiração, rotina e autocompaixão).
 > Em crise: **CVV 188** (24h, gratuito, ou chat em https://cvv.org.br) · **SAMU 192**.
 > Atendimento gratuito em saúde mental: **CAPS** e **UBS** (SUS) e clínicas-escola de psicologia.
 
-## Versão web
+## Versão web (recomendada)
+
+Link: https://claude.ai/artifact/STvp6C6YLrxh2aPznkkDQZ
+
+- Conversa, humor, metas, vitórias, plano e memória ficam guardados na conta do
+  Claude: o mesmo link mostra tudo igual no PC e no celular.
+- Fica fixada na barra lateral do claude.ai.
+- Aba Memória → "Baixar cópia" gera um arquivo de backup; "Restaurar" traz de volta.
+- Não apague o artifact: apagar o artifact apaga os dados guardados nele.
+
 
 Também existe uma versão para abrir no navegador, em `web/luz.html`, publicada
 como artifact no Claude. Nela a memória fica guardada na sua conta.

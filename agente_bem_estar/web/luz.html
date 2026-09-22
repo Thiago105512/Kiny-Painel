@@ -296,6 +296,16 @@
       <p class="note" id="memoria-status"></p>
       <p class="note"><span class="onde-salva">Tudo fica salvo neste aparelho.</span></p>
     </div>
+    <div class="card">
+      <h2>Cópia de segurança</h2>
+      <p class="note">Tudo já fica guardado na sua conta e aparece igual no PC e no celular. Se quiser uma garantia extra, baixe uma cópia de tempos em tempos. Ela serve para restaurar tudo se algo se perder.</p>
+      <div class="acoes">
+        <button class="btn" id="baixar-copia" type="button">Baixar cópia</button>
+        <label class="btn ghost" for="arquivo-copia">Restaurar de uma cópia</label>
+        <input type="file" id="arquivo-copia" accept="application/json,.json" hidden>
+      </div>
+      <p class="note" id="copia-status"></p>
+    </div>
   </section>
 
   <details class="apoio">
@@ -1015,6 +1025,53 @@ ${resumoPlano()}`;
     try {
       navigator.clipboard.writeText(texto).then(() => { copiarResumo.textContent = "Copiado"; }, selecionar);
     } catch { selecionar(); }
+  });
+
+  // Cópia de segurança
+  const copiaStatus = document.getElementById("copia-status");
+  document.getElementById("baixar-copia").addEventListener("click", async () => {
+    const dados = { app: "luz", versao: 1, exportado: new Date().toISOString(),
+      conversa: { turnos, pendentes }, humor, memoria, metas, vitorias, plano, prefs };
+    let downloads = null;
+    try { downloads = await window.claude?.use?.("downloads"); } catch {}
+    if (!downloads) { copiaStatus.textContent = "Não consegui baixar aqui. Tente abrir a Luz pelo navegador."; return; }
+    try {
+      const r = await downloads.save({ filename: `luz-copia-${hoje()}.json`, data: JSON.stringify(dados, null, 2) });
+      copiaStatus.textContent = r?.status === "saved" ? "Cópia salva." : "Pronto.";
+    } catch (e) {
+      copiaStatus.textContent = e?.code === "cancelled" || e?.code === "declined" ? "" : "Não consegui baixar agora.";
+    }
+  });
+  let copiaPendente = null;
+  document.getElementById("arquivo-copia").addEventListener("change", async ev => {
+    const f = ev.target.files?.[0];
+    ev.target.value = "";
+    if (!f) return;
+    try {
+      const d = JSON.parse(await f.text());
+      if (d?.app !== "luz") throw new Error();
+      copiaPendente = d;
+      copiaStatus.textContent = `Cópia de ${new Date(d.exportado).toLocaleDateString("pt-BR")} carregada. Isso substitui o que está na Luz agora. `;
+      const b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.textContent = "Confirmar restauração";
+      b.addEventListener("click", () => {
+        const c = copiaPendente; copiaPendente = null;
+        turnos = Array.isArray(c.conversa?.turnos) ? c.conversa.turnos : [];
+        pendentes = Number(c.conversa?.pendentes) || 0;
+        humor = Array.isArray(c.humor) ? c.humor : [];
+        memoria = { texto: String(c.memoria?.texto ?? ""), atualizado: String(c.memoria?.atualizado ?? "") };
+        metas = Array.isArray(c.metas) ? c.metas : [];
+        vitorias = Array.isArray(c.vitorias) ? c.vitorias : [];
+        plano = { ajuda: [], pessoas: [], bem: [], ...(c.plano || {}) };
+        prefs = { diaDificil: false, diaDificilEm: "", ...(c.prefs || {}) };
+        guardarConversa(); guardarHumor(); guardarMemoria(); guardarMetas(); guardarVitorias(); guardarPlano(); guardarPrefs();
+        renderizarConversa(); renderizarHumor(); renderizarMemoria(); renderizarMetas();
+        renderizarVitorias(); renderizarPlano(); renderizarModo(); renderizarCheckin();
+        copiaStatus.textContent = "Tudo restaurado.";
+      });
+      copiaStatus.appendChild(b);
+    } catch {
+      copiaStatus.textContent = "Esse arquivo não é uma cópia da Luz.";
+    }
   });
 
   // Memória de longo prazo
