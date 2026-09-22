@@ -200,26 +200,30 @@ def mostrar_historico(registros):
     print()
 
 
+def _transmitir(cliente, pedido, **extra):
+    with cliente.beta.messages.stream(**pedido, **extra) as stream:
+        print("\nLuz: ", end="", flush=True)
+        for texto in stream.text_stream:
+            print(texto, end="", flush=True)
+        final = stream.get_final_message()
+    print("\n")
+    return final
+
+
 def responder(cliente, mensagens, registros, memoria):
     sistema = [
         {"type": "text", "text": SISTEMA, "cache_control": {"type": "ephemeral"}},
         {"type": "text", "text": texto_memoria(memoria) + "\n\n" + resumo_humor(registros)},
     ]
-    print("\nLuz: ", end="", flush=True)
-    with cliente.beta.messages.stream(
-        model=MODELO,
-        max_tokens=4000,
-        system=sistema,
-        messages=mensagens,
-        output_config={"effort": "medium"},
+    pedido = dict(model=MODELO, max_tokens=4000, system=sistema, messages=mensagens,
+                  output_config={"effort": "medium"})
+    try:
         # Se o modelo principal recusar, a API tenta automaticamente um modelo alternativo.
-        betas=["server-side-fallback-2026-07-01"],
-        extra_body={"fallbacks": "default"},
-    ) as stream:
-        for texto in stream.text_stream:
-            print(texto, end="", flush=True)
-        final = stream.get_final_message()
-    print("\n")
+        final = _transmitir(cliente, pedido, betas=["server-side-fallback-2026-07-01"],
+                            extra_body={"fallbacks": "default"})
+    except anthropic.BadRequestError:
+        # Conta ou modelo sem suporte ao modelo alternativo: tenta sem ele.
+        final = _transmitir(cliente, pedido)
 
     if final.stop_reason == "refusal":
         print("(Não consegui responder a isso. Pode tentar dizer de outro jeito?)\n")
@@ -306,7 +310,11 @@ def main():
         if comando in ("/nova", "/limpar"):
             if pendentes:
                 print("Guardando o que é importante…")
+                memoria_antes = memoria
                 memoria = atualizar_memoria(cliente, memoria, mensagens, pendentes)
+                if memoria is memoria_antes:
+                    print("Não consegui guardar agora. Mantive a conversa; tente /nova de novo daqui a pouco.\n")
+                    continue
             mensagens, pendentes = [], 0
             guardar_conversa()
             print("Conversa nova. A Luz continua lembrando de você.\n")

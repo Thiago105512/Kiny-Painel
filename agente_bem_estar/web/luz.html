@@ -251,10 +251,10 @@ Só se a pessoa falar claramente em se matar, se machucar ou não querer mais vi
   let turnos = ler(K_CHAT, []);
   let humor = ler(K_HUMOR, []);
   let memoria = ler(K_MEM, { texto: "", atualizado: "" });
-  let pendentes = ler(K_PEND, 0);
+  let pendentes = ler(K_PEND, 0);  // mensagens ainda não resumidas na memória
   const K_METAS = "luz.metas";
   let metas = ler(K_METAS, []);
-  const hoje = () => new Date().toLocaleDateString("sv-SE");  // mensagens ainda não resumidas na memória
+  const hoje = () => new Date().toLocaleDateString("sv-SE");
 
   // Guarda na conta do Claude (privado, só a própria pessoa vê) e, de reserva, neste aparelho.
   let db = null, uid = null;
@@ -392,7 +392,7 @@ Responda só com JSON: {"opcoes": ["...", "...", "...", "...", "..."]}`, { model
     not_granted: "A Luz precisa da sua permissão para usar o Claude. Recarregue a página e permita quando for perguntado.",
     sampling_disabled: "O Claude não está disponível nesta conta.",
     rate_limited: "Muitas mensagens em pouco tempo. Espere um pouco e tente de novo.",
-    prompt_too_large: "A conversa ficou longa demais. Apague a conversa para recomeçar.",
+    prompt_too_large: "A conversa ficou longa demais. Toque em “Começar conversa nova” (a Luz continua lembrando de você).",
     refused: "Não consegui responder a isso. Pode tentar dizer de outro jeito?",
   };
 
@@ -406,10 +406,12 @@ Responda só com JSON: {"opcoes": ["...", "...", "...", "...", "..."]}`, { model
     }
   })();
 
+  let ocupado = false;
   async function mandar(texto) {
     texto = texto.trim();
-    if (!texto || enviar.disabled) return;
-    if (!sample) return;
+    if (!texto || ocupado || !sample) return;
+    ocupado = true;
+    enviar.disabled = true;
     await carregamento;
     entrada.value = "";
     mostrarOpcoes([]);
@@ -433,7 +435,6 @@ Responda só com JSON: {"opcoes": ["...", "...", "...", "...", "..."]}`, { model
     if (podeFerramentas) opcoes.tools = ferramentasMetas(); else opcoes.cache = false;
 
     const resp = bolha("luz wait", "Luz está escrevendo…");
-    enviar.disabled = true;
     rolar();
     try {
       const { text } = await sample(input, opcoes);
@@ -449,10 +450,15 @@ Responda só com JSON: {"opcoes": ["...", "...", "...", "...", "..."]}`, { model
       turnos.pop();
       pendentes = Math.max(0, pendentes - 1);
       guardarConversa();
+      // Devolve o texto para a caixa, para a pessoa poder tentar de novo sem reescrever.
+      if (!entrada.value) entrada.value = texto;
+      const anterior = turnos.at(-1);
+      mostrarOpcoes(!anterior ? INICIAIS : anterior.opcoes?.length ? anterior.opcoes : RESERVA);
       resp.classList.remove("wait");
       resp.textContent = (e?.text && separar(e.text).texto) || (MSG_ERRO[e?.code] ?? "Não consegui responder agora. Tente de novo em instantes.");
       if (e?.code === "not_granted" || e?.code === "sampling_disabled") { sample = null; return; }
     } finally {
+      ocupado = false;
       if (sample) enviar.disabled = false;
       rolar();
     }
@@ -579,7 +585,7 @@ Responda só com JSON: {"opcoes": ["...", "...", "...", "...", "..."]}`, { model
       `Vocês combinaram em ${dataCurta(metaSeguida.dia)}: “${metaSeguida.texto}”. Como foi?`;
   }
   seguir.querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
-    if (!metaSeguida || enviar.disabled) return;
+    if (!metaSeguida || ocupado || !sample) return;
     const m = metaSeguida;
     marcarMeta(m.id, b.dataset.estado);
     mandar(`Sobre a meta “${m.texto}”: ${b.textContent.toLowerCase()}`);
@@ -638,6 +644,7 @@ Responda só com JSON: {"opcoes": ["...", "...", "...", "...", "..."]}`, { model
     const recente = turnos.slice(-2 * Math.max(pendentes, 4))
       .map(t => (t.role === "user" ? "Pessoa: " : "Luz: ") + t.content).join("\n");
     if (!recente) return null;
+    const resumidas = pendentes;
     const prompt = `Você cuida das anotações de memória da "Luz", uma companhia de apoio emocional, sobre a pessoa com quem ela conversa. Essas anotações permitem que a Luz continue de onde parou em vez de recomeçar do zero.
 
 Atualize as anotações atuais com o que for importante na conversa recente. Guarde, quando aparecer: como a pessoa gosta de ser chamada; pessoas importantes; interesses e coisas de que gosta ou gostava; rotina, trabalho ou estudo; o que está pesando agora; o que ajudou e o que não ajudou; metas e pequenas tarefas combinadas e se foram feitas; conquistas; se faz acompanhamento profissional ou toma remédio.
@@ -653,7 +660,7 @@ ${recente}`;
       .then(r => {
         if (typeof r?.memoria === "string" && r.memoria.trim()) {
           memoria = { texto: r.memoria.trim().slice(0, 4000), atualizado: new Date().toISOString() };
-          pendentes = 0;
+          pendentes = Math.max(0, pendentes - resumidas);
           guardarMemoria(); guardarConversa();
           if (document.activeElement !== memTexto) renderizarMemoria();
         }
