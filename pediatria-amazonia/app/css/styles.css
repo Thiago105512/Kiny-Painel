@@ -309,3 +309,36 @@ details .body { padding: .3rem 0 .4rem; font-size: .93rem; }
 .prescricao.via { position: relative; margin-bottom: 1rem; }
 .prescricao .viaTag { position: absolute; top: .6rem; right: .9rem; font-family: var(--font); font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
 @media print { .prescricao.via { page-break-after: always; border: none; } .prescricao.via:last-of-type { page-break-after: auto; } }
+
+/* Entrada rápida */
+input.erro { border-color: var(--red); background: var(--red-soft); }
+input.aprox { border-style: dashed; }
+.field small.muted { font-weight: 400; }
+.pesoAtalhos { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .4rem; }
+.pesoAtalhos button { border: 1px solid var(--line); background: var(--card); color: var(--text); border-radius: 8px; padding: .3rem .55rem; font: inherit; font-size: .85rem; cursor: pointer; min-width: 44px; }
+.pesoAtalhos button:hover { border-color: var(--primary); }
+.marcas { font-size: .82rem; color: var(--muted); }
+.linhaTrat { border-left: 3px solid var(--line); padding-left: .7rem; margin: .5rem 0; }
+.linhaTrat.primeira { border-color: var(--green); }
+.linhaTrat.alternativa, .linhaTrat.segunda { border-color: var(--primary); }
+.linhaTrat.terceira, .linhaTrat.offlabel { border-color: var(--amber); }
+.linhaTrat.naorecomendado { border-color: var(--red); }
+
+/* Perguntas com resposta selecionável */
+.pergunta { border-bottom: 1px solid var(--line); padding: .6rem 0; }
+.pergunta:last-child { border-bottom: none; }
+.pergTexto { font-weight: 600; font-size: .95rem; margin-bottom: .35rem; }
+.pergunta .toggles { margin-bottom: .3rem; }
+.pergunta .toggle { font-size: .85rem; padding: .35rem .65rem; min-height: 36px; }
+.pergunta .pergObs, .pergunta .ctxObs { margin-top: .25rem; font-size: .92rem; }
+.pergunta .porque { font-size: .78rem; color: var(--muted); margin-top: .25rem; }
+.toggle.destaque { border-color: var(--green); background: var(--green-soft); color: var(--green); font-weight: 700; }
+.toggle.destaque.on { background: var(--green); color: #fff; }
+
+/* Curiosidades e conversa com a família */
+details.curio { background: var(--bg-soft); border-style: dashed; }
+details.curio summary { color: var(--muted); font-weight: 600; }
+.curioDia { background: linear-gradient(135deg, var(--primary-soft), var(--green-soft)); border: none; }
+.falaFamilia { background: var(--primary-soft); border-radius: 12px; padding: .6rem .8rem; margin: .5rem 0; }
+.falaFamilia p { margin: .3rem 0; font-size: .95rem; }
+details.quiz summary { font-weight: 600; }

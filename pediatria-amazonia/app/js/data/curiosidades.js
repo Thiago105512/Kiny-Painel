@@ -1,2 +1,1 @@
 window.PED = window.PED || {}; var PED = window.PED; PED.data = PED.data || {};
-/* Em produção: será substituído pelo conteúdo completo. */
