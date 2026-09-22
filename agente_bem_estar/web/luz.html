@@ -225,13 +225,15 @@
   const gravar = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
 
   const saudacao = () => memoria.texto
-    ? "Oi de novo. Que bom te ver por aqui. Como você está hoje?"
-    : "Oi. Que bom que você está aqui. Como você está se sentindo hoje?";
+    ? "Oi de novo, Thiago. Que bom te ver por aqui. Como você está hoje?"
+    : "Oi, Thiago. Que bom que você está aqui. Como você está se sentindo hoje?";
   const RISCO = ["me matar", "suicid", "tirar minha vida", "tirar a minha vida",
     "não quero mais viver", "nao quero mais viver", "quero morrer", "me machucar", "me cortar"];
   let avisouApoio = false;
 
-  const REGRAS = `Você é "Luz", uma companhia de apoio emocional em português do Brasil. Você conversa com uma pessoa que está lidando com depressão e quer se sentir melhor e retomar a própria vida.
+  const REGRAS = `Você é "Luz", uma companhia de apoio emocional em português do Brasil. Você conversa com o Thiago, que está lidando com depressão e quer se sentir melhor e retomar a própria vida. Chame-o pelo nome de vez em quando, com naturalidade.
+
+O Thiago prefere tocar em respostas prontas a digitar: depois de cada mensagem sua aparecem botões com respostas para ele. Por isso, quando fizer uma pergunta, prefira perguntas com respostas claras (escolher entre opções, sim/não, uma escala) em vez de perguntas muito abertas.
 
 Quem é a pessoa para você: alguém inteiro, com história, interesses, relações, planos e qualidades, não um "caso" ou um risco a ser gerenciado. Tenha curiosidade genuína por ela: do que ela gosta ou já gostou, o que dá sentido à vida dela, quem é importante, o que está funcionando, mesmo que pouco.
 
@@ -328,7 +330,10 @@ Só se a pessoa falar claramente em se matar, se machucar ou não querer mais vi
     bolha("luz", saudacao());
     for (const t of turnos) bolha(t.role === "user" ? "eu" : "luz", t.content);
     const ultimo = turnos.at(-1);
-    mostrarOpcoes(!ultimo ? INICIAIS : ultimo.role === "assistant" ? (ultimo.opcoes?.length ? ultimo.opcoes : RESERVA) : []);
+    if (!ultimo) mostrarOpcoes(INICIAIS);
+    else if (ultimo.role !== "assistant") mostrarOpcoes([]);
+    else if (ultimo.opcoes?.length) mostrarOpcoes(ultimo.opcoes);
+    else garantirOpcoes();
   }
   const INICIAIS = ["Estou sem energia para nada", "Minha cabeça não para de pensar", "Hoje estou um pouco melhor",
     "Me dá uma tarefa pequena para hoje", "Tive uma pequena vitória hoje"];
@@ -343,8 +348,19 @@ Só se a pessoa falar claramente em se matar, se machucar ou não querer mais vi
     }
     ideas.hidden = !lista.length;
   }
+  // Se a última mensagem da Luz ficou sem opções (versão antiga, falha), gera agora.
+  const gerando = new WeakSet();
+  function garantirOpcoes() {
+    const ultimo = turnos.at(-1);
+    if (!ultimo || ultimo.role !== "assistant" || ultimo.opcoes?.length) return;
+    if (!sample) { mostrarOpcoes(RESERVA); return; }
+    if (gerando.has(ultimo)) return;
+    const fala = turnos.slice(0, -1).reverse().find(t => t.role === "user")?.content ?? "";
+    carregarOpcoes(ultimo, fala);
+  }
   // Gera 5 respostas rápidas ligadas à ÚLTIMA mensagem da Luz (uma chamada rápida à parte).
   async function carregarOpcoes(turno, falaPessoa) {
+    gerando.add(turno);
     ideas.hidden = false;
     ideas.innerHTML = '<span class="note">Preparando respostas rápidas…</span>';
     let lista = [];
@@ -352,9 +368,8 @@ Só se a pessoa falar claramente em se matar, se machucar ou não querer mais vi
       const r = await sample.json(`A "Luz", uma companhia de apoio emocional, acabou de mandar a mensagem abaixo para uma pessoa com depressão. Crie exatamente 5 respostas curtas (no máximo 7 palavras cada) que a pessoa poderia tocar para responder, em primeira pessoa e em português do Brasil, com linguagem simples e natural.
 
 Regras:
-- Se a mensagem da Luz termina com uma pergunta, as 4 primeiras opções respondem DIRETAMENTE a essa pergunta, com respostas diferentes entre si (cubra as alternativas que a Luz ofereceu, uma mistura delas e um "não sei dizer" do jeito da pessoa).
-- Se não termina com pergunta, as 4 primeiras reagem ao que a Luz disse: concordar, discordar, contar mais, pedir uma ideia prática.
-- A 5ª é uma saída leve, como "Quero só desabafar" ou "Quero falar de outra coisa".
+- Se a Luz fez uma pergunta, TODAS as 5 opções respondem diretamente a ESSA pergunta, com respostas diferentes entre si: cubra cada alternativa que a Luz ofereceu, uma mistura delas, e um "não sei dizer" ou "prefiro não responder agora" do jeito da pessoa. A pessoa não quer digitar, então as opções precisam cobrir as respostas mais prováveis.
+- Se a Luz não fez pergunta, 4 opções reagem ao que ela disse (concordar, discordar, contar mais, pedir uma ideia prática) e a 5ª é uma saída leve, como "Quero falar de outra coisa".
 - Nada genérico que serviria para qualquer mensagem. Sem aspas, sem emojis.
 
 O que a pessoa tinha dito: ${falaPessoa}
@@ -364,9 +379,10 @@ Mensagem da Luz: ${turno.content}
 Responda só com JSON: {"opcoes": ["...", "...", "...", "...", "..."]}`, { modelTier: "quick", cache: false });
       lista = (Array.isArray(r?.opcoes) ? r.opcoes : []).map(o => String(o).trim()).filter(o => o && o.length <= 80).slice(0, 5);
     } catch {}
-    turno.opcoes = lista.length ? lista : RESERVA;
-    guardarConversa();
-    if (turnos.at(-1) === turno) mostrarOpcoes(turno.opcoes);
+    gerando.delete(turno);
+    turno.opcoes = lista;  // vazio = tenta de novo na próxima vez que abrir
+    if (lista.length) guardarConversa();
+    if (turnos.at(-1) === turno) mostrarOpcoes(lista.length ? lista : RESERVA);
   }
 
   // Separa o texto da resposta das opções de resposta rápida (<<opcoes>> a | b | c).
@@ -400,6 +416,7 @@ Responda só com JSON: {"opcoes": ["...", "...", "...", "...", "..."]}`, { model
   (async () => {
     try { sample = await window.claude?.use?.("sample"); } catch { sample = null; }
     if (sample) { try { podeFerramentas = !!(await sample.limits())?.tools; } catch { podeFerramentas = false; } }
+    if (sample) garantirOpcoes();
     if (!sample) {
       enviar.disabled = true;
       entrada.placeholder = "A conversa só funciona dentro do Claude.";
