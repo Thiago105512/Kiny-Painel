@@ -64,6 +64,7 @@
   .crisis { background: var(--calm-soft); color: var(--ink); border-radius: 12px; padding: 10px 14px; font-size: .9rem; align-self: flex-start; max-width: 88%; }
   .crisis a { color: var(--calm); }
   .ideas { display: flex; flex-wrap: wrap; gap: 8px; }
+  #ideas .chip { text-align: left; }
   .chip { font: 500 .88rem var(--sans); background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
   .chip:hover { border-color: var(--accent); }
   form.send { display: flex; gap: 8px; align-items: flex-end; position: sticky; bottom: 0; background: var(--bg); padding-block: 8px calc(8px + env(safe-area-inset-bottom, 0px)); }
@@ -148,12 +149,7 @@
         <button class="chip" type="button" data-estado="nao_deu">Não deu</button>
       </div>
     </div>
-    <div class="ideas" id="ideas">
-      <button class="chip" type="button">Estou sem energia para nada</button>
-      <button class="chip" type="button">Minha cabeça não para de pensar</button>
-      <button class="chip" type="button">Me dá uma tarefa pequena para hoje</button>
-      <button class="chip" type="button">Tive uma pequena vitória hoje</button>
-    </div>
+    <div class="ideas" id="ideas" aria-label="Respostas rápidas"></div>
     <form class="send" id="send">
       <textarea id="entrada" rows="1" placeholder="Escreva como você está…" aria-label="Sua mensagem"></textarea>
       <button class="btn" id="enviar" type="submit">Enviar</button>
@@ -241,12 +237,16 @@ Quem é a pessoa para você: alguém inteiro, com história, interesses, relaç�
 
 Como você age:
 - Acolha primeiro. Valide o que a pessoa sente sem julgar e sem pressa de "consertar".
-- Fale de forma calorosa, simples e natural, como uma boa amiga que entende do assunto. Respostas curtas (2 a 6 frases), a não ser que a pessoa peça mais. No máximo uma pergunta por vez. Texto simples, sem Markdown.
+- Fale de forma calorosa, simples e natural, como uma boa amiga que entende do assunto. Respostas curtas (2 a 6 frases), a não ser que a pessoa peça mais. Texto simples, sem Markdown.
+- Nem toda resposta precisa terminar com pergunta. Muitas vezes é melhor só acolher, afirmar algo verdadeiro, compartilhar uma ideia ou fazer um convite. Faça no máximo uma pergunta, e só quando ela ajudar de verdade; evite terminar duas respostas seguidas com pergunta.
 - Tristeza, cansaço, desânimo, choro, "não aguento mais" ou "estou mal" fazem parte da depressão e merecem acolhimento e conversa, não alarme. Não fale de suicídio, crise ou números de emergência a menos que a própria pessoa traga esse assunto.
 - Ajude de forma prática quando fizer sentido: uma pequena ação concreta para hoje, perguntas gentis para olhar pensamentos muito duros de outro ângulo, respiração, sono, rotina, sol, movimento, contato com pessoas, retomar algo que a pessoa gostava, autocompaixão, pequenas vitórias.
 - Celebre qualquer avanço, por menor que seja, e lembre a pessoa dos progressos que aparecem no registro de humor e nas metas.
 - Metas: quando fizer sentido, proponha UMA meta bem pequena e concreta para hoje ou amanhã (ex.: "abrir a janela e tomar sol por 5 minutos"). Se a pessoa topar, registre com a ferramenta combinar_meta. Se houver metas em aberto de dias anteriores, pergunte com leveza como foi; quando a pessoa contar, use marcar_meta. Se ela não conseguiu, zero julgamento: acolha e ajuste para algo ainda menor. Não empurre metas quando a pessoa só quer desabafar.
 - Quando for natural na conversa, e sem repetir toda hora, incentive o cuidado com um profissional (psicólogo, psiquiatra, CAPS/UBS pelo SUS, clínicas-escola de psicologia gratuitas ou de baixo custo). Não faça diagnósticos nem indique remédios.
+
+Respostas rápidas (obrigatório em toda resposta): depois do seu texto, escreva numa linha separada <<opcoes>> seguido de exatamente 5 respostas curtas (até 7 palavras cada) que a pessoa poderia tocar para continuar, separadas por " | ". Escreva na voz da pessoa, em primeira pessoa. Varie: uma ou duas respostas diretas ao que você disse (inclusive discordando), um sentimento, algo como "Só quero desabafar" ou "Hoje não consigo falar muito", um pedido de ideia prática e uma para mudar de assunto. Exemplo:
+<<opcoes>> Faz sentido | Não é bem isso | Estou cansado demais | Me dá uma ideia simples | Quero falar de outra coisa
 
 Só se a pessoa falar claramente em se matar, se machucar ou não querer mais viver: continue calorosa e presente, pergunte com cuidado se ela está segura agora e mencione uma vez o CVV (188, 24h, gratuito, ou chat em cvv.org.br) e chamar alguém de confiança. Depois siga a conversa normalmente, com a pessoa, e não em cima do assunto.`;
 
@@ -329,7 +329,29 @@ Só se a pessoa falar claramente em se matar, se machucar ou não querer mais vi
     log.textContent = "";
     bolha("luz", saudacao());
     for (const t of turnos) bolha(t.role === "user" ? "eu" : "luz", t.content);
-    ideas.hidden = turnos.length > 0;
+    const ultimo = turnos.at(-1);
+    mostrarOpcoes(!ultimo ? INICIAIS : ultimo.role === "assistant" ? (ultimo.opcoes?.length ? ultimo.opcoes : RESERVA) : []);
+  }
+  const INICIAIS = ["Estou sem energia para nada", "Minha cabeça não para de pensar", "Hoje estou um pouco melhor",
+    "Me dá uma tarefa pequena para hoje", "Tive uma pequena vitória hoje"];
+  const RESERVA = ["Obrigado, ajudou", "Não é bem isso", "Quero só desabafar", "Me dá uma ideia simples", "Quero falar de outra coisa"];
+  function mostrarOpcoes(lista) {
+    ideas.textContent = "";
+    for (const texto of lista.slice(0, 5)) {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "chip"; b.textContent = texto;
+      b.addEventListener("click", () => mandar(texto));
+      ideas.appendChild(b);
+    }
+    ideas.hidden = !lista.length;
+  }
+  // Separa o texto da resposta das opções de resposta rápida (<<opcoes>> a | b | c).
+  function separar(texto) {
+    const i = texto.indexOf("<<");
+    if (i < 0) return { texto: texto.trim(), opcoes: [] };
+    const opcoes = texto.slice(i).replace(/^<<\s*op[cç][oõ]es\s*>>/i, "").split(/[|\n]/)
+      .map(o => o.trim().replace(/^["“]|["”]$/g, "")).filter(o => o && !o.startsWith("<") && o.length <= 80).slice(0, 5);
+    return { texto: texto.slice(0, i).trim(), opcoes };
   }
   function rolar() { window.scrollTo({ top: document.body.scrollHeight }); }
 
@@ -366,7 +388,7 @@ Só se a pessoa falar claramente em se matar, se machucar ou não querer mais vi
     if (!sample) return;
     await carregamento;
     entrada.value = "";
-    ideas.hidden = true;
+    mostrarOpcoes([]);
     bolha("eu", texto);
     const baixo = texto.toLowerCase();
     if (!avisouApoio && RISCO.some(p => baixo.includes(p))) { avisouApoio = true; alertaCrise(); }
@@ -382,8 +404,8 @@ Só se a pessoa falar claramente em se matar, se machucar ou não querer mais vi
     const contexto = REGRAS + "\n\n" + lembrancas + "\n\n" + resumoHumor() +
       `\n\nVocê já cumprimentou a pessoa com: "${saudacao()}"\n\nMensagem da pessoa:\n`;
     const contextoCompleto = contexto.replace("\n\nMensagem da pessoa:\n", "\n\n" + resumoMetas() + "\n\nMensagem da pessoa:\n");
-    const input = recente.map((t, i) => i === 0 ? { role: "user", content: contextoCompleto + t.content } : t);
-    const opcoes = { onText: ({ text }) => { resp.classList.remove("wait"); resp.textContent = text; rolar(); } };
+    const input = recente.map((t, i) => ({ role: t.role, content: i === 0 ? contextoCompleto + t.content : t.content }));
+    const opcoes = { onText: ({ text }) => { const v = separar(text).texto; if (v) { resp.classList.remove("wait"); resp.textContent = v; rolar(); } } };
     if (podeFerramentas) opcoes.tools = ferramentasMetas(); else opcoes.cache = false;
 
     const resp = bolha("luz wait", "Luz está escrevendo…");
@@ -391,9 +413,11 @@ Só se a pessoa falar claramente em se matar, se machucar ou não querer mais vi
     rolar();
     try {
       const { text } = await sample(input, opcoes);
+      const r = separar(text);
       resp.classList.remove("wait");
-      resp.textContent = text;
-      turnos.push({ role: "assistant", content: text });
+      resp.textContent = r.texto || text;
+      turnos.push({ role: "assistant", content: r.texto || text, opcoes: r.opcoes });
+      mostrarOpcoes(r.opcoes.length ? r.opcoes : RESERVA);
       guardarConversa();
       if (pendentes >= 3) atualizarMemoria();
     } catch (e) {
@@ -401,7 +425,7 @@ Só se a pessoa falar claramente em se matar, se machucar ou não querer mais vi
       pendentes = Math.max(0, pendentes - 1);
       guardarConversa();
       resp.classList.remove("wait");
-      resp.textContent = e?.text || (MSG_ERRO[e?.code] ?? "Não consegui responder agora. Tente de novo em instantes.");
+      resp.textContent = (e?.text && separar(e.text).texto) || (MSG_ERRO[e?.code] ?? "Não consegui responder agora. Tente de novo em instantes.");
       if (e?.code === "not_granted" || e?.code === "sampling_disabled") { sample = null; return; }
     } finally {
       if (sample) enviar.disabled = false;
@@ -414,7 +438,6 @@ Só se a pessoa falar claramente em se matar, se machucar ou não querer mais vi
     if (ev.key === "Enter" && !ev.shiftKey) { ev.preventDefault(); mandar(entrada.value); }
   });
   entrada.addEventListener("input", () => { entrada.style.height = "auto"; entrada.style.height = entrada.scrollHeight + "px"; });
-  ideas.querySelectorAll(".chip").forEach(c => c.addEventListener("click", () => mandar(c.textContent)));
 
   const limpar = document.getElementById("limpar");
   let confirmar = false;
