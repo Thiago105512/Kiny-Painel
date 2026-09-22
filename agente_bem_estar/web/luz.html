@@ -244,9 +244,7 @@ Como você age:
 - Celebre qualquer avanço, por menor que seja, e lembre a pessoa dos progressos que aparecem no registro de humor e nas metas.
 - Metas: quando fizer sentido, proponha UMA meta bem pequena e concreta para hoje ou amanhã (ex.: "abrir a janela e tomar sol por 5 minutos"). Se a pessoa topar, registre com a ferramenta combinar_meta. Se houver metas em aberto de dias anteriores, pergunte com leveza como foi; quando a pessoa contar, use marcar_meta. Se ela não conseguiu, zero julgamento: acolha e ajuste para algo ainda menor. Não empurre metas quando a pessoa só quer desabafar.
 - Quando for natural na conversa, e sem repetir toda hora, incentive o cuidado com um profissional (psicólogo, psiquiatra, CAPS/UBS pelo SUS, clínicas-escola de psicologia gratuitas ou de baixo custo). Não faça diagnósticos nem indique remédios.
-
-Respostas rápidas (obrigatório em toda resposta): depois do seu texto, escreva numa linha separada <<opcoes>> seguido de exatamente 5 respostas curtas (até 7 palavras cada) que a pessoa poderia tocar para continuar, separadas por " | ". Escreva na voz da pessoa, em primeira pessoa. Varie: uma ou duas respostas diretas ao que você disse (inclusive discordando), um sentimento, algo como "Só quero desabafar" ou "Hoje não consigo falar muito", um pedido de ideia prática e uma para mudar de assunto. Exemplo:
-<<opcoes>> Faz sentido | Não é bem isso | Estou cansado demais | Me dá uma ideia simples | Quero falar de outra coisa
+- Não suponha nada que a pessoa não disse. Só mencione fatos da vida dela que estejam na conversa ou nas suas anotações; se não sabe, não insinue ("com tudo o que você tem lidado").
 
 Só se a pessoa falar claramente em se matar, se machucar ou não querer mais viver: continue calorosa e presente, pergunte com cuidado se ela está segura agora e mencione uma vez o CVV (188, 24h, gratuito, ou chat em cvv.org.br) e chamar alguém de confiança. Depois siga a conversa normalmente, com a pessoa, e não em cima do assunto.`;
 
@@ -345,6 +343,32 @@ Só se a pessoa falar claramente em se matar, se machucar ou não querer mais vi
     }
     ideas.hidden = !lista.length;
   }
+  // Gera 5 respostas rápidas ligadas à ÚLTIMA mensagem da Luz (uma chamada rápida à parte).
+  async function carregarOpcoes(turno, falaPessoa) {
+    ideas.hidden = false;
+    ideas.innerHTML = '<span class="note">Preparando respostas rápidas…</span>';
+    let lista = [];
+    try {
+      const r = await sample.json(`A "Luz", uma companhia de apoio emocional, acabou de mandar a mensagem abaixo para uma pessoa com depressão. Crie exatamente 5 respostas curtas (no máximo 7 palavras cada) que a pessoa poderia tocar para responder, em primeira pessoa e em português do Brasil, com linguagem simples e natural.
+
+Regras:
+- Se a mensagem da Luz termina com uma pergunta, as 4 primeiras opções respondem DIRETAMENTE a essa pergunta, com respostas diferentes entre si (cubra as alternativas que a Luz ofereceu, uma mistura delas e um "não sei dizer" do jeito da pessoa).
+- Se não termina com pergunta, as 4 primeiras reagem ao que a Luz disse: concordar, discordar, contar mais, pedir uma ideia prática.
+- A 5ª é uma saída leve, como "Quero só desabafar" ou "Quero falar de outra coisa".
+- Nada genérico que serviria para qualquer mensagem. Sem aspas, sem emojis.
+
+O que a pessoa tinha dito: ${falaPessoa}
+
+Mensagem da Luz: ${turno.content}
+
+Responda só com JSON: {"opcoes": ["...", "...", "...", "...", "..."]}`, { modelTier: "quick", cache: false });
+      lista = (Array.isArray(r?.opcoes) ? r.opcoes : []).map(o => String(o).trim()).filter(o => o && o.length <= 80).slice(0, 5);
+    } catch {}
+    turno.opcoes = lista.length ? lista : RESERVA;
+    guardarConversa();
+    if (turnos.at(-1) === turno) mostrarOpcoes(turno.opcoes);
+  }
+
   // Separa o texto da resposta das opções de resposta rápida (<<opcoes>> a | b | c).
   function separar(texto) {
     const i = texto.indexOf("<<");
@@ -416,8 +440,9 @@ Só se a pessoa falar claramente em se matar, se machucar ou não querer mais vi
       const r = separar(text);
       resp.classList.remove("wait");
       resp.textContent = r.texto || text;
-      turnos.push({ role: "assistant", content: r.texto || text, opcoes: r.opcoes });
-      mostrarOpcoes(r.opcoes.length ? r.opcoes : RESERVA);
+      const turno = { role: "assistant", content: r.texto || text, opcoes: [] };
+      turnos.push(turno);
+      carregarOpcoes(turno, texto);
       guardarConversa();
       if (pendentes >= 3) atualizarMemoria();
     } catch (e) {
