@@ -1730,6 +1730,355 @@ PED.data.alternativas = {
       fontes: [ { nome: 'Ministério da Saúde - Guia de vigilância em saúde, coqueluche', ano: 2023 }, { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre coqueluche', ano: 2022 } ],
       atualizadoEm: '2026-09'
     },
+    mononucleose: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - suporte', tipo: 'primeira',
+          opcoes: [
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula', quando: 'Febre, odinofagia e mialgia', obs: 'O cuidado é de suporte, com repouso relativo conforme a tolerância e hidratação.' },
+            { medId: 'sais_reidratacao_oral', nome: 'Sais de reidratação oral', esquema: 'Conforme plano A do Ministério da Saúde', quando: 'Ingestão reduzida pela odinofagia', obs: 'Dieta leve, fria e pastosa enquanto houver dor de garganta.' }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa analgésica e antitérmica', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'dipirona', nome: 'Dipirona', esquema: '10 a 15 mg/kg/dose VO ou IV a cada 6 h, conforme bula', quando: 'Alternativa quando o paracetamol não controla a dor ou a febre', obs: 'Não usar em menores de 3 meses ou abaixo de 5 kg.' },
+            { medId: 'ibuprofeno', nome: 'Ibuprofeno', esquema: '5 a 10 mg/kg/dose VO a cada 6 a 8 h, conforme bula', quando: 'Odinofagia e mialgia importantes', obs: 'Evitar se houver plaquetopenia, sangramento ou hepatite significativa.' }
+          ] },
+        { ordem: 3, rotulo: 'Uso off-label - situações selecionadas', tipo: 'offlabel',
+          opcoes: [
+            { medId: 'prednisolona', nome: 'Prednisolona em obstrução de via aérea ou citopenia grave', esquema: '1 a 2 mg/kg/dia VO, máximo 60 mg ao dia, por curto período, conforme avaliação especializada', quando: 'Obstrução de via aérea superior por hipertrofia amigdaliana, anemia hemolítica grave ou plaquetopenia grave', obs: 'Off-label para mononucleose: o corticoide não tem registro em bula para essa indicação e os ensaios clínicos não mostram benefício sobre os sintomas habituais. O uso se apoia em séries de casos e na prática consagrada para as complicações citadas, nas quais o risco justifica a intervenção. Confirmar conforme protocolo do serviço e bula.', verificar: true },
+            { medId: 'dexametasona', nome: 'Dexametasona em obstrução de via aérea superior', esquema: 'Dose e via conforme protocolo do serviço', quando: 'Alternativa parenteral ao corticoide oral na obstrução de via aérea por hipertrofia amigdaliana', obs: 'Mesma condição off-label da prednisolona nessa indicação. Confirmar conforme protocolo do serviço e bula.', verificar: true }
+          ] },
+        { ordem: 4, rotulo: 'Segunda linha - complicações', tipo: 'segunda',
+          opcoes: [
+            { medId: null, nome: 'Internação com monitorização e suporte de via aérea', esquema: 'Conforme protocolo do serviço', quando: 'Obstrução respiratória, desidratação por recusa oral, citopenias graves ou hepatite significativa', obs: 'Monitorizar hemograma e transaminases. Ruptura esplênica é rara, porém potencialmente fatal, e costuma ocorrer nas primeiras 3 a 4 semanas.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: 'prednisolona', nome: 'Corticoide na mononucleose sem obstrução de via aérea', esquema: '', quando: '', obs: 'Não recomendado. Ensaios clínicos não mostram benefício sobre febre, odinofagia ou tempo de doença, e há preocupação com imunossupressão em infecção viral ativa. Reservar para obstrução de via aérea e citopenias graves.' },
+            { medId: 'amoxicilina', nome: 'Amoxicilina e ampicilina na suspeita de mononucleose', esquema: '', quando: '', obs: 'Evitar pelo alto risco de exantema maculopapular extenso, que não é alergia verdadeira mas leva a rótulo permanente e equivocado de alergia a penicilina. Se houver faringite estreptocócica comprovada, preferir outro antibiótico conforme protocolo.' },
+            { medId: null, nome: 'Aciclovir na mononucleose', esquema: '', quando: '', obs: 'Não indicado. Reduz a eliminação viral orofaríngea sem alterar a evolução clínica.' },
+            { medId: null, nome: 'Liberação precoce para esportes de contato', esquema: '', quando: '', obs: 'Restringir esportes de contato, lutas, educação física e atividades com risco de trauma abdominal por pelo menos 3 a 4 semanas do início dos sintomas, e por mais tempo se a esplenomegalia persistir, pelo risco de ruptura esplênica.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Repouso relativo conforme tolerância, com retorno gradual às atividades.',
+        'Restrição de esportes de contato e de trauma abdominal por 3 a 4 semanas, reavaliando a esplenomegalia.',
+        'Dieta leve, fria e pastosa enquanto houver odinofagia, com hidratação frequente.',
+        'Orientar que a fadiga pode persistir por semanas, o que evita investigações desnecessárias.',
+        'Monitorar hemograma e transaminases nos casos com citopenias ou hepatite significativa.'
+      ],
+      fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre mononucleose infecciosa', ano: 2022 }, { nome: 'OPAS/OMS - Manejo de infecções virais na infância', ano: 2021 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    caxumba: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - analgesia e suporte', tipo: 'primeira',
+          opcoes: [
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula', quando: 'Dor parotídea e febre', obs: 'Não há antiviral específico. Compressas mornas ou frias conforme o alívio referido pela criança.' },
+            { medId: 'ibuprofeno', nome: 'Ibuprofeno', esquema: '5 a 10 mg/kg/dose VO a cada 6 a 8 h, conforme bula', quando: 'Dor e inflamação, inclusive na orquite, em que o componente anti-inflamatório é útil', obs: 'Evitar se houver desidratação ou suspeita de dengue.' }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa analgésica e hidratação', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'dipirona', nome: 'Dipirona', esquema: '10 a 15 mg/kg/dose VO ou IV a cada 6 h, conforme bula', quando: 'Alternativa quando o paracetamol não controla a dor ou a via oral está comprometida', obs: 'Não usar em menores de 3 meses ou abaixo de 5 kg.' },
+            { medId: 'soro_fisiologico', nome: 'Soro fisiológico 0,9%', esquema: 'Hidratação venosa conforme protocolo do serviço', quando: 'Vômitos ou recusa oral importante, inclusive na pancreatite', obs: '' }
+          ] },
+        { ordem: 3, rotulo: 'Segunda linha - parotidite bacteriana secundária', tipo: 'segunda',
+          opcoes: [
+            { medId: 'cefalexina', nome: 'Cefalexina', esquema: '50 a 100 mg/kg/dia VO dividida a cada 6 h, conforme protocolo do serviço', quando: 'Parotidite bacteriana secundária leve, com eritema, dor localizada e saída de secreção purulenta pelo ducto', obs: 'Cobertura para Staphylococcus aureus.' },
+            { medId: 'amoxicilina_clavulanato', nome: 'Amoxicilina + clavulanato', esquema: '45 a 50 mg/kg/dia do componente amoxicilina VO dividida a cada 12 h, conforme protocolo do serviço', quando: 'Parotidite bacteriana com necessidade de cobertura para anaeróbios', obs: 'Avaliação cirúrgica se houver flutuação ou abscesso.' }
+          ] },
+        { ordem: 4, rotulo: 'Adjuvante - orquite e prevenção', tipo: 'adjuvante',
+          opcoes: [
+            { medId: null, nome: 'Repouso no leito, elevação e suspensão escrotal e compressas frias', esquema: '', quando: 'Orquite, complicação mais temida por adolescentes e familiares', obs: 'Avaliação urológica quando a dor for intensa ou houver dúvida com torção testicular, que é emergência cirúrgica.' },
+            { medId: null, nome: 'Vacina tríplice viral ou tetraviral', esquema: 'Atualização conforme o Calendário Nacional de Vacinação e bloqueio de suscetíveis em situação de surto', quando: 'Atualização do esquema da criança e dos contatos', obs: 'A vacinação pós-exposição não previne a doença no contato já exposto, mas protege em exposições futuras. Confirmar conforme orientação da vigilância.', verificar: true }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: 'prednisolona', nome: 'Corticoide na orquite por caxumba', esquema: '', quando: '', obs: 'Não demonstrou prevenir atrofia testicular nem reduzir a duração dos sintomas. Não recomendado de rotina.' },
+            { medId: null, nome: 'Antibiótico na parotidite viral', esquema: '', quando: '', obs: 'Não indicado. Reservar para parotidite bacteriana secundária, com eritema, flutuação ou secreção purulenta pelo ducto.' },
+            { medId: null, nome: 'Alimentos ácidos e cítricos durante a parotidite', esquema: '', quando: '', obs: 'Estimulam a salivação e aumentam muito a dor. Orientar dieta pastosa e não ácida.' },
+            { medId: null, nome: 'Dispensar avaliação audiológica diante de queixa auditiva', esquema: '', quando: '', obs: 'A caxumba pode causar surdez neurossensorial, habitualmente unilateral. Queixa de perda auditiva, zumbido ou desequilíbrio exige avaliação.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Afastamento de creche, escola e atividades coletivas por 5 dias a partir do início do aumento da parótida, com isolamento por gotículas no hospital.',
+        'Dieta pastosa, evitando alimentos ácidos, cítricos e que exijam muita mastigação.',
+        'Higiene oral cuidadosa para reduzir o risco de infecção bacteriana secundária.',
+        'Avaliação audiológica diante de queixa de perda auditiva, zumbido ou desequilíbrio.',
+        'Verificação e atualização da situação vacinal da criança e dos contatos, com bloqueio em surtos.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Guia de vigilância em saúde, caxumba', ano: 2023 }, { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre parotidite infecciosa', ano: 2022 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    hepatite_a: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - suporte e vigilância de insuficiência hepática', tipo: 'primeira',
+          opcoes: [
+            { medId: 'sais_reidratacao_oral', nome: 'Sais de reidratação oral', esquema: 'Conforme plano A ou B do Ministério da Saúde', quando: 'Vômitos ou baixa aceitação oral na fase prodrômica', obs: 'Dieta livre conforme aceitação, com boa oferta calórica. A restrição rígida de gorduras não é necessária.' },
+            { medId: 'soro_fisiologico', nome: 'Soro fisiológico 0,9% com glicose conforme necessidade', esquema: 'Hidratação venosa conforme protocolo do serviço, com monitorização de glicemia e eletrólitos', quando: 'Vômitos persistentes ou aceitação oral insuficiente', obs: 'Atenção à hipoglicemia, que é sinal de gravidade na hepatite aguda.' }
+          ] },
+        { ordem: 2, rotulo: 'Analgesia e antitérmico com cautela', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'dipirona', nome: 'Dipirona', esquema: '10 a 15 mg/kg/dose VO ou IV a cada 6 h, conforme bula', quando: 'Febre e dor, conforme avaliação individual', obs: 'Alternativa ao paracetamol quando há preocupação com a função hepática.' },
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: 'Apenas se necessário, na menor dose eficaz, respeitando intervalo e dose máxima da bula', quando: 'Febre e dor, com uso cauteloso na hepatite aguda', obs: 'Evitar em disfunção hepática significativa. Confirmar conforme protocolo/bula.', verificar: true }
+          ] },
+        { ordem: 3, rotulo: 'Uso off-label - prurido colestático', tipo: 'offlabel',
+          opcoes: [
+            { medId: null, nome: 'Colestiramina', esquema: 'Indicação e dose conforme avaliação de gastroenterologia pediátrica e bula', quando: 'Prurido colestático persistente e incapacitante na forma colestática prolongada', obs: 'Off-label: a bula registra hipercolesterolemia e, em alguns produtos, prurido por obstrução biliar parcial, não a hepatite A. O uso no prurido colestático é prática consagrada descrita em hepatologia pediátrica, com evidência de séries de casos. Interfere na absorção de vitaminas lipossolúveis e de outros medicamentos, exigindo espaçamento das tomadas. Confirmar conforme protocolo e bula.', verificar: true }
+          ] },
+        { ordem: 4, rotulo: 'Segunda linha - sinais de insuficiência hepática aguda', tipo: 'segunda',
+          opcoes: [
+            { medId: null, nome: 'Vitamina K (fitomenadiona)', esquema: 'Dose e via conforme protocolo do serviço e bula, com reavaliação do INR', quando: 'Alargamento do tempo de protrombina', obs: 'A piora do INR, sobretudo com encefalopatia, indica transferência imediata para serviço com suporte hepático. Confirmar conforme protocolo/bula.', verificar: true },
+            { medId: null, nome: 'Transferência para serviço com suporte hepático', esquema: '', quando: 'INR em ascensão, hipoglicemia, sonolência, inversão do ciclo sono-vigília ou qualquer alteração de comportamento', obs: 'A hepatite fulminante é rara, mas a janela para transplante é estreita. Em município do interior, acionar a regulação precocemente.' }
+          ] },
+        { ordem: 5, rotulo: 'Adjuvante - profilaxia pós-exposição dos contatos', tipo: 'adjuvante',
+          opcoes: [
+            { medId: null, nome: 'Vacina hepatite A', esquema: 'Rotina aos 15 meses; profilaxia pós-exposição de contatos suscetíveis a partir de 12 meses, preferencialmente em até 14 dias da exposição', quando: 'Contatos domiciliares e próximos suscetíveis', obs: 'Confirmar conforme o Calendário Nacional de Vacinação e a orientação da vigilância.', verificar: true },
+            { medId: null, nome: 'Imunoglobulina humana normal', esquema: 'Preferencialmente em até 14 dias da exposição, dose e via conforme protocolo do CRIE e bula', quando: 'Contatos menores de 12 meses, imunossuprimidos e hepatopatas crônicos', obs: 'Confirmar conforme protocolo/bula e disponibilidade no CRIE.', verificar: true }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Chás, garrafadas, plantas medicinais e medicamentos por conta própria', esquema: '', quando: '', obs: 'Prática muito comum na região e com risco real de agravar a lesão hepática, inclusive por hepatotoxicidade direta de algumas plantas. Orientar ativamente contra e perguntar de forma específica sobre o uso.' },
+            { medId: 'ibuprofeno', nome: 'Anti-inflamatórios não esteroidais', esquema: '', quando: '', obs: 'Evitar na hepatite aguda pelo risco de sangramento digestivo e de lesão renal associada.' },
+            { medId: null, nome: 'Repouso absoluto prolongado e dieta com restrição rígida de gorduras', esquema: '', quando: '', obs: 'Práticas antigas sem respaldo. O repouso é relativo, conforme a tolerância, e a dieta é livre, com boa oferta calórica.' },
+            { medId: null, nome: 'Corticoide ou antiviral para hepatite A', esquema: '', quando: '', obs: 'Sem indicação e sem eficácia demonstrada. O cuidado é de suporte e de vigilância ativa.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Precauções de contato e higiene rigorosa das mãos, com afastamento de creche e escola por 7 dias após o início da icterícia.',
+        'Suspensão de medicamentos hepatotóxicos e desnecessários.',
+        'Medidas gerais para o prurido colestático: banho morno, hidratante, unhas curtas.',
+        'Investigação da fonte de contaminação, com acionamento da vigilância sanitária e epidemiológica, pois surtos por água e alimentos são comuns.',
+        'Monitorização de INR, glicemia, bilirrubinas e transaminases nos casos com vômitos, icterícia intensa ou sinal de alarme.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Guia de vigilância em saúde, hepatites virais', ano: 2023 }, { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre hepatites virais na infância', ano: 2022 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    febre_tifoide: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha', tipo: 'primeira',
+          opcoes: [
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: '50 a 100 mg/kg/dia IV uma vez ao dia ou dividida a cada 12 h, máximo 2 a 4 g ao dia, por 10 a 14 dias, conforme protocolo do serviço', quando: 'Casos que exigem internação, lactentes e quadros complicados', obs: 'Considerar o perfil de resistência local, que é crescente para ampicilina, cloranfenicol e sulfametoxazol com trimetoprima.' },
+            { medId: 'azitromicina', nome: 'Azitromicina', esquema: '10 a 20 mg/kg/dia VO uma vez ao dia, máximo 500 a 1.000 mg ao dia, por 5 a 7 dias, conforme protocolo do serviço', quando: 'Casos não complicados com boa tolerância oral, inclusive em tratamento ambulatorial em comunidade distante', obs: 'Boa penetração intracelular. A posologia em dose única diária facilita o tratamento supervisionado.' }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa guiada por antibiograma', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'sulfametoxazol_trimetoprim', nome: 'Sulfametoxazol + trimetoprima', esquema: '40 mg/kg/dia de sulfametoxazol e 8 mg/kg/dia de trimetoprima VO dividida a cada 12 h por 14 dias', quando: 'Alternativa apenas quando o isolado for comprovadamente sensível', obs: 'Contraindicado em menores de 2 meses e na deficiência de G6PD. Ajustar sempre pelo antibiograma.' },
+            { medId: null, nome: 'Cloranfenicol', esquema: 'Dose e duração conforme protocolo do Ministério da Saúde e bula, com monitorização hematológica', quando: 'Alternativa histórica onde houver sensibilidade comprovada e disponibilidade', obs: 'Risco de aplasia medular e de síndrome cinzenta no lactente. Confirmar conforme protocolo/bula.', verificar: true }
+          ] },
+        { ordem: 3, rotulo: 'Uso off-label', tipo: 'offlabel',
+          opcoes: [
+            { medId: 'ciprofloxacino', nome: 'Ciprofloxacino', esquema: 'Dose e duração conforme protocolo do serviço e bula, guiado por antibiograma', quando: 'Avaliar em cepas multirresistentes com sensibilidade comprovada a fluoroquinolonas, ou quando as demais opções não estão disponíveis ou são contraindicadas', obs: 'Off-label em pediatria para essa indicação, por restrição de bula ligada ao risco osteoarticular observado em animais. A OMS e diretrizes internacionais reconhecem o uso em febre tifoide resistente na criança, com segurança apoiada por metanálises. Atenção à resistência crescente a quinolonas em cepas do sudeste asiático. Confirmar conforme protocolo do serviço e bula.', verificar: true }
+          ] },
+        { ordem: 4, rotulo: 'Adjuvante / suporte', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'sais_reidratacao_oral', nome: 'Sais de reidratação oral', esquema: 'Conforme plano A ou B do Ministério da Saúde', quando: 'Manutenção da hidratação', obs: 'Dieta leve e fracionada conforme tolerância, evitando jejum desnecessário.' },
+            { medId: 'ringer_lactato', nome: 'Ringer lactato', esquema: 'Expansão volêmica conforme protocolo de ressuscitação do serviço', quando: 'Desidratação grave ou choque', obs: '' },
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula', quando: 'Febre e dor', obs: 'Evitar anti-inflamatórios e ácido acetilsalicílico pelo risco de sangramento digestivo.' },
+            { medId: 'metronidazol', nome: 'Metronidazol', esquema: 'Associado à cobertura para anaeróbios conforme protocolo cirúrgico do serviço', quando: 'Perfuração intestinal, complicação mais temida, associada a antibiótico de amplo espectro e cirurgia de urgência', obs: '' },
+            { medId: 'dexametasona', nome: 'Dexametasona', esquema: 'Curso curto em dose alta conforme protocolo do serviço e avaliação especializada', quando: 'Formas graves com choque ou alteração importante do sensório', obs: 'Confirmar conforme protocolo/bula e avaliação especializada.', verificar: true }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Trocar o antibiótico apenas porque a febre persiste em 48 a 72 h', esquema: '', quando: '', obs: 'A febre costuma levar de 3 a 5 dias para ceder mesmo com antibiótico eficaz. Esse retardo isolado não indica falha nem troca precoce do esquema.' },
+            { medId: null, nome: 'Antidiarreicos, antiespasmódicos e opiáceos que reduzem a motilidade', esquema: '', quando: '', obs: 'Evitar pelo risco de íleo, megacólon e perfuração intestinal.' },
+            { medId: 'ibuprofeno', nome: 'Anti-inflamatórios não esteroidais e ácido acetilsalicílico', esquema: '', quando: '', obs: 'Evitar pelo risco de sangramento digestivo, complicação clássica da febre tifoide.' },
+            { medId: null, nome: 'Antibiótico empírico sem coleta de hemocultura quando ela é possível', esquema: '', quando: '', obs: 'A hemocultura orienta o esquema diante da resistência crescente. Coletar antes da primeira dose sempre que isso não atrase o tratamento.' },
+            { medId: null, nome: 'Alta sem investigação de portadores crônicos entre os contatos', esquema: '', quando: '', obs: 'Investigar e tratar portadores, especialmente manipuladores de alimentos, é o que interrompe a cadeia de transmissão.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Notificação compulsória e investigação epidemiológica da fonte de contaminação: água, alimento ou manipulador.',
+        'Precauções de contato e higiene rigorosa das mãos.',
+        'Dieta leve e fracionada conforme tolerância, com jejum e avaliação cirúrgica imediata diante de suspeita de perfuração.',
+        'Vigilância de dor abdominal intensa, distensão e sinais de peritonite entre a segunda e a terceira semana de doença.',
+        'Orientação comunitária sobre tratamento da água e higiene de alimentos, essencial em comunidades sem saneamento.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Guia de vigilância em saúde, febre tifoide', ano: 2023 }, { nome: 'OMS - Typhoid fever, background document and treatment guidance', ano: 2019 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    hiv_pediatrico: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - terapia antirretroviral para todos', tipo: 'primeira',
+          opcoes: [
+            { medId: null, nome: 'Terapia antirretroviral combinada', esquema: 'Esquema, doses e apresentações definidos exclusivamente conforme o Protocolo Clínico e Diretrizes Terapêuticas para Manejo da Infecção pelo HIV em Crianças e Adolescentes do Ministério da Saúde vigente, com ajuste por peso e superfície corporal a cada consulta', quando: 'Toda criança e adolescente com diagnóstico confirmado, independentemente de sintomas ou de contagem de CD4, o mais precocemente possível', obs: 'Nos casos de transmissão vertical, iniciar idealmente nas primeiras semanas de vida. Condução obrigatória em serviço especializado. Confirmar conforme protocolo e bula.', verificar: true }
+          ] },
+        { ordem: 2, rotulo: 'Profilaxia de infecções oportunistas', tipo: 'primeira',
+          opcoes: [
+            { medId: 'sulfametoxazol_trimetoprim', nome: 'Sulfametoxazol + trimetoprima (profilaxia)', esquema: '750 mg/m2/dia de sulfametoxazol, ou cerca de 5 mg/kg/dia de trimetoprima, VO em 1 a 2 tomadas, 3 vezes por semana ou diariamente, conforme o PCDT', quando: 'Toda criança exposta a partir de 4 a 6 semanas de vida até a definição diagnóstica, e crianças infectadas conforme idade e contagem de CD4', obs: 'Profilaxia para Pneumocystis jirovecii. Confirmar esquema conforme o PCDT vigente.', verificar: true },
+            { medId: null, nome: 'Fórmula infantil', esquema: 'Garantida pelo serviço de saúde durante o período recomendado', quando: 'Toda criança exposta ao HIV, uma vez que o aleitamento materno é contraindicado', obs: 'Orientar inibição da lactação na mãe. Em comunidade distante, garantir o fornecimento contínuo e a água segura para o preparo, sem o que a substituição se torna mais arriscada que o próprio risco de transmissão.' }
+          ] },
+        { ordem: 3, rotulo: 'Segunda linha - tratamento de infecção oportunista', tipo: 'segunda',
+          opcoes: [
+            { medId: 'sulfametoxazol_trimetoprim', nome: 'Sulfametoxazol + trimetoprima (tratamento)', esquema: '15 a 20 mg/kg/dia de trimetoprima IV ou VO dividida a cada 6 ou 8 h por 21 dias', quando: 'Suspeita de pneumocistose, iniciando de forma empírica e imediata, sem aguardar confirmação', obs: 'A pneumocistose é a principal causa de morte no lactente com HIV não diagnosticado. Confirmar conforme protocolo do serviço.', verificar: true },
+            { medId: 'prednisolona', nome: 'Prednisolona', esquema: '1 a 2 mg/kg/dia VO com desmame ao longo do tratamento, conforme protocolo do serviço', quando: 'Adjuvante na pneumocistose com hipoxemia', obs: 'Confirmar conforme protocolo do serviço.', verificar: true },
+            { medId: null, nome: 'Fluconazol', esquema: 'Dose e duração conforme protocolo do serviço e bula', quando: 'Candidíase oral refratária ao tratamento tópico, ou candidíase esofágica', obs: 'Confirmar conforme protocolo/bula.', verificar: true },
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: '50 a 100 mg/kg/dia IV, conforme protocolo do serviço', quando: 'Infecção bacteriana grave na criança com HIV, que tem risco aumentado de doença invasiva', obs: '' },
+            { medId: 'azitromicina', nome: 'Azitromicina', esquema: 'Dose conforme indicação específica e protocolo do serviço', quando: 'Profilaxia ou tratamento de micobacteriose atípica e de infecções bacterianas conforme indicação', obs: 'Confirmar conforme protocolo/bula.', verificar: true }
+          ] },
+        { ordem: 4, rotulo: 'Uso off-label', tipo: 'offlabel',
+          opcoes: [
+            { medId: null, nome: 'Antirretrovirais fora da faixa etária, do peso ou da apresentação aprovada em bula', esquema: 'Definido exclusivamente pelo PCDT vigente e por infectologia pediátrica', quando: 'Situações em que o esquema recomendado para a criança usa fármaco ou formulação sem registro específico para aquela faixa de peso ou idade no Brasil', obs: 'Off-label por faixa etária ou apresentação: é situação frequente em pediatria do HIV, porque o registro em bula costuma ficar atrás da evidência. O uso é respaldado pelo PCDT do Ministério da Saúde, pelas diretrizes da OMS e por estudos de farmacocinética pediátrica. Nunca improvisar fracionamento de comprimido de adulto sem orientação do protocolo. Confirmar conforme protocolo e bula.', verificar: true }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Adiar a terapia antirretroviral à espera de CD4 ou de melhora clínica', esquema: '', quando: '', obs: 'Contrário à recomendação atual. O início precoce reduz mortalidade de forma marcante no lactente, e o tratamento é indicado para todos, independentemente de sintomas ou de CD4.' },
+            { medId: null, nome: 'Aleitamento materno por mãe vivendo com HIV', esquema: '', quando: '', obs: 'Contraindicado no Brasil, inclusive com carga viral indetectável, conforme protocolo do Ministério da Saúde. Também não usar leite de outra nutriz sem pasteurização em banco de leite.' },
+            { medId: null, nome: 'Interromper a terapia antirretroviral por melhora clínica ou por carga viral indetectável', esquema: '', quando: '', obs: 'A interrupção leva a rebote virológico e a resistência. O tratamento é contínuo e por toda a vida.' },
+            { medId: null, nome: 'Aplicar vacinas de agentes vivos sem avaliação do estado imunológico', esquema: '', quando: '', obs: 'Exigem avaliação prévia conforme o Manual do CRIE, pelo risco de doença vacinal em imunossupressão grave.' },
+            { medId: null, nome: 'Revelação do diagnóstico à criança de forma abrupta ou por terceiros', esquema: '', quando: '', obs: 'A revelação deve ser gradual, adequada à idade e conduzida por equipe multiprofissional, com atenção ao sigilo, sobretudo em comunidades pequenas onde a exposição social é inevitável.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Manejo da adesão como prioridade clínica, com acolhimento, apoio psicossocial, envolvimento do cuidador e dispensação adaptada à realidade ribeirinha, com apoio do agente comunitário e da referência.',
+        'Suporte nutricional intensivo, com acompanhamento do crescimento e tratamento da desnutrição conforme protocolo específico.',
+        'Calendário vacinal ampliado com vacinas do CRIE, avaliando o estado imunológico antes de agentes vivos.',
+        'Cuidado com o sigilo e com a revelação diagnóstica gradual, conduzida por equipe multiprofissional.',
+        'Monitorização laboratorial periódica de carga viral, CD4, hemograma, função renal e hepática e perfil metabólico, e rastreamento de infecções sexualmente transmissíveis em adolescentes.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - PCDT para Manejo da Infecção pelo HIV em Crianças e Adolescentes', ano: 2023 }, { nome: 'OMS - Consolidated guidelines on HIV prevention, testing, treatment and service delivery', ano: 2021 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    glomerulonefrite_pos_estreptococica: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - controle da hipervolemia', tipo: 'primeira',
+          opcoes: [
+            { medId: null, nome: 'Restrição de sódio e de líquidos', esquema: 'Dieta sem sal de adição e restrição hídrica proporcional à diurese e às perdas insensíveis, conforme avaliação', quando: 'Enquanto houver edema, hipertensão ou oligúria', obs: 'Medida não medicamentosa central. A doença é autolimitada e o cuidado é de suporte.' },
+            { medId: null, nome: 'Furosemida', esquema: '1 a 2 mg/kg/dose VO ou IV, repetida conforme resposta e protocolo do serviço, com monitorização de eletrólitos e diurese', quando: 'Hipervolemia, edema e hipertensão volume-dependente, que é o mecanismo predominante', obs: 'Diurético de alça é a medida medicamentosa inicial. Confirmar dose e intervalo conforme protocolo e bula.', verificar: true }
+          ] },
+        { ordem: 2, rotulo: 'Segunda linha - hipertensão sem resposta ao diurético', tipo: 'segunda',
+          opcoes: [
+            { medId: null, nome: 'Anti-hipertensivo adicional, por exemplo nifedipino, hidralazina ou nitroprussiato', esquema: 'Escolha, via, dose e velocidade de redução pressórica definidas conforme o protocolo de emergência hipertensiva do serviço e avaliação da nefrologia pediátrica', quando: 'Hipertensão que não responde ao diurético e à restrição, e emergência hipertensiva com encefalopatia', obs: 'Na emergência hipertensiva, a redução deve ser controlada e gradual, em ambiente monitorizado, evitando quedas abruptas. Evitar inibidores da enzima conversora de angiotensina na fase aguda com hipercalemia ou queda de função renal. Confirmar conforme protocolo e bula.', verificar: true },
+            { medId: null, nome: 'Diálise', esquema: 'Indicação e modalidade conforme avaliação da nefrologia pediátrica', quando: 'Hipercalemia refratária, acidose grave, hipervolemia refratária com edema agudo de pulmão, uremia sintomática ou anúria prolongada', obs: 'Acionar a referência precocemente, antes da descompensação, especialmente quando o transporte é demorado.' }
+          ] },
+        { ordem: 3, rotulo: 'Erradicação do estreptococo e da fonte comunitária', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'penicilina_benzatina', nome: 'Penicilina G benzatina', esquema: 'Dose única IM: 600.000 UI se peso abaixo de 27 kg e 1.200.000 UI se peso igual ou acima de 27 kg', quando: 'Erradicação do estreptococo, para reduzir a circulação da cepa nefritogênica na comunidade', obs: 'Não altera o curso da glomerulonefrite já instalada, mas tem papel epidemiológico, sobretudo em surtos comunitários.' },
+            { medId: 'amoxicilina', nome: 'Amoxicilina', esquema: '50 mg/kg/dia VO, máximo 1 g ao dia, por 10 dias', quando: 'Alternativa oral para erradicação', obs: '' },
+            { medId: 'permetrina', nome: 'Permetrina 5%', esquema: 'Loção ou creme no corpo todo do pescoço para baixo, por 8 a 12 h, repetida após 7 dias, conforme protocolo do Ministério da Saúde', quando: 'Escabiose associada, no paciente e nos contatos domiciliares', obs: 'Na Amazônia a porta de entrada mais comum é a piodermite sobre escabiose. Tratar a escabiose e os contatos é o que interrompe o surto comunitário.' },
+            { medId: 'cefalexina', nome: 'Cefalexina', esquema: '50 a 100 mg/kg/dia VO dividida a cada 6 h por 7 a 10 dias, conforme protocolo', quando: 'Piodermite associada', obs: '' }
+          ] },
+        { ordem: 4, rotulo: 'Alternativa em alergia a penicilina', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'azitromicina', nome: 'Azitromicina', esquema: '12 mg/kg/dia VO uma vez ao dia, máximo 500 mg ao dia, por 5 dias, conforme bula', quando: 'Alergia à penicilina, para a erradicação do estreptococo', obs: 'Considerar o perfil de resistência local.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: 'prednisolona', nome: 'Corticoide e imunossupressores na forma clássica', esquema: '', quando: '', obs: 'Sem indicação. A glomerulonefrite pós-estreptocócica clássica é autolimitada e o cuidado é de suporte. Considerar investigação de outra glomerulopatia se a evolução fugir do esperado.' },
+            { medId: null, nome: 'Nifedipino sublingual na crise hipertensiva', esquema: '', quando: '', obs: 'Não recomendado. A queda pressórica é abrupta e imprevisível, com risco de isquemia cerebral e miocárdica. A redução deve ser gradual e controlada, com agente e via definidos em protocolo.' },
+            { medId: null, nome: 'Restrição proteica de rotina', esquema: '', quando: '', obs: 'Não indicada. Ajustar o aporte conforme função renal e avaliação nutricional, sem restrição rotineira que comprometa o crescimento.' },
+            { medId: null, nome: 'Antibiótico para prevenir a glomerulonefrite após faringite ou piodermite', esquema: '', quando: '', obs: 'O antibiótico previne a febre reumática, mas não previne de forma confiável a glomerulonefrite. Não usar esse argumento para prescrever antibiótico em faringite viral.' },
+            { medId: null, nome: 'Alta sem seguimento do complemento e da urina', esquema: '', quando: '', obs: 'Acompanhar pressão arterial, urina rotina e C3 até a normalização. C3 que não normaliza em 8 a 12 semanas sugere outra glomerulopatia e exige nefrologia.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Controle rigoroso de peso diário, balanço hídrico, diurese e pressão arterial várias vezes ao dia nos casos internados.',
+        'Tratamento simultâneo de escabiose e piodermite do paciente e dos contatos domiciliares, medida essencial para interromper surtos comunitários.',
+        'Repouso relativo na fase aguda com hipertensão ou edema, com retorno gradual às atividades.',
+        'Acompanhamento ambulatorial prolongado com pressão arterial, urina rotina e C3 até a normalização.',
+        'Busca ativa de outros casos na comunidade, pois a glomerulonefrite pós-piodermite costuma ocorrer em surtos em áreas com escabiose endêmica.'
+      ],
+      fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre glomerulonefrite difusa aguda', ano: 2022 }, { nome: 'OMS - Rheumatic fever and streptococcal disease control', ano: 2021 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    otite_media_aguda: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - analgesia sempre e antibiótico quando indicado', tipo: 'primeira',
+          opcoes: [
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula, em horários regulares nas primeiras 48 h', quando: 'Todos os casos, com ou sem antibiótico, pois a otalgia é o que mais incomoda a criança', obs: 'A analgesia é prioridade e frequentemente é subvalorizada na prescrição.' },
+            { medId: 'amoxicilina', nome: 'Amoxicilina', esquema: '80 a 90 mg/kg/dia VO dividida a cada 12 h, máximo 2 a 3 g ao dia, por 10 dias em menores de 2 anos, em otite grave ou com otorreia, e por 5 a 7 dias em maiores de 2 anos com quadro leve a moderado', quando: 'Antibiótico indicado em menores de 6 meses; de 6 a 23 meses com otite bilateral ou com otorreia; e em qualquer idade quando o quadro for grave, com otalgia moderada a intensa, dor por 48 h ou mais, ou temperatura igual ou superior a 39 graus', obs: 'Primeira escolha em dose alta para cobrir pneumococo com sensibilidade reduzida.' }
+          ] },
+        { ordem: 2, rotulo: 'Observação vigilante como alternativa ao antibiótico imediato', tipo: 'alternativa',
+          opcoes: [
+            { medId: null, nome: 'Observação vigilante por 48 a 72 h com analgesia e retorno assegurado', esquema: 'Analgesia regular e reavaliação em 48 a 72 h, com prescrição de resgate quando apropriado', quando: 'Avaliar em criança de 6 a 23 meses com otite unilateral não grave, e em maiores de 24 meses com quadro não grave', obs: 'Essa estratégia depende de retorno garantido. Em comunidade ribeirinha ou indígena com transporte fluvial e retorno incerto, costuma ser mais seguro tratar desde o início. Registrar a decisão e o plano combinado com a família.' }
+          ] },
+        { ordem: 3, rotulo: 'Alternativa em alergia a penicilina', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'cefalexina', nome: 'Cefalexina', esquema: '50 mg/kg/dia VO dividida a cada 6 h, conforme protocolo do serviço', quando: 'Alergia não anafilática à penicilina', obs: 'Evitar se houve anafilaxia ou reação cutânea grave a betalactâmico.' },
+            { medId: 'azitromicina', nome: 'Azitromicina', esquema: '10 mg/kg no 1o dia e 5 mg/kg/dia do 2o ao 5o dia VO, conforme bula', quando: 'Alergia grave à penicilina', obs: 'Menor atividade contra pneumococo resistente, o que exige reavaliação mais atenta em 48 a 72 h.' },
+            { medId: 'claritromicina', nome: 'Claritromicina', esquema: '15 mg/kg/dia VO dividida a cada 12 h por 10 dias, máximo 1 g ao dia', quando: 'Alternativa de macrolídeo em alergia à penicilina', obs: '' }
+          ] },
+        { ordem: 4, rotulo: 'Segunda linha - falha terapêutica ou intolerância à via oral', tipo: 'segunda',
+          opcoes: [
+            { medId: 'amoxicilina_clavulanato', nome: 'Amoxicilina + clavulanato', esquema: '80 a 90 mg/kg/dia do componente amoxicilina VO dividida a cada 12 h, em formulação com baixa proporção de clavulanato, por 10 dias', quando: 'Falha terapêutica após 48 a 72 h, uso de amoxicilina nos últimos 30 dias, conjuntivite purulenta concomitante sugestiva de Haemophilus, ou otite recorrente', obs: 'Atenção à formulação: proporções altas de clavulanato aumentam diarreia sem ganho de cobertura.' },
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: '50 mg/kg/dia IM ou IV uma vez ao dia por 1 a 3 dias, conforme protocolo do serviço', quando: 'Vômitos, intolerância à via oral ou falha terapêutica, inclusive como forma de iniciar o tratamento em unidade sem via oral viável', obs: 'A aplicação intramuscular permite tratar em unidade básica distante sem depender da adesão diária.' }
+          ] },
+        { ordem: 5, rotulo: 'Uso off-label', tipo: 'offlabel',
+          opcoes: [
+            { medId: 'amoxicilina', nome: 'Amoxicilina em dose alta, 80 a 90 mg/kg/dia', esquema: '80 a 90 mg/kg/dia VO dividida a cada 12 h, máximo 2 a 3 g ao dia', quando: 'Otite média aguda com indicação de antibiótico, especialmente em menores de 2 anos, em creche e com uso recente de antibiótico', obs: 'Off-label quanto à dose: a bula brasileira da amoxicilina prevê habitualmente 20 a 50 mg/kg/dia. A dose alta é recomendada por diretrizes nacionais e internacionais de otite e de pneumonia para superar pneumococo com sensibilidade intermediária às penicilinas, com segurança bem estabelecida. Registrar a justificativa e confirmar conforme protocolo e bula.', verificar: true }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Descongestionantes, anti-histamínicos e corticoides na otite média aguda', esquema: '', quando: '', obs: 'Sem benefício demonstrado sobre a dor, a duração ou a efusão, e com efeitos adversos, especialmente em lactentes.' },
+            { medId: null, nome: 'Introduzir água, óleo, ervas, leite materno ou fumaça de cigarro no conduto auditivo', esquema: '', quando: '', obs: 'Práticas domiciliares frequentes, sem eficácia e com risco de otite externa, dermatite e queimadura. Perguntar ativamente e orientar contra.' },
+            { medId: null, nome: 'Gotas otológicas potencialmente ototóxicas com membrana perfurada', esquema: '', quando: '', obs: 'Evitar formulações com aminoglicosídeo quando há perfuração ou tubo de ventilação, pelo risco de ototoxicidade. Verificar a composição conforme bula.' },
+            { medId: 'azitromicina', nome: 'Macrolídeo como primeira escolha sem alergia a penicilina', esquema: '', quando: '', obs: 'Atividade insuficiente contra pneumococo resistente e Haemophilus. A amoxicilina em dose alta é superior.' },
+            { medId: null, nome: 'Observação vigilante sem retorno assegurado', esquema: '', quando: '', obs: 'A estratégia exige reavaliação garantida em 48 a 72 h. Sem isso, o risco de mastoidite e de complicação supera o benefício de evitar o antibiótico.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Otoscopia cuidadosa com avaliação de abaulamento, mobilidade e otorreia, que definem o diagnóstico e a indicação de antibiótico.',
+        'Reavaliação em 48 a 72 h, com reexame da região mastoidea.',
+        'Redução de fatores de risco: tabagismo passivo, uso de mamadeira deitado e chupeta após o primeiro ano.',
+        'Revisão do calendário vacinal, sobretudo pneumocócica e influenza.',
+        'Encaminhamento à otorrinolaringologia na otite recorrente, com 3 episódios em 6 meses ou 4 em 12 meses, efusão por mais de 3 meses, perfuração persistente ou suspeita de perda auditiva.'
+      ],
+      fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre otite média aguda', ano: 2023 }, { nome: 'OMS - Pocket book of hospital care for children', ano: 2013 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    faringoamigdalite_estreptococica: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha', tipo: 'primeira',
+          opcoes: [
+            { medId: 'penicilina_benzatina', nome: 'Penicilina G benzatina', esquema: 'Dose única IM: 600.000 UI se peso abaixo de 27 kg e 1.200.000 UI se peso igual ou acima de 27 kg. Observar por 30 min após a aplicação', quando: 'Faringoamigdalite estreptocócica confirmada por teste rápido ou cultura, ou com forte suspeita clínica em contexto de risco, sobretudo quando há risco de baixa adesão ou dificuldade de retorno', obs: 'Opção preferencial em comunidades ribeirinhas e indígenas, porque garante a erradicação em um único contato com o serviço.' },
+            { medId: 'amoxicilina', nome: 'Amoxicilina', esquema: '50 mg/kg/dia VO, máximo 1 g ao dia, em 1 ou 2 tomadas por 10 dias', quando: 'Alternativa oral de primeira escolha, com boa aceitação', obs: 'O objetivo principal do tratamento é prevenir a febre reumática, e para isso a duração de 10 dias é necessária. Pode ser iniciado com segurança até o 9o dia de sintomas.' }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa em alergia a penicilina', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'cefalexina', nome: 'Cefalexina', esquema: '40 a 50 mg/kg/dia VO dividida a cada 12 h, máximo 1 g ao dia, por 10 dias', quando: 'Alergia não anafilática à penicilina', obs: 'Evitar se houve anafilaxia, angioedema ou reação cutânea grave a betalactâmico.' },
+            { medId: 'azitromicina', nome: 'Azitromicina', esquema: '12 mg/kg/dia VO uma vez ao dia, máximo 500 mg ao dia, por 5 dias, conforme bula', quando: 'Alergia grave à penicilina', obs: 'Considerar a resistência local dos estreptococos a macrolídeos.' },
+            { medId: 'claritromicina', nome: 'Claritromicina', esquema: '15 mg/kg/dia VO dividida a cada 12 h, máximo 500 mg por dose, por 10 dias', quando: 'Alternativa de macrolídeo em alergia grave à penicilina', obs: '' }
+          ] },
+        { ordem: 3, rotulo: 'Segunda linha - falha terapêutica ou complicação supurativa', tipo: 'segunda',
+          opcoes: [
+            { medId: 'amoxicilina_clavulanato', nome: 'Amoxicilina + clavulanato', esquema: '45 a 50 mg/kg/dia do componente amoxicilina VO dividida a cada 12 h, conforme protocolo do serviço', quando: 'Complicação supurativa ou falha terapêutica, conforme avaliação', obs: 'Antes de assumir falha, rever adesão, dose e diagnóstico alternativo.' },
+            { medId: null, nome: 'Reavaliação em 48 a 72 h e investigação de diagnóstico alternativo', esquema: '', quando: 'Persistência da febre após 48 a 72 h de antibiótico adequado', obs: 'Considerar abscesso periamigdaliano, que exige avaliação otorrinolaringológica e drenagem, e mononucleose, em que a amoxicilina causa exantema.' }
+          ] },
+        { ordem: 4, rotulo: 'Uso off-label', tipo: 'offlabel',
+          opcoes: [
+            { medId: 'amoxicilina', nome: 'Amoxicilina em dose única diária por 10 dias', esquema: '50 mg/kg VO uma vez ao dia, máximo 1 g ao dia, por 10 dias', quando: 'Avaliar quando a adesão a múltiplas tomadas é o principal obstáculo, situação comum quando a família mora longe e o cuidador trabalha fora', obs: 'Off-label quanto à posologia: a bula prevê administração fracionada a cada 8 ou 12 h. A dose única diária por 10 dias é recomendada por diretrizes de faringite estreptocócica, com eficácia de erradicação comparável demonstrada em ensaios clínicos e metanálises. Confirmar conforme protocolo e bula.', verificar: true }
+          ] },
+        { ordem: 5, rotulo: 'Adjuvante / sintomático', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula, em horários regulares nos primeiros dias', quando: 'Dor de garganta e febre, sintoma que mais incomoda a criança', obs: '' },
+            { medId: 'ibuprofeno', nome: 'Ibuprofeno', esquema: '5 a 10 mg/kg/dose VO a cada 6 a 8 h, conforme bula', quando: 'Odinofagia importante', obs: 'Evitar em desidratação ou suspeita de infecção invasiva de partes moles.' },
+            { medId: 'dipirona', nome: 'Dipirona', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula', quando: 'Alternativa analgésica e antitérmica', obs: '' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Antibiótico para faringite com características virais', esquema: '', quando: '', obs: 'Tosse, coriza, rouquidão, conjuntivite e úlceras orais indicam etiologia viral. Não prescrever antibiótico nesses casos é a principal medida de uso racional de antimicrobianos em pediatria, e evita rótulos falsos de alergia.' },
+            { medId: 'amoxicilina', nome: 'Encurtar o curso oral para menos de 10 dias', esquema: '', quando: '', obs: 'A prevenção da febre reumática depende da erradicação, que exige os 10 dias completos, mesmo com a criança assintomática no terceiro dia.' },
+            { medId: 'prednisolona', nome: 'Corticoide de rotina na faringoamigdalite', esquema: '', quando: '', obs: 'Não recomendado. O ganho sobre a dor é pequeno e transitório, e pode mascarar complicação supurativa. Reservar para obstrução de via aérea conforme avaliação especializada.' },
+            { medId: null, nome: 'Tratar portadores assintomáticos de rotina', esquema: '', quando: '', obs: 'Não indicado. O portador crônico tem baixo risco de complicação e de transmissão.' },
+            { medId: null, nome: 'Indicar amigdalectomia sem critérios estabelecidos', esquema: '', quando: '', obs: 'A indicação depende de episódios documentados e frequentes ou de abscessos de repetição, e deve ser avaliada por otorrinolaringologia.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Teste rápido ou cultura sempre que disponível, para evitar antibiótico em faringite viral.',
+        'Hidratação com líquidos frios, gelatina, sorvete e alimentos macios, evitando ácidos, quentes e condimentados.',
+        'Afastamento escolar até 24 h após o início do antibiótico eficaz e resolução da febre.',
+        'Reavaliação em 48 a 72 h e avaliação de contatos domiciliares sintomáticos.',
+        'Orientação escrita sobre sinais de glomerulonefrite em 1 a 3 semanas e de febre reumática em 2 a 4 semanas, com data de retorno combinada.'
+      ],
+      fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre faringoamigdalites na infância', ano: 2023 }, { nome: 'OMS - Rheumatic fever and rheumatic heart disease, technical report', ano: 2021 } ],
+      atualizadoEm: '2026-09'
+    },
   },
 
   rotulosTipo: {
