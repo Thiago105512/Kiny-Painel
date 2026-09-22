@@ -188,15 +188,18 @@ window.PED = window.PED || {};
     const DI = D().didatica; if (!DI) return '';
     const cs = (ids || []).map(conceito).filter(Boolean);
     if (!cs.length) return '';
-    return `<div class="card entenda"><h2>📖 ${esc(titulo || 'Entenda')}</h2>
+    const umSo = cs.length === 1;
+    const cab = umSo ? 'Entenda: ' + cs[0].termo : (titulo || 'Entenda');
+    const jaNoTitulo = (c) => umSo || U.normalize(cab).endsWith(U.normalize(c.termo));
+    return `<div class="card entenda"><h2>📖 ${esc(cab)}</h2>
       ${cs.map(c => `<div class="conceito">
-        <h3>${esc(c.termo)}</h3>
+        ${jaNoTitulo(c) ? '' : `<h3>${esc(c.termo)}</h3>`}
         <p>${esc(c.oQueE)}</p>
         <details><summary>Por que acontece</summary><div class="body"><p>${esc(c.porQueAcontece)}</p>${c.naCrianca ? `<p><b>Na criança:</b> ${esc(c.naCrianca)}</p>` : ''}</div></details>
         ${(c.quandoPreocupa || []).length ? `<details><summary>Quando preocupa</summary><div class="body">${U.list(c.quandoPreocupa)}</div></details>` : ''}
         ${(c.mitos || []).length ? `<details><summary>Mitos frequentes</summary><div class="body">${c.mitos.map(m => `<p><b>Mito:</b> ${esc(m.mito)}<br><b>Na verdade:</b> ${esc(m.verdade)}</p>`).join('')}</div></details>` : ''}
         ${c.explicarFamilia ? `<div class="falaFamilia"><b>🗣️ Para explicar à família</b><p>${esc(c.explicarFamilia)}</p><button class="btn sm ghost" data-act="copiarTexto" data-t="${esc(c.explicarFamilia)}">📋 copiar</button></div>` : ''}
-        ${(c.relacionado || []).length ? `<div style="margin-top:.3rem">${c.relacionado.map(rid => { const rc = conceito(rid); return rc ? `<a class="chip" href="#/entender/${esc(rid)}">${esc(rc.termo)}</a>` : ''; }).join(' ')}</div>` : ''}
+        <div style="margin-top:.4rem"><a class="chip" href="#/entender/${esc(c.id)}">ficha completa</a>${(c.relacionado || []).map(rid => { const rc = conceito(rid); return rc ? ` <a class="chip gray" href="#/entender/${esc(rid)}">${esc(rc.termo)}</a>` : ''; }).join('')}</div>
       </div>`).join('')}
       <small class="muted">${esc(DI.aviso || '')}</small></div>`;
   }
