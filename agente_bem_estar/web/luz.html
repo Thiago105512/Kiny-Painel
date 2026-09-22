@@ -29,6 +29,7 @@
     --bg: #11161f; --surface: #1a212d; --ink: #e7ebf2; --muted: #9aa4b6; --line: #2a3342;
     --accent: #f0b356; --accent-ink: #1d1406; --glow: #3a2d17; --calm: #8fb0d6; --calm-soft: #1f2a3a;
   }
+  [hidden] { display: none !important; }
   html, body { height: 100%; }
   body {
     background: var(--bg); color: var(--ink); font: 16px/1.55 var(--sans);
@@ -44,10 +45,11 @@
   .apoio summary { cursor: pointer; width: fit-content; }
   .apoio p { margin: 6px 0 0; }
   .apoio a { color: var(--calm); }
-  nav { display: flex; gap: 6px; border-bottom: 1px solid var(--line); }
+  nav { display: flex; gap: 0; border-bottom: 1px solid var(--line); overflow-x: auto; scrollbar-width: none; }
+  nav button { white-space: nowrap; flex: none; }
   nav button {
     font: 500 .95rem var(--sans); color: var(--muted); background: none; border: 0;
-    padding: 10px 12px; border-bottom: 2px solid transparent; margin-bottom: -1px; cursor: pointer;
+    padding: 10px 10px; border-bottom: 2px solid transparent; margin-bottom: -1px; cursor: pointer;
   }
   nav button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
   button:focus-visible, textarea:focus-visible, input:focus-visible { outline: 2px solid var(--calm); outline-offset: 2px; }
@@ -73,6 +75,21 @@
   .btn.ghost { background: transparent; color: var(--muted); border: 1px solid var(--line); }
   .btn:disabled { opacity: .5; cursor: default; }
   .note { color: var(--muted); font-size: .85rem; margin: 0; }
+
+  /* Metas */
+  .seguir { background: var(--glow); border-radius: 14px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; }
+  .seguir p { margin: 0; }
+  .metas { display: flex; flex-direction: column; gap: 8px; }
+  .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; padding: 10px 0; border-top: 1px solid var(--line); }
+  .meta:first-child { border-top: 0; }
+  .meta span.txt { flex: 1 1 14em; overflow-wrap: anywhere; }
+  .meta.feita span.txt { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--accent); }
+  .meta small { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .estado { font-size: .8rem; font-weight: 600; border-radius: 999px; padding: 2px 10px; background: var(--calm-soft); color: var(--calm); }
+  .estado.feita { background: var(--glow); color: var(--accent); }
+  .nova-meta { display: flex; gap: 8px; }
+  .nova-meta input { flex: 1; min-width: 0; }
+  .placar { font: 400 1.25rem/1.3 var(--serif); margin: 0; }
 
   /* Humor */
   .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
@@ -115,13 +132,22 @@
 
   <nav role="tablist">
     <button role="tab" id="tab-conversa" aria-selected="true" data-tab="conversa">Conversar</button>
-    <button role="tab" id="tab-humor" aria-selected="false" data-tab="humor">Meu humor</button>
+    <button role="tab" id="tab-metas" aria-selected="false" data-tab="metas">Metas</button>
+    <button role="tab" id="tab-humor" aria-selected="false" data-tab="humor">Humor</button>
     <button role="tab" id="tab-respirar" aria-selected="false" data-tab="respirar">Respirar</button>
     <button role="tab" id="tab-memoria" aria-selected="false" data-tab="memoria">Memória</button>
   </nav>
 
   <section id="conversa" role="tabpanel">
     <div class="log" id="log" aria-live="polite"></div>
+    <div class="seguir" id="seguir" hidden>
+      <p id="seguir-texto"></p>
+      <div class="ideas">
+        <button class="chip" type="button" data-estado="feita">Consegui!</button>
+        <button class="chip" type="button" data-estado="mais_ou_menos">Mais ou menos</button>
+        <button class="chip" type="button" data-estado="nao_deu">Não deu</button>
+      </div>
+    </div>
     <div class="ideas" id="ideas">
       <button class="chip" type="button">Estou sem energia para nada</button>
       <button class="chip" type="button">Minha cabeça não para de pensar</button>
@@ -133,6 +159,19 @@
       <button class="btn" id="enviar" type="submit">Enviar</button>
     </form>
     <p class="note" id="aviso">A Luz é uma IA. Ela não substitui psicólogo ou psiquiatra. <span class="onde-salva">Tudo fica salvo neste aparelho.</span> <button class="chip" id="limpar" type="button">Começar conversa nova</button></p>
+  </section>
+
+  <section id="metas" role="tabpanel" hidden>
+    <div class="card">
+      <h2>Passos pequenos</h2>
+      <p class="placar" id="placar"></p>
+      <p class="note">Metas pequenas que você e a Luz combinaram. Ela pergunta depois como foi. Se não deu, tudo bem: vocês ajustam para algo menor.</p>
+      <div class="metas" id="lista-metas"></div>
+      <form class="nova-meta" id="form-meta">
+        <input type="text" id="nova-meta" placeholder="Ex.: tomar sol por 10 minutos" aria-label="Nova meta">
+        <button class="btn" type="submit">Adicionar</button>
+      </form>
+    </div>
   </section>
 
   <section id="humor" role="tabpanel" hidden>
@@ -205,7 +244,8 @@ Como você age:
 - Fale de forma calorosa, simples e natural, como uma boa amiga que entende do assunto. Respostas curtas (2 a 6 frases), a não ser que a pessoa peça mais. No máximo uma pergunta por vez. Texto simples, sem Markdown.
 - Tristeza, cansaço, desânimo, choro, "não aguento mais" ou "estou mal" fazem parte da depressão e merecem acolhimento e conversa, não alarme. Não fale de suicídio, crise ou números de emergência a menos que a própria pessoa traga esse assunto.
 - Ajude de forma prática quando fizer sentido: uma pequena ação concreta para hoje, perguntas gentis para olhar pensamentos muito duros de outro ângulo, respiração, sono, rotina, sol, movimento, contato com pessoas, retomar algo que a pessoa gostava, autocompaixão, pequenas vitórias.
-- Celebre qualquer avanço, por menor que seja, e lembre a pessoa dos progressos que aparecem no registro de humor.
+- Celebre qualquer avanço, por menor que seja, e lembre a pessoa dos progressos que aparecem no registro de humor e nas metas.
+- Metas: quando fizer sentido, proponha UMA meta bem pequena e concreta para hoje ou amanhã (ex.: "abrir a janela e tomar sol por 5 minutos"). Se a pessoa topar, registre com a ferramenta combinar_meta. Se houver metas em aberto de dias anteriores, pergunte com leveza como foi; quando a pessoa contar, use marcar_meta. Se ela não conseguiu, zero julgamento: acolha e ajuste para algo ainda menor. Não empurre metas quando a pessoa só quer desabafar.
 - Quando for natural na conversa, e sem repetir toda hora, incentive o cuidado com um profissional (psicólogo, psiquiatra, CAPS/UBS pelo SUS, clínicas-escola de psicologia gratuitas ou de baixo custo). Não faça diagnósticos nem indique remédios.
 
 Só se a pessoa falar claramente em se matar, se machucar ou não querer mais viver: continue calorosa e presente, pergunte com cuidado se ela está segura agora e mencione uma vez o CVV (188, 24h, gratuito, ou chat em cvv.org.br) e chamar alguém de confiança. Depois siga a conversa normalmente, com a pessoa, e não em cima do assunto.`;
@@ -213,7 +253,10 @@ Só se a pessoa falar claramente em se matar, se machucar ou não querer mais vi
   let turnos = ler(K_CHAT, []);
   let humor = ler(K_HUMOR, []);
   let memoria = ler(K_MEM, { texto: "", atualizado: "" });
-  let pendentes = ler(K_PEND, 0);  // mensagens ainda não resumidas na memória
+  let pendentes = ler(K_PEND, 0);
+  const K_METAS = "luz.metas";
+  let metas = ler(K_METAS, []);
+  const hoje = () => new Date().toLocaleDateString("sv-SE");  // mensagens ainda não resumidas na memória
 
   // Guarda na conta do Claude (privado, só a própria pessoa vê) e, de reserva, neste aparelho.
   let db = null, uid = null;
@@ -232,6 +275,7 @@ Só se a pessoa falar claramente em se matar, se machucar ou não querer mais vi
   };
   const guardarHumor = () => { humor = humor.slice(-400); guardar("humor", K_HUMOR, humor, { registros: humor }); };
   const guardarMemoria = () => guardar("memoria", K_MEM, memoria, memoria);
+  const guardarMetas = () => { metas = metas.slice(-200); guardar("metas", K_METAS, metas, { itens: metas }); };
 
   const carregamento = (async () => {
     try {
@@ -241,7 +285,9 @@ Só se a pessoa falar claramente em se matar, se machucar ou não querer mais vi
     } catch { db = null; }
     if (!db) return;
     try {
-      const [c, h, m] = await Promise.all(["conversa", "humor", "memoria"].map(n => db.doc(`data/users/${uid}/${n}`).get()));
+      const [c, h, m, mt] = await Promise.all(["conversa", "humor", "memoria", "metas"].map(n => db.doc(`data/users/${uid}/${n}`).get()));
+      if (mt.exists) { metas = mt.data().itens ?? []; gravar(K_METAS, metas); }
+      else if (metas.length) guardarMetas();
       if (c.exists) { turnos = c.data().turnos ?? []; pendentes = c.data().pendentes ?? 0; gravar(K_CHAT, turnos); gravar(K_PEND, pendentes); }
       else if (turnos.length) guardarConversa();
       if (h.exists) { humor = h.data().registros ?? []; gravar(K_HUMOR, humor); }
@@ -250,7 +296,7 @@ Só se a pessoa falar claramente em se matar, se machucar ou não querer mais vi
       else if (memoria.texto) guardarMemoria();
       document.querySelectorAll(".onde-salva").forEach(e => { e.textContent = "Tudo fica guardado na sua conta, e só você vê."; });
     } catch { db = null; }
-    renderizarConversa(); renderizarHumor(); renderizarMemoria();
+    renderizarConversa(); renderizarHumor(); renderizarMemoria(); renderizarMetas();
   })();
 
   // Abas
@@ -304,9 +350,10 @@ Só se a pessoa falar claramente em se matar, se machucar ou não querer mais vi
     refused: "Não consegui responder a isso. Pode tentar dizer de outro jeito?",
   };
 
-  let sample = null;
+  let sample = null, podeFerramentas = false;
   (async () => {
     try { sample = await window.claude?.use?.("sample"); } catch { sample = null; }
+    if (sample) { try { podeFerramentas = !!(await sample.limits())?.tools; } catch { podeFerramentas = false; } }
     if (!sample) {
       enviar.disabled = true;
       entrada.placeholder = "A conversa só funciona dentro do Claude.";
@@ -334,16 +381,16 @@ Só se a pessoa falar claramente em se matar, se machucar ou não querer mais vi
       : "Vocês ainda não se conhecem bem: aos poucos, com leveza, procure conhecer a pessoa.";
     const contexto = REGRAS + "\n\n" + lembrancas + "\n\n" + resumoHumor() +
       `\n\nVocê já cumprimentou a pessoa com: "${saudacao()}"\n\nMensagem da pessoa:\n`;
-    const input = recente.map((t, i) => i === 0 ? { role: "user", content: contexto + t.content } : t);
+    const contextoCompleto = contexto.replace("\n\nMensagem da pessoa:\n", "\n\n" + resumoMetas() + "\n\nMensagem da pessoa:\n");
+    const input = recente.map((t, i) => i === 0 ? { role: "user", content: contextoCompleto + t.content } : t);
+    const opcoes = { onText: ({ text }) => { resp.classList.remove("wait"); resp.textContent = text; rolar(); } };
+    if (podeFerramentas) opcoes.tools = ferramentasMetas(); else opcoes.cache = false;
 
     const resp = bolha("luz wait", "Luz está escrevendo…");
     enviar.disabled = true;
     rolar();
     try {
-      const { text } = await sample(input, {
-        cache: false,
-        onText: ({ text }) => { resp.classList.remove("wait"); resp.textContent = text; rolar(); },
-      });
+      const { text } = await sample(input, opcoes);
       resp.classList.remove("wait");
       resp.textContent = text;
       turnos.push({ role: "assistant", content: text });
@@ -426,6 +473,108 @@ Só se a pessoa falar claramente em se matar, se machucar ou não querer mais vi
     }
   }
 
+  // Metas
+  const NOMES_ESTADO = { aberta: "em aberto", feita: "feita", mais_ou_menos: "mais ou menos", nao_deu: "não deu" };
+  const dataCurta = d => d.split("-").reverse().slice(0, 2).join("/");
+  function novaMeta(texto) {
+    const meta = { id: Date.now().toString(36) + Math.random().toString(36).slice(2, 5), texto: texto.trim().slice(0, 200), dia: hoje(), estado: "aberta" };
+    metas.push(meta); guardarMetas(); renderizarMetas();
+    return meta;
+  }
+  function marcarMeta(id, estado) {
+    const m = metas.find(x => x.id === id);
+    if (!m || !NOMES_ESTADO[estado]) return null;
+    m.estado = estado; m.quando = hoje();
+    guardarMetas(); renderizarMetas();
+    return m;
+  }
+  function resumoMetas() {
+    const hj = hoje();
+    const rel = metas.filter(m => m.estado === "aberta" || (m.quando && m.quando >= hj)).slice(-8);
+    const feitas7 = metas.filter(m => m.estado === "feita" && m.quando && (new Date(hj) - new Date(m.quando)) / 864e5 < 7).length;
+    if (!rel.length) return `Hoje é ${dataCurta(hj)}. Nenhuma meta em aberto.` + (feitas7 ? ` Metas cumpridas nos últimos 7 dias: ${feitas7}.` : "");
+    return `Hoje é ${dataCurta(hj)}. Metas (id | combinada em | estado | texto):\n` +
+      rel.map(m => `- ${m.id} | ${dataCurta(m.dia)} | ${NOMES_ESTADO[m.estado]} | ${m.texto}`).join("\n") +
+      `\nMetas cumpridas nos últimos 7 dias: ${feitas7}.`;
+  }
+  function ferramentasMetas() {
+    return [
+      {
+        name: "combinar_meta",
+        description: "Registra uma meta pequena e concreta que a pessoa ACEITOU fazer (ex.: 'caminhar 10 minutos amanhã de manhã'). Use só depois que ela concordar. Retorna a meta criada.",
+        inputSchema: { type: "object", properties: { texto: { type: "string", description: "A meta, curta, em português" } }, required: ["texto"] },
+        execute: ({ texto }) => {
+          texto = String(texto ?? "").trim();
+          if (!texto) throw new Error("texto vazio");
+          const m = novaMeta(texto);
+          return { id: m.id, texto: m.texto };
+        },
+      },
+      {
+        name: "marcar_meta",
+        description: "Atualiza uma meta quando a pessoa contar como foi. estado: 'feita', 'mais_ou_menos' ou 'nao_deu'. Retorna a meta atualizada.",
+        inputSchema: { type: "object", properties: { id: { type: "string" }, estado: { type: "string", enum: ["feita", "mais_ou_menos", "nao_deu"] } }, required: ["id", "estado"] },
+        execute: ({ id, estado }) => {
+          const m = marcarMeta(String(id), String(estado));
+          if (!m) throw new Error("meta não encontrada");
+          return { id: m.id, estado: m.estado };
+        },
+      },
+    ];
+  }
+  const seguir = document.getElementById("seguir");
+  let metaSeguida = null;
+  function renderizarSeguir() {
+    metaSeguida = metas.filter(m => m.estado === "aberta" && m.dia < hoje()).at(-1) || null;
+    seguir.hidden = !metaSeguida;
+    if (metaSeguida) document.getElementById("seguir-texto").textContent =
+      `Vocês combinaram em ${dataCurta(metaSeguida.dia)}: “${metaSeguida.texto}”. Como foi?`;
+  }
+  seguir.querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
+    if (!metaSeguida || enviar.disabled) return;
+    const m = metaSeguida;
+    marcarMeta(m.id, b.dataset.estado);
+    mandar(`Sobre a meta “${m.texto}”: ${b.textContent.toLowerCase()}`);
+  }));
+  function renderizarMetas() {
+    const lista = document.getElementById("lista-metas");
+    lista.textContent = "";
+    const hj = hoje();
+    const feitas7 = metas.filter(m => m.estado === "feita" && m.quando && (new Date(hj) - new Date(m.quando)) / 864e5 < 7).length;
+    document.getElementById("placar").textContent = feitas7
+      ? `${feitas7} ${feitas7 === 1 ? "passo dado" : "passos dados"} nos últimos 7 dias.`
+      : "Um passo pequeno já conta.";
+    const mostrar = metas.slice(-20).reverse();
+    if (!mostrar.length) {
+      const p = document.createElement("p"); p.className = "note";
+      p.textContent = "Nenhuma meta ainda. Peça uma para a Luz ou escreva uma abaixo.";
+      lista.appendChild(p);
+    }
+    for (const m of mostrar) {
+      const row = document.createElement("div"); row.className = "meta" + (m.estado === "feita" ? " feita" : "");
+      const t = document.createElement("span"); t.className = "txt"; t.textContent = m.texto;
+      const d = document.createElement("small"); d.textContent = dataCurta(m.dia);
+      row.append(t, d);
+      if (m.estado === "aberta") {
+        for (const [estado, rotulo] of [["feita", "Feita"], ["nao_deu", "Não deu"]]) {
+          const b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.textContent = rotulo;
+          b.addEventListener("click", () => marcarMeta(m.id, estado));
+          row.appendChild(b);
+        }
+      } else {
+        const e = document.createElement("span"); e.className = "estado" + (m.estado === "feita" ? " feita" : "");
+        e.textContent = NOMES_ESTADO[m.estado]; row.appendChild(e);
+      }
+      lista.appendChild(row);
+    }
+    renderizarSeguir();
+  }
+  document.getElementById("form-meta").addEventListener("submit", ev => {
+    ev.preventDefault();
+    const campo = document.getElementById("nova-meta");
+    if (campo.value.trim()) { novaMeta(campo.value); campo.value = ""; }
+  });
+
   // Memória de longo prazo
   const memTexto = document.getElementById("memoria-texto");
   const memStatus = document.getElementById("memoria-status");
@@ -503,5 +652,6 @@ ${recente}`;
   renderizarConversa();
   renderizarHumor();
   renderizarMemoria();
+  renderizarMetas();
 })();
 </script>
