@@ -14,8 +14,6 @@
     --glow: #fbe8cc;
     --calm: #4f74a0;
     --calm-soft: #e3ebf5;
-    --alert: #b3372f;
-    --alert-soft: #fbe5e2;
     --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
     --sans: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   }
@@ -24,14 +22,12 @@
       color-scheme: dark;
       --bg: #11161f; --surface: #1a212d; --ink: #e7ebf2; --muted: #9aa4b6; --line: #2a3342;
       --accent: #f0b356; --accent-ink: #1d1406; --glow: #3a2d17; --calm: #8fb0d6; --calm-soft: #1f2a3a;
-      --alert: #f08a80; --alert-soft: #3a1e1c;
     }
   }
   :root[data-theme="dark"] {
     color-scheme: dark;
     --bg: #11161f; --surface: #1a212d; --ink: #e7ebf2; --muted: #9aa4b6; --line: #2a3342;
     --accent: #f0b356; --accent-ink: #1d1406; --glow: #3a2d17; --calm: #8fb0d6; --calm-soft: #1f2a3a;
-    --alert: #f08a80; --alert-soft: #3a1e1c;
   }
   html, body { height: 100%; }
   body {
@@ -44,12 +40,10 @@
   .sun { width: 38px; height: 38px; border-radius: 50%; background: radial-gradient(circle at 50% 60%, var(--accent) 0 38%, var(--glow) 39% 100%); flex: none; }
   h1 { font: 400 2.4rem/1 var(--serif); margin: 0; letter-spacing: .01em; }
   .tag { color: var(--muted); font-size: .9rem; margin: 2px 0 0; }
-  .sos {
-    display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; font-size: .88rem;
-    background: var(--calm-soft); color: var(--ink); border-radius: 12px; padding: 10px 14px;
-  }
-  .sos strong { font-weight: 600; }
-  .sos a { color: var(--calm); }
+  .apoio { font-size: .85rem; color: var(--muted); }
+  .apoio summary { cursor: pointer; width: fit-content; }
+  .apoio p { margin: 6px 0 0; }
+  .apoio a { color: var(--calm); }
   nav { display: flex; gap: 6px; border-bottom: 1px solid var(--line); }
   nav button {
     font: 500 .95rem var(--sans); color: var(--muted); background: none; border: 0;
@@ -65,8 +59,8 @@
   .msg.luz { background: var(--surface); border: 1px solid var(--line); border-bottom-left-radius: 4px; align-self: flex-start; }
   .msg.eu { background: var(--accent); color: var(--accent-ink); border-bottom-right-radius: 4px; align-self: flex-end; }
   .msg.wait { color: var(--muted); font-style: italic; }
-  .crisis { background: var(--alert-soft); border: 1px solid var(--alert); color: var(--ink); border-radius: 12px; padding: 12px 14px; font-size: .95rem; }
-  .crisis strong { color: var(--alert); }
+  .crisis { background: var(--calm-soft); color: var(--ink); border-radius: 12px; padding: 10px 14px; font-size: .9rem; align-self: flex-start; max-width: 88%; }
+  .crisis a { color: var(--calm); }
   .ideas { display: flex; flex-wrap: wrap; gap: 8px; }
   .chip { font: 500 .88rem var(--sans); background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
   .chip:hover { border-color: var(--accent); }
@@ -117,12 +111,6 @@
     </div>
   </header>
 
-  <div class="sos" role="note">
-    <span><strong>Em crise?</strong> CVV <strong>188</strong> (24h, gratuito)</span>
-    <a href="https://cvv.org.br" target="_blank" rel="noopener">chat em cvv.org.br</a>
-    <span>SAMU <strong>192</strong></span>
-  </div>
-
   <nav role="tablist">
     <button role="tab" id="tab-conversa" aria-selected="true" data-tab="conversa">Conversar</button>
     <button role="tab" id="tab-humor" aria-selected="false" data-tab="humor">Meu humor</button>
@@ -171,6 +159,11 @@
       <button class="btn" id="comecar" type="button">Começar</button>
     </div>
   </section>
+
+  <details class="apoio">
+    <summary>Contatos de apoio</summary>
+    <p>CVV: ligue 188 (24h, gratuito) ou use o chat em <a href="https://cvv.org.br" target="_blank" rel="noopener">cvv.org.br</a>. SAMU: 192. Atendimento gratuito em saúde mental: CAPS e UBS da sua cidade, pelo SUS.</p>
+  </details>
 </div>
 
 <script>
@@ -180,22 +173,23 @@
   const gravar = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
 
   const SAUDACAO = "Oi. Que bom que você está aqui. Como você está se sentindo hoje?";
-  const RISCO = ["me matar", "suicid", "tirar minha vida", "tirar a minha vida", "acabar com tudo",
-    "acabar com a minha vida", "não quero mais viver", "nao quero mais viver", "quero morrer",
-    "me machucar", "me cortar", "sumir pra sempre", "melhor sem mim"];
+  const RISCO = ["me matar", "suicid", "tirar minha vida", "tirar a minha vida",
+    "não quero mais viver", "nao quero mais viver", "quero morrer", "me machucar", "me cortar"];
+  let avisouApoio = false;
 
-  const REGRAS = `Você é "Luz", um agente de apoio emocional em português do Brasil, conversando com uma pessoa que está lidando com depressão e quer se sentir melhor.
+  const REGRAS = `Você é "Luz", uma companhia de apoio emocional em português do Brasil. Você conversa com uma pessoa que está lidando com depressão e quer se sentir melhor e retomar a própria vida.
+
+Quem é a pessoa para você: alguém inteiro, com história, interesses, relações, planos e qualidades, não um "caso" ou um risco a ser gerenciado. Tenha curiosidade genuína por ela: do que ela gosta ou já gostou, o que dá sentido à vida dela, quem é importante, o que está funcionando, mesmo que pouco.
 
 Como você age:
 - Acolha primeiro. Valide o que a pessoa sente sem julgar e sem pressa de "consertar".
-- Fale de forma calorosa, simples e humana. Respostas curtas (2 a 6 frases), a não ser que a pessoa peça mais. No máximo uma pergunta por vez. Texto simples, sem Markdown.
-- Use técnicas com base em evidências, de forma prática e leve, quando fizer sentido: ativação comportamental (uma única ação pequena e concreta para hoje), TCC (notar pensamentos automáticos e buscar visões mais equilibradas com perguntas gentis), respiração e grounding (5-4-3-2-1), sono, rotina, sol e movimento, autocompaixão, pequenas vitórias e gratidão.
-- Celebre qualquer avanço, por menor que seja.
-- Incentive com carinho a ajuda profissional (psicólogo, psiquiatra, CAPS/UBS pelo SUS, clínicas-escola de psicologia gratuitas ou de baixo custo) e o contato com pessoas de confiança. Você complementa, não substitui, esse cuidado.
-- Não faça diagnósticos e não indique ou ajuste remédios; oriente conversar com um médico.
-- Use o registro de humor abaixo para perceber padrões e progresso, com naturalidade.
+- Fale de forma calorosa, simples e natural, como uma boa amiga que entende do assunto. Respostas curtas (2 a 6 frases), a não ser que a pessoa peça mais. No máximo uma pergunta por vez. Texto simples, sem Markdown.
+- Tristeza, cansaço, desânimo, choro, "não aguento mais" ou "estou mal" fazem parte da depressão e merecem acolhimento e conversa, não alarme. Não fale de suicídio, crise ou números de emergência a menos que a própria pessoa traga esse assunto.
+- Ajude de forma prática quando fizer sentido: uma pequena ação concreta para hoje, perguntas gentis para olhar pensamentos muito duros de outro ângulo, respiração, sono, rotina, sol, movimento, contato com pessoas, retomar algo que a pessoa gostava, autocompaixão, pequenas vitórias.
+- Celebre qualquer avanço, por menor que seja, e lembre a pessoa dos progressos que aparecem no registro de humor.
+- Quando for natural na conversa, e sem repetir toda hora, incentive o cuidado com um profissional (psicólogo, psiquiatra, CAPS/UBS pelo SUS, clínicas-escola de psicologia gratuitas ou de baixo custo). Não faça diagnósticos nem indique remédios.
 
-Segurança (prioridade máxima): se houver qualquer sinal de risco (ideação suicida, autolesão, desesperança intensa, plano ou meio), acolha com calma, pergunte diretamente se a pessoa está segura agora, incentive a ligar para o CVV (188, 24h, gratuito, ou chat em cvv.org.br), SAMU (192) ou ir a um pronto-socorro, e a chamar alguém de confiança para ficar junto. Continue presente.`;
+Só se a pessoa falar claramente em se matar, se machucar ou não querer mais viver: continue calorosa e presente, pergunte com cuidado se ela está segura agora e mencione uma vez o CVV (188, 24h, gratuito, ou chat em cvv.org.br) e chamar alguém de confiança. Depois siga a conversa normalmente, com a pessoa, e não em cima do assunto.`;
 
   let turnos = ler(K_CHAT, []);
   let humor = ler(K_HUMOR, []);
@@ -223,7 +217,7 @@ Segurança (prioridade máxima): se houver qualquer sinal de risco (ideação su
   function alertaCrise() {
     const d = document.createElement("div");
     d.className = "crisis";
-    d.innerHTML = '<strong>Você não precisa passar por isso sozinho(a).</strong> Ligue agora para o CVV no <strong>188</strong> (24h, gratuito) ou use o chat em <a href="https://cvv.org.br" target="_blank" rel="noopener">cvv.org.br</a>. Em perigo imediato, ligue 192 (SAMU) ou vá a um pronto-socorro. Se puder, chame alguém de confiança para ficar com você.';
+    d.innerHTML = 'Se estiver pesado demais agora, o CVV atende 24h pelo 188 ou pelo chat em <a href="https://cvv.org.br" target="_blank" rel="noopener">cvv.org.br</a>. A Luz continua aqui com você.';
     log.appendChild(d);
   }
   function renderizarConversa() {
@@ -248,7 +242,7 @@ Segurança (prioridade máxima): se houver qualquer sinal de risco (ideação su
     sampling_disabled: "O Claude não está disponível nesta conta.",
     rate_limited: "Muitas mensagens em pouco tempo. Espere um pouco e tente de novo.",
     prompt_too_large: "A conversa ficou longa demais. Apague a conversa para recomeçar.",
-    refused: "Não consegui responder a isso. Se você estiver em perigo, ligue 188 (CVV) ou 192 (SAMU).",
+    refused: "Não consegui responder a isso. Pode tentar dizer de outro jeito?",
   };
 
   let sample = null;
@@ -268,7 +262,7 @@ Segurança (prioridade máxima): se houver qualquer sinal de risco (ideação su
     ideas.hidden = true;
     bolha("eu", texto);
     const baixo = texto.toLowerCase();
-    if (RISCO.some(p => baixo.includes(p))) alertaCrise();
+    if (!avisouApoio && RISCO.some(p => baixo.includes(p))) { avisouApoio = true; alertaCrise(); }
     turnos.push({ role: "user", content: texto });
     gravar(K_CHAT, turnos);
 

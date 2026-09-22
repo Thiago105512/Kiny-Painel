@@ -1,8 +1,7 @@
 """
 Agente de apoio emocional (bem-estar) no terminal, usando a API do Claude.
 
-NÃO substitui psicólogo, psiquiatra ou atendimento de emergência.
-Em crise: CVV 188 (24h, gratuito) | SAMU 192 | chat em https://cvv.org.br
+Não substitui psicólogo ou psiquiatra. Contatos de apoio: comando /apoio.
 """
 
 import json
@@ -23,54 +22,53 @@ ARQ_HUMOR = PASTA_DADOS / "humor.json"
 ARQ_CONVERSA = PASTA_DADOS / "conversa.json"
 MAX_MENSAGENS_SALVAS = 40
 
-AJUDA_URGENTE = """
-╭───────────────────────────────────────────────────────────╮
-│  Você não precisa passar por isso sozinho(a).             │
-│                                                           │
-│  • CVV – Centro de Valorização da Vida: ligue 188         │
-│    (24h, gratuito) ou chat em https://cvv.org.br          │
-│  • SAMU: 192   |   Emergência: vá ao pronto-socorro/UPA   │
-│  • CAPS da sua cidade: atendimento público em saúde mental│
-╰───────────────────────────────────────────────────────────╯
+CONTATOS_APOIO = """
+Contatos de apoio:
+  • CVV: ligue 188 (24h, gratuito) ou chat em https://cvv.org.br
+  • SAMU: 192
+  • CAPS e UBS da sua cidade: atendimento gratuito em saúde mental (SUS)
 """
+
+LEMBRETE_APOIO = (
+    "\n(Se estiver pesado demais agora, o CVV atende 24h pelo 188 ou em cvv.org.br. "
+    "A Luz continua aqui com você.)\n"
+)
 
 PALAVRAS_RISCO = (
     "me matar", "suicid", "tirar minha vida", "tirar a minha vida",
-    "acabar com tudo", "acabar com a minha vida", "não quero mais viver",
-    "nao quero mais viver", "quero morrer", "me machucar", "me cortar",
-    "sumir pra sempre", "melhor sem mim",
+    "não quero mais viver", "nao quero mais viver", "quero morrer", "me machucar", "me cortar",
 )
 
-SISTEMA = """Você é "Luz", um agente de apoio emocional em português do Brasil, \
-conversando com uma pessoa que está lidando com depressão e quer se sentir melhor.
+SISTEMA = """Você é "Luz", uma companhia de apoio emocional em português do Brasil. \
+Você conversa com uma pessoa que está lidando com depressão e quer se sentir melhor e \
+retomar a própria vida.
+
+Quem é a pessoa para você: alguém inteiro, com história, interesses, relações, planos e \
+qualidades, não um "caso" ou um risco a ser gerenciado. Tenha curiosidade genuína por ela: \
+do que ela gosta ou já gostou, o que dá sentido à vida dela, quem é importante, o que está \
+funcionando, mesmo que pouco.
 
 Como você age:
 - Acolha primeiro. Valide o que a pessoa sente sem julgar e sem pressa de "consertar".
-- Fale de forma calorosa, simples e humana. Respostas curtas (2 a 6 frases), \
-a não ser que a pessoa peça mais. Faça no máximo uma pergunta por vez.
-- Use técnicas com base em evidências, de forma prática e leve, quando fizer sentido:
-  • Ativação comportamental: sugerir uma única ação pequena e concreta para hoje \
-(beber água, abrir a janela, tomar banho, caminhar 5 minutos, mandar mensagem para alguém).
-  • TCC: ajudar a notar pensamentos automáticos ("sou um fracasso") e buscar \
-visões mais equilibradas, com perguntas gentis.
-  • Respiração/grounding (ex.: 4-7-8, técnica 5-4-3-2-1) em momentos de ansiedade.
-  • Higiene do sono, rotina, alimentação, sol e movimento.
-  • Autocompaixão e registro de pequenas vitórias e gratidão.
-- Celebre qualquer avanço, por menor que seja.
-- Incentive com carinho a busca de ajuda profissional (psicólogo, psiquiatra, \
-CAPS/UBS pelo SUS, clínicas-escola de psicologia que atendem de graça ou a baixo custo) \
-e o contato com pessoas de confiança. Você complementa, não substitui, esse cuidado.
-- Não faça diagnósticos e não indique ou ajuste medicamentos; para isso, oriente \
-conversar com um médico.
-- Você recebe um resumo do registro de humor da pessoa; use-o para perceber padrões \
-e progresso, mencionando-o com naturalidade.
+- Fale de forma calorosa, simples e natural, como uma boa amiga que entende do assunto. \
+Respostas curtas (2 a 6 frases), a não ser que a pessoa peça mais. No máximo uma pergunta por vez.
+- Tristeza, cansaço, desânimo, choro, "não aguento mais" ou "estou mal" fazem parte da \
+depressão e merecem acolhimento e conversa, não alarme. Não fale de suicídio, crise ou \
+números de emergência a menos que a própria pessoa traga esse assunto.
+- Ajude de forma prática quando fizer sentido: uma pequena ação concreta para hoje, \
+perguntas gentis para olhar pensamentos muito duros de outro ângulo, respiração, sono, \
+rotina, sol, movimento, contato com pessoas, retomar algo que a pessoa gostava, \
+autocompaixão, pequenas vitórias.
+- Celebre qualquer avanço, por menor que seja, e lembre a pessoa dos progressos que \
+aparecem no registro de humor.
+- Quando for natural na conversa, e sem repetir toda hora, incentive o cuidado com um \
+profissional (psicólogo, psiquiatra, CAPS/UBS pelo SUS, clínicas-escola de psicologia \
+gratuitas ou de baixo custo). Não faça diagnósticos nem indique remédios.
 
-Segurança (prioridade máxima):
-- Se houver qualquer sinal de risco (ideação suicida, autolesão, desesperança intensa, \
-plano ou meio), acolha com calma, pergunte diretamente se a pessoa está segura agora, \
-incentive a ligar para o CVV (188, 24h, gratuito, ou chat em cvv.org.br), SAMU (192) \
-ou ir a um pronto-socorro, e a chamar alguém de confiança para ficar junto. \
-Continue presente na conversa."""
+Só se a pessoa falar claramente em se matar, se machucar ou não querer mais viver: \
+continue calorosa e presente, pergunte com cuidado se ela está segura agora e mencione \
+uma vez o CVV (188, 24h, gratuito, ou chat em cvv.org.br) e chamar alguém de confiança. \
+Depois siga a conversa normalmente, com a pessoa, e não em cima do assunto."""
 
 
 def carregar(arquivo, padrao):
@@ -148,7 +146,7 @@ def responder(cliente, mensagens, registros):
     print("\n")
 
     if final.stop_reason == "refusal":
-        print(AJUDA_URGENTE)
+        print("(Não consegui responder a isso. Pode tentar dizer de outro jeito?)\n")
     texto = "".join(b.text for b in final.content if b.type == "text")
     return texto or "Estou aqui com você."
 
@@ -156,7 +154,7 @@ def responder(cliente, mensagens, registros):
 AJUDA_COMANDOS = """Comandos:
   /humor      registrar como você está (0 a 10)
   /historico  ver seus últimos registros de humor
-  /ajuda      contatos de ajuda urgente (CVV 188)
+  /apoio      contatos de apoio (CVV, CAPS)
   /respirar   exercício rápido de respiração
   /limpar     apagar a conversa salva (mantém o humor)
   /sair       encerrar
@@ -178,10 +176,11 @@ def main():
     cliente = anthropic.Anthropic()
     registros = carregar(ARQ_HUMOR, [])
     mensagens = carregar(ARQ_CONVERSA, [])
+    avisou_apoio = False
 
     print("═" * 60)
     print("  Luz — seu agente de apoio emocional 💛")
-    print("  Não substitui ajuda profissional. Em crise: CVV 188.")
+    print("  Não substitui ajuda profissional.")
     print("═" * 60)
     print(AJUDA_COMANDOS)
 
@@ -208,8 +207,8 @@ def main():
         if comando == "/historico":
             mostrar_historico(registros)
             continue
-        if comando == "/ajuda":
-            print(AJUDA_URGENTE)
+        if comando in ("/apoio", "/ajuda"):
+            print(CONTATOS_APOIO)
             continue
         if comando == "/respirar":
             respirar()
@@ -223,8 +222,9 @@ def main():
             print(AJUDA_COMANDOS)
             continue
 
-        if tem_sinal_de_risco(entrada):
-            print(AJUDA_URGENTE)
+        if not avisou_apoio and tem_sinal_de_risco(entrada):
+            avisou_apoio = True
+            print(LEMBRETE_APOIO)
 
         mensagens.append({"role": "user", "content": entrada})
         try:

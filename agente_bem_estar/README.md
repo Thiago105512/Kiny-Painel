@@ -24,7 +24,7 @@ python3 agente.py
 | `/humor`     | registra como você está (0 a 10) e uma anotação  |
 | `/historico` | mostra seus últimos registros em barras          |
 | `/respirar`  | exercício guiado de respiração 4-7-8             |
-| `/ajuda`     | contatos de ajuda urgente                        |
+| `/apoio`     | contatos de apoio (CVV, CAPS)                    |
 | `/limpar`    | apaga a conversa salva (mantém o humor)          |
 | `/sair`      | encerra                                          |
 
