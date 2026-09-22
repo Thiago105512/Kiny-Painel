@@ -1030,6 +1030,11 @@ window.PED = window.PED || {};
   });
 
   /* ---- Unidades de saúde ---- */
+  /** Endereço e telefone que a própria médica preencheu ficam guardados no aparelho. */
+  const compUnidade = (id) => ((S.pref('unidadesComp') || {})[id]) || {};
+  function salvarCompUnidade(id, dados) { const c = S.pref('unidadesComp') || {}; c[id] = Object.assign({}, c[id], dados); S.pref('unidadesComp', c); }
+  const unidadeCompleta = (u) => Object.assign({}, u, compUnidade(u.id));
+
   const TIPO_UNIDADE = { pronto_socorro: { rot: 'Pronto-socorro', ic: '\u{1F691}' }, upa: { rot: 'UPA / SPA', ic: '\u{1F3E5}' }, hospital: { rot: 'Hospital', ic: '\u{1F3E5}' }, maternidade: { rot: 'Maternidade', ic: '\u{1F930}' }, ubs: { rot: 'UBS', ic: '\u{1FA7A}' }, referencia: { rot: 'Referência', ic: '\u2B50' } };
   route('/unidades', (params, q) => {
     const L = D().locais; if (!L || !L.unidades) return '<div class="empty">M\u00f3dulo em prepara\u00e7\u00e3o.</div>';
@@ -1042,15 +1047,20 @@ window.PED = window.PED || {};
     if (tipo) lista = lista.filter(u => u.tipo === tipo);
     if (zona) lista = lista.filter(u => u.zona === zona);
     const tipos = [...new Set(L.unidades.filter(u => u.cidade === cidade).map(u => u.tipo))];
-    const linha = (u) => { const t = TIPO_UNIDADE[u.tipo] || { rot: u.tipo, ic: '\u{1F3E5}' };
+    const linha = (u0) => { const u = unidadeCompleta(u0); const t = TIPO_UNIDADE[u.tipo] || { rot: u.tipo, ic: '\u{1F3E5}' };
+      const meu = compUnidade(u.id);
       return `<div class="row"><span class="ic">${t.ic}</span><div class="grow">
         <div class="title">${esc(u.nome)} ${u.rede === 'privada' ? '<span class="chip purple">privado</span>' : ''} ${u.urgencia ? '<span class="chip red">24 h</span>' : ''} ${u.pediatria ? '<span class="chip green">pediatria</span>' : ''}</div>
-        <div class="sub">${esc([t.rot, u.bairro, u.zona ? (((L.zonasManaus || []).find(z => z.id === u.zona) || {}).nome || '') : '', u.endereco].filter(Boolean).join(' \u00b7 '))}</div>
-        ${(u.referenciaPara || []).length ? `<div class="sub">Refer\u00eancia para: ${esc(u.referenciaPara.join(', '))}</div>` : ''}
-        ${u.obs ? `<div class="sub muted"><small>${esc(u.obs)}</small></div>` : ''}</div>
-        ${u.telefone ? `<a class="btn sm" href="tel:${esc(u.telefone)}">ligar</a>` : ''}</div>`; };
+        <div class="sub">${esc([t.rot, u.bairro, u.zona ? (((L.zonasManaus || []).find(z => z.id === u.zona) || {}).nome || '') : ''].filter(Boolean).join(' \u00b7 '))}</div>
+        <div class="sub">${u.endereco ? esc(u.endereco) + (meu.endereco ? ' <span class="chip green">seu registro</span>' : '') : '<span class="muted">endere\u00e7o n\u00e3o confirmado</span>'}${u.telefone ? ' \u00b7 ' + esc(u.telefone) : ''}</div>
+        ${(u.referenciaPara || []).length ? `<div class="sub">Refer\u00eancia para: ${esc(u.referenciaPara.join(', '))}</div>` : ''}</div>
+        <div style="display:flex;flex-direction:column;gap:.25rem">
+        ${u.telefone ? `<a class="btn sm" href="tel:${esc(u.telefone)}">ligar</a>` : ''}
+        <button class="btn sm ghost" data-act="editarUnidade" data-id="${esc(u.id)}" data-nome="${esc(u.nome)}">\u270E</button></div></div>`; };
     const ref = L.unidades.filter(u => u.tipo === 'referencia' && u.cidade === cidade);
+    const semEndereco = L.unidades.filter(u => !unidadeCompleta(u).endereco).length;
     return `<h1>\u{1F3E5} Unidades de sa\u00fade</h1>
+      ${semEndereco ? `<div class="alert amber"><strong>Endere\u00e7os a confirmar</strong>${semEndereco} de ${L.unidades.length} unidades est\u00e3o cadastradas s\u00f3 pelo nome. Nenhum endere\u00e7o ou telefone foi presumido. Toque no l\u00e1pis para registrar os que voc\u00ea usa: ficam guardados neste aparelho e passam a aparecer aqui.</div>` : ''}
       <div class="field"><label>Cidade</label><select id="uniCidade">${cidades.map(c => `<option value="${esc(c)}" ${cidade === c ? 'selected' : ''}>${esc(c)}</option>`).join('')}</select></div>
       <div class="toggles" style="margin-bottom:.5rem">
         <a class="toggle ${tipo ? '' : 'on'}" href="#/unidades?cidade=${encodeURIComponent(cidade)}">Todas</a>
@@ -1101,8 +1111,15 @@ window.PED = window.PED || {};
       ${telefonesEServicos(V)}${U.fontes(V)}${disclaimer}`;
   });
   function telefonesEServicos(V) {
+    const semEnd = (V.servicos || []).filter(sv => !(compUnidade('sv_' + U.normalize(sv.nome).replace(/\W+/g, '_')).endereco || sv.endereco)).length;
     return `<div class="card"><h2>Para onde encaminhar</h2>
-      ${(V.servicos || []).length ? `<div class="list">${V.servicos.map(sv => `<div class="row"><span class="ic">\u{1F3E2}</span><div class="grow"><div class="title">${esc(sv.nome)}</div><div class="sub">${esc([sv.cidade, sv.endereco, sv.horario].filter(Boolean).join(' \u00b7 ')) || 'endere\u00e7o a confirmar'}${sv.obs ? ' \u00b7 ' + esc(sv.obs) : ''}</div></div>${sv.telefone ? `<a class="btn sm" href="tel:${esc(sv.telefone)}">ligar</a>` : ''}</div>`).join('')}</div>` : ''}
+      ${semEnd ? `<div class="alert amber"><strong>Endere\u00e7os a confirmar</strong>${semEnd} servi\u00e7o(s) est\u00e3o cadastrados s\u00f3 pelo nome: nenhum endere\u00e7o local foi presumido. Toque no l\u00e1pis para registrar os da sua regi\u00e3o; ficam guardados neste aparelho.</div>` : ''}
+      ${(V.servicos || []).length ? `<div class="list">${V.servicos.map(sv => { const k = 'sv_' + U.normalize(sv.nome).replace(/\W+/g, '_'); const meu = compUnidade(k); const end = meu.endereco || sv.endereco; const tel = meu.telefone || sv.telefone;
+        return `<div class="row"><span class="ic">\u{1F3E2}</span><div class="grow"><div class="title">${esc(sv.nome)}</div>
+        <div class="sub">${esc([sv.cidade, sv.horario].filter(Boolean).join(' \u00b7 '))}</div>
+        <div class="sub">${end ? esc(end) + (meu.endereco ? ' <span class="chip green">seu registro</span>' : '') : '<span class="muted">endere\u00e7o a confirmar</span>'}${tel ? ' \u00b7 ' + esc(tel) : ''}</div>
+        ${sv.obs ? `<div class="sub muted"><small>${esc(sv.obs)}</small></div>` : ''}</div>
+        <div style="display:flex;flex-direction:column;gap:.25rem">${tel ? `<a class="btn sm" href="tel:${esc(tel)}">ligar</a>` : ''}<button class="btn sm ghost" data-act="editarUnidade" data-id="${esc(k)}" data-nome="${esc(sv.nome)}">\u270E</button></div></div>`; }).join('')}</div>` : ''}
       <h3>Telefones</h3><div class="toggles">${(V.telefones || []).map(t => t.numero ? `<a class="chip" href="tel:${esc(t.numero)}">${esc(t.nome)}: ${esc(t.numero)}</a>` : `<span class="chip gray">${esc(t.nome)}</span>`).join('')}</div>
       ${V.interior ? `<div class="alert blue" style="margin-top:.6rem"><strong>No interior do Amazonas</strong>${esc(V.interior.texto)}</div>` : ''}</div>`;
   }
@@ -1405,6 +1422,14 @@ window.PED = window.PED || {};
       marcarVacina() { S.upsert('vacinasRealizadas', { pacienteId: el.dataset.pid, vacinaId: el.dataset.vid, doseIndex: Number(el.dataset.i), data: U.today() }); U.toast('Marcada com a data de hoje: toque na data para mudar'); render(); },
       editarDataVacina() { const v = S.byId('vacinasRealizadas', el.dataset.id); if (!v) return; const t = prompt('Data da dose (dd/mm/aaaa):', PED.entrada.deISO(v.data)); if (!t) return; const iso = PED.entrada.paraISO(t); if (!iso) { U.toast('Data inválida'); return; } v.data = iso; S.upsert('vacinasRealizadas', v); render(); },
       desfazerVacina() { S.remove('vacinasRealizadas', el.dataset.id); render(); },
+      editarUnidade() {
+        const id = el.dataset.id; const atual = compUnidade(id);
+        const end = prompt('Endere\u00e7o de ' + el.dataset.nome + ':', atual.endereco || '');
+        if (end === null) return;
+        const tel = prompt('Telefone (opcional):', atual.telefone || '');
+        salvarCompUnidade(id, { endereco: end.trim(), telefone: (tel || '').trim() });
+        U.toast('Registrado neste aparelho'); render();
+      },
       abaAprender() { go('/aprender?aba=' + el.dataset.aba); },
       copiarTexto() { const t = el.dataset.t;
         if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(() => U.toast('Copiado')).catch(() => U.toast('N\u00e3o foi poss\u00edvel copiar'));
