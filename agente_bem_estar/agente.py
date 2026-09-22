@@ -20,7 +20,9 @@ MODELO = os.environ.get("AGENTE_MODELO", "claude-opus-5")
 PASTA_DADOS = Path(os.environ.get("AGENTE_DADOS", Path.home() / ".agente_bem_estar"))
 ARQ_HUMOR = PASTA_DADOS / "humor.json"
 ARQ_CONVERSA = PASTA_DADOS / "conversa.json"
+ARQ_MEMORIA = PASTA_DADOS / "memoria.json"
 MAX_MENSAGENS_SALVAS = 40
+RESUMIR_A_CADA = 3  # mensagens da pessoa entre uma atualização da memória e outra
 
 CONTATOS_APOIO = """
 Contatos de apoio:
@@ -97,6 +99,80 @@ def resumo_humor(registros, ultimos=10):
     return "Registro de humor recente (0 = péssimo, 10 = ótimo):\n" + "\n".join(linhas) + f"\nMédia: {media:.1f}"
 
 
+PEDIDO_MEMORIA = """Você cuida das anotações de memória da "Luz", uma companhia de apoio \
+emocional, sobre a pessoa com quem ela conversa. Essas anotações permitem que a Luz continue \
+de onde parou em vez de recomeçar do zero.
+
+Atualize as anotações atuais com o que for importante na conversa recente. Guarde, quando \
+aparecer: como a pessoa gosta de ser chamada; pessoas importantes; interesses e coisas de que \
+gosta ou gostava; rotina, trabalho ou estudo; o que está pesando agora; o que ajudou e o que \
+não ajudou; metas e pequenas tarefas combinadas e se foram feitas; conquistas; se faz \
+acompanhamento profissional ou toma remédio.
+
+Regras: tópicos curtos, em português, no máximo 1500 caracteres. Mantenha o que continua \
+válido, atualize o que mudou e remova o que ficou velho. Não invente nada. Não guarde \
+detalhes de crise além de uma linha neutra, se necessário. Responda só com as anotações.
+
+Anotações atuais:
+{memoria}
+
+Conversa recente:
+{conversa}"""
+
+
+def texto_memoria(memoria):
+    if memoria.get("texto"):
+        return ("Suas anotações sobre a pessoa, de conversas anteriores "
+                "(use com naturalidade, sem recitar):\n" + memoria["texto"])
+    return "Vocês ainda não se conhecem bem: aos poucos, com leveza, procure conhecer a pessoa."
+
+
+def atualizar_memoria(cliente, memoria, mensagens, pendentes):
+    recente = mensagens[-2 * max(pendentes, 4):]
+    conversa = "\n".join(("Pessoa: " if m["role"] == "user" else "Luz: ") + m["content"] for m in recente)
+    if not conversa:
+        return memoria
+    try:
+        resposta = cliente.messages.create(
+            model=MODELO,
+            max_tokens=2000,
+            output_config={"effort": "low"},
+            messages=[{"role": "user", "content": PEDIDO_MEMORIA.format(
+                memoria=memoria.get("texto") or "(nenhuma ainda)", conversa=conversa)}],
+        )
+    except anthropic.APIError:
+        return memoria
+    texto = "".join(b.text for b in resposta.content if b.type == "text").strip()
+    if resposta.stop_reason == "refusal" or not texto:
+        return memoria
+    memoria = {"texto": texto[:4000], "atualizado": datetime.now().strftime("%d/%m/%Y %H:%M")}
+    salvar(ARQ_MEMORIA, memoria)
+    return memoria
+
+
+def editar_memoria(memoria):
+    print("\nO que a Luz lembra de você:\n")
+    print(memoria.get("texto") or "(nada ainda — as anotações aparecem depois de algumas mensagens)")
+    print("\nDigite um novo texto para substituir (termine com uma linha só com '.'),")
+    print("'apagar' para apagar tudo, ou Enter para manter como está.")
+    primeira = input("> ").strip()
+    if not primeira:
+        print()
+        return memoria
+    if primeira.lower() == "apagar":
+        memoria = {"texto": "", "atualizado": ""}
+        salvar(ARQ_MEMORIA, memoria)
+        print("Memória apagada.\n")
+        return memoria
+    linhas = [primeira]
+    while (linha := input("> ")) != ".":
+        linhas.append(linha)
+    memoria = {"texto": "\n".join(linhas).strip()[:4000], "atualizado": datetime.now().strftime("%d/%m/%Y %H:%M")}
+    salvar(ARQ_MEMORIA, memoria)
+    print("Salvo.\n")
+    return memoria
+
+
 def registrar_humor(registros):
     try:
         nota = int(input("De 0 (péssimo) a 10 (ótimo), como você está agora? ").strip())
@@ -124,10 +200,10 @@ def mostrar_historico(registros):
     print()
 
 
-def responder(cliente, mensagens, registros):
+def responder(cliente, mensagens, registros, memoria):
     sistema = [
         {"type": "text", "text": SISTEMA, "cache_control": {"type": "ephemeral"}},
-        {"type": "text", "text": resumo_humor(registros)},
+        {"type": "text", "text": texto_memoria(memoria) + "\n\n" + resumo_humor(registros)},
     ]
     print("\nLuz: ", end="", flush=True)
     with cliente.beta.messages.stream(
@@ -156,7 +232,8 @@ AJUDA_COMANDOS = """Comandos:
   /historico  ver seus últimos registros de humor
   /apoio      contatos de apoio (CVV, CAPS)
   /respirar   exercício rápido de respiração
-  /limpar     apagar a conversa salva (mantém o humor)
+  /memoria    ver, corrigir ou apagar o que a Luz lembra de você
+  /nova       começar conversa nova (a Luz continua lembrando de você)
   /sair       encerrar
 """
 
@@ -175,8 +252,16 @@ def respirar():
 def main():
     cliente = anthropic.Anthropic()
     registros = carregar(ARQ_HUMOR, [])
-    mensagens = carregar(ARQ_CONVERSA, [])
+    conversa = carregar(ARQ_CONVERSA, {})
+    if isinstance(conversa, list):  # formato antigo
+        conversa = {"mensagens": conversa, "pendentes": 0}
+    mensagens = conversa.get("mensagens", [])
+    pendentes = conversa.get("pendentes", 0)
+    memoria = carregar(ARQ_MEMORIA, {"texto": "", "atualizado": ""})
     avisou_apoio = False
+
+    def guardar_conversa():
+        salvar(ARQ_CONVERSA, {"mensagens": mensagens, "pendentes": pendentes})
 
     print("═" * 60)
     print("  Luz — seu agente de apoio emocional 💛")
@@ -186,6 +271,8 @@ def main():
 
     if mensagens:
         print("(Continuando a nossa última conversa.)\n")
+    elif memoria.get("texto"):
+        print("Luz: Oi de novo. Que bom te ver por aqui. Como você está hoje?\n")
     else:
         print("Luz: Oi. Que bom que você está aqui. Como você está se sentindo hoje?\n")
 
@@ -213,10 +300,16 @@ def main():
         if comando == "/respirar":
             respirar()
             continue
-        if comando == "/limpar":
-            mensagens = []
-            salvar(ARQ_CONVERSA, mensagens)
-            print("Conversa apagada.\n")
+        if comando == "/memoria":
+            memoria = editar_memoria(memoria)
+            continue
+        if comando in ("/nova", "/limpar"):
+            if pendentes:
+                print("Guardando o que é importante…")
+                memoria = atualizar_memoria(cliente, memoria, mensagens, pendentes)
+            mensagens, pendentes = [], 0
+            guardar_conversa()
+            print("Conversa nova. A Luz continua lembrando de você.\n")
             continue
         if comando.startswith("/"):
             print(AJUDA_COMANDOS)
@@ -228,7 +321,7 @@ def main():
 
         mensagens.append({"role": "user", "content": entrada})
         try:
-            resposta = responder(cliente, mensagens, registros)
+            resposta = responder(cliente, mensagens, registros, memoria)
         except anthropic.AuthenticationError:
             mensagens.pop()
             print("\nChave da API inválida ou ausente. Defina ANTHROPIC_API_KEY.\n")
@@ -243,10 +336,16 @@ def main():
             continue
 
         mensagens.append({"role": "assistant", "content": resposta})
+        pendentes += 1
+        if pendentes >= RESUMIR_A_CADA:
+            memoria_antes = memoria
+            memoria = atualizar_memoria(cliente, memoria, mensagens, pendentes)
+            if memoria is not memoria_antes:
+                pendentes = 0
         mensagens = mensagens[-MAX_MENSAGENS_SALVAS:]
         if mensagens[0]["role"] != "user":
             mensagens = mensagens[1:]
-        salvar(ARQ_CONVERSA, mensagens)
+        guardar_conversa()
 
 
 if __name__ == "__main__":
