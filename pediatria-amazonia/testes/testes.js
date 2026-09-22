@@ -4,17 +4,18 @@
 global.window = global;
 const path = require('path');
 const APP = path.join(__dirname, '..', 'app', 'js');
-for (const f of ['utils', 'store', 'seguranca',
-  'data/sinais-gravidade', 'data/contexto-epidemiologico', 'data/queixas', 'data/doencas',
+for (const f of ['utils', 'store', 'seguranca', 'entrada',
+  'data/apoio-entrada', 'data/sinais-gravidade', 'data/contexto-epidemiologico', 'data/queixas', 'data/doencas',
   'data/medicamentos', 'data/emergencias', 'data/exames', 'data/vacinas', 'data/crescimento',
   'data/zscore', 'data/notificacao', 'calculators']) {
   try { require(path.join(APP, f + '.js')); } catch (e) { console.error('Falha ao carregar ' + f + ': ' + e.message); process.exit(1); }
 }
-try { require(path.join(APP, 'data', 'doencas-extra.js')); } catch (e) {}
-try { require(path.join(APP, 'data', 'neonatal.js')); } catch (e) {}
+for (const f of ['doencas-extra', 'neonatal', 'comerciais', 'alternativas', 'locais', 'violencia', 'curiosidades']) {
+  try { require(path.join(APP, 'data', f + '.js')); } catch (e) { console.error('AVISO: ' + f + ' não carregou (' + e.message.slice(0, 40) + ')'); }
+}
 
 const D = PED.data, C = PED.calc, U = PED.util, Z = PED.zscore, SEG = PED.seguranca;
-let ok = 0, fail = 0; const falhas = [];
+let ok = 0, fail = 0; const falhas = []; const pendencias = {};
 const num = (x) => typeof x === 'string' ? Number(String(x).replace(/\./g, '').replace(',', '.')) : x;
 function t(nome, fn) {
   try { fn(); ok++; } catch (e) { fail++; falhas.push(nome + ' → ' + e.message); }
@@ -223,10 +224,111 @@ t('Nenhum texto clínico afirma diagnóstico definitivo', () => {
   if (ruins.length) throw new Error(ruins.join(', '));
 });
 
+/* ---------- 6. Entrada rápida ---------- */
+const E = PED.entrada;
+t('Data digitada aceita os formatos usados na prática', () => {
+  eq(E.paraISO('21092026'), '2026-09-21'); eq(E.paraISO('210926'), '2026-09-21');
+  eq(E.paraISO('21/09/2026'), '2026-09-21'); eq(E.paraISO('1/2/26'), '2026-02-01');
+  eq(E.paraISO('31/02/2026'), null, 'data inexistente:'); eq(E.paraISO('abc'), null);
+});
+t('Máscara de data formata enquanto digita', () => { eq(E.mascararData('2109'), '21/09'); eq(E.mascararData('21092026'), '21/09/2026'); });
+t('Idade digitada interpreta anos, meses, semanas e dias', () => {
+  perto(E.lerIdade('3a2m'), 38, 0.1); perto(E.lerIdade('1a6m'), 18, 0.1);
+  perto(E.lerIdade('14 meses'), 14, 0.1); perto(E.lerIdade('20d'), 0.66, 0.02);
+  perto(E.lerIdade('6 sem'), 1.38, 0.02); perto(E.lerIdade('5'), 60, 0.1);
+});
+t('Perguntas oferecem respostas adequadas ao que perguntam', () => {
+  const P = E.perguntas;
+  if (!P.opcoes('Há quantos dias está com febre?').includes('2 a 3 dias')) throw new Error('duração');
+  if (!P.opcoes('Qual a temperatura aferida?').some(x => /39,5/.test(x))) throw new Error('temperatura');
+  eq(P.opcoes('Houve vômitos?').join(','), 'Sim,Não,Não sei');
+});
+
+/* ---------- 7. Módulos novos ---------- */
+if (D.comerciais) {
+  t('Todo medicamento tem entrada de nome comercial', () => {
+    const falta = D.medicamentos.filter(m => !D.comerciais.porMedicamento[m.id]).map(m => m.id);
+    if (falta.length) throw new Error(falta.join(', '));
+  });
+  t('Sinônimos comerciais apontam para medicamentos existentes', () => {
+    const ruins = Object.entries(D.comerciais.sinonimos || {}).filter(([, id]) => !idsMed.has(id));
+    if (ruins.length) throw new Error(ruins.map(x => x[0]).join(', '));
+  });
+}
+if (D.alternativas) {
+  t('Alternativas cobrem o núcleo de doenças e emergências', () => {
+    const nucleo = (D.doencas || []).concat((D.neonatal && D.neonatal.protocolos) || []);
+    const falta = nucleo.filter(d => !D.alternativas.porDoenca[d.id]).map(d => d.id);
+    if (falta.length) throw new Error('sem alternativas: ' + falta.join(', '));
+  });
+  // Protocolos complementares podem entrar depois; a pendência é relatada, não reprovada.
+  pendencias.alternativas = (D.doencasExtra || []).filter(d => !D.alternativas.porDoenca[d.id]).map(d => d.id);
+  t('Alternativas referenciam medicamentos existentes e tipos válidos', () => {
+    const ruins = [];
+    for (const [k, v] of Object.entries(D.alternativas.porDoenca)) for (const l of v.linhas || []) {
+      if (!D.alternativas.rotulosTipo[l.tipo]) ruins.push(k + ' tipo ' + l.tipo);
+      for (const o of l.opcoes || []) if (o.medId && !idsMed.has(o.medId)) ruins.push(k + ' med ' + o.medId);
+    }
+    if (ruins.length) throw new Error(ruins.slice(0, 5).join(', '));
+  });
+  t('Off-label vem sempre com justificativa', () => {
+    const ruins = [];
+    for (const [k, v] of Object.entries(D.alternativas.porDoenca)) for (const l of v.linhas || [])
+      if (l.tipo === 'offlabel') for (const o of l.opcoes || []) if (!o.obs || o.obs.length < 20) ruins.push(k + ': ' + o.nome);
+    if (ruins.length) throw new Error(ruins.join(', '));
+  });
+}
+if (D.locais) {
+  t('Amazonas vem primeiro e Manaus lidera as cidades', () => {
+    eq(D.locais.estados[0].uf, 'AM'); eq(D.locais.estados[0].destaque, true);
+    eq(D.locais.cidades.AM[0].nome, 'Manaus');
+  });
+  t('Unidades têm identificador único e zona válida', () => {
+    const ids = D.locais.unidades.map(u => u.id);
+    eq(new Set(ids).size, ids.length, 'ids duplicados:');
+    const zs = new Set(D.locais.zonasManaus.map(z => z.id));
+    const ruins = D.locais.unidades.filter(u => u.cidade === 'Manaus' && u.zona && !zs.has(u.zona)).map(u => u.nome);
+    if (ruins.length) throw new Error(ruins.join(', '));
+  });
+  t('Nenhum telefone foi presumido sem endereço conhecido', () => {
+    const ruins = D.locais.unidades.filter(u => u.telefone && !u.endereco).map(u => u.nome);
+    if (ruins.length) throw new Error('telefone sem endereço: ' + ruins.join(', '));
+  });
+}
+if (D.violencia) {
+  t('Todo tipo de violência tem conduta e o que não fazer', () => {
+    const ruins = [];
+    for (const x of D.violencia.tipos) {
+      const c = (D.violencia.conduta.porTipo || {})[x.id];
+      if (!c) { ruins.push(x.id + ' sem conduta'); continue; }
+      if (!(c.passos || []).length) ruins.push(x.id + ' sem passos');
+      if (!(c.oQueNaoFazer || []).length) ruins.push(x.id + ' sem oQueNaoFazer');
+    }
+    if (ruins.length) throw new Error(ruins.join(', '));
+  });
+  t('Violência sexual traz as janelas de tempo das profilaxias', () => {
+    const j = (D.violencia.conduta.porTipo.sexual || {}).janelas || [];
+    if (j.length < 4) throw new Error('apenas ' + j.length + ' janelas');
+    if (!j.some(x => /72/.test(x.prazo))) throw new Error('sem a janela de 72 horas');
+  });
+  t('Obrigações legais estão declaradas', () => {
+    for (const k of ['notificacaoCompulsoria', 'conselhoTutelar', 'escutaEspecializada']) if (!D.violencia.legal[k]) throw new Error('falta ' + k);
+  });
+}
+if (D.curiosidades) {
+  t('Curiosidades trazem frase para explicar à família', () => {
+    const semFala = Object.entries(D.curiosidades.porDoenca || {}).filter(([, v]) => !v.some(x => x.tipo === 'explicarFamilia')).map(x => x[0]);
+    if (semFala.length) throw new Error(semFala.slice(0, 5).join(', '));
+  });
+}
+
 /* ---------- Resultado ---------- */
 console.log('\nMucurinha – suíte de testes');
+const extras = [D.comerciais && 'comerciais', D.alternativas && 'alternativas', D.locais && 'locais', D.violencia && 'violência', D.curiosidades && 'curiosidades'].filter(Boolean);
+console.log('  módulos: ' + (extras.join(', ') || 'nenhum módulo complementar carregado'));
 console.log('  bases: ' + doencas.length + ' doenças, ' + D.medicamentos.length + ' medicamentos, ' + D.queixas.length + ' queixas, ' +
   D.emergencias.length + ' emergências, ' + D.exames.length + ' exames, ' + D.vacinas.length + ' vacinas, ' + C.calculadoras.length + ' calculadoras');
 console.log('  ' + ok + ' passaram, ' + fail + ' falharam');
+for (const [k, v] of Object.entries(pendencias)) if (v && v.length) console.log('  … pendente em ' + k + ': ' + v.length + ' item(ns) — ' + v.slice(0, 6).join(', ') + (v.length > 6 ? '…' : ''));
 if (fail) { console.log('\nFalhas:'); falhas.forEach(x => console.log('  ✗ ' + x)); process.exit(1); }
 console.log('  ✓ tudo certo\n');

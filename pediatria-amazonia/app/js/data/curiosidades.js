@@ -701,5 +701,106 @@ PED.data.curiosidades = {
     ]
 
   }
+,
+
+  // Frases prontas para explicar ao paciente e ao acompanhante, por assunto.
+  // Feitas para serem ditas em voz alta, sem jargão, sem diminutivo forçado e sem susto desnecessário.
+  explicarFamilia: [
+    { assunto: 'Febre', texto: 'A febre é a defesa do corpo, não a doença. O que importa é como a criança fica entre um pico e outro: se ela brinca, bebe líquido e faz xixi, o sinal é bom. Não precisa medir de hora em hora nem correr atrás de zerar o termômetro.' },
+    { assunto: 'Antibiótico', texto: 'Antibiótico mata bactéria, e a maioria das febres de criança é vírus, que ele não resolve. Quando eu receito, é para ir até o último dia, mesmo que ela melhore no terceiro: parar antes deixa as bactérias mais fortes sobrando. E nunca use o que sobrou de outra vez ou o de outra pessoa.' },
+    { assunto: 'Soro caseiro e reidratação', texto: 'Na diarreia, o perigo não é o cocô solto, é a criança secar por dentro. Ofereça líquido depois de cada evacuação, de colher em colher, sem parar. Se vomitar, espere dez minutos e recomece devagar. O soro de envelope é melhor que o caseiro porque vem na medida certa; se fizer em casa, siga exatamente a medida que eu anotei, porque doce demais piora.' },
+    { assunto: 'Vacina', texto: 'Vacina não causa a doença, ela ensina o corpo a reconhecer o inimigo antes de ele chegar. Febre baixa, choro e vermelhidão no lugar da picada nos dois primeiros dias são esperados e passam. Traga sempre a caderneta: ela vale mais que a memória de qualquer um de nós dois.' },
+    { assunto: 'Mosquiteiro e arboviroses', texto: 'Cada mosquito daqui tem um horário e um lugar. O da dengue pica de dia e nasce na água parada de dentro de casa, em pote, calha, vaso e balde. O da malária pica do fim da tarde até de manhã cedo, e é por isso que o mosquiteiro na rede vale mais que qualquer outra coisa. Olhe o quintal uma vez por semana e vire tudo que junta água.' },
+    { assunto: 'Verminose e água tratada', texto: 'Verme não é sinal de casa suja, é sinal de água e chão sem tratamento. O remédio mata os de agora, mas em uma semana pode pegar de novo se nada mudar. Água fervida ou com hipoclorito para beber, mão lavada antes de comer e depois do banheiro, e sandália no pé no terreiro: um desses vermes entra pela sola do pé.' },
+    { assunto: 'Acidente com animal peçonhento', texto: 'Se picar cobra, escorpião ou aranha: não corte, não fure, não amarre, não chupe e não passe nada em cima. Lave com água e sabão, mantenha o braço ou a perna para cima e venha logo. Não precisa matar nem trazer o bicho. O remédio que desmancha o veneno só existe no hospital e é de graça.' },
+    { assunto: 'Aleitamento materno', texto: 'Até os seis meses, só o peito: nem água, nem chá, nem suco, porque o leite já tem toda a água de que ele precisa, mesmo neste calor. Depois dos seis meses entra a comida e o peito continua, até dois anos ou mais. Se ele mama, molha bem a fralda e ganha peso, o seu leite está dando conta, e leite fraco não existe.' },
+    { assunto: 'Sinais de alarme para voltar', texto: 'Quero que a senhora volte na hora, de dia ou de madrugada, se acontecer qualquer uma destas coisas: a criança ficar muito molinha ou difícil de acordar, respirar rápido ou afundar o peito, não conseguir beber nem mamar, vomitar tudo, ter convulsão, ficar com a mão e o pé frios, ou aparecer sangramento. Não espere amanhecer nem esperar para ver se melhora.' },
+    { assunto: 'Automedicação', texto: 'Remédio que serviu para um filho pode ser errado para o outro, porque a dose vai pelo peso. E sobra de antibiótico guardada em casa é o começo de um problema maior: da próxima vez ele pode não funcionar mais. Chá e garrafada podem ser fortes de verdade, alguns judiam do fígado, então me conte o que a senhora já deu, sem medo, para eu não errar.' },
+    { assunto: 'Desenvolvimento e estímulo', texto: 'O que faz o cérebro do bebê crescer é conversa, colo e brincadeira, não brinquedo caro. Fale com ele enquanto dá banho, cante o que a senhora sabe, conte o que está fazendo. Criança que é olhada e respondida aprende a falar mais cedo, e isso é de graça.' },
+    { assunto: 'Tela e sono', texto: 'Antes dos dois anos, o ideal é nenhuma tela, e depois disso o pouco que houver deve ser com um adulto junto, conversando sobre o que aparece. Tela perto da hora de dormir atrapalha o sono, e criança que dorme mal fica mais irritada e come pior. Um horário de dormir parecido todo dia ajuda mais do que parece.' },
+    { assunto: 'Alimentação complementar', texto: 'A partir dos seis meses a comida é amassada com garfo, não batida no liquidificador, para ele aprender a mastigar. Ofereça o que a família come: peixe, feijão, farinha, fruta da região, ovo, fígado de vez em quando pelo ferro. Nada de açúcar, refrigerante nem suco de caixinha antes dos dois anos. Se ele recusar, ofereça outro dia, sem brigar: às vezes precisa de muitas tentativas até aceitar.' },
+    { assunto: 'Cuidado com o sol e o rio', texto: 'Sol forte aqui é entre dez e quatro da tarde. Camiseta no banho de rio protege mais que qualquer creme, e chapéu ajuda muito. Criança nunca fica sozinha na beira, nem no banho de igarapé raso, porque afogamento é silencioso e rápido: não tem grito nem barulho. Quem não sabe nadar usa colete no barco, sempre.' },
+    { assunto: 'Transporte fluvial e demora para chegar', texto: 'Sei que vocês levaram muitas horas para chegar até aqui, e vou levar isso em conta no que estou receitando. Prefiro dar agora tudo que der para dar e deixar por escrito o que fazer em casa, para vocês não precisarem voltar por qualquer coisa. Mas se aparecer um dos sinais de alarme, o caminho tem que ser feito de novo, sem esperar o barco de linha da semana.' },
+    { assunto: 'Perguntar sem julgar sobre remédio caseiro', texto: 'Aqui ninguém vai brigar com a senhora por causa de chá ou de banho de erva. Só preciso saber o que já foi dado, e quanto, para não repetir remédio nem misturar coisa que não combina. Muito do que se usa é inofensivo, algumas coisas não são, e eu só consigo separar uma da outra se a senhora me contar.' },
+    { assunto: 'Criança indígena e respeito ao território', texto: 'Se a família for de comunidade indígena, vale perguntar com quem eles já falaram na aldeia, se o agente indígena de saúde acompanhou, e em que língua a criança e a mãe se entendem melhor. Explicar de novo, devagar, com um parente que traduza, não é perda de tempo: é o que faz o tratamento acontecer de verdade quando eles voltarem.' },
+    { assunto: 'Volta à escola e ao convívio', texto: 'A maior parte das doenças da infância não exige afastar a criança da escola por muitos dias: ela volta quando estiver sem febre, comendo e disposta. Hanseníase e tuberculose em tratamento não afastam ninguém de mesa, de escola nem de brincadeira. O que separa criança do convívio é o preconceito, não a doença tratada.' }
+  ],
+
+  // Perguntas rápidas que a médica pode usar para se testar, com resposta.
+  quiz: [
+    { pergunta: 'Qual o exame de escolha para o diagnóstico de malária e o que fazer se vier negativo com suspeita alta?', resposta: 'Gota espessa. Se negativa e a suspeita persistir, repetir, porque a parasitemia oscila ao longo do dia.', tema: 'malaria' },
+    { pergunta: 'Quais as contraindicações da primaquina em pediatria?', resposta: 'Menores de 6 meses, gestantes e lactantes de crianças menores de 6 meses. Orientar sinais de hemólise: urina escura, icterícia e palidez.', tema: 'malaria' },
+    { pergunta: 'Como se distribuem as 6 doses do artemeter com lumefantrina?', resposta: 'Em 3 dias, nas horas 0, 8, 24, 36, 48 e 60, sempre com alimento ou leite. Se vomitar em até 1 hora, repetir a dose.', tema: 'malaria' },
+    { pergunta: 'Em que momento da dengue a criança tem maior risco de gravidade?', resposta: 'Na defervescência, entre o terceiro e o sétimo dia, quando a febre cede e pode ocorrer extravasamento de plasma.', tema: 'dengue' },
+    { pergunta: 'Qual combinação clínica mais ajuda a separar zika de dengue à beira do leito?', resposta: 'Exantema pruriginoso com hiperemia conjuntival sem secreção e febre baixa ou ausente.', tema: 'zika' },
+    { pergunta: 'Qual é o vetor da febre do Oropouche e por que o mosquiteiro comum não basta?', resposta: 'Culicoides paraensis, o maruim ou mosquito-pólvora. É tão pequeno que atravessa telas e mosquiteiros de malha comum.', tema: 'oropouche' },
+    { pergunta: 'Qual a principal via de transmissão da doença de Chagas aguda na Amazônia?', resposta: 'Oral, por açaí, bacaba ou caldo contaminado no preparo. Os surtos são familiares e não há sinal de Romaña nem chagoma.', tema: 'doenca_chagas' },
+    { pergunta: 'Qual o esquema da vacina de febre amarela no calendário atual do Ministério da Saúde?', resposta: 'Primeira dose aos 9 meses e reforço aos 4 anos.', tema: 'febre_amarela' },
+    { pergunta: 'Qual tríade levanta a suspeita de leptospirose antes de qualquer exame?', resposta: 'Sufusão conjuntival sem secreção, mialgia intensa em panturrilhas e contato com água de enchente ou lama.', tema: 'leptospirose' },
+    { pergunta: 'Qual a apresentação clássica da leishmaniose visceral na criança pequena?', resposta: 'Febre prolongada de semanas, palidez progressiva, ausência de ganho de peso e esplenomegalia maior que a hepatomegalia.', tema: 'leishmaniose_visceral' },
+    { pergunta: 'Por que a baciloscopia costuma ser negativa na tuberculose infantil?', resposta: 'Porque a doença na criança é paucibacilar. O diagnóstico se apoia no sistema de pontuação do Ministério da Saúde: clínica, radiografia, contato com adulto bacilífero, prova tuberculínica e estado nutricional.', tema: 'tuberculose' },
+    { pergunta: 'O que caracteriza a mancha da hanseníase e como testar em menos de um minuto?', resposta: 'Mancha que não coça e não dói, com perda de sensibilidade. Testa-se sensibilidade térmica, dolorosa e tátil, comparando com a pele vizinha.', tema: 'hanseniase' },
+    { pergunta: 'O que significa um caso de hanseníase em menor de 15 anos?', resposta: 'Transmissão ativa e recente na comunidade. Obriga exame de todos os contatos domiciliares.', tema: 'hanseniase' },
+    { pergunta: 'A dose de soro antiveneno depende do peso da criança?', resposta: 'Não. Depende da gravidade, ou seja, da quantidade de veneno inoculado. Criança recebe o mesmo número de ampolas que o adulto.', tema: 'acidente_ofidico' },
+    { pergunta: 'Qual acidente ofídico cursa com dor local pequena, fácies miastênica e urina escura?', resposta: 'Crotálico. A neurotoxicidade e a rabdomiólise dominam, e a discreta repercussão local engana.', tema: 'acidente_ofidico' },
+    { pergunta: 'Que sinais indicam envenenamento sistêmico por escorpião em criança pequena?', resposta: 'Vômitos repetidos, sudorese profusa, agitação ou sonolência, taquicardia e taquipneia. Não são reação à dor e indicam soroterapia.', tema: 'escorpionismo' },
+    { pergunta: 'Todo acidente por aranha armadeira precisa de soro?', resposta: 'Não. A maioria é leve e se resolve com analgesia local e observação. A soroterapia fica para as manifestações sistêmicas, mais frequentes em criança pequena.', tema: 'araneismo' },
+    { pergunta: 'Qual o sinal mais sensível de pneumonia na atenção básica e como medi-lo?', resposta: 'Taquipneia, contada por um minuto inteiro com a criança calma. Ausculta normal não exclui pneumonia.', tema: 'pneumonia' },
+    { pergunta: 'Em que dia a bronquiolite costuma atingir o pior momento?', resposta: 'Entre o terceiro e o quarto dia de evolução, melhorando depois. Saber disso evita alta prematura e troca desnecessária de conduta.', tema: 'bronquiolite' },
+    { pergunta: 'Na crise leve a moderada de asma, espaçador ou nebulização?', resposta: 'Salbutamol com espaçador é tão eficaz quanto a nebulização, com menos taquicardia e menos tempo de sala.', tema: 'asma' },
+    { pergunta: 'Quando começa o efeito clínico do corticoide sistêmico na crise de asma?', resposta: 'Por volta de 4 a 6 horas, porque depende de transcrição gênica. Ele não é o que melhora agora, é o que evita a recaída.', tema: 'asma' },
+    { pergunta: 'Qual a dose usual de sulfato de magnésio na crise de asma grave?', resposta: '50 mg/kg IV, faixa de 25 a 75 mg/kg, máximo 2 g, diluído e infundido em 20 a 30 minutos, com monitorização de pressão, frequência cardíaca e reflexos.', tema: 'asma' },
+    { pergunta: 'Urocultura colhida por saco coletor serve para confirmar infecção urinária?', resposta: 'Não. Serve para afastar. Resultado positivo precisa ser confirmado por jato médio, cateterismo ou punção suprapúbica antes de rotular a criança.', tema: 'infeccao_urinaria' },
+    { pergunta: 'Por que a nitrofurantoína não serve para pielonefrite?', resposta: 'Porque atinge concentração alta na urina e concentração muito baixa no sangue e nos tecidos. Serve para cistite, não para infecção febril.', tema: 'infeccao_urinaria' },
+    { pergunta: 'Quais sinais de meningite aparecem no lactente quando faltam os sinais meníngeos clássicos?', resposta: 'Irritabilidade que piora ao colo, gemência, recusa alimentar, fontanela tensa e convulsão. Rigidez de nuca ausente não afasta o diagnóstico.', tema: 'meningite' },
+    { pergunta: 'Por que a pressão arterial normal não tranquiliza numa criança com suspeita de sepse?', resposta: 'Porque a hipotensão é sinal tardio na criança. Enchimento capilar lento, extremidades frias, pulso fino e alteração do sensório aparecem antes.', tema: 'sepse' },
+    { pergunta: 'Qual o volume e o tempo do Plano B de reidratação oral?', resposta: 'Aproximadamente 75 mL/kg de SRO em 4 horas, em pequenos volumes frequentes, com reavaliação a cada hora.', tema: 'doenca_diarreica' },
+    { pergunta: 'Como se faz o Plano C em menor de 1 ano?', resposta: 'Ringer lactato ou SF 0,9%, 100 mL/kg no total: 30 mL/kg na primeira hora e 70 mL/kg nas 5 horas seguintes, reavaliando a cada 15 a 30 minutos.', tema: 'doenca_diarreica' },
+    { pergunta: 'Qual a dose de zinco na diarreia aguda e por quanto tempo?', resposta: 'Menores de 6 meses: 10 mg/dia. A partir de 6 meses: 20 mg/dia. Por 10 a 14 dias, mantendo mesmo após a diarreia cessar.', tema: 'doenca_diarreica' },
+    { pergunta: 'Qual a dose de ondansetrona para vômitos que impedem a reidratação oral?', resposta: '0,15 mg/kg VO em dose única, a partir de 6 meses, reiniciando o SRO em 10 a 15 minutos.', tema: 'doenca_diarreica' },
+    { pergunta: 'Por qual via entra o ancilostomídeo e o que isso muda na orientação?', resposta: 'Pela pele do pé descalço, não pela boca. A orientação passa a incluir calçado no terreiro, além de água tratada e higiene das mãos.', tema: 'parasitoses_intestinais' },
+    { pergunta: 'Que complicação tardia deve ser avisada à família após impetigo estreptocócico?', resposta: 'Glomerulonefrite pós-estreptocócica, semanas depois. Orientar sobre urina escura, edema palpebral e redução do volume urinário.', tema: 'escabiose_impetigo' },
+    { pergunta: 'Qual a dose de sulfato ferroso no tratamento da anemia ferropriva e quando reavaliar?', resposta: '3 a 5 mg/kg/dia de ferro elementar, longe do leite e do chá. Reavaliar a hemoglobina em 30 dias, esperando aumento de pelo menos 1 g/dL.', tema: 'anemia_ferropriva' },
+    { pergunta: 'Que três causas de anemia costumam somar-se na criança amazônica?', resposta: 'Dieta pobre em ferro, malária de repetição e perda sanguínea por ancilostomíase. Encontrar uma não dispensa procurar as outras.', tema: 'anemia_ferropriva' },
+    { pergunta: 'Por que a reintrodução alimentar na desnutrição grave é deliberadamente lenta?', resposta: 'Pelo risco de síndrome de realimentação. Além disso a criança faz hipoglicemia e hipotermia com facilidade e pode infectar sem febre.', tema: 'desnutricao' },
+    { pergunta: 'Qual a suplementação preventiva de vitamina A por faixa etária?', resposta: '6 a 11 meses: 100.000 UI em dose única. 12 a 59 meses: 200.000 UI a cada 6 meses, respeitando intervalo mínimo entre megadoses.', tema: 'vitamina_a' },
+    { pergunta: 'Qual a dose e a via da adrenalina na anafilaxia?', resposta: '0,01 mg/kg da solução 1:1.000 por via intramuscular na face anterolateral da coxa, máximo 0,5 mg, repetindo a cada 5 a 15 minutos se necessário. Anti-histamínico e corticoide são adjuvantes e não substituem.', tema: 'adrenalina' },
+    { pergunta: 'Por que a cefotaxima é preferida à ceftriaxona no recém-nascido?', resposta: 'Porque a ceftriaxona desloca a bilirrubina da albumina e precipita com soluções contendo cálcio.', tema: 'ceftriaxona' },
+    { pergunta: 'Qual efeito da rifampicina deve ser avisado à família para evitar susto e abandono?', resposta: 'Coloração alaranjada de urina, suor e lágrima, que mancha roupa e lente de contato. É esperado e indica adesão.', tema: 'rifampicina' },
+    { pergunta: 'Qual toxicidade caracteriza o etambutol e por que ela preocupa na criança pequena?', resposta: 'Neurite óptica, com perda da discriminação entre verde e vermelho. Preocupa porque a criança pequena não sabe relatar a queixa.', tema: 'etambutol' }
+  ],
+
+  rotulosTipo: {
+    sabia: { rotulo: 'Você sabia', icone: '💡' },
+    regional: { rotulo: 'Na Amazônia', icone: '🌳' },
+    historia: { rotulo: 'História', icone: '📜' },
+    pratica: { rotulo: 'Na prática', icone: '🩺' },
+    explicarFamilia: { rotulo: 'Para explicar à família', icone: '🗣️' }
+  },
+
+  aviso: 'Conteúdo de apoio e de conversa com a família. Não substitui o protocolo nem altera a conduta. Em qualquer divergência, vale o que está na tela da doença, do medicamento ou da emergência.',
+
+  fontes: [
+    'Ministério da Saúde. Guia de Tratamento da Malária no Brasil.',
+    'Ministério da Saúde. Dengue: diagnóstico e manejo clínico, adulto e criança.',
+    'Ministério da Saúde. Guia de Vigilância em Saúde.',
+    'Ministério da Saúde. Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos.',
+    'Ministério da Saúde. Manual de Recomendações para o Controle da Tuberculose no Brasil.',
+    'Ministério da Saúde. Diretrizes para Vigilância, Atenção e Eliminação da Hanseníase.',
+    'Ministério da Saúde. Manual de Vigilância e Controle da Leishmaniose Visceral e Manual de Vigilância da Leishmaniose Tegumentar.',
+    'Ministério da Saúde. Manual de Normas e Procedimentos para Vacinação e Calendário Nacional de Vacinação.',
+    'Ministério da Saúde. Caderneta da Criança e Programa Nacional de Suplementação de Vitamina A e de Ferro.',
+    'Organização Mundial da Saúde. Pocket Book of Hospital Care for Children, 2ª edição.',
+    'Organização Mundial da Saúde. Guidelines for Malaria e Oral Rehydration Salts, formulação de osmolaridade reduzida.',
+    'Organização Mundial da Saúde e UNICEF. Atenção Integrada às Doenças Prevalentes na Infância (AIDPI).',
+    'Global Initiative for Asthma (GINA), relatório anual.',
+    'Sociedade Brasileira de Pediatria. Documentos científicos e Tratado de Pediatria.',
+    'Fundação de Medicina Tropical Doutor Heitor Vieira Dourado (FMT-HVD), Manaus, e Instituto Leônidas e Maria Deane (Fiocruz Amazônia).',
+    'Instituto Butantan, Fundação Ezequiel Dias e Instituto Vital Brazil: produção e indicação de soros antiveneno.',
+    'IBGE: população, área e localização dos municípios do Amazonas; Instituto Socioambiental e Funai: povos e terras indígenas.',
+    'Literatura histórica de referência para as notas de história e etimologia, incluindo os trabalhos originais de Carlos Chagas (1909), Gaspar Vianna (1912) e Cicely Williams (1933).'
+  ],
+
+  atualizadoEm: '2026-09'
 
 };
