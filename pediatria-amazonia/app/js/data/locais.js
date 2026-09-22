@@ -630,6 +630,127 @@ PED.data.locais = {
     { id: 'ubs_rural_br174', nome: 'UBS da área rural da BR-174', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'rural', bairro: 'Área rural da BR-174', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
 
     // ---------------------------------------------------------------
+    // MANAUS - REDE PRIVADA (COMPLEMENTO)
+    // Só entram serviços privados cuja existência em Manaus é conhecida.
+    // Endereço e telefone não são presumidos. pediatria: true só quando
+    // o atendimento a criança é conhecido; nos demais, confirmar no CNES.
+    // ---------------------------------------------------------------
+    {
+      id: 'hospital_samel_manaus',
+      nome: 'Hospital Samel (rede Samel)',
+      tipo: 'hospital', rede: 'privada',
+      cidade: 'Manaus', zona: null, bairro: '',
+      endereco: '', telefone: '',
+      pediatria: true, urgencia: true,
+      obs: 'rede privada com mais de uma unidade em Manaus; confirmar no CNES qual unidade tem pronto atendimento pediátrico 24 h, além de endereço e telefone', verificar: true
+    },
+    {
+      id: 'hospital_check_up_manaus',
+      nome: 'Hospital Check-up',
+      tipo: 'hospital', rede: 'privada',
+      cidade: 'Manaus', zona: null, bairro: '',
+      endereco: '', telefone: '',
+      pediatria: false, urgencia: false,
+      obs: 'confirmar no CNES endereço, telefone, se há pronto atendimento 24 h e se atende criança', verificar: true
+    },
+    {
+      id: 'hospital_nilton_lins',
+      nome: 'Hospital Nilton Lins',
+      tipo: 'hospital', rede: 'privada',
+      cidade: 'Manaus', zona: null, bairro: '',
+      endereco: '', telefone: '',
+      pediatria: false, urgencia: false,
+      obs: 'hospital-escola privado; confirmar no CNES endereço, telefone, perfil de atendimento e se atende criança', verificar: true
+    },
+
+    // ---------------------------------------------------------------
+    // MANAUS - POLICLÍNICAS E CENTROS DE ATENÇÃO ESPECIALIZADA
+    // Registradas como referência porque atendem por encaminhamento.
+    // Confirmar nome oficial, endereço e agenda no CNES ou na SEMSA.
+    // ---------------------------------------------------------------
+    {
+      id: 'policlinica_codajas',
+      nome: 'Policlínica Codajás',
+      tipo: 'referencia', rede: 'publica',
+      cidade: 'Manaus', zona: 'sul', bairro: '',
+      endereco: '', telefone: '',
+      pediatria: true, urgencia: false,
+      referenciaPara: ['consultas especializadas', 'exames de apoio diagnóstico'],
+      obs: 'confirmar bairro, endereço, especialidades pediátricas ofertadas e forma de agendamento', verificar: true
+    },
+    {
+      id: 'capsi_manaus',
+      nome: 'Centro de Atenção Psicossocial Infantojuvenil (CAPSi) de Manaus',
+      tipo: 'referencia', rede: 'publica',
+      cidade: 'Manaus', zona: null, bairro: '',
+      endereco: '', telefone: '',
+      pediatria: true, urgencia: false,
+      referenciaPara: ['saúde mental da criança e do adolescente'],
+      obs: 'confirmar quantas unidades infantojuvenis estão em funcionamento, o nome oficial de cada uma, o endereço e o fluxo de encaminhamento', verificar: true
+    },
+    {
+      id: 'apae_manaus',
+      nome: 'APAE Manaus (Associação de Pais e Amigos dos Excepcionais)',
+      tipo: 'referencia', rede: 'privada',
+      cidade: 'Manaus', zona: null, bairro: '',
+      endereco: '', telefone: '',
+      pediatria: true, urgencia: false,
+      referenciaPara: ['reabilitação', 'deficiência intelectual', 'atraso do desenvolvimento'],
+      obs: 'entidade filantrópica que atende por convênio com o SUS; confirmar endereço, critérios de encaminhamento e disponibilidade de vaga', verificar: true
+    },
+
+    // ---------------------------------------------------------------
+    // MANAUS - UBS POR BAIRRO (COMPLEMENTO)
+    // Uma entrada para cada bairro oficial ainda sem UBS nesta base.
+    // Como nas entradas anteriores, a unidade é identificada pelo bairro,
+    // que é como ela é conhecida localmente. O nome oficial (patrono) precisa
+    // ser confirmado no CNES antes de ser usado em documento.
+    // ---------------------------------------------------------------
+    { id: 'ubs_nossa_senhora_das_gracas', nome: 'UBS de Nossa Senhora das Graças', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'centro_sul', bairro: 'Nossa Senhora das Graças', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+
+    { id: 'ubs_dom_pedro', nome: 'UBS do Dom Pedro', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'centro_oeste', bairro: 'Dom Pedro', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+    { id: 'ubs_nova_esperanca', nome: 'UBS da Nova Esperança', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'centro_oeste', bairro: 'Nova Esperança', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+
+    { id: 'ubs_lago_azul', nome: 'UBS do Lago Azul', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'norte', bairro: 'Lago Azul', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+    { id: 'ubs_novo_aleixo', nome: 'UBS do Novo Aleixo', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'norte', bairro: 'Novo Aleixo', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+    { id: 'ubs_terra_nova', nome: 'UBS da Terra Nova', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'norte', bairro: 'Terra Nova', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+    { id: 'ubs_cidade_de_deus', nome: 'UBS da Cidade de Deus', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'norte', bairro: '', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'localidade populosa da Zona Norte que não consta na lista de bairros deste cadastro; confirmar no CNES o nome oficial da unidade, o bairro e o endereço', verificar: true },
+    { id: 'ubs_viver_melhor', nome: 'UBS do Conjunto Viver Melhor', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'norte', bairro: '', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'conjunto habitacional da Zona Norte; confirmar no CNES o nome oficial da unidade, o bairro e o endereço', verificar: true },
+
+    { id: 'ubs_betania', nome: 'UBS do Betânia', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'sul', bairro: 'Betânia', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+    { id: 'ubs_cachoeirinha', nome: 'UBS da Cachoeirinha', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'sul', bairro: 'Cachoeirinha', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+    { id: 'ubs_centro', nome: 'UBS do Centro', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'sul', bairro: 'Centro', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+    { id: 'ubs_crespo', nome: 'UBS do Crespo', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'sul', bairro: 'Crespo', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+    { id: 'ubs_distrito_industrial_i', nome: 'UBS do Distrito Industrial I', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'sul', bairro: 'Distrito Industrial I', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar no CNES se há unidade dentro do bairro ou qual unidade vizinha cobre a área, além de nome oficial e endereço', verificar: true },
+    { id: 'ubs_nossa_senhora_aparecida', nome: 'UBS de Nossa Senhora Aparecida', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'sul', bairro: 'Nossa Senhora Aparecida', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+    { id: 'ubs_praca_14', nome: 'UBS da Praça 14 de Janeiro', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'sul', bairro: 'Praça 14 de Janeiro', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+    { id: 'ubs_presidente_vargas', nome: 'UBS do Presidente Vargas', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'sul', bairro: 'Presidente Vargas', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+    { id: 'ubs_santa_luzia', nome: 'UBS da Santa Luzia', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'sul', bairro: 'Santa Luzia', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+    { id: 'ubs_sao_francisco', nome: 'UBS do São Francisco', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'sul', bairro: 'São Francisco', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+    { id: 'ubs_sao_lazaro', nome: 'UBS do São Lázaro', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'sul', bairro: 'São Lázaro', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+    { id: 'ubs_vila_buriti', nome: 'UBS da Vila Buriti', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'sul', bairro: 'Vila Buriti', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+
+    { id: 'ubs_distrito_industrial_ii', nome: 'UBS do Distrito Industrial II', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'leste', bairro: 'Distrito Industrial II', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar no CNES se há unidade dentro do bairro ou qual unidade vizinha cobre a área, além de nome oficial e endereço', verificar: true },
+    { id: 'ubs_gilberto_mestrinho', nome: 'UBS do Gilberto Mestrinho', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'leste', bairro: 'Gilberto Mestrinho', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+    { id: 'ubs_mauazinho', nome: 'UBS do Mauazinho', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'leste', bairro: 'Mauazinho', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+    { id: 'ubs_puraquequara', nome: 'UBS do Puraquequara', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'leste', bairro: 'Puraquequara', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'área de transição urbano-rural; confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+
+    { id: 'ubs_ponta_negra', nome: 'UBS da Ponta Negra', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'oeste', bairro: 'Ponta Negra', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+    { id: 'ubs_taruma_acu', nome: 'UBS do Tarumã-Açu', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'oeste', bairro: 'Tarumã-Açu', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+
+    // ---------------------------------------------------------------
+    // MANAUS - ZONA RURAL E RIBEIRINHA (COMPLEMENTO)
+    // A zona rural de Manaus é atendida por equipes de saúde da família
+    // rurais e fluviais, com deslocamento por ramal ou por rio. O número
+    // de unidades em operação e o calendário mudam: confirmar na SEMSA.
+    // ---------------------------------------------------------------
+    { id: 'ubs_rural_am010', nome: 'UBS da área rural da AM-010', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'rural', bairro: 'Área rural da AM-010', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço, ramal de referência e perfil de atendimento', verificar: true },
+    { id: 'ubs_rural_nova_canaa', nome: 'UBS do Distrito de Nova Canaã', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'rural', bairro: 'Distrito de Nova Canaã', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+    { id: 'ubs_rural_brasileirinho', nome: 'UBS do Ramal do Brasileirinho', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'rural', bairro: 'Ramal do Brasileirinho', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'confirmar nome oficial, endereço e perfil de atendimento', verificar: true },
+    { id: 'ubs_fluvial_rio_negro', nome: 'Atendimento fluvial às comunidades do Rio Negro (Manaus)', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'rural', bairro: 'Comunidades do Rio Negro', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'cobertura ribeirinha por equipe fluvial; confirmar na SEMSA qual unidade fluvial atende estas comunidades, o calendário e o ponto de atracação', verificar: true },
+    { id: 'ubs_fluvial_rio_amazonas', nome: 'Atendimento fluvial às comunidades do Rio Amazonas (Manaus)', tipo: 'ubs', rede: 'publica', cidade: 'Manaus', zona: 'rural', bairro: 'Comunidades do Rio Amazonas', endereco: '', telefone: '', pediatria: true, urgencia: false, obs: 'cobertura ribeirinha por equipe fluvial; confirmar na SEMSA qual unidade fluvial atende estas comunidades, o calendário e o ponto de atracação', verificar: true },
+
+    // ---------------------------------------------------------------
     // INTERIOR DO AMAZONAS - HOSPITAL PUBLICO PRINCIPAL DO MUNICIPIO
     // Referência de primeira linha antes da remoção para Manaus.
     // Todos com zona: null. Confirmar nome oficial e retaguarda pediátrica no CNES.

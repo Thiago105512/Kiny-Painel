@@ -705,5 +705,765 @@ PED.data.doencasExtra = [
     ],
     atualizadoEm: '2026-09'
   }
+,
+
+  {
+    id: 'escarlatina',
+    nome: 'Escarlatina',
+    categoria: 'infecciosa',
+    amazonia: false,
+    cid10: 'A38',
+    tags: ['febre', 'exantema', 'dor_garganta', 'linfonodomegalia', 'cefaleia', 'vomitos', 'dor_abdominal', 'lesoes_pele'],
+    definicao: 'Doença exantemática causada por cepas de Streptococcus pyogenes produtoras de toxina eritrogênica, caracterizada por faringoamigdalite aguda associada a exantema micropapular áspero (aspecto de lixa), língua em framboesa, palidez perioral e descamação lamelar tardia de mãos e pés.',
+    epidemiologia: 'Acomete principalmente escolares de 5 a 15 anos, sendo rara antes dos 3 anos. Ocorre em surtos escolares e domiciliares, com maior frequência no período de maior aglomeração. No Amazonas, a relevância principal está no risco de complicações não supurativas em populações com acesso tardio ao serviço de saúde: febre reumática e glomerulonefrite difusa aguda pós-estreptocócica seguem sendo problemas em comunidades ribeirinhas e periferias urbanas, onde a faringite estreptocócica frequentemente não é tratada. O tratamento antibiótico adequado previne a febre reumática, mas não previne a glomerulonefrite.',
+    agente: 'Streptococcus pyogenes (estreptococo beta-hemolítico do grupo A) produtor de exotoxinas pirogênicas (toxinas eritrogênicas A, B e C).',
+    transmissao: 'Gotículas respiratórias e contato direto com secreções de nasofaringe de doentes ou portadores; raramente por alimentos contaminados. A transmissibilidade cessa em cerca de 24 horas após o início do antibiótico eficaz.',
+    incubacao: '1 a 4 dias (podendo chegar a 7 dias).',
+    manifestacoes: [
+      'Início abrupto com febre alta, dor de garganta intensa, cefaleia, vômitos e dor abdominal.',
+      'Faringe e amígdalas hiperemiadas, com exsudato, petéquias em palato e adenomegalia cervical anterior dolorosa.',
+      'Exantema micropapular difuso, eritematoso, de textura áspera ao tato (aspecto de lixa), surgindo 12 a 48 horas após a febre, iniciando em pescoço, tórax e axilas e poupando palmas e plantas.',
+      'Acentuação do exantema em dobras cutâneas com linhas transversais mais escuras e petequiais (sinal de Pastia), em fossas antecubitais, axilas e virilhas.',
+      'Rubor facial com palidez perioral característica (sinal de Filatov).',
+      'Língua inicialmente saburrosa com papilas proeminentes (língua em morango branca) evoluindo para língua vermelha e papilada (língua em framboesa) por volta do 4º ao 5º dia.',
+      'Descamação lamelar de mãos, pés e dedos 1 a 3 semanas após o quadro, e descamação furfurácea em tronco.',
+      'Complicações supurativas: abscesso periamigdaliano e retrofaríngeo, otite média, sinusite, adenite cervical supurada.',
+      'Complicações não supurativas: febre reumática (2 a 4 semanas após) e glomerulonefrite difusa aguda (1 a 3 semanas após).'
+    ],
+    sinaisAlarme: [
+      'Dificuldade respiratória, estridor, sialorreia, trismo, voz abafada ou desvio de úvula (abscesso periamigdaliano ou retrofaríngeo).',
+      'Incapacidade de deglutir saliva ou líquidos, com desidratação.',
+      'Toxemia, hipotensão, exantema com descamação precoce e difusa (suspeita de síndrome do choque tóxico estreptocócico).',
+      'Edema periorbitário, urina escura, oligúria ou hipertensão (glomerulonefrite pós-estreptocócica).',
+      'Artrite migratória, cardite, coreia ou nódulos subcutâneos (febre reumática).',
+      'Celulite, dor desproporcional em partes moles ou lesão cutânea de evolução rápida (infecção invasiva).',
+      'Febre persistente após 48 a 72 horas de antibiótico adequado.'
+    ],
+    diagnosticoDiferencial: ['faringoamigdalite_estreptococica', 'sarampo', 'rubeola', 'mononucleose', 'doença de Kawasaki', 'síndrome do choque tóxico', 'farmacodermia', 'exantema_subito', 'eritema_infeccioso', 'dengue', 'síndrome da pele escaldada estafilocócica'],
+    exames: ['teste rápido para antígeno de estreptococo do grupo A em swab de orofaringe', 'cultura de orofaringe (swab)', 'hemograma', 'pcr', 'vhs', 'urina_1', 'ureia', 'creatinina', 'antiestreptolisina O (ASLO)', 'hemocultura (suspeita de infecção invasiva)'],
+    criteriosDiagnosticos: [
+      'Quadro clínico compatível: faringoamigdalite aguda febril em escolar com exantema micropapular áspero, palidez perioral, sinal de Pastia e língua em framboesa.',
+      'Teste rápido de antígeno para estreptococo do grupo A positivo confirma; teste rápido negativo em criança com quadro sugestivo deve ser seguido de cultura de orofaringe, quando disponível.',
+      'Escores clínicos (Centor modificado por McIsaac) auxiliam a estimar a probabilidade de etiologia estreptocócica, mas na escarlatina o exantema típico já eleva muito a suspeição.',
+      'ASLO tem valor retrospectivo e não serve para decisão terapêutica na fase aguda.',
+      'Solicitar urina rotina, ureia e creatinina se edema, hipertensão, urina escura ou oligúria após o quadro.',
+      'Não há indicação de cultura de controle após o tratamento em pacientes assintomáticos, exceto em situações especiais definidas pelo serviço.'
+    ],
+    classificacaoGravidade: [
+      { nivel: 'Leve a moderada (não complicada)', criterios: 'Febre, faringite e exantema típico, com boa aceitação oral, sem sinais de obstrução de via aérea nem toxemia. Tratamento ambulatorial com antibiótico e sintomáticos.' },
+      { nivel: 'Com complicação supurativa', criterios: 'Abscesso periamigdaliano ou retrofaríngeo, adenite supurada, otite média complicada. Internação, antibiótico intravenoso e avaliação otorrinolaringológica e cirúrgica.' },
+      { nivel: 'Invasiva ou grave', criterios: 'Síndrome do choque tóxico estreptocócico, fasciíte necrosante, bacteremia, ou complicação não supurativa com repercussão (glomerulonefrite com hipertensão e oligúria, cardite reumática). Internação e suporte, com avaliação especializada.' }
+    ],
+    tratamento: [
+      'Antibioticoterapia visando erradicação do estreptococo e prevenção da febre reumática, eficaz mesmo quando iniciada até o 9º dia do início dos sintomas.',
+      'Primeira escolha: penicilina benzatina em dose única intramuscular ou amoxicilina por via oral por 10 dias; a duração completa de 10 dias é essencial para a erradicação.',
+      'Alergia à penicilina: azitromicina por 5 dias ou claritromicina por 10 dias, conforme bula e perfil de resistência local; cefalexina é opção em alergia não anafilática.',
+      'Analgesia e antitérmico com paracetamol ou dipirona; ibuprofeno pode ser usado para dor de garganta conforme bula, evitando em desidratação ou suspeita de infecção invasiva de partes moles.',
+      'Hidratação oral, dieta leve e fria, com atenção à aceitação de líquidos.',
+      'A criança deixa de ser transmissível cerca de 24 horas após o início do antibiótico eficaz e pode retornar à escola após esse período, se afebril.',
+      'Não usar corticoide de rotina; reservar para situações específicas de obstrução, conforme avaliação especializada.',
+      'Reavaliar em 48 a 72 horas: persistência da febre sugere complicação supurativa, má adesão ou diagnóstico alternativo.',
+      'Orientar retorno em 1 a 3 semanas para pesquisa ativa de sinais de glomerulonefrite (edema, urina escura, oligúria) e, em 2 a 4 semanas, de febre reumática (artrite, cardite, coreia).',
+      'Investigar e tratar contatos domiciliares sintomáticos; não há indicação de tratamento de portadores assintomáticos de rotina.',
+      'Suspeita de síndrome do choque tóxico ou infecção invasiva: internação imediata, expansão volêmica, penicilina cristalina associada a clindamicina e avaliação cirúrgica, conforme protocolo do serviço.'
+    ],
+    medicamentos: [
+      { medId: 'penicilina_benzatina', esquema: 'Dose única IM: 600.000 UI em crianças com peso abaixo de 27 kg e 1.200.000 UI em peso igual ou acima de 27 kg. Observar por 30 minutos após a aplicação.' },
+      { medId: 'amoxicilina', esquema: 'Alternativa oral: 50 mg/kg/dia VO (máximo 1 g/dia) em 1 ou 2 tomadas por 10 dias; a duração de 10 dias não deve ser encurtada.' },
+      { medId: 'azitromicina', esquema: 'Alergia à penicilina: 12 mg/kg/dia VO uma vez ao dia (máximo 500 mg/dia) por 5 dias, conforme bula.' },
+      { medId: 'claritromicina', esquema: 'Alergia à penicilina: 15 mg/kg/dia VO dividida 12/12 h (máximo 500 mg por dose) por 10 dias.' },
+      { medId: 'cefalexina', esquema: 'Alergia não anafilática à penicilina: 40 a 50 mg/kg/dia VO dividida 12/12 h (máximo 1 g/dia) por 10 dias.' },
+      { medId: 'penicilina_cristalina', esquema: 'Infecção invasiva ou choque tóxico estreptocócico internado: 200.000 a 400.000 UI/kg/dia IV dividida 4/4 ou 6/6 h, associada a clindamicina, conforme protocolo do serviço.' },
+      { medId: 'paracetamol', esquema: 'Dor e febre: 10 a 15 mg/kg/dose VO a cada 6 horas, conforme bula.' },
+      { medId: 'ibuprofeno', esquema: 'Odinofagia: 5 a 10 mg/kg/dose VO a cada 6 a 8 horas, conforme bula; evitar se suspeita de infecção invasiva de pele e partes moles ou desidratação.' }
+    ],
+    criteriosInternacao: [
+      'Suspeita de abscesso periamigdaliano ou retrofaríngeo (trismo, voz abafada, sialorreia, desvio de úvula).',
+      'Incapacidade de deglutir com desidratação ou intolerância ao antibiótico oral.',
+      'Toxemia, hipotensão ou suspeita de infecção invasiva.',
+      'Glomerulonefrite pós-estreptocócica com hipertensão, edema importante ou oligúria.',
+      'Suspeita de febre reumática com cardite ou artrite incapacitante.',
+      'Falha do tratamento ambulatorial após 48 a 72 horas.',
+      'Impossibilidade de adesão ou de retorno para reavaliação.'
+    ],
+    criteriosUTI: [
+      'Choque tóxico estreptocócico ou choque séptico.',
+      'Obstrução de via aérea superior por abscesso com necessidade de via aérea artificial.',
+      'Fasciíte necrosante com necessidade de desbridamento e suporte hemodinâmico.',
+      'Insuficiência cardíaca por cardite reumática grave.',
+      'Encefalopatia hipertensiva ou insuficiência renal aguda com necessidade de diálise.'
+    ],
+    criteriosAlta: [
+      'Afebril por pelo menos 24 horas e com melhora da odinofagia e do estado geral.',
+      'Aceitação adequada de líquidos e do antibiótico por via oral.',
+      'Ausência de sinais de complicação supurativa ou de acometimento renal e cardíaco.',
+      'Pressão arterial e diurese normais.',
+      'Responsável orientado sobre a necessidade de completar 10 dias de antibiótico oral, quando for o caso.',
+      'Retorno agendado para vigilância de complicações tardias.'
+    ],
+    orientacoes: [
+      'Dar o antibiótico todos os dias, no horário certo, até completar 10 dias, mesmo que a criança melhore em 2 dias; interromper antes aumenta o risco de problema no coração (febre reumática).',
+      'Se foi aplicada a injeção de penicilina benzatina, o tratamento já está completo com a dose única.',
+      'A criança pode voltar à escola 24 horas depois de começar o antibiótico, se estiver sem febre.',
+      'Oferecer líquidos gelados, sorvete, gelatina e alimentos macios; evitar alimentos ácidos e condimentados.',
+      'A pele das mãos e dos pés pode descascar em placas 1 a 3 semanas depois; é esperado e não precisa de tratamento.',
+      'Observar nas próximas semanas: inchaço nos olhos ou pernas, urina escura como refrigerante ou em pouca quantidade, dor e inchaço nas juntas, falta de ar ou movimentos involuntários; procurar a unidade de saúde se aparecerem.',
+      'Retornar imediatamente se houver dificuldade para respirar ou engolir saliva, boca que não abre, voz muito abafada, ou febre que continua depois de 3 dias de antibiótico.',
+      'Levar à unidade de saúde outras crianças da casa que estejam com dor de garganta e febre.'
+    ],
+    retorno: 'Reavaliação em 48 a 72 horas para verificar resposta ao antibiótico; retorno programado em 1 a 3 semanas para pesquisa de glomerulonefrite (pressão arterial, edema, urina rotina) e orientação sobre sinais de febre reumática por até 4 semanas.',
+    prevencao: [
+      'Não há vacina disponível contra o estreptococo do grupo A.',
+      'Diagnóstico e tratamento precoces da faringoamigdalite estreptocócica, principal medida de prevenção da febre reumática.',
+      'Higiene das mãos, etiqueta respiratória e não compartilhamento de copos e talheres.',
+      'Afastamento escolar até 24 horas após o início do antibiótico.',
+      'Avaliação de contatos domiciliares sintomáticos.',
+      'Em pacientes com febre reumática prévia, profilaxia secundária com penicilina benzatina conforme protocolo do Ministério da Saúde.',
+      'Redução da aglomeração domiciliar e melhoria das condições de moradia como medida estrutural.'
+    ],
+    fontes: [
+      { nome: 'Diretrizes Brasileiras para o Diagnóstico e Tratamento da Febre Reumática – Sociedade Brasileira de Cardiologia e SBP', ano: 2009 },
+      { nome: 'Tratado de Pediatria – Sociedade Brasileira de Pediatria', ano: 2022 },
+      { nome: 'Nelson Textbook of Pediatrics, 22ª edição', ano: 2024 },
+      { nome: 'Guia de Vigilância em Saúde – Ministério da Saúde', ano: 2024 }
+    ],
+    atualizadoEm: '2026-09'
+  },
+
+  {
+    id: 'coqueluche',
+    nome: 'Coqueluche',
+    categoria: 'respiratoria',
+    amazonia: false,
+    cid10: 'A37',
+    tags: ['tosse', 'coriza', 'vomitos', 'dispneia', 'febre', 'convulsao', 'alteracao_consciencia', 'palidez', 'fraqueza'],
+    definicao: 'Doença respiratória bacteriana aguda e altamente transmissível, caracterizada por tosse paroxística prolongada, muitas vezes seguida de guincho inspiratório e vômitos pós-tosse. Em lactentes menores de 6 meses pode manifestar-se por apneia, cianose e evolução maligna com hiperleucocitose e hipertensão pulmonar.',
+    epidemiologia: 'A coqueluche é doença de notificação compulsória imediata no Brasil. A incidência voltou a subir após quedas nas coberturas vacinais de penta e dTpa, com surtos em várias unidades federadas. No Amazonas, a gravidade concentra-se em lactentes menores de 3 meses ainda não imunizados ou com esquema incompleto, sobretudo em comunidades ribeirinhas e indígenas com dificuldade de acesso à sala de vacina e ao transporte para o hospital de referência em Manaus. Adolescentes e adultos com imunidade em declínio são a principal fonte de infecção para os lactentes do domicílio. A vacinação de gestantes com dTpa a partir da 20ª semana é a estratégia mais eficaz para proteger o recém-nascido.',
+    agente: 'Bordetella pertussis; Bordetella parapertussis causa quadro semelhante e mais brando.',
+    transmissao: 'Gotículas respiratórias de pessoa doente, com transmissibilidade muito alta entre contatos domiciliares suscetíveis. O período de transmissão vai do início dos sintomas catarrais até cerca de 3 semanas após o início dos paroxismos, reduzindo-se a 5 dias após o início do antibiótico adequado.',
+    incubacao: '5 a 10 dias, podendo chegar a 21 dias.',
+    manifestacoes: [
+      'Fase catarral (1 a 2 semanas): coriza, espirros, tosse leve e febre baixa ou ausente, indistinguível de resfriado comum, porém com tosse que progride em vez de melhorar.',
+      'Fase paroxística (2 a 6 semanas): acessos de tosse súbitos, repetitivos e intensos, em salvas, sem intervalo para inspiração, seguidos de guincho inspiratório e frequentemente de vômito pós-tosse.',
+      'Congestão facial, cianose, lacrimejamento, protrusão de língua e exaustão durante e após o paroxismo, com aspecto normal entre as crises.',
+      'Em lactentes menores de 6 meses o guincho pode estar ausente: apneia, cianose, engasgo, bradicardia e episódio de aparente risco de vida podem ser as únicas manifestações.',
+      'Febre habitualmente ausente ou baixa; febre alta sugere coinfecção ou pneumonia bacteriana secundária.',
+      'Fase de convalescença (semanas a meses): redução gradual da frequência e intensidade dos paroxismos, com recrudescência a cada nova infecção respiratória.',
+      'Complicações mecânicas: hemorragia subconjuntival, petéquias em face e pescoço, hérnia, pneumotórax, enfisema subcutâneo e úlcera de frênulo lingual.',
+      'Complicações graves: pneumonia (primária ou secundária), convulsão, encefalopatia, desnutrição por vômitos repetidos e coqueluche maligna com hiperleucocitose, hipertensão pulmonar e choque.'
+    ],
+    sinaisAlarme: [
+      'Apneia, cianose ou bradicardia durante ou após os acessos de tosse.',
+      'Idade menor de 3 meses, prematuridade ou esquema vacinal incompleto.',
+      'Taquipneia persistente entre os paroxismos, tiragem ou saturação abaixo de 92%.',
+      'Leucocitose acentuada (contagem de leucócitos acima de 50.000/mm3 ou linfocitose extrema), preditora de coqueluche maligna.',
+      'Vômitos que impedem a alimentação, perda de peso ou desidratação.',
+      'Convulsão, sonolência ou alteração de consciência.',
+      'Taquicardia desproporcional e sinais de baixo débito (suspeita de hipertensão pulmonar).',
+      'Febre alta ou piora súbita (pneumonia bacteriana secundária).'
+    ],
+    diagnosticoDiferencial: ['bronquiolite', 'pneumonia', 'asma', 'tuberculose', 'aspiração de corpo estranho', 'refluxo gastroesofágico com aspiração', 'infecção por Mycoplasma, Chlamydia trachomatis ou adenovírus', 'fibrose cística', 'tosse psicogênica em adolescentes'],
+    exames: ['PCR em tempo real para Bordetella pertussis em aspirado ou swab de nasofaringe (swab de rayon ou dacron)', 'cultura de nasofaringe para Bordetella pertussis', 'hemograma', 'radiografia_torax', 'pcr', 'gasometria', 'eletrolitos', 'sodio', 'glicemia', 'hemocultura (suspeita de infecção secundária)'],
+    criteriosDiagnosticos: [
+      'Definição de caso suspeito (MS): todo indivíduo com tosse por 14 dias ou mais associada a paroxismos, guincho inspiratório ou vômitos pós-tosse; em menores de 6 meses, considerar suspeito todo lactente com tosse de qualquer duração associada a apneia, cianose, engasgo ou paroxismos.',
+      'Coletar aspirado ou swab de nasofaringe para PCR e cultura antes ou nas primeiras horas do antibiótico, preferencialmente nas primeiras 3 semanas de tosse.',
+      'Hemograma com leucocitose e linfocitose absoluta reforça a suspeita em lactentes; leucometria muito elevada é marcador de gravidade.',
+      'Radiografia de tórax pode mostrar infiltrado peri-hilar, atelectasias ou o clássico coração felpudo; serve sobretudo para excluir complicações.',
+      'Vínculo epidemiológico com caso confirmado ou contato com tossidor crônico no domicílio apoia o diagnóstico.',
+      'Iniciar tratamento e quimioprofilaxia com base na suspeita clínica, sem aguardar o resultado laboratorial.',
+      'Notificação compulsória imediata e investigação de contatos pela vigilância epidemiológica.'
+    ],
+    classificacaoGravidade: [
+      { nivel: 'Leve', criterios: 'Criança maior de 6 meses ou adolescente, com paroxismos tolerados, sem apneia, cianose ou vômitos incoercíveis, alimentando-se bem e com saturação normal. Tratamento ambulatorial com macrolídeo e isolamento.' },
+      { nivel: 'Moderada', criterios: 'Paroxismos frequentes com cianose transitória, vômitos pós-tosse limitando a alimentação, perda de peso ou idade entre 3 e 6 meses. Observação hospitalar com monitorização e suporte alimentar.' },
+      { nivel: 'Grave (coqueluche maligna)', criterios: 'Lactente menor de 3 meses, apneias, insuficiência respiratória, leucocitose acima de 50.000/mm3, hipertensão pulmonar, choque ou encefalopatia. Internação em UTI, com suporte avançado e avaliação de exsanguineotransfusão conforme protocolo.' }
+    ],
+    tratamento: [
+      'Antibioticoterapia com macrolídeo: reduz a transmissibilidade e, quando iniciada na fase catarral, pode atenuar a evolução; iniciada após o início dos paroxismos, tem pouco efeito sobre a duração da tosse mas mantém a indicação para bloqueio da transmissão.',
+      'Azitromicina é o macrolídeo de escolha, inclusive em menores de 1 mês, situação em que é preferida à eritromicina pelo risco de estenose hipertrófica de piloro associada à eritromicina.',
+      'Claritromicina é alternativa em maiores de 1 mês; sulfametoxazol com trimetoprima é a alternativa para maiores de 2 meses com contraindicação a macrolídeos.',
+      'Quimioprofilaxia para todos os contatos domiciliares e contatos próximos de risco (lactentes menores de 1 ano, gestantes no terceiro trimestre, imunossuprimidos, profissionais e crianças de creches), com o mesmo esquema do tratamento, conforme as definições do Guia de Vigilância em Saúde.',
+      'Isolamento respiratório por gotículas até completar 5 dias de antibiótico eficaz; afastamento de creche e escola pelo mesmo período.',
+      'Suporte em lactentes: monitorização cardiorrespiratória e oximetria contínua, oxigênio suplementar durante e após os paroxismos, aspiração suave de vias aéreas e ambiente calmo, evitando estímulos que desencadeiem crises.',
+      'Alimentação fracionada em pequenos volumes após os paroxismos; sonda nasogástrica ou hidratação venosa se vômitos repetidos ou risco de aspiração.',
+      'Não há benefício comprovado de broncodilatadores, corticoides, anti-histamínicos ou antitussígenos; não devem ser usados de rotina.',
+      'Coqueluche maligna: internação em UTI, suporte ventilatório, manejo de hipertensão pulmonar e consideração de exsanguineotransfusão ou leucoaférese em casos de hiperleucocitose refratária, conforme protocolo do serviço de referência.',
+      'Atualizar o esquema vacinal da criança e dos contatos após o episódio: a doença não confere imunidade duradoura e a vacinação permanece indicada.',
+      'Notificação imediata e investigação de comunicantes pela vigilância epidemiológica.'
+    ],
+    medicamentos: [
+      { medId: 'azitromicina', esquema: 'Tratamento e quimioprofilaxia. Menores de 6 meses: 10 mg/kg/dia VO uma vez ao dia por 5 dias. Maiores de 6 meses: 10 mg/kg no 1º dia (máximo 500 mg) e 5 mg/kg/dia do 2º ao 5º dia (máximo 250 mg/dia). É o macrolídeo preferido em menores de 1 mês.' },
+      { medId: 'claritromicina', esquema: 'Alternativa em maiores de 1 mês: 15 mg/kg/dia VO dividida 12/12 h (máximo 1 g/dia) por 7 dias.' },
+      { medId: 'sulfametoxazol_trimetoprim', esquema: 'Alternativa em maiores de 2 meses com contraindicação a macrolídeo: 40 mg/kg/dia de sulfametoxazol e 8 mg/kg/dia de trimetoprima VO dividida 12/12 h por 14 dias. Contraindicado em menores de 2 meses.' },
+      { medId: 'soro_fisiologico', esquema: 'Aspiração e higiene nasal suave antes das mamadas e hidratação venosa com SF 0,9% quando houver intolerância oral, conforme protocolo do serviço.' },
+      { medId: 'paracetamol', esquema: 'Desconforto ou febre associada: 10 a 15 mg/kg/dose VO a cada 6 horas, conforme bula.' },
+      { medId: null, nome: 'Vacina penta (DTP/Hib/HB), DTP e dTpa', esquema: 'Esquema básico aos 2, 4 e 6 meses com reforços aos 15 meses e 4 anos; dTpa em gestantes a cada gestação a partir da 20ª semana e em profissionais de saúde, conforme o Calendário Nacional de Vacinação.' }
+    ],
+    criteriosInternacao: [
+      'Idade menor de 3 meses com suspeita de coqueluche (internação recomendada mesmo com quadro aparentemente leve).',
+      'Apneia, cianose, engasgo ou bradicardia durante os paroxismos.',
+      'Saturação abaixo de 92%, taquipneia persistente ou desconforto respiratório.',
+      'Vômitos pós-tosse impedindo alimentação, perda de peso ou desidratação.',
+      'Leucocitose acentuada ou linfocitose extrema.',
+      'Pneumonia, convulsão ou qualquer complicação.',
+      'Prematuridade, cardiopatia, pneumopatia ou imunossupressão.',
+      'Impossibilidade de observação domiciliar ou de retorno rápido (comunidade distante, transporte fluvial demorado).'
+    ],
+    criteriosUTI: [
+      'Apneias recorrentes ou necessidade de ventilação não invasiva ou invasiva.',
+      'Insuficiência respiratória ou hipoxemia refratária.',
+      'Coqueluche maligna com hiperleucocitose, hipertensão pulmonar ou choque.',
+      'Encefalopatia, convulsões repetidas ou estado de mal convulsivo.',
+      'Necessidade de exsanguineotransfusão ou leucoaférese.'
+    ],
+    criteriosAlta: [
+      'Ausência de apneia, cianose ou dessaturação durante os paroxismos por pelo menos 48 horas de observação.',
+      'Alimentação oral adequada com ganho ou estabilização do peso.',
+      'Pelo menos 5 dias de antibiótico eficaz completados ou em curso com adesão garantida.',
+      'Ausência de complicações ativas.',
+      'Contatos domiciliares avaliados e quimioprofilaxia orientada.',
+      'Responsável orientado sobre a duração prolongada da tosse e sobre sinais de alarme.',
+      'Notificação realizada e calendário vacinal da criança e da família programado.'
+    ],
+    orientacoes: [
+      'A tosse pode durar semanas ou até meses, melhorando aos poucos; isso não significa que o tratamento falhou.',
+      'Dar o antibiótico todos os dias até o fim, mesmo com a tosse continuando: ele serve principalmente para a criança parar de transmitir.',
+      'Manter a criança em casa, longe de bebês e gestantes, até completar 5 dias de antibiótico.',
+      'Alimentar em pequenas quantidades e com mais frequência, logo após os acessos de tosse, para reduzir os vômitos.',
+      'Manter o ambiente calmo, sem fumaça de cigarro, de fogão a lenha ou cheiros fortes, que desencadeiam as crises.',
+      'Não usar xaropes para tosse, remédios caseiros ou antialérgicos por conta própria.',
+      'Todos os moradores da casa devem procurar a unidade de saúde para avaliar a necessidade de antibiótico preventivo e atualizar as vacinas.',
+      'Retornar imediatamente se o bebê ficar roxo, parar de respirar, ficar molinho, vomitar tudo o que mama, tiver febre alta, respiração rápida ou convulsão.'
+    ],
+    retorno: 'Reavaliação em 24 a 48 horas nos lactentes tratados ambulatorialmente e em 3 a 5 dias nas demais idades; retorno imediato diante de apneia, cianose, dificuldade respiratória ou piora da aceitação alimentar. Consulta de revisão ao final do tratamento para avaliação do peso e do calendário vacinal.',
+    prevencao: [
+      'Vacinação com pentavalente aos 2, 4 e 6 meses e reforços com DTP aos 15 meses e 4 anos, conforme o Calendário Nacional de Vacinação.',
+      'Vacinação de gestantes com dTpa em cada gestação, a partir da 20ª semana, para proteção passiva do recém-nascido, com esforço especial nas comunidades ribeirinhas e indígenas.',
+      'Estratégia de cocoon: vacinação de pais, cuidadores e profissionais de saúde que convivem com lactentes.',
+      'Quimioprofilaxia de contatos domiciliares e próximos conforme o Guia de Vigilância em Saúde.',
+      'Isolamento respiratório por gotículas e afastamento por 5 dias após o início do antibiótico.',
+      'Notificação compulsória imediata e investigação de comunicantes.',
+      'Busca ativa de faltosos da vacinação e vacinação em barcos e unidades fluviais no interior do Amazonas.'
+    ],
+    fontes: [
+      { nome: 'Guia de Vigilância em Saúde – Ministério da Saúde', ano: 2024 },
+      { nome: 'Calendário Nacional de Vacinação – Ministério da Saúde', ano: 2025 },
+      { nome: 'Documento Científico de Infectologia – Sociedade Brasileira de Pediatria', ano: 2023 },
+      { nome: 'Red Book – American Academy of Pediatrics', ano: 2024 }
+    ],
+    atualizadoEm: '2026-09'
+  },
+
+  {
+    id: 'mononucleose',
+    nome: 'Mononucleose infecciosa',
+    categoria: 'infecciosa',
+    amazonia: false,
+    cid10: 'B27',
+    tags: ['febre', 'dor_garganta', 'linfonodomegalia', 'esplenomegalia', 'hepatomegalia', 'fraqueza', 'exantema', 'ictericia', 'cefaleia', 'dor_abdominal'],
+    definicao: 'Síndrome clínica causada principalmente pelo vírus Epstein-Barr, caracterizada pela tríade febre, faringoamigdalite e linfadenopatia generalizada, frequentemente acompanhada de esplenomegalia, hepatite leve e linfocitose com linfócitos atípicos. Em crianças pequenas a infecção costuma ser oligossintomática.',
+    epidemiologia: 'A infecção pelo vírus Epstein-Barr é praticamente universal, ocorrendo precocemente em populações com aglomeração domiciliar e condições socioeconômicas desfavoráveis. Nas comunidades do Amazonas a soroconversão tende a acontecer ainda na primeira infância, período em que a infecção geralmente é subclínica ou confundida com uma virose comum; a síndrome de mononucleose clássica é mais vista em adolescentes e adultos jovens. A relevância prática regional está no diagnóstico diferencial com faringoamigdalite estreptocócica (evitando antibióticos desnecessários), com dengue, malária, leishmaniose visceral, HIV agudo e hepatites virais, e na orientação de restrição de atividades pelo risco de ruptura esplênica.',
+    agente: 'Vírus Epstein-Barr (herpes-vírus humano tipo 4) na maioria dos casos; síndromes semelhantes podem ser causadas por citomegalovírus, Toxoplasma gondii, HIV em infecção aguda, herpes-vírus humano tipo 6 e adenovírus.',
+    transmissao: 'Contato com saliva (doença do beijo), compartilhamento de copos, talheres e escovas de dente; eliminação viral intermitente e prolongada pela orofaringe por meses após a infecção. Transmissão por transfusão e transplante é possível, porém rara.',
+    incubacao: '30 a 50 dias em adolescentes e adultos; possivelmente mais curta em crianças pequenas.',
+    manifestacoes: [
+      'Pródromo de 1 a 2 semanas com mal-estar, fadiga intensa, cefaleia, mialgia e febre.',
+      'Faringoamigdalite exsudativa intensa, muitas vezes com membranas esbranquiçadas espessas e halitose, que não responde a antibióticos.',
+      'Linfadenopatia generalizada, com destaque para as cadeias cervicais posteriores, que é achado mais sugestivo que a adenomegalia cervical anterior isolada.',
+      'Esplenomegalia em cerca de metade dos casos, geralmente na segunda ou terceira semana, e hepatomegalia com hepatite anictérica leve.',
+      'Edema palpebral bilateral (sinal de Hoagland) e petéquias em palato.',
+      'Fadiga desproporcional e prolongada, que pode persistir por semanas a meses.',
+      'Exantema maculopapular difuso após uso de amoxicilina ou ampicilina, sem significar alergia verdadeira à penicilina.',
+      'Icterícia leve em uma minoria dos casos, com elevação de transaminases na maioria.',
+      'Complicações: obstrução de via aérea por hipertrofia amigdaliana, ruptura esplênica, anemia hemolítica autoimune, plaquetopenia, meningoencefalite, síndrome de Guillain-Barré e síndrome hemofagocítica.'
+    ],
+    sinaisAlarme: [
+      'Estridor, roncos intensos, dificuldade respiratória ou sialorreia por obstrução amigdaliana.',
+      'Dor abdominal intensa, principalmente em quadrante superior esquerdo ou ombro esquerdo, palidez e hipotensão (suspeita de ruptura esplênica).',
+      'Icterícia progressiva, sangramento ou sonolência (hepatite grave).',
+      'Petéquias, púrpura ou sangramento (plaquetopenia).',
+      'Palidez intensa e taquicardia (anemia hemolítica).',
+      'Cefaleia intensa, convulsão, rigidez de nuca ou alteração de consciência.',
+      'Febre persistente por mais de 2 a 3 semanas com piora do estado geral, citopenias e hiperferritinemia (suspeita de síndrome hemofagocítica).',
+      'Desidratação por incapacidade de deglutir.'
+    ],
+    diagnosticoDiferencial: ['faringoamigdalite_estreptococica', 'escarlatina', 'hiv_pediatrico', 'hepatite_a', 'citomegalovirose', 'toxoplasmose adquirida', 'leishmaniose_visceral', 'dengue', 'malaria', 'leucemia aguda e linfoma', 'adenovirose', 'tuberculose ganglionar'],
+    exames: ['hemograma', 'sorologia específica para Epstein-Barr (anti-VCA IgM e IgG, anti-EBNA)', 'teste de anticorpos heterófilos (Monoteste ou Paul-Bunnell)', 'ast', 'alt', 'bilirrubinas', 'teste rápido para estreptococo do grupo A em orofaringe', 'ultrassonografia de abdome (avaliação de baço e fígado)', 'pcr', 'vhs', 'ferritina', 'coagulograma', 'sorologia para HIV'],
+    criteriosDiagnosticos: [
+      'Quadro clínico compatível: febre, faringoamigdalite exsudativa, linfadenopatia cervical posterior e fadiga, com ou sem esplenomegalia.',
+      'Hemograma com linfocitose (habitualmente acima de 50% de linfócitos) e presença de linfócitos atípicos acima de 10% reforça fortemente a hipótese.',
+      'Anticorpos heterófilos positivos confirmam em adolescentes e adultos, mas apresentam baixa sensibilidade em menores de 4 anos.',
+      'Sorologia específica para Epstein-Barr é o método de escolha em crianças pequenas: anti-VCA IgM reagente com anti-EBNA não reagente indica infecção aguda; anti-EBNA reagente indica infecção passada.',
+      'Elevação leve a moderada de transaminases é achado esperado e não exige investigação adicional se assintomática.',
+      'Teste rápido para estreptococo pode ser positivo por estado de portador: a positividade isolada não afasta mononucleose nem justifica atribuir todo o quadro ao estreptococo.',
+      'Ultrassonografia abdominal quando houver esplenomegalia ao exame ou antes da liberação para esportes de contato, conforme conduta do serviço.',
+      'Solicitar sorologia para HIV em adolescentes com síndrome mononucleose-símile, considerando a infecção aguda pelo HIV no diferencial.'
+    ],
+    classificacaoGravidade: [
+      { nivel: 'Leve', criterios: 'Febre, faringite e adenomegalia com boa aceitação oral, sem esplenomegalia dolorosa, sem obstrução respiratória e sem citopenias importantes. Manejo domiciliar com sintomáticos e restrição de atividades.' },
+      { nivel: 'Moderada', criterios: 'Faringite intensa limitando a ingestão, desidratação leve, hepatite com transaminases elevadas e sintomáticas, esplenomegalia volumosa ou fadiga incapacitante. Observação, hidratação e reavaliação seriada.' },
+      { nivel: 'Grave', criterios: 'Obstrução de via aérea superior, ruptura esplênica, hepatite grave com coagulopatia, anemia hemolítica ou plaquetopenia sintomáticas, manifestações neurológicas ou síndrome hemofagocítica. Internação e avaliação especializada.' }
+    ],
+    tratamento: [
+      'Tratamento é de suporte: repouso relativo conforme a tolerância, hidratação e analgesia.',
+      'Antitérmico e analgésico com paracetamol ou dipirona; ibuprofeno pode ser usado conforme bula, evitando se houver plaquetopenia ou sangramento.',
+      'Evitar amoxicilina e ampicilina quando houver suspeita de mononucleose, pelo alto risco de exantema; se houver comprovação de faringite estreptocócica concomitante, preferir outro antibiótico conforme protocolo.',
+      'Aciclovir não é indicado: reduz a eliminação viral orofaríngea sem alterar a evolução clínica.',
+      'Corticoide não deve ser usado de rotina; considerar apenas em obstrução de via aérea superior por hipertrofia amigdaliana, anemia hemolítica grave ou plaquetopenia grave, conforme avaliação especializada.',
+      'Restrição de esportes de contato, educação física, lutas e atividades com risco de trauma abdominal por pelo menos 3 a 4 semanas do início dos sintomas, e por mais tempo se esplenomegalia persistente, conforme reavaliação clínica.',
+      'Dieta leve, fria e pastosa enquanto houver odinofagia; sais de reidratação oral se ingestão reduzida.',
+      'Orientar que a fadiga pode persistir por semanas e que o retorno às atividades deve ser gradual.',
+      'Monitorizar hemograma e transaminases nos casos com citopenias ou hepatite significativa, conforme protocolo do serviço.',
+      'Casos com obstrução respiratória: internação, monitorização, corticoide conforme avaliação e suporte de via aérea.'
+    ],
+    medicamentos: [
+      { medId: 'paracetamol', esquema: 'Febre e dor: 10 a 15 mg/kg/dose VO a cada 6 horas, conforme bula.' },
+      { medId: 'dipirona', esquema: 'Alternativa antitérmica e analgésica: 10 a 15 mg/kg/dose VO ou IV a cada 6 horas, conforme bula.' },
+      { medId: 'ibuprofeno', esquema: 'Odinofagia e mialgia: 5 a 10 mg/kg/dose VO a cada 6 a 8 horas, conforme bula; evitar se plaquetopenia, sangramento ou hepatite importante.' },
+      { medId: 'prednisolona', esquema: 'Apenas em situações selecionadas (obstrução de via aérea por hipertrofia amigdaliana, anemia hemolítica ou plaquetopenia graves): 1 a 2 mg/kg/dia VO (máximo 60 mg/dia) por curto período, conforme avaliação especializada e protocolo do serviço.' },
+      { medId: 'dexametasona', esquema: 'Alternativa em obstrução de via aérea superior, conforme protocolo do serviço e avaliação especializada, confirmar conforme protocolo.' },
+      { medId: 'sais_reidratacao_oral', esquema: 'Manutenção da hidratação quando a ingestão estiver reduzida pela odinofagia, conforme plano A do MS.' }
+    ],
+    criteriosInternacao: [
+      'Obstrução de via aérea superior com estridor, sialorreia ou desconforto respiratório.',
+      'Desidratação ou incapacidade de ingerir líquidos.',
+      'Suspeita de ruptura esplênica ou dor abdominal intensa.',
+      'Hepatite com icterícia progressiva, coagulopatia ou encefalopatia.',
+      'Plaquetopenia com sangramento ou anemia hemolítica sintomática.',
+      'Manifestações neurológicas.',
+      'Suspeita de síndrome hemofagocítica ou de neoplasia hematológica.'
+    ],
+    criteriosUTI: [
+      'Obstrução de via aérea com necessidade de intubação ou via aérea cirúrgica.',
+      'Choque hemorrágico por ruptura esplênica.',
+      'Insuficiência hepática aguda com encefalopatia.',
+      'Síndrome hemofagocítica com disfunção orgânica múltipla.',
+      'Encefalite com rebaixamento de consciência ou estado de mal convulsivo.'
+    ],
+    criteriosAlta: [
+      'Via aérea pérvia e sem desconforto respiratório.',
+      'Aceitação oral adequada e hidratação mantida.',
+      'Ausência de dor abdominal significativa e estabilidade hemodinâmica.',
+      'Hemograma e transaminases estáveis ou em melhora.',
+      'Responsável e adolescente orientados sobre restrição de esportes de contato e sinais de alarme abdominais.',
+      'Retorno agendado para reavaliação do baço e da fadiga.'
+    ],
+    orientacoes: [
+      'O cansaço pode durar várias semanas; o retorno às atividades deve ser aos poucos, respeitando o ritmo da criança ou do adolescente.',
+      'Evitar esportes de contato, lutas, educação física e brincadeiras com risco de pancada na barriga por pelo menos 3 a 4 semanas, pelo risco de ruptura do baço.',
+      'Procurar atendimento de urgência se houver dor forte na barriga, principalmente do lado esquerdo ou no ombro esquerdo, palidez, tontura ou desmaio.',
+      'Oferecer líquidos gelados e alimentos macios enquanto a garganta doer.',
+      'Não compartilhar copos, talheres, garrafas, chupetas ou escovas de dente; evitar beijo na boca.',
+      'Se aparecerem manchas no corpo após o uso de antibiótico, comunicar o serviço: em geral não é alergia verdadeira, mas deve ser avaliado.',
+      'Não é necessário afastamento escolar prolongado: a criança pode voltar quando estiver sem febre e se sentindo melhor.',
+      'Retornar se houver falta de ar, ronco alto com pausas, dificuldade para engolir saliva, amarelão nos olhos, manchas roxas, sangramentos, dor de cabeça forte ou sonolência.'
+    ],
+    retorno: 'Reavaliação em 5 a 7 dias para verificar hidratação, tamanho do baço e evolução das transaminases; nova avaliação antes da liberação para esportes de contato, habitualmente após 3 a 4 semanas, e retorno imediato diante de dor abdominal, palidez ou dificuldade respiratória.',
+    prevencao: [
+      'Não há vacina disponível.',
+      'Evitar compartilhamento de copos, talheres, garrafas e escovas de dente e orientar adolescentes sobre transmissão pela saliva.',
+      'Higiene das mãos e etiqueta respiratória.',
+      'Não há indicação de isolamento nem de afastamento escolar prolongado.',
+      'Evitar doação de sangue durante e logo após a doença, conforme critérios da hemoterapia.',
+      'Orientação sobre restrição esportiva para prevenir ruptura esplênica, principal medida de prevenção de complicação grave.'
+    ],
+    fontes: [
+      { nome: 'Nelson Textbook of Pediatrics, 22ª edição', ano: 2024 },
+      { nome: 'Tratado de Pediatria – Sociedade Brasileira de Pediatria', ano: 2022 },
+      { nome: 'Red Book – American Academy of Pediatrics', ano: 2024 },
+      { nome: 'Guia de Vigilância em Saúde – Ministério da Saúde', ano: 2024 }
+    ],
+    atualizadoEm: '2026-09'
+  },
+
+  {
+    id: 'caxumba',
+    nome: 'Caxumba (parotidite infecciosa)',
+    categoria: 'infecciosa',
+    amazonia: false,
+    cid10: 'B26',
+    tags: ['febre', 'dor_local', 'cefaleia', 'vomitos', 'linfonodomegalia', 'dor_abdominal', 'rigidez_nuca', 'alteracao_consciencia', 'fraqueza'],
+    definicao: 'Doença viral aguda caracterizada por aumento doloroso das glândulas salivares, principalmente das parótidas, de forma uni ou bilateral, acompanhada de febre e mal-estar. Pode cursar com meningite asséptica, orquite, ooforite, pancreatite e surdez neurossensorial.',
+    epidemiologia: 'A caxumba mantém circulação no Brasil, com surtos periódicos em escolas, universidades, quartéis e comunidades fechadas, inclusive em populações com esquema vacinal completo, pela queda de imunidade ao longo dos anos. No Amazonas, surtos comunitários em escolas e em comunidades ribeirinhas e indígenas com cobertura vacinal irregular são descritos; a orquite em adolescentes é a complicação que mais motiva procura ao serviço. Surtos de caxumba são de notificação (notificação de surtos à vigilância municipal), ainda que o caso isolado não seja de notificação compulsória individual em todo o território; seguir a normativa local.',
+    agente: 'Vírus da caxumba (Orthorubulavirus parotitidis, família Paramyxoviridae).',
+    transmissao: 'Gotículas respiratórias, contato direto com saliva e fômites contaminados. A transmissibilidade vai de cerca de 2 dias antes até 5 dias após o início do aumento da parótida.',
+    incubacao: '12 a 25 dias (média de 16 a 18 dias).',
+    manifestacoes: [
+      'Pródromo de 1 a 2 dias com febre baixa, cefaleia, mialgia, mal-estar e inapetência.',
+      'Aumento doloroso da parótida, inicialmente unilateral e tornando-se bilateral em cerca de 70% dos casos, com apagamento do ângulo da mandíbula e deslocamento do lobo da orelha para cima e para fora.',
+      'Dor que piora com a mastigação e com alimentos ácidos; edema do óstio do ducto de Stensen na mucosa jugal, sem saída de pus.',
+      'Acometimento de glândulas submandibulares e sublinguais em parte dos casos.',
+      'Febre habitualmente por 3 a 4 dias, com resolução do edema glandular em 7 a 10 dias.',
+      'Meningite asséptica: cefaleia, vômitos, rigidez de nuca e fotofobia, podendo ocorrer antes, durante ou após a parotidite, e mesmo sem parotidite.',
+      'Orquite e epididimite em adolescentes e adultos pós-púberes: dor testicular intensa, edema e febre, geralmente unilateral, surgindo na primeira semana após a parotidite.',
+      'Ooforite com dor pélvica, pancreatite com dor abdominal epigástrica e vômitos, e tireoidite, menos frequentes.',
+      'Surdez neurossensorial, em geral unilateral, é complicação rara mas potencialmente permanente.',
+      'Encefalite e mielite são raras.'
+    ],
+    sinaisAlarme: [
+      'Cefaleia intensa, vômitos persistentes, rigidez de nuca, fotofobia ou alteração de consciência (meningite ou encefalite).',
+      'Convulsão.',
+      'Dor e edema testicular intensos em adolescente (orquite, com risco de atrofia testicular).',
+      'Dor abdominal epigástrica intensa com vômitos (pancreatite).',
+      'Redução súbita da audição, zumbido ou desequilíbrio.',
+      'Desidratação por dor à deglutição.',
+      'Edema cervical com eritema intenso, flutuação ou saída de pus pelo ducto (sugere parotidite bacteriana supurativa, que exige antibiótico).',
+      'Febre alta persistente por mais de 5 dias.'
+    ],
+    diagnosticoDiferencial: ['parotidite bacteriana supurativa', 'adenite cervical', 'linfadenite por micobactéria atípica', 'cálculo de glândula salivar (sialolitíase)', 'parotidite recorrente juvenil', 'tumor de parótida', 'mononucleose', 'hiv_pediatrico (parotidite crônica)', 'abscesso dentário', 'reação a medicamentos'],
+    exames: ['sorologia IgM e IgG para caxumba', 'RT-PCR em saliva, swab de ducto parotídeo ou urina (até o 5º dia)', 'hemograma', 'amilase e lipase séricas', 'liquor', 'pcr', 'ultrassonografia de bolsa escrotal com Doppler (suspeita de orquite ou torção testicular)', 'ultrassonografia de glândulas salivares', 'glicemia'],
+    criteriosDiagnosticos: [
+      'Diagnóstico eminentemente clínico: aumento doloroso de parótida, uni ou bilateral, de início agudo, com febre, em contexto epidemiológico compatível.',
+      'Confirmação laboratorial por IgM reagente ou soroconversão de IgG, ou por RT-PCR em saliva ou urina nos primeiros dias; sorologia pode ser falsamente negativa em vacinados.',
+      'Amilase sérica elevada é comum na parotidite e não indica necessariamente pancreatite; a lipase é mais específica para acometimento pancreático.',
+      'Punção lombar indicada quando houver sinais meníngeos ou neurológicos; líquor mostra pleocitose linfocitária com glicose habitualmente normal.',
+      'Ultrassonografia escrotal com Doppler é mandatória diante de dor testicular aguda, para afastar torção de testículo, que é emergência cirúrgica.',
+      'Considerar parotidite bacteriana quando houver eritema intenso, flutuação, toxemia ou drenagem purulenta pelo ducto de Stensen.',
+      'Notificar surtos à vigilância epidemiológica municipal conforme a normativa local.'
+    ],
+    classificacaoGravidade: [
+      { nivel: 'Não complicada', criterios: 'Parotidite com febre e dor controláveis, boa aceitação oral, sem sinais meníngeos, sem acometimento testicular ou abdominal. Manejo domiciliar com analgesia, hidratação e afastamento.' },
+      { nivel: 'Com complicação localizada', criterios: 'Orquite, ooforite ou pancreatite com dor importante, vômitos ou limitação funcional. Avaliação hospitalar, analgesia otimizada, repouso e suporte, com reavaliação frequente.' },
+      { nivel: 'Grave', criterios: 'Meningite com vômitos incoercíveis, encefalite, convulsão, alteração de consciência, pancreatite grave, desidratação importante ou perda auditiva aguda. Internação e avaliação especializada.' }
+    ],
+    tratamento: [
+      'Não há antiviral específico: o tratamento é sintomático e de suporte.',
+      'Analgesia e antitérmico com paracetamol ou dipirona; ibuprofeno é útil pelo componente inflamatório, conforme bula.',
+      'Compressas mornas ou frias sobre a região parotídea conforme o alívio referido pelo paciente.',
+      'Dieta pastosa e evitar alimentos ácidos, cítricos e que exijam muita mastigação, pois estimulam a salivação e a dor.',
+      'Hidratação oral adequada; hidratação venosa se vômitos ou recusa importante.',
+      'Higiene oral cuidadosa para reduzir o risco de infecção bacteriana secundária.',
+      'Afastamento de creche, escola e atividades coletivas por 5 dias a partir do início do aumento da parótida, com isolamento por gotículas em ambiente hospitalar.',
+      'Orquite: repouso no leito, elevação e suspensão escrotal, compressas frias e anti-inflamatório conforme bula; corticoide não demonstrou prevenir atrofia testicular e não é recomendado de rotina. Avaliação urológica quando a dor for intensa ou houver dúvida com torção testicular.',
+      'Meningite asséptica: hidratação, analgesia e observação; antibiótico apenas até afastar etiologia bacteriana, conforme avaliação do líquor e protocolo do serviço.',
+      'Pancreatite: jejum inicial conforme tolerância, hidratação venosa, analgesia e reintrodução alimentar progressiva, conforme protocolo do serviço.',
+      'Parotidite bacteriana secundária (eritema, flutuação, pus): antibiótico com cobertura para Staphylococcus aureus e anaeróbios, conforme protocolo, e avaliação cirúrgica se abscesso.',
+      'Avaliação audiológica se houver queixa de perda auditiva, zumbido ou desequilíbrio.',
+      'Verificar e atualizar a situação vacinal da criança e dos contatos; a vacinação pós-exposição não previne a doença no contato já exposto, mas protege em exposições futuras e é recomendada em situação de surto.'
+    ],
+    medicamentos: [
+      { medId: 'paracetamol', esquema: 'Dor e febre: 10 a 15 mg/kg/dose VO a cada 6 horas, conforme bula.' },
+      { medId: 'dipirona', esquema: 'Alternativa analgésica e antitérmica: 10 a 15 mg/kg/dose VO ou IV a cada 6 horas, conforme bula.' },
+      { medId: 'ibuprofeno', esquema: 'Dor e inflamação, inclusive na orquite: 5 a 10 mg/kg/dose VO a cada 6 a 8 horas, conforme bula; evitar se desidratação ou suspeita de dengue.' },
+      { medId: 'soro_fisiologico', esquema: 'Hidratação venosa com SF 0,9% quando houver vômitos ou recusa oral, conforme protocolo do serviço.' },
+      { medId: 'cefalexina', esquema: 'Apenas em parotidite bacteriana secundária leve, conforme cobertura para Staphylococcus aureus: 50 a 100 mg/kg/dia VO dividida a cada 6 horas, conforme protocolo do serviço.' },
+      { medId: 'amoxicilina_clavulanato', esquema: 'Parotidite bacteriana com necessidade de cobertura para anaeróbios: 45 a 50 mg/kg/dia (componente amoxicilina) VO dividida 12/12 h, conforme protocolo do serviço.' },
+      { medId: null, nome: 'Vacina tríplice viral ou tetraviral', esquema: 'Atualização do esquema conforme o Calendário Nacional de Vacinação; em situação de surto, vacinação de bloqueio dos suscetíveis conforme orientação da vigilância epidemiológica.' }
+    ],
+    criteriosInternacao: [
+      'Vômitos persistentes, desidratação ou incapacidade de ingerir líquidos.',
+      'Sinais meníngeos ou neurológicos exigindo investigação de líquor.',
+      'Orquite com dor intensa não controlada ou dúvida diagnóstica com torção testicular.',
+      'Pancreatite com dor abdominal importante e intolerância alimentar.',
+      'Suspeita de parotidite bacteriana com abscesso.',
+      'Perda auditiva aguda.',
+      'Imunossupressão ou comorbidade relevante.'
+    ],
+    criteriosUTI: [
+      'Encefalite com rebaixamento de consciência ou estado de mal convulsivo.',
+      'Pancreatite grave com instabilidade hemodinâmica ou disfunção orgânica.',
+      'Desidratação grave com choque refratário à reposição inicial.',
+      'Comprometimento de via aérea por edema cervical extenso.'
+    ],
+    criteriosAlta: [
+      'Dor controlada com analgesia oral e boa aceitação de líquidos e dieta pastosa.',
+      'Afebril ou com febre em declínio e sem sinais meníngeos.',
+      'Ausência de sinais de complicação em evolução.',
+      'Avaliação urológica concluída nos casos de orquite, com afastamento de torção testicular.',
+      'Responsável orientado sobre afastamento por 5 dias e sobre sinais de alarme.',
+      'Situação vacinal verificada e surto comunicado à vigilância quando aplicável.'
+    ],
+    orientacoes: [
+      'Oferecer alimentos macios e pastosos e evitar frutas cítricas, sucos ácidos, vinagre e alimentos duros, que aumentam a dor.',
+      'Fazer compressas mornas ou frias no rosto, conforme o que aliviar mais.',
+      'Manter boa higiene da boca e escovar os dentes com cuidado.',
+      'Manter a criança em casa por 5 dias a partir do início do inchaço, evitando contato com pessoas não vacinadas e gestantes.',
+      'Dar apenas os remédios prescritos para dor e febre.',
+      'Em adolescentes do sexo masculino, observar dor ou inchaço nos testículos e procurar atendimento no mesmo dia se ocorrer: é importante descartar torção do testículo, que é uma urgência cirúrgica.',
+      'Retornar imediatamente se houver dor de cabeça forte, vômitos repetidos, pescoço duro, sonolência, convulsão, dor forte na barriga, ou se a criança passar a ouvir menos de um lado.',
+      'Levar o cartão de vacina de todos os moradores da casa à unidade de saúde.'
+    ],
+    retorno: 'Reavaliação em 48 a 72 horas ou antes se sinais de alarme; nos casos com orquite, reavaliação em 24 a 48 horas; avaliação audiológica ambulatorial se houver qualquer queixa auditiva.',
+    prevencao: [
+      'Vacinação com tríplice viral aos 12 meses e tetraviral aos 15 meses, conforme o Calendário Nacional de Vacinação, garantindo duas doses.',
+      'Vacinação de bloqueio de suscetíveis em situação de surto, conforme orientação da vigilância epidemiológica.',
+      'Afastamento do caso das atividades coletivas por 5 dias a partir do início do aumento parotídeo.',
+      'Precauções por gotículas em ambiente hospitalar.',
+      'Higiene das mãos e não compartilhamento de copos, talheres e garrafas.',
+      'Notificação de surtos à vigilância municipal conforme normativa local.',
+      'Manutenção de coberturas vacinais adequadas em escolas e comunidades ribeirinhas e indígenas.'
+    ],
+    fontes: [
+      { nome: 'Guia de Vigilância em Saúde – Ministério da Saúde', ano: 2024 },
+      { nome: 'Calendário Nacional de Vacinação – Ministério da Saúde', ano: 2025 },
+      { nome: 'Nelson Textbook of Pediatrics, 22ª edição', ano: 2024 },
+      { nome: 'Tratado de Pediatria – Sociedade Brasileira de Pediatria', ano: 2022 }
+    ],
+    atualizadoEm: '2026-09'
+  },
+
+  // =====================================================================
+  // OUTRAS DOENÇAS PREVALENTES
+  // =====================================================================
+  {
+    id: 'hepatite_a',
+    nome: 'Hepatite A',
+    categoria: 'gastrointestinal',
+    amazonia: false,
+    cid10: 'B15',
+    tags: ['febre', 'ictericia', 'vomitos', 'dor_abdominal', 'diarreia', 'fraqueza', 'hepatomegalia', 'prurido', 'alteracao_consciencia', 'sangramento'],
+    definicao: 'Hepatite viral aguda de transmissão fecal-oral causada pelo vírus da hepatite A, caracterizada por pródromo inespecífico seguido de icterícia, colúria, acolia fecal e hepatomegalia dolorosa. É autolimitada na grande maioria das crianças, mas pode evoluir para hepatite fulminante em uma pequena proporção dos casos.',
+    epidemiologia: 'A hepatite A tem forte relação com saneamento básico e qualidade da água. Na Região Norte, onde grande parte da população utiliza água de rio, poço ou chuva sem tratamento adequado e o esgotamento sanitário é limitado, a soroprevalência na infância historicamente é alta e surtos comunitários e em creches são frequentes, especialmente no período de cheia dos rios, quando fossas e igarapés transbordam e contaminam a água de uso doméstico. Em crianças menores de 6 anos a infecção costuma ser anictérica e passar despercebida, mantendo a transmissão silenciosa no domicílio. A hepatite A é doença de notificação compulsória. A vacina hepatite A está disponível no Calendário Nacional aos 15 meses.',
+    agente: 'Vírus da hepatite A (HAV), RNA vírus do gênero Hepatovirus, família Picornaviridae.',
+    transmissao: 'Fecal-oral: contato pessoa a pessoa em domicílios e creches, ingestão de água contaminada e de alimentos crus ou mal cozidos, incluindo moluscos e pescado de águas contaminadas. A excreção viral nas fezes é máxima nas 2 semanas que antecedem a icterícia e cai rapidamente após seu início.',
+    incubacao: '15 a 50 dias (média de 28 a 30 dias).',
+    manifestacoes: [
+      'Fase prodrômica de 3 a 10 dias: febre, mal-estar, astenia, náuseas, vômitos, inapetência, aversão a alimentos gordurosos e a odores fortes, dor em hipocôndrio direito e, por vezes, diarreia.',
+      'Fase ictérica: icterícia de escleras e pele, colúria (urina escura como refrigerante) e acolia ou hipocolia fecal (fezes claras), com melhora paradoxal dos sintomas prodrômicos e da febre.',
+      'Hepatomegalia dolorosa à palpação e, com menor frequência, esplenomegalia e adenomegalia.',
+      'Prurido cutâneo nas formas colestáticas.',
+      'Em menores de 6 anos, mais de 70% dos casos são anictéricos e oligossintomáticos, manifestando-se apenas como quadro gastrointestinal inespecífico.',
+      'Fase de convalescença com normalização progressiva das transaminases em 4 a 8 semanas; astenia pode persistir.',
+      'Formas atípicas: colestática (icterícia e prurido prolongados por semanas a meses) e recidivante (novo pico de transaminases após melhora), ambas de bom prognóstico.',
+      'Hepatite fulminante (rara): icterícia intensa, redução do tamanho do fígado, sangramento, alargamento do tempo de protrombina, hipoglicemia e encefalopatia hepática.'
+    ],
+    sinaisAlarme: [
+      'Sonolência, confusão, inversão do ciclo sono-vigília, agitação, flapping ou qualquer alteração do comportamento (encefalopatia hepática).',
+      'Sangramento de gengivas, epistaxe, equimoses, sangramento digestivo.',
+      'Vômitos incoercíveis e incapacidade de ingerir líquidos.',
+      'Icterícia rapidamente progressiva com redução do tamanho do fígado à palpação.',
+      'Hipoglicemia, hálito hepático ou ascite.',
+      'INR ou tempo de protrombina alargados.',
+      'Febre alta persistente após o início da icterícia.',
+      'Lactente, desnutrido, hepatopata crônico ou imunossuprimido.'
+    ],
+    diagnosticoDiferencial: ['hepatites virais B, C, D e E', 'mononucleose', 'citomegalovirose', 'leptospirose', 'malaria', 'febre_amarela', 'dengue com hepatite', 'febre_tifoide', 'hepatite autoimune', 'hepatotoxicidade por medicamentos (paracetamol, isoniazida) e por plantas medicinais', 'colestase e obstrução biliar', 'doença de Wilson em escolares e adolescentes'],
+    exames: ['sorologia anti-HAV IgM e IgG', 'alt', 'ast', 'bilirrubinas', 'coagulograma', 'glicemia', 'albumina', 'hemograma', 'ureia', 'creatinina', 'eletrolitos', 'sorologias para hepatites B e C', 'ultrassonografia de abdome', 'amonia sérica (se encefalopatia)'],
+    criteriosDiagnosticos: [
+      'Caso suspeito: quadro agudo de icterícia, colúria e acolia, ou elevação de transaminases com sintomas compatíveis, ou contato com caso confirmado de hepatite A.',
+      'Confirmação laboratorial compatível: anti-HAV IgM reagente. O anti-HAV IgG isolado indica infecção passada ou imunidade vacinal.',
+      'Transaminases habitualmente muito elevadas (frequentemente acima de 10 vezes o limite superior), com ALT em geral maior que AST.',
+      'Bilirrubina direta predominante na fase ictérica.',
+      'Coagulograma com INR é o exame mais importante para avaliar gravidade: alargamento sugere disfunção hepatocelular significativa.',
+      'Glicemia deve ser monitorizada, pela possibilidade de hipoglicemia na disfunção hepática.',
+      'Ultrassonografia abdominal quando houver dúvida com causa obstrutiva.',
+      'Notificação compulsória e investigação de contatos e da fonte comum (água, creche, alimento).'
+    ],
+    classificacaoGravidade: [
+      { nivel: 'Hepatite A não complicada', criterios: 'Criança com icterícia, boa aceitação oral, sem vômitos incoercíveis, sem alteração do sensório, com INR normal. Acompanhamento ambulatorial com orientação e reavaliação clínica e laboratorial.' },
+      { nivel: 'Forma prolongada ou colestática', criterios: 'Icterícia e prurido persistentes por mais de 4 a 6 semanas, com bilirrubina elevada e transaminases em queda, sem sinais de insuficiência hepática. Acompanhamento ambulatorial especializado e manejo do prurido.' },
+      { nivel: 'Hepatite grave ou fulminante', criterios: 'Encefalopatia hepática de qualquer grau, INR alargado, hipoglicemia, sangramento, redução do fígado ou vômitos incoercíveis. Internação imediata e contato precoce com centro de transplante hepático.' }
+    ],
+    tratamento: [
+      'Não há tratamento antiviral específico: a conduta é de suporte e de vigilância ativa dos sinais de insuficiência hepática.',
+      'Repouso relativo conforme a tolerância; não há evidência que justifique repouso absoluto prolongado.',
+      'Dieta livre, conforme a aceitação, com boa oferta calórica; a restrição rígida de gorduras não é necessária, embora alimentos gordurosos possam ser mal tolerados na fase prodrômica.',
+      'Hidratação oral frequente; hidratação venosa com soro glicosado e eletrólitos se vômitos ou aceitação insuficiente, com atenção à glicemia.',
+      'Suspender medicamentos hepatotóxicos e desnecessários; usar paracetamol com cautela e em dose mínima eficaz ou preferir dipirona conforme avaliação, evitando anti-inflamatórios não esteroidais.',
+      'Orientar rigorosamente contra o uso de chás, garrafadas, plantas medicinais e medicamentos por conta própria, prática comum na região e com risco de agravar a lesão hepática.',
+      'Prurido nas formas colestáticas: medidas gerais (banho morno, hidratante, unhas curtas); colestiramina pode ser considerada conforme avaliação especializada e bula.',
+      'Precauções de contato e higiene rigorosa das mãos; afastamento de creche e escola por 7 dias após o início da icterícia.',
+      'Profilaxia pós-exposição para contatos domiciliares e próximos suscetíveis: vacina hepatite A em até 14 dias da exposição; imunoglobulina humana normal para menores de 12 meses, imunossuprimidos e hepatopatas crônicos, conforme protocolo do CRIE.',
+      'Investigar a fonte de contaminação (água de consumo, creche, alimentos) e acionar a vigilância sanitária e epidemiológica.',
+      'Monitorizar INR, glicemia, bilirrubinas e transaminases nos casos com vômitos, icterícia intensa ou qualquer sinal de alarme; a piora do INR indica transferência para serviço com suporte hepático.'
+    ],
+    medicamentos: [
+      { medId: 'sais_reidratacao_oral', esquema: 'Manutenção da hidratação em vigência de vômitos ou baixa aceitação, conforme plano A ou B do MS.' },
+      { medId: 'soro_fisiologico', esquema: 'Hidratação venosa com SF 0,9% associada a glicose conforme necessidade, com monitorização de glicemia e eletrólitos, conforme protocolo do serviço.' },
+      { medId: 'dipirona', esquema: 'Antitérmico e analgésico, conforme avaliação individual: 10 a 15 mg/kg/dose VO ou IV a cada 6 horas, conforme bula.' },
+      { medId: 'paracetamol', esquema: 'Usar com cautela na hepatite aguda: apenas se necessário, na menor dose eficaz e respeitando o intervalo e a dose máxima da bula; evitar em disfunção hepática significativa, confirmar conforme protocolo.' },
+      { medId: null, nome: 'Vacina hepatite A', esquema: 'Rotina aos 15 meses pelo Calendário Nacional de Vacinação; profilaxia pós-exposição de contatos suscetíveis a partir de 12 meses, preferencialmente em até 14 dias da exposição.' },
+      { medId: null, nome: 'Imunoglobulina humana normal', esquema: 'Profilaxia pós-exposição em menores de 12 meses, imunossuprimidos e hepatopatas crônicos, preferencialmente em até 14 dias da exposição, dose e via conforme protocolo do CRIE e bula, confirmar conforme protocolo.' },
+      { medId: null, nome: 'Colestiramina', esquema: 'Prurido colestático persistente: indicação e dose conforme avaliação de gastroenterologia pediátrica e bula, confirmar conforme protocolo.' },
+      { medId: null, nome: 'Vitamina K (fitomenadiona)', esquema: 'Em caso de alargamento do tempo de protrombina, administração conforme protocolo do serviço e bula, com reavaliação do INR, confirmar conforme protocolo.' }
+    ],
+    criteriosInternacao: [
+      'Vômitos persistentes ou incapacidade de manter hidratação e aporte calórico por via oral.',
+      'Qualquer sinal de encefalopatia hepática, mesmo discreto (sonolência, irritabilidade, confusão).',
+      'INR ou tempo de protrombina alargados.',
+      'Hipoglicemia documentada.',
+      'Sangramento espontâneo.',
+      'Icterícia intensa e rapidamente progressiva ou redução do tamanho do fígado.',
+      'Lactente, desnutrido grave, hepatopata crônico ou imunossuprimido.',
+      'Impossibilidade de reavaliação ambulatorial frequente, situação comum em comunidades distantes.'
+    ],
+    criteriosUTI: [
+      'Encefalopatia hepática graus III e IV ou rebaixamento progressivo do nível de consciência.',
+      'Coagulopatia grave com sangramento ativo.',
+      'Hipoglicemia refratária.',
+      'Insuficiência hepática aguda com necessidade de suporte avançado ou de avaliação para transplante hepático.',
+      'Instabilidade hemodinâmica, insuficiência renal ou edema cerebral.'
+    ],
+    criteriosAlta: [
+      'Boa aceitação oral, sem vômitos, com hidratação mantida.',
+      'Ausência de sinais de encefalopatia e INR normal ou em normalização.',
+      'Glicemia estável.',
+      'Bilirrubinas e transaminases em queda ou estáveis, com melhora clínica.',
+      'Responsável orientado sobre sinais de alarme neurológicos e de sangramento.',
+      'Retorno ambulatorial agendado e contatos domiciliares avaliados para profilaxia.',
+      'Notificação realizada.'
+    ],
+    orientacoes: [
+      'A recuperação é lenta: pode levar de 4 a 8 semanas até a criança voltar ao normal, e o cansaço é comum nesse período.',
+      'Oferecer a alimentação que a criança aceitar, com boa quantidade de calorias; não é preciso dieta sem gordura rígida, mas alimentos muito gordurosos podem cair mal no começo.',
+      'Não dar nenhum remédio, chá, garrafada ou planta medicinal sem orientação médica: podem piorar o fígado.',
+      'Lavar bem as mãos com água e sabão após usar o banheiro, trocar fraldas e antes de preparar alimentos.',
+      'Ferver ou clorar a água de beber e de preparar alimentos, especialmente se vier de rio, igarapé, poço ou chuva.',
+      'Manter a criança fora da creche ou escola por 7 dias depois do início do amarelão.',
+      'Levar todos os moradores da casa à unidade de saúde para avaliar vacina ou imunoglobulina.',
+      'Procurar atendimento imediatamente se a criança ficar sonolenta, confusa, agitada, trocar o dia pela noite, sangrar pela gengiva ou nariz, vomitar muito ou o amarelão piorar rápido.'
+    ],
+    retorno: 'Reavaliação clínica em 7 dias e, nos casos com icterícia importante, reavaliação em 48 a 72 horas com repetição de transaminases, bilirrubinas e coagulograma; retorno imediato diante de qualquer sinal neurológico ou sangramento. Acompanhamento até a normalização clínica e laboratorial.',
+    prevencao: [
+      'Vacina hepatite A aos 15 meses, dose única, conforme o Calendário Nacional de Vacinação, com ampliação de faixa conforme normativa vigente.',
+      'Profilaxia pós-exposição de contatos suscetíveis com vacina ou imunoglobulina, conforme idade e condição clínica.',
+      'Tratamento da água de consumo: fervura, cloração ou filtração, medida essencial em comunidades ribeirinhas e periurbanas.',
+      'Melhoria do saneamento, destino adequado de dejetos e afastamento de fossas das fontes de água.',
+      'Higiene das mãos e higiene alimentar, evitando alimentos crus e moluscos de procedência duvidosa.',
+      'Afastamento de creche e escola por 7 dias após o início da icterícia e reforço das rotinas de higiene em creches.',
+      'Notificação compulsória e investigação de surtos e de fonte comum pela vigilância.'
+    ],
+    fontes: [
+      { nome: 'Protocolo Clínico e Diretrizes Terapêuticas para Hepatite A – Ministério da Saúde', ano: 2023 },
+      { nome: 'Guia de Vigilância em Saúde – Ministério da Saúde', ano: 2024 },
+      { nome: 'Calendário Nacional de Vacinação – Ministério da Saúde', ano: 2025 },
+      { nome: 'Nelson Textbook of Pediatrics, 22ª edição', ano: 2024 }
+    ],
+    atualizadoEm: '2026-09'
+  },
+
+  {
+    id: 'febre_tifoide',
+    nome: 'Febre tifoide',
+    categoria: 'infecciosa',
+    amazonia: false,
+    cid10: 'A01.0',
+    tags: ['febre', 'cefaleia', 'dor_abdominal', 'diarreia', 'vomitos', 'exantema', 'hepatomegalia', 'esplenomegalia', 'alteracao_consciencia', 'sangramento', 'fraqueza', 'calafrios'],
+    definicao: 'Doença bacteriana sistêmica causada por Salmonella enterica sorotipo Typhi, transmitida por água e alimentos contaminados, caracterizada por febre prolongada e progressiva, cefaleia, dor abdominal, hepatoesplenomegalia e possibilidade de complicações graves como hemorragia e perfuração intestinal na terceira semana de doença.',
+    epidemiologia: 'A febre tifoide permanece endêmica nas regiões Norte e Nordeste do Brasil, com os maiores coeficientes de incidência historicamente registrados em estados amazônicos, associada à ausência de saneamento, ao consumo de água não tratada de rios e igarapés e ao consumo de pescado e alimentos manipulados sem higiene. Surtos de fonte comum ocorrem em comunidades ribeirinhas e em áreas periurbanas, com maior risco durante a cheia, quando a contaminação fecal da água aumenta. Portadores crônicos assintomáticos, que eliminam a bactéria pelas fezes por mais de um ano, são reservatórios importantes e frequentemente manipuladores de alimentos. A febre tifoide é doença de notificação compulsória.',
+    agente: 'Salmonella enterica subespécie enterica sorotipo Typhi. Salmonella Paratyphi A, B e C causam a febre paratifoide, clinicamente semelhante e mais branda.',
+    transmissao: 'Fecal-oral, por ingestão de água e alimentos contaminados por fezes ou urina de doentes ou portadores; contato direto pessoa a pessoa é menos frequente. Moscas podem atuar como vetores mecânicos. O homem é o único reservatório.',
+    incubacao: '1 a 3 semanas (média de 8 a 14 dias), variando conforme o inóculo.',
+    manifestacoes: [
+      'Primeira semana: febre de início insidioso e ascensão progressiva em escada, cefaleia frontal intensa, mal-estar, anorexia, mialgia e dor abdominal difusa.',
+      'Bradicardia relativa (dissociação pulso-temperatura, sinal de Faget), presente em parte dos casos e mais descrita em adultos.',
+      'Alterações intestinais variáveis: constipação é mais comum em adultos, enquanto em crianças a diarreia é frequente, por vezes com aspecto de sopa de ervilha.',
+      'Segunda semana: prostração acentuada, hepatoesplenomegalia, distensão abdominal, torpor e fácies típica de apatia (estado tífico).',
+      'Roséola tífica: máculas eritematosas de 2 a 4 mm, escassas e fugazes, em tronco e abdome, mais difíceis de identificar em pele pigmentada.',
+      'Terceira semana: risco máximo de complicações, com hemorragia digestiva e perfuração intestinal na região ileocecal.',
+      'Manifestações neurológicas: confusão, delírio, apatia intensa, convulsão e, raramente, meningite.',
+      'Em lactentes e crianças pequenas o quadro pode ser inespecífico, com febre, vômitos, diarreia e distensão abdominal, simulando sepse ou gastroenterite grave.',
+      'Complicações adicionais: miocardite, hepatite tífica, colecistite, osteomielite (especialmente em portadores de anemia falciforme), pneumonia e abscessos.',
+      'Recaída em 5 a 15% dos casos, geralmente 1 a 3 semanas após o término do antibiótico, habitualmente mais branda.'
+    ],
+    sinaisAlarme: [
+      'Dor abdominal intensa e localizada, defesa ou descompressão dolorosa, distensão abdominal com desaparecimento do timpanismo hepático (suspeita de perfuração intestinal).',
+      'Melena, enterorragia, palidez súbita, taquicardia e hipotensão (hemorragia digestiva).',
+      'Alteração de consciência, delírio, torpor ou convulsão.',
+      'Choque, perfusão lentificada, oligúria.',
+      'Vômitos incoercíveis e desidratação.',
+      'Icterícia ou sinais de disfunção hepática.',
+      'Febre por mais de 7 dias sem foco definido em criança de área endêmica.',
+      'Lactente, desnutrido grave, anemia falciforme ou imunossuprimido.'
+    ],
+    diagnosticoDiferencial: ['malaria', 'dengue', 'leptospirose', 'febre_amarela', 'sepse', 'tuberculose', 'leishmaniose_visceral', 'hepatite_a', 'mononucleose', 'abscesso hepático e apendicite', 'doenca_chagas aguda', 'endocardite infecciosa', 'linfoma e leucemia'],
+    exames: ['hemocultura', 'coprocultura', 'urocultura', 'mielocultura (maior sensibilidade, conforme disponibilidade)', 'hemograma', 'pcr', 'ast', 'alt', 'bilirrubinas', 'eletrolitos', 'ureia', 'creatinina', 'radiografia de abdome em pé ou decúbito lateral (pesquisa de pneumoperitônio)', 'radiografia_torax', 'gota espessa para malária', 'sorologia_dengue', 'coagulograma'],
+    criteriosDiagnosticos: [
+      'Caso suspeito: febre persistente por 3 dias ou mais, com cefaleia, mal-estar e sintomas abdominais, em pessoa procedente de área endêmica ou com consumo de água ou alimentos de procedência duvidosa.',
+      'Confirmação laboratorial compatível: isolamento de Salmonella Typhi em hemocultura (maior positividade na primeira semana), mielocultura (maior sensibilidade e menos afetada por antibiótico prévio), coprocultura ou urocultura (positividade maior a partir da segunda e terceira semanas).',
+      'Colher hemoculturas, preferencialmente em mais de uma amostra e antes do início do antibiótico.',
+      'Hemograma tipicamente sem leucocitose, podendo apresentar leucopenia com aneosinofilia; plaquetopenia pode ocorrer.',
+      'O teste sorológico de Widal tem baixa acurácia e não deve ser utilizado isoladamente para decisão diagnóstica.',
+      'Em área endêmica, é obrigatório afastar malária com gota espessa ou teste rápido em toda criança com febre prolongada.',
+      'Radiografia de abdome com pneumoperitônio confirma perfuração intestinal e indica avaliação cirúrgica imediata.',
+      'Notificação compulsória, investigação de fonte comum e pesquisa de portadores entre manipuladores de alimentos.'
+    ],
+    classificacaoGravidade: [
+      { nivel: 'Não complicada', criterios: 'Febre e sintomas gerais com criança alerta, hidratada, tolerando via oral, sem sinais abdominais de alarme e sem alteração de consciência. Antibiótico oral e reavaliação frequente, quando houver garantia de seguimento.' },
+      { nivel: 'Complicada', criterios: 'Vômitos persistentes, desidratação, dor abdominal importante, sangramento digestivo, icterícia, miocardite ou febre com toxemia. Internação, antibiótico parenteral e monitorização.' },
+      { nivel: 'Grave', criterios: 'Perfuração intestinal, hemorragia digestiva volumosa, choque, alteração grave de consciência, delírio ou convulsão. Internação em UTI, suporte hemodinâmico, avaliação cirúrgica e consideração de corticoide conforme protocolo.' }
+    ],
+    tratamento: [
+      'Antibioticoterapia dirigida, considerando o perfil de sensibilidade local, já que há resistência crescente a ampicilina, cloranfenicol, sulfametoxazol com trimetoprima e, em algumas regiões do mundo, a fluoroquinolonas.',
+      'Ceftriaxona intravenosa é a escolha para casos que exigem internação, para lactentes e para quadros complicados, com duração habitual de 10 a 14 dias.',
+      'Azitromicina por via oral é opção eficaz para casos não complicados, com boa penetração intracelular, por 5 a 7 dias conforme protocolo.',
+      'Cloranfenicol, ampicilina e sulfametoxazol com trimetoprima permanecem como alternativas onde o isolado for comprovadamente sensível, conforme antibiograma e protocolo do serviço.',
+      'Ajustar o esquema conforme o resultado da hemocultura e do antibiograma.',
+      'A febre costuma levar de 3 a 5 dias para ceder mesmo com antibiótico eficaz; esse retardo não deve, isoladamente, motivar troca precoce do esquema.',
+      'Hidratação oral ou venosa conforme o estado de hidratação e a tolerância; correção de distúrbios eletrolíticos.',
+      'Antitérmico com paracetamol ou dipirona; evitar anti-inflamatórios não esteroidais e ácido acetilsalicílico pelo risco de sangramento digestivo.',
+      'Dieta leve e fracionada conforme a tolerância; evitar dieta zero desnecessária, mas manter jejum e avaliação cirúrgica imediata diante de suspeita de perfuração.',
+      'Evitar antiespasmódicos, antidiarreicos e opiáceos que reduzam a motilidade intestinal.',
+      'Complicações graves com choque ou alteração importante do sensório: considerar corticoide em dose alta por curto período, conforme protocolo do serviço e avaliação especializada.',
+      'Perfuração intestinal: ressuscitação volêmica, antibiótico de amplo espectro com cobertura para anaeróbios e Gram-negativos e cirurgia de urgência.',
+      'Precauções de contato e higiene rigorosa; investigar e tratar portadores crônicos entre contatos, especialmente manipuladores de alimentos, conforme protocolo.',
+      'Notificação compulsória e investigação epidemiológica da fonte de contaminação (água, alimento, manipulador).'
+    ],
+    medicamentos: [
+      { medId: 'ceftriaxona', esquema: 'Casos que exigem internação ou complicados: 50 a 100 mg/kg/dia IV uma vez ao dia ou dividida 12/12 h (máximo 2 a 4 g/dia), por 10 a 14 dias, conforme protocolo do serviço.' },
+      { medId: 'azitromicina', esquema: 'Casos não complicados com tolerância oral: 10 a 20 mg/kg/dia VO uma vez ao dia (máximo 500 a 1.000 mg/dia) por 5 a 7 dias, conforme protocolo do serviço.' },
+      { medId: 'sulfametoxazol_trimetoprim', esquema: 'Alternativa apenas quando o isolado for sensível: 40 mg/kg/dia de sulfametoxazol e 8 mg/kg/dia de trimetoprima VO dividida 12/12 h por 14 dias, conforme antibiograma.' },
+      { medId: null, nome: 'Cloranfenicol', esquema: 'Alternativa histórica onde houver sensibilidade comprovada e disponibilidade: dose e duração conforme protocolo do Ministério da Saúde e bula, com monitorização hematológica, confirmar conforme protocolo.' },
+      { medId: 'metronidazol', esquema: 'Associado à cobertura para anaeróbios em caso de perfuração intestinal, conforme protocolo cirúrgico do serviço.' },
+      { medId: 'sais_reidratacao_oral', esquema: 'Reidratação e manutenção conforme plano A ou B do MS.' },
+      { medId: 'ringer_lactato', esquema: 'Expansão volêmica em desidratação grave ou choque: conforme protocolo de ressuscitação do serviço.' },
+      { medId: 'paracetamol', esquema: 'Febre e dor: 10 a 15 mg/kg/dose VO a cada 6 horas, conforme bula.' },
+      { medId: 'dipirona', esquema: 'Alternativa antitérmica: 10 a 15 mg/kg/dose VO ou IV a cada 6 horas, conforme bula.' },
+      { medId: 'dexametasona', esquema: 'Apenas em formas graves com choque ou alteração importante do sensório, em curso curto e sob avaliação especializada, conforme protocolo do serviço, confirmar conforme protocolo.' }
+    ],
+    criteriosInternacao: [
+      'Vômitos persistentes, desidratação ou intolerância à via oral.',
+      'Dor abdominal importante, distensão ou qualquer suspeita de complicação intestinal.',
+      'Sangramento digestivo.',
+      'Alteração de consciência, delírio ou convulsão.',
+      'Toxemia, febre alta persistente ou piora após 5 a 7 dias de antibiótico.',
+      'Lactente, desnutrido grave, anemia falciforme ou imunossuprimido.',
+      'Icterícia ou suspeita de miocardite.',
+      'Impossibilidade de reavaliação diária, comum em comunidades de difícil acesso.'
+    ],
+    criteriosUTI: [
+      'Choque séptico ou hipovolêmico por hemorragia digestiva.',
+      'Perfuração intestinal com peritonite e necessidade de cirurgia e suporte hemodinâmico.',
+      'Rebaixamento importante do nível de consciência ou estado de mal convulsivo.',
+      'Insuficiência respiratória ou miocardite com disfunção ventricular.',
+      'Insuficiência renal aguda ou disfunção orgânica múltipla.'
+    ],
+    criteriosAlta: [
+      'Afebril por pelo menos 48 horas e com melhora do estado geral e do apetite.',
+      'Aceitação adequada de dieta e líquidos por via oral.',
+      'Ausência de sinais abdominais de alarme e de sangramento.',
+      'Antibiótico em curso com esquema e duração compreendidos pelo responsável, quando a transição para via oral for possível.',
+      'Orientação sobre risco de recaída em 1 a 3 semanas e sobre sinais de alarme.',
+      'Notificação realizada, investigação de fonte comum iniciada e contatos avaliados.',
+      'Retorno agendado, incluindo coproculturas de controle quando indicadas pelo serviço.'
+    ],
+    orientacoes: [
+      'Dar o antibiótico até o último dia indicado, mesmo com a febre já tendo passado; a febre demora de 3 a 5 dias para ceder.',
+      'A doença pode voltar 1 a 3 semanas depois do fim do tratamento; se a febre retornar, procurar a unidade de saúde.',
+      'Não dar remédios para segurar a diarreia nem antiespasmódicos sem orientação: podem aumentar o risco de complicação no intestino.',
+      'Ferver ou clorar toda a água de beber, de fazer gelo e de preparar alimentos, principalmente se for de rio, igarapé, poço ou chuva.',
+      'Lavar as mãos com água e sabão após usar o banheiro e antes de preparar ou servir alimentos.',
+      'Evitar que a pessoa doente ou recém-curada prepare alimentos para outras pessoas até a liberação do serviço de saúde.',
+      'Lavar e cozinhar bem os alimentos; evitar pescado cru ou mal cozido e alimentos vendidos sem condições de higiene.',
+      'Procurar atendimento imediatamente se houver dor forte na barriga, barriga muito inchada e dura, fezes pretas ou com sangue, palidez, desmaio, confusão, sonolência ou convulsão.'
+    ],
+    retorno: 'Reavaliação em 48 a 72 horas durante o tratamento ambulatorial, com atenção especial na terceira semana de doença, período de maior risco de complicações; retorno imediato diante de dor abdominal intensa, sangramento ou alteração de consciência. Consulta de revisão 2 a 4 semanas após o término do antibiótico para pesquisa de recaída e, quando indicado, coproculturas de controle para identificar estado de portador.',
+    prevencao: [
+      'Tratamento da água de consumo por fervura, cloração ou filtração, medida central em comunidades ribeirinhas e periurbanas do Amazonas.',
+      'Saneamento básico, destino adequado de dejetos e proteção das fontes de água contra contaminação fecal.',
+      'Higiene das mãos e higiene na manipulação e no preparo de alimentos; cozimento adequado de pescado.',
+      'Identificação, tratamento e afastamento de portadores crônicos, especialmente manipuladores de alimentos, conforme protocolo do Ministério da Saúde.',
+      'Notificação compulsória e investigação de surtos de fonte comum pela vigilância epidemiológica e sanitária.',
+      'Controle de moscas e destino adequado do lixo.',
+      'Vacina contra febre tifoide não faz parte do Calendário Nacional de Vacinação e sua indicação é restrita a situações específicas, conforme orientação da vigilância.'
+    ],
+    fontes: [
+      { nome: 'Guia de Vigilância em Saúde – Ministério da Saúde', ano: 2024 },
+      { nome: 'Manual Integrado de Vigilância e Controle da Febre Tifoide – Ministério da Saúde', ano: 2010 },
+      { nome: 'OMS – Typhoid fever: diagnosis, treatment and prevention', ano: 2019 },
+      { nome: 'Nelson Textbook of Pediatrics, 22ª edição', ano: 2024 }
+    ],
+    atualizadoEm: '2026-09'
+  }
 
 ];

@@ -22,7 +22,7 @@ PED.data.alternativas = {
         { ordem: 4, rotulo: 'Alternativa quando o esquema de escolha não está disponível na comunidade', tipo: 'alternativa',
           opcoes: [
             { medId: 'artesunato', nome: 'Artesunato retal (pré-referência)', esquema: '10 mg/kg por via retal em dose única antes do transporte', quando: 'Criança com malária grave em comunidade ribeirinha ou indígena sem acesso venoso e com transporte prolongado até a referência', obs: 'Medida de pré-referência recomendada pela OMS. Não substitui o tratamento completo, transferir sempre. Confirmar disponibilidade e apresentação conforme protocolo/bula.', verificar: true },
-            { medId: 'artemeter_lumefantrina', nome: 'Artemeter + lumefantrina', esquema: 'VO 12/12 h por 3 dias conforme faixa de peso', quando: 'Alternativa quando há falha ou indisponibilidade de cloroquina para P. vivax, situação prevista no Guia de Tratamento da Malária', obs: 'Discutir com a referência regional ou com o polo de malária antes de trocar o esquema do P. vivax.', verificar: true }
+            { medId: 'artemeter_lumefantrina', nome: 'Artemeter + lumefantrina', esquema: 'VO 12/12 h por 3 dias conforme faixa de peso', quando: 'Alternativa quando há falha ou indisponibilidade de cloroquina para P. vivax, situação prevista no Guia de Tratamento da Malária', obs: 'Discutir com a referência regional ou com o polo de malária antes de trocar o esquema do P. vivax. Confirmar conforme protocolo/bula.', verificar: true }
           ] },
         { ordem: 5, rotulo: 'Segunda linha / suspeita de falha terapêutica', tipo: 'segunda',
           opcoes: [
@@ -317,7 +317,7 @@ PED.data.alternativas = {
       linhas: [
         { ordem: 1, rotulo: 'Primeira escolha em pediatria', tipo: 'primeira',
           opcoes: [
-            { medId: 'anfotericina_b_lipossomal', nome: 'Anfotericina B lipossomal', esquema: '3 mg/kg/dia IV por 7 dias, ou 4 mg/kg/dia por 5 dias, conforme o Manual de vigilância e tratamento das leishmanioses', quando: 'Primeira escolha em menores de 1 ano, em criança com sinais de gravidade, desnutrição grave, coinfecção HIV, insuficiência renal ou hepática, e em falha ou toxicidade ao antimonial', quando_obs: '', obs: 'Menor toxicidade e internação mais curta. Monitorar potássio, magnésio, função renal e reação infusional.' }
+            { medId: 'anfotericina_b_lipossomal', nome: 'Anfotericina B lipossomal', esquema: '3 mg/kg/dia IV por 7 dias, ou 4 mg/kg/dia por 5 dias, conforme o Manual de vigilância e tratamento das leishmanioses', quando: 'Primeira escolha em menores de 1 ano, em criança com sinais de gravidade, desnutrição grave, coinfecção HIV, insuficiência renal ou hepática, e em falha ou toxicidade ao antimonial', obs: 'Menor toxicidade e internação mais curta. Monitorar potássio, magnésio, função renal e reação infusional.' }
           ] },
         { ordem: 2, rotulo: 'Alternativa quando a anfotericina lipossomal não está disponível', tipo: 'alternativa',
           opcoes: [
@@ -474,8 +474,8 @@ PED.data.alternativas = {
         { ordem: 1, rotulo: 'Primeira escolha - poliquimioterapia única (PQT-U)', tipo: 'primeira',
           opcoes: [
             { medId: 'rifampicina', nome: 'Rifampicina', esquema: 'Dose mensal supervisionada, ajustada por faixa de peso e idade conforme as cartelas infantis do esquema PQT-U, por 6 meses na forma paucibacilar e 12 meses na multibacilar', quando: 'Hanseníase confirmada em criança, em qualquer forma clínica', obs: 'Em menor de 30 kg a dose é calculada por peso, cerca de 10 a 20 mg/kg mensal. Confirmar conforme protocolo/bula e cartela disponível.', verificar: true },
-            { medId: 'dapsona', nome: 'Dapsona', esquema: 'Dose mensal supervisionada e dose diária autoadministrada, conforme faixa de peso da cartela infantil, em torno de 2 mg/kg/dia', quando: 'Componente do esquema PQT-U', obs: 'Investigar deficiência de G6PD quando disponível, e monitorar hemoglobina pelo risco de hemólise e de metemoglobinemia.', verificar: true },
-            { medId: 'clofazimina', nome: 'Clofazimina', esquema: 'Dose mensal supervisionada e dose em dias alternados ou diária conforme faixa de peso da cartela infantil', quando: 'Componente do esquema PQT-U, agora também na forma paucibacilar segundo o esquema único', obs: 'Orientar sobre o escurecimento reversível da pele e ressecamento cutâneo, causa frequente de abandono na adolescência.', verificar: true }
+            { medId: 'dapsona', nome: 'Dapsona', esquema: 'Dose mensal supervisionada e dose diária autoadministrada, conforme faixa de peso da cartela infantil, em torno de 2 mg/kg/dia', quando: 'Componente do esquema PQT-U', obs: 'Investigar deficiência de G6PD quando disponível, e monitorar hemoglobina pelo risco de hemólise e de metemoglobinemia. Confirmar conforme protocolo/bula e cartela disponível.', verificar: true },
+            { medId: 'clofazimina', nome: 'Clofazimina', esquema: 'Dose mensal supervisionada e dose em dias alternados ou diária conforme faixa de peso da cartela infantil', quando: 'Componente do esquema PQT-U, agora também na forma paucibacilar segundo o esquema único', obs: 'Orientar sobre o escurecimento reversível da pele e ressecamento cutâneo, causa frequente de abandono na adolescência. Confirmar conforme protocolo/bula e cartela disponível.', verificar: true }
           ] },
         { ordem: 2, rotulo: 'Alternativa em intolerância ou contraindicação a um dos fármacos', tipo: 'alternativa',
           opcoes: [
@@ -638,6 +638,780 @@ PED.data.alternativas = {
       fontes: [ { nome: 'Ministério da Saúde - Manual de diagnóstico e tratamento de acidentes por animais peçonhentos', ano: 2024 }, { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre acidentes por animais peçonhentos', ano: 2023 } ],
       atualizadoEm: '2026-09'
     },
+    pneumonia: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - tratamento ambulatorial', tipo: 'primeira',
+          opcoes: [
+            { medId: 'amoxicilina', nome: 'Amoxicilina', esquema: '50 mg/kg/dia VO divididos a cada 8 h por 7 a 10 dias, podendo chegar a 80 a 90 mg/kg/dia em áreas com pneumococo de sensibilidade reduzida', quando: 'Pneumonia comunitária típica em criança previamente hígida, sem sinais de gravidade e com boa aceitação oral', obs: 'Reavaliar em 48 a 72 h. A criança de 2 meses a 5 anos com taquipneia e sem tiragem pode ser tratada em casa com retorno programado.' }
+          ] },
+        { ordem: 2, rotulo: 'Primeira escolha - pneumonia grave, tratamento hospitalar', tipo: 'primeira',
+          opcoes: [
+            { medId: 'penicilina_cristalina', nome: 'Penicilina G cristalina', esquema: '100.000 a 200.000 UI/kg/dia IV divididas a cada 6 h', quando: 'Pneumonia grave a partir de 2 meses, com tiragem subcostal, hipoxemia ou recusa alimentar', obs: 'Passar para via oral após 48 a 72 h de melhora clínica, completando o curso.' },
+            { medId: 'ampicilina', nome: 'Ampicilina', esquema: '100 a 200 mg/kg/dia IV divididos a cada 6 h', quando: 'Alternativa de igual eficácia à penicilina cristalina na pneumonia grave', obs: '' },
+            { medId: 'gentamicina', nome: 'Gentamicina', esquema: '5 a 7,5 mg/kg/dia IV a cada 24 h, associada a ampicilina', quando: 'Menor de 2 meses com pneumonia, em que a cobertura precisa incluir germes do período neonatal', obs: 'Nessa faixa etária considerar sempre a condução hospitalar.' }
+          ] },
+        { ordem: 3, rotulo: 'Alternativa em alergia a penicilina', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'azitromicina', nome: 'Azitromicina', esquema: '10 mg/kg/dia VO por 5 dias, ou 10 mg/kg no 1o dia e 5 mg/kg/dia do 2o ao 5o dia', quando: 'Alergia a betalactâmicos, incluindo reação grave, na pneumonia não grave', obs: 'Cobre também os agentes atípicos. Atenção à resistência crescente do pneumococo a macrolídeos.' },
+            { medId: 'claritromicina', nome: 'Claritromicina', esquema: '15 mg/kg/dia VO divididos a cada 12 h por 7 a 10 dias', quando: 'Alternativa ao macrolídeo de escolha, ou quando há suspeita de pneumonia atípica em escolar e adolescente', obs: '' },
+            { medId: 'cefalexina', nome: 'Cefalexina', esquema: '50 a 100 mg/kg/dia VO divididos a cada 6 h', quando: 'Alergia não grave a penicilina, sem anafilaxia, em criança com pneumonia não grave', obs: 'Evitar se houve anafilaxia, angioedema ou reação cutânea grave a betalactâmico.' }
+          ] },
+        { ordem: 4, rotulo: 'Segunda linha / falha terapêutica ou complicação', tipo: 'segunda',
+          opcoes: [
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: '50 a 100 mg/kg/dia IV ou IM a cada 12 a 24 h', quando: 'Falha do esquema inicial em 48 a 72 h, pneumonia com derrame pleural, criança gravemente enferma, ou impossibilidade de via oral em comunidade distante antes da transferência', obs: 'A via intramuscular permite iniciar o tratamento em unidade básica ribeirinha enquanto se organiza o transporte.' },
+            { medId: 'oxacilina', nome: 'Oxacilina', esquema: '100 a 200 mg/kg/dia IV divididos a cada 6 h, associada a ceftriaxona quando indicado', quando: 'Suspeita de pneumonia estafilocócica: pneumatoceles, derrame volumoso, evolução rápida, lesão cutânea associada', obs: '' },
+            { medId: 'vancomicina', nome: 'Vancomicina', esquema: '40 a 60 mg/kg/dia IV divididos a cada 6 a 8 h', quando: 'Suspeita de Staphylococcus aureus resistente à meticilina ou pneumococo com resistência elevada, em criança grave', obs: 'Monitorar função renal e, quando disponível, nível sérico.' }
+          ] },
+        { ordem: 5, rotulo: 'Adjuvante / sintomático', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h', quando: 'Febre e dor torácica', obs: '' },
+            { medId: 'salbutamol', nome: 'Salbutamol', esquema: 'Spray com espaçador, 2 a 4 jatos, ou nebulização conforme protocolo', quando: 'Avaliar quando há sibilância associada e história de asma ou de broncoespasmo', obs: 'Não indicado de rotina na pneumonia sem sibilância.' },
+            { medId: null, nome: 'Oxigenoterapia', esquema: 'Cateter nasal ou máscara para manter saturação igual ou acima de 92% a 94%, conforme protocolo do serviço', quando: 'Hipoxemia, que é o principal marcador de gravidade', obs: 'Em comunidade sem oxímetro, usar frequência respiratória, tiragem, gemência e cianose como parâmetros.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: 'prednisolona', nome: 'Corticoide sistêmico na pneumonia', esquema: '', quando: '', obs: 'Sem benefício demonstrado na pneumonia comunitária da criança sem broncoespasmo. Reservar para asma associada ou para indicação específica.' },
+            { medId: null, nome: 'Xaropes antitussígenos, mucolíticos e expectorantes', esquema: '', quando: '', obs: 'Sem eficácia comprovada em criança e com risco de eventos adversos. Não recomendados pelas diretrizes pediátricas.' },
+            { medId: null, nome: 'Fisioterapia respiratória de rotina na pneumonia', esquema: '', quando: '', obs: 'Revisões sistemáticas não mostram redução de tempo de internação nem de mortalidade na pneumonia não complicada.' },
+            { medId: 'azitromicina', nome: 'Macrolídeo como primeira escolha em lactente e pré-escolar', esquema: '', quando: '', obs: 'O pneumococo é o principal agente bacteriano nessa faixa e a amoxicilina é superior. Reservar o macrolídeo para alergia ou suspeita de agente atípico.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Contagem da frequência respiratória por 1 minuto com a criança calma, e busca de tiragem subcostal, critérios da estratégia AIDPI.',
+        'Oximetria de pulso sempre que disponível, incluindo nas unidades fluviais.',
+        'Hidratação adequada e manutenção do aleitamento materno.',
+        'Retorno em 48 h ou imediatamente se houver piora, com plano de transporte combinado em comunidade distante.',
+        'Revisão do calendário vacinal, sobretudo pneumocócica, Haemophilus influenzae b, influenza e covid-19.'
+      ],
+      fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Diretrizes de pneumonia adquirida na comunidade em pediatria', ano: 2023 }, { nome: 'OMS - Pocket book of hospital care for children', ano: 2013 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    bronquiolite: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - medidas de suporte', tipo: 'primeira',
+          opcoes: [
+            { medId: null, nome: 'Oxigenoterapia e suporte respiratório', esquema: 'Oxigênio suplementar para manter saturação igual ou acima de 90% a 92%, cânula nasal de alto fluxo ou CPAP conforme disponibilidade e gravidade', quando: 'Hipoxemia ou desconforto respiratório importante', obs: 'Principal medida terapêutica com benefício demonstrado, junto com hidratação e aspiração de vias aéreas.' },
+            { medId: 'soro_fisiologico', nome: 'Soro fisiológico 0,9% nasal', esquema: 'Instilação nasal seguida de aspiração suave das narinas, antes das mamadas e quando houver obstrução', quando: 'Obstrução nasal, causa importante do desconforto no lactente que respira preferencialmente pelo nariz', obs: 'Medida de higiene nasal, não confundir com nebulização de soro fisiológico como tratamento.' },
+            { medId: null, nome: 'Hidratação e manutenção do aleitamento', esquema: 'Oferta fracionada, sonda enteral ou hidratação venosa quando há risco de aspiração ou desconforto intenso', quando: 'Dificuldade de aceitação oral pelo esforço respiratório', obs: 'Cuidado com hiper-hidratação, existe risco de secreção inapropriada de hormônio antidiurético.' }
+          ] },
+        { ordem: 2, rotulo: 'Teste terapêutico, apenas em casos selecionados', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'salbutamol', nome: 'Salbutamol', esquema: 'Teste único com spray e espaçador ou nebulização, mantendo somente se houver resposta objetiva documentada', quando: 'Avaliar em lactente com sibilância recorrente, atopia pessoal ou familiar marcante, em que asma do lactente é hipótese concorrente', obs: 'As diretrizes não recomendam o uso rotineiro na bronquiolite. Suspender se não houver melhora objetiva após o teste.' },
+            { medId: 'adrenalina', nome: 'Adrenalina nebulizada', esquema: 'Nebulização conforme protocolo do serviço, com observação da resposta', quando: 'Avaliar como medida de resgate temporária no lactente com desconforto grave em pronto-socorro, enquanto se organiza o suporte ou a transferência', obs: 'Efeito transitório, sem redução de internação em revisões sistemáticas. Exige monitorização. Confirmar conforme protocolo do serviço.', verificar: true }
+          ] },
+        { ordem: 3, rotulo: 'Uso off-label', tipo: 'offlabel',
+          opcoes: [
+            { medId: null, nome: 'Solução salina hipertônica a 3% nebulizada', esquema: 'Nebulização conforme protocolo do serviço, em ambiente hospitalar', quando: 'Avaliar em lactente internado com bronquiolite e internação prevista mais prolongada, em serviços que adotam essa prática', obs: 'Off-label: preparação e uso nebulizado não constam de bula específica para essa indicação. A evidência é heterogênea, com possível pequena redução de tempo de internação em alguns estudos e ausência de efeito em outros. Não usar em pronto-socorro para decidir alta e monitorar broncoespasmo durante a nebulização. Confirmar conforme protocolo/bula do preparo utilizado.', verificar: true }
+          ] },
+        { ordem: 4, rotulo: 'Situação especial - prevenção, não tratamento', tipo: 'adjuvante',
+          opcoes: [
+            { medId: null, nome: 'Palivizumabe ou anticorpo monoclonal de ação prolongada contra o VSR', esquema: 'Dose e periodicidade conforme o protocolo de imunização passiva vigente', quando: 'Profilaxia em prematuros e cardiopatas elegíveis, antes e durante a sazonalidade do VSR', obs: 'É medida preventiva, não tem papel no tratamento da bronquiolite instalada. Confirmar critérios de elegibilidade, dose e intervalo conforme protocolo/bula vigente.', verificar: true }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Antibiótico na bronquiolite viral', esquema: '', quando: '', obs: 'Não indicado. A etiologia é viral e o antibiótico não altera a evolução. Reservar para infecção bacteriana documentada, como otite média aguda ou pneumonia bacteriana concomitante.' },
+            { medId: 'prednisolona', nome: 'Corticoide sistêmico ou inalatório na bronquiolite', esquema: '', quando: '', obs: 'Sem benefício demonstrado em ensaios clínicos e revisões sistemáticas, não reduz internação nem duração dos sintomas no primeiro episódio.' },
+            { medId: 'soro_fisiologico', nome: 'Nebulização com soro fisiológico isolado como tratamento da bronquiolite', esquema: '', quando: '', obs: 'Prática frequente e sem benefício terapêutico demonstrado. Pode atrasar a alta, gerar custo e cansar o lactente. A higiene nasal com instilação e aspiração é medida diferente e essa sim é útil.' },
+            { medId: null, nome: 'Antitussígenos, descongestionantes e mucolíticos', esquema: '', quando: '', obs: 'Contraindicados em lactentes pelo risco de eventos adversos graves e ausência de eficácia.' },
+            { medId: null, nome: 'Fisioterapia respiratória de rotina no lactente com bronquiolite', esquema: '', quando: '', obs: 'Não recomendada de rotina na bronquiolite não complicada, sem benefício em revisões sistemáticas.' },
+            { medId: null, nome: 'Radiografia de tórax de rotina', esquema: '', quando: '', obs: 'Não indicada no quadro típico, aumenta a prescrição desnecessária de antibiótico. Reservar para dúvida diagnóstica ou piora inesperada.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Higiene nasal com soro fisiológico e aspiração suave antes das mamadas.',
+        'Fracionamento da dieta e manutenção do aleitamento materno.',
+        'Elevação da cabeceira e observação de sinais de esgotamento respiratório.',
+        'Isolamento de contato e higiene das mãos, o VSR se transmite facilmente em enfermaria e em domicílio.',
+        'Orientar o responsável quanto aos sinais de piora e ao pico de gravidade entre o terceiro e o quinto dia de doença, especialmente quando o retorno depende de transporte fluvial.'
+      ],
+      fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Diretrizes para o manejo da bronquiolite viral aguda', ano: 2023 }, { nome: 'OMS - Pocket book of hospital care for children', ano: 2013 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    asma: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha na crise', tipo: 'primeira',
+          opcoes: [
+            { medId: 'salbutamol', nome: 'Salbutamol', esquema: 'Spray com espaçador, 4 a 10 jatos a cada 20 min na primeira hora, ou nebulização com 0,07 a 0,15 mg/kg/dose, conforme protocolo do serviço', quando: 'Toda crise de asma, desde a leve até a grave', obs: 'Spray com espaçador é tão eficaz quanto a nebulização na crise leve e moderada, com menos efeitos adversos, e funciona bem em unidade sem rede de oxigênio.' },
+            { medId: 'prednisolona', nome: 'Prednisolona', esquema: '1 a 2 mg/kg/dia VO, máximo de 40 mg ao dia, por 3 a 5 dias', quando: 'Crise moderada e grave, e crise leve que não responde à primeira hora de broncodilatador', obs: 'Administrar precocemente, na primeira hora. Curso curto não exige desmame.' }
+          ] },
+        { ordem: 2, rotulo: 'Associação na crise moderada e grave', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'ipratropio', nome: 'Brometo de ipratrópio', esquema: 'Associado ao salbutamol nas três primeiras nebulizações ou doses, conforme protocolo do serviço', quando: 'Crise moderada e grave, na primeira hora de tratamento', obs: 'Benefício demonstrado nas primeiras horas, sem vantagem em manter após a estabilização.' },
+            { medId: 'hidrocortisona', nome: 'Hidrocortisona', esquema: '4 a 8 mg/kg/dose IV a cada 6 h, conforme protocolo do serviço', quando: 'Alternativa ao corticoide oral quando há vômitos, rebaixamento de consciência ou crise grave com via oral inviável', obs: 'A via oral é preferida quando a criança tolera, com eficácia equivalente.' },
+            { medId: 'metilprednisolona', nome: 'Metilprednisolona', esquema: '1 a 2 mg/kg/dia IV dividida conforme protocolo do serviço', quando: 'Alternativa parenteral ao corticoide na crise grave hospitalizada', obs: '' }
+          ] },
+        { ordem: 3, rotulo: 'Segunda linha na crise grave refratária', tipo: 'segunda',
+          opcoes: [
+            { medId: 'sulfato_magnesio', nome: 'Sulfato de magnésio', esquema: '40 a 50 mg/kg IV em 20 a 30 min, máximo de 2 g, dose única', quando: 'Crise grave sem resposta adequada após a primeira hora de broncodilatador e corticoide, em ambiente monitorizado', obs: 'Monitorar pressão arterial e reflexos. Ver também a marcação de uso off-label nesta mesma doença.' },
+            { medId: 'adrenalina', nome: 'Adrenalina', esquema: '0,01 mg/kg IM, máximo 0,5 mg por dose', quando: 'Crise gravíssima com risco iminente, anafilaxia associada ou tórax silencioso sem resposta ao inalatório', obs: 'Não substitui o broncodilatador inalatório na crise habitual.' }
+          ] },
+        { ordem: 4, rotulo: 'Uso off-label', tipo: 'offlabel',
+          opcoes: [
+            { medId: 'sulfato_magnesio', nome: 'Sulfato de magnésio intravenoso na crise asmática da criança', esquema: '40 a 50 mg/kg IV em 20 a 30 min, máximo de 2 g', quando: 'Crise grave refratária ao tratamento inicial, em unidade com monitorização', obs: 'Off-label: a bula brasileira registra indicações obstétricas e reposição de magnésio, não a crise asmática pediátrica. O uso é recomendado por diretrizes nacionais e internacionais de asma, com evidência de redução de internação na crise grave. Registrar a justificativa em prontuário.' }
+          ] },
+        { ordem: 5, rotulo: 'Adjuvante e manutenção após a crise', tipo: 'adjuvante',
+          opcoes: [
+            { medId: null, nome: 'Corticoide inalatório (beclometasona ou budesonida)', esquema: 'Dose conforme faixa etária e gravidade, mantida de forma contínua', quando: 'Início ou reforço do tratamento de manutenção na alta, medida que mais reduz recaída e nova internação', obs: 'Toda criança que teve crise deve sair com plano de manutenção e reavaliação agendada. Confirmar dose conforme protocolo/bula do produto disponível.', verificar: true },
+            { medId: null, nome: 'Oxigenoterapia', esquema: 'Para manter saturação igual ou acima de 94%, conforme protocolo do serviço', quando: 'Hipoxemia na crise moderada e grave', obs: '' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Antibiótico na crise de asma', esquema: '', quando: '', obs: 'Não indicado. A maioria das crises tem gatilho viral ou ambiental. Reservar para infecção bacteriana documentada.' },
+            { medId: null, nome: 'Xaropes expectorantes, mucolíticos e antitussígenos', esquema: '', quando: '', obs: 'Sem benefício na crise e com risco de piorar a tosse e a broncoconstrição.' },
+            { medId: null, nome: 'Sedativos e ansiolíticos na crise', esquema: '', quando: '', obs: 'Contraindicados fora de ambiente com suporte ventilatório, pelo risco de depressão respiratória e de mascarar a exaustão.' },
+            { medId: null, nome: 'Aminofilina intravenosa de rotina', esquema: '', quando: '', obs: 'Não recomendada de rotina pela estreita janela terapêutica e pela toxicidade. Restrita a terapia intensiva em casos selecionados.' },
+            { medId: 'salbutamol', nome: 'Alta sem plano de manutenção e sem técnica inalatória revista', esquema: '', quando: '', obs: 'Principal causa de retorno ao pronto-socorro. Sempre demonstrar o uso do espaçador e entregar plano de ação por escrito.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Uso de espaçador com todas as idades, com máscara até cerca de 4 anos, e demonstração prática da técnica.',
+        'Plano de ação escrito para a família, adaptado ao letramento e ao acesso da comunidade.',
+        'Identificação e controle de gatilhos: fumaça de fogão a lenha, queimadas, mofo, poeira, tabagismo passivo, exposição comum na região amazônica.',
+        'Revisão da adesão à medicação de manutenção e do calendário vacinal, incluindo influenza.',
+        'Combinar antecipadamente o plano de transporte em comunidade distante, para crises que não respondem em casa.'
+      ],
+      fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Diretrizes de manejo da asma na infância', ano: 2023 }, { nome: 'Global Initiative for Asthma - Estratégia global para manejo da asma', ano: 2024 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    infeccao_urinaria: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - tratamento ambulatorial', tipo: 'primeira',
+          opcoes: [
+            { medId: 'cefalexina', nome: 'Cefalexina', esquema: '50 a 100 mg/kg/dia VO divididos a cada 6 h, por 7 a 10 dias na pielonefrite e 3 a 5 dias na cistite', quando: 'Infecção urinária em criança acima de 3 meses, com boa aceitação oral e sem toxemia', obs: 'Colher urocultura antes de iniciar sempre que possível e ajustar conforme o antibiograma.' },
+            { medId: 'amoxicilina_clavulanato', nome: 'Amoxicilina + clavulanato', esquema: '50 mg/kg/dia de amoxicilina VO divididos a cada 8 ou 12 h', quando: 'Alternativa de primeira escolha oral, considerando o perfil local de resistência', obs: 'Resistência de Escherichia coli à amoxicilina isolada é elevada, por isso a associação.' }
+          ] },
+        { ordem: 2, rotulo: 'Primeira escolha - pielonefrite com toxemia ou lactente pequeno', tipo: 'primeira',
+          opcoes: [
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: '50 a 75 mg/kg/dia IV ou IM a cada 24 h', quando: 'Criança toxemiada, vômitos, menor de 3 meses, ou impossibilidade de via oral', obs: 'A dose única diária permite início em unidade básica ribeirinha e transição oral após melhora. Evitar em recém-nascido com icterícia.' },
+            { medId: 'gentamicina', nome: 'Gentamicina', esquema: '5 a 7,5 mg/kg/dia IV a cada 24 h, associada a ampicilina no lactente pequeno', quando: 'Alternativa hospitalar, especialmente em menores de 3 meses, associada a ampicilina', obs: 'Monitorar função renal, evitar em nefropatia.' },
+            { medId: 'ampicilina', nome: 'Ampicilina', esquema: '100 a 200 mg/kg/dia IV divididos a cada 6 h', quando: 'Cobertura de Enterococcus no lactente menor de 3 meses, associada a aminoglicosídeo', obs: '' }
+          ] },
+        { ordem: 3, rotulo: 'Alternativa em alergia a betalactâmico ou a sulfa', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'sulfametoxazol_trimetoprim', nome: 'Sulfametoxazol + trimetoprima', esquema: '8 a 10 mg de trimetoprima/kg/dia VO divididos a cada 12 h', quando: 'Alternativa em alergia a betalactâmico, guiada por antibiograma, em criança acima de 2 meses', obs: 'Contraindicada em menores de 2 meses e na deficiência de G6PD. Resistência regional pode ser alta, usar preferencialmente com cultura.' },
+            { medId: 'nitrofurantoina', nome: 'Nitrofurantoína', esquema: '5 a 7 mg/kg/dia VO divididos a cada 6 h', quando: 'Cistite não complicada em criança acima de 1 mês, e alternativa quando há alergia a sulfa', obs: 'Não serve para pielonefrite, pois não atinge concentração adequada no parênquima renal e no sangue. Contraindicada em menores de 1 mês e na deficiência de G6PD.' },
+            { medId: 'gentamicina', nome: 'Gentamicina', esquema: '5 a 7,5 mg/kg/dia IV ou IM a cada 24 h', quando: 'Alergia grave a betalactâmicos e a sulfa, na pielonefrite', obs: 'Monitorar função renal.' }
+          ] },
+        { ordem: 4, rotulo: 'Segunda linha / falha terapêutica ou germe resistente', tipo: 'segunda',
+          opcoes: [
+            { medId: null, nome: 'Reajuste guiado por urocultura e antibiograma, com apoio da referência', esquema: '', quando: 'Ausência de melhora em 48 a 72 h, urocultura com germe resistente, ou infecção urinária de repetição', obs: 'Em bactéria produtora de betalactamase de espectro estendido, o esquema deve ser definido com a referência, frequentemente com carbapenêmico hospitalar. Investigar uropatia obstrutiva e refluxo.' },
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: '50 a 75 mg/kg/dia IV', quando: 'Falha do tratamento oral inicial em criança com pielonefrite', obs: 'Reavaliar aderência, vômitos e dose antes de assumir resistência.' }
+          ] },
+        { ordem: 5, rotulo: 'Adjuvante / sintomático', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h', quando: 'Febre e dor lombar ou suprapúbica', obs: '' },
+            { medId: null, nome: 'Hidratação e higiene perineal', esquema: '', quando: 'Todos os casos', obs: 'Oferta regular de líquidos, tratamento de constipação e de oxiuríase, e orientação de higiene, que reduzem recorrência.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: 'nitrofurantoina', nome: 'Nitrofurantoína na pielonefrite ou em menores de 1 mês', esquema: '', quando: '', obs: 'Não atinge concentração tecidual e sérica adequada, e é contraindicada no recém-nascido pelo risco de hemólise.' },
+            { medId: null, nome: 'Tratamento de bacteriúria assintomática', esquema: '', quando: '', obs: 'Não indicado em criança sem sintomas e sem uropatia, o tratamento seleciona germes resistentes.' },
+            { medId: null, nome: 'Antibiótico guiado por urina colhida em saco coletor', esquema: '', quando: '', obs: 'Alta taxa de contaminação. O saco coletor só serve para afastar o diagnóstico quando negativo. Confirmar com jato médio, cateterismo ou punção suprapúbica antes de tratar.' },
+            { medId: null, nome: 'Profilaxia antibiótica contínua de rotina após o primeiro episódio', esquema: '', quando: '', obs: 'Não indicada de rotina. Reservar para casos selecionados com refluxo de alto grau ou recorrência, definidos com nefrologia ou urologia pediátrica.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Coleta adequada de urina antes do antibiótico, por jato médio na criança com controle esfincteriano ou por cateterismo no lactente.',
+        'Ultrassonografia de rins e vias urinárias após o primeiro episódio febril, conforme protocolo do serviço.',
+        'Investigação e tratamento de constipação e de disfunção miccional, causas frequentes de recorrência.',
+        'Orientação de higiene, hidratação e micção regular, e tratamento de fimose sintomática quando indicado.',
+        'Retorno programado com reavaliação clínica e resultado da urocultura, especialmente quando a família mora longe da unidade.'
+      ],
+      fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre infecção do trato urinário na infância', ano: 2023 }, { nome: 'OMS - Pocket book of hospital care for children', ano: 2013 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    meningite: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - antibiótico empírico imediato', tipo: 'primeira',
+          opcoes: [
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: '100 mg/kg/dia IV divididos a cada 12 h, dose máxima conforme protocolo, por 7 a 14 dias segundo o agente', quando: 'Meningite bacteriana a partir de 1 a 3 meses de idade, iniciada na primeira hora do atendimento', obs: 'Não retardar o antibiótico à espera da punção lombar ou da tomografia. Colher hemocultura antes quando isso não atrasar.' },
+            { medId: 'ampicilina', nome: 'Ampicilina', esquema: '200 a 400 mg/kg/dia IV divididos a cada 6 h', quando: 'Menor de 1 a 3 meses, associada a cefotaxima ou a aminoglicosídeo, para cobrir Listeria e Enterococcus', obs: '' },
+            { medId: 'gentamicina', nome: 'Gentamicina', esquema: '5 a 7,5 mg/kg/dia IV, conforme idade gestacional e pós-natal no lactente pequeno', quando: 'Associada à ampicilina no lactente menor de 1 mês', obs: 'Monitorar função renal.' }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa em alergia a betalactâmico ou indisponibilidade', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'cefotaxima', nome: 'Cefotaxima', esquema: '200 a 300 mg/kg/dia IV divididos a cada 6 a 8 h', quando: 'Alternativa à ceftriaxona, preferida no recém-nascido e no lactente com icterícia ou hiperbilirrubinemia', obs: 'A ceftriaxona desloca a bilirrubina da albumina, por isso a cefotaxima é preferida no período neonatal.' },
+            { medId: null, nome: 'Esquema alternativo definido com infectologia em alergia grave a betalactâmicos', esquema: '', quando: 'História de anafilaxia a penicilina e a cefalosporina', obs: 'Combinações com cloranfenicol, vancomicina ou meropenem são opções descritas, mas a escolha deve ser individualizada com a referência. Confirmar conforme protocolo.', verificar: true }
+          ] },
+        { ordem: 3, rotulo: 'Segunda linha / suspeita de pneumococo resistente ou falha', tipo: 'segunda',
+          opcoes: [
+            { medId: 'vancomicina', nome: 'Vancomicina', esquema: '60 mg/kg/dia IV divididos a cada 6 h, associada à ceftriaxona', quando: 'Suspeita ou confirmação de pneumococo com sensibilidade reduzida às cefalosporinas, ou ausência de melhora com esquema inicial', obs: 'Monitorar função renal e nível sérico quando disponível.' },
+            { medId: null, nome: 'Repetir a punção lombar e discutir com a referência', esquema: '', quando: 'Ausência de melhora clínica em 48 a 72 h, ou agente incomum', obs: 'Investigar complicações: empiema subdural, abscesso, ventriculite, trombose venosa. Considerar neuroimagem.' }
+          ] },
+        { ordem: 4, rotulo: 'Adjuvante - corticoide e controle de convulsões', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'dexametasona', nome: 'Dexametasona', esquema: '0,15 mg/kg/dose IV a cada 6 h por 2 a 4 dias, iniciada antes ou junto com a primeira dose do antibiótico', quando: 'Avaliar em meningite por Haemophilus influenzae b, e conforme protocolo do serviço em meningite pneumocócica, para reduzir sequela auditiva', obs: 'Benefício maior quando iniciada antes do antibiótico. Não iniciar tardiamente. Não indicada em meningite meningocócica nem no recém-nascido.' },
+            { medId: 'diazepam', nome: 'Diazepam', esquema: '0,2 a 0,3 mg/kg/dose IV lenta, ou 0,5 mg/kg por via retal quando não há acesso venoso', quando: 'Convulsão em curso', obs: 'A via retal é alternativa prática em unidade de comunidade sem acesso venoso imediato.' },
+            { medId: 'midazolam', nome: 'Midazolam', esquema: 'Dose conforme protocolo do serviço, por via IV, IM, nasal ou bucal', quando: 'Alternativa ao diazepam para a crise convulsiva, útil quando não há acesso venoso', obs: 'Monitorar respiração.' },
+            { medId: 'fenitoina', nome: 'Fenitoína', esquema: 'Ataque de 20 mg/kg IV em infusão lenta, com monitorização cardíaca', quando: 'Crise que persiste após duas doses de benzodiazepínico', obs: 'Não administrar em bolus rápido pelo risco de arritmia e de hipotensão.' },
+            { medId: 'fenobarbital', nome: 'Fenobarbital', esquema: 'Ataque de 20 mg/kg IV', quando: 'Alternativa à fenitoína, e de escolha no recém-nascido', obs: 'Risco de depressão respiratória, ter suporte ventilatório disponível.' }
+          ] },
+        { ordem: 5, rotulo: 'Quimioprofilaxia dos contatos', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'rifampicina', nome: 'Rifampicina', esquema: 'Meningococo: 10 mg/kg a cada 12 h por 2 dias, e 5 mg/kg a cada 12 h em menores de 1 mês. Haemophilus influenzae b: 20 mg/kg/dia por 4 dias. Máximo de 600 mg por dose', quando: 'Contatos domiciliares e íntimos de doença meningocócica, e contatos de Haemophilus influenzae b conforme os critérios da vigilância', obs: 'Orientar a coloração alaranjada de urina e de secreções. Iniciar o mais precocemente possível, idealmente em até 48 h.' },
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: 'Dose única IM, conforme idade e protocolo da vigilância', quando: 'Alternativa de quimioprofilaxia quando a rifampicina não é adequada ou não está disponível na comunidade', obs: 'Confirmar dose conforme protocolo da vigilância epidemiológica.', verificar: true }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Atrasar o antibiótico para realizar punção lombar ou tomografia', esquema: '', quando: '', obs: 'Erro grave, cada hora de atraso aumenta a mortalidade e a sequela. Colher hemocultura e iniciar o antibiótico, a punção pode ser feita depois.' },
+            { medId: 'dexametasona', nome: 'Dexametasona iniciada após várias horas de antibiótico', esquema: '', quando: '', obs: 'Sem benefício quando iniciada tardiamente. Também não é recomendada no recém-nascido nem na meningite meningocócica.' },
+            { medId: 'soro_fisiologico', nome: 'Restrição hídrica rotineira', esquema: '', quando: '', obs: 'Prática antiga sem respaldo. A conduta atual é manter euvolemia e perfusão cerebral adequadas, corrigindo a hipovolemia, com atenção ao sódio.' },
+            { medId: null, nome: 'Quimioprofilaxia de contatos escolares sem indicação da vigilância', esquema: '', quando: '', obs: 'A indicação depende do agente e do tipo de contato. Seguir a orientação da vigilância epidemiológica, para evitar uso desnecessário.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Notificação compulsória imediata e comunicação à vigilância epidemiológica para bloqueio de contatos.',
+        'Isolamento respiratório por gotículas nas primeiras 24 h de antibiótico na suspeita de meningococo.',
+        'Monitorização neurológica, de sinais de hipertensão intracraniana, de sódio e de glicemia.',
+        'Triagem auditiva antes da alta em toda criança com meningite bacteriana.',
+        'Revisão e atualização do calendário vacinal do caso e dos contatos, meningocócica, pneumocócica e Haemophilus influenzae b.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Guia de vigilância em saúde, meningites', ano: 2023 }, { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre meningites bacterianas', ano: 2022 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    sepse: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - primeira hora', tipo: 'primeira',
+          opcoes: [
+            { medId: 'soro_fisiologico', nome: 'Soro fisiológico 0,9%', esquema: 'Bolus de 10 a 20 mL/kg IV em 5 a 20 min, reavaliando após cada alíquota, até 40 a 60 mL/kg na primeira hora quando há resposta e não há sinais de sobrecarga', quando: 'Choque séptico ou hipoperfusão', obs: 'Reavaliar entre os bolus buscando hepatomegalia, estertores e piora respiratória. Em contexto sem terapia intensiva, ser mais cauteloso com grandes volumes.' },
+            { medId: 'ringer_lactato', nome: 'Ringer lactato', esquema: 'Mesmos volumes do soro fisiológico', quando: 'Alternativa preferida quando se antecipa necessidade de grandes volumes, pelo menor risco de acidose hiperclorêmica', obs: '' },
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: '100 mg/kg/dia IV, primeira dose na primeira hora, conforme protocolo', quando: 'Antibiótico empírico de amplo espectro na sepse comunitária a partir de 1 a 3 meses', obs: 'Colher hemocultura antes quando isso não atrasar a administração. O antibiótico na primeira hora é a medida com maior impacto na mortalidade.' }
+          ] },
+        { ordem: 2, rotulo: 'Ampliação do espectro conforme o foco suspeito', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'oxacilina', nome: 'Oxacilina', esquema: '100 a 200 mg/kg/dia IV divididos a cada 6 h', quando: 'Suspeita de foco cutâneo, osteoarticular ou pneumonia necrotizante por Staphylococcus aureus sensível', obs: '' },
+            { medId: 'vancomicina', nome: 'Vancomicina', esquema: '40 a 60 mg/kg/dia IV divididos a cada 6 a 8 h', quando: 'Suspeita de Staphylococcus aureus resistente à meticilina, infecção de cateter ou sepse hospitalar', obs: 'Monitorar função renal e nível sérico quando disponível.' },
+            { medId: 'metronidazol', nome: 'Metronidazol', esquema: '30 mg/kg/dia IV divididos a cada 8 h', quando: 'Foco abdominal ou suspeita de anaeróbios', obs: '' },
+            { medId: 'ampicilina', nome: 'Ampicilina', esquema: '200 a 400 mg/kg/dia IV divididos a cada 6 h, associada a gentamicina', quando: 'Lactente menor de 1 a 3 meses, para cobrir Listeria e Enterococcus', obs: '' },
+            { medId: 'gentamicina', nome: 'Gentamicina', esquema: '5 a 7,5 mg/kg/dia IV', quando: 'Associada ao betalactâmico no lactente pequeno e em suspeita de foco urinário', obs: '' }
+          ] },
+        { ordem: 3, rotulo: 'Situação regional - sepse com suspeita de malária grave', tipo: 'primeira',
+          opcoes: [
+            { medId: 'artesunato', nome: 'Artesunato endovenoso', esquema: '3 mg/kg/dose IV se peso abaixo de 20 kg e 2,4 mg/kg/dose se peso igual ou acima de 20 kg, nos tempos 0, 12 e 24 h', quando: 'Criança gravemente enferma em área endêmica do Amazonas com gota espessa ou teste rápido positivo, ou com alta suspeita clínica sem possibilidade imediata de exame', obs: 'Malária grave e sepse bacteriana coexistem com frequência, considerar tratar ambas na criança gravemente enferma.' }
+          ] },
+        { ordem: 4, rotulo: 'Segunda linha - choque refratário a volume', tipo: 'segunda',
+          opcoes: [
+            { medId: 'adrenalina', nome: 'Adrenalina', esquema: 'Infusão contínua iniciada em 0,05 a 0,1 mcg/kg/min, titulada conforme resposta, conforme protocolo do serviço', quando: 'Choque que persiste após 40 a 60 mL/kg de volume, preferencialmente no choque frio da criança', obs: 'Pode ser iniciada em veia periférica bem posicionada ou em acesso intraósseo enquanto se obtém acesso central, medida importante em unidade sem terapia intensiva.' },
+            { medId: 'hidrocortisona', nome: 'Hidrocortisona', esquema: '1 a 2 mg/kg/dose IV a cada 6 h, ou conforme protocolo do serviço', quando: 'Choque resistente a catecolaminas, ou suspeita de insuficiência adrenal, como em uso crônico de corticoide ou púrpura fulminante', obs: 'Não indicada em toda sepse, apenas no choque refratário.' },
+            { medId: 'glicose', nome: 'Glicose', esquema: 'Glicose a 10% 2 a 5 mL/kg IV na hipoglicemia, seguida de infusão de manutenção', quando: 'Hipoglicemia, frequente no lactente com sepse e na malária grave', obs: 'Checar glicemia capilar em toda criança gravemente enferma.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Atrasar o antibiótico à espera de exames ou de transferência', esquema: '', quando: '', obs: 'A primeira dose deve ser dada na unidade onde a criança está, inclusive em unidade básica ribeirinha, antes do transporte.' },
+            { medId: 'hidrocortisona', nome: 'Corticoide de rotina em toda sepse', esquema: '', quando: '', obs: 'Sem benefício demonstrado fora do choque refratário a catecolaminas ou da insuficiência adrenal.' },
+            { medId: null, nome: 'Coloides e amido hidroxietílico para expansão', esquema: '', quando: '', obs: 'Amido está associado a maior mortalidade e lesão renal. A expansão inicial é com cristaloide.' },
+            { medId: null, nome: 'Bicarbonato de sódio de rotina na acidose do choque', esquema: '', quando: '', obs: 'Sem benefício demonstrado e com riscos. O tratamento da acidose é a restauração da perfusão.' },
+            { medId: null, nome: 'Antitérmico como única resposta à febre na criança toxemiada', esquema: '', quando: '', obs: 'Erro frequente. Avaliar perfusão, consciência, frequência respiratória e cardíaca, a febre isolada não exclui sepse.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Reconhecimento precoce por triagem com sinais de alarme, tempo de enchimento capilar, nível de consciência e frequências.',
+        'Acesso venoso em até 5 min ou acesso intraósseo, sem hesitar, também na unidade de comunidade.',
+        'Oxigenoterapia e monitorização contínua, com glicemia capilar imediata.',
+        'Controle do foco: drenagem de abscesso, remoção de cateter infectado, desbridamento quando indicado.',
+        'Comunicação precoce com a central de regulação e plano de transporte aéreo ou fluvial, informando a hora da primeira dose de antibiótico.'
+      ],
+      fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre sepse em pediatria', ano: 2023 }, { nome: 'Surviving Sepsis Campaign - Diretrizes pediátricas internacionais', ano: 2020 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    doenca_diarreica: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - reidratação e zinco', tipo: 'primeira',
+          opcoes: [
+            { medId: 'sais_reidratacao_oral', nome: 'Sais de reidratação oral de osmolaridade reduzida', esquema: 'Plano A, manutenção com 50 a 100 mL após cada evacuação em menores de 2 anos e 100 a 200 mL nos maiores. Plano B, 50 a 100 mL/kg em 4 a 6 h na unidade de saúde', quando: 'Diarreia sem desidratação (plano A) e com desidratação leve a moderada (plano B)', obs: 'Base do tratamento, reduz mortalidade. Ofertar em pequenos volumes e com frequência, mesmo se houver vômito.' },
+            { medId: 'zinco', nome: 'Zinco', esquema: '10 mg/dia VO em menores de 6 meses e 20 mg/dia a partir de 6 meses, por 10 a 14 dias', quando: 'Toda criança menor de 5 anos com diarreia aguda', obs: 'Reduz a duração e a gravidade do episódio e a incidência nos meses seguintes. Frequentemente esquecido na prescrição.' }
+          ] },
+        { ordem: 2, rotulo: 'Primeira escolha - desidratação grave (plano C)', tipo: 'primeira',
+          opcoes: [
+            { medId: 'ringer_lactato', nome: 'Ringer lactato', esquema: 'Menores de 1 ano: 30 mL/kg em 1 h e depois 70 mL/kg em 5 h. Maiores de 1 ano: 30 mL/kg em 30 min e depois 70 mL/kg em 2 h e 30 min', quando: 'Desidratação grave, choque hipovolêmico ou incapacidade de reidratação oral', obs: 'Solução preferida no plano C. Reavaliar a cada 15 a 30 min e iniciar sais de reidratação oral assim que a criança puder beber.' },
+            { medId: 'soro_fisiologico', nome: 'Soro fisiológico 0,9%', esquema: 'Mesmos volumes do plano C', quando: 'Alternativa quando o Ringer lactato não está disponível na unidade, situação comum em comunidade ribeirinha', obs: 'Atenção à acidose hiperclorêmica com grandes volumes.' }
+          ] },
+        { ordem: 3, rotulo: 'Antibiótico apenas em situações selecionadas', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'azitromicina', nome: 'Azitromicina', esquema: '10 mg/kg/dia VO por 3 dias, ou conforme protocolo do serviço', quando: 'Disenteria com sangue e febre, suspeita de Shigella, e suspeita de cólera grave conforme orientação da vigilância', obs: 'Escolha atual na disenteria pela resistência crescente a outros fármacos.' },
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: '50 a 75 mg/kg/dia IV ou IM', quando: 'Disenteria em criança toxemiada, lactente pequeno, desnutrido grave ou com suspeita de bacteremia', obs: '' },
+            { medId: 'metronidazol', nome: 'Metronidazol', esquema: '30 a 50 mg/kg/dia VO divididos a cada 8 h por 5 a 10 dias, conforme o agente', quando: 'Amebíase invasiva ou giardíase confirmadas ou fortemente suspeitadas, diagnósticos frequentes na região', obs: '' },
+            { medId: 'nitazoxanida', nome: 'Nitazoxanida', esquema: '7,5 mg/kg/dose VO a cada 12 h por 3 dias, conforme faixa etária da bula', quando: 'Alternativa em giardíase, criptosporidíase e diarreia persistente com parasitas identificados', obs: 'Confirmar idade mínima e apresentação conforme a bula.', verificar: true }
+          ] },
+        { ordem: 4, rotulo: 'Uso off-label', tipo: 'offlabel',
+          opcoes: [
+            { medId: 'ondansetrona', nome: 'Ondansetrona em vômitos da gastroenterite aguda', esquema: 'Dose única VO de 2 mg entre 8 e 15 kg e 4 mg acima de 15 kg, ou 0,15 mg/kg/dose, conforme protocolo do serviço', quando: 'Vômitos que impedem a reidratação oral e levariam a hidratação venosa ou internação, em criança acima de 6 meses', obs: 'Off-label: a bula registra náusea e vômito associados a quimioterapia, radioterapia e pós-operatório. O uso na gastroenterite tem apoio de ensaios clínicos e de revisões sistemáticas que mostram aumento do sucesso da reidratação oral e redução de hidratação venosa. Dose única, não prolongar. Atenção ao intervalo QT e à possível diarreia como efeito adverso.' }
+          ] },
+        { ordem: 5, rotulo: 'Adjuvante / suporte', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'glicose', nome: 'Glicose', esquema: 'Glicose a 10% 2 a 5 mL/kg IV na hipoglicemia documentada', quando: 'Hipoglicemia, mais comum em desnutrido e em lactente com recusa alimentar prolongada', obs: '' },
+            { medId: null, nome: 'Manutenção da alimentação e do aleitamento', esquema: '', quando: 'Todos os casos', obs: 'Não suspender o leite materno nem jejuar. A realimentação precoce reduz a duração da diarreia.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Antidiarreicos e antiespasmódicos em criança (loperamida, difenoxilato, escopolamina)', esquema: '', quando: '', obs: 'Contraindicados na criança. Risco de íleo paralítico, distensão abdominal, sonolência, depressão respiratória e mascaramento da perda de líquidos. A loperamida está associada a eventos graves e a óbito em lactentes.' },
+            { medId: null, nome: 'Antibiótico de rotina na diarreia aquosa aguda', esquema: '', quando: '', obs: 'A maioria é viral, especialmente rotavírus e norovírus. O antibiótico não encurta o quadro e aumenta a resistência e o risco de síndrome hemolítico-urêmica em infecção por Escherichia coli produtora de toxina Shiga.' },
+            { medId: null, nome: 'Refrigerante, suco industrializado e soro caseiro mal preparado como reidratação', esquema: '', quando: '', obs: 'Osmolaridade e composição inadequadas, podem piorar a diarreia e causar distúrbio de sódio. Orientar o preparo correto do sal de reidratação oral com água tratada ou fervida.' },
+            { medId: null, nome: 'Jejum e diluição do leite', esquema: '', quando: '', obs: 'Prática antiga e prejudicial. Manter alimentação habitual e aleitamento materno.' },
+            { medId: null, nome: 'Antiemético de uso contínuo por vários dias', esquema: '', quando: '', obs: 'Não indicado, o objetivo é viabilizar a reidratação oral, não suprimir o sintoma de forma prolongada.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Classificação do estado de hidratação em planos A, B e C a cada avaliação.',
+        'Orientação prática do preparo do sal de reidratação oral com água segura, e entrega de envelopes suficientes para a família em comunidade distante.',
+        'Manutenção do aleitamento materno e realimentação precoce com alimentos habituais.',
+        'Orientar sinais de alarme: sede intensa, olhos fundos, letargia, redução da diurese, sangue nas fezes, vômitos incoercíveis.',
+        'Revisão da vacinação contra rotavírus, higiene das mãos, saneamento e cuidado com a água de igarapé e de poço.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Manejo da criança com diarreia e desidratação, AIDPI', ano: 2023 }, { nome: 'OMS/UNICEF - Diarrhoea treatment guidelines', ano: 2013 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    parasitoses_intestinais: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - helmintíases', tipo: 'primeira',
+          opcoes: [
+            { medId: 'albendazol', nome: 'Albendazol', esquema: '400 mg VO em dose única para criança a partir de 2 anos, e 200 mg entre 1 e 2 anos, repetindo em 2 a 3 semanas na enterobíase. Na estrongiloidíase, 400 mg/dia por 3 dias', quando: 'Ascaridíase, ancilostomíase, tricuríase, enterobíase e estrongiloidíase, e em tratamento coletivo periódico onde indicado', obs: 'Muito usado em quimioterapia preventiva em áreas de alta prevalência, como comunidades ribeirinhas e indígenas.' },
+            { medId: 'mebendazol', nome: 'Mebendazol', esquema: '100 mg VO a cada 12 h por 3 dias, ou 500 mg em dose única', quando: 'Alternativa de igual eficácia para os principais helmintos intestinais, útil quando o albendazol não está disponível', obs: 'Menos eficaz na estrongiloidíase.' }
+          ] },
+        { ordem: 2, rotulo: 'Primeira escolha - protozooses', tipo: 'primeira',
+          opcoes: [
+            { medId: 'metronidazol', nome: 'Metronidazol', esquema: 'Giardíase: 15 mg/kg/dia VO divididos a cada 8 h por 5 a 7 dias. Amebíase intestinal: 30 a 50 mg/kg/dia divididos a cada 8 h por 7 a 10 dias', quando: 'Giardíase e amebíase confirmadas ou com forte suspeita clínica e epidemiológica', obs: 'Orientar sobre gosto metálico e náusea, causas frequentes de abandono.' }
+          ] },
+        { ordem: 3, rotulo: 'Alternativa quando há intolerância ou falha', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'nitazoxanida', nome: 'Nitazoxanida', esquema: '7,5 mg/kg/dose VO a cada 12 h por 3 dias, conforme faixa etária da bula', quando: 'Alternativa em giardíase, criptosporidíase e em intolerância ao metronidazol', obs: 'Confirmar idade mínima e apresentação conforme a bula.', verificar: true },
+            { medId: 'ivermectina', nome: 'Ivermectina', esquema: '200 mcg/kg VO em dose única, repetida conforme a indicação, em criança acima de 15 kg', quando: 'Estrongiloidíase, e alternativa em escabiose associada, situação comum na mesma criança', obs: 'Primeira escolha na estrongiloidíase disseminada e antes de corticoterapia prolongada em área endêmica.' },
+            { medId: 'praziquantel', nome: 'Praziquantel', esquema: 'Teníase: 5 a 10 mg/kg VO em dose única. Himenolepíase: 25 mg/kg em dose única, conforme protocolo', quando: 'Teníase, himenolepíase e esquistossomose conforme a situação epidemiológica', obs: 'Confirmar dose conforme o agente e o protocolo vigente.', verificar: true }
+          ] },
+        { ordem: 4, rotulo: 'Uso off-label', tipo: 'offlabel',
+          opcoes: [
+            { medId: 'ivermectina', nome: 'Ivermectina em criança abaixo de 15 kg', esquema: '200 mcg/kg VO em dose única, com cálculo cuidadoso do peso', quando: 'Estrongiloidíase ou escabiose em criança abaixo de 15 kg quando as alternativas falharam ou não estão disponíveis, com avaliação individual', obs: 'Off-label: a bula restringe o uso a crianças acima de 15 kg, por ausência de estudos formais nessa faixa, e não por toxicidade demonstrada. Séries de casos e revisões sistemáticas sugerem perfil de segurança semelhante. Registrar a justificativa, discutir com a referência e confirmar conforme protocolo/bula.', verificar: true },
+            { medId: 'albendazol', nome: 'Albendazol em criança abaixo de 1 ano', esquema: '200 mg VO em dose única, conforme orientação da referência', quando: 'Helmintíase sintomática em lactente abaixo de 1 ano, em área de alta carga parasitária', obs: 'Off-label abaixo de 1 ano no Brasil. A OMS admite o uso em campanhas a partir de 12 meses e descreve experiência em lactentes menores em contextos selecionados. Avaliar risco-benefício individual. Confirmar conforme protocolo/bula.', verificar: true }
+          ] },
+        { ordem: 5, rotulo: 'Adjuvante', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'sulfato_ferroso', nome: 'Sulfato ferroso', esquema: '3 a 5 mg de ferro elementar/kg/dia VO por 3 a 6 meses', quando: 'Anemia associada a ancilostomíase ou a parasitose crônica', obs: 'Tratar o parasita e a anemia, a reposição isolada não resolve a perda contínua.' },
+            { medId: null, nome: 'Tratamento simultâneo dos conviventes', esquema: '', quando: 'Enterobíase e escabiose, em que a reinfecção familiar é a regra', obs: 'Tratar todos os moradores da casa e higienizar roupas de cama e de uso pessoal.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Antiparasitário empírico repetido sem avaliação clínica', esquema: '', quando: '', obs: 'O tratamento periódico em massa segue critérios da vigilância. Fora disso, evitar cursos repetidos sem sintomas nem exame, o que gera custo e resistência.' },
+            { medId: 'ivermectina', nome: 'Ivermectina como antiviral ou para outras indicações sem evidência', esquema: '', quando: '', obs: 'Não há evidência que sustente uso antiviral. Restringir às indicações parasitárias aprovadas.' },
+            { medId: null, nome: 'Purgantes, laxantes e chás vermífugos caseiros', esquema: '', quando: '', obs: 'Práticas comuns na comunidade, sem eficácia comprovada e com risco de desidratação e de intoxicação, especialmente em lactentes.' },
+            { medId: 'albendazol', nome: 'Antiparasitário isolado na estrongiloidíase grave do imunossuprimido', esquema: '', quando: '', obs: 'Nessa situação a ivermectina é a escolha e o caso deve ser conduzido com a referência, pelo risco de hiperinfecção.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Exame parasitológico de fezes quando disponível, com amostras seriadas, sobretudo antes de corticoterapia.',
+        'Saneamento, destino adequado de dejetos, calçado fechado e água tratada ou fervida.',
+        'Higiene das mãos e das unhas, e higienização de roupas de cama na enterobíase.',
+        'Tratamento simultâneo de conviventes nas parasitoses de transmissão domiciliar.',
+        'Avaliação nutricional e de anemia, e acompanhamento do crescimento na parasitose crônica.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Guia prático de tratamento das parasitoses intestinais', ano: 2022 }, { nome: 'OMS - Preventive chemotherapy for soil-transmitted helminthiases', ano: 2022 } ],
+      atualizadoEm: '2026-09'
+    },
+    escabiose_impetigo: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - escabiose', tipo: 'primeira',
+          opcoes: [
+            { medId: 'permetrina', nome: 'Permetrina 5% loção ou creme', esquema: 'Aplicar em todo o corpo do pescoço para baixo, e também no couro cabeludo e na face em lactentes, deixar por 8 a 12 h e lavar. Repetir em 7 dias. A partir de 2 meses de idade', quando: 'Escabiose em qualquer faixa etária a partir de 2 meses, incluindo lactentes', obs: 'Tratar simultaneamente todos os moradores da casa, mesmo assintomáticos, e lavar roupas de cama e de uso pessoal.' },
+            { medId: 'ivermectina', nome: 'Ivermectina', esquema: '200 mcg/kg VO em dose única, repetida em 7 a 14 dias, em criança acima de 15 kg', quando: 'Escabiose extensa, crostosa, em surto familiar ou comunitário, e quando a aplicação tópica é inviável', obs: 'Muito útil em surtos em comunidade indígena ou ribeirinha e em instituições, pela facilidade de administração supervisionada.' }
+          ] },
+        { ordem: 2, rotulo: 'Primeira escolha - impetigo', tipo: 'primeira',
+          opcoes: [
+            { medId: null, nome: 'Mupirocina 2% pomada', esquema: 'Aplicar a cada 8 h por 5 a 7 dias nas lesões, após limpeza com água e sabão', quando: 'Impetigo localizado, com poucas lesões e sem sinais sistêmicos', obs: 'O tópico isolado costuma ser suficiente no impetigo limitado. Confirmar disponibilidade e apresentação conforme protocolo/bula.', verificar: true },
+            { medId: 'cefalexina', nome: 'Cefalexina', esquema: '50 mg/kg/dia VO divididos a cada 6 h por 7 dias', quando: 'Impetigo extenso, múltiplas lesões, lesões em várias regiões, ou falha do tratamento tópico', obs: 'Cobre Staphylococcus aureus e Streptococcus pyogenes, agentes habituais.' }
+          ] },
+        { ordem: 3, rotulo: 'Alternativa em alergia a penicilina ou a cefalosporina', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'azitromicina', nome: 'Azitromicina', esquema: '10 mg/kg/dia VO por 3 a 5 dias', quando: 'Alergia grave a betalactâmicos no impetigo extenso', obs: 'Atenção à resistência crescente do estafilococo a macrolídeos.' },
+            { medId: 'sulfametoxazol_trimetoprim', nome: 'Sulfametoxazol + trimetoprima', esquema: '8 a 10 mg de trimetoprima/kg/dia VO divididos a cada 12 h por 7 dias', quando: 'Alternativa quando há suspeita de Staphylococcus aureus resistente à meticilina de origem comunitária, ou alergia a betalactâmicos', obs: 'Contraindicado em menores de 2 meses e na deficiência de G6PD. Cobertura fraca para Streptococcus pyogenes.' },
+            { medId: 'amoxicilina_clavulanato', nome: 'Amoxicilina + clavulanato', esquema: '50 mg/kg/dia de amoxicilina VO divididos a cada 8 ou 12 h', quando: 'Alternativa ao tratamento oral do impetigo, e opção quando há celulite associada', obs: 'Não usar em alergia a penicilina.' }
+          ] },
+        { ordem: 4, rotulo: 'Segunda linha - complicação ou falha', tipo: 'segunda',
+          opcoes: [
+            { medId: 'oxacilina', nome: 'Oxacilina', esquema: '100 a 200 mg/kg/dia IV divididos a cada 6 h', quando: 'Celulite extensa, abscesso com repercussão sistêmica ou criança toxemiada', obs: 'Drenagem do abscesso é parte essencial do tratamento.' },
+            { medId: 'penicilina_benzatina', nome: 'Penicilina G benzatina', esquema: '600.000 UI IM em dose única se peso abaixo de 27 kg, e 1.200.000 UI se peso igual ou acima, conforme protocolo', quando: 'Alternativa em criança com baixa adesão ao esquema oral, ou piodermite estreptocócica em comunidade distante com retorno difícil', obs: 'Dose única supervisionada resolve o problema da adesão em área remota. Não cobre estafilococo resistente.' }
+          ] },
+        { ordem: 5, rotulo: 'Uso off-label', tipo: 'offlabel',
+          opcoes: [
+            { medId: 'ivermectina', nome: 'Ivermectina em criança abaixo de 15 kg', esquema: '200 mcg/kg VO em dose única, repetida em 7 a 14 dias, com cálculo cuidadoso do peso', quando: 'Escabiose crostosa, surto comunitário ou falha do tratamento tópico em criança abaixo de 15 kg, com avaliação individual', obs: 'Off-label: a bula restringe a criança acima de 15 kg, por ausência de estudos formais nessa faixa e não por toxicidade demonstrada. Revisões sistemáticas e séries em manejo de surtos sugerem segurança semelhante. Registrar a justificativa, preferir o tópico quando ele for viável e confirmar conforme protocolo/bula.', verificar: true },
+            { medId: 'permetrina', nome: 'Permetrina tópica em menores de 2 meses', esquema: 'Aplicação conforme a orientação da referência', quando: 'Escabiose no lactente muito pequeno, quando não há alternativa segura disponível', obs: 'Off-label abaixo de 2 meses no Brasil. Alguns protocolos internacionais descrevem uso com tempo de contato reduzido nessa faixa. Discutir com dermatologia ou com a referência antes de prescrever. Confirmar conforme protocolo/bula.', verificar: true }
+          ] },
+        { ordem: 6, rotulo: 'Adjuvante / sintomático', tipo: 'adjuvante',
+          opcoes: [
+            { medId: null, nome: 'Anti-histamínico oral (dexclorfeniramina ou loratadina)', esquema: 'Dose conforme idade e peso da bula do produto disponível', quando: 'Prurido intenso da escabiose, que pode persistir por 2 a 4 semanas após o tratamento eficaz', obs: 'Explicar à família que o prurido residual não significa falha do tratamento. Confirmar conforme protocolo/bula.', verificar: true },
+            { medId: null, nome: 'Limpeza das lesões e cuidados com a pele', esquema: '', quando: 'Impetigo e escabiose escoriada', obs: 'Água e sabão, remoção suave das crostas, corte das unhas e hidratação da pele.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Enxofre, querosene, óleo queimado e outras preparações caseiras', esquema: '', quando: '', obs: 'Práticas frequentes na comunidade, causam dermatite de contato, queimadura química e infecção secundária. Orientar ativamente contra.' },
+            { medId: null, nome: 'Corticoide tópico isolado no prurido antes de tratar a escabiose', esquema: '', quando: '', obs: 'Mascara o quadro, favorece a escabiose crostosa e atrasa o diagnóstico.' },
+            { medId: null, nome: 'Tratar apenas a criança sem tratar os conviventes', esquema: '', quando: '', obs: 'Principal causa de recidiva. Tratar todos os moradores no mesmo dia.' },
+            { medId: null, nome: 'Antibiótico sistêmico para impetigo com poucas lesões', esquema: '', quando: '', obs: 'O tratamento tópico é suficiente e reduz exposição desnecessária. Reservar o oral para lesões extensas, sistêmicas ou refratárias.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Tratamento simultâneo de todos os moradores do domicílio na escabiose, no mesmo dia.',
+        'Lavagem de roupas de cama, toalhas e roupas de uso pessoal com água quente, ou vedação em saco plástico por 3 a 7 dias quando não há como lavar.',
+        'Busca ativa e abordagem coletiva em surtos em comunidade indígena, ribeirinha, creche e instituição.',
+        'Vigilância de complicações do impetigo estreptocócico, sobretudo glomerulonefrite pós-estreptocócica, com controle de pressão arterial e de urina.',
+        'Corte de unhas, higiene das mãos e cuidado com a pele para reduzir a autoinoculação.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Dermatologia na atenção básica', ano: 2022 }, { nome: 'OMS - Ectoparasites, scabies control guidelines', ano: 2020 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    anemia_ferropriva: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - tratamento', tipo: 'primeira',
+          opcoes: [
+            { medId: 'sulfato_ferroso', nome: 'Sulfato ferroso', esquema: '3 a 5 mg de ferro elementar/kg/dia VO, em 1 a 2 tomadas, por 3 a 6 meses, mantendo por pelo menos 2 a 3 meses após a normalização da hemoglobina', quando: 'Anemia ferropriva confirmada ou fortemente suspeitada em criança', obs: 'Preferir tomada longe das refeições e do leite, associada a fonte de vitamina C quando possível. Orientar sobre escurecimento das fezes e possível desconforto gástrico.' }
+          ] },
+        { ordem: 2, rotulo: 'Profilaxia e situações associadas', tipo: 'primeira',
+          opcoes: [
+            { medId: 'sulfato_ferroso', nome: 'Sulfato ferroso profilático', esquema: '1 a 2 mg de ferro elementar/kg/dia VO, conforme idade, prematuridade e recomendação do programa nacional de suplementação', quando: 'Lactentes a partir de 3 a 6 meses, prematuros e crianças de baixo peso ao nascer, conforme a recomendação vigente', obs: 'Confirmar o esquema conforme o programa nacional de suplementação de ferro e a faixa etária.', verificar: true },
+            { medId: 'albendazol', nome: 'Albendazol', esquema: '400 mg VO em dose única a partir de 2 anos, conforme indicação', quando: 'Anemia em área de alta prevalência de ancilostomíase, onde a perda sanguínea intestinal é causa frequente', obs: 'Tratar o helminto junto com a reposição, a suplementação isolada não corrige a perda contínua.' },
+            { medId: 'vitamina_a', nome: 'Vitamina A', esquema: 'Dose conforme faixa etária do programa nacional de suplementação', quando: 'Criança com carências múltiplas em área de insegurança alimentar, conforme o programa vigente', obs: 'A deficiência de vitamina A contribui para anemia em populações vulneráveis. Confirmar dose conforme o programa.', verificar: true }
+          ] },
+        { ordem: 3, rotulo: 'Uso off-label', tipo: 'offlabel',
+          opcoes: [
+            { medId: 'sulfato_ferroso', nome: 'Ferro oral em dias alternados ou em dose única diária', esquema: 'Dose diária equivalente administrada em dias alternados, conforme protocolo do serviço', quando: 'Avaliar quando há má tolerância gastrointestinal ou baixa adesão ao esquema fracionado', obs: 'Off-label quanto ao intervalo: a bula prevê tomadas diárias. Estudos de cinética da hepcidina mostram maior absorção fracionada com doses em dias alternados, com eficácia semelhante e melhor tolerância, principalmente em adolescentes. Evidência ainda limitada em lactentes. Confirmar conforme protocolo/bula.', verificar: true }
+          ] },
+        { ordem: 4, rotulo: 'Segunda linha / ausência de resposta', tipo: 'segunda',
+          opcoes: [
+            { medId: null, nome: 'Reavaliação diagnóstica antes de trocar o ferro', esquema: '', quando: 'Hemoglobina sem elevação esperada após 4 semanas de reposição adequada', obs: 'Investigar adesão, dose, perda sanguínea contínua, parasitose, doença celíaca, talassemia, anemia de doença crônica e deficiência de vitamina B12 ou de folato, além de hemoglobinopatias.' },
+            { medId: null, nome: 'Ferro parenteral ou transfusão', esquema: 'Indicação e dose definidas pelo serviço de referência', quando: 'Intolerância grave comprovada ao ferro oral, má absorção, ou anemia grave sintomática com repercussão hemodinâmica', obs: 'Transfusão é decisão clínica, não laboratorial isolada. Encaminhar à referência. Confirmar conforme protocolo.', verificar: true }
+          ] },
+        { ordem: 5, rotulo: 'Adjuvante', tipo: 'adjuvante',
+          opcoes: [
+            { medId: null, nome: 'Ácido fólico', esquema: 'Dose conforme idade e protocolo do serviço', quando: 'Anemia carencial mista ou desnutrição associada, conforme avaliação', obs: 'Não indicado de rotina na anemia ferropriva isolada. Confirmar conforme protocolo/bula.', verificar: true },
+            { medId: null, nome: 'Orientação alimentar', esquema: '', quando: 'Todos os casos', obs: 'Reforçar carnes, vísceras, peixe regional, feijão e folhas escuras, com fonte de vitamina C na mesma refeição, e evitar leite de vaca em excesso e chá junto às refeições.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: 'sulfato_ferroso', nome: 'Interrupção do ferro assim que a hemoglobina normaliza', esquema: '', quando: '', obs: 'Erro frequente. É necessário continuar por 2 a 3 meses adicionais para repor os estoques, caso contrário a anemia recidiva.' },
+            { medId: null, nome: 'Leite de vaca integral em excesso no lactente', esquema: '', quando: '', obs: 'Grande volume de leite de vaca reduz a absorção de ferro e pode causar perda sanguínea intestinal oculta, causa comum de anemia refratária.' },
+            { medId: null, nome: 'Polivitamínicos e tônicos sem dose adequada de ferro', esquema: '', quando: '', obs: 'Não substituem a dose terapêutica de ferro elementar. Verificar sempre a quantidade de ferro elementar na apresentação.' },
+            { medId: null, nome: 'Transfusão baseada apenas no valor da hemoglobina', esquema: '', quando: '', obs: 'A decisão depende da tolerância clínica, da velocidade de instalação e da presença de descompensação. Anemia crônica bem tolerada raramente exige transfusão.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Aleitamento materno exclusivo até 6 meses e introdução alimentar adequada, com alimentos ricos em ferro.',
+        'Triagem de anemia conforme a rotina da atenção básica, com atenção às populações ribeirinha e indígena, de maior prevalência.',
+        'Investigação e tratamento de parasitoses intestinais e de perdas sanguíneas.',
+        'Acompanhamento do crescimento, do desenvolvimento e do desempenho escolar, afetados pela ferropenia mesmo sem anemia.',
+        'Retorno em 30 dias para avaliar adesão e resposta, com nova hemoglobina em 4 a 8 semanas.'
+      ],
+      fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Consenso sobre anemia ferropriva', ano: 2021 }, { nome: 'OMS - Guideline on use of ferrous salts supplementation in infants and children', ano: 2016 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    desnutricao: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - estabilização inicial', tipo: 'primeira',
+          opcoes: [
+            { medId: null, nome: 'Fórmula terapêutica F-75 na fase de estabilização', esquema: 'Oferta fracionada a cada 2 a 3 h, conforme o protocolo de manejo da desnutrição aguda grave, sem forçar ganho de peso nesta fase', quando: 'Desnutrição aguda grave com complicação, nas primeiras 24 a 72 h de internação', obs: 'A realimentação rápida nessa fase provoca síndrome de realimentação, que pode ser fatal. Confirmar volumes conforme o protocolo do serviço.', verificar: true },
+            { medId: 'sais_reidratacao_oral', nome: 'Sais de reidratação oral para desnutrido (ReSoMal ou solução recomendada pelo protocolo)', esquema: 'Oferta lenta e fracionada, conforme o protocolo específico para desnutrição grave', quando: 'Desidratação na criança com desnutrição aguda grave', obs: 'A criança gravemente desnutrida tem excesso de sódio corporal e deficiência de potássio, por isso a solução e o ritmo são diferentes dos habituais. Confirmar conforme o protocolo.', verificar: true }
+          ] },
+        { ordem: 2, rotulo: 'Primeira escolha - antibiótico de rotina na desnutrição aguda grave', tipo: 'primeira',
+          opcoes: [
+            { medId: 'amoxicilina', nome: 'Amoxicilina', esquema: '50 mg/kg/dia VO divididos a cada 12 h por 5 a 7 dias, conforme o protocolo', quando: 'Desnutrição aguda grave sem complicação, em tratamento ambulatorial, mesmo sem sinais evidentes de infecção', obs: 'Recomendação do protocolo da OMS e do Ministério da Saúde: a infecção é frequentemente oculta no desnutrido grave, que não faz febre nem leucocitose.' },
+            { medId: 'ampicilina', nome: 'Ampicilina associada a gentamicina', esquema: 'Ampicilina 100 a 200 mg/kg/dia IV a cada 6 h, com gentamicina 5 a 7,5 mg/kg/dia IV a cada 24 h', quando: 'Desnutrição aguda grave com complicação, internada, com letargia, hipotermia, hipoglicemia ou sinais de infecção', obs: 'Monitorar função renal com o aminoglicosídeo, a criança desnutrida é mais vulnerável.' },
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: '50 a 100 mg/kg/dia IV', quando: 'Criança gravemente enferma, com suspeita de sepse ou falha do esquema inicial', obs: 'Atenção à hipoalbuminemia grave, discutir com a referência.' }
+          ] },
+        { ordem: 3, rotulo: 'Transição e reabilitação nutricional', tipo: 'alternativa',
+          opcoes: [
+            { medId: null, nome: 'Fórmula F-100 ou alimento terapêutico pronto para uso (RUTF)', esquema: 'Progressão conforme o protocolo, após retorno do apetite e resolução das complicações', quando: 'Fase de reabilitação, quando se busca ganho de peso acelerado', obs: 'O alimento terapêutico pronto para uso permite tratamento ambulatorial e é especialmente útil em comunidade distante. Confirmar disponibilidade e esquema conforme o protocolo.', verificar: true }
+          ] },
+        { ordem: 4, rotulo: 'Micronutrientes e correção de carências', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'vitamina_a', nome: 'Vitamina A', esquema: 'Dose conforme faixa etária do protocolo, com atenção a não repetir se houve dose recente', quando: 'Desnutrição aguda grave, sobretudo com sinais oculares de carência', obs: 'Confirmar dose e intervalo conforme o protocolo vigente.', verificar: true },
+            { medId: 'zinco', nome: 'Zinco', esquema: '10 a 20 mg/dia VO conforme a idade, por 10 a 14 dias, e conforme o protocolo na desnutrição', quando: 'Diarreia associada e reposição de micronutrientes', obs: '' },
+            { medId: null, nome: 'Ácido fólico', esquema: 'Dose conforme o protocolo do serviço', quando: 'Reposição na desnutrição aguda grave', obs: 'Confirmar conforme protocolo/bula.', verificar: true },
+            { medId: 'albendazol', nome: 'Albendazol', esquema: '400 mg VO em dose única a partir de 2 anos, e 200 mg entre 1 e 2 anos', quando: 'Na fase de reabilitação, após estabilização, em área de alta prevalência de helmintos', obs: 'Não administrar na fase aguda de estabilização.' },
+            { medId: 'sulfato_ferroso', nome: 'Sulfato ferroso', esquema: '3 mg de ferro elementar/kg/dia VO, iniciado apenas na fase de reabilitação', quando: 'Anemia na criança desnutrida, somente após recuperação do apetite e do ganho de peso', obs: 'Não iniciar ferro na fase de estabilização, pelo risco de agravar a infecção e o estresse oxidativo.' },
+            { medId: 'glicose', nome: 'Glicose', esquema: 'Glicose a 10% 5 mL/kg IV na hipoglicemia, ou oferta oral de solução açucarada quando a criança está consciente', quando: 'Hipoglicemia, causa frequente de óbito nas primeiras horas', obs: 'Checar glicemia na admissão e manter alimentação frequente, inclusive à noite.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: 'sulfato_ferroso', nome: 'Ferro na fase de estabilização', esquema: '', quando: '', obs: 'Contraindicado nessa fase. O ferro livre favorece infecção e estresse oxidativo no desnutrido grave, iniciar apenas na reabilitação.' },
+            { medId: 'ringer_lactato', nome: 'Expansão volêmica rápida com grandes volumes', esquema: '', quando: '', obs: 'A criança gravemente desnutrida tem função cardíaca comprometida e faz insuficiência cardíaca com facilidade. A reidratação é lenta e por via oral ou enteral, salvo choque com critérios definidos, quando os volumes e as taxas seguem o protocolo específico.' },
+            { medId: null, nome: 'Realimentação rápida com alta oferta calórica na admissão', esquema: '', quando: '', obs: 'Provoca síndrome de realimentação, com hipofosfatemia, hipocalemia e morte súbita. Progredir conforme o protocolo.' },
+            { medId: null, nome: 'Estimulantes de apetite e anabolizantes', esquema: '', quando: '', obs: 'Sem indicação e com risco. A recuperação depende de aporte nutricional adequado, tratamento das infecções e estímulo.' },
+            { medId: 'prednisolona', nome: 'Corticoide para ganho de peso', esquema: '', quando: '', obs: 'Sem indicação nutricional e com aumento do risco infeccioso.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Classificação antropométrica com peso, estatura, índice de massa corporal e perímetro braquial, além de busca de edema bilateral.',
+        'Prevenção da hipotermia e da hipoglicemia, com aquecimento, contato pele a pele e alimentação frequente inclusive noturna.',
+        'Estímulo ao desenvolvimento, brincadeira e vínculo com o cuidador durante a internação.',
+        'Avaliação social, insegurança alimentar, acesso à água e inserção em programas de transferência de renda e de alimentação.',
+        'Seguimento ambulatorial prolongado com controle de peso semanal no início, em articulação com a equipe de saúde da família e o agente comunitário.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Manejo da criança com desnutrição aguda grave', ano: 2023 }, { nome: 'OMS - Guideline on the management of acute malnutrition in infants and children', ano: 2023 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    ictericia_neonatal: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha', tipo: 'primeira',
+          opcoes: [
+            { medId: null, nome: 'Fototerapia', esquema: 'Fototerapia contínua de alta intensidade, indicada conforme nomograma por idade em horas, idade gestacional e fatores de risco', quando: 'Hiperbilirrubinemia indireta acima do limiar de tratamento para a idade em horas', obs: 'Medida não medicamentosa e principal tratamento. Manter aleitamento frequente, proteger os olhos e monitorar temperatura e hidratação.' },
+            { medId: null, nome: 'Aumento da frequência das mamadas', esquema: 'Amamentação em livre demanda, com pelo menos 8 a 12 mamadas ao dia, e apoio à pega', quando: 'Icterícia associada à baixa ingesta nos primeiros dias, causa muito frequente', obs: 'Avaliar peso, diurese e evacuações. Suplementar com leite humano ordenhado ou fórmula somente quando indicado.' }
+          ] },
+        { ordem: 2, rotulo: 'Segunda linha - hiperbilirrubinemia grave ou em ascensão apesar da fototerapia', tipo: 'segunda',
+          opcoes: [
+            { medId: null, nome: 'Exsanguineotransfusão', esquema: 'Indicação conforme nomograma, idade gestacional e presença de sinais de encefalopatia bilirrubínica', quando: 'Níveis de bilirrubina em zona de exsanguineotransfusão, ou sinais neurológicos agudos', obs: 'Procedimento de referência terciária. Em comunidade distante, acionar transporte imediatamente ao aproximar do limiar, sem esperar o valor de troca.' },
+            { medId: null, nome: 'Imunoglobulina humana intravenosa', esquema: '0,5 a 1 g/kg IV em 2 h, podendo repetir conforme protocolo do serviço', quando: 'Avaliar na doença hemolítica isoimune por incompatibilidade Rh ou ABO, com bilirrubina em ascensão apesar de fototerapia intensiva, como medida para reduzir a necessidade de exsanguineotransfusão', obs: 'Evidência de benefício controversa em ensaios mais recentes. Decisão com a referência neonatal. Confirmar conforme protocolo/bula.', verificar: true }
+          ] },
+        { ordem: 3, rotulo: 'Tratamento da causa quando identificada', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'ampicilina', nome: 'Ampicilina associada a gentamicina', esquema: 'Ampicilina conforme idade gestacional e pós-natal, com gentamicina, segundo o protocolo neonatal', quando: 'Icterícia com sinais de sepse neonatal, letargia, instabilidade térmica ou icterícia precoce nas primeiras 24 h de vida', obs: 'Icterícia nas primeiras 24 h nunca é fisiológica, investigar hemólise e infecção.' },
+            { medId: 'penicilina_cristalina', nome: 'Penicilina G cristalina', esquema: 'Conforme o protocolo de sífilis congênita, por 10 dias', quando: 'Icterícia com hepatoesplenomegalia e suspeita de sífilis congênita, diagnóstico a ser sempre afastado', obs: 'Verificar a sorologia materna e o seguimento no pré-natal.' },
+            { medId: 'soro_fisiologico', nome: 'Hidratação venosa', esquema: 'Conforme necessidade hídrica e perdas, quando a via oral é insuficiente', quando: 'Desidratação associada, que agrava a hiperbilirrubinemia', obs: 'Priorizar a via enteral e o leite materno sempre que possível.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: 'fenobarbital', nome: 'Fenobarbital para reduzir a bilirrubina', esquema: '', quando: '', obs: 'Prática antiga, sem benefício demonstrado no tratamento da hiperbilirrubinemia neonatal e com risco de sedação e de prejuízo à amamentação.' },
+            { medId: null, nome: 'Banho de sol como tratamento da icterícia', esquema: '', quando: '', obs: 'Prática domiciliar muito difundida e sem eficácia como tratamento, com risco de queimadura, hipertermia e desidratação, além de atrasar o atendimento. Pode dar falsa segurança à família.' },
+            { medId: null, nome: 'Suspensão do aleitamento materno de rotina', esquema: '', quando: '', obs: 'Não indicada na maioria dos casos. A conduta é aumentar a frequência das mamadas. A suspensão temporária é exceção, discutida com a referência.' },
+            { medId: null, nome: 'Avaliação da icterícia apenas pela inspeção visual', esquema: '', quando: '', obs: 'A inspeção subestima a gravidade, sobretudo em pele mais pigmentada. Usar bilirrubina transcutânea ou sérica sempre que disponível.' },
+            { medId: 'glicose', nome: 'Soro glicosado oral para reduzir bilirrubina', esquema: '', quando: '', obs: 'Sem eficácia, reduz a ingesta de leite e pode piorar a icterícia.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Avaliação da icterícia em todo recém-nascido antes da alta e no seguimento nas primeiras 48 a 72 h, com bilirrubina transcutânea quando disponível.',
+        'Uso de nomograma por idade em horas, e não apenas do valor absoluto de bilirrubina.',
+        'Apoio efetivo à amamentação, com avaliação da pega e do ganho de peso.',
+        'Triagem de tipagem sanguínea e Coombs quando a mãe é Rh negativo ou O, e pesquisa de deficiência de G6PD quando disponível.',
+        'Plano de seguimento e de transporte definido antecipadamente para recém-nascidos de comunidades distantes, com orientação clara sobre sinais de alerta neurológico.'
+      ],
+      fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre hiperbilirrubinemia indireta no recém-nascido', ano: 2021 }, { nome: 'Ministério da Saúde - Atenção à Saúde do Recém-Nascido, guia para profissionais de saúde', ano: 2014 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    sepse_neonatal: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - sepse precoce, até 72 h de vida', tipo: 'primeira',
+          opcoes: [
+            { medId: 'ampicilina', nome: 'Ampicilina', esquema: '100 a 200 mg/kg/dia IV, com intervalo conforme idade gestacional e pós-natal, podendo chegar a 300 mg/kg/dia na meningite', quando: 'Sepse neonatal precoce, para cobrir Streptococcus do grupo B, Listeria e Enterococcus', obs: 'Colher hemocultura antes da primeira dose sempre que isso não atrasar o início.' },
+            { medId: 'gentamicina', nome: 'Gentamicina', esquema: '4 a 5 mg/kg/dose IV, com intervalo de 24 a 48 h conforme idade gestacional e pós-natal', quando: 'Associada à ampicilina no esquema empírico da sepse precoce', obs: 'A dose estendida por peso e idade é a prática atual. Monitorar função renal e, quando disponível, nível sérico.' }
+          ] },
+        { ordem: 2, rotulo: 'Primeira escolha - sepse tardia', tipo: 'primeira',
+          opcoes: [
+            { medId: 'oxacilina', nome: 'Oxacilina', esquema: '100 a 200 mg/kg/dia IV, intervalo conforme idade', quando: 'Sepse tardia com suspeita de foco cutâneo, de cateter ou de origem comunitária, associada a aminoglicosídeo', obs: 'Em recém-nascido internado há muito tempo, o esquema deve considerar a flora e o perfil de resistência da unidade.' },
+            { medId: 'vancomicina', nome: 'Vancomicina', esquema: '15 mg/kg/dose IV, intervalo conforme idade gestacional e pós-natal', quando: 'Suspeita de Staphylococcus coagulase negativo ou de Staphylococcus aureus resistente à meticilina em sepse tardia hospitalar, sobretudo associada a cateter', obs: 'Monitorar função renal e nível sérico quando disponível. Descalonar assim que o resultado da cultura permitir.' },
+            { medId: 'cefotaxima', nome: 'Cefotaxima', esquema: '100 a 200 mg/kg/dia IV, intervalo conforme idade', quando: 'Suspeita de meningite neonatal, associada à ampicilina', obs: 'Preferida à ceftriaxona no período neonatal. Evitar o uso empírico prolongado, pelo risco de seleção de resistência e de candidíase.' }
+          ] },
+        { ordem: 3, rotulo: 'Alternativa quando a cefotaxima não está disponível', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: 'Dose conforme protocolo, apenas em situação excepcional no período neonatal', quando: 'Alternativa quando não há cefotaxima na unidade e há necessidade de cefalosporina de terceira geração', obs: 'Evitar no recém-nascido com icterícia ou hiperbilirrubinemia, pelo deslocamento da bilirrubina da albumina, e não usar junto com soluções contendo cálcio. Confirmar conforme protocolo/bula e discutir com a referência.', verificar: true },
+            { medId: 'penicilina_cristalina', nome: 'Penicilina G cristalina', esquema: 'Dose conforme idade e protocolo neonatal', quando: 'Após identificação de Streptococcus do grupo B ou de Treponema pallidum, para descalonar o esquema', obs: 'Descalonar sempre que a cultura ou a sorologia permitirem.' }
+          ] },
+        { ordem: 4, rotulo: 'Segunda linha - suspeita de agente não bacteriano ou falha', tipo: 'segunda',
+          opcoes: [
+            { medId: null, nome: 'Aciclovir', esquema: '60 mg/kg/dia IV divididos a cada 8 h, conforme protocolo neonatal', quando: 'Suspeita de infecção neonatal por herpes simples: vesículas, convulsão, hepatite, sepse com culturas negativas e piora clínica', obs: 'Considerar precocemente, o atraso piora muito o prognóstico. Confirmar dose e duração conforme protocolo/bula.', verificar: true },
+            { medId: null, nome: 'Ampliação de espectro definida com a referência neonatal', esquema: '', quando: 'Falha clínica, cultura com germe multirresistente, ou unidade com perfil epidemiológico específico', obs: 'Esquemas com carbapenêmico ou antifúngico devem ser definidos com a comissão de controle de infecção e com a referência.' }
+          ] },
+        { ordem: 5, rotulo: 'Adjuvante / suporte', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'soro_fisiologico', nome: 'Soro fisiológico 0,9%', esquema: 'Expansão de 10 mL/kg IV em 10 a 30 min, repetindo conforme reavaliação', quando: 'Choque séptico neonatal', obs: 'Volumes menores e reavaliação mais frequente que na criança maior.' },
+            { medId: 'glicose', nome: 'Glicose', esquema: 'Glicose a 10% 2 mL/kg IV na hipoglicemia, seguida de infusão contínua com taxa de infusão de glicose adequada', quando: 'Hipoglicemia, frequente na sepse neonatal', obs: 'Monitorar glicemia seriada.' },
+            { medId: 'adrenalina', nome: 'Adrenalina', esquema: 'Infusão contínua conforme protocolo neonatal, titulada pela resposta', quando: 'Choque refratário a volume', obs: 'Iniciar precocemente no choque que não responde a 2 expansões, com acesso seguro.' },
+            { medId: 'fenobarbital', nome: 'Fenobarbital', esquema: 'Ataque de 20 mg/kg IV, com doses adicionais conforme protocolo', quando: 'Convulsão neonatal associada à sepse ou à meningite', obs: 'Manter suporte ventilatório disponível.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona no recém-nascido ictérico ou em uso de cálcio', esquema: '', quando: '', obs: 'Contraindicada nessas situações pelo risco de encefalopatia bilirrubínica e de precipitação com cálcio. Preferir cefotaxima.' },
+            { medId: 'cefotaxima', nome: 'Cefalosporina de terceira geração como esquema empírico de rotina', esquema: '', quando: '', obs: 'O uso empírico amplo se associa a resistência e a candidíase invasiva. Reservar para suspeita de meningite ou para orientação por cultura.' },
+            { medId: null, nome: 'Manter antibiótico por 7 dias com culturas negativas e recém-nascido bem', esquema: '', quando: '', obs: 'Reavaliar em 36 a 48 h. A suspensão precoce diante de culturas negativas e boa evolução clínica é recomendada pelos programas de uso racional de antimicrobianos.' },
+            { medId: null, nome: 'Imunoglobulina intravenosa de rotina na sepse neonatal', esquema: '', quando: '', obs: 'Ensaio clínico multicêntrico de grande porte não demonstrou redução de mortalidade nem de incapacidade. Não indicada de rotina.' },
+            { medId: 'prednisolona', nome: 'Corticoide de rotina na sepse neonatal', esquema: '', quando: '', obs: 'Sem indicação fora do choque refratário com suspeita de insuficiência adrenal, conduzido pela referência.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Identificação dos fatores de risco maternos: bolsa rota prolongada, febre materna, colonização por Streptococcus do grupo B, corioamnionite e prematuridade.',
+        'Coleta de hemocultura e, quando indicado, de líquor antes do antibiótico, sem atrasar a primeira dose.',
+        'Controle térmico, glicêmico e hemodinâmico, com contato pele a pele quando o estado clínico permite.',
+        'Higiene das mãos e cuidado com cateteres, principal medida de prevenção da sepse tardia.',
+        'Comunicação precoce com a referência neonatal e plano de transporte, com informação da hora da primeira dose de antibiótico.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Atenção à Saúde do Recém-Nascido, guia para profissionais de saúde', ano: 2014 }, { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre sepse neonatal', ano: 2022 } ],
+      atualizadoEm: '2026-09'
+    },
+    desconforto_respiratorio_rn: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - suporte respiratório', tipo: 'primeira',
+          opcoes: [
+            { medId: null, nome: 'CPAP nasal precoce', esquema: 'Pressão inicial de 5 a 6 cmH2O, ajustada conforme esforço respiratório e oxigenação, com oxigênio titulado pela oximetria', quando: 'Recém-nascido com desconforto respiratório e esforço, sobretudo prematuro com doença da membrana hialina', obs: 'Medida não medicamentosa de maior impacto, iniciada ainda na sala de parto quando indicada. Reduz a necessidade de ventilação mecânica e de surfactante.' },
+            { medId: null, nome: 'Oxigenoterapia com alvo de saturação controlado', esquema: 'Titular para manter saturação entre 90% e 95% no prematuro, conforme protocolo do serviço', quando: 'Hipoxemia', obs: 'Evitar hiperóxia, associada a retinopatia da prematuridade e a lesão pulmonar. Usar blender e oxímetro sempre que disponíveis.' }
+          ] },
+        { ordem: 2, rotulo: 'Primeira escolha - surfactante na doença da membrana hialina', tipo: 'primeira',
+          opcoes: [
+            { medId: null, nome: 'Surfactante exógeno (poractante alfa ou beractanto)', esquema: 'Dose inicial conforme o produto, em geral 100 a 200 mg/kg por via traqueal, com possibilidade de repetição conforme resposta e protocolo', quando: 'Doença da membrana hialina com necessidade de oxigênio acima do limiar do protocolo ou falha de CPAP', obs: 'Quanto mais precoce, maior o benefício. Técnicas menos invasivas de administração são usadas em serviços com experiência. Confirmar dose e técnica conforme protocolo/bula do produto disponível.', verificar: true }
+          ] },
+        { ordem: 3, rotulo: 'Antibiótico quando há suspeita de infecção', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'ampicilina', nome: 'Ampicilina associada a gentamicina', esquema: 'Doses conforme idade gestacional e pós-natal do protocolo neonatal', quando: 'Avaliar quando o desconforto respiratório pode corresponder a pneumonia congênita ou sepse precoce: bolsa rota prolongada, febre materna, líquido fétido, leucopenia', obs: 'A pneumonia congênita por Streptococcus do grupo B é indistinguível da doença da membrana hialina no início. Reavaliar em 36 a 48 h e suspender se as culturas forem negativas e a evolução boa.' },
+            { medId: 'cefotaxima', nome: 'Cefotaxima', esquema: 'Dose conforme idade e protocolo neonatal', quando: 'Suspeita de meningite associada, ou orientação por cultura', obs: 'Preferida à ceftriaxona no período neonatal.' }
+          ] },
+        { ordem: 4, rotulo: 'Adjuvante e prevenção da apneia da prematuridade', tipo: 'adjuvante',
+          opcoes: [
+            { medId: null, nome: 'Citrato de cafeína', esquema: 'Ataque de 20 mg/kg IV ou VO de citrato de cafeína e manutenção de 5 a 10 mg/kg/dia', quando: 'Prematuro com apneia da prematuridade, e para facilitar a extubação e a manutenção do CPAP', obs: 'Melhora desfechos respiratórios e do neurodesenvolvimento em prematuros. Confirmar dose conforme protocolo/bula do produto disponível.', verificar: true },
+            { medId: 'glicose', nome: 'Glicose', esquema: 'Infusão contínua com taxa de infusão de glicose conforme protocolo, e glicose a 10% 2 mL/kg IV na hipoglicemia', quando: 'Manutenção metabólica no recém-nascido que não pode se alimentar, e correção de hipoglicemia', obs: 'Monitorar glicemia seriada, o desconforto respiratório aumenta o consumo energético.' },
+            { medId: 'soro_fisiologico', nome: 'Soro fisiológico 0,9%', esquema: 'Expansão de 10 mL/kg IV em 10 a 30 min quando há sinais de hipovolemia', quando: 'Má perfusão associada', obs: 'Evitar expansões repetidas sem indicação clara, pelo risco de hemorragia peri-intraventricular no prematuro.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Oxigênio a 100% sem controle de oximetria', esquema: '', quando: '', obs: 'A hiperóxia é lesiva. Usar blender e oxímetro, e titular pelo alvo de saturação. Em unidade sem blender, acionar a referência e usar a menor fração possível.' },
+            { medId: 'dexametasona', nome: 'Corticoide sistêmico precoce no prematuro para prevenir displasia broncopulmonar', esquema: '', quando: '', obs: 'O uso precoce de dexametasona se associa a paralisia cerebral e a pior neurodesenvolvimento. Se considerado, apenas tardiamente, em dose baixa e por decisão da referência neonatal.' },
+            { medId: null, nome: 'Aspiração traqueal de rotina no recém-nascido com líquido meconial', esquema: '', quando: '', obs: 'Não é mais recomendada de rotina pelas diretrizes de reanimação neonatal, inclusive no recém-nascido não vigoroso. A prioridade é a ventilação com pressão positiva eficaz.' },
+            { medId: 'ampicilina', nome: 'Antibiótico prolongado em todo desconforto respiratório', esquema: '', quando: '', obs: 'Reavaliar em 36 a 48 h. Antibiótico prolongado sem infecção comprovada aumenta enterocolite necrosante, candidíase e resistência.' },
+            { medId: null, nome: 'Fisioterapia respiratória de rotina no prematuro em fase aguda', esquema: '', quando: '', obs: 'Não recomendada de rotina na fase aguda, pelo risco de instabilidade e de hemorragia peri-intraventricular.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Controle térmico rigoroso desde a sala de parto, com saco plástico e touca no prematuro.',
+        'Clampeamento oportuno do cordão e manuseio mínimo nas primeiras horas.',
+        'Posicionamento adequado, cuidado postural e redução de ruído e de luz no cuidado do prematuro.',
+        'Início precoce de leite materno, preferencialmente da própria mãe, e contato pele a pele quando o estado clínico permite.',
+        'Acionamento precoce do transporte neonatal quando o serviço não dispõe de CPAP, surfactante ou ventilação mecânica, situação comum nos municípios do interior do Amazonas.'
+      ],
+      fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Programa de Reanimação Neonatal e documentos de neonatologia', ano: 2022 }, { nome: 'Ministério da Saúde - Atenção à Saúde do Recém-Nascido, guia para profissionais de saúde', ano: 2014 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    hipoglicemia_neonatal: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - recém-nascido assintomático', tipo: 'primeira',
+          opcoes: [
+            { medId: null, nome: 'Leite materno ou leite materno ordenhado', esquema: 'Amamentação imediata ou oferta de leite ordenhado, com nova glicemia 30 a 60 min depois, conforme protocolo do serviço', quando: 'Hipoglicemia assintomática em recém-nascido de risco, com capacidade de sucção preservada', obs: 'Medida de primeira linha no assintomático. Manter contato pele a pele e controle térmico, o frio agrava a hipoglicemia.' }
+          ] },
+        { ordem: 2, rotulo: 'Primeira escolha - recém-nascido sintomático ou glicemia muito baixa', tipo: 'primeira',
+          opcoes: [
+            { medId: 'glicose', nome: 'Glicose', esquema: 'Glicose a 10% 2 mL/kg IV em bolus lento, seguida de infusão contínua com taxa de infusão de glicose de 4 a 8 mg/kg/min, ajustada pelas glicemias', quando: 'Hipoglicemia sintomática, com tremores, letargia, apneia, hipotonia ou convulsão, ou glicemia muito baixa conforme o limiar do protocolo', obs: 'Não usar soluções mais concentradas em veia periférica, pelo risco de lesão vascular. Repetir a glicemia 30 min após o bolus.' }
+          ] },
+        { ordem: 3, rotulo: 'Uso off-label', tipo: 'offlabel',
+          opcoes: [
+            { medId: null, nome: 'Gel de dextrose oral a 40%', esquema: '200 mg/kg, equivalente a 0,5 mL/kg do gel a 40%, massageado na mucosa oral, seguido de amamentação e de nova glicemia em 30 min', quando: 'Hipoglicemia assintomática ou levemente sintomática em recém-nascido de risco, como medida para evitar separação da mãe e hidratação venosa, sobretudo em unidade sem acesso venoso fácil', obs: 'Off-label no Brasil: não há apresentação registrada com essa indicação, e o produto costuma ser manipulado ou importado. A evidência é robusta, com ensaios clínicos randomizados e revisões sistemáticas mostrando redução de admissão em unidade neonatal e de separação mãe-bebê, e a prática consta de diretrizes internacionais. Confirmar disponibilidade, concentração e protocolo do serviço.', verificar: true }
+          ] },
+        { ordem: 4, rotulo: 'Segunda linha - hipoglicemia persistente ou refratária', tipo: 'segunda',
+          opcoes: [
+            { medId: 'glicose', nome: 'Aumento progressivo da taxa de infusão de glicose', esquema: 'Elevar a taxa de infusão em etapas, conforme glicemias, geralmente com necessidade de acesso central acima de 12,5% de concentração', quando: 'Glicemia que não normaliza com a infusão inicial', obs: 'Necessidade de taxa de infusão acima de 8 a 10 mg/kg/min sugere hiperinsulinismo e exige investigação e discussão com a referência.' },
+            { medId: null, nome: 'Glucagon', esquema: 'Dose conforme protocolo do serviço, por via IV, IM ou subcutânea', quando: 'Hipoglicemia refratária enquanto se obtém ou se amplia o acesso venoso, sobretudo em filho de mãe diabética com boas reservas de glicogênio', obs: 'Medida temporária, não substitui a infusão de glicose. Confirmar dose conforme protocolo/bula.', verificar: true },
+            { medId: null, nome: 'Investigação de hiperinsulinismo e de erro inato do metabolismo', esquema: 'Coleta de amostra crítica no momento da hipoglicemia, conforme protocolo', quando: 'Hipoglicemia persistente além de 48 a 72 h, ou com necessidade alta de glicose', obs: 'Encaminhar à referência em endocrinologia pediátrica. A amostra crítica colhida no momento da hipoglicemia é insubstituível.' }
+          ] },
+        { ordem: 5, rotulo: 'Adjuvante / tratamento da causa', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'ampicilina', nome: 'Ampicilina associada a gentamicina', esquema: 'Doses conforme o protocolo neonatal', quando: 'Avaliar quando a hipoglicemia vem acompanhada de letargia, instabilidade térmica ou outros sinais de sepse neonatal', obs: 'Hipoglicemia pode ser a primeira manifestação de sepse no recém-nascido.' },
+            { medId: 'fenobarbital', nome: 'Fenobarbital', esquema: 'Ataque de 20 mg/kg IV', quando: 'Convulsão que persiste após a correção da glicemia', obs: 'Corrigir primeiro a glicemia, a convulsão hipoglicêmica costuma ceder com a correção.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: 'glicose', nome: 'Bolus repetidos de glicose sem infusão contínua', esquema: '', quando: '', obs: 'Provocam hipoglicemia de rebote por estímulo à liberação de insulina. Após o bolus, manter infusão contínua.' },
+            { medId: null, nome: 'Água glicosada oral em mamadeira como tratamento', esquema: '', quando: '', obs: 'Prática comum, oferece pouca energia, prejudica o aleitamento e não corrige adequadamente a hipoglicemia.' },
+            { medId: null, nome: 'Triagem de glicemia em recém-nascido a termo saudável e sem fatores de risco', esquema: '', quando: '', obs: 'Não indicada. Gera intervenções desnecessárias e separação mãe-bebê. Rastrear apenas recém-nascidos de risco: prematuro, pequeno ou grande para a idade gestacional, filho de mãe diabética e sintomáticos.' },
+            { medId: null, nome: 'Separação da mãe e suspensão do aleitamento por hipoglicemia leve assintomática', esquema: '', quando: '', obs: 'A amamentação e o contato pele a pele fazem parte do tratamento. Evitar separação desnecessária.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Contato pele a pele imediato e amamentação na primeira hora de vida, medidas que previnem a hipoglicemia.',
+        'Controle térmico rigoroso, o frio aumenta o consumo de glicose.',
+        'Rastreamento de glicemia apenas em recém-nascidos de risco, com horários definidos em protocolo.',
+        'Alimentação frequente, a cada 2 a 3 h, no recém-nascido de risco.',
+        'Coleta de amostra crítica antes de corrigir a glicemia quando há suspeita de causa endócrina ou metabólica.'
+      ],
+      fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre hipoglicemia neonatal', ano: 2021 }, { nome: 'Ministério da Saúde - Atenção à Saúde do Recém-Nascido, guia para profissionais de saúde', ano: 2014 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    sifilis_congenita: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - sífilis congênita confirmada ou muito provável', tipo: 'primeira',
+          opcoes: [
+            { medId: 'penicilina_cristalina', nome: 'Penicilina G cristalina', esquema: '50.000 UI/kg/dose IV a cada 12 h nos primeiros 7 dias de vida e a cada 8 h a partir do 8o dia, por 10 dias', quando: 'Recém-nascido com evidência clínica, laboratorial ou radiológica de sífilis congênita, e sempre que houver neurossífilis ou alteração do líquor', obs: 'Esquema de escolha e o único adequado quando há acometimento do sistema nervoso central. Interrupção de mais de 24 h exige reinício do esquema completo.' },
+            { medId: null, nome: 'Penicilina G procaína', esquema: '50.000 UI/kg/dose IM a cada 24 h por 10 dias', quando: 'Alternativa prevista no protocolo quando o líquor é normal e não há sinais de neurossífilis, especialmente onde a manutenção do acesso venoso por 10 dias é inviável', obs: 'Muito útil em unidade de município do interior sem condições de manter acesso venoso. Confirmar conforme o PCDT vigente.', verificar: true }
+          ] },
+        { ordem: 2, rotulo: 'Situação de mãe tratada de forma inadequada com recém-nascido assintomático', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'penicilina_benzatina', nome: 'Penicilina G benzatina', esquema: '50.000 UI/kg IM em dose única', quando: 'Recém-nascido assintomático, com exames normais e titulação de VDRL não maior que a materna, em situação específica prevista no protocolo, quando há garantia de seguimento', obs: 'Somente em situação estritamente definida pelo PCDT e com seguimento assegurado. Em população ribeirinha ou indígena, com risco de perda de seguimento, considerar o esquema completo. Confirmar conforme o PCDT vigente.', verificar: true },
+            { medId: null, nome: 'Investigação completa antes de decidir o esquema', esquema: 'VDRL do recém-nascido em sangue periférico, hemograma, líquor, radiografia de ossos longos, avaliação hepática, oftalmológica e auditiva', quando: 'Todo recém-nascido de mãe com sífilis, antes de definir a conduta', obs: 'A decisão terapêutica depende do tratamento materno, da titulação comparada e dos exames do recém-nascido.' }
+          ] },
+        { ordem: 3, rotulo: 'Segunda linha / situações especiais', tipo: 'segunda',
+          opcoes: [
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: 'Dose e duração definidas pelo serviço de referência', quando: 'Situação excepcional de alergia comprovada à penicilina ou desabastecimento, sempre com aval de infectologia pediátrica', obs: 'A penicilina é o único fármaco com eficácia comprovada na sífilis congênita, inclusive na neurossífilis. A ceftriaxona tem dados limitados nessa indicação e não é equivalente. Diante de alergia, a conduta preferida é a dessensibilização à penicilina em ambiente hospitalar. Evitar no recém-nascido ictérico. Confirmar conforme protocolo e com a referência.', verificar: true }
+          ] },
+        { ordem: 4, rotulo: 'Adjuvante / tratamento das manifestações', tipo: 'adjuvante',
+          opcoes: [
+            { medId: null, nome: 'Fototerapia', esquema: 'Conforme nomograma por idade em horas', quando: 'Icterícia com hiperbilirrubinemia associada à sífilis congênita', obs: 'Medida não medicamentosa.' },
+            { medId: 'sulfato_ferroso', nome: 'Sulfato ferroso', esquema: '2 a 3 mg de ferro elementar/kg/dia VO, iniciado conforme protocolo de seguimento', quando: 'Anemia no seguimento da criança com sífilis congênita', obs: 'Confirmar conforme protocolo do serviço.', verificar: true },
+            { medId: 'ampicilina', nome: 'Ampicilina associada a gentamicina', esquema: 'Doses conforme protocolo neonatal', quando: 'Avaliar quando há suspeita simultânea de sepse bacteriana no recém-nascido gravemente enfermo', obs: 'A sífilis congênita grave pode se apresentar como sepse, considerar as duas hipóteses.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Esquemas com macrolídeo, como azitromicina ou eritromicina, para sífilis congênita', esquema: '', quando: '', obs: 'Não recomendados. Falha terapêutica documentada, resistência do Treponema pallidum a macrolídeos e ausência de passagem adequada pela barreira hematoencefálica.' },
+            { medId: 'penicilina_benzatina', nome: 'Penicilina benzatina em dose única no recém-nascido sintomático ou com líquor alterado', esquema: '', quando: '', obs: 'Insuficiente. Não atinge concentração treponemicida no sistema nervoso central. Nesses casos, usar penicilina cristalina por 10 dias.' },
+            { medId: null, nome: 'Alta sem seguimento sorológico programado', esquema: '', quando: '', obs: 'O seguimento com VDRL seriado e avaliação neurológica, auditiva e oftalmológica é obrigatório. Em comunidade distante, articular o retorno com a equipe local antes da alta.' },
+            { medId: null, nome: 'Tratar apenas o recém-nascido sem tratar a mãe e a parceria sexual', esquema: '', quando: '', obs: 'Erro frequente que perpetua a transmissão. Tratar a mãe e as parcerias, e notificar.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Notificação compulsória de sífilis congênita e de sífilis em gestante, com investigação do caso.',
+        'Testagem rápida da mãe e das parcerias sexuais, e tratamento das parcerias.',
+        'Avaliação completa do recém-nascido: líquor, hemograma, radiografia de ossos longos, função hepática, avaliação oftalmológica e auditiva.',
+        'Seguimento com VDRL em 1, 3, 6, 12 e 18 meses, e avaliação do neurodesenvolvimento.',
+        'Fortalecimento da testagem no pré-natal e no parto, inclusive em unidades fluviais e em áreas indígenas, onde a perda de seguimento é maior.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Protocolo Clínico e Diretrizes Terapêuticas para Atenção Integral às Pessoas com Infecções Sexualmente Transmissíveis', ano: 2022 }, { nome: 'OMS - Guidelines for the treatment of Treponema pallidum', ano: 2016 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    reanimacao_neonatal_dx: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - ventilação com pressão positiva', tipo: 'primeira',
+          opcoes: [
+            { medId: null, nome: 'Ventilação com pressão positiva com ar ambiente ou oxigênio titulado', esquema: 'Iniciar nos primeiros 60 segundos de vida, com 40 a 60 ventilações por minuto, com ar ambiente no recém-nascido a termo e fração de oxigênio inicial conforme a idade gestacional no prematuro', quando: 'Recém-nascido que não respira ou não tem respiração eficaz, ou com frequência cardíaca abaixo de 100 batimentos por minuto', obs: 'Medida isolada mais importante da reanimação neonatal. A grande maioria dos recém-nascidos responde apenas a isso, sem necessidade de qualquer medicamento.' },
+            { medId: null, nome: 'Massagem cardíaca coordenada com a ventilação', esquema: 'Relação de 3 compressões para 1 ventilação, com técnica dos dois polegares, após ventilação eficaz com via aérea avançada quando possível', quando: 'Frequência cardíaca abaixo de 60 batimentos por minuto após 30 segundos de ventilação com pressão positiva eficaz', obs: 'Antes de iniciar a massagem, checar a eficácia da ventilação, que é a causa mais comum de falha.' }
+          ] },
+        { ordem: 2, rotulo: 'Segunda linha - medicação na reanimação', tipo: 'segunda',
+          opcoes: [
+            { medId: 'adrenalina', nome: 'Adrenalina', esquema: 'Via endovenosa ou intraóssea preferencial: 0,01 a 0,03 mg/kg por dose, equivalente a 0,1 a 0,3 mL/kg da solução a 1:10.000, repetida a cada 3 a 5 min. Via traqueal, quando o acesso ainda não foi obtido: 0,05 a 0,1 mg/kg', quando: 'Frequência cardíaca que permanece abaixo de 60 batimentos por minuto apesar de ventilação eficaz e de massagem cardíaca coordenada por 60 segundos', obs: 'A via endovenosa ou intraóssea é preferida, a via traqueal tem absorção errática. Cateterismo umbilical é a via de escolha na sala de parto.' },
+            { medId: 'soro_fisiologico', nome: 'Soro fisiológico 0,9%', esquema: '10 mL/kg IV ou intraóssea em 5 a 10 min, podendo repetir', quando: 'Suspeita de hipovolemia: perda sanguínea aguda, descolamento de placenta, sangramento de cordão, palidez com má resposta à reanimação', obs: 'Infundir lentamente no prematuro, pelo risco de hemorragia peri-intraventricular. Considerar sangue O negativo quando há perda volumosa.' }
+          ] },
+        { ordem: 3, rotulo: 'Pós-reanimação - cuidados na encefalopatia hipóxico-isquêmica', tipo: 'primeira',
+          opcoes: [
+            { medId: null, nome: 'Hipotermia terapêutica', esquema: 'Iniciada nas primeiras 6 h de vida, com temperatura alvo conforme protocolo, em serviço com equipe e monitorização adequadas', quando: 'Recém-nascido com 35 semanas ou mais e encefalopatia hipóxico-isquêmica moderada ou grave, conforme critérios do protocolo', obs: 'Única intervenção com benefício comprovado na encefalopatia hipóxico-isquêmica. Em unidade sem o recurso, evitar a hipertermia e acionar o transporte imediatamente, pois a janela é curta.' },
+            { medId: 'glicose', nome: 'Glicose', esquema: 'Infusão contínua com taxa de infusão adequada, e glicose a 10% 2 mL/kg IV na hipoglicemia', quando: 'Manutenção da glicemia na fase pós-reanimação', obs: 'Evitar tanto hipoglicemia quanto hiperglicemia, ambas pioram a lesão neurológica.' }
+          ] },
+        { ordem: 4, rotulo: 'Adjuvante pós-reanimação', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'fenobarbital', nome: 'Fenobarbital', esquema: 'Ataque de 20 mg/kg IV, com doses adicionais conforme protocolo', quando: 'Convulsão neonatal clínica ou eletrográfica após a asfixia', obs: 'Não indicado de forma profilática. Tratar as crises e monitorizar quando houver eletroencefalograma de amplitude integrada disponível.' },
+            { medId: 'ampicilina', nome: 'Ampicilina associada a gentamicina', esquema: 'Doses conforme idade gestacional e pós-natal', quando: 'Avaliar quando há fatores de risco infecciosos, pois sepse e asfixia se apresentam de forma semelhante', obs: 'Reavaliar em 36 a 48 h e suspender se as culturas forem negativas e a evolução boa.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Naloxona na sala de parto', esquema: '', quando: '', obs: 'Não recomendada nas diretrizes atuais de reanimação neonatal. Pode desencadear convulsão em filho de mãe dependente de opioide. A conduta é ventilação com pressão positiva eficaz e suporte.' },
+            { medId: null, nome: 'Bicarbonato de sódio durante a reanimação', esquema: '', quando: '', obs: 'Não recomendado. Associa-se a hemorragia peri-intraventricular no prematuro e não melhora desfechos. A acidose se corrige com ventilação e restauração da perfusão.' },
+            { medId: null, nome: 'Aspiração traqueal de rotina no recém-nascido com líquido meconial', esquema: '', quando: '', obs: 'Não recomendada, inclusive no recém-nascido não vigoroso. Atrasa a ventilação, que é a prioridade.' },
+            { medId: null, nome: 'Oxigênio a 100% de rotina na reanimação do recém-nascido a termo', esquema: '', quando: '', obs: 'Iniciar com ar ambiente no recém-nascido a termo e titular pela oximetria. O uso rotineiro de oxigênio a 100% se associa a maior mortalidade e a estresse oxidativo.' },
+            { medId: null, nome: 'Hipertermia no pós-reanimação', esquema: '', quando: '', obs: 'A hipertermia agrava a lesão cerebral. Evitar aquecimento excessivo e monitorar a temperatura de forma contínua.' },
+            { medId: 'adrenalina', nome: 'Adrenalina antes de garantir ventilação eficaz', esquema: '', quando: '', obs: 'Erro frequente. A bradicardia neonatal é quase sempre de origem respiratória. Corrigir a técnica de ventilação antes de progredir para medicação.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Preparo do material e da equipe antes de todo parto, com checklist e definição de papéis.',
+        'Clampeamento oportuno do cordão no recém-nascido que não precisa de reanimação, e controle térmico imediato.',
+        'Passos iniciais em 30 segundos: aquecer, posicionar, aspirar vias aéreas se necessário, secar e estimular.',
+        'Monitorização com oxímetro no membro superior direito e, quando disponível, monitor cardíaco, que é mais rápido para detectar a frequência cardíaca.',
+        'Treinamento periódico da equipe em reanimação neonatal, incluindo as equipes de unidades fluviais e de municípios sem maternidade de referência.'
+      ],
+      fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Diretrizes do Programa de Reanimação Neonatal', ano: 2022 }, { nome: 'ILCOR - Consenso internacional sobre reanimação neonatal', ano: 2023 } ],
+      atualizadoEm: '2026-09'
+    }
   },
 
   rotulosTipo: {
