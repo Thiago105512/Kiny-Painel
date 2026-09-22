@@ -2565,5 +2565,77 @@ PED.data.medicamentos = [
     fontes: [{ nome: 'Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos – Ministério da Saúde/FUNASA', ano: 2001 }, { nome: 'Guia de Vigilância em Saúde – Ministério da Saúde', ano: 2024 }, { nome: 'Instituto Butantan – Bulas dos soros antivenenos', ano: 2023 }],
     atualizadoEm: '2026-09',
     verificar: false
+  },
+  {
+    id: 'ciprofloxacino',
+    nome: 'Ciprofloxacino',
+    classe: 'Antibiótico – fluoroquinolona',
+    apresentacoes: [
+      { descricao: 'Comprimido revestido 250 mg', mg: 250, ml: null, tipo: 'comprimido', via: 'VO' },
+      { descricao: 'Comprimido revestido 500 mg', mg: 500, ml: null, tipo: 'comprimido', via: 'VO' },
+      { descricao: 'Suspensão oral 250 mg/5 mL (disponibilidade limitada no Brasil)', mg: 250, ml: 5, tipo: 'suspensao', via: 'VO' },
+      { descricao: 'Bolsa 200 mg/100 mL (2 mg/mL) para infusão', mg: 200, ml: 100, tipo: 'injetavel', via: 'IV' },
+      { descricao: 'Bolsa 400 mg/200 mL (2 mg/mL) para infusão', mg: 400, ml: 200, tipo: 'injetavel', via: 'IV' }
+    ],
+    indicacoes: [
+      'Infecção de ferimento por animal aquático com cobertura para Aeromonas hydrophila (acidente por arraia, ferimento por espinho de peixe)',
+      'Febre tifoide',
+      'Infecção urinária complicada ou por Pseudomonas quando não há alternativa',
+      'Otite externa maligna e osteomielite por Pseudomonas',
+      'Profilaxia de meningite meningocócica em contactantes, conforme protocolo'
+    ],
+    doses: [
+      {
+        indicacao: 'Infecção de ferimento por animal aquático (cobertura para Aeromonas)',
+        mgKgDose: 15, mgKgDia: 30, vezesDia: 2, frequencia: '12/12 h', via: 'VO',
+        doseMaxDose: 750, doseMaxDia: 1500, duracao: '7 a 14 dias conforme evolução da ferida',
+        faixaEtaria: 'Todas as idades', obs: 'Uso pediátrico reservado às situações em que o benefício supera o risco articular descrito em estudos experimentais. Alternativa: sulfametoxazol-trimetoprim ou doxiciclina acima de 8 anos. Associar cobertura para Staphylococcus e Streptococcus quando houver celulite. Confirmar conforme protocolo do serviço.',
+        verificar: true
+      },
+      {
+        indicacao: 'Febre tifoide',
+        mgKgDose: 10, mgKgDia: 20, vezesDia: 2, frequencia: '12/12 h', via: 'VO',
+        doseMaxDose: 500, doseMaxDia: 1000, duracao: '7 a 10 dias',
+        faixaEtaria: 'Todas as idades', obs: 'Resistência crescente em algumas regiões; considerar ceftriaxona ou azitromicina conforme perfil local. Confirmar conforme protocolo.',
+        verificar: true
+      },
+      {
+        indicacao: 'Infecção grave por Pseudomonas ou infecção urinária complicada – via venosa',
+        mgKgDose: 10, mgKgDia: 30, vezesDia: 3, frequencia: '8/8 h', via: 'IV',
+        doseMaxDose: 400, doseMaxDia: 1200, duracao: 'conforme foco e resposta',
+        faixaEtaria: 'Todas as idades', obs: 'Infundir em 60 min. Preferir betalactâmico quando o perfil de sensibilidade permitir. Confirmar conforme protocolo e antibiograma.',
+        verificar: true
+      }
+    ],
+    diluicao: 'Apresentação injetável já vem diluída a 2 mg/mL; não diluir novamente nem administrar em bolus.',
+    infusao: 'Infusão venosa lenta, em 60 minutos, para reduzir irritação venosa.',
+    contraindicacoes: [
+      'Hipersensibilidade a quinolonas',
+      'Uso concomitante de tizanidina',
+      'Cautela em criança com histórico de tendinopatia, miastenia gravis ou epilepsia'
+    ],
+    interacoes: [
+      'Antiácidos, sais de ferro, cálcio, zinco e leite reduzem a absorção oral: espaçar 2 horas antes ou 6 horas depois',
+      'Aumenta níveis de teofilina e de cafeína',
+      'Associação com corticoide aumenta o risco de tendinopatia',
+      'Pode prolongar o intervalo QT com outros medicamentos que também prolongam'
+    ],
+    ajusteRenal: 'Reduzir a dose ou espaçar o intervalo quando a taxa de filtração glomerular estimada for menor que 30 mL/min/1,73 m²; confirmar no protocolo do serviço.',
+    ajusteHepatico: 'Não requer ajuste de rotina.',
+    efeitosAdversos: [
+      'Náusea, vômito e dor abdominal',
+      'Artralgia e tendinopatia, com risco descrito de ruptura do tendão de Aquiles',
+      'Fotossensibilidade',
+      'Prolongamento do intervalo QT',
+      'Colite associada a Clostridioides difficile'
+    ],
+    fontes: [
+      { nome: 'Bulário Eletrônico da ANVISA', ano: 2024 },
+      { nome: 'Nelson Textbook of Pediatrics', ano: 2020 },
+      { nome: 'Harriet Lane Handbook, 23rd ed.', ano: 2024 },
+      { nome: 'Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos – Ministério da Saúde', ano: 2001 }
+    ],
+    atualizadoEm: '2026-09',
+    verificar: true
   }
 ];

@@ -1465,5 +1465,1501 @@ PED.data.doencasExtra = [
     ],
     atualizadoEm: '2026-09'
   }
+,
+
+  {
+    id: 'hiv_pediatrico',
+    nome: 'Infecção pelo HIV na criança e no adolescente',
+    categoria: 'infecciosa',
+    amazonia: false,
+    cid10: 'B20',
+    tags: ['febre', 'perda_peso', 'diarreia', 'tosse', 'linfonodomegalia', 'hepatomegalia', 'esplenomegalia', 'lesoes_pele', 'palidez', 'fraqueza', 'dispneia', 'feridas'],
+    definicao: 'Infecção crônica pelo vírus da imunodeficiência humana, adquirida na infância principalmente por transmissão vertical, que leva a imunodeficiência progressiva com infecções oportunistas, comprometimento do crescimento e do desenvolvimento. Com diagnóstico precoce e terapia antirretroviral iniciada no primeiro ano de vida, a evolução muda radicalmente.',
+    epidemiologia: 'A transmissão vertical responde pela maioria dos casos em menores de 13 anos no Brasil e pode ser reduzida a menos de 1% com pré-natal adequado, terapia antirretroviral materna, profilaxia no recém-nascido e não amamentação. No Amazonas, as barreiras geográficas ao pré-natal, a testagem tardia na gestação e a dificuldade de acesso a fórmula infantil em comunidades ribeirinhas e indígenas ainda resultam em casos de transmissão vertical evitáveis. Em adolescentes, a transmissão sexual é a principal via, com aumento de casos e diagnóstico tardio. Coinfecções relevantes na região incluem tuberculose, leishmaniose visceral, sífilis, hepatites virais e paracoccidioidomicose. A infecção pelo HIV é de notificação compulsória, assim como a gestante e a criança exposta.',
+    agente: 'Vírus da imunodeficiência humana tipos 1 e 2 (HIV-1 predominante no Brasil), retrovírus com tropismo por linfócitos T CD4.',
+    transmissao: 'Vertical (intraútero, intraparto e pelo aleitamento materno, que responde por parcela relevante do risco quando há amamentação), sexual em adolescentes, por sangue e hemoderivados e por uso de material perfurocortante contaminado. O aleitamento materno é contraindicado para mães vivendo com HIV no Brasil.',
+    incubacao: 'Sem tratamento, a progressão é bimodal na transmissão vertical: cerca de 15 a 25% evoluem rapidamente com imunodeficiência grave nos primeiros 12 meses e os demais progridem ao longo de anos. A infecção aguda em adolescentes surge 2 a 4 semanas após a exposição.',
+    manifestacoes: [
+      'Criança exposta assintomática: a maioria dos recém-nascidos de mães vivendo com HIV é assintomática ao nascer e o diagnóstico depende de testagem programada.',
+      'Sinais precoces de infecção não tratada em lactentes: ganho de peso insuficiente, déficit de crescimento, atraso do desenvolvimento neuropsicomotor, hepatoesplenomegalia e linfadenomegalia generalizada persistente.',
+      'Candidíase oral persistente ou recorrente, especialmente após os 6 meses de idade, e candidíase esofágica com recusa alimentar e dor à deglutição.',
+      'Diarreia crônica ou recorrente, parotidite crônica bilateral indolor e dermatite persistente.',
+      'Infecções bacterianas graves e recorrentes: pneumonia, otite média de repetição, sinusite, sepse, meningite.',
+      'Pneumonia por Pneumocystis jirovecii em lactentes de 3 a 6 meses: taquipneia progressiva, hipoxemia desproporcional à ausculta, tosse seca e febre, com alta letalidade.',
+      'Pneumonia intersticial linfocítica em crianças maiores, com hipoxemia crônica e baqueteamento digital.',
+      'Tuberculose pulmonar e extrapulmonar, com apresentações atípicas e maior gravidade.',
+      'Herpes-zóster, molusco contagioso extenso, verrugas disseminadas e escabiose crostosa.',
+      'Anemia, plaquetopenia e leucopenia.',
+      'Encefalopatia pelo HIV: perda de marcos do desenvolvimento, microcefalia adquirida, espasticidade e regressão neurológica.',
+      'Em adolescentes, infecção aguda com síndrome mononucleose-símile: febre, faringite, exantema, adenomegalia e úlceras orais.'
+    ],
+    sinaisAlarme: [
+      'Taquipneia progressiva com hipoxemia em lactente de 3 a 6 meses (suspeita de pneumocistose, que exige tratamento empírico imediato).',
+      'Saturação de oxigênio abaixo de 92% ou desconforto respiratório.',
+      'Candidíase esofágica com recusa alimentar e desidratação.',
+      'Perda de peso acelerada, desnutrição grave ou parada do crescimento.',
+      'Regressão de marcos do desenvolvimento, convulsão, alteração de consciência ou sinais neurológicos focais.',
+      'Febre prolongada com hepatoesplenomegalia e pancitopenia (considerar tuberculose disseminada, leishmaniose visceral e micoses sistêmicas).',
+      'Sinais de sepse ou de meningite.',
+      'Anemia grave ou sangramento por plaquetopenia.',
+      'Abandono ou interrupção da terapia antirretroviral, com risco de falha virológica e resistência.'
+    ],
+    diagnosticoDiferencial: ['tuberculose', 'desnutricao', 'leishmaniose_visceral', 'imunodeficiências primárias', 'mononucleose', 'sífilis congênita', 'citomegalovirose congênita', 'toxoplasmose congênita', 'fibrose cística', 'doença celíaca e outras causas de má absorção', 'neoplasias hematológicas'],
+    exames: ['carga viral do HIV (RNA quantitativo) para diagnóstico em menores de 18 meses', 'testes rápidos e imunoensaio para HIV a partir de 18 meses ou em adolescentes', 'contagem de linfócitos T CD4 e CD8', 'hemograma', 'ast', 'alt', 'creatinina', 'ureia', 'glicemia', 'radiografia_torax', 'prova_tuberculinica', 'teste_rapido_molecular_tb', 'baciloscopia', 'sorologia para hepatites B e C', 'sorologia para sífilis (VDRL e teste treponêmico)', 'sorologia para toxoplasmose', 'gasometria', 'lactato'],
+    criteriosDiagnosticos: [
+      'Em menores de 18 meses, os anticorpos maternos atravessam a placenta e permanecem detectáveis: o diagnóstico exige detecção viral direta por carga viral (RNA do HIV), conforme o fluxograma do Ministério da Saúde.',
+      'Criança exposta: coletar carga viral conforme calendário estabelecido no PCDT (primeira coleta a partir das 2 semanas de vida ou conforme fluxo vigente, com repetições subsequentes); duas cargas virais detectáveis em amostras distintas são compatíveis com infecção.',
+      'Em maiores de 18 meses e adolescentes, o diagnóstico segue o fluxograma com testes rápidos ou imunoensaios, com confirmação conforme a normativa vigente.',
+      'Sempre repetir e confirmar resultados antes de comunicar o diagnóstico, seguindo o fluxograma oficial.',
+      'Solicitar contagem de CD4 e carga viral no diagnóstico e no seguimento, para estadiamento e monitorização.',
+      'Investigar coinfecções no diagnóstico: tuberculose (incluindo prova tuberculínica ou IGRA, radiografia de tórax e pesquisa conforme suspeita), sífilis, hepatites B e C e toxoplasmose.',
+      'Avaliar crescimento, desenvolvimento neuropsicomotor e situação vacinal em toda consulta.',
+      'Notificação compulsória de gestante com HIV, criança exposta e caso de infecção.'
+    ],
+    classificacaoGravidade: [
+      { nivel: 'Criança exposta em investigação', criterios: 'Recém-nascido ou lactente de mãe vivendo com HIV, em profilaxia antirretroviral e profilaxia para pneumocistose conforme protocolo, com exames em andamento e sem confirmação diagnóstica. Acompanhamento em serviço especializado.' },
+      { nivel: 'Infecção sem imunodeficiência significativa', criterios: 'Diagnóstico confirmado, assintomático ou com sintomas leves, CD4 adequado para a idade. Início imediato de terapia antirretroviral e acompanhamento regular.' },
+      { nivel: 'Doença avançada ou imunodeficiência grave', criterios: 'Infecção oportunista definidora, desnutrição grave, encefalopatia, CD4 baixo para a idade ou apresentação com doença grave. Internação quando indicada, tratamento da infecção oportunista e início ou reinício da terapia antirretroviral conforme protocolo, atento à síndrome inflamatória de reconstituição imune.' }
+    ],
+    tratamento: [
+      'A terapia antirretroviral é indicada para toda criança e adolescente com diagnóstico confirmado, independentemente de sintomas ou de contagem de CD4, e deve ser iniciada o mais precocemente possível, idealmente nas primeiras semanas de vida nos casos de transmissão vertical.',
+      'O esquema antirretroviral, as doses e as apresentações pediátricas devem ser definidos estritamente conforme o Protocolo Clínico e Diretrizes Terapêuticas para Manejo da Infecção pelo HIV em Crianças e Adolescentes do Ministério da Saúde vigente, em serviço especializado, com ajuste por peso e superfície corporal a cada consulta.',
+      'Profilaxia primária para Pneumocystis jirovecii com sulfametoxazol com trimetoprima em toda criança exposta a partir de 4 a 6 semanas de vida até a definição diagnóstica, e em crianças infectadas conforme idade e contagem de CD4, segundo o protocolo vigente.',
+      'Suspeita de pneumocistose: iniciar tratamento empírico imediato com sulfametoxazol com trimetoprima em dose terapêutica, associado a corticoide quando houver hipoxemia, conforme protocolo do serviço, sem aguardar confirmação.',
+      'Tratamento e profilaxia de outras infecções oportunistas (tuberculose, candidíase, toxoplasmose, micobacteriose atípica, criptococose) conforme protocolos específicos e sempre em articulação com infectologia pediátrica.',
+      'Contraindicação ao aleitamento materno para mães vivendo com HIV, com garantia de fórmula infantil pelo serviço e orientação para inibição da lactação, conforme protocolo do Ministério da Saúde.',
+      'Suporte nutricional intensivo: avaliação e acompanhamento do crescimento, correção de deficiências, tratamento de desnutrição conforme protocolo específico.',
+      'Calendário vacinal ampliado, com vacinas do CRIE conforme indicação; vacinas de agentes vivos exigem avaliação do estado imunológico, conforme o Manual do CRIE.',
+      'Manejo da adesão como prioridade clínica: acolhimento, apoio psicossocial, envolvimento do cuidador, estratégias de dispensação adaptadas à realidade ribeirinha e apoio de agentes comunitários e do serviço de referência.',
+      'Cuidado com o sigilo e com a revelação diagnóstica à criança, de forma gradual e adequada à idade, conduzida por equipe multiprofissional.',
+      'Rastreamento e tratamento de infecções sexualmente transmissíveis em adolescentes, com discussão sobre prevenção combinada.',
+      'Monitorização laboratorial periódica de carga viral, CD4, hemograma, função renal e hepática e perfil metabólico, conforme o protocolo.'
+    ],
+    medicamentos: [
+      { medId: 'sulfametoxazol_trimetoprim', esquema: 'Profilaxia para pneumocistose: 750 mg/m2/dia de sulfametoxazol (ou cerca de 5 mg/kg/dia de trimetoprima) VO, em 1 a 2 tomadas, 3 vezes por semana ou diariamente, conforme o PCDT do Ministério da Saúde. Tratamento da pneumocistose: 15 a 20 mg/kg/dia de trimetoprima IV ou VO dividida 6/6 ou 8/8 h por 21 dias, confirmar conforme protocolo do serviço.' },
+      { medId: null, nome: 'Terapia antirretroviral combinada', esquema: 'Esquema e doses definidos exclusivamente conforme o PCDT de Manejo da Infecção pelo HIV em Crianças e Adolescentes do Ministério da Saúde vigente e a avaliação de infectologia pediátrica, com ajuste por peso e idade em cada consulta. Confirmar conforme protocolo e bula.' },
+      { medId: 'prednisolona', esquema: 'Adjuvante na pneumocistose com hipoxemia: 1 a 2 mg/kg/dia VO com desmame ao longo do tratamento, conforme protocolo do serviço, confirmar conforme protocolo.' },
+      { medId: null, nome: 'Fórmula infantil', esquema: 'Substituição do aleitamento materno garantida pelo serviço de saúde para toda criança exposta ao HIV, conforme protocolo do Ministério da Saúde.' },
+      { medId: 'azitromicina', esquema: 'Profilaxia ou tratamento de micobacteriose atípica e de infecções bacterianas conforme indicação específica e protocolo do serviço, confirmar conforme protocolo.' },
+      { medId: null, nome: 'Fluconazol', esquema: 'Candidíase oral refratária ou esofágica: dose e duração conforme protocolo do serviço e bula, confirmar conforme protocolo.' },
+      { medId: 'ceftriaxona', esquema: 'Infecção bacteriana grave em criança com HIV: 50 a 100 mg/kg/dia IV, conforme protocolo do serviço.' }
+    ],
+    criteriosInternacao: [
+      'Suspeita de pneumocistose ou qualquer pneumonia com hipoxemia.',
+      'Infecção oportunista com necessidade de tratamento parenteral.',
+      'Desnutrição grave com complicações.',
+      'Diarreia crônica com desidratação ou distúrbio eletrolítico.',
+      'Candidíase esofágica impedindo alimentação.',
+      'Suspeita de tuberculose disseminada ou meningite.',
+      'Anemia grave ou plaquetopenia com sangramento.',
+      'Encefalopatia com regressão neurológica ou convulsão.',
+      'Necessidade de investigação diagnóstica complexa ou de suporte para início da terapia antirretroviral com garantia de adesão.'
+    ],
+    criteriosUTI: [
+      'Insuficiência respiratória com necessidade de suporte ventilatório, em especial na pneumocistose grave.',
+      'Choque séptico.',
+      'Rebaixamento importante do nível de consciência ou estado de mal convulsivo.',
+      'Disfunção orgânica múltipla.',
+      'Síndrome inflamatória de reconstituição imune com comprometimento de órgão vital.'
+    ],
+    criteriosAlta: [
+      'Infecção aguda controlada, sem febre e sem necessidade de terapia parenteral.',
+      'Ausência de hipoxemia e boa aceitação alimentar.',
+      'Terapia antirretroviral iniciada ou ajustada, com esquema compreendido pelo cuidador e primeira dispensação garantida.',
+      'Consulta em serviço especializado agendada e transporte ou apoio social organizados para comunidades distantes.',
+      'Cuidador orientado sobre adesão, armazenamento das medicações, sigilo e sinais de alarme.',
+      'Situação vacinal, nutricional e de coinfecções avaliada e encaminhada.',
+      'Notificação realizada e vínculo com a atenção primária estabelecido.'
+    ],
+    orientacoes: [
+      'O remédio antirretroviral deve ser dado todos os dias, no mesmo horário, sem falhar nenhum dia, mesmo quando a criança estiver bem: é isso que mantém o vírus controlado.',
+      'Se faltar medicação, procurar o serviço antes de acabar; nunca interromper por conta própria.',
+      'Levar todas as medicações e o cartão de acompanhamento em cada consulta.',
+      'A criança não deve mamar no peito; a fórmula infantil é fornecida pelo serviço de saúde.',
+      'Manter o calendário de vacinas em dia conforme a orientação do serviço especializado.',
+      'Manter as consultas e as coletas de sangue nas datas marcadas, mesmo que a criança esteja bem, e avisar a equipe se houver dificuldade de transporte.',
+      'Com o tratamento correto, a criança cresce, se desenvolve e vive normalmente; o diagnóstico será conversado com ela aos poucos, com apoio da equipe.',
+      'Procurar atendimento se houver febre persistente, tosse, respiração rápida, diarreia prolongada, perda de peso, placas brancas na boca, feridas que não cicatrizam ou qualquer piora.',
+      'A informação sobre o diagnóstico é sigilosa e protegida por lei; a equipe pode ajudar a decidir com quem compartilhar.'
+    ],
+    retorno: 'Acompanhamento em serviço de referência em infectologia pediátrica, com consultas mensais no primeiro ano de vida ou no início do tratamento e, depois, a cada 2 a 3 meses conforme estabilidade, com monitorização de carga viral e CD4 segundo o protocolo; retorno imediato diante de febre, sintomas respiratórios, perda de peso ou interrupção da medicação.',
+    prevencao: [
+      'Testagem para HIV no pré-natal em todos os trimestres e no parto, com testagem também do parceiro, e início imediato da terapia antirretroviral na gestante.',
+      'Profilaxia antirretroviral no recém-nascido exposto conforme o risco e o protocolo vigente, iniciada preferencialmente nas primeiras horas de vida.',
+      'Contraindicação do aleitamento materno e garantia de fórmula infantil, com inibição da lactação, conforme protocolo do Ministério da Saúde.',
+      'Acompanhamento da criança exposta com coletas de carga viral nos prazos previstos e profilaxia para pneumocistose.',
+      'Prevenção combinada em adolescentes: preservativos, testagem regular, profilaxia pré-exposição e profilaxia pós-exposição conforme indicação.',
+      'Testagem e tratamento de infecções sexualmente transmissíveis e vacinação contra HPV e hepatite B.',
+      'Fortalecimento do pré-natal e da testagem rápida em comunidades ribeirinhas e indígenas, com apoio de equipes fluviais e do Distrito Sanitário Especial Indígena.',
+      'Notificação compulsória de gestantes, crianças expostas e casos confirmados.'
+    ],
+    fontes: [
+      { nome: 'Protocolo Clínico e Diretrizes Terapêuticas para Manejo da Infecção pelo HIV em Crianças e Adolescentes – Ministério da Saúde', ano: 2024 },
+      { nome: 'Protocolo Clínico e Diretrizes Terapêuticas para Prevenção da Transmissão Vertical de HIV, Sífilis e Hepatites Virais – Ministério da Saúde', ano: 2022 },
+      { nome: 'Manual dos Centros de Referência para Imunobiológicos Especiais (CRIE) – Ministério da Saúde', ano: 2023 },
+      { nome: 'OMS – Consolidated guidelines on HIV prevention, testing, treatment, service delivery and monitoring', ano: 2021 }
+    ],
+    atualizadoEm: '2026-09'
+  },
+
+  {
+    id: 'glomerulonefrite_pos_estreptococica',
+    nome: 'Glomerulonefrite difusa aguda pós-estreptocócica',
+    categoria: 'urinaria',
+    amazonia: false,
+    cid10: 'N00.9',
+    tags: ['edema', 'reducao_diurese', 'cefaleia', 'vomitos', 'dor_abdominal', 'convulsao', 'alteracao_consciencia', 'dispneia', 'palidez', 'febre', 'fraqueza', 'sangramento'],
+    definicao: 'Glomerulonefrite aguda imunomediada que surge 1 a 3 semanas após faringoamigdalite ou 3 a 6 semanas após piodermite por cepas nefritogênicas de Streptococcus pyogenes, caracterizada pela síndrome nefrítica: hematúria, edema, hipertensão arterial e oligúria, com consumo de complemento C3.',
+    epidemiologia: 'É a causa mais comum de síndrome nefrítica aguda na criança, com pico entre 5 e 12 anos e predomínio no sexo masculino. No Amazonas e em toda a Região Norte tem forte associação com piodermite e escabiose infectada, condições muito prevalentes em comunidades ribeirinhas, indígenas e periurbanas com dificuldade de acesso à água, sabão e cuidados de pele. Surtos comunitários podem ocorrer após epidemias de impetigo. Ao contrário da febre reumática, o tratamento antibiótico da infecção estreptocócica não previne a glomerulonefrite, embora reduza a disseminação da cepa nefritogênica na comunidade. O prognóstico na infância é excelente na grande maioria dos casos.',
+    agente: 'Cepas nefritogênicas de Streptococcus pyogenes (estreptococo beta-hemolítico do grupo A), por mecanismo imunomediado com deposição de imunocomplexos e ativação da via alternativa do complemento.',
+    transmissao: 'A glomerulonefrite em si não é transmissível; transmite-se a infecção estreptocócica precedente, por gotículas respiratórias (faringite) ou contato direto com lesões de pele (impetigo, escabiose infectada).',
+    incubacao: 'Período de latência de 1 a 3 semanas após faringoamigdalite e de 3 a 6 semanas após piodermite.',
+    manifestacoes: [
+      'Edema de início súbito, tipicamente periorbitário e matinal, podendo evoluir para edema de membros inferiores, ascite e anasarca.',
+      'Hematúria macroscópica em cerca de 30 a 50% dos casos, com urina de cor escura, descrita como cor de coca-cola, refrigerante ou chá preto; hematúria microscópica é universal.',
+      'Oligúria, com redução do volume e da frequência urinária.',
+      'Hipertensão arterial, presente na maioria dos casos, frequentemente o achado de maior risco imediato.',
+      'Sintomas gerais: mal-estar, cefaleia, náuseas, vômitos, dor abdominal, febre baixa e palidez.',
+      'História de dor de garganta 1 a 3 semanas antes ou de feridas de pele, impetigo ou sarna infectada 3 a 6 semanas antes.',
+      'Proteinúria em geral leve a moderada; síndrome nefrótica associada ocorre em minoria dos casos.',
+      'Congestão circulatória por hipervolemia: dispneia, taquipneia, estertores pulmonares, hepatomegalia e ritmo de galope.',
+      'Encefalopatia hipertensiva: cefaleia intensa, vômitos, alterações visuais, confusão e convulsão.',
+      'Evolução habitual: diurese e pressão arterial normalizam em 1 a 2 semanas, hematúria macroscópica cede em poucos dias, hematúria microscópica pode persistir por 6 a 12 meses e a proteinúria por alguns meses; o C3 normaliza em até 8 a 12 semanas.'
+    ],
+    sinaisAlarme: [
+      'Hipertensão arterial significativa para idade, sexo e estatura, especialmente com cefaleia, vômitos ou alterações visuais.',
+      'Convulsão, sonolência, confusão ou déficit neurológico (encefalopatia hipertensiva).',
+      'Dispneia, taquipneia, ortopneia, estertores pulmonares ou queda de saturação (congestão pulmonar e edema agudo de pulmão).',
+      'Anúria ou oligúria importante e mantida.',
+      'Anasarca com ganho de peso rápido.',
+      'Elevação progressiva de ureia e creatinina, hipercalemia ou acidose metabólica.',
+      'Palidez intensa e sinais de anemia dilucional grave.',
+      'Persistência de C3 baixo além de 12 semanas ou hematúria macroscópica prolongada (sugere outro diagnóstico).'
+    ],
+    diagnosticoDiferencial: ['nefropatia por IgA', 'glomerulonefrite membranoproliferativa', 'nefrite lúpica', 'púrpura de Henoch-Schönlein com nefrite', 'síndrome hemolítico-urêmica', 'infeccao_urinaria com hematúria', 'litíase renal', 'hipercalciúria idiopática', 'síndrome nefrótica', 'glomerulonefrite associada a endocardite ou a abscesso'],
+    exames: ['urina_1', 'ureia', 'creatinina', 'complemento C3 e C4', 'antiestreptolisina O (ASLO) e anti-DNase B', 'sodio', 'potassio', 'hemograma', 'albumina', 'proteinúria de 24 horas ou relação proteína/creatinina em amostra isolada', 'urocultura', 'radiografia_torax (se congestão)', 'gasometria', 'FAN e anti-DNA (se suspeita de lúpus)', 'cultura de orofaringe ou de lesão de pele'],
+    criteriosDiagnosticos: [
+      'Quadro clínico de síndrome nefrítica aguda: hematúria, edema, hipertensão e oligúria, com ou sem insuficiência renal.',
+      'Urina rotina com hematúria, cilindros hemáticos ou hemácias dismórficas e proteinúria variável.',
+      'Evidência de infecção estreptocócica prévia: cultura positiva, ASLO elevado (mais sensível após faringite) ou anti-DNase B elevado (mais sensível após piodermite).',
+      'Consumo de complemento com C3 baixo e C4 habitualmente normal é achado característico e deve normalizar em até 8 a 12 semanas.',
+      'Ureia e creatinina para avaliar função renal; eletrólitos com atenção a potássio e sódio.',
+      'A biópsia renal não é indicada de rotina; considerar quando houver curso atípico: anúria, insuficiência renal rapidamente progressiva, síndrome nefrótica importante, C3 persistentemente baixo além de 12 semanas, ausência de evidência de infecção estreptocócica ou hematúria macroscópica recorrente.',
+      'Medir a pressão arterial com manguito adequado e comparar com tabelas de referência por idade, sexo e estatura em toda avaliação.'
+    ],
+    classificacaoGravidade: [
+      { nivel: 'Leve', criterios: 'Hematúria e edema discreto, pressão arterial normal ou minimamente elevada, diurese preservada, ureia e creatinina normais. Acompanhamento ambulatorial próximo com restrição de sal e controle diário de peso, diurese e pressão arterial.' },
+      { nivel: 'Moderada', criterios: 'Hipertensão arterial que requer tratamento, edema significativo, oligúria ou elevação leve de ureia e creatinina, sem congestão pulmonar nem sinais neurológicos. Internação para monitorização, restrição hidrossalina, diurético e anti-hipertensivo.' },
+      { nivel: 'Grave', criterios: 'Encefalopatia hipertensiva, convulsão, congestão pulmonar ou edema agudo de pulmão, anúria, insuficiência renal com hipercalemia ou acidose grave. Internação em unidade de maior complexidade, tratamento da emergência hipertensiva e avaliação de diálise.' }
+    ],
+    tratamento: [
+      'O tratamento é de suporte, com foco no controle da hipervolemia e da hipertensão, enquanto a doença segue seu curso autolimitado.',
+      'Restrição de sódio (dieta sem sal de adição) e restrição hídrica proporcional à diurese e às perdas insensíveis, conforme avaliação, enquanto houver edema, hipertensão ou oligúria.',
+      'Controle rigoroso de peso diário, balanço hídrico, diurese e pressão arterial várias vezes ao dia nos casos internados.',
+      'Diurético de alça (furosemida) é a medida inicial para hipervolemia, edema e hipertensão volume-dependente, conforme protocolo do serviço.',
+      'Anti-hipertensivo adicional quando a hipertensão não responde ao diurético e à restrição: escolha e dose conforme protocolo de nefrologia pediátrica; evitar inibidores da enzima conversora de angiotensina na fase aguda com hipercalemia ou queda de função renal.',
+      'Emergência hipertensiva com encefalopatia: redução controlada e gradual da pressão arterial em ambiente monitorizado, com medicação parenteral conforme protocolo do serviço, evitando quedas abruptas.',
+      'Antibiótico (penicilina benzatina em dose única ou amoxicilina por 10 dias) para erradicar o estreptococo e reduzir a disseminação da cepa nefritogênica na comunidade, embora não altere o curso da glomerulonefrite já instalada.',
+      'Tratamento concomitante da escabiose e da piodermite, quando presentes, incluindo os contatos domiciliares, medida essencial para interromper surtos comunitários.',
+      'Restrição proteica não é indicada de rotina; ajustar aporte conforme função renal e avaliação nutricional.',
+      'Corticoide e imunossupressores não são indicados na forma clássica.',
+      'Repouso relativo durante a fase aguda com hipertensão ou edema, retornando às atividades conforme melhora.',
+      'Diálise em caso de hipercalemia refratária, acidose grave, hipervolemia refratária com edema agudo de pulmão, uremia sintomática ou anúria prolongada, conforme avaliação da nefrologia pediátrica.',
+      'Acompanhamento ambulatorial prolongado com controle de pressão arterial, urina rotina e C3 até a normalização.'
+    ],
+    medicamentos: [
+      { medId: null, nome: 'Furosemida', esquema: 'Hipervolemia, edema e hipertensão volume-dependente: 1 a 2 mg/kg/dose VO ou IV, repetida conforme resposta e protocolo do serviço, com monitorização de eletrólitos e diurese. Confirmar dose e intervalo conforme protocolo e bula.' },
+      { medId: 'penicilina_benzatina', esquema: 'Erradicação do estreptococo: dose única IM de 600.000 UI em peso abaixo de 27 kg e 1.200.000 UI em peso igual ou acima de 27 kg.' },
+      { medId: 'amoxicilina', esquema: 'Alternativa oral para erradicação: 50 mg/kg/dia VO (máximo 1 g/dia) por 10 dias.' },
+      { medId: 'azitromicina', esquema: 'Alergia à penicilina: 12 mg/kg/dia VO uma vez ao dia (máximo 500 mg/dia) por 5 dias, conforme bula.' },
+      { medId: 'permetrina', esquema: 'Escabiose associada, no paciente e nos contatos: loção ou creme a 5% em aplicação no corpo todo do pescoço para baixo, por 8 a 12 horas, repetida após 7 dias, conforme protocolo do MS.' },
+      { medId: 'cefalexina', esquema: 'Piodermite associada: 50 a 100 mg/kg/dia VO dividida a cada 6 horas por 7 a 10 dias, conforme protocolo.' },
+      { medId: null, nome: 'Anti-hipertensivo adicional (por exemplo, nifedipino, hidralazina ou nitroprussiato)', esquema: 'Escolha, via, dose e velocidade de redução pressórica definidas conforme o protocolo de emergência hipertensiva do serviço e avaliação da nefrologia pediátrica. Confirmar conforme protocolo e bula.' }
+    ],
+    criteriosInternacao: [
+      'Hipertensão arterial significativa ou de difícil controle.',
+      'Oligúria acentuada ou anúria.',
+      'Edema importante, anasarca ou ganho de peso rápido.',
+      'Sinais de congestão pulmonar ou insuficiência cardíaca.',
+      'Elevação de ureia e creatinina ou distúrbio eletrolítico (hipercalemia, hiponatremia, acidose).',
+      'Cefaleia intensa, vômitos, alterações visuais, convulsão ou alteração de consciência.',
+      'Dúvida diagnóstica ou curso atípico que exija investigação.',
+      'Impossibilidade de aferição diária da pressão arterial e da diurese em casa ou de retorno rápido ao serviço.'
+    ],
+    criteriosUTI: [
+      'Encefalopatia hipertensiva com convulsão ou rebaixamento do nível de consciência.',
+      'Edema agudo de pulmão ou insuficiência respiratória.',
+      'Hipercalemia grave com alterações eletrocardiográficas ou arritmia.',
+      'Insuficiência renal aguda com necessidade de diálise de urgência.',
+      'Instabilidade hemodinâmica ou necessidade de anti-hipertensivo em infusão contínua com monitorização invasiva.'
+    ],
+    criteriosAlta: [
+      'Pressão arterial controlada e estável, dentro da faixa adequada para idade, sexo e estatura.',
+      'Diurese restabelecida e peso em queda ou estabilizado, com edema em regressão.',
+      'Ureia, creatinina e eletrólitos estáveis ou em melhora.',
+      'Ausência de sinais de congestão pulmonar e de manifestações neurológicas.',
+      'Antibiótico de erradicação administrado e escabiose ou piodermite tratadas, incluindo contatos.',
+      'Responsável orientado sobre restrição de sal, controle de peso e diurese e sinais de alarme.',
+      'Retorno ambulatorial agendado com nefrologia ou pediatria, com plano de controle de pressão arterial, urina rotina e C3.'
+    ],
+    orientacoes: [
+      'Preparar a comida sem sal de adição e não colocar sal na mesa; evitar caldo em cubo, temperos prontos, embutidos, enlatados, salgadinhos, charque e pescado salgado enquanto durar o inchaço e a pressão alta.',
+      'Oferecer líquidos na quantidade orientada pela equipe, sem ultrapassar o volume indicado.',
+      'Anotar todos os dias o peso da criança e observar a quantidade de xixi.',
+      'A urina escura costuma clarear em poucos dias; um pouco de sangue invisível pode continuar por meses e isso é esperado.',
+      'Dar o antibiótico até o final, quando prescrito; se foi aplicada a injeção, o tratamento já está completo.',
+      'Tratar a sarna e as feridas de pele de toda a família ao mesmo tempo, conforme a orientação recebida.',
+      'Voltar às consultas marcadas mesmo que a criança pareça bem: os exames de urina e de sangue precisam ser repetidos até normalizar.',
+      'Procurar atendimento imediatamente se houver dor de cabeça forte, vômitos, alterações na visão, convulsão, sonolência, falta de ar, criança urinando muito pouco ou nada, ou inchaço piorando rapidamente.'
+    ],
+    retorno: 'Reavaliação em 24 a 72 horas nos casos leves acompanhados em casa, com aferição de pressão arterial e avaliação de diurese e peso; consultas semanais até a normalização da pressão arterial e da diurese; urina rotina e complemento C3 repetidos em 6 a 12 semanas, com encaminhamento à nefrologia pediátrica se o C3 permanecer baixo além de 12 semanas, se a proteinúria persistir além de 6 meses ou se houver hematúria macroscópica recorrente.',
+    prevencao: [
+      'Diagnóstico e tratamento precoces das infecções estreptocócicas de garganta e de pele, reduzindo a circulação de cepas nefritogênicas na comunidade.',
+      'Tratamento simultâneo de escabiose e piodermite em todos os contatos domiciliares, medida de maior impacto na Região Norte.',
+      'Higiene pessoal, acesso a água e sabão e cuidado precoce de feridas e picadas infectadas.',
+      'Higiene das mãos, corte de unhas e lavagem de roupas de cama em surtos de impetigo.',
+      'Busca ativa de casos em surtos comunitários de piodermite, com avaliação de pressão arterial e urina.',
+      'Não há vacina disponível contra o estreptococo do grupo A.',
+      'Orientar que o tratamento antibiótico da infecção não impede a glomerulonefrite, mas reduz a transmissão na comunidade.'
+    ],
+    fontes: [
+      { nome: 'Tratado de Pediatria – Sociedade Brasileira de Pediatria', ano: 2022 },
+      { nome: 'Documento Científico do Departamento de Nefrologia – Sociedade Brasileira de Pediatria', ano: 2021 },
+      { nome: 'Nelson Textbook of Pediatrics, 22ª edição', ano: 2024 },
+      { nome: 'KDIGO Clinical Practice Guideline for the Management of Glomerular Diseases', ano: 2021 }
+    ],
+    atualizadoEm: '2026-09'
+  },
+
+  {
+    id: 'otite_media_aguda',
+    nome: 'Otite média aguda',
+    categoria: 'respiratoria',
+    amazonia: false,
+    cid10: 'H66.9',
+    tags: ['febre', 'dor_local', 'coriza', 'tosse', 'vomitos', 'diarreia', 'fraqueza', 'linfonodomegalia'],
+    definicao: 'Infecção aguda da orelha média, caracterizada por início súbito de sinais e sintomas de inflamação associados à presença de efusão na orelha média, evidenciada por abaulamento da membrana timpânica, otorreia recente ou otalgia intensa. É uma das infecções bacterianas mais frequentes da infância e uma das principais causas de prescrição de antibióticos em pediatria.',
+    epidemiologia: 'Acomete principalmente crianças de 6 a 24 meses, com pico de incidência nessa faixa pela anatomia da tuba auditiva. Fatores de risco incluem frequência a creche, ausência de aleitamento materno, uso de chupeta, exposição à fumaça de cigarro e de fogão a lenha e história familiar. No Amazonas, a exposição intensa à fumaça de lenha em domicílios ribeirinhos, a alta frequência de infecções respiratórias virais e a dificuldade de acesso ao otoscópio e ao especialista favorecem diagnósticos tardios, otites supuradas crônicas e perda auditiva com impacto no desenvolvimento da linguagem e na aprendizagem escolar. A mastoidite, embora rara, é mais vista onde o tratamento é retardado.',
+    agente: 'Streptococcus pneumoniae, Haemophilus influenzae não tipável e Moraxella catarrhalis são as principais bactérias; Streptococcus pyogenes e Staphylococcus aureus em menor proporção. Vírus respiratórios frequentemente precedem e coexistem com a infecção bacteriana.',
+    transmissao: 'Não se transmite a otite em si: transmitem-se as infecções respiratórias virais e a colonização bacteriana da nasofaringe, por gotículas e contato.',
+    incubacao: 'Surge habitualmente 2 a 7 dias após o início de uma infecção viral de vias aéreas superiores.',
+    manifestacoes: [
+      'Otalgia de início súbito, que em lactentes se expressa por irritabilidade, choro inconsolável, despertares noturnos e manipulação ou tração da orelha.',
+      'Febre, presente em cerca de metade a dois terços dos casos, habitualmente moderada.',
+      'Antecedente recente de coriza, obstrução nasal e tosse.',
+      'Otoscopia com membrana timpânica abaulada, hiperemiada ou opaca, com mobilidade reduzida à otoscopia pneumática quando disponível.',
+      'Otorreia purulenta de início agudo, quando ocorre perfuração espontânea, geralmente acompanhada de alívio da dor.',
+      'Hipoacusia, sensação de ouvido tampado e, em crianças maiores, zumbido.',
+      'Irritabilidade, recusa alimentar, vômitos e diarreia em lactentes, sintomas inespecíficos que podem dominar o quadro.',
+      'Otite média com efusão (persistência de líquido sem sinais agudos) pode permanecer por semanas após o episódio e não requer antibiótico.',
+      'Complicações: perfuração timpânica persistente, otite média crônica supurativa, mastoidite, paralisia facial periférica, labirintite, meningite e abscesso intracraniano.'
+    ],
+    sinaisAlarme: [
+      'Edema, eritema, dor retroauricular ou deslocamento do pavilhão auricular para fora e para baixo (mastoidite).',
+      'Paralisia facial periférica.',
+      'Rigidez de nuca, cefaleia intensa, vômitos, alteração de consciência ou convulsão (complicação intracraniana).',
+      'Vertigem intensa, nistagmo ou perda auditiva súbita e importante.',
+      'Toxemia, prostração ou sinais de sepse.',
+      'Febre alta persistente após 48 a 72 horas de antibiótico adequado.',
+      'Menor de 6 meses com otite média aguda.',
+      'Otorreia persistente por mais de 2 semanas ou recorrente.'
+    ],
+    diagnosticoDiferencial: ['otite externa aguda', 'corpo estranho em conduto auditivo', 'dor referida por erupção dentária ou abscesso dentário', 'faringoamigdalite_estreptococica', 'adenite cervical', 'parotidite (caxumba)', 'miringite bolhosa', 'disfunção tubária e otite média com efusão', 'trauma ou barotrauma', 'mastoidite'],
+    exames: ['otoscopia (preferencialmente pneumática)', 'hemograma (apenas se toxemia ou suspeita de complicação)', 'pcr', 'cultura de secreção otológica (otorreia persistente ou falha terapêutica)', 'hemocultura (se sepse)', 'tomografia de mastoide e crânio (suspeita de mastoidite ou complicação intracraniana)', 'audiometria ou avaliação audiológica (após episódios recorrentes ou efusão persistente)', 'timpanometria'],
+    criteriosDiagnosticos: [
+      'O diagnóstico exige otoscopia: sinais de efusão na orelha média associados a sinais e sintomas agudos de inflamação.',
+      'Critérios aceitos: abaulamento moderado a intenso da membrana timpânica, ou otorreia de início recente não atribuível a otite externa, ou abaulamento leve associado a otalgia de início nas últimas 48 horas ou a hiperemia intensa da membrana.',
+      'Hiperemia isolada da membrana timpânica, sem abaulamento e sem efusão, não estabelece o diagnóstico e pode decorrer de choro ou febre.',
+      'Otite média com efusão (líquido sem sinais agudos) deve ser diferenciada da otite média aguda, pois não se beneficia de antibiótico.',
+      'Avaliar sempre o outro ouvido e a orofaringe, e examinar mastoide e pares cranianos.',
+      'Exames de imagem apenas diante de suspeita de complicação supurativa.',
+      'Avaliação audiológica indicada após episódios recorrentes, efusão persistente por mais de 3 meses ou suspeita de atraso de linguagem.'
+    ],
+    classificacaoGravidade: [
+      { nivel: 'Não grave', criterios: 'Otalgia leve por menos de 48 horas e temperatura abaixo de 39 graus nas últimas 24 horas, em criança com bom estado geral. Em maiores de 2 anos com quadro unilateral, a observação vigilante por 48 a 72 horas com analgesia é opção, desde que haja garantia de reavaliação.' },
+      { nivel: 'Grave', criterios: 'Otalgia moderada a intensa, otalgia por 48 horas ou mais, ou temperatura igual ou superior a 39 graus. Antibioticoterapia indicada em qualquer idade.' },
+      { nivel: 'Complicada', criterios: 'Mastoidite, paralisia facial, labirintite, complicação intracraniana, sepse ou falha terapêutica com toxemia. Internação, antibiótico parenteral e avaliação otorrinolaringológica de urgência.' }
+    ],
+    tratamento: [
+      'Analgesia é prioridade em todos os casos, independentemente de se prescrever ou não antibiótico: paracetamol, dipirona ou ibuprofeno, em horários regulares nas primeiras 48 horas.',
+      'Antibiótico indicado sempre em menores de 6 meses; em crianças de 6 a 23 meses com otite bilateral ou com qualquer otorreia; e em qualquer idade quando o quadro for grave (otalgia moderada a intensa, dor por 48 horas ou mais, ou temperatura igual ou superior a 39 graus).',
+      'Observação vigilante por 48 a 72 horas, com analgesia e reavaliação garantida, pode ser considerada em crianças de 6 a 23 meses com otite unilateral não grave e em maiores de 24 meses com quadro não grave; essa estratégia exige retorno assegurado, o que deve ser ponderado em comunidades de difícil acesso.',
+      'Amoxicilina é o antibiótico de primeira escolha, em dose alta, por 10 dias em menores de 2 anos e nos casos graves ou com otorreia, e por 5 a 7 dias em crianças maiores de 2 anos com quadro leve a moderado.',
+      'Amoxicilina com clavulanato é indicada quando houver uso de amoxicilina nos últimos 30 dias, conjuntivite purulenta concomitante (sugestiva de Haemophilus), otite recorrente ou falha terapêutica após 48 a 72 horas.',
+      'Alergia à penicilina: cefalexina ou outra cefalosporina em alergia não anafilática; azitromicina ou claritromicina em alergia grave, considerando menor eficácia contra pneumococo resistente.',
+      'Ceftriaxona intramuscular ou intravenosa é opção em vômitos, intolerância à via oral ou falha terapêutica, conforme protocolo do serviço.',
+      'Reavaliar em 48 a 72 horas: a ausência de melhora indica falha terapêutica e necessidade de ampliar o espectro e de reexaminar a mastoide.',
+      'Não usar descongestionantes, anti-histamínicos ou corticoides, que não trazem benefício.',
+      'Gotas otológicas com antibiótico podem ser indicadas em otorreia por perfuração ou em portadores de tubo de ventilação, conforme avaliação; evitar gotas potencialmente ototóxicas com membrana perfurada, conforme bula.',
+      'Não introduzir água, óleo, ervas, fumaça de cigarro, leite materno ou qualquer substância no conduto auditivo.',
+      'Mastoidite ou complicação: internação, antibiótico parenteral de amplo espectro, imagem e avaliação otorrinolaringológica para eventual drenagem.',
+      'Encaminhar à otorrinolaringologia se otite recorrente (3 episódios em 6 meses ou 4 em 12 meses), efusão persistente por mais de 3 meses, perfuração persistente ou suspeita de perda auditiva.'
+    ],
+    medicamentos: [
+      { medId: 'amoxicilina', esquema: 'Primeira escolha: 80 a 90 mg/kg/dia VO dividida 12/12 h (máximo 2 a 3 g/dia), por 10 dias em menores de 2 anos, em otite grave ou com otorreia, e por 5 a 7 dias em maiores de 2 anos com quadro leve a moderado.' },
+      { medId: 'amoxicilina_clavulanato', esquema: 'Falha terapêutica, uso recente de amoxicilina, conjuntivite purulenta associada ou otite recorrente: 80 a 90 mg/kg/dia do componente amoxicilina VO dividida 12/12 h, em formulação com baixa proporção de clavulanato, por 10 dias.' },
+      { medId: 'ceftriaxona', esquema: 'Intolerância à via oral ou falha terapêutica: 50 mg/kg/dia IM ou IV uma vez ao dia por 1 a 3 dias, conforme protocolo do serviço.' },
+      { medId: 'cefalexina', esquema: 'Alergia não anafilática à penicilina: 50 mg/kg/dia VO dividida 6/6 h, conforme protocolo do serviço.' },
+      { medId: 'azitromicina', esquema: 'Alergia grave à penicilina: 10 mg/kg no 1º dia e 5 mg/kg/dia do 2º ao 5º dia VO, conforme bula, considerando menor atividade contra pneumococo resistente.' },
+      { medId: 'claritromicina', esquema: 'Alternativa em alergia à penicilina: 15 mg/kg/dia VO dividida 12/12 h por 10 dias (máximo 1 g/dia).' },
+      { medId: 'paracetamol', esquema: 'Analgesia e febre: 10 a 15 mg/kg/dose VO a cada 6 horas, conforme bula.' },
+      { medId: 'ibuprofeno', esquema: 'Analgesia: 5 a 10 mg/kg/dose VO a cada 6 a 8 horas, conforme bula.' },
+      { medId: 'dipirona', esquema: 'Alternativa analgésica e antitérmica: 10 a 15 mg/kg/dose VO a cada 6 horas, conforme bula.' }
+    ],
+    criteriosInternacao: [
+      'Suspeita de mastoidite, paralisia facial ou complicação intracraniana.',
+      'Toxemia, prostração ou suspeita de sepse.',
+      'Vômitos persistentes ou incapacidade de tomar o antibiótico por via oral.',
+      'Menor de 3 meses com febre e otite média aguda.',
+      'Falha terapêutica com piora clínica apesar de antibiótico adequado.',
+      'Imunossupressão ou comorbidade relevante.',
+      'Impossibilidade de reavaliação em 48 a 72 horas em comunidade distante, quando o quadro exigir vigilância.'
+    ],
+    criteriosUTI: [
+      'Complicação intracraniana com rebaixamento de consciência, convulsão ou hipertensão intracraniana.',
+      'Sepse ou choque séptico.',
+      'Necessidade de suporte ventilatório ou hemodinâmico durante o tratamento de complicação supurativa.'
+    ],
+    criteriosAlta: [
+      'Dor controlada com analgesia oral e febre em resolução.',
+      'Ausência de sinais de mastoidite ou de complicação neurológica.',
+      'Tolerância ao antibiótico por via oral, com esquema e duração compreendidos pelo responsável.',
+      'Responsável orientado sobre sinais de alarme e sobre a necessidade de completar o tratamento.',
+      'Reavaliação agendada e, quando indicado, encaminhamento à otorrinolaringologia e à avaliação audiológica.'
+    ],
+    orientacoes: [
+      'Dar o remédio para dor em horários regulares nos primeiros dias: a dor de ouvido costuma ser forte e melhora bem com analgesia.',
+      'Se o médico optou por aguardar sem antibiótico, retornar em 48 a 72 horas se não houver melhora, ou antes se piorar.',
+      'Quando houver antibiótico, dar todos os dias até o fim, mesmo com a criança melhor.',
+      'Não colocar nada dentro do ouvido: água, óleo, ervas, fumaça de cigarro, leite materno, algodão com produtos ou gotas não prescritas.',
+      'Se sair pus do ouvido, limpar apenas a parte externa com gaze ou pano limpo e comunicar o serviço.',
+      'Evitar fumaça de cigarro e de fogão a lenha dentro de casa e reduzir o uso de chupeta.',
+      'Manter o aleitamento materno e as vacinas em dia, especialmente a pneumocócica e a da gripe.',
+      'Retornar imediatamente se houver inchaço ou vermelhidão atrás da orelha, orelha empurrada para fora, boca torta, dor de cabeça forte, vômitos, pescoço duro, sonolência, convulsão ou febre que continua depois de 3 dias de antibiótico.',
+      'Se a criança parecer não ouvir bem, demorar a falar ou pedir muito para repetir, comunicar na consulta: pode ser necessário avaliar a audição.'
+    ],
+    retorno: 'Reavaliação em 48 a 72 horas nos casos em observação vigilante e em todos os lactentes; nos demais, retorno ao final do tratamento ou antes se não houver melhora. Reavaliação da membrana timpânica em 4 a 6 semanas nos casos com otorreia ou efusão, e encaminhamento audiológico se a efusão persistir por mais de 3 meses ou houver suspeita de perda auditiva.',
+    prevencao: [
+      'Vacinação pneumocócica conjugada e vacina influenza anual, conforme o Calendário Nacional de Vacinação.',
+      'Aleitamento materno exclusivo até os 6 meses e complementado até 2 anos ou mais.',
+      'Evitar alimentar o lactente deitado com mamadeira e reduzir o uso de chupeta após os 6 meses.',
+      'Eliminar a exposição à fumaça de cigarro e reduzir a exposição à fumaça de fogão a lenha, com ventilação adequada da cozinha.',
+      'Higiene das mãos e manejo adequado das infecções respiratórias virais.',
+      'Tratamento adequado dos episódios agudos para prevenir otite crônica supurativa e perda auditiva.',
+      'Acesso a otoscópio e capacitação das equipes de atenção primária e de unidades fluviais para diagnóstico correto.',
+      'Vigilância do desenvolvimento da linguagem em crianças com otites de repetição.'
+    ],
+    fontes: [
+      { nome: 'AAP Clinical Practice Guideline: The Diagnosis and Management of Acute Otitis Media', ano: 2013 },
+      { nome: 'Tratado de Pediatria – Sociedade Brasileira de Pediatria', ano: 2022 },
+      { nome: 'Nelson Textbook of Pediatrics, 22ª edição', ano: 2024 },
+      { nome: 'Manual AIDPI Criança – Ministério da Saúde', ano: 2017 }
+    ],
+    atualizadoEm: '2026-09'
+  },
+
+  {
+    id: 'faringoamigdalite_estreptococica',
+    nome: 'Faringoamigdalite estreptocócica',
+    categoria: 'respiratoria',
+    amazonia: false,
+    cid10: 'J03.0',
+    tags: ['febre', 'dor_garganta', 'linfonodomegalia', 'cefaleia', 'vomitos', 'dor_abdominal', 'exantema', 'fraqueza'],
+    definicao: 'Infecção aguda da faringe e das amígdalas por Streptococcus pyogenes, caracterizada por dor de garganta de início súbito, febre, exsudato amigdaliano e adenomegalia cervical anterior dolorosa, tipicamente sem tosse nem coriza. Seu tratamento adequado previne a febre reumática.',
+    epidemiologia: 'Representa cerca de 15 a 30% das faringites agudas em crianças de 5 a 15 anos, sendo incomum abaixo dos 3 anos. No Amazonas, a importância clínica está na prevenção da febre reumática e da cardiopatia reumática crônica, que permanecem prevalentes em populações com dificuldade de acesso ao diagnóstico e ao antibiótico, e no combate ao uso indiscriminado de antibióticos em faringites virais, que representam a maioria dos casos. Em comunidades ribeirinhas, a dose única de penicilina benzatina tem vantagem prática evidente sobre esquemas orais de 10 dias, pela garantia de tratamento completo em uma única visita.',
+    agente: 'Streptococcus pyogenes (estreptococo beta-hemolítico do grupo A). Estreptococos dos grupos C e G podem causar faringite, sem risco de febre reumática.',
+    transmissao: 'Gotículas respiratórias e contato direto com secreções de nasofaringe de doentes ou portadores; a transmissibilidade é maior na fase aguda e cessa cerca de 24 horas após o início do antibiótico eficaz.',
+    incubacao: '2 a 5 dias.',
+    manifestacoes: [
+      'Início súbito de dor de garganta intensa e febre, frequentemente acompanhadas de cefaleia, mal-estar, náuseas, vômitos e dor abdominal, especialmente em escolares.',
+      'Amígdalas hiperemiadas e aumentadas, com exsudato branco-amarelado em placas ou puntiforme.',
+      'Petéquias em palato mole e úvula edemaciada e hiperemiada.',
+      'Adenomegalia cervical anterior (submandibular e jugulodigástrica) dolorosa à palpação.',
+      'Ausência de tosse, coriza, rouquidão, conjuntivite, úlceras orais e diarreia, cuja presença sugere fortemente etiologia viral.',
+      'Halitose e odinofagia intensa com dificuldade para deglutir alimentos sólidos.',
+      'Exantema micropapular áspero caracteriza a forma escarlatiniforme (escarlatina).',
+      'Complicações supurativas: abscesso periamigdaliano e retrofaríngeo, adenite cervical supurada, otite média, sinusite e, raramente, infecção invasiva.',
+      'Complicações não supurativas: febre reumática (prevenível com antibiótico adequado) e glomerulonefrite difusa aguda (não prevenível pelo antibiótico).'
+    ],
+    sinaisAlarme: [
+      'Trismo, voz abafada, sialorreia, desvio de úvula ou abaulamento assimétrico de palato (abscesso periamigdaliano).',
+      'Rigidez de nuca, torcicolo, dor à mobilização cervical ou abaulamento de parede posterior da faringe (abscesso retrofaríngeo).',
+      'Estridor, dispneia ou incapacidade de deglutir a própria saliva.',
+      'Toxemia, hipotensão ou exantema descamativo difuso (síndrome do choque tóxico).',
+      'Desidratação por recusa de líquidos.',
+      'Febre persistente após 48 a 72 horas de antibiótico adequado.',
+      'Edema periorbitário, urina escura ou oligúria após o quadro (glomerulonefrite).',
+      'Artrite migratória, dispneia, sopro novo ou movimentos involuntários semanas depois (febre reumática).'
+    ],
+    diagnosticoDiferencial: ['faringite viral (adenovírus, rinovírus, influenza, coronavírus)', 'mononucleose', 'herpangina e gengivoestomatite herpética', 'mao_pe_boca', 'escarlatina', 'difteria', 'abscesso periamigdaliano e retrofaríngeo', 'candidíase orofaríngea', 'faringite gonocócica em adolescentes', 'agranulocitose e leucemia', 'doença de Kawasaki'],
+    exames: ['teste rápido para antígeno de estreptococo do grupo A em swab de orofaringe', 'cultura de orofaringe (swab)', 'hemograma (apenas em quadros atípicos ou graves)', 'pcr', 'sorologia para Epstein-Barr e teste de anticorpos heterófilos (suspeita de mononucleose)', 'urina_1 (vigilância de glomerulonefrite)', 'ureia', 'creatinina', 'antiestreptolisina O (ASLO) com valor apenas retrospectivo'],
+    criteriosDiagnosticos: [
+      'A distinção clínica entre faringite viral e estreptocócica é imperfeita: escores clínicos auxiliam, mas não substituem o teste microbiológico quando disponível.',
+      'Escore de Centor modificado por McIsaac pontua: exsudato ou edema amigdaliano, adenomegalia cervical anterior dolorosa, febre relatada acima de 38 graus, ausência de tosse e idade de 3 a 14 anos (ponto adicional), com desconto para idade acima de 45 anos.',
+      'Pontuação baixa torna a etiologia estreptocócica improvável e não justifica antibiótico nem testagem; pontuação intermediária ou alta indica realizar teste rápido ou cultura.',
+      'Teste rápido positivo confirma; teste rápido negativo em criança ou adolescente com quadro sugestivo deve ser seguido de cultura de orofaringe, quando disponível, pela menor sensibilidade do teste rápido.',
+      'Quando não houver teste disponível, decidir com base no quadro clínico e no risco individual e comunitário de febre reumática, conforme a realidade local, evitando a prescrição indiscriminada.',
+      'Presença de tosse, coriza, rouquidão, conjuntivite, úlceras orais ou diarreia torna a etiologia estreptocócica improvável.',
+      'ASLO não tem utilidade para o diagnóstico da infecção aguda.',
+      'Não há indicação de teste de controle após o tratamento em pacientes assintomáticos; portadores crônicos assintomáticos não requerem tratamento de rotina.'
+    ],
+    classificacaoGravidade: [
+      { nivel: 'Não complicada', criterios: 'Odinofagia, febre e exsudato com boa aceitação de líquidos, sem trismo, sem sinais de obstrução e sem toxemia. Tratamento ambulatorial com antibiótico e analgesia.' },
+      { nivel: 'Com complicação supurativa', criterios: 'Abscesso periamigdaliano ou retrofaríngeo, adenite supurada ou celulite cervical. Internação, antibiótico parenteral, imagem e avaliação otorrinolaringológica para eventual drenagem.' },
+      { nivel: 'Invasiva ou com complicação não supurativa', criterios: 'Síndrome do choque tóxico, bacteremia, glomerulonefrite pós-estreptocócica com hipertensão ou oligúria, ou febre reumática com cardite. Internação e manejo especializado.' }
+    ],
+    tratamento: [
+      'Antibioticoterapia indicada quando houver confirmação por teste rápido ou cultura, ou forte suspeita clínica em contexto de risco, com o objetivo principal de prevenir a febre reumática, além de reduzir sintomas, transmissão e complicações supurativas.',
+      'O tratamento pode ser iniciado com segurança até o 9º dia do início dos sintomas e ainda assim prevenir a febre reumática.',
+      'Penicilina benzatina em dose única intramuscular é a opção preferencial quando há risco de baixa adesão ou dificuldade de retorno, situação frequente em comunidades ribeirinhas e indígenas.',
+      'Amoxicilina por via oral por 10 dias é alternativa eficaz e bem tolerada, com posologia simples; a duração de 10 dias é necessária para a erradicação.',
+      'Alergia à penicilina: cefalexina por 10 dias em alergia não anafilática; azitromicina por 5 dias ou claritromicina por 10 dias em alergia grave.',
+      'Analgesia e antitérmico com paracetamol, dipirona ou ibuprofeno, em horários regulares nos primeiros dias, pois a dor é o sintoma que mais incomoda.',
+      'Hidratação com líquidos frios, gelatina, sorvete e alimentos macios; evitar alimentos ácidos, quentes e condimentados.',
+      'Não usar corticoide de rotina; reservar para obstrução de via aérea conforme avaliação especializada.',
+      'Não prescrever antibiótico para faringite com características virais evidentes (tosse, coriza, rouquidão, conjuntivite, úlceras orais): essa é a principal medida de uso racional de antibióticos em pediatria.',
+      'Afastamento escolar até 24 horas após o início do antibiótico eficaz e resolução da febre.',
+      'Reavaliar em 48 a 72 horas: persistência da febre sugere complicação supurativa, má adesão ou diagnóstico alternativo, como mononucleose.',
+      'Avaliar contatos domiciliares sintomáticos; não tratar portadores assintomáticos de rotina.',
+      'Orientar vigilância para sinais de glomerulonefrite em 1 a 3 semanas e de febre reumática em 2 a 4 semanas.',
+      'Indicação de amigdalectomia deve ser avaliada por otorrinolaringologia em casos de faringites estreptocócicas documentadas muito frequentes ou de abscessos de repetição, conforme critérios estabelecidos.'
+    ],
+    medicamentos: [
+      { medId: 'penicilina_benzatina', esquema: 'Dose única IM: 600.000 UI em peso abaixo de 27 kg e 1.200.000 UI em peso igual ou acima de 27 kg. Observar por 30 minutos após a aplicação.' },
+      { medId: 'amoxicilina', esquema: '50 mg/kg/dia VO (máximo 1 g/dia) em 1 ou 2 tomadas por 10 dias; não encurtar a duração.' },
+      { medId: 'cefalexina', esquema: 'Alergia não anafilática à penicilina: 40 a 50 mg/kg/dia VO dividida 12/12 h (máximo 1 g/dia) por 10 dias.' },
+      { medId: 'azitromicina', esquema: 'Alergia grave à penicilina: 12 mg/kg/dia VO uma vez ao dia (máximo 500 mg/dia) por 5 dias, conforme bula.' },
+      { medId: 'claritromicina', esquema: 'Alergia grave à penicilina: 15 mg/kg/dia VO dividida 12/12 h (máximo 500 mg por dose) por 10 dias.' },
+      { medId: 'amoxicilina_clavulanato', esquema: 'Complicação supurativa ou falha terapêutica, conforme avaliação: 45 a 50 mg/kg/dia do componente amoxicilina VO dividida 12/12 h, conforme protocolo do serviço.' },
+      { medId: 'paracetamol', esquema: 'Dor e febre: 10 a 15 mg/kg/dose VO a cada 6 horas, conforme bula.' },
+      { medId: 'ibuprofeno', esquema: 'Odinofagia: 5 a 10 mg/kg/dose VO a cada 6 a 8 horas, conforme bula.' },
+      { medId: 'dipirona', esquema: 'Alternativa analgésica e antitérmica: 10 a 15 mg/kg/dose VO a cada 6 horas, conforme bula.' }
+    ],
+    criteriosInternacao: [
+      'Suspeita de abscesso periamigdaliano ou retrofaríngeo.',
+      'Incapacidade de deglutir líquidos ou saliva, com desidratação.',
+      'Estridor, dispneia ou qualquer sinal de obstrução de via aérea.',
+      'Toxemia, hipotensão ou suspeita de infecção invasiva.',
+      'Vômitos persistentes que impeçam o uso do antibiótico oral.',
+      'Falha do tratamento ambulatorial com piora clínica.',
+      'Complicação não supurativa com repercussão (glomerulonefrite com hipertensão, cardite reumática).'
+    ],
+    criteriosUTI: [
+      'Obstrução de via aérea superior com necessidade de via aérea artificial.',
+      'Choque tóxico estreptocócico ou choque séptico.',
+      'Mediastinite ou fasciíte cervical descendente.',
+      'Insuficiência cardíaca por cardite reumática grave.'
+    ],
+    criteriosAlta: [
+      'Afebril ou com febre em declínio e dor controlada com analgesia oral.',
+      'Aceitação adequada de líquidos e do antibiótico por via oral, ou dose única de penicilina benzatina já administrada.',
+      'Ausência de sinais de complicação supurativa ou de obstrução.',
+      'Responsável orientado sobre a importância de completar 10 dias de antibiótico oral, quando for o caso.',
+      'Orientação sobre vigilância de glomerulonefrite e de febre reumática, com retorno agendado.'
+    ],
+    orientacoes: [
+      'Se foi indicado antibiótico por via oral, dar todos os dias até completar 10 dias, mesmo que a garganta melhore em 2 dias: parar antes aumenta o risco de problema no coração.',
+      'Se foi aplicada a injeção de penicilina benzatina, o tratamento já está completo com a dose única.',
+      'Dar o remédio para dor em horários regulares nos primeiros dias; a dor é o que mais incomoda.',
+      'Oferecer líquidos gelados, gelatina, sorvete, iogurte e alimentos macios; evitar alimentos ácidos, quentes e temperados.',
+      'A criança pode voltar à escola 24 horas depois de começar o antibiótico, se estiver sem febre.',
+      'Nem toda dor de garganta precisa de antibiótico: quando há tosse, coriza, rouquidão e olhos vermelhos, geralmente é virose e o antibiótico não ajuda.',
+      'Trocar a escova de dente após 24 a 48 horas de tratamento e não compartilhar copos e talheres.',
+      'Nas semanas seguintes, observar inchaço nos olhos ou pernas, urina escura ou em pouca quantidade, dor e inchaço nas juntas, falta de ar ou movimentos involuntários, e procurar a unidade de saúde se aparecerem.',
+      'Retornar imediatamente se houver dificuldade para respirar ou engolir saliva, boca que não abre, voz abafada, pescoço inchado ou febre que persiste após 3 dias de antibiótico.'
+    ],
+    retorno: 'Reavaliação em 48 a 72 horas se não houver melhora; retorno programado em 1 a 3 semanas para aferição de pressão arterial e urina rotina quando indicado, e orientação de vigilância para febre reumática por até 4 semanas. Encaminhamento à otorrinolaringologia se episódios documentados muito frequentes.',
+    prevencao: [
+      'Não há vacina disponível contra o estreptococo do grupo A.',
+      'Diagnóstico e tratamento adequados da faringite estreptocócica, principal medida de prevenção primária da febre reumática.',
+      'Uso racional de antibióticos, evitando prescrição em faringites de características virais.',
+      'Higiene das mãos, etiqueta respiratória e não compartilhamento de copos, talheres e garrafas.',
+      'Afastamento escolar por 24 horas após o início do antibiótico.',
+      'Profilaxia secundária com penicilina benzatina em pacientes com febre reumática prévia, conforme o protocolo do Ministério da Saúde.',
+      'Redução da aglomeração domiciliar e melhoria das condições de moradia.',
+      'Garantia de acesso a testes rápidos e a penicilina benzatina nas unidades básicas e fluviais do interior.'
+    ],
+    fontes: [
+      { nome: 'Diretrizes Brasileiras para o Diagnóstico e Tratamento da Febre Reumática – Sociedade Brasileira de Cardiologia e SBP', ano: 2009 },
+      { nome: 'IDSA Clinical Practice Guideline for the Diagnosis and Management of Group A Streptococcal Pharyngitis', ano: 2012 },
+      { nome: 'Tratado de Pediatria – Sociedade Brasileira de Pediatria', ano: 2022 },
+      { nome: 'Nelson Textbook of Pediatrics, 22ª edição', ano: 2024 }
+    ],
+    atualizadoEm: '2026-09'
+  },
+
+  {
+    id: 'laringite_viral',
+    nome: 'Laringotraqueíte viral aguda (crupe)',
+    categoria: 'respiratoria',
+    amazonia: false,
+    cid10: 'J05.0',
+    tags: ['tosse', 'estridor', 'dispneia', 'febre', 'coriza', 'alteracao_consciencia', 'palidez', 'fraqueza'],
+    definicao: 'Infecção viral aguda da laringe, traqueia e brônquios que provoca edema subglótico, caracterizada pela tríade tosse metálica ou ladrante, rouquidão e estridor inspiratório, com graus variáveis de desconforto respiratório. É a principal causa de obstrução aguda de via aérea superior em crianças pequenas.',
+    epidemiologia: 'Acomete principalmente crianças de 6 meses a 3 anos, com pico aos 2 anos e predomínio no sexo masculino. Nas regiões temperadas há sazonalidade de outono e inverno; no Amazonas os casos se distribuem ao longo do ano, com aumento no período chuvoso, acompanhando a circulação de vírus respiratórios. A exposição domiciliar à fumaça de fogão a lenha e ao tabagismo passivo agrava os sintomas. Em comunidades distantes, a principal preocupação é o reconhecimento precoce da obstrução grave e a disponibilidade de corticoide e de adrenalina nebulizada nas unidades básicas e fluviais, uma vez que o transporte até Manaus pode levar horas ou dias.',
+    agente: 'Vírus parainfluenza tipos 1, 2 e 3 (principal causa, especialmente o tipo 1); vírus sincicial respiratório, influenza A e B (associado a formas mais graves), adenovírus, rinovírus, metapneumovírus e coronavírus sazonais.',
+    transmissao: 'Gotículas respiratórias e contato com secreções e superfícies contaminadas.',
+    incubacao: '2 a 6 dias, conforme o agente.',
+    manifestacoes: [
+      'Pródromo de 12 a 48 horas com coriza, obstrução nasal, febre baixa e tosse leve.',
+      'Instalação, tipicamente noturna, de tosse metálica ou ladrante (semelhante a latido de cão), rouquidão e estridor inspiratório.',
+      'Estridor inicialmente apenas ao choro, à agitação ou ao esforço, podendo progredir para estridor em repouso.',
+      'Retração supraesternal e de fúrcula, e nos casos mais graves tiragem intercostal e subcostal e uso de musculatura acessória.',
+      'Piora noturna e com choro e agitação; melhora com o ambiente calmo e com ar fresco e úmido, fenômeno frequentemente relatado pelos pais no trajeto até o serviço.',
+      'Ausculta pulmonar habitualmente limpa, com transmissão do ruído laríngeo; murmúrio vesicular diminuído nos casos graves.',
+      'Febre habitualmente baixa; febre alta com toxemia sugere traqueíte bacteriana ou epiglotite.',
+      'Duração habitual de 3 a 7 dias, com pico de gravidade nas primeiras 24 a 48 horas.',
+      'Crupe espasmódico: episódios recorrentes de início súbito noturno, sem pródromo infeccioso evidente e com resolução rápida.'
+    ],
+    sinaisAlarme: [
+      'Estridor em repouso, especialmente se bifásico.',
+      'Tiragem intensa, uso de musculatura acessória, batimento de asa nasal ou balanço tóraco-abdominal.',
+      'Redução paradoxal do estridor com piora do estado geral (sinal de exaustão e de obstrução crítica, não de melhora).',
+      'Cianose, palidez, saturação abaixo de 92% ou queda do murmúrio vesicular.',
+      'Agitação intensa, sonolência, confusão ou rebaixamento do nível de consciência.',
+      'Sialorreia, incapacidade de engolir, posição de tripé, pescoço estendido ou voz abafada (suspeita de epiglotite ou abscesso).',
+      'Febre alta com toxemia e secreção purulenta (suspeita de traqueíte bacteriana).',
+      'Menor de 6 meses, prematuro, portador de estenose subglótica prévia, anomalia de via aérea ou cardiopatia.',
+      'Falta de resposta à adrenalina nebulizada ou necessidade de doses repetidas.'
+    ],
+    diagnosticoDiferencial: ['epiglotite', 'traqueíte bacteriana', 'abscesso retrofaríngeo', 'aspiração de corpo estranho', 'anafilaxia e angioedema', 'estenose subglótica e laringomalácia', 'papilomatose laríngea', 'difteria (crupe diftérico)', 'queimadura ou inalação de fumaça', 'compressão extrínseca por massa ou anel vascular', 'refluxo gastroesofágico com laringite'],
+    exames: ['oximetria de pulso', 'avaliação clínica seriada com escore de Westley', 'radiografia cervical em anteroposterior (sinal da torre ou da ponta de lápis, apenas em dúvida diagnóstica)', 'radiografia_torax (se suspeita de outra causa)', 'hemograma (apenas se suspeita de infecção bacteriana)', 'pcr', 'gasometria (apenas em casos graves, sem retardar o tratamento)', 'painel viral (não altera conduta, uso epidemiológico)'],
+    criteriosDiagnosticos: [
+      'Diagnóstico clínico: tosse ladrante, rouquidão e estridor inspiratório de início agudo em criança de 6 meses a 3 anos, precedidos por sintomas de via aérea superior.',
+      'Nenhum exame é necessário na apresentação típica; a prioridade é a avaliação da gravidade e o tratamento.',
+      'Evitar manipulação de orofaringe, exames desconfortáveis, punções e procedimentos que provoquem choro em criança com estridor em repouso, pelo risco de agravar a obstrução.',
+      'Escore de Westley auxilia a graduar a gravidade, considerando estridor, tiragem, entrada de ar, cianose e nível de consciência.',
+      'Radiografia cervical apenas em dúvida diagnóstica ou evolução atípica, e nunca antes de estabilizar a criança.',
+      'Considerar epiglotite quando houver sialorreia, disfagia, toxemia, ausência de tosse ladrante e posição de tripé, especialmente em criança não vacinada para Haemophilus influenzae tipo b.',
+      'Considerar traqueíte bacteriana quando houver febre alta, toxemia e ausência de resposta ao tratamento habitual.',
+      'Considerar corpo estranho quando houver início súbito sem pródromo, história de engasgo ou sintomas unilaterais.'
+    ],
+    classificacaoGravidade: [
+      { nivel: 'Leve', criterios: 'Tosse ladrante ocasional, sem estridor em repouso, sem tiragem ou com tiragem leve, criança ativa e com boa aceitação oral. Corticoide em dose única e orientação domiciliar.' },
+      { nivel: 'Moderada', criterios: 'Estridor em repouso com tiragem visível, mas sem agitação importante, sem cianose e com boa entrada de ar. Corticoide e observação em unidade de saúde por 2 a 4 horas; adrenalina nebulizada conforme evolução.' },
+      { nivel: 'Grave', criterios: 'Estridor em repouso proeminente ou bifásico, tiragem intensa, agitação ou sonolência, entrada de ar reduzida, palidez ou cianose. Adrenalina nebulizada imediata, corticoide, oxigênio e observação prolongada, com indicação de internação.' },
+      { nivel: 'Insuficiência respiratória iminente', criterios: 'Redução do estridor com piora clínica, letargia, cianose, saturação baixa apesar de oxigênio, exaustão ou apneia. Emergência: manejo de via aérea por equipe experiente e transferência para UTI.' }
+    ],
+    tratamento: [
+      'Manter a criança calma e no colo do cuidador: choro e agitação aumentam a turbulência do fluxo aéreo e agravam a obstrução. Adiar procedimentos não essenciais.',
+      'Corticoide para todos os casos, inclusive os leves, pois reduz a gravidade, o tempo de permanência e o retorno ao serviço: dexametasona em dose única é a opção de escolha, por via oral quando possível, ou intramuscular se vômitos ou dificuldade de deglutição.',
+      'Prednisolona por via oral é alternativa aceitável quando a dexametasona não estiver disponível, conforme protocolo do serviço.',
+      'Adrenalina nebulizada nos casos moderados a graves com estridor em repouso: proporciona melhora rápida por vasoconstrição da mucosa, com efeito que dura cerca de 2 horas.',
+      'Após adrenalina nebulizada, manter a criança em observação por pelo menos 2 a 4 horas pelo risco de retorno dos sintomas ao término do efeito; a alta só deve ocorrer se não houver estridor em repouso nesse período e se o corticoide tiver sido administrado.',
+      'Oxigênio suplementar se saturação abaixo de 92% ou desconforto importante, ofertado da forma menos incômoda possível, preferencialmente por oxigênio em fluxo livre próximo à face.',
+      'Umidificação ou vapor não demonstraram eficácia e não devem substituir o tratamento; manter apenas se confortarem a criança, sem risco de queimadura.',
+      'Antibióticos não são indicados na laringotraqueíte viral; reservar para traqueíte bacteriana ou epiglotite, com internação e antibiótico parenteral conforme protocolo.',
+      'Broncodilatadores não têm indicação, exceto se houver sibilância concomitante.',
+      'Hidratação oral conforme aceitação; evitar procedimentos venosos desnecessários nos casos leves e moderados.',
+      'Insuficiência respiratória iminente: acionar equipe com experiência em via aérea pediátrica, preparar material para intubação com tubo de diâmetro menor que o previsto para a idade e transferir para UTI.',
+      'Reavaliar a necessidade de nova dose de adrenalina; a exigência de doses repetidas indica internação.'
+    ],
+    medicamentos: [
+      { medId: 'dexametasona', esquema: 'Dose única de 0,15 a 0,6 mg/kg VO, IM ou IV (dose máxima habitualmente 10 a 16 mg); a dose de 0,6 mg/kg é a mais estudada e 0,15 mg/kg tem eficácia comparável nos casos leves. Confirmar apresentação e dose conforme protocolo do serviço e bula.' },
+      { medId: 'prednisolona', esquema: 'Alternativa quando não houver dexametasona: 1 a 2 mg/kg/dia VO, conforme protocolo do serviço; pode exigir dose adicional no dia seguinte pela meia-vida mais curta.' },
+      { medId: 'adrenalina', esquema: 'Nebulização nos casos moderados a graves com estridor em repouso: adrenalina (solução 1 mg/mL) 0,5 mL/kg por dose, máximo de 5 mL, diluída em soro fisiológico, com fluxo de oxigênio; pode ser repetida conforme resposta e protocolo do serviço, mantendo observação mínima de 2 a 4 horas após.' },
+      { medId: 'soro_fisiologico', esquema: 'Diluente para a nebulização e hidratação venosa quando indicada, conforme protocolo do serviço.' },
+      { medId: 'paracetamol', esquema: 'Febre e desconforto: 10 a 15 mg/kg/dose VO a cada 6 horas, conforme bula.' },
+      { medId: 'dipirona', esquema: 'Alternativa antitérmica: 10 a 15 mg/kg/dose VO a cada 6 horas, conforme bula.' },
+      { medId: 'ceftriaxona', esquema: 'Apenas em suspeita de traqueíte bacteriana ou epiglotite, associada a cobertura antiestafilocócica conforme protocolo do serviço: 50 a 100 mg/kg/dia IV.' }
+    ],
+    criteriosInternacao: [
+      'Estridor em repouso persistente após corticoide e observação adequada.',
+      'Necessidade de duas ou mais doses de adrenalina nebulizada.',
+      'Saturação abaixo de 92% ou necessidade de oxigênio.',
+      'Desidratação ou incapacidade de ingerir líquidos.',
+      'Menor de 6 meses, prematuro, portador de anomalia de via aérea, estenose subglótica prévia, síndrome genética ou cardiopatia.',
+      'Suspeita de traqueíte bacteriana, epiglotite ou outra causa de obstrução.',
+      'Retorno ao serviço no mesmo episódio após alta.',
+      'Impossibilidade de retorno rápido ao serviço em caso de piora noturna, especialmente em comunidades ribeirinhas e indígenas com transporte demorado.'
+    ],
+    criteriosUTI: [
+      'Insuficiência respiratória iminente ou instalada, com necessidade de intubação ou de suporte ventilatório.',
+      'Redução do estridor com piora do estado geral, letargia ou exaustão.',
+      'Cianose ou hipoxemia refratária a oxigênio.',
+      'Necessidade de adrenalina nebulizada em intervalos muito curtos ou de infusão contínua conforme protocolo.',
+      'Traqueíte bacteriana ou epiglotite com comprometimento de via aérea.'
+    ],
+    criteriosAlta: [
+      'Ausência de estridor em repouso por pelo menos 2 a 4 horas após a última dose de adrenalina nebulizada.',
+      'Corticoide administrado e documentado.',
+      'Saturação igual ou maior que 92% em ar ambiente e ausência de tiragem significativa.',
+      'Aceitação oral adequada e criança ativa.',
+      'Responsável orientado sobre a piora noturna esperada e sobre sinais de alarme.',
+      'Acesso garantido ao serviço em caso de piora, considerando a distância e o meio de transporte.'
+    ],
+    orientacoes: [
+      'A tosse de cachorro e a rouquidão costumam piorar à noite e durar de 3 a 7 dias, melhorando a cada dia.',
+      'Manter a criança calma e no colo: quanto mais ela chora, mais difícil fica a respiração.',
+      'Pode-se levar a criança para um ambiente arejado ou mais fresco, o que costuma aliviar; não usar vapor de água quente nem panela no fogo, pelo risco de queimadura.',
+      'Não usar xaropes para tosse, antialérgicos, descongestionantes, remédios caseiros ou antibiótico por conta própria.',
+      'Oferecer líquidos em pequenas quantidades e com frequência.',
+      'Evitar fumaça de cigarro e de fogão a lenha dentro de casa e manter o ambiente ventilado.',
+      'Dormir com a cabeceira um pouco elevada pode ajudar.',
+      'Procurar atendimento imediatamente se a criança apresentar barulho na respiração mesmo parada ou dormindo, afundamento das costelas ou do pescoço, lábios ou pontas dos dedos roxos, muita agitação seguida de sonolência, baba constante com dificuldade para engolir, ou se ficar quieta demais e cansada.',
+      'Se a família mora longe, considerar permanecer próximo ao serviço de saúde na primeira noite após o atendimento.'
+    ],
+    retorno: 'Reavaliação em 24 horas nos casos moderados liberados após observação, ou antes se houver piora; nos casos leves, orientação para retorno imediato diante de estridor em repouso ou esforço respiratório. Encaminhar à otorrinolaringologia se houver episódios recorrentes, estridor persistente entre os episódios ou suspeita de anomalia de via aérea.',
+    prevencao: [
+      'Não há vacina específica contra os vírus parainfluenza; a vacinação anual contra influenza reduz casos graves associados a esse vírus.',
+      'Vacinação contra Haemophilus influenzae tipo b (pentavalente) é essencial para a prevenção da epiglotite.',
+      'Higiene das mãos e etiqueta respiratória, com atenção em creches.',
+      'Evitar exposição à fumaça de cigarro e de fogão a lenha, com melhoria da ventilação domiciliar.',
+      'Afastamento de creche durante a fase aguda e febril.',
+      'Capacitação das equipes de atenção primária e fluviais para reconhecimento precoce da obstrução e disponibilidade de dexametasona e adrenalina para nebulização.',
+      'Orientação antecipada às famílias de crianças com episódios recorrentes sobre reconhecimento dos sinais e conduta inicial.'
+    ],
+    fontes: [
+      { nome: 'Tratado de Pediatria – Sociedade Brasileira de Pediatria', ano: 2022 },
+      { nome: 'Nelson Textbook of Pediatrics, 22ª edição', ano: 2024 },
+      { nome: 'Alberta Clinical Practice Guideline for the Diagnosis and Management of Croup', ano: 2022 },
+      { nome: 'Manual AIDPI Criança – Ministério da Saúde', ano: 2017 }
+    ],
+    atualizadoEm: '2026-09'
+  },
+
+  // =====================================================================
+  // AGRAVOS AMAZÔNICOS
+  // =====================================================================
+  {
+    id: 'hantavirose',
+    nome: 'Hantavirose (síndrome cardiopulmonar por hantavírus)',
+    categoria: 'amazonia',
+    amazonia: true,
+    cid10: 'B33.4',
+    tags: ['febre', 'mialgia', 'cefaleia', 'tosse', 'dispneia', 'vomitos', 'dor_abdominal', 'diarreia', 'palidez', 'sudorese', 'alteracao_consciencia', 'calafrios', 'fraqueza', 'sangramento'],
+    definicao: 'Doença viral aguda transmitida por roedores silvestres, que evolui de um pródromo febril inespecífico para insuficiência respiratória aguda por extravasamento capilar pulmonar, com choque e alta letalidade. A fase cardiopulmonar se instala de forma abrupta, em horas.',
+    epidemiologia: 'No Brasil, a hantavirose está associada ao contato com roedores silvestres em áreas rurais, de expansão agrícola e de desmatamento. Na Amazônia, os casos concentram-se em áreas de fronteira agrícola, assentamentos, ramais, garimpos, acampamentos e sítios, com destaque para atividades de limpeza de paióis, tulhas, galpões e casas fechadas há muito tempo, manuseio de grãos armazenados (milho, arroz, castanha), colheita, roçado e acampamento em mata. O período de maior risco coincide com a colheita e o armazenamento de grãos, quando a população de roedores aumenta. A letalidade da síndrome cardiopulmonar no Brasil é elevada, situando-se em torno de 40%, e o desfecho depende criticamente do reconhecimento precoce e do suporte intensivo. Casos em crianças são menos frequentes, mas ocorrem em famílias que residem ou trabalham nessas áreas. A hantavirose é de notificação compulsória imediata.',
+    agente: 'Hantavírus (família Hantaviridae). No Brasil circulam os genótipos Araraquara, Juquitiba, Castelo dos Sonhos, Anajatuba, Laguna Negra e outros, com reservatórios em roedores silvestres das subfamílias Sigmodontinae, como Necromys lasiurus, Oligoryzomys spp. e Calomys spp.',
+    transmissao: 'Inalação de aerossóis formados a partir de excretas secas (urina, fezes e saliva) de roedores infectados, principalmente em ambientes fechados e pouco ventilados, como paióis, galpões, tulhas, casas desabitadas e depósitos de grãos. Também por contato de mucosas ou de pele lesada com excretas e, raramente, por mordedura de roedor. A transmissão interpessoal não é descrita para os genótipos brasileiros, embora tenha sido documentada para o vírus Andes na Argentina e no Chile.',
+    incubacao: '1 a 5 semanas, com média de 2 a 3 semanas.',
+    manifestacoes: [
+      'Fase prodrômica (3 a 6 dias): febre alta, mialgia intensa (especialmente em coxas, região lombar e dorso), cefaleia, calafrios, astenia e mal-estar, quadro indistinguível de outras viroses febris.',
+      'Sintomas gastrointestinais proeminentes: náuseas, vômitos, dor abdominal e diarreia, que podem levar ao diagnóstico equivocado de abdome agudo ou gastroenterite.',
+      'Ausência habitual de coriza, obstrução nasal, dor de garganta e conjuntivite, o que ajuda a diferenciar de outras infecções respiratórias.',
+      'Fase cardiopulmonar, de instalação súbita: tosse seca, taquipneia, dispneia rapidamente progressiva e hipoxemia, evoluindo em horas para edema pulmonar não cardiogênico.',
+      'Hipotensão e choque com redução do débito cardíaco e aumento da resistência vascular sistêmica, padrão distinto do choque séptico clássico.',
+      'Estertores pulmonares difusos, taquicardia e má perfusão periférica.',
+      'Achados laboratoriais característicos e precoces: hemoconcentração com hematócrito elevado, plaquetopenia, leucocitose com desvio à esquerda e presença de linfócitos atípicos ou imunoblastos.',
+      'Hipoalbuminemia, elevação de transaminases e de desidrogenase lática, e acidose metabólica com lactato elevado.',
+      'Radiografia de tórax com infiltrado intersticial bilateral que evolui para infiltrado alveolar difuso, com área cardíaca normal.',
+      'Fase diurética e de convalescença nos sobreviventes, com poliúria e recuperação em dias a semanas, podendo persistir astenia por meses.',
+      'Em crianças, o quadro pode ser confundido inicialmente com dengue, gastroenterite, pneumonia atípica ou leptospirose.'
+    ],
+    sinaisAlarme: [
+      'Qualquer dispneia, taquipneia ou tosse em criança com pródromo febril e história de exposição a roedores: é o marco da transição para a fase cardiopulmonar e exige transferência imediata.',
+      'Saturação de oxigênio abaixo de 92% ou queda progressiva.',
+      'Hematócrito em elevação com plaquetopenia (hemoconcentração por extravasamento capilar).',
+      'Hipotensão, taquicardia, enchimento capilar lentificado, extremidades frias ou oligúria.',
+      'Plaquetas abaixo de 150.000/mm3 ou em queda rápida.',
+      'Lactato elevado ou acidose metabólica.',
+      'Alteração de consciência, agitação ou sonolência.',
+      'Infiltrado pulmonar bilateral na radiografia de tórax.',
+      'História de limpeza de paiol, tulha, galpão, casa fechada, manuseio de grãos armazenados ou acampamento em mata nas últimas 5 semanas.'
+    ],
+    diagnosticoDiferencial: ['dengue', 'leptospirose', 'malaria', 'sepse', 'pneumonia', 'febre_amarela', 'influenza grave', 'oropouche', 'riquetsiose e febre maculosa', 'histoplasmose pulmonar aguda', 'síndrome do desconforto respiratório agudo de outras causas', 'miocardite viral'],
+    exames: ['sorologia IgM e IgG para hantavírus (ELISA) em laboratório de referência', 'RT-PCR para hantavírus em sangue ou coágulo (fase precoce)', 'hemograma com pesquisa de linfócitos atípicos e contagem de plaquetas', 'radiografia_torax', 'gasometria', 'lactato', 'albumina', 'ast', 'alt', 'ureia', 'creatinina', 'eletrolitos', 'coagulograma', 'sorologia_dengue', 'gota espessa para malária', 'hemocultura', 'imuno-histoquímica em material de necropsia (casos fatais)'],
+    criteriosDiagnosticos: [
+      'Caso suspeito (MS): paciente com febre, mialgia, cefaleia e sintomas gastrointestinais, seguidos de dispneia sem causa determinada ou com infiltrado pulmonar bilateral, associado a história de exposição a roedores nas últimas 5 semanas.',
+      'Também é suspeito o paciente com enfermidade febril aguda e sinais de insuficiência respiratória com infiltrado intersticial bilateral, com ou sem antecedente de exposição conhecida, em área com casos.',
+      'A tétrade laboratorial de alta suspeição é: trombocitopenia, hemoconcentração, leucocitose com desvio à esquerda e presença de linfócitos atípicos ou imunoblastos.',
+      'Confirmação laboratorial compatível: IgM reagente para hantavírus, soroconversão de IgG, RT-PCR detectável ou imuno-histoquímica positiva.',
+      'Coletar amostra de sangue na suspeita e encaminhar ao laboratório de referência conforme fluxo da vigilância; não aguardar resultado para iniciar suporte e transferência.',
+      'Investigar ativamente a exposição: limpeza de paiol, tulha ou galpão, abertura de casa fechada, manuseio ou transporte de grãos armazenados, roçado, colheita, garimpo, acampamento ou caça.',
+      'Afastar malária com gota espessa ou teste rápido e investigar dengue e leptospirose em paralelo, pois o diagnóstico diferencial é obrigatório na região.',
+      'Notificação compulsória imediata em até 24 horas e investigação do local provável de infecção pela vigilância ambiental.'
+    ],
+    classificacaoGravidade: [
+      { nivel: 'Fase prodrômica (suspeita)', criterios: 'Febre, mialgia, cefaleia e sintomas gastrointestinais com história de exposição a roedores, sem sintomas respiratórios e com radiografia de tórax normal. Internação para observação com monitorização respiratória e hematológica seriada: a piora é súbita.' },
+      { nivel: 'Fase cardiopulmonar inicial', criterios: 'Tosse, taquipneia, hipoxemia leve e infiltrado intersticial bilateral, com pressão arterial ainda mantida. Transferência imediata para serviço com UTI, oxigenoterapia e restrição hídrica cuidadosa.' },
+      { nivel: 'Fase cardiopulmonar grave', criterios: 'Edema pulmonar não cardiogênico, hipoxemia refratária, choque com baixo débito, acidose e oligúria. UTI com ventilação mecânica protetora, suporte inotrópico e monitorização hemodinâmica; considerar suporte extracorpóreo em centro com disponibilidade.' }
+    ],
+    tratamento: [
+      'Não existe antiviral com eficácia comprovada: o tratamento é de suporte, e o prognóstico depende do reconhecimento precoce e da transferência antes da instalação da insuficiência respiratória.',
+      'Todo caso suspeito deve ser internado, mesmo na fase prodrômica, em serviço com condição de monitorização e com possibilidade de transferência rápida para UTI.',
+      'Monitorização contínua de frequência respiratória, oximetria, pressão arterial, diurese e, seriadamente, de hematócrito e plaquetas: a elevação do hematócrito com queda de plaquetas antecede a fase cardiopulmonar.',
+      'Oxigenoterapia precoce para manter saturação adequada; instalar acesso venoso e preparar a equipe para deterioração rápida.',
+      'Manejo hídrico criterioso e restritivo: o extravasamento capilar pulmonar faz com que a infusão liberal de volume agrave o edema pulmonar. Expansão volêmica deve ser feita em alíquotas pequenas, com reavaliação frequente, e o suporte hemodinâmico deve priorizar o uso precoce de droga vasoativa e inotrópica em vez de grandes volumes, conforme protocolo do serviço.',
+      'Choque por hantavirose tem componente de disfunção miocárdica com baixo débito: considerar inotrópico conforme avaliação e protocolo, com monitorização hemodinâmica quando disponível.',
+      'Ventilação mecânica protetora com estratégia de síndrome do desconforto respiratório agudo quando indicada, conforme protocolo da UTI pediátrica.',
+      'Suporte extracorpóreo (ECMO) tem sido descrito como resgate em casos refratários, disponível apenas em centros selecionados.',
+      'Correção de distúrbios eletrolíticos, acidose e suporte transfusional conforme necessidade e protocolo.',
+      'Antibioticoterapia empírica inicial é frequentemente mantida até que sepse bacteriana e leptospirose sejam razoavelmente afastadas, conforme avaliação clínica e protocolo do serviço.',
+      'Evitar anti-inflamatórios não esteroidais e ácido acetilsalicílico pelo risco de sangramento e de lesão renal, enquanto dengue e outras causas hemorrágicas não estiverem afastadas.',
+      'Notificação compulsória imediata, investigação do local provável de infecção e adoção de medidas de manejo ambiental de roedores no domicílio e na área de exposição.',
+      'Orientar a família e a comunidade sobre a técnica segura de limpeza de ambientes fechados, pois a fonte de exposição frequentemente permanece ativa.'
+    ],
+    medicamentos: [
+      { medId: 'soro_fisiologico', esquema: 'Expansão volêmica criteriosa em alíquotas pequenas, com reavaliação frequente do estado respiratório, pelo risco de agravar o edema pulmonar; volume total e velocidade conforme protocolo do serviço, confirmar conforme protocolo.' },
+      { medId: 'ringer_lactato', esquema: 'Alternativa cristaloide para expansão volêmica criteriosa, conforme protocolo do serviço, confirmar conforme protocolo.' },
+      { medId: 'adrenalina', esquema: 'Suporte hemodinâmico no choque com baixo débito, em infusão contínua, com dose titulada conforme resposta e protocolo da UTI pediátrica, confirmar conforme protocolo.' },
+      { medId: null, nome: 'Noradrenalina e outros vasoativos ou inotrópicos (por exemplo, dobutamina)', esquema: 'Escolha do agente, dose e titulação definidas pelo protocolo de choque da UTI pediátrica, com preferência pelo uso precoce em relação à expansão volêmica liberal. Confirmar conforme protocolo e bula.' },
+      { medId: 'ceftriaxona', esquema: 'Cobertura empírica enquanto leptospirose e sepse bacteriana não forem afastadas: 50 a 100 mg/kg/dia IV, conforme protocolo do serviço.' },
+      { medId: 'paracetamol', esquema: 'Febre e dor: 10 a 15 mg/kg/dose VO a cada 6 horas, conforme bula; preferir em relação a anti-inflamatórios não esteroidais.' },
+      { medId: 'dipirona', esquema: 'Alternativa antitérmica: 10 a 15 mg/kg/dose VO ou IV a cada 6 horas, conforme bula.' }
+    ],
+    criteriosInternacao: [
+      'Todo caso suspeito de hantavirose deve ser internado, ainda que na fase prodrômica e com bom estado geral.',
+      'Febre com mialgia intensa e sintomas gastrointestinais em pessoa com exposição a roedores nas últimas 5 semanas.',
+      'Plaquetopenia, hemoconcentração ou presença de linfócitos atípicos no hemograma.',
+      'Qualquer sintoma respiratório.',
+      'Alteração radiológica pulmonar.',
+      'Impossibilidade de monitorização e de transferência rápida em caso de deterioração, situação comum em áreas rurais e de ramal.'
+    ],
+    criteriosUTI: [
+      'Qualquer sinal de insuficiência respiratória, hipoxemia ou infiltrado pulmonar bilateral.',
+      'Hipotensão, choque ou necessidade de droga vasoativa.',
+      'Necessidade de ventilação mecânica ou não invasiva.',
+      'Acidose metabólica com lactato elevado ou oligúria.',
+      'Plaquetopenia acentuada com hemoconcentração progressiva.',
+      'Alteração de consciência.',
+      'Todo caso na fase cardiopulmonar, mesmo inicial, deve ser conduzido em UTI ou transferido com urgência para serviço que disponha dela.'
+    ],
+    criteriosAlta: [
+      'Resolução da insuficiência respiratória, com saturação adequada em ar ambiente e sem necessidade de suporte.',
+      'Estabilidade hemodinâmica sem drogas vasoativas por período adequado.',
+      'Hematócrito, plaquetas e função renal em normalização.',
+      'Radiografia de tórax em melhora.',
+      'Aceitação oral adequada e diurese normal.',
+      'Notificação realizada e investigação do local provável de infecção em andamento.',
+      'Família orientada sobre manejo ambiental de roedores e sobre a técnica segura de limpeza, com visita da vigilância programada quando possível.',
+      'Retorno ambulatorial agendado para acompanhamento da astenia e da função pulmonar.'
+    ],
+    orientacoes: [
+      'Antes de entrar em paiol, tulha, galpão, depósito ou casa que ficou fechada, abrir portas e janelas e deixar arejar por pelo menos 30 minutos antes de entrar.',
+      'Nunca varrer a seco nem usar vassoura ou ar comprimido em locais com sinais de rato: molhar todo o chão, as bancadas e os cantos com água e água sanitária diluída antes de limpar, e recolher com pano úmido.',
+      'Usar luvas de borracha e, quando possível, máscara ao limpar esses locais; lavar as mãos com água e sabão em seguida.',
+      'Recolher os roedores mortos com pá ou saco plástico, sem tocar com as mãos, e enterrar a pelo menos 50 cm de profundidade ou queimar conforme orientação da vigilância.',
+      'Armazenar grãos, castanha, milho e arroz em recipientes fechados e elevados do chão, longe das paredes; manter alimentos e ração de animais fechados.',
+      'Manter o terreno limpo, capinado e sem entulho, lenha e materiais encostados na casa; vedar buracos e frestas em paredes, telhados e assoalhos.',
+      'Não dormir diretamente no chão em acampamentos, roçados ou ramais; acampar em áreas limpas e afastadas de tocas e depósitos de grãos.',
+      'Informar sempre à equipe de saúde se a criança ou a família esteve em contato com roedores, paióis, grãos armazenados, casas fechadas, garimpo ou acampamento nas últimas semanas.',
+      'Procurar atendimento imediatamente e informar essa exposição se surgir febre com dor no corpo, e voltar com urgência se aparecer qualquer falta de ar, tosse ou cansaço, ainda que leve: a piora é muito rápida.'
+    ],
+    retorno: 'Caso suspeito não se acompanha em casa: a conduta é internação e monitorização. Após a alta, reavaliação em 7 a 15 dias e acompanhamento ambulatorial por alguns meses, pois astenia, redução da tolerância ao esforço e alterações da função pulmonar podem persistir. A vigilância epidemiológica deve realizar investigação do local provável de infecção e busca ativa de outros casos na comunidade.',
+    prevencao: [
+      'Não há vacina disponível.',
+      'Manejo ambiental de roedores: eliminação de fontes de alimento e abrigo, armazenamento correto de grãos em recipientes fechados e elevados, destino adequado do lixo e limpeza do terreno.',
+      'Técnica segura de limpeza de ambientes fechados: arejar por 30 minutos antes de entrar, umedecer as superfícies com solução de água sanitária antes de limpar, nunca varrer a seco, usar luvas e máscara.',
+      'Vedação de frestas e buracos em paredes, telhados, assoalhos e depósitos, mantendo lenha e materiais afastados das casas.',
+      'Orientação a trabalhadores rurais, garimpeiros, extrativistas e acampantes sobre o risco em paióis, tulhas e casas desabitadas.',
+      'Não dormir no chão em áreas de mata e evitar acampar próximo a depósitos de grãos e tocas de roedores.',
+      'Notificação compulsória imediata e investigação do local provável de infecção com adoção de medidas de controle pela vigilância ambiental.',
+      'Educação em saúde nas comunidades rurais e de ramal durante o período de colheita e armazenamento de grãos.'
+    ],
+    fontes: [
+      { nome: 'Guia de Vigilância em Saúde – Ministério da Saúde', ano: 2024 },
+      { nome: 'Manual de Vigilância, Prevenção e Controle das Hantaviroses – Ministério da Saúde', ano: 2013 },
+      { nome: 'OPAS/OMS – Hantavirus: epidemiologia e manejo clínico nas Américas', ano: 2021 },
+      { nome: 'Nelson Textbook of Pediatrics, 22ª edição', ano: 2024 }
+    ],
+    atualizadoEm: '2026-09'
+  }
+,
+
+  {
+    id: 'acidente_arraia',
+    nome: 'Acidente por arraia de água doce',
+    categoria: 'amazonia',
+    amazonia: true,
+    cid10: 'T63.5',
+    tags: ['dor_local', 'feridas', 'lesoes_pele', 'edema', 'febre', 'vomitos', 'sudorese', 'palidez', 'fraqueza', 'mialgia'],
+    definicao: 'Acidente traumático e por envenenamento causado pelo ferrão caudal de arraias de água doce, que provoca dor local desproporcional e imediata, ferida perfurocortante contaminada e necrose tecidual de evolução lenta, com risco elevado de infecção secundária e de úlcera crônica.',
+    epidemiologia: 'É um dos acidentes por animais aquáticos mais frequentes na Amazônia. As arraias de água doce do gênero Potamotrygon habitam rios, igarapés, lagos e praias de areia, permanecendo semienterradas no fundo, o que faz com que o acidente ocorra quando a pessoa pisa sobre o animal. Os casos concentram-se no período da vazante e da seca, quando o volume de água diminui, as praias afloram e as arraias ficam concentradas em áreas rasas onde crianças tomam banho, brincam e ajudam na pesca. Crianças e adolescentes de comunidades ribeirinhas são particularmente acometidos, quase sempre em pés, tornozelos e pernas. O acidente não é fatal na maioria dos casos, mas causa dor intensa, afastamento escolar prolongado, úlceras que demoram semanas a meses para cicatrizar e, com frequência, infecção secundária. Acidentes por animais peçonhentos são de notificação compulsória.',
+    agente: 'Arraias de água doce da família Potamotrygonidae, especialmente do gênero Potamotrygon. O ferrão, localizado na base da cauda, é retrosserrilhado e recoberto por tecido tegumentar produtor de veneno com ação proteolítica, vasoconstritora e necrosante.',
+    transmissao: 'Não é doença transmissível: trata-se de acidente por trauma e inoculação de veneno quando a pessoa pisa ou encosta na arraia semienterrada no fundo arenoso ou lodoso. O movimento defensivo da cauda crava o ferrão e, ao ser retirado, as serrilhas rasgam o tecido, podendo deixar fragmentos do ferrão e do tegumento na ferida.',
+    incubacao: 'Não se aplica. A dor é imediata e atinge intensidade máxima em 30 a 90 minutos; a necrose local se manifesta ao longo de dias e a úlcera pode evoluir por semanas.',
+    manifestacoes: [
+      'Dor local imediata, intensa e desproporcional ao tamanho da ferida, em queimação ou latejante, com irradiação para todo o membro e pico entre 30 e 90 minutos.',
+      'Ferida perfurocortante ou lacerante, frequentemente em pé, tornozelo ou perna, com bordas irregulares e sangramento variável.',
+      'Edema local rapidamente progressivo, eritema, calor e palidez ao redor da lesão.',
+      'Possível presença de fragmentos do ferrão, de serrilhas ou de tecido tegumentar retidos na ferida.',
+      'Manifestações sistêmicas por reflexo doloroso intenso: náuseas, vômitos, sudorese fria, palidez, tontura, cefaleia, taquicardia, hipotensão e, em crianças, síncope.',
+      'Evolução para necrose da pele e do tecido subcutâneo ao redor do ponto de entrada, em 2 a 7 dias, com formação de escara e posterior ulceração.',
+      'Úlcera de bordas irregulares e fundo sujo, de cicatrização lenta, podendo levar semanas a meses.',
+      'Infecção secundária frequente, com celulite, abscesso, linfangite, adenomegalia regional e febre.',
+      'Complicações menos comuns: osteomielite, tenossinovite, artrite séptica e, em ferimentos de tronco ou abdome, lesão de órgãos internos.',
+      'Tétano é risco real em comunidades com cobertura vacinal incompleta.'
+    ],
+    sinaisAlarme: [
+      'Ferimento em tórax, abdome, pescoço ou face, com risco de lesão de órgão interno ou de grande vaso.',
+      'Sangramento abundante ou pulsátil.',
+      'Dor que não cede após as medidas iniciais e a analgesia adequada.',
+      'Febre, eritema em expansão, secreção purulenta, linfangite ou adenomegalia dolorosa (infecção secundária).',
+      'Perda de sensibilidade, perda de força, palidez distal ou ausência de pulso no membro (comprometimento vascular ou neurológico, síndrome compartimental).',
+      'Área de necrose extensa ou de rápida progressão.',
+      'Hipotensão, síncope, alteração de consciência ou sinais de choque.',
+      'Vacinação antitetânica desatualizada ou desconhecida.',
+      'Presença de corpo estranho visível ou suspeita de fragmento retido.'
+    ],
+    diagnosticoDiferencial: ['ferimento_peixe', 'acidente por peixe-elétrico ou por candiru', 'ferimento perfurante por objeto submerso (galho, vidro, prego)', 'acidente_ofidico', 'escorpionismo', 'celulite e erisipela', 'abscesso de partes moles', 'reação alérgica local', 'picada de inseto infectada', 'úlcera de leishmaniose_tegumentar em fase tardia'],
+    exames: ['exame físico detalhado da ferida com pesquisa de corpo estranho', 'radiografia do local (pesquisa de fragmento de ferrão retido e de acometimento ósseo)', 'hemograma', 'pcr', 'cultura de secreção da ferida (se infecção)', 'hemocultura (se febre ou toxemia)', 'ultrassonografia de partes moles (suspeita de coleção ou corpo estranho)', 'cpk', 'creatinina', 'glicemia'],
+    criteriosDiagnosticos: [
+      'Diagnóstico clínico e epidemiológico: história de pisar em arraia ou de contato com o fundo do rio, igarapé ou praia, com dor imediata e intensa e ferida perfurocortante em membro inferior.',
+      'A desproporção entre a intensidade da dor e o tamanho aparente da ferida é característica e deve orientar a suspeita mesmo quando o animal não foi visto.',
+      'Inspecionar cuidadosamente a ferida sob boa iluminação e analgesia adequada, pesquisando fragmentos do ferrão e do tegumento.',
+      'Radiografia do local é útil para identificar fragmentos radiopacos retidos e deve ser considerada em ferimentos profundos ou de evolução arrastada.',
+      'Avaliar a situação vacinal antitetânica em todo acidente.',
+      'Reavaliar entre 48 e 72 horas para identificar necrose e infecção secundária, que são a regra e não a exceção.',
+      'Notificar o acidente conforme a ficha de acidentes por animais peçonhentos do Sistema de Informação de Agravos de Notificação.'
+    ],
+    classificacaoGravidade: [
+      { nivel: 'Leve', criterios: 'Ferimento pequeno em extremidade, dor controlada com as medidas iniciais, sem sinais de infecção, sem corpo estranho e com boa perfusão. Atendimento ambulatorial com limpeza, imersão em água morna, analgesia, profilaxia antitetânica e reavaliação programada.' },
+      { nivel: 'Moderado', criterios: 'Dor intensa e persistente, edema importante, ferida profunda ou extensa, suspeita de fragmento retido, ou sinais iniciais de infecção secundária. Observação em unidade, analgesia otimizada, exploração da ferida e antibioticoterapia.' },
+      { nivel: 'Grave', criterios: 'Ferimento em tronco, abdome, pescoço ou face; sangramento importante; necrose extensa; celulite grave, abscesso, osteomielite ou sinais sistêmicos de infecção; comprometimento vascular ou neurológico. Internação, antibiótico parenteral e avaliação cirúrgica.' }
+    ],
+    tratamento: [
+      'Primeiro atendimento: imersão da região atingida em água morna, na maior temperatura tolerável pela pele sem causar queimadura, em torno de 50 graus, por 30 a 90 minutos ou até o alívio da dor. O calor inativa componentes termolábeis do veneno e é a medida mais eficaz para a dor.',
+      'Testar sempre a temperatura da água com a mão ou o cotovelo de um adulto antes de imergir a criança e manter supervisão contínua, pelo risco real de queimadura, especialmente em crianças pequenas e em áreas com sensibilidade alterada. Acrescentar água quente aos poucos para manter a temperatura durante a imersão.',
+      'Não usar torniquete, garrote ou faixa compressiva; não fazer cortes, sucção, cauterização, aplicação de gelo, urina, fumo, borra de café, ervas, querosene ou qualquer substância caseira sobre a ferida.',
+      'Analgesia sistêmica precoce e em dose adequada: a dor é o principal problema inicial. Considerar bloqueio anestésico local ou regional com anestésico sem vasoconstritor, conforme avaliação e protocolo do serviço, quando a dor não ceder.',
+      'Limpeza abundante da ferida com água corrente limpa e soro fisiológico, seguida de antissepsia, com exploração cuidadosa e remoção de fragmentos do ferrão e de tecido tegumentar sob analgesia adequada.',
+      'Desbridamento do tecido desvitalizado conforme avaliação cirúrgica; a ferida não deve ser suturada de forma primária e hermética, pelo alto risco de infecção, devendo ser deixada aberta para cicatrização por segunda intenção ou com fechamento tardio, conforme protocolo.',
+      'Profilaxia antitetânica conforme a situação vacinal e a característica do ferimento, seguindo o Calendário Nacional de Vacinação e as orientações do Ministério da Saúde, incluindo imunoglobulina antitetânica quando indicada.',
+      'Antibioticoterapia não é obrigatória em todos os casos, mas é indicada em ferimentos profundos, extensos, com retardo no atendimento, com corpo estranho, em imunossuprimidos, diabéticos ou quando já houver sinais de infecção. A cobertura deve contemplar bactérias de ambiente aquático, em especial Aeromonas hydrophila, além de estafilococos e estreptococos.',
+      'Curativos diários com soro fisiológico e cobertura conforme a fase da ferida, com reavaliações frequentes; orientar elevação do membro e repouso relativo.',
+      'Não existe soro antiveneno específico para acidentes por arraia.',
+      'Acompanhamento prolongado da úlcera, que pode levar semanas a meses para cicatrizar, com atenção à dor, à funcionalidade e ao retorno às atividades escolares.',
+      'Notificação do acidente no sistema de vigilância de animais peçonhentos e orientação preventiva à família e à comunidade.'
+    ],
+    medicamentos: [
+      { medId: 'dipirona', esquema: 'Analgesia: 10 a 15 mg/kg/dose VO ou IV a cada 6 horas, conforme bula.' },
+      { medId: 'paracetamol', esquema: 'Analgesia: 10 a 15 mg/kg/dose VO a cada 6 horas, conforme bula.' },
+      { medId: 'ibuprofeno', esquema: 'Analgesia e controle do edema: 5 a 10 mg/kg/dose VO a cada 6 a 8 horas, conforme bula.' },
+      { medId: null, nome: 'Analgésico opioide (por exemplo, morfina)', esquema: 'Dor intensa não controlada pelos analgésicos habituais: indicação, dose e monitorização conforme protocolo do serviço e bula, confirmar conforme protocolo.' },
+      { medId: null, nome: 'Anestésico local sem vasoconstritor (por exemplo, lidocaína)', esquema: 'Infiltração local ou bloqueio regional para controle da dor e para exploração da ferida, conforme protocolo do serviço e bula, confirmar conforme protocolo.' },
+      { medId: 'sulfametoxazol_trimetoprim', esquema: 'Cobertura para Aeromonas em ferimento de ambiente aquático: 40 mg/kg/dia de sulfametoxazol e 8 mg/kg/dia de trimetoprima VO dividida 12/12 h, conforme protocolo do serviço. Contraindicado em menores de 2 meses.' },
+      { medId: null, nome: 'Ciprofloxacino', esquema: 'Alternativa com boa cobertura para Aeromonas em adolescentes ou conforme avaliação individual: dose e duração conforme protocolo do serviço e bula, confirmar conforme protocolo.' },
+      { medId: 'amoxicilina_clavulanato', esquema: 'Cobertura para flora cutânea e anaeróbios, habitualmente associada a cobertura para Aeromonas: 45 a 50 mg/kg/dia do componente amoxicilina VO dividida 12/12 h, conforme protocolo do serviço.' },
+      { medId: 'ceftriaxona', esquema: 'Infecção grave com internação: 50 a 100 mg/kg/dia IV, associada conforme necessidade a cobertura antiestafilocócica e para Aeromonas, segundo protocolo do serviço.' },
+      { medId: 'soro_fisiologico', esquema: 'Lavagem abundante da ferida e curativos diários com SF 0,9%.' },
+      { medId: null, nome: 'Vacina antitetânica (dT ou dTpa) e imunoglobulina antitetânica', esquema: 'Profilaxia conforme a situação vacinal e o tipo de ferimento, segundo as orientações do Ministério da Saúde e do CRIE.' }
+    ],
+    criteriosInternacao: [
+      'Ferimento em tronco, abdome, tórax, pescoço ou face.',
+      'Dor intensa não controlada com analgesia oral.',
+      'Infecção secundária com celulite extensa, abscesso, linfangite ou febre.',
+      'Necrose extensa ou de progressão rápida, com necessidade de desbridamento cirúrgico.',
+      'Suspeita de fragmento retido que exija exploração cirúrgica.',
+      'Sinais de comprometimento vascular, neurológico ou de síndrome compartimental.',
+      'Suspeita de osteomielite, artrite séptica ou tenossinovite.',
+      'Criança imunossuprimida, desnutrida ou com comorbidade relevante.',
+      'Impossibilidade de curativos diários e de reavaliação frequente, situação comum em comunidades ribeirinhas distantes.'
+    ],
+    criteriosUTI: [
+      'Choque séptico ou sepse grave secundária à infecção da ferida.',
+      'Fasciíte necrosante ou infecção invasiva de partes moles com instabilidade hemodinâmica.',
+      'Lesão de órgão interno por ferimento de tronco ou abdome.',
+      'Hemorragia significativa com repercussão hemodinâmica.',
+      'Insuficiência respiratória ou renal associadas.'
+    ],
+    criteriosAlta: [
+      'Dor controlada com analgesia por via oral.',
+      'Ferida limpa, sem sinais de infecção ativa em progressão e com plano de curativo definido.',
+      'Profilaxia antitetânica realizada e registrada.',
+      'Antibiótico, quando indicado, em curso e compreendido pelo responsável.',
+      'Perfusão, sensibilidade e mobilidade preservadas no membro acometido.',
+      'Responsável orientado sobre curativos, elevação do membro, sinais de infecção e necessidade de reavaliações.',
+      'Retorno agendado e, quando possível, articulação com a equipe de saúde da família ou unidade fluvial para os curativos.',
+      'Acidente notificado.'
+    ],
+    orientacoes: [
+      'Logo após o acidente, colocar o pé ou a perna dentro de uma bacia com água morna, o mais quente que a pele suportar sem queimar, por 30 a 90 minutos ou até a dor aliviar. Um adulto deve sempre testar a água antes com a própria mão e ficar do lado o tempo todo.',
+      'Ir acrescentando água quente aos poucos para manter a temperatura, com cuidado para não queimar a criança.',
+      'Não amarrar garrote, corda, pano ou faixa apertada no membro, não cortar a ferida, não chupar, não queimar e não colocar urina, fumo, borra de café, pó de café, querosene, folhas, ervas ou qualquer remédio caseiro.',
+      'Procurar a unidade de saúde mesmo que a ferida pareça pequena: a dor é muito forte e a ferida costuma infeccionar e demorar a fechar.',
+      'Levar o cartão de vacina para a equipe avaliar a vacina contra tétano.',
+      'Fazer o curativo todos os dias como orientado e manter a perna elevada quando estiver sentado ou deitado.',
+      'A ferida pode escurecer e virar uma casca preta nos primeiros dias e depois abrir numa ferida que demora semanas a meses para fechar; isso faz parte da evolução e exige acompanhamento.',
+      'Voltar imediatamente se houver febre, vermelhidão que aumenta ao redor da ferida, pus, cheiro ruim, listras vermelhas subindo pela perna, íngua dolorida, dor que piora, ou se o pé ficar dormente, pálido ou frio.',
+      'Para prevenir: ao entrar no rio, igarapé ou praia, arrastar os pés pelo fundo em vez de pisar firme, o que espanta a arraia; usar calçado fechado ou sandália na praia e ao pescar; evitar áreas rasas de fundo arenoso na vazante, quando as arraias ficam concentradas.'
+    ],
+    retorno: 'Reavaliação em 24 a 48 horas e depois a cada 2 a 3 dias nas primeiras duas semanas, período em que a necrose e a infecção secundária costumam se manifestar; acompanhamento semanal até a cicatrização completa da úlcera, com articulação com a unidade de saúde mais próxima ou equipe fluvial. Retorno imediato diante de febre, piora da dor ou sinais de infecção.',
+    prevencao: [
+      'Arrastar os pés pelo fundo ao caminhar dentro do rio, igarapé ou lago, em vez de pisar firme, para espantar as arraias enterradas na areia.',
+      'Usar calçado fechado, bota de borracha ou sandália resistente ao entrar na água, especialmente em praias e áreas rasas.',
+      'Evitar banho e pesca em áreas rasas de fundo arenoso ou lodoso durante a vazante e a seca, quando as arraias se concentram.',
+      'Supervisão de adultos durante o banho de crianças em praias de rio e igarapés.',
+      'Orientar crianças e adolescentes que ajudam na pesca sobre o manuseio seguro de redes, malhadeiras e do pescado.',
+      'Manter o calendário vacinal antitetânico atualizado em toda a família, medida essencial em comunidades ribeirinhas.',
+      'Capacitar as equipes de saúde locais e as unidades fluviais para o primeiro atendimento com imersão em água morna e para o reconhecimento de infecção secundária.',
+      'Notificação dos acidentes para dimensionar o problema e orientar ações locais de prevenção.'
+    ],
+    fontes: [
+      { nome: 'Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos – Ministério da Saúde', ano: 2001 },
+      { nome: 'Guia de Vigilância em Saúde – Ministério da Saúde', ano: 2024 },
+      { nome: 'Fundação de Medicina Tropical Doutor Heitor Vieira Dourado – protocolos de animais aquáticos da Amazônia', ano: 2022 },
+      { nome: 'Tratado de Pediatria – Sociedade Brasileira de Pediatria', ano: 2022 }
+    ],
+    atualizadoEm: '2026-09'
+  },
+
+  {
+    id: 'ferimento_peixe',
+    nome: 'Ferimento por peixe e infecção de ferida em ambiente aquático',
+    categoria: 'amazonia',
+    amazonia: true,
+    cid10: 'T63.5',
+    tags: ['feridas', 'dor_local', 'lesoes_pele', 'edema', 'febre', 'linfonodomegalia', 'fraqueza', 'prurido'],
+    definicao: 'Ferimento perfurante, cortante ou por mordedura causado por peixes, espinhos, ferrões, nadadeiras, escamas, dentes, anzóis ou instrumentos de pesca, com risco particular de infecção por bactérias de ambiente aquático, como Aeromonas hydrophila e Mycobacterium marinum, além de tétano.',
+    epidemiologia: 'É um agravo cotidiano em comunidades ribeirinhas, indígenas e de pescadores da Amazônia, onde crianças e adolescentes participam da pesca, do transporte e da limpeza do pescado desde cedo. Os ferimentos mais comuns ocorrem em mãos e dedos durante a manipulação do peixe e das redes, e em pés e pernas ao caminhar na água e nas praias. Peixes com espinhos e ferrões, como bagres, mandis, jaús, piranhas com dentes cortantes e traíras, além de anzóis e facas de limpeza, são as causas mais frequentes. A água de rio e igarapé é rica em Aeromonas hydrophila, que causa infecções de partes moles de evolução rápida, e em micobactérias de crescimento lento, em especial Mycobacterium marinum, responsável por nódulos e úlceras de evolução arrastada que muitas vezes são tratados por meses como piodermite comum. A cobertura vacinal antitetânica incompleta em comunidades distantes torna o tétano um risco concreto.',
+    agente: 'Trauma mecânico por espinhos, ferrões, nadadeiras, dentes, escamas ou anzóis, com ou sem veneno associado (bagres e mandis possuem glândulas de veneno na base dos espinhos peitorais e dorsais). Agentes infecciosos relevantes: Aeromonas hydrophila e outras Aeromonas, Vibrio spp., Mycobacterium marinum e outras micobactérias de crescimento rápido, Staphylococcus aureus, Streptococcus pyogenes, Pseudomonas e Clostridium tetani.',
+    transmissao: 'Não é doença transmissível entre pessoas. A contaminação ocorre no momento do trauma, pela introdução de água, muco do peixe, escamas e matéria orgânica na ferida, ou posteriormente, pelo contato continuado da ferida aberta com a água do rio, com o pescado e com redes e instrumentos de pesca.',
+    incubacao: 'Infecção por Aeromonas: instalação rápida, em 8 a 48 horas. Infecção por Mycobacterium marinum: período longo, de 2 a 6 semanas ou mais. Tétano: 3 a 21 dias.',
+    manifestacoes: [
+      'Ferimento perfurante, cortante ou lacerante, mais comum em mãos, dedos, pés e pernas, com dor local imediata.',
+      'Dor intensa e desproporcional quando há veneno associado, como nos espinhos de bagres e mandis, com edema e eritema locais.',
+      'Presença frequente de corpo estranho retido: fragmento de espinho, escama, dente ou anzol, que pode não ser visível na inspeção inicial.',
+      'Infecção precoce por Aeromonas: em 8 a 48 horas surgem eritema em expansão, edema importante, dor intensa, secreção serosa ou purulenta, bolhas, linfangite e febre, com evolução potencialmente rápida para celulite grave, abscesso e, raramente, fasciíte necrosante.',
+      'Infecção por Mycobacterium marinum (granuloma de piscina ou de aquário): nódulo eritemato-violáceo indolor ou pouco doloroso que surge semanas após o ferimento, geralmente em dorso de mão ou dedo, podendo ulcerar e formar cadeia de nódulos ao longo do trajeto linfático, em padrão esporotricoide.',
+      'Adenomegalia regional e linfangite.',
+      'Evolução para tenossinovite, artrite séptica ou osteomielite em ferimentos profundos de mãos e dedos, especialmente por anzol ou espinho retido.',
+      'Feridas crônicas e de cicatrização lenta, mantidas pelo contato continuado com a água do rio durante as atividades diárias.',
+      'Tétano: trismo, rigidez de nuca, disfagia, espasmos musculares e riso sardônico, em pessoa com ferimento contaminado e vacinação incompleta.'
+    ],
+    sinaisAlarme: [
+      'Eritema em rápida expansão, dor desproporcional, bolhas, áreas escurecidas ou crepitação (suspeita de infecção necrosante).',
+      'Febre, calafrios, prostração ou toxemia.',
+      'Linfangite ascendente e adenomegalia dolorosa.',
+      'Secreção purulenta abundante, flutuação ou abscesso.',
+      'Dor à mobilização de um dedo com edema fusiforme e postura em semiflexão (tenossinovite, urgência cirúrgica de mão).',
+      'Limitação de movimento de articulação ou dor óssea persistente (artrite séptica ou osteomielite).',
+      'Corpo estranho retido, anzol farpado incrustado ou ferimento profundo em mão.',
+      'Trismo, rigidez, espasmos musculares ou disfagia (suspeita de tétano).',
+      'Vacinação antitetânica desatualizada ou desconhecida.',
+      'Ferida que não cicatriza após semanas ou nódulos em cadeia ao longo do braço (suspeita de Mycobacterium marinum).'
+    ],
+    diagnosticoDiferencial: ['acidente_arraia', 'escabiose_impetigo', 'celulite e erisipela de outras causas', 'leishmaniose_tegumentar', 'esporotricose', 'paracoccidioidomicose cutânea', 'micobacteriose atípica', 'hanseniase', 'larva_migrans_cutanea', 'miiase secundária em ferida', 'corpo estranho retido sem infecção', 'tuberculose cutânea'],
+    exames: ['exame físico detalhado com pesquisa de corpo estranho', 'radiografia do local (fragmento de espinho, anzol, acometimento ósseo)', 'ultrassonografia de partes moles (coleção ou corpo estranho radiotransparente)', 'cultura de secreção da ferida com antibiograma', 'hemograma', 'pcr', 'vhs', 'hemocultura (se febre ou toxemia)', 'baciloscopia e cultura para micobactérias em fragmento de lesão (suspeita de Mycobacterium marinum)', 'biópsia de pele com histopatologia e cultura específica', 'glicemia'],
+    criteriosDiagnosticos: [
+      'Diagnóstico clínico e epidemiológico: ferimento ocorrido durante pesca, limpeza de pescado, banho de rio, manuseio de rede ou contato com água de rio e igarapé.',
+      'Investigar sempre o mecanismo exato: espinho, ferrão, dente, escama, anzol, faca de limpeza, e o tempo decorrido até o atendimento.',
+      'Pesquisar corpo estranho retido por inspeção sob boa iluminação e analgesia e, quando o ferimento for profundo ou a evolução arrastada, por radiografia ou ultrassonografia.',
+      'Coletar cultura de secreção com antibiograma em toda ferida infectada, orientando a antibioticoterapia definitiva, já que Aeromonas apresenta resistência a penicilinas e a cefalosporinas de primeira geração.',
+      'Considerar Mycobacterium marinum em ferida ou nódulo que não melhora após semanas de antibiótico convencional, especialmente em dorso de mão ou dedo, com nódulos em trajeto linfático; solicitar biópsia com cultura específica e informar ao laboratório a suspeita, pois exige meio e temperatura de incubação apropriados.',
+      'Avaliar a situação vacinal antitetânica em todo ferimento.',
+      'Avaliar função de tendões, sensibilidade e mobilidade em ferimentos de mão e dedos, encaminhando precocemente à cirurgia quando houver suspeita de tenossinovite.',
+      'Considerar imunossupressão, diabetes, desnutrição e hepatopatia como fatores de risco para infecção grave por Aeromonas e Vibrio.'
+    ],
+    classificacaoGravidade: [
+      { nivel: 'Leve', criterios: 'Ferimento superficial, limpo, sem corpo estranho, sem sinais de infecção e com atendimento precoce. Limpeza, curativo, profilaxia antitetânica e orientação, com reavaliação em 48 horas.' },
+      { nivel: 'Moderado', criterios: 'Ferimento profundo, sujo ou com atendimento tardio, dor importante, suspeita de corpo estranho, ou infecção localizada com celulite sem repercussão sistêmica. Antibioticoterapia oral com cobertura para Aeromonas, exploração da ferida e reavaliação frequente.' },
+      { nivel: 'Grave', criterios: 'Celulite extensa, abscesso, linfangite ascendente, tenossinovite, artrite séptica, osteomielite, febre, toxemia, suspeita de infecção necrosante ou de tétano. Internação, antibiótico parenteral e avaliação cirúrgica de urgência.' },
+      { nivel: 'Crônico', criterios: 'Nódulos ou úlcera de evolução arrastada por semanas a meses, com suspeita de Mycobacterium marinum ou de outra causa granulomatosa. Biópsia, cultura específica e tratamento prolongado orientado por infectologia ou dermatologia.' }
+    ],
+    tratamento: [
+      'Lavagem imediata e abundante da ferida com água limpa e corrente e com soro fisiológico, seguida de antissepsia.',
+      'Exploração da ferida sob analgesia adequada, com remoção de fragmentos de espinho, escamas, muco e matéria orgânica; não suturar de forma primária e hermética ferimentos contaminados, profundos, por mordedura ou com atendimento tardio.',
+      'Ferimento por espinho de bagre ou mandi com dor intensa: imersão da área em água morna, na maior temperatura tolerável sem queimar, em torno de 50 graus, por 30 a 90 minutos, com supervisão de um adulto e teste prévio da temperatura, medida que alivia a dor por inativação de componentes termolábeis do veneno.',
+      'Não usar torniquete, cortes, sucção, cauterização, gelo direto sobre a pele, urina, fumo, borra de café, querosene ou preparações caseiras.',
+      'Anzol incrustado: retirada apenas por profissional, sob anestesia local, com a técnica adequada ao tipo de anzol; não puxar no sentido inverso quando houver farpa. Ferimentos em face, olhos, pescoço ou próximos a vasos e tendões exigem avaliação especializada.',
+      'Profilaxia antitetânica conforme a situação vacinal e o tipo de ferimento, seguindo as orientações do Ministério da Saúde, incluindo imunoglobulina antitetânica quando indicada. Ferimentos de pesca são frequentemente classificados como de alto risco para tétano.',
+      'Antibioticoprofilaxia ou tratamento indicados em ferimentos profundos, por mordedura, em mãos e pés, com corpo estranho, com atendimento tardio, extensos, ou em crianças imunossuprimidas, desnutridas ou com hepatopatia. O esquema deve cobrir Aeromonas, além de estafilococos e estreptococos, o que habitualmente exige associação ou escolha específica.',
+      'Sulfametoxazol com trimetoprima ou ciprofloxacino são opções com boa atividade contra Aeromonas; amoxicilina com clavulanato e cefalexina isoladas não cobrem Aeromonas de forma confiável e não devem ser usadas sozinhas nesse contexto.',
+      'Infecção grave com internação: antibiótico parenteral de amplo espectro cobrindo Aeromonas e cocos Gram-positivos, conforme protocolo do serviço e antibiograma.',
+      'Drenagem cirúrgica de abscessos, desbridamento de tecido desvitalizado e exploração de mão com suspeita de tenossinovite, sem retardo.',
+      'Suspeita de Mycobacterium marinum: tratamento prolongado, habitualmente por vários meses e por pelo menos 4 a 8 semanas após a resolução das lesões, com esquemas que podem incluir claritromicina isolada ou associada, conforme orientação de infectologia ou dermatologia e conforme cultura e antibiograma; confirmar conforme protocolo.',
+      'Curativos diários com soro fisiológico e cobertura conforme a fase da ferida; orientar que a ferida deve ser protegida do contato com a água do rio durante a cicatrização, o que exige negociação prática com a rotina de pesca e banho da família.',
+      'Elevação do membro, repouso relativo e analgesia regular.',
+      'Reavaliação obrigatória em 48 horas, pelo risco de infecção por Aeromonas de evolução rápida.',
+      'Notificar acidentes por animais peçonhentos quando houver envenenamento associado, conforme a ficha específica.'
+    ],
+    medicamentos: [
+      { medId: 'sulfametoxazol_trimetoprim', esquema: 'Cobertura para Aeromonas em ferimento de ambiente aquático: 40 mg/kg/dia de sulfametoxazol e 8 mg/kg/dia de trimetoprima VO dividida 12/12 h por 7 a 10 dias, conforme protocolo do serviço. Contraindicado em menores de 2 meses.' },
+      { medId: null, nome: 'Ciprofloxacino', esquema: 'Alternativa com boa atividade contra Aeromonas e Vibrio, conforme avaliação individual e disponibilidade: dose e duração conforme protocolo do serviço e bula, confirmar conforme protocolo.' },
+      { medId: 'cefalexina', esquema: 'Cobertura para estafilococos e estreptococos, associada a um agente com atividade contra Aeromonas (não usar isoladamente em ferimento de ambiente aquático): 50 a 100 mg/kg/dia VO dividida a cada 6 horas, conforme protocolo.' },
+      { medId: 'amoxicilina_clavulanato', esquema: 'Cobertura para flora cutânea, anaeróbios e mordeduras, associada a agente com atividade contra Aeromonas: 45 a 50 mg/kg/dia do componente amoxicilina VO dividida 12/12 h, conforme protocolo do serviço.' },
+      { medId: 'ceftriaxona', esquema: 'Infecção grave com internação: 50 a 100 mg/kg/dia IV, associada a cobertura antiestafilocócica e para Aeromonas conforme protocolo do serviço e antibiograma.' },
+      { medId: 'claritromicina', esquema: 'Suspeita ou confirmação de Mycobacterium marinum: 15 mg/kg/dia VO dividida 12/12 h (máximo 1 g/dia), em tratamento prolongado por vários meses, isolada ou associada conforme orientação de infectologia e antibiograma, confirmar conforme protocolo.' },
+      { medId: 'doxiciclina', esquema: 'Alternativa em maiores de 8 anos para infecções por Vibrio e para micobacteriose, conforme avaliação especializada: dose e duração conforme protocolo do serviço e bula, confirmar conforme protocolo.' },
+      { medId: 'dipirona', esquema: 'Analgesia: 10 a 15 mg/kg/dose VO ou IV a cada 6 horas, conforme bula.' },
+      { medId: 'paracetamol', esquema: 'Analgesia e febre: 10 a 15 mg/kg/dose VO a cada 6 horas, conforme bula.' },
+      { medId: 'ibuprofeno', esquema: 'Analgesia e controle do edema: 5 a 10 mg/kg/dose VO a cada 6 a 8 horas, conforme bula.' },
+      { medId: 'soro_fisiologico', esquema: 'Lavagem abundante da ferida e curativos diários com SF 0,9%.' },
+      { medId: null, nome: 'Vacina antitetânica (dT ou dTpa) e imunoglobulina antitetânica', esquema: 'Profilaxia conforme a situação vacinal e o tipo de ferimento, segundo as orientações do Ministério da Saúde e do CRIE. Ferimentos de pesca e contaminados com terra ou água de rio são geralmente de alto risco.' }
+    ],
+    criteriosInternacao: [
+      'Celulite extensa, abscesso ou linfangite ascendente.',
+      'Febre, calafrios ou toxemia.',
+      'Suspeita de infecção necrosante de partes moles.',
+      'Tenossinovite, artrite séptica ou osteomielite.',
+      'Ferimento profundo de mão com comprometimento funcional ou necessidade de exploração cirúrgica.',
+      'Corpo estranho ou anzol que exija remoção sob anestesia em centro cirúrgico.',
+      'Suspeita de tétano.',
+      'Criança imunossuprimida, desnutrida, diabética ou hepatopata com ferimento infectado.',
+      'Impossibilidade de curativos diários, de antibiótico oral supervisionado ou de retorno rápido em comunidade distante.'
+    ],
+    criteriosUTI: [
+      'Sepse ou choque séptico.',
+      'Fasciíte necrosante ou mionecrose com instabilidade hemodinâmica.',
+      'Tétano com espasmos generalizados, comprometimento respiratório ou disautonomia.',
+      'Insuficiência respiratória ou disfunção orgânica múltipla.'
+    ],
+    criteriosAlta: [
+      'Ausência de febre e de sinais de infecção em progressão.',
+      'Ferida limpa, com plano de curativo definido e material disponível.',
+      'Dor controlada com analgesia oral.',
+      'Profilaxia antitetânica realizada e registrada.',
+      'Antibiótico com cobertura adequada em curso e compreendido pelo responsável.',
+      'Função e sensibilidade preservadas no membro, especialmente em ferimentos de mão.',
+      'Responsável orientado sobre proteger a ferida do contato com a água do rio e sobre sinais de infecção.',
+      'Retorno agendado e, quando possível, apoio da equipe de saúde da família ou unidade fluvial para os curativos.'
+    ],
+    orientacoes: [
+      'Lavar a ferida imediatamente com bastante água limpa e sabão e procurar a unidade de saúde, mesmo que pareça pequena: feridas feitas na água do rio infeccionam com facilidade e rapidez.',
+      'Em espetada de bagre ou mandi, com dor muito forte, mergulhar a área em água morna, o mais quente que a pele suportar sem queimar, por 30 a 90 minutos; um adulto deve testar a água antes e acompanhar o tempo todo.',
+      'Nunca amarrar garrote, cortar, chupar, queimar ou colocar urina, fumo, borra de café, querosene, folhas ou remédio caseiro na ferida.',
+      'Não tentar tirar anzol fisgado em casa, principalmente se estiver na mão, no rosto, perto do olho ou fundo: procurar o serviço de saúde.',
+      'Levar o cartão de vacina: a vacina contra tétano é essencial nesse tipo de ferimento.',
+      'Manter a ferida protegida e seca; evitar que a criança entre no rio, brinque na lama ou ajude na limpeza do peixe enquanto a ferida não fechar, combinando com a equipe alternativas possíveis para a rotina da família.',
+      'Fazer os curativos todos os dias conforme a orientação e manter a mão ou o pé elevado.',
+      'Voltar ao serviço em 2 dias para reavaliação, mesmo que pareça bem.',
+      'Procurar atendimento imediatamente se houver febre, vermelhidão que se espalha rápido, inchaço com pele brilhante, bolhas, pus, cheiro ruim, listras vermelhas subindo pelo braço ou perna, íngua dolorida, dor que piora muito, dedo inchado que não dobra, ou dificuldade para abrir a boca e engolir.',
+      'Se a ferida não fechar em algumas semanas ou surgirem carocinhos em fila subindo pelo braço, voltar: pode ser uma bactéria de crescimento lento que precisa de tratamento específico e prolongado.',
+      'Para prevenir: usar luva ou pano grosso ao segurar o peixe e ao tirar o anzol, calçado fechado na pesca e na praia, e ter cuidado com bagres, mandis, piranhas e traíras ainda vivos no fundo da canoa.'
+    ],
+    retorno: 'Reavaliação obrigatória em 48 horas, pelo risco de infecção por Aeromonas de evolução rápida, e novamente em 5 a 7 dias; nas feridas infectadas, reavaliações a cada 2 a 3 dias até controle. Ferida que não cicatriza em 3 a 4 semanas ou que desenvolve nódulos em trajeto linfático exige reavaliação com biópsia e cultura para micobactérias e encaminhamento a dermatologia ou infectologia.',
+    prevencao: [
+      'Usar luvas, pano grosso ou alicate ao manusear peixes vivos, redes, malhadeiras e anzóis, especialmente bagres, mandis, piranhas e traíras.',
+      'Usar calçado fechado ou bota de borracha na pesca, na praia e ao caminhar em áreas alagadas.',
+      'Manter facas, anzóis e materiais de pesca limpos e organizados, fora do alcance de crianças pequenas.',
+      'Lavar imediatamente qualquer ferimento ocorrido na pesca ou na limpeza do pescado e procurar avaliação.',
+      'Manter feridas abertas protegidas e evitar contato com água de rio até a cicatrização.',
+      'Manter o calendário vacinal antitetânico atualizado em toda a família, com atenção especial a pescadores e crianças que os acompanham.',
+      'Educação em saúde nas comunidades de pesca sobre reconhecimento precoce de infecção e sobre a inadequação das práticas caseiras sobre feridas.',
+      'Garantir disponibilidade de antibióticos com cobertura para Aeromonas e de imunobiológicos antitetânicos nas unidades básicas e fluviais.'
+    ],
+    fontes: [
+      { nome: 'Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos – Ministério da Saúde', ano: 2001 },
+      { nome: 'Guia de Vigilância em Saúde – Ministério da Saúde', ano: 2024 },
+      { nome: 'Red Book – American Academy of Pediatrics (infecções por Aeromonas e Mycobacterium marinum)', ano: 2024 },
+      { nome: 'Nelson Textbook of Pediatrics, 22ª edição', ano: 2024 }
+    ],
+    atualizadoEm: '2026-09'
+  },
+
+  {
+    id: 'miiase',
+    nome: 'Miíase',
+    categoria: 'amazonia',
+    amazonia: true,
+    cid10: 'B87',
+    tags: ['lesoes_pele', 'feridas', 'prurido', 'dor_local', 'edema', 'picada_inseto', 'febre', 'linfonodomegalia'],
+    definicao: 'Infestação de tecidos e órgãos de pessoas ou animais por larvas de moscas. Nas formas furunculoide e cavitária, a larva se desenvolve na pele íntegra ou em feridas e cavidades preexistentes, causando lesão dolorosa com orifício central, sensação de movimentação e risco de infecção secundária.',
+    epidemiologia: 'A miíase é frequente em comunidades rurais, ribeirinhas e indígenas da Amazônia, favorecida pelo clima quente e úmido, pela convivência próxima com animais domésticos e de criação, pela presença de moscas atraídas por restos de alimento, pescado e lixo e pelo grande número de picadas de inseto e feridas expostas nas crianças. A forma furunculoide pelo berne, causada por Dermatobia hominis, é a mais comum e ocorre em áreas de mata e criação de gado. A forma cavitária e de ferida, causada principalmente por Cochliomyia hominivorax, a mosca da bicheira, aparece em feridas abertas, umbigo de recém-nascido, couro cabeludo com pediculose, lesões de escabiose infectada, ouvidos com otorreia e cavidade nasal e oral, sendo mais grave e mais frequente em crianças com má higiene, desnutrição, deficiência intelectual ou situação de vulnerabilidade social. A miíase em ferida de criança deve sempre motivar avaliação do cuidado e do contexto familiar.',
+    agente: 'Dermatobia hominis (berne, mosca varejeira que deposita ovos por meio de outro inseto vetor) na forma furunculoide primária; Cochliomyia hominivorax (mosca da bicheira) e Chrysomya spp. e Lucilia spp. nas formas cavitárias e de ferida.',
+    transmissao: 'Não há transmissão entre pessoas. Dermatobia hominis utiliza um inseto vetor, geralmente um mosquito ou mosca, para transportar seus ovos até a pele; o calor corporal estimula a eclosão e a larva penetra pela pele íntegra ou por orifício de picada. Cochliomyia hominivorax deposita ovos diretamente sobre feridas, secreções, mucosas ou cavidades, onde as larvas eclodem e se alimentam de tecido vivo.',
+    incubacao: 'Na forma furunculoide, a larva leva de 5 a 12 semanas para completar o desenvolvimento, com lesão perceptível a partir de poucos dias após a penetração. Nas formas cavitárias e de ferida, as larvas eclodem em cerca de 12 a 24 horas e causam destruição tecidual rápida em poucos dias.',
+    manifestacoes: [
+      'Miíase furunculoide (berne): nódulo eritematoso, endurecido e doloroso, semelhante a furúnculo, com orifício central por onde se observa saída de secreção serossanguinolenta e, por vezes, a extremidade posterior da larva.',
+      'Sensação de ferroada, pontada ou movimentação dentro da lesão, referida especialmente à noite, sintoma muito sugestivo.',
+      'Localização preferencial em áreas expostas: couro cabeludo, face, pescoço, braços, pernas e dorso.',
+      'Prurido e dor local de intensidade variável, com edema perilesional e adenomegalia regional.',
+      'Miíase de ferida ou cavitária: ferida preexistente com larvas visíveis, odor fétido, secreção abundante, destruição de tecido e sangramento.',
+      'Localizações graves: cavidade nasal, seios da face, ouvido, órbita, boca, gengiva, região perineal e umbigo do recém-nascido, com risco de invasão de estruturas profundas.',
+      'Otite com miíase: otorreia fétida, dor intensa e visualização de larvas no conduto.',
+      'Febre, mal-estar e sinais de infecção secundária bacteriana.',
+      'Em lesões de couro cabeludo de crianças com pediculose intensa, pode haver destruição extensa e exposição óssea em casos negligenciados.',
+      'Associação frequente com desnutrição, escabiose, pediculose, feridas crônicas e negligência no cuidado.'
+    ],
+    sinaisAlarme: [
+      'Miíase em cavidade nasal, ouvido, órbita, boca ou seios da face, com risco de extensão para estruturas profundas e para o sistema nervoso central.',
+      'Miíase em umbigo de recém-nascido ou em lactente pequeno.',
+      'Febre, calafrios, celulite em expansão, linfangite ou toxemia.',
+      'Destruição tecidual extensa, exposição de osso, cartilagem ou tendão.',
+      'Sangramento importante da lesão.',
+      'Cefaleia, rigidez de nuca, alteração de consciência ou sinais neurológicos em miíase de face e cabeça.',
+      'Grande número de larvas ou lesões múltiplas.',
+      'Criança desnutrida, imunossuprimida, com deficiência ou em situação de negligência e vulnerabilidade social.',
+      'Vacinação antitetânica desatualizada.'
+    ],
+    diagnosticoDiferencial: ['furúnculo e abscesso cutâneo', 'escabiose_impetigo', 'tungiase', 'larva_migrans_cutanea', 'leishmaniose_tegumentar', 'picada de inseto infectada', 'cisto epidérmico infectado', 'corpo estranho com granuloma', 'esporotricose', 'úlcera crônica de outras causas'],
+    exames: ['diagnóstico clínico com visualização da larva', 'identificação entomológica da larva removida (quando disponível)', 'hemograma', 'pcr', 'cultura de secreção da ferida (se infecção secundária)', 'radiografia ou tomografia de face e crânio (miíase nasal, orbitária ou auricular extensa)', 'ultrassonografia de partes moles (dúvida diagnóstica)', 'hemocultura (se toxemia)', 'exame_parasitologico_fezes e avaliação nutricional no contexto de vulnerabilidade'],
+    criteriosDiagnosticos: [
+      'Diagnóstico clínico: lesão nodular com orifício central e sensação de movimentação, ou ferida com larvas visíveis.',
+      'A visualização direta da larva, espontânea ou após oclusão do orifício, confirma o diagnóstico.',
+      'A oclusão do orifício com vaselina, esparadrapo ou substância oleosa por alguns minutos força a larva a emergir em busca de ar, facilitando a identificação e a retirada.',
+      'Avaliar sempre a extensão da lesão, a presença de infecção secundária e o número de larvas.',
+      'Em miíase nasal, auricular ou orbitária, indicar exame por especialista e imagem para avaliar extensão.',
+      'Investigar e tratar as condições de base que permitiram a infestação: feridas crônicas, escabiose, pediculose, otorreia, desnutrição, deficiência de autocuidado.',
+      'Avaliar o contexto de cuidado da criança: miíase extensa em ferida, especialmente em couro cabeludo, umbigo ou períneo, é sinal de alerta para negligência e exige avaliação social conforme protocolo do serviço e, quando indicado, comunicação ao Conselho Tutelar.',
+      'Avaliar a situação vacinal antitetânica.'
+    ],
+    classificacaoGravidade: [
+      { nivel: 'Leve (furunculoide localizada)', criterios: 'Uma ou poucas lesões em pele de tronco ou membros, sem infecção secundária significativa, criança em bom estado geral. Remoção ambulatorial da larva, curativo e orientação.' },
+      { nivel: 'Moderada', criterios: 'Lesões múltiplas, miíase de ferida com número moderado de larvas, infecção secundária localizada ou localização em couro cabeludo. Remoção sob analgesia adequada, antibioticoterapia e reavaliação frequente.' },
+      { nivel: 'Grave', criterios: 'Miíase cavitária em nariz, ouvido, órbita, boca ou períneo; miíase em recém-nascido; destruição tecidual extensa; celulite grave, toxemia ou suspeita de extensão para estruturas profundas. Internação, remoção sob sedação ou anestesia e avaliação especializada.' }
+    ],
+    tratamento: [
+      'Miíase furunculoide: ocluir o orifício central com vaselina, pomada oclusiva ou esparadrapo por alguns minutos para dificultar a respiração da larva e favorecer sua emersão, seguida de retirada com pinça, com movimento suave e contínuo.',
+      'Evitar romper ou fragmentar a larva durante a retirada, pois restos podem causar reação inflamatória intensa, granuloma e infecção secundária. Quando a extração não for completa, considerar pequena incisão sob anestesia local, conforme protocolo do serviço.',
+      'Anestesia local pode ser usada para facilitar a remoção em lesões dolorosas, em crianças pouco colaborativas ou em localizações delicadas.',
+      'Miíase de ferida ou cavitária: remoção mecânica de todas as larvas com pinça, sob boa iluminação e analgesia adequada, associada a limpeza abundante com soro fisiológico, desbridamento do tecido desvitalizado e curativos frequentes até que não restem larvas.',
+      'Ivermectina por via oral pode ser usada como adjuvante para facilitar a remoção em miíases extensas, cavitárias ou de difícil acesso, imobilizando e matando as larvas; a indicação segue os critérios de peso e idade do Ministério da Saúde, sendo habitualmente reservada a crianças com peso igual ou superior a 15 kg, confirmar conforme protocolo e bula. Formulações tópicas de ivermectina também têm sido descritas conforme protocolo do serviço.',
+      'Antibioticoterapia sistêmica quando houver infecção bacteriana secundária, celulite, febre ou ferida extensa, com cobertura para estafilococos e estreptococos e, conforme o contexto, para anaeróbios.',
+      'Analgesia adequada durante o procedimento e nos dias seguintes.',
+      'Profilaxia antitetânica conforme a situação vacinal e o tipo de lesão, seguindo as orientações do Ministério da Saúde.',
+      'Miíase nasal, auricular, orbitária, oral ou perineal: avaliação por otorrinolaringologia, oftalmologia ou cirurgia, com remoção sob sedação ou anestesia geral quando necessário e avaliação de extensão por imagem.',
+      'Curativos diários com soro fisiológico e cobertura adequada, com reavaliação frequente até a cicatrização.',
+      'Tratar simultaneamente as condições associadas: escabiose, pediculose, otorreia crônica, feridas crônicas e desnutrição, pois sem isso a recorrência é a regra.',
+      'Não usar querosene, óleo diesel, gasolina, creolina, tabaco, cal ou outras substâncias cáusticas sobre a lesão, práticas comuns na região e causadoras de queimadura química e agravamento da ferida.',
+      'Avaliação social e, quando indicada, articulação com a rede de proteção e comunicação ao Conselho Tutelar em situações que sugiram negligência.'
+    ],
+    medicamentos: [
+      { medId: 'ivermectina', esquema: 'Adjuvante em miíases extensas, cavitárias ou de difícil acesso: 200 microgramas/kg VO em dose única, podendo ser repetida conforme avaliação. Uso habitualmente restrito a crianças com peso igual ou superior a 15 kg; confirmar indicação, peso mínimo e dose conforme protocolo do Ministério da Saúde e bula.' },
+      { medId: 'cefalexina', esquema: 'Infecção bacteriana secundária: 50 a 100 mg/kg/dia VO dividida a cada 6 horas por 7 a 10 dias, conforme protocolo.' },
+      { medId: 'amoxicilina_clavulanato', esquema: 'Ferida extensa, cavitária ou com necessidade de cobertura para anaeróbios: 45 a 50 mg/kg/dia do componente amoxicilina VO dividida 12/12 h, conforme protocolo do serviço.' },
+      { medId: 'ceftriaxona', esquema: 'Infecção grave com internação: 50 a 100 mg/kg/dia IV, conforme protocolo do serviço.' },
+      { medId: 'metronidazol', esquema: 'Associado quando houver ferida fétida com suspeita de anaeróbios, conforme protocolo do serviço.' },
+      { medId: 'paracetamol', esquema: 'Analgesia: 10 a 15 mg/kg/dose VO a cada 6 horas, conforme bula.' },
+      { medId: 'dipirona', esquema: 'Analgesia: 10 a 15 mg/kg/dose VO ou IV a cada 6 horas, conforme bula.' },
+      { medId: 'ibuprofeno', esquema: 'Analgesia e controle do edema: 5 a 10 mg/kg/dose VO a cada 6 a 8 horas, conforme bula.' },
+      { medId: 'soro_fisiologico', esquema: 'Limpeza abundante da lesão e curativos diários com SF 0,9%.' },
+      { medId: 'permetrina', esquema: 'Tratamento simultâneo de escabiose ou pediculose associadas: loção ou creme a 5% para escabiose e loção a 1% para pediculose, conforme protocolo do MS e bula.' },
+      { medId: null, nome: 'Anestésico local sem vasoconstritor (por exemplo, lidocaína)', esquema: 'Infiltração local para facilitar a remoção das larvas, conforme protocolo do serviço e bula, confirmar conforme protocolo.' },
+      { medId: null, nome: 'Vacina antitetânica (dT ou dTpa) e imunoglobulina antitetânica', esquema: 'Profilaxia conforme a situação vacinal e o tipo de lesão, segundo as orientações do Ministério da Saúde e do CRIE.' }
+    ],
+    criteriosInternacao: [
+      'Miíase em cavidade nasal, ouvido, órbita, boca, seios da face ou períneo.',
+      'Miíase em recém-nascido ou lactente pequeno, especialmente umbilical.',
+      'Grande número de larvas ou destruição tecidual extensa.',
+      'Infecção secundária com celulite extensa, abscesso, linfangite ou febre.',
+      'Necessidade de remoção sob sedação ou anestesia geral.',
+      'Sangramento importante.',
+      'Criança desnutrida grave, imunossuprimida ou com deficiência que impeça o cuidado domiciliar.',
+      'Situação de negligência ou vulnerabilidade social que comprometa o tratamento e o cuidado da ferida.'
+    ],
+    criteriosUTI: [
+      'Sepse ou choque séptico secundário à infecção da ferida.',
+      'Extensão para sistema nervoso central com meningite ou abscesso.',
+      'Comprometimento de via aérea em miíase oral ou faríngea extensa.',
+      'Tétano com espasmos generalizados ou comprometimento respiratório.',
+      'Instabilidade hemodinâmica por sangramento ou infecção invasiva.'
+    ],
+    criteriosAlta: [
+      'Todas as larvas removidas, confirmado por inspeção cuidadosa da lesão.',
+      'Ferida limpa, em processo de granulação e sem sinais de infecção em progressão.',
+      'Ausência de febre.',
+      'Dor controlada com analgesia oral.',
+      'Profilaxia antitetânica realizada e registrada.',
+      'Condições associadas (escabiose, pediculose, otorreia, desnutrição) identificadas e em tratamento.',
+      'Responsável orientado sobre curativos, sinais de alarme e prevenção de recorrência, com material de curativo garantido.',
+      'Avaliação social realizada quando indicada e rede de proteção acionada nos casos necessários.',
+      'Retorno agendado com a unidade de saúde da família ou equipe fluvial.'
+    ],
+    orientacoes: [
+      'Não colocar querosene, óleo diesel, gasolina, creolina, cal, fumo ou qualquer produto forte na ferida: isso queima a pele, piora a lesão e não resolve o problema.',
+      'A retirada das larvas deve ser feita na unidade de saúde; tentar espremer ou cavar a ferida em casa pode quebrar a larva dentro e piorar a inflamação.',
+      'Manter a ferida limpa e coberta com curativo, trocando conforme a orientação recebida.',
+      'Lavar bem as feridas, picadas e arranhões da criança todos os dias e mantê-los cobertos, pois é neles que a mosca coloca os ovos.',
+      'Tratar sarna, piolho, ferida de ouvido e outras feridas de toda a família ao mesmo tempo, conforme a orientação, para evitar que a miíase volte.',
+      'Manter o lixo em recipiente fechado, não deixar restos de comida, peixe ou carne expostos e manter o terreno limpo.',
+      'Cuidar dos animais da casa, que também podem ter bicheira e atrair moscas; procurar orientação veterinária quando possível.',
+      'Usar telas nas janelas quando possível, mosquiteiro e roupas que cubram os braços e as pernas em áreas com muita mosca e mosquito.',
+      'Levar o cartão de vacina para avaliar a vacina contra tétano.',
+      'Voltar imediatamente se houver febre, vermelhidão que se espalha, pus, cheiro forte, dor que piora, sangramento, inchaço no rosto, dor de cabeça forte, ou se aparecerem novas larvas.',
+      'Voltar em todas as consultas marcadas até a ferida fechar completamente.'
+    ],
+    retorno: 'Reavaliação em 24 a 48 horas após a remoção, para confirmar que não restaram larvas e avaliar infecção secundária, e depois a cada 2 a 3 dias até a ferida estar limpa e em cicatrização; acompanhamento semanal até o fechamento completo. Reavaliação do estado nutricional, do calendário vacinal e das condições de higiene e cuidado da criança, com seguimento pela equipe de saúde da família.',
+    prevencao: [
+      'Lavar e cobrir feridas, picadas de inseto, arranhões e o coto umbilical do recém-nascido, impedindo que as moscas depositem ovos.',
+      'Tratamento precoce de escabiose, pediculose, impetigo, otorreia crônica e feridas crônicas, que são as portas de entrada mais comuns.',
+      'Higiene corporal regular e troca de roupas, com apoio às famílias que enfrentam dificuldade de acesso a água e sabão.',
+      'Destino adequado do lixo em recipientes fechados, remoção de restos de alimento, pescado e carcaças e limpeza do terreno.',
+      'Uso de telas em janelas, mosquiteiros e roupas que cubram braços e pernas em áreas de mata e criação de animais.',
+      'Cuidado veterinário dos animais domésticos e de criação, tratando bicheiras que mantêm a população de moscas.',
+      'Vigilância do cuidado de crianças pequenas, com deficiência ou acamadas, com atenção redobrada a ouvidos, nariz, boca e região perineal.',
+      'Manutenção do calendário vacinal antitetânico atualizado.',
+      'Educação em saúde nas comunidades sobre o risco das substâncias cáusticas aplicadas em feridas.'
+    ],
+    fontes: [
+      { nome: 'Guia de Vigilância em Saúde – Ministério da Saúde', ano: 2024 },
+      { nome: 'Tratado de Pediatria – Sociedade Brasileira de Pediatria', ano: 2022 },
+      { nome: 'Nelson Textbook of Pediatrics, 22ª edição', ano: 2024 },
+      { nome: 'OPAS/OMS – Doenças tropicais negligenciadas relacionadas à pele', ano: 2022 }
+    ],
+    atualizadoEm: '2026-09'
+  },
+
+  {
+    id: 'tungiase',
+    nome: 'Tungíase (bicho-de-pé)',
+    categoria: 'amazonia',
+    amazonia: true,
+    cid10: 'B88.1',
+    tags: ['lesoes_pele', 'prurido', 'dor_local', 'feridas', 'edema', 'febre', 'linfonodomegalia', 'picada_inseto'],
+    definicao: 'Ectoparasitose cutânea causada pela penetração da fêmea grávida da pulga Tunga penetrans na epiderme, geralmente nos pés, formando uma pápula esbranquiçada com ponto central escuro, pruriginosa e dolorosa, com risco importante de infecção bacteriana secundária e de tétano.',
+    epidemiologia: 'A tungíase é uma doença tropical negligenciada fortemente associada à pobreza, ao piso de terra batida, à ausência de calçados e à convivência com cães, porcos e galinhas. Na Amazônia é frequente em comunidades rurais, ribeirinhas, periurbanas e indígenas, com maior ocorrência no período seco, quando o solo arenoso e as áreas sombreadas ao redor das casas, chiqueiros e galinheiros favorecem o ciclo da pulga. Acomete de forma desproporcional crianças em idade escolar e idosos, e a carga parasitária costuma ser maior nos pés de crianças que brincam descalças no terreiro e na areia. As consequências vão além da lesão: dor ao caminhar, dificuldade de frequentar a escola, deformidade ungueal, infecção bacteriana secundária com risco de sepse e tétano, e estigma social. É doença frequentemente subestimada e raramente notificada, ainda que de grande impacto local.',
+    agente: 'Tunga penetrans, pulga também conhecida como bicho-de-pé, jatecuba ou pulga-da-areia. A fêmea fecundada penetra na epiderme e sofre hipertrofia, aumentando de tamanho em cerca de 2.000 vezes enquanto desenvolve os ovos.',
+    transmissao: 'Não há transmissão direta entre pessoas. A infestação ocorre pelo contato da pele, principalmente dos pés, com solo arenoso, seco e sombreado contaminado por pulgas, em terreiros, chiqueiros, currais, galinheiros e interior de casas com piso de terra batida. Cães, porcos, gatos, ratos e outros animais atuam como reservatórios e mantêm o ciclo no peridomicílio.',
+    incubacao: 'A penetração é rápida e frequentemente despercebida. A lesão característica torna-se visível em 1 a 2 dias e a fêmea completa o ciclo em cerca de 3 a 4 semanas, quando expele os ovos e morre, com involução e descamação da lesão.',
+    manifestacoes: [
+      'Prurido e sensação de ferroada ou corpo estranho no local da penetração, frequentemente referidos antes de a lesão ser visível.',
+      'Pápula ou nódulo esbranquiçado ou amarelado de 3 a 10 mm, com halo eritematoso e ponto central escuro, correspondente à porção posterior da pulga.',
+      'Localização preferencial nos pés: região periungueal, subungueal, entre os dedos, na planta, no calcanhar e nas bordas laterais; também podem ocorrer em mãos, joelhos, nádegas e cotovelos em crianças que se sentam e engatinham no solo.',
+      'Dor local que piora ao caminhar e ao calçar sapatos, com prejuízo à marcha, às brincadeiras e à frequência escolar.',
+      'Saída de material esbranquiçado (ovos) pelo orifício central e, ao final do ciclo, formação de crosta escura com descamação.',
+      'Lesões múltiplas e agrupadas em infestação intensa, com edema, deformidade dos dedos e das unhas e dificuldade de calçar.',
+      'Infecção bacteriana secundária muito frequente: pústula, abscesso, celulite, linfangite, adenomegalia dolorosa e febre.',
+      'Complicações em infestações graves ou negligenciadas: onicodistrofia, perda de unha, úlcera crônica, osteomielite, deformidade e limitação funcional, autoamputação de dedos em casos extremos e tétano.',
+      'Fissuras e hiperceratose associadas em pés de crianças que andam descalças.',
+      'Estigma e afastamento escolar associados às lesões visíveis e à dor.'
+    ],
+    sinaisAlarme: [
+      'Febre, calafrios ou toxemia.',
+      'Eritema em expansão, pústula, secreção purulenta, linfangite ou adenomegalia dolorosa.',
+      'Abscesso, flutuação ou área de necrose.',
+      'Dor óssea, limitação da mobilidade articular ou drenagem persistente (suspeita de osteomielite ou artrite séptica).',
+      'Grande número de lesões, lesões confluentes, edema difuso do pé ou dificuldade de deambular.',
+      'Trismo, rigidez de nuca, disfagia ou espasmos musculares (suspeita de tétano).',
+      'Vacinação antitetânica desatualizada ou desconhecida.',
+      'Criança desnutrida, diabética, imunossuprimida ou com anemia falciforme.',
+      'Lesões em crianças pequenas com sinais de negligência e falta de cuidado.'
+    ],
+    diagnosticoDiferencial: ['escabiose_impetigo', 'miiase', 'larva_migrans_cutanea', 'verruga plantar', 'corpo estranho na planta do pé (espinho, farpa)', 'paroníquia e unha encravada', 'foliculite e furúnculo', 'picada de inseto infectada', 'granuloma de corpo estranho', 'melanoma subungueal (em lesões pigmentadas persistentes de adolescentes)'],
+    exames: ['diagnóstico clínico com inspeção sob boa iluminação e, quando disponível, dermatoscopia', 'hemograma (se infecção secundária)', 'pcr', 'cultura de secreção da lesão (se infecção)', 'radiografia do pé (suspeita de osteomielite ou de corpo estranho)', 'hemocultura (se febre ou toxemia)', 'glicemia', 'avaliação nutricional'],
+    criteriosDiagnosticos: [
+      'Diagnóstico clínico: pápula esbranquiçada com ponto central escuro em pé de criança que anda descalça, com prurido e dor local.',
+      'A dermatoscopia, quando disponível, auxilia ao mostrar o orifício central e a estrutura do parasita.',
+      'Examinar sistematicamente todos os pés, dedos, regiões periungueais e subungueais, plantas, espaços interdigitais, calcanhares, mãos, joelhos e nádegas, pois lesões múltiplas são comuns e passam despercebidas.',
+      'Classificar o estágio das lesões e estimar a carga parasitária, o que orienta a conduta e o acompanhamento.',
+      'Identificar e registrar sinais de infecção bacteriana secundária, que é a principal causa de morbidade.',
+      'Avaliar a situação vacinal antitetânica em todo paciente com tungíase, medida essencial dada a via de entrada e a associação descrita com tétano.',
+      'Avaliar o ambiente domiciliar e peridomiciliar e a presença de animais, pois o tratamento individual sem manejo ambiental resulta em reinfestação.',
+      'Rastrear outros moradores da casa, especialmente crianças e idosos, já que a infestação costuma ser familiar.'
+    ],
+    classificacaoGravidade: [
+      { nivel: 'Leve', criterios: 'Poucas lesões (até cerca de 5), sem sinais de infecção secundária, marcha preservada, criança em bom estado geral. Remoção ambulatorial das pulgas, antissepsia, profilaxia antitetânica e orientação ambiental.' },
+      { nivel: 'Moderada', criterios: 'Lesões múltiplas ou agrupadas, dor que limita a marcha, lesões periungueais ou subungueais, ou infecção secundária localizada. Remoção sob analgesia, antibioticoterapia oral e reavaliação em poucos dias.' },
+      { nivel: 'Grave', criterios: 'Infestação intensa com dezenas de lesões, edema difuso do pé, celulite extensa, abscesso, linfangite, febre, deformidade ungueal importante, suspeita de osteomielite ou de tétano, ou criança com comorbidade. Internação, antibiótico parenteral e avaliação cirúrgica.' }
+    ],
+    tratamento: [
+      'Remoção mecânica do parasita é o tratamento padrão: extração completa da pulga com agulha estéril ou cureta, sob antissepsia rigorosa, em ambiente de saúde e com instrumental estéril e individual.',
+      'Não usar agulha, alfinete, espinho ou instrumento compartilhado e não reutilizado, prática comum na comunidade e associada a infecção secundária e a transmissão de patógenos de transmissão sanguínea.',
+      'A cavidade resultante deve ser limpa com antisséptico e coberta; realizar a remoção com analgesia adequada, especialmente em crianças com muitas lesões.',
+      'Em infestação intensa, programar sessões de remoção, priorizando as lesões mais dolorosas e as com sinais de infecção, com retornos frequentes.',
+      'Aplicação tópica de dimeticona de baixa viscosidade duas vezes ao dia por vários dias tem eficácia demonstrada para matar as pulgas incrustadas e é uma alternativa não invasiva, especialmente útil em infestações intensas e em programas comunitários; disponibilidade e esquema conforme protocolo do serviço, confirmar conforme protocolo.',
+      'Vaselina ou óleos oclusivos podem ser usados como medida auxiliar para reduzir a viabilidade do parasita quando não houver disponibilidade de dimeticona, conforme protocolo do serviço.',
+      'Ivermectina oral não tem eficácia consistentemente demonstrada na tungíase e não deve ser considerada tratamento de primeira linha; seu uso eventual deve seguir avaliação individual, critérios de peso e idade e protocolo do serviço, confirmar conforme protocolo e bula.',
+      'Antibioticoterapia sistêmica quando houver infecção bacteriana secundária, com cobertura para estafilococos e estreptococos; em infecção extensa, febre ou toxemia, internação e antibiótico parenteral.',
+      'Profilaxia antitetânica conforme a situação vacinal e o tipo de lesão, seguindo as orientações do Ministério da Saúde; a atualização vacinal de toda a família é parte do cuidado.',
+      'Analgesia regular, pois a dor costuma ser subestimada e compromete a marcha e a frequência escolar.',
+      'Curativos e cuidados com os pés: lavagem diária com água e sabão, secagem entre os dedos, hidratação da pele, corte adequado das unhas e tratamento de fissuras e hiperceratose.',
+      'Tratar simultaneamente os demais moradores afetados e orientar o manejo ambiental, sem o que a reinfestação ocorre em semanas.',
+      'Manejo ambiental e animal: cimentar ou compactar o piso, manter o terreiro varrido e limpo, afastar chiqueiros, galinheiros e canis da casa e tratar os animais domésticos, conforme orientação veterinária disponível.',
+      'Articulação com a equipe de saúde da família, com a escola e com a vigilância ambiental, uma vez que a tungíase é um problema comunitário e não apenas individual.'
+    ],
+    medicamentos: [
+      { medId: null, nome: 'Dimeticona de baixa viscosidade tópica', esquema: 'Aplicação sobre as lesões duas vezes ao dia por vários dias consecutivos, conforme protocolo do serviço e bula; alternativa não invasiva à remoção mecânica, especialmente em infestação intensa. Confirmar disponibilidade e esquema conforme protocolo.' },
+      { medId: 'cefalexina', esquema: 'Infecção bacteriana secundária: 50 a 100 mg/kg/dia VO dividida a cada 6 horas por 7 a 10 dias, conforme protocolo.' },
+      { medId: 'amoxicilina_clavulanato', esquema: 'Infecção extensa ou com necessidade de cobertura ampliada: 45 a 50 mg/kg/dia do componente amoxicilina VO dividida 12/12 h, conforme protocolo do serviço.' },
+      { medId: 'ceftriaxona', esquema: 'Infecção grave com internação: 50 a 100 mg/kg/dia IV, conforme protocolo do serviço.' },
+      { medId: 'sulfametoxazol_trimetoprim', esquema: 'Alternativa em suspeita de Staphylococcus aureus resistente à meticilina de origem comunitária: 8 a 12 mg/kg/dia de trimetoprima VO dividida 12/12 h, conforme protocolo do serviço e perfil local. Contraindicado em menores de 2 meses.' },
+      { medId: 'ivermectina', esquema: 'Eficácia não consistentemente demonstrada na tungíase; não é tratamento de primeira linha. Se considerada em situação específica, 200 microgramas/kg VO em dose única, habitualmente restrita a crianças com peso igual ou superior a 15 kg, confirmar conforme protocolo do Ministério da Saúde e bula.' },
+      { medId: 'paracetamol', esquema: 'Analgesia: 10 a 15 mg/kg/dose VO a cada 6 horas, conforme bula.' },
+      { medId: 'dipirona', esquema: 'Analgesia: 10 a 15 mg/kg/dose VO a cada 6 horas, conforme bula.' },
+      { medId: 'ibuprofeno', esquema: 'Analgesia e controle do edema: 5 a 10 mg/kg/dose VO a cada 6 a 8 horas, conforme bula.' },
+      { medId: 'soro_fisiologico', esquema: 'Limpeza das lesões e curativos com SF 0,9%.' },
+      { medId: null, nome: 'Vacina antitetânica (dT ou dTpa) e imunoglobulina antitetânica', esquema: 'Profilaxia conforme a situação vacinal e o tipo de lesão, segundo as orientações do Ministério da Saúde e do CRIE; atualizar o esquema de toda a família.' }
+    ],
+    criteriosInternacao: [
+      'Celulite extensa, abscesso ou linfangite ascendente.',
+      'Febre, calafrios ou toxemia.',
+      'Suspeita de osteomielite, artrite séptica ou necrose.',
+      'Infestação muito intensa com incapacidade de deambular e necessidade de remoção sob sedação.',
+      'Suspeita de tétano.',
+      'Criança desnutrida grave, diabética, imunossuprimida ou com anemia falciforme e infecção associada.',
+      'Impossibilidade de remoção adequada, de curativos e de acompanhamento no território, em comunidades muito distantes.',
+      'Situação de negligência ou vulnerabilidade social grave.'
+    ],
+    criteriosUTI: [
+      'Sepse ou choque séptico.',
+      'Tétano com espasmos generalizados, comprometimento respiratório ou disautonomia.',
+      'Fasciíte necrosante ou infecção invasiva de partes moles com instabilidade hemodinâmica.',
+      'Disfunção orgânica múltipla.'
+    ],
+    criteriosAlta: [
+      'Lesões removidas ou em tratamento tópico adequado, com plano definido para as lesões remanescentes.',
+      'Ausência de febre e de sinais de infecção em progressão.',
+      'Dor controlada e marcha possível.',
+      'Profilaxia antitetânica realizada e registrada.',
+      'Antibiótico, quando indicado, em curso e compreendido pelo responsável.',
+      'Família orientada sobre cuidados com os pés, uso de calçados e manejo ambiental e animal.',
+      'Demais moradores avaliados e tratados quando necessário.',
+      'Retorno agendado com a equipe de saúde da família ou unidade fluvial e articulação com a escola quando houver afastamento.'
+    ],
+    orientacoes: [
+      'Não tirar o bicho-de-pé em casa com agulha, alfinete, espinho ou canivete: além de doer e infeccionar, o mesmo instrumento usado em várias pessoas pode transmitir doenças. A retirada deve ser feita na unidade de saúde, com material estéril.',
+      'Levar o cartão de vacina: a vacina contra o tétano é muito importante nesse caso, para a criança e para toda a família.',
+      'Depois da retirada, lavar os pés todos os dias com água e sabão, secar bem entre os dedos e manter o curativo conforme orientado.',
+      'Usar calçado fechado sempre que possível, inclusive dentro de casa e no terreiro; sandália é melhor do que andar descalço, mas o calçado fechado protege mais.',
+      'Cortar as unhas dos pés retas e mantê-las limpas.',
+      'Olhar os pés da criança todos os dias, inclusive entre os dedos e ao redor das unhas, e procurar a unidade de saúde assim que aparecer uma bolinha branca com pontinho preto.',
+      'Examinar também os pés dos outros moradores da casa, especialmente das outras crianças e dos idosos.',
+      'Manter o terreiro limpo e varrido, evitar areia solta acumulada perto da casa e, quando possível, cimentar ou compactar o chão de terra dos cômodos e da área de entrada.',
+      'Afastar chiqueiro, galinheiro, curral e casinha de cachorro da casa e da área onde as crianças brincam, e cuidar dos animais, que também carregam o bicho-de-pé.',
+      'Voltar imediatamente se houver febre, vermelhidão que aumenta, pus, inchaço do pé, listras vermelhas subindo pela perna, íngua dolorida, dor forte ao pisar, ou se a criança tiver dificuldade para abrir a boca, engolir ou apresentar rigidez no corpo.',
+      'Se a criança faltar à escola por causa da dor nos pés, avisar a equipe de saúde para que o problema seja tratado de forma prioritária.'
+    ],
+    retorno: 'Reavaliação em 3 a 7 dias após a remoção para verificar cicatrização, identificar lesões não percebidas na primeira avaliação e tratar infecção secundária; nas infestações intensas, retornos semanais até o controle. Reavaliação em 2 a 4 semanas para detectar reinfestação e revisar as medidas ambientais, com visita domiciliar pela equipe de saúde da família quando possível.',
+    prevencao: [
+      'Uso regular de calçados fechados, inclusive dentro de casa e no terreiro, principal medida de proteção individual.',
+      'Cimentação ou compactação do piso de terra batida das casas e das áreas de circulação, medida de maior impacto estrutural.',
+      'Limpeza e varrição do terreiro, remoção de areia solta acumulada e de matéria orgânica no peridomicílio.',
+      'Afastamento de chiqueiros, galinheiros, currais e canis das casas e das áreas de brincadeira das crianças.',
+      'Cuidado e tratamento dos animais domésticos e de criação, que são reservatórios do parasita.',
+      'Exame periódico dos pés das crianças em casa e na escola, com busca ativa e tratamento precoce.',
+      'Aplicação de repelentes à base de óleo de coco ou formulações específicas sobre os pés, descrita como medida preventiva eficaz em estudos comunitários, conforme disponibilidade e protocolo local.',
+      'Manutenção do calendário vacinal antitetânico atualizado em toda a comunidade.',
+      'Abordagem comunitária coordenada, envolvendo escola, agentes comunitários de saúde e vigilância ambiental, uma vez que o tratamento individual isolado leva à reinfestação.',
+      'Atenção à tungíase como marcador de vulnerabilidade social, com articulação com a assistência social quando necessário.'
+    ],
+    fontes: [
+      { nome: 'OMS – Tungiasis: fact sheet and guidance on skin NTDs', ano: 2023 },
+      { nome: 'Guia de Vigilância em Saúde – Ministério da Saúde', ano: 2024 },
+      { nome: 'OPAS/OMS – Doenças tropicais negligenciadas relacionadas à pele', ano: 2022 },
+      { nome: 'Tratado de Pediatria – Sociedade Brasileira de Pediatria', ano: 2022 }
+    ],
+    atualizadoEm: '2026-09'
+  },
+
+  {
+    id: 'larva_migrans_cutanea',
+    nome: 'Larva migrans cutânea (bicho geográfico)',
+    categoria: 'amazonia',
+    amazonia: true,
+    cid10: 'B76.9',
+    tags: ['lesoes_pele', 'prurido', 'feridas', 'dor_local', 'edema', 'febre', 'linfonodomegalia'],
+    definicao: 'Dermatose parasitária causada pela penetração e migração intraepidérmica de larvas de ancilostomídeos de cães e gatos, caracterizada por lesão linear ou serpiginosa, eritematosa, muito pruriginosa e de progressão diária, tipicamente em pés, nádegas e coxas.',
+    epidemiologia: 'É uma das dermatoses parasitárias mais comuns em regiões tropicais e uma queixa frequente em crianças na Amazônia. A infestação ocorre no contato da pele com solo arenoso, úmido e sombreado contaminado por fezes de cães e gatos, situação típica das praias fluviais que afloram na vazante e na seca dos rios, dos barrancos e dos terreiros de comunidades ribeirinhas, além de tanques de areia, quintais e áreas embaixo de casas suspensas. As praias de rio, muito frequentadas por crianças no período da seca e utilizadas também por animais, são cenário clássico da transmissão no Amazonas. A doença é autolimitada, mas o prurido intenso provoca escoriação e infecção bacteriana secundária, perda de sono e afastamento escolar. Também é frequente entre crianças que brincam em areia de construção e em barrancos próximos a moradias com cães sem cuidado veterinário.',
+    agente: 'Larvas filariformes de ancilostomídeos de animais, principalmente Ancylostoma braziliense e Ancylostoma caninum, parasitas do intestino de cães e gatos. O ser humano é hospedeiro acidental e a larva não consegue atravessar a membrana basal, permanecendo confinada à epiderme.',
+    transmissao: 'Contato direto da pele com solo ou areia contaminados por fezes de cães e gatos infectados, onde os ovos eclodem e as larvas se tornam infectantes em poucos dias em ambiente quente e úmido. Não há transmissão entre pessoas. Sentar, deitar ou andar descalço em areia de praia de rio, terreiro sombreado ou embaixo de casas suspensas são as situações de maior risco.',
+    incubacao: 'A penetração provoca prurido e pápula em horas; o trajeto migratório característico costuma aparecer entre 1 e 5 dias após a exposição, podendo demorar semanas em alguns casos.',
+    manifestacoes: [
+      'Prurido intenso no local da penetração, frequentemente com piora noturna, que é a queixa dominante e causa perda de sono.',
+      'Pápula ou vesícula eritematosa inicial no ponto de entrada.',
+      'Lesão linear ou serpiginosa, discretamente elevada, eritematosa, com trajeto sinuoso que avança alguns milímetros a poucos centímetros por dia, conferindo o aspecto de mapa que dá origem ao nome popular.',
+      'Localização preferencial em pés, espaços interdigitais, calcanhares, tornozelos, pernas, nádegas, coxas e, em lactentes e crianças pequenas, também em abdome, dorso e região genital, conforme a área que teve contato com o solo.',
+      'Lesões múltiplas e agrupadas quando houve contato extenso, por exemplo ao sentar ou deitar diretamente na areia.',
+      'Escoriações por coçadura, com crostas e, com frequência, impetiginização secundária.',
+      'Vesículas e bolhas ao longo do trajeto em parte dos casos.',
+      'Foliculite por larva migrans, com pápulas e pústulas foliculares, em áreas de contato prolongado, como nádegas.',
+      'Edema local e, quando há infecção secundária, eritema em expansão, pus, linfangite, adenomegalia e febre.',
+      'Evolução autolimitada em semanas a poucos meses, com a morte espontânea da larva, mas com desconforto prolongado se não tratada.',
+      'Síndrome de Loeffler com eosinofilia e infiltrado pulmonar transitório é rara e descrita em infestações maciças.'
+    ],
+    sinaisAlarme: [
+      'Febre, eritema em expansão, pústulas, secreção purulenta, linfangite ou adenomegalia dolorosa (infecção bacteriana secundária).',
+      'Celulite extensa ou abscesso.',
+      'Lesões muito numerosas ou extensas, com prurido incapacitante e perda importante de sono.',
+      'Localização periorbitária, genital ou em mucosa.',
+      'Tosse, dispneia e eosinofilia acentuada (suspeita de síndrome de Loeffler).',
+      'Criança imunossuprimida, desnutrida ou com dermatite atópica extensa.',
+      'Lesão que não regride após tratamento adequado ou que muda de aspecto, exigindo reavaliação diagnóstica.',
+      'Escoriações profundas com risco de tétano em criança com vacinação incompleta.'
+    ],
+    diagnosticoDiferencial: ['escabiose_impetigo', 'tungiase', 'miiase', 'larva currens por Strongyloides stercoralis (trajeto muito mais rápido, em região perianal e tronco)', 'dermatite de contato', 'urticária e dermografismo', 'tinea corporis', 'picadas de inseto agrupadas (estrófulo)', 'granuloma anular', 'eritema migratório', 'fitofotodermatose'],
+    exames: ['diagnóstico clínico pelo trajeto serpiginoso característico', 'dermatoscopia (auxiliar, quando disponível)', 'hemograma com contagem de eosinófilos', 'cultura de secreção da lesão (se infecção secundária)', 'pcr', 'radiografia_torax (apenas se sintomas respiratórios e eosinofilia acentuada)', 'exame_parasitologico_fezes (avaliação de parasitoses associadas)', 'biópsia de pele (apenas em casos atípicos ou dúvida diagnóstica)'],
+    criteriosDiagnosticos: [
+      'Diagnóstico eminentemente clínico: lesão linear ou serpiginosa, pruriginosa, com progressão diária visível, em criança com história de contato com areia ou solo, especialmente praia de rio, terreiro ou área sombreada com presença de cães e gatos.',
+      'A progressão do trajeto entre um dia e outro, que pode ser marcada com caneta na pele para demonstração, confirma a suspeita clínica.',
+      'Não há necessidade de exames laboratoriais na apresentação típica; eosinofilia pode estar presente mas não é obrigatória.',
+      'Diferenciar da larva currens do Strongyloides stercoralis, cujo trajeto avança vários centímetros por hora, é predominantemente perianal e de tronco e associa-se a estrongiloidíase sistêmica.',
+      'Identificar e registrar sinais de infecção bacteriana secundária, principal complicação.',
+      'Biópsia é desnecessária e habitualmente não encontra a larva, pois esta costuma estar à frente do trajeto visível.',
+      'Investigar exposição comum entre irmãos e colegas, pois surtos familiares e escolares após ida a praia de rio são frequentes.',
+      'Avaliar a situação vacinal antitetânica quando houver escoriações profundas.'
+    ],
+    classificacaoGravidade: [
+      { nivel: 'Leve', criterios: 'Uma ou poucas lesões, prurido tolerável, sem infecção secundária. Tratamento antiparasitário tópico ou oral conforme disponibilidade, controle do prurido e orientação preventiva.' },
+      { nivel: 'Moderada', criterios: 'Lesões múltiplas, prurido intenso com perda de sono, escoriações extensas ou impetiginização localizada. Tratamento antiparasitário sistêmico, antibiótico para a infecção secundária e controle rigoroso do prurido.' },
+      { nivel: 'Grave', criterios: 'Infestação extensa com dezenas de trajetos, celulite, abscesso, linfangite, febre, foliculite extensa, ou manifestações sistêmicas como síndrome de Loeffler. Internação quando houver infecção grave, antibiótico parenteral e avaliação especializada.' }
+    ],
+    tratamento: [
+      'A doença é autolimitada, mas o tratamento está indicado para abreviar o curso, aliviar o prurido intenso e reduzir a escoriação e a infecção bacteriana secundária.',
+      'Albendazol por via oral é a opção mais utilizada e eficaz, em curso curto, conforme o protocolo do serviço e a bula, respeitando os critérios de idade e peso.',
+      'Ivermectina por via oral em dose única é alternativa eficaz, habitualmente restrita a crianças com peso igual ou superior a 15 kg, conforme os critérios do Ministério da Saúde e a bula; pode ser repetida conforme avaliação.',
+      'Tiabendazol tópico pode ser considerado em lesões localizadas e poucas, especialmente em crianças menores nas quais o tratamento sistêmico é limitado, conforme disponibilidade, protocolo do serviço e bula.',
+      'Mebendazol tem eficácia inferior na larva migrans cutânea e não é a escolha preferencial.',
+      'Controle do prurido: anti-histamínico oral conforme bula, compressas frias, hidratação da pele e corte das unhas, medidas essenciais para reduzir a escoriação.',
+      'Corticoide tópico de baixa potência pode ser associado por curto período para alívio da inflamação e do prurido, conforme avaliação e protocolo do serviço.',
+      'Não usar querosene, óleo diesel, cal, creolina, fumo, folhas maceradas ou qualquer substância cáustica sobre as lesões, práticas relatadas na região e causadoras de queimadura química.',
+      'Não tentar retirar a larva com agulha ou objeto cortante: a larva costuma estar à frente da extremidade visível do trajeto e o procedimento apenas fere a pele e favorece infecção.',
+      'Antibioticoterapia sistêmica quando houver impetiginização, celulite ou abscesso, com cobertura para estafilococos e estreptococos.',
+      'Profilaxia antitetânica conforme a situação vacinal e o tipo de lesão, especialmente quando houver escoriações profundas.',
+      'Higiene local com água e sabão e curativos quando houver lesões escoriadas ou infectadas.',
+      'Avaliar e tratar outras crianças da casa ou da turma expostas ao mesmo local, e orientar a comunidade sobre a área de risco identificada.',
+      'Reavaliar em 7 dias: a ausência de resposta deve motivar revisão diagnóstica e novo curso de tratamento conforme protocolo.'
+    ],
+    medicamentos: [
+      { medId: 'albendazol', esquema: 'Tratamento de escolha: 400 mg VO uma vez ao dia por 3 a 5 dias (ou 10 a 15 mg/kg/dia, máximo 400 mg/dia, em crianças menores), conforme protocolo do serviço e bula, respeitando os critérios de idade mínima. Confirmar conforme protocolo e bula.' },
+      { medId: 'ivermectina', esquema: 'Alternativa: 200 microgramas/kg VO em dose única, podendo ser repetida após 1 a 2 semanas conforme avaliação. Uso habitualmente restrito a crianças com peso igual ou superior a 15 kg; confirmar indicação, peso mínimo e dose conforme protocolo do Ministério da Saúde e bula.' },
+      { medId: null, nome: 'Tiabendazol tópico', esquema: 'Lesões poucas e localizadas, em especial em crianças pequenas: aplicação sobre o trajeto e alguns centímetros à frente dele, 2 a 3 vezes ao dia por 7 a 10 dias, conforme disponibilidade, protocolo do serviço e bula. Confirmar conforme protocolo.' },
+      { medId: 'mebendazol', esquema: 'Eficácia inferior na larva migrans cutânea; não é a escolha preferencial. Uso apenas na indisponibilidade das opções anteriores, conforme protocolo do serviço e bula, confirmar conforme protocolo.' },
+      { medId: null, nome: 'Anti-histamínico oral (por exemplo, hidroxizina ou dexclorfeniramina)', esquema: 'Controle do prurido: dose conforme idade, peso e bula, com atenção à sedação. Confirmar conforme protocolo e bula.' },
+      { medId: null, nome: 'Corticoide tópico de baixa potência (por exemplo, hidrocortisona 1%)', esquema: 'Alívio da inflamação e do prurido por curto período, associado ao antiparasitário, conforme avaliação e bula. Confirmar conforme protocolo.' },
+      { medId: 'cefalexina', esquema: 'Infecção bacteriana secundária (impetiginização, celulite): 50 a 100 mg/kg/dia VO dividida a cada 6 horas por 7 a 10 dias, conforme protocolo.' },
+      { medId: 'amoxicilina_clavulanato', esquema: 'Infecção secundária extensa ou falha da cefalexina: 45 a 50 mg/kg/dia do componente amoxicilina VO dividida 12/12 h, conforme protocolo do serviço.' },
+      { medId: 'paracetamol', esquema: 'Dor ou desconforto: 10 a 15 mg/kg/dose VO a cada 6 horas, conforme bula.' },
+      { medId: 'soro_fisiologico', esquema: 'Limpeza das lesões escoriadas e curativos com SF 0,9%.' },
+      { medId: null, nome: 'Vacina antitetânica (dT ou dTpa)', esquema: 'Atualização conforme a situação vacinal, especialmente quando houver escoriações profundas, segundo as orientações do Ministério da Saúde.' }
+    ],
+    criteriosInternacao: [
+      'Celulite extensa, abscesso ou linfangite ascendente.',
+      'Febre, calafrios ou toxemia associadas à infecção secundária.',
+      'Lesões extremamente numerosas com prurido incapacitante e escoriações extensas infectadas.',
+      'Manifestações sistêmicas como síndrome de Loeffler com desconforto respiratório.',
+      'Criança imunossuprimida, desnutrida grave ou com dermatite atópica extensa e infecção associada.',
+      'Impossibilidade de tratamento e de reavaliação no território, em comunidades distantes.'
+    ],
+    criteriosUTI: [
+      'Sepse ou choque séptico secundário à infecção cutânea.',
+      'Infecção necrosante de partes moles com instabilidade hemodinâmica.',
+      'Insuficiência respiratória em síndrome de Loeffler grave ou em infestação maciça.',
+      'Tétano com espasmos generalizados ou comprometimento respiratório.'
+    ],
+    criteriosAlta: [
+      'Ausência de febre e de sinais de infecção bacteriana em progressão.',
+      'Prurido controlado, permitindo sono adequado.',
+      'Tratamento antiparasitário iniciado e esquema compreendido pelo responsável.',
+      'Lesões escoriadas limpas e com plano de curativo definido.',
+      'Profilaxia antitetânica avaliada e registrada.',
+      'Família orientada sobre a fonte provável de exposição e sobre as medidas de prevenção.',
+      'Irmãos e colegas expostos avaliados quando indicado.',
+      'Retorno agendado em 7 dias para verificar a interrupção da progressão dos trajetos.'
+    ],
+    orientacoes: [
+      'A lesão é causada por uma larva de verme de cachorro ou gato que anda debaixo da pele; ela não passa de pessoa para pessoa e não vai para dentro do corpo.',
+      'Não tentar tirar a larva com agulha, alfinete ou faca: ela está sempre um pouco à frente da ponta do caminho que se vê, e furar a pele só machuca e infecciona.',
+      'Não passar querosene, óleo diesel, creolina, cal, fumo, folhas ou qualquer produto forte na pele: queima e piora a lesão.',
+      'Dar o remédio conforme a prescrição e usar o que foi indicado para a coceira; a coceira costuma melhorar em poucos dias.',
+      'Cortar bem as unhas da criança e manter as mãos limpas para evitar que a coceira vire ferida infeccionada.',
+      'Lavar a pele com água e sabão e manter as feridas cobertas quando houver escoriação.',
+      'Para prevenir: não sentar nem deitar direto na areia da praia do rio, no barranco ou no terreiro; usar esteira, lona ou toalha grossa, e usar calçado fechado ou chinelo.',
+      'Evitar que a criança brinque em areia onde cães e gatos costumam defecar, inclusive embaixo da casa e nas áreas sombreadas do quintal.',
+      'Levar cães e gatos da casa para vermifugação regular sempre que houver essa possibilidade, e recolher as fezes dos animais do terreiro.',
+      'Voltar em 7 dias para reavaliação, ou antes se aparecer febre, vermelhidão que aumenta, pus, inchaço, íngua dolorida ou listras vermelhas na pele.',
+      'Se outras crianças da casa ou da escola estiveram no mesmo lugar e apareceram com lesões parecidas, levá-las também à unidade de saúde.'
+    ],
+    retorno: 'Reavaliação em 7 dias para confirmar a interrupção da progressão dos trajetos e a melhora do prurido; nas lesões infectadas, reavaliação em 48 a 72 horas. Ausência de resposta ao tratamento deve motivar revisão diagnóstica, considerando larva currens por Strongyloides stercoralis e outras dermatoses, e novo curso terapêutico conforme protocolo.',
+    prevencao: [
+      'Evitar contato direto da pele com areia e solo sombreado e úmido em praias de rio, barrancos, terreiros e áreas embaixo de casas suspensas.',
+      'Usar esteira, lona ou toalha grossa para sentar e deitar na praia e usar calçado fechado ou chinelo ao caminhar nessas áreas.',
+      'Recolher e dar destino adequado às fezes de cães e gatos no terreiro e nas áreas de brincadeira das crianças.',
+      'Vermifugação periódica de cães e gatos domiciliados, conforme orientação veterinária disponível.',
+      'Impedir o acesso de animais a tanques de areia, praias utilizadas por crianças e áreas de recreação escolar, cobrindo caixas de areia quando não estiverem em uso.',
+      'Manter o terreiro limpo, varrido e sem acúmulo de areia e matéria orgânica em áreas sombreadas.',
+      'Orientação comunitária durante a seca e a vazante, quando as praias de rio afloram e o número de casos aumenta.',
+      'Educação em saúde nas escolas ribeirinhas sobre a forma de transmissão e sobre o abandono das práticas caseiras cáusticas.',
+      'Manutenção do calendário vacinal antitetânico atualizado.'
+    ],
+    fontes: [
+      { nome: 'Guia de Vigilância em Saúde – Ministério da Saúde', ano: 2024 },
+      { nome: 'OPAS/OMS – Doenças tropicais negligenciadas relacionadas à pele', ano: 2022 },
+      { nome: 'Nelson Textbook of Pediatrics, 22ª edição', ano: 2024 },
+      { nome: 'Tratado de Pediatria – Sociedade Brasileira de Pediatria', ano: 2022 }
+    ],
+    atualizadoEm: '2026-09'
+  }
 
 ];

@@ -429,12 +429,21 @@ PED.data.comerciais = {
       marcas: ['Instituto Butantan'],
       apelidos: ['soro de aranha'],
       obs: 'Sem nome comercial nem venda em farmácia. Distribuição exclusiva do Ministério da Saúde; cobre Phoneutria, Loxosceles e escorpiões do gênero Tityus.'
-    }
+    },
+    ciprofloxacino: {
+      generico: 'Ciprofloxacino',
+      marcas: ['Cipro', 'Ciflox', 'Proflox', 'Quinoflox'],
+      associacoes: [],
+      apelidos: ['cipro'],
+      obs: 'Disponível como genérico. A suspensão pediátrica tem disponibilidade limitada no Brasil; em criança pequena costuma ser necessário fracionar comprimido ou usar alternativa.'
+    },
   },
 
   // Índice inverso pronto para busca: nome comercial em minúsculas e sem acento -> id do medicamento
   // (o app também gera isso sozinho a partir de marcas, aqui entram grafias alternativas e apelidos)
   sinonimos: {
+    'cipro': 'ciprofloxacino',
+    'ciflox': 'ciprofloxacino',
     'coartem': 'artemeter_lumefantrina',
     'artemeter': 'artemeter_lumefantrina',
     'tylenol': 'paracetamol',
