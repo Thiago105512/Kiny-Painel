@@ -26,16 +26,21 @@ No celular, abra a URL e use "Adicionar à tela inicial" para instalar como app.
 | Módulo | Quantidade |
 |---|---|
 | Queixas com fluxo guiado | 45 |
-| Doenças com protocolo padronizado (18 seções) | ver `docs/06-doencas.md` |
-| Medicamentos com cálculo mg/kg → mL | ver `docs/07-medicamentos.md` |
-| Calculadoras | 18 |
+| Doenças com protocolo padronizado | 56 |
+| Doenças com destaque amazônico | 24 |
+| Medicamentos com cálculo por peso e nome comercial | 67 |
+| Alternativas, segunda linha e off-label | 296 linhas, 733 opções |
+| Calculadoras | 20 |
 | Emergências com doses por peso | 14 |
 | Exames com referências por idade | 39 |
-| Vacinas (PNI) | calendário 0–14 anos |
-| Módulo Amazônia | doenças regionais em destaque |
-| Protocolos neonatais com limiares de fototerapia | 6 |
-| Agravos de notificação compulsória com dados da ficha | 43 |
-| Cadastro de pacientes, prescrição editável com confirmação, evolução SOAP com comparação | ✔ |
+| Vacinas do calendário nacional | 19 |
+| Agravos de notificação compulsória | 43 |
+| Unidades de saúde de Manaus e do interior | 159 |
+| Municípios do Amazonas | 62 |
+| Tipos de violência com protocolo | 8 |
+| Sinais de gravidade e perguntas de contexto | 25 e 23 |
+| Perguntas de autoavaliação | 55 |
+| Cadastro de pacientes, prescrição com confirmação, evolução SOAP | ✔ |
 
 ## Uso rápido
 

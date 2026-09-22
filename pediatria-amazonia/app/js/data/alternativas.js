@@ -1925,7 +1925,7 @@ PED.data.alternativas = {
           ] },
         { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
           opcoes: [
-            { medId: null, nome: 'Adiar a terapia antirretroviral à espera de CD4 ou de melhora clínica', esquema: '', quando: '', obs: 'Contrário à recomendação atual. O início precoce reduz mortalidade de forma marcante no lactente, e o tratamento é indicado para todos, independentemente de sintomas ou de CD4.' },
+            { medId: null, nome: 'Adiar a terapia antirretroviral à espera de CD4 ou de melhora clínica', esquema: '', quando: '', obs: 'Contrário à recomendação atual. O início precoce reduz mortalidade de forma marcante no lactente, e a indicação vale para todos, independentemente de sintomas ou de CD4.' },
             { medId: null, nome: 'Aleitamento materno por mãe vivendo com HIV', esquema: '', quando: '', obs: 'Contraindicado no Brasil, inclusive com carga viral indetectável, conforme protocolo do Ministério da Saúde. Também não usar leite de outra nutriz sem pasteurização em banco de leite.' },
             { medId: null, nome: 'Interromper a terapia antirretroviral por melhora clínica ou por carga viral indetectável', esquema: '', quando: '', obs: 'A interrupção leva a rebote virológico e a resistência. O tratamento é contínuo e por toda a vida.' },
             { medId: null, nome: 'Aplicar vacinas de agentes vivos sem avaliação do estado imunológico', esquema: '', quando: '', obs: 'Exigem avaliação prévia conforme o Manual do CRIE, pelo risco de doença vacinal em imunossupressão grave.' },
@@ -2037,7 +2037,7 @@ PED.data.alternativas = {
         { ordem: 1, rotulo: 'Primeira escolha', tipo: 'primeira',
           opcoes: [
             { medId: 'penicilina_benzatina', nome: 'Penicilina G benzatina', esquema: 'Dose única IM: 600.000 UI se peso abaixo de 27 kg e 1.200.000 UI se peso igual ou acima de 27 kg. Observar por 30 min após a aplicação', quando: 'Faringoamigdalite estreptocócica confirmada por teste rápido ou cultura, ou com forte suspeita clínica em contexto de risco, sobretudo quando há risco de baixa adesão ou dificuldade de retorno', obs: 'Opção preferencial em comunidades ribeirinhas e indígenas, porque garante a erradicação em um único contato com o serviço.' },
-            { medId: 'amoxicilina', nome: 'Amoxicilina', esquema: '50 mg/kg/dia VO, máximo 1 g ao dia, em 1 ou 2 tomadas por 10 dias', quando: 'Alternativa oral de primeira escolha, com boa aceitação', obs: 'O objetivo principal do tratamento é prevenir a febre reumática, e para isso a duração de 10 dias é necessária. Pode ser iniciado com segurança até o 9o dia de sintomas.' }
+            { medId: 'amoxicilina', nome: 'Amoxicilina', esquema: '50 mg/kg/dia VO, máximo 1 g ao dia, em 1 ou 2 tomadas por 10 dias', quando: 'Alternativa oral de primeira escolha, com boa aceitação', obs: 'O objetivo principal do antibiótico aqui é prevenir a febre reumática, e para isso a duração de 10 dias é necessária. Pode ser iniciado com segurança até o 9o dia de sintomas.' }
           ] },
         { ordem: 2, rotulo: 'Alternativa em alergia a penicilina', tipo: 'alternativa',
           opcoes: [
@@ -2079,6 +2079,327 @@ PED.data.alternativas = {
       fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre faringoamigdalites na infância', ano: 2023 }, { nome: 'OMS - Rheumatic fever and rheumatic heart disease, technical report', ano: 2021 } ],
       atualizadoEm: '2026-09'
     },
+    laringite_viral: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - corticoide para todos os casos', tipo: 'primeira',
+          opcoes: [
+            { medId: 'dexametasona', nome: 'Dexametasona', esquema: 'Dose única de 0,15 a 0,6 mg/kg VO, IM ou IV, dose máxima habitualmente 10 a 16 mg. A dose de 0,6 mg/kg é a mais estudada e 0,15 mg/kg tem eficácia comparável nos casos leves', quando: 'Todos os casos de laringotraqueíte viral, inclusive os leves, pois reduz a gravidade, o tempo de permanência e o retorno ao serviço', obs: 'Preferir a via oral quando possível, reservando a intramuscular para vômitos ou dificuldade de deglutição. Confirmar apresentação e dose conforme protocolo do serviço e bula.', verificar: true },
+            { medId: null, nome: 'Manter a criança calma e no colo do cuidador', esquema: 'Adiar procedimentos não essenciais e reduzir manipulação', quando: 'Todos os casos', obs: 'Choro e agitação aumentam a turbulência do fluxo aéreo e agravam a obstrução. Essa é a primeira medida, antes de qualquer fármaco.' }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa quando não há dexametasona na unidade', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'prednisolona', nome: 'Prednisolona', esquema: '1 a 2 mg/kg/dia VO, conforme protocolo do serviço', quando: 'Alternativa aceitável quando a dexametasona não está disponível, situação comum em unidade básica ribeirinha', obs: 'Pela meia-vida mais curta, pode exigir dose adicional no dia seguinte.' }
+          ] },
+        { ordem: 3, rotulo: 'Segunda linha - caso moderado a grave com estridor em repouso', tipo: 'segunda',
+          opcoes: [
+            { medId: 'adrenalina', nome: 'Adrenalina nebulizada', esquema: 'Solução de 1 mg/mL, 0,5 mL/kg por dose, máximo de 5 mL, diluída em soro fisiológico, com fluxo de oxigênio; pode ser repetida conforme resposta e protocolo do serviço', quando: 'Casos moderados a graves com estridor em repouso', obs: 'Melhora rápida por vasoconstrição da mucosa, com efeito de cerca de 2 h. Manter observação por 2 a 4 h após a nebulização e só dar alta se não houver estridor em repouso nesse período e se o corticoide tiver sido administrado. Necessidade de doses repetidas indica internação.' },
+            { medId: null, nome: 'Oxigenoterapia', esquema: 'Se saturação abaixo de 92% ou desconforto importante, ofertado da forma menos incômoda possível, preferencialmente em fluxo livre próximo à face', quando: 'Hipoxemia ou desconforto respiratório importante', obs: 'Evitar máscaras que gerem agitação, pois o choro piora a obstrução.' }
+          ] },
+        { ordem: 4, rotulo: 'Uso off-label', tipo: 'offlabel',
+          opcoes: [
+            { medId: 'adrenalina', nome: 'Adrenalina por via inalatória (nebulização)', esquema: 'Solução de 1 mg/mL, 0,5 mL/kg por dose, máximo de 5 mL, diluída em soro fisiológico', quando: 'Crupe moderado a grave com estridor em repouso, enquanto o corticoide não faz efeito e durante a estabilização ou o transporte', obs: 'Off-label quanto à via: a bula da adrenalina registra as vias intramuscular, subcutânea e intravenosa, não a inalatória. O uso nebulizado no crupe é recomendado por diretrizes nacionais e internacionais, com benefício demonstrado em revisões sistemáticas. Exige monitorização de frequência cardíaca e observação prolongada pelo retorno dos sintomas ao fim do efeito.' },
+            { medId: 'dexametasona', nome: 'Dexametasona injetável administrada por via oral', esquema: 'Conteúdo da ampola administrado por via oral, na dose de 0,15 a 0,6 mg/kg em dose única, conforme protocolo do serviço', quando: 'Avaliar quando não há apresentação oral de dexametasona na unidade, situação frequente em pronto-socorro e em unidade de comunidade', obs: 'Off-label quanto à via: a apresentação injetável não prevê administração oral em bula. A prática é amplamente descrita em protocolos de emergência pediátrica, com boa biodisponibilidade oral e eficácia equivalente. Confirmar conforme protocolo do serviço e bula.', verificar: true }
+          ] },
+        { ordem: 5, rotulo: 'Adjuvante / sintomático e diagnóstico diferencial', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula', quando: 'Febre e desconforto', obs: '' },
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: '50 a 100 mg/kg/dia IV, associada a cobertura antiestafilocócica conforme protocolo do serviço', quando: 'Suspeita de traqueíte bacteriana ou epiglotite: toxemia, febre alta, sialorreia, posição de tripé, ausência de resposta à adrenalina e ao corticoide', obs: 'São diagnósticos diferenciais graves que mudam completamente a conduta e exigem via aérea avançada.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Umidificação, vapor e banheiro com chuveiro quente como tratamento', esquema: '', quando: '', obs: 'Não demonstraram eficácia em ensaios clínicos e não devem substituir o corticoide. Manter apenas se confortarem a criança e sem risco de queimadura, que é real com vapor de água fervente.' },
+            { medId: null, nome: 'Antibiótico na laringotraqueíte viral', esquema: '', quando: '', obs: 'Não indicado. A etiologia é viral, sobretudo parainfluenza. Reservar para traqueíte bacteriana ou epiglotite, com internação e antibiótico parenteral.' },
+            { medId: 'salbutamol', nome: 'Broncodilatadores no crupe', esquema: '', quando: '', obs: 'Sem indicação, pois a obstrução é alta e extratorácica. Usar apenas se houver sibilância concomitante documentada.' },
+            { medId: null, nome: 'Exame de orofaringe, punção venosa e procedimentos não essenciais na criança com estridor em repouso', esquema: '', quando: '', obs: 'Podem precipitar obstrução completa, especialmente na suspeita de epiglotite. Adiar procedimentos e manter a criança calma no colo.' },
+            { medId: 'adrenalina', nome: 'Alta logo após a nebulização de adrenalina', esquema: '', quando: '', obs: 'O efeito dura cerca de 2 h e os sintomas podem retornar. Observar por 2 a 4 h e garantir que o corticoide foi administrado antes da alta, sobretudo quando a família mora longe.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Manter a criança calma e no colo do cuidador, adiando procedimentos não essenciais.',
+        'Hidratação oral conforme aceitação, evitando punção venosa desnecessária nos casos leves e moderados.',
+        'Observação por 2 a 4 h após adrenalina nebulizada antes de decidir a alta.',
+        'Orientação escrita sobre sinais de retorno: estridor em repouso, tiragem, sonolência e cianose.',
+        'Insuficiência respiratória iminente: acionar equipe com experiência em via aérea pediátrica, preparar tubo de diâmetro menor que o previsto para a idade e transferir para terapia intensiva.'
+      ],
+      fontes: [ { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre laringotraqueíte viral aguda', ano: 2023 }, { nome: 'OMS - Pocket book of hospital care for children', ano: 2013 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    hantavirose: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - suporte com manejo hídrico restritivo', tipo: 'primeira',
+          opcoes: [
+            { medId: null, nome: 'Internação precoce e monitorização contínua', esquema: 'Monitorização de frequência respiratória, oximetria, pressão arterial, diurese e, seriadamente, hematócrito e plaquetas', quando: 'Todo caso suspeito, mesmo na fase prodrômica', obs: 'A elevação do hematócrito com queda de plaquetas antecede a fase cardiopulmonar e é o sinal de alerta que motiva transferência antes da deterioração.' },
+            { medId: 'soro_fisiologico', nome: 'Soro fisiológico 0,9%', esquema: 'Expansão volêmica criteriosa em alíquotas pequenas, com reavaliação frequente do estado respiratório; volume total e velocidade conforme protocolo do serviço', quando: 'Hipotensão e má perfusão, com muita cautela pelo extravasamento capilar pulmonar', obs: 'Diferente de outros choques: a infusão liberal de volume agrava o edema pulmonar. Confirmar conforme protocolo do serviço.', verificar: true }
+          ] },
+        { ordem: 2, rotulo: 'Segunda linha - suporte hemodinâmico precoce', tipo: 'segunda',
+          opcoes: [
+            { medId: 'adrenalina', nome: 'Adrenalina', esquema: 'Infusão contínua com dose titulada conforme resposta e protocolo da terapia intensiva pediátrica', quando: 'Choque com baixo débito, em que o uso precoce de droga vasoativa é preferido à expansão volêmica liberal', obs: 'Confirmar conforme protocolo do serviço.', verificar: true },
+            { medId: null, nome: 'Noradrenalina e outros vasoativos ou inotrópicos, por exemplo dobutamina', esquema: 'Escolha do agente, dose e titulação definidas pelo protocolo de choque da terapia intensiva pediátrica', quando: 'Choque com disfunção miocárdica e baixo débito, característico da hantavirose', obs: 'Preferir o início precoce do vasoativo em vez de grandes volumes. Confirmar conforme protocolo e bula.', verificar: true },
+            { medId: null, nome: 'Ventilação mecânica protetora e suporte extracorpóreo', esquema: 'Estratégia de síndrome do desconforto respiratório agudo conforme protocolo da terapia intensiva; ECMO descrita como resgate em centros selecionados', quando: 'Insuficiência respiratória na fase cardiopulmonar', obs: 'Confirmar conforme protocolo do serviço de referência.', verificar: true }
+          ] },
+        { ordem: 3, rotulo: 'Cobertura empírica enquanto o diagnóstico não está definido', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: '50 a 100 mg/kg/dia IV, conforme protocolo do serviço', quando: 'Manter até que leptospirose e sepse bacteriana sejam razoavelmente afastadas, diagnósticos diferenciais frequentes na Amazônia', obs: 'A leptospirose grave é indistinguível no início e responde a antibiótico, por isso a cobertura empírica é justificada.' },
+            { medId: 'ringer_lactato', nome: 'Ringer lactato', esquema: 'Alternativa cristaloide para expansão volêmica criteriosa, conforme protocolo do serviço', quando: 'Alternativa ao soro fisiológico, mantendo a mesma cautela com o volume', obs: 'Confirmar conforme protocolo do serviço.', verificar: true }
+          ] },
+        { ordem: 4, rotulo: 'Adjuvante / sintomático', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula', quando: 'Febre e dor', obs: 'Preferir em relação aos anti-inflamatórios não esteroidais.' },
+            { medId: 'dipirona', nome: 'Dipirona', esquema: '10 a 15 mg/kg/dose VO ou IV a cada 6 h, conforme bula', quando: 'Alternativa antitérmica', obs: 'Atenção à hipotensão na administração venosa rápida, em paciente já instável.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: 'soro_fisiologico', nome: 'Expansão volêmica liberal com grandes volumes', esquema: '', quando: '', obs: 'Erro mais grave nessa doença. O extravasamento capilar pulmonar faz com que volumes generosos precipitem edema pulmonar e morte. Priorizar vasoativo precoce e alíquotas pequenas com reavaliação.' },
+            { medId: null, nome: 'Antiviral para hantavirose', esquema: '', quando: '', obs: 'Não há antiviral com eficácia comprovada. O prognóstico depende do reconhecimento precoce e da transferência antes da insuficiência respiratória.' },
+            { medId: 'ibuprofeno', nome: 'Anti-inflamatórios não esteroidais e ácido acetilsalicílico', esquema: '', quando: '', obs: 'Evitar pelo risco de sangramento e de lesão renal, enquanto dengue e outras causas hemorrágicas não estiverem afastadas.' },
+            { medId: null, nome: 'Alta ou observação domiciliar do caso suspeito na fase prodrômica', esquema: '', quando: '', obs: 'A transição da fase prodrômica para a cardiopulmonar é abrupta, em horas. Todo caso suspeito deve ser internado em serviço com possibilidade de transferência rápida.' },
+            { medId: null, nome: 'Varrer ou usar vassoura e água em ambiente fechado com fezes de roedor', esquema: '', quando: '', obs: 'Gera aerossóis e é a principal forma de contágio. Orientar a família e a comunidade sobre ventilação prévia, umidificação com desinfetante e proteção individual antes da limpeza.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Notificação compulsória imediata e investigação do local provável de infecção.',
+        'Internação de todo caso suspeito, mesmo na fase prodrômica, em serviço com possibilidade de transferência rápida para terapia intensiva.',
+        'Oxigenoterapia precoce, acesso venoso instalado e equipe preparada para deterioração rápida.',
+        'Manejo ambiental de roedores no domicílio e na área de exposição, com orientação sobre a técnica segura de limpeza de ambientes fechados.',
+        'Orientação à família e à comunidade, pois a fonte de exposição frequentemente permanece ativa após o caso índice.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Guia de vigilância em saúde, hantavirose', ano: 2023 }, { nome: 'OPAS - Manejo clínico da síndrome cardiopulmonar por hantavírus', ano: 2022 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    acidente_arraia: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - imersão em água morna e analgesia', tipo: 'primeira',
+          opcoes: [
+            { medId: null, nome: 'Imersão da região atingida em água morna', esquema: 'Maior temperatura tolerável pela pele sem causar queimadura, em torno de 50 graus, por 30 a 90 min ou até o alívio da dor, acrescentando água quente aos poucos para manter a temperatura', quando: 'Medida inicial em todo acidente por arraia, pois o calor inativa componentes termolábeis do veneno', obs: 'É a medida mais eficaz para a dor. Testar sempre a temperatura com a mão ou o cotovelo de um adulto antes de imergir a criança e manter supervisão contínua, pelo risco real de queimadura em criança pequena ou com sensibilidade alterada.' },
+            { medId: 'dipirona', nome: 'Dipirona', esquema: '10 a 15 mg/kg/dose VO ou IV a cada 6 h, conforme bula', quando: 'Analgesia sistêmica precoce, associada à imersão', obs: 'A dor é o principal problema inicial e costuma ser subtratada.' },
+            { medId: 'soro_fisiologico', nome: 'Soro fisiológico 0,9%', esquema: 'Lavagem abundante da ferida e curativos diários', quando: 'Limpeza da ferida, com exploração cuidadosa e remoção de fragmentos do ferrão e de tecido tegumentar sob analgesia adequada', obs: '' }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa e escalonamento da analgesia', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula', quando: 'Alternativa analgésica quando a dipirona não está disponível ou é contraindicada', obs: '' },
+            { medId: 'ibuprofeno', nome: 'Ibuprofeno', esquema: '5 a 10 mg/kg/dose VO a cada 6 a 8 h, conforme bula', quando: 'Analgesia e controle do edema', obs: 'Evitar em desidratação e avaliar função renal.' },
+            { medId: null, nome: 'Anestésico local sem vasoconstritor, por exemplo lidocaína', esquema: 'Infiltração local ou bloqueio regional conforme protocolo do serviço e bula, respeitando a dose máxima por peso', quando: 'Dor que não cede com analgesia sistêmica e imersão, e para permitir a exploração da ferida', obs: 'Confirmar dose máxima conforme protocolo/bula.', verificar: true },
+            { medId: null, nome: 'Analgésico opioide, por exemplo morfina', esquema: 'Indicação, dose e monitorização conforme protocolo do serviço e bula', quando: 'Dor intensa não controlada pelos analgésicos habituais', obs: 'Requer monitorização respiratória. Confirmar conforme protocolo/bula.', verificar: true }
+          ] },
+        { ordem: 3, rotulo: 'Antibiótico com cobertura para Aeromonas quando indicado', tipo: 'segunda',
+          opcoes: [
+            { medId: 'sulfametoxazol_trimetoprim', nome: 'Sulfametoxazol + trimetoprima', esquema: '40 mg/kg/dia de sulfametoxazol e 8 mg/kg/dia de trimetoprima VO dividida a cada 12 h, conforme protocolo do serviço', quando: 'Ferimento profundo, extenso, com retardo no atendimento, com corpo estranho, em imunossuprimido ou diabético, ou já com sinais de infecção', obs: 'Cobertura para Aeromonas hydrophila, agente típico de ferida de água doce. Contraindicado em menores de 2 meses.' },
+            { medId: 'amoxicilina_clavulanato', nome: 'Amoxicilina + clavulanato', esquema: '45 a 50 mg/kg/dia do componente amoxicilina VO dividida a cada 12 h, conforme protocolo do serviço', quando: 'Cobertura para flora cutânea e anaeróbios, habitualmente associada a um agente com atividade contra Aeromonas', obs: 'Não cobre Aeromonas de forma confiável quando usada isoladamente.' },
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: '50 a 100 mg/kg/dia IV, conforme protocolo do serviço', quando: 'Infecção grave com necessidade de internação, associada conforme necessidade a cobertura antiestafilocócica e para Aeromonas', obs: '' }
+          ] },
+        { ordem: 4, rotulo: 'Uso off-label', tipo: 'offlabel',
+          opcoes: [
+            { medId: 'ciprofloxacino', nome: 'Ciprofloxacino', esquema: 'Dose e duração conforme protocolo do serviço e bula', quando: 'Alternativa com boa cobertura para Aeromonas em adolescentes, em alergia à sulfa, ou quando o sulfametoxazol com trimetoprima é contraindicado ou indisponível na comunidade', obs: 'Off-label em criança para essa indicação, por restrição de bula ligada ao risco osteoarticular observado em animais jovens. O uso em infecções por Gram-negativos e por Aeromonas é respaldado por diretrizes e por metanálises que não confirmaram dano articular clinicamente relevante em crianças. Registrar a justificativa e confirmar conforme protocolo e bula.', verificar: true }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Torniquete, garrote ou faixa compressiva', esquema: '', quando: '', obs: 'Não usar. Agrava a isquemia e a necrose local, sem qualquer efeito sobre o veneno. Prática comum à beira do rio que precisa ser desfeita ativamente na orientação da comunidade.' },
+            { medId: null, nome: 'Cortes, sucção, cauterização e aplicação de gelo, urina, fumo, borra de café, ervas ou querosene', esquema: '', quando: '', obs: 'Sem benefício e com aumento de infecção, queimadura química e extensão da lesão. O que alivia a dor é a imersão em água morna e a analgesia adequada.' },
+            { medId: null, nome: 'Sutura primária e hermética da ferida', esquema: '', quando: '', obs: 'Contraindicada pelo alto risco de infecção. A ferida deve ser deixada aberta para cicatrização por segunda intenção ou com fechamento tardio, conforme protocolo.' },
+            { medId: null, nome: 'Aguardar soro antiveneno específico', esquema: '', quando: '', obs: 'Não existe soro antiveneno para acidentes por arraia. Todo o cuidado é analgesia, limpeza, desbridamento, profilaxia antitetânica e antibiótico quando indicado.' },
+            { medId: null, nome: 'Antibiótico de rotina em todo acidente', esquema: '', quando: '', obs: 'Não é obrigatório em ferimentos superficiais, limpos e atendidos precocemente. Indicar conforme os critérios de risco e reavaliar em 48 h.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Profilaxia antitetânica conforme a situação vacinal e a característica do ferimento, incluindo imunoglobulina antitetânica quando indicada.',
+        'Exploração e desbridamento do tecido desvitalizado conforme avaliação cirúrgica, sem sutura primária hermética.',
+        'Curativos diários com soro fisiológico, elevação do membro e repouso relativo, com reavaliações frequentes.',
+        'Acompanhamento prolongado da úlcera, que pode levar semanas a meses para cicatrizar, com atenção à dor, à funcionalidade e ao retorno à escola.',
+        'Notificação no sistema de vigilância de animais peçonhentos e orientação preventiva: arrastar os pés ao entrar no rio, usar calçado e evitar bancos de areia rasos.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Manual de diagnóstico e tratamento de acidentes por animais peçonhentos', ano: 2024 }, { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre acidentes por animais peçonhentos', ano: 2023 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    ferimento_peixe: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - limpeza, exploração e analgesia', tipo: 'primeira',
+          opcoes: [
+            { medId: 'soro_fisiologico', nome: 'Soro fisiológico 0,9%', esquema: 'Lavagem imediata e abundante com água limpa e corrente e com soro fisiológico, seguida de antissepsia e de curativos diários', quando: 'Todo ferimento em ambiente aquático', obs: 'A limpeza precoce e a remoção de fragmentos de espinho, escamas e muco são o que mais reduz infecção.' },
+            { medId: 'dipirona', nome: 'Dipirona', esquema: '10 a 15 mg/kg/dose VO ou IV a cada 6 h, conforme bula', quando: 'Analgesia para permitir a exploração adequada da ferida', obs: '' },
+            { medId: null, nome: 'Imersão em água morna no ferimento por espinho de bagre ou mandi', esquema: 'Maior temperatura tolerável sem queimar, em torno de 50 graus, por 30 a 90 min, com teste prévio da temperatura por um adulto e supervisão contínua', quando: 'Dor intensa por ferroada de bagre, mandi e peixes peçonhentos de água doce', obs: 'Alivia a dor por inativação de componentes termolábeis do veneno. Risco real de queimadura se a temperatura não for testada.' }
+          ] },
+        { ordem: 2, rotulo: 'Antibiótico com cobertura obrigatória para Aeromonas quando indicado', tipo: 'primeira',
+          opcoes: [
+            { medId: 'sulfametoxazol_trimetoprim', nome: 'Sulfametoxazol + trimetoprima', esquema: '40 mg/kg/dia de sulfametoxazol e 8 mg/kg/dia de trimetoprima VO dividida a cada 12 h por 7 a 10 dias, conforme protocolo do serviço', quando: 'Ferimento profundo, por mordedura, em mãos e pés, com corpo estranho, com atendimento tardio, extenso, ou em criança imunossuprimida, desnutrida ou hepatopata', obs: 'Cobertura para Aeromonas. Contraindicado em menores de 2 meses.' },
+            { medId: 'cefalexina', nome: 'Cefalexina', esquema: '50 a 100 mg/kg/dia VO dividida a cada 6 h, conforme protocolo', quando: 'Cobertura para estafilococos e estreptococos, sempre associada a um agente com atividade contra Aeromonas', obs: 'Não usar isoladamente em ferimento de ambiente aquático, pois não cobre Aeromonas de forma confiável.' },
+            { medId: 'amoxicilina_clavulanato', nome: 'Amoxicilina + clavulanato', esquema: '45 a 50 mg/kg/dia do componente amoxicilina VO dividida a cada 12 h, conforme protocolo do serviço', quando: 'Cobertura para flora cutânea, anaeróbios e mordeduras, associada a agente com atividade contra Aeromonas', obs: 'Também não cobre Aeromonas de forma confiável quando isolada.' }
+          ] },
+        { ordem: 3, rotulo: 'Uso off-label', tipo: 'offlabel',
+          opcoes: [
+            { medId: 'ciprofloxacino', nome: 'Ciprofloxacino', esquema: 'Dose e duração conforme protocolo do serviço e bula', quando: 'Alternativa com boa atividade contra Aeromonas e Vibrio, útil em alergia à sulfa ou quando o sulfametoxazol com trimetoprima é contraindicado ou indisponível', obs: 'Off-label em criança por restrição de bula ligada ao risco osteoarticular observado em animais jovens. O uso é respaldado por diretrizes de infecção por Gram-negativos e por metanálises que não confirmaram dano articular clinicamente relevante em crianças. Registrar a justificativa e confirmar conforme protocolo e bula.', verificar: true },
+            { medId: 'doxiciclina', nome: 'Doxiciclina em menores de 8 anos', esquema: 'Dose e duração conforme protocolo do serviço e bula', quando: 'Alternativa em infecções por Vibrio e em micobacteriose, conforme avaliação especializada, quando não há outra opção adequada', obs: 'Off-label abaixo de 8 anos no Brasil por restrição de bula relacionada ao risco de alteração dentária. Cursos curtos têm risco muito baixo de manchamento segundo a Academia Americana de Pediatria e o CDC. Confirmar conforme protocolo e bula.', verificar: true }
+          ] },
+        { ordem: 4, rotulo: 'Segunda linha - infecção grave ou de evolução arrastada', tipo: 'segunda',
+          opcoes: [
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: '50 a 100 mg/kg/dia IV, associada a cobertura antiestafilocócica e para Aeromonas conforme protocolo do serviço e antibiograma', quando: 'Infecção grave com necessidade de internação', obs: 'Drenagem de abscessos, desbridamento e exploração de mão com suspeita de tenossinovite não devem ser adiados.' },
+            { medId: 'claritromicina', nome: 'Claritromicina', esquema: '15 mg/kg/dia VO dividida a cada 12 h, máximo 1 g ao dia, em tratamento prolongado por vários meses, isolada ou associada conforme orientação especializada', quando: 'Suspeita ou confirmação de Mycobacterium marinum, com nódulos de evolução arrastada em trajeto linear após contato com água e peixe', obs: 'Tratar habitualmente por pelo menos 4 a 8 semanas após a resolução das lesões. Confirmar conforme protocolo, cultura e antibiograma.', verificar: true }
+          ] },
+        { ordem: 5, rotulo: 'Adjuvante / sintomático', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula', quando: 'Analgesia e febre', obs: '' },
+            { medId: 'ibuprofeno', nome: 'Ibuprofeno', esquema: '5 a 10 mg/kg/dose VO a cada 6 a 8 h, conforme bula', quando: 'Analgesia e controle do edema', obs: '' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: 'cefalexina', nome: 'Cefalexina ou amoxicilina com clavulanato isoladas em ferida de ambiente aquático', esquema: '', quando: '', obs: 'Erro frequente e clinicamente relevante: nenhuma das duas cobre Aeromonas de forma confiável. A cobertura para Aeromonas é obrigatória nesse contexto, por associação ou por escolha específica.' },
+            { medId: null, nome: 'Sutura primária e hermética de ferimento contaminado, profundo, por mordedura ou com atendimento tardio', esquema: '', quando: '', obs: 'Aumenta muito o risco de infecção. Deixar aberto ou considerar fechamento tardio, conforme protocolo.' },
+            { medId: null, nome: 'Torniquete, cortes, sucção, cauterização, gelo direto sobre a pele, urina, fumo, borra de café ou querosene', esquema: '', quando: '', obs: 'Práticas caseiras comuns na pesca, sem benefício e com risco de queimadura química, necrose e infecção.' },
+            { medId: null, nome: 'Retirada de anzol incrustado por pessoa não treinada', esquema: '', quando: '', obs: 'Não puxar no sentido inverso quando há farpa. A retirada deve ser feita por profissional, sob anestesia local, com a técnica adequada ao tipo de anzol. Ferimentos em face, olhos, pescoço ou próximos a vasos e tendões exigem avaliação especializada.' },
+            { medId: null, nome: 'Alta sem reavaliação em 48 h', esquema: '', quando: '', obs: 'A infecção por Aeromonas tem evolução rápida. A reavaliação em 48 h é obrigatória e deve ser combinada considerando a distância e o transporte fluvial.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Profilaxia antitetânica conforme a situação vacinal e o tipo de ferimento, com imunoglobulina quando indicada; ferimentos de pesca e contaminados com terra ou água de rio são geralmente de alto risco.',
+        'Exploração da ferida sob analgesia adequada, com remoção de fragmentos de espinho, escamas, muco e matéria orgânica.',
+        'Curativos diários com soro fisiológico e proteção da ferida do contato com a água do rio durante a cicatrização, o que exige negociação prática com a rotina de pesca e banho da família.',
+        'Elevação do membro, repouso relativo e analgesia regular.',
+        'Notificação de acidente por animal peçonhento quando houver envenenamento associado, conforme a ficha específica.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Manual de diagnóstico e tratamento de acidentes por animais peçonhentos', ano: 2024 }, { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre infecções de pele e partes moles', ano: 2022 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    miiase: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - remoção mecânica', tipo: 'primeira',
+          opcoes: [
+            { medId: null, nome: 'Oclusão do orifício e retirada da larva com pinça', esquema: 'Ocluir o orifício central com vaselina, pomada oclusiva ou esparadrapo por alguns minutos, para dificultar a respiração da larva e favorecer sua emersão, seguida de retirada com pinça em movimento suave e contínuo', quando: 'Miíase furunculoide, forma mais comum na criança', obs: 'Evitar romper ou fragmentar a larva, pois restos causam reação inflamatória intensa, granuloma e infecção secundária. Quando a extração não for completa, considerar pequena incisão sob anestesia local conforme protocolo do serviço.' },
+            { medId: 'soro_fisiologico', nome: 'Soro fisiológico 0,9%', esquema: 'Limpeza abundante da lesão e curativos diários', quando: 'Miíase de ferida ou cavitária, com remoção mecânica de todas as larvas sob boa iluminação e analgesia adequada', obs: 'Associar desbridamento do tecido desvitalizado e curativos frequentes até que não restem larvas.' }
+          ] },
+        { ordem: 2, rotulo: 'Adjuvante para facilitar a remoção', tipo: 'adjuvante',
+          opcoes: [
+            { medId: null, nome: 'Anestésico local sem vasoconstritor, por exemplo lidocaína', esquema: 'Infiltração local conforme protocolo do serviço e bula, respeitando a dose máxima por peso', quando: 'Lesões dolorosas, criança pouco colaborativa ou localização delicada', obs: 'Confirmar dose máxima conforme protocolo/bula.', verificar: true },
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula', quando: 'Analgesia durante o procedimento e nos dias seguintes', obs: '' },
+            { medId: 'dipirona', nome: 'Dipirona', esquema: '10 a 15 mg/kg/dose VO ou IV a cada 6 h, conforme bula', quando: 'Alternativa analgésica', obs: '' },
+            { medId: 'ibuprofeno', nome: 'Ibuprofeno', esquema: '5 a 10 mg/kg/dose VO a cada 6 a 8 h, conforme bula', quando: 'Analgesia e controle do edema', obs: '' }
+          ] },
+        { ordem: 3, rotulo: 'Uso off-label', tipo: 'offlabel',
+          opcoes: [
+            { medId: 'ivermectina', nome: 'Ivermectina oral como adjuvante na miíase', esquema: '200 microgramas/kg VO em dose única, podendo ser repetida conforme avaliação. Uso habitualmente restrito a crianças com peso igual ou superior a 15 kg', quando: 'Miíases extensas, cavitárias ou de difícil acesso, para imobilizar e matar as larvas e facilitar a remoção', obs: 'Off-label: a bula da ivermectina registra estrongiloidíase, oncocercose e escabiose, não a miíase, e restringe o uso a crianças com 15 kg ou mais. O emprego na miíase, inclusive cavitária e em miíase por Cochliomyia hominivorax, é descrito em séries de casos e em protocolos assistenciais. Confirmar indicação, peso mínimo e dose conforme protocolo do Ministério da Saúde e bula.', verificar: true },
+            { medId: 'ivermectina', nome: 'Ivermectina tópica sobre a lesão', esquema: 'Aplicação tópica conforme protocolo do serviço', quando: 'Alternativa descrita para facilitar a saída das larvas quando a via oral não é adequada ou a criança tem menos de 15 kg', obs: 'Off-label quanto à via e à indicação, sem apresentação registrada para esse uso no Brasil. Descrita em relatos e séries de casos. Confirmar conforme protocolo do serviço.', verificar: true }
+          ] },
+        { ordem: 4, rotulo: 'Segunda linha - infecção bacteriana secundária', tipo: 'segunda',
+          opcoes: [
+            { medId: 'cefalexina', nome: 'Cefalexina', esquema: '50 a 100 mg/kg/dia VO dividida a cada 6 h por 7 a 10 dias, conforme protocolo', quando: 'Infecção bacteriana secundária, celulite ou febre', obs: 'Cobertura para estafilococos e estreptococos.' },
+            { medId: 'amoxicilina_clavulanato', nome: 'Amoxicilina + clavulanato', esquema: '45 a 50 mg/kg/dia do componente amoxicilina VO dividida a cada 12 h, conforme protocolo do serviço', quando: 'Ferida extensa, cavitária ou com necessidade de cobertura para anaeróbios', obs: '' },
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: '50 a 100 mg/kg/dia IV, conforme protocolo do serviço', quando: 'Infecção grave com necessidade de internação', obs: '' },
+            { medId: 'metronidazol', nome: 'Metronidazol', esquema: 'Associado conforme protocolo do serviço', quando: 'Ferida fétida com suspeita de anaeróbios', obs: '' }
+          ] },
+        { ordem: 5, rotulo: 'Adjuvante - tratar as condições associadas', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'permetrina', nome: 'Permetrina', esquema: 'Loção ou creme a 5% para escabiose e loção a 1% para pediculose, conforme protocolo do Ministério da Saúde e bula', quando: 'Escabiose ou pediculose associadas, que criam as lesões de entrada para a mosca', obs: 'Sem tratar as condições de base, a recorrência é a regra.' },
+            { medId: null, nome: 'Tratamento das demais condições predisponentes', esquema: '', quando: 'Otorreia crônica, feridas crônicas, desnutrição e lesões de coçadura', obs: 'A miíase costuma ser marcador de vulnerabilidade social e de acesso deficiente ao cuidado.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Querosene, óleo diesel, gasolina, creolina, tabaco ou cal sobre a lesão', esquema: '', quando: '', obs: 'Práticas muito comuns na região e francamente prejudiciais: causam queimadura química, dermatite grave, necrose e agravamento da ferida, além de risco de absorção sistêmica na criança. Perguntar ativamente se foram usadas e orientar contra.' },
+            { medId: null, nome: 'Retirada da larva com força ou de forma incompleta', esquema: '', quando: '', obs: 'Fragmentos retidos causam reação inflamatória intensa, granuloma de corpo estranho e infecção secundária. Preferir oclusão prévia e movimento suave e contínuo.' },
+            { medId: null, nome: 'Antibiótico sistêmico em toda miíase', esquema: '', quando: '', obs: 'Não indicado sem sinais de infecção bacteriana secundária. O tratamento é a remoção das larvas e o cuidado da ferida.' },
+            { medId: null, nome: 'Remoção ambulatorial de miíase nasal, auricular, orbitária, oral ou perineal', esquema: '', quando: '', obs: 'Essas localizações exigem avaliação por otorrinolaringologia, oftalmologia ou cirurgia, com remoção sob sedação ou anestesia geral quando necessário e avaliação de extensão por imagem.' },
+            { medId: null, nome: 'Alta sem avaliação social quando o quadro sugere negligência', esquema: '', quando: '', obs: 'Miíase extensa em criança com má higiene e feridas crônicas exige avaliação social e, quando indicada, articulação com a rede de proteção e comunicação ao Conselho Tutelar.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Profilaxia antitetânica conforme a situação vacinal e o tipo de lesão.',
+        'Curativos diários com soro fisiológico e cobertura adequada, com reavaliação frequente até a cicatrização.',
+        'Tratamento simultâneo de escabiose, pediculose, otorreia crônica, feridas crônicas e desnutrição, sem o que a recorrência é a regra.',
+        'Orientação sobre proteção de feridas com curativo, telas e higiene, em ambiente com alta densidade de moscas.',
+        'Avaliação social e articulação com a rede de proteção quando houver sinais de negligência.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Dermatologia na atenção básica e vigilância de zoonoses', ano: 2022 }, { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre dermatoses parasitárias', ano: 2022 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    tungiase: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - remoção mecânica com instrumental estéril', tipo: 'primeira',
+          opcoes: [
+            { medId: null, nome: 'Extração completa da pulga com agulha estéril ou cureta', esquema: 'Remoção sob antissepsia rigorosa, em ambiente de saúde, com instrumental estéril e individual, seguida de limpeza da cavidade com antisséptico e cobertura', quando: 'Tungíase com poucas lesões ou lesões sintomáticas', obs: 'Tratamento padrão. Realizar com analgesia adequada, especialmente em criança com muitas lesões. Em infestação intensa, programar sessões, priorizando as lesões mais dolorosas e as infectadas.' },
+            { medId: 'soro_fisiologico', nome: 'Soro fisiológico 0,9%', esquema: 'Limpeza das lesões e curativos', quando: 'Após a remoção e no cuidado diário dos pés', obs: '' }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa não invasiva, útil em infestação intensa e em ação comunitária', tipo: 'alternativa',
+          opcoes: [
+            { medId: null, nome: 'Dimeticona de baixa viscosidade tópica', esquema: 'Aplicação sobre as lesões duas vezes ao dia por vários dias consecutivos, conforme protocolo do serviço e bula', quando: 'Infestação intensa, criança que não tolera a remoção, ou programas comunitários em que a extração individual de dezenas de lesões é inviável', obs: 'Eficácia demonstrada para matar as pulgas incrustadas, com a vantagem de não ser invasiva. Confirmar disponibilidade e esquema conforme protocolo.', verificar: true },
+            { medId: null, nome: 'Vaselina ou óleos oclusivos', esquema: 'Aplicação oclusiva conforme protocolo do serviço', quando: 'Medida auxiliar quando não há dimeticona disponível na comunidade', obs: 'Reduz a viabilidade do parasita. Medida paliativa, não substitui a remoção quando ela é possível. Confirmar conforme protocolo do serviço.', verificar: true }
+          ] },
+        { ordem: 3, rotulo: 'Segunda linha - infecção bacteriana secundária', tipo: 'segunda',
+          opcoes: [
+            { medId: 'cefalexina', nome: 'Cefalexina', esquema: '50 a 100 mg/kg/dia VO dividida a cada 6 h por 7 a 10 dias, conforme protocolo', quando: 'Infecção bacteriana secundária, complicação frequente e principal causa de morbidade', obs: 'Cobertura para estafilococos e estreptococos.' },
+            { medId: 'amoxicilina_clavulanato', nome: 'Amoxicilina + clavulanato', esquema: '45 a 50 mg/kg/dia do componente amoxicilina VO dividida a cada 12 h, conforme protocolo do serviço', quando: 'Infecção extensa ou com necessidade de cobertura ampliada', obs: '' },
+            { medId: 'sulfametoxazol_trimetoprim', nome: 'Sulfametoxazol + trimetoprima', esquema: '8 a 12 mg/kg/dia de trimetoprima VO dividida a cada 12 h, conforme protocolo do serviço e perfil local', quando: 'Suspeita de Staphylococcus aureus resistente à meticilina de origem comunitária, e alternativa em alergia a betalactâmicos', obs: 'Contraindicado em menores de 2 meses e na deficiência de G6PD.' },
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: '50 a 100 mg/kg/dia IV, conforme protocolo do serviço', quando: 'Infecção grave, febre ou toxemia com necessidade de internação', obs: '' }
+          ] },
+        { ordem: 4, rotulo: 'Adjuvante / sintomático', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula', quando: 'Analgesia regular, pois a dor é subestimada e compromete a marcha e a frequência escolar', obs: '' },
+            { medId: 'dipirona', nome: 'Dipirona', esquema: '10 a 15 mg/kg/dose VO a cada 6 h, conforme bula', quando: 'Alternativa analgésica', obs: '' },
+            { medId: 'ibuprofeno', nome: 'Ibuprofeno', esquema: '5 a 10 mg/kg/dose VO a cada 6 a 8 h, conforme bula', quando: 'Analgesia e controle do edema', obs: '' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Agulha, alfinete ou espinho compartilhado e não esterilizado para extrair o bicho-de-pé', esquema: '', quando: '', obs: 'Prática domiciliar muito comum e perigosa: causa infecção bacteriana secundária, tétano e risco de transmissão de patógenos de transmissão sanguínea, incluindo hepatites e HIV, quando o instrumento é compartilhado entre membros da família ou vizinhos. Orientar ativamente e oferecer a remoção no serviço.' },
+            { medId: null, nome: 'Querosene, creolina, óleo diesel e outras substâncias cáusticas nos pés', esquema: '', quando: '', obs: 'Prática frequente na tentativa de matar a pulga. Causa queimadura química, dermatite de contato e agravamento da infecção, sem eficácia comprovada.' },
+            { medId: 'ivermectina', nome: 'Ivermectina oral como tratamento de primeira linha', esquema: '', quando: '', obs: 'Eficácia não consistentemente demonstrada na tungíase, ao contrário do que ocorre na escabiose. Não deve ser considerada tratamento de primeira linha. Se cogitada em situação específica, seguir critérios de peso e idade e confirmar conforme protocolo e bula.' },
+            { medId: null, nome: 'Tratar apenas a criança sem abordar a casa, os conviventes e os animais', esquema: '', quando: '', obs: 'A reinfestação ocorre em semanas. A tungíase é problema comunitário e ambiental, não apenas individual.' },
+            { medId: null, nome: 'Alta sem atualização da profilaxia antitetânica', esquema: '', quando: '', obs: 'As lesões são portas de entrada clássicas para o tétano. Atualizar o esquema da criança e de toda a família.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Profilaxia antitetânica conforme a situação vacinal e o tipo de lesão, com atualização do esquema de toda a família.',
+        'Cuidados com os pés: lavagem diária com água e sabão, secagem entre os dedos, hidratação da pele, corte adequado das unhas e tratamento de fissuras e hiperceratose.',
+        'Tratamento simultâneo dos demais moradores afetados.',
+        'Manejo ambiental e animal: cimentar ou compactar o piso, manter o terreiro varrido e limpo, afastar chiqueiros, galinheiros e canis da casa e tratar os animais domésticos.',
+        'Articulação com a equipe de saúde da família, com a escola e com a vigilância ambiental, com uso de calçado fechado como medida central de prevenção.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Dermatologia na atenção básica', ano: 2022 }, { nome: 'OMS - Tungiasis, neglected tropical diseases fact sheet and guidance', ano: 2023 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    larva_migrans_cutanea: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha', tipo: 'primeira',
+          opcoes: [
+            { medId: 'albendazol', nome: 'Albendazol', esquema: '400 mg VO uma vez ao dia por 3 a 5 dias, ou 10 a 15 mg/kg/dia, máximo 400 mg ao dia, em crianças menores, conforme protocolo do serviço e bula', quando: 'Larva migrans cutânea confirmada clinicamente pelo trajeto serpiginoso e pruriginoso', obs: 'A doença é autolimitada, mas o tratamento abrevia o curso, alivia o prurido intenso e reduz escoriação e infecção secundária. Confirmar conforme protocolo e bula, respeitando os critérios de idade mínima.', verificar: true }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'ivermectina', nome: 'Ivermectina', esquema: '200 microgramas/kg VO em dose única, podendo ser repetida após 1 a 2 semanas conforme avaliação. Uso habitualmente restrito a crianças com peso igual ou superior a 15 kg', quando: 'Alternativa eficaz, especialmente útil quando a adesão a um curso de vários dias é difícil, situação comum em comunidade distante', obs: 'Confirmar indicação, peso mínimo e dose conforme protocolo do Ministério da Saúde e bula.', verificar: true },
+            { medId: null, nome: 'Tiabendazol tópico', esquema: 'Aplicação sobre o trajeto e alguns centímetros à frente dele, 2 a 3 vezes ao dia por 7 a 10 dias, conforme disponibilidade, protocolo do serviço e bula', quando: 'Lesões poucas e localizadas, em especial em crianças pequenas nas quais o tratamento sistêmico é limitado por idade ou peso', obs: 'Aplicar à frente da extremidade visível, pois a larva costuma estar adiante do trajeto aparente. Confirmar conforme protocolo.', verificar: true }
+          ] },
+        { ordem: 3, rotulo: 'Segunda linha - apenas na indisponibilidade das opções anteriores', tipo: 'segunda',
+          opcoes: [
+            { medId: 'mebendazol', nome: 'Mebendazol', esquema: 'Dose e duração conforme protocolo do serviço e bula', quando: 'Apenas quando albendazol, ivermectina e tiabendazol tópico não estão disponíveis na unidade', obs: 'Eficácia inferior na larva migrans cutânea, não é a escolha preferencial. Confirmar conforme protocolo/bula.', verificar: true },
+            { medId: null, nome: 'Reavaliação em 7 dias e novo curso conforme protocolo', esquema: '', quando: 'Ausência de resposta ao tratamento inicial', obs: 'Rever o diagnóstico e considerar novo curso conforme protocolo do serviço.' }
+          ] },
+        { ordem: 4, rotulo: 'Adjuvante - controle do prurido e da infecção secundária', tipo: 'adjuvante',
+          opcoes: [
+            { medId: null, nome: 'Anti-histamínico oral, por exemplo hidroxizina ou dexclorfeniramina', esquema: 'Dose conforme idade, peso e bula, com atenção à sedação', quando: 'Prurido intenso, que é o que leva a criança a escoriar e a infectar a lesão', obs: 'Confirmar conforme protocolo e bula.', verificar: true },
+            { medId: null, nome: 'Corticoide tópico de baixa potência, por exemplo hidrocortisona 1%', esquema: 'Aplicação por curto período, associada ao antiparasitário, conforme avaliação e bula', quando: 'Alívio da inflamação e do prurido locais', obs: 'Não usar isoladamente sem o antiparasitário. Confirmar conforme protocolo.', verificar: true },
+            { medId: 'cefalexina', nome: 'Cefalexina', esquema: '50 a 100 mg/kg/dia VO dividida a cada 6 h por 7 a 10 dias, conforme protocolo', quando: 'Infecção bacteriana secundária: impetiginização ou celulite', obs: '' },
+            { medId: 'amoxicilina_clavulanato', nome: 'Amoxicilina + clavulanato', esquema: '45 a 50 mg/kg/dia do componente amoxicilina VO dividida a cada 12 h, conforme protocolo do serviço', quando: 'Infecção secundária extensa ou falha da cefalexina', obs: '' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Tiabendazol por via oral', esquema: '', quando: '', obs: 'Não recomendado quando há alternativa melhor. A formulação oral tem alta frequência de náusea, vômitos, tontura e efeitos neurológicos, com eficácia não superior à do albendazol e da ivermectina, que são mais bem tolerados. A apresentação tópica é a que mantém espaço no tratamento.' },
+            { medId: null, nome: 'Querosene, óleo diesel, cal, creolina, fumo ou folhas maceradas sobre as lesões', esquema: '', quando: '', obs: 'Práticas relatadas na região e causadoras de queimadura química e de dermatite de contato, sem eficácia sobre a larva.' },
+            { medId: null, nome: 'Tentar retirar a larva com agulha ou objeto cortante', esquema: '', quando: '', obs: 'A larva costuma estar à frente da extremidade visível do trajeto. O procedimento apenas fere a pele, aumenta a dor e favorece infecção secundária.' },
+            { medId: null, nome: 'Crioterapia com nitrogênio líquido sobre o trajeto', esquema: '', quando: '', obs: 'Técnica antiga, dolorosa, com baixa eficácia pelo mesmo motivo e com risco de bolha e de cicatriz, especialmente em criança.' },
+            { medId: null, nome: 'Corticoide tópico isolado para o prurido', esquema: '', quando: '', obs: 'Alivia temporariamente sem eliminar a larva, prolongando o quadro. Associar sempre o antiparasitário.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Controle do prurido com compressas frias, hidratação da pele e corte das unhas, medidas essenciais para reduzir escoriação.',
+        'Higiene local com água e sabão e curativos quando houver lesões escoriadas ou infectadas.',
+        'Profilaxia antitetânica conforme a situação vacinal, especialmente quando houver escoriações profundas.',
+        'Avaliação de outras crianças da casa ou da turma expostas ao mesmo local, com orientação à comunidade sobre a área de risco identificada, geralmente areia ou solo úmido com fezes de cães e gatos.',
+        'Prevenção: uso de calçado e de esteira ou canga na areia, e controle de cães e gatos com vermifugação periódica.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Dermatologia na atenção básica', ano: 2022 }, { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre dermatoses parasitárias', ano: 2022 } ],
+      atualizadoEm: '2026-09'
+    }
   },
 
   rotulosTipo: {
