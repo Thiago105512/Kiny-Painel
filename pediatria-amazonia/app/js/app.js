@@ -1035,6 +1035,13 @@ window.PED = window.PED || {};
   function salvarCompUnidade(id, dados) { const c = S.pref('unidadesComp') || {}; c[id] = Object.assign({}, c[id], dados); S.pref('unidadesComp', c); }
   const unidadeCompleta = (u) => Object.assign({}, u, compUnidade(u.id));
 
+  /** Unidades que a médica cadastrou neste aparelho, somadas às da base. */
+  const minhasUnidades = () => S.pref('minhasUnidades') || [];
+  function todasUnidades() {
+    const base = ((D().locais || {}).unidades) || [];
+    return base.concat(minhasUnidades());
+  }
+
   const TIPO_UNIDADE = { pronto_socorro: { rot: 'Pronto-socorro', ic: '\u{1F691}' }, upa: { rot: 'UPA / SPA', ic: '\u{1F3E5}' }, hospital: { rot: 'Hospital', ic: '\u{1F3E5}' }, maternidade: { rot: 'Maternidade', ic: '\u{1F930}' }, ubs: { rot: 'UBS', ic: '\u{1FA7A}' }, referencia: { rot: 'Referência', ic: '\u2B50' } };
   route('/unidades', (params, q) => {
     const L = D().locais; if (!L || !L.unidades) return '<div class="empty">M\u00f3dulo em prepara\u00e7\u00e3o.</div>';
@@ -1042,32 +1049,33 @@ window.PED = window.PED || {};
     const cidade = q.cidade || (p && p.municipio) || 'Manaus';
     const tipo = q.tipo || '';
     const zona = q.zona || '';
-    const cidades = [...new Set(L.unidades.map(u => u.cidade))].sort((a, b) => a === 'Manaus' ? -1 : b === 'Manaus' ? 1 : a.localeCompare(b));
-    let lista = L.unidades.filter(u => u.cidade === cidade);
+    const TODAS = todasUnidades();
+    const cidades = [...new Set(TODAS.map(u => u.cidade))].sort((a, b) => a === 'Manaus' ? -1 : b === 'Manaus' ? 1 : a.localeCompare(b));
+    let lista = TODAS.filter(u => u.cidade === cidade);
     if (tipo) lista = lista.filter(u => u.tipo === tipo);
     if (zona) lista = lista.filter(u => u.zona === zona);
-    const tipos = [...new Set(L.unidades.filter(u => u.cidade === cidade).map(u => u.tipo))];
+    const tipos = [...new Set(TODAS.filter(u => u.cidade === cidade).map(u => u.tipo))];
     const linha = (u0) => { const u = unidadeCompleta(u0); const t = TIPO_UNIDADE[u.tipo] || { rot: u.tipo, ic: '\u{1F3E5}' };
       const meu = compUnidade(u.id);
       return `<div class="row"><span class="ic">${t.ic}</span><div class="grow">
-        <div class="title">${esc(u.nome)} ${u.rede === 'privada' ? '<span class="chip purple">privado</span>' : ''} ${u.urgencia ? '<span class="chip red">24 h</span>' : ''} ${u.pediatria ? '<span class="chip green">pediatria</span>' : ''}</div>
+        <div class="title">${esc(u.nome)} ${u.rede === 'privada' ? '<span class="chip purple">privado</span>' : ''} ${u.minha ? '<span class="chip green">sua</span>' : ''} ${u.urgencia ? '<span class="chip red">24 h</span>' : ''} ${u.pediatria ? '<span class="chip green">pediatria</span>' : ''}</div>
         <div class="sub">${esc([t.rot, u.bairro, u.zona ? (((L.zonasManaus || []).find(z => z.id === u.zona) || {}).nome || '') : ''].filter(Boolean).join(' \u00b7 '))}</div>
         <div class="sub">${u.endereco ? esc(u.endereco) + (meu.endereco ? ' <span class="chip green">seu registro</span>' : '') : '<span class="muted">endere\u00e7o n\u00e3o confirmado</span>'}${u.telefone ? ' \u00b7 ' + esc(u.telefone) : ''}</div>
         ${(u.referenciaPara || []).length ? `<div class="sub">Refer\u00eancia para: ${esc(u.referenciaPara.join(', '))}</div>` : ''}</div>
         <div style="display:flex;flex-direction:column;gap:.25rem">
         ${u.telefone ? `<a class="btn sm" href="tel:${esc(u.telefone)}">ligar</a>` : ''}
         <button class="btn sm ghost" data-act="editarUnidade" data-id="${esc(u.id)}" data-nome="${esc(u.nome)}">\u270E</button></div></div>`; };
-    const ref = L.unidades.filter(u => u.tipo === 'referencia' && u.cidade === cidade);
-    const semEndereco = L.unidades.filter(u => !unidadeCompleta(u).endereco).length;
+    const ref = TODAS.filter(u => u.tipo === 'referencia' && u.cidade === cidade);
+    const semEndereco = TODAS.filter(u => !unidadeCompleta(u).endereco).length;
     return `<h1>\u{1F3E5} Unidades de sa\u00fade</h1>
-      ${semEndereco ? `<div class="alert amber"><strong>Endere\u00e7os a confirmar</strong>${semEndereco} de ${L.unidades.length} unidades est\u00e3o cadastradas s\u00f3 pelo nome. Nenhum endere\u00e7o ou telefone foi presumido. Toque no l\u00e1pis para registrar os que voc\u00ea usa: ficam guardados neste aparelho e passam a aparecer aqui.</div>` : ''}
+      ${semEndereco ? `<div class="alert amber"><strong>Endere\u00e7os a confirmar</strong>${semEndereco} de ${TODAS.length} unidades est\u00e3o cadastradas s\u00f3 pelo nome. Nenhum endere\u00e7o ou telefone foi presumido. Toque no l\u00e1pis para registrar os que voc\u00ea usa: ficam guardados neste aparelho e passam a aparecer aqui.</div>` : ''}
       <div class="field"><label>Cidade</label><select id="uniCidade">${cidades.map(c => `<option value="${esc(c)}" ${cidade === c ? 'selected' : ''}>${esc(c)}</option>`).join('')}</select></div>
       <div class="toggles" style="margin-bottom:.5rem">
         <a class="toggle ${tipo ? '' : 'on'}" href="#/unidades?cidade=${encodeURIComponent(cidade)}">Todas</a>
         ${tipos.map(t => `<a class="toggle ${tipo === t ? 'on' : ''}" href="#/unidades?cidade=${encodeURIComponent(cidade)}&tipo=${t}">${esc((TIPO_UNIDADE[t] || {}).rot || t)}</a>`).join('')}</div>
       ${cidade === 'Manaus' ? `<div class="toggles" style="margin-bottom:.6rem"><a class="toggle ${zona ? '' : 'on'}" href="#/unidades?cidade=Manaus${tipo ? '&tipo=' + tipo : ''}">Todas as zonas</a>${(L.zonasManaus || []).map(z => `<a class="toggle ${zona === z.id ? 'on' : ''}" href="#/unidades?cidade=Manaus&zona=${z.id}${tipo ? '&tipo=' + tipo : ''}">${esc(z.nome)}</a>`).join('')}</div>` : ''}
       ${ref.length && !tipo && !zona ? `<div class="section-title"><h2>\u2B50 Refer\u00eancias</h2></div><div class="list">${ref.map(linha).join('')}</div>` : ''}
-      <div class="section-title"><h2>${lista.length} unidade(s)</h2></div>
+      <div class="section-title"><h2>${lista.length} unidade(s)</h2><button class="btn sm" data-act="novaUnidade" data-cidade="${esc(cidade)}">\u2795 Adicionar</button></div>
       <div class="list">${lista.filter(u => !(ref.includes(u) && !tipo && !zona)).map(linha).join('') || '<div class="empty">Nenhuma unidade com esse filtro.</div>'}</div>
       ${(L.referencias || []).length ? `<div class="card"><h2>Refer\u00eancias estaduais por assunto</h2><div class="tablewrap"><table><tr><th>Assunto</th><th>Unidade</th></tr>${L.referencias.map(x => `<tr><td>${esc(x.assunto)}</td><td>${esc(x.unidade)}${x.obs ? '<br><small class="muted">' + esc(x.obs) + '</small>' : ''}</td></tr>`).join('')}</table></div></div>` : ''}
       <div class="alert amber"><strong>Conferir antes de encaminhar</strong>${esc(L.aviso || '')}</div>${U.fontes(L)}${disclaimer}`;
@@ -1422,6 +1430,17 @@ window.PED = window.PED || {};
       marcarVacina() { S.upsert('vacinasRealizadas', { pacienteId: el.dataset.pid, vacinaId: el.dataset.vid, doseIndex: Number(el.dataset.i), data: U.today() }); U.toast('Marcada com a data de hoje: toque na data para mudar'); render(); },
       editarDataVacina() { const v = S.byId('vacinasRealizadas', el.dataset.id); if (!v) return; const t = prompt('Data da dose (dd/mm/aaaa):', PED.entrada.deISO(v.data)); if (!t) return; const iso = PED.entrada.paraISO(t); if (!iso) { U.toast('Data inválida'); return; } v.data = iso; S.upsert('vacinasRealizadas', v); render(); },
       desfazerVacina() { S.remove('vacinasRealizadas', el.dataset.id); render(); },
+      novaUnidade() {
+        const nome = prompt('Nome da unidade:'); if (!nome || !nome.trim()) return;
+        const tipos = 'hospital, pronto_socorro, upa, ubs, maternidade, referencia';
+        const tipo = (prompt('Tipo (' + tipos + '):', 'ubs') || 'ubs').trim();
+        const rede = (prompt('Rede (publica ou privada):', 'publica') || 'publica').trim();
+        const endereco = prompt('Endereço (opcional):', '') || '';
+        const telefone = prompt('Telefone (opcional):', '') || '';
+        const lista = minhasUnidades();
+        lista.push({ id: 'minha_' + U.uid(), nome: nome.trim(), tipo, rede, cidade: el.dataset.cidade, zona: null, bairro: '', endereco: endereco.trim(), telefone: telefone.trim(), pediatria: true, urgencia: false, minha: true, obs: 'Cadastrada por você neste aparelho.' });
+        S.pref('minhasUnidades', lista); U.toast('Unidade adicionada'); render();
+      },
       editarUnidade() {
         const id = el.dataset.id; const atual = compUnidade(id);
         const end = prompt('Endere\u00e7o de ' + el.dataset.nome + ':', atual.endereco || '');
