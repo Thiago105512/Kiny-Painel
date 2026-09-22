@@ -31,6 +31,7 @@ window.PED = window.PED || {};
     { path: '/exames', nome: 'Exames', ic: '🧪' },
     { path: '/vacinas', nome: 'Vacinas', ic: '💉' },
     { path: '/crescimento', nome: 'Crescimento', ic: '📈' },
+    { path: '/unidades', nome: 'Unidades', ic: '🏥' },
     { path: '/violencia', nome: 'Proteção', ic: '🛡️' },
     { path: '/aprender', nome: 'Aprender', ic: '💡' },
     { path: '/notificacao', nome: 'Notificação', ic: '📢' },
@@ -377,6 +378,7 @@ window.PED = window.PED || {};
         <a class="tile" href="#/vacinas"><span class="ic">💉</span>Vacinas</a>
         <a class="tile" href="#/crescimento"><span class="ic">📈</span>Crescimento</a>
         <a class="tile" href="#/notificacao"><span class="ic">📢</span>Notificação<small>compulsória</small></a>
+        <a class="tile" href="#/unidades"><span class="ic">🏥</span>Unidades<small>para onde encaminhar</small></a>
         <a class="tile red" href="#/violencia"><span class="ic">🛡️</span>Proteção<small>violência</small></a>
         <a class="tile" href="#/aprender"><span class="ic">💡</span>Aprender<small>e explicar à família</small></a>
       </div>
@@ -1027,6 +1029,40 @@ window.PED = window.PED || {};
       ${disclaimer}`;
   });
 
+  /* ---- Unidades de saúde ---- */
+  const TIPO_UNIDADE = { pronto_socorro: { rot: 'Pronto-socorro', ic: '\u{1F691}' }, upa: { rot: 'UPA / SPA', ic: '\u{1F3E5}' }, hospital: { rot: 'Hospital', ic: '\u{1F3E5}' }, maternidade: { rot: 'Maternidade', ic: '\u{1F930}' }, ubs: { rot: 'UBS', ic: '\u{1FA7A}' }, referencia: { rot: 'Referência', ic: '\u2B50' } };
+  route('/unidades', (params, q) => {
+    const L = D().locais; if (!L || !L.unidades) return '<div class="empty">M\u00f3dulo em prepara\u00e7\u00e3o.</div>';
+    const p = paciente();
+    const cidade = q.cidade || (p && p.municipio) || 'Manaus';
+    const tipo = q.tipo || '';
+    const zona = q.zona || '';
+    const cidades = [...new Set(L.unidades.map(u => u.cidade))].sort((a, b) => a === 'Manaus' ? -1 : b === 'Manaus' ? 1 : a.localeCompare(b));
+    let lista = L.unidades.filter(u => u.cidade === cidade);
+    if (tipo) lista = lista.filter(u => u.tipo === tipo);
+    if (zona) lista = lista.filter(u => u.zona === zona);
+    const tipos = [...new Set(L.unidades.filter(u => u.cidade === cidade).map(u => u.tipo))];
+    const linha = (u) => { const t = TIPO_UNIDADE[u.tipo] || { rot: u.tipo, ic: '\u{1F3E5}' };
+      return `<div class="row"><span class="ic">${t.ic}</span><div class="grow">
+        <div class="title">${esc(u.nome)} ${u.rede === 'privada' ? '<span class="chip purple">privado</span>' : ''} ${u.urgencia ? '<span class="chip red">24 h</span>' : ''} ${u.pediatria ? '<span class="chip green">pediatria</span>' : ''}</div>
+        <div class="sub">${esc([t.rot, u.bairro, u.zona ? (((L.zonasManaus || []).find(z => z.id === u.zona) || {}).nome || '') : '', u.endereco].filter(Boolean).join(' \u00b7 '))}</div>
+        ${(u.referenciaPara || []).length ? `<div class="sub">Refer\u00eancia para: ${esc(u.referenciaPara.join(', '))}</div>` : ''}
+        ${u.obs ? `<div class="sub muted"><small>${esc(u.obs)}</small></div>` : ''}</div>
+        ${u.telefone ? `<a class="btn sm" href="tel:${esc(u.telefone)}">ligar</a>` : ''}</div>`; };
+    const ref = L.unidades.filter(u => u.tipo === 'referencia' && u.cidade === cidade);
+    return `<h1>\u{1F3E5} Unidades de sa\u00fade</h1>
+      <div class="field"><label>Cidade</label><select id="uniCidade">${cidades.map(c => `<option value="${esc(c)}" ${cidade === c ? 'selected' : ''}>${esc(c)}</option>`).join('')}</select></div>
+      <div class="toggles" style="margin-bottom:.5rem">
+        <a class="toggle ${tipo ? '' : 'on'}" href="#/unidades?cidade=${encodeURIComponent(cidade)}">Todas</a>
+        ${tipos.map(t => `<a class="toggle ${tipo === t ? 'on' : ''}" href="#/unidades?cidade=${encodeURIComponent(cidade)}&tipo=${t}">${esc((TIPO_UNIDADE[t] || {}).rot || t)}</a>`).join('')}</div>
+      ${cidade === 'Manaus' ? `<div class="toggles" style="margin-bottom:.6rem"><a class="toggle ${zona ? '' : 'on'}" href="#/unidades?cidade=Manaus${tipo ? '&tipo=' + tipo : ''}">Todas as zonas</a>${(L.zonasManaus || []).map(z => `<a class="toggle ${zona === z.id ? 'on' : ''}" href="#/unidades?cidade=Manaus&zona=${z.id}${tipo ? '&tipo=' + tipo : ''}">${esc(z.nome)}</a>`).join('')}</div>` : ''}
+      ${ref.length && !tipo && !zona ? `<div class="section-title"><h2>\u2B50 Refer\u00eancias</h2></div><div class="list">${ref.map(linha).join('')}</div>` : ''}
+      <div class="section-title"><h2>${lista.length} unidade(s)</h2></div>
+      <div class="list">${lista.filter(u => !(ref.includes(u) && !tipo && !zona)).map(linha).join('') || '<div class="empty">Nenhuma unidade com esse filtro.</div>'}</div>
+      ${(L.referencias || []).length ? `<div class="card"><h2>Refer\u00eancias estaduais por assunto</h2><div class="tablewrap"><table><tr><th>Assunto</th><th>Unidade</th></tr>${L.referencias.map(x => `<tr><td>${esc(x.assunto)}</td><td>${esc(x.unidade)}${x.obs ? '<br><small class="muted">' + esc(x.obs) + '</small>' : ''}</td></tr>`).join('')}</table></div></div>` : ''}
+      <div class="alert amber"><strong>Conferir antes de encaminhar</strong>${esc(L.aviso || '')}</div>${U.fontes(L)}${disclaimer}`;
+  });
+
   /* ---- Aprender e explicar ---- */
   route('/aprender', (params, q) => {
     const C = D().curiosidades; if (!C) return '<div class="empty">M\u00f3dulo em prepara\u00e7\u00e3o.</div>';
@@ -1329,6 +1365,7 @@ window.PED = window.PED || {};
     if (fs) fs.addEventListener('submit', (e) => { e.preventDefault(); const d = formData(fs); const prev = fs.dataset.id ? S.byId('evolucoes', fs.dataset.id) : null; const quando = (d.dataISO ? d.dataISO : U.today()) + 'T' + ((d.hora && /^\d{1,2}:?\d{0,2}$/.test(d.hora)) ? (d.hora.includes(':') ? d.hora : d.hora.padStart(4, '0').replace(/(\d{2})(\d{2})/, '$1:$2')) : '12:00');
         const obj = Object.assign({}, prev || {}, d, { data: new Date(quando).toISOString(), profissional: profissionalLinha() }); if (!fs.dataset.id) delete obj.id; S.upsert('evolucoes', obj); const p = S.byId('pacientes', d.pacienteId); if (p && d.peso && Number(d.peso) !== p.peso) { p.peso = Number(d.peso); S.upsert('pacientes', p); } U.toast('Evolução salva'); go('/pacientes/' + d.pacienteId + '?tab=evolucao'); });
     const fprof = $('#formProf'); if (fprof) fprof.addEventListener('submit', (e) => { e.preventDefault(); S.pref('profissional', formData(fprof)); U.toast('Profissional salvo'); render(); });
+    const uc = $('#uniCidade'); if (uc) uc.addEventListener('change', () => go('/unidades?cidade=' + encodeURIComponent(uc.value)));
     // Importar
     const imp = $('#importFile'); if (imp) imp.addEventListener('change', () => { const fr = new FileReader(); fr.onload = () => { try { S.importJSON(fr.result); U.toast('Dados importados'); render(); } catch (e) { alert('Arquivo inválido: ' + e.message); } }; fr.readAsText(imp.files[0]); });
   }

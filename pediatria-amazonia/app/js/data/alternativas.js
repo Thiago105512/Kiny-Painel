@@ -313,6 +313,331 @@ PED.data.alternativas = {
       fontes: [ { nome: 'Ministério da Saúde - Leptospirose: diagnóstico e manejo clínico', ano: 2023 }, { nome: 'OPAS/OMS - Leptospirosis, human, guidance for diagnosis and management', ano: 2022 } ],
       atualizadoEm: '2026-09'
     },
+    leishmaniose_visceral: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha em pediatria', tipo: 'primeira',
+          opcoes: [
+            { medId: 'anfotericina_b_lipossomal', nome: 'Anfotericina B lipossomal', esquema: '3 mg/kg/dia IV por 7 dias, ou 4 mg/kg/dia por 5 dias, conforme o Manual de vigilância e tratamento das leishmanioses', quando: 'Primeira escolha em menores de 1 ano, em criança com sinais de gravidade, desnutrição grave, coinfecção HIV, insuficiência renal ou hepática, e em falha ou toxicidade ao antimonial', quando_obs: '', obs: 'Menor toxicidade e internação mais curta. Monitorar potássio, magnésio, função renal e reação infusional.' }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa quando a anfotericina lipossomal não está disponível', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'antimoniato_meglumina', nome: 'Antimoniato de meglumina', esquema: '20 mg de Sb5+/kg/dia IV ou IM por 20 a 30 dias, máximo de 3 ampolas ao dia', quando: 'Criança acima de 1 ano, sem sinais de gravidade e sem contraindicação cardíaca, hepática ou renal', obs: 'Exige eletrocardiograma antes e durante o tratamento, além de controle de transaminases, amilase, lipase e função renal. Contraindicado em menores de 1 ano.' },
+            { medId: null, nome: 'Anfotericina B desoxicolato', esquema: '1 mg/kg/dia IV por 14 a 20 dias, conforme o manual do Ministério da Saúde', quando: 'Alternativa quando não há a formulação lipossomal nem antimonial, em unidade com monitorização', obs: 'Toxicidade renal e infusional maior. Hidratar bem e repor eletrólitos. Confirmar conforme protocolo/bula.', verificar: true }
+          ] },
+        { ordem: 3, rotulo: 'Segunda linha / falha terapêutica ou recidiva', tipo: 'segunda',
+          opcoes: [
+            { medId: 'anfotericina_b_lipossomal', nome: 'Anfotericina B lipossomal em esquema estendido', esquema: 'Dose e duração definidas pelo serviço de referência, geralmente com dose total acumulada maior', quando: 'Recidiva, falha ao antimonial ou coinfecção com HIV', obs: 'Encaminhar ao serviço de referência em leishmanioses para definição do esquema e do seguimento.' }
+          ] },
+        { ordem: 4, rotulo: 'Adjuvante / tratamento das complicações', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'ceftriaxona', nome: 'Ceftriaxona', esquema: '50 a 100 mg/kg/dia IV', quando: 'Infecção bacteriana associada, complicação frequente e principal causa de óbito no calazar', obs: 'Investigar pneumonia, otite, infecção urinária e sepse em toda criança com calazar e piora clínica.' },
+            { medId: 'sulfato_ferroso', nome: 'Sulfato ferroso', esquema: '3 a 5 mg de ferro elementar/kg/dia VO, após a fase aguda', quando: 'Anemia carencial associada, após controle da doença', obs: 'Na fase aguda a anemia é principalmente da própria doença, a transfusão é decidida por critérios clínicos.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: 'antimoniato_meglumina', nome: 'Antimoniato de meglumina em menores de 1 ano ou em criança grave', esquema: '', quando: '', obs: 'Contraindicado nessas situações pelo risco de cardiotoxicidade e de óbito. Usar anfotericina B lipossomal.' },
+            { medId: null, nome: 'Tratamento empírico sem confirmação diagnóstica', esquema: '', quando: '', obs: 'Evitar iniciar sem teste rápido rK39, sorologia ou parasitológico, salvo em criança grave em local remoto, com discussão da referência e coleta prévia de amostras.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Notificação compulsória e busca de casos caninos e humanos na comunidade.',
+        'Avaliar e tratar desnutrição, anemia e infecções associadas, que determinam a letalidade.',
+        'Usar o escore de gravidade do Ministério da Saúde para decidir internação e transferência.',
+        'Seguimento clínico por 12 meses após o tratamento, para detectar recidiva.',
+        'Controle vetorial no peridomicílio e proteção com mosquiteiro de malha fina, o flebotomíneo atravessa telas comuns.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Manual de vigilância e controle da leishmaniose visceral', ano: 2022 }, { nome: 'OPAS - Diretrizes para o tratamento das leishmanioses na Região das Américas', ano: 2022 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    leishmaniose_tegumentar: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha', tipo: 'primeira',
+          opcoes: [
+            { medId: 'antimoniato_meglumina', nome: 'Antimoniato de meglumina', esquema: 'Forma cutânea: 10 a 20 mg de Sb5+/kg/dia IV ou IM por 20 dias. Forma mucosa: 20 mg de Sb5+/kg/dia por 30 dias, conforme o manual do Ministério da Saúde', quando: 'Leishmaniose tegumentar confirmada em criança acima de 1 ano, sem contraindicação cardíaca, hepática, renal ou pancreática', obs: 'Exige eletrocardiograma e controle laboratorial. Criança costuma tolerar melhor que adulto, mas a monitorização é obrigatória.' }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa quando o antimonial é contraindicado ou indisponível', tipo: 'alternativa',
+          opcoes: [
+            { medId: null, nome: 'Isetionato de pentamidina', esquema: '4 mg/kg/dose IM ou IV em dias alternados, número de doses conforme a forma clínica e o manual do Ministério da Saúde', quando: 'Contraindicação ou falha ao antimonial, ou lesões por Leishmania guyanensis, predominante no Amazonas', obs: 'Monitorar glicemia pelo risco de hipoglicemia e de diabetes, e a pressão arterial durante a aplicação. Confirmar conforme protocolo/bula.', verificar: true },
+            { medId: 'anfotericina_b_lipossomal', nome: 'Anfotericina B lipossomal', esquema: 'Dose e duração conforme o serviço de referência', quando: 'Forma mucosa, forma disseminada, falha terapêutica ou contraindicação às demais opções', obs: 'Requer internação e monitorização. Encaminhar ao serviço de referência.' }
+          ] },
+        { ordem: 3, rotulo: 'Segunda linha / casos refratários', tipo: 'segunda',
+          opcoes: [
+            { medId: null, nome: 'Miltefosina', esquema: 'Cerca de 2,5 mg/kg/dia VO por 28 dias, conforme protocolo do serviço de referência e faixa de peso', quando: 'Opção oral em leishmaniose tegumentar, útil quando a via parenteral supervisionada é inviável em comunidade distante', obs: 'Disponibilidade restrita no SUS e acesso pela referência estadual. Contraindicada na gestação, exige contracepção em adolescentes. Confirmar conforme protocolo/bula.', verificar: true }
+          ] },
+        { ordem: 4, rotulo: 'Adjuvante / tratamento da infecção secundária', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'cefalexina', nome: 'Cefalexina', esquema: '50 mg/kg/dia VO divididos a cada 6 h por 7 a 10 dias', quando: 'Infecção bacteriana secundária da úlcera, com celulite periférica, secreção purulenta ou dor desproporcional', obs: 'Tratar a infecção secundária antes de julgar falha terapêutica da leishmaniose.' },
+            { medId: null, nome: 'Curativo e limpeza da lesão', esquema: '', quando: 'Toda úlcera cutânea', obs: 'Limpeza com soro fisiológico e curativo não aderente. Evitar produtos cáusticos e receitas caseiras irritantes.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Termoterapia e infiltração intralesional em criança', esquema: '', quando: '', obs: 'Não recomendadas de rotina na faixa pediátrica no protocolo brasileiro, ficam restritas a situações selecionadas em serviço de referência.' },
+            { medId: null, nome: 'Uso de cáusticos, ervas e cauterização caseira na úlcera', esquema: '', quando: '', obs: 'Prática comum na comunidade, aumenta o risco de infecção secundária e de cicatriz. Orientar ativamente contra.' },
+            { medId: 'antimoniato_meglumina', nome: 'Antimonial em menores de 1 ano', esquema: '', quando: '', obs: 'Contraindicado, avaliar alternativas com o serviço de referência.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Confirmação por pesquisa direta em raspado de lesão, quando disponível, antes de iniciar o tratamento.',
+        'Notificação compulsória e registro fotográfico da lesão para comparar na reavaliação.',
+        'Tratamento supervisionado, com apoio do agente comunitário nas comunidades ribeirinhas e indígenas.',
+        'Seguimento por 3 meses após o fim do tratamento para avaliar cicatrização, e por 6 a 12 meses para detectar recidiva ou acometimento mucoso.',
+        'Avaliação otorrinolaringológica em lesões extensas, múltiplas, ou acima da cintura, pelo risco de forma mucosa tardia.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Manual de vigilância da leishmaniose tegumentar', ano: 2022 }, { nome: 'OPAS - Diretrizes para o tratamento das leishmanioses na Região das Américas', ano: 2022 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    doenca_chagas: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha', tipo: 'primeira',
+          opcoes: [
+            { medId: 'benznidazol', nome: 'Benznidazol', esquema: '5 a 10 mg/kg/dia VO divididos a cada 12 h por 60 dias, conforme o PCDT de Doença de Chagas e a faixa de peso', quando: 'Fase aguda confirmada, incluindo os surtos de transmissão oral por açaí e bacaba, situação típica do Amazonas', obs: 'Tratar o mais precocemente possível, a eficácia na fase aguda é alta. Monitorar hemograma, transaminases e aparecimento de exantema.' }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa / segunda linha', tipo: 'segunda',
+          opcoes: [
+            { medId: null, nome: 'Nifurtimox', esquema: '8 a 10 mg/kg/dia VO divididos a cada 8 h por 60 dias, conforme faixa de peso e protocolo', quando: 'Alternativa quando há intolerância, reação adversa importante ou falha ao benznidazol', obs: 'Acesso pelo Ministério da Saúde e pela OPAS. Efeitos adversos digestivos e neurológicos mais frequentes. Confirmar conforme protocolo/bula.', verificar: true }
+          ] },
+        { ordem: 3, rotulo: 'Conduta em reação adversa ao benznidazol', tipo: 'alternativa',
+          opcoes: [
+            { medId: null, nome: 'Suspensão temporária e reintrodução escalonada', esquema: '', quando: 'Exantema leve a moderado, sintoma digestivo ou neuropatia incipiente', obs: 'Discutir com a referência. Exantema grave, síndrome de Stevens-Johnson, neutropenia ou hepatite exigem suspensão definitiva e troca de fármaco.' },
+            { medId: null, nome: 'Anti-histamínico oral', esquema: 'Dose conforme idade e bula do produto disponível', quando: 'Exantema leve durante o tratamento, para permitir a continuidade sob vigilância', obs: 'Confirmar conforme protocolo/bula. Não mascarar reação grave.', verificar: true }
+          ] },
+        { ordem: 4, rotulo: 'Adjuvante / sintomático', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h', quando: 'Febre da fase aguda', obs: '' },
+            { medId: 'diazepam', nome: 'Diazepam', esquema: '0,2 a 0,3 mg/kg/dose IV lenta, máximo conforme protocolo', quando: 'Convulsão na meningoencefalite chagásica aguda, complicação rara e grave', obs: 'Manejo em unidade com suporte ventilatório, transferir precocemente.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: 'prednisolona', nome: 'Corticoide de rotina na fase aguda', esquema: '', quando: '', obs: 'Não indicado, pode aumentar a parasitemia. Reservar a situações específicas com avaliação especializada, como miocardite grave.' },
+            { medId: null, nome: 'Tratamento sem confirmação laboratorial', esquema: '', quando: '', obs: 'Coletar parasitológico direto, gota espessa ou sorologia antes de iniciar, salvo em surto oral já confirmado com nexo epidemiológico claro e discussão com a vigilância.' },
+            { medId: 'benznidazol', nome: 'Interrupção precoce do benznidazol por melhora clínica', esquema: '', quando: '', obs: 'O curso de 60 dias deve ser completo, a melhora dos sintomas ocorre antes da cura parasitológica.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Notificação imediata e investigação de surto, a transmissão oral por polpa de açaí ou bacaba contaminada gera casos em grupo familiar.',
+        'Investigar e tratar todos os expostos do mesmo lote de alimento ou da mesma comunidade.',
+        'Eletrocardiograma e avaliação cardiológica na fase aguda e no seguimento.',
+        'Orientar boas práticas de coleta, branqueamento e higienização da polpa de frutos amazônicos.',
+        'Seguimento sorológico prolongado, a negativação é lenta e a criança tratada precocemente tem alta chance de cura.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Protocolo Clínico e Diretrizes Terapêuticas da Doença de Chagas', ano: 2022 }, { nome: 'OPAS - Guidelines for the diagnosis and treatment of Chagas disease', ano: 2019 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    tuberculose: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - esquema básico', tipo: 'primeira',
+          opcoes: [
+            { medId: 'rifampicina', nome: 'Rifampicina', esquema: '15 mg/kg/dia VO (faixa de 10 a 20), 2 meses de fase intensiva e 4 meses de manutenção, conforme faixa de peso e apresentação dispersível', quando: 'Tuberculose pulmonar ou extrapulmonar confirmada ou com escore clínico-radiológico compatível, em criança abaixo de 10 anos', obs: 'Em criança menor de 10 anos o esquema é RHZ na fase intensiva e RH na manutenção, sem etambutol de rotina. A partir de 10 anos utiliza-se RHZE.' },
+            { medId: 'isoniazida', nome: 'Isoniazida', esquema: '10 mg/kg/dia VO (faixa de 7 a 15), pelos 6 meses', quando: 'Componente do esquema básico', obs: 'Monitorar transaminases se houver sintomas. Considerar piridoxina em desnutrido, em adolescente e em pessoa vivendo com HIV.' },
+            { medId: 'pirazinamida', nome: 'Pirazinamida', esquema: '35 mg/kg/dia VO (faixa de 30 a 40), nos 2 primeiros meses', quando: 'Fase intensiva do esquema básico', obs: '' }
+          ] },
+        { ordem: 2, rotulo: 'Acréscimo conforme idade e forma clínica', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'etambutol', nome: 'Etambutol', esquema: '20 mg/kg/dia VO (faixa de 15 a 25), nos 2 primeiros meses', quando: 'Criança a partir de 10 anos, ou formas extensas e com alta carga bacilar em menores de 10 anos conforme avaliação, e nos esquemas com suspeita de resistência', obs: 'Avaliar acuidade visual e discriminação de cores quando a criança colabora.' }
+          ] },
+        { ordem: 3, rotulo: 'Adjuvante - corticoide em formas graves', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'prednisolona', nome: 'Prednisolona', esquema: '1 a 2 mg/kg/dia VO por 4 semanas, com redução gradual, máximo conforme protocolo', quando: 'Meningoencefalite tuberculosa, pericardite, tuberculose miliar grave e obstrução brônquica por gânglio', obs: 'Somente associado ao esquema antituberculose em curso.' },
+            { medId: 'dexametasona', nome: 'Dexametasona', esquema: 'Dose conforme protocolo do serviço, na fase inicial da meningite tuberculosa, com redução gradual', quando: 'Alternativa parenteral ao corticoide oral na meningoencefalite tuberculosa', obs: 'Confirmar conforme protocolo/bula.', verificar: true }
+          ] },
+        { ordem: 4, rotulo: 'Segunda linha / falha, resistência ou intolerância', tipo: 'segunda',
+          opcoes: [
+            { medId: null, nome: 'Esquema para tuberculose drogarresistente definido por serviço de referência terciária', esquema: '', quando: 'Falha do esquema básico, contato com caso resistente, teste rápido molecular com resistência à rifampicina, ou toxicidade que impeça o esquema padrão', obs: 'Nunca montar esquema de resgate isoladamente. Encaminhar ao serviço de referência em tuberculose e comunicar a coordenação estadual do programa.' }
+          ] },
+        { ordem: 5, rotulo: 'Uso off-label', tipo: 'offlabel',
+          opcoes: [
+            { medId: null, nome: 'Levofloxacino e outros fármacos de segunda linha em criança', esquema: 'Dose definida pelo serviço de referência conforme peso', quando: 'Tuberculose resistente ou intolerância aos fármacos de primeira linha, sob condução especializada', obs: 'As fluoroquinolonas são off-label na faixa pediátrica para essa indicação no Brasil, por restrição de bula ligada ao risco osteoarticular. O uso é recomendado pela OMS e pelo Ministério da Saúde no manejo da tuberculose drogarresistente em crianças, com monitorização. Confirmar conforme protocolo do serviço de referência.', verificar: true }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Monoterapia ou acréscimo de um único fármaco a um esquema em falência', esquema: '', quando: '', obs: 'Prática que gera resistência. Toda mudança de esquema deve ser feita pelo serviço de referência.' },
+            { medId: null, nome: 'Interrupção do tratamento pela melhora clínica', esquema: '', quando: '', obs: 'O esquema de 6 meses deve ser completado. Abandono é a principal causa de falência e de resistência.' },
+            { medId: null, nome: 'Exigir confirmação bacteriológica antes de tratar a criança', esquema: '', quando: '', obs: 'A tuberculose infantil é paucibacilar. O diagnóstico usa o sistema de pontuação clínico, radiológico, epidemiológico e prova tuberculínica ou IGRA, e a ausência de baciloscopia não afasta a doença.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Tratamento diretamente observado, com apoio do agente comunitário de saúde e adaptação logística em comunidade fluvial.',
+        'Investigação de contatos intradomiciliares e tratamento da infecção latente nos contatos indicados.',
+        'Testagem para HIV em todo caso de tuberculose.',
+        'Avaliação nutricional e acompanhamento do ganho de peso, com reajuste das doses conforme o peso a cada consulta.',
+        'Notificação compulsória e registro no sistema de informação do programa de tuberculose.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Manual de recomendações para o controle da tuberculose no Brasil', ano: 2024 }, { nome: 'OMS - Consolidated guidelines on tuberculosis, management in children and adolescents', ano: 2022 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    hanseniase: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - poliquimioterapia única (PQT-U)', tipo: 'primeira',
+          opcoes: [
+            { medId: 'rifampicina', nome: 'Rifampicina', esquema: 'Dose mensal supervisionada, ajustada por faixa de peso e idade conforme as cartelas infantis do esquema PQT-U, por 6 meses na forma paucibacilar e 12 meses na multibacilar', quando: 'Hanseníase confirmada em criança, em qualquer forma clínica', obs: 'Em menor de 30 kg a dose é calculada por peso, cerca de 10 a 20 mg/kg mensal. Confirmar conforme protocolo/bula e cartela disponível.', verificar: true },
+            { medId: 'dapsona', nome: 'Dapsona', esquema: 'Dose mensal supervisionada e dose diária autoadministrada, conforme faixa de peso da cartela infantil, em torno de 2 mg/kg/dia', quando: 'Componente do esquema PQT-U', obs: 'Investigar deficiência de G6PD quando disponível, e monitorar hemoglobina pelo risco de hemólise e de metemoglobinemia.', verificar: true },
+            { medId: 'clofazimina', nome: 'Clofazimina', esquema: 'Dose mensal supervisionada e dose em dias alternados ou diária conforme faixa de peso da cartela infantil', quando: 'Componente do esquema PQT-U, agora também na forma paucibacilar segundo o esquema único', obs: 'Orientar sobre o escurecimento reversível da pele e ressecamento cutâneo, causa frequente de abandono na adolescência.', verificar: true }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa em intolerância ou contraindicação a um dos fármacos', tipo: 'alternativa',
+          opcoes: [
+            { medId: null, nome: 'Esquema substitutivo com ofloxacino, minociclina ou claritromicina', esquema: 'Definido pelo serviço de referência conforme o fármaco substituído e o peso', quando: 'Intolerância grave ou contraindicação à dapsona, à rifampicina ou à clofazimina', obs: 'Esquemas substitutivos constam das diretrizes do Ministério da Saúde, mas a composição em pediatria deve ser definida pela referência. Confirmar conforme protocolo.', verificar: true },
+            { medId: null, nome: 'Suspensão da dapsona em anemia hemolítica', esquema: '', quando: 'Queda importante de hemoglobina, icterícia ou cianose por metemoglobinemia', obs: 'Suspender e encaminhar imediatamente à referência para redefinição do esquema.' }
+          ] },
+        { ordem: 3, rotulo: 'Tratamento das reações hansênicas', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'prednisolona', nome: 'Prednisolona', esquema: '1 a 2 mg/kg/dia VO, com redução gradual e lenta conforme resposta', quando: 'Reação tipo 1 (reversa) e reação tipo 2 com neurite, iridociclite ou orquite, e em qualquer dano neural agudo', obs: 'Manter a poliquimioterapia durante a reação. Associar profilaxia de estrongiloidíase antes de corticoide prolongado em área endêmica.' },
+            { medId: 'clofazimina', nome: 'Clofazimina em dose anti-inflamatória', esquema: 'Dose aumentada conforme orientação da referência, por período limitado', quando: 'Reação tipo 2 recorrente ou dependente de corticoide', obs: 'Confirmar conforme protocolo/bula e conduzir com a referência.', verificar: true }
+          ] },
+        { ordem: 4, rotulo: 'Adjuvante - profilaxia antes de corticoide prolongado', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'ivermectina', nome: 'Ivermectina', esquema: '200 mcg/kg VO em dose única, repetida conforme protocolo, em criança acima de 15 kg', quando: 'Prevenção de hiperinfecção por Strongyloides antes ou no início de corticoterapia prolongada, em área endêmica como a Amazônia', obs: 'Alternativa com albendazol quando a ivermectina não está disponível. Confirmar conforme protocolo/bula.', verificar: true }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Talidomida em crianças e em adolescentes do sexo feminino', esquema: '', quando: '', obs: 'Não recomendada na faixa pediátrica de rotina e proibida em mulheres em idade fértil sem os controles rigorosos previstos em lei, pelo risco teratogênico. Reação tipo 2 na criança é conduzida com corticoide e apoio da referência.' },
+            { medId: null, nome: 'Interrupção da poliquimioterapia durante a reação hansênica', esquema: '', quando: '', obs: 'Erro frequente. A reação não indica falha nem alergia ao esquema, a poliquimioterapia deve continuar.' },
+            { medId: null, nome: 'Tratamento sem classificação operacional e sem avaliação neurológica', esquema: '', quando: '', obs: 'A avaliação do grau de incapacidade e o exame neurológico simplificado orientam o seguimento e devem ser feitos no diagnóstico e na alta.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Notificação compulsória, exame de todos os contatos domiciliares e dos contatos sociais próximos.',
+        'Vacinação BCG nos contatos conforme as diretrizes vigentes, e avaliação de quimioprofilaxia com rifampicina dose única segundo a recomendação nacional.',
+        'Avaliação neurológica simplificada e do grau de incapacidade física no diagnóstico, durante o tratamento e na alta.',
+        'Autocuidado com mãos, pés e olhos, orientado de forma lúdica e com a família.',
+        'Enfrentamento do estigma na escola e na comunidade, com apoio do agente comunitário.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Diretrizes para vigilância, atenção e eliminação da hanseníase como problema de saúde pública', ano: 2022 }, { nome: 'OMS - Guidelines for the diagnosis, treatment and prevention of leprosy', ano: 2018 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    acidente_ofidico: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - soroterapia específica', tipo: 'primeira',
+          opcoes: [
+            { medId: 'soro_antibotropico', nome: 'Soro antibotrópico (SAB)', esquema: 'Leve 2 a 4 ampolas, moderado 4 a 8 ampolas, grave 12 ampolas, IV, conforme o manual do Ministério da Saúde', quando: 'Acidente por jararaca e afins, com edema, dor, equimose, bolhas ou sangramento', obs: 'A dose é a mesma para criança e adulto, pois depende da quantidade de veneno inoculado, não do peso. Diluir conforme protocolo e infundir com monitorização.' },
+            { medId: 'soro_anticrotalico', nome: 'Soro anticrotálico (SAC)', esquema: 'Leve 5 ampolas, moderado 10 ampolas, grave 20 ampolas, IV', quando: 'Acidente crotálico, com fácies miastênica, mialgia, urina escura e pouca reação local', obs: 'Risco de rabdomiólise e de lesão renal aguda, hidratar precocemente.' },
+            { medId: 'soro_antilaquetico', nome: 'Soro antilaquético (SAL)', esquema: 'Moderado 10 ampolas, grave 20 ampolas, IV', quando: 'Acidente laquético, por surucucu, frequente em área de mata na Amazônia, com quadro local botrópico associado a vagotonia, bradicardia, hipotensão, vômitos e diarreia', obs: 'Na indisponibilidade do SAL, o soro antibotrópico-laquético é a opção prevista.' },
+            { medId: 'soro_antielapidico', nome: 'Soro antielapídico (SAE)', esquema: '10 ampolas IV em todos os casos, independentemente da gravidade aparente', quando: 'Acidente elapídico, por coral verdadeira, com ptose, oftalmoplegia e risco de insuficiência respiratória', obs: 'Todo acidente elapídico é considerado potencialmente grave, soroterapia imediata e vigilância respiratória.' }
+          ] },
+        { ordem: 2, rotulo: 'Alternativa quando o soro específico não está disponível na unidade', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'soro_antibotropico', nome: 'Soro antibotrópico-laquético ou antibotrópico-crotálico', esquema: 'Número de ampolas conforme a gravidade e o manual do Ministério da Saúde', quando: 'Alternativa prevista quando o soro monovalente correspondente não está disponível no ponto de atendimento', obs: 'Em comunidade ribeirinha ou indígena, acionar imediatamente o polo de soroterapia da região e o transporte, o tempo até a soroterapia determina o prognóstico. Confirmar disponibilidade conforme a rede estadual.', verificar: true },
+            { medId: 'soro_fisiologico', nome: 'Hidratação venosa e medidas de suporte durante o transporte', esquema: 'Soro fisiológico 0,9% conforme necessidade hídrica e perfusão, com atenção à diurese', quando: 'Enquanto o soro específico não está disponível e durante o transporte para a referência', obs: 'Manter membro elevado, analgesia, e evitar torniquete, sucção e incisão.' }
+          ] },
+        { ordem: 3, rotulo: 'Conduta na reação anafilática à soroterapia', tipo: 'primeira',
+          opcoes: [
+            { medId: 'adrenalina', nome: 'Adrenalina', esquema: '0,01 mg/kg IM na face anterolateral da coxa, máximo 0,5 mg por dose, repetível a cada 5 a 15 min', quando: 'Reação anafilática durante a infusão do soro', obs: 'Primeira medida da anafilaxia. Suspender temporariamente a infusão, tratar e reiniciar mais lentamente, a soroterapia não pode ser abandonada.' },
+            { medId: 'hidrocortisona', nome: 'Hidrocortisona', esquema: '4 a 10 mg/kg/dose IV conforme protocolo do serviço', quando: 'Adjuvante na reação à soroterapia, após a adrenalina', obs: 'Não substitui a adrenalina e não previne a reação bifásica de forma isolada.' }
+          ] },
+        { ordem: 4, rotulo: 'Adjuvante - infecção secundária e dor', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'amoxicilina_clavulanato', nome: 'Amoxicilina + clavulanato', esquema: '50 mg/kg/dia de amoxicilina VO divididos a cada 8 ou 12 h por 7 dias', quando: 'Sinais de infecção secundária no acidente botrópico, como celulite e abscesso, complicação comum pela flora oral da serpente', obs: 'Não indicado como profilaxia de rotina em todo acidente, avaliar sinais clínicos.' },
+            { medId: 'dipirona', nome: 'Dipirona', esquema: '10 a 15 mg/kg/dose IV ou VO a cada 6 h', quando: 'Dor local intensa', obs: 'Preferir analgésico não anti-inflamatório pelo distúrbio de coagulação.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Torniquete, garrote, sucção, incisão e aplicação de substâncias na picada', esquema: '', quando: '', obs: 'Práticas comuns na comunidade que aumentam necrose, infecção e amputação, sem qualquer benefício. Orientar ativamente contra.' },
+            { medId: null, nome: 'Anti-inflamatórios não esteroidais e ácido acetilsalicílico', esquema: '', quando: '', obs: 'Evitar pelo distúrbio de coagulação induzido pelo veneno e pelo risco renal.' },
+            { medId: null, nome: 'Pré-medicação sistemática com corticoide e anti-histamínico antes do soro', esquema: '', quando: '', obs: 'Não é recomendada de rotina no manual brasileiro e não substitui a vigilância. O essencial é ter adrenalina preparada e monitorizar durante a infusão.' },
+            { medId: null, nome: 'Retardar a soroterapia à espera de identificação da serpente', esquema: '', quando: '', obs: 'A indicação é clínica e epidemiológica. Não atrasar a soroterapia.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Notificação compulsória e registro do tempo entre a picada e a soroterapia.',
+        'Manter o membro elevado e em repouso, limpar a ferida, avaliar perfusão distal e síndrome compartimental.',
+        'Monitorar tempo de coagulação, diurese, função renal e sangramentos, com reavaliação em 12 e 24 h.',
+        'Verificar e atualizar a profilaxia antitetânica, que deve ser feita após a normalização da coagulação nos acidentes botrópicos.',
+        'Plano regional de transporte fluvial e aéreo definido antecipadamente para comunidades distantes dos polos de soroterapia.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Manual de diagnóstico e tratamento de acidentes por animais peçonhentos', ano: 2024 }, { nome: 'OMS - Guidelines for the management of snakebites', ano: 2016 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    escorpionismo: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - soroterapia nos casos moderados e graves', tipo: 'primeira',
+          opcoes: [
+            { medId: 'soro_antiescorpionico', nome: 'Soro antiescorpiônico (SAEEs)', esquema: 'Moderado 2 a 3 ampolas, grave 4 a 6 ampolas, IV, conforme o manual do Ministério da Saúde', quando: 'Manifestação sistêmica: vômitos repetidos, sudorese profusa, agitação, taquicardia, hipertensão, sialorreia, tremores, priapismo, edema pulmonar ou choque', obs: 'Criança pequena evolui mais rápido para forma grave. A soroterapia é urgente e a dose não depende do peso.' },
+            { medId: 'soro_antiaracnidico', nome: 'Soro antiaracnídico (SAAr)', esquema: 'Mesmo número de ampolas do soro antiescorpiônico conforme a gravidade', quando: 'Alternativa de igual eficácia quando o soro antiescorpiônico específico não está disponível na unidade', obs: 'Opção prevista no manual do Ministério da Saúde.' }
+          ] },
+        { ordem: 2, rotulo: 'Primeira escolha no caso leve - analgesia', tipo: 'primeira',
+          opcoes: [
+            { medId: null, nome: 'Lidocaína 2% sem vasoconstritor, infiltração local', esquema: 'Cerca de 1 mL por vez em criança, conforme protocolo do serviço, respeitando a dose máxima por peso', quando: 'Dor local intensa no acidente leve, que é a apresentação mais comum', obs: 'Analgesia local é a base do tratamento do caso leve. Confirmar dose máxima conforme protocolo/bula.', verificar: true },
+            { medId: 'dipirona', nome: 'Dipirona', esquema: '10 a 15 mg/kg/dose VO ou IV a cada 6 h', quando: 'Dor local, isolada ou associada à infiltração', obs: '' }
+          ] },
+        { ordem: 3, rotulo: 'Alternativa quando não há lidocaína ou a dor persiste', tipo: 'alternativa',
+          opcoes: [
+            { medId: 'paracetamol', nome: 'Paracetamol', esquema: '10 a 15 mg/kg/dose VO a cada 6 h', quando: 'Alternativa analgésica no caso leve, especialmente em unidade sem anestésico local', obs: '' },
+            { medId: null, nome: 'Compressas mornas no local da picada', esquema: '', quando: 'Medida adjuvante de analgesia no acidente leve', obs: 'Medida simples, útil enquanto a criança permanece em observação.' }
+          ] },
+        { ordem: 4, rotulo: 'Adjuvante nas complicações do caso grave', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'ondansetrona', nome: 'Ondansetrona', esquema: '0,15 mg/kg/dose IV conforme protocolo do serviço', quando: 'Vômitos incoercíveis, que são o principal marcador de gravidade na criança', obs: 'Não retardar a soroterapia para tratar o vômito, o vômito repetido já indica soro.' },
+            { medId: 'adrenalina', nome: 'Adrenalina', esquema: '0,01 mg/kg IM na anafilaxia à soroterapia, e infusão contínua no choque conforme protocolo de terapia intensiva', quando: 'Reação anafilática ao soro ou choque cardiogênico', obs: 'Edema agudo de pulmão e choque cardiogênico exigem terapia intensiva e transferência.' },
+            { medId: 'midazolam', nome: 'Midazolam', esquema: 'Dose conforme protocolo do serviço, na menor dose eficaz', quando: 'Agitação intensa ou convulsão no caso grave, em ambiente monitorizado', obs: 'Usar com cautela pelo risco de depressão respiratória, somente com suporte ventilatório disponível.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Torniquete, incisão, sucção e substâncias caseiras na picada', esquema: '', quando: '', obs: 'Sem benefício e com risco de infecção e de lesão local.' },
+            { medId: null, nome: 'Soroterapia no acidente leve com dor apenas local', esquema: '', quando: '', obs: 'Não indicada. O caso leve é tratado com analgesia e observação de 6 a 12 h, especialmente em menores de 7 anos.' },
+            { medId: null, nome: 'Codeína e outros opioides em menores de 12 anos para a dor', esquema: '', quando: '', obs: 'Codeína é contraindicada abaixo de 12 anos. A analgesia local com lidocaína é mais eficaz e mais segura nesse acidente.' },
+            { medId: null, nome: 'Alta precoce da criança pequena sem período de observação', esquema: '', quando: '', obs: 'Menores de 7 anos podem evoluir para forma grave em poucas horas. Manter observação em unidade com condições de soroterapia.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Notificação compulsória e identificação do animal quando possível, sem atrasar o atendimento.',
+        'Observação mínima de 6 a 12 h para menores de 7 anos, mesmo em caso aparentemente leve.',
+        'Monitorização cardíaca, oximetria, glicemia e avaliação de sinais de edema pulmonar nos casos moderados e graves.',
+        'Eletrocardiograma e, quando disponível, avaliação da função cardíaca nos casos graves.',
+        'Prevenção domiciliar: manter quintal limpo, vedar ralos, afastar entulho e lenha das paredes da casa.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Manual de diagnóstico e tratamento de acidentes por animais peçonhentos', ano: 2024 }, { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre acidentes por animais peçonhentos', ano: 2023 } ],
+      atualizadoEm: '2026-09'
+    },
+
+    araneismo: {
+      linhas: [
+        { ordem: 1, rotulo: 'Primeira escolha - soroterapia conforme o gênero e a gravidade', tipo: 'primeira',
+          opcoes: [
+            { medId: 'soro_antiaracnidico', nome: 'Soro antiaracnídico (SAAr)', esquema: 'Loxoscelismo cutâneo-hemolítico ou forma cutânea extensa: 5 ampolas IV. Foneutrismo moderado: 2 a 4 ampolas. Foneutrismo grave: 5 a 10 ampolas. Conforme o manual do Ministério da Saúde', quando: 'Acidente por Loxosceles com forma sistêmica ou lesão extensa, e acidente por Phoneutria moderado ou grave, sobretudo em criança pequena', obs: 'A maioria dos acidentes por Phoneutria é leve e não necessita de soro. Em criança pequena o limiar de gravidade é menor.' },
+            { medId: null, nome: 'Soro antilatrodéctico (SALatr)', esquema: '1 a 2 ampolas IM ou IV, conforme a gravidade e o manual do Ministério da Saúde', quando: 'Latrodectismo com manifestações sistêmicas, como dor abdominal intensa, sudorese, tremores e hipertensão', obs: 'Disponibilidade restrita a alguns centros. Acionar a referência regional. Confirmar conforme protocolo.', verificar: true }
+          ] },
+        { ordem: 2, rotulo: 'Primeira escolha no acidente leve - analgesia', tipo: 'primeira',
+          opcoes: [
+            { medId: null, nome: 'Lidocaína 2% sem vasoconstritor, infiltração ou bloqueio local', esquema: 'Cerca de 1 a 3 mL conforme o local e o peso, respeitando a dose máxima por peso', quando: 'Dor intensa no foneutrismo leve, que é a apresentação mais frequente', obs: 'Confirmar dose máxima conforme protocolo/bula. Pode ser repetida conforme o manual.', verificar: true },
+            { medId: 'dipirona', nome: 'Dipirona', esquema: '10 a 15 mg/kg/dose VO ou IV a cada 6 h', quando: 'Dor local, isolada ou associada ao bloqueio', obs: '' }
+          ] },
+        { ordem: 3, rotulo: 'Adjuvante no loxoscelismo', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'prednisolona', nome: 'Prednisolona', esquema: '1 mg/kg/dia VO por cerca de 5 dias, conforme o manual do Ministério da Saúde', quando: 'Loxoscelismo cutâneo, associado ou não à soroterapia, para reduzir a inflamação local', obs: 'Não substitui a soroterapia nas formas com hemólise.' },
+            { medId: 'cefalexina', nome: 'Cefalexina', esquema: '50 mg/kg/dia VO divididos a cada 6 h por 7 a 10 dias', quando: 'Infecção secundária da lesão necrótica', obs: 'Avaliar clinicamente, não usar como profilaxia de rotina.' }
+          ] },
+        { ordem: 4, rotulo: 'Uso off-label', tipo: 'offlabel',
+          opcoes: [
+            { medId: 'dapsona', nome: 'Dapsona no loxoscelismo cutâneo', esquema: 'Cerca de 1 mg/kg/dia VO por período curto, definido com a referência', quando: 'Lesão necrótica cutânea extensa por Loxosceles, em serviço com possibilidade de monitorização hematológica', obs: 'Off-label: a dapsona tem registro para hanseníase e dermatite herpetiforme, e o uso no loxoscelismo deriva de séries de casos e de modelos experimentais, com evidência controversa. Exige pesquisa de deficiência de G6PD e controle de hemograma pelo risco de hemólise e de metemoglobinemia. Confirmar conforme protocolo/bula e discutir com a referência.', verificar: true }
+          ] },
+        { ordem: 5, rotulo: 'Adjuvante no caso grave', tipo: 'adjuvante',
+          opcoes: [
+            { medId: 'diazepam', nome: 'Diazepam', esquema: '0,1 a 0,2 mg/kg/dose IV lenta, conforme protocolo do serviço', quando: 'Espasmos musculares intensos no latrodectismo', obs: 'Monitorizar nível de consciência e respiração.' },
+            { medId: 'adrenalina', nome: 'Adrenalina', esquema: '0,01 mg/kg IM, máximo 0,5 mg por dose', quando: 'Reação anafilática durante a soroterapia', obs: 'Suspender a infusão, tratar e reiniciar mais lentamente.' }
+          ] },
+        { ordem: 9, rotulo: 'Não recomendado de rotina', tipo: 'naorecomendado',
+          opcoes: [
+            { medId: null, nome: 'Desbridamento cirúrgico precoce da lesão loxoscélica', esquema: '', quando: '', obs: 'Deve ser postergado até a demarcação da necrose, o desbridamento precoce amplia a perda tecidual.' },
+            { medId: null, nome: 'Torniquete, incisão, sucção e aplicação de substâncias caseiras', esquema: '', quando: '', obs: 'Sem benefício e com risco de infecção e de piora da lesão.' },
+            { medId: 'soro_antiaracnidico', nome: 'Soroterapia em todo acidente por Phoneutria', esquema: '', quando: '', obs: 'A maioria dos casos é leve e se resolve com analgesia e observação. Reservar o soro para casos moderados e graves, e ter atenção redobrada em menores de 7 anos.' },
+            { medId: null, nome: 'Antibiótico profilático em toda picada de aranha', esquema: '', quando: '', obs: 'Não indicado sem sinais de infecção secundária.' }
+          ] }
+      ],
+      naoFarmacologico: [
+        'Notificação compulsória e tentativa de identificação da aranha, sem retardar o atendimento.',
+        'Observação de 6 a 12 h em menores de 7 anos no foneutrismo, pelo risco de evolução para forma grave.',
+        'No loxoscelismo, monitorar hemoglobina, urina e função renal por pelo menos 72 h a 7 dias, pela hemólise tardia.',
+        'Cuidados locais da ferida com limpeza, curativo e avaliação seriada da demarcação da necrose.',
+        'Prevenção domiciliar: sacudir roupas e calçados, afastar camas das paredes, limpar atrás de móveis e quadros.'
+      ],
+      fontes: [ { nome: 'Ministério da Saúde - Manual de diagnóstico e tratamento de acidentes por animais peçonhentos', ano: 2024 }, { nome: 'Sociedade Brasileira de Pediatria - Documento científico sobre acidentes por animais peçonhentos', ano: 2023 } ],
+      atualizadoEm: '2026-09'
+    },
   },
 
   rotulosTipo: {

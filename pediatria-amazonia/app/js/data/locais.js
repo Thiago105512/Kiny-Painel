@@ -482,11 +482,11 @@ PED.data.locais = {
       id: 'maternidade_nazira_daou',
       nome: 'Maternidade Dona Nazira Daou',
       tipo: 'maternidade', rede: 'publica',
-      cidade: 'Manaus', zona: 'leste', bairro: 'Aleixo',
+      cidade: 'Manaus', zona: 'leste', bairro: '',
       endereco: '', telefone: '',
       pediatria: true, urgencia: true,
       referenciaPara: ['parto', 'recém-nascido'],
-      obs: 'confirmar zona, endereço e perfil de atendimento', verificar: true
+      obs: 'confirmar zona, bairro, endereço e perfil de atendimento', verificar: true
     },
     {
       id: 'maternidade_moura_tapajoz',
@@ -568,13 +568,13 @@ PED.data.locais = {
       obs: 'confirmar endereço e perfil de atendimento', verificar: true
     },
     {
-      id: 'ps_infantil_privado_referencia',
-      nome: 'Pronto-Socorro Infantil da rede privada conveniada',
+      id: 'outro_servico_privado',
+      nome: 'Outro serviço privado (registrar o nome no prontuário)',
       tipo: 'pronto_socorro', rede: 'privada',
       cidade: 'Manaus', zona: null, bairro: '',
       endereco: '', telefone: '',
       pediatria: true, urgencia: true,
-      obs: 'opção genérica para registro quando a criança foi atendida em serviço privado não listado; confirmar nome da unidade', verificar: true
+      obs: 'opção de registro quando a criança foi atendida em serviço privado não listado nesta base; anotar o nome da unidade no prontuário', verificar: true
     },
 
     // ---------------------------------------------------------------
@@ -686,11 +686,31 @@ PED.data.locais = {
     { id: 'hosp_porto_velho_cosme_damiao', nome: 'Hospital Infantil Cosme e Damião (Porto Velho)', tipo: 'hospital', rede: 'publica', cidade: 'Porto Velho', zona: null, bairro: '', endereco: '', telefone: '', pediatria: true, urgencia: true, referenciaPara: ['urgência pediátrica em Rondônia'], obs: 'confirmar endereço e perfil de atendimento', verificar: true }
   ],
 
-  referencias: [],
+  // Referências estaduais que o pediatra precisa saber de cor.
+  referencias: [
+    { assunto: 'Doenças infecciosas e tropicais', unidade: 'Fundação de Medicina Tropical Doutor Heitor Vieira Dourado (FMT-HVD)', obs: 'Malária, arboviroses, leishmanioses, acidentes por animais peçonhentos, soros antivenenos, tuberculose, HIV e hepatites virais. Porta de entrada em Manaus.' },
+    { assunto: 'Emergência pediátrica e trauma', unidade: 'Hospital e Pronto-Socorro da Criança da Zona Oeste (Joãozinho), da Zona Sul e da Zona Leste', obs: 'Portas abertas 24 h para criança em Manaus. Para trauma grave de adolescente e adulto, o Hospital e Pronto-Socorro Dr. João Lúcio Pereira Machado.' },
+    { assunto: 'Queimados', unidade: 'Hospital e Pronto-Socorro da Criança da Zona Oeste (Joãozinho)', obs: 'Confirmar a unidade de queimados pediátricos vigente antes de remover, porque o serviço já mudou de endereço em Manaus.' },
+    { assunto: 'Oncologia pediátrica', unidade: 'Fundação Centro de Controle de Oncologia do Estado do Amazonas (FCECON)', obs: 'Suspeita de câncer na criança exige contato direto e encaminhamento rápido, sem esperar fila comum.' },
+    { assunto: 'Hematologia e anemia falciforme', unidade: 'Fundação de Hematologia e Hemoterapia do Amazonas (HEMOAM)', obs: 'Triagem neonatal alterada para hemoglobinopatia, crise falcêmica, hemofilia e necessidade de hemocomponentes.' },
+    { assunto: 'Cardiopatia congênita', unidade: 'Hospital Universitário Francisca Mendes', obs: 'Referência estadual em cirurgia cardiovascular. Recém-nascido com suspeita de cardiopatia crítica deve ser discutido antes da remoção.' },
+    { assunto: 'Doenças raras e genética', unidade: 'Hospital Universitário Getúlio Vargas (HUGV/UFAM) e Instituto da Criança do Amazonas (ICAM)', obs: 'Confirmar qual serviço mantém o ambulatório de genética médica vigente, porque a oferta varia.' },
+    { assunto: 'Hanseníase e dermatologia sanitária', unidade: 'Fundação Alfredo da Matta (FUAM)', obs: 'Lesão hipocrômica com alteração de sensibilidade em criança, contato domiciliar de hanseníase.' },
+    { assunto: 'Saúde indígena', unidade: 'Casa de Saúde Indígena (CASAI) Manaus e Distritos Sanitários Especiais Indígenas (DSEI) do Amazonas', obs: 'Criança indígena referenciada do interior costuma chegar pela CASAI. Acionar o DSEI de origem para continuidade do cuidado, retorno e vacinação.' },
+    { assunto: 'Intoxicações', unidade: 'Centro de Informação e Assistência Toxicológica do Amazonas (CIATox-AM)', obs: 'Orientação por telefone em intoxicação exógena, acidente com animal peçonhento e uso indevido de medicamento. Confirmar o número vigente antes do plantão.' },
+    { assunto: 'Gestação de alto risco e recém-nascido grave', unidade: 'Maternidade Ana Braga e demais maternidades estaduais de Manaus', obs: 'Confirmar disponibilidade de UTI neonatal pela central de regulação antes de transferir.' },
+    { assunto: 'Regulação e transporte do interior', unidade: 'Central de Regulação de Leitos e Urgências do Amazonas', obs: 'Remoção fluvial e aérea do interior para Manaus depende de regulação. Iniciar estabilização e contato o mais cedo possível, porque o tempo de deslocamento é longo.' }
+  ],
 
-  aviso: '',
+  aviso: 'Nomes, endereços e perfis de atendimento das unidades mudam. Conferir a unidade de referência vigente antes de encaminhar, especialmente à noite e nos fins de semana. As entradas marcadas com verificar precisam de confirmação no CNES ou junto à regulação.',
 
-  fontes: [],
+  fontes: [
+    { nome: 'Cadastro Nacional de Estabelecimentos de Saúde (CNES) - Ministério da Saúde', ano: 2025 },
+    { nome: 'Secretaria Municipal de Saúde de Manaus (SEMSA)', ano: 2025 },
+    { nome: 'Secretaria de Estado de Saúde do Amazonas (SES-AM)', ano: 2025 },
+    { nome: 'Instituto Brasileiro de Geografia e Estatística (IBGE) - divisão territorial e municípios do Amazonas', ano: 2025 },
+    { nome: 'Prefeitura de Manaus - divisão de bairros e zonas administrativas', ano: 2025 }
+  ],
 
   atualizadoEm: '2026-09'
 };
