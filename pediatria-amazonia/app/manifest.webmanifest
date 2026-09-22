@@ -1,13 +1,14 @@
 {
   "name": "Mucurinha – Pediatria no Amazonas",
   "short_name": "Mucurinha",
-  "description": "Apoio à decisão clínica pediátrica no contexto amazônico.",
+  "description": "Aqui seu filho é atendido como se fosse uma mucurinha. Apoio à decisão clínica pediátrica no contexto amazônico.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#1f8a9e",
+  "theme_color": "#243060",
   "lang": "pt-BR",
   "icons": [
-    { "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f8a9e'/%3E%3Ctext x='32' y='42' font-size='34' text-anchor='middle'%3E🌿%3C/text%3E%3C/svg%3E", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+    { "src": "img/mucurinha.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "img/mucurinha-64.png", "sizes": "64x64", "type": "image/png", "purpose": "any" }
   ]
 }

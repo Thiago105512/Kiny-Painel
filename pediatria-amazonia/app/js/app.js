@@ -416,10 +416,16 @@ window.PED = window.PED || {};
     const p = paciente(); const q = D().queixas || [];
     const destaque = ['febre', 'febre_calafrios', 'febre_exantema', 'tosse', 'dispneia', 'diarreia', 'vomitos', 'convulsao', 'acidente_ofidico', 'rn_febre', 'lesoes_pele', 'ictericia'];
     return `
-      <div class="card" style="background:linear-gradient(135deg,#e3f3f5,#e4f5ec);border:none">
-        <h1>Mucurinha</h1>
-        <p>Apoio à decisão clínica em pediatria para o contexto amazônico: queixas, diagnósticos diferenciais, protocolos, doses por peso e emergências.</p>
-        <p class="muted"><small>${esc(profissionalLinha())}</small></p>
+      <div class="card" style="background:linear-gradient(135deg,var(--primary-soft),var(--green-soft));border:none">
+        <div class="marca">
+          <img src="img/mucurinha-grande.jpg" alt="Mucurinha, o gambazinho amazônico agasalhado">
+          <div class="lema">
+            <h1>Mucurinha</h1>
+            <p class="frase">Aqui seu filho é atendido como se fosse uma <b>mucurinha</b>.<br>Com carinho, cuidado e acolhimento.</p>
+            <p class="sub">${esc(profissionalLinha())}</p>
+          </div>
+        </div>
+        <p style="margin-top:.8rem">Apoio à decisão clínica em pediatria para o contexto amazônico: queixas, diagnósticos diferenciais, protocolos, doses por peso e emergências.</p>
         <div class="btnrow">
           <a class="btn" href="#/queixas">🩺 Iniciar por queixa</a>
           <a class="btn danger" href="#/emergencias">🚨 Emergências</a>
@@ -939,9 +945,9 @@ window.PED = window.PED || {};
   route('/emergencias/:id', ({ id }) => {
     const e = (D().emergencias || []).find(x => x.id === id); if (!e) return '<div class="empty">Não encontrada.</div>';
     const peso = pesoAtivo(); const idade = idadePaciente();
-    return `<div class="section-title"><h1>${e.icone || '🚨'} ${esc(e.nome)}</h1><span class="chip red">${esc(e.cor || 'emergência')}</span></div>${pesoBoxEmergencia()}
+    return `<div class="section-title"><h1>${e.icone || '🚨'} ${esc(e.nome)}</h1><span class="chip red">${esc(({ vermelho: 'emergência', laranja: 'urgência', amarelo: 'urgência', verde: 'avaliar' })[e.cor] || 'emergência')}</span></div>${pesoBoxEmergencia()}
       <div class="card"><h2>Reconhecimento</h2>${U.list(e.reconhecimento)}</div>
-      <div class="card"><h2>Passos</h2><ol>${(e.passos || []).map(x => `<li>${esc(x)}</li>`).join('')}</ol></div>
+      <div class="card"><h2>Passos</h2><ol>${(e.passos || []).map(x => `<li>${esc(String(x).replace(/^\s*\d+[.)]\s*/, ''))}</li>`).join('')}</ol></div>
       <div class="card"><h2>Doses ${peso ? `<span class="chip green">${f(peso)} kg</span>` : '<span class="chip red">informe o peso</span>'}</h2><div class="tablewrap"><table class="dosetable"><tr><th>Droga</th><th>Dose calculada</th><th>Via / repetição</th></tr>${(e.doses || []).map(d => doseRow(peso, d)).join('')}</table></div>${idade && idade.totalMeses < 1 ? '<div class="alert amber">Recém-nascido: usar protocolos neonatais específicos (reanimação neonatal SBP).</div>' : ''}</div>
       ${(e.materiais || []).length ? `<div class="card"><h2>Materiais</h2>${U.list(e.materiais)}</div>` : ''}
       ${(e.criteriosUTI || []).length ? `<div class="card"><h2>Critérios de UTI / transferência</h2>${U.list(e.criteriosUTI)}</div>` : ''}
@@ -1079,7 +1085,7 @@ window.PED = window.PED || {};
         <div class="alert red"><strong>Sinais de alarme</strong>${U.list(F.sinaisAlarme)}</div>
         <div class="btnrow"><a class="btn" href="#/calculadoras/fototerapia">Calcular para um RN</a></div>${U.fontes(F)}</div>
 
-      <div class="card"><h2>\u{1FAC1} Reanima\u00e7\u00e3o em sala de parto</h2><ol>${(R.passos || []).map(x => `<li>${esc(x)}</li>`).join('')}</ol>
+      <div class="card"><h2>\u{1FAC1} Reanima\u00e7\u00e3o em sala de parto</h2><ol>${(R.passos || []).map(x => `<li>${esc(String(x).replace(/^\s*\d+[.)]\s*/, ''))}</li>`).join('')}</ol>
         <h3>Apgar</h3><div class="tablewrap"><table><tr><th>Item</th><th>0</th><th>1</th><th>2</th></tr>${(R.apgar || []).map(a => `<tr><td>${esc(a.item)}</td><td>${esc(a.p0)}</td><td>${esc(a.p1)}</td><td>${esc(a.p2)}</td></tr>`).join('')}</table></div>
         <h3>Tubo por peso</h3><div class="tablewrap"><table><tr><th>Peso</th><th>IG</th><th>Tubo</th><th>Profundidade</th></tr>${(R.tamanhoTubo || []).map(x => `<tr><td>${f(x.pesoMin, 1)} a ${x.pesoMax > 50 ? '+' : f(x.pesoMax, 1)} kg</td><td>${esc(x.igSemanas)} sem</td><td>${f(x.tubo, 1)} mm</td><td>${esc(x.profundidadeCm)} cm</td></tr>`).join('')}</table></div>
         <h3>Metas de satura\u00e7\u00e3o</h3>${U.list((R.metasSaturacao || []).map(m => (m.minutos != null ? m.minutos + ' min de vida' : m.rotulo) + ': ' + (m.alvo || m.sato2)))}
@@ -1226,7 +1232,7 @@ window.PED = window.PED || {};
     return `<div class="section-title"><h1>\u{1F6E1}\uFE0F ${esc(t.nome)}</h1>${t.prazoCritico ? `<span class="chip red">${esc(t.prazoCritico)}</span>` : ''}</div>
       <div class="alert red"><strong>Notificar a partir da suspeita</strong>${esc(V.aviso || '')}</div>
       ${(c.janelas || []).length ? `<div class="card" style="border-color:#f3c1bd"><h2>\u23F1\uFE0F Janelas de tempo</h2><div class="tablewrap"><table class="dosetable"><tr><th>A\u00e7\u00e3o</th><th>Prazo</th><th>Observa\u00e7\u00e3o</th></tr>${c.janelas.map(j => `<tr><td data-l="A\u00e7\u00e3o"><b>${esc(j.acao)}</b></td><td data-l="Dose"><span class="chip red">${esc(j.prazo)}</span></td><td data-l="Via">${esc(j.obs || '')}</td></tr>`).join('')}</table></div></div>` : ''}
-      <div class="card"><h2>O que fazer, em ordem</h2><ol>${((V.conduta || {}).geral || []).concat(c.passos || []).map(x => `<li>${esc(x)}</li>`).join('')}</ol></div>
+      <div class="card"><h2>O que fazer, em ordem</h2><ol>${((V.conduta || {}).geral || []).concat(c.passos || []).map(x => `<li>${esc(String(x).replace(/^\s*\d+[.)]\s*/, ''))}</li>`).join('')}</ol></div>
       ${(c.exames || []).length ? `<div class="card"><h2>Exames</h2>${U.list(c.exames)}</div>` : ''}
       ${(c.oQueNaoFazer || []).length ? `<div class="card" style="border-color:#f3c1bd"><h2>\u26D4 O que n\u00e3o fazer</h2>${U.list(c.oQueNaoFazer)}</div>` : ''}
       ${(t.sinais || []).length ? `<details><summary>Sinais que levantam a suspeita</summary><div class="body">${U.list(t.sinais)}</div></details>` : ''}
