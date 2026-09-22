@@ -28,7 +28,10 @@ Rotas do protótipo (`#/…`). Cada tela indica objetivo, conteúdo e ações.
 | 22 | `#/neonatal` | Recém-nascido | Protocolos neonatais, limiares de fototerapia e exsanguineotransfusão por hora de vida, zonas de Kramer, reanimação em sala de parto com Apgar e tubo por peso, sepse neonatal. |
 | 23 | `#/notificacao` · `#/notificacao/:id` | Notificação compulsória | 43 agravos separados entre imediatos (24 h) e semanais, com sistema, ficha, prazo e dados pré-preenchidos a partir do paciente e do atendimento. |
 | 24 | `#/revisao` | Revisão clínica | Itens das bases sinalizados para conferência, com registro de quem conferiu e quando. |
-| 25 | `#/config` | Dados | Profissional responsável (nome, especialidade, CRM, RQE – padrão: Dra. Catarina Ribeiro de Queiroz, Pediatra, CRM/AM 10.677, RQE 6.706), exportar/importar JSON, apagar, contagem das bases carregadas. |
+| 25 | `#/unidades` | Unidades de saúde | 122 unidades de Manaus e do interior, filtradas por cidade, tipo e zona, com referências destacadas. |
+| 26 | `#/violencia` · `#/violencia/:tipo` | Proteção | Oito tipos de violência, janelas de tempo das profilaxias, conduta em ordem, o que não fazer, obrigações legais e serviços de encaminhamento. |
+| 27 | `#/aprender` | Aprender e explicar | Frases prontas para a família, informações sobre os municípios e perguntas de autoavaliação. |
+| 28 | `#/config` | Dados | Profissional responsável (nome, especialidade, CRM, RQE – padrão: Dra. Catarina Ribeiro de Queiroz, Pediatra, CRM/AM 10.677, RQE 6.706), exportar/importar JSON, apagar, contagem das bases carregadas. |
 
 ## Elementos globais
 - **Barra superior**: logotipo, busca global (queixas, doenças, medicamentos, calculadoras, emergências, exames, vacinas, pacientes) e chip do paciente ativo (nome, idade, peso).

@@ -37,6 +37,34 @@ No celular, abra a URL e use "Adicionar à tela inicial" para instalar como app.
 | Agravos de notificação compulsória com dados da ficha | 43 |
 | Cadastro de pacientes, prescrição editável com confirmação, evolução SOAP com comparação | ✔ |
 
+## Uso rápido
+
+O aplicativo foi feito para digitar o mínimo durante o atendimento.
+
+- **Só o nome é obrigatório** no cadastro. Todo o resto pode ser preenchido depois, durante a consulta.
+- **Datas são digitadas**, não escolhidas em calendário. Aceita 21092026, 210926 ou 21/09/2026.
+- **A idade substitui a data de nascimento**. Digite 3a2m, 14m ou 20d e a data é calculada.
+- **Toda pergunta tem resposta de um toque**, mais um campo Outros para observação livre.
+- **Estado, cidade, zona e bairro são escolhidos**, com Amazonas e Manaus em primeiro lugar. O sistema traz 62 municípios, as sete zonas de Manaus e 122 unidades de saúde públicas e privadas.
+- **Sexo, zona e prematuridade são botões**, não listas suspensas.
+- **Na emergência o peso fica em destaque**, com atalhos de peso e estimativa por idade quando não há balança.
+
+## Genérico e nome comercial
+
+Cada medicamento mostra o genérico e as marcas comerciais, e a busca funciona nos dois sentidos. Digitar Benzetacil encontra a penicilina benzatina; digitar dipirona mostra Novalgina. Medicamentos distribuídos apenas pelo sistema público trazem essa informação, para não procurar em farmácia.
+
+## Alternativas e off-label
+
+Cada doença traz, além da primeira escolha, as alternativas em alergia, a segunda linha na falha terapêutica, o que fazer quando o medicamento não está disponível na comunidade, o que é usado off-label com a justificativa, e o que é comumente prescrito mas não recomendado.
+
+## Proteção contra violência
+
+Rastreio dentro do fluxo do atendimento, com oito tipos de violência. Ao marcar a suspeita, o aplicativo mostra as janelas de tempo das profilaxias, o que fazer em ordem, o que não fazer, as obrigações legais e para onde encaminhar. A suspeita já obriga a notificar, independentemente de confirmação ou de boletim de ocorrência.
+
+## Aprender e explicar
+
+Cada doença e cada medicamento trazem, ao final da tela e recolhidas para não atrapalhar, curiosidades e uma frase pronta para explicar à família em palavras simples. A tela Aprender reúne essas frases por assunto, informações sobre os municípios do Amazonas e perguntas para a médica se testar.
+
 ## Segurança da prescrição
 
 O sistema confere automaticamente cada item antes da emissão e exibe o alerta na tela de dose e na prescrição:
