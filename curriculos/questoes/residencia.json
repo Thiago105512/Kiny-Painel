@@ -1,0 +1,156 @@
+[
+ {
+  "id": "res-1c7e9f5c",
+  "area": "Clínica Médica",
+  "enunciado": "Critério diagnóstico de diabetes mellitus (em duas ocasiões, sem hiperglicemia inequívoca):",
+  "alternativas": [
+   "Glicemia de jejum ≥ 100 mg/dL",
+   "Glicemia de jejum ≥ 126 mg/dL",
+   "HbA1c ≥ 5,7%",
+   "Glicemia casual ≥ 140 mg/dL",
+   "TOTG 2 h ≥ 140 mg/dL"
+  ],
+  "correta": 1,
+  "explicacao": "Jejum ≥ 126, HbA1c ≥ 6,5%, TOTG 2 h ≥ 200 ou casual ≥ 200 com sintomas. 100–125 é pré-diabetes."
+ },
+ {
+  "id": "res-f757fbd2",
+  "area": "Clínica Médica",
+  "enunciado": "A primeira medida terapêutica na cetoacidose diabética é:",
+  "alternativas": [
+   "Insulina regular em bolus",
+   "Bicarbonato de sódio",
+   "Hidratação venosa com SF 0,9%",
+   "Reposição de fósforo",
+   "Glicose a 5%"
+  ],
+  "correta": 2,
+  "explicacao": "Hidratação vem primeiro. Insulina só após checar K⁺ (se < 3,3 mEq/L, repor potássio antes)."
+ },
+ {
+  "id": "res-630b1f2d",
+  "area": "Cirurgia",
+  "enunciado": "No ABCDE do trauma, a letra A corresponde a:",
+  "alternativas": [
+   "Avaliação neurológica",
+   "Via aérea com restrição de movimento da coluna cervical",
+   "Controle de hemorragia",
+   "Exposição",
+   "Respiração"
+  ],
+  "correta": 1,
+  "explicacao": "A: via aérea + proteção cervical; B: respiração; C: circulação e hemorragia; D: neurológico; E: exposição/ambiente."
+ },
+ {
+  "id": "res-c570bc3a",
+  "area": "Cirurgia",
+  "enunciado": "Dor à descompressão brusca da fossa ilíaca direita (sinal de Blumberg) sugere:",
+  "alternativas": [
+   "Colecistite",
+   "Apendicite aguda",
+   "Diverticulite",
+   "Pancreatite",
+   "Litíase renal"
+  ],
+  "correta": 1,
+  "explicacao": "Blumberg indica irritação peritoneal, classicamente no ponto de McBurney na apendicite."
+ },
+ {
+  "id": "res-7576a2af",
+  "area": "Pediatria",
+  "enunciado": "A vacina BCG, pelo calendário do PNI, é aplicada:",
+  "alternativas": [
+   "Aos 2 meses",
+   "Ao nascer",
+   "Aos 12 meses",
+   "Aos 4 anos",
+   "Aos 6 meses"
+  ],
+  "correta": 1,
+  "explicacao": "Dose única ao nascer (ou o mais cedo possível), protege contra formas graves de tuberculose."
+ },
+ {
+  "id": "res-a2ba5aa5",
+  "area": "Pediatria",
+  "enunciado": "Um marco do desenvolvimento esperado por volta dos 2 meses é:",
+  "alternativas": [
+   "Sentar sem apoio",
+   "Sorriso social",
+   "Andar com apoio",
+   "Pinça fina",
+   "Falar frases"
+  ],
+  "correta": 1,
+  "explicacao": "Sorriso social ~2 meses; sentar sem apoio ~6 meses; pinça ~9–10 meses; andar ~12 meses."
+ },
+ {
+  "id": "res-44bd0d73",
+  "area": "Ginecologia e Obstetrícia",
+  "enunciado": "A droga de escolha para prevenir e tratar convulsões na pré-eclâmpsia grave/eclâmpsia é:",
+  "alternativas": [
+   "Diazepam",
+   "Fenitoína",
+   "Sulfato de magnésio",
+   "Hidralazina",
+   "Nifedipino"
+  ],
+  "correta": 2,
+  "explicacao": "Sulfato de magnésio (esquemas de Pritchard ou Zuspan). Hidralazina/nifedipino tratam a pressão."
+ },
+ {
+  "id": "res-a15d620b",
+  "area": "Ginecologia e Obstetrícia",
+  "enunciado": "Gestação a termo corresponde à idade gestacional de:",
+  "alternativas": [
+   "34 a 36s6d",
+   "37 a 41s6d",
+   "36 a 40 semanas",
+   "38 a 42 semanas",
+   "≥ 42 semanas"
+  ],
+  "correta": 1,
+  "explicacao": "Pré-termo < 37 semanas; termo 37 a 41s6d; pós-termo ≥ 42 semanas."
+ },
+ {
+  "id": "res-ea256408",
+  "area": "Medicina Preventiva",
+  "enunciado": "Sensibilidade de um teste diagnóstico é:",
+  "alternativas": [
+   "Proporção de doentes com teste positivo",
+   "Proporção de sadios com teste negativo",
+   "Probabilidade de doença dado teste positivo",
+   "Proporção de positivos na população",
+   "Taxa de falsos positivos"
+  ],
+  "correta": 0,
+  "explicacao": "Sensibilidade = VP/(VP+FN). Especificidade = VN/(VN+FP). A probabilidade de doença dado teste positivo é o valor preditivo positivo."
+ },
+ {
+  "id": "res-2ecf9576",
+  "area": "Medicina Preventiva",
+  "enunciado": "A Lei Orgânica da Saúde, que regula o SUS, é a:",
+  "alternativas": [
+   "Lei 8.142/1990",
+   "Lei 8.080/1990",
+   "Lei 9.656/1998",
+   "Lei 13.979/2020",
+   "Constituição, art. 5º"
+  ],
+  "correta": 1,
+  "explicacao": "Lei 8.080/1990. A 8.142/1990 trata de participação social e financiamento; a 9.656/1998, de planos de saúde."
+ },
+ {
+  "id": "res-72daf190",
+  "area": "Medicina Preventiva",
+  "enunciado": "São princípios doutrinários do SUS:",
+  "alternativas": [
+   "Universalidade, integralidade e equidade",
+   "Descentralização, regionalização e hierarquização",
+   "Lucro, eficiência e mercado",
+   "Privatização e seletividade",
+   "Participação popular e cofinanciamento"
+  ],
+  "correta": 0,
+  "explicacao": "Doutrinários: universalidade, integralidade, equidade. Descentralização, regionalização e hierarquização são princípios organizativos."
+ }
+]

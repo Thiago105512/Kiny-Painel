@@ -1,0 +1,184 @@
+[
+ {
+  "id": "med-cc68d69f",
+  "area": "Anatomia",
+  "enunciado": "O principal nervo motor do diafragma é o:",
+  "alternativas": [
+   "Vago",
+   "Frênico",
+   "Intercostal",
+   "Glossofaríngeo",
+   "Acessório"
+  ],
+  "correta": 1,
+  "explicacao": "Nervo frênico (C3–C5): \"C3, 4, 5 mantêm o diafragma vivo\"."
+ },
+ {
+  "id": "med-423796fc",
+  "area": "Fisiologia",
+  "enunciado": "A fase de despolarização rápida do potencial de ação neuronal se deve principalmente a:",
+  "alternativas": [
+   "Saída de K⁺",
+   "Entrada de Ca²⁺",
+   "Entrada de Na⁺",
+   "Entrada de Cl⁻",
+   "Bomba Na⁺/K⁺"
+  ],
+  "correta": 2,
+  "explicacao": "Abertura de canais de Na⁺ voltagem-dependentes. A repolarização é por saída de K⁺."
+ },
+ {
+  "id": "med-942f20fc",
+  "area": "Bioquímica",
+  "enunciado": "O saldo líquido de ATP na glicólise, por molécula de glicose, é:",
+  "alternativas": [
+   "2",
+   "4",
+   "36",
+   "1",
+   "38"
+  ],
+  "correta": 0,
+  "explicacao": "Gera 4 ATP, mas consome 2 na fase preparatória: saldo 2 ATP (+ 2 NADH)."
+ },
+ {
+  "id": "med-254a112e",
+  "area": "Histologia",
+  "enunciado": "A epiderme é formada por epitélio:",
+  "alternativas": [
+   "Simples cúbico",
+   "Pseudoestratificado ciliado",
+   "Estratificado pavimentoso queratinizado",
+   "Simples pavimentoso",
+   "De transição"
+  ],
+  "correta": 2,
+  "explicacao": "Várias camadas, células superficiais achatadas e queratina para proteção."
+ },
+ {
+  "id": "med-7e102a2d",
+  "area": "Imunologia",
+  "enunciado": "A imunoglobulina que atravessa a placenta é a:",
+  "alternativas": [
+   "IgM",
+   "IgA",
+   "IgE",
+   "IgG",
+   "IgD"
+  ],
+  "correta": 3,
+  "explicacao": "IgG passa por transporte ativo (receptor FcRn), conferindo imunidade passiva ao feto."
+ },
+ {
+  "id": "med-3ed4da34",
+  "area": "Microbiologia",
+  "enunciado": "A coloração usada para identificar bacilos álcool-ácido resistentes (BAAR), como o da tuberculose, é:",
+  "alternativas": [
+   "Gram",
+   "Ziehl-Neelsen",
+   "Giemsa",
+   "Tinta da China",
+   "Hematoxilina-eosina"
+  ],
+  "correta": 1,
+  "explicacao": "Ziehl-Neelsen evidencia a parede rica em ácidos micólicos do Mycobacterium."
+ },
+ {
+  "id": "med-9e30497d",
+  "area": "Parasitologia",
+  "enunciado": "O vetor da malária humana é a fêmea do mosquito do gênero:",
+  "alternativas": [
+   "Aedes",
+   "Culex",
+   "Lutzomyia",
+   "Anopheles",
+   "Triatoma"
+  ],
+  "correta": 3,
+  "explicacao": "Anopheles (no Amazonas, principalmente A. darlingi). Aedes: dengue; Lutzomyia: leishmaniose; Triatoma: Chagas."
+ },
+ {
+  "id": "med-adce296a",
+  "area": "Parasitologia",
+  "enunciado": "A leishmaniose tegumentar, endêmica no Amazonas, é transmitida por:",
+  "alternativas": [
+   "Flebotomíneos (mosquito-palha)",
+   "Anopheles",
+   "Barbeiro",
+   "Carrapato",
+   "Caramujo"
+  ],
+  "correta": 0,
+  "explicacao": "Flebotomíneos (Lutzomyia/Nyssomyia) transmitem Leishmania; comum em áreas de mata e desmatamento."
+ },
+ {
+  "id": "med-23afa8df",
+  "area": "Farmacologia",
+  "enunciado": "O antídoto da intoxicação por paracetamol é:",
+  "alternativas": [
+   "Flumazenil",
+   "Naloxona",
+   "Atropina",
+   "N-acetilcisteína",
+   "Vitamina K"
+  ],
+  "correta": 3,
+  "explicacao": "A N-acetilcisteína repõe glutationa e neutraliza o metabólito tóxico NAPQI."
+ },
+ {
+  "id": "med-a29a0869",
+  "area": "Farmacologia",
+  "enunciado": "O antagonista usado na intoxicação por benzodiazepínicos é:",
+  "alternativas": [
+   "Naloxona",
+   "Flumazenil",
+   "Protamina",
+   "Fisostigmina",
+   "Glucagon"
+  ],
+  "correta": 1,
+  "explicacao": "Flumazenil é antagonista competitivo do receptor benzodiazepínico (GABA-A). Naloxona é para opioides."
+ },
+ {
+  "id": "med-b115c2eb",
+  "area": "Semiologia",
+  "enunciado": "Parada da inspiração à palpação do hipocôndrio direito (sinal de Murphy) sugere:",
+  "alternativas": [
+   "Apendicite",
+   "Pancreatite",
+   "Colecistite aguda",
+   "Úlcera péptica",
+   "Pielonefrite"
+  ],
+  "correta": 2,
+  "explicacao": "Sinal de Murphy positivo: inflamação da vesícula biliar."
+ },
+ {
+  "id": "med-f3825734",
+  "area": "Cardiologia",
+  "enunciado": "Supradesnivelamento de ST em DII, DIII e aVF sugere infarto de parede:",
+  "alternativas": [
+   "Anterior",
+   "Lateral",
+   "Septal",
+   "Inferior",
+   "Posterior isolada"
+  ],
+  "correta": 3,
+  "explicacao": "DII, DIII e aVF olham a parede inferior (geralmente coronária direita)."
+ },
+ {
+  "id": "med-20f0b586",
+  "area": "Patologia",
+  "enunciado": "A necrose típica da tuberculose é a:",
+  "alternativas": [
+   "Coagulativa",
+   "Liquefativa",
+   "Caseosa",
+   "Gordurosa",
+   "Fibrinoide"
+  ],
+  "correta": 2,
+  "explicacao": "Necrose caseosa, de aspecto de queijo, dentro de granulomas."
+ }
+]

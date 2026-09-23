@@ -1,0 +1,114 @@
+[
+ {
+  "id": "oab-198a7cff",
+  "area": "Ética",
+  "enunciado": "Para se inscrever como advogado é preciso, entre outros requisitos:",
+  "alternativas": [
+   "Mestrado em Direito",
+   "Aprovação no Exame de Ordem",
+   "2 anos de estágio",
+   "Idade mínima de 25 anos",
+   "Concurso público"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 8º, IV, do Estatuto da Advocacia (Lei 8.906/1994)."
+ },
+ {
+  "id": "oab-488b6d6d",
+  "area": "Ética",
+  "enunciado": "Os honorários de sucumbência pertencem:",
+  "alternativas": [
+   "À parte vencedora",
+   "Ao advogado",
+   "Ao Estado",
+   "À OAB",
+   "Metade à parte, metade ao advogado"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 23 do EAOAB: pertencem ao advogado, que pode executá-los autonomamente."
+ },
+ {
+  "id": "oab-95dc217e",
+  "area": "Processo Civil",
+  "enunciado": "No procedimento comum do CPC, o prazo para contestar é de:",
+  "alternativas": [
+   "10 dias úteis",
+   "15 dias úteis",
+   "5 dias",
+   "30 dias corridos",
+   "20 dias úteis"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 335 do CPC."
+ },
+ {
+  "id": "oab-4c56a54c",
+  "area": "Processo Civil",
+  "enunciado": "O prazo para apelação no CPC/2015 é de:",
+  "alternativas": [
+   "5 dias",
+   "10 dias",
+   "15 dias úteis",
+   "30 dias",
+   "8 dias"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 1.003, §5º: 15 dias para todos os recursos, exceto embargos de declaração (5 dias)."
+ },
+ {
+  "id": "oab-51160cef",
+  "area": "Processo Penal",
+  "enunciado": "Com o indiciado preso, o inquérito policial deve terminar em (regra do CPP):",
+  "alternativas": [
+   "30 dias",
+   "10 dias",
+   "15 dias",
+   "5 dias",
+   "60 dias"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 10 do CPP: 10 dias se preso, 30 se solto. Há leis especiais com prazos diferentes."
+ },
+ {
+  "id": "oab-19a76129",
+  "area": "ECA",
+  "enunciado": "Para o ECA, adolescente é a pessoa entre:",
+  "alternativas": [
+   "10 e 18 anos",
+   "12 e 18 anos incompletos",
+   "14 e 21 anos",
+   "12 e 21 anos",
+   "13 e 17 anos"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 2º do ECA: criança até 12 anos incompletos; adolescente de 12 a 18 anos incompletos."
+ },
+ {
+  "id": "oab-9ab054b5",
+  "area": "Consumidor",
+  "enunciado": "O prazo para reclamar de vício aparente em produto durável é de:",
+  "alternativas": [
+   "30 dias",
+   "90 dias",
+   "5 anos",
+   "7 dias",
+   "1 ano"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 26, II, do CDC. Não durável: 30 dias. Os 7 dias são o arrependimento em compras fora do estabelecimento (art. 49)."
+ },
+ {
+  "id": "oab-280a8198",
+  "area": "Empresarial",
+  "enunciado": "Na sociedade limitada, a responsabilidade dos sócios:",
+  "alternativas": [
+   "É ilimitada",
+   "É restrita ao valor de suas quotas, mas todos respondem solidariamente pela integralização do capital",
+   "Não existe",
+   "É subsidiária e ilimitada",
+   "É proporcional ao lucro"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 1.052 do Código Civil."
+ }
+]

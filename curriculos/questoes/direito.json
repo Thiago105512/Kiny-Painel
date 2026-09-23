@@ -1,0 +1,170 @@
+[
+ {
+  "id": "dir-dc378632",
+  "area": "Constitucional",
+  "enunciado": "NÃO é cláusula pétrea (art. 60, §4º, CF):",
+  "alternativas": [
+   "Forma federativa de Estado",
+   "Voto direto, secreto, universal e periódico",
+   "Separação dos Poderes",
+   "Direitos e garantias individuais",
+   "Forma republicana de governo"
+  ],
+  "correta": 4,
+  "explicacao": "A república não está no rol do art. 60, §4º (foi objeto do plebiscito de 1993)."
+ },
+ {
+  "id": "dir-88cf9e94",
+  "area": "Constitucional",
+  "enunciado": "O remédio constitucional que protege a liberdade de locomoção é o:",
+  "alternativas": [
+   "Mandado de segurança",
+   "Habeas data",
+   "Habeas corpus",
+   "Mandado de injunção",
+   "Ação popular"
+  ],
+  "correta": 2,
+  "explicacao": "Habeas corpus (art. 5º, LXVIII). Habeas data protege informações pessoais."
+ },
+ {
+  "id": "dir-bef15209",
+  "area": "Constitucional",
+  "enunciado": "Para conhecer ou retificar informações pessoais em bancos de dados públicos, cabe:",
+  "alternativas": [
+   "Habeas corpus",
+   "Habeas data",
+   "Ação civil pública",
+   "Mandado de injunção",
+   "Reclamação"
+  ],
+  "correta": 1,
+  "explicacao": "Habeas data (art. 5º, LXXII, CF; Lei 9.507/1997)."
+ },
+ {
+  "id": "dir-6b1671e3",
+  "area": "Civil",
+  "enunciado": "Após o Estatuto da Pessoa com Deficiência (Lei 13.146/2015), são absolutamente incapazes:",
+  "alternativas": [
+   "Os menores de 18 anos",
+   "Os ébrios habituais",
+   "Os menores de 16 anos",
+   "Os pródigos",
+   "As pessoas com deficiência mental"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 3º do CC: só os menores de 16 anos. Ébrios habituais e pródigos são relativamente incapazes (art. 4º)."
+ },
+ {
+  "id": "dir-a223d292",
+  "area": "Civil",
+  "enunciado": "A menoridade civil cessa, em regra, aos:",
+  "alternativas": [
+   "16 anos",
+   "21 anos",
+   "18 anos",
+   "14 anos",
+   "Com o casamento aos 16"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 5º do CC: 18 anos completos. A emancipação é exceção."
+ },
+ {
+  "id": "dir-743b9371",
+  "area": "Penal",
+  "enunciado": "NÃO é excludente de ilicitude (art. 23, CP):",
+  "alternativas": [
+   "Legítima defesa",
+   "Estado de necessidade",
+   "Estrito cumprimento do dever legal",
+   "Exercício regular de direito",
+   "Coação moral irresistível"
+  ],
+  "correta": 4,
+  "explicacao": "Coação moral irresistível exclui a culpabilidade (inexigibilidade de conduta diversa, art. 22)."
+ },
+ {
+  "id": "dir-ec5bff20",
+  "area": "Penal",
+  "enunciado": "\"Não há crime sem lei anterior que o defina\" expressa o princípio da:",
+  "alternativas": [
+   "Insignificância",
+   "Legalidade (e anterioridade)",
+   "Culpabilidade",
+   "Intervenção mínima",
+   "Proporcionalidade"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 5º, XXXIX, CF e art. 1º, CP."
+ },
+ {
+  "id": "dir-e02d9936",
+  "area": "Processo Civil",
+  "enunciado": "No CPC/2015, os prazos processuais em dias são contados:",
+  "alternativas": [
+   "Em dias corridos",
+   "Somente em dias úteis",
+   "Em dias úteis só na Justiça Federal",
+   "Em horas",
+   "Excluindo apenas domingos"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 219 do CPC: contam-se apenas os dias úteis."
+ },
+ {
+  "id": "dir-b4d50a67",
+  "area": "Administrativo",
+  "enunciado": "NÃO está expresso no caput do art. 37 da CF:",
+  "alternativas": [
+   "Legalidade",
+   "Impessoalidade",
+   "Moralidade",
+   "Razoabilidade",
+   "Eficiência"
+  ],
+  "correta": 3,
+  "explicacao": "LIMPE: Legalidade, Impessoalidade, Moralidade, Publicidade, Eficiência. Razoabilidade é implícito."
+ },
+ {
+  "id": "dir-56817d1a",
+  "area": "Tributário",
+  "enunciado": "O tributo cuja obrigação independe de atividade estatal específica relativa ao contribuinte é o:",
+  "alternativas": [
+   "Imposto",
+   "Taxa",
+   "Contribuição de melhoria",
+   "Empréstimo compulsório",
+   "Pedágio"
+  ],
+  "correta": 0,
+  "explicacao": "Art. 16 do CTN. Taxas e contribuições de melhoria são vinculadas a uma atuação estatal."
+ },
+ {
+  "id": "dir-6cbe0dd8",
+  "area": "Ambiental",
+  "enunciado": "Legislar sobre florestas, fauna e proteção do meio ambiente é competência:",
+  "alternativas": [
+   "Privativa da União",
+   "Exclusiva dos Estados",
+   "Concorrente (União, Estados e DF)",
+   "Exclusiva dos Municípios",
+   "Residual dos Estados"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 24, VI, CF. A União edita normas gerais; os Estados suplementam. Municípios suplementam no interesse local (art. 30)."
+ },
+ {
+  "id": "dir-2adeb60c",
+  "area": "Trabalho",
+  "enunciado": "O empregado adquire direito a férias após:",
+  "alternativas": [
+   "6 meses",
+   "12 meses de vigência do contrato",
+   "24 meses",
+   "3 meses",
+   "Qualquer período"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 130 da CLT: a cada 12 meses (período aquisitivo), até 30 dias, conforme faltas."
+ }
+]

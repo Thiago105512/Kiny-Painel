@@ -1,0 +1,282 @@
+[
+ {
+  "id": "ene-6b707813",
+  "area": "Matemática",
+  "enunciado": "Um produto de R$ 200,00 teve aumento de 10% e, no mês seguinte, desconto de 10% sobre o novo preço. Qual o preço final?",
+  "alternativas": [
+   "R$ 200,00",
+   "R$ 202,00",
+   "R$ 198,00",
+   "R$ 180,00",
+   "R$ 220,00"
+  ],
+  "correta": 2,
+  "explicacao": "200 × 1,10 = 220; 220 × 0,90 = 198. Aumento e desconto de mesma taxa não se anulam: o fator final é 1,1 × 0,9 = 0,99."
+ },
+ {
+  "id": "ene-9b2c8fd6",
+  "area": "Matemática",
+  "enunciado": "Aplicando R$ 1.000,00 a juros compostos de 10% ao ano, qual o montante após 2 anos?",
+  "alternativas": [
+   "R$ 1.200,00",
+   "R$ 1.100,00",
+   "R$ 1.221,00",
+   "R$ 1.210,00",
+   "R$ 1.020,00"
+  ],
+  "correta": 3,
+  "explicacao": "M = C(1 + i)^t = 1000 × 1,1² = 1210. R$ 1.200 seria juros simples."
+ },
+ {
+  "id": "ene-02f0d6df",
+  "area": "Matemática",
+  "enunciado": "Qual a mediana do conjunto {3, 7, 2, 9, 5}?",
+  "alternativas": [
+   "5",
+   "5,2",
+   "7",
+   "3",
+   "9"
+  ],
+  "correta": 0,
+  "explicacao": "Ordenando: 2, 3, 5, 7, 9. O termo central é 5. (5,2 é a média, pegadinha comum.)"
+ },
+ {
+  "id": "ene-37e12bc4",
+  "area": "Matemática",
+  "enunciado": "Lançando dois dados comuns, qual a probabilidade de a soma ser 7?",
+  "alternativas": [
+   "1/12",
+   "7/36",
+   "1/36",
+   "1/3",
+   "1/6"
+  ],
+  "correta": 4,
+  "explicacao": "Casos favoráveis: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6. Total 36. 6/36 = 1/6."
+ },
+ {
+  "id": "ene-96cf4d2a",
+  "area": "Biologia",
+  "enunciado": "A organela responsável pela maior parte da produção de ATP na respiração celular aeróbica é:",
+  "alternativas": [
+   "Ribossomo",
+   "Mitocôndria",
+   "Complexo golgiense",
+   "Lisossomo",
+   "Retículo endoplasmático liso"
+  ],
+  "correta": 1,
+  "explicacao": "Ciclo de Krebs e cadeia respiratória ocorrem na mitocôndria, onde se forma a maior parte do ATP."
+ },
+ {
+  "id": "ene-ae21eac1",
+  "area": "Biologia",
+  "enunciado": "No cruzamento Aa × Aa, com dominância completa, a proporção fenotípica esperada é:",
+  "alternativas": [
+   "1:2:1",
+   "1:1",
+   "3:1",
+   "9:3:3:1",
+   "Todos dominantes"
+  ],
+  "correta": 2,
+  "explicacao": "Genótipos 1 AA : 2 Aa : 1 aa → fenótipos 3 dominantes : 1 recessivo. 1:2:1 é a proporção genotípica."
+ },
+ {
+  "id": "ene-066d5a17",
+  "area": "Biologia",
+  "enunciado": "A associação entre fungos e algas que forma os liquens é exemplo de:",
+  "alternativas": [
+   "Parasitismo",
+   "Comensalismo",
+   "Predação",
+   "Mutualismo",
+   "Competição"
+  ],
+  "correta": 3,
+  "explicacao": "Ambos se beneficiam e a relação é obrigatória: a alga faz fotossíntese, o fungo dá proteção e absorve água e sais."
+ },
+ {
+  "id": "ene-2f8c7497",
+  "area": "Química",
+  "enunciado": "Uma solução tem [H⁺] = 10⁻³ mol/L a 25 °C. Seu pH é:",
+  "alternativas": [
+   "3",
+   "11",
+   "7",
+   "−3",
+   "0,001"
+  ],
+  "correta": 0,
+  "explicacao": "pH = −log[H⁺] = −log 10⁻³ = 3 (solução ácida)."
+ },
+ {
+  "id": "ene-14d7f2e2",
+  "area": "Química",
+  "enunciado": "Quantos mols há em 36 g de água (H₂O, massa molar 18 g/mol)?",
+  "alternativas": [
+   "0,5",
+   "1",
+   "18",
+   "2",
+   "36"
+  ],
+  "correta": 3,
+  "explicacao": "n = m / M = 36 / 18 = 2 mol."
+ },
+ {
+  "id": "ene-e3e12743",
+  "area": "Física",
+  "enunciado": "Um carro vai de 0 a 20 m/s em 5 s, em movimento uniformemente variado. Sua aceleração é:",
+  "alternativas": [
+   "100 m/s²",
+   "4 m/s²",
+   "0,25 m/s²",
+   "25 m/s²",
+   "15 m/s²"
+  ],
+  "correta": 1,
+  "explicacao": "a = Δv/Δt = 20/5 = 4 m/s²."
+ },
+ {
+  "id": "ene-0127e825",
+  "area": "Física",
+  "enunciado": "Dois resistores de 6 Ω e 3 Ω são ligados em paralelo. A resistência equivalente é:",
+  "alternativas": [
+   "9 Ω",
+   "4,5 Ω",
+   "2 Ω",
+   "18 Ω",
+   "0,5 Ω"
+  ],
+  "correta": 2,
+  "explicacao": "Em paralelo: R = (6 × 3)/(6 + 3) = 18/9 = 2 Ω. A equivalente é sempre menor que o menor resistor."
+ },
+ {
+  "id": "ene-2c673320",
+  "area": "História",
+  "enunciado": "O Teatro Amazonas, inaugurado em Manaus em 1896, é símbolo de qual período econômico?",
+  "alternativas": [
+   "Ciclo do ouro",
+   "Ciclo da cana-de-açúcar",
+   "Ciclo da borracha",
+   "Zona Franca de Manaus",
+   "Ciclo do café"
+  ],
+  "correta": 2,
+  "explicacao": "A exportação do látex (fim do séc. XIX – início do XX) enriqueceu Manaus e Belém, financiando obras como o Teatro Amazonas. A Zona Franca é de 1967."
+ },
+ {
+  "id": "ene-a1caa377",
+  "area": "História",
+  "enunciado": "A Lei Áurea, que aboliu a escravidão no Brasil, foi assinada em:",
+  "alternativas": [
+   "1822",
+   "1850",
+   "1871",
+   "1888",
+   "1889"
+  ],
+  "correta": 3,
+  "explicacao": "13 de maio de 1888, pela Princesa Isabel. 1850: Lei Eusébio de Queirós; 1871: Ventre Livre; 1889: República."
+ },
+ {
+  "id": "ene-3a4a948a",
+  "area": "Geografia",
+  "enunciado": "O Encontro das Águas, próximo a Manaus, é formado pelos rios:",
+  "alternativas": [
+   "Negro e Solimões",
+   "Madeira e Tapajós",
+   "Negro e Branco",
+   "Solimões e Purus",
+   "Amazonas e Xingu"
+  ],
+  "correta": 0,
+  "explicacao": "As águas escuras do Negro e barrentas do Solimões correm lado a lado por quilômetros por diferenças de temperatura, velocidade e densidade."
+ },
+ {
+  "id": "ene-5842196b",
+  "area": "Geografia",
+  "enunciado": "O clima predominante na Amazônia, quente e úmido o ano todo, é o:",
+  "alternativas": [
+   "Tropical de altitude",
+   "Semiárido",
+   "Subtropical",
+   "Equatorial",
+   "Tropical atlântico"
+  ],
+  "correta": 3,
+  "explicacao": "Clima equatorial: temperaturas médias altas, pequena amplitude térmica anual e chuvas abundantes."
+ },
+ {
+  "id": "ene-4dd1f9aa",
+  "area": "Filosofia",
+  "enunciado": "\"Penso, logo existo\" é uma formulação associada a:",
+  "alternativas": [
+   "Platão",
+   "Kant",
+   "Descartes",
+   "Nietzsche",
+   "Aristóteles"
+  ],
+  "correta": 2,
+  "explicacao": "René Descartes, no Discurso do Método, marco do racionalismo moderno."
+ },
+ {
+  "id": "ene-6033a7a6",
+  "area": "Sociologia",
+  "enunciado": "O conceito de \"fato social\", marcado por exterioridade, generalidade e coercitividade, é de:",
+  "alternativas": [
+   "Max Weber",
+   "Karl Marx",
+   "Émile Durkheim",
+   "Pierre Bourdieu",
+   "Auguste Comte"
+  ],
+  "correta": 2,
+  "explicacao": "Durkheim, em As Regras do Método Sociológico. Weber trabalha com ação social; Marx, com luta de classes."
+ },
+ {
+  "id": "ene-0853b5d1",
+  "area": "Português",
+  "enunciado": "Em \"Aquele rapaz é uma fera no xadrez\", a figura de linguagem é:",
+  "alternativas": [
+   "Metonímia",
+   "Hipérbole",
+   "Metáfora",
+   "Antítese",
+   "Eufemismo"
+  ],
+  "correta": 2,
+  "explicacao": "Comparação implícita (sem \"como\"): o rapaz é associado a uma fera pela habilidade."
+ },
+ {
+  "id": "ene-3b7c9ac5",
+  "area": "Literatura",
+  "enunciado": "Macunaíma, \"o herói sem nenhum caráter\", é obra de qual autor modernista?",
+  "alternativas": [
+   "Oswald de Andrade",
+   "Mário de Andrade",
+   "Carlos Drummond",
+   "Graciliano Ramos",
+   "Manuel Bandeira"
+  ],
+  "correta": 1,
+  "explicacao": "Mário de Andrade (1928), rapsódia que mistura lendas indígenas, folclore e crítica à identidade nacional."
+ },
+ {
+  "id": "ene-79ffec4b",
+  "area": "Redação",
+  "enunciado": "Na redação do ENEM, a competência 5 avalia:",
+  "alternativas": [
+   "Domínio da norma culta",
+   "Coesão textual",
+   "Proposta de intervenção que respeite os direitos humanos",
+   "Compreensão do tema",
+   "Organização dos argumentos"
+  ],
+  "correta": 2,
+  "explicacao": "C5: proposta com agente, ação, meio/modo, finalidade e detalhamento, respeitando os direitos humanos."
+ }
+]
