@@ -110,5 +110,635 @@
   ],
   "correta": 1,
   "explicacao": "Art. 1.052 do Código Civil."
+ },
+ {
+  "id": "oab-c337b16a",
+  "area": "Ética",
+  "enunciado": "Em 2019, a Seccional tomou conhecimento oficial de falta disciplinar praticada pelo advogado Rui. Nenhum ato interruptivo ocorreu desde então. Sobre a pretensão punitiva da OAB, é correto afirmar que ela prescreve em:",
+  "alternativas": [
+   "2 anos, contados da data da prática do fato",
+   "5 anos, contados da data da constatação oficial do fato",
+   "3 anos, contados da data da constatação oficial do fato",
+   "10 anos, contados da data da prática do fato",
+   "Não prescreve, por se tratar de processo disciplinar de natureza ética"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 43 do Estatuto da Advocacia (Lei 8.906/1994): a pretensão à punibilidade das infrações disciplinares prescreve em cinco anos, contados da constatação oficial do fato."
+ },
+ {
+  "id": "oab-06f7e527",
+  "area": "Ética",
+  "enunciado": "Maria, advogada, foi arrolada como testemunha em processo sobre fatos que conheceu ao patrocinar os interesses de seu antigo cliente, o qual, inclusive, autorizou por escrito o depoimento. Nesse caso, Maria:",
+  "alternativas": [
+   "É obrigada a depor, pois a autorização do cliente afasta o sigilo profissional",
+   "Só pode recusar-se se ainda for advogada do cliente",
+   "Pode recusar-se a depor, ainda que autorizada ou solicitada pelo cliente",
+   "Deve depor, mas apenas sobre fatos posteriores ao fim do mandato",
+   "Só pode recusar-se mediante autorização prévia do Conselho Seccional"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 7º, XIX, do Estatuto da Advocacia: é direito do advogado recusar-se a depor sobre fato relacionado a pessoa de quem seja ou foi advogado, mesmo quando autorizado ou solicitado pelo constituinte."
+ },
+ {
+  "id": "oab-f088d205",
+  "area": "Ética",
+  "enunciado": "Carlos, advogado, renunciou ao mandato que lhe fora outorgado em ação cível e notificou regularmente o cliente. Quanto à sua responsabilidade após a renúncia, Carlos:",
+  "alternativas": [
+   "Deixa de representar o cliente imediatamente após a notificação",
+   "Continua a representar o cliente por 30 dias após a notificação",
+   "Continua a representar o cliente até o trânsito em julgado da ação",
+   "Continua a representar o cliente durante os 10 dias seguintes à notificação, salvo se for substituído antes",
+   "Só se desobriga após homologação judicial da renúncia"
+  ],
+  "correta": 3,
+  "explicacao": "Art. 5º, § 3º, do Estatuto da Advocacia: o advogado que renunciar ao mandato continuará, durante os dez dias seguintes à notificação da renúncia, a representar o mandante, salvo se for substituído antes."
+ },
+ {
+  "id": "oab-e3946a33",
+  "area": "Ética",
+  "enunciado": "Lucas, policial militar da ativa, foi aprovado no Exame de Ordem e deseja advogar nas horas vagas, apenas em causas de família. Segundo o Estatuto da Advocacia, Lucas:",
+  "alternativas": [
+   "Pode advogar em causas de família, pois há mero impedimento contra a Fazenda que o remunera",
+   "Pode advogar livremente, desde que fora do horário de serviço",
+   "Pode advogar apenas em causas próprias e de parentes",
+   "Não pode advogar, pois os ocupantes de cargos vinculados à atividade policial de qualquer natureza exercem atividade incompatível com a advocacia",
+   "Pode advogar se obtiver autorização do comandante da corporação"
+  ],
+  "correta": 3,
+  "explicacao": "Art. 28, V, do Estatuto da Advocacia: a advocacia é incompatível com as atividades de ocupantes de cargos ou funções vinculados direta ou indiretamente a atividade policial de qualquer natureza; a incompatibilidade gera proibição total (art. 27)."
+ },
+ {
+  "id": "oab-a209c66f",
+  "area": "Ética",
+  "enunciado": "Joana, advogada regularmente inscrita, tomou posse como analista administrativa em uma autarquia estadual, cargo sem poder de decisão relevante. Quanto ao exercício da advocacia, Joana:",
+  "alternativas": [
+   "Está proibida de advogar em qualquer causa, por incompatibilidade",
+   "Pode advogar livremente, inclusive contra o Estado",
+   "Está impedida apenas de advogar em causas trabalhistas",
+   "Deve licenciar-se da OAB enquanto ocupar o cargo",
+   "Está impedida de advogar contra a Fazenda Pública que a remunera ou à qual seja vinculada a entidade empregadora"
+  ],
+  "correta": 4,
+  "explicacao": "Art. 30, I, do Estatuto da Advocacia: os servidores da administração direta, indireta e fundacional são impedidos de exercer a advocacia contra a Fazenda Pública que os remunere ou à qual seja vinculada a entidade empregadora."
+ },
+ {
+  "id": "oab-656d73b7",
+  "area": "Ética",
+  "enunciado": "A sociedade de advogados Silva & Souza pretende divulgar seus serviços por meio de um outdoor em avenida movimentada, com o nome dos sócios e as áreas de atuação. Segundo o Código de Ética e Disciplina da OAB, essa publicidade:",
+  "alternativas": [
+   "É permitida, desde que contenha apenas informações objetivas",
+   "É permitida mediante prévia autorização do Conselho Seccional",
+   "É permitida, desde que não mencione valores de honorários",
+   "É vedada apenas se contiver fotografia dos sócios",
+   "É vedada, pois o Código proíbe o uso de outdoors, painéis luminosos ou formas assemelhadas de publicidade"
+  ],
+  "correta": 4,
+  "explicacao": "Art. 40, II, do Código de Ética e Disciplina da OAB: é vedado o uso de outdoors, painéis luminosos ou formas assemelhadas de publicidade."
+ },
+ {
+  "id": "oab-5ad7c482",
+  "area": "Ética",
+  "enunciado": "Ana, advogada, firmou contrato escrito de honorários com seu cliente, que deixou de pagar as parcelas após a conclusão do serviço. Segundo o Estatuto da Advocacia, o contrato escrito de honorários:",
+  "alternativas": [
+   "Exige prévio ajuizamento de ação de conhecimento para cobrança",
+   "Só vale como título executivo se homologado pela OAB",
+   "Só pode ser cobrado por meio de ação monitória",
+   "Não tem força executiva, servindo apenas como prova escrita",
+   "Constitui título executivo, permitindo a execução direta do crédito"
+  ],
+  "correta": 4,
+  "explicacao": "Art. 24 do Estatuto da Advocacia: a decisão judicial que fixar ou arbitrar honorários e o contrato escrito que os estipular são títulos executivos e constituem crédito privilegiado na falência, concordata, concurso de credores, insolvência civil e liquidação extrajudicial."
+ },
+ {
+  "id": "oab-255411d8",
+  "area": "Ética",
+  "enunciado": "Pedro, advogado, é sócio de uma sociedade de advogados com sede em Belo Horizonte. Ele foi convidado a ingressar como sócio em outra sociedade de advogados, também sediada em Belo Horizonte. Segundo o Estatuto da Advocacia, Pedro:",
+  "alternativas": [
+   "Não pode integrar a segunda sociedade, pois é vedado integrar mais de uma sociedade de advogados com sede ou filial na área do mesmo Conselho Seccional",
+   "Pode integrar ambas, desde que comunique o fato ao Conselho Seccional",
+   "Pode integrar ambas, desde que as sociedades atuem em áreas distintas",
+   "Pode integrar ambas, desde que tenha participação minoritária em uma delas",
+   "Só pode integrar a segunda sociedade se ela for unipessoal"
+  ],
+  "correta": 0,
+  "explicacao": "Art. 15, § 4º, do Estatuto da Advocacia: nenhum advogado pode integrar mais de uma sociedade de advogados com sede ou filial na mesma área territorial do respectivo Conselho Seccional."
+ },
+ {
+  "id": "oab-14c81919",
+  "area": "Constitucional",
+  "enunciado": "Roberto deseja conhecer as informações a seu respeito constantes de um banco de dados de caráter público mantido por órgão federal, que se recusou a fornecê-las. A ação constitucional adequada é:",
+  "alternativas": [
+   "Habeas data",
+   "Mandado de segurança",
+   "Habeas corpus",
+   "Mandado de injunção",
+   "Ação popular"
+  ],
+  "correta": 0,
+  "explicacao": "Art. 5º, LXXII, a, da Constituição: conceder-se-á habeas data para assegurar o conhecimento de informações relativas à pessoa do impetrante, constantes de registros ou bancos de dados de entidades governamentais ou de caráter público."
+ },
+ {
+  "id": "oab-2886890b",
+  "area": "Constitucional",
+  "enunciado": "O Presidente da República editou medida provisória criando um novo tipo penal para punir fraudes em licitações. Essa medida provisória é:",
+  "alternativas": [
+   "Constitucional, desde que convertida em lei no prazo de 60 dias",
+   "Constitucional, por se tratar de caso de relevância e urgência",
+   "Constitucional, se aprovada por maioria absoluta do Congresso",
+   "Inconstitucional apenas se previr pena de reclusão",
+   "Inconstitucional, pois é vedada a edição de medida provisória sobre direito penal"
+  ],
+  "correta": 4,
+  "explicacao": "Art. 62, § 1º, I, b, da Constituição: é vedada a edição de medidas provisórias sobre matéria relativa a direito penal, processual penal e processual civil."
+ },
+ {
+  "id": "oab-80975d76",
+  "area": "Constitucional",
+  "enunciado": "Um grupo de cidadãos pretende apresentar, mediante coleta de assinaturas, proposta de emenda à Constituição Federal. Considerando o texto constitucional, entre os legitimados à propositura de emenda está(ão):",
+  "alternativas": [
+   "Os cidadãos, por iniciativa popular subscrita por 1% do eleitorado nacional",
+   "Qualquer Governador de Estado",
+   "O Supremo Tribunal Federal",
+   "Um décimo dos membros da Câmara dos Deputados",
+   "Mais da metade das Assembleias Legislativas das unidades da Federação, manifestando-se cada uma pela maioria relativa de seus membros"
+  ],
+  "correta": 4,
+  "explicacao": "Art. 60, I a III, da Constituição: a Constituição pode ser emendada mediante proposta de um terço dos membros da Câmara ou do Senado, do Presidente da República ou de mais da metade das Assembleias Legislativas, cada uma pela maioria relativa de seus membros."
+ },
+ {
+  "id": "oab-cc61cf3d",
+  "area": "Constitucional",
+  "enunciado": "Paula, com 32 anos de idade, filiada a partido político e em pleno gozo dos direitos políticos, pretende se candidatar nas próximas eleições. Pelo critério da idade mínima, Paula NÃO pode concorrer ao cargo de:",
+  "alternativas": [
+   "Governadora",
+   "Deputada Federal",
+   "Senadora",
+   "Prefeita",
+   "Vereadora"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 14, § 3º, VI, da Constituição: a idade mínima é de 35 anos para Presidente, Vice-Presidente e Senador; 30 para Governador; 21 para Deputado e Prefeito; 18 para Vereador."
+ },
+ {
+  "id": "oab-b2f5b9ec",
+  "area": "Civil",
+  "enunciado": "Em janeiro de 2023, o carro de Fábio foi atingido por veículo conduzido por Gustavo, que agiu com culpa. Fábio pretende ajuizar ação de reparação civil. Pela regra geral do Código Civil, o prazo prescricional dessa pretensão é de:",
+  "alternativas": [
+   "1 ano",
+   "5 anos",
+   "10 anos",
+   "2 anos",
+   "3 anos"
+  ],
+  "correta": 4,
+  "explicacao": "Art. 206, § 3º, V, do Código Civil: prescreve em três anos a pretensão de reparação civil."
+ },
+ {
+  "id": "oab-b20158c8",
+  "area": "Civil",
+  "enunciado": "Segundo o Código Civil, com a redação dada pelo Estatuto da Pessoa com Deficiência (Lei 13.146/2015), é absolutamente incapaz de exercer pessoalmente os atos da vida civil:",
+  "alternativas": [
+   "O pródigo",
+   "O ébrio habitual",
+   "O menor de 16 anos",
+   "A pessoa com deficiência mental",
+   "O maior de 16 e menor de 18 anos"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 3º do Código Civil: são absolutamente incapazes apenas os menores de 16 anos; pródigos, ébrios habituais e maiores de 16 e menores de 18 são relativamente incapazes (art. 4º)."
+ },
+ {
+  "id": "oab-122e164d",
+  "area": "Civil",
+  "enunciado": "Lúcia comprou um automóvel usado de um particular e, logo após a entrega, constatou um defeito oculto no motor que torna o bem impróprio ao uso. Pela regra geral do Código Civil (sem considerar vícios que só podem ser conhecidos mais tarde), o prazo decadencial para Lúcia obter a redibição é de:",
+  "alternativas": [
+   "7 dias, contados da entrega efetiva",
+   "90 dias, contados da descoberta do vício",
+   "1 ano, contado da entrega efetiva",
+   "3 anos, contados da celebração do contrato",
+   "30 dias, contados da entrega efetiva"
+  ],
+  "correta": 4,
+  "explicacao": "Art. 445 do Código Civil: o adquirente decai do direito de obter a redibição ou abatimento no preço no prazo de 30 dias se a coisa for móvel, e de um ano se for imóvel, contado da entrega efetiva."
+ },
+ {
+  "id": "oab-921f649c",
+  "area": "Civil",
+  "enunciado": "José, viúvo, tem dois filhos e deseja deixar, por testamento, todo o seu patrimônio a um amigo de infância. Segundo o Código Civil, José:",
+  "alternativas": [
+   "Só pode dispor de metade de seus bens, pois a outra metade constitui a legítima dos herdeiros necessários",
+   "Pode dispor livremente de todo o patrimônio, por ser viúvo",
+   "Pode dispor de dois terços de seus bens",
+   "Não pode fazer testamento enquanto tiver descendentes",
+   "Pode dispor de todo o patrimônio, desde que os filhos sejam maiores"
+  ],
+  "correta": 0,
+  "explicacao": "Arts. 1.845, 1.846 e 1.789 do Código Civil: descendentes são herdeiros necessários, e pertence a eles, de pleno direito, a metade dos bens da herança; havendo herdeiros necessários, o testador só pode dispor da metade."
+ },
+ {
+  "id": "oab-fb8fc796",
+  "area": "Processo Civil",
+  "enunciado": "Proferida sentença, o réu opôs embargos de declaração alegando omissão. Quanto ao prazo para interposição de apelação pelas partes, a oposição dos embargos de declaração:",
+  "alternativas": [
+   "Suspende o prazo, que volta a correr pelo saldo restante",
+   "Não produz qualquer efeito sobre o prazo recursal",
+   "Interrompe o prazo para a interposição de recurso",
+   "Interrompe o prazo apenas para a parte que opôs os embargos",
+   "Suspende o prazo apenas se os embargos forem acolhidos"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 1.026 do CPC: os embargos de declaração não possuem efeito suspensivo e interrompem o prazo para a interposição de recurso."
+ },
+ {
+  "id": "oab-d7ef213c",
+  "area": "Processo Civil",
+  "enunciado": "Em ação de obrigação de fazer, o juiz indeferiu o pedido de tutela provisória de urgência formulado pela autora. O recurso cabível contra essa decisão interlocutória é:",
+  "alternativas": [
+   "Apelação",
+   "Agravo interno",
+   "Recurso ordinário",
+   "Embargos infringentes",
+   "Agravo de instrumento"
+  ],
+  "correta": 4,
+  "explicacao": "Art. 1.015, I, do CPC: cabe agravo de instrumento contra as decisões interlocutórias que versarem sobre tutelas provisórias."
+ },
+ {
+  "id": "oab-099cbebb",
+  "area": "Processo Civil",
+  "enunciado": "Em ação de cobrança movida contra dois devedores solidários, apenas um deles contestou, impugnando a existência da dívida, fato comum a ambos. O outro réu foi revel. Quanto ao efeito material da revelia, é correto afirmar que:",
+  "alternativas": [
+   "Presumem-se verdadeiras as alegações do autor em relação ao réu revel",
+   "Não se presumem verdadeiras as alegações do autor, pois um dos litisconsortes contestou a ação",
+   "O processo deve ser extinto em relação ao réu revel",
+   "O juiz deve julgar antecipadamente o pedido apenas contra o revel",
+   "O réu revel será condenado automaticamente, sem produção de provas"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 345, I, do CPC: a revelia não produz o efeito de presunção de veracidade se, havendo pluralidade de réus, algum deles contestar a ação."
+ },
+ {
+  "id": "oab-942d0685",
+  "area": "Processo Civil",
+  "enunciado": "Transitou em julgado decisão de mérito proferida por juiz absolutamente incompetente. A parte prejudicada pretende ajuizar ação rescisória. Pela regra geral do CPC, o prazo para tanto é de:",
+  "alternativas": [
+   "1 ano, contado do trânsito em julgado",
+   "2 anos, contados do trânsito em julgado da última decisão proferida no processo",
+   "5 anos, contados da prolação da decisão",
+   "2 anos, contados da ciência do vício pela parte",
+   "90 dias, contados do trânsito em julgado"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 975 do CPC: o direito à rescisão se extingue em dois anos contados do trânsito em julgado da última decisão proferida no processo; a incompetência absoluta é hipótese de rescisória (art. 966, II)."
+ },
+ {
+  "id": "oab-50b1a0b7",
+  "area": "Penal",
+  "enunciado": "Tiago furtou um celular e, arrependido, devolveu-o voluntariamente à vítima antes do recebimento da denúncia. Segundo o Código Penal, Tiago:",
+  "alternativas": [
+   "Terá direito à redução da pena de um a dois terços, pelo arrependimento posterior",
+   "Terá extinta a punibilidade",
+   "Responderá apenas pelos atos já praticados, pela desistência voluntária",
+   "Não será punido, pelo arrependimento eficaz",
+   "Não terá qualquer benefício, pois o crime já se consumou"
+  ],
+  "correta": 0,
+  "explicacao": "Art. 16 do Código Penal: nos crimes cometidos sem violência ou grave ameaça, reparado o dano ou restituída a coisa até o recebimento da denúncia, por ato voluntário do agente, a pena será reduzida de um a dois terços."
+ },
+ {
+  "id": "oab-cdbbb050",
+  "area": "Penal",
+  "enunciado": "Rafael, pretendendo matar Bruno, disparou uma vez contra ele, errando o alvo. Embora tivesse outras munições e nada o impedisse, decidiu por vontade própria não prosseguir. Bruno não sofreu lesões. Rafael:",
+  "alternativas": [
+   "Responde por tentativa de homicídio",
+   "Responde apenas pelos atos já praticados, em razão da desistência voluntária",
+   "Responde por homicídio consumado com pena reduzida",
+   "Tem a pena reduzida de um a dois terços pelo arrependimento posterior",
+   "Não responde por crime algum, por se tratar de crime impossível"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 15 do Código Penal: o agente que voluntariamente desiste de prosseguir na execução só responde pelos atos já praticados (no caso, eventualmente, disparo de arma de fogo ou perigo para a vida)."
+ },
+ {
+  "id": "oab-8fd049ba",
+  "area": "Penal",
+  "enunciado": "Durante uma caçada, Célio atirou contra um vulto na mata acreditando tratar-se de um animal, mas atingiu e matou um colega. O erro era evitável, se Célio tivesse agido com a cautela devida. Nesse caso:",
+  "alternativas": [
+   "Há erro de proibição, que isenta de pena",
+   "Há erro de tipo invencível, que exclui dolo e culpa",
+   "Há erro de tipo vencível, que exclui o dolo, mas permite a punição por homicídio culposo",
+   "Responde por homicídio doloso, pois assumiu o risco",
+   "Há legítima defesa putativa, que exclui a ilicitude"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 20, caput, do Código Penal: o erro sobre elemento constitutivo do tipo legal exclui o dolo, mas permite a punição por crime culposo, se previsto em lei."
+ },
+ {
+  "id": "oab-50c34185",
+  "area": "Penal",
+  "enunciado": "Marcos tinha 20 anos na data do crime e 23 anos na data da sentença. Quanto aos prazos prescricionais aplicáveis a ele:",
+  "alternativas": [
+   "São reduzidos de metade, pois era menor de 21 anos ao tempo do crime",
+   "São reduzidos de um terço, pois era menor de 21 anos ao tempo do crime",
+   "Não há redução, pois era maior de 21 anos na data da sentença",
+   "São reduzidos de metade apenas se ele for maior de 70 anos na sentença",
+   "São contados em dobro, por se tratar de réu jovem"
+  ],
+  "correta": 0,
+  "explicacao": "Art. 115 do Código Penal: são reduzidos de metade os prazos de prescrição quando o criminoso era, ao tempo do crime, menor de 21 anos, ou, na data da sentença, maior de 70 anos."
+ },
+ {
+  "id": "oab-d0abd164",
+  "area": "Processo Penal",
+  "enunciado": "Laura foi vítima de crime de ação penal privada e descobriu quem era o autor do fato em 10 de março. Salvo disposição em contrário, o prazo para oferecer queixa-crime é de:",
+  "alternativas": [
+   "6 meses, contados da data do fato",
+   "30 dias, contados da conclusão do inquérito policial",
+   "6 meses, contados do dia em que Laura veio a saber quem é o autor do crime",
+   "1 ano, contado do dia em que soube quem é o autor",
+   "15 dias, contados do conhecimento da autoria"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 38 do CPP: o ofendido decai do direito de queixa se não o exercer dentro de seis meses, contados do dia em que vier a saber quem é o autor do crime."
+ },
+ {
+  "id": "oab-8f008e4c",
+  "area": "Processo Penal",
+  "enunciado": "Em processo pelo procedimento comum ordinário, o juiz rejeitou a denúncia oferecida pelo Ministério Público por falta de justa causa. O recurso cabível é:",
+  "alternativas": [
+   "Recurso em sentido estrito",
+   "Apelação",
+   "Agravo em execução",
+   "Carta testemunhável",
+   "Embargos infringentes"
+  ],
+  "correta": 0,
+  "explicacao": "Art. 581, I, do CPP: cabe recurso em sentido estrito da decisão que não receber a denúncia ou a queixa."
+ },
+ {
+  "id": "oab-02647e6d",
+  "area": "Processo Penal",
+  "enunciado": "Douglas foi denunciado por latrocínio (roubo seguido de morte). O órgão competente para julgá-lo é:",
+  "alternativas": [
+   "O Tribunal do Júri, por haver resultado morte",
+   "O juízo criminal singular, pois o latrocínio é crime contra o patrimônio",
+   "O Tribunal do Júri, por se tratar de crime hediondo",
+   "O Juizado Especial Criminal",
+   "O juízo singular apenas se a morte resultar de culpa"
+  ],
+  "correta": 1,
+  "explicacao": "Súmula 603 do STF: a competência para o processo e julgamento de latrocínio é do juiz singular e não do Tribunal do Júri, que julga os crimes dolosos contra a vida (art. 5º, XXXVIII, d, da Constituição; art. 74, § 1º, do CPP)."
+ },
+ {
+  "id": "oab-846a8377",
+  "area": "Trabalho",
+  "enunciado": "Sandra completou seu período aquisitivo de férias, mas o empregador não as concedeu nos 12 meses subsequentes. Segundo a CLT, Sandra:",
+  "alternativas": [
+   "Tem direito ao pagamento das férias em dobro",
+   "Perde o direito às férias, que prescrevem",
+   "Tem direito às férias simples, sem acréscimo",
+   "Tem direito a férias de 60 dias corridos, sem remuneração dobrada",
+   "Tem direito apenas a indenização de um terço da remuneração"
+  ],
+  "correta": 0,
+  "explicacao": "Art. 137 da CLT: sempre que as férias forem concedidas após o prazo do art. 134 (12 meses subsequentes ao período aquisitivo), o empregador pagará em dobro a respectiva remuneração."
+ },
+ {
+  "id": "oab-7bf63d39",
+  "area": "Trabalho",
+  "enunciado": "Juliana, empregada com contrato por prazo indeterminado, teve a gravidez confirmada e foi dispensada sem justa causa. Segundo a Constituição, a estabilidade provisória da gestante vai:",
+  "alternativas": [
+   "Da confirmação da gravidez até cinco meses após o parto",
+   "Da confirmação da gravidez até o parto",
+   "Da confirmação da gravidez até 120 dias após o parto",
+   "Da comunicação ao empregador até seis meses após o parto",
+   "Do parto até um ano após o parto"
+  ],
+  "correta": 0,
+  "explicacao": "Art. 10, II, b, do ADCT: fica vedada a dispensa arbitrária ou sem justa causa da empregada gestante, desde a confirmação da gravidez até cinco meses após o parto."
+ },
+ {
+  "id": "oab-52b96464",
+  "area": "Trabalho",
+  "enunciado": "Rogério, empregado urbano, trabalha habitualmente das 23h às 4h. Segundo a CLT, o trabalho noturno urbano é aquele realizado:",
+  "alternativas": [
+   "Entre as 21h de um dia e as 5h do dia seguinte, com adicional de 25%",
+   "Entre as 22h de um dia e as 6h do dia seguinte, com adicional de 50%",
+   "Entre as 20h de um dia e as 4h do dia seguinte, com adicional de 20%",
+   "Entre as 22h de um dia e as 5h do dia seguinte, sem adicional se houver acordo individual",
+   "Entre as 22h de um dia e as 5h do dia seguinte, com adicional de pelo menos 20% sobre a hora diurna"
+  ],
+  "correta": 4,
+  "explicacao": "Art. 73, caput e § 2º, da CLT: considera-se noturno o trabalho urbano executado entre as 22h de um dia e as 5h do dia seguinte, com remuneração acrescida de pelo menos 20% sobre a hora diurna."
+ },
+ {
+  "id": "oab-7ec7fda0",
+  "area": "Processo do Trabalho",
+  "enunciado": "Em reclamação trabalhista pelo rito ordinário, a sentença julgou improcedentes os pedidos do reclamante. O prazo para interposição de recurso ordinário é de:",
+  "alternativas": [
+   "5 dias",
+   "8 dias",
+   "10 dias",
+   "15 dias",
+   "30 dias"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 895, I, da CLT e art. 6º da Lei 5.584/1970: o recurso ordinário é cabível no prazo de oito dias, prazo que é a regra geral dos recursos trabalhistas."
+ },
+ {
+  "id": "oab-d6ec5e46",
+  "area": "Processo do Trabalho",
+  "enunciado": "Em reclamação trabalhista submetida ao procedimento sumaríssimo, cada parte pode indicar, no máximo:",
+  "alternativas": [
+   "3 testemunhas",
+   "6 testemunhas",
+   "1 testemunha",
+   "2 testemunhas",
+   "5 testemunhas"
+  ],
+  "correta": 3,
+  "explicacao": "Art. 852-H, § 2º, da CLT: no procedimento sumaríssimo, as testemunhas, até o máximo de duas para cada parte, comparecerão independentemente de intimação; no rito ordinário, o limite é de três (art. 821)."
+ },
+ {
+  "id": "oab-c599afc2",
+  "area": "Administrativo",
+  "enunciado": "Um município concedeu licença a um particular e, posteriormente, constatou que o ato foi praticado com vício de legalidade. Segundo o entendimento sumulado do STF, a Administração:",
+  "alternativas": [
+   "Deve revogar o ato, por conveniência e oportunidade",
+   "Só pode desfazer o ato mediante decisão judicial",
+   "Não pode desfazer o ato, pois gerou direito adquirido",
+   "Pode anular o ato, pois a Administração pode anular seus próprios atos quando eivados de vícios que os tornem ilegais",
+   "Deve convalidar obrigatoriamente o ato, qualquer que seja o vício"
+  ],
+  "correta": 3,
+  "explicacao": "Súmula 473 do STF: a Administração pode anular seus próprios atos, quando eivados de vícios que os tornem ilegais, porque deles não se originam direitos; ou revogá-los por motivo de conveniência ou oportunidade (no mesmo sentido, art. 53 da Lei 9.784/1999)."
+ },
+ {
+  "id": "oab-d12b825c",
+  "area": "Administrativo",
+  "enunciado": "Um motorista de ambulância de hospital público estadual, em serviço, causou acidente que feriu o pedestre Nilo. Quanto à responsabilidade civil, é correto afirmar que:",
+  "alternativas": [
+   "O Estado responde apenas se Nilo provar a culpa do motorista",
+   "Apenas o motorista responde, de forma subjetiva",
+   "O Estado responde objetivamente pelo dano, assegurado o direito de regresso contra o agente em caso de dolo ou culpa",
+   "O Estado e o motorista respondem objetivamente e de forma solidária",
+   "O Estado responde subjetivamente, com base na culpa do serviço"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 37, § 6º, da Constituição: as pessoas jurídicas de direito público responderão pelos danos que seus agentes, nessa qualidade, causarem a terceiros, assegurado o direito de regresso contra o responsável nos casos de dolo ou culpa."
+ },
+ {
+  "id": "oab-1ec7c178",
+  "area": "Administrativo",
+  "enunciado": "Em 2016, um órgão federal concedeu vantagem a um servidor que estava de boa-fé. Em 2024, constatou-se que o ato era ilegal. Segundo a Lei 9.784/1999, a Administração:",
+  "alternativas": [
+   "Pode anular o ato a qualquer tempo, pois atos ilegais não se convalidam",
+   "Pode anular o ato em até dez anos da sua prática",
+   "Deve revogar o ato, com efeitos retroativos",
+   "Não pode mais anular o ato, pois decaiu o direito de anular atos de que decorram efeitos favoráveis após cinco anos, salvo má-fé",
+   "Pode anular o ato em até vinte anos, por se tratar de verba pública"
+  ],
+  "correta": 3,
+  "explicacao": "Art. 54 da Lei 9.784/1999: o direito da Administração de anular atos de que decorram efeitos favoráveis para os destinatários decai em cinco anos, contados da data em que foram praticados, salvo comprovada má-fé."
+ },
+ {
+  "id": "oab-4230a631",
+  "area": "Tributário",
+  "enunciado": "Uma empresa declarou e pagou antecipadamente determinado tributo sujeito a lançamento por homologação, sem dolo, fraude ou simulação. A Fazenda não se manifestou. Segundo o CTN, o prazo para a Fazenda homologar ou lançar diferenças é de:",
+  "alternativas": [
+   "5 anos, contados do primeiro dia do exercício seguinte à declaração",
+   "10 anos, contados da ocorrência do fato gerador",
+   "5 anos, contados da ocorrência do fato gerador, findos os quais se considera homologado o lançamento",
+   "2 anos, contados do pagamento",
+   "3 anos, contados da entrega da declaração"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 150, § 4º, do CTN: se a lei não fixar prazo, a homologação ocorre em cinco anos a contar da ocorrência do fato gerador; expirado esse prazo sem pronunciamento, considera-se homologado o lançamento, salvo dolo, fraude ou simulação."
+ },
+ {
+  "id": "oab-293524fb",
+  "area": "Tributário",
+  "enunciado": "Um município lançou IPTU sobre o imóvel onde funciona o templo de uma igreja e realizou as celebrações religiosas. Segundo a Constituição, essa cobrança é:",
+  "alternativas": [
+   "Devida, pois a imunidade dos templos abrange apenas taxas",
+   "Indevida, pois há imunidade tributária dos templos de qualquer culto quanto a impostos",
+   "Devida, pois a imunidade alcança apenas tributos federais",
+   "Indevida apenas se a entidade religiosa comprovar ausência de patrimônio",
+   "Devida, pois IPTU é tributo real e não se sujeita a imunidades"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 150, VI, b, da Constituição: é vedado aos entes federativos instituir impostos sobre entidades religiosas e templos de qualquer culto; a imunidade abrange o imóvel onde se realizam os cultos."
+ },
+ {
+  "id": "oab-1de2028f",
+  "area": "Tributário",
+  "enunciado": "A empresa Beta, antes de qualquer procedimento de fiscalização, percebeu que deixara de declarar e de recolher um tributo, confessou a infração e pagou integralmente o tributo devido com juros de mora. Segundo o CTN, Beta:",
+  "alternativas": [
+   "Deve pagar a multa punitiva, reduzida à metade",
+   "Deve pagar a multa, pois o tributo foi recolhido em atraso",
+   "Tem direito à restituição dos juros pagos",
+   "Tem a responsabilidade pela infração excluída, pela denúncia espontânea",
+   "Tem a responsabilidade excluída apenas se o débito for parcelado"
+  ],
+  "correta": 3,
+  "explicacao": "Art. 138 do CTN: a responsabilidade é excluída pela denúncia espontânea da infração, acompanhada do pagamento do tributo devido e dos juros de mora, antes do início de qualquer procedimento administrativo ou medida de fiscalização."
+ },
+ {
+  "id": "oab-4d3c2249",
+  "area": "Empresarial",
+  "enunciado": "Vânia recebeu um cheque emitido na mesma praça em que deve ser pago. Segundo a Lei do Cheque (Lei 7.357/1985), o prazo de apresentação desse cheque é de:",
+  "alternativas": [
+   "60 dias, contados da data de emissão",
+   "30 dias, contados da data de emissão",
+   "6 meses, contados da data de emissão",
+   "15 dias, contados da data de emissão",
+   "90 dias, contados da data de emissão"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 33 da Lei 7.357/1985: o cheque deve ser apresentado para pagamento em 30 dias, quando emitido no lugar onde houver de ser pago, e em 60 dias, quando emitido em outro lugar."
+ },
+ {
+  "id": "oab-8030f13d",
+  "area": "Empresarial",
+  "enunciado": "A sociedade empresária Alfa Ltda., constituída e registrada há um ano, enfrenta crise financeira e pretende requerer recuperação judicial. Segundo a Lei 11.101/2005, esse pedido:",
+  "alternativas": [
+   "Pode ser deferido, pois não há exigência de tempo mínimo de atividade",
+   "Não preenche requisito legal, pois o devedor deve exercer regularmente suas atividades há mais de 2 anos",
+   "Exige apenas a apresentação do plano de recuperação na petição inicial",
+   "Pode ser deferido se houver concordância prévia de metade dos credores",
+   "Não preenche requisito legal, pois exige-se atividade regular há mais de 5 anos"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 48, caput, da Lei 11.101/2005: poderá requerer recuperação judicial o devedor que, no momento do pedido, exerça regularmente suas atividades há mais de 2 anos, atendidos os demais requisitos."
+ },
+ {
+  "id": "oab-42996f65",
+  "area": "Consumidor",
+  "enunciado": "Heitor comprou um aparelho de ginástica pela internet e, ao recebê-lo, desistiu da compra, embora o produto não tivesse defeito. Segundo o CDC, Heitor:",
+  "alternativas": [
+   "Não pode desistir, pois o produto não apresenta vício",
+   "Pode desistir em 30 dias, com retenção de multa de 10%",
+   "Pode desistir em 7 dias, mas deve arcar com o frete de devolução",
+   "Pode desistir no prazo de 7 dias a contar do recebimento, com devolução imediata dos valores pagos, monetariamente atualizados",
+   "Pode desistir em 90 dias, por se tratar de produto durável"
+  ],
+  "correta": 3,
+  "explicacao": "Art. 49 do CDC: o consumidor pode desistir do contrato no prazo de 7 dias a contar de sua assinatura ou do recebimento do produto, sempre que a contratação ocorrer fora do estabelecimento comercial, com devolução imediata dos valores pagos, monetariamente atualizados."
+ },
+ {
+  "id": "oab-3cc601e6",
+  "area": "ECA",
+  "enunciado": "Um adolescente recebeu a medida socioeducativa de internação. Segundo o ECA, essa medida:",
+  "alternativas": [
+   "Tem prazo fixo de dois anos, sem necessidade de reavaliação",
+   "Deve ser reavaliada a cada ano e pode durar até cinco anos",
+   "Não pode exceder um ano, prorrogável uma vez",
+   "Não comporta prazo determinado, deve ser reavaliada no máximo a cada seis meses e não pode exceder três anos",
+   "Tem prazo indeterminado, cessando apenas aos 18 anos"
+  ],
+  "correta": 3,
+  "explicacao": "Art. 121, §§ 2º e 3º, do ECA: a internação não comporta prazo determinado, sua manutenção deve ser reavaliada no máximo a cada seis meses e o período máximo não excederá três anos; a liberação é compulsória aos 21 anos (§ 5º)."
+ },
+ {
+  "id": "oab-cb839b1c",
+  "area": "Direitos Humanos",
+  "enunciado": "Uma vítima de violação de direitos humanos no Brasil pretende que seu caso seja julgado pela Corte Interamericana de Direitos Humanos. Segundo a Convenção Americana (Pacto de San José da Costa Rica), têm direito de submeter um caso à decisão da Corte:",
+  "alternativas": [
+   "Qualquer pessoa, diretamente, após esgotados os recursos internos",
+   "Apenas as organizações não governamentais reconhecidas",
+   "Somente a vítima, representada por advogado",
+   "Somente os Estados Partes e a Comissão Interamericana de Direitos Humanos",
+   "Qualquer Estado membro da ONU"
+  ],
+  "correta": 3,
+  "explicacao": "Art. 61.1 da Convenção Americana sobre Direitos Humanos: somente os Estados Partes e a Comissão têm direito de submeter caso à decisão da Corte; o indivíduo apresenta petição à Comissão (art. 44)."
+ },
+ {
+  "id": "oab-51092f8a",
+  "area": "Filosofia do Direito",
+  "enunciado": "Na Teoria Pura do Direito, Hans Kelsen explica que o fundamento último de validade de uma ordem jurídica reside:",
+  "alternativas": [
+   "Na norma fundamental (Grundnorm), pressuposta e não posta por ato de vontade",
+   "Na vontade soberana do povo, expressa pela Constituição",
+   "Nos princípios morais universais do direito natural",
+   "Na regra de reconhecimento aceita pelas autoridades",
+   "Na eficácia social das normas perante os destinatários"
+  ],
+  "correta": 0,
+  "explicacao": "Para Kelsen, a validade de cada norma decorre de uma norma superior, até a norma fundamental, que é pressuposta pelo pensamento jurídico; a regra de reconhecimento, que é uma prática social, é conceito de Hart."
+ },
+ {
+  "id": "oab-bc76875a",
+  "area": "Ambiental",
+  "enunciado": "Uma indústria, operando com todas as licenças ambientais, causou vazamento acidental de produtos químicos que contaminou um rio. Quanto à obrigação de reparar o dano ambiental, a indústria:",
+  "alternativas": [
+   "Responde apenas se comprovada sua culpa",
+   "Não responde, pois possuía licença ambiental válida",
+   "Responde objetivamente, independentemente da existência de culpa",
+   "Responde apenas se o dano atingir área de preservação permanente",
+   "Responde subsidiariamente ao Poder Público que concedeu a licença"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 14, § 1º, da Lei 6.938/1981 (Política Nacional do Meio Ambiente): o poluidor é obrigado, independentemente da existência de culpa, a indenizar ou reparar os danos causados ao meio ambiente e a terceiros; a licença não afasta essa obrigação (art. 225, § 3º, da Constituição)."
  }
 ]
