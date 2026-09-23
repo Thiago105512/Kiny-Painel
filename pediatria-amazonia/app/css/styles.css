@@ -426,9 +426,10 @@ details.quiz summary { font-weight: 600; }
 .calMarca { width: 7px; height: 7px; border-radius: 50%; display: block; }
 .calMais { font-size: .62rem; color: var(--muted); }
 .calHoras { font-size: .62rem; color: var(--primary-dark); font-weight: 600; line-height: 1; }
+.calComp { font-size: .56rem; color: var(--muted); line-height: 1; white-space: nowrap; }
 .calLegenda { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: .6rem; font-size: .82rem; color: var(--muted); }
 .calLegenda span { display: inline-flex; align-items: center; gap: .3rem; }
-@media (min-width: 640px) { .calDia { aspect-ratio: 1 / 0.8; } .calNum { font-size: .95rem; } .calHoras { font-size: .72rem; } }
+@media (min-width: 640px) { .calDia { aspect-ratio: 1 / 0.8; } .calNum { font-size: .95rem; } .calHoras { font-size: .72rem; } .calComp { font-size: .68rem; } }
 
 /* Tela inicial com o planner em primeiro lugar */
 .marca.marcaCompacta { gap: .7rem; }

@@ -19,6 +19,11 @@ PED.store = (function () {
       profissional: { nome: 'Catarina Ribeiro de Queiroz', tratamento: 'Dra.', especialidade: 'Pediatra', crm: 'CRM/AM 10.677', rqe: 'RQE 6.706' } }
   });
   let db = null;
+  const ouvintes = [];          // avisados a cada alteração local, para a sincronização e a tela
+  let silencio = 0;             // suspende o aviso enquanto aplicamos algo vindo de fora
+  function notificar() { if (silencio) return; ouvintes.forEach(f => { try { f(); } catch (e) { console.warn('store: ouvinte falhou', e); } }); }
+  /** Registra quem quer saber que os dados mudaram aqui neste aparelho. */
+  function aoMudar(fn) { if (typeof fn === 'function') ouvintes.push(fn); }
 
   function load() {
     if (db) return db;
@@ -33,6 +38,7 @@ PED.store = (function () {
   function save() {
     try { localStorage.setItem(KEY, JSON.stringify(db)); }
     catch (e) { console.warn('store: falha ao gravar', e); }
+    notificar();
   }
   const col = (name) => { const d = load(); if (!Array.isArray(d[name])) d[name] = []; return d[name]; };
   const byId = (name, id) => col(name).find(x => x.id === id) || null;
@@ -40,6 +46,7 @@ PED.store = (function () {
     const c = col(name);
     if (!obj.id) obj.id = PED.util.uid();
     obj.atualizadoEm = new Date().toISOString();
+    if (!obj.por) obj.por = quemSou();        // com duas pessoas no mesmo espaço, vale saber quem lançou
     if (!obj.criadoEm) obj.criadoEm = obj.atualizadoEm;
     const i = c.findIndex(x => x.id === obj.id);
     if (i >= 0) c[i] = obj; else c.push(obj);
@@ -58,12 +65,14 @@ PED.store = (function () {
   }
   /** Coleções que guardam registros com id e data de atualização. */
   const COLECOES = ['pacientes', 'atendimentos', 'evolucoes', 'prescricoes', 'vacinasRealizadas', 'medidas', 'locaisTrabalho', 'plantoes'];
+  /** Nome de quem está usando este aparelho, para assinar o que é criado aqui. */
+  function quemSou() { const p = (load().prefs || {}).profissional || {}; return p.nome || ''; }
   function where(name, fn) { return col(name).filter(fn); }
   function pref(k, v) { const p = load().prefs; if (v === undefined) return p[k]; p[k] = v; save(); return v; }
   function exportJSON() { return JSON.stringify(load(), null, 2); }
   function importJSON(txt) { const o = JSON.parse(txt); db = Object.assign(empty(), o); save(); }
   function reset() { db = empty(); save(); }
   /** Substitui todo o conteúdo local por um estado já mesclado. */
-  function substituir(novo) { db = Object.assign(empty(), novo); save(); }
-  return { load, save, col, byId, upsert, remove, where, pref, exportJSON, importJSON, reset, substituir, COLECOES };
+  function substituir(novo) { silencio++; db = Object.assign(empty(), novo); try { save(); } finally { silencio--; } }
+  return { load, save, col, byId, upsert, remove, where, pref, exportJSON, importJSON, reset, substituir, aoMudar, quemSou, COLECOES };
 })();

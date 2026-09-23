@@ -1,10 +1,56 @@
 rules_version = '2';
-// Cada pessoa só enxerga e grava os próprios dados. Nada é público.
+// Nada é público. Cada conta enxerga os próprios dados; um espaço compartilhado
+// é visível apenas para quem entrou nele, e só entra quem foi convidada por e-mail.
 service cloud.firestore {
   match /databases/{database}/documents {
+
+    function logada() { return request.auth != null; }
+    function temEmail() { return logada() && request.auth.token.email != null; }
+    function meuEmail() { return request.auth.token.email.lower(); }
+
+    // Uso individual: os dados de uma conta só.
     match /usuarios/{uid}/dados/{doc} {
-      allow read, write: if request.auth != null && request.auth.uid == uid;
+      allow read, write: if logada() && request.auth.uid == uid;
     }
+
+    // Uso compartilhado: duas ou mais pessoas com o mesmo conteúdo.
+    match /equipes/{equipe} {
+      function membrosAqui() { return resource.data.membros; }
+      function souMembroDaqui() { return logada() && request.auth.uid in membrosAqui(); }
+      function fuiConvidada() {
+        return temEmail() && exists(/databases/$(database)/documents/equipes/$(equipe)/convites/$(meuEmail()));
+      }
+      // Entrar no espaço acrescenta a própria chave em `membros` – e nada mais.
+      function entrandoComConvite() {
+        return fuiConvidada()
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['membros'])
+          && request.resource.data.membros.diff(resource.data.membros).affectedKeys().hasOnly([request.auth.uid]);
+      }
+
+      allow get: if souMembroDaqui() || fuiConvidada();
+      allow create: if logada()
+        && request.resource.data.dono == request.auth.uid
+        && request.resource.data.membros.keys().hasOnly([request.auth.uid]);
+      allow update: if souMembroDaqui() || entrandoComConvite();
+      allow delete: if logada() && resource.data.dono == request.auth.uid;
+      allow list: if false;
+
+      function souMembro() {
+        return logada() && request.auth.uid in get(/databases/$(database)/documents/equipes/$(equipe)).data.membros;
+      }
+
+      // Convites: quem está no espaço administra; a convidada só enxerga o próprio.
+      match /convites/{email} {
+        allow read: if souMembro() || (temEmail() && email == meuEmail());
+        allow write: if souMembro();
+      }
+
+      // Os dados propriamente ditos.
+      match /dados/{doc} {
+        allow read, write: if souMembro();
+      }
+    }
+
     match /{document=**} {
       allow read, write: if false;
     }

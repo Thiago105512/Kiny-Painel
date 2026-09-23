@@ -53,6 +53,14 @@ Sem configuração o aplicativo funciona só no navegador, como sempre. Com um p
 
 Publicar no Firebase Hosting também dá ao aplicativo um endereço próprio e o funcionamento offline de verdade, que é o que importa no interior.
 
+## Duas pessoas no mesmo aplicativo
+
+Com um espaço compartilhado, duas pessoas veem e alteram o mesmo conteúdo, cada uma no seu aparelho e com a sua própria conta: o que uma lança aparece na outra em segundos. Cada registro guarda quem o fez, e o mês de plantões passa a mostrar a divisão por pessoa. Entrar num espaço exige o código **e** um convite para aquele e-mail — as regras de segurança que garantem isso são verificadas por um teste no emulador do Firestore. Passo a passo em [docs/10-firebase.md](docs/10-firebase.md).
+
+## Agenda do Gmail
+
+Os plantões vão para o calendário de duas formas: um arquivo `.ics`, que entra em qualquer agenda sem configuração nenhuma, ou a ligação direta com o Google, que cria e **atualiza** os eventos sozinha e ainda traz os compromissos já marcados na agenda para dentro do calendário do aplicativo. Instruções em [docs/11-google-agenda.md](docs/11-google-agenda.md).
+
 ## Plantões
 
 Aba para registrar cada plantão e acompanhar o que entra no mês.

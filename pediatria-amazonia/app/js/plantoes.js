@@ -88,8 +88,8 @@ PED.plantao = (function () {
   /** Resumo do mês: horas, valores por situação e quebra por local. */
   function resumoMes(ano, mes) {
     const ps = doMes(ano, mes);
-    const r = { plantoes: ps.length, minutos: 0, previsto: 0, realizado: 0, faturado: 0, pago: 0, total: 0, aReceber: 0, porLocal: [], porStatus: {} };
-    const mapa = new Map();
+    const r = { plantoes: ps.length, minutos: 0, previsto: 0, realizado: 0, faturado: 0, pago: 0, total: 0, aReceber: 0, porLocal: [], porPessoa: [], porStatus: {} };
+    const mapa = new Map(), pessoas = new Map();
     for (const p of ps) {
       const v = valores(p);
       r.minutos += v.min || 0;
@@ -101,10 +101,16 @@ PED.plantao = (function () {
       const atual = mapa.get(chave) || { id: chave, nome: l ? l.nome : 'Sem local', corIdx: l ? (l.corIdx || 0) : 7, minutos: 0, valor: 0, plantoes: 0 };
       atual.minutos += v.min || 0; atual.valor += v.liquido; atual.plantoes++;
       mapa.set(chave, atual);
+      // quando duas pessoas usam o mesmo espaço, o dinheiro de cada uma precisa aparecer separado
+      const quem = p.por || '';
+      const dela = pessoas.get(quem) || { nome: quem, minutos: 0, valor: 0, plantoes: 0 };
+      dela.minutos += v.min || 0; dela.valor += v.liquido; dela.plantoes++;
+      pessoas.set(quem, dela);
     }
     r.pago = r.porStatus.pago || 0;
     r.aReceber = r.total - r.pago;
     r.porLocal = Array.from(mapa.values()).sort((a, b) => b.valor - a.valor);
+    r.porPessoa = Array.from(pessoas.values()).sort((a, b) => b.valor - a.valor);
     return r;
   }
 
@@ -126,14 +132,14 @@ PED.plantao = (function () {
 
   /** Exportação para a contabilidade. */
   function csvMes(ano, mes) {
-    const linhas = [['Data', 'Local', 'Início', 'Fim', 'Horas', 'Forma', 'Bruto', 'Acréscimo', 'Desconto', 'Líquido', 'Situação', 'Pago em', 'Observação'].join(';')];
+    const linhas = [['Data', 'Local', 'Início', 'Fim', 'Horas', 'Forma', 'Bruto', 'Acréscimo', 'Desconto', 'Líquido', 'Situação', 'Pago em', 'Quem lançou', 'Observação'].join(';')];
     for (const p of doMes(ano, mes)) {
       const v = valores(p), l = p.localId ? local(p.localId) : null;
       linhas.push([PED.util.fmtDate(p.data), l ? l.nome : '', p.inicio || '', p.fim || '',
         v.min != null ? (v.horas).toFixed(2).replace('.', ',') : '', v.forma,
         v.bruto.toFixed(2).replace('.', ','), Number(p.acrescimo || 0).toFixed(2).replace('.', ','),
         Number(p.desconto || 0).toFixed(2).replace('.', ','), v.liquido.toFixed(2).replace('.', ','),
-        rotuloStatus(p.status), p.dataPagamento ? PED.util.fmtDate(p.dataPagamento) : '', (p.obs || '').replace(/;/g, ',')].join(';'));
+        rotuloStatus(p.status), p.dataPagamento ? PED.util.fmtDate(p.dataPagamento) : '', (p.por || '').replace(/;/g, ','), (p.obs || '').replace(/;/g, ',')].join(';'));
     }
     return linhas.join('\n');
   }

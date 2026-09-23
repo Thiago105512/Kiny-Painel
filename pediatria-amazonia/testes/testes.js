@@ -2,9 +2,12 @@
    Executar:  node testes/testes.js     (a partir de pediatria-amazonia/)
    Sai com código 1 se algum teste falhar. */
 global.window = global;
+// o navegador guarda em localStorage; aqui basta um armazenamento de mentira para o store não reclamar
+const memoria = {};
+global.localStorage = { getItem: (k) => (k in memoria ? memoria[k] : null), setItem: (k, v) => { memoria[k] = String(v); }, removeItem: (k) => { delete memoria[k]; } };
 const path = require('path');
 const APP = path.join(__dirname, '..', 'app', 'js');
-for (const f of ['utils', 'store', 'seguranca', 'entrada', 'plantoes', 'nuvem',
+for (const f of ['utils', 'store', 'seguranca', 'entrada', 'plantoes', 'nuvem', 'agenda',
   'data/apoio-entrada', 'data/sinais-gravidade', 'data/contexto-epidemiologico', 'data/queixas', 'data/doencas',
   'data/medicamentos', 'data/emergencias', 'data/exames', 'data/vacinas', 'data/crescimento',
   'data/zscore', 'data/notificacao', 'calculators']) {
@@ -473,6 +476,111 @@ t('Excluir registra a lápide para sincronizar', () => {
 t('A mensagem de rede bloqueada explica onde sincronizar', () => {
   const m = NV.mensagemErro(new Error('Failed to fetch'));
   if (!/Firebase Hosting/.test(m)) throw new Error('mensagem não orienta: ' + m);
+});
+
+t('Preferências de aparelho não sobem para o espaço compartilhado', () => {
+  const d = { prefs: { firebase: { apiKey: 'k' }, espaco: { id: 'x' }, google: { clientId: 'c' }, profissional: { nome: 'Catarina' }, pesoRapido: 12, revisoes: { a: { em: '2026-09-01' } } } };
+  const enviado = NV.paraNuvem(d).prefs;
+  for (const k of ['firebase', 'espaco', 'google', 'profissional', 'pesoRapido']) if (k in enviado) throw new Error(k + ' não deveria subir');
+  if (!enviado.revisoes) throw new Error('as conferências clínicas precisam ser compartilhadas');
+});
+t('Conferência clínica desfeita chega ao outro aparelho', () => {
+  const a = { prefs: { revisoes: { x: { em: '2026-09-20', por: 'A' } } }, removidos: {} };
+  const b = { prefs: { revisoes: { x: { em: '2026-09-22', removido: true } } }, removidos: {} };
+  eq(NV.mesclar(a, b).prefs.revisoes.x.removido, true);
+  eq(NV.mesclar(b, a).prefs.revisoes.x.removido, true, 'a ordem não muda:');
+});
+t('Conferência de cada pessoa se soma, item a item', () => {
+  const a = { prefs: { revisoes: { x: { em: '2026-09-20', por: 'A' } } }, removidos: {} };
+  const b = { prefs: { revisoes: { y: { em: '2026-09-21', por: 'B' } } }, removidos: {} };
+  eq(Object.keys(NV.mesclar(a, b).prefs.revisoes).sort().join(','), 'x,y');
+});
+t('Código do espaço é ditável e sem letras ambíguas', () => {
+  for (let i = 0; i < 50; i++) {
+    const c = NV.novoCodigo();
+    if (!/^mucu-[a-z2-9]{4}-[a-z2-9]{4}$/.test(c)) throw new Error('formato inesperado: ' + c);
+    if (/[ilo01]/.test(c.slice(5))) throw new Error('letra que se confunde ao ditar: ' + c);
+  }
+});
+t('Cada lançamento guarda quem o fez', () => {
+  PED.store.reset();
+  const p3 = PED.store.upsert('plantoes', { data: '2026-09-10' });
+  eq(p3.por, 'Catarina Ribeiro de Queiroz');
+});
+t('O resumo do mês separa o que é de cada pessoa', () => {
+  PED.store.reset();
+  const l = PED.store.upsert('locaisTrabalho', { nome: 'Hapvida', forma: 'hora', valorHora: 100, corIdx: 0 });
+  PED.store.upsert('plantoes', { data: '2026-09-10', inicio: '07:00', fim: '19:00', localId: l.id, por: 'Catarina' });
+  PED.store.upsert('plantoes', { data: '2026-09-11', inicio: '07:00', fim: '13:00', localId: l.id, por: 'Colega' });
+  const r = PED.plantao.resumoMes(2026, 9);
+  eq(r.porPessoa.length, 2);
+  eq(r.porPessoa[0].nome, 'Catarina');
+  eq(r.porPessoa[0].valor, 1200);
+  eq(r.porPessoa[1].valor, 600);
+});
+
+/* ---------- 11. Agenda ---------- */
+const AG = PED.agenda;
+function umPlantao(extra) {
+  PED.store.reset();
+  const l = PED.store.upsert('locaisTrabalho', { nome: 'Hapvida', forma: 'hora', valorHora: 100, corIdx: 0 });
+  return PED.store.upsert('plantoes', Object.assign({ data: '2026-09-23', inicio: '19:00', fim: '07:00', localId: l.id, status: 'previsto' }, extra || {}));
+}
+t('Plantão noturno termina no dia seguinte no arquivo da agenda', () => {
+  const j = AG.janela(umPlantao());
+  eq(j.inicio, '2026-09-23T19:00:00');
+  eq(j.fim, '2026-09-24T07:00:00');
+});
+t('Plantão do dia termina no mesmo dia', () => {
+  const j = AG.janela(umPlantao({ inicio: '07:00', fim: '19:00' }));
+  eq(j.inicio, '2026-09-23T07:00:00');
+  eq(j.fim, '2026-09-23T19:00:00');
+});
+t('Plantão sem horário vira compromisso de dia inteiro', () => {
+  const j = AG.janela(umPlantao({ inicio: '', fim: '' }));
+  eq(j.diaInteiro, true);
+  eq(j.inicio, '2026-09-23');
+  eq(j.fim, '2026-09-24');
+});
+t('O arquivo .ics tem a estrutura que as agendas esperam', () => {
+  const txt = AG.ics([umPlantao()]);
+  for (const linha of ['BEGIN:VCALENDAR', 'VERSION:2.0', 'BEGIN:VTIMEZONE', 'TZID:America/Manaus', 'TZOFFSETTO:-0400',
+    'BEGIN:VEVENT', 'DTSTART;TZID=America/Manaus:20260923T190000', 'DTEND;TZID=America/Manaus:20260924T070000',
+    'END:VEVENT', 'END:VCALENDAR'])
+    if (!txt.includes(linha)) throw new Error('faltou no arquivo: ' + linha);
+  if (!/\r\n/.test(txt)) throw new Error('o arquivo precisa de quebras CRLF');
+});
+t('O evento diz o local, o valor e a conta', () => {
+  const p4 = umPlantao();
+  const txt = AG.ics([p4]);
+  if (!txt.includes('SUMMARY:Plantão · Hapvida')) throw new Error('título sem o local');
+  if (!/DESCRIPTION:.*12h × R\\,?.?\$?\s?/.test(txt) && !txt.includes('12h')) throw new Error('descrição sem a duração');
+  if (!txt.includes('LOCATION:Hapvida')) throw new Error('sem o local');
+});
+t('Ponto e vírgula e quebras de linha não estragam o arquivo', () => {
+  const txt = AG.ics([umPlantao({ obs: 'trocar com a Ana; avisar\nchefia' })]);
+  if (!txt.includes('\\;')) throw new Error('ponto e vírgula não escapado');
+  if (!txt.includes('\\n')) throw new Error('quebra de linha não escapada');
+});
+t('Linhas longas são dobradas como manda o formato', () => {
+  const txt = AG.ics([umPlantao({ obs: 'x'.repeat(300) })]);
+  for (const linha of txt.split('\r\n')) if (linha.length > 75) throw new Error('linha com ' + linha.length + ' caracteres');
+});
+t('Cada plantão mantém o mesmo identificador, para atualizar em vez de duplicar', () => {
+  const p5 = umPlantao();
+  const a = AG.ics([p5]), b = AG.ics([p5]);
+  const uid = (t2) => (t2.match(/UID:[^\r]+/) || [''])[0];
+  eq(uid(a), uid(b));
+  if (!uid(a).includes(p5.id)) throw new Error('o identificador não é o do plantão');
+});
+t('Sem ID de cliente, a ligação com o Google fica desligada', () => {
+  PED.store.reset();
+  eq(AG.configurado(), false);
+  eq(AG.getEstado().ligado, false);
+});
+t('A mensagem de erro do Google explica o endereço autorizado', () => {
+  if (!/origens JavaScript/.test(AG.mensagemErro(new Error('invalid_client origin')))) throw new Error('mensagem não orienta');
+  if (!/Firebase Hosting/.test(AG.mensagemErro(new Error('Failed to fetch')))) throw new Error('mensagem de rede não orienta');
 });
 
 /* ---------- Resultado ---------- */

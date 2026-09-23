@@ -387,13 +387,14 @@ window.PED = window.PED || {};
      O software não valida conteúdo clínico: apenas guarda a conferência humana. */
   const revisao = {
     chave: (tipo, id, sub) => tipo + '|' + id + (sub != null ? '|' + sub : ''),
-    get(tipo, id, sub) { return (S.pref('revisoes') || {})[revisao.chave(tipo, id, sub)] || null; },
+    get(tipo, id, sub) { const r = (S.pref('revisoes') || {})[revisao.chave(tipo, id, sub)]; return (r && !r.removido) ? r : null; },
     marcar(tipo, id, sub, nota) {
       const r = S.pref('revisoes') || {};
       r[revisao.chave(tipo, id, sub)] = { em: new Date().toISOString(), por: profissionalLinha(), nota: nota || '' };
       S.pref('revisoes', r); return r;
     },
-    desmarcar(tipo, id, sub) { const r = S.pref('revisoes') || {}; delete r[revisao.chave(tipo, id, sub)]; S.pref('revisoes', r); },
+    // a conferência desfeita fica registrada, e não apagada, para que o desfazer também chegue ao outro aparelho
+    desmarcar(tipo, id, sub) { const r = S.pref('revisoes') || {}; r[revisao.chave(tipo, id, sub)] = { em: new Date().toISOString(), removido: true }; S.pref('revisoes', r); },
     /** Todos os itens das bases que pedem conferência humana. */
     pendencias() {
       const out = [];
@@ -1138,6 +1139,31 @@ window.PED = window.PED || {};
   }
 
   /** Calendário do mês inteiro: cada dia mostra os plantões por cor de local. */
+  /* ---------- Agenda do Google e espaço compartilhado ---------- */
+  const AG = () => PED.agenda;
+  let compromissos = { chave: '', itens: [], carregando: false };
+  /** Busca os compromissos do mês uma vez e redesenha quando chegam. */
+  function pedirCompromissos(ano, mes) {
+    const A = AG();
+    if (!A || !A.configurado() || !S.pref('googleMostrar')) return [];
+    const chave = ano + '-' + mes;
+    if (compromissos.chave === chave) return compromissos.itens;
+    if (compromissos.carregando) return [];
+    compromissos.carregando = true;
+    A.compromissosDoMes(ano, mes)
+      .then(itens => { compromissos = { chave, itens, carregando: false }; render(); })
+      .catch(() => { compromissos = { chave, itens: [], carregando: false }; });
+    return [];
+  }
+  const compromissosDoDia = (data) => (compromissos.itens || []).filter(c => c.data === data);
+  /** Baixa um arquivo gerado aqui mesmo. */
+  function baixarArquivo(nome, texto, tipo) {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([texto], { type: tipo || 'text/plain;charset=utf-8' }));
+    a.download = nome; a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 3000);
+  }
+
   function calendarioMes(ano, mes, ps) {
     const porDia = {};
     ps.forEach(x => (porDia[x.data] = porDia[x.data] || []).push(x));
@@ -1153,11 +1179,13 @@ window.PED = window.PED || {};
       let minutos = 0, valor = 0;
       doDia.forEach(x => { const v = PL().valores(x); minutos += v.min || 0; valor += v.liquido; });
       const fds = new Date(ano, mes - 1, d).getDay() % 6 === 0;
+      const cps = compromissosDoDia(iso);
       celulas.push(`<a class="calDia${iso === hoje ? ' hoje' : ''}${fds ? ' fds' : ''}${doDia.length ? ' comPlantao' : ''}" href="#/plantoes/dia/${iso}">
         <span class="calNum">${d}</span>
         ${doDia.length ? `<span class="calMarcas">${doDia.slice(0, 3).map(x => { const l = x.localId ? PL().local(x.localId) : null;
             return `<span class="calMarca" style="background:${PL().corLocal(l ? l.corIdx : 7)}" title="${esc(l ? l.nome : 'Sem local')}"></span>`; }).join('')}${doDia.length > 3 ? `<span class="calMais">+${doDia.length - 3}</span>` : ''}</span>
           <span class="calHoras">${esc(PL().fmtDuracao(minutos))}</span>` : ''}
+        ${cps.length ? `<span class="calComp" title="${esc(cps.map(c => c.titulo).join(' · '))}">📆 ${cps.length}</span>` : ''}
       </a>`);
     }
     const semanas = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'];
@@ -1180,15 +1208,25 @@ window.PED = window.PED || {};
           const st = PL().STATUS.find(s2 => s2.id === (x.status || 'previsto')) || {};
           return `<a class="row" href="#/plantoes/${x.id}"><span class="vizPonto" style="background:${PL().corLocal(l ? l.corIdx : 7)};width:12px;height:12px;flex:0 0 auto"></span>
             <div class="grow"><div class="title">${esc(l ? l.nome : 'Sem local')} <span class="chip ${st.cor || ''}">${esc(st.rotulo || '')}</span></div>
-            <div class="sub">${esc(x.inicio || '—')} às ${esc(x.fim || '—')} · ${esc(PL().fmtDuracao(v.min))}</div></div>
+            <div class="sub">${esc(x.inicio || '—')} às ${esc(x.fim || '—')} · ${esc(PL().fmtDuracao(v.min))}${autoria(x)}</div></div>
             <b>${esc(PL().moeda(v.liquido))}</b></a>`; }).join('')}</div>`
         : '<div class="empty">Nada marcado neste dia.</div>'}
+      ${(() => { const cps = compromissosDoDia(data); return cps.length ? `<div class="card compact"><h3 style="margin:.1rem 0 .4rem">📆 Na agenda do Google</h3>
+        ${cps.map(c => `<div class="row" style="cursor:default"><div class="grow"><div class="title" style="font-size:.92rem">${esc(c.titulo)}</div>
+          <div class="sub">${esc(c.diaInteiro ? 'dia inteiro' : c.hora)}${c.local ? ' · ' + esc(c.local) : ''}</div></div></div>`).join('')}</div>` : ''; })()}
       <div class="btnrow"><a class="btn" href="#/plantoes/novo?data=${esc(data)}">➕ Lançar neste dia</a><a class="btn ghost" href="#/plantoes?ano=${data.slice(0, 4)}&mes=${Number(data.slice(5, 7))}">Voltar ao mês</a></div>`;
   });
+
+  /** Quem lançou, mostrado só quando não foi quem está usando este aparelho. */
+  function autoria(p) {
+    const eu = S.quemSou ? S.quemSou() : '';
+    return (p.por && p.por !== eu) ? ' · <span class="chip gray">' + esc(p.por.split(' ')[0]) + '</span>' : '';
+  }
 
   /** Resumo do mês + calendário, reaproveitado na tela inicial. */
   function painelPlantoes(ano, mes) {
     PL().garantirLocais();
+    pedirCompromissos(ano, mes);
     const R = PL().resumoMes(ano, mes), ps = PL().doMes(ano, mes);
     const ant = desloca(ano, mes, -1), prox = desloca(ano, mes, 1);
     const prox3 = PL().proximos(3);
@@ -1218,6 +1256,7 @@ window.PED = window.PED || {};
   route('/plantoes', (params, q) => {
     PL().garantirLocais();
     const { ano, mes } = mesRef();
+    pedirCompromissos(ano, mes);
     const R = PL().resumoMes(ano, mes);
     const ps = PL().doMes(ano, mes);
     const vista = q.vista || S.pref('vistaPlantao') || 'calendario';
@@ -1231,7 +1270,7 @@ window.PED = window.PED || {};
       return `<a class="row" href="#/plantoes/${x.id}">
         <span class="vizPonto" style="background:${PL().corLocal(l ? l.corIdx : 7)};width:12px;height:12px;flex:0 0 auto"></span>
         <div class="grow"><div class="title">${esc(l ? l.nome : 'Sem local')} <span class="chip ${st.cor || ''}">${esc(st.rotulo || '')}</span></div>
-        <div class="sub">${esc(x.inicio || '—')} às ${esc(x.fim || '—')} · ${esc(PL().fmtDuracao(v.min))}${x.obs ? ' · ' + esc(x.obs) : ''}</div></div>
+        <div class="sub">${esc(x.inicio || '—')} às ${esc(x.fim || '—')} · ${esc(PL().fmtDuracao(v.min))}${x.obs ? ' · ' + esc(x.obs) : ''}${autoria(x)}</div></div>
         <div style="text-align:right"><b>${esc(PL().moeda(v.liquido))}</b></div></a>`;
     };
     return `<div class="section-title"><h1>🗓️ Plantões</h1><a class="btn sm" href="#/plantoes/novo">➕ Lançar</a></div>
@@ -1251,6 +1290,12 @@ window.PED = window.PED || {};
         <details><summary>ver como tabela</summary><div class="body"><div class="tablewrap"><table><tr><th>Local</th><th>Plantões</th><th>Horas</th><th>Valor</th></tr>
         ${R.porLocal.map(x => `<tr><td>${esc(x.nome)}</td><td>${x.plantoes}</td><td>${esc(PL().fmtDuracao(x.minutos))}</td><td>${esc(PL().moeda(x.valor))}</td></tr>`).join('')}</table></div></div></details></div>` : ''}
 
+      ${R.porPessoa.length > 1 ? `<div class="card"><h2>Por pessoa</h2><p class="muted">Quem lançou cada plantão neste espaço compartilhado.</p>
+        <div class="list">${R.porPessoa.map(x => `<div class="row" style="cursor:default"><div class="grow">
+          <div class="title">${esc(x.nome || 'sem nome')}</div>
+          <div class="sub">${x.plantoes} plantão(ões) · ${esc(PL().fmtDuracao(x.minutos))}</div></div>
+          <b>${esc(PL().moeda(x.valor))}</b></div>`).join('')}</div></div>` : ''}
+
       <div class="card"><h2>Últimos 6 meses</h2>${barrasMeses(serie)}
         <details><summary>ver como tabela</summary><div class="body"><div class="tablewrap"><table><tr><th>Mês</th><th>Plantões</th><th>Horas</th><th>Total</th><th>Recebido</th></tr>
         ${serie.map(x => `<tr><td>${esc(x.rotulo)}</td><td>${x.plantoes}</td><td>${esc(PL().fmtDuracao(x.minutos))}</td><td>${esc(PL().moeda(x.total))}</td><td>${esc(PL().moeda(x.pago))}</td></tr>`).join('')}</table></div></div></details></div>
@@ -1263,6 +1308,8 @@ window.PED = window.PED || {};
               : '<div class="empty">Nenhum plantão lançado neste mês.</div>')
           : calendarioMes(ano, mes, ps) + (R.porLocal.length ? `<div class="calLegenda">${R.porLocal.map(x => `<span><span class="vizPonto" style="background:${PL().corLocal(x.corIdx)}"></span>${esc(x.nome)}</span>`).join('')}</div>` : '')}
       </div>
+
+      ${blocoAgendaGoogle(ano, mes)}
 
       <div class="btnrow"><a class="btn secondary" href="#/plantoes/agenda">📆 Agenda</a><a class="btn secondary" href="#/plantoes/locais">🏢 Locais e valores</a><button class="btn ghost" data-act="exportarPlantoes" data-ano="${ano}" data-mes="${mes}">⬇️ Planilha do mês</button></div>
       <p class="disclaimer">Controle pessoal de plantões. Os valores são os que você lançar; confira sempre com o contracheque e o contrato.</p>`;
@@ -1601,6 +1648,118 @@ window.PED = window.PED || {};
       ${U.fontes(N)}${disclaimer}`;
   });
 
+  /** Botões para levar os plantões à agenda: arquivo .ics e ligação com o Google. */
+  function blocoAgendaGoogle(ano, mes) {
+    const A = AG(); if (!A) return '';
+    const e = A.getEstado();
+    const ult = S.pref('googleUltimoEnvio');
+    const mostrando = !!S.pref('googleMostrar');
+    return `<div class="card"><h2>📆 Levar para a agenda do celular</h2>
+      <p class="muted">O arquivo .ics entra em qualquer agenda — Google, Apple ou Outlook — sem conta e sem configuração. A ligação direta com o Google cria e atualiza os eventos sozinha e traz para o calendário os compromissos que já estão lá.</p>
+      <div class="btnrow"><button class="btn secondary" data-act="icsMes" data-ano="${ano}" data-mes="${mes}">⬇️ Arquivo deste mês (.ics)</button>
+        <button class="btn ghost" data-act="icsFuturos">⬇️ Todos os próximos</button></div>
+      ${e.configurado
+        ? `<div class="btnrow" style="margin-top:.4rem"><button class="btn" data-act="enviarGoogle" data-ano="${ano}" data-mes="${mes}">☁️ Enviar ao Google Agenda</button>
+             <button class="btn ghost sm" data-act="alternarCompromissos">${mostrando ? '🙈 ocultar os compromissos do Google' : '👁️ mostrar os compromissos do Google'}</button></div>
+           ${ult ? `<p class="muted"><small>Último envio: ${U.fmtDateTime(ult)}${e.nomeCalendario ? ' · agenda: ' + esc(e.nomeCalendario) : ''}</small></p>` : ''}`
+        : `<p class="muted"><small>Para criar os eventos direto na agenda do Gmail, informe o ID de cliente do Google em <a href="#/config">Dados e configurações</a>.</small></p>`}
+    </div>`;
+  }
+
+  /* ---- Espaço compartilhado: duas pessoas, os mesmos dados ---- */
+  let equipeCache = { id: '', dados: null, carregando: false };
+  function pedirEquipe(id) {
+    if (equipeCache.id === id) return equipeCache.dados;
+    if (equipeCache.carregando) return null;
+    equipeCache.carregando = true;
+    PED.nuvem.equipe().then(d => { equipeCache = { id, dados: d, carregando: false }; render(); })
+      .catch(() => { equipeCache = { id, dados: null, carregando: false }; });
+    return null;
+  }
+  function blocoEspaco() {
+    const N = PED.nuvem; if (!N) return '';
+    const e = N.getEstado();
+    if (!e.configurado) return '<p class="muted">Configure o Firebase acima e entre na conta: o espaço compartilhado usa a mesma ligação.</p>';
+    if (!e.ligado) return '<p class="muted">Entre com e-mail e senha acima para criar um espaço ou entrar no espaço de outra pessoa.</p>';
+    const esp = e.espaco;
+    if (!esp) {
+      return `<p class="muted">Cada conta guarda os seus próprios dados. Num espaço compartilhado, duas pessoas veem e alteram o mesmo conteúdo — pacientes, plantões, tudo — cada uma no seu aparelho.</p>
+        <div class="btnrow"><button class="btn" data-act="criarEspaco">👥 Criar um espaço compartilhado</button></div>
+        <form id="formEntrarEspaco" class="fields" style="margin-top:.5rem">
+          <div class="field full"><label>Ou entre com o código que a outra pessoa passou</label>
+            <input name="codigo" placeholder="mucu-0000-0000" autocapitalize="none" spellcheck="false">
+            <small class="muted">É preciso que ela já tenha convidado o seu e-mail (${esc((e.usuario || {}).email || '')}).</small></div>
+          <div class="field full"><button class="btn secondary" type="submit">Entrar no espaço</button></div>
+        </form>`;
+    }
+    const eq = pedirEquipe(esp.id);
+    const lista = eq ? eq.membros : [];
+    const convites = eq ? eq.convites : [];
+    return `<p class="muted">Tudo o que for lançado aqui aparece para quem estiver neste espaço, em segundos.</p>
+      <div class="tile" style="cursor:default;align-items:flex-start"><small class="muted">Código deste espaço</small>
+        <b style="font-size:1.2rem;letter-spacing:.06em">${esc(esp.id)}</b>
+        <small>passe este código e convide o e-mail da outra pessoa</small></div>
+      <div class="btnrow"><button class="btn sm secondary" data-act="copiarTexto" data-t="${esc(esp.id)}">📋 Copiar código</button></div>
+      ${lista.length ? `<h3>Quem está no espaço</h3><div class="list">${lista.map(m => `<div class="row" style="cursor:default"><div class="grow">
+          <div class="title">${esc(m.nome || m.email || m.uid)}${eq && eq.dono === m.uid ? ' <span class="chip">criou</span>' : ''}</div>
+          <div class="sub">${esc(m.email || '')}${m.desde ? ' · desde ' + U.fmtDate(String(m.desde).slice(0, 10)) : ''}</div></div></div>`).join('')}</div>`
+        : (eq ? '' : '<p class="muted"><small>Carregando quem está no espaço…</small></p>')}
+      ${convites.length ? `<h3>Convites feitos</h3><div class="list">${convites.map(c => `<div class="row" style="cursor:default"><div class="grow"><div class="title">${esc(c.email)}</div>
+          <div class="sub">ainda não entrou</div></div><button class="btn sm ghost" data-act="retirarConvite" data-email="${esc(c.email)}">retirar</button></div>`).join('')}</div>` : ''}
+      <form id="formConvite" class="fields" style="margin-top:.5rem">
+        <div class="field full"><label>Convidar por e-mail</label><input name="email" type="email" placeholder="colega@gmail.com" autocapitalize="none">
+          <small class="muted">Ela entra com este e-mail e digita o código acima.</small></div>
+        <div class="field full"><button class="btn" type="submit">Convidar</button></div>
+      </form>
+      <div class="btnrow"><button class="btn ghost sm" data-act="sairEspaco">Deixar o espaço neste aparelho</button></div>`;
+  }
+
+  /* ---- Agenda do Google: configuração ---- */
+  let agendasCache = { itens: null, carregando: false };
+  function pedirAgendas() {
+    const A = AG();
+    if (agendasCache.itens) return agendasCache.itens;
+    if (agendasCache.carregando || !A.ligado()) return null;
+    agendasCache.carregando = true;
+    A.calendarios().then(itens => { agendasCache = { itens, carregando: false }; render(); })
+      .catch(() => { agendasCache = { itens: [], carregando: false }; });
+    return null;
+  }
+  function blocoGoogle() {
+    const A = AG(); if (!A) return '<p class="muted">Módulo indisponível.</p>';
+    const e = A.getEstado();
+    if (!e.configurado) {
+      return `<p class="muted">Com um ID de cliente do Google, os plantões viram eventos na agenda do Gmail e os compromissos que já estão lá aparecem no calendário do aplicativo. Sem isso, o botão de arquivo .ics continua funcionando em qualquer agenda.</p>
+        <form id="formGoogle" class="fields">
+          <div class="field full"><label>ID de cliente OAuth (termina em .apps.googleusercontent.com)</label>
+            <input name="clientId" placeholder="000000-xxxx.apps.googleusercontent.com" autocapitalize="none" spellcheck="false"></div>
+          <div class="field full"><button class="btn" type="submit">Salvar</button></div>
+        </form>
+        <div class="alert blue"><strong>Onde isso funciona</strong>O Google só aceita endereços autorizados. Publique o aplicativo (Firebase Hosting) e inclua esse endereço nas origens JavaScript do ID de cliente — o passo a passo está em docs/11-google-agenda.md. No visualizador do claude.ai a rede é bloqueada.</div>`;
+    }
+    const ags = e.ligado ? pedirAgendas() : null;
+    return `<p><b>ID de cliente:</b> <small>${esc((A.cfg().clientId || '').slice(0, 28))}…</small> ${e.ligado ? '<span class="chip green">conectada</span>' : '<span class="chip amber">fora da conta</span>'}</p>
+      ${e.ligado
+        ? `${ags ? `<form id="formCalendario" class="fields"><div class="field full"><label>Gravar os plantões nesta agenda</label>
+              <select name="calendarId">${ags.map(c => `<option value="${esc(c.id)}" ${c.id === e.calendarId ? 'selected' : ''}>${esc(c.nome)}${c.principal ? ' (principal)' : ''}</option>`).join('')}</select></div></form>`
+            : '<p class="muted"><small>Carregando as agendas da conta…</small></p>'}
+           <div class="btnrow"><button class="btn" data-act="enviarGoogleMes">☁️ Enviar o mês atual</button><button class="btn ghost" data-act="googleSair">Desconectar</button></div>`
+        : `<div class="btnrow"><button class="btn" data-act="googleConectar">Conectar à conta do Google</button></div>`}
+      <div class="btnrow"><button class="btn ghost sm" data-act="limparGoogle">Remover a configuração do Google</button></div>
+      <p class="muted"><small>Os eventos criados daqui ficam marcados como do Mucurinha: enviar de novo atualiza o mesmo evento, e um plantão apagado aqui some de lá no próximo envio.</small></p>`;
+  }
+
+  /** Manda os plantões do mês para a agenda do Google e conta o que fez. */
+  async function enviarAoGoogle(ano, mes) {
+    U.toast('Enviando ao Google Agenda…');
+    try {
+      const r = await PED.agenda.enviarMes(ano, mes);
+      compromissos = { chave: '', itens: [], carregando: false };
+      U.toast(`Agenda atualizada: ${r.criados} novo(s), ${r.atualizados} atualizado(s)${r.removidos ? ', ' + r.removidos + ' removido(s)' : ''}`);
+      render();
+    } catch (err) { alert(PED.agenda.mensagemErro(err)); }
+  }
+
   /** Configuração e estado da sincronização opcional com o Firebase. */
   function blocoNuvem() {
     const N = PED.nuvem; if (!N) return '<p class="muted">Módulo indisponível.</p>';
@@ -1669,6 +1828,10 @@ window.PED = window.PED || {};
       <p class="muted"><small>Cada item exibe suas fontes (MS, SBP, OMS/OPAS, PALS, bulas) e a data da última atualização. O sistema não gera diagnóstico automático e não substitui a decisão médica.</small></p></div>
     <div class="card"><h2>☁️ Sincronização entre aparelhos</h2>
       ${blocoNuvem()}</div>
+    <div class="card"><h2>👥 Espaço compartilhado</h2>
+      ${blocoEspaco()}</div>
+    <div class="card"><h2>📆 Agenda do Google</h2>
+      ${blocoGoogle()}</div>
     <div class="card"><h2>⚙️ Revisão clínica</h2><p class="muted">Itens das bases que pedem conferência da médica antes do uso assistencial.</p>
       <p><strong>${revisao.pendencias().filter(x => revisao.get(x.tipo, x.id, x.sub)).length} de ${revisao.pendencias().length}</strong> conferidos.</p>
       <div class="btnrow"><a class="btn" href="#/revisao">Abrir revisão clínica</a></div></div>
@@ -1857,6 +2020,39 @@ window.PED = window.PED || {};
       try { await PED.nuvem.entrar(d.email, d.senha); S.pref('emailNuvem', d.email); U.toast('Conectada'); render(); }
       catch (err) { alert(PED.nuvem.mensagemErro(err)); render(); }
     });
+    const fge = $('#formGoogle');
+    if (fge) fge.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const id = (formData(fge).clientId || '').trim();
+      if (!/\.apps\.googleusercontent\.com$/.test(id)) { U.toast('O ID de cliente termina em .apps.googleusercontent.com'); return; }
+      PED.agenda.salvarConfig({ clientId: id }); U.toast('ID salvo'); render();
+    });
+    const fcal = $('#formCalendario');
+    if (fcal) {
+      const sel = fcal.querySelector('select[name="calendarId"]');
+      if (sel) sel.addEventListener('change', () => {
+        const op = sel.options[sel.selectedIndex];
+        PED.agenda.salvarConfig({ calendarId: sel.value, calendarNome: op ? op.textContent : '' });
+        compromissos = { chave: '', itens: [], carregando: false };
+        U.toast('Agenda escolhida'); render();
+      });
+    }
+    const fee = $('#formEntrarEspaco');
+    if (fee) fee.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const codigo = formData(fee).codigo || '';
+      if (!codigo) { U.toast('Informe o código do espaço'); return; }
+      U.toast('Entrando no espaço…');
+      try { await PED.nuvem.entrarEspaco(codigo); equipeCache = { id: '', dados: null, carregando: false }; U.toast('Pronto: os dados agora são os dois'); render(); }
+      catch (err) { alert(PED.nuvem.mensagemErro(err)); }
+    });
+    const fcv = $('#formConvite');
+    if (fcv) fcv.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = formData(fcv).email || '';
+      try { await PED.nuvem.convidar(email); equipeCache = { id: '', dados: null, carregando: false }; U.toast('Convite registrado para ' + email); render(); }
+      catch (err) { alert(PED.nuvem.mensagemErro(err)); }
+    });
     const fprof = $('#formProf'); if (fprof) fprof.addEventListener('submit', (e) => { e.preventDefault(); S.pref('profissional', formData(fprof)); U.toast('Profissional salvo'); render(); });
     const ft = $('#filtroTox'); if (ft) ft.addEventListener('input', () => { const q2 = U.normalize(ft.value); $$('.toxRow', main).forEach(x => x.style.display = !q2 || x.dataset.n.includes(q2) ? '' : 'none'); });
     const uc = $('#uniCidade'); if (uc) uc.addEventListener('change', () => go('/unidades?cidade=' + encodeURIComponent(uc.value)));
@@ -2008,7 +2204,55 @@ window.PED = window.PED || {};
         try { const r2 = await PED.nuvem.sincronizar(); U.toast('Sincronizado: ' + r2.registros + ' registros'); render(); }
         catch (err) { alert(PED.nuvem.mensagemErro(err)); render(); }
       },
-      async sairNuvem() { await PED.nuvem.sair(); render(); },
+      async sairNuvem() { await PED.nuvem.sair(); equipeCache = { id: '', dados: null, carregando: false }; render(); },
+      /* ---- Espaço compartilhado ---- */
+      async criarEspaco() {
+        const nome = prompt('Nome do espaço (aparece só aqui):', 'Mucurinha') || 'Mucurinha';
+        U.toast('Criando o espaço…');
+        try {
+          const id = await PED.nuvem.criarEspaco(nome);
+          equipeCache = { id: '', dados: null, carregando: false };
+          alert('Espaço criado.\n\nCódigo: ' + id + '\n\nConvide o e-mail da outra pessoa e passe este código para ela.');
+          render();
+        } catch (err) { alert(PED.nuvem.mensagemErro(err)); }
+      },
+      sairEspaco() {
+        if (!confirm('Deixar o espaço compartilhado neste aparelho? Os dados que já estão aqui continuam aqui, e os do espaço continuam lá.')) return;
+        PED.nuvem.sairEspaco(); equipeCache = { id: '', dados: null, carregando: false }; U.toast('Fora do espaço'); render();
+      },
+      async retirarConvite() {
+        try { await PED.nuvem.retirarConvite(el.dataset.email); equipeCache = { id: '', dados: null, carregando: false }; U.toast('Convite retirado'); render(); }
+        catch (err) { alert(PED.nuvem.mensagemErro(err)); }
+      },
+      /* ---- Agenda ---- */
+      icsMes() {
+        const ano = Number(el.dataset.ano), mes = Number(el.dataset.mes);
+        baixarArquivo('plantoes-' + ano + '-' + String(mes).padStart(2, '0') + '.ics', PED.agenda.icsMes(ano, mes), 'text/calendar;charset=utf-8');
+        U.toast('Arquivo gerado: abra-o para lançar na sua agenda');
+      },
+      icsFuturos() {
+        baixarArquivo('plantoes-proximos.ics', PED.agenda.icsFuturos(), 'text/calendar;charset=utf-8');
+        U.toast('Arquivo gerado: abra-o para lançar na sua agenda');
+      },
+      alternarCompromissos() {
+        const novo = !S.pref('googleMostrar');
+        S.pref('googleMostrar', novo);
+        compromissos = { chave: '', itens: [], carregando: false };
+        if (novo && !PED.agenda.ligado()) PED.agenda.entrar(true).then(render).catch(err => { alert(PED.agenda.mensagemErro(err)); });
+        render();
+      },
+      async googleConectar() {
+        U.toast('Abrindo a autorização do Google…');
+        try { await PED.agenda.entrar(); agendasCache = { itens: null, carregando: false }; U.toast('Conectada ao Google'); render(); }
+        catch (err) { alert(PED.agenda.mensagemErro(err)); }
+      },
+      googleSair() { PED.agenda.sair(); agendasCache = { itens: null, carregando: false }; render(); },
+      limparGoogle() {
+        if (!confirm('Remover a configuração do Google deste aparelho? Os eventos já criados na agenda continuam lá.')) return;
+        PED.agenda.limparConfig(); agendasCache = { itens: null, carregando: false }; compromissos = { chave: '', itens: [], carregando: false }; render();
+      },
+      async enviarGoogle() { await enviarAoGoogle(Number(el.dataset.ano), Number(el.dataset.mes)); },
+      async enviarGoogleMes() { const r = mesRef(); await enviarAoGoogle(r.ano, r.mes); },
       limparNuvem() { if (!confirm('Remover a configuração do Firebase deste aparelho? Os dados locais continuam aqui.')) return; PED.nuvem.limparConfig(); render(); },
       exportar() { const blob = new Blob([S.exportJSON()], { type: 'application/json' }); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'mucurinha-' + U.today() + '.json'; a.click(); S.pref('ultimoBackup', new Date().toISOString()); U.toast('Cópia gerada'); render(); },
       copiarBackup() { const txt = S.exportJSON();
@@ -2072,9 +2316,22 @@ window.PED = window.PED || {};
     }
   }
 
+  /** Redesenha quando chega algo da nuvem, mas nunca no meio de uma digitação. */
+  let redesenhoPendente = false;
+  function renderSeOcioso() {
+    const a = document.activeElement;
+    if (a && /^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)) { redesenhoPendente = true; return; }
+    redesenhoPendente = false; render();
+  }
+
   function init() {
     juntarBases();
     bindSearch();
+    if (PED.nuvem && PED.nuvem.configurado()) {
+      PED.nuvem.aoAplicar(renderSeOcioso);
+      PED.nuvem.iniciar().catch(() => { /* sem rede agora: a tela continua local */ });
+      document.addEventListener('focusout', () => { if (redesenhoPendente) setTimeout(renderSeOcioso, 300); });
+    }
     const tb = $('#themeBtn'); if (tb) { tb.textContent = temaAtual() === 'dark' ? '☀️' : '🌙'; tb.onclick = alternarTema; }
     if ('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('sw.js').catch(() => {});
     render();
