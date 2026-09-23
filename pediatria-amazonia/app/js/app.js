@@ -1367,8 +1367,10 @@ window.PED = window.PED || {};
       doDia.forEach(x => { const v = PL().valores(x); minutos += v.min || 0; valor += v.liquido; });
       const fds = new Date(ano, mes - 1, d).getDay() % 6 === 0;
       const cps = compromissosDoDia(iso);
-      celulas.push(`<a class="calDia${iso === hoje ? ' hoje' : ''}${fds ? ' fds' : ''}${doDia.length ? ' comPlantao' : ''}" href="#/plantoes/dia/${iso}">
-        <span class="calNum">${d}</span>
+      const fer = PL().feriadoEm(iso, true);
+      const bate = doDia.some(x => PL().conflitos(x).length);
+      celulas.push(`<a class="calDia${iso === hoje ? ' hoje' : ''}${fds || (fer && fer.tipo !== 'facultativo') ? ' fds' : ''}${doDia.length ? ' comPlantao' : ''}${bate ? ' conflito' : ''}" href="#/plantoes/dia/${iso}"${fer ? ` title="${esc(fer.nome)}"` : ''}>
+        <span class="calNum">${d}${fer ? '<span class="calFeriado">•</span>' : ''}${bate ? ' ⚠️' : ''}</span>
         ${doDia.length ? `<span class="calMarcas">${doDia.slice(0, 3).map(x => { const l = x.localId ? PL().local(x.localId) : null;
             return `<span class="calMarca" style="background:${PL().corLocal(l ? l.corIdx : 7)}" title="${esc(l ? l.nome : 'Sem local')}"></span>`; }).join('')}${doDia.length > 3 ? `<span class="calMais">+${doDia.length - 3}</span>` : ''}</span>
           <span class="calHoras">${esc(PL().fmtDuracao(minutos))}</span>` : ''}
@@ -1456,11 +1458,17 @@ window.PED = window.PED || {};
       const st = (PL().STATUS.find(s2 => s2.id === (x.status || 'previsto')) || {});
       return `<a class="row" href="#/plantoes/${x.id}">
         <span class="vizPonto" style="background:${PL().corLocal(l ? l.corIdx : 7)};width:12px;height:12px;flex:0 0 auto"></span>
-        <div class="grow"><div class="title">${esc(l ? l.nome : 'Sem local')} <span class="chip ${st.cor || ''}">${esc(st.rotulo || '')}</span></div>
-        <div class="sub">${esc(x.inicio || '—')} às ${esc(x.fim || '—')} · ${esc(PL().fmtDuracao(v.min))}${x.obs ? ' · ' + esc(x.obs) : ''}${autoria(x)}</div></div>
+        <div class="grow"><div class="title">${esc(l ? l.nome : 'Sem local')} <span class="chip ${st.cor || ''}">${esc(st.rotulo || '')}</span>${x.tipo && x.tipo !== 'normal' ? ' <span class="chip gray">' + esc((PL().TIPOS.find(t2 => t2.id === x.tipo) || {}).rotulo || '') + '</span>' : ''}${v.reparticao.feriado ? ' 🎉' : ''}</div>
+        <div class="sub">${x.inicio ? esc(x.inicio) + ' às ' + esc(x.fim || '—') : esc(x.duracao || '—')} · ${esc(PL().fmtDuracao(v.min))}${x.obs ? ' · ' + esc(x.obs) : ''}${autoria(x)}</div></div>
         <div style="text-align:right"><b>${esc(PL().moeda(v.liquido))}</b></div></a>`;
     };
-    return `<div class="section-title"><h1>🗓️ Plantões</h1><a class="btn sm" href="#/plantoes/novo">➕ Lançar</a></div>
+    const meta = S.pref('metaPlantao') || {};
+    const sobrepostos = ps.filter(x => PL().conflitos(x).length).length;
+    const longas = PL().jornadasLongas(1440, ps);
+    const alertas = sobrepostos + longas.length;
+    const textoAlerta = [sobrepostos ? `${sobrepostos} plantões com horário sobreposto` : '', longas.length ? `${longas.length} jornada(s) emendada(s) de ${longas.map(j => PL().fmtDuracao(j.minutos)).join(', ')}` : ''].filter(Boolean).join(' · ');
+    return `<h1>🗓️ Plantões</h1>
+      <div class="btnrow" style="margin:.2rem 0 .7rem"><a class="btn" href="#/plantoes/novo">➕ Lançar plantão</a><a class="btn secondary" href="#/plantoes/ferramentas?ano=${ano}&mes=${mes}">🧰 Ferramentas</a></div>
       <div class="card compact" style="display:flex;align-items:center;justify-content:space-between;gap:.5rem">
         <a class="btn sm ghost" href="#/plantoes?ano=${ant.ano}&mes=${ant.mes}">←</a>
         <b>${NOME_MES[mes - 1]} de ${ano}</b>
@@ -1472,10 +1480,14 @@ window.PED = window.PED || {};
         <div class="tile" style="cursor:default"><small class="muted">Já recebido</small><span style="font-size:1.35rem;font-weight:700;color:var(--green)">${esc(PL().moeda(R.pago))}</span><small>marcado como pago</small></div>
         <div class="tile" style="cursor:default"><small class="muted">A receber</small><span style="font-size:1.35rem;font-weight:700;color:${R.aReceber > 0 ? 'var(--amber)' : 'var(--muted)'}">${esc(PL().moeda(R.aReceber))}</span><small>ainda não pago</small></div>
       </div>
+      ${R.adicionais || R.retencao ? `<div class="card compact"><small class="muted">${R.adicionais ? `Adicionais (noturno, fim de semana, feriado): <b>${esc(PL().moeda(R.adicionais))}</b>` : ''}${R.adicionais && R.retencao ? ' · ' : ''}${R.retencao ? `retenção estimada ${esc(PL().moeda(R.retencao))} → na mão ≈ <b>${esc(PL().moeda(R.aposRetencao))}</b>` : ''}</small></div>` : ''}
+      ${alertas ? `<a class="alert amber" style="display:block;text-decoration:none" href="#/plantoes/ferramentas?aba=alertas&ano=${ano}&mes=${mes}"><strong>⚠️ Atenção neste mês</strong>${esc(textoAlerta)}. Toque para ver.</a>` : ''}
+      ${R.diferencas.length ? `<a class="alert amber" style="display:block;text-decoration:none" href="#/plantoes/ferramentas?aba=receber&ano=${ano}&mes=${mes}"><strong>💰 ${R.diferencas.length} pagamento(s) diferente(s) do previsto</strong>Toque para conferir.</a>` : ''}
+      ${meta.valor || meta.horas || meta.limiteHoras ? `<div class="card"><h2>🎯 Meta do mês</h2>${blocoMeta(R, meta)}</div>` : ''}
 
       ${R.porLocal.length ? `<div class="card"><h2>Por local</h2>${barrasPorLocal(R.porLocal, R.total)}
-        <details><summary>ver como tabela</summary><div class="body"><div class="tablewrap"><table><tr><th>Local</th><th>Plantões</th><th>Horas</th><th>Valor</th></tr>
-        ${R.porLocal.map(x => `<tr><td>${esc(x.nome)}</td><td>${x.plantoes}</td><td>${esc(PL().fmtDuracao(x.minutos))}</td><td>${esc(PL().moeda(x.valor))}</td></tr>`).join('')}</table></div></div></details></div>` : ''}
+        <details><summary>ver como tabela</summary><div class="body"><div class="tablewrap"><table><tr><th>Local</th><th>Plantões</th><th>Horas</th><th>Valor</th><th>Pagamento previsto</th></tr>
+        ${R.porLocal.map(x => { const pp = PL().previsaoPagamento(PL().local(x.id), ano, mes); return `<tr><td>${esc(x.nome)}</td><td>${x.plantoes}</td><td>${esc(PL().fmtDuracao(x.minutos))}</td><td>${esc(PL().moeda(x.valor))}</td><td>${pp ? U.fmtDate(pp) : '—'}</td></tr>`; }).join('')}</table></div></div></details></div>` : ''}
 
       ${R.porPessoa.length > 1 ? `<div class="card"><h2>Por pessoa</h2><p class="muted">Quem lançou cada plantão neste espaço compartilhado.</p>
         <div class="list">${R.porPessoa.map(x => `<div class="row" style="cursor:default"><div class="grow">
@@ -1502,6 +1514,168 @@ window.PED = window.PED || {};
       <p class="disclaimer">Controle pessoal de plantões. Os valores são os que você lançar; confira sempre com o contracheque e o contrato.</p>`;
   });
 
+  /* ---------------- Ferramentas de plantão ---------------- */
+  const NOMES_SEMANA = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'];
+  let escalaPrevia = null;            // plantões gerados, esperando confirmação
+
+  route('/plantoes/ferramentas', (params, q) => {
+    PL().garantirLocais();
+    const ls = PL().locais();
+    const { ano, mes } = mesRef();
+    const E = PED.entrada;
+    const aba = q.aba || 'calcular';
+    const abas = [['calcular', '🧮 Calcular'], ['escala', '🔁 Escala'], ['receber', '💰 Receber'], ['cobrar', '📝 Cobrar'], ['meta', '🎯 Meta'], ['alertas', '⚠️ Alertas'], ['feriados', '🎉 Feriados']];
+    const opcoesLocal = (sel, vazio) => `${vazio ? `<option value="">${vazio}</option>` : ''}${ls.map(l => `<option value="${l.id}" ${sel === l.id ? 'selected' : ''}>${esc(l.nome)}</option>`).join('')}`;
+    const seletorMes = `<div class="card compact" style="display:flex;align-items:center;justify-content:space-between;gap:.5rem">
+      <a class="btn sm ghost" href="#/plantoes/ferramentas?aba=${aba}&ano=${desloca(ano, mes, -1).ano}&mes=${desloca(ano, mes, -1).mes}">←</a>
+      <b>${NOME_MES[mes - 1]} de ${ano}</b>
+      <a class="btn sm ghost" href="#/plantoes/ferramentas?aba=${aba}&ano=${desloca(ano, mes, 1).ano}&mes=${desloca(ano, mes, 1).mes}">→</a></div>`;
+    let corpo = '';
+
+    if (aba === 'calcular') {
+      corpo = `<div class="card"><h2>Quanto vale este plantão?</h2>
+        <p class="muted">Faz a conta sem lançar nada: bom para decidir se aceita um plantão extra ou conferir um valor fechado.</p>
+        <form id="formCalcPlantao" class="fields">
+          <div class="field full"><label>Regras de qual local <small class="muted">(opcional)</small></label><select name="localId">${opcoesLocal('', 'nenhum — só a conta')}</select></div>
+          <div class="field full"><label>Horário</label><div class="toggles">${PADROES_HORARIO.map(x => `<span class="toggle chipHorario" data-i="${x.i}" data-f="${x.f}">${x.r}</span>`).join('')}</div></div>
+          <div class="field"><label>Data <small class="muted">(para feriado e fim de semana)</small></label><input data-tipo="data" data-iso="isoCalc" value="${E ? E.deISO(U.today()) : ''}" autocomplete="off"><input type="hidden" name="data" id="isoCalc" value="${U.today()}"></div>
+          <div class="field"><label>Entrada</label><input class="hora" name="inicio" inputmode="numeric" maxlength="5" placeholder="19:10"></div>
+          <div class="field"><label>Saída</label><input class="hora" name="fim" inputmode="numeric" maxlength="5" placeholder="07:40"></div>
+          <div class="field"><label>Ou a duração</label><input name="duracao" placeholder="6h40"></div>
+          <div class="field"><label>Valor da hora (R$)</label><input type="number" inputmode="decimal" step="0.01" name="valorHora" placeholder="do local"></div>
+          <div class="field"><label>Ou valor fechado (R$)</label><input type="number" inputmode="decimal" step="0.01" name="valorFixo" placeholder="quanto oferecem"></div>
+          <div class="field"><label>Intervalo (min)</label><input type="number" inputmode="numeric" name="intervalo" placeholder="0"></div>
+        </form>
+        <div id="resultadoCalc" class="result"><div class="muted">Preencha o horário e o valor.</div></div></div>
+        <div class="card"><h2>Converter horas</h2>
+          <form id="formConverte" class="fields"><div class="field full"><label>Digite horas e minutos ou horas decimais</label><input name="t" placeholder="7h20, 7,33 ou 440min" autocomplete="off"></div></form>
+          <div id="resultadoConverte" class="muted">7h20 = 7,33 h = 440 min</div></div>`;
+    }
+
+    if (aba === 'escala') {
+      const prev = escalaPrevia;
+      corpo = `<div class="card"><h2>Lançar vários plantões de uma vez</h2>
+        <p class="muted">Monte a escala, veja a prévia com os conflitos marcados e só então confirme.</p>
+        <form id="formEscala" class="fields">
+          <div class="field full"><label>Local</label><select name="localId">${opcoesLocal(q.local || (ls[0] && ls[0].id))}</select></div>
+          <div class="field full"><label>Horário</label><div class="toggles">${PADROES_HORARIO.map(x => `<span class="toggle chipHorario" data-i="${x.i}" data-f="${x.f}">${x.r}</span>`).join('')}</div></div>
+          <div class="field"><label>Entrada</label><input class="hora" name="inicio" inputmode="numeric" maxlength="5" placeholder="19:00"></div>
+          <div class="field"><label>Saída</label><input class="hora" name="fim" inputmode="numeric" maxlength="5" placeholder="07:00"></div>
+          <div class="field"><label>De <small class="muted">(digite)</small></label><input data-tipo="data" data-iso="isoDe" value="${E ? E.deISO(ano + '-' + String(mes).padStart(2, '0') + '-01') : ''}" autocomplete="off"><input type="hidden" name="de" id="isoDe" value="${ano}-${String(mes).padStart(2, '0')}-01"></div>
+          <div class="field"><label>Até <small class="muted">(digite)</small></label><input data-tipo="data" data-iso="isoAte" value="${E ? E.deISO(ano + '-' + String(mes).padStart(2, '0') + '-' + new Date(ano, mes, 0).getDate()) : ''}" autocomplete="off"><input type="hidden" name="ate" id="isoAte" value="${ano}-${String(mes).padStart(2, '0')}-${new Date(ano, mes, 0).getDate()}"></div>
+          <div class="field full"><label>Repetição</label><div class="toggles" data-escolha="modo">
+            <span class="toggle on" data-v="semana">Dias da semana</span><span class="toggle" data-v="2">12x36 (dia sim, dia não)</span>
+            <span class="toggle" data-v="3">24x48 (a cada 3 dias)</span><span class="toggle" data-v="4">24x72 (a cada 4 dias)</span>
+            <input type="hidden" name="modo" value="semana"></div></div>
+          <div class="field full" id="diasSemana"><label>Quais dias</label><div class="toggles">${NOMES_SEMANA.map((n, i) => `<label class="toggle"><input type="checkbox" name="dia" value="${i}" style="display:none">${n}</label>`).join('')}</div></div>
+          <div class="field full"><button class="btn secondary" type="submit">👀 Ver a prévia</button></div>
+        </form></div>
+        ${prev ? `<div class="card"><h2>Prévia: ${prev.length} plantão(ões)</h2>
+          ${prev.length ? `<div class="list">${prev.map(x => { const v = PL().valores(x); const conf = PL().conflitos(x); const fr = PL().feriadoEm(x.data);
+            return `<div class="row" style="cursor:default"><div class="grow"><div class="title" style="font-size:.93rem">${U.fmtDate(x.data)} <small class="muted">${NOMES_SEMANA[new Date(x.data + 'T12:00:00').getDay()]}</small>${fr ? ' <span class="chip amber">' + esc(fr.nome) + '</span>' : ''}</div>
+              <div class="sub">${esc(x.inicio)}–${esc(x.fim)} · ${esc(PL().fmtDuracao(v.min))}${conf.length ? ' · <b style="color:var(--red)">bate com outro plantão</b>' : ''}</div></div><b>${esc(PL().moeda(v.liquido))}</b></div>`; }).join('')}</div>
+            <p><b>Total previsto: ${esc(PL().moeda(prev.reduce((a, x) => a + PL().valores(x).liquido, 0)))}</b> · ${esc(PL().fmtDuracao(prev.reduce((a, x) => a + (PL().valores(x).min || 0), 0)))}</p>
+            <div class="btnrow"><button class="btn" data-act="confirmarEscala">✓ Lançar ${prev.filter(x => !PL().conflitos(x).length).length} plantão(ões)</button><button class="btn ghost" data-act="descartarEscala">Descartar</button></div>
+            ${prev.some(x => PL().conflitos(x).length) ? '<p class="muted"><small>Os que batem com plantão já lançado ficam de fora.</small></p>' : ''}`
+          : '<div class="empty">Nenhum dia caiu na escala escolhida.</div>'}</div>` : ''}`;
+    }
+
+    if (aba === 'receber') {
+      const R = PL().resumoMes(ano, mes);
+      corpo = seletorMes + `<div class="card"><h2>Recebi o pagamento</h2>
+        <p class="muted">Marca de uma vez como pagos os plantões do local neste mês.</p>
+        ${R.porLocal.length ? `<div class="list">${R.porLocal.map(x => { const l = PL().local(x.id); const falta = x.valor - x.pago; const prevPg = l ? PL().previsaoPagamento(l, ano, mes) : null;
+          return `<div class="row" style="cursor:default"><span class="vizPonto" style="background:${PL().corLocal(x.corIdx)};width:12px;height:12px;flex:0 0 auto"></span>
+            <div class="grow"><div class="title">${esc(x.nome)}</div><div class="sub">${x.plantoes} plantão(ões) · ${esc(PL().moeda(x.valor))}${prevPg ? ' · pagamento previsto ' + U.fmtDate(prevPg) : ''}</div>
+            <div class="sub">${falta > 0.009 ? 'falta receber <b>' + esc(PL().moeda(falta)) + '</b>' : '<span style="color:var(--green)">tudo recebido</span>'}</div></div>
+            ${falta > 0.009 && x.id !== 'sem' ? `<button class="btn sm" data-act="marcarPagosLocal" data-l="${x.id}" data-ano="${ano}" data-mes="${mes}">Marcar pagos</button>` : ''}</div>`; }).join('')}</div>` : '<div class="empty">Nenhum plantão neste mês.</div>'}</div>
+        ${R.diferencas.length ? `<div class="card"><h2>Veio diferente do previsto</h2><div class="list">${R.diferencas.map(d => { const l = PL().local(d.localId);
+          return `<a class="row" href="#/plantoes/${d.id}"><div class="grow"><div class="title">${U.fmtDate(d.data)} · ${esc(l ? l.nome : '')}</div>
+            <div class="sub">previsto ${esc(PL().moeda(d.previsto))} · recebido ${esc(PL().moeda(d.recebido))}</div></div>
+            <b style="color:${d.diferenca < 0 ? 'var(--red)' : 'var(--green)'}">${d.diferenca < 0 ? '−' : '+'}${esc(PL().moeda(Math.abs(d.diferenca)))}</b></a>`; }).join('')}</div></div>` : ''}`;
+    }
+
+    if (aba === 'cobrar') {
+      const localSel = q.local || '';
+      const txt = PL().textoCobranca(ano, mes, localSel || null);
+      corpo = seletorMes + `<div class="card"><h2>Texto para conferir ou cobrar</h2>
+        <p class="muted">A lista do mês, pronta para colar no WhatsApp ou no e-mail do setor.</p>
+        <div class="field"><label>Local</label><select id="cobrarLocal" data-ano="${ano}" data-mes="${mes}">${opcoesLocal(localSel, 'todos os locais')}</select></div>
+        <textarea id="textoCobrar" readonly style="width:100%;min-height:240px;font-family:ui-monospace,monospace;font-size:.82rem;margin-top:.5rem">${esc(txt)}</textarea>
+        <div class="btnrow"><button class="btn" data-act="copiarTexto" data-t="${esc(txt)}">📋 Copiar</button>
+          ${navigator.share ? `<button class="btn secondary" data-act="compartilharTexto" data-t="${esc(txt)}">📤 Enviar</button>` : ''}</div></div>`;
+    }
+
+    if (aba === 'meta') {
+      const meta = S.pref('metaPlantao') || {};
+      const R = PL().resumoMes(ano, mes);
+      corpo = seletorMes + `<div class="card"><h2>Meta do mês</h2>
+        <form id="formMeta" class="fields">
+          <div class="field"><label>Quanto quero fazer (R$)</label><input type="number" inputmode="decimal" step="50" name="valor" value="${meta.valor || ''}"></div>
+          <div class="field"><label>Ou quantas horas</label><input type="number" inputmode="decimal" step="1" name="horas" value="${meta.horas || ''}"></div>
+          <div class="field"><label>Limite de horas no mês <small class="muted">(para não passar)</small></label><input type="number" inputmode="decimal" step="1" name="limiteHoras" value="${meta.limiteHoras || ''}"></div>
+          <div class="field full"><button class="btn" type="submit">💾 Salvar meta</button></div></form>
+        ${blocoMeta(R, meta)}</div>`;
+    }
+
+    if (aba === 'alertas') {
+      const doMes = PL().doMes(ano, mes);
+      const conflitos = doMes.map(p => ({ p, c: PL().conflitos(p) })).filter(x => x.c.length);
+      const longas = PL().jornadasLongas(1440, doMes);
+      const semValor = doMes.filter(p => !PL().valores(p).liquido);
+      const pendentes = doMes.filter(p => (p.status || 'previsto') === 'previsto' && p.data < U.today());
+      const item = (p, txt) => { const l = p.localId ? PL().local(p.localId) : null; return `<a class="row" href="#/plantoes/${p.id}"><div class="grow"><div class="title" style="font-size:.93rem">${U.fmtDate(p.data)} · ${esc(l ? l.nome : 'Sem local')} ${esc(p.inicio || '')}–${esc(p.fim || '')}</div><div class="sub">${txt}</div></div></a>`; };
+      corpo = seletorMes + `<div class="card"><h2>O que merece atenção</h2>
+        ${!conflitos.length && !longas.length && !semValor.length && !pendentes.length ? '<div class="empty">Nada a apontar neste mês.</div>' : ''}
+        ${longas.length ? `<h3>Jornadas emendadas de 24 h ou mais</h3>${longas.map(j => `<div class="alert amber"><strong>${esc(PL().fmtDuracao(j.minutos))} seguidas</strong>${j.plantoes.map(p => { const l = PL().local(p.localId); return U.fmtDate(p.data) + ' ' + (p.inicio || '') + '–' + (p.fim || '') + (l ? ' ' + l.nome : ''); }).map(esc).join(' → ')}</div>`).join('')}` : ''}
+        ${conflitos.length ? `<h3>Horários que se sobrepõem</h3><div class="list">${conflitos.map(x => item(x.p, 'bate com ' + x.c.length + ' outro(s)')).join('')}</div>` : ''}
+        ${pendentes.length ? `<h3>Já passaram e seguem como "previsto"</h3><div class="list">${pendentes.map(p => item(p, 'marcar como realizado?')).join('')}</div>
+          <div class="btnrow"><button class="btn sm secondary" data-act="marcarRealizados" data-ano="${ano}" data-mes="${mes}">Marcar todos como realizados</button></div>` : ''}
+        ${semValor.length ? `<h3>Sem valor calculado</h3><div class="list">${semValor.map(p => item(p, 'falta o valor da hora, o valor fechado ou o horário')).join('')}</div>` : ''}
+      </div>`;
+    }
+
+    if (aba === 'feriados') {
+      const fs = PL().feriados(ano);
+      const lista = Object.keys(fs).sort().map(k => Object.assign({ data: k }, fs[k]));
+      corpo = `<div class="card"><h2>Feriados de ${ano}</h2>
+        <p class="muted">Nacionais, do Amazonas e de Manaus entram sozinhos na conta do adicional de feriado. Pontos facultativos aparecem aqui, mas só contam se você marcar "é feriado" no plantão. Em outra cidade, marque à mão.</p>
+        <div class="list">${lista.map(f => `<div class="row" style="cursor:default"><div class="grow"><div class="title" style="font-size:.93rem">${U.fmtDate(f.data)} <small class="muted">${NOMES_SEMANA[new Date(f.data + 'T12:00:00').getDay()]}</small></div><div class="sub">${esc(f.nome)}</div></div>
+          <span class="chip ${f.tipo === 'facultativo' ? 'gray' : f.tipo === 'nacional' ? '' : 'amber'}">${esc(f.tipo)}</span></div>`).join('')}</div>
+        <div class="btnrow"><a class="btn sm ghost" href="#/plantoes/ferramentas?aba=feriados&ano=${ano - 1}&mes=${mes}">${ano - 1}</a><a class="btn sm ghost" href="#/plantoes/ferramentas?aba=feriados&ano=${ano + 1}&mes=${mes}">${ano + 1}</a></div>
+        <p class="muted"><small>Datas móveis calculadas a partir da Páscoa. Confira com o calendário oficial do ano e com o seu contrato.</small></p></div>`;
+    }
+
+    return `<div class="section-title"><h1>🧰 Ferramentas de plantão</h1><a class="btn sm ghost" href="#/plantoes?ano=${ano}&mes=${mes}">voltar ao mês</a></div>
+      <div class="tabs abasRolam">${abas.map(([id, r]) => `<a class="${aba === id ? 'active' : ''}" href="#/plantoes/ferramentas?aba=${id}&ano=${ano}&mes=${mes}">${r}</a>`).join('')}</div>
+      ${corpo}`;
+  });
+
+  /** Progresso da meta do mês, com a estimativa de quantos plantões faltam. */
+  function blocoMeta(R, meta) {
+    if (!meta || (!meta.valor && !meta.horas && !meta.limiteHoras)) return '<p class="muted">Sem meta definida.</p>';
+    const partes = [];
+    const barra = (pc, cor) => `<div class="barraProg" style="height:10px"><span style="height:10px;width:${Math.min(100, pc)}%;background:${cor || 'var(--green)'}"></span></div>`;
+    const medioPlantao = R.plantoes ? R.total / R.plantoes : 0;
+    const medioMin = R.plantoes ? R.minutos / R.plantoes : 0;
+    if (meta.valor) {
+      const pc = Math.round(100 * R.total / meta.valor), falta = meta.valor - R.total;
+      partes.push(`<div style="margin:.6rem 0"><div style="display:flex;justify-content:space-between"><b>${esc(PL().moeda(R.total))}</b><small class="muted">meta ${esc(PL().moeda(meta.valor))} · ${pc}%</small></div>${barra(pc)}
+        <small class="muted">${falta > 0 ? `faltam ${esc(PL().moeda(falta))}${medioPlantao ? ` — cerca de ${Math.ceil(falta / medioPlantao)} plantão(ões) no valor médio deste mês (${esc(PL().moeda(medioPlantao))})` : ''}` : 'meta batida 🎉'}</small></div>`);
+    }
+    if (meta.horas) {
+      const pc = Math.round(100 * R.minutos / 60 / meta.horas), falta = meta.horas * 60 - R.minutos;
+      partes.push(`<div style="margin:.6rem 0"><div style="display:flex;justify-content:space-between"><b>${esc(PL().fmtDuracao(R.minutos))}</b><small class="muted">meta ${meta.horas} h · ${pc}%</small></div>${barra(pc)}
+        <small class="muted">${falta > 0 ? `faltam ${esc(PL().fmtDuracao(falta))}${medioMin ? ` — cerca de ${Math.ceil(falta / medioMin)} plantão(ões) do tamanho médio` : ''}` : 'meta batida 🎉'}</small></div>`);
+    }
+    if (meta.limiteHoras) {
+      const pc = Math.round(100 * R.minutos / 60 / meta.limiteHoras);
+      partes.push(`<div style="margin:.6rem 0"><div style="display:flex;justify-content:space-between"><b>${esc(PL().fmtDuracao(R.minutos))}</b><small class="muted">limite ${meta.limiteHoras} h · ${pc}%</small></div>${barra(pc, pc >= 100 ? 'var(--red)' : pc >= 85 ? 'var(--amber)' : 'var(--primary)')}
+        <small class="muted">${pc >= 100 ? 'limite passado: vale rever a escala' : 'folga de ' + esc(PL().fmtDuracao(meta.limiteHoras * 60 - R.minutos))}</small></div>`);
+    }
+    return partes.join('');
+  }
+
   route('/plantoes/agenda', () => {
     PL().garantirLocais();
     const ps = PL().proximos(40);
@@ -1514,6 +1688,9 @@ window.PED = window.PED || {};
         : '<div class="empty">Nenhum plantão futuro lançado.</div>'}
       <div class="btnrow"><a class="btn secondary" href="#/plantoes">Voltar ao mês</a></div>`;
   });
+
+  /** Quantas regras de cálculo o local tem ligadas. */
+  const regrasAtivas = (l) => ['intervaloMin', 'arredondamento', 'noturnoPct', 'fdsPct', 'feriadoPct', 'retencaoPct'].filter(k => l[k] != null && l[k] !== '' && Number(l[k]) !== 0).length;
 
   route('/plantoes/locais', () => {
     const ls = PL().garantirLocais();
@@ -1530,10 +1707,54 @@ window.PED = window.PED || {};
           <div class="field"><label>Dia de pagamento</label><input type="number" inputmode="numeric" min="1" max="31" name="diaPagamento" value="${l.diaPagamento != null ? l.diaPagamento : ''}"></div>
           <div class="field full"><label>Observação</label><input name="obs" value="${esc(l.obs || '')}"></div>
         </div>
+        <details class="regrasLocal" ${regrasAtivas(l) ? 'open' : ''}><summary>⚙️ Regras de cálculo ${regrasAtivas(l) ? `<span class="chip">${regrasAtivas(l)} ativa(s)</span>` : '<small class="muted">intervalo, arredondamento, adicionais, retenção</small>'}</summary>
+          <div class="body"><div class="fields">
+            <div class="field"><label>Intervalo não pago (min)</label><input type="number" inputmode="numeric" name="intervaloMin" value="${l.intervaloMin != null ? l.intervaloMin : ''}" placeholder="0"></div>
+            <div class="field"><label>Arredondar as horas</label><select name="arredondamento">
+              ${[['', 'não arredondar'], ['15', 'de 15 em 15 min'], ['30', 'de 30 em 30 min'], ['60', 'hora cheia']].map(([v2, r]) => `<option value="${v2}" ${String(l.arredondamento || '') === v2 ? 'selected' : ''}>${r}</option>`).join('')}</select></div>
+            <div class="field"><label>Para que lado</label><select name="arredModo">
+              ${[['proximo', 'o mais próximo'], ['cima', 'sempre para cima'], ['baixo', 'sempre para baixo']].map(([v2, r]) => `<option value="${v2}" ${(l.arredModo || 'proximo') === v2 ? 'selected' : ''}>${r}</option>`).join('')}</select></div>
+            <div class="field"><label>Adicional noturno (%)</label><input type="number" inputmode="decimal" step="0.1" name="noturnoPct" value="${l.noturnoPct != null ? l.noturnoPct : ''}" placeholder="0"></div>
+            <div class="field"><label>Noturno começa</label><input class="hora" name="noturnoInicio" inputmode="numeric" maxlength="5" value="${esc(l.noturnoInicio || '')}" placeholder="22:00"></div>
+            <div class="field"><label>Noturno termina</label><input class="hora" name="noturnoFim" inputmode="numeric" maxlength="5" value="${esc(l.noturnoFim || '')}" placeholder="05:00"></div>
+            <div class="field"><label>Adicional de fim de semana (%)</label><input type="number" inputmode="decimal" step="0.1" name="fdsPct" value="${l.fdsPct != null ? l.fdsPct : ''}" placeholder="0"></div>
+            <div class="field"><label>Fim de semana é</label><select name="fdsDias">
+              <option value="sabdom" ${l.fdsDias !== 'dom' ? 'selected' : ''}>sábado e domingo</option><option value="dom" ${l.fdsDias === 'dom' ? 'selected' : ''}>só domingo</option></select></div>
+            <div class="field"><label>Adicional de feriado (%)</label><input type="number" inputmode="decimal" step="0.1" name="feriadoPct" value="${l.feriadoPct != null ? l.feriadoPct : ''}" placeholder="0"></div>
+            <div class="field"><label>Retenção estimada (%)</label><input type="number" inputmode="decimal" step="0.1" name="retencaoPct" value="${l.retencaoPct != null ? l.retencaoPct : ''}" placeholder="impostos, taxa"></div>
+          </div>
+          <p class="muted"><small>As contas são minuto a minuto: num plantão das 19h10 às 7h40, só os minutos entre o início e o fim da janela noturna recebem o noturno, e só os que caem no feriado recebem o de feriado. Fim de semana e feriado no mesmo minuto não se somam — vale o maior; o noturno soma com qualquer um. O intervalo e o arredondamento valem para todos os minutos por igual. A retenção é só uma estimativa sua, para ver o que chega na mão.</small></p></div>
+        </details>
         <div class="btnrow"><button class="btn sm" type="submit">💾 Salvar</button><button type="button" class="btn sm ghost" data-act="excluirLocal" data-id="${l.id}">Excluir</button></div>
       </form>`).join('')}
       <div class="btnrow"><a class="btn secondary" href="#/plantoes">Voltar</a></div>`;
   });
+
+  /** Horários prontos para um toque: o que mais se repete em plantão. */
+  const PADROES_HORARIO = [
+    { r: '07–19', i: '07:00', f: '19:00' }, { r: '19–07', i: '19:00', f: '07:00' },
+    { r: '07–13', i: '07:00', f: '13:00' }, { r: '13–19', i: '13:00', f: '19:00' },
+    { r: '19–01', i: '19:00', f: '01:00' }, { r: '24 h', i: '07:00', f: '07:00' },
+  ];
+
+  /** Avisos de um plantão: sobreposição com outro e jornada emendada longa. */
+  function avisosPlantao(p) {
+    const out = [];
+    if (!p || !p.data) return out;
+    const conf = PL().conflitos(p);
+    if (conf.length) out.push(`Bate no horário de ${conf.map(o => { const l = o.localId ? PL().local(o.localId) : null; return (l ? l.nome : 'outro plantão') + ' (' + U.fmtDate(o.data) + ' ' + (o.inicio || '') + '–' + (o.fim || '') + ')'; }).join(', ')}.`);
+    const lista = S.col('plantoes').filter(o => !p.id || o.id !== p.id).concat([p]);
+    const j = PL().jornadas(lista).find(x => x.plantoes.indexOf(p) >= 0);
+    if (j && j.plantoes.length > 1 && j.minutos >= 1440) out.push(`Emendado com outro plantão: ${PL().fmtDuracao(j.minutos)} seguidas, com menos de 1 hora de folga entre eles.`);
+    return out;
+  }
+
+  /** Caixa do resultado: valor grande, a conta aberta e os avisos. */
+  function caixaResultado(v, avisos) {
+    return `<div class="big">${esc(PL().moeda(v.liquido))}</div><div>valor do plantão${v.min != null ? ' · ' + esc(PL().fmtDuracao(v.min)) + ' trabalhadas' : ''}</div>
+      <div class="formula">${PL().contaAberta(v).map(esc).join('\n')}</div>
+      ${(avisos || []).map(a => `<div class="alert amber" style="margin:.5rem 0 0"><strong>Atenção</strong>${esc(a)}</div>`).join('')}`;
+  }
 
   function formPlantao(p) {
     p = p || {};
@@ -1542,6 +1763,9 @@ window.PED = window.PED || {};
     const v = PL().valores(p);
     const l = p.localId ? PL().local(p.localId) : null;
     const forma = p.forma || (l && l.forma) || 'hora';
+    const fer = p.data ? PL().feriadoEm(p.data, true) : null;
+    const detalhesUsados = (p.feriado && p.feriado !== 'auto') || (p.tipo && p.tipo !== 'normal') || p.acrescimo || p.desconto || p.dataPagamento || p.valorPago != null || p.obs;
+    const toggles = (nome, opcoes, atual) => `<div class="toggles" data-escolha="${nome}">${opcoes.map(o => `<span class="toggle ${atual === o.id ? 'on' : ''}" data-v="${o.id}">${esc(o.rotulo)}</span>`).join('')}<input type="hidden" name="${nome}" value="${esc(atual)}"></div>`;
     return `<form id="formPlantao" class="card" data-id="${esc(p.id || '')}">
       <div class="fields">
         <div class="field full"><label>Local</label><div class="toggles" data-escolha="localId">
@@ -1550,35 +1774,43 @@ window.PED = window.PED || {};
 
         <div class="field"><label>Data <small class="muted">(digite)</small></label>
           <input data-tipo="data" data-iso="isoPlantao" value="${E ? E.deISO(p.data || U.today()) : ''}" autocomplete="off">
-          <input type="hidden" name="data" id="isoPlantao" value="${esc(p.data || U.today())}"></div>
-        <div class="field"><label>Entrada</label><input class="hora" name="inicio" inputmode="numeric" maxlength="5" value="${esc(p.inicio || '')}" placeholder="19:00"></div>
-        <div class="field"><label>Saída</label><input class="hora" name="fim" inputmode="numeric" maxlength="5" value="${esc(p.fim || '')}" placeholder="07:00"></div>
-        <div class="field"><label>Duração</label><input id="duracaoCalc" disabled value="${esc(PL().fmtDuracao(v.min))}"></div>
+          <input type="hidden" name="data" id="isoPlantao" value="${esc(p.data || U.today())}">
+          <small class="muted" id="feriadoInfo">${fer ? '🎉 ' + esc(fer.nome) + (fer.tipo === 'facultativo' ? ' (ponto facultativo)' : '') : ''}</small></div>
 
-        <div class="field full"><label>Forma</label><div class="toggles" data-escolha="forma">
-          <span class="toggle ${forma === 'hora' ? 'on' : ''}" data-v="hora">Por hora</span>
-          <span class="toggle ${forma === 'fixo' ? 'on' : ''}" data-v="fixo">Valor fechado</span>
-          <input type="hidden" name="forma" value="${esc(forma)}"></div></div>
+        <div class="field full"><label>Horário</label>
+          <div class="toggles">${PADROES_HORARIO.map(x => `<span class="toggle chipHorario ${p.inicio === x.i && p.fim === x.f ? 'on' : ''}" data-i="${x.i}" data-f="${x.f}">${x.r}</span>`).join('')}</div></div>
+        <div class="field"><label>Entrada</label><input class="hora" name="inicio" inputmode="numeric" maxlength="5" value="${esc(p.inicio || '')}" placeholder="19:10"></div>
+        <div class="field"><label>Saída</label><input class="hora" name="fim" inputmode="numeric" maxlength="5" value="${esc(p.fim || '')}" placeholder="07:40"></div>
+        <div class="field"><label>Ou só a duração <small class="muted">(sem horário)</small></label><input name="duracao" value="${esc(p.duracao || '')}" placeholder="6h40, 6,5 ou 40min" autocomplete="off"></div>
+        <div class="field"><label>Intervalo não pago <small class="muted">(min)</small></label><input type="number" inputmode="numeric" name="intervalo" value="${p.intervalo != null ? p.intervalo : ''}" placeholder="${l && l.intervaloMin ? l.intervaloMin + ' (do local)' : '0'}"></div>
+
+        <div class="field full"><label>Forma</label>${toggles('forma', [{ id: 'hora', rotulo: 'Por hora' }, { id: 'fixo', rotulo: 'Valor fechado' }], forma)}</div>
         <div class="field"><label>Valor da hora (R$)</label><input type="number" inputmode="decimal" step="0.01" name="valorHora" value="${p.valorHora != null ? p.valorHora : (l && l.valorHora != null ? l.valorHora : '')}"></div>
         <div class="field"><label>Valor fechado (R$)</label><input type="number" inputmode="decimal" step="0.01" name="valorFixo" value="${p.valorFixo != null ? p.valorFixo : (l && l.valorFixo != null ? l.valorFixo : '')}"></div>
-        <div class="field"><label>Acréscimo (R$)</label><input type="number" inputmode="decimal" step="0.01" name="acrescimo" value="${p.acrescimo != null ? p.acrescimo : ''}" placeholder="feriado, extra"></div>
-        <div class="field"><label>Desconto (R$)</label><input type="number" inputmode="decimal" step="0.01" name="desconto" value="${p.desconto != null ? p.desconto : ''}" placeholder="imposto, taxa"></div>
-
-        <div class="field full"><label>Situação</label><div class="toggles" data-escolha="status">
-          ${PL().STATUS.map(st => `<span class="toggle ${(p.status || 'previsto') === st.id ? 'on' : ''}" data-v="${st.id}">${esc(st.rotulo)}</span>`).join('')}
-          <input type="hidden" name="status" value="${esc(p.status || 'previsto')}"></div></div>
+      </div>
+      <div id="resumoPlantao" class="result">${caixaResultado(v, avisosPlantao(p))}</div>
+      <div class="fields">
+        <div class="field full"><label>Situação</label>${toggles('status', PL().STATUS, p.status || 'previsto')}</div>
+      </div>
+      <details class="maisDetalhes" ${detalhesUsados ? 'open' : ''}><summary>Mais detalhes <small class="muted">feriado, tipo, acréscimo, pagamento, observação</small></summary>
+      <div class="fields" style="margin-top:.5rem">
+        <div class="field full"><label>Feriado</label>${toggles('feriado', [{ id: 'auto', rotulo: 'Pelo calendário' }, { id: 'sim', rotulo: 'É feriado' }, { id: 'nao', rotulo: 'Não é feriado' }], p.feriado || 'auto')}</div>
+        <div class="field full"><label>Tipo</label>${toggles('tipo', PL().TIPOS, p.tipo || 'normal')}</div>
+        <div class="field"><label>Acréscimo (R$)</label><input type="number" inputmode="decimal" step="0.01" name="acrescimo" value="${p.acrescimo != null ? p.acrescimo : ''}" placeholder="bônus, produção"></div>
+        <div class="field"><label>Desconto (R$)</label><input type="number" inputmode="decimal" step="0.01" name="desconto" value="${p.desconto != null ? p.desconto : ''}" placeholder="taxa, glosa"></div>
         <div class="field"><label>Pago em <small class="muted">(digite)</small></label>
           <input data-tipo="data" data-iso="isoPago" value="${E && p.dataPagamento ? E.deISO(p.dataPagamento) : ''}" autocomplete="off">
           <input type="hidden" name="dataPagamento" id="isoPago" value="${esc(p.dataPagamento || '')}"></div>
-        <div class="field"><label>Valor recebido (R$)</label><input type="number" inputmode="decimal" step="0.01" name="valorPago" value="${p.valorPago != null ? p.valorPago : ''}" placeholder="se diferente"></div>
-        <div class="field full"><label>Observação</label><input name="obs" value="${esc(p.obs || '')}"></div>
-      </div>
-      <div id="resumoPlantao" class="result"><div class="big">${esc(PL().moeda(v.liquido))}</div><div>valor do plantão</div><div class="formula">${esc(v.base)}</div></div>
+        <div class="field"><label>Valor recebido (R$)</label><input type="number" inputmode="decimal" step="0.01" name="valorPago" value="${p.valorPago != null ? p.valorPago : ''}" placeholder="se veio diferente"></div>
+        <div class="field full"><label>Observação</label><input name="obs" value="${esc(p.obs || '')}" placeholder="troca com fulana, cobri a escala de…"></div>
+      </div></details>
       <div class="btnrow"><button class="btn" type="submit">💾 Salvar</button>
-        ${p.id ? `<button type="button" class="btn secondary" data-act="duplicarPlantao" data-id="${p.id}">Duplicar</button><button type="button" class="btn ghost" data-act="excluirPlantao" data-id="${p.id}">Excluir</button>` : ''}
+        ${p.id ? `<button type="button" class="btn secondary" data-act="duplicarPlantao" data-id="${p.id}">Repetir na semana seguinte</button><button type="button" class="btn ghost" data-act="excluirPlantao" data-id="${p.id}">Excluir</button>` : ''}
         <a class="btn ghost" href="#/plantoes">Cancelar</a></div>
+      <p class="muted"><small>Regras do local (intervalo, arredondamento, noturno, fim de semana, feriado, retenção) ficam em <a href="#/plantoes/locais">Locais e valores</a>.</small></p>
     </form>`;
   }
+
   route('/plantoes/novo', (params, q) => `<h1>Lançar plantão</h1>${formPlantao(q.data ? { data: q.data } : {})}`);
   route('/plantoes/:id', ({ id }) => { const p = S.byId('plantoes', id); if (!p) return '<div class="empty">Plantão não encontrado.</div>'; return `<h1>Plantão</h1>${formPlantao(p)}`; });
 
@@ -2253,11 +2485,33 @@ window.PED = window.PED || {};
       }));
       const recalc = () => {
         const d = formData(fpl);
+        if (fpl.dataset.id) d.id = fpl.dataset.id;
         const v = PED.plantao.valores(d);
-        const dc = $('#duracaoCalc'); if (dc) dc.value = PED.plantao.fmtDuracao(v.min);
         const box = $('#resumoPlantao');
-        if (box) box.innerHTML = `<div class="big">${esc(PED.plantao.moeda(v.liquido))}</div><div class="formula">${esc(v.base)}${v.acrescimo ? ' + ' + PED.plantao.moeda(v.acrescimo) : ''}${v.desconto ? ' − ' + PED.plantao.moeda(v.desconto) : ''}</div>`;
+        if (box) box.innerHTML = caixaResultado(v, avisosPlantao(d));
+        const fi = $('#feriadoInfo');
+        if (fi) { const fr = d.data ? PED.plantao.feriadoEm(d.data, true) : null; fi.textContent = fr ? '🎉 ' + fr.nome + (fr.tipo === 'facultativo' ? ' (ponto facultativo)' : '') : ''; }
+        $$('.chipHorario', fpl).forEach(c => c.classList.toggle('on', c.dataset.i === d.inicio && c.dataset.f === d.fim));
       };
+      $$('.chipHorario', fpl).forEach(c => c.addEventListener('click', () => {
+        fpl.querySelector('[name="inicio"]').value = c.dataset.i;
+        fpl.querySelector('[name="fim"]').value = c.dataset.f;
+        fpl.querySelector('[name="duracao"]').value = '';
+        recalc();
+      }));
+      // ao trocar de local, os valores padrão acompanham — a menos que já tenham sido mudados à mão
+      const campoLocal = fpl.querySelector('[name="localId"]');
+      let localAnterior = campoLocal.value;
+      campoLocal.addEventListener('input', () => {
+        const antes = PED.plantao.local(localAnterior) || {}, agora = PED.plantao.local(campoLocal.value) || {};
+        for (const k of ['valorHora', 'valorFixo']) {
+          const c = fpl.querySelector('[name="' + k + '"]');
+          if (c && (c.value === '' || Number(c.value) === Number(antes[k]))) c.value = agora[k] != null ? agora[k] : '';
+        }
+        const iv = fpl.querySelector('[name="intervalo"]');
+        if (iv) iv.placeholder = agora.intervaloMin ? agora.intervaloMin + ' (do local)' : '0';
+        localAnterior = campoLocal.value;
+      });
       fpl.addEventListener('input', recalc);
       fpl.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -2267,8 +2521,10 @@ window.PED = window.PED || {};
         const numero = (x) => x === '' || x == null ? null : Number(x);
         const obj = Object.assign({}, prev || {}, d, {
           valorHora: numero(d.valorHora), valorFixo: numero(d.valorFixo),
-          acrescimo: numero(d.acrescimo), desconto: numero(d.desconto), valorPago: numero(d.valorPago)
+          acrescimo: numero(d.acrescimo), desconto: numero(d.desconto), valorPago: numero(d.valorPago), intervalo: numero(d.intervalo)
         });
+        if (!obj.inicio && !obj.fim && !obj.duracao) { U.toast('Informe o horário ou a duração'); return; }
+        if (obj.duracao && PED.plantao.lerDuracao(obj.duracao) == null) { U.toast('Duração não entendida: use 6h40, 6,5 ou 40min'); return; }
         if (!fpl.dataset.id) delete obj.id;
         S.upsert('plantoes', obj);
         U.toast('Plantão salvo');
@@ -2276,15 +2532,103 @@ window.PED = window.PED || {};
       });
       recalc();
     }
+    $$('.formLocal .hora', main).forEach(h => h.addEventListener('input', () => { h.value = PED.plantao.mascararHora(h.value); }));
+    ligarFerramentasPlantao(main);
     $$('.formLocal', main).forEach(fl => fl.addEventListener('submit', (e) => {
       e.preventDefault();
       const d = formData(fl); const prev = S.byId('locaisTrabalho', fl.dataset.id);
       const numero = (x) => x === '' || x == null ? null : Number(x);
-      S.upsert('locaisTrabalho', Object.assign({}, prev, d, { id: fl.dataset.id, valorHora: numero(d.valorHora), valorFixo: numero(d.valorFixo), cargaHoras: numero(d.cargaHoras), diaPagamento: numero(d.diaPagamento) }));
+      const nums = {};
+      ['valorHora', 'valorFixo', 'cargaHoras', 'diaPagamento', 'intervaloMin', 'arredondamento', 'noturnoPct', 'fdsPct', 'feriadoPct', 'retencaoPct'].forEach(k => { nums[k] = numero(d[k]); });
+      S.upsert('locaisTrabalho', Object.assign({}, prev, d, nums, { id: fl.dataset.id }));
       U.toast('Local salvo'); render();
     }));
     // Importar
     const imp = $('#importFile'); if (imp) imp.addEventListener('change', () => { const fr = new FileReader(); fr.onload = () => { try { S.importJSON(fr.result); U.toast('Dados importados'); render(); } catch (e) { alert('Arquivo inválido: ' + e.message); } }; fr.readAsText(imp.files[0]); });
+  }
+
+  /** Liga os formulários da tela de ferramentas de plantão. */
+  function ligarFerramentasPlantao(main) {
+    const PLx = PED.plantao;
+    const horarios = (form, depois) => {
+      if (PED.entrada) PED.entrada.ligar(form);
+      $$('.hora', form).forEach(h => h.addEventListener('input', () => { h.value = PLx.mascararHora(h.value); }));
+      $$('.chipHorario', form).forEach(c => c.addEventListener('click', () => {
+        form.querySelector('[name="inicio"]').value = c.dataset.i;
+        form.querySelector('[name="fim"]').value = c.dataset.f;
+        const dur = form.querySelector('[name="duracao"]'); if (dur) dur.value = '';
+        $$('.chipHorario', form).forEach(x => x.classList.toggle('on', x === c));
+        if (depois) depois();
+      }));
+    };
+    // calculadora rápida
+    const fc = $('#formCalcPlantao');
+    if (fc) {
+      const calcular = () => {
+        const d = formData(fc);
+        if (d.valorFixo) d.forma = 'fixo';
+        const numero = (x) => x === '' || x == null ? null : Number(x);
+        d.valorHora = numero(d.valorHora); d.valorFixo = numero(d.valorFixo); d.intervalo = numero(d.intervalo);
+        const v = PLx.valores(d);
+        const box = $('#resultadoCalc');
+        if (!box) return;
+        if (v.min == null) { box.innerHTML = '<div class="muted">Preencha o horário ou a duração.</div>'; return; }
+        box.innerHTML = caixaResultado(v) + (v.forma === 'fixo' && v.valorHoraEfetivo ? '' : (v.minPagos ? `<div class="muted" style="margin-top:.4rem"><small>Equivale a ${esc(PLx.moeda(v.liquido / (v.minPagos / 60)))} por hora paga, contando os adicionais.</small></div>` : ''));
+      };
+      horarios(fc, calcular);
+      fc.addEventListener('input', calcular);
+      fc.addEventListener('change', calcular);
+      calcular();
+    }
+    // conversor de horas
+    const fv = $('#formConverte');
+    if (fv) {
+      const conv = () => {
+        const t = (formData(fv).t || '').trim();
+        const out = $('#resultadoConverte');
+        const min = PLx.lerDuracao(t);
+        out.textContent = min == null ? (t ? 'Não entendi: use 7h20, 7,33 ou 440min.' : '7h20 = 7,33 h = 440 min')
+          : `${PLx.fmtDuracao(min)} = ${PLx.fmtDecimal(min)} = ${min} min`;
+      };
+      fv.addEventListener('input', conv);
+      fv.addEventListener('submit', (e) => e.preventDefault());
+    }
+    // escala
+    const fe = $('#formEscala');
+    if (fe) {
+      horarios(fe);
+      const modo = fe.querySelector('[name="modo"]');
+      const dias = $('#diasSemana');
+      const mostrar = () => { if (dias) dias.style.display = modo.value === 'semana' || !modo.value ? '' : 'none'; };
+      modo.addEventListener('input', mostrar); mostrar();
+      $$('#diasSemana label.toggle', fe).forEach(lb => lb.addEventListener('click', (e) => {
+        e.preventDefault();
+        const cb = lb.querySelector('input'); cb.checked = !cb.checked; lb.classList.toggle('on', cb.checked);
+      }));
+      fe.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const d = formData(fe);
+        const escolhidos = $$('input[name="dia"]', fe).filter(c => c.checked).map(c => Number(c.value));
+        if (!d.inicio || !d.fim) { U.toast('Informe a entrada e a saída'); return; }
+        if (!d.de || !d.ate) { U.toast('Informe o período'); return; }
+        const cfg = { localId: d.localId, inicio: d.inicio, fim: d.fim, de: d.de, ate: d.ate };
+        if (d.modo && d.modo !== 'semana') cfg.aCada = Number(d.modo);
+        else { if (!escolhidos.length) { U.toast('Escolha pelo menos um dia da semana'); return; } cfg.dias = escolhidos; }
+        escalaPrevia = PLx.gerarEscala(cfg);
+        render();
+      });
+    }
+    // meta
+    const fm = $('#formMeta');
+    if (fm) fm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const d = formData(fm); const n = (x) => x ? Number(x) : null;
+      S.pref('metaPlantao', { valor: n(d.valor), horas: n(d.horas), limiteHoras: n(d.limiteHoras) });
+      U.toast('Meta salva'); render();
+    });
+    // texto de cobrança por local
+    const cl = $('#cobrarLocal');
+    if (cl) cl.addEventListener('change', () => go('/plantoes/ferramentas?aba=cobrar&ano=' + cl.dataset.ano + '&mes=' + cl.dataset.mes + (cl.value ? '&local=' + cl.value : '')));
   }
 
   // Delegação de cliques por data-act
@@ -2367,6 +2711,33 @@ window.PED = window.PED || {};
         copia.data = d.toISOString().slice(0, 10);
         const novo = S.upsert('plantoes', copia);
         U.toast('Duplicado para a semana seguinte'); go('/plantoes/' + novo.id);
+      },
+      confirmarEscala() {
+        const lista = (escalaPrevia || []).filter(x => !PED.plantao.conflitos(x).length);
+        lista.forEach(x => S.upsert('plantoes', x));
+        escalaPrevia = null;
+        U.toast(lista.length + ' plantão(ões) lançado(s)');
+        const pr = lista[0];
+        go(pr ? '/plantoes?ano=' + pr.data.slice(0, 4) + '&mes=' + Number(pr.data.slice(5, 7)) : '/plantoes');
+      },
+      descartarEscala() { escalaPrevia = null; render(); },
+      marcarPagosLocal() {
+        const ano = Number(el.dataset.ano), mes = Number(el.dataset.mes);
+        const l = PED.plantao.local(el.dataset.l);
+        const pend = PED.plantao.doMes(ano, mes).filter(p => p.localId === el.dataset.l && (p.status || 'previsto') !== 'pago');
+        const soma = pend.reduce((a, p) => a + PED.plantao.valores(p).liquido, 0);
+        if (!confirm(`Marcar ${pend.length} plantão(ões) de ${l ? l.nome : ''} como pagos hoje, total de ${PED.plantao.moeda(soma)}?`)) return;
+        const r = PED.plantao.marcarPagos(ano, mes, el.dataset.l, U.today());
+        U.toast(r.plantoes + ' plantão(ões) marcados como pagos'); render();
+      },
+      marcarRealizados() {
+        const ano = Number(el.dataset.ano), mes = Number(el.dataset.mes);
+        const ps = PED.plantao.doMes(ano, mes).filter(p => (p.status || 'previsto') === 'previsto' && p.data < U.today());
+        ps.forEach(p => S.upsert('plantoes', Object.assign({}, p, { status: 'realizado' })));
+        U.toast(ps.length + ' plantão(ões) marcados como realizados'); render();
+      },
+      compartilharTexto() {
+        if (navigator.share) navigator.share({ text: el.dataset.t }).catch(() => {});
       },
       exportarPlantoes() {
         const csv = PED.plantao.csvMes(Number(el.dataset.ano), Number(el.dataset.mes));

@@ -1,6 +1,6 @@
-/* Mucurinha – apoio à decisão clínica pediátrica */
+/* PedTudo – apoio à decisão clínica pediátrica */
 :root {
-  /* Paleta da marca Mucurinha: azul-marinho do título, verde-sálvia e coral */
+  /* Paleta da marca (mascote Mucurinha): azul-marinho do título, verde-sálvia e coral */
   --bg: #ffffff;
   --bg-soft: #f6f7fb;
   --card: #ffffff;
@@ -271,6 +271,8 @@ details .body { padding: .3rem 0 .4rem; font-size: .93rem; }
 .tabs { display: flex; gap: .3rem; overflow-x: auto; margin-bottom: .8rem; border-bottom: 1px solid var(--line); }
 .tabs button { flex: 0 0 auto; background: none; border: none; border-bottom: 3px solid transparent; padding: .55rem .8rem; font: inherit; font-weight: 600; color: var(--muted); cursor: pointer; }
 .tabs button.active { color: var(--primary-dark); border-color: var(--primary); }
+.tabs a { flex: 0 0 auto; border-bottom: 3px solid transparent; padding: .55rem .8rem; font-weight: 600; color: var(--muted); }
+.tabs a.active { color: var(--primary-dark); border-color: var(--primary); }
 
 .section-title { display:flex; align-items:center; justify-content:space-between; gap:.6rem; margin: 1rem 0 .5rem; }
 .section-title h2 { margin: 0; }
@@ -473,3 +475,15 @@ details.quiz summary { font-weight: 600; }
 .tile.acao.verde { border-color: #bfe5d0; background: var(--green-soft); }
 .faixaPlantao { border: 1px solid var(--line); border-radius: 12px; background: var(--card); margin: .6rem 0; }
 @media (min-width: 640px) { .gridAcao { grid-template-columns: repeat(4, 1fr); } }
+
+/* Plantões: feriado, conflito, ferramentas */
+.calFeriado { color: var(--amber); font-weight: 900; margin-left: 1px; }
+.calDia.conflito { border-color: var(--red); box-shadow: inset 0 0 0 1px var(--red); }
+.abasRolam { overflow-x: auto; flex-wrap: nowrap; white-space: nowrap; scrollbar-width: none; }
+.abasRolam::-webkit-scrollbar { display: none; }
+.abasRolam a { flex: 0 0 auto; text-decoration: none; }
+.regrasLocal { margin-top: .6rem; border: 1px dashed var(--line); border-radius: 10px; padding: .4rem .7rem; }
+.regrasLocal summary { cursor: pointer; font-weight: 600; }
+#diasSemana label.toggle { cursor: pointer; }
+.maisDetalhes { margin: .4rem 0 .6rem; border-top: 1px dashed var(--line); padding-top: .5rem; }
+.maisDetalhes summary { cursor: pointer; font-weight: 600; }

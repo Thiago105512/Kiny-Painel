@@ -73,14 +73,31 @@ Os plantões vão para o calendário de duas formas: um arquivo `.ics`, que entr
 
 ## Plantões
 
-Aba para registrar cada plantão e acompanhar o que entra no mês.
+Aba para registrar cada plantão e acompanhar o que entra no mês. Fica na barra de baixo, sempre a um toque.
 
-- **Locais de trabalho** com valor da hora ou valor fechado, carga habitual e dia de pagamento. Hapvida e CardioBaby já vêm cadastrados.
-- **Lançamento em poucos toques**: local em botão, data digitada, entrada e saída aceitando 19 ou 1900, e a duração calculada na hora. Plantão noturno atravessa a meia-noite sem precisar avisar.
-- **Situação de cada plantão**: previsto, realizado, faturado ou pago, com data de pagamento e valor recebido quando diferente do previsto.
-- **Calendário do mês inteiro**, que é a primeira coisa que aparece ao abrir o aplicativo. Cada dia mostra os plantões por cor de local e as horas do dia; tocar num dia abre o que está marcado e permite lançar ali.
-- **Painel do mês** com horas trabalhadas, previsão do total, quanto já foi recebido e quanto falta receber, mais a divisão por local e os últimos seis meses.
-- **Agenda** dos plantões futuros, duplicação de um plantão para a semana seguinte e exportação da planilha do mês para a contabilidade.
+**Horas quebradas.** As contas são feitas minuto a minuto. Um plantão das 19h10 às 7h40 dá 12h30, que viram 12,5 h na conta do dinheiro, e a conta aparece aberta embaixo do valor, como nas doses de medicação. Dá para lançar só a duração ("6h40", "6,5", "40min") quando não se sabe o horário, e 7h às 7h vira um plantão de 24 horas.
+
+**Regras de cada local**, recolhidas numa seção própria para não atrapalhar quem não usa:
+- intervalo não pago (descontado das horas pagas);
+- arredondamento combinado com o contratante: de 15 em 15, de 30 em 30 ou hora cheia, para cima, para baixo ou para o mais próximo;
+- adicional noturno, com a janela configurável (22h às 5h por padrão) — só os minutos dentro dela recebem;
+- adicional de fim de semana (sábado e domingo, ou só domingo) e de feriado — no mesmo minuto não se somam, vale o maior; o noturno soma com qualquer um;
+- retenção estimada (impostos, taxa), para ver o que chega na mão.
+
+**Feriados** nacionais, do Amazonas e de Manaus entram sozinhos na conta, inclusive as datas móveis calculadas a partir da Páscoa. Um plantão de 24/12 às 19h até 25/12 às 7h recebe o adicional só nas horas depois da meia-noite. Pontos facultativos aparecem, mas só contam se forem marcados no plantão; em outra cidade, marca-se à mão.
+
+**Lançamento em poucos toques**: local em botão, data digitada, horários prontos (07–19, 19–07, 07–13, 13–19, 19–01, 24 h), valor do local já preenchido, e o que é raro (feriado manual, tipo troca/cobertura/extra, acréscimo, pagamento, observação) recolhido em "mais detalhes". O formulário avisa na hora se o plantão bate no horário de outro ou se fica emendado com outro em 24 horas ou mais.
+
+**Ferramentas**:
+- **Calcular** — quanto vale um plantão sem lançar nada, e quanto a hora sai de verdade num valor fechado; conversor de horas (7h20 = 7,33 h = 440 min).
+- **Escala** — lança o mês de uma vez por dias da semana ou em 12x36, 24x48 e 24x72, com prévia e conflitos marcados antes de confirmar.
+- **Receber** — marca como pagos, de uma vez, os plantões de um local no mês; mostra a data prevista de pagamento e aponta o que veio diferente do previsto.
+- **Cobrar** — o texto do mês, dia a dia com horário, horas e valor, pronto para colar no WhatsApp ou no e-mail do setor.
+- **Meta** — quanto quer fazer (em reais ou horas) e um limite de horas para não passar, com a estimativa de quantos plantões faltam.
+- **Alertas** — horários sobrepostos, jornadas emendadas, plantões passados ainda como "previsto" e os que estão sem valor.
+- **Feriados** — o calendário do ano, com o tipo de cada um.
+
+**Calendário do mês**, com os plantões por cor de local, as horas do dia, os feriados marcados e os dias com conflito em vermelho; **painel do mês** com horas, previsão, recebido, a receber, adicionais e o valor estimado na mão; divisão por local e por pessoa; últimos seis meses; planilha do mês para a contabilidade.
 
 ## Uso rápido
 

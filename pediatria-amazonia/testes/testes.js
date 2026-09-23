@@ -435,6 +435,162 @@ t('Paleta dos locais é a validada e não se repete antes de 8', () => {
   eq(PL.corLocal(0), PL.corLocal(8), 'o nono local reaproveita a primeira cor:');
 });
 
+/* ---------- 9b. Horas quebradas e ferramentas de plantão ---------- */
+function localCom(extra) {
+  PED.store.reset();
+  return PED.store.upsert('locaisTrabalho', Object.assign({ nome: 'Hapvida', corIdx: 0, forma: 'hora', valorHora: 150 }, extra || {}));
+}
+t('Duração digitada direto aceita as formas comuns', () => {
+  eq(PL.lerDuracao('6h40'), 400); eq(PL.lerDuracao('6:40'), 400); eq(PL.lerDuracao('6,5'), 390);
+  eq(PL.lerDuracao('6.5h'), 390); eq(PL.lerDuracao('40min'), 40); eq(PL.lerDuracao('12'), 720);
+  eq(PL.lerDuracao('12h'), 720); eq(PL.lerDuracao('abc'), null); eq(PL.lerDuracao(''), null);
+});
+t('Hora com "h" no meio é entendida', () => { eq(PL.lerHora('7h20'), 440); eq(PL.lerHora('19h'), 1140); });
+t('Hora quebrada vira dinheiro sem arredondar escondido', () => {
+  const l = localCom();
+  const v = PL.valores({ localId: l.id, data: '2026-09-23', inicio: '19:10', fim: '07:40' });
+  eq(v.min, 750); eq(v.liquido, 1875);             // 12h30 = 12,5 h × 150
+  if (!/12h30 = 12,5 h/.test(v.base)) throw new Error('a conta não mostra as horas decimais: ' + v.base);
+});
+t('Plantão de 24 horas (entrada e saída no mesmo horário)', () => { eq(PL.duracaoMin('07:00', '07:00'), 1440); });
+t('Intervalo não pago sai das horas pagas', () => {
+  const l = localCom({ intervaloMin: 60 });
+  const v = PL.valores({ localId: l.id, data: '2026-09-23', inicio: '07:00', fim: '19:00' });
+  eq(v.min, 720, 'trabalhadas:'); eq(v.minPagos, 660, 'pagas:'); eq(v.liquido, 1650);
+});
+t('Intervalo do plantão vale mais que o padrão do local', () => {
+  const l = localCom({ intervaloMin: 60 });
+  eq(PL.valores({ localId: l.id, data: '2026-09-23', inicio: '07:00', fim: '19:00', intervalo: 0 }).minPagos, 720);
+});
+t('Arredondamento combinado com o contratante', () => {
+  eq(PL.arredondar(727, 15, 'proximo'), 720); eq(PL.arredondar(728, 15, 'proximo'), 735);
+  eq(PL.arredondar(721, 15, 'cima'), 735); eq(PL.arredondar(734, 15, 'baixo'), 720);
+  eq(PL.arredondar(727, 0), 727, 'sem regra, nada muda:');
+  const l = localCom({ arredondamento: 30, arredModo: 'cima' });
+  eq(PL.valores({ localId: l.id, data: '2026-09-23', inicio: '07:00', fim: '19:05' }).minPagos, 750);
+});
+t('Adicional noturno conta só os minutos entre 22h e 5h', () => {
+  const l = localCom({ noturnoPct: 20 });
+  const v = PL.valores({ localId: l.id, data: '2026-09-23', inicio: '19:00', fim: '07:00' });
+  eq(v.reparticao.noturno, 420); perto(v.somaAdicionais, 210); perto(v.liquido, 2010);
+  const v2 = PL.valores({ localId: l.id, data: '2026-09-23', inicio: '20:30', fim: '23:15' });
+  eq(v2.reparticao.noturno, 75, 'noturno parcial:');
+});
+t('Janela noturna configurável por local', () => {
+  const l = localCom({ noturnoPct: 20, noturnoInicio: '19:00', noturnoFim: '07:00' });
+  eq(PL.valores({ localId: l.id, data: '2026-09-23', inicio: '19:00', fim: '07:00' }).reparticao.noturno, 720);
+});
+t('Feriado que começa à meia-noite no meio do plantão', () => {
+  const l = localCom({ feriadoPct: 100 });
+  const v = PL.valores({ localId: l.id, data: '2026-12-24', inicio: '19:00', fim: '07:00' });
+  eq(v.reparticao.feriado, 420, 'só da meia-noite às 7h é Natal:');
+  perto(v.somaAdicionais, 1050);
+  if (!/Natal/.test(v.adicionais[0].rotulo)) throw new Error('o adicional não diz qual feriado');
+});
+t('Fim de semana e feriado no mesmo minuto: vale o maior, sem somar', () => {
+  // 5 de setembro de 2026 é sábado e feriado estadual no Amazonas
+  eq(new Date('2026-09-05T12:00:00').getDay(), 6);
+  const l = localCom({ fdsPct: 30, feriadoPct: 100 });
+  const v = PL.valores({ localId: l.id, data: '2026-09-05', inicio: '07:00', fim: '19:00' });
+  eq(v.adicionais.length, 1); eq(v.adicionais[0].pct, 100); perto(v.somaAdicionais, 1800);
+});
+t('Noturno soma com o fim de semana', () => {
+  const l = localCom({ fdsPct: 30, noturnoPct: 20 });
+  const v = PL.valores({ localId: l.id, data: '2026-09-26', inicio: '19:00', fim: '07:00' });   // sábado para domingo
+  eq(v.adicionais.length, 2);
+  perto(v.somaAdicionais, 210 + 540);                  // 7 h noturnas a 20% + 12 h de fim de semana a 30%
+});
+t('Feriado marcado à mão vale no plantão inteiro; "não é feriado" desliga', () => {
+  const l = localCom({ feriadoPct: 50 });
+  eq(PL.valores({ localId: l.id, data: '2026-09-23', inicio: '07:00', fim: '13:00', feriado: 'sim' }).reparticao.feriado, 360);
+  eq(PL.valores({ localId: l.id, data: '2026-12-25', inicio: '07:00', fim: '13:00', feriado: 'nao' }).reparticao.feriado, 0);
+});
+t('Datas móveis: Páscoa, Paixão, Carnaval e Corpus Christi de 2026', () => {
+  eq(PL.isoDe(PL.pascoa(2026)), '2026-04-05');
+  eq(PL.feriadoEm('2026-04-03').nome, 'Sexta-feira da Paixão');
+  eq(PL.feriadoEm('2026-02-17'), null, 'Carnaval é ponto facultativo:');
+  eq(PL.feriadoEm('2026-02-17', true).tipo, 'facultativo');
+  eq(PL.feriadoEm('2026-06-04', true).nome, 'Corpus Christi');
+  eq(PL.feriadoEm('2026-10-24').tipo, 'municipal');
+  eq(PL.feriadoEm('2026-11-20').tipo, 'nacional');
+});
+t('Plantão só com a duração, sem horário', () => {
+  const l = localCom({ valorHora: 120 });
+  const v = PL.valores({ localId: l.id, data: '2026-09-23', duracao: '6h40' });
+  eq(v.min, 400); eq(v.liquido, 800);
+});
+t('Valor fechado mostra quanto a hora saiu de verdade', () => {
+  const l = localCom();
+  const v = PL.valores({ localId: l.id, data: '2026-09-23', inicio: '07:00', fim: '19:00', forma: 'fixo', valorFixo: 1500 });
+  eq(v.liquido, 1500); eq(v.valorHoraEfetivo, 125);
+});
+t('Retenção estimada do local sai do valor na mão', () => {
+  const l = localCom({ retencaoPct: 15 });
+  const v = PL.valores({ localId: l.id, data: '2026-09-23', inicio: '07:00', fim: '19:00' });
+  eq(v.liquido, 1800); perto(v.retencao, 270); perto(v.aposRetencao, 1530);
+});
+t('A conta aberta explica cada parcela', () => {
+  const l = localCom({ intervaloMin: 30, noturnoPct: 20, retencaoPct: 10 });
+  const linhas = PL.contaAberta(PL.valores({ localId: l.id, data: '2026-09-23', inicio: '19:00', fim: '07:00' }));
+  const txt = linhas.join(' | ');
+  for (const x of ['intervalo', 'Adicional noturno', 'retenção']) if (txt.indexOf(x) < 0) throw new Error('faltou "' + x + '" em: ' + txt);
+});
+t('Sobreposição de plantões é detectada; plantões encostados não', () => {
+  const l = localCom();
+  const a = PED.store.upsert('plantoes', { localId: l.id, data: '2026-10-01', inicio: '07:00', fim: '19:00' });
+  PED.store.upsert('plantoes', { localId: l.id, data: '2026-10-01', inicio: '19:00', fim: '07:00' });
+  eq(PL.conflitos(a).length, 0, 'encostados:');
+  PED.store.upsert('plantoes', { localId: l.id, data: '2026-10-01', inicio: '18:00', fim: '22:00' });
+  eq(PL.conflitos(a).length, 1, 'sobreposto:');
+});
+t('Jornada emendada de 24 h ou mais vira alerta', () => {
+  const l = localCom();
+  PED.store.upsert('plantoes', { localId: l.id, data: '2026-10-01', inicio: '07:00', fim: '19:00' });
+  PED.store.upsert('plantoes', { localId: l.id, data: '2026-10-01', inicio: '19:30', fim: '07:00' });
+  PED.store.upsert('plantoes', { localId: l.id, data: '2026-10-05', inicio: '07:00', fim: '19:00' });
+  const longas = PL.jornadasLongas();
+  eq(longas.length, 1); eq(longas[0].plantoes.length, 2); eq(longas[0].minutos, 1440);
+});
+t('Escala por dias da semana e escala 12x36', () => {
+  const tq = PL.gerarEscala({ de: '2026-10-01', ate: '2026-10-31', dias: [2, 4], inicio: '19:00', fim: '07:00' });
+  eq(tq.length, 9, 'terças e quintas de outubro de 2026:');
+  if (tq.some(x => [2, 4].indexOf(new Date(x.data + 'T12:00:00').getDay()) < 0)) throw new Error('dia fora da escala');
+  const dia = PL.gerarEscala({ de: '2026-10-01', ate: '2026-10-10', aCada: 2, inicio: '07:00', fim: '19:00' });
+  eq(dia.map(x => x.data.slice(8)).join(','), '01,03,05,07,09');
+  eq(PL.gerarEscala({ de: '2026-10-10', ate: '2026-10-01', dias: [1] }).length, 0, 'intervalo invertido:');
+});
+t('Pagamento em lote e diferença entre previsto e recebido', () => {
+  const l = localCom({ valorHora: 100 });
+  const outro = PED.store.upsert('locaisTrabalho', { nome: 'CardioBaby', corIdx: 1, forma: 'hora', valorHora: 100 });
+  PED.store.upsert('plantoes', { localId: l.id, data: '2026-10-02', inicio: '07:00', fim: '19:00' });
+  PED.store.upsert('plantoes', { localId: l.id, data: '2026-10-04', inicio: '07:00', fim: '13:00' });
+  PED.store.upsert('plantoes', { localId: outro.id, data: '2026-10-06', inicio: '07:00', fim: '13:00' });
+  const r = PL.marcarPagos(2026, 10, l.id, '2026-11-05');
+  eq(r.plantoes, 2); eq(r.valor, 1800);
+  let res = PL.resumoMes(2026, 10);
+  eq(res.pago, 1800); eq(res.aReceber, 600, 'o outro local continua a receber:');
+  const pago = PL.doMes(2026, 10).find(x => x.data === '2026-10-02');
+  PED.store.upsert('plantoes', Object.assign({}, pago, { valorPago: 1100 }));
+  res = PL.resumoMes(2026, 10);
+  eq(res.pago, 1700, 'recebido vale o que entrou de fato:');
+  eq(res.diferencas.length, 1); eq(res.diferencas[0].diferenca, -100);
+});
+t('Previsão de pagamento cai no mês seguinte e respeita o fim do mês', () => {
+  eq(PL.previsaoPagamento({ diaPagamento: 10 }, 2026, 9), '2026-10-10');
+  eq(PL.previsaoPagamento({ diaPagamento: 31 }, 2026, 1), '2026-02-28');
+  eq(PL.previsaoPagamento({ diaPagamento: 5 }, 2026, 12), '2027-01-05');
+  eq(PL.previsaoPagamento({}, 2026, 9), null);
+});
+t('Texto para cobrar traz cada plantão e o total', () => {
+  const l = localCom({ valorHora: 100 });
+  PED.store.upsert('plantoes', { localId: l.id, data: '2026-10-02', inicio: '07:00', fim: '19:00' });
+  PED.store.upsert('plantoes', { localId: l.id, data: '2026-10-04', inicio: '19:10', fim: '07:40' });
+  const txt = PL.textoCobranca(2026, 10, l.id);
+  if (!/outubro de 2026 – Hapvida/.test(txt)) throw new Error('cabeçalho: ' + txt.split('\n')[0]);
+  if (!/Total: 2 plantão\(ões\), 24h30/.test(txt)) throw new Error('total: ' + txt);
+  if (!/02\/10\/2026 \(sex\)/.test(txt)) throw new Error('linha do dia: ' + txt);
+});
+
 /* ---------- 10. Sincronização ---------- */
 const NV = PED.nuvem;
 t('Sem configuração, a sincronização fica desligada', () => eq(NV.configurado(), false));
