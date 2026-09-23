@@ -29,14 +29,14 @@ function filtrarQuestoes(F) {
     return true;
   });
 }
-function formFiltros(F, prefixo = "fq") {
+function formFiltros(F, prefixo = "fq", { rapidos = false } = {}) {
   const base = questoes().filter(q => !F.trilha || (F.trilha === "med" ? TRILHAS[q.t]?.dominio === "medicina" : q.t === F.trilha));
   const discs = ordenarPt(unicos(base.map(q => q.disc))), temasL = ordenarPt(unicos(base.map(q => q.tema)).filter(t => TEMAS[t]), nomeTema);
   const espL = ordenarPt(unicos(base.flatMap(q => [q.esp, ...(TEMAS[q.tema]?.especialidades || [])])).filter(e => ESPECIALIDADES[e]), e => ESPECIALIDADES[e].nome);
   const anos = unicos(base.map(q => q.ano)).sort(), provas = unicos(base.map(q => q.prova)), fontes = unicos(base.map(q => q.fonte || q.src));
   const sel = (c, lab, itens, vazioTxt = "Todas") => `<label class="campo"><span class="lab">${lab}</span><select data-chg="${prefixo}" data-c="${c}">${opcoes(itens, F[c], vazioTxt)}</select></label>`;
   return `<div class="campos">
-    ${sel("trilha", "Trilha", [["med", "Medicina (graduação + residência)"], ...Object.entries(TRILHAS).map(([k, v]) => [k, v.nome])])}
+    ${rapidos ? "" : sel("trilha", "Trilha", [["med", "Medicina (graduação + residência)"], ...Object.entries(TRILHAS).map(([k, v]) => [k, v.nome])])}
     ${sel("inst", "Instituição (via grade)", instituicoes().map(i => [i.id, i.sigla]))}
     ${sel("periodo", "Período", Array.from({ length: 12 }, (_, i) => [i + 1, i + 1 + "º"]), "Todos")}
     ${sel("disc", "Disciplina", discs.map(d => [d, d]))}
@@ -47,29 +47,37 @@ function formFiltros(F, prefixo = "fq") {
     ${sel("fonte", "Fonte", fontes.map(f => [f, { autoral: "Autoral (banco do app)", ia: "Gerada por IA", minha: "Minhas" }[f] || f]))}
     ${anos.length ? sel("ano", "Ano", anos.map(a => [a, a]), "Todos") : ""}${provas.length ? sel("prova", "Prova", provas.map(p => [p, p])) : ""}
     <label class="campo"><span class="lab">Texto</span><input type="search" value="${esc(F.texto)}" data-inp="${prefixo}-txt" placeholder="Palavra no enunciado"></label></div>
-    <div style="margin-top:10px"><span class="lab">Status</span><div class="chips">${STATUS_Q.map(([k, t]) => `<button class="chip" data-act="${prefixo}-st" data-v="${k}" aria-pressed="${F.status.includes(k)}">${t}</button>`).join("")}</div></div>
+    ${rapidos ? "" : `<div style="margin-top:10px"><span class="lab">Status</span><div class="chips">${STATUS_Q.map(([k, t]) => `<button class="chip" data-act="${prefixo}-st" data-v="${k}" aria-pressed="${F.status.includes(k)}">${t}</button>`).join("")}</div></div>`}
     ${F.inst && !temasDaInstituicao(F.inst).size ? `<p class="aviso" style="margin-top:10px">A instituição escolhida não tem matriz importada com temas vinculados (${PENDENTE}). Nenhuma questão pode ser associada a ela ainda.</p>` : ""}`;
 }
 MUDANCAS.fq = el => { FQ[el.dataset.c] = el.value; if (el.dataset.c === "tema") FQ.subtema = ""; if (el.dataset.c === "trilha") Object.assign(FQ, { disc: "", tema: "", subtema: "", esp: "" }); atualizar(); };
 ENTRADAS["fq-txt"] = el => { FQ.texto = el.value; atualizar(); const i = document.querySelector('[data-inp="fq-txt"]'); if (i) { i.focus(); i.setSelectionRange(i.value.length, i.value.length); } };
-ACOES["fq-st"] = el => { const k = el.dataset.v; FQ.status = FQ.status.includes(k) ? FQ.status.filter(x => x !== k) : [...FQ.status, k]; atualizar(); };
+ACOES["fq-st"] = el => { QPAG = 20; const k = el.dataset.v; FQ.status = FQ.status.includes(k) ? FQ.status.filter(x => x !== k) : [...FQ.status, k]; atualizar(); };
 ACOES["fq-limpar"] = () => { Object.assign(FQ, { trilha: "", inst: "", periodo: "", disc: "", esp: "", tema: "", subtema: "", dif: "", fonte: "", ano: "", prova: "", status: [], texto: "" }); atualizar(); };
 
+let QPAG = 20;
+const TRILHAS_RAPIDAS = [["", "Todas"], ["med", "Medicina"], ["enem", "ENEM"], ["direito", "Direito"], ["oab", "OAB"]];
+const STATUS_RAPIDOS = [["nao", "Não respondidas"], ["incorreta", "Erradas"], ["marcada", "Marcadas"], ["revisar", "Revisar"]];
 rota("/questoes", () => {
   if (playerAtivo("banco")) return { secao: "questoes", crumbs: [["Questões", "#/questoes"]], titulo: PL.rotulo || "Praticando", html: htmlPlayer(), ctx: { questao: PL.ids[PL.i], tema: qPorId(PL.ids[PL.i])?.tema } };
-  const qs = filtrarQuestoes(FQ), ativos = Object.entries(FQ).filter(([k, v]) => k !== "status" ? v : v.length).length;
+  const qs = filtrarQuestoes(FQ), extras = Object.entries(FQ).filter(([k, v]) => !["trilha", "status", "texto"].includes(k) && v).length;
   return {
-    secao: "questoes", titulo: "Questões", sub: `${questoes().length} no banco · ${qs.length} no filtro`,
-    acoes: `<a class="btn sec" href="#/erros">Caderno de erros</a><a class="btn sec" href="#/biblioteca/questoes">Minhas questões</a>`,
+    secao: "questoes", titulo: "Questões", sub: `${qs.length} de ${questoes().length}`,
     html: `${abas([["banco", "Banco"], ["erros", "Caderno de erros"]], "banco", "ir-aba-q")}
-      <details class="filtros" ${ativos ? "open" : ""}><summary>Filtros${ativos ? ` (${ativos})` : ""}</summary><div style="margin-top:10px">${formFiltros(FQ)}</div>${ativos ? `<div class="acoes"><button class="btn sec mini" data-act="fq-limpar">Limpar filtros</button></div>` : ""}</details>
-      <div class="acoes" style="margin-top:0">${qs.length ? `<button class="btn" data-act="praticar-filtro">Praticar ${Math.min(qs.length, 30)} questões</button><button class="btn sec" data-act="sim-do-filtro">Simulado com este filtro</button>` : ""}</div>
-      ${listaQuestoes(qs)}`,
+      <div class="pilha">
+        ${chips(TRILHAS_RAPIDAS, FQ.trilha, "fq-trilha")}
+        <div class="chips">${STATUS_RAPIDOS.map(([k, t]) => `<button class="chip" data-act="fq-st" data-v="${k}" aria-pressed="${FQ.status.includes(k)}">${t}</button>`).join("")}</div>
+        <details class="filtros" ${extras ? "open" : ""} style="margin:0"><summary>Mais filtros${extras ? ` (${extras})` : ""}</summary><div style="margin-top:10px">${formFiltros(FQ, "fq", { rapidos: true })}</div>${extras || FQ.status.length || FQ.trilha ? `<div class="acoes"><button class="btn sec mini" data-act="fq-limpar">Limpar tudo</button></div>` : ""}</details>
+        ${qs.length ? `<div class="linha"><button class="btn" data-act="praticar-filtro">Praticar ${Math.min(qs.length, 20)}</button><button class="btn sec" data-act="sim-do-filtro">Fazer simulado</button></div>` : ""}
+      </div>
+      ${listaQuestoes(qs, QPAG, true)}`,
   };
 });
+ACOES["lq-mais"] = () => { QPAG += 20; atualizar(); };
+ACOES["fq-trilha"] = el => { FQ.trilha = el.dataset.v; Object.assign(FQ, { disc: "", tema: "", subtema: "", esp: "" }); QPAG = 20; atualizar(); };
 ACOES["ir-aba-q"] = el => ir(el.dataset.v === "erros" ? "#/erros" : "#/questoes");
 function praticar(ids, rotulo) { iniciarPlayer("banco", ids, "pratica"); PL.rotulo = rotulo || "Praticando"; ir("#/questoes"); }
-ACOES["praticar-filtro"] = () => { const qs = filtrarQuestoes(FQ); const pri = qs.filter(q => statusQ(q).chave === "nao"); praticar(embaralhar(pri.length >= 10 ? pri : qs).slice(0, 30).map(q => q.id), "Praticando questões filtradas"); };
+ACOES["praticar-filtro"] = () => { const qs = filtrarQuestoes(FQ); const pri = qs.filter(q => statusQ(q).chave === "nao"); praticar(embaralhar(pri.length >= 10 ? pri : qs).slice(0, 20).map(q => q.id), "Praticando questões filtradas"); };
 ACOES["praticar-ids"] = el => praticar(embaralhar(el.dataset.ids.split(",").filter(qPorId)).slice(0, 40), "Praticando: " + (el.dataset.ctx || "seleção"));
 
 /* ---------- Página de uma questão ---------- */
@@ -89,35 +97,35 @@ rota("/questoes/q/:id", ({ id }) => {
 });
 
 /* ---------- Caderno de erros ---------- */
-const FE = { status: "aberto", tema: "", motivo: "", agrupar: false };
+const FE = { status: "aberto", tema: "", motivo: "", agrupar: true };
 function tabelaErros(errs) {
-  return tabela([{ t: "Questão" }, { t: "Tema" }, { t: "Sua resposta" }, { t: "Motivo" }, { t: "Revisão" }, { t: "" }],
-    errs.sort((a, b) => (a.srs?.prox || "").localeCompare(b.srs?.prox || "")).map(e => { const q = qPorId(e.qid); if (!q) return null;
-      return [`<a href="#/questoes/q/${esc(q.id)}">${esc(q.q.slice(0, 90))}${q.q.length > 90 ? "…" : ""}</a>`, e.tema ? linkTema(e.tema) : esc(q.a), `<span class="small">${esc(q.o[e.resp] ?? "—")}</span>`,
-        `<span class="small">${esc(e.motivo || e.motivoSugerido || "—")}${e.motivo ? "" : " <i class='muted'>(sugerido)</i>"}</span>`, e.status === "aberto" ? `${dataBR(e.srs?.prox)} ${vencido(e.srs) ? pill("vencida", "bad") : ""}` : pill("resolvido", "ok"),
-        `<button class="btn mini sec" data-act="erro-detalhe" data-q="${esc(q.id)}">Abrir</button>`]; }).filter(Boolean), { vaziaMsg: "Nenhum erro com esses filtros." });
+  const l = errs.filter(e => qPorId(e.qid)).sort((a, b) => (a.srs?.prox || "").localeCompare(b.srs?.prox || ""));
+  if (!l.length) return vazio("Nenhum erro com esses filtros.");
+  return `<div class="lista-q">${l.map(e => { const q = qPorId(e.qid);
+    return `<a href="#" data-act="erro-detalhe" data-q="${esc(q.id)}"><span class="txt">${esc(q.q)}</span><span class="meta">${e.status === "aberto" ? (vencido(e.srs) ? pill("revisar hoje", "bad") : `<span>revisão ${quando(e.srs?.prox)}</span>`) : pill("resolvido", "ok")}<span>${esc(e.tema ? nomeTema(e.tema) : q.a)}</span><span>${esc(e.motivo || e.motivoSugerido || "")}</span></span></a>`; }).join("")}</div>`;
 }
 rota("/erros", () => {
   const todos = Object.values(store.doc("erros").itens).filter(e => qPorId(e.qid));
   const lista = todos.filter(e => (!FE.status || e.status === FE.status) && (!FE.tema || e.tema === FE.tema) && (!FE.motivo || (e.motivo || "") === FE.motivo));
   const venc = todos.filter(e => e.status === "aberto" && vencido(e.srs));
-  const porTema = listaPor(Object.fromEntries(Object.entries(porChave(todos.filter(e => e.status === "aberto"), e => e.tema || "—")).map(([k, v]) => [k, { n: v.length, ac: 0 }]))).sort((a, b) => b.n - a.n).slice(0, 6);
   return {
-    secao: "questoes", crumbs: [["Questões", "#/questoes"]], titulo: "Caderno de erros", sub: `${todos.filter(e => e.status === "aberto").length} abertos · ${todos.filter(e => e.status === "resolvido").length} resolvidos. Toda questão errada entra aqui automaticamente, com revisão em 1 dia.`,
+    secao: "questoes", crumbs: [["Questões", "#/questoes"]], titulo: "Caderno de erros", sub: `${todos.filter(e => e.status === "aberto").length} abertos · ${todos.filter(e => e.status === "resolvido").length} resolvidos`,
     acoes: venc.length ? `<a class="btn" href="#/revisoes/erros">Refazer ${venc.length} vencidas</a>` : "",
     html: `${abas([["banco", "Banco"], ["erros", "Caderno de erros"]], "erros", "ir-aba-q")}
-      ${porTema.length ? `<p class="small">Temas com mais erros abertos: ${porTema.map(x => `${linkTema(x.k)} (${x.n})`).join(" · ")}</p>` : ""}
-      <div class="campos" style="margin-bottom:12px">
+      <details class="filtros" ${FE.tema || FE.motivo || FE.status !== "aberto" ? "open" : ""}><summary>Filtrar</summary><div class="campos" style="margin-top:10px">
         <label class="campo"><span class="lab">Status</span><select data-chg="fe" data-c="status">${opcoes([["aberto", "Abertos"], ["resolvido", "Resolvidos"]], FE.status, "Todos")}</select></label>
         <label class="campo"><span class="lab">Tema</span><select data-chg="fe" data-c="tema">${opcoes(ordenarPt(unicos(todos.map(e => e.tema)).filter(Boolean), nomeTema).map(t => [t, nomeTema(t)]), FE.tema, "Todos")}</select></label>
-        <label class="campo"><span class="lab">Motivo</span><select data-chg="fe" data-c="motivo">${opcoes(MOTIVOS.map(m => [m, m]), FE.motivo, "Todos")}</select></label></div>
-      ${todos.length ? `<label class="check" style="margin-bottom:8px"><input type="checkbox" data-chg="fe-agrupar" ${FE.agrupar ? "checked" : ""}><span>Agrupar por tema</span></label>` : ""}
-      ${todos.length && FE.agrupar ? tabela([{ t: "Tema" }, { t: "Erros", num: 1 }, { t: "Abertos", num: 1 }, { t: "Vencidos", num: 1 }, { t: "" }], Object.entries(porChave(lista, e => e.tema || "_sem")).sort((a, b) => b[1].length - a[1].length).map(([tm, es]) => [tm === "_sem" ? "Sem tema" : linkTema(tm), es.length, es.filter(e => e.status === "aberto").length, es.filter(e => e.status === "aberto" && vencido(e.srs)).length || "—", es.some(e => e.status === "aberto") ? `<a class="btn mini" href="#/revisoes/erros/${encodeURIComponent(tm)}">Refazer lote</a>` : ""]))
+        <label class="campo"><span class="lab">Motivo</span><select data-chg="fe" data-c="motivo">${opcoes(MOTIVOS.map(m => [m, m]), FE.motivo, "Todos")}</select></label></div></details>
+      ${todos.length ? `${chips([["1", "Por tema"], ["0", "Todas as questões"]], FE.agrupar ? "1" : "0", "fe-vista")}` : ""}
+      ${todos.length && FE.agrupar ? `<div class="tarefas">${Object.entries(porChave(lista, e => e.tema || "_sem")).sort((a, b) => b[1].length - a[1].length).map(([tm, es]) => {
+        const ab = es.filter(e => e.status === "aberto").length, ve = es.filter(e => e.status === "aberto" && vencido(e.srs)).length;
+        return `<div class="tarefa"><div class="o">${tm === "_sem" ? "Sem tema" : linkTema(tm)}<small>${ab ? `${ab} aberto(s)` : "resolvidos"}${ve ? ` · <b style="color:var(--bad)">${ve} para hoje</b>` : ""}</small></div>${ab ? `<a class="btn mini ${ve ? "" : "sec"}" href="#/revisoes/erros/${encodeURIComponent(tm)}">Refazer</a>` : ""}</div>`; }).join("")}</div>`
       : todos.length ? tabelaErros(lista) : vazio("Nenhum erro registrado ainda. Quando você errar uma questão, ela aparece aqui com revisão programada.", `<a class="btn" href="#/questoes">Praticar questões</a>`)}`,
   };
 });
 MUDANCAS.fe = el => { FE[el.dataset.c] = el.value; atualizar(); };
 MUDANCAS["fe-agrupar"] = el => { FE.agrupar = el.checked; atualizar(); };
+ACOES["fe-vista"] = el => { FE.agrupar = el.dataset.v === "1"; atualizar(); };
 ACOES["erro-detalhe"] = el => {
   const e = store.doc("erros").itens[el.dataset.q], q = qPorId(el.dataset.q); if (!e || !q) return;
   abrirFolha(`<h2 class="sec">Registro do erro</h2><p class="leitura" style="margin:0 0 8px">${esc(q.q)}</p>

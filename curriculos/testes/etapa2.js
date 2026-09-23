@@ -38,8 +38,8 @@ for(let i=0;i<ids.length;i++){await p.evaluate(ultima=>{const q=qPorId(PL.ids[PL
 ok((await txt()).includes('acertadas'),'resumo do lote exibido');
 await p.click('[data-act="erros-cards"]');await p.waitForTimeout(100);
 ok((await p.evaluate(t=>cards().filter(c=>c.tema===t&&c.origem==='erro').length,tema1))===1,'flashcard criado para a que errou de novo');
-await go('#/erros');await p.check('[data-chg="fe-agrupar"]');await p.waitForTimeout(100);
-ok((await txt()).includes('Refazer lote'),'caderno de erros agrupado por tema');
+await go('#/erros');await p.click('[data-act="fe-vista"][data-v="1"]');await p.waitForTimeout(100);
+ok(!!(await p.$('#view a[href^="#/revisoes/erros/"]')),'caderno de erros agrupado por tema');
 
 console.log('Item 5: backup automático semanal');
 await p.evaluate(()=>{const P=store.doc('perfil');P.ultimoBackup=Date.now()-8*86400000;store.mudou('perfil');});

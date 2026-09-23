@@ -38,25 +38,31 @@ const IC = {
 };
 const icone = n => `<svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="${IC[n] || ""}"/></svg>`;
 
-const NAV = [
-  ["inicio", "#/", "Início"], ["medicina", "#/medicina", "Medicina"], ["enem", "#/enem", "ENEM/Vestibulares"],
-  ["questoes", "#/questoes", "Questões"], ["flashcards", "#/flashcards", "Flashcards"], ["revisoes", "#/revisoes", "Revisões"],
-  ["casos", "#/casos", "Casos clínicos"], ["simulados", "#/simulados", "Simulados"], ["plano", "#/plano", "Planejamento"],
-  ["desempenho", "#/desempenho", "Desempenho"], ["biblioteca", "#/biblioteca", "Biblioteca"],
+/* Navegação em grupos: o que estudar, praticar, revisar e organizar */
+const GRUPOS_NAV = [
+  ["", [["inicio", "#/", "Início"]]],
+  ["Estudar", [["medicina", "#/medicina", "Medicina"], ["enem", "#/enem", "ENEM e vestibulares"]]],
+  ["Praticar", [["questoes", "#/questoes", "Questões"], ["simulados", "#/simulados", "Simulados"], ["casos", "#/casos", "Casos clínicos"]]],
+  ["Revisar", [["revisoes", "#/revisoes", "Revisões"], ["flashcards", "#/flashcards", "Flashcards"]]],
+  ["Organizar", [["plano", "#/plano", "Planejamento"], ["desempenho", "#/desempenho", "Desempenho"], ["biblioteca", "#/biblioteca", "Biblioteca"]]],
 ];
+const NAV = GRUPOS_NAV.flatMap(g => g[1]);
 const INFERIOR = ["inicio", "medicina", "enem", "revisoes"];
+const CURTO = { enem: "ENEM" };
 
 function desenharNav(secao) {
   const n = pendencias().total;
   const badge = k => k === "revisoes" && n ? `<span class="n" aria-label="${n} pendentes">${n}</span>` : "";
-  $("#nav-lateral").innerHTML = NAV.map(([k, h, t], i) =>
-    (i === 3 ? `<div class="grupo">Estudar</div>` : i === 8 ? `<div class="grupo">Organizar</div>` : "") +
-    `<a href="${h}" ${k === secao ? 'aria-current="page"' : ""}>${icone(k)}<span>${t}</span>${badge(k)}</a>`).join("");
+  $("#nav-lateral").innerHTML = GRUPOS_NAV.map(([g, itens]) => (g ? `<div class="grupo">${g}</div>` : "") +
+    itens.map(([k, h, t]) => `<a href="${h}" ${k === secao ? 'aria-current="page"' : ""}>${icone(k)}<span>${t}</span>${badge(k)}</a>`).join("")).join("");
   $("#nav-inferior").innerHTML = INFERIOR.map(k => { const [, h, t] = NAV.find(x => x[0] === k);
-    return `<a href="${h}" ${k === secao ? 'aria-current="page"' : ""}>${icone(k)}<span>${t.split("/")[0]}</span>${badge(k)}</a>`; }).join("")
+    return `<a href="${h}" ${k === secao ? 'aria-current="page"' : ""}>${icone(k)}<span>${CURTO[k] || t}</span>${badge(k)}</a>`; }).join("")
     + `<button data-act="menu-mais" ${INFERIOR.includes(secao) ? "" : 'aria-current="page"'}>${icone("mais")}<span>Mais</span></button>`;
 }
-ACOES["menu-mais"] = () => abrirFolha(`<h2 class="sec">Menu</h2><div class="folha-lista">${NAV.filter(([k]) => !INFERIOR.includes(k)).map(([k, h, t]) => `<a href="${h}" data-act="fechar-folha">${icone(k)}${t}</a>`).join("")}<a href="#/redacao" data-act="fechar-folha">${icone("enem")}Redação</a><a href="#/erros" data-act="fechar-folha">${icone("questoes")}Caderno de erros</a></div>`);
+ACOES["menu-mais"] = () => abrirFolha(GRUPOS_NAV.filter(([g]) => g).map(([g, itens]) => {
+  const extra = g === "Estudar" ? [["enem", "#/redacao", "Redação"]] : g === "Revisar" ? [["questoes", "#/erros", "Caderno de erros"]] : [];
+  return `<div class="menu-grupo"><h3>${g}</h3><div class="links-lista">${itens.concat(extra).filter(([k, h]) => !INFERIOR.includes(k) || extra.some(x => x[1] === h)).map(([k, h, t]) => `<a href="${h}" data-act="fechar-folha"><span class="linha" style="flex-wrap:nowrap">${icone(k)}${t}</span></a>`).join("")}</div></div>`;
+}).join(""), { titulo: "Menu" });
 
 /* ---------- Render ---------- */
 function render(opts = {}) {
@@ -99,9 +105,9 @@ function toast(msg) {
   const t = document.createElement("div"); t.className = "toast"; t.setAttribute("role", "status"); t.textContent = msg;
   document.body.appendChild(t); setTimeout(() => t.remove(), 2600);
 }
-function abrirFolha(html) {
-  $("#camada").innerHTML = `<div class="folha-fundo" data-act="fechar-folha"></div><div class="folha" role="dialog" aria-modal="true">${html}<div class="acoes"><button class="btn sec dir" data-act="fechar-folha">Fechar</button></div></div>`;
-  $("#camada .folha").querySelector("input,textarea,button")?.focus();
+function abrirFolha(html, { titulo } = {}) {
+  $("#camada").innerHTML = `<div class="folha-fundo" data-act="fechar-folha"></div><div class="folha" role="dialog" aria-modal="true" ${titulo ? `aria-label="${esc(titulo)}"` : ""}><button class="btn sec mini fechar-x" data-act="fechar-folha" aria-label="Fechar">✕</button>${titulo ? `<h2 class="sec">${esc(titulo)}</h2>` : ""}${html}</div>`;
+  $("#camada .folha").querySelector("input,textarea,select")?.focus();
 }
 function fecharFolha() { $("#camada").innerHTML = ""; }
 ACOES["fechar-folha"] = () => fecharFolha();
@@ -110,7 +116,8 @@ ACOES["fechar-folha"] = () => fecharFolha();
 document.addEventListener("click", e => {
   const el = e.target.closest("[data-act]"); if (!el) return;
   const f = ACOES[el.dataset.act]; if (!f) return;
-  if (el.tagName === "A" && el.getAttribute("href")?.startsWith("#")) { f(el, e); return; }
+  const href = el.tagName === "A" ? el.getAttribute("href") || "" : "";
+  if (href.startsWith("#") && href.length > 1) { f(el, e); return; } // link de rota: deixa navegar
   e.preventDefault(); f(el, e);
 });
 document.addEventListener("change", e => { const el = e.target.closest("[data-chg]"); if (el && MUDANCAS[el.dataset.chg]) MUDANCAS[el.dataset.chg](el, e); });

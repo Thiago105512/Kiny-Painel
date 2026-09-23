@@ -8,15 +8,18 @@ rota("/revisoes", () => {
   for (let i = 1; i <= 14; i++) {
     const d = somaDias(hoje(), i);
     const t = Object.values(R).filter(s => s.prox === d).length, c = cards().filter(x => x.srs.prox === d).length, e = Object.values(store.doc("erros").itens).filter(x => x.status === "aberto" && x.srs?.prox === d).length;
-    if (t + c + e) prox.push([dataBR(d) + ` <span class="muted small">${new Date(d + "T12:00").toLocaleDateString("pt-BR", { weekday: "short" })}</span>`, t || "—", c || "—", e || "—"]);
+    if (t + c + e) prox.push(`<div class="tarefa"><div class="o">${new Date(d + "T12:00").toLocaleDateString("pt-BR", { weekday: "short", day: "2-digit", month: "2-digit" })}<small>${[t && t + " tema(s)", c && c + " card(s)", e && e + " erro(s)"].filter(Boolean).join(" · ")}</small></div></div>`);
   }
+  const itens = [
+    ...p.temas.sort((a, b) => a.srs.prox.localeCompare(b.srs.prox)).map(({ id, srs }) => `<div class="tarefa"><div class="o">${linkTema(id)}<small>tema · ${quando(srs.prox)} · etapa ${srs.etapa + 1}</small></div><a class="btn mini" href="#/revisoes/tema/${encodeURIComponent(id)}">Revisar</a></div>`),
+    p.erros.length ? `<div class="tarefa"><div class="o">Questões que você errou<small>${p.erros.length} para refazer, agrupadas por tema</small></div><a class="btn mini" href="#/revisoes/erros">Refazer</a></div>` : "",
+    p.cards.length ? `<div class="tarefa"><div class="o">Flashcards<small>${p.cards.length} para hoje</small></div><a class="btn mini" href="#/flashcards/estudar">Estudar</a></div>` : "",
+  ].filter(Boolean);
   return {
-    secao: "revisoes", titulo: "Revisões", sub: "Intervalos base de 1, 7, 30 e 90 dias. Acertar adianta a próxima etapa; errar volta ao início.",
-    html: `<div class="kpis"><div class="kpi"><b>${p.temas.length}</b><span>temas vencidos</span></div><div class="kpi"><b>${p.cards.length}</b><span>flashcards</span></div><div class="kpi"><b>${p.erros.length}</b><span>erros para refazer</span></div></div>
-      ${p.total ? "" : `<div class="aviso info" style="margin-top:12px">Tudo em dia. Novas revisões surgem quando você marca um tema como estudado, cria flashcards ou erra questões.</div>`}
-      ${p.temas.length ? `<h2 class="sec">Temas para revisar</h2>${tabela([{ t: "Tema" }, { t: "Etapa", num: 1 }, { t: "Venceu" }, { t: "Acerto", num: 1 }, { t: "" }], p.temas.sort((a, b) => a.srs.prox.localeCompare(b.srs.prox)).map(({ id, srs }) => { const d = desempenhoTema(id); return [linkTema(id), srs.etapa + 1, quando(srs.prox), d.n ? pct(d.ac, d.n) + "%" : "—", `<a class="btn mini" href="#/revisoes/tema/${encodeURIComponent(id)}">Revisar</a>`]; }))}` : ""}
-      ${p.cards.length || p.erros.length ? `<h2 class="sec">Outras revisões de hoje</h2><div class="linha">${p.cards.length ? `<a class="btn" href="#/flashcards/estudar">Estudar ${p.cards.length} flashcards</a>` : ""}${p.erros.length ? `<a class="btn" href="#/revisoes/erros">Refazer ${p.erros.length} questões erradas</a>` : ""}</div>` : ""}
-      <h2 class="sec">Próximos 14 dias</h2>${tabela([{ t: "Dia" }, { t: "Temas", num: 1 }, { t: "Cards", num: 1 }, { t: "Erros", num: 1 }], prox, { vaziaMsg: "Nada agendado para os próximos 14 dias." })}`,
+    secao: "revisoes", titulo: "Revisões", sub: p.total ? `${p.total} para hoje` : "Tudo em dia",
+    html: `${itens.length ? `<div class="tarefas">${itens.join("")}</div>` : vazio("Nada para revisar hoje. Novas revisões surgem quando você estuda um tema, cria flashcards ou erra questões.")}
+      ${prox.length ? `<section><h2 class="sec">Próximos dias</h2><div class="tarefas">${prox.join("")}</div></section>` : ""}
+      <p class="small muted">Revisão espaçada: 1, 7, 30 e 90 dias. Acertar adianta a próxima etapa; errar volta ao início.</p>`,
   };
 });
 

@@ -9,39 +9,33 @@ const nomeInst = id => instPorId(id)?.sigla || id;
 
 /* ---------- Hub ---------- */
 rota("/medicina", () => {
-  const P = store.doc("perfil"), insts = instituicoes();
-  const gradesP = P.faculdade ? gradesDe(P.faculdade) : [];
-  const linhas = insts.map(i => {
-    const gs = gradesDe(i.id, "medicina"), st = gs.length ? statusGrade(gs[0]) : { nome: PENDENTE, cls: "warn" };
-    return [`<a href="#/medicina/inst/${esc(i.id)}">${esc(i.sigla)}</a>${i.id === P.faculdade ? " " + pill("minha", "azul") : ""}`, esc(i.nome || "—"), gs.length ? gs.map(g => esc(g.versao || "sem versão")).join(", ") : "—", pill(gs.some(g => itensGrade(g).length) ? st.nome : PENDENTE, gs.some(g => itensGrade(g).length) ? st.cls : "warn")];
-  });
+  const P = store.doc("perfil"), insts = instituicoes(), g = P.gradeId && gradePorId(P.gradeId);
+  const situacao = i => { const gs = gradesDe(i.id, "medicina").filter(x => itensGrade(x).length); return gs.length ? statusGrade(gs[0]).nome : "matriz pendente"; };
   return {
-    secao: "medicina", titulo: "Medicina", sub: "Estude seguindo a matriz da sua faculdade ou o mapa de especialidades.",
-    html: `<div class="grid g2">
-      <section class="caixa"><h2 class="sec">Minha faculdade</h2>
-        <form class="pilha" data-form="perfil-fac">
-          <div class="campos">
-            <label class="campo"><span class="lab">Instituição</span><select id="pf-inst" data-chg="pf-inst">${opcoes(insts.map(i => [i.id, i.sigla]), P.faculdade, "Selecione")}</select></label>
-            <label class="campo"><span class="lab">Matriz (versão)</span><select id="pf-grade">${opcoes(gradesP.map(g => [g.id, g.versao || g.id]), P.gradeId, gradesP.length ? "Selecione" : "Nenhuma cadastrada")}</select></label>
-            <label class="campo"><span class="lab">Período atual</span><input type="number" id="pf-per" min="1" max="12" value="${P.periodo || ""}"></label>
-          </div>
-          <div class="linha"><button class="btn">Salvar</button>${P.gradeId ? `<a class="btn sec" href="#/medicina/grade/${esc(P.gradeId)}${P.periodo ? "/p/" + P.periodo : ""}">Abrir meu período</a>` : ""}</div>
-        </form></section>
-      <section class="caixa"><h2 class="sec">Outras formas de estudar</h2><div class="pilha">
-        <a class="btn sec" href="#/medicina/especialidades">Mapa por especialidades</a>
-        <a class="btn sec" href="#/medicina/comparar">Comparar grades</a>
-        <a class="btn sec" href="#/medicina/importar">Importar matriz curricular</a>
-      </div></section>
-    </div>
-    <h2 class="sec">Faculdades <button class="btn sec mini" data-act="nova-inst">+ Adicionar faculdade</button></h2>
-    ${tabela([{ t: "Sigla" }, { t: "Instituição" }, { t: "Matrizes" }, { t: "Situação" }], linhas)}
-    <p class="small muted">Cada instituição tem sua própria matriz, nunca misturada com outra. Matrizes sem documento oficial importado aparecem como "${PENDENTE}".</p>`,
+    secao: "medicina", titulo: "Medicina",
+    html: `<div class="faixa"><p>${P.faculdade ? `<b>${esc(nomeInst(P.faculdade))}</b>${P.periodo ? ` · ${P.periodo}º período` : ""}<br><span class="small muted">${g ? esc(g.versao || "matriz") : "matriz ainda não importada"}</span>` : "Escolha sua faculdade e período"}</p>
+        <span class="linha">${g ? `<a class="btn mini" href="#/medicina/grade/${esc(g.id)}${P.periodo ? "/p/" + P.periodo : ""}">Meu período</a>` : ""}<button class="btn mini sec" data-act="perfil-fac">${P.faculdade ? "Alterar" : "Escolher"}</button></span></div>
+      <section><h2 class="sec">Estudar</h2><div class="links-lista">
+        <a href="#/medicina/especialidades"><span>Por especialidade</span><small>${Object.keys(ESPECIALIDADES).length} especialidades · ${Object.values(TEMAS).filter(t => t.dominio === "medicina").length} temas</small></a>
+        <a href="#/medicina/comparar"><span>Comparar grades</span><small>UFAM × UEA × outras</small></a>
+        <a href="#/medicina/importar"><span>Importar matriz curricular</span><small>PDF, planilha ou texto</small></a></div></section>
+      <section><h2 class="sec">Faculdades <button class="btn sec mini" data-act="nova-inst">+ Adicionar</button></h2><div class="links-lista">
+        ${insts.map(i => `<a href="#/medicina/inst/${esc(i.id)}"><span>${esc(i.sigla)}${i.id === P.faculdade ? " " + pill("minha", "azul") : ""}</span><small>${esc(situacao(i))}</small></a>`).join("")}</div>
+        <p class="small muted">Cada faculdade tem a própria matriz. Sem documento oficial, os dados curriculares ficam pendentes.</p></section>`,
   };
 });
+ACOES["perfil-fac"] = () => {
+  const P = store.doc("perfil"), insts = instituicoes(), gradesP = P.faculdade ? gradesDe(P.faculdade) : [];
+  abrirFolha(`<form class="pilha" data-form="perfil-fac"><div class="campos">
+    <label class="campo"><span class="lab">Instituição</span><select id="pf-inst" data-chg="pf-inst">${opcoes(insts.map(i => [i.id, i.sigla]), P.faculdade, "Selecione")}</select></label>
+    <label class="campo"><span class="lab">Matriz (versão)</span><select id="pf-grade">${opcoes(gradesP.map(g => [g.id, g.versao || g.id]), P.gradeId, gradesP.length ? "Selecione" : "Nenhuma cadastrada")}</select></label>
+    <label class="campo"><span class="lab">Período atual</span><input type="number" id="pf-per" min="1" max="12" value="${P.periodo || ""}"></label></div>
+    <button class="btn">Salvar</button></form>`, { titulo: "Minha faculdade" });
+};
 MUDANCAS["pf-inst"] = el => { const gs = gradesDe(el.value); $("#pf-grade").innerHTML = opcoes(gs.map(g => [g.id, g.versao || g.id]), gs[0]?.id, gs.length ? "Selecione" : "Nenhuma cadastrada"); };
 FORMS["perfil-fac"] = () => {
   const P = store.doc("perfil"); P.faculdade = $("#pf-inst").value || null; P.gradeId = $("#pf-grade").value || null;
-  const n = parseInt($("#pf-per").value, 10); P.periodo = n >= 1 && n <= 12 ? n : null; store.mudou("perfil"); toast("Faculdade salva"); atualizar();
+  const n = parseInt($("#pf-per").value, 10); P.periodo = n >= 1 && n <= 12 ? n : null; store.mudou("perfil"); fecharFolha(); toast("Faculdade salva"); atualizar();
 };
 ACOES["nova-inst"] = () => abrirFolha(`<h2 class="sec">Adicionar faculdade</h2><form class="pilha" data-form="nova-inst">
   <label class="campo"><span class="lab">Sigla</span><input type="text" id="ni-sigla" required maxlength="20"></label>

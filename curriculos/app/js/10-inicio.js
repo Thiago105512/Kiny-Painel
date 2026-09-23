@@ -19,59 +19,53 @@ function semanas(n = 4) {
   return tabela([{ t: "Semana" }, { t: "Questões", num: 1 }, { t: "Acerto", num: 1 }, { t: "Tempo", num: 1 }], linhas);
 }
 
-function proximosDaFaculdade() {
+/** Uma linha sobre a faculdade: o próximo conteúdo do período ou o que falta configurar. */
+function linhaFaculdade() {
   const P = store.doc("perfil"), g = P.gradeId && gradePorId(P.gradeId);
-  if (!P.faculdade) return vazio("Escolha sua faculdade para ver aqui os próximos conteúdos do seu período.", `<a class="btn" href="#/medicina">Escolher faculdade</a>`);
-  const inst = instPorId(P.faculdade);
-  if (!g || !itensGrade(g).length) return `<div class="aviso">${esc(inst?.sigla || "")}: ${PENDENTE}. Importe a matriz oficial para acompanhar os conteúdos do período.</div><a class="btn sec" href="#/medicina/importar/${esc(P.faculdade)}">Importar matriz</a>`;
+  if (!P.faculdade) return `<div class="faixa"><p>Escolha sua faculdade para ver os conteúdos do seu período.</p><a class="btn sec mini" href="#/medicina">Escolher</a></div>`;
+  const sig = esc(instPorId(P.faculdade)?.sigla || "");
+  if (!g || !itensGrade(g).length) return `<div class="faixa"><p><b>${sig}</b> · <span class="muted">matriz ainda não importada</span></p><a class="btn sec mini" href="#/medicina/inst/${esc(P.faculdade)}">Importar</a></div>`;
   const per = P.periodo || 1, itens = itensGrade(g).filter(i => i.periodo === per), vistos = temasEstudados();
-  const pend = itens.flatMap(it => temasDoItem(it).filter(t => !vistos.has(t)).map(t => ({ t, it }))).slice(0, 8);
-  if (!itens.length) return vazio(`Nenhuma disciplina cadastrada no ${per}º período.`, `<a class="btn sec" href="#/medicina/grade/${esc(g.id)}">Ver matriz</a>`);
-  if (!pend.length) return `<p>${itens.length} disciplinas/módulos no ${per}º período.${itens.some(i => !temasDoItem(i).length) ? " Vincule temas às disciplinas para receber sugestões do que estudar." : " Todos os temas vinculados já foram estudados."}</p><a class="btn sec" href="#/medicina/grade/${esc(g.id)}/p/${per}">Abrir ${per}º período</a>`;
-  return tabela([{ t: "Tema" }, { t: "Disciplina/módulo" }], pend.map(({ t, it }) => [linkTema(t), `<a href="#/medicina/grade/${esc(g.id)}/item/${esc(it.id)}">${esc(it.nome)}</a>`]));
+  const prox = itens.flatMap(it => temasDoItem(it).filter(t => !vistos.has(t)).map(t => ({ t, it })))[0];
+  return `<div class="faixa"><p><b>${sig} · ${per}º período</b><br><span class="small muted">${prox ? `Próximo: ${linkTema(prox.t)} (${esc(prox.it.nome)})` : `${itens.length} disciplinas/módulos${itens.some(i => !temasDoItem(i).length) ? " · vincule temas para receber sugestões" : ""}`}</span></p><a class="btn sec mini" href="#/medicina/grade/${esc(g.id)}/p/${per}">Abrir período</a></div>`;
 }
 
 rota("/", () => {
   const P = store.doc("perfil"), d = diaDe(hoje()), pend = pendencias(), metas = P.metas || { questoes: 20, minutos: 60 };
-  const ag = agregados(), discs = listaPor(ag.por.disc, 3).sort((a, b) => a.p - b.p);
-  const estudadosHoje = unicos(d.temas || []);
-  const planoHoje = Object.values(store.doc("plano").itens).filter(p => p.data === hoje());
-  const fazer = [];
-  if (pend.cards.length) fazer.push([`${pend.cards.length} flashcard(s) para revisar`, `<a class="btn mini" href="#/flashcards/estudar">Estudar</a>`]);
-  pend.temas.slice(0, 4).forEach(t => fazer.push([`Revisão do tema ${linkTema(t.id)} <span class="muted small">(${quando(t.srs.prox)})</span>`, `<a class="btn mini" href="#/revisoes/tema/${encodeURIComponent(t.id)}">Revisar</a>`]));
-  if (pend.temas.length > 4) fazer.push([`+${pend.temas.length - 4} temas vencidos`, `<a class="btn mini sec" href="#/revisoes">Ver todos</a>`]);
-  if (pend.erros.length) fazer.push([`${pend.erros.length} questão(ões) do caderno de erros para refazer`, `<a class="btn mini" href="#/revisoes/erros">Refazer por tema</a>`]);
-  planoHoje.forEach(p => fazer.push([`<label class="check" style="padding:0"><input type="checkbox" data-chg="plano-feito" data-id="${esc(p.id)}" ${p.feito ? "checked" : ""}><span>${esc(p.titulo)}${p.tema ? " · " + linkTema(p.tema) : ""} <span class="muted small">${p.min ? p.min + " min" : ""}${p.nq ? " · " + p.nq + " questões" : ""}</span></span></label>`, p.tema ? `<a class="btn mini sec" href="#/tema/${encodeURIComponent(p.tema)}">Abrir</a>` : ""]));
+  const min = Math.round((d.seg || 0) / 60), estudados = unicos(d.temas || []);
+  const fracas = listaPor(agregados().por.disc, 3).sort((a, b) => a.p - b.p).slice(0, 3);
+  // Tarefas em ordem de prioridade; no máximo 5 visíveis
+  const tarefas = [];
+  pend.temas.forEach(t => tarefas.push({ o: `Revisar ${linkTema(t.id)}`, s: quando(t.srs.prox), b: `<a class="btn mini" href="#/revisoes/tema/${encodeURIComponent(t.id)}">Revisar</a>` }));
+  if (pend.erros.length) tarefas.push({ o: `Refazer ${pend.erros.length} questão(ões) que você errou`, s: "caderno de erros", b: `<a class="btn mini" href="#/revisoes/erros">Refazer</a>` });
+  if (pend.cards.length) tarefas.push({ o: `${pend.cards.length} flashcard(s)`, s: "revisão de hoje", b: `<a class="btn mini" href="#/flashcards/estudar">Estudar</a>` });
+  Object.values(store.doc("plano").itens).filter(p => p.data === hoje()).forEach(p => tarefas.push({ o: `<label class="check" style="padding:0"><input type="checkbox" data-chg="plano-feito" data-id="${esc(p.id)}" ${p.feito ? "checked" : ""}><span style="${p.feito ? "text-decoration:line-through;color:var(--muted)" : ""}">${esc(p.titulo || nomeTema(p.tema) || p.disciplina || "Estudo planejado")}</span></label>`, s: [p.min && p.min + " min", p.nq && p.nq + " questões"].filter(Boolean).join(" · ") || "planejado", b: p.tema && !p.feito ? `<a class="btn mini sec" href="#/tema/${encodeURIComponent(p.tema)}">Abrir</a>` : "" }));
+  const visiveis = tarefas.slice(0, 5);
   return {
-    secao: "inicio", titulo: "Início", sub: new Date().toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" }),
-    html: `${avisoBackup()}<div class="kpis">
-      <div class="kpi"><b>${d.q}<small class="muted" style="font-size:14px">/${metas.questoes}</small></b><span>questões hoje</span>${medidor(pct(d.q, metas.questoes), "ok")}</div>
-      <div class="kpi"><b>${d.q ? pct(d.ac, d.q) + "%" : "—"}</b><span>acerto hoje</span></div>
-      <div class="kpi"><b>${Math.round((d.seg || 0) / 60)}<small class="muted" style="font-size:14px">/${metas.minutos} min</small></b><span>tempo de estudo</span>${medidor(pct((d.seg || 0) / 60, metas.minutos), "ok")}</div>
-      <div class="kpi"><b>${sequencia()}</b><span>dias seguidos</span></div>
-      <div class="kpi"><a href="#/revisoes"><b style="color:${pend.total ? "var(--bad)" : "inherit"}">${pend.total}</b><span>revisões pendentes</span></a></div>
-    </div>
-    <div class="grid g2" style="margin-top:14px">
-      <section class="caixa"><h2 class="sec">Para fazer agora</h2>${fazer.length ? `<div class="pilha">${fazer.map(([a, b]) => `<div class="linha entre" style="flex-wrap:nowrap"><div>${a}</div>${b}</div>`).join("")}</div>` : vazio("Nada pendente. Que tal praticar questões ou planejar a semana?", `<a class="btn" href="#/questoes">Praticar questões</a><a class="btn sec" href="#/plano">Planejar</a>`)}</section>
-      <section class="caixa"><h2 class="sec">Próximos conteúdos da faculdade ${P.faculdade ? pill((instPorId(P.faculdade)?.sigla || "") + (P.periodo ? ` · ${P.periodo}º período` : "")) : ""}</h2>${proximosDaFaculdade()}</section>
-    </div>
-    <section><h2 class="sec">Estudado hoje <span class="muted small">${estudadosHoje.length} assunto(s)</span></h2>${estudadosHoje.length ? `<div class="chips">${estudadosHoje.map(t => `<a class="chip" href="#/tema/${encodeURIComponent(t)}">${esc(nomeTema(t))}</a>`).join("")}</div>` : `<p class="muted">Nenhum assunto ainda hoje.</p>`}</section>
-    <div class="grid g2">
-      <section><h2 class="sec">Evolução — 14 dias <a class="small" href="#/desempenho">detalhes</a></h2>${blocoEvolucao()}</section>
-      <section><h2 class="sec">Por semana</h2>${semanas()}</section>
-    </div>
-    <div class="grid g2">
-      <section><h2 class="sec">Disciplinas com pior desempenho</h2>${discs.length ? `<div class="barras">${discs.slice(0, 4).map(x => barra(esc(x.k), x.ac, x.n)).join("")}</div>` : `<p class="muted">Responda ao menos 3 questões de uma disciplina para aparecer aqui.</p>`}</section>
-      <section><h2 class="sec">Melhor desempenho</h2>${discs.length ? `<div class="barras">${discs.slice(-4).reverse().map(x => barra(esc(x.k), x.ac, x.n)).join("")}</div>` : `<p class="muted">—</p>`}</section>
-    </div>
-    <section><h2 class="sec">Metas diárias</h2><form class="linha" data-form="metas">
-      <label class="campo"><span class="lab">Questões/dia</span><input type="number" id="meta-q" min="0" max="500" value="${metas.questoes}"></label>
-      <label class="campo"><span class="lab">Minutos/dia</span><input type="number" id="meta-m" min="0" max="900" value="${metas.minutos}"></label>
-      <button class="btn sec" style="align-self:end">Salvar metas</button></form></section>`,
+    secao: "inicio", titulo: "Hoje", sub: new Date().toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" }),
+    acoes: `<button class="btn sec mini" data-act="metas-editar">Metas</button>`,
+    html: `${avisoBackup()}
+    <section class="caixa"><div class="metas">
+      <div class="meta-item"><span>Questões</span><b>${d.q}<small class="muted" style="font-size:13px"> / ${metas.questoes}</small></b>${medidor(pct(d.q, metas.questoes), "ok")}</div>
+      <div class="meta-item"><span>Tempo de estudo</span><b>${min}<small class="muted" style="font-size:13px"> / ${metas.minutos} min</small></b>${medidor(pct(min, metas.minutos), "ok")}</div>
+      <div class="meta-item"><span>Acerto hoje</span><b>${d.q ? pct(d.ac, d.q) + "%" : "—"}</b></div>
+      <div class="meta-item"><span>Sequência</span><b>${sequencia()} ${sequencia() === 1 ? "dia" : "dias"}</b></div>
+    </div></section>
+    <section><h2 class="sec">Para fazer agora ${tarefas.length > 5 ? `<a class="small" href="#/revisoes">ver tudo (${tarefas.length})</a>` : ""}</h2>
+      ${visiveis.length ? `<div class="tarefas">${visiveis.map(t => `<div class="tarefa"><div class="o">${t.o}<small>${t.s}</small></div>${t.b}</div>`).join("")}</div>`
+        : vazio("Tudo em dia. Pratique algumas questões ou planeje a semana.", `<a class="btn" href="#/questoes">Praticar</a><a class="btn sec" href="#/plano">Planejar</a>`)}</section>
+    <section><h2 class="sec">Sua faculdade</h2>${linhaFaculdade()}</section>
+    ${estudados.length ? `<section><h2 class="sec">Estudado hoje</h2><p style="margin:0">${estudados.slice(0, 4).map(linkTema).join(" · ")}${estudados.length > 4 ? ` <span class="muted">e mais ${estudados.length - 4}</span>` : ""}</p></section>` : ""}
+    ${fracas.length ? `<section><h2 class="sec">Onde focar <a class="small" href="#/desempenho">desempenho</a></h2><div class="barras">${fracas.map(x => barra(esc(x.k), x.ac, x.n)).join("")}</div></section>` : ""}`,
   };
 });
+ACOES["metas-editar"] = () => { const m = store.doc("perfil").metas || { questoes: 20, minutos: 60 };
+  abrirFolha(`<form class="pilha" data-form="metas"><div class="campos">
+    <label class="campo"><span class="lab">Questões por dia</span><input type="number" id="meta-q" min="0" max="500" value="${m.questoes}"></label>
+    <label class="campo"><span class="lab">Minutos por dia</span><input type="number" id="meta-m" min="0" max="900" value="${m.minutos}"></label></div>
+    <button class="btn">Salvar metas</button></form>`, { titulo: "Metas diárias" }); };
 FORMS.metas = () => {
   const q = Math.max(0, Math.min(500, +$("#meta-q").value || 0)), m = Math.max(0, Math.min(900, +$("#meta-m").value || 0));
-  const P = store.doc("perfil"); P.metas = { questoes: q, minutos: m }; store.mudou("perfil"); toast("Metas salvas"); atualizar();
+  const P = store.doc("perfil"); P.metas = { questoes: q, minutos: m }; store.mudou("perfil"); fecharFolha(); toast("Metas salvas"); atualizar();
 };
 MUDANCAS["plano-feito"] = el => { const P = store.doc("plano"); const p = P.itens[el.dataset.id]; if (!p) return; p.feito = el.checked; if (p.feito && p.rev && p.tema) estudarTema(p.tema); store.mudou("plano"); atualizar(); };

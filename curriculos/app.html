@@ -79,6 +79,9 @@ main{flex:1;min-width:0;padding-inline:16px;padding-block:14px 90px}
 .titulo .sub{color:var(--muted);font-size:13px;width:100%}
 h2.sec{font:700 17px var(--display);margin:22px 0 10px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
 h2.sec:first-child{margin-top:0}
+#view>*+*{margin-top:18px}
+#view>.crumbs+.titulo,#view>.titulo+.tabs{margin-top:0}
+#view>section>h2.sec:first-child{margin-top:0}
 h3{font:600 12px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:16px 0 6px}
 .muted{color:var(--muted)} .small{font-size:13px}
 .leitura{font:400 16px/1.6 var(--read);max-width:68ch;white-space:pre-wrap}
@@ -133,12 +136,21 @@ tr:last-child td{border-bottom:0}
 td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:13px;white-space:nowrap}
 tr.clic{cursor:pointer} tr.clic:hover td{background:var(--line2)}
 td a{text-decoration:none;font-weight:600}
-@media (max-width:560px){table.resp thead{display:none} table.resp tr{display:block;border-bottom:1px solid var(--line2);padding:6px 0} table.resp td{display:flex;justify-content:space-between;gap:12px;border:0;padding:4px 12px} table.resp td::before{content:attr(data-l);font:600 11px var(--mono);color:var(--muted);text-transform:uppercase} table.resp td.num{text-align:right}}
+@media (max-width:560px){
+  table.resp thead{display:none}
+  table.resp tr{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px;padding:10px 14px;border-bottom:1px solid var(--line2)}
+  table.resp tr:last-child{border-bottom:0}
+  table.resp td{display:inline;border:0;padding:0;font-size:12.5px;color:var(--ink2)}
+  table.resp td:first-child{flex-basis:100%;font-size:15px;color:var(--ink);margin-bottom:2px}
+  table.resp td.num{font-size:12.5px}
+  table.resp td:not(:first-child)[data-l]:not([data-l=""])::before{content:attr(data-l) " ";color:var(--muted);font:11px var(--display)}
+  table.resp td:last-child:has(.btn){margin-left:auto}
+}
 
 /* ---------- Números e barras ---------- */
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:6px}
-.kpi{background:var(--sheet);border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:0}
-.kpi b{display:block;font:700 24px/1.1 var(--display);font-variant-numeric:tabular-nums}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:0;background:var(--sheet);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.kpi{padding:12px 14px;min-width:0;border-right:1px solid var(--line2);border-bottom:1px solid var(--line2);margin:0 -1px -1px 0}
+.kpi b{display:block;font:700 22px/1.15 var(--display);font-variant-numeric:tabular-nums}
 .kpi span{font:12px var(--mono);color:var(--muted)}
 .kpi a{text-decoration:none;color:inherit}
 .meter{height:6px;background:var(--track);border-radius:3px;overflow:hidden}
@@ -238,6 +250,38 @@ main:focus{outline:none}
 .arvore .no.ok{border-color:var(--ok);background:var(--ok-soft)}
 .arvore .no.bad{border-color:var(--bad);background:var(--bad-soft)}
 .legenda{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--muted);margin:0 0 10px}
+
+/* ---------- Limpeza visual ---------- */
+.lista-q{display:grid;background:var(--sheet);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.lista-q a{display:grid;gap:3px;padding:11px 14px;border-bottom:1px solid var(--line2);text-decoration:none;color:var(--ink)}
+.lista-q a:last-child{border-bottom:0}
+.lista-q a:hover{background:var(--line2)}
+.lista-q .txt{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font:400 15px/1.45 var(--read)}
+.lista-q .meta{font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center}
+.hoje{display:grid;gap:14px}
+.metas{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px 20px}
+.meta-item{display:grid;gap:6px}
+.meta-item b{font:700 20px var(--display);font-variant-numeric:tabular-nums}
+.meta-item span{font-size:12px;color:var(--muted)}
+.tarefas{display:grid;background:var(--sheet);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.tarefa{display:flex;align-items:center;gap:12px;padding:11px 14px;border-bottom:1px solid var(--line2)}
+.tarefa:last-child{border-bottom:0}
+.tarefa .o{flex:1;min-width:0}
+.tarefa small{display:block;color:var(--muted);font-size:12px}
+.faixa{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 14px;background:var(--sheet);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.faixa p{margin:0}
+.links-lista{display:grid;background:var(--sheet);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.links-lista a{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line2);text-decoration:none;color:var(--ink);font-weight:600}
+.links-lista a:last-child{border-bottom:0}
+.links-lista a small{font-weight:400;color:var(--muted);font-size:12px;text-align:right}
+.links-lista a::after{content:"›";color:var(--muted);font-size:18px;margin-left:4px}
+.menu-grupo h3{margin:14px 0 6px}
+.menu-grupo:first-of-type h3{margin-top:4px}
+.fechar-x{position:absolute;top:10px;right:10px}
+.folha{position:fixed}
+details.mais>summary{cursor:pointer;color:var(--pen);font-weight:600;font-size:14px;padding:6px 0}
+.folha>h2.sec:first-of-type{padding-right:52px}
+.links-lista a small{margin-left:auto}
 
 </style>
 
@@ -915,25 +959,31 @@ const IC = {
 };
 const icone = n => `<svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="${IC[n] || ""}"/></svg>`;
 
-const NAV = [
-  ["inicio", "#/", "Início"], ["medicina", "#/medicina", "Medicina"], ["enem", "#/enem", "ENEM/Vestibulares"],
-  ["questoes", "#/questoes", "Questões"], ["flashcards", "#/flashcards", "Flashcards"], ["revisoes", "#/revisoes", "Revisões"],
-  ["casos", "#/casos", "Casos clínicos"], ["simulados", "#/simulados", "Simulados"], ["plano", "#/plano", "Planejamento"],
-  ["desempenho", "#/desempenho", "Desempenho"], ["biblioteca", "#/biblioteca", "Biblioteca"],
+/* Navegação em grupos: o que estudar, praticar, revisar e organizar */
+const GRUPOS_NAV = [
+  ["", [["inicio", "#/", "Início"]]],
+  ["Estudar", [["medicina", "#/medicina", "Medicina"], ["enem", "#/enem", "ENEM e vestibulares"]]],
+  ["Praticar", [["questoes", "#/questoes", "Questões"], ["simulados", "#/simulados", "Simulados"], ["casos", "#/casos", "Casos clínicos"]]],
+  ["Revisar", [["revisoes", "#/revisoes", "Revisões"], ["flashcards", "#/flashcards", "Flashcards"]]],
+  ["Organizar", [["plano", "#/plano", "Planejamento"], ["desempenho", "#/desempenho", "Desempenho"], ["biblioteca", "#/biblioteca", "Biblioteca"]]],
 ];
+const NAV = GRUPOS_NAV.flatMap(g => g[1]);
 const INFERIOR = ["inicio", "medicina", "enem", "revisoes"];
+const CURTO = { enem: "ENEM" };
 
 function desenharNav(secao) {
   const n = pendencias().total;
   const badge = k => k === "revisoes" && n ? `<span class="n" aria-label="${n} pendentes">${n}</span>` : "";
-  $("#nav-lateral").innerHTML = NAV.map(([k, h, t], i) =>
-    (i === 3 ? `<div class="grupo">Estudar</div>` : i === 8 ? `<div class="grupo">Organizar</div>` : "") +
-    `<a href="${h}" ${k === secao ? 'aria-current="page"' : ""}>${icone(k)}<span>${t}</span>${badge(k)}</a>`).join("");
+  $("#nav-lateral").innerHTML = GRUPOS_NAV.map(([g, itens]) => (g ? `<div class="grupo">${g}</div>` : "") +
+    itens.map(([k, h, t]) => `<a href="${h}" ${k === secao ? 'aria-current="page"' : ""}>${icone(k)}<span>${t}</span>${badge(k)}</a>`).join("")).join("");
   $("#nav-inferior").innerHTML = INFERIOR.map(k => { const [, h, t] = NAV.find(x => x[0] === k);
-    return `<a href="${h}" ${k === secao ? 'aria-current="page"' : ""}>${icone(k)}<span>${t.split("/")[0]}</span>${badge(k)}</a>`; }).join("")
+    return `<a href="${h}" ${k === secao ? 'aria-current="page"' : ""}>${icone(k)}<span>${CURTO[k] || t}</span>${badge(k)}</a>`; }).join("")
     + `<button data-act="menu-mais" ${INFERIOR.includes(secao) ? "" : 'aria-current="page"'}>${icone("mais")}<span>Mais</span></button>`;
 }
-ACOES["menu-mais"] = () => abrirFolha(`<h2 class="sec">Menu</h2><div class="folha-lista">${NAV.filter(([k]) => !INFERIOR.includes(k)).map(([k, h, t]) => `<a href="${h}" data-act="fechar-folha">${icone(k)}${t}</a>`).join("")}<a href="#/redacao" data-act="fechar-folha">${icone("enem")}Redação</a><a href="#/erros" data-act="fechar-folha">${icone("questoes")}Caderno de erros</a></div>`);
+ACOES["menu-mais"] = () => abrirFolha(GRUPOS_NAV.filter(([g]) => g).map(([g, itens]) => {
+  const extra = g === "Estudar" ? [["enem", "#/redacao", "Redação"]] : g === "Revisar" ? [["questoes", "#/erros", "Caderno de erros"]] : [];
+  return `<div class="menu-grupo"><h3>${g}</h3><div class="links-lista">${itens.concat(extra).filter(([k, h]) => !INFERIOR.includes(k) || extra.some(x => x[1] === h)).map(([k, h, t]) => `<a href="${h}" data-act="fechar-folha"><span class="linha" style="flex-wrap:nowrap">${icone(k)}${t}</span></a>`).join("")}</div></div>`;
+}).join(""), { titulo: "Menu" });
 
 /* ---------- Render ---------- */
 function render(opts = {}) {
@@ -976,9 +1026,9 @@ function toast(msg) {
   const t = document.createElement("div"); t.className = "toast"; t.setAttribute("role", "status"); t.textContent = msg;
   document.body.appendChild(t); setTimeout(() => t.remove(), 2600);
 }
-function abrirFolha(html) {
-  $("#camada").innerHTML = `<div class="folha-fundo" data-act="fechar-folha"></div><div class="folha" role="dialog" aria-modal="true">${html}<div class="acoes"><button class="btn sec dir" data-act="fechar-folha">Fechar</button></div></div>`;
-  $("#camada .folha").querySelector("input,textarea,button")?.focus();
+function abrirFolha(html, { titulo } = {}) {
+  $("#camada").innerHTML = `<div class="folha-fundo" data-act="fechar-folha"></div><div class="folha" role="dialog" aria-modal="true" ${titulo ? `aria-label="${esc(titulo)}"` : ""}><button class="btn sec mini fechar-x" data-act="fechar-folha" aria-label="Fechar">✕</button>${titulo ? `<h2 class="sec">${esc(titulo)}</h2>` : ""}${html}</div>`;
+  $("#camada .folha").querySelector("input,textarea,select")?.focus();
 }
 function fecharFolha() { $("#camada").innerHTML = ""; }
 ACOES["fechar-folha"] = () => fecharFolha();
@@ -987,7 +1037,8 @@ ACOES["fechar-folha"] = () => fecharFolha();
 document.addEventListener("click", e => {
   const el = e.target.closest("[data-act]"); if (!el) return;
   const f = ACOES[el.dataset.act]; if (!f) return;
-  if (el.tagName === "A" && el.getAttribute("href")?.startsWith("#")) { f(el, e); return; }
+  const href = el.tagName === "A" ? el.getAttribute("href") || "" : "";
+  if (href.startsWith("#") && href.length > 1) { f(el, e); return; } // link de rota: deixa navegar
   e.preventDefault(); f(el, e);
 });
 document.addEventListener("change", e => { const el = e.target.closest("[data-chg]"); if (el && MUDANCAS[el.dataset.chg]) MUDANCAS[el.dataset.chg](el, e); });
@@ -1123,60 +1174,54 @@ function semanas(n = 4) {
   return tabela([{ t: "Semana" }, { t: "Questões", num: 1 }, { t: "Acerto", num: 1 }, { t: "Tempo", num: 1 }], linhas);
 }
 
-function proximosDaFaculdade() {
+/** Uma linha sobre a faculdade: o próximo conteúdo do período ou o que falta configurar. */
+function linhaFaculdade() {
   const P = store.doc("perfil"), g = P.gradeId && gradePorId(P.gradeId);
-  if (!P.faculdade) return vazio("Escolha sua faculdade para ver aqui os próximos conteúdos do seu período.", `<a class="btn" href="#/medicina">Escolher faculdade</a>`);
-  const inst = instPorId(P.faculdade);
-  if (!g || !itensGrade(g).length) return `<div class="aviso">${esc(inst?.sigla || "")}: ${PENDENTE}. Importe a matriz oficial para acompanhar os conteúdos do período.</div><a class="btn sec" href="#/medicina/importar/${esc(P.faculdade)}">Importar matriz</a>`;
+  if (!P.faculdade) return `<div class="faixa"><p>Escolha sua faculdade para ver os conteúdos do seu período.</p><a class="btn sec mini" href="#/medicina">Escolher</a></div>`;
+  const sig = esc(instPorId(P.faculdade)?.sigla || "");
+  if (!g || !itensGrade(g).length) return `<div class="faixa"><p><b>${sig}</b> · <span class="muted">matriz ainda não importada</span></p><a class="btn sec mini" href="#/medicina/inst/${esc(P.faculdade)}">Importar</a></div>`;
   const per = P.periodo || 1, itens = itensGrade(g).filter(i => i.periodo === per), vistos = temasEstudados();
-  const pend = itens.flatMap(it => temasDoItem(it).filter(t => !vistos.has(t)).map(t => ({ t, it }))).slice(0, 8);
-  if (!itens.length) return vazio(`Nenhuma disciplina cadastrada no ${per}º período.`, `<a class="btn sec" href="#/medicina/grade/${esc(g.id)}">Ver matriz</a>`);
-  if (!pend.length) return `<p>${itens.length} disciplinas/módulos no ${per}º período.${itens.some(i => !temasDoItem(i).length) ? " Vincule temas às disciplinas para receber sugestões do que estudar." : " Todos os temas vinculados já foram estudados."}</p><a class="btn sec" href="#/medicina/grade/${esc(g.id)}/p/${per}">Abrir ${per}º período</a>`;
-  return tabela([{ t: "Tema" }, { t: "Disciplina/módulo" }], pend.map(({ t, it }) => [linkTema(t), `<a href="#/medicina/grade/${esc(g.id)}/item/${esc(it.id)}">${esc(it.nome)}</a>`]));
+  const prox = itens.flatMap(it => temasDoItem(it).filter(t => !vistos.has(t)).map(t => ({ t, it })))[0];
+  return `<div class="faixa"><p><b>${sig} · ${per}º período</b><br><span class="small muted">${prox ? `Próximo: ${linkTema(prox.t)} (${esc(prox.it.nome)})` : `${itens.length} disciplinas/módulos${itens.some(i => !temasDoItem(i).length) ? " · vincule temas para receber sugestões" : ""}`}</span></p><a class="btn sec mini" href="#/medicina/grade/${esc(g.id)}/p/${per}">Abrir período</a></div>`;
 }
 
 rota("/", () => {
   const P = store.doc("perfil"), d = diaDe(hoje()), pend = pendencias(), metas = P.metas || { questoes: 20, minutos: 60 };
-  const ag = agregados(), discs = listaPor(ag.por.disc, 3).sort((a, b) => a.p - b.p);
-  const estudadosHoje = unicos(d.temas || []);
-  const planoHoje = Object.values(store.doc("plano").itens).filter(p => p.data === hoje());
-  const fazer = [];
-  if (pend.cards.length) fazer.push([`${pend.cards.length} flashcard(s) para revisar`, `<a class="btn mini" href="#/flashcards/estudar">Estudar</a>`]);
-  pend.temas.slice(0, 4).forEach(t => fazer.push([`Revisão do tema ${linkTema(t.id)} <span class="muted small">(${quando(t.srs.prox)})</span>`, `<a class="btn mini" href="#/revisoes/tema/${encodeURIComponent(t.id)}">Revisar</a>`]));
-  if (pend.temas.length > 4) fazer.push([`+${pend.temas.length - 4} temas vencidos`, `<a class="btn mini sec" href="#/revisoes">Ver todos</a>`]);
-  if (pend.erros.length) fazer.push([`${pend.erros.length} questão(ões) do caderno de erros para refazer`, `<a class="btn mini" href="#/revisoes/erros">Refazer por tema</a>`]);
-  planoHoje.forEach(p => fazer.push([`<label class="check" style="padding:0"><input type="checkbox" data-chg="plano-feito" data-id="${esc(p.id)}" ${p.feito ? "checked" : ""}><span>${esc(p.titulo)}${p.tema ? " · " + linkTema(p.tema) : ""} <span class="muted small">${p.min ? p.min + " min" : ""}${p.nq ? " · " + p.nq + " questões" : ""}</span></span></label>`, p.tema ? `<a class="btn mini sec" href="#/tema/${encodeURIComponent(p.tema)}">Abrir</a>` : ""]));
+  const min = Math.round((d.seg || 0) / 60), estudados = unicos(d.temas || []);
+  const fracas = listaPor(agregados().por.disc, 3).sort((a, b) => a.p - b.p).slice(0, 3);
+  // Tarefas em ordem de prioridade; no máximo 5 visíveis
+  const tarefas = [];
+  pend.temas.forEach(t => tarefas.push({ o: `Revisar ${linkTema(t.id)}`, s: quando(t.srs.prox), b: `<a class="btn mini" href="#/revisoes/tema/${encodeURIComponent(t.id)}">Revisar</a>` }));
+  if (pend.erros.length) tarefas.push({ o: `Refazer ${pend.erros.length} questão(ões) que você errou`, s: "caderno de erros", b: `<a class="btn mini" href="#/revisoes/erros">Refazer</a>` });
+  if (pend.cards.length) tarefas.push({ o: `${pend.cards.length} flashcard(s)`, s: "revisão de hoje", b: `<a class="btn mini" href="#/flashcards/estudar">Estudar</a>` });
+  Object.values(store.doc("plano").itens).filter(p => p.data === hoje()).forEach(p => tarefas.push({ o: `<label class="check" style="padding:0"><input type="checkbox" data-chg="plano-feito" data-id="${esc(p.id)}" ${p.feito ? "checked" : ""}><span style="${p.feito ? "text-decoration:line-through;color:var(--muted)" : ""}">${esc(p.titulo || nomeTema(p.tema) || p.disciplina || "Estudo planejado")}</span></label>`, s: [p.min && p.min + " min", p.nq && p.nq + " questões"].filter(Boolean).join(" · ") || "planejado", b: p.tema && !p.feito ? `<a class="btn mini sec" href="#/tema/${encodeURIComponent(p.tema)}">Abrir</a>` : "" }));
+  const visiveis = tarefas.slice(0, 5);
   return {
-    secao: "inicio", titulo: "Início", sub: new Date().toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" }),
-    html: `${avisoBackup()}<div class="kpis">
-      <div class="kpi"><b>${d.q}<small class="muted" style="font-size:14px">/${metas.questoes}</small></b><span>questões hoje</span>${medidor(pct(d.q, metas.questoes), "ok")}</div>
-      <div class="kpi"><b>${d.q ? pct(d.ac, d.q) + "%" : "—"}</b><span>acerto hoje</span></div>
-      <div class="kpi"><b>${Math.round((d.seg || 0) / 60)}<small class="muted" style="font-size:14px">/${metas.minutos} min</small></b><span>tempo de estudo</span>${medidor(pct((d.seg || 0) / 60, metas.minutos), "ok")}</div>
-      <div class="kpi"><b>${sequencia()}</b><span>dias seguidos</span></div>
-      <div class="kpi"><a href="#/revisoes"><b style="color:${pend.total ? "var(--bad)" : "inherit"}">${pend.total}</b><span>revisões pendentes</span></a></div>
-    </div>
-    <div class="grid g2" style="margin-top:14px">
-      <section class="caixa"><h2 class="sec">Para fazer agora</h2>${fazer.length ? `<div class="pilha">${fazer.map(([a, b]) => `<div class="linha entre" style="flex-wrap:nowrap"><div>${a}</div>${b}</div>`).join("")}</div>` : vazio("Nada pendente. Que tal praticar questões ou planejar a semana?", `<a class="btn" href="#/questoes">Praticar questões</a><a class="btn sec" href="#/plano">Planejar</a>`)}</section>
-      <section class="caixa"><h2 class="sec">Próximos conteúdos da faculdade ${P.faculdade ? pill((instPorId(P.faculdade)?.sigla || "") + (P.periodo ? ` · ${P.periodo}º período` : "")) : ""}</h2>${proximosDaFaculdade()}</section>
-    </div>
-    <section><h2 class="sec">Estudado hoje <span class="muted small">${estudadosHoje.length} assunto(s)</span></h2>${estudadosHoje.length ? `<div class="chips">${estudadosHoje.map(t => `<a class="chip" href="#/tema/${encodeURIComponent(t)}">${esc(nomeTema(t))}</a>`).join("")}</div>` : `<p class="muted">Nenhum assunto ainda hoje.</p>`}</section>
-    <div class="grid g2">
-      <section><h2 class="sec">Evolução — 14 dias <a class="small" href="#/desempenho">detalhes</a></h2>${blocoEvolucao()}</section>
-      <section><h2 class="sec">Por semana</h2>${semanas()}</section>
-    </div>
-    <div class="grid g2">
-      <section><h2 class="sec">Disciplinas com pior desempenho</h2>${discs.length ? `<div class="barras">${discs.slice(0, 4).map(x => barra(esc(x.k), x.ac, x.n)).join("")}</div>` : `<p class="muted">Responda ao menos 3 questões de uma disciplina para aparecer aqui.</p>`}</section>
-      <section><h2 class="sec">Melhor desempenho</h2>${discs.length ? `<div class="barras">${discs.slice(-4).reverse().map(x => barra(esc(x.k), x.ac, x.n)).join("")}</div>` : `<p class="muted">—</p>`}</section>
-    </div>
-    <section><h2 class="sec">Metas diárias</h2><form class="linha" data-form="metas">
-      <label class="campo"><span class="lab">Questões/dia</span><input type="number" id="meta-q" min="0" max="500" value="${metas.questoes}"></label>
-      <label class="campo"><span class="lab">Minutos/dia</span><input type="number" id="meta-m" min="0" max="900" value="${metas.minutos}"></label>
-      <button class="btn sec" style="align-self:end">Salvar metas</button></form></section>`,
+    secao: "inicio", titulo: "Hoje", sub: new Date().toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" }),
+    acoes: `<button class="btn sec mini" data-act="metas-editar">Metas</button>`,
+    html: `${avisoBackup()}
+    <section class="caixa"><div class="metas">
+      <div class="meta-item"><span>Questões</span><b>${d.q}<small class="muted" style="font-size:13px"> / ${metas.questoes}</small></b>${medidor(pct(d.q, metas.questoes), "ok")}</div>
+      <div class="meta-item"><span>Tempo de estudo</span><b>${min}<small class="muted" style="font-size:13px"> / ${metas.minutos} min</small></b>${medidor(pct(min, metas.minutos), "ok")}</div>
+      <div class="meta-item"><span>Acerto hoje</span><b>${d.q ? pct(d.ac, d.q) + "%" : "—"}</b></div>
+      <div class="meta-item"><span>Sequência</span><b>${sequencia()} ${sequencia() === 1 ? "dia" : "dias"}</b></div>
+    </div></section>
+    <section><h2 class="sec">Para fazer agora ${tarefas.length > 5 ? `<a class="small" href="#/revisoes">ver tudo (${tarefas.length})</a>` : ""}</h2>
+      ${visiveis.length ? `<div class="tarefas">${visiveis.map(t => `<div class="tarefa"><div class="o">${t.o}<small>${t.s}</small></div>${t.b}</div>`).join("")}</div>`
+        : vazio("Tudo em dia. Pratique algumas questões ou planeje a semana.", `<a class="btn" href="#/questoes">Praticar</a><a class="btn sec" href="#/plano">Planejar</a>`)}</section>
+    <section><h2 class="sec">Sua faculdade</h2>${linhaFaculdade()}</section>
+    ${estudados.length ? `<section><h2 class="sec">Estudado hoje</h2><p style="margin:0">${estudados.slice(0, 4).map(linkTema).join(" · ")}${estudados.length > 4 ? ` <span class="muted">e mais ${estudados.length - 4}</span>` : ""}</p></section>` : ""}
+    ${fracas.length ? `<section><h2 class="sec">Onde focar <a class="small" href="#/desempenho">desempenho</a></h2><div class="barras">${fracas.map(x => barra(esc(x.k), x.ac, x.n)).join("")}</div></section>` : ""}`,
   };
 });
+ACOES["metas-editar"] = () => { const m = store.doc("perfil").metas || { questoes: 20, minutos: 60 };
+  abrirFolha(`<form class="pilha" data-form="metas"><div class="campos">
+    <label class="campo"><span class="lab">Questões por dia</span><input type="number" id="meta-q" min="0" max="500" value="${m.questoes}"></label>
+    <label class="campo"><span class="lab">Minutos por dia</span><input type="number" id="meta-m" min="0" max="900" value="${m.minutos}"></label></div>
+    <button class="btn">Salvar metas</button></form>`, { titulo: "Metas diárias" }); };
 FORMS.metas = () => {
   const q = Math.max(0, Math.min(500, +$("#meta-q").value || 0)), m = Math.max(0, Math.min(900, +$("#meta-m").value || 0));
-  const P = store.doc("perfil"); P.metas = { questoes: q, minutos: m }; store.mudou("perfil"); toast("Metas salvas"); atualizar();
+  const P = store.doc("perfil"); P.metas = { questoes: q, minutos: m }; store.mudou("perfil"); fecharFolha(); toast("Metas salvas"); atualizar();
 };
 MUDANCAS["plano-feito"] = el => { const P = store.doc("plano"); const p = P.itens[el.dataset.id]; if (!p) return; p.feito = el.checked; if (p.feito && p.rev && p.tema) estudarTema(p.tema); store.mudou("plano"); atualizar(); };
 
@@ -1192,39 +1237,33 @@ const nomeInst = id => instPorId(id)?.sigla || id;
 
 /* ---------- Hub ---------- */
 rota("/medicina", () => {
-  const P = store.doc("perfil"), insts = instituicoes();
-  const gradesP = P.faculdade ? gradesDe(P.faculdade) : [];
-  const linhas = insts.map(i => {
-    const gs = gradesDe(i.id, "medicina"), st = gs.length ? statusGrade(gs[0]) : { nome: PENDENTE, cls: "warn" };
-    return [`<a href="#/medicina/inst/${esc(i.id)}">${esc(i.sigla)}</a>${i.id === P.faculdade ? " " + pill("minha", "azul") : ""}`, esc(i.nome || "—"), gs.length ? gs.map(g => esc(g.versao || "sem versão")).join(", ") : "—", pill(gs.some(g => itensGrade(g).length) ? st.nome : PENDENTE, gs.some(g => itensGrade(g).length) ? st.cls : "warn")];
-  });
+  const P = store.doc("perfil"), insts = instituicoes(), g = P.gradeId && gradePorId(P.gradeId);
+  const situacao = i => { const gs = gradesDe(i.id, "medicina").filter(x => itensGrade(x).length); return gs.length ? statusGrade(gs[0]).nome : "matriz pendente"; };
   return {
-    secao: "medicina", titulo: "Medicina", sub: "Estude seguindo a matriz da sua faculdade ou o mapa de especialidades.",
-    html: `<div class="grid g2">
-      <section class="caixa"><h2 class="sec">Minha faculdade</h2>
-        <form class="pilha" data-form="perfil-fac">
-          <div class="campos">
-            <label class="campo"><span class="lab">Instituição</span><select id="pf-inst" data-chg="pf-inst">${opcoes(insts.map(i => [i.id, i.sigla]), P.faculdade, "Selecione")}</select></label>
-            <label class="campo"><span class="lab">Matriz (versão)</span><select id="pf-grade">${opcoes(gradesP.map(g => [g.id, g.versao || g.id]), P.gradeId, gradesP.length ? "Selecione" : "Nenhuma cadastrada")}</select></label>
-            <label class="campo"><span class="lab">Período atual</span><input type="number" id="pf-per" min="1" max="12" value="${P.periodo || ""}"></label>
-          </div>
-          <div class="linha"><button class="btn">Salvar</button>${P.gradeId ? `<a class="btn sec" href="#/medicina/grade/${esc(P.gradeId)}${P.periodo ? "/p/" + P.periodo : ""}">Abrir meu período</a>` : ""}</div>
-        </form></section>
-      <section class="caixa"><h2 class="sec">Outras formas de estudar</h2><div class="pilha">
-        <a class="btn sec" href="#/medicina/especialidades">Mapa por especialidades</a>
-        <a class="btn sec" href="#/medicina/comparar">Comparar grades</a>
-        <a class="btn sec" href="#/medicina/importar">Importar matriz curricular</a>
-      </div></section>
-    </div>
-    <h2 class="sec">Faculdades <button class="btn sec mini" data-act="nova-inst">+ Adicionar faculdade</button></h2>
-    ${tabela([{ t: "Sigla" }, { t: "Instituição" }, { t: "Matrizes" }, { t: "Situação" }], linhas)}
-    <p class="small muted">Cada instituição tem sua própria matriz, nunca misturada com outra. Matrizes sem documento oficial importado aparecem como "${PENDENTE}".</p>`,
+    secao: "medicina", titulo: "Medicina",
+    html: `<div class="faixa"><p>${P.faculdade ? `<b>${esc(nomeInst(P.faculdade))}</b>${P.periodo ? ` · ${P.periodo}º período` : ""}<br><span class="small muted">${g ? esc(g.versao || "matriz") : "matriz ainda não importada"}</span>` : "Escolha sua faculdade e período"}</p>
+        <span class="linha">${g ? `<a class="btn mini" href="#/medicina/grade/${esc(g.id)}${P.periodo ? "/p/" + P.periodo : ""}">Meu período</a>` : ""}<button class="btn mini sec" data-act="perfil-fac">${P.faculdade ? "Alterar" : "Escolher"}</button></span></div>
+      <section><h2 class="sec">Estudar</h2><div class="links-lista">
+        <a href="#/medicina/especialidades"><span>Por especialidade</span><small>${Object.keys(ESPECIALIDADES).length} especialidades · ${Object.values(TEMAS).filter(t => t.dominio === "medicina").length} temas</small></a>
+        <a href="#/medicina/comparar"><span>Comparar grades</span><small>UFAM × UEA × outras</small></a>
+        <a href="#/medicina/importar"><span>Importar matriz curricular</span><small>PDF, planilha ou texto</small></a></div></section>
+      <section><h2 class="sec">Faculdades <button class="btn sec mini" data-act="nova-inst">+ Adicionar</button></h2><div class="links-lista">
+        ${insts.map(i => `<a href="#/medicina/inst/${esc(i.id)}"><span>${esc(i.sigla)}${i.id === P.faculdade ? " " + pill("minha", "azul") : ""}</span><small>${esc(situacao(i))}</small></a>`).join("")}</div>
+        <p class="small muted">Cada faculdade tem a própria matriz. Sem documento oficial, os dados curriculares ficam pendentes.</p></section>`,
   };
 });
+ACOES["perfil-fac"] = () => {
+  const P = store.doc("perfil"), insts = instituicoes(), gradesP = P.faculdade ? gradesDe(P.faculdade) : [];
+  abrirFolha(`<form class="pilha" data-form="perfil-fac"><div class="campos">
+    <label class="campo"><span class="lab">Instituição</span><select id="pf-inst" data-chg="pf-inst">${opcoes(insts.map(i => [i.id, i.sigla]), P.faculdade, "Selecione")}</select></label>
+    <label class="campo"><span class="lab">Matriz (versão)</span><select id="pf-grade">${opcoes(gradesP.map(g => [g.id, g.versao || g.id]), P.gradeId, gradesP.length ? "Selecione" : "Nenhuma cadastrada")}</select></label>
+    <label class="campo"><span class="lab">Período atual</span><input type="number" id="pf-per" min="1" max="12" value="${P.periodo || ""}"></label></div>
+    <button class="btn">Salvar</button></form>`, { titulo: "Minha faculdade" });
+};
 MUDANCAS["pf-inst"] = el => { const gs = gradesDe(el.value); $("#pf-grade").innerHTML = opcoes(gs.map(g => [g.id, g.versao || g.id]), gs[0]?.id, gs.length ? "Selecione" : "Nenhuma cadastrada"); };
 FORMS["perfil-fac"] = () => {
   const P = store.doc("perfil"); P.faculdade = $("#pf-inst").value || null; P.gradeId = $("#pf-grade").value || null;
-  const n = parseInt($("#pf-per").value, 10); P.periodo = n >= 1 && n <= 12 ? n : null; store.mudou("perfil"); toast("Faculdade salva"); atualizar();
+  const n = parseInt($("#pf-per").value, 10); P.periodo = n >= 1 && n <= 12 ? n : null; store.mudou("perfil"); fecharFolha(); toast("Faculdade salva"); atualizar();
 };
 ACOES["nova-inst"] = () => abrirFolha(`<h2 class="sec">Adicionar faculdade</h2><form class="pilha" data-form="nova-inst">
   <label class="campo"><span class="lab">Sigla</span><input type="text" id="ni-sigla" required maxlength="20"></label>
@@ -1599,72 +1638,74 @@ function crumbsTema(t) {
   const e = ESPECIALIDADES[t.especialidades?.[0]];
   return e ? [CRUMB_MED, ["Especialidades", "#/medicina/especialidades"], [e.nome, "#/medicina/esp/" + e.id]] : [CRUMB_MED];
 }
-const ABAS_TEMA = [["visao", "Visão geral"], ["mapa", "Mapa"], ["questoes", "Questões"], ["flashcards", "Flashcards"], ["casos", "Casos"], ["notas", "Anotações"], ["materiais", "Materiais"], ["erros", "Erros"], ["desempenho", "Desempenho"]];
-rota("/tema/:id", p => paginaTema(p.id, "visao"));
-rota("/tema/:id/:aba", p => paginaTema(p.id, p.aba));
+const ABAS_TEMA = [["resumo", "Resumo"], ["praticar", "Praticar"], ["mapa", "Mapa"], ["notas", "Notas"], ["desempenho", "Desempenho"]];
+// Endereços antigos continuam válidos
+const ABA_ANTIGA = { visao: "resumo", questoes: "praticar", flashcards: "praticar", casos: "praticar", erros: "praticar", materiais: "notas" };
+rota("/tema/:id", p => paginaTema(p.id, "resumo"));
+rota("/tema/:id/:aba", p => paginaTema(p.id, ABA_ANTIGA[p.aba] || p.aba));
+
+/** Faixa de revisão no topo: o que fazer com este tema agora. */
+function faixaRevisao(id, rev) {
+  if (!rev) return `<div class="faixa"><p class="small">Revisão espaçada ainda não agendada.</p><button class="btn mini" data-act="tema-estudei" data-t="${esc(id)}">Marcar como estudado</button></div>`;
+  return `<div class="faixa"><p class="small">Próxima revisão <b>${quando(rev.prox)}</b> <span class="muted">· ${dataBR(rev.prox)}</span></p>${vencido(rev) ? `<a class="btn mini azul" href="#/revisoes/tema/${encodeURIComponent(id)}">Revisar agora</a>` : `<button class="btn mini sec" data-act="tema-estudei" data-t="${esc(id)}">Estudei hoje</button>`}</div>`;
+}
+const linhaSecao = (titulo, detalhe, botoes) => `<div class="tarefa"><div class="o"><b>${titulo}</b><small>${detalhe}</small></div><span class="linha" style="flex-wrap:nowrap">${botoes}</span></div>`;
 
 function paginaTema(id, aba) {
   const t = TEMAS[id]; if (!t) return paginaNaoEncontrada();
-  const med = t.dominio === "medicina";
+  const med = t.dominio === "medicina", enc = encodeURIComponent(id);
   const qs = questoes().filter(q => q.tema === id), d = desempenhoTema(id), rev = store.doc("revisoes").temas[id];
   const cs = cards().filter(c => c.tema === id), casos = todosCasos().filter(c => c.temaId === id);
   const nota = store.doc("notas").temas[id], mats = Object.values(store.doc("materiais").itens).filter(m => m.tema === id);
-  const errs = Object.values(store.doc("erros").itens).filter(e => e.tema === id);
+  const errsAb = Object.values(store.doc("erros").itens).filter(e => e.tema === id && e.status === "aberto");
   const onde = med ? ondeNaGrade(id) : [], minha = onde.find(o => o.minha);
-  const abas = ABAS_TEMA.filter(([k]) => med || k !== "casos").map(([k, n]) => [k, n + ({ questoes: qs.length, flashcards: cs.length, casos: casos.length, erros: errs.filter(e => e.status === "aberto").length, materiais: mats.length }[k] ? ` (${({ questoes: qs.length, flashcards: cs.length, casos: casos.length, erros: errs.filter(e => e.status === "aberto").length, materiais: mats.length })[k]})` : "")]);
   let corpo = "";
 
-  if (aba === "visao") {
-    corpo = `<div class="grid g2">
-      <section class="caixa"><h2 class="sec">${t.dominio === "enem" ? "Teoria essencial" : "Resumo"}</h2>${t.resumo ? `<p class="leitura">${esc(t.resumo)}</p><p class="small muted">Resumo de referência (autoral). Aprofunde na bibliografia da disciplina.</p>` : `<p class="muted">Resumo ainda não cadastrado.</p>`}
-        ${IA.disponivel() ? `<button class="btn sec mini" data-act="ia-abrir">Pedir explicação ao assistente</button>` : ""}</section>
-      <section class="caixa"><h2 class="sec">Revisão espaçada</h2>
-        ${rev ? `<p>Próxima revisão: <b>${dataBR(rev.prox)}</b> (${quando(rev.prox)}) · etapa ${rev.etapa + 1}</p>` : `<p class="muted">Ainda não agendada. Marque como estudado para programar revisões em 1, 7, 30 e 90 dias (ajustadas pelo seu desempenho).</p>`}
-        <div class="linha"><button class="btn" data-act="tema-estudei" data-t="${esc(id)}">${rev ? "Estudei de novo hoje" : "Marcar como estudado"}</button>${rev && vencido(rev) ? `<a class="btn azul" href="#/revisoes/tema/${encodeURIComponent(id)}">Revisar agora</a>` : ""}</div>
-        <div class="kpis" style="margin-top:12px"><div class="kpi"><b>${d.n ? pct(d.ac, d.n) + "%" : "—"}</b><span>acerto (${d.n} resp.)</span></div><div class="kpi"><b>${d.vistas}/${qs.length}</b><span>questões vistas</span></div></div></section>
-    </div>
-    ${t.objetivos?.length ? `<h2 class="sec">Objetivos de aprendizagem</h2><ul class="leitura" style="white-space:normal">${t.objetivos.map(o => `<li>${esc(o)}</li>`).join("")}</ul><p class="small muted">Objetivos sugeridos. Os objetivos oficiais vêm do plano de ensino da sua faculdade.</p>` : ""}
-    ${t.subtemas?.length ? `<h2 class="sec">Subtemas</h2>${tabela([{ t: "Subtema" }, { t: "Questões", num: 1 }, { t: "Acerto", num: 1 }], t.subtemas.map(s => { const a = agregados(q => q.tema === id && q.subtema === s.id), n = qs.filter(q => q.subtema === s.id).length; return [esc(s.nome), n, a.n ? pct(a.ac, a.n) + "%" : "—"]; }))}` : ""}
-    ${med ? `<div class="grid g2"><section><h2 class="sec">Onde aparece nas suas grades</h2>${onde.length ? tabela([{ t: "Instituição" }, { t: "Período", num: 1 }, { t: "Disciplina/módulo" }], onde.map(o => [esc(nomeInst(o.g.instituicao)) + (o.minha ? " " + pill("minha", "azul") : ""), o.periodo + "º", `<a href="#/medicina/grade/${esc(o.g.id)}/item/${esc(o.item.id)}">${esc(o.item.nome)}</a>`])) : `<p class="muted small">Não vinculado a nenhuma disciplina das matrizes importadas.</p>`}</section>
-      <section><h2 class="sec">Disciplinas e especialidades relacionadas</h2><p class="small muted" style="margin-top:0">Referência geral (não é a grade de uma faculdade).</p>
-        <div class="chips">${(t.especialidades || []).map(e => `<a class="chip" href="#/medicina/esp/${esc(e)}">${esc(ESPECIALIDADES[e]?.nome || e)}</a>`).join("")}</div>
-        <p class="small" style="margin-top:8px">${(t.disciplinas || []).map(esc).join(" · ")}</p></section></div>` : ""}`;
+  if (aba === "resumo") {
+    const subs = (t.subtemas || []).map(sb => { const n = qs.filter(q => q.subtema === sb.id).length; return `<span class="pill">${esc(sb.nome)}${n ? ` · ${n}` : ""}</span>`; });
+    corpo = `${faixaRevisao(id, rev)}
+      ${t.resumo ? `<section><p class="leitura" style="margin:0">${esc(t.resumo)}</p></section>` : ""}
+      ${t.objetivos?.length ? `<section><h2 class="sec">Objetivos</h2><ul style="margin:0;padding-left:20px">${t.objetivos.map(o => `<li>${esc(o)}</li>`).join("")}</ul></section>` : ""}
+      ${subs.length ? `<section><h2 class="sec">Subtemas</h2><div class="chips">${subs.join("")}</div></section>` : ""}
+      ${med ? `<section><h2 class="sec">Onde aparece</h2>${onde.length ? `<div class="links-lista">${onde.map(o => `<a href="#/medicina/grade/${esc(o.g.id)}/item/${esc(o.item.id)}"><span>${esc(o.item.nome)}</span><small>${esc(nomeInst(o.g.instituicao))} · ${o.periodo}º período</small></a>`).join("")}</div>` : `<p class="small muted" style="margin:0">Ainda não vinculado às disciplinas da sua grade.</p>`}
+        <p class="small" style="margin:10px 0 0"><span class="muted">Especialidades:</span> ${(t.especialidades || []).map(e => `<a href="#/medicina/esp/${esc(e)}">${esc(ESPECIALIDADES[e]?.nome || e)}</a>`).join(", ")}</p></section>` : ""}
+      <p class="small muted">Resumo de referência (autoral) — aprofunde na bibliografia${med ? " da disciplina" : ""}.</p>`;
+  }
+  else if (aba === "praticar") {
+    if (playerAtivo("tema:" + id)) corpo = htmlPlayer();
+    else {
+      const novas = qs.filter(q => statusQ(q).chave === "nao").length, erradas = qs.filter(q => statusQ(q).chave === "incorreta").length, venc = cs.filter(c => vencido(c.srs)).length;
+      corpo = `<div class="tarefas">
+        ${linhaSecao("Questões", qs.length ? `${qs.length} no banco · ${novas} novas${d.n ? ` · ${pct(d.ac, d.n)}% de acerto` : ""}` : "nenhuma ainda", qs.length ? `<button class="btn mini" data-act="tema-praticar" data-t="${esc(id)}" data-m="${novas ? "novas" : "todas"}">Praticar</button>${erradas ? `<button class="btn mini sec" data-act="tema-praticar" data-t="${esc(id)}" data-m="erradas">Só erradas</button>` : ""}` : (IA.disponivel() ? `<button class="btn mini sec" data-act="ia-abrir">Gerar</button>` : ""))}
+        ${linhaSecao("Flashcards", cs.length ? `${cs.length} cards · ${venc} para hoje` : "nenhum ainda", `${venc ? `<a class="btn mini" href="#/flashcards/estudar/${enc}">Estudar</a>` : ""}${qs.length && !cs.length ? `<button class="btn mini sec" data-act="tema-cards-questoes" data-t="${esc(id)}">Criar das questões</button>` : `<button class="btn mini sec" data-act="card-novo" data-t="${esc(id)}">Novo</button>`}`)}
+        ${errsAb.length ? linhaSecao("Erros deste tema", `${errsAb.length} em aberto no caderno`, `<a class="btn mini" href="#/revisoes/erros/${enc}">Refazer</a>`) : ""}
+        ${med ? linhaSecao("Casos clínicos", casos.length ? casos.map(c => esc(c.titulo)).join(" · ") : "nenhum ainda", casos.length ? `<a class="btn mini sec" href="#/casos/${esc(casos[0].id)}">Abrir</a>` : "") : ""}
+      </div>
+      ${qs.length ? `<details class="mais" style="margin-top:12px"><summary>Ver as ${qs.length} questões</summary>${listaQuestoes(qs, 100)}</details>` : ""}
+      ${cs.length ? `<details class="mais"><summary>Ver os ${cs.length} flashcards</summary>${tabelaCards(cs)}</details>` : ""}`;
+    }
   }
   else if (aba === "mapa") {
     corpo = `<p class="legenda"><span>Toque num ramo para abrir ou fechar.</span><span><span class="pill ok">verde</span> ≥70% de acerto</span><span><span class="pill bad">vermelho</span> &lt;50%</span></p>${arvore(mapaDoTema(id))}
-      ${IA.disponivel() ? `<div class="acoes"><button class="btn sec" data-act="ia-abrir">Gerar mapa mental detalhado com IA</button></div>` : ""}`;
+      ${IA.disponivel() ? `<div class="acoes"><button class="btn sec" data-act="ia-abrir">Mapa detalhado com IA</button></div>` : ""}`;
   }
-  else if (aba === "questoes") {
-    const chave = "tema:" + id;
-    if (playerAtivo(chave)) corpo = htmlPlayer();
-    else corpo = qs.length ? `<div class="acoes" style="margin-top:0"><button class="btn" data-act="tema-praticar" data-t="${esc(id)}" data-m="todas">Praticar todas (${qs.length})</button>
-        ${qs.some(q => statusQ(q).chave === "nao") ? `<button class="btn sec" data-act="tema-praticar" data-t="${esc(id)}" data-m="novas">Só não respondidas</button>` : ""}
-        ${qs.some(q => statusQ(q).chave === "incorreta") ? `<button class="btn sec" data-act="tema-praticar" data-t="${esc(id)}" data-m="erradas">Só as que errei</button>` : ""}</div>
-      ${listaQuestoes(qs)}` : vazio("Nenhuma questão deste tema no banco ainda.", IA.disponivel() ? `<button class="btn" data-act="ia-abrir">Gerar questões com o assistente</button>` : `<a class="btn sec" href="#/biblioteca/questoes">Cadastrar questão</a>`);
-  }
-  else if (aba === "flashcards") {
-    corpo = `<div class="acoes" style="margin-top:0">${cs.some(c => vencido(c.srs)) ? `<a class="btn" href="#/flashcards/estudar/${encodeURIComponent(id)}">Estudar ${cs.filter(c => vencido(c.srs)).length} vencidos</a>` : ""}<button class="btn sec" data-act="card-novo" data-t="${esc(id)}">+ Novo flashcard</button>${qs.length ? `<button class="btn sec" data-act="tema-cards-questoes" data-t="${esc(id)}">Criar a partir das questões</button>` : ""}</div>
-      ${tabelaCards(cs, "Nenhum flashcard deste tema.")}`;
-  }
-  else if (aba === "casos") corpo = casos.length ? tabelaCasos(casos) : vazio("Nenhum caso clínico deste tema.", IA.disponivel() ? `<button class="btn" data-act="ia-abrir">Gerar caso com o assistente</button>` : "");
   else if (aba === "notas") {
-    corpo = `<label class="campo"><span class="lab">Suas anotações (salvas automaticamente)</span><textarea id="nota-txt" rows="14" data-inp="nota" data-t="${esc(id)}" placeholder="Resumo próprio, mnemônicos, dúvidas para levar à aula…">${esc(nota?.texto || "")}</textarea></label>
-      <p class="small muted" id="nota-st">${nota?.atualizado ? "Última edição: " + new Date(nota.atualizado).toLocaleString("pt-BR") : ""}</p>`;
-  }
-  else if (aba === "materiais") corpo = `${listaMateriais(mats)}<div class="acoes"><button class="btn sec" data-act="mat-novo" data-t="${esc(id)}">+ Adicionar material</button></div>`;
-  else if (aba === "erros") {
-    corpo = errs.length ? tabelaErros(errs) : vazio("Nenhum erro registrado neste tema. Erros entram aqui automaticamente.");
+    corpo = `<label class="campo"><span class="lab">Anotações (salvas automaticamente)</span><textarea id="nota-txt" rows="12" data-inp="nota" data-t="${esc(id)}" placeholder="Resumo próprio, mnemônicos, dúvidas para levar à aula…">${esc(nota?.texto || "")}</textarea></label>
+      <p class="small muted" id="nota-st">${nota?.atualizado ? "Última edição: " + new Date(nota.atualizado).toLocaleString("pt-BR") : ""}</p>
+      <section><h2 class="sec">Materiais <button class="btn sec mini" data-act="mat-novo" data-t="${esc(id)}">+ Adicionar</button></h2>${mats.length ? listaMateriais(mats) : `<p class="small muted" style="margin:0">Links de aulas, PDFs e textos deste tema aparecem aqui.</p>`}</section>`;
   }
   else if (aba === "desempenho") {
     const hist = qs.flatMap(q => (progDe(q)?.h || []).map(h => ({ ts: h[0], ok: h[2], ms: h[3] }))).sort((a, b) => a.ts - b.ts);
-    corpo = `<div class="kpis"><div class="kpi"><b>${d.n ? pct(d.ac, d.n) + "%" : "—"}</b><span>acerto</span></div><div class="kpi"><b>${d.n}</b><span>respostas</span></div><div class="kpi"><b>${d.tempoMedio ? mmss(d.tempoMedio) : "—"}</b><span>tempo médio</span></div><div class="kpi"><b>${cs.filter(c => c.srs.etapa >= 2).length}/${cs.length}</b><span>cards consolidados</span></div></div>
-      ${t.subtemas?.length ? `<h2 class="sec">Por subtema</h2><div class="barras">${t.subtemas.map(s => { const a = agregados(q => q.tema === id && q.subtema === s.id); return a.n ? barra(esc(s.nome), a.ac, a.n) : ""; }).join("") || `<p class="muted">Sem respostas por subtema ainda.</p>`}</div>` : ""}
-      <h2 class="sec">Últimas tentativas</h2>${tabela([{ t: "Data" }, { t: "Resultado" }, { t: "Tempo", num: 1 }], hist.slice(-15).reverse().map(h => [new Date(h.ts).toLocaleString("pt-BR"), h.ok ? pill("certa", "ok") : pill("errada", "bad"), h.ms ? mmss(h.ms) : "—"]), { vaziaMsg: "Sem tentativas registradas." })}`;
+    const porSub = (t.subtemas || []).map(sb => { const a = agregados(q => q.tema === id && q.subtema === sb.id); return a.n ? barra(esc(sb.nome), a.ac, a.n) : ""; }).join("");
+    corpo = `<div class="kpis"><div class="kpi"><b>${d.n ? pct(d.ac, d.n) + "%" : "—"}</b><span>acerto</span></div><div class="kpi"><b>${d.n}</b><span>respostas</span></div><div class="kpi"><b>${d.tempoMedio ? mmss(d.tempoMedio) : "—"}</b><span>tempo médio</span></div><div class="kpi"><b>${errsAb.length}</b><span>erros abertos</span></div></div>
+      ${porSub ? `<section><h2 class="sec">Por subtema</h2><div class="barras">${porSub}</div></section>` : ""}
+      <section><h2 class="sec">Últimas tentativas</h2>${tabela([{ t: "Data" }, { t: "Resultado" }, { t: "Tempo", num: 1 }], hist.slice(-10).reverse().map(h => [new Date(h.ts).toLocaleString("pt-BR"), h.ok ? pill("certa", "ok") : pill("errada", "bad"), h.ms ? mmss(h.ms) : "—"]), { vaziaMsg: "Sem tentativas registradas." })}</section>`;
   }
+  else return paginaTema(id, "resumo");
   return {
     secao: med ? "medicina" : "enem", crumbs: crumbsTema(t), titulo: t.nome,
-    sub: `${med ? (t.especialidades || []).map(e => ESPECIALIDADES[e]?.nome).filter(Boolean).join(" · ") : `ENEM · ${esc(t.areaNome)}`}${(t.sinonimos || []).length ? ` · também: ${t.sinonimos.map(esc).join(", ")}` : ""}`,
-    html: abas.length ? `<div class="tabs" role="tablist">${abas.map(([k, n]) => `<a role="tab" href="#/tema/${encodeURIComponent(id)}/${k}" aria-selected="${k === aba}">${n}</a>`).join("")}</div>${corpo}` : corpo,
+    sub: med ? esc((t.especialidades || []).map(e => ESPECIALIDADES[e]?.nome).filter(Boolean).join(" · ")) : `ENEM · ${esc(t.areaNome)}`,
+    html: `<div class="tabs" role="tablist">${ABAS_TEMA.map(([k, n]) => `<a role="tab" href="#/tema/${enc}/${k}" aria-selected="${k === aba}">${n}${k === "praticar" && (errsAb.length || cs.some(c => vencido(c.srs))) ? " •" : ""}</a>`).join("")}</div>${corpo}`,
     ctx: { tema: id, trilha: med ? "medicina" : "enem", ...(minha ? { grade: minha.g.id, periodo: minha.periodo, disciplina: minha.item.nome } : {}) },
   };
 }
@@ -1685,11 +1726,13 @@ ENTRADAS.nota = el => {
 };
 
 /* ---------- Listas reutilizadas por outras páginas ---------- */
-function listaQuestoes(qs, limite = 200) {
+/** Lista compacta de questões (enunciado em 2 linhas + uma linha de detalhes). */
+function listaQuestoes(qs, limite = 20, paginar = false) {
+  if (!qs.length) return vazio("Nenhuma questão com esses critérios.");
   const cls = { correta: "ok", incorreta: "bad", nao: "" };
-  return tabela([{ t: "Questão" }, { t: "Tema" }, { t: "Dif." }, { t: "Status" }],
-    qs.slice(0, limite).map(q => { const s = statusQ(q); return [`<a href="#/questoes/q/${esc(q.id)}">${esc(q.q.length > 110 ? q.q.slice(0, 110) + "…" : q.q)}</a>`, q.tema ? linkTema(q.tema) : esc(q.a), q.dif ? DIFICULDADE[q.dif] : "—", pill(s.nome, cls[s.chave]) + (s.marcada ? " ★" : "") + (s.revisar ? " ↻" : "")]; }))
-    + (qs.length > limite ? `<p class="small muted">Mostrando ${limite} de ${qs.length}. Use os filtros para refinar.</p>` : "");
+  return `<div class="lista-q">${qs.slice(0, limite).map(q => { const s = statusQ(q);
+    return `<a href="#/questoes/q/${esc(q.id)}"><span class="txt">${esc(q.q)}</span><span class="meta">${pill(s.nome, cls[s.chave])}${s.marcada ? "<span>★ marcada</span>" : ""}<span>${esc(q.tema ? nomeTema(q.tema) : q.a)}</span>${q.dif ? `<span>${DIFICULDADE[q.dif]}</span>` : ""}</span></a>`; }).join("")}</div>`
+    + (qs.length > limite ? (paginar ? `<div class="acoes"><button class="btn sec" data-act="lq-mais">Mostrar mais (${qs.length - limite} restantes)</button></div>` : `<p class="small muted">Mostrando ${limite} de ${qs.length}.</p>`) : "");
 }
 
 /** Mapa do tema montado só com dados do app: subtemas (com desempenho), objetivos, grade, especialidades, materiais e temas relacionados. */
@@ -1788,14 +1831,14 @@ function filtrarQuestoes(F) {
     return true;
   });
 }
-function formFiltros(F, prefixo = "fq") {
+function formFiltros(F, prefixo = "fq", { rapidos = false } = {}) {
   const base = questoes().filter(q => !F.trilha || (F.trilha === "med" ? TRILHAS[q.t]?.dominio === "medicina" : q.t === F.trilha));
   const discs = ordenarPt(unicos(base.map(q => q.disc))), temasL = ordenarPt(unicos(base.map(q => q.tema)).filter(t => TEMAS[t]), nomeTema);
   const espL = ordenarPt(unicos(base.flatMap(q => [q.esp, ...(TEMAS[q.tema]?.especialidades || [])])).filter(e => ESPECIALIDADES[e]), e => ESPECIALIDADES[e].nome);
   const anos = unicos(base.map(q => q.ano)).sort(), provas = unicos(base.map(q => q.prova)), fontes = unicos(base.map(q => q.fonte || q.src));
   const sel = (c, lab, itens, vazioTxt = "Todas") => `<label class="campo"><span class="lab">${lab}</span><select data-chg="${prefixo}" data-c="${c}">${opcoes(itens, F[c], vazioTxt)}</select></label>`;
   return `<div class="campos">
-    ${sel("trilha", "Trilha", [["med", "Medicina (graduação + residência)"], ...Object.entries(TRILHAS).map(([k, v]) => [k, v.nome])])}
+    ${rapidos ? "" : sel("trilha", "Trilha", [["med", "Medicina (graduação + residência)"], ...Object.entries(TRILHAS).map(([k, v]) => [k, v.nome])])}
     ${sel("inst", "Instituição (via grade)", instituicoes().map(i => [i.id, i.sigla]))}
     ${sel("periodo", "Período", Array.from({ length: 12 }, (_, i) => [i + 1, i + 1 + "º"]), "Todos")}
     ${sel("disc", "Disciplina", discs.map(d => [d, d]))}
@@ -1806,29 +1849,37 @@ function formFiltros(F, prefixo = "fq") {
     ${sel("fonte", "Fonte", fontes.map(f => [f, { autoral: "Autoral (banco do app)", ia: "Gerada por IA", minha: "Minhas" }[f] || f]))}
     ${anos.length ? sel("ano", "Ano", anos.map(a => [a, a]), "Todos") : ""}${provas.length ? sel("prova", "Prova", provas.map(p => [p, p])) : ""}
     <label class="campo"><span class="lab">Texto</span><input type="search" value="${esc(F.texto)}" data-inp="${prefixo}-txt" placeholder="Palavra no enunciado"></label></div>
-    <div style="margin-top:10px"><span class="lab">Status</span><div class="chips">${STATUS_Q.map(([k, t]) => `<button class="chip" data-act="${prefixo}-st" data-v="${k}" aria-pressed="${F.status.includes(k)}">${t}</button>`).join("")}</div></div>
+    ${rapidos ? "" : `<div style="margin-top:10px"><span class="lab">Status</span><div class="chips">${STATUS_Q.map(([k, t]) => `<button class="chip" data-act="${prefixo}-st" data-v="${k}" aria-pressed="${F.status.includes(k)}">${t}</button>`).join("")}</div></div>`}
     ${F.inst && !temasDaInstituicao(F.inst).size ? `<p class="aviso" style="margin-top:10px">A instituição escolhida não tem matriz importada com temas vinculados (${PENDENTE}). Nenhuma questão pode ser associada a ela ainda.</p>` : ""}`;
 }
 MUDANCAS.fq = el => { FQ[el.dataset.c] = el.value; if (el.dataset.c === "tema") FQ.subtema = ""; if (el.dataset.c === "trilha") Object.assign(FQ, { disc: "", tema: "", subtema: "", esp: "" }); atualizar(); };
 ENTRADAS["fq-txt"] = el => { FQ.texto = el.value; atualizar(); const i = document.querySelector('[data-inp="fq-txt"]'); if (i) { i.focus(); i.setSelectionRange(i.value.length, i.value.length); } };
-ACOES["fq-st"] = el => { const k = el.dataset.v; FQ.status = FQ.status.includes(k) ? FQ.status.filter(x => x !== k) : [...FQ.status, k]; atualizar(); };
+ACOES["fq-st"] = el => { QPAG = 20; const k = el.dataset.v; FQ.status = FQ.status.includes(k) ? FQ.status.filter(x => x !== k) : [...FQ.status, k]; atualizar(); };
 ACOES["fq-limpar"] = () => { Object.assign(FQ, { trilha: "", inst: "", periodo: "", disc: "", esp: "", tema: "", subtema: "", dif: "", fonte: "", ano: "", prova: "", status: [], texto: "" }); atualizar(); };
 
+let QPAG = 20;
+const TRILHAS_RAPIDAS = [["", "Todas"], ["med", "Medicina"], ["enem", "ENEM"], ["direito", "Direito"], ["oab", "OAB"]];
+const STATUS_RAPIDOS = [["nao", "Não respondidas"], ["incorreta", "Erradas"], ["marcada", "Marcadas"], ["revisar", "Revisar"]];
 rota("/questoes", () => {
   if (playerAtivo("banco")) return { secao: "questoes", crumbs: [["Questões", "#/questoes"]], titulo: PL.rotulo || "Praticando", html: htmlPlayer(), ctx: { questao: PL.ids[PL.i], tema: qPorId(PL.ids[PL.i])?.tema } };
-  const qs = filtrarQuestoes(FQ), ativos = Object.entries(FQ).filter(([k, v]) => k !== "status" ? v : v.length).length;
+  const qs = filtrarQuestoes(FQ), extras = Object.entries(FQ).filter(([k, v]) => !["trilha", "status", "texto"].includes(k) && v).length;
   return {
-    secao: "questoes", titulo: "Questões", sub: `${questoes().length} no banco · ${qs.length} no filtro`,
-    acoes: `<a class="btn sec" href="#/erros">Caderno de erros</a><a class="btn sec" href="#/biblioteca/questoes">Minhas questões</a>`,
+    secao: "questoes", titulo: "Questões", sub: `${qs.length} de ${questoes().length}`,
     html: `${abas([["banco", "Banco"], ["erros", "Caderno de erros"]], "banco", "ir-aba-q")}
-      <details class="filtros" ${ativos ? "open" : ""}><summary>Filtros${ativos ? ` (${ativos})` : ""}</summary><div style="margin-top:10px">${formFiltros(FQ)}</div>${ativos ? `<div class="acoes"><button class="btn sec mini" data-act="fq-limpar">Limpar filtros</button></div>` : ""}</details>
-      <div class="acoes" style="margin-top:0">${qs.length ? `<button class="btn" data-act="praticar-filtro">Praticar ${Math.min(qs.length, 30)} questões</button><button class="btn sec" data-act="sim-do-filtro">Simulado com este filtro</button>` : ""}</div>
-      ${listaQuestoes(qs)}`,
+      <div class="pilha">
+        ${chips(TRILHAS_RAPIDAS, FQ.trilha, "fq-trilha")}
+        <div class="chips">${STATUS_RAPIDOS.map(([k, t]) => `<button class="chip" data-act="fq-st" data-v="${k}" aria-pressed="${FQ.status.includes(k)}">${t}</button>`).join("")}</div>
+        <details class="filtros" ${extras ? "open" : ""} style="margin:0"><summary>Mais filtros${extras ? ` (${extras})` : ""}</summary><div style="margin-top:10px">${formFiltros(FQ, "fq", { rapidos: true })}</div>${extras || FQ.status.length || FQ.trilha ? `<div class="acoes"><button class="btn sec mini" data-act="fq-limpar">Limpar tudo</button></div>` : ""}</details>
+        ${qs.length ? `<div class="linha"><button class="btn" data-act="praticar-filtro">Praticar ${Math.min(qs.length, 20)}</button><button class="btn sec" data-act="sim-do-filtro">Fazer simulado</button></div>` : ""}
+      </div>
+      ${listaQuestoes(qs, QPAG, true)}`,
   };
 });
+ACOES["lq-mais"] = () => { QPAG += 20; atualizar(); };
+ACOES["fq-trilha"] = el => { FQ.trilha = el.dataset.v; Object.assign(FQ, { disc: "", tema: "", subtema: "", esp: "" }); QPAG = 20; atualizar(); };
 ACOES["ir-aba-q"] = el => ir(el.dataset.v === "erros" ? "#/erros" : "#/questoes");
 function praticar(ids, rotulo) { iniciarPlayer("banco", ids, "pratica"); PL.rotulo = rotulo || "Praticando"; ir("#/questoes"); }
-ACOES["praticar-filtro"] = () => { const qs = filtrarQuestoes(FQ); const pri = qs.filter(q => statusQ(q).chave === "nao"); praticar(embaralhar(pri.length >= 10 ? pri : qs).slice(0, 30).map(q => q.id), "Praticando questões filtradas"); };
+ACOES["praticar-filtro"] = () => { const qs = filtrarQuestoes(FQ); const pri = qs.filter(q => statusQ(q).chave === "nao"); praticar(embaralhar(pri.length >= 10 ? pri : qs).slice(0, 20).map(q => q.id), "Praticando questões filtradas"); };
 ACOES["praticar-ids"] = el => praticar(embaralhar(el.dataset.ids.split(",").filter(qPorId)).slice(0, 40), "Praticando: " + (el.dataset.ctx || "seleção"));
 
 /* ---------- Página de uma questão ---------- */
@@ -1848,35 +1899,35 @@ rota("/questoes/q/:id", ({ id }) => {
 });
 
 /* ---------- Caderno de erros ---------- */
-const FE = { status: "aberto", tema: "", motivo: "", agrupar: false };
+const FE = { status: "aberto", tema: "", motivo: "", agrupar: true };
 function tabelaErros(errs) {
-  return tabela([{ t: "Questão" }, { t: "Tema" }, { t: "Sua resposta" }, { t: "Motivo" }, { t: "Revisão" }, { t: "" }],
-    errs.sort((a, b) => (a.srs?.prox || "").localeCompare(b.srs?.prox || "")).map(e => { const q = qPorId(e.qid); if (!q) return null;
-      return [`<a href="#/questoes/q/${esc(q.id)}">${esc(q.q.slice(0, 90))}${q.q.length > 90 ? "…" : ""}</a>`, e.tema ? linkTema(e.tema) : esc(q.a), `<span class="small">${esc(q.o[e.resp] ?? "—")}</span>`,
-        `<span class="small">${esc(e.motivo || e.motivoSugerido || "—")}${e.motivo ? "" : " <i class='muted'>(sugerido)</i>"}</span>`, e.status === "aberto" ? `${dataBR(e.srs?.prox)} ${vencido(e.srs) ? pill("vencida", "bad") : ""}` : pill("resolvido", "ok"),
-        `<button class="btn mini sec" data-act="erro-detalhe" data-q="${esc(q.id)}">Abrir</button>`]; }).filter(Boolean), { vaziaMsg: "Nenhum erro com esses filtros." });
+  const l = errs.filter(e => qPorId(e.qid)).sort((a, b) => (a.srs?.prox || "").localeCompare(b.srs?.prox || ""));
+  if (!l.length) return vazio("Nenhum erro com esses filtros.");
+  return `<div class="lista-q">${l.map(e => { const q = qPorId(e.qid);
+    return `<a href="#" data-act="erro-detalhe" data-q="${esc(q.id)}"><span class="txt">${esc(q.q)}</span><span class="meta">${e.status === "aberto" ? (vencido(e.srs) ? pill("revisar hoje", "bad") : `<span>revisão ${quando(e.srs?.prox)}</span>`) : pill("resolvido", "ok")}<span>${esc(e.tema ? nomeTema(e.tema) : q.a)}</span><span>${esc(e.motivo || e.motivoSugerido || "")}</span></span></a>`; }).join("")}</div>`;
 }
 rota("/erros", () => {
   const todos = Object.values(store.doc("erros").itens).filter(e => qPorId(e.qid));
   const lista = todos.filter(e => (!FE.status || e.status === FE.status) && (!FE.tema || e.tema === FE.tema) && (!FE.motivo || (e.motivo || "") === FE.motivo));
   const venc = todos.filter(e => e.status === "aberto" && vencido(e.srs));
-  const porTema = listaPor(Object.fromEntries(Object.entries(porChave(todos.filter(e => e.status === "aberto"), e => e.tema || "—")).map(([k, v]) => [k, { n: v.length, ac: 0 }]))).sort((a, b) => b.n - a.n).slice(0, 6);
   return {
-    secao: "questoes", crumbs: [["Questões", "#/questoes"]], titulo: "Caderno de erros", sub: `${todos.filter(e => e.status === "aberto").length} abertos · ${todos.filter(e => e.status === "resolvido").length} resolvidos. Toda questão errada entra aqui automaticamente, com revisão em 1 dia.`,
+    secao: "questoes", crumbs: [["Questões", "#/questoes"]], titulo: "Caderno de erros", sub: `${todos.filter(e => e.status === "aberto").length} abertos · ${todos.filter(e => e.status === "resolvido").length} resolvidos`,
     acoes: venc.length ? `<a class="btn" href="#/revisoes/erros">Refazer ${venc.length} vencidas</a>` : "",
     html: `${abas([["banco", "Banco"], ["erros", "Caderno de erros"]], "erros", "ir-aba-q")}
-      ${porTema.length ? `<p class="small">Temas com mais erros abertos: ${porTema.map(x => `${linkTema(x.k)} (${x.n})`).join(" · ")}</p>` : ""}
-      <div class="campos" style="margin-bottom:12px">
+      <details class="filtros" ${FE.tema || FE.motivo || FE.status !== "aberto" ? "open" : ""}><summary>Filtrar</summary><div class="campos" style="margin-top:10px">
         <label class="campo"><span class="lab">Status</span><select data-chg="fe" data-c="status">${opcoes([["aberto", "Abertos"], ["resolvido", "Resolvidos"]], FE.status, "Todos")}</select></label>
         <label class="campo"><span class="lab">Tema</span><select data-chg="fe" data-c="tema">${opcoes(ordenarPt(unicos(todos.map(e => e.tema)).filter(Boolean), nomeTema).map(t => [t, nomeTema(t)]), FE.tema, "Todos")}</select></label>
-        <label class="campo"><span class="lab">Motivo</span><select data-chg="fe" data-c="motivo">${opcoes(MOTIVOS.map(m => [m, m]), FE.motivo, "Todos")}</select></label></div>
-      ${todos.length ? `<label class="check" style="margin-bottom:8px"><input type="checkbox" data-chg="fe-agrupar" ${FE.agrupar ? "checked" : ""}><span>Agrupar por tema</span></label>` : ""}
-      ${todos.length && FE.agrupar ? tabela([{ t: "Tema" }, { t: "Erros", num: 1 }, { t: "Abertos", num: 1 }, { t: "Vencidos", num: 1 }, { t: "" }], Object.entries(porChave(lista, e => e.tema || "_sem")).sort((a, b) => b[1].length - a[1].length).map(([tm, es]) => [tm === "_sem" ? "Sem tema" : linkTema(tm), es.length, es.filter(e => e.status === "aberto").length, es.filter(e => e.status === "aberto" && vencido(e.srs)).length || "—", es.some(e => e.status === "aberto") ? `<a class="btn mini" href="#/revisoes/erros/${encodeURIComponent(tm)}">Refazer lote</a>` : ""]))
+        <label class="campo"><span class="lab">Motivo</span><select data-chg="fe" data-c="motivo">${opcoes(MOTIVOS.map(m => [m, m]), FE.motivo, "Todos")}</select></label></div></details>
+      ${todos.length ? `${chips([["1", "Por tema"], ["0", "Todas as questões"]], FE.agrupar ? "1" : "0", "fe-vista")}` : ""}
+      ${todos.length && FE.agrupar ? `<div class="tarefas">${Object.entries(porChave(lista, e => e.tema || "_sem")).sort((a, b) => b[1].length - a[1].length).map(([tm, es]) => {
+        const ab = es.filter(e => e.status === "aberto").length, ve = es.filter(e => e.status === "aberto" && vencido(e.srs)).length;
+        return `<div class="tarefa"><div class="o">${tm === "_sem" ? "Sem tema" : linkTema(tm)}<small>${ab ? `${ab} aberto(s)` : "resolvidos"}${ve ? ` · <b style="color:var(--bad)">${ve} para hoje</b>` : ""}</small></div>${ab ? `<a class="btn mini ${ve ? "" : "sec"}" href="#/revisoes/erros/${encodeURIComponent(tm)}">Refazer</a>` : ""}</div>`; }).join("")}</div>`
       : todos.length ? tabelaErros(lista) : vazio("Nenhum erro registrado ainda. Quando você errar uma questão, ela aparece aqui com revisão programada.", `<a class="btn" href="#/questoes">Praticar questões</a>`)}`,
   };
 });
 MUDANCAS.fe = el => { FE[el.dataset.c] = el.value; atualizar(); };
 MUDANCAS["fe-agrupar"] = el => { FE.agrupar = el.checked; atualizar(); };
+ACOES["fe-vista"] = el => { FE.agrupar = el.dataset.v === "1"; atualizar(); };
 ACOES["erro-detalhe"] = el => {
   const e = store.doc("erros").itens[el.dataset.q], q = qPorId(el.dataset.q); if (!e || !q) return;
   abrirFolha(`<h2 class="sec">Registro do erro</h2><p class="leitura" style="margin:0 0 8px">${esc(q.q)}</p>
@@ -1901,20 +1952,21 @@ ACOES["erro-status"] = el => { const E = store.doc("erros"), e = E.itens[el.data
    ============================================================ */
 const ORIGEM_CARD = { manual: "manual", erro: "caderno de erros", questao: "questão", ia: "IA" };
 function tabelaCards(cs, vaziaMsg = "Nenhum flashcard.") {
-  return tabela([{ t: "Pergunta" }, { t: "Tema" }, { t: "Origem" }, { t: "Próxima" }, { t: "" }],
-    cs.sort((a, b) => a.srs.prox.localeCompare(b.srs.prox)).map(c => [esc(c.frente.length > 90 ? c.frente.slice(0, 90) + "…" : c.frente), c.tema ? linkTema(c.tema) : "—", esc(ORIGEM_CARD[c.origem] || c.origem),
-      `${dataBR(c.srs.prox)} ${vencido(c.srs) ? pill("hoje", "azul") : ""}`, `<button class="btn mini sec" data-act="card-editar" data-id="${esc(c.id)}">Editar</button>`]), { vaziaMsg });
+  if (!cs.length) return vazio(vaziaMsg);
+  return `<div class="lista-q">${cs.sort((a, b) => a.srs.prox.localeCompare(b.srs.prox)).map(c => `<a href="#" data-act="card-editar" data-id="${esc(c.id)}"><span class="txt">${esc(c.frente)}</span><span class="meta">${vencido(c.srs) ? pill("hoje", "azul") : `<span>${quando(c.srs.prox)}</span>`}${c.tema ? `<span>${esc(nomeTema(c.tema))}</span>` : ""}<span>${esc(ORIGEM_CARD[c.origem] || c.origem)}</span></span></a>`).join("")}</div>`;
 }
 const FF = { tema: "" };
 rota("/flashcards", () => {
   const todos = cards(), lista = todos.filter(c => !FF.tema || c.tema === FF.tema), venc = todos.filter(c => vencido(c.srs));
   const temasC = ordenarPt(unicos(todos.map(c => c.tema)).filter(Boolean), nomeTema);
   return {
-    secao: "flashcards", titulo: "Flashcards", sub: "Revisão espaçada: 1 → 7 → 30 → 90 dias, ajustada pela sua avaliação a cada card.",
-    acoes: `${venc.length ? `<a class="btn" href="#/flashcards/estudar">Estudar ${venc.length} vencidos</a>` : ""}<button class="btn sec" data-act="card-novo">+ Novo</button>`,
-    html: `<div class="kpis"><div class="kpi"><b>${todos.length}</b><span>cards</span></div><div class="kpi"><b>${venc.length}</b><span>para hoje</span></div><div class="kpi"><b>${todos.filter(c => c.srs.etapa >= 2).length}</b><span>consolidados (≥30 dias)</span></div><div class="kpi"><b>${todos.filter(c => c.srs.hist?.length).length}</b><span>já revisados</span></div></div>
-      ${todos.length ? `<div class="campos" style="margin:12px 0"><label class="campo"><span class="lab">Tema</span><select data-chg="ff">${opcoes(temasC.map(t => [t, nomeTema(t)]), FF.tema, "Todos")}</select></label></div>${tabelaCards(lista)}`
-        : vazio("Você ainda não tem flashcards. Crie a partir dos seus erros, das questões de um tema, com o assistente ou manualmente.", `<a class="btn" href="#/erros">Do caderno de erros</a><button class="btn sec" data-act="card-novo">Criar manualmente</button>`)}`,
+    secao: "flashcards", titulo: "Flashcards", sub: todos.length ? `${todos.length} cards · ${venc.length} para hoje · ${todos.filter(c => c.srs.etapa >= 2).length} consolidados` : "",
+    acoes: `<button class="btn sec mini" data-act="card-novo">+ Novo</button>`,
+    html: todos.length ? `${venc.length ? `<div class="faixa"><p><b>${venc.length} para revisar hoje</b></p><a class="btn" href="#/flashcards/estudar">Estudar</a></div>` : ""}
+        ${temasC.length > 1 ? `<label class="campo" style="max-width:320px"><span class="lab">Filtrar por tema</span><select data-chg="ff">${opcoes(temasC.map(t => [t, nomeTema(t)]), FF.tema, "Todos")}</select></label>` : ""}
+        ${tabelaCards(lista)}
+        <p class="small muted">Revisão espaçada: 1 → 7 → 30 → 90 dias, ajustada pela sua avaliação.</p>`
+      : vazio("Você ainda não tem flashcards. Crie a partir dos seus erros, das questões de um tema, com o assistente ou manualmente.", `<a class="btn" href="#/erros">Do caderno de erros</a><button class="btn sec" data-act="card-novo">Criar</button>`),
   };
 });
 MUDANCAS.ff = el => { FF.tema = el.value; atualizar(); };
@@ -1989,15 +2041,18 @@ rota("/revisoes", () => {
   for (let i = 1; i <= 14; i++) {
     const d = somaDias(hoje(), i);
     const t = Object.values(R).filter(s => s.prox === d).length, c = cards().filter(x => x.srs.prox === d).length, e = Object.values(store.doc("erros").itens).filter(x => x.status === "aberto" && x.srs?.prox === d).length;
-    if (t + c + e) prox.push([dataBR(d) + ` <span class="muted small">${new Date(d + "T12:00").toLocaleDateString("pt-BR", { weekday: "short" })}</span>`, t || "—", c || "—", e || "—"]);
+    if (t + c + e) prox.push(`<div class="tarefa"><div class="o">${new Date(d + "T12:00").toLocaleDateString("pt-BR", { weekday: "short", day: "2-digit", month: "2-digit" })}<small>${[t && t + " tema(s)", c && c + " card(s)", e && e + " erro(s)"].filter(Boolean).join(" · ")}</small></div></div>`);
   }
+  const itens = [
+    ...p.temas.sort((a, b) => a.srs.prox.localeCompare(b.srs.prox)).map(({ id, srs }) => `<div class="tarefa"><div class="o">${linkTema(id)}<small>tema · ${quando(srs.prox)} · etapa ${srs.etapa + 1}</small></div><a class="btn mini" href="#/revisoes/tema/${encodeURIComponent(id)}">Revisar</a></div>`),
+    p.erros.length ? `<div class="tarefa"><div class="o">Questões que você errou<small>${p.erros.length} para refazer, agrupadas por tema</small></div><a class="btn mini" href="#/revisoes/erros">Refazer</a></div>` : "",
+    p.cards.length ? `<div class="tarefa"><div class="o">Flashcards<small>${p.cards.length} para hoje</small></div><a class="btn mini" href="#/flashcards/estudar">Estudar</a></div>` : "",
+  ].filter(Boolean);
   return {
-    secao: "revisoes", titulo: "Revisões", sub: "Intervalos base de 1, 7, 30 e 90 dias. Acertar adianta a próxima etapa; errar volta ao início.",
-    html: `<div class="kpis"><div class="kpi"><b>${p.temas.length}</b><span>temas vencidos</span></div><div class="kpi"><b>${p.cards.length}</b><span>flashcards</span></div><div class="kpi"><b>${p.erros.length}</b><span>erros para refazer</span></div></div>
-      ${p.total ? "" : `<div class="aviso info" style="margin-top:12px">Tudo em dia. Novas revisões surgem quando você marca um tema como estudado, cria flashcards ou erra questões.</div>`}
-      ${p.temas.length ? `<h2 class="sec">Temas para revisar</h2>${tabela([{ t: "Tema" }, { t: "Etapa", num: 1 }, { t: "Venceu" }, { t: "Acerto", num: 1 }, { t: "" }], p.temas.sort((a, b) => a.srs.prox.localeCompare(b.srs.prox)).map(({ id, srs }) => { const d = desempenhoTema(id); return [linkTema(id), srs.etapa + 1, quando(srs.prox), d.n ? pct(d.ac, d.n) + "%" : "—", `<a class="btn mini" href="#/revisoes/tema/${encodeURIComponent(id)}">Revisar</a>`]; }))}` : ""}
-      ${p.cards.length || p.erros.length ? `<h2 class="sec">Outras revisões de hoje</h2><div class="linha">${p.cards.length ? `<a class="btn" href="#/flashcards/estudar">Estudar ${p.cards.length} flashcards</a>` : ""}${p.erros.length ? `<a class="btn" href="#/revisoes/erros">Refazer ${p.erros.length} questões erradas</a>` : ""}</div>` : ""}
-      <h2 class="sec">Próximos 14 dias</h2>${tabela([{ t: "Dia" }, { t: "Temas", num: 1 }, { t: "Cards", num: 1 }, { t: "Erros", num: 1 }], prox, { vaziaMsg: "Nada agendado para os próximos 14 dias." })}`,
+    secao: "revisoes", titulo: "Revisões", sub: p.total ? `${p.total} para hoje` : "Tudo em dia",
+    html: `${itens.length ? `<div class="tarefas">${itens.join("")}</div>` : vazio("Nada para revisar hoje. Novas revisões surgem quando você estuda um tema, cria flashcards ou erra questões.")}
+      ${prox.length ? `<section><h2 class="sec">Próximos dias</h2><div class="tarefas">${prox.join("")}</div></section>` : ""}
+      <p class="small muted">Revisão espaçada: 1, 7, 30 e 90 dias. Acertar adianta a próxima etapa; errar volta ao início.</p>`,
   };
 });
 
@@ -2085,12 +2140,12 @@ const FC2 = { esp: "", disc: "", dif: "", tema: "" };
 rota("/casos", () => {
   const todos = todosCasos(), lista = todos.filter(c => (!FC2.esp || c.espId === FC2.esp) && (!FC2.disc || c.disciplina === FC2.disc) && (!FC2.dif || String(c.dificuldade) === FC2.dif) && (!FC2.tema || c.temaId === FC2.tema));
   return {
-    secao: "casos", titulo: "Casos clínicos", sub: AVISO_CASO, acoes: `<button class="btn sec" data-act="caso-novo">+ Novo caso</button>`,
-    html: `<div class="campos" style="margin-bottom:12px">
+    secao: "casos", titulo: "Casos clínicos", sub: AVISO_CASO, acoes: `<button class="btn sec mini" data-act="caso-novo">+ Novo</button>`,
+    html: `<details class="filtros" ${Object.values(FC2).some(Boolean) ? "open" : ""}><summary>Filtrar${Object.values(FC2).filter(Boolean).length ? ` (${Object.values(FC2).filter(Boolean).length})` : ""}</summary><div class="campos" style="margin-top:10px">
       <label class="campo"><span class="lab">Especialidade</span><select data-chg="fc2" data-c="esp">${opcoes(ordenarPt(unicos(todos.map(c => c.espId)).filter(e => ESPECIALIDADES[e]), e => ESPECIALIDADES[e].nome).map(e => [e, ESPECIALIDADES[e].nome]), FC2.esp, "Todas")}</select></label>
       <label class="campo"><span class="lab">Disciplina</span><select data-chg="fc2" data-c="disc">${opcoes(ordenarPt(unicos(todos.map(c => c.disciplina))).map(d => [d, d]), FC2.disc, "Todas")}</select></label>
       <label class="campo"><span class="lab">Tema</span><select data-chg="fc2" data-c="tema">${opcoes(ordenarPt(unicos(todos.map(c => c.temaId)).filter(t => TEMAS[t]), nomeTema).map(t => [t, nomeTema(t)]), FC2.tema, "Todos")}</select></label>
-      <label class="campo"><span class="lab">Dificuldade</span><select data-chg="fc2" data-c="dif">${opcoes(Object.entries(DIFICULDADE), FC2.dif, "Todas")}</select></label></div>
+      <label class="campo"><span class="lab">Dificuldade</span><select data-chg="fc2" data-c="dif">${opcoes(Object.entries(DIFICULDADE), FC2.dif, "Todas")}</select></label></div></details>
       ${tabelaCasos(lista)}`,
   };
 });
@@ -2308,9 +2363,9 @@ rota("/plano", () => {
     titulo = new Date(PV.data + "T12:00").toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" });
     const l = doDia(PV.data); corpo = l.length ? l.map(linhaPlano).join("") : vazio("Nada planejado para este dia.");
   } else if (PV.vista === "semana") {
-    const ini = inicioSemana(PV.data); titulo = `Semana de ${dataBR(ini)} a ${dataBR(somaDias(ini, 6))}`;
-    corpo = Array.from({ length: 7 }, (_, i) => somaDias(ini, i)).map(d => { const l = doDia(d), min = l.reduce((s, p) => s + (+p.min || 0), 0);
-      return `<section style="margin-bottom:10px"><h3 style="${d === hoje() ? "color:var(--pen)" : ""}">${new Date(d + "T12:00").toLocaleDateString("pt-BR", { weekday: "long", day: "2-digit", month: "2-digit" })}${min ? ` · ${horas(min * 60)}` : ""} <button class="btn mini sec" data-act="plano-novo" data-d="${d}" style="margin-left:6px">+</button></h3>${l.length ? l.map(linhaPlano).join("") : `<p class="small muted" style="margin:0">—</p>`}</section>`; }).join("");
+    const ini = inicioSemana(PV.data); titulo = `${dataCurta(new Date(ini + "T12:00"))} a ${dataCurta(new Date(somaDias(ini, 6) + "T12:00"))}`;
+    corpo = `<div class="tarefas">${Array.from({ length: 7 }, (_, i) => somaDias(ini, i)).map(d => { const l = doDia(d), min = l.reduce((s, p) => s + (+p.min || 0), 0);
+      return `<div class="tarefa" style="flex-wrap:wrap;align-items:flex-start"><div class="o"><b style="${d === hoje() ? "color:var(--pen)" : ""}">${new Date(d + "T12:00").toLocaleDateString("pt-BR", { weekday: "short", day: "2-digit", month: "2-digit" })}</b><small>${l.length ? `${l.length} item(ns)${min ? " · " + horas(min * 60) : ""}` : "livre"}</small></div><button class="btn mini sec" data-act="plano-novo" data-d="${d}" aria-label="Adicionar em ${dataBR(d)}">+</button>${l.length ? `<div style="flex-basis:100%">${l.map(linhaPlano).join("")}</div>` : ""}</div>`; }).join("")}</div>`;
   } else {
     const [a, m] = PV.data.split("-").map(Number), prim = `${a}-${String(m).padStart(2, "0")}-01`, ini = inicioSemana(prim);
     titulo = new Date(prim + "T12:00").toLocaleDateString("pt-BR", { month: "long", year: "numeric" });
@@ -2320,10 +2375,10 @@ rota("/plano", () => {
   const passo = { dia: 1, semana: 7, mes: 30 }[PV.vista];
   const semana = todos.filter(p => p.data >= inicioSemana(hoje()) && p.data <= somaDias(inicioSemana(hoje()), 6));
   return {
-    secao: "plano", titulo: "Planejamento", sub: `Esta semana: ${semana.filter(p => p.feito).length}/${semana.length} concluídos · ${horas(semana.reduce((s, p) => s + (+p.min || 0), 0) * 60)} previstos`,
-    acoes: `<button class="btn" data-act="plano-novo" data-d="${PV.vista === "dia" ? PV.data : hoje()}">+ Adicionar</button>`,
+    secao: "plano", titulo: "Planejamento", sub: semana.length ? `Esta semana: ${semana.filter(p => p.feito).length} de ${semana.length} concluídos · ${horas(semana.reduce((s, p) => s + (+p.min || 0), 0) * 60)} previstos` : "",
+    acoes: `<button class="btn sec mini" data-act="plano-novo" data-d="${PV.vista === "dia" ? PV.data : hoje()}">+ Adicionar</button>`,
     html: `${abas([["dia", "Dia"], ["semana", "Semana"], ["mes", "Mês"]], PV.vista, "plano-vista")}
-      <div class="linha entre" style="margin-bottom:10px"><button class="btn sec mini" data-act="plano-mover" data-n="-${passo}" aria-label="Anterior">‹</button><b style="text-transform:capitalize">${esc(titulo)}</b><span class="linha"><button class="btn sec mini" data-act="plano-hoje">Hoje</button><button class="btn sec mini" data-act="plano-mover" data-n="${passo}" aria-label="Próximo">›</button></span></div>
+      <div class="linha entre" style="margin-bottom:10px;flex-wrap:nowrap"><b>${esc(titulo)}</b><span class="linha" style="flex-wrap:nowrap"><button class="btn sec mini" data-act="plano-mover" data-n="-${passo}" aria-label="Anterior">‹</button><button class="btn sec mini" data-act="plano-hoje">Hoje</button><button class="btn sec mini" data-act="plano-mover" data-n="${passo}" aria-label="Próximo">›</button></span></div>
       ${corpo}`,
   };
 });
@@ -2365,8 +2420,11 @@ FORMS["plano-salvar"] = () => {
    20-desempenho — métricas calculadas a partir das tentativas registradas.
    ============================================================ */
 const DV = { aba: "disciplina", trilha: "" };
+/** Os pontos mais fracos primeiro, só com base suficiente (3+ respostas). */
 function tabelaDesempenho(lista, rotulo, fmt = k => esc(k)) {
-  return tabela([{ t: rotulo }, { t: "Respostas", num: 1 }, { t: "Acerto", num: 1 }, { t: "" }], lista.sort((a, b) => a.p - b.p).map(x => [fmt(x.k), x.n, Math.round(x.p * 100) + "%", `<div style="min-width:90px">${medidor(x.p * 100, x.p < .5 ? "bad" : "")}</div>`]), { vaziaMsg: "Sem respostas ainda." });
+  const l = lista.filter(x => x.n >= 3).sort((a, b) => a.p - b.p);
+  if (!l.length) return vazio("Responda ao menos 3 questões de um assunto para ele aparecer aqui.");
+  return `<div class="barras">${l.slice(0, 8).map(x => barra(fmt(x.k), x.ac, x.n)).join("")}</div>${l.length > 8 ? `<p class="small muted">+${l.length - 8} com melhor desempenho</p>` : ""}`;
 }
 function colunasTempo(nDias = 14) {
   const D = store.doc("dias").d, dias = Array.from({ length: nDias }, (_, i) => somaDias(hoje(), i - nDias + 1)).map(k => ({ k, m: Math.round((D[k]?.seg || 0) / 60) }));
@@ -2386,21 +2444,32 @@ rota("/desempenho", () => {
     tab = tabelaDesempenho(listaPor(porA), "Área do ENEM");
   }
   else if (DV.aba === "trilha") tab = tabelaDesempenho(listaPor(ag.por.trilha), "Trilha", k => esc(TRILHAS[k]?.nome || k));
+  const temTempo = Object.values(D).some(d => d.seg >= 60), sem = semanasComDados(4);
   return {
     secao: "desempenho", titulo: "Desempenho",
-    html: `<div class="linha" style="margin-bottom:12px">${chips([["", "Tudo"], ["med", "Medicina"], ["enem", "ENEM"], ["direito", "Direito"], ["oab", "OAB"]], DV.trilha, "dv-trilha")}</div>
+    html: `${chips([["", "Tudo"], ["med", "Medicina"], ["enem", "ENEM"], ["direito", "Direito"], ["oab", "OAB"]], DV.trilha, "dv-trilha")}
       <div class="kpis"><div class="kpi"><b>${ag.n ? pct(ag.ac, ag.n) + "%" : "—"}</b><span>acerto geral</span></div><div class="kpi"><b>${ag.n}</b><span>respostas</span></div>
-        <div class="kpi"><b>${ag.vistas}/${questoes().filter(filtro).length}</b><span>questões vistas</span></div><div class="kpi"><b>${ag.nms ? mmss(ag.ms / ag.nms) : "—"}</b><span>tempo médio/questão</span></div>
-        <div class="kpi"><b>${horas(segTotal)}</b><span>tempo de estudo total</span></div><div class="kpi"><b>${sequencia()}</b><span>dias seguidos</span></div>
-        <div class="kpi"><b>${cs.filter(c => c.srs.etapa >= 2).length}/${cs.length}</b><span>flashcards consolidados</span></div><div class="kpi"><b>${sims.length}</b><span>simulados</span></div></div>
-      <div class="grid g2"><section><h2 class="sec">Questões por dia (30 dias)</h2>${blocoEvolucao(30)}</section><section><h2 class="sec">Minutos de estudo (14 dias)</h2>${colunasTempo()}</section></div>
-      <h2 class="sec">Evolução semanal</h2>${semanas(8)}
-      <h2 class="sec">Onde melhorar</h2>${abas([["disciplina", "Disciplinas"], ["especialidade", "Especialidades"], ["tema", "Temas"], ["enem", "Áreas do ENEM"], ["trilha", "Trilhas"]], DV.aba, "dv-aba")}${tab}
-      <h2 class="sec">Simulados</h2>${evolucaoSim(null)}${sims.length ? `<div class="barras" style="margin-top:10px">${sims.slice(-10).reverse().map(barraSim).join("")}</div>` : `<p class="muted">Nenhum simulado feito.</p>`}`,
+        <div class="kpi"><b>${ag.vistas}<small class="muted" style="font-size:13px"> / ${questoes().filter(filtro).length}</small></b><span>questões vistas</span></div><div class="kpi"><b>${horas(segTotal)}</b><span>tempo de estudo</span></div></div>
+      <section><h2 class="sec">Onde melhorar</h2>${abas([["disciplina", "Disciplinas"], ["tema", "Temas"], ["especialidade", "Especialidades"], ["enem", "ENEM"]], DV.aba, "dv-aba")}${tab}</section>
+      <section><h2 class="sec">Questões nos últimos 14 dias</h2>${blocoEvolucao(14)}</section>
+      ${temTempo ? `<section><h2 class="sec">Minutos de estudo</h2>${colunasTempo()}</section>` : ""}
+      ${sem ? `<section><h2 class="sec">Por semana</h2>${sem}</section>` : ""}
+      ${sims.length ? `<section><h2 class="sec">Simulados</h2>${evolucaoSim(null)}<div class="barras" style="margin-top:10px">${sims.slice(-5).reverse().map(barraSim).join("")}</div></section>` : ""}
+      <p class="small muted">Tempo médio por questão: ${ag.nms ? mmss(ag.ms / ag.nms) : "—"} · flashcards consolidados: ${cs.filter(c => c.srs.etapa >= 2).length}/${cs.length} · sequência: ${sequencia()} dia(s)</p>`,
   };
 });
 ACOES["dv-aba"] = el => { DV.aba = el.dataset.v; atualizar(); };
 ACOES["dv-trilha"] = el => { DV.trilha = el.dataset.v; atualizar(); };
+/** Semanas com algum estudo (as vazias não aparecem). */
+function semanasComDados(n = 4) {
+  const D = store.doc("dias").d, linhas = [];
+  for (let w = 0; w < n; w++) {
+    let q = 0, ac = 0, seg = 0;
+    for (let i = 0; i < 7; i++) { const d = D[somaDias(hoje(), -(w * 7 + i))]; if (d) { q += d.q || 0; ac += d.ac || 0; seg += d.seg || 0; } }
+    if (q || seg >= 60) linhas.push([w === 0 ? "Esta semana" : `Há ${w} semana${w > 1 ? "s" : ""}`, q, q ? pct(ac, q) + "%" : "—", horas(seg)]);
+  }
+  return linhas.length ? tabela([{ t: "Semana" }, { t: "Questões", num: 1 }, { t: "Acerto", num: 1 }, { t: "Tempo", num: 1 }], linhas) : "";
+}
 
 /* ---- 21-biblioteca.js ---- */
 /* ============================================================
@@ -2447,14 +2516,13 @@ function paginaBiblioteca(aba) {
       <h2 class="sec">Salvas <span class="small muted">${minhas.length}</span></h2>
       ${tabela([{ t: "Questão" }, { t: "Trilha" }, { t: "Tema" }, { t: "" }], minhas.map(x => [`<a href="#/questoes/q/${esc(x.id)}">${esc((x.enunciado || x.q || "").slice(0, 100))}</a>`, esc(TRILHAS[x.t]?.curto || x.t), x.tema ? linkTema(x.tema) : "—", `<button class="btn mini sec" data-act="q-del" data-id="${esc(x.id)}">Excluir</button>`]), { vaziaMsg: "Nenhuma questão sua ainda. Cadastre acima ou gere com o assistente dentro de um tema." })}`;
   } else if (aba === "dados") {
-    const nomes = store.nomes().filter(n => n !== "perfil");
-    corpo = `<section class="caixa"><h2 class="sec">Onde seus dados ficam</h2><p>${store.naConta ? "Na sua conta Claude (sincronizados entre aparelhos) e em cópia local neste navegador." : "Somente neste navegador. Abra pelo link do Claude para sincronizar, ou faça backup regularmente."}</p>
-      <p class="small muted">${nomes.length} coleções: ${nomes.map(esc).join(", ")}</p></section>
+    corpo = `<div class="faixa"><p class="small">${store.naConta ? "Seus dados ficam na sua conta Claude e sincronizam entre aparelhos." : "Seus dados estão só neste navegador. Faça backups para não perdê-los."}</p></div>
       ${blocoBackups()}
-      <section class="caixa"><h2 class="sec">Backup manual</h2><div class="linha">${DOWNLOADS ? `<button class="btn" data-act="bk-baixar">Baixar backup (.json)</button>` : ""}<button class="btn sec" data-act="bk-copiar">Copiar backup</button>
+      <details class="filtros"><summary>Backup manual (copiar, baixar, restaurar)</summary><div class="pilha" style="margin-top:10px">
+        <div class="linha">${DOWNLOADS ? `<button class="btn sec" data-act="bk-baixar">Baixar (.json)</button>` : ""}<button class="btn sec" data-act="bk-copiar">Copiar</button>
         <label class="btn sec">Restaurar de arquivo<input type="file" accept=".json,application/json" data-chg="bk-arquivo" hidden></label></div>
-        <label class="campo" style="margin-top:10px"><span class="lab">Ou cole um backup (inclui o formato da versão anterior)</span><textarea id="bk-txt" rows="3"></textarea></label><div class="acoes"><button class="btn sec" data-act="bk-colar">Restaurar do texto</button></div></section>
-      <section class="caixa"><h2 class="sec">Zerar progresso</h2><p class="small">Apaga respostas, erros, revisões, flashcards, simulados e plano. Matrizes, questões próprias, anotações e materiais são mantidos.</p><button class="btn perigo" data-act="zerar-conf">Zerar progresso…</button></section>`;
+        <label class="campo"><span class="lab">Ou cole um backup</span><textarea id="bk-txt" rows="3"></textarea></label><div><button class="btn sec" data-act="bk-colar">Restaurar do texto</button></div></div></details>
+      <details class="filtros"><summary>Zerar progresso</summary><p class="small">Apaga respostas, erros, revisões, flashcards, simulados e plano. Matrizes, questões próprias, anotações e materiais ficam.</p><button class="btn perigo" data-act="zerar-conf">Zerar progresso…</button></details>`;
   }
   return { secao: "biblioteca", titulo: "Biblioteca", html: `<div class="tabs" role="tablist">${ABAS_BIB.map(([k, n]) => `<a role="tab" href="#/biblioteca/${k}" aria-selected="${k === aba}">${n}</a>`).join("")}</div>${corpo}` };
 }
@@ -2517,10 +2585,9 @@ rota("/redacao/:aba", p => paginaRedacao(p.aba));
 function paginaRedacao(aba) {
   let corpo = "";
   if (aba === "propostas") {
-    corpo = REDACAO.propostas.length ? REDACAO.propostas.map(p => `<article class="caixa"><h2 class="sec">${esc(p.tema)}</h2>
-      ${(p.textosMotivadores || []).length ? `<ul class="small">${p.textosMotivadores.map(t => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}
-      ${(p.eixos || []).length ? `<p class="small muted">Eixos possíveis: ${p.eixos.map(esc).join(" · ")}</p>` : ""}
-      <div class="linha">${p.autoral ? pill("proposta autoral") : ""}<button class="btn mini" data-act="red-usar" data-id="${esc(p.id)}">Escrever sobre este tema</button></div></article>`).join("") : vazio("Sem propostas cadastradas.");
+    corpo = REDACAO.propostas.length ? `<div class="tarefas">${REDACAO.propostas.map(p => `<div class="tarefa" style="flex-wrap:wrap"><div class="o"><b>${esc(p.tema)}</b><small>${(p.eixos || []).slice(0, 3).map(esc).join(" · ")}</small></div>
+      <button class="btn mini" data-act="red-usar" data-id="${esc(p.id)}">Escrever</button>
+      ${(p.textosMotivadores || []).length ? `<details class="mais" style="flex-basis:100%"><summary class="small">Textos de apoio</summary><ul class="small" style="margin:4px 0 0;padding-left:18px">${p.textosMotivadores.map(t => `<li>${esc(t)}</li>`).join("")}</ul></details>` : ""}</div>`).join("")}</div><p class="small muted">Propostas autorais, no formato do ENEM.</p>` : vazio("Sem propostas cadastradas.");
   } else if (aba === "escrever") {
     const prop = REDACAO.propostas.find(p => p.id === RD.proposta), l = linhasEstimadas(RD.texto), pal = RD.texto.trim() ? RD.texto.trim().split(/\s+/).length : 0;
     corpo = `<section class="caixa pilha">
@@ -2689,9 +2756,10 @@ ACOES["bk-limpar"] = async el => {
 /** Aviso no Início quando os dados só existem neste navegador e não há download recente. */
 function avisoBackup() {
   const P = store.doc("perfil");
-  if (store.naConta || !temDados() || Date.now() - (P.ultimoDownload || P.migradoEm || 0) < 2 * SEMANA) return "";
-  return `<div class="aviso">Seus dados estão só neste navegador. <a href="#/biblioteca/dados">Baixe ou copie um backup</a> para não perdê-los.</div>`;
+  if (store.naConta || !temDados() || Date.now() - (P.ultimoDownload || 0) < 2 * SEMANA || Date.now() < (P.avisoBackupAte || 0)) return "";
+  return `<div class="faixa"><p class="small">Seus dados estão só neste navegador.</p><span class="linha"><a class="btn mini" href="#/biblioteca/dados">Fazer backup</a><button class="btn mini sec" data-act="aviso-backup-ok">Agora não</button></span></div>`;
 }
+ACOES["aviso-backup-ok"] = () => { const P = store.doc("perfil"); P.avisoBackupAte = Date.now() + SEMANA; store.mudou("perfil"); atualizar(); };
 
 /* ---- 99-main.js ---- */
 /* ============================================================

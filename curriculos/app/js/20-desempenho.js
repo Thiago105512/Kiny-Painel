@@ -2,8 +2,11 @@
    20-desempenho — métricas calculadas a partir das tentativas registradas.
    ============================================================ */
 const DV = { aba: "disciplina", trilha: "" };
+/** Os pontos mais fracos primeiro, só com base suficiente (3+ respostas). */
 function tabelaDesempenho(lista, rotulo, fmt = k => esc(k)) {
-  return tabela([{ t: rotulo }, { t: "Respostas", num: 1 }, { t: "Acerto", num: 1 }, { t: "" }], lista.sort((a, b) => a.p - b.p).map(x => [fmt(x.k), x.n, Math.round(x.p * 100) + "%", `<div style="min-width:90px">${medidor(x.p * 100, x.p < .5 ? "bad" : "")}</div>`]), { vaziaMsg: "Sem respostas ainda." });
+  const l = lista.filter(x => x.n >= 3).sort((a, b) => a.p - b.p);
+  if (!l.length) return vazio("Responda ao menos 3 questões de um assunto para ele aparecer aqui.");
+  return `<div class="barras">${l.slice(0, 8).map(x => barra(fmt(x.k), x.ac, x.n)).join("")}</div>${l.length > 8 ? `<p class="small muted">+${l.length - 8} com melhor desempenho</p>` : ""}`;
 }
 function colunasTempo(nDias = 14) {
   const D = store.doc("dias").d, dias = Array.from({ length: nDias }, (_, i) => somaDias(hoje(), i - nDias + 1)).map(k => ({ k, m: Math.round((D[k]?.seg || 0) / 60) }));
@@ -23,18 +26,29 @@ rota("/desempenho", () => {
     tab = tabelaDesempenho(listaPor(porA), "Área do ENEM");
   }
   else if (DV.aba === "trilha") tab = tabelaDesempenho(listaPor(ag.por.trilha), "Trilha", k => esc(TRILHAS[k]?.nome || k));
+  const temTempo = Object.values(D).some(d => d.seg >= 60), sem = semanasComDados(4);
   return {
     secao: "desempenho", titulo: "Desempenho",
-    html: `<div class="linha" style="margin-bottom:12px">${chips([["", "Tudo"], ["med", "Medicina"], ["enem", "ENEM"], ["direito", "Direito"], ["oab", "OAB"]], DV.trilha, "dv-trilha")}</div>
+    html: `${chips([["", "Tudo"], ["med", "Medicina"], ["enem", "ENEM"], ["direito", "Direito"], ["oab", "OAB"]], DV.trilha, "dv-trilha")}
       <div class="kpis"><div class="kpi"><b>${ag.n ? pct(ag.ac, ag.n) + "%" : "—"}</b><span>acerto geral</span></div><div class="kpi"><b>${ag.n}</b><span>respostas</span></div>
-        <div class="kpi"><b>${ag.vistas}/${questoes().filter(filtro).length}</b><span>questões vistas</span></div><div class="kpi"><b>${ag.nms ? mmss(ag.ms / ag.nms) : "—"}</b><span>tempo médio/questão</span></div>
-        <div class="kpi"><b>${horas(segTotal)}</b><span>tempo de estudo total</span></div><div class="kpi"><b>${sequencia()}</b><span>dias seguidos</span></div>
-        <div class="kpi"><b>${cs.filter(c => c.srs.etapa >= 2).length}/${cs.length}</b><span>flashcards consolidados</span></div><div class="kpi"><b>${sims.length}</b><span>simulados</span></div></div>
-      <div class="grid g2"><section><h2 class="sec">Questões por dia (30 dias)</h2>${blocoEvolucao(30)}</section><section><h2 class="sec">Minutos de estudo (14 dias)</h2>${colunasTempo()}</section></div>
-      <h2 class="sec">Evolução semanal</h2>${semanas(8)}
-      <h2 class="sec">Onde melhorar</h2>${abas([["disciplina", "Disciplinas"], ["especialidade", "Especialidades"], ["tema", "Temas"], ["enem", "Áreas do ENEM"], ["trilha", "Trilhas"]], DV.aba, "dv-aba")}${tab}
-      <h2 class="sec">Simulados</h2>${evolucaoSim(null)}${sims.length ? `<div class="barras" style="margin-top:10px">${sims.slice(-10).reverse().map(barraSim).join("")}</div>` : `<p class="muted">Nenhum simulado feito.</p>`}`,
+        <div class="kpi"><b>${ag.vistas}<small class="muted" style="font-size:13px"> / ${questoes().filter(filtro).length}</small></b><span>questões vistas</span></div><div class="kpi"><b>${horas(segTotal)}</b><span>tempo de estudo</span></div></div>
+      <section><h2 class="sec">Onde melhorar</h2>${abas([["disciplina", "Disciplinas"], ["tema", "Temas"], ["especialidade", "Especialidades"], ["enem", "ENEM"]], DV.aba, "dv-aba")}${tab}</section>
+      <section><h2 class="sec">Questões nos últimos 14 dias</h2>${blocoEvolucao(14)}</section>
+      ${temTempo ? `<section><h2 class="sec">Minutos de estudo</h2>${colunasTempo()}</section>` : ""}
+      ${sem ? `<section><h2 class="sec">Por semana</h2>${sem}</section>` : ""}
+      ${sims.length ? `<section><h2 class="sec">Simulados</h2>${evolucaoSim(null)}<div class="barras" style="margin-top:10px">${sims.slice(-5).reverse().map(barraSim).join("")}</div></section>` : ""}
+      <p class="small muted">Tempo médio por questão: ${ag.nms ? mmss(ag.ms / ag.nms) : "—"} · flashcards consolidados: ${cs.filter(c => c.srs.etapa >= 2).length}/${cs.length} · sequência: ${sequencia()} dia(s)</p>`,
   };
 });
 ACOES["dv-aba"] = el => { DV.aba = el.dataset.v; atualizar(); };
 ACOES["dv-trilha"] = el => { DV.trilha = el.dataset.v; atualizar(); };
+/** Semanas com algum estudo (as vazias não aparecem). */
+function semanasComDados(n = 4) {
+  const D = store.doc("dias").d, linhas = [];
+  for (let w = 0; w < n; w++) {
+    let q = 0, ac = 0, seg = 0;
+    for (let i = 0; i < 7; i++) { const d = D[somaDias(hoje(), -(w * 7 + i))]; if (d) { q += d.q || 0; ac += d.ac || 0; seg += d.seg || 0; } }
+    if (q || seg >= 60) linhas.push([w === 0 ? "Esta semana" : `Há ${w} semana${w > 1 ? "s" : ""}`, q, q ? pct(ac, q) + "%" : "—", horas(seg)]);
+  }
+  return linhas.length ? tabela([{ t: "Semana" }, { t: "Questões", num: 1 }, { t: "Acerto", num: 1 }, { t: "Tempo", num: 1 }], linhas) : "";
+}

@@ -16,72 +16,74 @@ function crumbsTema(t) {
   const e = ESPECIALIDADES[t.especialidades?.[0]];
   return e ? [CRUMB_MED, ["Especialidades", "#/medicina/especialidades"], [e.nome, "#/medicina/esp/" + e.id]] : [CRUMB_MED];
 }
-const ABAS_TEMA = [["visao", "Visão geral"], ["mapa", "Mapa"], ["questoes", "Questões"], ["flashcards", "Flashcards"], ["casos", "Casos"], ["notas", "Anotações"], ["materiais", "Materiais"], ["erros", "Erros"], ["desempenho", "Desempenho"]];
-rota("/tema/:id", p => paginaTema(p.id, "visao"));
-rota("/tema/:id/:aba", p => paginaTema(p.id, p.aba));
+const ABAS_TEMA = [["resumo", "Resumo"], ["praticar", "Praticar"], ["mapa", "Mapa"], ["notas", "Notas"], ["desempenho", "Desempenho"]];
+// Endereços antigos continuam válidos
+const ABA_ANTIGA = { visao: "resumo", questoes: "praticar", flashcards: "praticar", casos: "praticar", erros: "praticar", materiais: "notas" };
+rota("/tema/:id", p => paginaTema(p.id, "resumo"));
+rota("/tema/:id/:aba", p => paginaTema(p.id, ABA_ANTIGA[p.aba] || p.aba));
+
+/** Faixa de revisão no topo: o que fazer com este tema agora. */
+function faixaRevisao(id, rev) {
+  if (!rev) return `<div class="faixa"><p class="small">Revisão espaçada ainda não agendada.</p><button class="btn mini" data-act="tema-estudei" data-t="${esc(id)}">Marcar como estudado</button></div>`;
+  return `<div class="faixa"><p class="small">Próxima revisão <b>${quando(rev.prox)}</b> <span class="muted">· ${dataBR(rev.prox)}</span></p>${vencido(rev) ? `<a class="btn mini azul" href="#/revisoes/tema/${encodeURIComponent(id)}">Revisar agora</a>` : `<button class="btn mini sec" data-act="tema-estudei" data-t="${esc(id)}">Estudei hoje</button>`}</div>`;
+}
+const linhaSecao = (titulo, detalhe, botoes) => `<div class="tarefa"><div class="o"><b>${titulo}</b><small>${detalhe}</small></div><span class="linha" style="flex-wrap:nowrap">${botoes}</span></div>`;
 
 function paginaTema(id, aba) {
   const t = TEMAS[id]; if (!t) return paginaNaoEncontrada();
-  const med = t.dominio === "medicina";
+  const med = t.dominio === "medicina", enc = encodeURIComponent(id);
   const qs = questoes().filter(q => q.tema === id), d = desempenhoTema(id), rev = store.doc("revisoes").temas[id];
   const cs = cards().filter(c => c.tema === id), casos = todosCasos().filter(c => c.temaId === id);
   const nota = store.doc("notas").temas[id], mats = Object.values(store.doc("materiais").itens).filter(m => m.tema === id);
-  const errs = Object.values(store.doc("erros").itens).filter(e => e.tema === id);
+  const errsAb = Object.values(store.doc("erros").itens).filter(e => e.tema === id && e.status === "aberto");
   const onde = med ? ondeNaGrade(id) : [], minha = onde.find(o => o.minha);
-  const abas = ABAS_TEMA.filter(([k]) => med || k !== "casos").map(([k, n]) => [k, n + ({ questoes: qs.length, flashcards: cs.length, casos: casos.length, erros: errs.filter(e => e.status === "aberto").length, materiais: mats.length }[k] ? ` (${({ questoes: qs.length, flashcards: cs.length, casos: casos.length, erros: errs.filter(e => e.status === "aberto").length, materiais: mats.length })[k]})` : "")]);
   let corpo = "";
 
-  if (aba === "visao") {
-    corpo = `<div class="grid g2">
-      <section class="caixa"><h2 class="sec">${t.dominio === "enem" ? "Teoria essencial" : "Resumo"}</h2>${t.resumo ? `<p class="leitura">${esc(t.resumo)}</p><p class="small muted">Resumo de referência (autoral). Aprofunde na bibliografia da disciplina.</p>` : `<p class="muted">Resumo ainda não cadastrado.</p>`}
-        ${IA.disponivel() ? `<button class="btn sec mini" data-act="ia-abrir">Pedir explicação ao assistente</button>` : ""}</section>
-      <section class="caixa"><h2 class="sec">Revisão espaçada</h2>
-        ${rev ? `<p>Próxima revisão: <b>${dataBR(rev.prox)}</b> (${quando(rev.prox)}) · etapa ${rev.etapa + 1}</p>` : `<p class="muted">Ainda não agendada. Marque como estudado para programar revisões em 1, 7, 30 e 90 dias (ajustadas pelo seu desempenho).</p>`}
-        <div class="linha"><button class="btn" data-act="tema-estudei" data-t="${esc(id)}">${rev ? "Estudei de novo hoje" : "Marcar como estudado"}</button>${rev && vencido(rev) ? `<a class="btn azul" href="#/revisoes/tema/${encodeURIComponent(id)}">Revisar agora</a>` : ""}</div>
-        <div class="kpis" style="margin-top:12px"><div class="kpi"><b>${d.n ? pct(d.ac, d.n) + "%" : "—"}</b><span>acerto (${d.n} resp.)</span></div><div class="kpi"><b>${d.vistas}/${qs.length}</b><span>questões vistas</span></div></div></section>
-    </div>
-    ${t.objetivos?.length ? `<h2 class="sec">Objetivos de aprendizagem</h2><ul class="leitura" style="white-space:normal">${t.objetivos.map(o => `<li>${esc(o)}</li>`).join("")}</ul><p class="small muted">Objetivos sugeridos. Os objetivos oficiais vêm do plano de ensino da sua faculdade.</p>` : ""}
-    ${t.subtemas?.length ? `<h2 class="sec">Subtemas</h2>${tabela([{ t: "Subtema" }, { t: "Questões", num: 1 }, { t: "Acerto", num: 1 }], t.subtemas.map(s => { const a = agregados(q => q.tema === id && q.subtema === s.id), n = qs.filter(q => q.subtema === s.id).length; return [esc(s.nome), n, a.n ? pct(a.ac, a.n) + "%" : "—"]; }))}` : ""}
-    ${med ? `<div class="grid g2"><section><h2 class="sec">Onde aparece nas suas grades</h2>${onde.length ? tabela([{ t: "Instituição" }, { t: "Período", num: 1 }, { t: "Disciplina/módulo" }], onde.map(o => [esc(nomeInst(o.g.instituicao)) + (o.minha ? " " + pill("minha", "azul") : ""), o.periodo + "º", `<a href="#/medicina/grade/${esc(o.g.id)}/item/${esc(o.item.id)}">${esc(o.item.nome)}</a>`])) : `<p class="muted small">Não vinculado a nenhuma disciplina das matrizes importadas.</p>`}</section>
-      <section><h2 class="sec">Disciplinas e especialidades relacionadas</h2><p class="small muted" style="margin-top:0">Referência geral (não é a grade de uma faculdade).</p>
-        <div class="chips">${(t.especialidades || []).map(e => `<a class="chip" href="#/medicina/esp/${esc(e)}">${esc(ESPECIALIDADES[e]?.nome || e)}</a>`).join("")}</div>
-        <p class="small" style="margin-top:8px">${(t.disciplinas || []).map(esc).join(" · ")}</p></section></div>` : ""}`;
+  if (aba === "resumo") {
+    const subs = (t.subtemas || []).map(sb => { const n = qs.filter(q => q.subtema === sb.id).length; return `<span class="pill">${esc(sb.nome)}${n ? ` · ${n}` : ""}</span>`; });
+    corpo = `${faixaRevisao(id, rev)}
+      ${t.resumo ? `<section><p class="leitura" style="margin:0">${esc(t.resumo)}</p></section>` : ""}
+      ${t.objetivos?.length ? `<section><h2 class="sec">Objetivos</h2><ul style="margin:0;padding-left:20px">${t.objetivos.map(o => `<li>${esc(o)}</li>`).join("")}</ul></section>` : ""}
+      ${subs.length ? `<section><h2 class="sec">Subtemas</h2><div class="chips">${subs.join("")}</div></section>` : ""}
+      ${med ? `<section><h2 class="sec">Onde aparece</h2>${onde.length ? `<div class="links-lista">${onde.map(o => `<a href="#/medicina/grade/${esc(o.g.id)}/item/${esc(o.item.id)}"><span>${esc(o.item.nome)}</span><small>${esc(nomeInst(o.g.instituicao))} · ${o.periodo}º período</small></a>`).join("")}</div>` : `<p class="small muted" style="margin:0">Ainda não vinculado às disciplinas da sua grade.</p>`}
+        <p class="small" style="margin:10px 0 0"><span class="muted">Especialidades:</span> ${(t.especialidades || []).map(e => `<a href="#/medicina/esp/${esc(e)}">${esc(ESPECIALIDADES[e]?.nome || e)}</a>`).join(", ")}</p></section>` : ""}
+      <p class="small muted">Resumo de referência (autoral) — aprofunde na bibliografia${med ? " da disciplina" : ""}.</p>`;
+  }
+  else if (aba === "praticar") {
+    if (playerAtivo("tema:" + id)) corpo = htmlPlayer();
+    else {
+      const novas = qs.filter(q => statusQ(q).chave === "nao").length, erradas = qs.filter(q => statusQ(q).chave === "incorreta").length, venc = cs.filter(c => vencido(c.srs)).length;
+      corpo = `<div class="tarefas">
+        ${linhaSecao("Questões", qs.length ? `${qs.length} no banco · ${novas} novas${d.n ? ` · ${pct(d.ac, d.n)}% de acerto` : ""}` : "nenhuma ainda", qs.length ? `<button class="btn mini" data-act="tema-praticar" data-t="${esc(id)}" data-m="${novas ? "novas" : "todas"}">Praticar</button>${erradas ? `<button class="btn mini sec" data-act="tema-praticar" data-t="${esc(id)}" data-m="erradas">Só erradas</button>` : ""}` : (IA.disponivel() ? `<button class="btn mini sec" data-act="ia-abrir">Gerar</button>` : ""))}
+        ${linhaSecao("Flashcards", cs.length ? `${cs.length} cards · ${venc} para hoje` : "nenhum ainda", `${venc ? `<a class="btn mini" href="#/flashcards/estudar/${enc}">Estudar</a>` : ""}${qs.length && !cs.length ? `<button class="btn mini sec" data-act="tema-cards-questoes" data-t="${esc(id)}">Criar das questões</button>` : `<button class="btn mini sec" data-act="card-novo" data-t="${esc(id)}">Novo</button>`}`)}
+        ${errsAb.length ? linhaSecao("Erros deste tema", `${errsAb.length} em aberto no caderno`, `<a class="btn mini" href="#/revisoes/erros/${enc}">Refazer</a>`) : ""}
+        ${med ? linhaSecao("Casos clínicos", casos.length ? casos.map(c => esc(c.titulo)).join(" · ") : "nenhum ainda", casos.length ? `<a class="btn mini sec" href="#/casos/${esc(casos[0].id)}">Abrir</a>` : "") : ""}
+      </div>
+      ${qs.length ? `<details class="mais" style="margin-top:12px"><summary>Ver as ${qs.length} questões</summary>${listaQuestoes(qs, 100)}</details>` : ""}
+      ${cs.length ? `<details class="mais"><summary>Ver os ${cs.length} flashcards</summary>${tabelaCards(cs)}</details>` : ""}`;
+    }
   }
   else if (aba === "mapa") {
     corpo = `<p class="legenda"><span>Toque num ramo para abrir ou fechar.</span><span><span class="pill ok">verde</span> ≥70% de acerto</span><span><span class="pill bad">vermelho</span> &lt;50%</span></p>${arvore(mapaDoTema(id))}
-      ${IA.disponivel() ? `<div class="acoes"><button class="btn sec" data-act="ia-abrir">Gerar mapa mental detalhado com IA</button></div>` : ""}`;
+      ${IA.disponivel() ? `<div class="acoes"><button class="btn sec" data-act="ia-abrir">Mapa detalhado com IA</button></div>` : ""}`;
   }
-  else if (aba === "questoes") {
-    const chave = "tema:" + id;
-    if (playerAtivo(chave)) corpo = htmlPlayer();
-    else corpo = qs.length ? `<div class="acoes" style="margin-top:0"><button class="btn" data-act="tema-praticar" data-t="${esc(id)}" data-m="todas">Praticar todas (${qs.length})</button>
-        ${qs.some(q => statusQ(q).chave === "nao") ? `<button class="btn sec" data-act="tema-praticar" data-t="${esc(id)}" data-m="novas">Só não respondidas</button>` : ""}
-        ${qs.some(q => statusQ(q).chave === "incorreta") ? `<button class="btn sec" data-act="tema-praticar" data-t="${esc(id)}" data-m="erradas">Só as que errei</button>` : ""}</div>
-      ${listaQuestoes(qs)}` : vazio("Nenhuma questão deste tema no banco ainda.", IA.disponivel() ? `<button class="btn" data-act="ia-abrir">Gerar questões com o assistente</button>` : `<a class="btn sec" href="#/biblioteca/questoes">Cadastrar questão</a>`);
-  }
-  else if (aba === "flashcards") {
-    corpo = `<div class="acoes" style="margin-top:0">${cs.some(c => vencido(c.srs)) ? `<a class="btn" href="#/flashcards/estudar/${encodeURIComponent(id)}">Estudar ${cs.filter(c => vencido(c.srs)).length} vencidos</a>` : ""}<button class="btn sec" data-act="card-novo" data-t="${esc(id)}">+ Novo flashcard</button>${qs.length ? `<button class="btn sec" data-act="tema-cards-questoes" data-t="${esc(id)}">Criar a partir das questões</button>` : ""}</div>
-      ${tabelaCards(cs, "Nenhum flashcard deste tema.")}`;
-  }
-  else if (aba === "casos") corpo = casos.length ? tabelaCasos(casos) : vazio("Nenhum caso clínico deste tema.", IA.disponivel() ? `<button class="btn" data-act="ia-abrir">Gerar caso com o assistente</button>` : "");
   else if (aba === "notas") {
-    corpo = `<label class="campo"><span class="lab">Suas anotações (salvas automaticamente)</span><textarea id="nota-txt" rows="14" data-inp="nota" data-t="${esc(id)}" placeholder="Resumo próprio, mnemônicos, dúvidas para levar à aula…">${esc(nota?.texto || "")}</textarea></label>
-      <p class="small muted" id="nota-st">${nota?.atualizado ? "Última edição: " + new Date(nota.atualizado).toLocaleString("pt-BR") : ""}</p>`;
-  }
-  else if (aba === "materiais") corpo = `${listaMateriais(mats)}<div class="acoes"><button class="btn sec" data-act="mat-novo" data-t="${esc(id)}">+ Adicionar material</button></div>`;
-  else if (aba === "erros") {
-    corpo = errs.length ? tabelaErros(errs) : vazio("Nenhum erro registrado neste tema. Erros entram aqui automaticamente.");
+    corpo = `<label class="campo"><span class="lab">Anotações (salvas automaticamente)</span><textarea id="nota-txt" rows="12" data-inp="nota" data-t="${esc(id)}" placeholder="Resumo próprio, mnemônicos, dúvidas para levar à aula…">${esc(nota?.texto || "")}</textarea></label>
+      <p class="small muted" id="nota-st">${nota?.atualizado ? "Última edição: " + new Date(nota.atualizado).toLocaleString("pt-BR") : ""}</p>
+      <section><h2 class="sec">Materiais <button class="btn sec mini" data-act="mat-novo" data-t="${esc(id)}">+ Adicionar</button></h2>${mats.length ? listaMateriais(mats) : `<p class="small muted" style="margin:0">Links de aulas, PDFs e textos deste tema aparecem aqui.</p>`}</section>`;
   }
   else if (aba === "desempenho") {
     const hist = qs.flatMap(q => (progDe(q)?.h || []).map(h => ({ ts: h[0], ok: h[2], ms: h[3] }))).sort((a, b) => a.ts - b.ts);
-    corpo = `<div class="kpis"><div class="kpi"><b>${d.n ? pct(d.ac, d.n) + "%" : "—"}</b><span>acerto</span></div><div class="kpi"><b>${d.n}</b><span>respostas</span></div><div class="kpi"><b>${d.tempoMedio ? mmss(d.tempoMedio) : "—"}</b><span>tempo médio</span></div><div class="kpi"><b>${cs.filter(c => c.srs.etapa >= 2).length}/${cs.length}</b><span>cards consolidados</span></div></div>
-      ${t.subtemas?.length ? `<h2 class="sec">Por subtema</h2><div class="barras">${t.subtemas.map(s => { const a = agregados(q => q.tema === id && q.subtema === s.id); return a.n ? barra(esc(s.nome), a.ac, a.n) : ""; }).join("") || `<p class="muted">Sem respostas por subtema ainda.</p>`}</div>` : ""}
-      <h2 class="sec">Últimas tentativas</h2>${tabela([{ t: "Data" }, { t: "Resultado" }, { t: "Tempo", num: 1 }], hist.slice(-15).reverse().map(h => [new Date(h.ts).toLocaleString("pt-BR"), h.ok ? pill("certa", "ok") : pill("errada", "bad"), h.ms ? mmss(h.ms) : "—"]), { vaziaMsg: "Sem tentativas registradas." })}`;
+    const porSub = (t.subtemas || []).map(sb => { const a = agregados(q => q.tema === id && q.subtema === sb.id); return a.n ? barra(esc(sb.nome), a.ac, a.n) : ""; }).join("");
+    corpo = `<div class="kpis"><div class="kpi"><b>${d.n ? pct(d.ac, d.n) + "%" : "—"}</b><span>acerto</span></div><div class="kpi"><b>${d.n}</b><span>respostas</span></div><div class="kpi"><b>${d.tempoMedio ? mmss(d.tempoMedio) : "—"}</b><span>tempo médio</span></div><div class="kpi"><b>${errsAb.length}</b><span>erros abertos</span></div></div>
+      ${porSub ? `<section><h2 class="sec">Por subtema</h2><div class="barras">${porSub}</div></section>` : ""}
+      <section><h2 class="sec">Últimas tentativas</h2>${tabela([{ t: "Data" }, { t: "Resultado" }, { t: "Tempo", num: 1 }], hist.slice(-10).reverse().map(h => [new Date(h.ts).toLocaleString("pt-BR"), h.ok ? pill("certa", "ok") : pill("errada", "bad"), h.ms ? mmss(h.ms) : "—"]), { vaziaMsg: "Sem tentativas registradas." })}</section>`;
   }
+  else return paginaTema(id, "resumo");
   return {
     secao: med ? "medicina" : "enem", crumbs: crumbsTema(t), titulo: t.nome,
-    sub: `${med ? (t.especialidades || []).map(e => ESPECIALIDADES[e]?.nome).filter(Boolean).join(" · ") : `ENEM · ${esc(t.areaNome)}`}${(t.sinonimos || []).length ? ` · também: ${t.sinonimos.map(esc).join(", ")}` : ""}`,
-    html: abas.length ? `<div class="tabs" role="tablist">${abas.map(([k, n]) => `<a role="tab" href="#/tema/${encodeURIComponent(id)}/${k}" aria-selected="${k === aba}">${n}</a>`).join("")}</div>${corpo}` : corpo,
+    sub: med ? esc((t.especialidades || []).map(e => ESPECIALIDADES[e]?.nome).filter(Boolean).join(" · ")) : `ENEM · ${esc(t.areaNome)}`,
+    html: `<div class="tabs" role="tablist">${ABAS_TEMA.map(([k, n]) => `<a role="tab" href="#/tema/${enc}/${k}" aria-selected="${k === aba}">${n}${k === "praticar" && (errsAb.length || cs.some(c => vencido(c.srs))) ? " •" : ""}</a>`).join("")}</div>${corpo}`,
     ctx: { tema: id, trilha: med ? "medicina" : "enem", ...(minha ? { grade: minha.g.id, periodo: minha.periodo, disciplina: minha.item.nome } : {}) },
   };
 }
@@ -102,11 +104,13 @@ ENTRADAS.nota = el => {
 };
 
 /* ---------- Listas reutilizadas por outras páginas ---------- */
-function listaQuestoes(qs, limite = 200) {
+/** Lista compacta de questões (enunciado em 2 linhas + uma linha de detalhes). */
+function listaQuestoes(qs, limite = 20, paginar = false) {
+  if (!qs.length) return vazio("Nenhuma questão com esses critérios.");
   const cls = { correta: "ok", incorreta: "bad", nao: "" };
-  return tabela([{ t: "Questão" }, { t: "Tema" }, { t: "Dif." }, { t: "Status" }],
-    qs.slice(0, limite).map(q => { const s = statusQ(q); return [`<a href="#/questoes/q/${esc(q.id)}">${esc(q.q.length > 110 ? q.q.slice(0, 110) + "…" : q.q)}</a>`, q.tema ? linkTema(q.tema) : esc(q.a), q.dif ? DIFICULDADE[q.dif] : "—", pill(s.nome, cls[s.chave]) + (s.marcada ? " ★" : "") + (s.revisar ? " ↻" : "")]; }))
-    + (qs.length > limite ? `<p class="small muted">Mostrando ${limite} de ${qs.length}. Use os filtros para refinar.</p>` : "");
+  return `<div class="lista-q">${qs.slice(0, limite).map(q => { const s = statusQ(q);
+    return `<a href="#/questoes/q/${esc(q.id)}"><span class="txt">${esc(q.q)}</span><span class="meta">${pill(s.nome, cls[s.chave])}${s.marcada ? "<span>★ marcada</span>" : ""}<span>${esc(q.tema ? nomeTema(q.tema) : q.a)}</span>${q.dif ? `<span>${DIFICULDADE[q.dif]}</span>` : ""}</span></a>`; }).join("")}</div>`
+    + (qs.length > limite ? (paginar ? `<div class="acoes"><button class="btn sec" data-act="lq-mais">Mostrar mais (${qs.length - limite} restantes)</button></div>` : `<p class="small muted">Mostrando ${limite} de ${qs.length}.</p>`) : "");
 }
 
 /** Mapa do tema montado só com dados do app: subtemas (com desempenho), objetivos, grade, especialidades, materiais e temas relacionados. */

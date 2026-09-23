@@ -19,9 +19,9 @@ rota("/plano", () => {
     titulo = new Date(PV.data + "T12:00").toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" });
     const l = doDia(PV.data); corpo = l.length ? l.map(linhaPlano).join("") : vazio("Nada planejado para este dia.");
   } else if (PV.vista === "semana") {
-    const ini = inicioSemana(PV.data); titulo = `Semana de ${dataBR(ini)} a ${dataBR(somaDias(ini, 6))}`;
-    corpo = Array.from({ length: 7 }, (_, i) => somaDias(ini, i)).map(d => { const l = doDia(d), min = l.reduce((s, p) => s + (+p.min || 0), 0);
-      return `<section style="margin-bottom:10px"><h3 style="${d === hoje() ? "color:var(--pen)" : ""}">${new Date(d + "T12:00").toLocaleDateString("pt-BR", { weekday: "long", day: "2-digit", month: "2-digit" })}${min ? ` · ${horas(min * 60)}` : ""} <button class="btn mini sec" data-act="plano-novo" data-d="${d}" style="margin-left:6px">+</button></h3>${l.length ? l.map(linhaPlano).join("") : `<p class="small muted" style="margin:0">—</p>`}</section>`; }).join("");
+    const ini = inicioSemana(PV.data); titulo = `${dataCurta(new Date(ini + "T12:00"))} a ${dataCurta(new Date(somaDias(ini, 6) + "T12:00"))}`;
+    corpo = `<div class="tarefas">${Array.from({ length: 7 }, (_, i) => somaDias(ini, i)).map(d => { const l = doDia(d), min = l.reduce((s, p) => s + (+p.min || 0), 0);
+      return `<div class="tarefa" style="flex-wrap:wrap;align-items:flex-start"><div class="o"><b style="${d === hoje() ? "color:var(--pen)" : ""}">${new Date(d + "T12:00").toLocaleDateString("pt-BR", { weekday: "short", day: "2-digit", month: "2-digit" })}</b><small>${l.length ? `${l.length} item(ns)${min ? " · " + horas(min * 60) : ""}` : "livre"}</small></div><button class="btn mini sec" data-act="plano-novo" data-d="${d}" aria-label="Adicionar em ${dataBR(d)}">+</button>${l.length ? `<div style="flex-basis:100%">${l.map(linhaPlano).join("")}</div>` : ""}</div>`; }).join("")}</div>`;
   } else {
     const [a, m] = PV.data.split("-").map(Number), prim = `${a}-${String(m).padStart(2, "0")}-01`, ini = inicioSemana(prim);
     titulo = new Date(prim + "T12:00").toLocaleDateString("pt-BR", { month: "long", year: "numeric" });
@@ -31,10 +31,10 @@ rota("/plano", () => {
   const passo = { dia: 1, semana: 7, mes: 30 }[PV.vista];
   const semana = todos.filter(p => p.data >= inicioSemana(hoje()) && p.data <= somaDias(inicioSemana(hoje()), 6));
   return {
-    secao: "plano", titulo: "Planejamento", sub: `Esta semana: ${semana.filter(p => p.feito).length}/${semana.length} concluídos · ${horas(semana.reduce((s, p) => s + (+p.min || 0), 0) * 60)} previstos`,
-    acoes: `<button class="btn" data-act="plano-novo" data-d="${PV.vista === "dia" ? PV.data : hoje()}">+ Adicionar</button>`,
+    secao: "plano", titulo: "Planejamento", sub: semana.length ? `Esta semana: ${semana.filter(p => p.feito).length} de ${semana.length} concluídos · ${horas(semana.reduce((s, p) => s + (+p.min || 0), 0) * 60)} previstos` : "",
+    acoes: `<button class="btn sec mini" data-act="plano-novo" data-d="${PV.vista === "dia" ? PV.data : hoje()}">+ Adicionar</button>`,
     html: `${abas([["dia", "Dia"], ["semana", "Semana"], ["mes", "Mês"]], PV.vista, "plano-vista")}
-      <div class="linha entre" style="margin-bottom:10px"><button class="btn sec mini" data-act="plano-mover" data-n="-${passo}" aria-label="Anterior">‹</button><b style="text-transform:capitalize">${esc(titulo)}</b><span class="linha"><button class="btn sec mini" data-act="plano-hoje">Hoje</button><button class="btn sec mini" data-act="plano-mover" data-n="${passo}" aria-label="Próximo">›</button></span></div>
+      <div class="linha entre" style="margin-bottom:10px;flex-wrap:nowrap"><b>${esc(titulo)}</b><span class="linha" style="flex-wrap:nowrap"><button class="btn sec mini" data-act="plano-mover" data-n="-${passo}" aria-label="Anterior">‹</button><button class="btn sec mini" data-act="plano-hoje">Hoje</button><button class="btn sec mini" data-act="plano-mover" data-n="${passo}" aria-label="Próximo">›</button></span></div>
       ${corpo}`,
   };
 });

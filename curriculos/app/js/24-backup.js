@@ -59,6 +59,7 @@ ACOES["bk-limpar"] = async el => {
 /** Aviso no Início quando os dados só existem neste navegador e não há download recente. */
 function avisoBackup() {
   const P = store.doc("perfil");
-  if (store.naConta || !temDados() || Date.now() - (P.ultimoDownload || P.migradoEm || 0) < 2 * SEMANA) return "";
-  return `<div class="aviso">Seus dados estão só neste navegador. <a href="#/biblioteca/dados">Baixe ou copie um backup</a> para não perdê-los.</div>`;
+  if (store.naConta || !temDados() || Date.now() - (P.ultimoDownload || 0) < 2 * SEMANA || Date.now() < (P.avisoBackupAte || 0)) return "";
+  return `<div class="faixa"><p class="small">Seus dados estão só neste navegador.</p><span class="linha"><a class="btn mini" href="#/biblioteca/dados">Fazer backup</a><button class="btn mini sec" data-act="aviso-backup-ok">Agora não</button></span></div>`;
 }
+ACOES["aviso-backup-ok"] = () => { const P = store.doc("perfil"); P.avisoBackupAte = Date.now() + SEMANA; store.mudou("perfil"); atualizar(); };

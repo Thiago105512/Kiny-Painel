@@ -25,7 +25,7 @@ let n=await importar('ufam','TESTE e2e','1º período\nTST101 Anatomia Humana TE
 ok(n===3,'importador reconheceu 3 disciplinas em 2 períodos ('+n+')');
 ok((await p.evaluate(()=>location.hash))==='#/medicina/grade/ufam-medicina-teste-e2e','matriz salva e aberta');
 ok((await txt()).includes('Importada — conferir'),'matriz marcada como importada (pendente de validação)');
-await go('#/medicina');await p.selectOption('#pf-inst','ufam');await p.dispatchEvent('#pf-inst','change');await p.selectOption('#pf-grade','ufam-medicina-teste-e2e');await p.fill('#pf-per','1');await p.click('form[data-form="perfil-fac"] button');await p.waitForTimeout(100);
+await go('#/medicina');await p.click('[data-act="perfil-fac"]');await p.selectOption('#pf-inst','ufam');await p.dispatchEvent('#pf-inst','change');await p.selectOption('#pf-grade','ufam-medicina-teste-e2e');await p.fill('#pf-per','1');await p.click('form[data-form="perfil-fac"] button');await p.waitForTimeout(100);
 await go('#/medicina/grade/ufam-medicina-teste-e2e/p/1');await p.click('text=Fisiologia TESTE');await p.waitForTimeout(100);
 const T1=temaCom[0], nomeT1=await p.evaluate(t=>TEMAS[t].nome,T1);
 await p.fill('#it-tema',nomeT1);await p.click('form[data-form="item-tema"] button');await p.waitForTimeout(100);
@@ -35,12 +35,12 @@ const crumbs=await p.innerText('.crumbs');ok(crumbs.includes('UFAM')&&crumbs.inc
 await p.click('[data-act="ia-abrir"]');await p.click('[data-act="ia-acao"][data-v="explicar"]');await p.waitForTimeout(150);
 const pr=await p.evaluate(()=>window.__prompts.at(-1));ok(pr.includes('UFAM')&&pr.includes('Período: 1º')&&pr.includes('Disciplina/módulo: Fisiologia TESTE')&&pr.includes('Tema: '+nomeT1),'IA recebeu contexto instituição/período/disciplina/tema');
 await p.click('.folha [data-act="fechar-folha"]');
-await go(`#/tema/${T1}/questoes`);await p.click('[data-act="tema-praticar"][data-m="todas"]');await p.waitForTimeout(100);
+await go(`#/tema/${T1}/questoes`);await p.click('[data-act="tema-praticar"]');await p.waitForTimeout(100);
 await responder(true);await p.click('[data-act="pl-prox"]');await responder(true);
 await go(`#/tema/${T1}/desempenho`);ok((await txt()).includes('100%'),'desempenho do tema registrou 2 acertos');
 const tent=await p.evaluate(t=>questoes().filter(q=>q.tema===t).map(progDe).filter(Boolean).map(x=>x.h.at(-1)),T1);
 ok(tent.length===2&&tent.every(h=>h[3]>0&&h[4]==='tema'),'tentativas guardam resposta, tempo e origem');
-await go('#/');ok((await txt()).includes('2/20'),'dashboard: 2 questões hoje');
+await go('#/');ok(/2\s*\/\s*20/.test(await txt()),'dashboard: 2 questões hoje');
 
 console.log('Fluxo 2: Medicina → UEA → período → módulo → tema → flashcards → revisão');
 n=await importar('uea','TESTE e2e','1º período\nMódulo Sistema Cardiovascular TESTE 200h\n2º período\nMódulo Agressão e Defesa TESTE 180h');
@@ -64,10 +64,10 @@ console.log('Fluxo 3: especialidade → tema → questão → erro → caderno �
 const esp=await p.evaluate(t=>TEMAS[t].especialidades[0],T1);
 await go('#/medicina/esp/'+esp);ok((await txt()).includes(nomeT1),'especialidade lista o tema');
 await go(`#/tema/${T1}/questoes`);await p.click(`[data-act="pl-encerrar"]`);await p.click(`[data-act="pl-sair"]`);
-await p.click('[data-act="tema-praticar"][data-m="todas"]');await p.waitForTimeout(80);
+await p.click('[data-act="tema-praticar"]');await p.waitForTimeout(80);
 const qErr=await p.evaluate(()=>PL.ids[PL.i]);await responder(false);
 ok((await txt()).includes('caderno de erros'),'feedback de erro indica o caderno');
-await go('#/erros');ok((await p.$$('[data-act="erro-detalhe"]')).length>=1,'erro aparece no caderno');
+await go('#/erros');ok(!!(await p.$('#view a[href^="#/revisoes/erros/"]')),'caderno abre agrupado por tema');await p.click('[data-act="fe-vista"][data-v="0"]');await p.waitForTimeout(100);ok((await p.$$('[data-act="erro-detalhe"]')).length>=1,'erro aparece no caderno');
 await p.click(`[data-act="erro-detalhe"][data-q="${qErr}"]`);await p.selectOption('#er-mot','Confundi conceitos parecidos');await p.fill('#er-com','nota pessoal teste');
 await p.click('form[data-form="erro-salvar"] button.btn:not(.sec)');await p.waitForTimeout(80);
 await p.click(`[data-act="erro-detalhe"][data-q="${qErr}"]`);await p.click('[data-act="erro-card"]');await p.waitForTimeout(80);
@@ -81,7 +81,7 @@ console.log('Fluxo 4: ENEM → Matemática → assunto → questões → simulad
 await go('#/enem');await p.click('#view a[href="#/enem/matematica/matematica"]');await p.waitForTimeout(100);
 const assunto=await p.evaluate(()=>{const c={};questoes().filter(q=>q.t==='enem'&&q.disc==='Matemática').forEach(q=>c[q.tema]=(c[q.tema]||0)+1);return Object.keys(c)[0];});
 await p.click(`#view a[href="#/tema/${assunto}"]`);await p.waitForTimeout(100);ok((await p.innerText('.crumbs')).includes('Matemática'),'assunto do ENEM com breadcrumb ENEM › Matemática');
-await go(`#/tema/${assunto}/questoes`);await p.click('[data-act="tema-praticar"][data-m="todas"]');await responder(true);
+await go(`#/tema/${assunto}/questoes`);await p.click('[data-act="tema-praticar"]');await responder(true);
 await go('#/enem/matematica/matematica');await p.click('[data-act="sim-disc"]');await p.waitForTimeout(150);
 await p.click('[data-act="sim-n"][data-v="10"]');await p.click('[data-act="sim-iniciar"]');await p.waitForTimeout(150);
 const disc=await p.evaluate(()=>SIM.ids.map(qPorId).every(q=>q.disc==='Matemática'));ok(disc,'simulado personalizado só com Matemática');
@@ -93,7 +93,7 @@ ok((await p.evaluate(()=>store.doc('simulados').hist.length))>=1,'simulado entro
 
 console.log('Fluxo 5: dashboard → revisão pendente → revisar → desempenho atualizado');
 await p.evaluate(t=>{const R=store.doc('revisoes');R.temas[t].prox=hoje();store.mudou('revisoes');},T2);
-await go('#/');ok((await txt()).includes('Revisão do tema'),'dashboard lista a revisão pendente');
+await go('#/');ok(!!(await p.$(`#view a[href="#/revisoes/tema/${T2}"]`)),'dashboard lista a revisão pendente');
 const antes=await p.evaluate(()=>pendencias().total);
 await p.click(`#view a[href="#/revisoes/tema/${T2}"]`);await p.waitForTimeout(100);
 await p.click('[data-act="rev-iniciar"]');await p.waitForTimeout(80);

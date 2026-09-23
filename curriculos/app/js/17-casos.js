@@ -13,12 +13,12 @@ const FC2 = { esp: "", disc: "", dif: "", tema: "" };
 rota("/casos", () => {
   const todos = todosCasos(), lista = todos.filter(c => (!FC2.esp || c.espId === FC2.esp) && (!FC2.disc || c.disciplina === FC2.disc) && (!FC2.dif || String(c.dificuldade) === FC2.dif) && (!FC2.tema || c.temaId === FC2.tema));
   return {
-    secao: "casos", titulo: "Casos clínicos", sub: AVISO_CASO, acoes: `<button class="btn sec" data-act="caso-novo">+ Novo caso</button>`,
-    html: `<div class="campos" style="margin-bottom:12px">
+    secao: "casos", titulo: "Casos clínicos", sub: AVISO_CASO, acoes: `<button class="btn sec mini" data-act="caso-novo">+ Novo</button>`,
+    html: `<details class="filtros" ${Object.values(FC2).some(Boolean) ? "open" : ""}><summary>Filtrar${Object.values(FC2).filter(Boolean).length ? ` (${Object.values(FC2).filter(Boolean).length})` : ""}</summary><div class="campos" style="margin-top:10px">
       <label class="campo"><span class="lab">Especialidade</span><select data-chg="fc2" data-c="esp">${opcoes(ordenarPt(unicos(todos.map(c => c.espId)).filter(e => ESPECIALIDADES[e]), e => ESPECIALIDADES[e].nome).map(e => [e, ESPECIALIDADES[e].nome]), FC2.esp, "Todas")}</select></label>
       <label class="campo"><span class="lab">Disciplina</span><select data-chg="fc2" data-c="disc">${opcoes(ordenarPt(unicos(todos.map(c => c.disciplina))).map(d => [d, d]), FC2.disc, "Todas")}</select></label>
       <label class="campo"><span class="lab">Tema</span><select data-chg="fc2" data-c="tema">${opcoes(ordenarPt(unicos(todos.map(c => c.temaId)).filter(t => TEMAS[t]), nomeTema).map(t => [t, nomeTema(t)]), FC2.tema, "Todos")}</select></label>
-      <label class="campo"><span class="lab">Dificuldade</span><select data-chg="fc2" data-c="dif">${opcoes(Object.entries(DIFICULDADE), FC2.dif, "Todas")}</select></label></div>
+      <label class="campo"><span class="lab">Dificuldade</span><select data-chg="fc2" data-c="dif">${opcoes(Object.entries(DIFICULDADE), FC2.dif, "Todas")}</select></label></div></details>
       ${tabelaCasos(lista)}`,
   };
 });

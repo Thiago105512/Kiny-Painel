@@ -16,10 +16,9 @@ rota("/redacao/:aba", p => paginaRedacao(p.aba));
 function paginaRedacao(aba) {
   let corpo = "";
   if (aba === "propostas") {
-    corpo = REDACAO.propostas.length ? REDACAO.propostas.map(p => `<article class="caixa"><h2 class="sec">${esc(p.tema)}</h2>
-      ${(p.textosMotivadores || []).length ? `<ul class="small">${p.textosMotivadores.map(t => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}
-      ${(p.eixos || []).length ? `<p class="small muted">Eixos possíveis: ${p.eixos.map(esc).join(" · ")}</p>` : ""}
-      <div class="linha">${p.autoral ? pill("proposta autoral") : ""}<button class="btn mini" data-act="red-usar" data-id="${esc(p.id)}">Escrever sobre este tema</button></div></article>`).join("") : vazio("Sem propostas cadastradas.");
+    corpo = REDACAO.propostas.length ? `<div class="tarefas">${REDACAO.propostas.map(p => `<div class="tarefa" style="flex-wrap:wrap"><div class="o"><b>${esc(p.tema)}</b><small>${(p.eixos || []).slice(0, 3).map(esc).join(" · ")}</small></div>
+      <button class="btn mini" data-act="red-usar" data-id="${esc(p.id)}">Escrever</button>
+      ${(p.textosMotivadores || []).length ? `<details class="mais" style="flex-basis:100%"><summary class="small">Textos de apoio</summary><ul class="small" style="margin:4px 0 0;padding-left:18px">${p.textosMotivadores.map(t => `<li>${esc(t)}</li>`).join("")}</ul></details>` : ""}</div>`).join("")}</div><p class="small muted">Propostas autorais, no formato do ENEM.</p>` : vazio("Sem propostas cadastradas.");
   } else if (aba === "escrever") {
     const prop = REDACAO.propostas.find(p => p.id === RD.proposta), l = linhasEstimadas(RD.texto), pal = RD.texto.trim() ? RD.texto.trim().split(/\s+/).length : 0;
     corpo = `<section class="caixa pilha">

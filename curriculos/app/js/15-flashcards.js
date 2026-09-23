@@ -3,20 +3,21 @@
    ============================================================ */
 const ORIGEM_CARD = { manual: "manual", erro: "caderno de erros", questao: "questão", ia: "IA" };
 function tabelaCards(cs, vaziaMsg = "Nenhum flashcard.") {
-  return tabela([{ t: "Pergunta" }, { t: "Tema" }, { t: "Origem" }, { t: "Próxima" }, { t: "" }],
-    cs.sort((a, b) => a.srs.prox.localeCompare(b.srs.prox)).map(c => [esc(c.frente.length > 90 ? c.frente.slice(0, 90) + "…" : c.frente), c.tema ? linkTema(c.tema) : "—", esc(ORIGEM_CARD[c.origem] || c.origem),
-      `${dataBR(c.srs.prox)} ${vencido(c.srs) ? pill("hoje", "azul") : ""}`, `<button class="btn mini sec" data-act="card-editar" data-id="${esc(c.id)}">Editar</button>`]), { vaziaMsg });
+  if (!cs.length) return vazio(vaziaMsg);
+  return `<div class="lista-q">${cs.sort((a, b) => a.srs.prox.localeCompare(b.srs.prox)).map(c => `<a href="#" data-act="card-editar" data-id="${esc(c.id)}"><span class="txt">${esc(c.frente)}</span><span class="meta">${vencido(c.srs) ? pill("hoje", "azul") : `<span>${quando(c.srs.prox)}</span>`}${c.tema ? `<span>${esc(nomeTema(c.tema))}</span>` : ""}<span>${esc(ORIGEM_CARD[c.origem] || c.origem)}</span></span></a>`).join("")}</div>`;
 }
 const FF = { tema: "" };
 rota("/flashcards", () => {
   const todos = cards(), lista = todos.filter(c => !FF.tema || c.tema === FF.tema), venc = todos.filter(c => vencido(c.srs));
   const temasC = ordenarPt(unicos(todos.map(c => c.tema)).filter(Boolean), nomeTema);
   return {
-    secao: "flashcards", titulo: "Flashcards", sub: "Revisão espaçada: 1 → 7 → 30 → 90 dias, ajustada pela sua avaliação a cada card.",
-    acoes: `${venc.length ? `<a class="btn" href="#/flashcards/estudar">Estudar ${venc.length} vencidos</a>` : ""}<button class="btn sec" data-act="card-novo">+ Novo</button>`,
-    html: `<div class="kpis"><div class="kpi"><b>${todos.length}</b><span>cards</span></div><div class="kpi"><b>${venc.length}</b><span>para hoje</span></div><div class="kpi"><b>${todos.filter(c => c.srs.etapa >= 2).length}</b><span>consolidados (≥30 dias)</span></div><div class="kpi"><b>${todos.filter(c => c.srs.hist?.length).length}</b><span>já revisados</span></div></div>
-      ${todos.length ? `<div class="campos" style="margin:12px 0"><label class="campo"><span class="lab">Tema</span><select data-chg="ff">${opcoes(temasC.map(t => [t, nomeTema(t)]), FF.tema, "Todos")}</select></label></div>${tabelaCards(lista)}`
-        : vazio("Você ainda não tem flashcards. Crie a partir dos seus erros, das questões de um tema, com o assistente ou manualmente.", `<a class="btn" href="#/erros">Do caderno de erros</a><button class="btn sec" data-act="card-novo">Criar manualmente</button>`)}`,
+    secao: "flashcards", titulo: "Flashcards", sub: todos.length ? `${todos.length} cards · ${venc.length} para hoje · ${todos.filter(c => c.srs.etapa >= 2).length} consolidados` : "",
+    acoes: `<button class="btn sec mini" data-act="card-novo">+ Novo</button>`,
+    html: todos.length ? `${venc.length ? `<div class="faixa"><p><b>${venc.length} para revisar hoje</b></p><a class="btn" href="#/flashcards/estudar">Estudar</a></div>` : ""}
+        ${temasC.length > 1 ? `<label class="campo" style="max-width:320px"><span class="lab">Filtrar por tema</span><select data-chg="ff">${opcoes(temasC.map(t => [t, nomeTema(t)]), FF.tema, "Todos")}</select></label>` : ""}
+        ${tabelaCards(lista)}
+        <p class="small muted">Revisão espaçada: 1 → 7 → 30 → 90 dias, ajustada pela sua avaliação.</p>`
+      : vazio("Você ainda não tem flashcards. Crie a partir dos seus erros, das questões de um tema, com o assistente ou manualmente.", `<a class="btn" href="#/erros">Do caderno de erros</a><button class="btn sec" data-act="card-novo">Criar</button>`),
   };
 });
 MUDANCAS.ff = el => { FF.tema = el.value; atualizar(); };

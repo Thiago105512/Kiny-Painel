@@ -42,14 +42,13 @@ function paginaBiblioteca(aba) {
       <h2 class="sec">Salvas <span class="small muted">${minhas.length}</span></h2>
       ${tabela([{ t: "Questão" }, { t: "Trilha" }, { t: "Tema" }, { t: "" }], minhas.map(x => [`<a href="#/questoes/q/${esc(x.id)}">${esc((x.enunciado || x.q || "").slice(0, 100))}</a>`, esc(TRILHAS[x.t]?.curto || x.t), x.tema ? linkTema(x.tema) : "—", `<button class="btn mini sec" data-act="q-del" data-id="${esc(x.id)}">Excluir</button>`]), { vaziaMsg: "Nenhuma questão sua ainda. Cadastre acima ou gere com o assistente dentro de um tema." })}`;
   } else if (aba === "dados") {
-    const nomes = store.nomes().filter(n => n !== "perfil");
-    corpo = `<section class="caixa"><h2 class="sec">Onde seus dados ficam</h2><p>${store.naConta ? "Na sua conta Claude (sincronizados entre aparelhos) e em cópia local neste navegador." : "Somente neste navegador. Abra pelo link do Claude para sincronizar, ou faça backup regularmente."}</p>
-      <p class="small muted">${nomes.length} coleções: ${nomes.map(esc).join(", ")}</p></section>
+    corpo = `<div class="faixa"><p class="small">${store.naConta ? "Seus dados ficam na sua conta Claude e sincronizam entre aparelhos." : "Seus dados estão só neste navegador. Faça backups para não perdê-los."}</p></div>
       ${blocoBackups()}
-      <section class="caixa"><h2 class="sec">Backup manual</h2><div class="linha">${DOWNLOADS ? `<button class="btn" data-act="bk-baixar">Baixar backup (.json)</button>` : ""}<button class="btn sec" data-act="bk-copiar">Copiar backup</button>
+      <details class="filtros"><summary>Backup manual (copiar, baixar, restaurar)</summary><div class="pilha" style="margin-top:10px">
+        <div class="linha">${DOWNLOADS ? `<button class="btn sec" data-act="bk-baixar">Baixar (.json)</button>` : ""}<button class="btn sec" data-act="bk-copiar">Copiar</button>
         <label class="btn sec">Restaurar de arquivo<input type="file" accept=".json,application/json" data-chg="bk-arquivo" hidden></label></div>
-        <label class="campo" style="margin-top:10px"><span class="lab">Ou cole um backup (inclui o formato da versão anterior)</span><textarea id="bk-txt" rows="3"></textarea></label><div class="acoes"><button class="btn sec" data-act="bk-colar">Restaurar do texto</button></div></section>
-      <section class="caixa"><h2 class="sec">Zerar progresso</h2><p class="small">Apaga respostas, erros, revisões, flashcards, simulados e plano. Matrizes, questões próprias, anotações e materiais são mantidos.</p><button class="btn perigo" data-act="zerar-conf">Zerar progresso…</button></section>`;
+        <label class="campo"><span class="lab">Ou cole um backup</span><textarea id="bk-txt" rows="3"></textarea></label><div><button class="btn sec" data-act="bk-colar">Restaurar do texto</button></div></div></details>
+      <details class="filtros"><summary>Zerar progresso</summary><p class="small">Apaga respostas, erros, revisões, flashcards, simulados e plano. Matrizes, questões próprias, anotações e materiais ficam.</p><button class="btn perigo" data-act="zerar-conf">Zerar progresso…</button></details>`;
   }
   return { secao: "biblioteca", titulo: "Biblioteca", html: `<div class="tabs" role="tablist">${ABAS_BIB.map(([k, n]) => `<a role="tab" href="#/biblioteca/${k}" aria-selected="${k === aba}">${n}</a>`).join("")}</div>${corpo}` };
 }
