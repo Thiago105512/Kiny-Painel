@@ -4,7 +4,7 @@
 global.window = global;
 const path = require('path');
 const APP = path.join(__dirname, '..', 'app', 'js');
-for (const f of ['utils', 'store', 'seguranca', 'entrada',
+for (const f of ['utils', 'store', 'seguranca', 'entrada', 'plantoes',
   'data/apoio-entrada', 'data/sinais-gravidade', 'data/contexto-epidemiologico', 'data/queixas', 'data/doencas',
   'data/medicamentos', 'data/emergencias', 'data/exames', 'data/vacinas', 'data/crescimento',
   'data/zscore', 'data/notificacao', 'calculators']) {
@@ -378,6 +378,59 @@ if (D.acidentes) {
     if (!(F.nuncaFazer || []).some(x => /v[oô]mito/i.test(x))) throw new Error('não consta');
   });
 }
+
+/* ---------- 9. Plantões ---------- */
+const PL = PED.plantao;
+t('Hora aceita as formas que se digita na pressa', () => {
+  eq(PL.lerHora('7'), 420); eq(PL.lerHora('19'), 1140);
+  eq(PL.lerHora('1930'), 1170); eq(PL.lerHora('19:30'), 1170);
+  eq(PL.lerHora('2599'), null); eq(PL.lerHora('abc'), null);
+});
+t('Plantão noturno atravessa a meia-noite', () => {
+  eq(PL.duracaoMin('19:00', '07:00'), 720, 'noturno 12 h:');
+  eq(PL.duracaoMin('08:00', '14:30'), 390);
+  eq(PL.duracaoMin('22:00', '02:00'), 240);
+});
+t('Duração é exibida em horas e minutos', () => {
+  eq(PL.fmtDuracao(720), '12h'); eq(PL.fmtDuracao(390), '6h30'); eq(PL.fmtDuracao(null), '—');
+});
+t('Valor por hora multiplica a duração', () => {
+  const v = PL.valores({ inicio: '19:00', fim: '07:00', forma: 'hora', valorHora: 150 });
+  eq(v.liquido, 1800); eq(v.horas, 12);
+});
+t('Valor fechado ignora a duração', () => {
+  eq(PL.valores({ inicio: '07:00', fim: '19:00', forma: 'fixo', valorFixo: 1200 }).liquido, 1200);
+});
+t('Acréscimo e desconto entram no líquido', () => {
+  const v = PL.valores({ inicio: '19:00', fim: '07:00', forma: 'hora', valorHora: 150, acrescimo: 200, desconto: 180 });
+  eq(v.bruto, 1800); eq(v.liquido, 1820);
+});
+t('Resumo do mês separa recebido de a receber', () => {
+  PED.store.reset();
+  const local = PED.store.upsert('locaisTrabalho', { nome: 'Teste', corIdx: 0, forma: 'hora', valorHora: 100 });
+  PED.store.upsert('plantoes', { localId: local.id, data: '2026-09-10', inicio: '19:00', fim: '07:00', forma: 'hora', valorHora: 100, status: 'pago' });
+  PED.store.upsert('plantoes', { localId: local.id, data: '2026-09-20', inicio: '08:00', fim: '14:00', forma: 'hora', valorHora: 100, status: 'previsto' });
+  PED.store.upsert('plantoes', { localId: local.id, data: '2026-08-10', inicio: '08:00', fim: '14:00', forma: 'hora', valorHora: 100, status: 'pago' });
+  const r = PL.resumoMes(2026, 9);
+  eq(r.plantoes, 2, 'só os do mês:'); eq(r.minutos, 1080); eq(r.total, 1800);
+  eq(r.pago, 1200); eq(r.aReceber, 600);
+  eq(r.porLocal.length, 1); eq(r.porLocal[0].valor, 1800);
+});
+t('Série de meses volta na ordem certa', () => {
+  const s2 = PL.serieMeses(6, 2026, 9);
+  eq(s2.length, 6); eq(s2[5].rotulo, '09/26'); eq(s2[0].rotulo, '04/26');
+  eq(s2[4].total, 600, 'agosto:');
+});
+t('Planilha do mês sai com cabeçalho e uma linha por plantão', () => {
+  const csv = PL.csvMes(2026, 9).split('\n');
+  eq(csv.length, 3, 'cabeçalho + 2 plantões:');
+  if (!/Data;Local/.test(csv[0])) throw new Error('cabeçalho inesperado');
+});
+t('Paleta dos locais é a validada e não se repete antes de 8', () => {
+  eq(PL.CORES.length, 8); eq(PL.CORES[0], '#2a78d6');
+  eq(new Set(PL.CORES).size, 8);
+  eq(PL.corLocal(0), PL.corLocal(8), 'o nono local reaproveita a primeira cor:');
+});
 
 /* ---------- Resultado ---------- */
 console.log('\nMucurinha – suíte de testes');

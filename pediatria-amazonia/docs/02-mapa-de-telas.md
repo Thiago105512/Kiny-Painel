@@ -33,7 +33,8 @@ Rotas do protótipo (`#/…`). Cada tela indica objetivo, conteúdo e ações.
 | 27 | `#/aprender` | Aprender e explicar | Frases prontas para a família, informações sobre os municípios e perguntas de autoavaliação. |
 | 28 | `#/entender` · `#/entender/:id` | Entender | 55 conceitos com o que é, por que acontece, o que muda na criança, quando preocupa, mitos e a frase para a família. Aparecem automaticamente nas queixas e nas doenças. |
 | 29 | `#/acidentes` · `#/acidentes/:ferramenta` | Acidentes | 16 protocolos e as ferramentas: superfície queimada, PECARN, profilaxia da raiva e do tétano, agentes tóxicos. |
-| 30 | `#/config` | Dados | Profissional responsável (nome, especialidade, CRM, RQE – padrão: Dra. Catarina Ribeiro de Queiroz, Pediatra, CRM/AM 10.677, RQE 6.706), exportar/importar JSON, apagar, contagem das bases carregadas. |
+| 30 | `#/plantoes` · `/novo` · `/:id` · `/agenda` · `/locais` | Plantões | Painel do mês com horas, previsão, recebido e a receber; divisão por local e série de seis meses; lançamento rápido; agenda; locais com valores; planilha do mês. |
+| 31 | `#/config` | Dados | Profissional responsável (nome, especialidade, CRM, RQE – padrão: Dra. Catarina Ribeiro de Queiroz, Pediatra, CRM/AM 10.677, RQE 6.706), exportar/importar JSON, apagar, contagem das bases carregadas. |
 
 ## Elementos globais
 - **Barra superior**: logotipo, busca global (queixas, doenças, medicamentos, calculadoras, emergências, exames, vacinas, pacientes) e chip do paciente ativo (nome, idade, peso).

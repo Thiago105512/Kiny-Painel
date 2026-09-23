@@ -11,6 +11,8 @@ PED.store = (function () {
     prescricoes: [],      // prescrições emitidas
     vacinasRealizadas: [],// {pacienteId, vacinaId, doseIndex, data}
     medidas: [],          // {pacienteId, data, peso, altura, pc}
+    locaisTrabalho: [],   // {nome, forma, valorHora, valorFixo, cargaHoras, diaPagamento}
+    plantoes: [],         // {localId, data, inicio, fim, forma, valores, status, dataPagamento}
     prefs: { pesoRapido: null, ultimoPacienteId: null,
       // Profissional responsável (editável em Dados › Profissional)
       profissional: { nome: 'Catarina Ribeiro de Queiroz', tratamento: 'Dra.', especialidade: 'Pediatra', crm: 'CRM/AM 10.677', rqe: 'RQE 6.706' } }
@@ -31,7 +33,7 @@ PED.store = (function () {
     try { localStorage.setItem(KEY, JSON.stringify(db)); }
     catch (e) { console.warn('store: falha ao gravar', e); }
   }
-  const col = (name) => load()[name];
+  const col = (name) => { const d = load(); if (!Array.isArray(d[name])) d[name] = []; return d[name]; };
   const byId = (name, id) => col(name).find(x => x.id === id) || null;
   function upsert(name, obj) {
     const c = col(name);

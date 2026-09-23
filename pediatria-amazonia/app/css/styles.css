@@ -380,3 +380,28 @@ details.quiz summary { font-weight: 600; }
   .marca .lema { min-width: 0; }
   .topbar .patient-chip { max-width: 34vw; }
 }
+
+/* Plantões: barras de leitura rápida */
+.viz { margin: .4rem 0; }
+.vizBarras { display: flex; flex-direction: column; gap: 6px; }
+.vizLinha { display: grid; grid-template-columns: minmax(80px, 1fr) minmax(70px, 2fr) auto; gap: .6rem; align-items: center; }
+.vizRot { font-size: .88rem; font-weight: 600; display: flex; align-items: center; gap: .35rem; min-width: 0; }
+.vizPonto { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex: 0 0 auto; }
+.vizTrilho { background: var(--bg-soft); border-radius: 4px; height: 14px; overflow: hidden; }
+.vizBarra { height: 14px; border-radius: 0 4px 4px 0; }
+.vizVal { font-size: .88rem; font-weight: 600; text-align: right; white-space: nowrap; }
+.vizMeses { display: flex; gap: 6px; align-items: flex-end; height: 140px; }
+.vizMes { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; text-decoration: none; color: var(--text); gap: 3px; }
+.vizMesVal { font-size: .7rem; font-weight: 600; color: var(--muted); white-space: nowrap; }
+.vizMesBarra { width: 100%; max-width: 46px; background: var(--primary); border-radius: 4px 4px 0 0; min-height: 2px; }
+.vizMes:hover .vizMesBarra { background: var(--primary-dark); }
+.vizMesRot { font-size: .72rem; color: var(--muted); }
+.tile small.muted { font-weight: 400; }
+
+@media (max-width: 560px) {
+  /* nome do local acima da barra, para não ser cortado */
+  .vizLinha { grid-template-columns: 1fr auto; grid-template-areas: "rot val" "barra val"; row-gap: 3px; }
+  .vizRot { grid-area: rot; }
+  .vizTrilho { grid-area: barra; }
+  .vizVal { grid-area: val; align-self: center; }
+}

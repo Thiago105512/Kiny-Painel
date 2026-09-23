@@ -38,6 +38,8 @@ vacina, vacina_dose, marco_desenvolvimento, curva_oms, sinal_vital_ref, fonte
 | `prescricao_item` | id, prescricao_id, medicamento_id (nullable), medicamento, apresentacao, dose, via, intervalo, horarios, duracao, orientacoes, calculo, fonte |
 | `medida` | id, paciente_id, data, peso_kg, altura_cm, pc_cm |
 | `vacina_realizada` | id, paciente_id, vacina_id, dose_index, data, lote |
+| `local_trabalho` | id, nome, cor_idx, forma (hora/fixo), valor_hora, valor_fixo, carga_horas, dia_pagamento, obs |
+| `plantao` | id, local_id, data, inicio, fim, forma, valor_hora, valor_fixo, acrescimo, desconto, status (previsto/realizado/faturado/pago), data_pagamento, valor_pago, obs |
 
 ## 3.3 Tabelas de conhecimento clínico
 

@@ -42,9 +42,20 @@ No celular, abra a URL e use "Adicionar à tela inicial" para instalar como app.
 | Tipos de violência com protocolo | 8 |
 | Sinais de gravidade e perguntas de contexto | 25 e 23 |
 | Conceitos explicados na camada didática | 55 |
+| Controle de plantões, horas e valores | ✔ |
 | Mitos desfeitos com a correção | 146 |
 | Perguntas de autoavaliação | 55 |
 | Cadastro de pacientes, prescrição com confirmação, evolução SOAP | ✔ |
+
+## Plantões
+
+Aba para registrar cada plantão e acompanhar o que entra no mês.
+
+- **Locais de trabalho** com valor da hora ou valor fechado, carga habitual e dia de pagamento. Hapvida e CardioBaby já vêm cadastrados.
+- **Lançamento em poucos toques**: local em botão, data digitada, entrada e saída aceitando 19 ou 1900, e a duração calculada na hora. Plantão noturno atravessa a meia-noite sem precisar avisar.
+- **Situação de cada plantão**: previsto, realizado, faturado ou pago, com data de pagamento e valor recebido quando diferente do previsto.
+- **Painel do mês** com horas trabalhadas, previsão do total, quanto já foi recebido e quanto falta receber, mais a divisão por local e os últimos seis meses.
+- **Agenda** dos plantões futuros, duplicação de um plantão para a semana seguinte e exportação da planilha do mês para a contabilidade.
 
 ## Uso rápido
 

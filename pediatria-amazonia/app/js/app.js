@@ -31,6 +31,7 @@ window.PED = window.PED || {};
     { path: '/exames', nome: 'Exames', ic: '🧪' },
     { path: '/vacinas', nome: 'Vacinas', ic: '💉' },
     { path: '/crescimento', nome: 'Crescimento', ic: '📈' },
+    { path: '/plantoes', nome: 'Plantões', ic: '🗓️' },
     { path: '/acidentes', nome: 'Acidentes', ic: '🚩' },
     { path: '/unidades', nome: 'Unidades', ic: '🏥' },
     { path: '/violencia', nome: 'Proteção', ic: '🛡️' },
@@ -448,6 +449,7 @@ window.PED = window.PED || {};
         <a class="tile" href="#/vacinas"><span class="ic">💉</span>Vacinas</a>
         <a class="tile" href="#/crescimento"><span class="ic">📈</span>Crescimento</a>
         <a class="tile" href="#/notificacao"><span class="ic">📢</span>Notificação<small>compulsória</small></a>
+        <a class="tile" href="#/plantoes"><span class="ic">🗓️</span>Plantões<small>horas e valores</small></a>
         <a class="tile red" href="#/acidentes"><span class="ic">🚩</span>Acidentes<small>queimadura, engasgo, intoxicação</small></a>
         <a class="tile" href="#/unidades"><span class="ic">🏥</span>Unidades<small>para onde encaminhar</small></a>
         <a class="tile red" href="#/violencia"><span class="ic">🛡️</span>Proteção<small>violência</small></a>
@@ -1105,6 +1107,162 @@ window.PED = window.PED || {};
       ${disclaimer}`;
   });
 
+  /* ---- Plantões: horas e valores ---- */
+  const PL = () => PED.plantao;
+  const mesRef = () => {
+    const q = parseHash().query;
+    const hoje = new Date();
+    return { ano: Number(q.ano) || hoje.getFullYear(), mes: Number(q.mes) || (hoje.getMonth() + 1) };
+  };
+  const NOME_MES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+  const desloca = (ano, mes, d) => { mes += d; if (mes < 1) { mes = 12; ano--; } if (mes > 12) { mes = 1; ano++; } return { ano, mes }; };
+
+  /** Barras horizontais por local: magnitude por identidade, com rótulo direto em cada barra. */
+  function barrasPorLocal(porLocal, total) {
+    if (!porLocal.length) return '';
+    const max = Math.max(...porLocal.map(x => x.valor), 1);
+    return `<div class="viz">
+      <div class="vizBarras">${porLocal.map(x => `<div class="vizLinha" title="${esc(x.nome)}: ${esc(PL().moeda(x.valor))} em ${x.plantoes} plantão(ões)">
+        <div class="vizRot"><span class="vizPonto" style="background:${PL().corLocal(x.corIdx)}"></span>${esc(x.nome)}</div>
+        <div class="vizTrilho"><div class="vizBarra" style="width:${Math.max(2, 100 * x.valor / max)}%;background:${PL().corLocal(x.corIdx)}"></div></div>
+        <div class="vizVal">${esc(PL().moeda(x.valor))}<br><small class="muted">${esc(PL().fmtDuracao(x.minutos))}</small></div>
+      </div>`).join('')}</div></div>`;
+  }
+  /** Série de meses: uma medida ao longo do tempo, rótulo direto no topo de cada barra. */
+  function barrasMeses(serie) {
+    const max = Math.max(...serie.map(x => x.total), 1);
+    return `<div class="viz"><div class="vizMeses">${serie.map(x => `<a class="vizMes" href="#/plantoes?ano=${x.ano}&mes=${x.mes}" title="${esc(x.rotulo)}: ${esc(PL().moeda(x.total))}">
+      <span class="vizMesVal">${x.total ? esc(PL().moeda(x.total).replace('R$\u00a0', '').replace(',00', '')) : ''}</span>
+      <span class="vizMesBarra" style="height:${Math.max(2, 100 * x.total / max)}%"></span>
+      <span class="vizMesRot">${esc(x.rotulo)}</span></a>`).join('')}</div></div>`;
+  }
+
+  route('/plantoes', (params, q) => {
+    PL().garantirLocais();
+    const { ano, mes } = mesRef();
+    const R = PL().resumoMes(ano, mes);
+    const ps = PL().doMes(ano, mes);
+    const ant = desloca(ano, mes, -1), prox = desloca(ano, mes, 1);
+    const serie = PL().serieMeses(6, ano, mes);
+    const porDia = {};
+    ps.forEach(x => (porDia[x.data] = porDia[x.data] || []).push(x));
+    const linha = (x) => {
+      const v = PL().valores(x), l = x.localId ? PL().local(x.localId) : null;
+      const st = (PL().STATUS.find(s2 => s2.id === (x.status || 'previsto')) || {});
+      return `<a class="row" href="#/plantoes/${x.id}">
+        <span class="vizPonto" style="background:${PL().corLocal(l ? l.corIdx : 7)};width:12px;height:12px;flex:0 0 auto"></span>
+        <div class="grow"><div class="title">${esc(l ? l.nome : 'Sem local')} <span class="chip ${st.cor || ''}">${esc(st.rotulo || '')}</span></div>
+        <div class="sub">${esc(x.inicio || '—')} às ${esc(x.fim || '—')} · ${esc(PL().fmtDuracao(v.min))}${x.obs ? ' · ' + esc(x.obs) : ''}</div></div>
+        <div style="text-align:right"><b>${esc(PL().moeda(v.liquido))}</b></div></a>`;
+    };
+    return `<div class="section-title"><h1>🗓️ Plantões</h1><a class="btn sm" href="#/plantoes/novo">➕ Lançar</a></div>
+      <div class="card compact" style="display:flex;align-items:center;justify-content:space-between;gap:.5rem">
+        <a class="btn sm ghost" href="#/plantoes?ano=${ant.ano}&mes=${ant.mes}">←</a>
+        <b>${NOME_MES[mes - 1]} de ${ano}</b>
+        <a class="btn sm ghost" href="#/plantoes?ano=${prox.ano}&mes=${prox.mes}">→</a></div>
+
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(140px,1fr))">
+        <div class="tile" style="cursor:default"><small class="muted">Horas no mês</small><span style="font-size:1.5rem;font-weight:700;color:var(--primary-dark)">${esc(PL().fmtDuracao(R.minutos))}</span><small>${R.plantoes} plantão(ões)</small></div>
+        <div class="tile" style="cursor:default"><small class="muted">Previsão do mês</small><span style="font-size:1.35rem;font-weight:700;color:var(--primary-dark)">${esc(PL().moeda(R.total))}</span><small>tudo que foi lançado</small></div>
+        <div class="tile" style="cursor:default"><small class="muted">Já recebido</small><span style="font-size:1.35rem;font-weight:700;color:var(--green)">${esc(PL().moeda(R.pago))}</span><small>marcado como pago</small></div>
+        <div class="tile" style="cursor:default"><small class="muted">A receber</small><span style="font-size:1.35rem;font-weight:700;color:${R.aReceber > 0 ? 'var(--amber)' : 'var(--muted)'}">${esc(PL().moeda(R.aReceber))}</span><small>ainda não pago</small></div>
+      </div>
+
+      ${R.porLocal.length ? `<div class="card"><h2>Por local</h2>${barrasPorLocal(R.porLocal, R.total)}
+        <details><summary>ver como tabela</summary><div class="body"><div class="tablewrap"><table><tr><th>Local</th><th>Plantões</th><th>Horas</th><th>Valor</th></tr>
+        ${R.porLocal.map(x => `<tr><td>${esc(x.nome)}</td><td>${x.plantoes}</td><td>${esc(PL().fmtDuracao(x.minutos))}</td><td>${esc(PL().moeda(x.valor))}</td></tr>`).join('')}</table></div></div></details></div>` : ''}
+
+      <div class="card"><h2>Últimos 6 meses</h2>${barrasMeses(serie)}
+        <details><summary>ver como tabela</summary><div class="body"><div class="tablewrap"><table><tr><th>Mês</th><th>Plantões</th><th>Horas</th><th>Total</th><th>Recebido</th></tr>
+        ${serie.map(x => `<tr><td>${esc(x.rotulo)}</td><td>${x.plantoes}</td><td>${esc(PL().fmtDuracao(x.minutos))}</td><td>${esc(PL().moeda(x.total))}</td><td>${esc(PL().moeda(x.pago))}</td></tr>`).join('')}</table></div></div></details></div>
+
+      ${ps.length ? Object.keys(porDia).sort().map(d => `<div class="section-title" style="margin:.8rem 0 .3rem"><h3 style="margin:0">${U.fmtDate(d)} <small class="muted">${['domingo','segunda','terça','quarta','quinta','sexta','sábado'][new Date(d + 'T12:00:00').getDay()]}</small></h3></div><div class="list">${porDia[d].map(linha).join('')}</div>`).join('')
+        : '<div class="empty">Nenhum plantão lançado neste mês.<br><a class="btn" style="margin-top:.8rem" href="#/plantoes/novo">Lançar o primeiro</a></div>'}
+
+      <div class="btnrow"><a class="btn secondary" href="#/plantoes/agenda">📆 Agenda</a><a class="btn secondary" href="#/plantoes/locais">🏢 Locais e valores</a><button class="btn ghost" data-act="exportarPlantoes" data-ano="${ano}" data-mes="${mes}">⬇️ Planilha do mês</button></div>
+      <p class="disclaimer">Controle pessoal de plantões. Os valores são os que você lançar; confira sempre com o contracheque e o contrato.</p>`;
+  });
+
+  route('/plantoes/agenda', () => {
+    PL().garantirLocais();
+    const ps = PL().proximos(40);
+    return `<div class="section-title"><h1>📆 Agenda de plantões</h1><a class="btn sm" href="#/plantoes/novo">➕ Lançar</a></div>
+      ${ps.length ? `<div class="list">${ps.map(x => { const v = PL().valores(x), l = x.localId ? PL().local(x.localId) : null; const d = new Date(x.data + 'T12:00:00');
+        const dias = Math.round((d - new Date(U.today() + 'T12:00:00')) / 86400000);
+        return `<a class="row" href="#/plantoes/${x.id}"><span class="vizPonto" style="background:${PL().corLocal(l ? l.corIdx : 7)};width:12px;height:12px;flex:0 0 auto"></span>
+        <div class="grow"><div class="title">${U.fmtDate(x.data)} · ${esc(l ? l.nome : 'Sem local')} ${dias === 0 ? '<span class="chip red">hoje</span>' : dias === 1 ? '<span class="chip amber">amanhã</span>' : `<span class="chip gray">em ${dias} dias</span>`}</div>
+        <div class="sub">${esc(x.inicio || '—')} às ${esc(x.fim || '—')} · ${esc(PL().fmtDuracao(v.min))} · ${esc(PL().moeda(v.liquido))}</div></div></a>`; }).join('')}</div>`
+        : '<div class="empty">Nenhum plantão futuro lançado.</div>'}
+      <div class="btnrow"><a class="btn secondary" href="#/plantoes">Voltar ao mês</a></div>`;
+  });
+
+  route('/plantoes/locais', () => {
+    const ls = PL().garantirLocais();
+    return `<div class="section-title"><h1>🏢 Locais e valores</h1><button class="btn sm" data-act="novoLocal">➕ Novo local</button></div>
+      <p class="muted">O valor cadastrado aqui é usado como padrão ao lançar um plantão, e pode ser alterado em cada lançamento.</p>
+      ${ls.map(l => `<form class="card formLocal" data-id="${l.id}">
+        <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.5rem"><span class="vizPonto" style="background:${PL().corLocal(l.corIdx)};width:14px;height:14px"></span><b>${esc(l.nome)}</b></div>
+        <div class="fields">
+          <div class="field full"><label>Nome</label><input name="nome" value="${esc(l.nome)}"></div>
+          <div class="field"><label>Forma de pagamento</label><select name="forma"><option value="hora" ${l.forma === 'hora' ? 'selected' : ''}>Por hora</option><option value="fixo" ${l.forma === 'fixo' ? 'selected' : ''}>Valor fechado</option></select></div>
+          <div class="field"><label>Valor da hora (R$)</label><input type="number" inputmode="decimal" step="0.01" name="valorHora" value="${l.valorHora != null ? l.valorHora : ''}"></div>
+          <div class="field"><label>Valor fechado (R$)</label><input type="number" inputmode="decimal" step="0.01" name="valorFixo" value="${l.valorFixo != null ? l.valorFixo : ''}"></div>
+          <div class="field"><label>Carga habitual (h)</label><input type="number" inputmode="decimal" step="0.5" name="cargaHoras" value="${l.cargaHoras != null ? l.cargaHoras : ''}"></div>
+          <div class="field"><label>Dia de pagamento</label><input type="number" inputmode="numeric" min="1" max="31" name="diaPagamento" value="${l.diaPagamento != null ? l.diaPagamento : ''}"></div>
+          <div class="field full"><label>Observação</label><input name="obs" value="${esc(l.obs || '')}"></div>
+        </div>
+        <div class="btnrow"><button class="btn sm" type="submit">💾 Salvar</button><button type="button" class="btn sm ghost" data-act="excluirLocal" data-id="${l.id}">Excluir</button></div>
+      </form>`).join('')}
+      <div class="btnrow"><a class="btn secondary" href="#/plantoes">Voltar</a></div>`;
+  });
+
+  function formPlantao(p) {
+    p = p || {};
+    const ls = PL().garantirLocais();
+    const E = PED.entrada;
+    const v = PL().valores(p);
+    const l = p.localId ? PL().local(p.localId) : null;
+    const forma = p.forma || (l && l.forma) || 'hora';
+    return `<form id="formPlantao" class="card" data-id="${esc(p.id || '')}">
+      <div class="fields">
+        <div class="field full"><label>Local</label><div class="toggles" data-escolha="localId">
+          ${ls.map(x => `<span class="toggle ${p.localId === x.id ? 'on' : ''}" data-v="${x.id}"><span class="vizPonto" style="background:${PL().corLocal(x.corIdx)}"></span> ${esc(x.nome)}</span>`).join('')}
+          <input type="hidden" name="localId" value="${esc(p.localId || '')}"></div></div>
+
+        <div class="field"><label>Data <small class="muted">(digite)</small></label>
+          <input data-tipo="data" data-iso="isoPlantao" value="${E ? E.deISO(p.data || U.today()) : ''}" autocomplete="off">
+          <input type="hidden" name="data" id="isoPlantao" value="${esc(p.data || U.today())}"></div>
+        <div class="field"><label>Entrada</label><input class="hora" name="inicio" inputmode="numeric" maxlength="5" value="${esc(p.inicio || '')}" placeholder="19:00"></div>
+        <div class="field"><label>Saída</label><input class="hora" name="fim" inputmode="numeric" maxlength="5" value="${esc(p.fim || '')}" placeholder="07:00"></div>
+        <div class="field"><label>Duração</label><input id="duracaoCalc" disabled value="${esc(PL().fmtDuracao(v.min))}"></div>
+
+        <div class="field full"><label>Forma</label><div class="toggles" data-escolha="forma">
+          <span class="toggle ${forma === 'hora' ? 'on' : ''}" data-v="hora">Por hora</span>
+          <span class="toggle ${forma === 'fixo' ? 'on' : ''}" data-v="fixo">Valor fechado</span>
+          <input type="hidden" name="forma" value="${esc(forma)}"></div></div>
+        <div class="field"><label>Valor da hora (R$)</label><input type="number" inputmode="decimal" step="0.01" name="valorHora" value="${p.valorHora != null ? p.valorHora : (l && l.valorHora != null ? l.valorHora : '')}"></div>
+        <div class="field"><label>Valor fechado (R$)</label><input type="number" inputmode="decimal" step="0.01" name="valorFixo" value="${p.valorFixo != null ? p.valorFixo : (l && l.valorFixo != null ? l.valorFixo : '')}"></div>
+        <div class="field"><label>Acréscimo (R$)</label><input type="number" inputmode="decimal" step="0.01" name="acrescimo" value="${p.acrescimo != null ? p.acrescimo : ''}" placeholder="feriado, extra"></div>
+        <div class="field"><label>Desconto (R$)</label><input type="number" inputmode="decimal" step="0.01" name="desconto" value="${p.desconto != null ? p.desconto : ''}" placeholder="imposto, taxa"></div>
+
+        <div class="field full"><label>Situação</label><div class="toggles" data-escolha="status">
+          ${PL().STATUS.map(st => `<span class="toggle ${(p.status || 'previsto') === st.id ? 'on' : ''}" data-v="${st.id}">${esc(st.rotulo)}</span>`).join('')}
+          <input type="hidden" name="status" value="${esc(p.status || 'previsto')}"></div></div>
+        <div class="field"><label>Pago em <small class="muted">(digite)</small></label>
+          <input data-tipo="data" data-iso="isoPago" value="${E && p.dataPagamento ? E.deISO(p.dataPagamento) : ''}" autocomplete="off">
+          <input type="hidden" name="dataPagamento" id="isoPago" value="${esc(p.dataPagamento || '')}"></div>
+        <div class="field"><label>Valor recebido (R$)</label><input type="number" inputmode="decimal" step="0.01" name="valorPago" value="${p.valorPago != null ? p.valorPago : ''}" placeholder="se diferente"></div>
+        <div class="field full"><label>Observação</label><input name="obs" value="${esc(p.obs || '')}"></div>
+      </div>
+      <div id="resumoPlantao" class="result"><div class="big">${esc(PL().moeda(v.liquido))}</div><div class="formula">${esc(v.base)}</div></div>
+      <div class="btnrow"><button class="btn" type="submit">💾 Salvar</button>
+        ${p.id ? `<button type="button" class="btn secondary" data-act="duplicarPlantao" data-id="${p.id}">Duplicar</button><button type="button" class="btn ghost" data-act="excluirPlantao" data-id="${p.id}">Excluir</button>` : ''}
+        <a class="btn ghost" href="#/plantoes">Cancelar</a></div>
+    </form>`;
+  }
+  route('/plantoes/novo', () => `<h1>Lançar plantão</h1>${formPlantao({})}`);
+  route('/plantoes/:id', ({ id }) => { const p = S.byId('plantoes', id); if (!p) return '<div class="empty">Plantão não encontrado.</div>'; return `<h1>Plantão</h1>${formPlantao(p)}`; });
+
   /* ---- Acidentes do dia a dia ---- */
   route('/acidentes', (params, q) => {
     const A = D().acidentes; if (!A || !A.protocolos) return '<div class="empty">M\u00f3dulo em prepara\u00e7\u00e3o.</div>';
@@ -1567,6 +1725,45 @@ window.PED = window.PED || {};
     const fprof = $('#formProf'); if (fprof) fprof.addEventListener('submit', (e) => { e.preventDefault(); S.pref('profissional', formData(fprof)); U.toast('Profissional salvo'); render(); });
     const ft = $('#filtroTox'); if (ft) ft.addEventListener('input', () => { const q2 = U.normalize(ft.value); $$('.toxRow', main).forEach(x => x.style.display = !q2 || x.dataset.n.includes(q2) ? '' : 'none'); });
     const uc = $('#uniCidade'); if (uc) uc.addEventListener('change', () => go('/unidades?cidade=' + encodeURIComponent(uc.value)));
+    // Plantões
+    const fpl = $('#formPlantao');
+    if (fpl) {
+      if (PED.entrada) PED.entrada.ligar(fpl);
+      $$('.hora', fpl).forEach(h => h.addEventListener('input', () => {
+        const pos = h.value.length; h.value = PED.plantao.mascararHora(h.value); if (pos) h.setSelectionRange(h.value.length, h.value.length);
+      }));
+      const recalc = () => {
+        const d = formData(fpl);
+        const v = PED.plantao.valores(d);
+        const dc = $('#duracaoCalc'); if (dc) dc.value = PED.plantao.fmtDuracao(v.min);
+        const box = $('#resumoPlantao');
+        if (box) box.innerHTML = `<div class="big">${esc(PED.plantao.moeda(v.liquido))}</div><div class="formula">${esc(v.base)}${v.acrescimo ? ' + ' + PED.plantao.moeda(v.acrescimo) : ''}${v.desconto ? ' − ' + PED.plantao.moeda(v.desconto) : ''}</div>`;
+      };
+      fpl.addEventListener('input', recalc);
+      fpl.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const d = formData(fpl);
+        if (!d.data) { U.toast('Informe a data'); return; }
+        const prev = fpl.dataset.id ? S.byId('plantoes', fpl.dataset.id) : null;
+        const numero = (x) => x === '' || x == null ? null : Number(x);
+        const obj = Object.assign({}, prev || {}, d, {
+          valorHora: numero(d.valorHora), valorFixo: numero(d.valorFixo),
+          acrescimo: numero(d.acrescimo), desconto: numero(d.desconto), valorPago: numero(d.valorPago)
+        });
+        if (!fpl.dataset.id) delete obj.id;
+        S.upsert('plantoes', obj);
+        U.toast('Plantão salvo');
+        go('/plantoes?ano=' + obj.data.slice(0, 4) + '&mes=' + Number(obj.data.slice(5, 7)));
+      });
+      recalc();
+    }
+    $$('.formLocal', main).forEach(fl => fl.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const d = formData(fl); const prev = S.byId('locaisTrabalho', fl.dataset.id);
+      const numero = (x) => x === '' || x == null ? null : Number(x);
+      S.upsert('locaisTrabalho', Object.assign({}, prev, d, { id: fl.dataset.id, valorHora: numero(d.valorHora), valorFixo: numero(d.valorFixo), cargaHoras: numero(d.cargaHoras), diaPagamento: numero(d.diaPagamento) }));
+      U.toast('Local salvo'); render();
+    }));
     // Importar
     const imp = $('#importFile'); if (imp) imp.addEventListener('change', () => { const fr = new FileReader(); fr.onload = () => { try { S.importJSON(fr.result); U.toast('Dados importados'); render(); } catch (e) { alert('Arquivo inválido: ' + e.message); } }; fr.readAsText(imp.files[0]); });
   }
@@ -1626,6 +1823,34 @@ window.PED = window.PED || {};
         U.toast('Registrado neste aparelho'); render();
       },
       outraDica() { render(); },
+      novoLocal() {
+        const nome = prompt('Nome do local de trabalho:'); if (!nome || !nome.trim()) return;
+        const n = PED.plantao.locais().length;
+        S.upsert('locaisTrabalho', { nome: nome.trim(), corIdx: n % 8, forma: 'hora', valorHora: null, valorFixo: null, cargaHoras: null, diaPagamento: null, obs: '' });
+        U.toast('Local criado'); render();
+      },
+      excluirLocal() {
+        const usados = S.where('plantoes', x => x.localId === el.dataset.id).length;
+        if (!confirm(usados ? `Este local tem ${usados} plantão(ões) lançado(s). Excluir mesmo assim? Os plantões ficam sem local.` : 'Excluir este local?')) return;
+        S.remove('locaisTrabalho', el.dataset.id); render();
+      },
+      excluirPlantao() { if (!confirm('Excluir este plantão?')) return; S.remove('plantoes', el.dataset.id); go('/plantoes'); },
+      duplicarPlantao() {
+        const p2 = S.byId('plantoes', el.dataset.id); if (!p2) return;
+        const copia = Object.assign({}, p2); delete copia.id; delete copia.criadoEm;
+        copia.status = 'previsto'; copia.dataPagamento = ''; copia.valorPago = null;
+        const d = new Date(p2.data + 'T12:00:00'); d.setDate(d.getDate() + 7);
+        copia.data = d.toISOString().slice(0, 10);
+        const novo = S.upsert('plantoes', copia);
+        U.toast('Duplicado para a semana seguinte'); go('/plantoes/' + novo.id);
+      },
+      exportarPlantoes() {
+        const csv = PED.plantao.csvMes(Number(el.dataset.ano), Number(el.dataset.mes));
+        const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8' });
+        const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+        a.download = 'plantoes-' + el.dataset.ano + '-' + String(el.dataset.mes).padStart(2, '0') + '.csv'; a.click();
+        U.toast('Planilha gerada');
+      },
       abaAprender() { go('/aprender?aba=' + el.dataset.aba); },
       copiarTexto() { const t = el.dataset.t;
         if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(() => U.toast('Copiado')).catch(() => U.toast('N\u00e3o foi poss\u00edvel copiar'));
