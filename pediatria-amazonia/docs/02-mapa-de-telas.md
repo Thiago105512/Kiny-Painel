@@ -4,7 +4,7 @@ Rotas do protótipo (`#/…`). Cada tela indica objetivo, conteúdo e ações.
 
 | # | Rota | Tela | Conteúdo / ações |
 |---|---|---|---|
-| 1 | `#/` | Início | Botões "Iniciar por queixa", "Emergências", "Novo paciente"; caixa de peso rápido; queixas frequentes; atalhos. |
+| 1 | `#/` | Início (planner de plantões) | Emergências, "Iniciar por queixa" e Acidentes a um toque no alto; em seguida o calendário do mês com os plantões, os números do mês e os próximos plantões; caixa de peso rápido; dica do dia; queixas frequentes; atalhos. |
 | 2 | `#/pacientes` | Lista de pacientes | Lista ordenada por atualização, chip "ativo", desmarcar ativo, novo. |
 | 3 | `#/pacientes/novo` · `#/pacientes/:id/editar` | Cadastro | Nome, nascimento (idade automática), sexo, peso, altura, PC, IMC/SC calculados, prematuridade/IG, alergias, comorbidades, medicamentos em uso, internações, histórico vacinal, município, zona (urbana/rural/indígena/ribeirinha), responsável. |
 | 4 | `#/pacientes/:id?tab=resumo` | Paciente – Resumo | Dados antropométricos calculados, alergias em destaque, atalhos para atendimento, SOAP e prescrição. |
@@ -33,8 +33,8 @@ Rotas do protótipo (`#/…`). Cada tela indica objetivo, conteúdo e ações.
 | 27 | `#/aprender` | Aprender e explicar | Frases prontas para a família, informações sobre os municípios e perguntas de autoavaliação. |
 | 28 | `#/entender` · `#/entender/:id` | Entender | 55 conceitos com o que é, por que acontece, o que muda na criança, quando preocupa, mitos e a frase para a família. Aparecem automaticamente nas queixas e nas doenças. |
 | 29 | `#/acidentes` · `#/acidentes/:ferramenta` | Acidentes | 16 protocolos e as ferramentas: superfície queimada, PECARN, profilaxia da raiva e do tétano, agentes tóxicos. |
-| 30 | `#/plantoes` · `/novo` · `/:id` · `/agenda` · `/locais` | Plantões | Painel do mês com horas, previsão, recebido e a receber; divisão por local e série de seis meses; lançamento rápido; agenda; locais com valores; planilha do mês. |
-| 31 | `#/config` | Dados | Profissional responsável (nome, especialidade, CRM, RQE – padrão: Dra. Catarina Ribeiro de Queiroz, Pediatra, CRM/AM 10.677, RQE 6.706), exportar/importar JSON, apagar, contagem das bases carregadas. |
+| 30 | `#/plantoes` · `/dia/:data` · `/novo` · `/:id` · `/agenda` · `/locais` | Plantões (planner) | Calendário do mês inteiro, com os plantões de cada dia por cor de local e as horas do dia, alternando com a lista; a tela de um dia mostra o que está marcado e lança ali; painel com horas, previsão, recebido e a receber; divisão por local e série de seis meses; agenda; locais com valores; planilha do mês. É também o que abre na tela inicial. |
+| 31 | `#/config` | Dados | Profissional responsável (nome, especialidade, CRM, RQE – padrão: Dra. Catarina Ribeiro de Queiroz, Pediatra, CRM/AM 10.677, RQE 6.706), exportar/importar JSON, apagar, contagem das bases carregadas e a sincronização opcional pelo Firebase (entrar, sincronizar agora, sair). |
 
 ## Elementos globais
 - **Barra superior**: logotipo, busca global (queixas, doenças, medicamentos, calculadoras, emergências, exames, vacinas, pacientes) e chip do paciente ativo (nome, idade, peso).
