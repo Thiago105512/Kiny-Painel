@@ -272,7 +272,7 @@
   "alternativas": [
    "Domínio da norma culta",
    "Coesão textual",
-   "Proposta de intervenção que respeite os direitos humanos",
+   "Proposta de intervenção",
    "Compreensão do tema",
    "Organização dos argumentos"
   ],
@@ -649,7 +649,7 @@
   "enunciado": "Antibióticos não são indicados para tratar a gripe comum porque:",
   "alternativas": [
    "a gripe é causada por bactérias muito resistentes",
-   "a gripe é causada por vírus, que não possuem as estruturas celulares atingidas pelos antibióticos",
+   "a gripe é causada por vírus, e não por bactérias",
    "os antibióticos só atuam contra fungos",
    "o vírus da gripe possui parede celular muito espessa",
    "a gripe é uma doença genética"
@@ -664,7 +664,7 @@
   "alternativas": [
    "pela alta fertilidade das rochas profundas",
    "pelo uso de fertilizantes naturais trazidos pelos rios",
-   "pela rápida decomposição da serapilheira e reciclagem de nutrientes pela própria floresta",
+   "pela rápida reciclagem de nutrientes pela própria floresta",
    "pela ausência de chuvas, que evita a lixiviação",
    "pelas baixas temperaturas, que conservam a matéria orgânica"
   ],
@@ -679,7 +679,7 @@
    "vírus e mosquito Aedes aegypti",
    "bactéria e caramujo",
    "protozoário Trypanosoma cruzi e barbeiro",
-   "protozoário do gênero Plasmodium e mosquito do gênero Anopheles",
+   "protozoário Plasmodium e mosquito Anopheles",
    "verme e água contaminada"
   ],
   "correta": 3,
@@ -719,7 +719,7 @@
   "enunciado": "A Zona Franca de Manaus, reformulada em 1967 durante o regime militar, teve como objetivo principal:",
   "alternativas": [
    "retomar a exportação de borracha como principal atividade econômica",
-   "criar um polo industrial e comercial com incentivos fiscais para desenvolver e integrar a Amazônia Ocidental",
+   "criar um polo industrial com incentivos fiscais para integrar a Amazônia",
    "transformar Manaus na capital federal do Brasil",
    "proibir a entrada de produtos estrangeiros na região",
    "promover a reforma agrária nas várzeas do Amazonas"
@@ -764,7 +764,7 @@
    "extinguiu a censura prévia à imprensa",
    "anistiou todos os presos políticos",
    "restabeleceu o pluripartidarismo",
-   "permitiu fechar o Congresso e suspendeu o habeas corpus para crimes políticos"
+   "autorizou o fechamento do Congresso Nacional"
   ],
   "correta": 4,
   "explicacao": "O AI-5 deu ao presidente poderes para fechar o Legislativo, cassar mandatos e suspender direitos políticos, além de suspender o habeas corpus em crimes políticos. Anistia (1979) e pluripartidarismo vieram na abertura."
@@ -774,14 +774,14 @@
   "area": "História",
   "enunciado": "A queda do Muro de Berlim, em 1989, é um marco simbólico:",
   "alternativas": [
-   "do fim da Guerra Fria e da divisão da Europa entre os blocos capitalista e socialista",
+   "do fim da Guerra Fria",
    "do início da Primeira Guerra Mundial",
    "da criação da ONU",
    "da ascensão do nazismo na Alemanha",
    "da Revolução Russa"
   ],
   "correta": 0,
-  "explicacao": "O muro, erguido em 1961, separava Berlim Ocidental e Oriental. Sua queda antecipou a reunificação alemã (1990) e o colapso da URSS (1991), encerrando a bipolaridade."
+  "explicacao": "O muro, erguido em 1961, separava Berlim Ocidental e Oriental. Sua queda antecipou a reunificação alemã (1990) e o colapso da URSS (1991), encerrando a bipolaridade e a divisão da Europa entre os blocos capitalista e socialista."
  },
  {
   "id": "ene-69674aa4",
@@ -804,7 +804,7 @@
   "alternativas": [
    "rios subterrâneos que ligam a Amazônia ao Sudeste",
    "canais artificiais de transposição de água",
-   "fluxos de umidade na atmosfera, alimentados em grande parte pela evapotranspiração da Floresta Amazônica",
+   "fluxos de umidade na atmosfera vindos da Floresta Amazônica",
    "nuvens formadas exclusivamente sobre o oceano Pacífico",
    "correntes marítimas frias do litoral sul"
   ],
@@ -819,7 +819,7 @@
    "nunca serem alagadas, por estarem em terrenos mais altos",
    "terem clima frio e seco",
    "não permitirem nenhum tipo de agricultura",
-   "serem inundadas periodicamente pelas cheias, recebendo sedimentos que fertilizam o solo",
+   "serem inundadas periodicamente pelas cheias dos rios",
    "serem cobertas por vegetação de cerrado"
   ],
   "correta": 3,
@@ -859,7 +859,7 @@
   "enunciado": "Nas últimas décadas, a pirâmide etária brasileira tem apresentado base mais estreita e topo mais largo. Esse processo reflete principalmente:",
   "alternativas": [
    "o aumento da mortalidade infantil",
-   "a queda da taxa de natalidade e o aumento da expectativa de vida",
+   "a queda da natalidade e o aumento da longevidade",
    "a elevação da taxa de fecundidade",
    "a chegada em massa de imigrantes jovens",
    "a redução da expectativa de vida"
@@ -929,7 +929,7 @@
   "enunciado": "Para Aristóteles, a virtude moral consiste, em geral, em:",
   "alternativas": [
    "seguir cegamente as leis divinas",
-   "um justo meio entre dois vícios, um por excesso e outro por falta",
+   "um justo meio entre dois vícios",
    "eliminar todas as paixões humanas",
    "buscar o máximo de prazer possível",
    "obedecer ao governante mais forte"
@@ -1044,24 +1044,24 @@
    "a descrição objetiva da seca no sertão nordestino",
    "a crítica à escravidão feita por um narrador abolicionista",
    "a exaltação da natureza brasileira em versos parnasianos",
-   "a narração em primeira pessoa por Bentinho, que deixa ambígua a suposta traição de Capitu"
+   "a ambiguidade sobre a suposta traição de Capitu"
   ],
   "correta": 4,
-  "explicacao": "Bento Santiago narra a própria história a partir de seu ponto de vista, e a traição nunca é comprovada; essa ambiguidade é uma marca do Realismo machadiano."
+  "explicacao": "Bento Santiago (Bentinho) narra a própria história em primeira pessoa, a partir de seu ponto de vista, e a traição nunca é comprovada; essa ambiguidade é uma marca do Realismo machadiano."
  },
  {
   "id": "ene-9a5b9431",
   "area": "Literatura",
   "enunciado": "Vidas Secas (1938), de Graciliano Ramos, que acompanha a família de Fabiano pelo sertão, é representativo:",
   "alternativas": [
-   "do romance regionalista de 30, na segunda fase do Modernismo",
+   "do romance regionalista de 30",
    "do Romantismo indianista",
    "do Arcadismo mineiro",
    "da poesia concreta",
    "do Realismo de Machado de Assis"
   ],
   "correta": 0,
-  "explicacao": "A obra integra o romance de 30, que denunciava problemas sociais como a seca, a miséria e a opressão, com linguagem seca e enxuta."
+  "explicacao": "A obra integra o romance de 30, da segunda fase do Modernismo, que denunciava problemas sociais como a seca, a miséria e a opressão, com linguagem seca e enxuta."
  },
  {
   "id": "ene-bf1da4ca",

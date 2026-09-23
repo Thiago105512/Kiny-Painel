@@ -102,14 +102,14 @@
   "area": "Parasitologia",
   "enunciado": "A leishmaniose tegumentar, endêmica no Amazonas, é transmitida por:",
   "alternativas": [
-   "Flebotomíneos (mosquito-palha)",
+   "Flebotomíneos",
    "Anopheles",
    "Barbeiro",
    "Carrapato",
    "Caramujo"
   ],
   "correta": 0,
-  "explicacao": "Flebotomíneos (Lutzomyia/Nyssomyia) transmitem Leishmania; comum em áreas de mata e desmatamento."
+  "explicacao": "Flebotomíneos (mosquito-palha; Lutzomyia/Nyssomyia) transmitem Leishmania; comum em áreas de mata e desmatamento."
  },
  {
   "id": "med-23afa8df",
@@ -314,7 +314,7 @@
   "alternativas": [
    "Bradicardia por aumento do tônus vagal",
    "Vasodilatação periférica mediada pelo simpático",
-   "Aumento da frequência cardíaca e vasoconstrição por maior atividade simpática",
+   "Taquicardia e vasoconstrição por ativação simpática",
    "Redução da contratilidade miocárdica",
    "Aumento da diurese por inibição do ADH"
   ],
@@ -343,7 +343,7 @@
    "Piruvato-cinase, com falta de ATP na hemácia",
    "Hexocinase, com bloqueio da entrada de glicose na glicólise",
    "Lactato desidrogenase, com acúmulo de piruvato",
-   "Glicose-6-fosfato desidrogenase, com menor produção de NADPH e de glutationa reduzida",
+   "Glicose-6-fosfato desidrogenase, com menor produção de NADPH",
    "Glicocinase, com hipoglicemia grave"
   ],
   "correta": 3,
@@ -454,7 +454,7 @@
   "alternativas": [
    "Translocação robertsoniana herdada do pai",
    "Mosaicismo por erro mitótico pós-zigótico",
-   "Não disjunção cromossômica na meiose materna (trissomia livre do 21)",
+   "Não disjunção na meiose materna (trissomia livre)",
    "Dissomia uniparental do cromossomo 21",
    "Microdeleção no braço longo do cromossomo 21"
   ],
@@ -565,7 +565,7 @@
   "enunciado": "Surtos de doença de Chagas aguda na Amazônia têm sido associados principalmente a:",
   "alternativas": [
    "Picada de flebotomíneos",
-   "Ingestão de alimentos, como açaí, contaminados por triatomíneos ou suas fezes",
+   "Ingestão de alimentos contaminados, como o açaí",
    "Ingestão de carne suína malcozida",
    "Contato da pele com água de igarapés",
    "Picada de Aedes aegypti"
@@ -676,14 +676,14 @@
   "area": "Farmacologia",
   "enunciado": "O efeito antiagregante do ácido acetilsalicílico decorre de:",
   "alternativas": [
-   "Acetilação irreversível da COX-1 plaquetária, reduzindo tromboxano A₂",
+   "Inibição irreversível da COX-1 plaquetária",
    "Bloqueio do receptor P2Y12 de ADP",
    "Bloqueio da glicoproteína IIb/IIIa",
    "Inibição da vitamina K epóxido redutase",
    "Potencialização da antitrombina"
   ],
   "correta": 0,
-  "explicacao": "O AAS acetila irreversivelmente a COX; a plaqueta, sem núcleo, não sintetiza nova enzima, e o efeito dura a vida da plaqueta (Goodman)."
+  "explicacao": "O AAS acetila irreversivelmente a COX-1, reduzindo a síntese de tromboxano A₂; a plaqueta, sem núcleo, não sintetiza nova enzima, e o efeito dura a vida da plaqueta (Goodman)."
  },
  {
   "id": "med-2109d92b",
@@ -705,7 +705,7 @@
   "enunciado": "As penicilinas exercem ação bactericida por:",
   "alternativas": [
    "Ligação à subunidade ribossomal 30S",
-   "Ligação às proteínas ligadoras de penicilina, inibindo a transpeptidação da parede celular",
+   "Ligação às proteínas ligadoras de penicilina",
    "Ligação à subunidade ribossomal 50S",
    "Inibição da DNA-girase",
    "Inibição da síntese de folato"
@@ -763,7 +763,7 @@
    "Lesão do hemisfério cerebelar",
    "Lesão do trato corticoespinal",
    "Irritação meníngea",
-   "Déficit da sensibilidade proprioceptiva (ataxia sensitiva)",
+   "Ataxia sensitiva por déficit proprioceptivo",
    "Lesão do nervo facial"
   ],
   "correta": 3,
@@ -804,7 +804,7 @@
   "alternativas": [
    "Nas primeiras 24 horas de febre",
    "No pico febril do primeiro dia",
-   "Com a defervescência, geralmente entre o 3º e o 7º dia de doença",
+   "Com a defervescência, entre o 3º e o 7º dia",
    "Após três semanas do início dos sintomas",
    "Apenas na fase de convalescença"
   ],
@@ -845,7 +845,7 @@
   "enunciado": "Segundo o Código de Ética Médica, em relação ao sigilo profissional, o médico:",
   "alternativas": [
    "Fica liberado do sigilo após o falecimento do paciente",
-   "Pode revelar fato sigiloso por motivo justo, dever legal ou consentimento, por escrito, do paciente",
+   "Pode revelar fato sigiloso por motivo justo, dever legal ou consentimento escrito",
    "Fica liberado do sigilo quando o fato já é de conhecimento público",
    "Deve informar o diagnóstico do trabalhador ao empregador sempre que solicitado",
    "Deve revelar o fato sigiloso ao depor como testemunha sempre que intimado"

@@ -33,7 +33,7 @@
   "enunciado": "No ABCDE do trauma, a letra A corresponde a:",
   "alternativas": [
    "Avaliação neurológica",
-   "Via aérea com restrição de movimento da coluna cervical",
+   "Via aérea e proteção cervical",
    "Controle de hemorragia",
    "Exposição",
    "Respiração"
@@ -284,7 +284,7 @@
   "area": "Clínica Médica",
   "enunciado": "Adulto com diagnóstico novo de tuberculose pulmonar, sem tratamento prévio. Pelo Manual de Recomendações para o Controle da Tuberculose do Ministério da Saúde, o esquema básico é:",
   "alternativas": [
-   "6 meses de rifampicina, isoniazida e pirazinamida",
+   "2 meses de rifampicina, isoniazida e pirazinamida, seguidos de 4 meses de isoniazida isolada",
    "2 meses de rifampicina e isoniazida, seguidos de 4 meses de etambutol",
    "9 meses de isoniazida isolada",
    "12 meses de rifampicina, isoniazida, pirazinamida e etambutol",
@@ -301,7 +301,7 @@
    "Acidose metabólica com ânion gap aumentado e compensação respiratória adequada",
    "Acidose metabólica hiperclorêmica com ânion gap normal",
    "Acidose respiratória aguda",
-   "Acidose metabólica associada a acidose respiratória",
+   "Acidose metabólica com ânion gap aumentado e acidose respiratória associada",
    "Alcalose respiratória com compensação metabólica"
   ],
   "correta": 0,
@@ -453,7 +453,7 @@
   "enunciado": "Pela classificação de Atlanta revisada (2012), o diagnóstico de pancreatite aguda exige:",
   "alternativas": [
    "Obrigatoriamente tomografia com necrose pancreática",
-   "Pelo menos dois de três critérios: dor abdominal típica, amilase ou lipase ≥ 3 vezes o limite superior e achados de imagem característicos",
+   "Pelo menos dois de três critérios clínicos, laboratoriais e de imagem",
    "Lipase acima de 10 vezes o limite superior, isoladamente",
    "Presença de sinal de Cullen ou de Grey-Turner",
    "Três ou mais critérios de Ranson na admissão"
@@ -483,7 +483,7 @@
    "Plano A: tratamento domiciliar com aumento da oferta de líquidos",
    "Plano C: hidratação venosa imediata",
    "Jejum e hidratação venosa de manutenção",
-   "Plano B: terapia de reidratação oral com sais de reidratação oral na unidade de saúde",
+   "Plano B: reidratação oral com SRO na unidade de saúde",
    "Antibiótico empírico e antidiarreico"
   ],
   "correta": 3,
@@ -498,10 +498,10 @@
    "Suspender o aleitamento materno por 48 horas",
    "Expor o recém-nascido ao sol em casa",
    "Aguardar a alta e reavaliar na consulta da primeira semana",
-   "Considerar a icterícia patológica e investigar hemólise, com dosagem de bilirrubinas"
+   "Considerar a icterícia patológica e investigar hemólise"
   ],
   "correta": 4,
-  "explicacao": "Icterícia nas primeiras 24 horas de vida é sempre patológica, geralmente por hemólise (incompatibilidade ABO/Rh). A fisiológica surge após 24 horas."
+  "explicacao": "Icterícia nas primeiras 24 horas de vida é sempre patológica, geralmente por hemólise (incompatibilidade ABO/Rh), e exige investigação com dosagem de bilirrubinas. A fisiológica surge após 24 horas."
  },
  {
   "id": "res-061df4bc",
@@ -608,7 +608,7 @@
   "alternativas": [
    "Descolamento prematuro de placenta; amniotomia imediata",
    "Rotura uterina; laparotomia imediata",
-   "Placenta prévia; evitar o toque vaginal até avaliar a localização placentária por ultrassonografia",
+   "Placenta prévia; evitar toque vaginal até a ultrassonografia",
    "Vasa prévia; toque vaginal para avaliar o colo",
    "Trabalho de parto prematuro; tocólise e toque vaginal seriado"
   ],
@@ -678,7 +678,7 @@
   "alternativas": [
    "Abortamento retido; misoprostol e alta sem seguimento",
    "Gestação gemelar; pré-natal de alto risco",
-   "Mola hidatiforme completa; esvaziamento uterino e dosagem seriada de β-hCG",
+   "Mola hidatiforme completa; esvaziamento e β-hCG seriado",
    "Gravidez ectópica; metotrexato",
    "Mioma uterino; miomectomia"
   ],

@@ -342,7 +342,7 @@
   "alternativas": [
    "Começa da concepção, com plena capacidade de fato",
    "Começa com o registro de nascimento em cartório",
-   "Começa do nascimento com vida, mas a lei põe a salvo, desde a concepção, os direitos do nascituro",
+   "Começa do nascimento com vida, ressalvados desde a concepção os direitos do nascituro",
    "Começa aos 16 anos, com a capacidade relativa",
    "Começa do nascimento com vida, sem qualquer proteção jurídica ao nascituro"
   ],
@@ -357,7 +357,7 @@
    "O lugar onde nasceu",
    "O lugar onde foi registrada",
    "Qualquer lugar onde esteja no momento",
-   "O lugar onde ela estabelece a sua residência com ânimo definitivo",
+   "O lugar onde reside com ânimo definitivo",
    "O lugar indicado no seu título de eleitor"
   ],
   "correta": 3,
@@ -382,7 +382,7 @@
   "area": "Civil",
   "enunciado": "Um adolescente de 15 anos, que mora com os pais, quebra a vitrine de uma loja. Quanto aos pais, é correto afirmar que:",
   "alternativas": [
-   "Respondem pela reparação independentemente de culpa, pois o filho menor está sob sua autoridade e em sua companhia",
+   "Respondem pela reparação, ainda que não haja culpa de sua parte",
    "Só respondem se a vítima provar que falharam no dever de vigilância",
    "Não respondem, pois apenas o próprio menor responde com seus bens",
    "Respondem apenas se o filho tiver sido emancipado",
@@ -442,10 +442,10 @@
    "Desistência voluntária",
    "Arrependimento eficaz",
    "Perdão judicial obrigatório",
-   "Arrependimento posterior, com redução da pena de um a dois terços"
+   "Arrependimento posterior"
   ],
   "correta": 4,
-  "explicacao": "Art. 16 do Código Penal (arrependimento posterior), causa obrigatória de diminuição de pena."
+  "explicacao": "Art. 16 do Código Penal (arrependimento posterior), causa obrigatória de diminuição de pena, de um a dois terços."
  },
  {
   "id": "dir-8695925c",
@@ -512,10 +512,10 @@
    "Extinção do processo sem resolução do mérito",
    "Confissão ficta sobre toda a matéria de direito",
    "Nenhuma, pois a audiência é facultativa para o réu",
-   "Ato atentatório à dignidade da justiça, com multa de até 2% da vantagem econômica pretendida ou do valor da causa"
+   "Ato atentatório à dignidade da justiça, sancionado com multa"
   ],
   "correta": 4,
-  "explicacao": "Art. 334, §8º, do CPC. A revelia decorre da falta de contestação (art. 344), não da ausência à audiência."
+  "explicacao": "Art. 334, §8º, do CPC: multa de até 2% da vantagem econômica pretendida ou do valor da causa. A revelia decorre da falta de contestação (art. 344), não da ausência à audiência."
  },
  {
   "id": "dir-29d5cdb3",
@@ -552,7 +552,7 @@
   "alternativas": [
    "30 dias em qualquer caso",
    "15 dias se preso e 60 dias se solto",
-   "10 dias se o indiciado estiver preso e 30 dias se estiver solto",
+   "10 dias se preso e 30 dias se solto",
    "5 dias se preso e 10 dias se solto",
    "90 dias, prorrogáveis livremente"
   ],
@@ -567,7 +567,7 @@
    "6 meses, contado da data do fato",
    "30 dias, contado do conhecimento da autoria",
    "1 ano, contado da data do fato",
-   "6 meses, contado do dia em que veio a saber quem é o autor do crime",
+   "6 meses, contado do conhecimento da autoria",
    "2 anos, contado do conhecimento da autoria"
   ],
   "correta": 3,
@@ -582,7 +582,7 @@
    "Acaba de cometer a infração penal",
    "É perseguido, logo após, em situação que faça presumir ser o autor",
    "É encontrado, logo depois, com instrumentos ou objetos que façam presumir ser ele o autor",
-   "É identificado por testemunhas três dias após o crime, sem ter sido perseguido e sem portar objetos ligados ao delito"
+   "É identificado por testemunhas três dias após o crime, sem perseguição nem objetos"
   ],
   "correta": 4,
   "explicacao": "Art. 302 do CPP lista as hipóteses de flagrante próprio, impróprio e presumido. Identificação posterior, sem perseguição nem objetos, não autoriza prisão em flagrante."
@@ -607,7 +607,7 @@
   "enunciado": "O servidor nomeado para cargo de provimento efetivo em virtude de concurso público adquire estabilidade após:",
   "alternativas": [
    "2 anos de efetivo exercício",
-   "3 anos de efetivo exercício, com avaliação especial de desempenho",
+   "3 anos de efetivo exercício",
    "5 anos de efetivo exercício",
    "A posse no cargo",
    "1 ano de estágio probatório"
@@ -622,7 +622,7 @@
   "alternativas": [
    "O Estado só responde se a vítima provar a culpa do servidor",
    "Só o servidor responde, pessoalmente e de forma objetiva",
-   "O Estado responde objetivamente, assegurado o direito de regresso contra o servidor em caso de dolo ou culpa",
+   "O Estado responde objetivamente, com direito de regresso contra o servidor",
    "O Estado responde subsidiariamente, apenas se o servidor não tiver bens",
    "Não há responsabilidade, pois o servidor agia no exercício da função"
   ],
@@ -732,14 +732,14 @@
   "area": "Ambiental",
   "enunciado": "As terras tradicionalmente ocupadas pelos índios, como as do Alto Rio Negro, são:",
   "alternativas": [
-   "Bens da União, destinadas à posse permanente dos índios, com usufruto exclusivo das riquezas do solo, dos rios e dos lagos nelas existentes",
+   "Bens da União, destinadas à posse permanente e ao usufruto exclusivo dos índios",
    "Propriedade privada das comunidades indígenas, podendo ser vendidas por decisão coletiva",
    "Bens dos Estados em que se localizam",
    "Bens dos Municípios, com usufruto compartilhado",
    "Terras devolutas passíveis de usucapião após 15 anos"
   ],
   "correta": 0,
-  "explicacao": "Arts. 20, XI, e 231, §2º, da CF. Essas terras são inalienáveis e indisponíveis, e os direitos sobre elas são imprescritíveis (art. 231, §4º)."
+  "explicacao": "Arts. 20, XI, e 231, §2º, da CF: posse permanente e usufruto exclusivo das riquezas do solo, dos rios e dos lagos. Essas terras são inalienáveis e indisponíveis, e os direitos sobre elas são imprescritíveis (art. 231, §4º)."
  },
  {
   "id": "dir-c67cc917",
@@ -747,7 +747,7 @@
   "enunciado": "Uma madeireira, por decisão de seu diretor e em benefício da empresa, desmata ilegalmente área protegida no Amazonas. Sobre a responsabilidade penal da pessoa jurídica:",
   "alternativas": [
    "Não é possível, pois pessoa jurídica não pode ser sujeito ativo de crime",
-   "É possível, pois a infração foi cometida por decisão de seu representante, no interesse ou benefício da entidade",
+   "É possível, por ter sido decidida por seu diretor em benefício da empresa",
    "É possível apenas na esfera administrativa, não na penal",
    "Exclui a responsabilidade penal do diretor pessoa física",
    "Só é possível se a empresa for pública"
@@ -762,7 +762,7 @@
   "alternativas": [
    "Quem exerce profissionalmente atividade econômica organizada para a circulação de bens",
    "Quem exerce profissionalmente atividade econômica organizada para a produção de bens",
-   "Quem exerce profissão intelectual, de natureza científica, literária ou artística, sem que ela constitua elemento de empresa",
+   "Quem exerce profissão intelectual de natureza científica, literária ou artística",
    "Quem exerce profissionalmente atividade econômica organizada para a prestação de serviços",
    "O comerciante individual de um mercadinho no bairro"
   ],

@@ -103,13 +103,13 @@
   "enunciado": "Na sociedade limitada, a responsabilidade dos sócios:",
   "alternativas": [
    "É ilimitada",
-   "É restrita ao valor de suas quotas, mas todos respondem solidariamente pela integralização do capital",
+   "É restrita ao valor de suas quotas",
    "Não existe",
    "É subsidiária e ilimitada",
    "É proporcional ao lucro"
   ],
   "correta": 1,
-  "explicacao": "Art. 1.052 do Código Civil."
+  "explicacao": "Art. 1.052 do Código Civil: a responsabilidade de cada sócio é restrita ao valor de suas quotas, mas todos respondem solidariamente pela integralização do capital social."
  },
  {
   "id": "oab-c337b16a",
@@ -147,7 +147,7 @@
    "Deixa de representar o cliente imediatamente após a notificação",
    "Continua a representar o cliente por 30 dias após a notificação",
    "Continua a representar o cliente até o trânsito em julgado da ação",
-   "Continua a representar o cliente durante os 10 dias seguintes à notificação, salvo se for substituído antes",
+   "Continua a representá-lo nos 10 dias seguintes, salvo se substituído antes",
    "Só se desobriga após homologação judicial da renúncia"
   ],
   "correta": 3,
@@ -161,7 +161,7 @@
    "Pode advogar em causas de família, pois há mero impedimento contra a Fazenda que o remunera",
    "Pode advogar livremente, desde que fora do horário de serviço",
    "Pode advogar apenas em causas próprias e de parentes",
-   "Não pode advogar, pois os ocupantes de cargos vinculados à atividade policial de qualquer natureza exercem atividade incompatível com a advocacia",
+   "Não pode advogar, pois a atividade policial é incompatível com a advocacia",
    "Pode advogar se obtiver autorização do comandante da corporação"
   ],
   "correta": 3,
@@ -176,7 +176,7 @@
    "Pode advogar livremente, inclusive contra o Estado",
    "Está impedida apenas de advogar em causas trabalhistas",
    "Deve licenciar-se da OAB enquanto ocupar o cargo",
-   "Está impedida de advogar contra a Fazenda Pública que a remunera ou à qual seja vinculada a entidade empregadora"
+   "Está impedida de advogar contra a Fazenda Pública que a remunera"
   ],
   "correta": 4,
   "explicacao": "Art. 30, I, do Estatuto da Advocacia: os servidores da administração direta, indireta e fundacional são impedidos de exercer a advocacia contra a Fazenda Pública que os remunere ou à qual seja vinculada a entidade empregadora."
@@ -190,7 +190,7 @@
    "É permitida mediante prévia autorização do Conselho Seccional",
    "É permitida, desde que não mencione valores de honorários",
    "É vedada apenas se contiver fotografia dos sócios",
-   "É vedada, pois o Código proíbe o uso de outdoors, painéis luminosos ou formas assemelhadas de publicidade"
+   "É vedada, pois o Código proíbe publicidade por meio de outdoors"
   ],
   "correta": 4,
   "explicacao": "Art. 40, II, do Código de Ética e Disciplina da OAB: é vedado o uso de outdoors, painéis luminosos ou formas assemelhadas de publicidade."
@@ -214,7 +214,7 @@
   "area": "Ética",
   "enunciado": "Pedro, advogado, é sócio de uma sociedade de advogados com sede em Belo Horizonte. Ele foi convidado a ingressar como sócio em outra sociedade de advogados, também sediada em Belo Horizonte. Segundo o Estatuto da Advocacia, Pedro:",
   "alternativas": [
-   "Não pode integrar a segunda sociedade, pois é vedado integrar mais de uma sociedade de advogados com sede ou filial na área do mesmo Conselho Seccional",
+   "Não pode integrar a segunda, por terem sede na área do mesmo Conselho Seccional",
    "Pode integrar ambas, desde que comunique o fato ao Conselho Seccional",
    "Pode integrar ambas, desde que as sociedades atuem em áreas distintas",
    "Pode integrar ambas, desde que tenha participação minoritária em uma delas",
@@ -260,7 +260,7 @@
    "Qualquer Governador de Estado",
    "O Supremo Tribunal Federal",
    "Um décimo dos membros da Câmara dos Deputados",
-   "Mais da metade das Assembleias Legislativas das unidades da Federação, manifestando-se cada uma pela maioria relativa de seus membros"
+   "Mais da metade das Assembleias Legislativas das unidades da Federação"
   ],
   "correta": 4,
   "explicacao": "Art. 60, I a III, da Constituição: a Constituição pode ser emendada mediante proposta de um terço dos membros da Câmara ou do Senado, do Presidente da República ou de mais da metade das Assembleias Legislativas, cada uma pela maioria relativa de seus membros."
@@ -326,7 +326,7 @@
   "area": "Civil",
   "enunciado": "José, viúvo, tem dois filhos e deseja deixar, por testamento, todo o seu patrimônio a um amigo de infância. Segundo o Código Civil, José:",
   "alternativas": [
-   "Só pode dispor de metade de seus bens, pois a outra metade constitui a legítima dos herdeiros necessários",
+   "Só pode dispor de metade dos bens, reservada a legítima dos filhos",
    "Pode dispor livremente de todo o patrimônio, por ser viúvo",
    "Pode dispor de dois terços de seus bens",
    "Não pode fazer testamento enquanto tiver descendentes",
@@ -369,7 +369,7 @@
   "enunciado": "Em ação de cobrança movida contra dois devedores solidários, apenas um deles contestou, impugnando a existência da dívida, fato comum a ambos. O outro réu foi revel. Quanto ao efeito material da revelia, é correto afirmar que:",
   "alternativas": [
    "Presumem-se verdadeiras as alegações do autor em relação ao réu revel",
-   "Não se presumem verdadeiras as alegações do autor, pois um dos litisconsortes contestou a ação",
+   "Não se presumem verdadeiras, pois um dos litisconsortes contestou",
    "O processo deve ser extinto em relação ao réu revel",
    "O juiz deve julgar antecipadamente o pedido apenas contra o revel",
    "O réu revel será condenado automaticamente, sem produção de provas"
@@ -383,7 +383,7 @@
   "enunciado": "Transitou em julgado decisão de mérito proferida por juiz absolutamente incompetente. A parte prejudicada pretende ajuizar ação rescisória. Pela regra geral do CPC, o prazo para tanto é de:",
   "alternativas": [
    "1 ano, contado do trânsito em julgado",
-   "2 anos, contados do trânsito em julgado da última decisão proferida no processo",
+   "2 anos, contados do trânsito em julgado da última decisão",
    "5 anos, contados da prolação da decisão",
    "2 anos, contados da ciência do vício pela parte",
    "90 dias, contados do trânsito em julgado"
@@ -426,7 +426,7 @@
   "alternativas": [
    "Há erro de proibição, que isenta de pena",
    "Há erro de tipo invencível, que exclui dolo e culpa",
-   "Há erro de tipo vencível, que exclui o dolo, mas permite a punição por homicídio culposo",
+   "Há erro de tipo vencível, punível a título de culpa",
    "Responde por homicídio doloso, pois assumiu o risco",
    "Há legítima defesa putativa, que exclui a ilicitude"
   ],
@@ -454,7 +454,7 @@
   "alternativas": [
    "6 meses, contados da data do fato",
    "30 dias, contados da conclusão do inquérito policial",
-   "6 meses, contados do dia em que Laura veio a saber quem é o autor do crime",
+   "6 meses, contados do conhecimento da autoria",
    "1 ano, contado do dia em que soube quem é o autor",
    "15 dias, contados do conhecimento da autoria"
   ],
@@ -567,7 +567,7 @@
    "Deve revogar o ato, por conveniência e oportunidade",
    "Só pode desfazer o ato mediante decisão judicial",
    "Não pode desfazer o ato, pois gerou direito adquirido",
-   "Pode anular o ato, pois a Administração pode anular seus próprios atos quando eivados de vícios que os tornem ilegais",
+   "Pode anular o ato, pois de atos ilegais não se originam direitos",
    "Deve convalidar obrigatoriamente o ato, qualquer que seja o vício"
   ],
   "correta": 3,
@@ -580,7 +580,7 @@
   "alternativas": [
    "O Estado responde apenas se Nilo provar a culpa do motorista",
    "Apenas o motorista responde, de forma subjetiva",
-   "O Estado responde objetivamente pelo dano, assegurado o direito de regresso contra o agente em caso de dolo ou culpa",
+   "O Estado responde objetivamente, com direito de regresso contra o agente",
    "O Estado e o motorista respondem objetivamente e de forma solidária",
    "O Estado responde subjetivamente, com base na culpa do serviço"
   ],
@@ -595,7 +595,7 @@
    "Pode anular o ato a qualquer tempo, pois atos ilegais não se convalidam",
    "Pode anular o ato em até dez anos da sua prática",
    "Deve revogar o ato, com efeitos retroativos",
-   "Não pode mais anular o ato, pois decaiu o direito de anular atos de que decorram efeitos favoráveis após cinco anos, salvo má-fé",
+   "Não pode mais anular o ato, pois decaiu o direito após cinco anos",
    "Pode anular o ato em até vinte anos, por se tratar de verba pública"
   ],
   "correta": 3,
@@ -608,7 +608,7 @@
   "alternativas": [
    "5 anos, contados do primeiro dia do exercício seguinte à declaração",
    "10 anos, contados da ocorrência do fato gerador",
-   "5 anos, contados da ocorrência do fato gerador, findos os quais se considera homologado o lançamento",
+   "5 anos, contados da ocorrência do fato gerador",
    "2 anos, contados do pagamento",
    "3 anos, contados da entrega da declaração"
   ],
@@ -663,7 +663,7 @@
   "enunciado": "A sociedade empresária Alfa Ltda., constituída e registrada há um ano, enfrenta crise financeira e pretende requerer recuperação judicial. Segundo a Lei 11.101/2005, esse pedido:",
   "alternativas": [
    "Pode ser deferido, pois não há exigência de tempo mínimo de atividade",
-   "Não preenche requisito legal, pois o devedor deve exercer regularmente suas atividades há mais de 2 anos",
+   "Não preenche requisito legal, pois exige-se atividade regular há mais de 2 anos",
    "Exige apenas a apresentação do plano de recuperação na petição inicial",
    "Pode ser deferido se houver concordância prévia de metade dos credores",
    "Não preenche requisito legal, pois exige-se atividade regular há mais de 5 anos"
@@ -679,7 +679,7 @@
    "Não pode desistir, pois o produto não apresenta vício",
    "Pode desistir em 30 dias, com retenção de multa de 10%",
    "Pode desistir em 7 dias, mas deve arcar com o frete de devolução",
-   "Pode desistir no prazo de 7 dias a contar do recebimento, com devolução imediata dos valores pagos, monetariamente atualizados",
+   "Pode desistir em 7 dias do recebimento, com devolução imediata do valor pago",
    "Pode desistir em 90 dias, por se tratar de produto durável"
   ],
   "correta": 3,
@@ -693,7 +693,7 @@
    "Tem prazo fixo de dois anos, sem necessidade de reavaliação",
    "Deve ser reavaliada a cada ano e pode durar até cinco anos",
    "Não pode exceder um ano, prorrogável uma vez",
-   "Não comporta prazo determinado, deve ser reavaliada no máximo a cada seis meses e não pode exceder três anos",
+   "Não comporta prazo determinado e não pode exceder três anos",
    "Tem prazo indeterminado, cessando apenas aos 18 anos"
   ],
   "correta": 3,
@@ -718,7 +718,7 @@
   "area": "Filosofia do Direito",
   "enunciado": "Na Teoria Pura do Direito, Hans Kelsen explica que o fundamento último de validade de uma ordem jurídica reside:",
   "alternativas": [
-   "Na norma fundamental (Grundnorm), pressuposta e não posta por ato de vontade",
+   "Na norma fundamental (Grundnorm), pressuposta e não posta",
    "Na vontade soberana do povo, expressa pela Constituição",
    "Nos princípios morais universais do direito natural",
    "Na regra de reconhecimento aceita pelas autoridades",
