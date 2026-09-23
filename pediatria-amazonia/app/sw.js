@@ -1,7 +1,7 @@
 /* Service worker simples: cache-first para uso offline em campo (ribeirinho/rural). */
 const CACHE = 'mucurinha-v1';
 const ASSETS = ['./', './index.html', './css/styles.css', './manifest.webmanifest', './img/mucurinha.png', './img/mucurinha-64.png', './img/mucurinha-grande.jpg',
-  './js/utils.js', './js/store.js', './js/entrada.js', './js/seguranca.js', './js/plantoes.js', './js/data/apoio-entrada.js', './js/data/locais.js', './js/data/violencia.js', './js/data/curiosidades.js', './js/data/didatica.js', './js/data/comerciais.js', './js/data/alternativas.js', './js/calculators.js', './js/app.js',
+  './js/utils.js', './js/store.js', './js/entrada.js', './js/seguranca.js', './js/plantoes.js', './js/nuvem.js', './js/data/apoio-entrada.js', './js/data/locais.js', './js/data/violencia.js', './js/data/curiosidades.js', './js/data/didatica.js', './js/data/comerciais.js', './js/data/alternativas.js', './js/calculators.js', './js/app.js',
   './js/data/sinais-gravidade.js', './js/data/contexto-epidemiologico.js', './js/data/queixas.js', './js/data/doencas.js', './js/data/doencas-extra.js', './js/data/neonatal.js', './js/data/acidentes.js',
   './js/data/medicamentos.js', './js/data/emergencias.js', './js/data/exames.js', './js/data/vacinas.js', './js/data/crescimento.js', './js/data/zscore.js', './js/data/notificacao.js'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting())); });

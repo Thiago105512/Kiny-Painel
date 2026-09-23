@@ -47,6 +47,12 @@ No celular, abra a URL e use "Adicionar à tela inicial" para instalar como app.
 | Perguntas de autoavaliação | 55 |
 | Cadastro de pacientes, prescrição com confirmação, evolução SOAP | ✔ |
 
+## Sincronizar entre aparelhos (opcional)
+
+Sem configuração o aplicativo funciona só no navegador, como sempre. Com um projeto Firebase, os dados passam a acompanhar celular e computador e ganham cópia na nuvem. A mesclagem é feita registro a registro: vence a versão mais recente, as exclusões também viajam, e nenhum aparelho sobrescreve o outro em bloco. Instruções em [docs/10-firebase.md](docs/10-firebase.md).
+
+Publicar no Firebase Hosting também dá ao aplicativo um endereço próprio e o funcionamento offline de verdade, que é o que importa no interior.
+
 ## Plantões
 
 Aba para registrar cada plantão e acompanhar o que entra no mês.
@@ -54,6 +60,7 @@ Aba para registrar cada plantão e acompanhar o que entra no mês.
 - **Locais de trabalho** com valor da hora ou valor fechado, carga habitual e dia de pagamento. Hapvida e CardioBaby já vêm cadastrados.
 - **Lançamento em poucos toques**: local em botão, data digitada, entrada e saída aceitando 19 ou 1900, e a duração calculada na hora. Plantão noturno atravessa a meia-noite sem precisar avisar.
 - **Situação de cada plantão**: previsto, realizado, faturado ou pago, com data de pagamento e valor recebido quando diferente do previsto.
+- **Calendário do mês inteiro**, que é a primeira coisa que aparece ao abrir o aplicativo. Cada dia mostra os plantões por cor de local e as horas do dia; tocar num dia abre o que está marcado e permite lançar ali.
 - **Painel do mês** com horas trabalhadas, previsão do total, quanto já foi recebido e quanto falta receber, mais a divisão por local e os últimos seis meses.
 - **Agenda** dos plantões futuros, duplicação de um plantão para a semana seguinte e exportação da planilha do mês para a contabilidade.
 

@@ -1,0 +1,12 @@
+rules_version = '2';
+// Cada pessoa só enxerga e grava os próprios dados. Nada é público.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /usuarios/{uid}/dados/{doc} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -13,6 +13,7 @@ PED.store = (function () {
     medidas: [],          // {pacienteId, data, peso, altura, pc}
     locaisTrabalho: [],   // {nome, forma, valorHora, valorFixo, cargaHoras, diaPagamento}
     plantoes: [],         // {localId, data, inicio, fim, forma, valores, status, dataPagamento}
+    removidos: {},        // {colecao: {id: dataISO}} – lápides, para a exclusão também sincronizar
     prefs: { pesoRapido: null, ultimoPacienteId: null,
       // Profissional responsável (editável em Dados › Profissional)
       profissional: { nome: 'Catarina Ribeiro de Queiroz', tratamento: 'Dra.', especialidade: 'Pediatra', crm: 'CRM/AM 10.677', rqe: 'RQE 6.706' } }
@@ -49,12 +50,20 @@ PED.store = (function () {
     const c = col(name);
     const i = c.findIndex(x => x.id === id);
     if (i >= 0) c.splice(i, 1);
+    const d = load();
+    d.removidos = d.removidos || {};
+    d.removidos[name] = d.removidos[name] || {};
+    d.removidos[name][id] = new Date().toISOString();   // registra para que a exclusão chegue aos outros aparelhos
     save();
   }
+  /** Coleções que guardam registros com id e data de atualização. */
+  const COLECOES = ['pacientes', 'atendimentos', 'evolucoes', 'prescricoes', 'vacinasRealizadas', 'medidas', 'locaisTrabalho', 'plantoes'];
   function where(name, fn) { return col(name).filter(fn); }
   function pref(k, v) { const p = load().prefs; if (v === undefined) return p[k]; p[k] = v; save(); return v; }
   function exportJSON() { return JSON.stringify(load(), null, 2); }
   function importJSON(txt) { const o = JSON.parse(txt); db = Object.assign(empty(), o); save(); }
   function reset() { db = empty(); save(); }
-  return { load, save, col, byId, upsert, remove, where, pref, exportJSON, importJSON, reset };
+  /** Substitui todo o conteúdo local por um estado já mesclado. */
+  function substituir(novo) { db = Object.assign(empty(), novo); save(); }
+  return { load, save, col, byId, upsert, remove, where, pref, exportJSON, importJSON, reset, substituir, COLECOES };
 })();

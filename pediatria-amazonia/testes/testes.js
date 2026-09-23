@@ -4,7 +4,7 @@
 global.window = global;
 const path = require('path');
 const APP = path.join(__dirname, '..', 'app', 'js');
-for (const f of ['utils', 'store', 'seguranca', 'entrada', 'plantoes',
+for (const f of ['utils', 'store', 'seguranca', 'entrada', 'plantoes', 'nuvem',
   'data/apoio-entrada', 'data/sinais-gravidade', 'data/contexto-epidemiologico', 'data/queixas', 'data/doencas',
   'data/medicamentos', 'data/emergencias', 'data/exames', 'data/vacinas', 'data/crescimento',
   'data/zscore', 'data/notificacao', 'calculators']) {
@@ -430,6 +430,49 @@ t('Paleta dos locais é a validada e não se repete antes de 8', () => {
   eq(PL.CORES.length, 8); eq(PL.CORES[0], '#2a78d6');
   eq(new Set(PL.CORES).size, 8);
   eq(PL.corLocal(0), PL.corLocal(8), 'o nono local reaproveita a primeira cor:');
+});
+
+/* ---------- 10. Sincronização ---------- */
+const NV = PED.nuvem;
+t('Sem configuração, a sincronização fica desligada', () => eq(NV.configurado(), false));
+t('Mesclagem mantém a versão mais recente de cada registro', () => {
+  const local = { pacientes: [{ id: 'a', nome: 'Ana', atualizadoEm: '2026-09-20T10:00:00Z' }], removidos: {}, prefs: {} };
+  const remoto = { pacientes: [{ id: 'a', nome: 'Ana Maria', atualizadoEm: '2026-09-22T10:00:00Z' }], removidos: {}, prefs: {} };
+  eq(NV.mesclar(local, remoto).pacientes[0].nome, 'Ana Maria');
+  eq(NV.mesclar(remoto, local).pacientes[0].nome, 'Ana Maria', 'a ordem não muda o resultado:');
+});
+t('Exclusão feita em um aparelho chega ao outro', () => {
+  const local = { pacientes: [{ id: 'b', nome: 'Bia', atualizadoEm: '2026-09-21T10:00:00Z' }], removidos: {}, prefs: {} };
+  const remoto = { pacientes: [], removidos: { pacientes: { b: '2026-09-22T00:00:00Z' } }, prefs: {} };
+  eq(NV.mesclar(local, remoto).pacientes.length, 0);
+});
+t('Registro editado depois da exclusão volta', () => {
+  const local = { pacientes: [{ id: 'b', nome: 'Bia editada', atualizadoEm: '2026-09-23T10:00:00Z' }], removidos: {}, prefs: {} };
+  const remoto = { pacientes: [], removidos: { pacientes: { b: '2026-09-22T00:00:00Z' } }, prefs: {} };
+  eq(NV.mesclar(local, remoto).pacientes.length, 1);
+});
+t('Registro que só existe no outro aparelho é trazido', () => {
+  const local = { pacientes: [], removidos: {}, prefs: {} };
+  const remoto = { pacientes: [{ id: 'c', nome: 'Caio', atualizadoEm: '2026-09-19T10:00:00Z' }], removidos: {}, prefs: {} };
+  eq(NV.mesclar(local, remoto).pacientes[0].nome, 'Caio');
+});
+t('Mesclagem cobre todas as coleções com registros', () => {
+  for (const c of PED.store.COLECOES) {
+    const local = { [c]: [{ id: 'x', atualizadoEm: '2026-09-20T10:00:00Z' }], removidos: {}, prefs: {} };
+    const remoto = { [c]: [{ id: 'y', atualizadoEm: '2026-09-21T10:00:00Z' }], removidos: {}, prefs: {} };
+    eq(NV.mesclar(local, remoto)[c].length, 2, c + ':');
+  }
+});
+t('Excluir registra a lápide para sincronizar', () => {
+  PED.store.reset();
+  const p2 = PED.store.upsert('pacientes', { nome: 'Teste' });
+  PED.store.remove('pacientes', p2.id);
+  const rem = PED.store.load().removidos || {};
+  if (!rem.pacientes || !rem.pacientes[p2.id]) throw new Error('lápide não registrada');
+});
+t('A mensagem de rede bloqueada explica onde sincronizar', () => {
+  const m = NV.mensagemErro(new Error('Failed to fetch'));
+  if (!/Firebase Hosting/.test(m)) throw new Error('mensagem não orienta: ' + m);
 });
 
 /* ---------- Resultado ---------- */

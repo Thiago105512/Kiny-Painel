@@ -414,47 +414,47 @@ window.PED = window.PED || {};
   }
 
   /* ---------------- Telas ---------------- */
-  route('/', () => {
-    const p = paciente(); const q = D().queixas || [];
-    const destaque = ['febre', 'febre_calafrios', 'febre_exantema', 'tosse', 'dispneia', 'diarreia', 'vomitos', 'convulsao', 'acidente_ofidico', 'rn_febre', 'lesoes_pele', 'ictericia'];
+  route('/', (params, q) => {
+    const p = paciente(); const qs = D().queixas || [];
+    const hoje = new Date();
+    const ano = Number(q.ano) || hoje.getFullYear(), mes = Number(q.mes) || (hoje.getMonth() + 1);
+    const destaque = ['febre', 'febre_calafrios', 'febre_exantema', 'tosse', 'dispneia', 'diarreia', 'vomitos', 'convulsao', 'acidente_ofidico', 'queimadura', 'engasgo', 'rn_febre'];
     return `
-      <div class="card" style="background:linear-gradient(135deg,var(--primary-soft),var(--green-soft));border:none">
-        <div class="marca">
-          <img src="img/mucurinha-grande.jpg" alt="Mucurinha, o gambazinho amazônico agasalhado">
-          <div class="lema">
-            <h1>Mucurinha</h1>
-            <p class="frase">Aqui seu filho é atendido como se fosse uma <b>mucurinha</b>.<br>Com carinho, cuidado e acolhimento.</p>
-            <p class="sub">${esc(profissionalLinha())}</p>
-          </div>
+      <div class="card" style="background:linear-gradient(135deg,var(--primary-soft),var(--green-soft));border:none;padding:.8rem 1rem">
+        <div class="marca marcaCompacta">
+          <img src="img/mucurinha.png" alt="Mucurinha">
+          <div class="lema"><h1 style="font-size:1.25rem;margin:0">Mucurinha</h1>
+            <p class="sub" style="margin:.1rem 0 0">${esc(profissionalLinha())}</p></div>
         </div>
-        <p style="margin-top:.8rem">Apoio à decisão clínica em pediatria para o contexto amazônico: queixas, diagnósticos diferenciais, protocolos, doses por peso e emergências.</p>
-        <div class="btnrow">
-          <a class="btn" href="#/queixas">🩺 Iniciar por queixa</a>
+        <div class="btnrow" style="margin:.7rem 0 0">
           <a class="btn danger" href="#/emergencias">🚨 Emergências</a>
-          <a class="btn secondary" href="#/pacientes/novo">➕ Novo paciente</a>
+          <a class="btn" href="#/queixas">🩺 Queixa</a>
+          <a class="btn secondary" href="#/acidentes">🚩 Acidentes</a>
         </div>
       </div>
-      ${pesoBox('Informe o peso para calcular doses nas telas de medicamentos e emergências.')}
+
+      ${painelPlantoes(ano, mes)}
       ${bannerBackup()}
-      ${p ? '' : `<div class="alert blue"><strong>Dica</strong>Cadastre ou selecione um paciente para preencher automaticamente idade, peso, altura e contexto epidemiológico em todas as telas.</div>`}
+      ${pesoBox('Informe o peso para calcular doses nas telas de medicamentos e emergências.')}
       ${dicaRotativa()}
+
       <div class="section-title"><h2>Queixas frequentes</h2><a href="#/queixas">ver todas</a></div>
-      <div class="grid">${destaque.map(id => q.find(x => x.id === id)).filter(Boolean).map(x => `<a class="tile" href="#/queixas/${x.id}"><span class="ic">${x.icone || '•'}</span>${esc(x.nome)}</a>`).join('')}</div>
+      <div class="grid">${destaque.map(id => qs.find(x => x.id === id)).filter(Boolean).map(x => `<a class="tile" href="#/queixas/${x.id}"><span class="ic">${x.icone || '•'}</span>${esc(x.nome)}</a>`).join('')}</div>
+
       <div class="section-title"><h2>Atalhos</h2></div>
       <div class="grid">
+        <a class="tile" href="#/pacientes"><span class="ic">🧒</span>Pacientes</a>
         <a class="tile amazon" href="#/amazonia"><span class="ic">🌳</span>Amazônia<small>doenças regionais</small></a>
         <a class="tile" href="#/medicamentos"><span class="ic">💊</span>Medicamentos<small>dose por peso</small></a>
         <a class="tile" href="#/calculadoras"><span class="ic">🧮</span>Calculadoras</a>
         <a class="tile" href="#/exames"><span class="ic">🧪</span>Exames</a>
         <a class="tile" href="#/vacinas"><span class="ic">💉</span>Vacinas</a>
         <a class="tile" href="#/crescimento"><span class="ic">📈</span>Crescimento</a>
-        <a class="tile" href="#/notificacao"><span class="ic">📢</span>Notificação<small>compulsória</small></a>
-        <a class="tile" href="#/plantoes"><span class="ic">🗓️</span>Plantões<small>horas e valores</small></a>
-        <a class="tile red" href="#/acidentes"><span class="ic">🚩</span>Acidentes<small>queimadura, engasgo, intoxicação</small></a>
-        <a class="tile" href="#/unidades"><span class="ic">🏥</span>Unidades<small>para onde encaminhar</small></a>
-        <a class="tile red" href="#/violencia"><span class="ic">🛡️</span>Proteção<small>violência</small></a>
-        <a class="tile" href="#/entender"><span class="ic">📖</span>Entender<small>o que é e por que acontece</small></a>
-        <a class="tile" href="#/aprender"><span class="ic">💡</span>Aprender<small>e explicar à família</small></a>
+        <a class="tile" href="#/unidades"><span class="ic">🏥</span>Unidades</a>
+        <a class="tile red" href="#/violencia"><span class="ic">🛡️</span>Proteção</a>
+        <a class="tile" href="#/entender"><span class="ic">📖</span>Entender</a>
+        <a class="tile" href="#/aprender"><span class="ic">💡</span>Aprender</a>
+        <a class="tile" href="#/notificacao"><span class="ic">📢</span>Notificação</a>
       </div>
       ${disclaimer}`;
   });
@@ -1137,11 +1137,90 @@ window.PED = window.PED || {};
       <span class="vizMesRot">${esc(x.rotulo)}</span></a>`).join('')}</div></div>`;
   }
 
+  /** Calendário do mês inteiro: cada dia mostra os plantões por cor de local. */
+  function calendarioMes(ano, mes, ps) {
+    const porDia = {};
+    ps.forEach(x => (porDia[x.data] = porDia[x.data] || []).push(x));
+    const primeiro = new Date(ano, mes - 1, 1);
+    const diasNoMes = new Date(ano, mes, 0).getDate();
+    const inicioSemana = primeiro.getDay();                 // 0 = domingo
+    const hoje = U.today();
+    const celulas = [];
+    for (let i = 0; i < inicioSemana; i++) celulas.push('<div class="calDia vazio"></div>');
+    for (let d = 1; d <= diasNoMes; d++) {
+      const iso = ano + '-' + String(mes).padStart(2, '0') + '-' + String(d).padStart(2, '0');
+      const doDia = porDia[iso] || [];
+      let minutos = 0, valor = 0;
+      doDia.forEach(x => { const v = PL().valores(x); minutos += v.min || 0; valor += v.liquido; });
+      const fds = new Date(ano, mes - 1, d).getDay() % 6 === 0;
+      celulas.push(`<a class="calDia${iso === hoje ? ' hoje' : ''}${fds ? ' fds' : ''}${doDia.length ? ' comPlantao' : ''}" href="#/plantoes/dia/${iso}">
+        <span class="calNum">${d}</span>
+        ${doDia.length ? `<span class="calMarcas">${doDia.slice(0, 3).map(x => { const l = x.localId ? PL().local(x.localId) : null;
+            return `<span class="calMarca" style="background:${PL().corLocal(l ? l.corIdx : 7)}" title="${esc(l ? l.nome : 'Sem local')}"></span>`; }).join('')}${doDia.length > 3 ? `<span class="calMais">+${doDia.length - 3}</span>` : ''}</span>
+          <span class="calHoras">${esc(PL().fmtDuracao(minutos))}</span>` : ''}
+      </a>`);
+    }
+    const semanas = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'];
+    return `<div class="calendario">
+      <div class="calCab">${semanas.map((x, i) => `<span class="${i % 6 === 0 ? 'fds' : ''}">${x}</span>`).join('')}</div>
+      <div class="calGrade">${celulas.join('')}</div></div>`;
+  }
+
+  /** Um dia: o que está marcado e o atalho para lançar. */
+  route('/plantoes/dia/:data', ({ data }) => {
+    PL().garantirLocais();
+    const ps = S.where('plantoes', x => x.data === data).sort((a, b) => String(a.inicio).localeCompare(String(b.inicio)));
+    const d = new Date(data + 'T12:00:00');
+    const semana = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'][d.getDay()];
+    let minutos = 0, valor = 0;
+    ps.forEach(x => { const v = PL().valores(x); minutos += v.min || 0; valor += v.liquido; });
+    return `<div class="section-title"><h1>${U.fmtDate(data)}</h1><span class="chip">${esc(semana)}</span></div>
+      ${ps.length ? `<div class="card compact"><b>${esc(PL().fmtDuracao(minutos))}</b> · ${esc(PL().moeda(valor))} em ${ps.length} plantão(ões)</div>
+        <div class="list">${ps.map(x => { const v = PL().valores(x), l = x.localId ? PL().local(x.localId) : null;
+          const st = PL().STATUS.find(s2 => s2.id === (x.status || 'previsto')) || {};
+          return `<a class="row" href="#/plantoes/${x.id}"><span class="vizPonto" style="background:${PL().corLocal(l ? l.corIdx : 7)};width:12px;height:12px;flex:0 0 auto"></span>
+            <div class="grow"><div class="title">${esc(l ? l.nome : 'Sem local')} <span class="chip ${st.cor || ''}">${esc(st.rotulo || '')}</span></div>
+            <div class="sub">${esc(x.inicio || '—')} às ${esc(x.fim || '—')} · ${esc(PL().fmtDuracao(v.min))}</div></div>
+            <b>${esc(PL().moeda(v.liquido))}</b></a>`; }).join('')}</div>`
+        : '<div class="empty">Nada marcado neste dia.</div>'}
+      <div class="btnrow"><a class="btn" href="#/plantoes/novo?data=${esc(data)}">➕ Lançar neste dia</a><a class="btn ghost" href="#/plantoes?ano=${data.slice(0, 4)}&mes=${Number(data.slice(5, 7))}">Voltar ao mês</a></div>`;
+  });
+
+  /** Resumo do mês + calendário, reaproveitado na tela inicial. */
+  function painelPlantoes(ano, mes) {
+    PL().garantirLocais();
+    const R = PL().resumoMes(ano, mes), ps = PL().doMes(ano, mes);
+    const ant = desloca(ano, mes, -1), prox = desloca(ano, mes, 1);
+    const prox3 = PL().proximos(3);
+    return `<div class="card">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:.5rem">
+        <a class="btn sm ghost" href="#/?ano=${ant.ano}&mes=${ant.mes}">←</a>
+        <b style="font-size:1.05rem">🗓️ ${NOME_MES[mes - 1]} de ${ano}</b>
+        <a class="btn sm ghost" href="#/?ano=${prox.ano}&mes=${prox.mes}">→</a></div>
+      ${calendarioMes(ano, mes, ps)}
+      ${R.porLocal.length ? `<div class="calLegenda">${R.porLocal.map(x => `<span><span class="vizPonto" style="background:${PL().corLocal(x.corIdx)}"></span>${esc(x.nome)}</span>`).join('')}</div>` : ''}
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(110px,1fr));margin-top:.7rem">
+        <div class="tile compacto"><small class="muted">Horas</small><b>${esc(PL().fmtDuracao(R.minutos))}</b></div>
+        <div class="tile compacto"><small class="muted">Previsão</small><b>${esc(PL().moeda(R.total))}</b></div>
+        <div class="tile compacto"><small class="muted">Recebido</small><b style="color:var(--green)">${esc(PL().moeda(R.pago))}</b></div>
+        <div class="tile compacto"><small class="muted">A receber</small><b style="color:${R.aReceber > 0 ? 'var(--amber)' : 'var(--muted)'}">${esc(PL().moeda(R.aReceber))}</b></div>
+      </div>
+      ${prox3.length ? `<div style="margin-top:.6rem"><small class="muted">Próximos</small>${prox3.map(x => { const l = x.localId ? PL().local(x.localId) : null;
+        const dias = Math.round((new Date(x.data + 'T12:00:00') - new Date(U.today() + 'T12:00:00')) / 86400000);
+        return `<a class="row" style="margin-top:.3rem" href="#/plantoes/${x.id}"><span class="vizPonto" style="background:${PL().corLocal(l ? l.corIdx : 7)};width:10px;height:10px;flex:0 0 auto"></span>
+        <div class="grow"><div class="title" style="font-size:.92rem">${U.fmtDate(x.data)} · ${esc(l ? l.nome : 'Sem local')}</div>
+        <div class="sub">${esc(x.inicio || '')} às ${esc(x.fim || '')}</div></div>
+        <span class="chip ${dias === 0 ? 'red' : dias === 1 ? 'amber' : 'gray'}">${dias === 0 ? 'hoje' : dias === 1 ? 'amanhã' : 'em ' + dias + ' d'}</span></a>`; }).join('')}</div>` : ''}
+      <div class="btnrow" style="margin:.7rem 0 0"><a class="btn" href="#/plantoes/novo">➕ Lançar plantão</a><a class="btn secondary" href="#/plantoes?ano=${ano}&mes=${mes}">Abrir planner</a></div>
+    </div>`;
+  }
+
   route('/plantoes', (params, q) => {
     PL().garantirLocais();
     const { ano, mes } = mesRef();
     const R = PL().resumoMes(ano, mes);
     const ps = PL().doMes(ano, mes);
+    const vista = q.vista || S.pref('vistaPlantao') || 'calendario';
     const ant = desloca(ano, mes, -1), prox = desloca(ano, mes, 1);
     const serie = PL().serieMeses(6, ano, mes);
     const porDia = {};
@@ -1176,8 +1255,14 @@ window.PED = window.PED || {};
         <details><summary>ver como tabela</summary><div class="body"><div class="tablewrap"><table><tr><th>Mês</th><th>Plantões</th><th>Horas</th><th>Total</th><th>Recebido</th></tr>
         ${serie.map(x => `<tr><td>${esc(x.rotulo)}</td><td>${x.plantoes}</td><td>${esc(PL().fmtDuracao(x.minutos))}</td><td>${esc(PL().moeda(x.total))}</td><td>${esc(PL().moeda(x.pago))}</td></tr>`).join('')}</table></div></div></details></div>
 
-      ${ps.length ? Object.keys(porDia).sort().map(d => `<div class="section-title" style="margin:.8rem 0 .3rem"><h3 style="margin:0">${U.fmtDate(d)} <small class="muted">${['domingo','segunda','terça','quarta','quinta','sexta','sábado'][new Date(d + 'T12:00:00').getDay()]}</small></h3></div><div class="list">${porDia[d].map(linha).join('')}</div>`).join('')
-        : '<div class="empty">Nenhum plantão lançado neste mês.<br><a class="btn" style="margin-top:.8rem" href="#/plantoes/novo">Lançar o primeiro</a></div>'}
+      <div class="card"><div class="tabs" style="margin-bottom:.5rem">
+          <button class="${vista === 'lista' ? '' : 'active'}" data-act="vistaPlantao" data-v="calendario" data-ano="${ano}" data-mes="${mes}">📅 Calendário</button>
+          <button class="${vista === 'lista' ? 'active' : ''}" data-act="vistaPlantao" data-v="lista" data-ano="${ano}" data-mes="${mes}">☰ Lista</button></div>
+        ${vista === 'lista'
+          ? (ps.length ? Object.keys(porDia).sort().map(d => `<div class="section-title" style="margin:.6rem 0 .3rem"><h3 style="margin:0">${U.fmtDate(d)} <small class="muted">${['domingo','segunda','terça','quarta','quinta','sexta','sábado'][new Date(d + 'T12:00:00').getDay()]}</small></h3></div><div class="list">${porDia[d].map(linha).join('')}</div>`).join('')
+              : '<div class="empty">Nenhum plantão lançado neste mês.</div>')
+          : calendarioMes(ano, mes, ps) + (R.porLocal.length ? `<div class="calLegenda">${R.porLocal.map(x => `<span><span class="vizPonto" style="background:${PL().corLocal(x.corIdx)}"></span>${esc(x.nome)}</span>`).join('')}</div>` : '')}
+      </div>
 
       <div class="btnrow"><a class="btn secondary" href="#/plantoes/agenda">📆 Agenda</a><a class="btn secondary" href="#/plantoes/locais">🏢 Locais e valores</a><button class="btn ghost" data-act="exportarPlantoes" data-ano="${ano}" data-mes="${mes}">⬇️ Planilha do mês</button></div>
       <p class="disclaimer">Controle pessoal de plantões. Os valores são os que você lançar; confira sempre com o contracheque e o contrato.</p>`;
@@ -1254,13 +1339,13 @@ window.PED = window.PED || {};
         <div class="field"><label>Valor recebido (R$)</label><input type="number" inputmode="decimal" step="0.01" name="valorPago" value="${p.valorPago != null ? p.valorPago : ''}" placeholder="se diferente"></div>
         <div class="field full"><label>Observação</label><input name="obs" value="${esc(p.obs || '')}"></div>
       </div>
-      <div id="resumoPlantao" class="result"><div class="big">${esc(PL().moeda(v.liquido))}</div><div class="formula">${esc(v.base)}</div></div>
+      <div id="resumoPlantao" class="result"><div class="big">${esc(PL().moeda(v.liquido))}</div><div>valor do plantão</div><div class="formula">${esc(v.base)}</div></div>
       <div class="btnrow"><button class="btn" type="submit">💾 Salvar</button>
         ${p.id ? `<button type="button" class="btn secondary" data-act="duplicarPlantao" data-id="${p.id}">Duplicar</button><button type="button" class="btn ghost" data-act="excluirPlantao" data-id="${p.id}">Excluir</button>` : ''}
         <a class="btn ghost" href="#/plantoes">Cancelar</a></div>
     </form>`;
   }
-  route('/plantoes/novo', () => `<h1>Lançar plantão</h1>${formPlantao({})}`);
+  route('/plantoes/novo', (params, q) => `<h1>Lançar plantão</h1>${formPlantao(q.data ? { data: q.data } : {})}`);
   route('/plantoes/:id', ({ id }) => { const p = S.byId('plantoes', id); if (!p) return '<div class="empty">Plantão não encontrado.</div>'; return `<h1>Plantão</h1>${formPlantao(p)}`; });
 
   /* ---- Acidentes do dia a dia ---- */
@@ -1516,6 +1601,34 @@ window.PED = window.PED || {};
       ${U.fontes(N)}${disclaimer}`;
   });
 
+  /** Configuração e estado da sincronização opcional com o Firebase. */
+  function blocoNuvem() {
+    const N = PED.nuvem; if (!N) return '<p class="muted">Módulo indisponível.</p>';
+    const e = N.getEstado(); const c = N.config() || {};
+    const ult = S.pref('ultimaSync');
+    if (!e.configurado) {
+      return `<p class="muted">Sem configuração, tudo funciona normalmente e os dados ficam só neste aparelho. Configurando o seu projeto no Firebase, os registros passam a acompanhar celular e computador e ganham cópia na nuvem.</p>
+        <form id="formFirebase" class="fields">
+          <div class="field full"><label>Cole aqui o objeto de configuração do seu projeto</label>
+            <textarea name="cfg" placeholder='{ "apiKey": "...", "authDomain": "...", "projectId": "...", "storageBucket": "...", "messagingSenderId": "...", "appId": "..." }' style="min-height:110px;font-family:ui-monospace,monospace;font-size:.82rem"></textarea>
+            <small class="muted">No console do Firebase: Configurações do projeto, seus aplicativos, configuração do SDK.</small></div>
+          <div class="field full"><button class="btn" type="submit">Salvar configuração</button></div>
+        </form>
+        <div class="alert blue"><strong>Onde isso funciona</strong>A sincronização precisa de acesso à rede. No visualizador do claude.ai o acesso é bloqueado; publique o aplicativo no seu Firebase Hosting, com as instruções em docs/10-firebase.md, e a sincronização passa a funcionar.</div>`;
+    }
+    return `<p><b>Projeto:</b> ${esc(c.projectId || '—')} ${e.ligado ? `<span class="chip green">conectada como ${esc((e.usuario || {}).email || '')}</span>` : '<span class="chip amber">fora da conta</span>'}</p>
+      ${ult ? `<p class="muted"><small>Última sincronização: ${U.fmtDateTime(ult)}</small></p>` : ''}
+      ${e.erro ? `<div class="alert amber">${esc(e.erro)}</div>` : ''}
+      ${e.ligado ? `<div class="btnrow"><button class="btn" data-act="sincronizar">☁️ Sincronizar agora</button><button class="btn ghost" data-act="sairNuvem">Sair da conta</button></div>`
+        : `<form id="formEntrarNuvem" class="fields">
+            <div class="field"><label>E-mail</label><input name="email" type="email" autocomplete="username" value="${esc(S.pref('emailNuvem') || '')}"></div>
+            <div class="field"><label>Senha</label><input name="senha" type="password" autocomplete="current-password"></div>
+            <div class="field full"><button class="btn" type="submit">Entrar ou criar conta</button></div>
+          </form>`}
+      <div class="btnrow"><button class="btn ghost sm" data-act="limparNuvem">Remover configuração</button></div>
+      <p class="muted"><small>A mesclagem é feita registro a registro: vence sempre a versão mais recente, e as exclusões também viajam. Nenhum aparelho sobrescreve o outro em bloco.</small></p>`;
+  }
+
   /* ---- Revisão clínica ---- */
   route('/revisao', (params, q) => {
     const itens = revisao.pendencias();
@@ -1554,6 +1667,8 @@ window.PED = window.PED || {};
       <form id="formProf"><div class="fields"><div class="field"><label>Tratamento</label><input name="tratamento" value="${esc(profissional().tratamento || '')}"></div><div class="field full"><label>Nome</label><input name="nome" value="${esc(profissional().nome || '')}"></div><div class="field"><label>Especialidade</label><input name="especialidade" value="${esc(profissional().especialidade || '')}"></div><div class="field"><label>CRM</label><input name="crm" value="${esc(profissional().crm || '')}"></div><div class="field"><label>RQE</label><input name="rqe" value="${esc(profissional().rqe || '')}"></div></div><div class="btnrow"><button class="btn" type="submit">💾 Salvar</button></div></form></div>
     <div class="card"><h2>Bases clínicas carregadas</h2><dl class="kv"><dt>Doenças</dt><dd>${(D().doencas || []).length}</dd><dt>Medicamentos</dt><dd>${(D().medicamentos || []).length}</dd><dt>Queixas</dt><dd>${(D().queixas || []).length}</dd><dt>Calculadoras</dt><dd>${PED.calc.calculadoras.length}</dd><dt>Emergências</dt><dd>${(D().emergencias || []).length}</dd><dt>Exames</dt><dd>${(D().exames || []).length}</dd><dt>Vacinas</dt><dd>${(D().vacinas || []).length}</dd></dl>
       <p class="muted"><small>Cada item exibe suas fontes (MS, SBP, OMS/OPAS, PALS, bulas) e a data da última atualização. O sistema não gera diagnóstico automático e não substitui a decisão médica.</small></p></div>
+    <div class="card"><h2>☁️ Sincronização entre aparelhos</h2>
+      ${blocoNuvem()}</div>
     <div class="card"><h2>⚙️ Revisão clínica</h2><p class="muted">Itens das bases que pedem conferência da médica antes do uso assistencial.</p>
       <p><strong>${revisao.pendencias().filter(x => revisao.get(x.tipo, x.id, x.sub)).length} de ${revisao.pendencias().length}</strong> conferidos.</p>
       <div class="btnrow"><a class="btn" href="#/revisao">Abrir revisão clínica</a></div></div>
@@ -1722,6 +1837,26 @@ window.PED = window.PED || {};
     const fs = $('#formSoap');
     if (fs) fs.addEventListener('submit', (e) => { e.preventDefault(); const d = formData(fs); const prev = fs.dataset.id ? S.byId('evolucoes', fs.dataset.id) : null; const quando = (d.dataISO ? d.dataISO : U.today()) + 'T' + ((d.hora && /^\d{1,2}:?\d{0,2}$/.test(d.hora)) ? (d.hora.includes(':') ? d.hora : d.hora.padStart(4, '0').replace(/(\d{2})(\d{2})/, '$1:$2')) : '12:00');
         const obj = Object.assign({}, prev || {}, d, { data: new Date(quando).toISOString(), profissional: profissionalLinha() }); if (!fs.dataset.id) delete obj.id; S.upsert('evolucoes', obj); const p = S.byId('pacientes', d.pacienteId); if (p && d.peso && Number(d.peso) !== p.peso) { p.peso = Number(d.peso); S.upsert('pacientes', p); } U.toast('Evolução salva'); go('/pacientes/' + d.pacienteId + '?tab=evolucao'); });
+    const ffb = $('#formFirebase');
+    if (ffb) ffb.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const txt = formData(ffb).cfg || '';
+      try {
+        const limpo = txt.trim().replace(/^const\s+\w+\s*=\s*/, '').replace(/;\s*$/, '');
+        const cfg = JSON.parse(limpo.replace(/([{,]\s*)([A-Za-z_$][\w$]*)\s*:/g, '$1"$2":').replace(/'/g, '"'));
+        if (!cfg.apiKey || !cfg.projectId) throw new Error('faltam apiKey e projectId');
+        PED.nuvem.salvarConfig(cfg); U.toast('Configuração salva'); render();
+      } catch (err) { U.toast('Configuração inválida: ' + err.message); }
+    });
+    const fen = $('#formEntrarNuvem');
+    if (fen) fen.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const d = formData(fen);
+      if (!d.email || !d.senha) { U.toast('Informe e-mail e senha'); return; }
+      U.toast('Conectando…');
+      try { await PED.nuvem.entrar(d.email, d.senha); S.pref('emailNuvem', d.email); U.toast('Conectada'); render(); }
+      catch (err) { alert(PED.nuvem.mensagemErro(err)); render(); }
+    });
     const fprof = $('#formProf'); if (fprof) fprof.addEventListener('submit', (e) => { e.preventDefault(); S.pref('profissional', formData(fprof)); U.toast('Profissional salvo'); render(); });
     const ft = $('#filtroTox'); if (ft) ft.addEventListener('input', () => { const q2 = U.normalize(ft.value); $$('.toxRow', main).forEach(x => x.style.display = !q2 || x.dataset.n.includes(q2) ? '' : 'none'); });
     const uc = $('#uniCidade'); if (uc) uc.addEventListener('change', () => go('/unidades?cidade=' + encodeURIComponent(uc.value)));
@@ -1823,6 +1958,11 @@ window.PED = window.PED || {};
         U.toast('Registrado neste aparelho'); render();
       },
       outraDica() { render(); },
+      vistaPlantao() {
+        S.pref('vistaPlantao', el.dataset.v);
+        // a vista entra no endereço: sem isso, tocar na aba não mudaria o hash e a tela não redesenharia
+        go('/plantoes?ano=' + el.dataset.ano + '&mes=' + el.dataset.mes + '&vista=' + el.dataset.v);
+      },
       novoLocal() {
         const nome = prompt('Nome do local de trabalho:'); if (!nome || !nome.trim()) return;
         const n = PED.plantao.locais().length;
@@ -1863,6 +2003,13 @@ window.PED = window.PED || {};
       },
       marcarRevisao() { const [tipo, id, sub] = el.dataset.k.split('|'); const nota = (document.querySelector('.notaRev[data-k="' + el.dataset.k + '"]') || {}).value || ''; revisao.marcar(tipo, id, sub === undefined ? null : sub, nota); U.toast('Conferência registrada'); render(); },
       desfazerRevisao() { const [tipo, id, sub] = el.dataset.k.split('|'); revisao.desmarcar(tipo, id, sub === undefined ? null : sub); render(); },
+      async sincronizar() {
+        U.toast('Sincronizando…');
+        try { const r2 = await PED.nuvem.sincronizar(); U.toast('Sincronizado: ' + r2.registros + ' registros'); render(); }
+        catch (err) { alert(PED.nuvem.mensagemErro(err)); render(); }
+      },
+      async sairNuvem() { await PED.nuvem.sair(); render(); },
+      limparNuvem() { if (!confirm('Remover a configuração do Firebase deste aparelho? Os dados locais continuam aqui.')) return; PED.nuvem.limparConfig(); render(); },
       exportar() { const blob = new Blob([S.exportJSON()], { type: 'application/json' }); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'mucurinha-' + U.today() + '.json'; a.click(); S.pref('ultimoBackup', new Date().toISOString()); U.toast('Cópia gerada'); render(); },
       copiarBackup() { const txt = S.exportJSON();
         const ok = () => { S.pref('ultimoBackup', new Date().toISOString()); U.toast('Dados copiados: cole em um bloco de notas ou mensagem para guardar'); render(); };
