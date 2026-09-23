@@ -28,7 +28,7 @@ function paginaBiblioteca(aba) {
       return `<details class="filtros"><summary>${esc(NOME_GUIA[sec] || sec)} <span class="small muted">${f}/${tot}</span></summary>${Object.entries(dados).map(([sub, it]) => `<h3>${esc(sub)}</h3>${it.map((x, i) => { const k = `${sec}|${sub}|${i}`; return `<label class="check"><input type="checkbox" data-chg="guia" data-k="${esc(k)}" ${store.doc("guia").g[k] ? "checked" : ""}><span>${esc(x)}</span></label>`; }).join("")}`).join("")}</details>`;
     }).join("");
   } else if (aba === "questoes") {
-    const minhas = Object.values(store.doc("questoes").itens).sort((a, b) => String(b.id).localeCompare(String(a.id)));
+    const minhas = minhasQuestoes().sort((a, b) => String(b.id).localeCompare(String(a.id)));
     corpo = `<form class="caixa pilha" data-form="q-nova">
       <div class="campos"><label class="campo"><span class="lab">Trilha</span><select id="nq-t">${opcoes(Object.entries(TRILHAS).map(([k, v]) => [k, v.nome]), "medicina")}</select></label>
       <label class="campo"><span class="lab">Disciplina</span><input type="text" id="nq-disc" placeholder="ex.: Farmacologia" required></label>

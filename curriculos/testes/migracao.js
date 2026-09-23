@@ -38,7 +38,7 @@ ctx=await b.newContext();p=await ctx.newPage();p.on('pageerror',e=>errs.push(e.m
 await p.addInitScript(dbMock({'data/users/u_teste/perfil':{faculdade:'uea',metas:{questoes:40,minutos:90},_ts:Date.now()+1000},'data/users/u_teste/cards':{itens:{c1:{id:'c1',frente:'Remoto?',verso:'sim',tema:null,origem:'manual',dif:2,criado:1,srs:{etapa:-1,ease:2.2,int:0,prox:'2000-01-01',hist:[]}}},_ts:Date.now()+1000}}));
 await p.goto(URL);await p.waitForTimeout(1500);
 r=await p.evaluate(()=>({f:store.doc('perfil').faculdade,m:store.doc('perfil').metas.questoes,c:cards().length,pend:pendencias().cards.length,h:document.querySelector('#view').innerText}));
-ok(r.f==='uea'&&r.m===40,'perfil vindo de outro aparelho aplicado');ok(r.c===1&&r.pend===1,'flashcard remoto aparece e está pendente');ok(/\/\s*40/.test(r.h),'tela atualizada após sincronizar');
+ok(r.f==='uea'&&r.m===40,'perfil vindo de outro aparelho aplicado');ok(r.c===1&&r.pend===1,'flashcard remoto aparece e está pendente');ok(/de\s*40/.test(r.h),'tela atualizada após sincronizar');
 await p.evaluate(()=>{criarCard({frente:'novo local',verso:'x'});});await p.waitForTimeout(1300);
 ok((await p.evaluate(()=>Object.keys(window.__db.get('data/users/u_teste/cards').itens).length))===2,'alteração local sobe para a conta');
 await ctx.close();

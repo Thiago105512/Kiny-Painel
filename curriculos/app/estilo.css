@@ -274,3 +274,15 @@ main:focus{outline:none}
 details.mais>summary{cursor:pointer;color:var(--pen);font-weight:600;font-size:14px;padding:6px 0}
 .folha>h2.sec:first-of-type{padding-right:52px}
 .links-lista a small{margin-left:auto}
+
+/* Início */
+.hero{background:var(--pen-soft);border:1px solid var(--pen);border-radius:12px;padding:18px;display:grid;gap:8px;justify-items:start}
+.hero .lab{color:var(--pen);margin:0}
+.hero-tit{font:700 20px/1.25 var(--display);margin:0}
+.btn.grande{min-height:48px;padding:10px 22px;font-size:16px;margin-top:6px}
+.atalhos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+@media (max-width:700px){.atalhos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.atalhos a{display:grid;gap:2px;padding:14px;background:var(--sheet);border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--ink);min-height:72px;align-content:center}
+.atalhos a:hover{border-color:var(--pen)}
+.atalhos b{font-size:15px}
+.atalhos small{font-size:12px;color:var(--muted)}

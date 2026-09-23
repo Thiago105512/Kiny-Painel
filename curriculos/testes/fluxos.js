@@ -40,7 +40,7 @@ await responder(true);await p.click('[data-act="pl-prox"]');await responder(true
 await go(`#/tema/${T1}/desempenho`);ok((await txt()).includes('100%'),'desempenho do tema registrou 2 acertos');
 const tent=await p.evaluate(t=>questoes().filter(q=>q.tema===t).map(progDe).filter(Boolean).map(x=>x.h.at(-1)),T1);
 ok(tent.length===2&&tent.every(h=>h[3]>0&&h[4]==='tema'),'tentativas guardam resposta, tempo e origem');
-await go('#/');ok(/2\s*\/\s*20/.test(await txt()),'dashboard: 2 questões hoje');
+await go('#/');ok(/\b2\s*de\s*20/.test(await txt()),'dashboard: 2 questões hoje');
 
 console.log('Fluxo 2: Medicina → UEA → período → módulo → tema → flashcards → revisão');
 n=await importar('uea','TESTE e2e','1º período\nMódulo Sistema Cardiovascular TESTE 200h\n2º período\nMódulo Agressão e Defesa TESTE 180h');

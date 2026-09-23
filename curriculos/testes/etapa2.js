@@ -69,4 +69,8 @@ await p.click('[data-act="conf-periodo"]');await p.waitForTimeout(100);
 await p.click('[data-act="grade-validar"]');await p.waitForTimeout(150);
 const g=await p.evaluate(id=>{const g=gradePorId(id);return {st:g.status,em:g.validadoEm,it:itensGrade(g)};},gid);
 ok(g.st==='validado'&&g.em&&g.it[1].ch===75&&g.it[1].nome==='DISCIPLINA TESTE B 2','matriz corrigida, conferida e validada');
+console.log('Questões próprias sem limite (blocos de 150)');
+const bl=await p.evaluate(()=>{const antes=questoes().length;for(let i=0;i<320;i++)salvarQuestaoPropria({id:'qt'+i,t:'medicina',area:'Teste',enunciado:'Pergunta de teste '+i,alternativas:['a','b','c','d','e'],correta:0,src:'minha'});
+  const b=blocosQ().map(n=>Object.keys(store.doc(n).itens).length);apagarQuestaoPropria('qt5');return {antes,depois:questoes().length,b,maior:Math.max(...b.map(x=>x)),tam:Math.max(...blocosQ().map(n=>JSON.stringify(store.doc(n)).length))};});
+ok(bl.depois===bl.antes+319&&bl.maior<=150,`320 questões em ${bl.b.length} blocos (${bl.b.join('/')}), maior bloco ${Math.round(bl.tam/1024)} KB`);
 console.log(errs.length?'ERROS JS: '+errs:'Sem erros de JS');console.log(falhas?falhas+' FALHA(S)':'ETAPA 2 OK');await b.close();process.exit(falhas?1:0);})();

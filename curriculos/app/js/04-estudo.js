@@ -7,7 +7,7 @@
 let _cacheQ = null;
 function questoes() {
   if (!_cacheQ) {
-    const minhas = Object.values(store.doc("questoes").itens).filter(x => x && Array.isArray(x.o || x.alternativas)).map(x => normQuestao(x, x.t, x.src || "minha"));
+    const minhas = minhasQuestoes().filter(x => x && Array.isArray(x.o || x.alternativas)).map(x => normQuestao(x, x.t, x.src || "minha"));
     _cacheQ = QUESTOES_BASE.concat(minhas);
     _cacheQ.porId = Object.fromEntries(_cacheQ.map(q => [q.id, q]));
   }
@@ -15,10 +15,17 @@ function questoes() {
 }
 const invalidarQuestoes = () => { _cacheQ = null; };
 const qPorId = id => questoes().porId[id];
+/** Blocos de questões próprias: o antigo "questoes" + "q-1", "q-2"… */
+const blocosQ = () => ["questoes", ...store.nomes().filter(n => /^q-\d+$/.test(n)).sort((a, b) => +a.slice(2) - +b.slice(2))];
+const minhasQuestoes = () => blocosQ().flatMap(n => Object.values(store.doc(n).itens));
 function salvarQuestaoPropria(x) {
-  const d = store.doc("questoes"); d.itens[x.id] = x; store.mudou("questoes"); invalidarQuestoes();
+  const blocos = blocosQ();
+  let nome = blocos.find(n => store.doc(n).itens[x.id]);                                    // edição: fica onde está
+  if (!nome) nome = blocos.slice(1).reverse().find(n => Object.keys(store.doc(n).itens).length < TAM_BLOCO_Q);
+  if (!nome) nome = "q-" + (blocos.length);                                                  // novo bloco
+  store.doc(nome).itens[x.id] = x; store.mudou(nome); invalidarQuestoes();
 }
-function apagarQuestaoPropria(id) { const d = store.doc("questoes"); delete d.itens[id]; store.mudou("questoes"); invalidarQuestoes(); }
+function apagarQuestaoPropria(id) { const nome = blocosQ().find(n => store.doc(n).itens[id]); if (!nome) return; delete store.doc(nome).itens[id]; store.mudou(nome); invalidarQuestoes(); }
 
 /* ---------- Progresso e tentativas (QuestionAttempt) ---------- */
 const progDe = q => store.doc(docProg(q.t)).q[q.id];

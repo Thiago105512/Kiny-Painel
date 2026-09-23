@@ -30,35 +30,67 @@ function linhaFaculdade() {
   return `<div class="faixa"><p><b>${sig} · ${per}º período</b><br><span class="small muted">${prox ? `Próximo: ${linkTema(prox.t)} (${esc(prox.it.nome)})` : `${itens.length} disciplinas/módulos${itens.some(i => !temasDoItem(i).length) ? " · vincule temas para receber sugestões" : ""}`}</span></p><a class="btn sec mini" href="#/medicina/grade/${esc(g.id)}/p/${per}">Abrir período</a></div>`;
 }
 
+/** Lista de pendências em ordem de prioridade: revisões vencidas, erros, flashcards, plano. */
+function tarefasDoDia() {
+  const pend = pendencias(), T = [];
+  pend.temas.sort((a, b) => a.srs.prox.localeCompare(b.srs.prox)).forEach(t => T.push({ tit: `Revisar ${nomeTema(t.id)}`, det: `revisão ${quando(t.srs.prox)} · ~15 min`, href: `#/revisoes/tema/${encodeURIComponent(t.id)}`, bt: "Revisar", link: linkTema(t.id) }));
+  if (pend.erros.length) T.push({ tit: `Refazer ${pend.erros.length} questão(ões) que você errou`, det: "caderno de erros", href: "#/revisoes/erros", bt: "Refazer" });
+  if (pend.cards.length) T.push({ tit: `Estudar ${pend.cards.length} flashcard(s)`, det: `~${Math.max(2, Math.round(pend.cards.length / 3))} min`, href: "#/flashcards/estudar", bt: "Estudar" });
+  Object.values(store.doc("plano").itens).filter(p => p.data === hoje() && !p.feito).forEach(p => T.push({ tit: p.titulo || nomeTema(p.tema) || p.disciplina || "Estudo planejado", det: ["planejado", p.min && p.min + " min", p.nq && p.nq + " questões"].filter(Boolean).join(" · "), href: p.tema ? "#/tema/" + encodeURIComponent(p.tema) : "#/plano", bt: "Abrir" }));
+  return T;
+}
+/** Sugestão quando não há pendências: questões novas do ponto mais fraco (ou do banco todo). */
+function sugestaoPratica() {
+  const fraca = listaPor(agregados().por.disc, 3).sort((a, b) => a.p - b.p)[0];
+  const novas = questoes().filter(q => statusQ(q).chave === "nao" && (!fraca || q.disc === fraca.k));
+  return fraca && novas.length >= 5 ? { tit: `Praticar ${fraca.k}`, det: `seu ponto mais fraco (${Math.round(fraca.p * 100)}%) · ${novas.length} questões novas`, disc: fraca.k }
+    : { tit: "Praticar 10 questões novas", det: `${questoes().filter(q => statusQ(q).chave === "nao").length} ainda não respondidas no banco` };
+}
+const saudacao = () => { const h = new Date().getHours(); return h < 12 ? "Bom dia" : h < 18 ? "Boa tarde" : "Boa noite"; };
+
 rota("/", () => {
-  const P = store.doc("perfil"), d = diaDe(hoje()), pend = pendencias(), metas = P.metas || { questoes: 20, minutos: 60 };
-  const min = Math.round((d.seg || 0) / 60), estudados = unicos(d.temas || []);
-  const fracas = listaPor(agregados().por.disc, 3).sort((a, b) => a.p - b.p).slice(0, 3);
-  // Tarefas em ordem de prioridade; no máximo 5 visíveis
-  const tarefas = [];
-  pend.temas.forEach(t => tarefas.push({ o: `Revisar ${linkTema(t.id)}`, s: quando(t.srs.prox), b: `<a class="btn mini" href="#/revisoes/tema/${encodeURIComponent(t.id)}">Revisar</a>` }));
-  if (pend.erros.length) tarefas.push({ o: `Refazer ${pend.erros.length} questão(ões) que você errou`, s: "caderno de erros", b: `<a class="btn mini" href="#/revisoes/erros">Refazer</a>` });
-  if (pend.cards.length) tarefas.push({ o: `${pend.cards.length} flashcard(s)`, s: "revisão de hoje", b: `<a class="btn mini" href="#/flashcards/estudar">Estudar</a>` });
-  Object.values(store.doc("plano").itens).filter(p => p.data === hoje()).forEach(p => tarefas.push({ o: `<label class="check" style="padding:0"><input type="checkbox" data-chg="plano-feito" data-id="${esc(p.id)}" ${p.feito ? "checked" : ""}><span style="${p.feito ? "text-decoration:line-through;color:var(--muted)" : ""}">${esc(p.titulo || nomeTema(p.tema) || p.disciplina || "Estudo planejado")}</span></label>`, s: [p.min && p.min + " min", p.nq && p.nq + " questões"].filter(Boolean).join(" · ") || "planejado", b: p.tema && !p.feito ? `<a class="btn mini sec" href="#/tema/${encodeURIComponent(p.tema)}">Abrir</a>` : "" }));
-  const visiveis = tarefas.slice(0, 5);
+  const P = store.doc("perfil"), d = diaDe(hoje()), metas = P.metas || { questoes: 20, minutos: 60 };
+  const min = Math.round((d.seg || 0) / 60), estudados = unicos(d.temas || []), seq = sequencia();
+  const tarefas = tarefasDoDia(), prox = tarefas[0], sug = prox ? null : sugestaoPratica();
+  const Q = questoes(), feitas = Q.filter(q => progDe(q)?.n).length, pend = pendencias();
+  const ag = agregados(), fracas = listaPor(ag.por.disc, 3).sort((a, b) => a.p - b.p).slice(0, 3);
+  const novato = ag.n < 10;
+  const passo = (ok, txt, href, bt) => `<div class="tarefa"><div class="o" style="${ok ? "color:var(--muted);text-decoration:line-through" : ""}">${ok ? "✓ " : ""}${txt}</div>${ok ? "" : `<a class="btn mini sec" href="${href}">${bt}</a>`}</div>`;
   return {
-    secao: "inicio", titulo: "Hoje", sub: new Date().toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" }),
+    secao: "inicio", titulo: saudacao(), sub: new Date().toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" }),
     acoes: `<button class="btn sec mini" data-act="metas-editar">Metas</button>`,
     html: `${avisoBackup()}
+    <section class="hero"><span class="lab">Próximo passo</span>
+      ${prox ? `<p class="hero-tit">${esc(prox.tit)}</p><p class="small muted" style="margin:0">${esc(prox.det)}${tarefas.length > 1 ? ` · depois: mais ${tarefas.length - 1}` : ""}</p><a class="btn azul grande" href="${prox.href}">${prox.bt}</a>`
+        : `<p class="hero-tit">${esc(sug.tit)}</p><p class="small muted" style="margin:0">Nada pendente para hoje · ${esc(sug.det)}</p><button class="btn azul grande" data-act="inicio-praticar" data-disc="${esc(sug.disc || "")}">Começar</button>`}
+    </section>
     <section class="caixa"><div class="metas">
-      <div class="meta-item"><span>Questões</span><b>${d.q}<small class="muted" style="font-size:13px"> / ${metas.questoes}</small></b>${medidor(pct(d.q, metas.questoes), "ok")}</div>
-      <div class="meta-item"><span>Tempo de estudo</span><b>${min}<small class="muted" style="font-size:13px"> / ${metas.minutos} min</small></b>${medidor(pct(min, metas.minutos), "ok")}</div>
+      <div class="meta-item"><span>Questões hoje</span><b>${d.q}<small class="muted" style="font-size:13px"> de ${metas.questoes}</small></b>${medidor(pct(d.q, metas.questoes), "ok")}</div>
+      <div class="meta-item"><span>Tempo de estudo</span><b>${min}<small class="muted" style="font-size:13px"> de ${metas.minutos} min</small></b>${medidor(pct(min, metas.minutos), "ok")}</div>
       <div class="meta-item"><span>Acerto hoje</span><b>${d.q ? pct(d.ac, d.q) + "%" : "—"}</b></div>
-      <div class="meta-item"><span>Sequência</span><b>${sequencia()} ${sequencia() === 1 ? "dia" : "dias"}</b></div>
+      <div class="meta-item"><span>Sequência</span><b>${seq} ${seq === 1 ? "dia" : "dias"}</b></div></div>
+      ${estudados.length ? `<p class="small" style="margin:12px 0 0"><span class="muted">Estudado hoje:</span> ${estudados.slice(0, 3).map(linkTema).join(", ")}${estudados.length > 3 ? ` <span class="muted">e mais ${estudados.length - 3}</span>` : ""}</p>` : ""}
+    </section>
+    <section><div class="atalhos">
+      <a href="#/questoes"><b>Questões</b><small>${Q.length} no banco · ${feitas} feitas</small></a>
+      <a href="#/simulados"><b>Simulado</b><small>${store.doc("simulados").hist.length ? store.doc("simulados").hist.length + " feitos" : "prova cronometrada"}</small></a>
+      <a href="#/flashcards"><b>Flashcards</b><small>${pend.cards.length ? pend.cards.length + " para hoje" : cards().length + " cards"}</small></a>
+      <a href="#/casos"><b>Casos clínicos</b><small>${todosCasos().length} casos</small></a>
     </div></section>
-    <section><h2 class="sec">Para fazer agora ${tarefas.length > 5 ? `<a class="small" href="#/revisoes">ver tudo (${tarefas.length})</a>` : ""}</h2>
-      ${visiveis.length ? `<div class="tarefas">${visiveis.map(t => `<div class="tarefa"><div class="o">${t.o}<small>${t.s}</small></div>${t.b}</div>`).join("")}</div>`
-        : vazio("Tudo em dia. Pratique algumas questões ou planeje a semana.", `<a class="btn" href="#/questoes">Praticar</a><a class="btn sec" href="#/plano">Planejar</a>`)}</section>
-    <section><h2 class="sec">Sua faculdade</h2>${linhaFaculdade()}</section>
-    ${estudados.length ? `<section><h2 class="sec">Estudado hoje</h2><p style="margin:0">${estudados.slice(0, 4).map(linkTema).join(" · ")}${estudados.length > 4 ? ` <span class="muted">e mais ${estudados.length - 4}</span>` : ""}</p></section>` : ""}
-    ${fracas.length ? `<section><h2 class="sec">Onde focar <a class="small" href="#/desempenho">desempenho</a></h2><div class="barras">${fracas.map(x => barra(esc(x.k), x.ac, x.n)).join("")}</div></section>` : ""}`,
+    ${tarefas.length > 1 ? `<section><h2 class="sec">Também para hoje</h2><div class="tarefas">${tarefas.slice(1, 5).map(t => `<div class="tarefa"><div class="o">${t.link ? "Revisar " + t.link : esc(t.tit)}<small>${esc(t.det)}</small></div><a class="btn mini sec" href="${t.href}">${t.bt}</a></div>`).join("")}</div>${tarefas.length > 5 ? `<p class="small"><a href="#/revisoes">Ver todas as ${tarefas.length}</a></p>` : ""}</section>` : ""}
+    ${novato ? `<section><h2 class="sec">Primeiros passos</h2><div class="tarefas">
+        ${passo(!!P.faculdade, "Escolher sua faculdade e período", "#/medicina", "Escolher")}
+        ${passo(ag.n >= 10, "Responder 10 questões", "#/questoes", "Praticar")}
+        ${passo(Object.keys(store.doc("revisoes").temas).length > 0, "Marcar um tema como estudado (programa as revisões)", "#/medicina/especialidades", "Ver temas")}
+        ${passo(cards().length > 0, "Criar seus primeiros flashcards", "#/flashcards", "Criar")}</div></section>`
+      : `<section><h2 class="sec">Sua faculdade</h2>${linhaFaculdade()}</section>
+        ${fracas.length ? `<section><h2 class="sec">Onde focar <a class="small" href="#/desempenho">ver desempenho</a></h2><div class="barras">${fracas.map(x => barra(esc(x.k), x.ac, x.n)).join("")}</div></section>` : ""}`}`,
   };
 });
+ACOES["inicio-praticar"] = el => {
+  const disc = el.dataset.disc, qs = questoes().filter(q => statusQ(q).chave === "nao" && (!disc || q.disc === disc));
+  praticar(embaralhar(qs.length ? qs : questoes()).slice(0, 10).map(q => q.id), disc ? "Praticando " + disc : "10 questões novas");
+};
 ACOES["metas-editar"] = () => { const m = store.doc("perfil").metas || { questoes: 20, minutos: 60 };
   abrirFolha(`<form class="pilha" data-form="metas"><div class="campos">
     <label class="campo"><span class="lab">Questões por dia</span><input type="number" id="meta-q" min="0" max="500" value="${m.questoes}"></label>

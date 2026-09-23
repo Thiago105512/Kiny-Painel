@@ -25,7 +25,10 @@ const DOC_PADRAO = {
 // Progresso das questões, fragmentado por trilha para cada doc ficar pequeno:
 // prog-<trilha>.q[qid] = {n, ac, h:[[ts, resp, ok, ms, origem]…], m: marcada, r: revisar}
 const docProg = t => "prog-" + t;
-const padrao = nome => nome.startsWith("prog-") ? { q: {} } : (DOC_PADRAO[nome] || (() => ({})))();
+// Questões próprias/IA ficam em blocos "q-1", "q-2"… (até 150 cada), para nenhum documento passar do limite de 256 KB.
+const TAM_BLOCO_Q = 150;
+const nomeValido = n => n in DOC_PADRAO || n.startsWith("prog-") || /^q-\d+$/.test(n);
+const padrao = nome => nome.startsWith("prog-") ? { q: {} } : /^q-\d+$/.test(nome) ? { itens: {} } : (DOC_PADRAO[nome] || (() => ({})))();
 
 const store = (() => {
   const docs = {}, sujos = new Set(), gravando = {}, pend = {};
@@ -71,7 +74,7 @@ const store = (() => {
       if (!remotos.perfil && remotos.estado) await migrarRemotoV1(remotos.estado);
       let mudouAlgo = false;
       for (const [nome, corpo] of Object.entries(remotos)) {
-        if (nome === "estado" || !(nome in DOC_PADRAO || nome.startsWith("prog-"))) continue;
+        if (nome === "estado" || !nomeValido(nome)) continue;
         const local = docs[nome];
         if (!local || (corpo._ts || 0) > (local._ts || 0)) { docs[nome] = Object.assign(padrao(nome), JSON.parse(JSON.stringify(corpo))); ls.set(chaveLS(nome), docs[nome]); mudouAlgo = true; }
       }
@@ -121,7 +124,7 @@ const store = (() => {
     // Restaurar = voltar ao estado do backup: coleções que não existiam nele voltam ao padrão.
     Object.keys(docs).forEach(n => { if (n !== "backups" && !(n in obj.docs)) { docs[n] = padrao(n); mudou(n); } });
     for (const [n, corpo] of Object.entries(obj.docs)) {
-      if (!(n in DOC_PADRAO || n.startsWith("prog-")) || n === "backups" || typeof corpo !== "object") continue;
+      if (!nomeValido(n) || n === "backups" || typeof corpo !== "object") continue;
       docs[n] = Object.assign(padrao(n), corpo); mudou(n);
     }
   }
