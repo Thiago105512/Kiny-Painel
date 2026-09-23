@@ -278,5 +278,845 @@
   ],
   "correta": 2,
   "explicacao": "C5: proposta com agente, ação, meio/modo, finalidade e detalhamento, respeitando os direitos humanos."
+ },
+ {
+  "id": "ene-0b187b51",
+  "area": "Matemática",
+  "enunciado": "Uma progressão aritmética tem primeiro termo 3 e razão 4. Qual é o seu 20º termo?",
+  "alternativas": [
+   "79",
+   "83",
+   "80",
+   "76",
+   "75"
+  ],
+  "correta": 0,
+  "explicacao": "aₙ = a₁ + (n − 1)r = 3 + 19 × 4 = 79. Usar 20 × 4 + 3 = 83 é o erro clássico de esquecer o (n − 1)."
+ },
+ {
+  "id": "ene-cd805bd1",
+  "area": "Matemática",
+  "enunciado": "A altura, em metros, de um objeto lançado é dada por h(t) = −t² + 6t + 5, com t em segundos. Qual a altura máxima atingida?",
+  "alternativas": [
+   "5 m",
+   "14 m",
+   "3 m",
+   "9 m",
+   "23 m"
+  ],
+  "correta": 1,
+  "explicacao": "O vértice ocorre em t = −b/2a = 3 s; h(3) = −9 + 18 + 5 = 14 m. O valor 3 é o instante do máximo, não a altura."
+ },
+ {
+  "id": "ene-c50ec98e",
+  "area": "Matemática",
+  "enunciado": "Uma caixa-d'água cilíndrica tem raio interno de 2 m e altura de 3 m. Usando π = 3, sua capacidade é de:",
+  "alternativas": [
+   "18.000 litros",
+   "12.000 litros",
+   "36.000 litros",
+   "108.000 litros",
+   "3.600 litros"
+  ],
+  "correta": 2,
+  "explicacao": "V = πr²h = 3 × 2² × 3 = 36 m³. Como 1 m³ = 1.000 L, a capacidade é de 36.000 litros."
+ },
+ {
+  "id": "ene-50243a22",
+  "area": "Matemática",
+  "enunciado": "De um grupo de 6 estudantes, deseja-se formar uma comissão de 3 membros, sem cargos distintos. Quantas comissões diferentes são possíveis?",
+  "alternativas": [
+   "120",
+   "18",
+   "216",
+   "20",
+   "60"
+  ],
+  "correta": 3,
+  "explicacao": "A ordem não importa, então é combinação: C(6,3) = 6!/(3!·3!) = 20. O valor 120 seria arranjo (ordem importando)."
+ },
+ {
+  "id": "ene-0745e142",
+  "area": "Matemática",
+  "enunciado": "Em um mapa na escala 1:250.000, a distância entre duas comunidades ribeirinhas é de 4 cm. A distância real é de:",
+  "alternativas": [
+   "1 km",
+   "100 km",
+   "25 km",
+   "62,5 km",
+   "10 km"
+  ],
+  "correta": 4,
+  "explicacao": "4 cm × 250.000 = 1.000.000 cm = 10.000 m = 10 km."
+ },
+ {
+  "id": "ene-71bd5a67",
+  "area": "Matemática",
+  "enunciado": "Uma rampa de acessibilidade vence uma altura de 6 m ao longo de uma distância horizontal de 8 m. Qual o comprimento da rampa?",
+  "alternativas": [
+   "10 m",
+   "14 m",
+   "12 m",
+   "7 m",
+   "9 m"
+  ],
+  "correta": 0,
+  "explicacao": "Pelo teorema de Pitágoras: c² = 6² + 8² = 36 + 64 = 100, logo c = 10 m. Somar os catetos (14 m) é a pegadinha."
+ },
+ {
+  "id": "ene-147e590d",
+  "area": "Matemática",
+  "enunciado": "Uma cultura começa com 500 bactérias, e a população dobra a cada 3 horas. Quantas bactérias haverá após 12 horas?",
+  "alternativas": [
+   "4.000",
+   "8.000",
+   "2.000",
+   "16.000",
+   "6.000"
+  ],
+  "correta": 1,
+  "explicacao": "Em 12 h ocorrem 12/3 = 4 duplicações: 500 × 2⁴ = 500 × 16 = 8.000. Multiplicar 500 por 12 trata o crescimento como linear."
+ },
+ {
+  "id": "ene-45cbc305",
+  "area": "Matemática",
+  "enunciado": "Um aluno tirou 7 na prova de peso 2, 8 na prova de peso 3 e 4 no trabalho de peso 1. Sua média ponderada é:",
+  "alternativas": [
+   "6,33",
+   "6,5",
+   "7,0",
+   "7,5",
+   "8,0"
+  ],
+  "correta": 2,
+  "explicacao": "Média ponderada = (7·2 + 8·3 + 4·1)/(2 + 3 + 1) = (14 + 24 + 4)/6 = 42/6 = 7,0. O valor 6,33 é a média aritmética simples."
+ },
+ {
+  "id": "ene-d6755292",
+  "area": "Matemática",
+  "enunciado": "Um empréstimo de R$ 2.000,00 foi feito a juros simples de 3% ao mês, por 5 meses. O montante a pagar é:",
+  "alternativas": [
+   "R$ 2.318,55",
+   "R$ 2.030,00",
+   "R$ 2.150,00",
+   "R$ 2.300,00",
+   "R$ 2.600,00"
+  ],
+  "correta": 3,
+  "explicacao": "J = C·i·t = 2000 × 0,03 × 5 = 300; M = 2.300. O valor R$ 2.318,55 corresponderia a juros compostos (2000 × 1,03⁵)."
+ },
+ {
+  "id": "ene-72ded741",
+  "area": "Matemática",
+  "enunciado": "Uma urna tem 4 bolas azuis e 6 vermelhas. Retiram-se 2 bolas, sem reposição. Qual a probabilidade de ambas serem azuis?",
+  "alternativas": [
+   "4/25",
+   "1/5",
+   "2/5",
+   "1/15",
+   "2/15"
+  ],
+  "correta": 4,
+  "explicacao": "P = 4/10 × 3/9 = 12/90 = 2/15. O valor 4/25 seria com reposição (4/10 × 4/10)."
+ },
+ {
+  "id": "ene-75f308b7",
+  "area": "Física",
+  "enunciado": "Um chuveiro de 5.500 W é usado 20 minutos por dia durante 30 dias. O consumo mensal de energia é de:",
+  "alternativas": [
+   "55 kWh",
+   "165 kWh",
+   "110 kWh",
+   "5,5 kWh",
+   "3.300 kWh"
+  ],
+  "correta": 0,
+  "explicacao": "E = P·t = 5,5 kW × (1/3 h) × 30 = 55 kWh. Usar 20 h em vez de 20 min, ou esquecer de converter minutos em horas, gera os valores distorcidos."
+ },
+ {
+  "id": "ene-0465f4cd",
+  "area": "Física",
+  "enunciado": "Um objeto é abandonado do repouso a 45 m de altura. Desprezando a resistência do ar e adotando g = 10 m/s², o tempo de queda é:",
+  "alternativas": [
+   "4,5 s",
+   "3 s",
+   "9 s",
+   "2 s",
+   "1,5 s"
+  ],
+  "correta": 1,
+  "explicacao": "h = gt²/2 ⇒ 45 = 5t² ⇒ t² = 9 ⇒ t = 3 s."
+ },
+ {
+  "id": "ene-f9c6222f",
+  "area": "Física",
+  "enunciado": "Uma rádio FM transmite na frequência de 100 MHz. Sabendo que as ondas de rádio se propagam a 3 × 10⁸ m/s, o comprimento de onda é:",
+  "alternativas": [
+   "0,3 m",
+   "30 m",
+   "3 m",
+   "3,3 m",
+   "300 m"
+  ],
+  "correta": 2,
+  "explicacao": "v = λf ⇒ λ = 3 × 10⁸ / 1 × 10⁸ = 3 m (lembrando que 100 MHz = 10⁸ Hz)."
+ },
+ {
+  "id": "ene-45b6e2fd",
+  "area": "Física",
+  "enunciado": "Quanto calor é necessário para aquecer 500 g de água de 20 °C até 80 °C? (calor específico da água: 1 cal/g·°C)",
+  "alternativas": [
+   "40.000 cal",
+   "10.000 cal",
+   "3.000 cal",
+   "30.000 cal",
+   "60.000 cal"
+  ],
+  "correta": 3,
+  "explicacao": "Q = m·c·ΔT = 500 × 1 × (80 − 20) = 30.000 cal. Usar a temperatura final (80) em vez da variação dá 40.000 cal."
+ },
+ {
+  "id": "ene-7bb80274",
+  "area": "Física",
+  "enunciado": "Um canudo mergulhado parcialmente num copo com água parece 'quebrado' na superfície do líquido. Esse efeito se deve à:",
+  "alternativas": [
+   "reflexão total da luz",
+   "difração da luz",
+   "polarização da luz",
+   "interferência da luz",
+   "refração da luz"
+  ],
+  "correta": 4,
+  "explicacao": "Ao passar da água para o ar, a luz muda de velocidade e de direção (refração), e o observador vê a parte submersa numa posição aparente diferente."
+ },
+ {
+  "id": "ene-640e27a3",
+  "area": "Física",
+  "enunciado": "Considere que cada 10 m de profundidade na água acrescentam cerca de 1 atm de pressão. A pressão total (absoluta) sobre um mergulhador a 20 m de profundidade, ao nível do mar, é de aproximadamente:",
+  "alternativas": [
+   "3 atm",
+   "2 atm",
+   "1 atm",
+   "20 atm",
+   "4 atm"
+  ],
+  "correta": 0,
+  "explicacao": "Pressão absoluta = pressão atmosférica + pressão da coluna d'água = 1 atm + 2 atm = 3 atm. Os 2 atm seriam só a pressão hidrostática (manométrica)."
+ },
+ {
+  "id": "ene-f7a2d82d",
+  "area": "Química",
+  "enunciado": "Na equação da combustão completa do metano, CH₄ + O₂ → CO₂ + H₂O, balanceada com os menores coeficientes inteiros, a soma dos coeficientes é:",
+  "alternativas": [
+   "4",
+   "6",
+   "5",
+   "7",
+   "8"
+  ],
+  "correta": 1,
+  "explicacao": "Balanceando: CH₄ + 2 O₂ → CO₂ + 2 H₂O. Soma = 1 + 2 + 1 + 2 = 6."
+ },
+ {
+  "id": "ene-173f5b26",
+  "area": "Química",
+  "enunciado": "Dissolvem-se 20 g de cloreto de sódio em água até completar 500 mL de solução. A concentração comum é de:",
+  "alternativas": [
+   "10 g/L",
+   "20 g/L",
+   "40 g/L",
+   "0,04 g/L",
+   "4 g/L"
+  ],
+  "correta": 2,
+  "explicacao": "C = m/V = 20 g / 0,5 L = 40 g/L. Dividir por 500 sem converter mL em L leva a 0,04 g/L."
+ },
+ {
+  "id": "ene-2141df2e",
+  "area": "Química",
+  "enunciado": "100 mL de uma solução de HCl 2 mol/L são diluídos com água até 500 mL. A nova concentração é:",
+  "alternativas": [
+   "1 mol/L",
+   "0,2 mol/L",
+   "10 mol/L",
+   "0,4 mol/L",
+   "0,5 mol/L"
+  ],
+  "correta": 3,
+  "explicacao": "Na diluição o número de mols se conserva: C₁V₁ = C₂V₂ ⇒ 2 × 100 = C₂ × 500 ⇒ C₂ = 0,4 mol/L."
+ },
+ {
+  "id": "ene-7b70b230",
+  "area": "Química",
+  "enunciado": "O etanol (CH₃CH₂OH), combustível produzido a partir da cana-de-açúcar, pertence à função orgânica:",
+  "alternativas": [
+   "fenol",
+   "ácido carboxílico",
+   "aldeído",
+   "éter",
+   "álcool"
+  ],
+  "correta": 4,
+  "explicacao": "O etanol possui hidroxila (−OH) ligada a carbono saturado, característica dos álcoois. No fenol a hidroxila está ligada a anel aromático."
+ },
+ {
+  "id": "ene-98b047cc",
+  "area": "Química",
+  "enunciado": "Na reação 2 H₂ + O₂ → 2 H₂O, qual a massa de água formada a partir de 4 g de hidrogênio, com oxigênio em excesso? (H = 1; O = 16)",
+  "alternativas": [
+   "36 g",
+   "18 g",
+   "72 g",
+   "32 g",
+   "4 g"
+  ],
+  "correta": 0,
+  "explicacao": "4 g de H₂ (2 g/mol) = 2 mol; a proporção H₂ : H₂O é 1 : 1, logo formam-se 2 mol de água = 2 × 18 g = 36 g."
+ },
+ {
+  "id": "ene-6801db77",
+  "area": "Química",
+  "enunciado": "Um isótopo radioativo tem meia-vida de 5 anos. Partindo de 80 g dessa amostra, quanto dela restará após 15 anos?",
+  "alternativas": [
+   "20 g",
+   "10 g",
+   "40 g",
+   "5 g",
+   "26,7 g"
+  ],
+  "correta": 1,
+  "explicacao": "15 anos correspondem a 3 meias-vidas: 80 → 40 → 20 → 10 g. Dividir 80 por 3 (26,7 g) trata o decaimento como linear."
+ },
+ {
+  "id": "ene-a4a44250",
+  "area": "Biologia",
+  "enunciado": "Uma mulher de sangue tipo O tem filhos com um homem de sangue tipo AB. Quais tipos sanguíneos (sistema ABO) os filhos podem ter?",
+  "alternativas": [
+   "apenas O",
+   "A, B ou AB",
+   "A ou B",
+   "A, B, AB ou O",
+   "apenas AB"
+  ],
+  "correta": 2,
+  "explicacao": "A mãe é ii e o pai IᴬIᴮ; os filhos serão Iᴬi (tipo A) ou Iᴮi (tipo B). Nenhum pode ser O nem AB."
+ },
+ {
+  "id": "ene-a37fda44",
+  "area": "Biologia",
+  "enunciado": "Na fotossíntese, o gás oxigênio liberado pelas plantas é proveniente:",
+  "alternativas": [
+   "do gás carbônico absorvido",
+   "da degradação da glicose",
+   "da decomposição da clorofila",
+   "da quebra das moléculas de água",
+   "da síntese de ATP"
+  ],
+  "correta": 3,
+  "explicacao": "O O₂ vem da fotólise da água na fase clara (dependente de luz). O carbono do CO₂ é incorporado à glicose, não liberado como O₂."
+ },
+ {
+  "id": "ene-3079253c",
+  "area": "Biologia",
+  "enunciado": "A pirâmide de energia de um ecossistema nunca é invertida. Isso ocorre porque:",
+  "alternativas": [
+   "os consumidores produzem mais energia que os produtores",
+   "a energia é reciclada pelos decompositores e volta aos produtores",
+   "o número de indivíduos sempre diminui nos níveis superiores",
+   "os produtores armazenam toda a energia que recebem do Sol",
+   "a cada nível trófico parte da energia é perdida, sobretudo como calor"
+  ],
+  "correta": 4,
+  "explicacao": "O fluxo de energia é unidirecional e, em cada nível, grande parte é dissipada na respiração como calor; por isso cada nível tem menos energia que o anterior. Diferente da matéria, a energia não é reciclada."
+ },
+ {
+  "id": "ene-5536f0ff",
+  "area": "Biologia",
+  "enunciado": "O uso indiscriminado de antibióticos tem aumentado a frequência de bactérias resistentes. A explicação evolutiva mais adequada é que:",
+  "alternativas": [
+   "o antibiótico seleciona bactérias que já eram resistentes, que sobrevivem e se reproduzem",
+   "o antibiótico induz as bactérias a desenvolverem resistência por necessidade",
+   "as bactérias se acostumam ao remédio e transmitem esse hábito",
+   "o uso frequente fortalece as bactérias, como um músculo exercitado",
+   "o antibiótico transforma bactérias em vírus resistentes"
+  ],
+  "correta": 0,
+  "explicacao": "Pela seleção natural (darwinismo), as variantes resistentes já existiam por mutação ao acaso; o antibiótico elimina as sensíveis e favorece as resistentes. A ideia de adquirir resistência por necessidade é lamarckista."
+ },
+ {
+  "id": "ene-e39bef34",
+  "area": "Biologia",
+  "enunciado": "Antibióticos não são indicados para tratar a gripe comum porque:",
+  "alternativas": [
+   "a gripe é causada por bactérias muito resistentes",
+   "a gripe é causada por vírus, que não possuem as estruturas celulares atingidas pelos antibióticos",
+   "os antibióticos só atuam contra fungos",
+   "o vírus da gripe possui parede celular muito espessa",
+   "a gripe é uma doença genética"
+  ],
+  "correta": 1,
+  "explicacao": "Antibióticos atuam em estruturas e processos de bactérias (como parede celular e ribossomos bacterianos). Vírus são acelulares e se replicam dentro das células do hospedeiro."
+ },
+ {
+  "id": "ene-a83e11fc",
+  "area": "Biologia",
+  "enunciado": "A Floresta Amazônica é exuberante, embora grande parte de seus solos de terra firme seja pobre em nutrientes. Isso se explica principalmente:",
+  "alternativas": [
+   "pela alta fertilidade das rochas profundas",
+   "pelo uso de fertilizantes naturais trazidos pelos rios",
+   "pela rápida decomposição da serapilheira e reciclagem de nutrientes pela própria floresta",
+   "pela ausência de chuvas, que evita a lixiviação",
+   "pelas baixas temperaturas, que conservam a matéria orgânica"
+  ],
+  "correta": 2,
+  "explicacao": "Com calor e umidade elevados, fungos e bactérias decompõem rapidamente folhas e galhos, e as raízes reabsorvem os nutrientes; o estoque fica na biomassa, não no solo. Por isso o desmatamento tende a empobrecer o solo rapidamente."
+ },
+ {
+  "id": "ene-da34228a",
+  "area": "Biologia",
+  "enunciado": "A malária, ainda presente na região amazônica, é causada e transmitida, respectivamente, por:",
+  "alternativas": [
+   "vírus e mosquito Aedes aegypti",
+   "bactéria e caramujo",
+   "protozoário Trypanosoma cruzi e barbeiro",
+   "protozoário do gênero Plasmodium e mosquito do gênero Anopheles",
+   "verme e água contaminada"
+  ],
+  "correta": 3,
+  "explicacao": "O agente da malária é o protozoário Plasmodium, transmitido pela picada da fêmea do mosquito Anopheles. Aedes transmite dengue; o barbeiro transmite a doença de Chagas."
+ },
+ {
+  "id": "ene-c5996c33",
+  "area": "Biologia",
+  "enunciado": "Após ser picada por uma cobra peçonhenta, uma pessoa recebe soro antiofídico. Esse tratamento é um exemplo de:",
+  "alternativas": [
+   "imunização ativa, com produção de memória",
+   "vacinação preventiva",
+   "uso de antibiótico contra o veneno",
+   "transplante de células de defesa",
+   "imunização passiva, com anticorpos prontos"
+  ],
+  "correta": 4,
+  "explicacao": "O soro contém anticorpos já produzidos (em geral por cavalos), de ação imediata e sem memória imunológica: imunização passiva. A vacina, ao contrário, estimula o próprio organismo (imunização ativa)."
+ },
+ {
+  "id": "ene-04d874b4",
+  "area": "História",
+  "enunciado": "A Cabanagem (1835–1840), revolta que envolveu amplas camadas populares no Grão-Pará, território que então incluía a área do atual Amazonas, ocorreu durante qual período da história do Brasil?",
+  "alternativas": [
+   "Período Regencial",
+   "Primeiro Reinado",
+   "Segundo Reinado já consolidado",
+   "República Velha",
+   "Período Joanino"
+  ],
+  "correta": 0,
+  "explicacao": "Entre a abdicação de D. Pedro I (1831) e o Golpe da Maioridade (1840), o Brasil viveu o Período Regencial, marcado por revoltas provinciais como a Cabanagem, a Balaiada, a Sabinada e a Farroupilha."
+ },
+ {
+  "id": "ene-cc27b83e",
+  "area": "História",
+  "enunciado": "A Zona Franca de Manaus, reformulada em 1967 durante o regime militar, teve como objetivo principal:",
+  "alternativas": [
+   "retomar a exportação de borracha como principal atividade econômica",
+   "criar um polo industrial e comercial com incentivos fiscais para desenvolver e integrar a Amazônia Ocidental",
+   "transformar Manaus na capital federal do Brasil",
+   "proibir a entrada de produtos estrangeiros na região",
+   "promover a reforma agrária nas várzeas do Amazonas"
+  ],
+  "correta": 1,
+  "explicacao": "O Decreto-Lei nº 288/1967 concedeu isenções e incentivos fiscais para atrair indústrias e comércio a Manaus, dentro de uma estratégia de ocupação e integração da Amazônia."
+ },
+ {
+  "id": "ene-12286e30",
+  "area": "História",
+  "enunciado": "Entre os fatores que explicam o pioneirismo da Inglaterra na Revolução Industrial, no século XVIII, está:",
+  "alternativas": [
+   "a ausência de colônias e de comércio exterior",
+   "a proibição do uso de carvão mineral",
+   "o acúmulo de capitais e a mão de obra liberada pelos cercamentos dos campos",
+   "o fortalecimento do regime feudal no campo",
+   "a falta de interesse da burguesia por inovações técnicas"
+  ],
+  "correta": 2,
+  "explicacao": "A Inglaterra reunia capitais do comércio colonial, reservas de carvão e ferro e mão de obra barata formada por camponeses expulsos das terras pelos cercamentos (enclosures)."
+ },
+ {
+  "id": "ene-7297b9e1",
+  "area": "História",
+  "enunciado": "A Consolidação das Leis do Trabalho (CLT), de 1943, foi criada:",
+  "alternativas": [
+   "no governo de Juscelino Kubitschek",
+   "durante a ditadura militar",
+   "no Império, por D. Pedro II",
+   "durante o Estado Novo de Getúlio Vargas",
+   "na República da Espada"
+  ],
+  "correta": 3,
+  "explicacao": "A CLT reuniu a legislação trabalhista em 1943, no Estado Novo (1937–1945), dentro da política varguista de controle e aproximação com os trabalhadores urbanos."
+ },
+ {
+  "id": "ene-072ab839",
+  "area": "História",
+  "enunciado": "O Ato Institucional nº 5 (AI-5), de 1968, é considerado o marco do endurecimento da ditadura militar brasileira porque, entre outras medidas:",
+  "alternativas": [
+   "convocou eleições diretas para presidente",
+   "extinguiu a censura prévia à imprensa",
+   "anistiou todos os presos políticos",
+   "restabeleceu o pluripartidarismo",
+   "permitiu fechar o Congresso e suspendeu o habeas corpus para crimes políticos"
+  ],
+  "correta": 4,
+  "explicacao": "O AI-5 deu ao presidente poderes para fechar o Legislativo, cassar mandatos e suspender direitos políticos, além de suspender o habeas corpus em crimes políticos. Anistia (1979) e pluripartidarismo vieram na abertura."
+ },
+ {
+  "id": "ene-68818d6c",
+  "area": "História",
+  "enunciado": "A queda do Muro de Berlim, em 1989, é um marco simbólico:",
+  "alternativas": [
+   "do fim da Guerra Fria e da divisão da Europa entre os blocos capitalista e socialista",
+   "do início da Primeira Guerra Mundial",
+   "da criação da ONU",
+   "da ascensão do nazismo na Alemanha",
+   "da Revolução Russa"
+  ],
+  "correta": 0,
+  "explicacao": "O muro, erguido em 1961, separava Berlim Ocidental e Oriental. Sua queda antecipou a reunificação alemã (1990) e o colapso da URSS (1991), encerrando a bipolaridade."
+ },
+ {
+  "id": "ene-69674aa4",
+  "area": "História",
+  "enunciado": "A economia açucareira do Brasil colonial, nos séculos XVI e XVII, organizou-se predominantemente com base em:",
+  "alternativas": [
+   "pequenas propriedades familiares e mão de obra assalariada",
+   "latifúndio, monocultura, trabalho escravizado e produção voltada à exportação",
+   "policultura para abastecer o mercado interno",
+   "extração de ouro em Minas Gerais",
+   "indústrias têxteis mecanizadas"
+  ],
+  "correta": 1,
+  "explicacao": "O sistema de plantation colonial combinava grandes propriedades, um único produto de exportação e mão de obra escravizada, atendendo aos interesses mercantilistas da metrópole."
+ },
+ {
+  "id": "ene-aa9253a0",
+  "area": "Geografia",
+  "enunciado": "Os chamados 'rios voadores' são importantes para o regime de chuvas de parte do Centro-Oeste e do Sudeste brasileiros. Eles correspondem a:",
+  "alternativas": [
+   "rios subterrâneos que ligam a Amazônia ao Sudeste",
+   "canais artificiais de transposição de água",
+   "fluxos de umidade na atmosfera, alimentados em grande parte pela evapotranspiração da Floresta Amazônica",
+   "nuvens formadas exclusivamente sobre o oceano Pacífico",
+   "correntes marítimas frias do litoral sul"
+  ],
+  "correta": 2,
+  "explicacao": "A floresta devolve à atmosfera grande quantidade de vapor d'água pela evapotranspiração; esse vapor é transportado pelos ventos e barrado pelos Andes, desviando-se para o centro-sul. O desmatamento ameaça esse mecanismo."
+ },
+ {
+  "id": "ene-65d41fb6",
+  "area": "Geografia",
+  "enunciado": "Na Amazônia, as áreas de várzea diferenciam-se das de terra firme por:",
+  "alternativas": [
+   "nunca serem alagadas, por estarem em terrenos mais altos",
+   "terem clima frio e seco",
+   "não permitirem nenhum tipo de agricultura",
+   "serem inundadas periodicamente pelas cheias, recebendo sedimentos que fertilizam o solo",
+   "serem cobertas por vegetação de cerrado"
+  ],
+  "correta": 3,
+  "explicacao": "As várzeas margeiam principalmente rios de água branca (como o Solimões-Amazonas) e são alagadas nas cheias; a deposição de sedimentos as torna férteis para a agricultura de vazante. A terra firme não alaga."
+ },
+ {
+  "id": "ene-2cb859ea",
+  "area": "Geografia",
+  "enunciado": "A cidade A está a 45° de longitude oeste e a cidade B, a 75° de longitude oeste. Considerando apenas os fusos teóricos, quando são 12 h em A, em B são:",
+  "alternativas": [
+   "14 h",
+   "11 h",
+   "13 h",
+   "9 h",
+   "10 h"
+  ],
+  "correta": 4,
+  "explicacao": "Cada 15° equivalem a 1 hora. A diferença é de 30°, ou seja, 2 horas; como B está mais a oeste, seu horário é atrasado: 12 − 2 = 10 h."
+ },
+ {
+  "id": "ene-0dcf2167",
+  "area": "Geografia",
+  "enunciado": "Quando o crescimento urbano faz duas ou mais cidades vizinhas se unirem fisicamente, formando uma mancha urbana contínua, ocorre o fenômeno de:",
+  "alternativas": [
+   "conurbação",
+   "êxodo rural",
+   "gentrificação",
+   "megalópole isolada",
+   "desmetropolização"
+  ],
+  "correta": 0,
+  "explicacao": "Conurbação é a junção física de malhas urbanas de municípios diferentes. Gentrificação é a valorização de uma área que expulsa moradores de menor renda."
+ },
+ {
+  "id": "ene-5f9b1cf2",
+  "area": "Geografia",
+  "enunciado": "Nas últimas décadas, a pirâmide etária brasileira tem apresentado base mais estreita e topo mais largo. Esse processo reflete principalmente:",
+  "alternativas": [
+   "o aumento da mortalidade infantil",
+   "a queda da taxa de natalidade e o aumento da expectativa de vida",
+   "a elevação da taxa de fecundidade",
+   "a chegada em massa de imigrantes jovens",
+   "a redução da expectativa de vida"
+  ],
+  "correta": 1,
+  "explicacao": "Menos nascimentos estreitam a base, e a maior longevidade alarga o topo: é o envelhecimento populacional típico da transição demográfica."
+ },
+ {
+  "id": "ene-7df379a3",
+  "area": "Geografia",
+  "enunciado": "Na geração de energia elétrica do Brasil, a fonte com maior participação é:",
+  "alternativas": [
+   "o carvão mineral",
+   "a nuclear",
+   "a hidrelétrica",
+   "o petróleo",
+   "a geotérmica"
+  ],
+  "correta": 2,
+  "explicacao": "A matriz elétrica brasileira é majoritariamente renovável, com predomínio da hidreletricidade, favorecida por rios caudalosos de planalto. Eólica e solar crescem, mas a hidráulica continua sendo a maior."
+ },
+ {
+  "id": "ene-f065425f",
+  "area": "Geografia",
+  "enunciado": "O Brasil não possui vulcões ativos e registra poucos terremotos de grande intensidade. A principal explicação é que o território brasileiro:",
+  "alternativas": [
+   "localiza-se sobre o encontro de duas placas convergentes",
+   "fica no Círculo de Fogo do Pacífico",
+   "está sobre uma dorsal oceânica ativa",
+   "está situado na porção central da Placa Sul-Americana, longe de suas bordas",
+   "não está sobre nenhuma placa tectônica"
+  ],
+  "correta": 3,
+  "explicacao": "Vulcanismo e grandes sismos concentram-se nas bordas das placas; o Brasil está no interior da Placa Sul-Americana, região de relativa estabilidade. Os Andes, na borda oeste, são área de alta atividade."
+ },
+ {
+  "id": "ene-be12df20",
+  "area": "Filosofia",
+  "enunciado": "Na Alegoria da Caverna, de Platão, os prisioneiros que veem apenas sombras na parede representam:",
+  "alternativas": [
+   "os filósofos que alcançaram o conhecimento das Ideias",
+   "os governantes justos da cidade",
+   "os deuses que controlam o destino humano",
+   "os sofistas que dominam a matemática",
+   "os que tomam as aparências do mundo sensível pela verdade"
+  ],
+  "correta": 4,
+  "explicacao": "Para Platão, as sombras simbolizam a opinião (doxa) baseada nos sentidos; sair da caverna representa o caminho do conhecimento rumo ao mundo inteligível das Ideias."
+ },
+ {
+  "id": "ene-d2b5125a",
+  "area": "Filosofia",
+  "enunciado": "'Age apenas segundo uma máxima tal que possas ao mesmo tempo querer que ela se torne lei universal.' Essa formulação corresponde:",
+  "alternativas": [
+   "ao imperativo categórico de Kant",
+   "ao princípio da utilidade de Stuart Mill",
+   "ao contrato social de Rousseau",
+   "à vontade de potência de Nietzsche",
+   "à dúvida metódica de Descartes"
+  ],
+  "correta": 0,
+  "explicacao": "Para Kant, a ação moral é incondicionada e deve poder ser universalizada, independentemente de suas consequências, ao contrário do utilitarismo, que julga pelos resultados."
+ },
+ {
+  "id": "ene-6145f4c0",
+  "area": "Filosofia",
+  "enunciado": "Para Aristóteles, a virtude moral consiste, em geral, em:",
+  "alternativas": [
+   "seguir cegamente as leis divinas",
+   "um justo meio entre dois vícios, um por excesso e outro por falta",
+   "eliminar todas as paixões humanas",
+   "buscar o máximo de prazer possível",
+   "obedecer ao governante mais forte"
+  ],
+  "correta": 1,
+  "explicacao": "Na Ética a Nicômaco, a virtude é uma disposição adquirida pelo hábito e situada no meio-termo: a coragem, por exemplo, está entre a covardia (falta) e a temeridade (excesso)."
+ },
+ {
+  "id": "ene-56fe51c0",
+  "area": "Sociologia",
+  "enunciado": "Um servidor público é obedecido não por sua personalidade nem por tradição, mas porque ocupa um cargo definido por normas impessoais. Segundo Max Weber, esse é um exemplo de dominação:",
+  "alternativas": [
+   "carismática",
+   "tradicional",
+   "racional-legal",
+   "patriarcal",
+   "teocrática"
+  ],
+  "correta": 2,
+  "explicacao": "Weber distingue três tipos puros de dominação legítima: tradicional, carismática e racional-legal. Esta última se baseia em regras formais e é típica da burocracia moderna."
+ },
+ {
+  "id": "ene-508ff7af",
+  "area": "Sociologia",
+  "enunciado": "Para Karl Marx, a diferença entre o valor produzido pelo trabalhador e o valor que ele recebe como salário, apropriada pelo capitalista, é chamada de:",
+  "alternativas": [
+   "alienação",
+   "fetichismo da mercadoria",
+   "ideologia",
+   "mais-valia",
+   "luta de classes"
+  ],
+  "correta": 3,
+  "explicacao": "A mais-valia é o trabalho excedente não pago, base da acumulação capitalista. Alienação e fetichismo são conceitos relacionados, mas descrevem outros aspectos da relação de trabalho."
+ },
+ {
+  "id": "ene-8abc118c",
+  "area": "Sociologia",
+  "enunciado": "Um turista considera 'atrasados' os hábitos alimentares de uma comunidade ribeirinha apenas por serem diferentes dos seus. Essa atitude exemplifica:",
+  "alternativas": [
+   "relativismo cultural",
+   "aculturação",
+   "alteridade",
+   "multiculturalismo",
+   "etnocentrismo"
+  ],
+  "correta": 4,
+  "explicacao": "Etnocentrismo é julgar outras culturas tomando a própria como padrão superior. O relativismo cultural, ao contrário, busca compreender cada cultura em seu próprio contexto."
+ },
+ {
+  "id": "ene-ed2b772c",
+  "area": "Português",
+  "enunciado": "Em qual frase o acento grave indicativo de crase está empregado corretamente?",
+  "alternativas": [
+   "Entreguei o documento à diretora.",
+   "Ela começou à estudar cedo.",
+   "Fomos à pé até o porto.",
+   "Enviei a carta à você.",
+   "Ficamos frente à frente."
+  ],
+  "correta": 0,
+  "explicacao": "Há crase quando a preposição 'a' (entregar algo a alguém) se funde ao artigo feminino 'a' (a diretora). Não ocorre crase antes de verbo, de palavra masculina, de pronome de tratamento como 'você' nem entre palavras repetidas."
+ },
+ {
+  "id": "ene-8c1866b7",
+  "area": "Português",
+  "enunciado": "Um poema traz a fala de um personagem nordestino: 'Oxente, visse? Vou arretado pra feira.' O uso dessas expressões exemplifica principalmente a variação linguística:",
+  "alternativas": [
+   "histórica (diacrônica)",
+   "regional (diatópica)",
+   "situacional, por ser um texto formal",
+   "social ligada a jargão profissional",
+   "decorrente de erro gramatical"
+  ],
+  "correta": 1,
+  "explicacao": "'Oxente', 'visse' e 'arretado' são marcas associadas a falares do Nordeste, caracterizando variação geográfica. Variação não é erro, mas diversidade legítima da língua."
+ },
+ {
+  "id": "ene-40499f0e",
+  "area": "Português",
+  "enunciado": "Um verbete de dicionário que explica o significado da palavra 'palavra' tem como função da linguagem predominante a:",
+  "alternativas": [
+   "referencial",
+   "emotiva",
+   "metalinguística",
+   "conativa",
+   "fática"
+  ],
+  "correta": 2,
+  "explicacao": "A função metalinguística ocorre quando o código explica o próprio código, como em dicionários e gramáticas. A referencial foca em informar sobre um assunto externo à língua."
+ },
+ {
+  "id": "ene-686272c1",
+  "area": "Português",
+  "enunciado": "Em 'Embora estivesse cansado, o estudante terminou a prova', a oração introduzida por 'embora' expressa ideia de:",
+  "alternativas": [
+   "causa",
+   "condição",
+   "finalidade",
+   "concessão",
+   "consequência"
+  ],
+  "correta": 3,
+  "explicacao": "'Embora' é conjunção concessiva: apresenta um obstáculo (o cansaço) que não impede o fato principal (terminar a prova)."
+ },
+ {
+  "id": "ene-0d11b644",
+  "area": "Literatura",
+  "enunciado": "Em Dom Casmurro, de Machado de Assis, um dos aspectos centrais da obra é:",
+  "alternativas": [
+   "a idealização romântica do indígena como herói nacional",
+   "a descrição objetiva da seca no sertão nordestino",
+   "a crítica à escravidão feita por um narrador abolicionista",
+   "a exaltação da natureza brasileira em versos parnasianos",
+   "a narração em primeira pessoa por Bentinho, que deixa ambígua a suposta traição de Capitu"
+  ],
+  "correta": 4,
+  "explicacao": "Bento Santiago narra a própria história a partir de seu ponto de vista, e a traição nunca é comprovada; essa ambiguidade é uma marca do Realismo machadiano."
+ },
+ {
+  "id": "ene-9a5b9431",
+  "area": "Literatura",
+  "enunciado": "Vidas Secas (1938), de Graciliano Ramos, que acompanha a família de Fabiano pelo sertão, é representativo:",
+  "alternativas": [
+   "do romance regionalista de 30, na segunda fase do Modernismo",
+   "do Romantismo indianista",
+   "do Arcadismo mineiro",
+   "da poesia concreta",
+   "do Realismo de Machado de Assis"
+  ],
+  "correta": 0,
+  "explicacao": "A obra integra o romance de 30, que denunciava problemas sociais como a seca, a miséria e a opressão, com linguagem seca e enxuta."
+ },
+ {
+  "id": "ene-bf1da4ca",
+  "area": "Literatura",
+  "enunciado": "O romance Dois Irmãos, do escritor amazonense Milton Hatoum, ambientado em Manaus, tem como eixo:",
+  "alternativas": [
+   "a vida de um seringueiro no Acre durante a Revolução Acreana",
+   "a rivalidade entre os gêmeos Yaqub e Omar, numa família de origem libanesa",
+   "a viagem de um herói indígena a São Paulo",
+   "a trajetória de um retirante nordestino no sertão",
+   "a vida da corte portuguesa no Rio de Janeiro"
+  ],
+  "correta": 1,
+  "explicacao": "Hatoum, nascido em Manaus, narra em Dois Irmãos o conflito entre os gêmeos Yaqub e Omar, filhos de Halim e Zana, tendo a cidade de Manaus e suas transformações como pano de fundo."
+ },
+ {
+  "id": "ene-7f818000",
+  "area": "Inglês",
+  "enunciado": "Leia: 'Deforestation in the Amazon releases carbon stored in trees, which contributes to climate change. However, protected areas and Indigenous lands have shown lower deforestation rates.' Segundo o texto, as áreas protegidas e as terras indígenas:",
+  "alternativas": [
+   "são as principais responsáveis pelas emissões de carbono",
+   "impedem totalmente as mudanças climáticas",
+   "têm apresentado taxas menores de desmatamento",
+   "têm árvores que não armazenam carbono",
+   "registram as maiores taxas de desmatamento"
+  ],
+  "correta": 2,
+  "explicacao": "O trecho 'have shown lower deforestation rates' significa 'têm mostrado taxas de desmatamento menores'. O conectivo 'However' introduz o contraste com o problema descrito na primeira frase."
+ },
+ {
+  "id": "ene-fbfb9938",
+  "area": "Inglês",
+  "enunciado": "Leia: 'Many people pretend to understand the terms of service, but few actually read them.' No trecho, a palavra 'pretend' significa:",
+  "alternativas": [
+   "pretender",
+   "entender",
+   "ignorar",
+   "fingir",
+   "prometer"
+  ],
+  "correta": 3,
+  "explicacao": "'Pretend' é falso cognato: significa 'fingir', não 'pretender' (que em inglês seria 'intend'). Também 'actually' significa 'na verdade', e não 'atualmente'."
+ },
+ {
+  "id": "ene-dd8fc321",
+  "area": "Redação",
+  "enunciado": "Na redação do ENEM, qual das situações abaixo leva o texto a receber nota zero?",
+  "alternativas": [
+   "Não colocar título",
+   "Escrever um texto com 20 linhas",
+   "Não citar nenhum filósofo",
+   "Cometer alguns desvios de ortografia",
+   "Fugir totalmente ao tema proposto"
+  ],
+  "correta": 4,
+  "explicacao": "A fuga total ao tema zera a redação, assim como não atender ao tipo dissertativo-argumentativo ou ter até 7 linhas. Título é opcional, e desvios gramaticais apenas reduzem a nota na competência 1."
  }
 ]

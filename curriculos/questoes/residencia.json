@@ -152,5 +152,705 @@
   ],
   "correta": 0,
   "explicacao": "Doutrinários: universalidade, integralidade, equidade. Descentralização, regionalização e hierarquização são princípios organizativos."
+ },
+ {
+  "id": "res-53920861",
+  "area": "Clínica Médica",
+  "enunciado": "Mulher de 70 anos com hiponatremia crônica (Na⁺ 112 mEq/L) recebe correção rápida do sódio e, dois dias depois, evolui com disartria, disfagia e tetraparesia. A complicação mais provável é:",
+  "alternativas": [
+   "Síndrome de desmielinização osmótica",
+   "Edema cerebral por hiponatremia persistente",
+   "Acidente vascular cerebral isquêmico de tronco",
+   "Encefalopatia de Wernicke",
+   "Síndrome de Guillain-Barré"
+  ],
+  "correta": 0,
+  "explicacao": "A correção rápida da hiponatremia crônica causa desmielinização osmótica (mielinólise pontina), com quadro bifásico de disartria, disfagia e tetraparesia; por isso a velocidade de correção deve ser limitada."
+ },
+ {
+  "id": "res-8c625d79",
+  "area": "Clínica Médica",
+  "enunciado": "Paciente renal crônico chega com K⁺ de 7,8 mEq/L e ECG com ondas T apiculadas e alargamento do QRS. A primeira medida, visando proteger o miocárdio, é:",
+  "alternativas": [
+   "Poliestirenossulfonato de cálcio por via oral",
+   "Gluconato de cálcio endovenoso",
+   "Furosemida endovenosa",
+   "Hemodiálise imediata como única medida",
+   "Bicarbonato de sódio como primeira escolha"
+  ],
+  "correta": 1,
+  "explicacao": "Com alteração eletrocardiográfica, o cálcio EV estabiliza a membrana do cardiomiócito em minutos, sem reduzir o potássio; em seguida vêm as medidas que deslocam o K⁺ para dentro da célula (insulina com glicose, beta-2 agonista) e as que o removem."
+ },
+ {
+  "id": "res-a2cbe9d5",
+  "area": "Clínica Médica",
+  "enunciado": "Toracocentese: proteína pleural 4,0 g/dL (sérica 6,0 g/dL); LDH pleural 300 U/L (sérica 250 U/L; limite superior 240 U/L). Pelos critérios de Light, o derrame é:",
+  "alternativas": [
+   "Transudato, pois a relação de proteínas é menor que 1",
+   "Transudato, típico de insuficiência cardíaca",
+   "Exsudato, pois preenche os três critérios de Light",
+   "Exsudato apenas pelo critério da LDH pleural",
+   "Indeterminado, sendo obrigatório dosar o gradiente de albumina"
+  ],
+  "correta": 2,
+  "explicacao": "Light: exsudato se proteína pleural/sérica > 0,5 (aqui 0,67), LDH pleural/sérica > 0,6 (aqui 1,2) ou LDH pleural > 2/3 do limite superior sérico (300 > 160). Basta um critério; este caso preenche os três."
+ },
+ {
+  "id": "res-938bf64a",
+  "area": "Clínica Médica",
+  "enunciado": "Homem de 68 anos com pneumonia comunitária, confuso, FR 34 irpm, PA 110/70 mmHg e ureia 30 mg/dL. Seu escore CURB-65 é:",
+  "alternativas": [
+   "1",
+   "2",
+   "4",
+   "3",
+   "5"
+  ],
+  "correta": 3,
+  "explicacao": "CURB-65: Confusão (1), Ureia > 50 mg/dL (0), FR ≥ 30 (1), PAS < 90 ou PAD ≤ 60 (0), idade ≥ 65 (1) = 3, o que indica pneumonia grave com indicação de internação."
+ },
+ {
+  "id": "res-47c52df8",
+  "area": "Clínica Médica",
+  "enunciado": "Mulher de 35 anos com menorragia, fadiga e anemia microcítica e hipocrômica. O perfil laboratorial esperado na anemia ferropriva é:",
+  "alternativas": [
+   "Ferritina elevada e capacidade total de ligação do ferro baixa",
+   "Ferritina normal e saturação de transferrina elevada",
+   "Ferro sérico elevado e ferritina elevada",
+   "Ferritina baixa e capacidade total de ligação do ferro baixa",
+   "Ferritina baixa e capacidade total de ligação do ferro elevada"
+  ],
+  "correta": 4,
+  "explicacao": "Na ferropenia os estoques caem (ferritina baixa) e a transferrina aumenta (CTLF alta, saturação baixa). Ferritina alta com CTLF baixa sugere anemia de doença crônica."
+ },
+ {
+  "id": "res-d4b2f7e4",
+  "area": "Clínica Médica",
+  "enunciado": "Mulher de 40 anos, assintomática, apresenta TSH 8,5 mUI/L (referência 0,4–4,5) e T4 livre normal, confirmados em nova dosagem. O diagnóstico é:",
+  "alternativas": [
+   "Hipotireoidismo subclínico",
+   "Hipotireoidismo primário franco",
+   "Hipotireoidismo central",
+   "Hipertireoidismo subclínico",
+   "Síndrome do eutireoidiano doente"
+  ],
+  "correta": 0,
+  "explicacao": "TSH elevado com T4 livre normal define hipotireoidismo subclínico; TSH alto com T4 livre baixo é hipotireoidismo primário franco; TSH baixo/normal com T4 livre baixo sugere causa central."
+ },
+ {
+  "id": "res-23e6a1e9",
+  "area": "Clínica Médica",
+  "enunciado": "Adulto com edema generalizado, albumina sérica de 2,0 g/dL e colesterol elevado. Qual achado urinário completa a definição de síndrome nefrótica?",
+  "alternativas": [
+   "Hematúria dismórfica com cilindros hemáticos",
+   "Proteinúria acima de 3,5 g/24 h",
+   "Proteinúria entre 150 e 300 mg/24 h",
+   "Leucocitúria com cilindros leucocitários",
+   "Glicosúria com glicemia normal"
+  ],
+  "correta": 1,
+  "explicacao": "Síndrome nefrótica: proteinúria > 3,5 g/24 h (no adulto), hipoalbuminemia, edema e dislipidemia. Hematúria dismórfica com cilindros hemáticos caracteriza síndrome nefrítica."
+ },
+ {
+  "id": "res-fea5e4d7",
+  "area": "Clínica Médica",
+  "enunciado": "Homem de 58 anos com dor torácica há 1 hora. O ECG mostra supradesnivelamento do segmento ST em DII, DIII e aVF. A parede acometida é a:",
+  "alternativas": [
+   "Anterior extensa",
+   "Lateral alta",
+   "Inferior",
+   "Septal",
+   "Posterior isolada"
+  ],
+  "correta": 2,
+  "explicacao": "DII, DIII e aVF exploram a parede inferior, geralmente irrigada pela coronária direita. V1–V4 correspondem à parede anterosseptal e DI/aVL à lateral alta."
+ },
+ {
+  "id": "res-b3ec8e48",
+  "area": "Clínica Médica",
+  "enunciado": "Jovem com febre, cefaleia e rigidez de nuca. Líquor turvo com 2.500 células/mm³ (90% neutrófilos), glicose de 20 mg/dL (glicemia 100 mg/dL) e proteína de 250 mg/dL. O padrão é mais compatível com meningite:",
+  "alternativas": [
+   "Viral",
+   "Tuberculosa",
+   "Fúngica criptocócica",
+   "Bacteriana",
+   "Carcinomatosa"
+  ],
+  "correta": 3,
+  "explicacao": "Pleocitose neutrofílica intensa, glicose baixa (relação líquor/sangue < 0,4) e proteína alta caracterizam meningite bacteriana. A viral tem predomínio linfocitário e glicose normal; a tuberculosa, linfócitos com glicose baixa e evolução subaguda."
+ },
+ {
+  "id": "res-7eb4f1dd",
+  "area": "Clínica Médica",
+  "enunciado": "Adulto com diagnóstico novo de tuberculose pulmonar, sem tratamento prévio. Pelo Manual de Recomendações para o Controle da Tuberculose do Ministério da Saúde, o esquema básico é:",
+  "alternativas": [
+   "6 meses de rifampicina, isoniazida e pirazinamida",
+   "2 meses de rifampicina e isoniazida, seguidos de 4 meses de etambutol",
+   "9 meses de isoniazida isolada",
+   "12 meses de rifampicina, isoniazida, pirazinamida e etambutol",
+   "2 meses de rifampicina, isoniazida, pirazinamida e etambutol, seguidos de 4 meses de rifampicina e isoniazida"
+  ],
+  "correta": 4,
+  "explicacao": "O esquema básico brasileiro para adultos é 2RHZE/4RH: fase intensiva de 2 meses com quatro fármacos e fase de manutenção de 4 meses com rifampicina e isoniazida."
+ },
+ {
+  "id": "res-bb2bc86e",
+  "area": "Clínica Médica",
+  "enunciado": "Gasometria: pH 7,25; pCO₂ 29 mmHg; HCO₃⁻ 14 mEq/L. Na⁺ 140, Cl⁻ 104 mEq/L. A interpretação correta é:",
+  "alternativas": [
+   "Acidose metabólica com ânion gap aumentado e compensação respiratória adequada",
+   "Acidose metabólica hiperclorêmica com ânion gap normal",
+   "Acidose respiratória aguda",
+   "Acidose metabólica associada a acidose respiratória",
+   "Alcalose respiratória com compensação metabólica"
+  ],
+  "correta": 0,
+  "explicacao": "Ânion gap = 140 − (104 + 14) = 22 (aumentado). Pela fórmula de Winters, pCO₂ esperada = 1,5 × 14 + 8 = 29 ± 2; a pCO₂ medida (29) indica compensação respiratória adequada."
+ },
+ {
+  "id": "res-9c606336",
+  "area": "Clínica Médica",
+  "enunciado": "Tabagista de 60 anos com dispneia progressiva e tosse crônica. Qual achado espirométrico confirma limitação persistente ao fluxo aéreo compatível com DPOC?",
+  "alternativas": [
+   "Relação VEF1/CVF < 0,70 apenas antes do broncodilatador",
+   "Relação VEF1/CVF < 0,70 após broncodilatador",
+   "Aumento do VEF1 de 20% após broncodilatador",
+   "CVF reduzida com relação VEF1/CVF aumentada",
+   "Capacidade de difusão do CO aumentada"
+  ],
+  "correta": 1,
+  "explicacao": "Segundo a GOLD, o diagnóstico exige VEF1/CVF < 0,70 pós-broncodilatador. CVF reduzida com relação preservada ou aumentada sugere distúrbio restritivo."
+ },
+ {
+  "id": "res-5523c7de",
+  "area": "Cirurgia",
+  "enunciado": "Homem de 70 kg sofre queimadura de 2º e 3º graus em 30% da superfície corporal, além de 10% de queimadura de 1º grau. Pela fórmula de Parkland (4 mL × kg × %SCQ), o volume de cristaloide a infundir nas primeiras 8 horas após a queimadura é:",
+  "alternativas": [
+   "8.400 mL",
+   "5.600 mL",
+   "4.200 mL",
+   "2.800 mL",
+   "11.200 mL"
+  ],
+  "correta": 2,
+  "explicacao": "Considera-se só a área de 2º e 3º graus: 4 × 70 × 30 = 8.400 mL em 24 h, metade (4.200 mL) nas primeiras 8 h a partir do momento da queimadura. A 10ª edição do ATLS propõe iniciar com 2 mL/kg/%SCQ em adultos, ajustando pela diurese."
+ },
+ {
+  "id": "res-6873edc4",
+  "area": "Cirurgia",
+  "enunciado": "Vítima de trauma craniano abre os olhos apenas à pressão/estímulo doloroso, fala palavras inapropriadas e localiza o estímulo doloroso. Sua pontuação na Escala de Coma de Glasgow é:",
+  "alternativas": [
+   "8",
+   "9",
+   "11",
+   "10",
+   "12"
+  ],
+  "correta": 3,
+  "explicacao": "Abertura ocular à pressão = 2; resposta verbal com palavras inapropriadas = 3; resposta motora que localiza = 5. Total: 10."
+ },
+ {
+  "id": "res-41922d8e",
+  "area": "Cirurgia",
+  "enunciado": "Politraumatizado com taquicardia importante, hipotensão, pulso fino, ansiedade, confusão e débito urinário reduzido. Pela classificação do choque hemorrágico do ATLS, a perda volêmica estimada é de:",
+  "alternativas": [
+   "Até 15% (classe I)",
+   "15% a 30% (classe II)",
+   "Mais de 40% (classe IV)",
+   "Menos de 5%, sem repercussão clínica",
+   "30% a 40% (classe III)"
+  ],
+  "correta": 4,
+  "explicacao": "A classe III (30–40%) é a primeira com queda da pressão arterial, além de taquicardia acentuada, confusão e oligúria. Na classe II a PA ainda está preservada; na classe IV há hipotensão grave, letargia e diurese mínima."
+ },
+ {
+  "id": "res-c0790836",
+  "area": "Cirurgia",
+  "enunciado": "Após ferimento no tórax, paciente evolui com dispneia intensa, hipotensão, turgência jugular, desvio da traqueia para a esquerda e murmúrio vesicular abolido à direita. A conduta imediata é:",
+  "alternativas": [
+   "Descompressão torácica imediata do lado direito, sem aguardar exame de imagem",
+   "Radiografia de tórax para confirmar o diagnóstico",
+   "Pericardiocentese",
+   "Intubação orotraqueal e ventilação com pressão positiva antes de qualquer outra medida",
+   "Toracotomia de reanimação no centro cirúrgico"
+  ],
+  "correta": 0,
+  "explicacao": "O quadro é de pneumotórax hipertensivo, cujo diagnóstico é clínico. O ATLS recomenda descompressão imediata (agulha ou digital) seguida de drenagem em selo d'água; aguardar imagem ou ventilar com pressão positiva antes piora o quadro."
+ },
+ {
+  "id": "res-3303de46",
+  "area": "Cirurgia",
+  "enunciado": "Durante herniorrafia inguinal, o cirurgião encontra saco herniário que emerge lateralmente aos vasos epigástricos inferiores, através do anel inguinal profundo. Trata-se de hérnia:",
+  "alternativas": [
+   "Inguinal direta",
+   "Inguinal indireta",
+   "Femoral",
+   "Umbilical",
+   "De Spiegel"
+  ],
+  "correta": 1,
+  "explicacao": "A hérnia indireta passa pelo anel inguinal profundo, lateral aos vasos epigástricos inferiores. A direta protrui pelo triângulo de Hesselbach, medial a esses vasos; a femoral fica abaixo do ligamento inguinal."
+ },
+ {
+  "id": "res-85bf277a",
+  "area": "Cirurgia",
+  "enunciado": "Mulher de 45 anos com dor em hipocôndrio direito há 2 dias, febre e parada da inspiração à palpação profunda do hipocôndrio direito. O exame de imagem inicial de escolha é:",
+  "alternativas": [
+   "Tomografia computadorizada de abdome com contraste",
+   "Colangiorressonância",
+   "Ultrassonografia de abdome",
+   "Colangiopancreatografia retrógrada endoscópica",
+   "Radiografia simples de abdome"
+  ],
+  "correta": 2,
+  "explicacao": "O sinal de Murphy sugere colecistite aguda. A ultrassonografia é o exame inicial (Diretrizes de Tóquio): barata, sem radiação e sensível para cálculos, espessamento da parede e líquido perivesicular."
+ },
+ {
+  "id": "res-0ff88a16",
+  "area": "Cirurgia",
+  "enunciado": "Homem de 55 anos com antecedente de colectomia há 5 anos apresenta dor abdominal em cólica, vômitos, distensão e parada de eliminação de gases e fezes. A causa mais provável da obstrução é:",
+  "alternativas": [
+   "Neoplasia de intestino delgado",
+   "Hérnia interna congênita",
+   "Íleo biliar",
+   "Aderências (bridas) pós-operatórias",
+   "Volvo de sigmoide"
+  ],
+  "correta": 3,
+  "explicacao": "As aderências pós-operatórias são a principal causa de obstrução de intestino delgado em adultos com cirurgia abdominal prévia; hérnias e neoplasias vêm em seguida."
+ },
+ {
+  "id": "res-b3d648ff",
+  "area": "Cirurgia",
+  "enunciado": "Paciente com coledocolitíase conhecida apresenta febre com calafrios, icterícia e dor em hipocôndrio direito, evoluindo com hipotensão e confusão mental. O diagnóstico é:",
+  "alternativas": [
+   "Colecistite aguda não complicada",
+   "Pancreatite aguda leve",
+   "Hepatite viral aguda",
+   "Abscesso hepático amebiano",
+   "Colangite aguda grave (pêntade de Reynolds)"
+  ],
+  "correta": 4,
+  "explicacao": "Febre, icterícia e dor em hipocôndrio direito formam a tríade de Charcot da colangite; somadas a hipotensão e alteração do estado mental formam a pêntade de Reynolds, que indica colangite grave com necessidade de drenagem biliar urgente."
+ },
+ {
+  "id": "res-f7a696e7",
+  "area": "Cirurgia",
+  "enunciado": "Vítima de ferimento por arma branca em região precordial apresenta hipotensão, turgência jugular e bulhas cardíacas abafadas, com murmúrio vesicular presente e simétrico. A principal hipótese é:",
+  "alternativas": [
+   "Tamponamento cardíaco",
+   "Pneumotórax hipertensivo",
+   "Hemotórax maciço",
+   "Contusão pulmonar",
+   "Choque neurogênico"
+  ],
+  "correta": 0,
+  "explicacao": "Hipotensão, turgência jugular e abafamento de bulhas compõem a tríade de Beck. Murmúrio simétrico afasta pneumotórax hipertensivo e hemotórax maciço, que causariam murmúrio abolido de um lado."
+ },
+ {
+  "id": "res-162b9bc1",
+  "area": "Cirurgia",
+  "enunciado": "Pela classificação de Atlanta revisada (2012), o diagnóstico de pancreatite aguda exige:",
+  "alternativas": [
+   "Obrigatoriamente tomografia com necrose pancreática",
+   "Pelo menos dois de três critérios: dor abdominal típica, amilase ou lipase ≥ 3 vezes o limite superior e achados de imagem característicos",
+   "Lipase acima de 10 vezes o limite superior, isoladamente",
+   "Presença de sinal de Cullen ou de Grey-Turner",
+   "Três ou mais critérios de Ranson na admissão"
+  ],
+  "correta": 1,
+  "explicacao": "Atlanta revisada: dois de três critérios (dor típica; amilase/lipase ≥ 3× o limite superior; imagem compatível). Ranson avalia gravidade, não diagnóstico, e os sinais de Cullen e Grey-Turner são raros e inespecíficos."
+ },
+ {
+  "id": "res-0e8a6af8",
+  "area": "Pediatria",
+  "enunciado": "Lactente de 4 meses, no inverno, com coriza há 3 dias, seguida de taquipneia, tiragem subcostal, sibilos e crepitações difusas. O agente etiológico mais provável é:",
+  "alternativas": [
+   "Streptococcus pneumoniae",
+   "Mycoplasma pneumoniae",
+   "Vírus sincicial respiratório",
+   "Adenovírus",
+   "Bordetella pertussis"
+  ],
+  "correta": 2,
+  "explicacao": "O quadro é de bronquiolite viral aguda, primeiro episódio de sibilância no lactente, cujo principal agente é o vírus sincicial respiratório, com pico no outono e inverno."
+ },
+ {
+  "id": "res-7c1e8d52",
+  "area": "Pediatria",
+  "enunciado": "Criança de 2 anos com diarreia aguda, irritada, com sede intensa, olhos fundos e sinal da prega que desaparece lentamente, sem sinais de gravidade, aceitando líquidos pela boca. Pelo manejo do Ministério da Saúde, a conduta é:",
+  "alternativas": [
+   "Plano A: tratamento domiciliar com aumento da oferta de líquidos",
+   "Plano C: hidratação venosa imediata",
+   "Jejum e hidratação venosa de manutenção",
+   "Plano B: terapia de reidratação oral com sais de reidratação oral na unidade de saúde",
+   "Antibiótico empírico e antidiarreico"
+  ],
+  "correta": 3,
+  "explicacao": "Dois ou mais sinais (irritabilidade, sede, olhos fundos, prega que desaparece lentamente) indicam desidratação, tratada com o Plano B (SRO sob supervisão na unidade). O Plano C é para desidratação grave (letargia, prega muito lenta, incapacidade de beber)."
+ },
+ {
+  "id": "res-2ee0c524",
+  "area": "Pediatria",
+  "enunciado": "Recém-nascido a termo apresenta icterícia visível com 18 horas de vida. A conduta mais adequada é:",
+  "alternativas": [
+   "Tranquilizar a mãe, pois se trata de icterícia fisiológica",
+   "Suspender o aleitamento materno por 48 horas",
+   "Expor o recém-nascido ao sol em casa",
+   "Aguardar a alta e reavaliar na consulta da primeira semana",
+   "Considerar a icterícia patológica e investigar hemólise, com dosagem de bilirrubinas"
+  ],
+  "correta": 4,
+  "explicacao": "Icterícia nas primeiras 24 horas de vida é sempre patológica, geralmente por hemólise (incompatibilidade ABO/Rh). A fisiológica surge após 24 horas."
+ },
+ {
+  "id": "res-061df4bc",
+  "area": "Pediatria",
+  "enunciado": "No 5º minuto de vida, um recém-nascido tem frequência cardíaca de 120 bpm, choro forte, flexão ativa dos membros, careta ao estímulo da sonda nasal e extremidades cianóticas com corpo róseo. O boletim de Apgar é:",
+  "alternativas": [
+   "8",
+   "6",
+   "7",
+   "9",
+   "10"
+  ],
+  "correta": 0,
+  "explicacao": "FC > 100 = 2; choro forte = 2; flexão ativa = 2; careta = 1; acrocianose = 1. Total: 8."
+ },
+ {
+  "id": "res-65c66e7f",
+  "area": "Pediatria",
+  "enunciado": "Menino de 4 anos com edema palpebral e de membros inferiores, proteinúria maciça, albumina de 1,8 g/dL, PA normal e sem hematúria. A causa mais provável é:",
+  "alternativas": [
+   "Glomerulonefrite pós-estreptocócica",
+   "Doença de lesões mínimas",
+   "Nefropatia membranosa",
+   "Glomerulonefrite membranoproliferativa",
+   "Nefropatia por IgA"
+  ],
+  "correta": 1,
+  "explicacao": "A doença de lesões mínimas responde pela maioria das síndromes nefróticas entre 1 e 10 anos e costuma ser corticossensível. A pós-estreptocócica e a nefropatia por IgA são nefríticas, com hematúria."
+ },
+ {
+  "id": "res-a71a87fe",
+  "area": "Pediatria",
+  "enunciado": "Criança de 2 anos com coriza há 2 dias acorda à noite com tosse ladrante, rouquidão e estridor inspiratório. O agente mais frequentemente envolvido é:",
+  "alternativas": [
+   "Haemophilus influenzae tipo b",
+   "Staphylococcus aureus",
+   "Vírus parainfluenza",
+   "Vírus sincicial respiratório",
+   "Streptococcus pyogenes"
+  ],
+  "correta": 2,
+  "explicacao": "O quadro é de laringotraqueíte viral (crupe), cuja principal causa é o parainfluenza. O Haemophilus influenzae tipo b causa epiglotite, com toxemia, sialorreia e sem tosse ladrante."
+ },
+ {
+  "id": "res-af83c75f",
+  "area": "Pediatria",
+  "enunciado": "Criança de 3 anos com febre há 6 dias, conjuntivite não exsudativa bilateral, lábios fissurados, língua em framboesa, edema de mãos e pés e linfonodo cervical de 2 cm. A complicação mais temida dessa doença é:",
+  "alternativas": [
+   "Glomerulonefrite rapidamente progressiva",
+   "Encefalite",
+   "Insuficiência hepática aguda",
+   "Aneurisma de artérias coronárias",
+   "Artrite séptica"
+  ],
+  "correta": 3,
+  "explicacao": "É a doença de Kawasaki, vasculite de médios vasos cuja complicação mais importante são os aneurismas coronarianos; o tratamento com imunoglobulina endovenosa e AAS reduz esse risco."
+ },
+ {
+  "id": "res-66649a88",
+  "area": "Pediatria",
+  "enunciado": "Lactente de 4 semanas, do sexo masculino, com vômitos não biliosos em jato após as mamadas, fome logo após vomitar e perda de peso. O distúrbio metabólico esperado é:",
+  "alternativas": [
+   "Acidose metabólica hiperclorêmica",
+   "Acidose metabólica com ânion gap aumentado",
+   "Alcalose respiratória",
+   "Hipercalemia com acidose",
+   "Alcalose metabólica hipoclorêmica e hipocalêmica"
+  ],
+  "correta": 4,
+  "explicacao": "Na estenose hipertrófica do piloro, a perda de ácido clorídrico pelos vômitos causa alcalose metabólica hipoclorêmica, e a hipocalemia decorre da perda renal de potássio por hiperaldosteronismo secundário."
+ },
+ {
+  "id": "res-98247263",
+  "area": "Pediatria",
+  "enunciado": "Lactente de 10 meses com febre alta há 3 dias, em bom estado geral. No dia em que a febre cessa, surge exantema maculopapular róseo em tronco. A principal hipótese é:",
+  "alternativas": [
+   "Exantema súbito (roséola), pelo herpesvírus humano 6",
+   "Sarampo",
+   "Escarlatina",
+   "Eritema infeccioso, pelo parvovírus B19",
+   "Rubéola"
+  ],
+  "correta": 0,
+  "explicacao": "O exantema súbito caracteriza-se por febre alta por 3 a 5 dias com exantema que aparece após a defervescência, típico de lactentes, causado pelo HHV-6 (e HHV-7). No sarampo e na escarlatina o exantema surge com febre."
+ },
+ {
+  "id": "res-04a21f49",
+  "area": "Pediatria",
+  "enunciado": "Segundo a OMS e o Ministério da Saúde, o aleitamento materno deve ser:",
+  "alternativas": [
+   "Exclusivo até os 4 meses e complementado até 1 ano",
+   "Exclusivo até os 6 meses e complementado até 2 anos ou mais",
+   "Exclusivo até os 12 meses",
+   "Exclusivo até os 6 meses e interrompido com a introdução alimentar",
+   "Complementado com água e chás desde o 1º mês"
+  ],
+  "correta": 1,
+  "explicacao": "Recomenda-se aleitamento materno exclusivo até os 6 meses, sem água ou chás, e mantido com alimentação complementar até 2 anos ou mais."
+ },
+ {
+  "id": "res-51600c9b",
+  "area": "Ginecologia e Obstetrícia",
+  "enunciado": "Gestante de 33 semanas com sangramento vaginal vermelho vivo, indolor, de início súbito, útero com tônus normal e BCF presentes. A principal hipótese e o cuidado ao exame são:",
+  "alternativas": [
+   "Descolamento prematuro de placenta; amniotomia imediata",
+   "Rotura uterina; laparotomia imediata",
+   "Placenta prévia; evitar o toque vaginal até avaliar a localização placentária por ultrassonografia",
+   "Vasa prévia; toque vaginal para avaliar o colo",
+   "Trabalho de parto prematuro; tocólise e toque vaginal seriado"
+  ],
+  "correta": 2,
+  "explicacao": "Sangramento vermelho vivo, indolor e com útero relaxado sugere placenta prévia. O toque vaginal pode provocar hemorragia grave e deve ser evitado até a ultrassonografia definir a posição da placenta."
+ },
+ {
+  "id": "res-45b1eb4c",
+  "area": "Ginecologia e Obstetrícia",
+  "enunciado": "Gestante de 35 semanas, hipertensa crônica, com dor abdominal súbita e intensa, sangramento vaginal escuro, útero hipertônico e BCF de 100 bpm. O diagnóstico mais provável é:",
+  "alternativas": [
+   "Placenta prévia",
+   "Trabalho de parto fisiológico",
+   "Rotura prematura de membranas",
+   "Descolamento prematuro de placenta",
+   "Apendicite aguda na gestação"
+  ],
+  "correta": 3,
+  "explicacao": "Dor súbita, hipertonia uterina, sangramento escuro e sofrimento fetal, com hipertensão como principal fator de risco, caracterizam o descolamento prematuro de placenta."
+ },
+ {
+  "id": "res-9b60b71a",
+  "area": "Ginecologia e Obstetrícia",
+  "enunciado": "Mulher de 28 anos com atraso menstrual de 7 semanas, dor pélvica intensa, hipotensão e taquicardia. β-hCG positivo, ultrassonografia sem saco gestacional intrauterino e grande quantidade de líquido livre na cavidade. A conduta é:",
+  "alternativas": [
+   "Metotrexato intramuscular",
+   "Conduta expectante com β-hCG seriado",
+   "Curetagem uterina",
+   "Repetir a ultrassonografia em 48 horas",
+   "Cirurgia imediata"
+  ],
+  "correta": 4,
+  "explicacao": "É gravidez ectópica rota com instabilidade hemodinâmica, o que exige cirurgia imediata. Metotrexato e conduta expectante só cabem em pacientes estáveis, com massa íntegra."
+ },
+ {
+  "id": "res-d5c77329",
+  "area": "Ginecologia e Obstetrícia",
+  "enunciado": "Gestante com VDRL reagente e teste treponêmico positivo, sem alergia conhecida. O único tratamento considerado adequado para prevenir a sífilis congênita é:",
+  "alternativas": [
+   "Penicilina G benzatina",
+   "Ceftriaxona",
+   "Azitromicina",
+   "Doxiciclina",
+   "Eritromicina"
+  ],
+  "correta": 0,
+  "explicacao": "Para o Ministério da Saúde, só a penicilina benzatina (iniciada até 30 dias antes do parto) trata adequadamente o feto. Outros antimicrobianos não previnem a sífilis congênita; em caso de alergia, faz-se dessensibilização."
+ },
+ {
+  "id": "res-4180a88b",
+  "area": "Ginecologia e Obstetrícia",
+  "enunciado": "Puérpera evolui com sangramento volumoso logo após a dequitação, com útero amolecido e acima da cicatriz umbilical. A causa mais comum de hemorragia pós-parto, compatível com o quadro, é:",
+  "alternativas": [
+   "Retenção de restos placentários",
+   "Atonia uterina",
+   "Laceração de trajeto",
+   "Coagulopatia",
+   "Inversão uterina"
+  ],
+  "correta": 1,
+  "explicacao": "Dos \"4 T\" (tônus, trauma, tecido, trombina), o tônus, isto é, a atonia uterina, é a causa mais frequente. Útero amolecido e aumentado confirma o mecanismo; as primeiras medidas são massagem uterina e uterotônicos, com ocitocina como primeira escolha."
+ },
+ {
+  "id": "res-1a81202d",
+  "area": "Ginecologia e Obstetrícia",
+  "enunciado": "Mulher de 20 anos com 11 semanas de atraso menstrual, sangramento vaginal, útero maior que o esperado para a idade gestacional, β-hCG muito elevado e ultrassonografia com imagem em \"flocos de neve\", sem embrião. O diagnóstico e o seguimento são:",
+  "alternativas": [
+   "Abortamento retido; misoprostol e alta sem seguimento",
+   "Gestação gemelar; pré-natal de alto risco",
+   "Mola hidatiforme completa; esvaziamento uterino e dosagem seriada de β-hCG",
+   "Gravidez ectópica; metotrexato",
+   "Mioma uterino; miomectomia"
+  ],
+  "correta": 2,
+  "explicacao": "Útero aumentado, β-hCG muito alto e imagem em flocos de neve sem embrião caracterizam mola completa. Trata-se com esvaziamento (preferencialmente por aspiração) e segue-se com β-hCG seriado até normalizar, para detectar neoplasia trofoblástica gestacional."
+ },
+ {
+  "id": "res-07e7fe47",
+  "area": "Ginecologia e Obstetrícia",
+  "enunciado": "Mulher de 24 anos com ciclos a cada 60–90 dias e hirsutismo, sem outras causas de hiperandrogenismo. Pelos critérios de Rotterdam, o diagnóstico de síndrome dos ovários policísticos:",
+  "alternativas": [
+   "Exige ultrassonografia com ovários policísticos, obrigatoriamente",
+   "Exige resistência insulínica comprovada",
+   "Exige obesidade associada",
+   "Já pode ser feito, pois há dois dos três critérios",
+   "Não pode ser feito sem LH/FSH maior que 2"
+  ],
+  "correta": 3,
+  "explicacao": "Rotterdam: dois de três critérios (oligo/anovulação, hiperandrogenismo clínico ou laboratorial, morfologia policística à ultrassonografia), após excluir outras causas. Resistência insulínica, obesidade e relação LH/FSH não são critérios."
+ },
+ {
+  "id": "res-31ff7aa0",
+  "area": "Ginecologia e Obstetrícia",
+  "enunciado": "Puérpera Rh negativo, com Coombs indireto negativo durante a gestação, tem recém-nascido Rh positivo. A conduta para prevenir aloimunização é:",
+  "alternativas": [
+   "Nenhuma, pois o Coombs indireto foi negativo",
+   "Imunoglobulina anti-D apenas se o Coombs direto do RN for positivo",
+   "Exsanguineotransfusão profilática do recém-nascido",
+   "Imunoglobulina anti-D somente na próxima gestação",
+   "Imunoglobulina anti-D até 72 horas após o parto"
+  ],
+  "correta": 4,
+  "explicacao": "Mãe Rh negativo não sensibilizada (Coombs indireto negativo) com RN Rh positivo deve receber imunoglobulina anti-D em até 72 horas. Se já estiver sensibilizada, a imunoglobulina não tem mais efeito."
+ },
+ {
+  "id": "res-4c7767b9",
+  "area": "Ginecologia e Obstetrícia",
+  "enunciado": "Mulher com corrimento acinzentado, homogêneo e com odor de peixe que piora após a relação sexual, pH vaginal de 5,0, teste das aminas positivo e clue cells à microscopia. O diagnóstico e o tratamento são:",
+  "alternativas": [
+   "Vaginose bacteriana; metronidazol",
+   "Candidíase vulvovaginal; fluconazol",
+   "Tricomoníase; tratamento apenas da parceria",
+   "Vaginite atrófica; estrogênio tópico",
+   "Cervicite gonocócica; ceftriaxona"
+  ],
+  "correta": 0,
+  "explicacao": "Os critérios de Amsel (corrimento homogêneo, pH > 4,5, teste das aminas positivo, clue cells; três de quatro) confirmam vaginose bacteriana, tratada com metronidazol. A candidíase tem pH < 4,5 e corrimento grumoso."
+ },
+ {
+  "id": "res-b63e3a89",
+  "area": "Medicina Preventiva",
+  "enunciado": "Um teste com sensibilidade de 90% e especificidade de 90% é aplicado a 1.000 pessoas, numa população com prevalência de 10% da doença. O valor preditivo positivo é:",
+  "alternativas": [
+   "90%",
+   "50%",
+   "10%",
+   "81%",
+   "98,8%"
+  ],
+  "correta": 1,
+  "explicacao": "Doentes: 100 (90 VP, 10 FN). Sadios: 900 (810 VN, 90 FP). VPP = 90/(90 + 90) = 50%. O VPN seria 810/820 ≈ 98,8%; a baixa prevalência derruba o VPP."
+ },
+ {
+  "id": "res-b1ebedba",
+  "area": "Medicina Preventiva",
+  "enunciado": "Num ensaio clínico, o desfecho ocorreu em 20% do grupo controle e em 15% do grupo tratado. O número necessário para tratar (NNT) para evitar um desfecho é:",
+  "alternativas": [
+   "5",
+   "4",
+   "20",
+   "15",
+   "25"
+  ],
+  "correta": 2,
+  "explicacao": "Redução absoluta do risco = 20% − 15% = 5% (0,05); NNT = 1/0,05 = 20. A redução relativa do risco seria de 25%."
+ },
+ {
+  "id": "res-33d4cacf",
+  "area": "Medicina Preventiva",
+  "enunciado": "Num estudo caso-controle, entre 100 casos, 60 foram expostos ao fator; entre 100 controles, 30 foram expostos. A medida de associação adequada e seu valor são:",
+  "alternativas": [
+   "Risco relativo de 2,0",
+   "Risco relativo de 3,5",
+   "Odds ratio de 2,0",
+   "Odds ratio de 3,5",
+   "Incidência de 60% nos expostos"
+  ],
+  "correta": 3,
+  "explicacao": "No caso-controle não se calcula incidência nem risco relativo; usa-se a odds ratio = (60 × 70)/(40 × 30) = 4.200/1.200 = 3,5."
+ },
+ {
+  "id": "res-8ce34aec",
+  "area": "Medicina Preventiva",
+  "enunciado": "Um novo tratamento prolonga a sobrevida de pacientes com uma doença crônica, mas não a cura. Mantida a incidência, espera-se que a prevalência:",
+  "alternativas": [
+   "Diminua",
+   "Permaneça inalterada",
+   "Caia a zero",
+   "Iguale-se à incidência",
+   "Aumente"
+  ],
+  "correta": 4,
+  "explicacao": "Em situação estável, prevalência ≈ incidência × duração média da doença. Prolongar a sobrevida sem curar aumenta a duração e, portanto, a prevalência."
+ },
+ {
+  "id": "res-d440cf32",
+  "area": "Medicina Preventiva",
+  "enunciado": "Pesquisadores selecionam trabalhadores sem câncer de pulmão, classificam-nos como expostos ou não expostos ao amianto e os acompanham por 20 anos, comparando a incidência de câncer entre os grupos. O desenho do estudo é:",
+  "alternativas": [
+   "Coorte",
+   "Caso-controle",
+   "Transversal",
+   "Ecológico",
+   "Ensaio clínico randomizado"
+  ],
+  "correta": 0,
+  "explicacao": "Partir da exposição em pessoas livres da doença e segui-las para medir a incidência define o estudo de coorte, que permite calcular o risco relativo. No caso-controle, parte-se da doença para investigar exposições passadas."
+ },
+ {
+  "id": "res-75c991a9",
+  "area": "Medicina Preventiva",
+  "enunciado": "Pela Lei 8.142/1990, a Conferência de Saúde, que avalia a situação de saúde e propõe diretrizes para a política de saúde, reúne-se:",
+  "alternativas": [
+   "Mensalmente, em caráter deliberativo permanente",
+   "A cada 4 anos, com representação dos vários segmentos sociais",
+   "A cada 2 anos, apenas com gestores",
+   "Anualmente, com membros indicados pelo Ministério da Saúde",
+   "Somente quando convocada pelo Congresso Nacional"
+  ],
+  "correta": 1,
+  "explicacao": "A Lei 8.142/1990 define a Conferência de Saúde (a cada 4 anos) e o Conselho de Saúde (permanente e deliberativo), com representação paritária dos usuários em relação aos demais segmentos."
+ },
+ {
+  "id": "res-2d9d331f",
+  "area": "Medicina Preventiva",
+  "enunciado": "Médico de família evita solicitar exames desnecessários a um paciente ansioso e assintomático, protegendo-o de sobrediagnóstico e intervenções excessivas. Esse é um exemplo de prevenção:",
+  "alternativas": [
+   "Primária",
+   "Secundária",
+   "Quaternária",
+   "Terciária",
+   "Primordial"
+  ],
+  "correta": 2,
+  "explicacao": "A prevenção quaternária (Jamoulle) busca identificar pessoas em risco de medicalização excessiva e protegê-las de intervenções desnecessárias e de iatrogenia."
+ },
+ {
+  "id": "res-f21c97df",
+  "area": "Medicina Preventiva",
+  "enunciado": "Um programa de rastreamento de câncer mostra maior sobrevida a partir do diagnóstico nos casos detectados no rastreamento, mas a mortalidade pela doença não muda. O viés que melhor explica o achado é:",
+  "alternativas": [
+   "Viés de memória",
+   "Viés de confusão por idade",
+   "Viés do entrevistador",
+   "Viés de tempo de antecipação (lead-time)",
+   "Viés de publicação"
+  ],
+  "correta": 3,
+  "explicacao": "O rastreamento antecipa o diagnóstico, e o tempo de sobrevida medido a partir dele aumenta mesmo sem mudar a data do óbito. Por isso, o desfecho adequado para avaliar rastreamento é a mortalidade."
+ },
+ {
+  "id": "res-808bdcee",
+  "area": "Medicina Preventiva",
+  "enunciado": "Um município registrou, em um ano, 2.000 nascidos vivos, 30 óbitos de menores de 1 ano (12 deles no período neonatal) e 10 óbitos fetais. O coeficiente de mortalidade infantil é:",
+  "alternativas": [
+   "6 por 1.000 nascidos vivos",
+   "20 por 1.000 nascidos vivos",
+   "9 por 1.000 nascidos vivos",
+   "19,6 por 1.000 nascimentos",
+   "15 por 1.000 nascidos vivos"
+  ],
+  "correta": 4,
+  "explicacao": "Coeficiente de mortalidade infantil = óbitos de menores de 1 ano / nascidos vivos × 1.000 = 30/2.000 × 1.000 = 15. Óbitos fetais não entram, e 12/2.000 = 6 seria o componente neonatal."
  }
 ]

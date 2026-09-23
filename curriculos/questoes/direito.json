@@ -166,5 +166,635 @@
   ],
   "correta": 1,
   "explicacao": "Art. 130 da CLT: a cada 12 meses (período aquisitivo), até 30 dias, conforme faltas."
+ },
+ {
+  "id": "dir-775adf8a",
+  "area": "Introdução ao Direito",
+  "enunciado": "Salvo disposição em contrário, a lei começa a vigorar em todo o país:",
+  "alternativas": [
+   "45 dias depois de oficialmente publicada",
+   "Na data de sua publicação",
+   "30 dias depois de oficialmente publicada",
+   "90 dias depois de oficialmente publicada",
+   "3 meses depois de oficialmente publicada"
+  ],
+  "correta": 0,
+  "explicacao": "Art. 1º da LINDB (Decreto-Lei 4.657/1942): vacatio legis de 45 dias, salvo disposição em contrário. No estrangeiro, quando admitida, a obrigatoriedade começa 3 meses depois (art. 1º, §1º)."
+ },
+ {
+  "id": "dir-fc45fbed",
+  "area": "Introdução ao Direito",
+  "enunciado": "Quando a lei for omissa, o juiz decidirá o caso de acordo com:",
+  "alternativas": [
+   "A equidade, a doutrina e a jurisprudência",
+   "A analogia, os costumes e os princípios gerais de direito",
+   "Somente a analogia, vedado o uso dos costumes",
+   "O direito comparado e a doutrina majoritária",
+   "Nada, devendo extinguir o processo por ausência de lei"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 4º da LINDB. O juiz não se exime de decidir alegando lacuna (art. 140 do CPC)."
+ },
+ {
+  "id": "dir-6927439f",
+  "area": "Introdução ao Direito",
+  "enunciado": "A Lei A foi revogada pela Lei B. Anos depois, a Lei C revogou a Lei B, sem dizer nada sobre a Lei A. Nessa situação, a Lei A:",
+  "alternativas": [
+   "Volta a vigorar automaticamente, pois a lei que a revogou deixou de existir",
+   "Volta a vigorar apenas se a Lei C for de mesma hierarquia",
+   "Não volta a vigorar, pois a repristinação só ocorre se houver disposição expressa",
+   "Volta a vigorar após nova vacatio legis de 45 dias",
+   "Volta a vigorar somente nos pontos não tratados pela Lei C"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 2º, §3º, da LINDB: salvo disposição em contrário, a lei revogada não se restaura por ter a lei revogadora perdido a vigência (vedação da repristinação tácita)."
+ },
+ {
+  "id": "dir-91b927af",
+  "area": "Constitucional",
+  "enunciado": "Um casal de turistas franceses, que não está a serviço da França, tem um filho durante a viagem, em Manaus. Pela Constituição, a criança é:",
+  "alternativas": [
+   "Brasileira naturalizada",
+   "Estrangeira, pois os pais são franceses",
+   "Brasileira nata apenas se registrada em repartição brasileira e optar pela nacionalidade após a maioridade",
+   "Brasileira nata",
+   "Apátrida até completar 18 anos"
+  ],
+  "correta": 3,
+  "explicacao": "Art. 12, I, 'a', da CF: são brasileiros natos os nascidos no Brasil, ainda que de pais estrangeiros, desde que estes não estejam a serviço de seu país (critério do ius soli)."
+ },
+ {
+  "id": "dir-6389dd49",
+  "area": "Constitucional",
+  "enunciado": "É cargo privativo de brasileiro nato:",
+  "alternativas": [
+   "Ministro do Superior Tribunal de Justiça",
+   "Senador da República",
+   "Governador de Estado",
+   "Procurador-Geral da República",
+   "Ministro do Supremo Tribunal Federal"
+  ],
+  "correta": 4,
+  "explicacao": "Art. 12, §3º, da CF: Presidente e Vice, Presidentes da Câmara e do Senado, Ministro do STF, carreira diplomática, oficial das Forças Armadas e Ministro de Estado da Defesa. Os demais cargos citados podem ser ocupados por naturalizados."
+ },
+ {
+  "id": "dir-7a958ab6",
+  "area": "Constitucional",
+  "enunciado": "Sem consentimento do morador, é possível ingressar na casa dele:",
+  "alternativas": [
+   "Durante o dia, por determinação judicial",
+   "À noite, por determinação judicial",
+   "A qualquer hora, por requisição do delegado de polícia",
+   "Durante o dia, por ordem do Ministério Público",
+   "À noite, por ordem de autoridade administrativa sanitária"
+  ],
+  "correta": 0,
+  "explicacao": "Art. 5º, XI, da CF: a casa é asilo inviolável, salvo em flagrante delito, desastre, para prestar socorro ou, durante o dia, por determinação judicial."
+ },
+ {
+  "id": "dir-442f20da",
+  "area": "Constitucional",
+  "enunciado": "Quando a falta de norma regulamentadora torna inviável o exercício de direitos e liberdades constitucionais, o remédio adequado é:",
+  "alternativas": [
+   "Mandado de segurança",
+   "Mandado de injunção",
+   "Ação popular",
+   "Habeas data",
+   "Ação civil pública"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 5º, LXXI, da CF (regulamentado pela Lei 13.300/2016): o mandado de injunção combate a omissão normativa que inviabiliza direitos."
+ },
+ {
+  "id": "dir-d5260823",
+  "area": "Constitucional",
+  "enunciado": "A idade mínima exigida como condição de elegibilidade para Senador é de:",
+  "alternativas": [
+   "30 anos",
+   "21 anos",
+   "35 anos",
+   "18 anos",
+   "40 anos"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 14, §3º, VI, 'a', da CF: 35 anos para Presidente, Vice-Presidente e Senador; 30 para Governador; 21 para Deputado e Prefeito; 18 para Vereador."
+ },
+ {
+  "id": "dir-7f4a108d",
+  "area": "Constitucional",
+  "enunciado": "Tem legitimidade para propor ação direta de inconstitucionalidade (ADI) perante o STF:",
+  "alternativas": [
+   "O Prefeito de capital de Estado",
+   "O Advogado-Geral da União",
+   "A seccional estadual da OAB",
+   "O Conselho Federal da Ordem dos Advogados do Brasil",
+   "O Defensor Público-Geral do Estado"
+  ],
+  "correta": 3,
+  "explicacao": "Art. 103, VII, da CF inclui o Conselho Federal da OAB. Prefeitos e seccionais da OAB não constam do rol, e o AGU atua na defesa do ato impugnado (art. 103, §3º)."
+ },
+ {
+  "id": "dir-6e5765c2",
+  "area": "Constitucional",
+  "enunciado": "Compete privativamente à União legislar sobre:",
+  "alternativas": [
+   "Direito tributário",
+   "Direito penitenciário",
+   "Direito urbanístico",
+   "Educação, cultura e ensino",
+   "Direito eleitoral"
+  ],
+  "correta": 4,
+  "explicacao": "Art. 22, I, da CF (direito civil, comercial, penal, processual, eleitoral, agrário, marítimo, aeronáutico, espacial e do trabalho). As demais matérias são de competência concorrente (art. 24, I e IX)."
+ },
+ {
+  "id": "dir-5c99154b",
+  "area": "Civil",
+  "enunciado": "Quando a lei não fixar prazo menor, a prescrição ocorre em:",
+  "alternativas": [
+   "10 anos",
+   "5 anos",
+   "3 anos",
+   "15 anos",
+   "20 anos"
+  ],
+  "correta": 0,
+  "explicacao": "Art. 205 do Código Civil: prazo geral de 10 anos. O CC/1916 previa 20 anos para ações pessoais."
+ },
+ {
+  "id": "dir-5e6ec6a7",
+  "area": "Civil",
+  "enunciado": "A vítima de um acidente de trânsito, sem nenhum vínculo contratual com o causador, pretende indenização. A pretensão de reparação civil prescreve em:",
+  "alternativas": [
+   "1 ano",
+   "3 anos",
+   "5 anos",
+   "10 anos",
+   "20 anos"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 206, §3º, V, do Código Civil: prescreve em 3 anos a pretensão de reparação civil (responsabilidade extracontratual)."
+ },
+ {
+  "id": "dir-4aff4014",
+  "area": "Civil",
+  "enunciado": "Sobre o início da personalidade civil, o Código Civil estabelece que:",
+  "alternativas": [
+   "Começa da concepção, com plena capacidade de fato",
+   "Começa com o registro de nascimento em cartório",
+   "Começa do nascimento com vida, mas a lei põe a salvo, desde a concepção, os direitos do nascituro",
+   "Começa aos 16 anos, com a capacidade relativa",
+   "Começa do nascimento com vida, sem qualquer proteção jurídica ao nascituro"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 2º do Código Civil: a personalidade começa do nascimento com vida, ressalvados desde a concepção os direitos do nascituro."
+ },
+ {
+  "id": "dir-5c3098e1",
+  "area": "Civil",
+  "enunciado": "O domicílio da pessoa natural é, em regra:",
+  "alternativas": [
+   "O lugar onde nasceu",
+   "O lugar onde foi registrada",
+   "Qualquer lugar onde esteja no momento",
+   "O lugar onde ela estabelece a sua residência com ânimo definitivo",
+   "O lugar indicado no seu título de eleitor"
+  ],
+  "correta": 3,
+  "explicacao": "Art. 70 do Código Civil. Tendo várias residências, qualquer delas pode ser considerada domicílio (art. 71)."
+ },
+ {
+  "id": "dir-f0111918",
+  "area": "Civil",
+  "enunciado": "João, inexperiente em negócios, vende um terreno em Parintins por um quinto do valor de mercado, sem ter sido enganado nem ameaçado pelo comprador. O defeito do negócio jurídico é:",
+  "alternativas": [
+   "Estado de perigo",
+   "Dolo",
+   "Coação",
+   "Fraude contra credores",
+   "Lesão"
+  ],
+  "correta": 4,
+  "explicacao": "Art. 157 do Código Civil: há lesão quando a pessoa, sob premente necessidade ou por inexperiência, se obriga a prestação manifestamente desproporcional. É causa de anulabilidade (art. 171, II)."
+ },
+ {
+  "id": "dir-3d2f9a72",
+  "area": "Civil",
+  "enunciado": "Um adolescente de 15 anos, que mora com os pais, quebra a vitrine de uma loja. Quanto aos pais, é correto afirmar que:",
+  "alternativas": [
+   "Respondem pela reparação independentemente de culpa, pois o filho menor está sob sua autoridade e em sua companhia",
+   "Só respondem se a vítima provar que falharam no dever de vigilância",
+   "Não respondem, pois apenas o próprio menor responde com seus bens",
+   "Respondem apenas se o filho tiver sido emancipado",
+   "Respondem somente na esfera penal, não na civil"
+  ],
+  "correta": 0,
+  "explicacao": "Arts. 932, I, e 933 do Código Civil: os pais respondem pelos filhos menores sob sua autoridade e companhia, ainda que não haja culpa de sua parte (responsabilidade objetiva por fato de terceiro)."
+ },
+ {
+  "id": "dir-bd853c25",
+  "area": "Civil",
+  "enunciado": "Uma pessoa viúva, com dois filhos, deseja fazer testamento. Ela pode dispor livremente de:",
+  "alternativas": [
+   "Toda a herança",
+   "Metade da herança",
+   "Um terço da herança",
+   "Um quarto da herança",
+   "Nada, pois há herdeiros necessários"
+  ],
+  "correta": 1,
+  "explicacao": "Arts. 1.845 e 1.846 do Código Civil: os descendentes são herdeiros necessários e a eles pertence metade dos bens (a legítima); a outra metade é disponível (art. 1.789)."
+ },
+ {
+  "id": "dir-8a66c7e9",
+  "area": "Penal",
+  "enunciado": "Salvo disposição em contrário, a pena do crime tentado é:",
+  "alternativas": [
+   "A mesma do crime consumado",
+   "A do crime consumado, diminuída de metade",
+   "A do crime consumado, diminuída de um a dois terços",
+   "A do crime consumado, diminuída de um sexto a um terço",
+   "Nenhuma, pois a tentativa não é punível"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 14, II e parágrafo único, do Código Penal."
+ },
+ {
+  "id": "dir-cbb6b7de",
+  "area": "Penal",
+  "enunciado": "Pedro dispara contra Lucas com intenção de matar, erra o tiro e, embora tivesse mais munição e pudesse continuar, decide ir embora por vontade própria. Lucas não se fere. Houve:",
+  "alternativas": [
+   "Tentativa de homicídio, com redução de um a dois terços",
+   "Arrependimento posterior, com redução de pena",
+   "Arrependimento eficaz, com isenção total de pena",
+   "Desistência voluntária, respondendo Pedro apenas pelos atos já praticados",
+   "Crime impossível, sem punição"
+  ],
+  "correta": 3,
+  "explicacao": "Art. 15 do Código Penal: quem voluntariamente desiste de prosseguir na execução só responde pelos atos já praticados (no caso, por exemplo, disparo de arma de fogo ou perigo à vida)."
+ },
+ {
+  "id": "dir-27488d4f",
+  "area": "Penal",
+  "enunciado": "Nos crimes cometidos sem violência ou grave ameaça, reparado o dano ou restituída a coisa por ato voluntário do agente até o recebimento da denúncia ou da queixa, ocorre:",
+  "alternativas": [
+   "Extinção da punibilidade",
+   "Desistência voluntária",
+   "Arrependimento eficaz",
+   "Perdão judicial obrigatório",
+   "Arrependimento posterior, com redução da pena de um a dois terços"
+  ],
+  "correta": 4,
+  "explicacao": "Art. 16 do Código Penal (arrependimento posterior), causa obrigatória de diminuição de pena."
+ },
+ {
+  "id": "dir-8695925c",
+  "area": "Penal",
+  "enunciado": "Segundo o Código Penal, NÃO exclui a imputabilidade penal:",
+  "alternativas": [
+   "A emoção ou a paixão",
+   "A menoridade de 18 anos",
+   "A doença mental que torna o agente, ao tempo da ação, inteiramente incapaz de entender o caráter ilícito do fato",
+   "A embriaguez completa proveniente de caso fortuito ou força maior",
+   "O desenvolvimento mental retardado que retira inteiramente a capacidade de autodeterminação"
+  ],
+  "correta": 0,
+  "explicacao": "Art. 28, I, do Código Penal: emoção e paixão não excluem a imputabilidade. As demais hipóteses estão nos arts. 26, 27 e 28, §1º."
+ },
+ {
+  "id": "dir-001609eb",
+  "area": "Penal",
+  "enunciado": "Carlos pegou emprestado o notebook de um colega e, já com o bem em mãos, decidiu não devolvê-lo e vendeu-o. Carlos praticou:",
+  "alternativas": [
+   "Furto",
+   "Apropriação indébita",
+   "Roubo",
+   "Estelionato",
+   "Receptação"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 168 do Código Penal: apropriar-se de coisa alheia móvel de que tem a posse ou a detenção. No furto (art. 155), o agente subtrai a coisa, que não estava legitimamente em seu poder."
+ },
+ {
+  "id": "dir-5107cd57",
+  "area": "Penal",
+  "enunciado": "Pelo Código Penal, o crime é doloso quando o agente quis o resultado ou:",
+  "alternativas": [
+   "Deu causa a ele por imprudência",
+   "Deu causa a ele por negligência",
+   "Assumiu o risco de produzi-lo",
+   "Deu causa a ele por imperícia",
+   "Poderia prevê-lo, mas confiou que não ocorreria"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 18, I, do Código Penal (dolo direto e dolo eventual). Imprudência, negligência e imperícia caracterizam o crime culposo (art. 18, II)."
+ },
+ {
+  "id": "dir-53a88342",
+  "area": "Processo Civil",
+  "enunciado": "No CPC/2015, o prazo para opor embargos de declaração é de:",
+  "alternativas": [
+   "15 dias",
+   "10 dias",
+   "3 dias",
+   "5 dias",
+   "30 dias"
+  ],
+  "correta": 3,
+  "explicacao": "Art. 1.023 do CPC. Os demais recursos, em regra, têm prazo de 15 dias (art. 1.003, §5º)."
+ },
+ {
+  "id": "dir-2988a31b",
+  "area": "Processo Civil",
+  "enunciado": "O réu, devidamente intimado, não comparece à audiência de conciliação do art. 334 do CPC e não apresenta justificativa. A consequência legal é:",
+  "alternativas": [
+   "Revelia, com presunção de veracidade dos fatos alegados pelo autor",
+   "Extinção do processo sem resolução do mérito",
+   "Confissão ficta sobre toda a matéria de direito",
+   "Nenhuma, pois a audiência é facultativa para o réu",
+   "Ato atentatório à dignidade da justiça, com multa de até 2% da vantagem econômica pretendida ou do valor da causa"
+  ],
+  "correta": 4,
+  "explicacao": "Art. 334, §8º, do CPC. A revelia decorre da falta de contestação (art. 344), não da ausência à audiência."
+ },
+ {
+  "id": "dir-29d5cdb3",
+  "area": "Processo Civil",
+  "enunciado": "A presunção de veracidade decorrente da revelia NÃO ocorre quando:",
+  "alternativas": [
+   "Havendo pluralidade de réus, algum deles contestar a ação",
+   "O réu for pessoa jurídica de direito privado",
+   "O litígio versar sobre direitos patrimoniais disponíveis",
+   "O autor tiver juntado documentos com a petição inicial",
+   "O réu tiver sido citado pessoalmente"
+  ],
+  "correta": 0,
+  "explicacao": "Art. 345, I, do CPC. Também não ocorre em direitos indisponíveis, falta de instrumento indispensável ou alegações inverossímeis (art. 345, II a IV)."
+ },
+ {
+  "id": "dir-f73f25e6",
+  "area": "Processo Civil",
+  "enunciado": "Autor que mora em Manaus ajuíza ação reivindicatória de um imóvel situado em Itacoatiara contra réu domiciliado em Belém. É competente o foro de:",
+  "alternativas": [
+   "Belém, domicílio do réu",
+   "Itacoatiara, local da situação do imóvel",
+   "Manaus, domicílio do autor",
+   "Qualquer um, à escolha do autor",
+   "Brasília, por envolver partes de Estados diferentes"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 47 do CPC: para ações fundadas em direito real sobre imóveis, é competente o foro de situação da coisa."
+ },
+ {
+  "id": "dir-afaebb34",
+  "area": "Processo Penal",
+  "enunciado": "Pelo CPP, o inquérito policial deve terminar, em regra, no prazo de:",
+  "alternativas": [
+   "30 dias em qualquer caso",
+   "15 dias se preso e 60 dias se solto",
+   "10 dias se o indiciado estiver preso e 30 dias se estiver solto",
+   "5 dias se preso e 10 dias se solto",
+   "90 dias, prorrogáveis livremente"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 10 do CPP. Estando solto, o prazo pode ser prorrogado pelo juiz quando o fato for de difícil elucidação (art. 10, §3º)."
+ },
+ {
+  "id": "dir-dc8a110b",
+  "area": "Processo Penal",
+  "enunciado": "Em crime de ação penal privada, o ofendido deve oferecer queixa, sob pena de decadência, em regra no prazo de:",
+  "alternativas": [
+   "6 meses, contado da data do fato",
+   "30 dias, contado do conhecimento da autoria",
+   "1 ano, contado da data do fato",
+   "6 meses, contado do dia em que veio a saber quem é o autor do crime",
+   "2 anos, contado do conhecimento da autoria"
+  ],
+  "correta": 3,
+  "explicacao": "Art. 38 do CPP (e art. 103 do CP): 6 meses a partir do conhecimento da autoria."
+ },
+ {
+  "id": "dir-acfa3811",
+  "area": "Processo Penal",
+  "enunciado": "NÃO se considera em flagrante delito quem:",
+  "alternativas": [
+   "Está cometendo a infração penal",
+   "Acaba de cometer a infração penal",
+   "É perseguido, logo após, em situação que faça presumir ser o autor",
+   "É encontrado, logo depois, com instrumentos ou objetos que façam presumir ser ele o autor",
+   "É identificado por testemunhas três dias após o crime, sem ter sido perseguido e sem portar objetos ligados ao delito"
+  ],
+  "correta": 4,
+  "explicacao": "Art. 302 do CPP lista as hipóteses de flagrante próprio, impróprio e presumido. Identificação posterior, sem perseguição nem objetos, não autoriza prisão em flagrante."
+ },
+ {
+  "id": "dir-bb726343",
+  "area": "Administrativo",
+  "enunciado": "Um ato administrativo válido deixa de ser conveniente e oportuno para o interesse público. A Administração pode extingui-lo por meio de:",
+  "alternativas": [
+   "Revogação, respeitados os direitos adquiridos",
+   "Anulação, com efeitos retroativos",
+   "Convalidação",
+   "Cassação",
+   "Caducidade"
+  ],
+  "correta": 0,
+  "explicacao": "Art. 53 da Lei 9.784/1999 e Súmula 473 do STF: a Administração anula atos ilegais e pode revogar atos por conveniência ou oportunidade, respeitados os direitos adquiridos."
+ },
+ {
+  "id": "dir-cc6c791d",
+  "area": "Administrativo",
+  "enunciado": "O servidor nomeado para cargo de provimento efetivo em virtude de concurso público adquire estabilidade após:",
+  "alternativas": [
+   "2 anos de efetivo exercício",
+   "3 anos de efetivo exercício, com avaliação especial de desempenho",
+   "5 anos de efetivo exercício",
+   "A posse no cargo",
+   "1 ano de estágio probatório"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 41, caput e §4º, da CF: estabilidade após três anos de efetivo exercício, sendo obrigatória a avaliação especial de desempenho por comissão."
+ },
+ {
+  "id": "dir-58efd06c",
+  "area": "Administrativo",
+  "enunciado": "Uma viatura estadual, conduzida por servidor em serviço, colide com um carro particular. Quanto à responsabilidade civil, é correto afirmar que:",
+  "alternativas": [
+   "O Estado só responde se a vítima provar a culpa do servidor",
+   "Só o servidor responde, pessoalmente e de forma objetiva",
+   "O Estado responde objetivamente, assegurado o direito de regresso contra o servidor em caso de dolo ou culpa",
+   "O Estado responde subsidiariamente, apenas se o servidor não tiver bens",
+   "Não há responsabilidade, pois o servidor agia no exercício da função"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 37, §6º, da CF: as pessoas jurídicas de direito público respondem pelos danos que seus agentes causarem a terceiros, com regresso contra o responsável nos casos de dolo ou culpa."
+ },
+ {
+  "id": "dir-9407f768",
+  "area": "Administrativo",
+  "enunciado": "NÃO é modalidade de licitação prevista na Lei 14.133/2021:",
+  "alternativas": [
+   "Pregão",
+   "Concorrência",
+   "Leilão",
+   "Tomada de preços",
+   "Diálogo competitivo"
+  ],
+  "correta": 3,
+  "explicacao": "Art. 28 da Lei 14.133/2021: pregão, concorrência, concurso, leilão e diálogo competitivo. Tomada de preços e convite existiam na antiga Lei 8.666/1993."
+ },
+ {
+  "id": "dir-23e0b61b",
+  "area": "Tributário",
+  "enunciado": "Uma lei que institui um novo imposto (sem estar entre as exceções constitucionais) é publicada em dezembro. Em regra, esse imposto poderá ser cobrado:",
+  "alternativas": [
+   "Imediatamente, na data da publicação",
+   "Em 1º de janeiro do ano seguinte, ainda que não decorridos 90 dias",
+   "Somente após 90 dias, mesmo que no mesmo exercício",
+   "Somente após dois exercícios financeiros",
+   "No exercício seguinte, desde que decorridos 90 dias da publicação da lei"
+  ],
+  "correta": 4,
+  "explicacao": "Art. 150, III, 'b' e 'c', da CF: anterioridade do exercício e anterioridade nonagesimal se aplicam cumulativamente, salvo as exceções do art. 150, §1º."
+ },
+ {
+  "id": "dir-9d9d0a1a",
+  "area": "Tributário",
+  "enunciado": "Segundo o conceito de tributo do art. 3º do CTN, o tributo:",
+  "alternativas": [
+   "Não constitui sanção de ato ilícito",
+   "Pode ser pago em serviços prestados ao Estado",
+   "É cobrado mediante atividade discricionária",
+   "Pode ser instituído por contrato com o contribuinte",
+   "É uma prestação voluntária"
+  ],
+  "correta": 0,
+  "explicacao": "Art. 3º do CTN: prestação pecuniária compulsória, em moeda ou cujo valor nela se possa exprimir, que não constitua sanção de ato ilícito, instituída em lei e cobrada mediante atividade administrativa plenamente vinculada. A multa é sanção, não tributo."
+ },
+ {
+  "id": "dir-c448982c",
+  "area": "Tributário",
+  "enunciado": "Uma igreja em Manaus recebe cobrança de IPTU sobre o templo e de uma taxa municipal de fiscalização. Sobre a imunidade dos templos, é correto afirmar que:",
+  "alternativas": [
+   "Alcança impostos e taxas, mas não contribuições",
+   "Alcança somente impostos, de modo que a entidade continua sujeita às taxas",
+   "Alcança todos os tributos, sem exceção",
+   "Não alcança o IPTU, apenas o imposto de renda",
+   "Depende de lei complementar municipal para produzir efeitos"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 150, VI, 'b', da CF: a imunidade veda a instituição de impostos sobre templos de qualquer culto; taxas e outras espécies tributárias não são abrangidas."
+ },
+ {
+  "id": "dir-327eacf7",
+  "area": "Trabalho",
+  "enunciado": "NÃO é requisito para a caracterização da relação de emprego segundo a CLT:",
+  "alternativas": [
+   "Pessoalidade",
+   "Não eventualidade",
+   "Exclusividade",
+   "Subordinação",
+   "Onerosidade"
+  ],
+  "correta": 2,
+  "explicacao": "Arts. 2º e 3º da CLT: pessoa física, pessoalidade, não eventualidade, onerosidade (salário) e subordinação (dependência). O empregado pode ter mais de um emprego."
+ },
+ {
+  "id": "dir-b0d89039",
+  "area": "Trabalho",
+  "enunciado": "A remuneração do serviço extraordinário (hora extra) deve ser, no mínimo:",
+  "alternativas": [
+   "20% superior à da hora normal",
+   "100% superior à da hora normal",
+   "Igual à da hora normal",
+   "50% superior à da hora normal",
+   "30% superior à da hora normal"
+  ],
+  "correta": 3,
+  "explicacao": "Art. 7º, XVI, da CF (e art. 59, §1º, da CLT). O percentual de 20% corresponde ao adicional noturno urbano (art. 73 da CLT)."
+ },
+ {
+  "id": "dir-e851d773",
+  "area": "Trabalho",
+  "enunciado": "A empregada gestante tem garantia de emprego, vedada a dispensa arbitrária ou sem justa causa:",
+  "alternativas": [
+   "Desde a confirmação da gravidez até o parto",
+   "Desde a admissão até um ano após o parto",
+   "Somente durante a licença-maternidade",
+   "Desde o parto até quatro meses depois",
+   "Desde a confirmação da gravidez até cinco meses após o parto"
+  ],
+  "correta": 4,
+  "explicacao": "Art. 10, II, 'b', do ADCT da CF/88."
+ },
+ {
+  "id": "dir-1da77ad9",
+  "area": "Ambiental",
+  "enunciado": "As terras tradicionalmente ocupadas pelos índios, como as do Alto Rio Negro, são:",
+  "alternativas": [
+   "Bens da União, destinadas à posse permanente dos índios, com usufruto exclusivo das riquezas do solo, dos rios e dos lagos nelas existentes",
+   "Propriedade privada das comunidades indígenas, podendo ser vendidas por decisão coletiva",
+   "Bens dos Estados em que se localizam",
+   "Bens dos Municípios, com usufruto compartilhado",
+   "Terras devolutas passíveis de usucapião após 15 anos"
+  ],
+  "correta": 0,
+  "explicacao": "Arts. 20, XI, e 231, §2º, da CF. Essas terras são inalienáveis e indisponíveis, e os direitos sobre elas são imprescritíveis (art. 231, §4º)."
+ },
+ {
+  "id": "dir-c67cc917",
+  "area": "Ambiental",
+  "enunciado": "Uma madeireira, por decisão de seu diretor e em benefício da empresa, desmata ilegalmente área protegida no Amazonas. Sobre a responsabilidade penal da pessoa jurídica:",
+  "alternativas": [
+   "Não é possível, pois pessoa jurídica não pode ser sujeito ativo de crime",
+   "É possível, pois a infração foi cometida por decisão de seu representante, no interesse ou benefício da entidade",
+   "É possível apenas na esfera administrativa, não na penal",
+   "Exclui a responsabilidade penal do diretor pessoa física",
+   "Só é possível se a empresa for pública"
+  ],
+  "correta": 1,
+  "explicacao": "Art. 225, §3º, da CF e art. 3º da Lei 9.605/1998. A responsabilidade da pessoa jurídica não exclui a das pessoas físicas autoras, coautoras ou partícipes (art. 3º, parágrafo único)."
+ },
+ {
+  "id": "dir-5a6259c1",
+  "area": "Empresarial",
+  "enunciado": "Pelo Código Civil, NÃO é considerado empresário, em regra:",
+  "alternativas": [
+   "Quem exerce profissionalmente atividade econômica organizada para a circulação de bens",
+   "Quem exerce profissionalmente atividade econômica organizada para a produção de bens",
+   "Quem exerce profissão intelectual, de natureza científica, literária ou artística, sem que ela constitua elemento de empresa",
+   "Quem exerce profissionalmente atividade econômica organizada para a prestação de serviços",
+   "O comerciante individual de um mercadinho no bairro"
+  ],
+  "correta": 2,
+  "explicacao": "Art. 966, caput e parágrafo único, do Código Civil. O profissional intelectual só será empresário se o exercício da profissão constituir elemento de empresa."
+ },
+ {
+  "id": "dir-c5edb85e",
+  "area": "Empresarial",
+  "enunciado": "Na sociedade limitada, a responsabilidade de cada sócio:",
+  "alternativas": [
+   "É ilimitada e solidária por todas as dívidas da sociedade",
+   "É restrita ao valor de suas quotas, sem qualquer solidariedade entre os sócios",
+   "É ilimitada apenas para o sócio administrador",
+   "É restrita ao valor de suas quotas, mas todos respondem solidariamente pela integralização do capital social",
+   "Não existe, pois apenas a sociedade responde, mesmo que o capital não esteja integralizado"
+  ],
+  "correta": 3,
+  "explicacao": "Art. 1.052 do Código Civil."
+ },
+ {
+  "id": "dir-81649a82",
+  "area": "Direitos Humanos",
+  "enunciado": "Os tratados e convenções internacionais sobre direitos humanos aprovados, em cada Casa do Congresso Nacional, em dois turnos, por três quintos dos votos dos respectivos membros, serão:",
+  "alternativas": [
+   "Equivalentes às leis ordinárias",
+   "Equivalentes às leis complementares",
+   "Normas de hierarquia inferior aos decretos",
+   "Aplicáveis apenas após referendo popular",
+   "Equivalentes às emendas constitucionais"
+  ],
+  "correta": 4,
+  "explicacao": "Art. 5º, §3º, da CF (incluído pela EC 45/2004). Exemplo: a Convenção sobre os Direitos das Pessoas com Deficiência."
  }
 ]
