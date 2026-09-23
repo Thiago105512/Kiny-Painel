@@ -2,7 +2,7 @@
 
    Como rodar (precisa de Java e de acesso à internet, uma vez):
      npm i --no-save firebase-tools @firebase/rules-unit-testing firebase
-     npx firebase emulators:exec --only firestore --project demo-mucurinha "node testes/regras-firestore.test.mjs"
+     npx firebase emulators:exec --only firestore --project demo-pedtudo "node testes/regras-firestore.test.mjs"
 
    O emulador lê as regras de app/firestore.rules, as mesmas que vão para o projeto. */
 import { initializeTestEnvironment, assertSucceeds, assertFails } from '@firebase/rules-unit-testing';
@@ -10,7 +10,7 @@ import { doc, getDoc, setDoc, updateDoc, deleteDoc, collection, getDocs } from '
 import fs from 'node:fs';
 
 const env = await initializeTestEnvironment({
-  projectId: 'demo-mucurinha',
+  projectId: 'demo-pedtudo',
   firestore: { host: '127.0.0.1', port: 8181, rules: fs.readFileSync(new URL('../app/firestore.rules', import.meta.url), 'utf8') },
 });
 
@@ -26,68 +26,68 @@ const anon = () => env.unauthenticatedContext().firestore();
 // estado inicial: espaço da Catarina, com convite para a colega
 await env.withSecurityRulesDisabled(async (c) => {
   const d = c.firestore();
-  await setDoc(doc(d, 'equipes/mucu-teste'), { dono: CAT.sub, nome: 'Mucurinha', membros: { [CAT.sub]: { nome: 'Catarina', email: CAT.email } } });
-  await setDoc(doc(d, 'equipes/mucu-teste/convites/colega@gmail.com'), { email: 'colega@gmail.com', por: CAT.email });
-  await setDoc(doc(d, 'equipes/mucu-teste/dados/mucurinha'), { json: '{}' });
-  await setDoc(doc(d, 'usuarios/uid-catarina/dados/mucurinha'), { json: '{}' });
+  await setDoc(doc(d, 'equipes/ped-teste'), { dono: CAT.sub, nome: 'PedTudo', membros: { [CAT.sub]: { nome: 'Catarina', email: CAT.email } } });
+  await setDoc(doc(d, 'equipes/ped-teste/convites/colega@gmail.com'), { email: 'colega@gmail.com', por: CAT.email });
+  await setDoc(doc(d, 'equipes/ped-teste/dados/pedtudo'), { json: '{}' });
+  await setDoc(doc(d, 'usuarios/uid-catarina/dados/pedtudo'), { json: '{}' });
 });
 
 console.log('\nRegras do Firestore');
 await t('a dona lê e grava os dados do espaço', async () => {
-  await assertSucceeds(getDoc(doc(como(CAT), 'equipes/mucu-teste/dados/mucurinha')));
-  await assertSucceeds(setDoc(doc(como(CAT), 'equipes/mucu-teste/dados/mucurinha'), { json: '{"a":1}' }));
+  await assertSucceeds(getDoc(doc(como(CAT), 'equipes/ped-teste/dados/pedtudo')));
+  await assertSucceeds(setDoc(doc(como(CAT), 'equipes/ped-teste/dados/pedtudo'), { json: '{"a":1}' }));
 });
 await t('quem não entrou não lê os dados do espaço', async () => {
-  await assertFails(getDoc(doc(como(EST), 'equipes/mucu-teste/dados/mucurinha')));
+  await assertFails(getDoc(doc(como(EST), 'equipes/ped-teste/dados/pedtudo')));
 });
 await t('sem conta, nada', async () => {
-  await assertFails(getDoc(doc(anon(), 'equipes/mucu-teste/dados/mucurinha')));
-  await assertFails(getDoc(doc(anon(), 'equipes/mucu-teste')));
+  await assertFails(getDoc(doc(anon(), 'equipes/ped-teste/dados/pedtudo')));
+  await assertFails(getDoc(doc(anon(), 'equipes/ped-teste')));
 });
 await t('a convidada entra sozinha, com o código', async () => {
-  await assertSucceeds(getDoc(doc(como(COL), 'equipes/mucu-teste')));
-  await assertSucceeds(updateDoc(doc(como(COL), 'equipes/mucu-teste'), { ['membros.' + COL.sub]: { nome: 'Colega', email: COL.email } }));
+  await assertSucceeds(getDoc(doc(como(COL), 'equipes/ped-teste')));
+  await assertSucceeds(updateDoc(doc(como(COL), 'equipes/ped-teste'), { ['membros.' + COL.sub]: { nome: 'Colega', email: COL.email } }));
 });
 await t('depois de entrar, a colega lê e grava os dados', async () => {
-  await assertSucceeds(getDoc(doc(como(COL), 'equipes/mucu-teste/dados/mucurinha')));
-  await assertSucceeds(setDoc(doc(como(COL), 'equipes/mucu-teste/dados/mucurinha'), { json: '{"b":2}' }));
+  await assertSucceeds(getDoc(doc(como(COL), 'equipes/ped-teste/dados/pedtudo')));
+  await assertSucceeds(setDoc(doc(como(COL), 'equipes/ped-teste/dados/pedtudo'), { json: '{"b":2}' }));
 });
 await t('quem não foi convidada não entra, mesmo sabendo o código', async () => {
-  await assertFails(updateDoc(doc(como(EST), 'equipes/mucu-teste'), { ['membros.' + EST.sub]: { nome: 'Estranha' } }));
-  await assertFails(getDoc(doc(como(EST), 'equipes/mucu-teste')));
+  await assertFails(updateDoc(doc(como(EST), 'equipes/ped-teste'), { ['membros.' + EST.sub]: { nome: 'Estranha' } }));
+  await assertFails(getDoc(doc(como(EST), 'equipes/ped-teste')));
 });
 await t('a convidada não pode se aproveitar para mexer em outra coisa', async () => {
   await env.withSecurityRulesDisabled(async (c) => {
-    await setDoc(doc(c.firestore(), 'equipes/mucu-outro'), { dono: CAT.sub, nome: 'Outro', membros: { [CAT.sub]: {} } });
-    await setDoc(doc(c.firestore(), 'equipes/mucu-outro/convites/colega@gmail.com'), { email: 'colega@gmail.com' });
+    await setDoc(doc(c.firestore(), 'equipes/ped-outro'), { dono: CAT.sub, nome: 'Outro', membros: { [CAT.sub]: {} } });
+    await setDoc(doc(c.firestore(), 'equipes/ped-outro/convites/colega@gmail.com'), { email: 'colega@gmail.com' });
   });
   const d = como(COL);
-  await assertFails(updateDoc(doc(d, 'equipes/mucu-outro'), { nome: 'Sequestrado', ['membros.' + COL.sub]: {} }));
-  await assertFails(updateDoc(doc(d, 'equipes/mucu-outro'), { ['membros.' + EST.sub]: {} }));
-  await assertFails(updateDoc(doc(d, 'equipes/mucu-outro'), { dono: COL.sub, ['membros.' + COL.sub]: {} }));
+  await assertFails(updateDoc(doc(d, 'equipes/ped-outro'), { nome: 'Sequestrado', ['membros.' + COL.sub]: {} }));
+  await assertFails(updateDoc(doc(d, 'equipes/ped-outro'), { ['membros.' + EST.sub]: {} }));
+  await assertFails(updateDoc(doc(d, 'equipes/ped-outro'), { dono: COL.sub, ['membros.' + COL.sub]: {} }));
 });
 await t('só quem está no espaço convida', async () => {
-  await assertSucceeds(setDoc(doc(como(CAT), 'equipes/mucu-teste/convites/terceira@gmail.com'), { email: 'terceira@gmail.com' }));
-  await assertFails(setDoc(doc(como(EST), 'equipes/mucu-teste/convites/estranha@gmail.com'), { email: 'estranha@gmail.com' }));
-  await assertSucceeds(getDocs(collection(como(CAT), 'equipes/mucu-teste/convites')));
-  await assertFails(getDocs(collection(como(EST), 'equipes/mucu-teste/convites')));
+  await assertSucceeds(setDoc(doc(como(CAT), 'equipes/ped-teste/convites/terceira@gmail.com'), { email: 'terceira@gmail.com' }));
+  await assertFails(setDoc(doc(como(EST), 'equipes/ped-teste/convites/estranha@gmail.com'), { email: 'estranha@gmail.com' }));
+  await assertSucceeds(getDocs(collection(como(CAT), 'equipes/ped-teste/convites')));
+  await assertFails(getDocs(collection(como(EST), 'equipes/ped-teste/convites')));
 });
 await t('criar espaço só para si, já como membro', async () => {
-  await assertSucceeds(setDoc(doc(como(CAT), 'equipes/mucu-novo'), { dono: CAT.sub, membros: { [CAT.sub]: {} } }));
-  await assertFails(setDoc(doc(como(CAT), 'equipes/mucu-alheio'), { dono: EST.sub, membros: { [EST.sub]: {} } }));
-  await assertFails(setDoc(doc(como(CAT), 'equipes/mucu-cheio'), { dono: CAT.sub, membros: { [CAT.sub]: {}, [EST.sub]: {} } }));
+  await assertSucceeds(setDoc(doc(como(CAT), 'equipes/ped-novo'), { dono: CAT.sub, membros: { [CAT.sub]: {} } }));
+  await assertFails(setDoc(doc(como(CAT), 'equipes/ped-alheio'), { dono: EST.sub, membros: { [EST.sub]: {} } }));
+  await assertFails(setDoc(doc(como(CAT), 'equipes/ped-cheio'), { dono: CAT.sub, membros: { [CAT.sub]: {}, [EST.sub]: {} } }));
 });
 await t('os dados individuais continuam privados', async () => {
-  await assertSucceeds(getDoc(doc(como(CAT), 'usuarios/uid-catarina/dados/mucurinha')));
-  await assertFails(getDoc(doc(como(EST), 'usuarios/uid-catarina/dados/mucurinha')));
+  await assertSucceeds(getDoc(doc(como(CAT), 'usuarios/uid-catarina/dados/pedtudo')));
+  await assertFails(getDoc(doc(como(EST), 'usuarios/uid-catarina/dados/pedtudo')));
 });
 await t('nada mais no banco é acessível', async () => {
   await assertFails(getDoc(doc(como(CAT), 'qualquer/coisa')));
   await assertFails(setDoc(doc(como(CAT), 'qualquer/coisa'), { x: 1 }));
 });
 await t('só a dona apaga o espaço', async () => {
-  await assertFails(deleteDoc(doc(como(COL), 'equipes/mucu-teste')));
-  await assertSucceeds(deleteDoc(doc(como(CAT), 'equipes/mucu-novo')));
+  await assertFails(deleteDoc(doc(como(COL), 'equipes/ped-teste')));
+  await assertSucceeds(deleteDoc(doc(como(CAT), 'equipes/ped-novo')));
 });
 
 await env.cleanup();

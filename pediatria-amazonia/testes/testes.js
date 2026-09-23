@@ -1,4 +1,4 @@
-/* Suíte de testes do Mucurinha – fórmulas, segurança e integridade das bases.
+/* Suíte de testes do PedTudo – fórmulas, segurança e integridade das bases.
    Executar:  node testes/testes.js     (a partir de pediatria-amazonia/)
    Sai com código 1 se algum teste falhar. */
 global.window = global;
@@ -7,10 +7,10 @@ const memoria = {};
 global.localStorage = { getItem: (k) => (k in memoria ? memoria[k] : null), setItem: (k, v) => { memoria[k] = String(v); }, removeItem: (k) => { delete memoria[k]; } };
 const path = require('path');
 const APP = path.join(__dirname, '..', 'app', 'js');
-for (const f of ['utils', 'store', 'seguranca', 'entrada', 'plantoes', 'nuvem', 'agenda',
+for (const f of ['utils', 'store', 'seguranca', 'entrada', 'plantoes', 'nuvem', 'agenda', 'flashcards',
   'data/apoio-entrada', 'data/sinais-gravidade', 'data/contexto-epidemiologico', 'data/queixas', 'data/doencas',
   'data/medicamentos', 'data/emergencias', 'data/exames', 'data/vacinas', 'data/crescimento',
-  'data/zscore', 'data/notificacao', 'calculators']) {
+  'data/zscore', 'data/notificacao', 'data/preparo', 'calculators']) {
   try { require(path.join(APP, f + '.js')); } catch (e) { console.error('Falha ao carregar ' + f + ': ' + e.message); process.exit(1); }
 }
 for (const f of ['doencas-extra', 'neonatal', 'acidentes', 'comerciais', 'alternativas', 'locais', 'violencia', 'curiosidades', 'didatica']) {
@@ -498,7 +498,7 @@ t('Conferência de cada pessoa se soma, item a item', () => {
 t('Código do espaço é ditável e sem letras ambíguas', () => {
   for (let i = 0; i < 50; i++) {
     const c = NV.novoCodigo();
-    if (!/^mucu-[a-z2-9]{4}-[a-z2-9]{4}$/.test(c)) throw new Error('formato inesperado: ' + c);
+    if (!/^ped-[a-z2-9]{4}-[a-z2-9]{4}$/.test(c)) throw new Error('formato inesperado: ' + c);
     if (/[ilo01]/.test(c.slice(5))) throw new Error('letra que se confunde ao ditar: ' + c);
   }
 });
@@ -583,8 +583,87 @@ t('A mensagem de erro do Google explica o endereço autorizado', () => {
   if (!/Firebase Hosting/.test(AG.mensagemErro(new Error('Failed to fetch')))) throw new Error('mensagem de rede não orienta');
 });
 
+/* ---------- 12. Preparo e flashcards ---------- */
+const PREP = D.preparo || [];
+const FLA = PED.flash;
+t('Todo preparo tem fonte, data e passos', () => {
+  for (const p6 of PREP) {
+    if (!p6.fontes || !p6.fontes.length) throw new Error(p6.chave + ' sem fonte');
+    if (!p6.atualizadoEm) throw new Error(p6.chave + ' sem data de atualização');
+    if (!p6.preparo || !p6.preparo.length) throw new Error(p6.chave + ' sem passos de preparo');
+    if (!p6.nomes || !p6.nomes.length) throw new Error(p6.chave + ' sem nomes');
+  }
+});
+t('Cada chave de preparo é única', () => {
+  const vistas = new Set();
+  for (const p6 of PREP) { if (vistas.has(p6.chave)) throw new Error('chave repetida: ' + p6.chave); vistas.add(p6.chave); }
+});
+t('Todo nome de preparo existe nas emergências', () => {
+  const doses = new Set();
+  (D.emergencias || []).forEach(e => (e.doses || []).forEach(d => doses.add(d.nome)));
+  for (const p6 of PREP) for (const n of p6.nomes) if (!doses.has(n)) throw new Error('nome sem dose correspondente: ' + n + ' (' + p6.chave + ')');
+});
+t('As medicações que se diluem têm preparo descrito', () => {
+  const precisam = ['Adrenalina (epinefrina)', 'Amiodarona', 'Fenitoína', 'Midazolam IV', 'Gluconato de cálcio 10%',
+    'Bicarbonato de sódio 8,4%', 'Adenosina', 'Sulfato de magnésio', 'Cloreto de potássio no soro de manutenção', 'N-acetilcisteína IV – dose de ataque'];
+  for (const n of precisam) {
+    const p6 = FLA.preparoDe(n);
+    if (!p6) throw new Error('sem preparo: ' + n);
+    if (!p6.concentracaoFinal) throw new Error('sem concentração final: ' + n);
+  }
+});
+t('Os baralhos cobrem todas as emergências', () => {
+  const bs = FLA.baralhos();
+  eq(bs.filter(b => b.emergencia).length, (D.emergencias || []).length);
+  for (const b of bs.filter(x => x.emergencia)) if (!b.total) throw new Error('baralho vazio: ' + b.id);
+});
+t('Cada emergência vira um cartão de conduta com passos', () => {
+  const cs = FLA.cartas('condutas');
+  eq(cs.length, (D.emergencias || []).length);
+  for (const c of cs) {
+    if (!c.passos.length) throw new Error('cartão sem passos: ' + c.id);
+    if (!c.pergunta) throw new Error('cartão sem pergunta: ' + c.id);
+    if (!c.fontes.length) throw new Error('cartão sem fonte: ' + c.id);
+  }
+});
+t('Cartão de medicação carrega dose e contexto', () => {
+  const cs = FLA.cartas('medicacoes');
+  if (cs.length < 50) throw new Error('poucos cartões de medicação: ' + cs.length);
+  for (const c of cs) {
+    if (!c.dose) throw new Error('cartão sem dose: ' + c.id);
+    if (!c.contexto) throw new Error('cartão sem a emergência de origem: ' + c.id);
+  }
+});
+t('Cada cartão tem identificador único', () => {
+  const vistos = new Set();
+  for (const c of FLA.cartas('tudo')) { if (vistos.has(c.id)) throw new Error('id repetido: ' + c.id); vistos.add(c.id); }
+});
+t('Embaralhar mantém todos os cartões e é estável por semente', () => {
+  const cs = FLA.cartas('condutas');
+  const a = FLA.embaralhar(cs, 42).map(c => c.id);
+  const b = FLA.embaralhar(cs, 42).map(c => c.id);
+  eq(a.join(','), b.join(','), 'a mesma semente muda a ordem:');
+  eq(a.slice().sort().join(','), cs.map(c => c.id).sort().join(','), 'algum cartão se perdeu:');
+});
+t('Marcar um cartão alimenta o progresso e o baralho de revisão', () => {
+  PED.store.reset();
+  const c = FLA.cartas('condutas')[0];
+  FLA.marcar(c.id, 'sei');
+  eq(FLA.estado(c.id), 'sei');
+  eq(FLA.progresso('condutas').sei, 1);
+  FLA.marcar(c.id, 'rever');
+  eq(FLA.cartas('rever').length, 1);
+  FLA.limpar('condutas');
+  eq(FLA.progresso('condutas').sei, 0);
+  eq(FLA.cartas('rever').length, 0);
+});
+t('O estudo fica no aparelho e não vai para o espaço compartilhado', () => {
+  const d = { prefs: { flash: { 'c:pcr': { estado: 'sei' } } } };
+  if ('flash' in NV.paraNuvem(d).prefs) throw new Error('o progresso pessoal não deveria subir');
+});
+
 /* ---------- Resultado ---------- */
-console.log('\nMucurinha – suíte de testes');
+console.log('\nPedTudo – suíte de testes');
 const extras = [D.acidentes && 'acidentes', D.didatica && 'didática', D.comerciais && 'comerciais', D.alternativas && 'alternativas', D.locais && 'locais', D.violencia && 'violência', D.curiosidades && 'curiosidades'].filter(Boolean);
 console.log('  módulos: ' + (extras.join(', ') || 'nenhum módulo complementar carregado'));
 console.log('  bases: ' + doencas.length + ' doenças, ' + D.medicamentos.length + ' medicamentos, ' + D.queixas.length + ' queixas, ' +

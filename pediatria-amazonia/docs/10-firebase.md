@@ -2,7 +2,7 @@
 
 O aplicativo funciona sem nada disso: aberto de um arquivo ou de qualquer endereço, ele guarda tudo no próprio navegador. O Firebase resolve dois problemas concretos:
 
-1. **Um endereço próprio, que funciona sem internet.** Publicado no Firebase Hosting, o Mucurinha vira um aplicativo instalável de verdade, com o cache offline funcionando. Isso importa no interior, onde o sinal falha.
+1. **Um endereço próprio, que funciona sem internet.** Publicado no Firebase Hosting, o PedTudo vira um aplicativo instalável de verdade, com o cache offline funcionando. Isso importa no interior, onde o sinal falha.
 2. **Os dados deixam de ficar presos em um navegador.** Com a sincronização ligada, pacientes, atendimentos, prescrições, evoluções e plantões passam a existir também na sua conta e acompanham celular e computador.
 
 ## Publicar
@@ -43,7 +43,7 @@ Repita o passo 5 em cada aparelho, com o mesmo e-mail.
 O espaço compartilhado serve para quando duas pessoas usam o mesmo aplicativo e precisam ver e alterar tudo: os pacientes, os plantões, as conferências clínicas.
 
 1. Cada uma entra com **o seu próprio e-mail e senha** (não compartilhe a mesma conta: é o e-mail que identifica quem lançou cada coisa).
-2. Quem começa abre **Dados › Espaço compartilhado** e toca em **Criar um espaço compartilhado**. Aparece um código curto, do tipo `mucu-7k3q-2f4b`.
+2. Quem começa abre **Dados › Espaço compartilhado** e toca em **Criar um espaço compartilhado**. Aparece um código curto, do tipo `ped-7k3q-2f4b`.
 3. Ainda ali, ela convida o e-mail da outra pessoa e passa o código (WhatsApp serve).
 4. A outra pessoa abre a mesma tela, digita o código e toca em **Entrar no espaço**.
 
@@ -65,7 +65,7 @@ Isso não está só escrito: há um teste que roda essas regras no emulador do F
 
 ```bash
 npm i --no-save firebase-tools @firebase/rules-unit-testing firebase
-npx firebase emulators:exec --only firestore --project demo-mucurinha "node testes/regras-firestore.test.mjs"
+npx firebase emulators:exec --only firestore --project demo-pedtudo "node testes/regras-firestore.test.mjs"
 ```
 
 ## Como a mesclagem se comporta

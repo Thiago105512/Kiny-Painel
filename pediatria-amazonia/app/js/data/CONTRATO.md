@@ -144,3 +144,25 @@ Regra: `se.sintomas` = todos os ids devem estar marcados; `se.contexto` = ao men
   fontes:[...], atualizadoEm
 }
 ```
+
+## PED.data.preparo  (array)
+
+Como preparar e diluir as medicações que aparecem em `PED.data.emergencias`. Não repete dose nem indicação: isso mora na emergência. Aqui fica o que a mão precisa na hora.
+
+```js
+{
+  chave: 'adrenalina-iv',              // slug único
+  nomes: ['Adrenalina (epinefrina)'],  // precisa casar com dose.nome de alguma emergência (há teste para isso)
+  apresentacao: 'Ampola de 1 mL com 1 mg/mL (solução 1:1.000).',
+  preparo: ['passo 1', 'passo 2'],     // o que fazer, na ordem
+  concentracaoFinal: '0,1 mg/mL (1:10.000)',
+  volumePorKg: '0,1 mL/kg da solução 1:10.000',   // opcional
+  administrar: 'Bolus IV/IO rápido, seguido de flush de 5 mL de SF 0,9%.',
+  cuidados: ['o que não pode acontecer'],
+  verificar: true,                     // quando a concentração varia entre serviços
+  fontes: [{ nome: 'PALS/AHA', ano: 2020 }],
+  atualizadoEm: '2026-09',
+}
+```
+
+`PED.flash` monta os cartões a partir de `emergencias` + `preparo`. Nenhum conteúdo clínico novo mora no módulo de flashcards.

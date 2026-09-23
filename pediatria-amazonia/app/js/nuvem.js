@@ -1,4 +1,4 @@
-/* Sincronização opcional com o Firebase – Mucurinha
+/* Sincronização opcional com o Firebase – PedTudo
    Sem configuração, o aplicativo funciona exatamente como antes, só no aparelho.
    Configurado, os dados passam a existir também na conta no Firebase e acompanham
    celular e computador. Com um espaço compartilhado, duas pessoas veem e alteram
@@ -122,7 +122,7 @@ PED.nuvem = (function () {
   }
 
   /** O que é gravado na nuvem: nada de configuração de aparelho. */
-  const PREFS_LOCAIS = ['firebase', 'espaco', 'google', 'googleEventos', 'googleUltimoEnvio', 'emailNuvem', 'ultimaSync', 'ultimoBackup', 'profissional', 'vistaPlantao', 'pesoRapido', 'ultimoPacienteId'];
+  const PREFS_LOCAIS = ['firebase', 'espaco', 'google', 'googleEventos', 'googleUltimoEnvio', 'emailNuvem', 'ultimaSync', 'ultimoBackup', 'profissional', 'vistaPlantao', 'pesoRapido', 'ultimoPacienteId', 'flash', 'googleMostrar'];
   function paraNuvem(d) {
     const copia = JSON.parse(JSON.stringify(d));
     copia.prefs = Object.assign({}, copia.prefs || {});
@@ -135,7 +135,7 @@ PED.nuvem = (function () {
   function novoCodigo() {
     let s = '';
     for (let i = 0; i < 8; i++) s += ALFABETO[Math.floor(Math.random() * ALFABETO.length)];
-    return 'mucu-' + s.slice(0, 4) + '-' + s.slice(4);
+    return 'ped-' + s.slice(0, 4) + '-' + s.slice(4);
   }
   const limparCodigo = (c) => String(c || '').trim().toLowerCase().replace(/\s+/g, '');
   const chaveEmail = (e) => String(e || '').trim().toLowerCase();
@@ -154,10 +154,10 @@ PED.nuvem = (function () {
     const { fbStore } = sdk;
     const id = novoCodigo();
     await fbStore.setDoc(equipeRef(id), {
-      dono: u.uid, nome: nome || 'Mucurinha', criadoEm: new Date().toISOString(),
+      dono: u.uid, nome: nome || 'PedTudo', criadoEm: new Date().toISOString(),
       membros: { [u.uid]: meuCartao(u) },
     });
-    S().pref('espaco', { id, nome: nome || 'Mucurinha' });
+    S().pref('espaco', { id, nome: nome || 'PedTudo' });
     ultimoEnviado = '';
     await sincronizar();
     await ouvir();
@@ -175,7 +175,7 @@ PED.nuvem = (function () {
     if (!((dados.membros || {})[u.uid])) {
       await fbStore.updateDoc(equipeRef(id), { ['membros.' + u.uid]: meuCartao(u) });
     }
-    S().pref('espaco', { id, nome: dados.nome || 'Mucurinha' });
+    S().pref('espaco', { id, nome: dados.nome || 'PedTudo' });
     ultimoEnviado = '';
     await sincronizar();
     await ouvir();
@@ -219,12 +219,23 @@ PED.nuvem = (function () {
   }
 
   /* ---------- Gravação e escuta ---------- */
-  const docRef = () => {
+  const DOC = 'pedtudo', DOC_ANTIGO = 'mucurinha';   // o aplicativo mudou de nome depois do primeiro envio
+  const docRef = (nome) => {
     const esp = espaco();
     return esp
-      ? sdk.fbStore.doc(db, 'equipes', esp.id, 'dados', 'mucurinha')
-      : sdk.fbStore.doc(db, 'usuarios', auth.currentUser.uid, 'dados', 'mucurinha');
+      ? sdk.fbStore.doc(db, 'equipes', esp.id, 'dados', nome || DOC)
+      : sdk.fbStore.doc(db, 'usuarios', auth.currentUser.uid, 'dados', nome || DOC);
   };
+  /** Lê o documento atual e, se ainda não existir, o gravado com o nome antigo. */
+  async function lerRemoto(tx) {
+    const ler = async (ref) => (tx ? await tx.get(ref) : await sdk.fbStore.getDoc(ref));
+    let snap = await ler(docRef());
+    if (!snap.exists()) {
+      const antigo = await ler(docRef(DOC_ANTIGO));
+      if (antigo.exists()) snap = antigo;
+    }
+    return snap.exists() ? JSON.parse(snap.data().json || '{}') : {};
+  }
 
   /** Baixa, mescla, grava de volta e aplica localmente – tudo numa transação. */
   async function sincronizar() {
@@ -236,8 +247,7 @@ PED.nuvem = (function () {
       const { fbStore } = sdk;
       const ref = docRef();
       const unido = await fbStore.runTransaction(db, async (tx) => {
-        const snap = await tx.get(ref);
-        const remoto = snap.exists() ? (JSON.parse(snap.data().json || '{}')) : {};
+        const remoto = await lerRemoto(tx);
         const u = mesclar(S().load(), remoto);
         tx.set(ref, { json: JSON.stringify(paraNuvem(u)), atualizadoEm: new Date().toISOString(), por: auth.currentUser.email || '', versao: 1 });
         return u;

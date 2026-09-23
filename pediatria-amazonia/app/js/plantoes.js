@@ -1,4 +1,4 @@
-/* Plantões – Mucurinha
+/* Plantões – PedTudo
    Registro de plantões, horas trabalhadas, valores previstos e recebidos.
    Os dados ficam no aparelho, junto com o restante do aplicativo, e entram na cópia de segurança. */
 window.PED = window.PED || {};

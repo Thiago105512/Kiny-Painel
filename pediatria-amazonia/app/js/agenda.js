@@ -1,4 +1,4 @@
-/* Agenda – Mucurinha
+/* Agenda – PedTudo
    Leva os plantões para o calendário do Google (a agenda do Gmail) e traz de volta
    os compromissos do mês, para que o planner mostre tudo no mesmo lugar.
 
@@ -70,7 +70,7 @@ PED.agenda = (function () {
     linhas.push('Situação: ' + PL().rotuloStatus(p.status));
     if (p.por) linhas.push('Lançado por: ' + p.por);
     if (p.obs) linhas.push(p.obs);
-    linhas.push('— Mucurinha');
+    linhas.push('— PedTudo');
     return linhas.join('\n');
   }
 
@@ -90,8 +90,8 @@ PED.agenda = (function () {
 
   /** Calendário .ics com os plantões recebidos. */
   function ics(plantoes) {
-    const L = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Mucurinha//Plantoes//PT-BR', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
-      'X-WR-CALNAME:Plantões (Mucurinha)', 'X-WR-TIMEZONE:' + FUSO,
+    const L = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//PedTudo//Plantoes//PT-BR', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
+      'X-WR-CALNAME:Plantões (PedTudo)', 'X-WR-TIMEZONE:' + FUSO,
       'BEGIN:VTIMEZONE', 'TZID:' + FUSO, 'BEGIN:STANDARD', 'DTSTART:19700101T000000',
       'TZOFFSETFROM:-0400', 'TZOFFSETTO:-0400', 'TZNAME:-04', 'END:STANDARD', 'END:VTIMEZONE'];
     for (const p of plantoes) {
@@ -99,7 +99,7 @@ PED.agenda = (function () {
       const j = janela(p);
       const l = p.localId ? PL().local(p.localId) : null;
       L.push('BEGIN:VEVENT');
-      L.push('UID:plantao-' + p.id + '@mucurinha');
+      L.push('UID:plantao-' + p.id + '@pedtudo');
       L.push('DTSTAMP:' + agoraUTC());
       if (j.diaInteiro) {
         L.push('DTSTART;VALUE=DATE:' + semTraco(j.inicio));
@@ -189,7 +189,7 @@ PED.agenda = (function () {
       location: l ? l.nome : undefined,
       start: j.diaInteiro ? { date: j.inicio } : { dateTime: j.inicio, timeZone: FUSO },
       end: j.diaInteiro ? { date: j.fim } : { dateTime: j.fim, timeZone: FUSO },
-      extendedProperties: { private: { mucurinha: p.id } },
+      extendedProperties: { private: { pedtudo: p.id } },
     };
   };
 
@@ -235,7 +235,7 @@ PED.agenda = (function () {
     const r = await chamar('/calendars/' + encodeURIComponent(calendarioId()) + '/events?singleEvents=true&orderBy=startTime&maxResults=250'
       + '&timeMin=' + encodeURIComponent(ini) + '&timeMax=' + encodeURIComponent(fim));
     return (r.items || [])
-      .filter(ev => !((ev.extendedProperties || {}).private || {}).mucurinha)      // o que veio daqui já está no calendário
+      .filter(ev => { const pv = (ev.extendedProperties || {}).private || {}; return !pv.pedtudo && !pv.mucurinha; })   // o que veio daqui já está no calendário
       .map(ev => ({
         id: ev.id,
         titulo: ev.summary || '(sem título)',

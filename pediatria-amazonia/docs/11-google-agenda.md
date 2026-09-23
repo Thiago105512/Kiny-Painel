@@ -16,7 +16,7 @@ Isso precisa de um ID de cliente OAuth, criado uma vez:
 
 1. Abra o [console do Google Cloud](https://console.cloud.google.com/) com a mesma conta do Gmail e selecione (ou crie) um projeto — pode ser o mesmo projeto do Firebase.
 2. Em **APIs e serviços › Biblioteca**, ative a **Google Calendar API**.
-3. Em **APIs e serviços › Tela de permissão OAuth**, configure a tela: tipo **Externo**, nome do aplicativo (Mucurinha), e-mail de contato. Em **Usuários de teste**, acrescente o seu e-mail e o da outra pessoa — enquanto o aplicativo estiver como "em teste", só esses e-mails conseguem autorizar, o que para duas pessoas basta.
+3. Em **APIs e serviços › Tela de permissão OAuth**, configure a tela: tipo **Externo**, nome do aplicativo (PedTudo), e-mail de contato. Em **Usuários de teste**, acrescente o seu e-mail e o da outra pessoa — enquanto o aplicativo estiver como "em teste", só esses e-mails conseguem autorizar, o que para duas pessoas basta.
 4. Em **Escopos**, inclua `https://www.googleapis.com/auth/calendar`.
 5. Em **APIs e serviços › Credenciais › Criar credenciais › ID do cliente OAuth**, escolha **Aplicativo da Web**. Em **Origens JavaScript autorizadas**, informe exatamente o endereço de onde o aplicativo é aberto — por exemplo `https://seu-projeto.web.app` (e `http://localhost:8080`, se for testar na sua máquina). Não é preciso URI de redirecionamento.
 6. Copie o ID gerado (termina em `.apps.googleusercontent.com`) e cole em **Dados › Agenda do Google**.

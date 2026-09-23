@@ -1,8 +1,8 @@
-# 1. Arquitetura do sistema – Mucurinha
+# 1. Arquitetura do sistema – PedTudo
 
 ## 1.1 Visão geral
 
-Mucurinha é um mini sistema de apoio à decisão clínica pediátrica voltado ao atendimento infantil no Amazonas. O MVP é uma **aplicação web responsiva sem backend** (HTML, CSS e JavaScript puros), instalável como PWA (Progressive Web App) e funcional offline, com persistência local no navegador. A arquitetura foi desenhada em camadas para permitir a evolução para um backend (API + banco relacional) e para um aplicativo nativo/híbrido sem reescrever as regras clínicas.
+PedTudo é um mini sistema de apoio à decisão clínica pediátrica voltado ao atendimento infantil no Amazonas. O MVP é uma **aplicação web responsiva sem backend** (HTML, CSS e JavaScript puros), instalável como PWA (Progressive Web App) e funcional offline, com persistência local no navegador. A arquitetura foi desenhada em camadas para permitir a evolução para um backend (API + banco relacional) e para um aplicativo nativo/híbrido sem reescrever as regras clínicas.
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐

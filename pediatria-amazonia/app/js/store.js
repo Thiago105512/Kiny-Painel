@@ -3,7 +3,7 @@
    permitindo migração futura para backend (IndexedDB/PostgreSQL). */
 window.PED = window.PED || {};
 PED.store = (function () {
-  const KEY = 'mucurinha.v1';
+  const KEY = 'pedtudo.v1';
   const empty = () => ({
     pacientes: [],        // cadastro
     atendimentos: [],     // cada atendimento: queixa, sintomas, contexto, gravidade, hipóteses
@@ -25,10 +25,15 @@ PED.store = (function () {
   /** Registra quem quer saber que os dados mudaram aqui neste aparelho. */
   function aoMudar(fn) { if (typeof fn === 'function') ouvintes.push(fn); }
 
+  const KEY_ANTIGA = 'mucurinha.v1';      // nome anterior do aplicativo; migrado na primeira abertura
   function load() {
     if (db) return db;
     try {
-      const raw = localStorage.getItem(KEY);
+      let raw = localStorage.getItem(KEY);
+      if (!raw) {                           // o aplicativo mudou de nome: traz o que já estava gravado
+        const antigo = localStorage.getItem(KEY_ANTIGA);
+        if (antigo) { localStorage.setItem(KEY, antigo); raw = antigo; }
+      }
       db = raw ? Object.assign(empty(), JSON.parse(raw)) : empty();
       db.prefs = Object.assign(empty().prefs, db.prefs || {});
       if (!db.prefs.profissional) db.prefs.profissional = empty().prefs.profissional;

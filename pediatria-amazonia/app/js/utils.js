@@ -1,4 +1,4 @@
-/* Utilitários gerais – Mucurinha */
+/* Utilitários gerais – PedTudo */
 window.PED = window.PED || {};
 PED.util = (function () {
   const esc = (s) => String(s == null ? '' : s)

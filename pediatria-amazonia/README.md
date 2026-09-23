@@ -1,4 +1,4 @@
-# Mucurinha – mini sistema médico pediátrico para o Amazonas
+# PedTudo – mini sistema médico pediátrico para o Amazonas
 
 Ferramenta de **apoio acadêmico e clínico** para atendimento infantil no contexto amazônico: paciente → queixa → sintomas → contexto epidemiológico → sinais de gravidade → diagnósticos diferenciais → exames → protocolos → tratamento → medicações → prescrição → evolução.
 
@@ -12,10 +12,10 @@ Não há build nem dependências.
 
 ```bash
 # opção 1: abrir diretamente
-xdg-open pediatria-amazonia/app/index.html      # ou clique duplo no arquivo
+xdg-open app/index.html      # ou clique duplo no arquivo
 
 # opção 2: servir localmente (habilita PWA/offline)
-cd pediatria-amazonia/app && python3 -m http.server 8080
+cd app && python3 -m http.server 8080
 # acesse http://localhost:8080
 ```
 
@@ -25,6 +25,8 @@ No celular, abra a URL e use "Adicionar à tela inicial" para instalar como app.
 
 | Módulo | Quantidade |
 |---|---|
+| Flashcards de emergência (conduta, dose e diluição) | 130 |
+| Medicações de emergência com preparo e diluição descritos | 65 |
 | Queixas com fluxo guiado | 54 |
 | Doenças com protocolo padronizado | 72 |
 | Doenças com destaque amazônico | 24 |
@@ -52,6 +54,14 @@ No celular, abra a URL e use "Adicionar à tela inicial" para instalar como app.
 Sem configuração o aplicativo funciona só no navegador, como sempre. Com um projeto Firebase, os dados passam a acompanhar celular e computador e ganham cópia na nuvem. A mesclagem é feita registro a registro: vence a versão mais recente, as exclusões também viajam, e nenhum aparelho sobrescreve o outro em bloco. Instruções em [docs/10-firebase.md](docs/10-firebase.md).
 
 Publicar no Firebase Hosting também dá ao aplicativo um endereço próprio e o funcionamento offline de verdade, que é o que importa no interior.
+
+## Flashcards de emergência
+
+Cada emergência vira cartões de estudo e de consulta rápida. **A pergunta aparece sozinha**: o quadro clínico, sem a resposta. Um toque mostra a conduta em ordem; outro toque mostra as doses — já calculadas para o peso — e **como diluir cada medicação**. Quem estuda tenta lembrar antes de virar; quem está na sala de emergência chega à dose em dois toques.
+
+São 130 cartões: 14 de conduta (um por emergência) e 116 de medicação. Marcar "sei" ou "rever" alimenta um baralho só com o que ficou pela metade, e o progresso é pessoal de cada aparelho. No computador dá para estudar pelo teclado: espaço vira o cartão, as setas andam, `s` marca como sabido e `r` manda para a revisão.
+
+O preparo (`app/js/data/preparo.js`) cobre 65 medicações de emergência com apresentação, passos da diluição, concentração final, velocidade de administração e os cuidados que evitam acidente — cada uma com fonte e data. Onde a concentração varia de hospital para hospital, o item diz isso com todas as letras em vez de inventar um número.
 
 ## Duas pessoas no mesmo aplicativo
 

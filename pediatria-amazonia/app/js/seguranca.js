@@ -1,4 +1,4 @@
-/* Segurança da prescrição – Mucurinha
+/* Segurança da prescrição – PedTudo
    Converte em alerta automático o que hoje só existe como texto nas bases:
    1. faixa etária e de peso de cada esquema posológico;
    2. alergia do cadastro comparada por classe e princípio ativo, com reatividade cruzada;

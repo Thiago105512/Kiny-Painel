@@ -1,4 +1,4 @@
-/* Mucurinha – aplicação (roteador hash + telas). Sem dependências externas. */
+/* PedTudo – aplicação (roteador hash + telas). Sem dependências externas. */
 window.PED = window.PED || {};
 (function () {
   const U = PED.util, S = PED.store, esc = U.esc, f = U.fmt;
@@ -19,6 +19,8 @@ window.PED = window.PED || {};
   const profissionalLinha = () => { const pr = profissional(); return [pr.tratamento, pr.nome].filter(Boolean).join(' ') + [pr.especialidade, pr.crm, pr.rqe].filter(Boolean).map(x => ' · ' + x).join(''); };
   function setPaciente(id) { state.pacienteId = id; S.pref('ultimoPacienteId', id); renderChrome(); }
 
+  // o que fica na barra de baixo, na ordem: o que se abre o dia inteiro
+  const BARRA = ['/', '/queixas', '/emergencias', '/plantoes'];
   const NAV = [
     { path: '/', nome: 'Início', ic: '🏠' },
     { path: '/pacientes', nome: 'Pacientes', ic: '🧒' },
@@ -28,6 +30,7 @@ window.PED = window.PED || {};
     { path: '/medicamentos', nome: 'Medicamentos', ic: '💊' },
     { path: '/calculadoras', nome: 'Calculadoras', ic: '🧮' },
     { path: '/emergencias', nome: 'Emergências', ic: '🚨' },
+    { path: '/flashcards', nome: 'Flashcards', ic: '🃏' },
     { path: '/exames', nome: 'Exames', ic: '🧪' },
     { path: '/vacinas', nome: 'Vacinas', ic: '💉' },
     { path: '/crescimento', nome: 'Crescimento', ic: '📈' },
@@ -63,16 +66,30 @@ window.PED = window.PED || {};
   }
   window.addEventListener('hashchange', render);
 
+  // no computador, estudar com o teclado é mais rápido do que com o mouse
+  window.addEventListener('keydown', (e) => {
+    if (!parseHash().path.startsWith('/flashcards/')) return;
+    const alvo = e.target || {};
+    if (/^(INPUT|TEXTAREA|SELECT)$/.test(alvo.tagName || '')) return;
+    const clicar = (sel) => { const b = document.querySelector(sel); if (b) b.click(); };
+    if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); clicar('[data-act="revelar"]'); }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); clicar('.fcBotoes a:last-child:not(.desab)'); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); clicar('.fcBotoes a:first-child:not(.desab)'); }
+    else if (e.key.toLowerCase() === 's') clicar('[data-act="marcarCarta"][data-e="sei"]');
+    else if (e.key.toLowerCase() === 'r') clicar('[data-act="marcarCarta"][data-e="rever"]');
+  });
+
   /* ---------------- Cromo (barra superior, navegação) ---------------- */
   function renderChrome() {
     const { path } = parseHash();
     const active = (p) => (p === '/' ? path === '/' : path.startsWith(p)) ? 'active' : '';
     const side = $('#sidenav'); const bottom = $('#bottomnav'); const more = $('#moremenu');
     side.innerHTML = NAV.map(n => `<a href="#${n.path}" class="${active(n.path)}"><span class="ic">${n.ic}</span>${n.nome}</a>`).join('');
-    const main5 = NAV.slice(0, 4);
-    bottom.innerHTML = main5.map(n => `<a href="#${n.path}" class="${active(n.path)}"><span class="ic">${n.ic}</span>${n.nome}</a>`).join('') +
-      `<a href="javascript:void(0)" id="moreBtn" class="${NAV.slice(4).some(n => active(n.path)) ? 'active' : ''}"><span class="ic">☰</span>Mais</a>`;
-    more.innerHTML = NAV.slice(4).map(n => `<a href="#${n.path}" class="${active(n.path)}"><span class="ic">${n.ic}</span>${n.nome}</a>`).join('');
+    const naBarra = NAV.filter(n => BARRA.indexOf(n.path) >= 0).sort((a, b) => BARRA.indexOf(a.path) - BARRA.indexOf(b.path));
+    const noMenu = NAV.filter(n => BARRA.indexOf(n.path) < 0);
+    bottom.innerHTML = naBarra.map(n => `<a href="#${n.path}" class="${active(n.path)}"><span class="ic">${n.ic}</span>${n.nome}</a>`).join('') +
+      `<a href="javascript:void(0)" id="moreBtn" class="${noMenu.some(n => active(n.path)) ? 'active' : ''}"><span class="ic">☰</span>Mais</a>`;
+    more.innerHTML = noMenu.map(n => `<a href="#${n.path}" class="${active(n.path)}"><span class="ic">${n.ic}</span>${n.nome}</a>`).join('');
     $('#moreBtn').onclick = () => more.classList.toggle('open');
     $$('a', more).forEach(a => a.onclick = () => more.classList.remove('open'));
     const p = paciente(); const chip = $('#patientChip');
@@ -415,52 +432,80 @@ window.PED = window.PED || {};
   }
 
   /* ---------------- Telas ---------------- */
+  /** Faixa compacta dos plantões: o que é hoje, o que vem depois e a porta do planner. */
+  function faixaPlantoes() {
+    PL().garantirLocais();
+    const hoje = U.today();
+    const doDia = S.where('plantoes', x => x.data === hoje);
+    const prox = PL().proximos(2).filter(x => x.data !== hoje);
+    const nome = (x) => { const l = x.localId ? PL().local(x.localId) : null; return l ? l.nome : 'Sem local'; };
+    const linha = doDia.length
+      ? `<b>Hoje:</b> ${doDia.map(x => esc(nome(x) + ' ' + (x.inicio || '') + (x.fim ? '–' + x.fim : ''))).join(' · ')}`
+      : (prox.length ? `<b>Próximo:</b> ${U.fmtDate(prox[0].data)} · ${esc(nome(prox[0]))} ${esc(prox[0].inicio || '')}` : 'Nenhum plantão lançado por enquanto.');
+    return `<a class="row faixaPlantao" href="#/plantoes">
+      <span style="font-size:1.3rem">🗓️</span>
+      <div class="grow"><div class="title">Plantões</div><div class="sub">${linha}</div></div>
+      <span class="chip">abrir</span></a>`;
+  }
+
   route('/', (params, q) => {
     const p = paciente(); const qs = D().queixas || [];
-    const hoje = new Date();
-    const ano = Number(q.ano) || hoje.getFullYear(), mes = Number(q.mes) || (hoje.getMonth() + 1);
-    const destaque = ['febre', 'febre_calafrios', 'febre_exantema', 'tosse', 'dispneia', 'diarreia', 'vomitos', 'convulsao', 'acidente_ofidico', 'queimadura', 'engasgo', 'rn_febre'];
+    const destaque = ['febre', 'tosse', 'dispneia', 'diarreia', 'vomitos', 'dor_abdominal', 'exantema', 'convulsao', 'queimadura', 'intoxicacao_medicamento', 'engasgo', 'choro_excessivo'];
+    const tile = (href, ic, nome, sub) => `<a class="tile" href="${href}"><span class="ic">${ic}</span>${nome}${sub ? `<small>${sub}</small>` : ''}</a>`;
     return `
-      <div class="card" style="background:linear-gradient(135deg,var(--primary-soft),var(--green-soft));border:none;padding:.8rem 1rem">
+      <div class="card marcaTopo">
         <div class="marca marcaCompacta">
-          <img src="img/mucurinha.png" alt="Mucurinha">
-          <div class="lema"><h1 style="font-size:1.25rem;margin:0">Mucurinha</h1>
+          <img src="img/mucurinha.png" alt="PedTudo">
+          <div class="lema"><h1 style="font-size:1.3rem;margin:0">PedTudo</h1>
             <p class="sub" style="margin:.1rem 0 0">${esc(profissionalLinha())}</p></div>
-        </div>
-        <div class="btnrow" style="margin:.7rem 0 0">
-          <a class="btn danger" href="#/emergencias">🚨 Emergências</a>
-          <a class="btn" href="#/queixas">🩺 Queixa</a>
-          <a class="btn secondary" href="#/acidentes">🚩 Acidentes</a>
         </div>
       </div>
 
-      ${painelPlantoes(ano, mes)}
+      <div class="section-title"><h2>Atender agora</h2></div>
+      <div class="grid gridAcao">
+        <a class="tile acao vermelho" href="#/emergencias"><span class="ic">🚨</span>Emergências<small>conduta e doses</small></a>
+        <a class="tile acao azul" href="#/queixas"><span class="ic">🩺</span>Começar por queixa<small>o que a criança tem</small></a>
+        <a class="tile acao laranja" href="#/acidentes"><span class="ic">🚩</span>Acidentes<small>queimadura, ingestão</small></a>
+        <a class="tile acao verde" href="#/pacientes"><span class="ic">🧒</span>${p ? 'Paciente ativo' : 'Pacientes'}<small>${p ? esc(p.nome.split(' ')[0]) : 'cadastrar e abrir'}</small></a>
+      </div>
+
+      ${pesoBox('Com o peso preenchido, todas as doses do aplicativo já saem calculadas.')}
       ${bannerBackup()}
-      ${pesoBox('Informe o peso para calcular doses nas telas de medicamentos e emergências.')}
-      ${dicaRotativa()}
+      ${faixaPlantoes()}
 
       <div class="section-title"><h2>Queixas frequentes</h2><a href="#/queixas">ver todas</a></div>
-      <div class="grid">${destaque.map(id => qs.find(x => x.id === id)).filter(Boolean).map(x => `<a class="tile" href="#/queixas/${x.id}"><span class="ic">${x.icone || '•'}</span>${esc(x.nome)}</a>`).join('')}</div>
+      <div class="grid">${destaque.map(id => qs.find(x => x.id === id)).filter(Boolean).slice(0, 10).map(x => `<a class="tile" href="#/queixas/${x.id}"><span class="ic">${x.icone || '•'}</span>${esc(x.nome)}</a>`).join('')}</div>
 
-      <div class="section-title"><h2>Atalhos</h2></div>
+      <div class="section-title"><h2>Consultar</h2></div>
       <div class="grid">
-        <a class="tile" href="#/pacientes"><span class="ic">🧒</span>Pacientes</a>
-        <a class="tile amazon" href="#/amazonia"><span class="ic">🌳</span>Amazônia<small>doenças regionais</small></a>
-        <a class="tile" href="#/medicamentos"><span class="ic">💊</span>Medicamentos<small>dose por peso</small></a>
-        <a class="tile" href="#/calculadoras"><span class="ic">🧮</span>Calculadoras</a>
-        <a class="tile" href="#/exames"><span class="ic">🧪</span>Exames</a>
-        <a class="tile" href="#/vacinas"><span class="ic">💉</span>Vacinas</a>
-        <a class="tile" href="#/crescimento"><span class="ic">📈</span>Crescimento</a>
-        <a class="tile" href="#/unidades"><span class="ic">🏥</span>Unidades</a>
-        <a class="tile red" href="#/violencia"><span class="ic">🛡️</span>Proteção</a>
-        <a class="tile" href="#/entender"><span class="ic">📖</span>Entender</a>
-        <a class="tile" href="#/aprender"><span class="ic">💡</span>Aprender</a>
-        <a class="tile" href="#/notificacao"><span class="ic">📢</span>Notificação</a>
+        ${tile('#/medicamentos', '💊', 'Medicamentos', 'dose por peso')}
+        ${tile('#/doencas', '📚', 'Doenças', 'protocolo completo')}
+        ${tile('#/calculadoras', '🧮', 'Calculadoras', '21 contas prontas')}
+        ${tile('#/exames', '🧪', 'Exames', 'valores por idade')}
+        ${tile('#/vacinas', '💉', 'Vacinas', 'calendário')}
+        ${tile('#/crescimento', '📈', 'Crescimento', 'peso, altura, PC')}
+        ${tile('#/amazonia', '🌳', 'Amazônia', 'doenças da região')}
+        ${tile('#/unidades', '🏥', 'Unidades', 'para onde encaminhar')}
+      </div>
+
+      <div class="section-title"><h2>Estudar</h2></div>
+      <div class="grid">
+        ${tile('#/flashcards', '🃏', 'Flashcards', 'emergências na ponta da língua')}
+        ${tile('#/entender', '📖', 'Entender', 'o que é e por que acontece')}
+        ${tile('#/aprender', '💡', 'Aprender e explicar', 'frases para a família')}
+      </div>
+      ${dicaRotativa()}
+
+      <div class="section-title"><h2>Registrar e organizar</h2></div>
+      <div class="grid">
+        ${tile('#/plantoes', '🗓️', 'Plantões', 'calendário e valores')}
+        ${tile('#/notificacao', '📢', 'Notificação', 'agravos compulsórios')}
+        ${tile('#/violencia', '🛡️', 'Proteção', 'suspeita de violência')}
+        ${tile('#/config', '🗄️', 'Dados', 'cópia, nuvem, agenda')}
       </div>
       ${disclaimer}`;
   });
 
-  /* ---- Pacientes ---- */
   route('/pacientes', () => {
     const ps = S.col('pacientes').slice().sort((a, b) => (b.atualizadoEm || '').localeCompare(a.atualizadoEm || ''));
     return `<div class="section-title"><h1>Pacientes</h1><a class="btn sm" href="#/pacientes/novo">➕ Novo</a></div>
@@ -956,6 +1001,13 @@ window.PED = window.PED || {};
       <div class="card"><h2>Reconhecimento</h2>${U.list(e.reconhecimento)}</div>
       <div class="card"><h2>Passos</h2><ol>${(e.passos || []).map(x => `<li>${esc(String(x).replace(/^\s*\d+[.)]\s*/, ''))}</li>`).join('')}</ol></div>
       <div class="card"><h2>Doses ${peso ? `<span class="chip green">${f(peso)} kg</span>` : '<span class="chip red">informe o peso</span>'}</h2><div class="tablewrap"><table class="dosetable"><tr><th>Droga</th><th>Dose calculada</th><th>Via / repetição</th></tr>${(e.doses || []).map(d => doseRow(peso, d)).join('')}</table></div>${idade && idade.totalMeses < 1 ? '<div class="alert amber">Recém-nascido: usar protocolos neonatais específicos (reanimação neonatal SBP).</div>' : ''}</div>
+      ${(() => {
+        const vistos = new Set(), preps = [];
+        (e.doses || []).forEach(d => { const p = PED.flash && PED.flash.preparoDe(d.nome); if (p && !vistos.has(p.chave)) { vistos.add(p.chave); preps.push(p); } });
+        return preps.length ? `<div class="card"><h2>💧 Como preparar e diluir</h2>
+          ${preps.map(p => `<details class="medCard"><summary><b>${esc(p.nomes[0])}</b></summary><div class="body">${blocoPreparo(p)}</div></details>`).join('')}</div>` : '';
+      })()}
+      <div class="btnrow"><a class="btn secondary" href="#/flashcards/e:${esc(e.id)}">🃏 Estudar em flashcards</a></div>
       ${(e.materiais || []).length ? `<div class="card"><h2>Materiais</h2>${U.list(e.materiais)}</div>` : ''}
       ${(e.criteriosUTI || []).length ? `<div class="card"><h2>Critérios de UTI / transferência</h2>${U.list(e.criteriosUTI)}</div>` : ''}
       <div class="card compact">${U.fontes(e)}</div>${disclaimer}`;
@@ -1139,6 +1191,141 @@ window.PED = window.PED || {};
   }
 
   /** Calendário do mês inteiro: cada dia mostra os plantões por cor de local. */
+  /* ---------------- Flashcards de emergência ---------------- */
+  const FL = () => PED.flash;
+  let nivelCarta = 0;                 // 0: só a pergunta · 1: a conduta · 2: as doses e a diluição
+  let cartaAtual = '';                // qual cartão está aberto, para virá-lo de volta ao trocar
+
+  /** Dose de um cartão, no mesmo formato do painel de medicações: valor grande e a conta embaixo. */
+  function doseCartao(peso, d) {
+    let valor = '', formula = '';
+    if (d.porGravidade) {
+      const pg = Array.isArray(d.porGravidade)
+        ? d.porGravidade.map(g => `<b>${esc(g.gravidade)}</b>: ${g.ampolasMin != null ? (g.ampolasMax != null && g.ampolasMax !== g.ampolasMin ? f(g.ampolasMin) + '–' + f(g.ampolasMax) : f(g.ampolasMin)) : esc(g.dose || '')} ${esc(g.unidade || d.unidade || 'ampolas')}`)
+        : Object.entries(d.porGravidade).map(([k, v]) => `<b>${esc(k)}</b>: ${esc(v)}`);
+      return `<div class="doseBox"><div class="big" style="font-size:1.05rem;line-height:1.4">${pg.join('<br>')}</div><div class="formula">por gravidade clínica – não depende do peso</div></div>`;
+    }
+    if (d.doseFixa != null) { valor = `${f(d.doseFixa)} ${d.unidade || ''}`; formula = 'dose fixa'; }
+    else if (d.mgKg != null && peso) {
+      let dose = d.mgKg * peso, lim = '';
+      if (d.doseMax != null && dose > d.doseMax) { dose = d.doseMax; lim = ` (máx. ${f(d.doseMax)} ${d.unidade})`; }
+      valor = `${f(dose)} ${d.unidade}${lim}`;
+      formula = `${f(d.mgKg)} ${d.unidade}/kg × ${f(peso)} kg = ${f(d.mgKg * peso)} ${d.unidade}`;
+      if (d.concentracaoMgMl) {
+        const ml = dose / d.concentracaoMgMl;
+        valor += ` = ${f(ml)} mL`;
+        formula += ` ÷ ${f(d.concentracaoMgMl, 3)} mg/mL = ${f(ml)} mL`;
+      }
+    } else if (d.mgKg != null) { valor = `${f(d.mgKg)} ${d.unidade}/kg`; formula = 'informe o peso para o aplicativo calcular'; }
+    else { valor = d.obs || d.apresentacao || '—'; }
+    return `<div class="doseBox"><div class="big">${esc(valor)}</div><div class="formula">${esc(formula)}</div></div>`;
+  }
+
+  /** O verso do cartão, revelado por partes. */
+  function versoCarta(c, peso) {
+    if (c.tipo === 'conduta') {
+      const passos = `<div class="card compact"><h3>Conduta, em ordem</h3><ol class="passos">${c.passos.map(x => `<li>${esc(x)}</li>`).join('')}</ol></div>`;
+      if (nivelCarta < 2) return passos + `<button class="btn full" data-act="revelar">💉 Ver as doses e a diluição</button>`;
+      const doses = (c.doses || []).filter(d => !d.informativo);
+      return passos + `<div class="card"><h3>Medicações ${peso ? `<span class="chip green">${f(peso)} kg</span>` : '<span class="chip amber">informe o peso</span>'}</h3>
+        ${doses.map(d => { const prep = FL().preparoDe(d.nome);
+          return `<div class="medCard"><b>${esc(d.nome)}</b> <small class="muted">${esc(d.via || '')}${d.repeticao ? ' · ' + esc(d.repeticao) : ''}</small>
+            ${doseCartao(peso, d)}
+            ${prep ? `<details><summary>como preparar</summary><div class="body">${blocoPreparo(prep)}</div></details>`
+                   : (d.apresentacao ? `<small class="muted">${esc(d.apresentacao)}</small>` : '')}</div>`;
+        }).join('')}</div>`;
+    }
+    const d = c.dose;
+    const nivel1 = `<div class="card compact"><h3>Para que serve e por onde</h3>
+      <dl class="kv"><dt>Indicação</dt><dd>${esc(c.indicacao || '—')}</dd><dt>Via</dt><dd>${esc(c.via || '—')}</dd>
+      ${c.repeticao ? `<dt>Repetição</dt><dd>${esc(c.repeticao)}</dd>` : ''}</dl></div>`;
+    if (nivelCarta < 2) return nivel1 + `<button class="btn full" data-act="revelar">💧 Ver a dose e como diluir</button>`;
+    return nivel1 + `<div class="card"><h3>Dose ${peso ? `<span class="chip green">${f(peso)} kg</span>` : '<span class="chip amber">informe o peso</span>'}</h3>
+        ${doseCartao(peso, d)}
+        ${d.obs ? `<p class="muted"><small>${esc(d.obs)}</small></p>` : ''}
+        ${d.verificar ? '<div class="alert amber"><strong>Conferir</strong>Item sinalizado para conferência na fonte oficial antes do uso.</div>' : ''}</div>
+      <div class="card"><h3>Como preparar e diluir</h3>
+        ${c.preparo ? blocoPreparo(c.preparo)
+          : `<p>${esc(d.apresentacao || 'A base não detalha o preparo desta apresentação.')}</p>
+             <div class="alert blue"><strong>Sem preparo detalhado aqui</strong>Confirmar a diluição na bula do produto disponível e na padronização do serviço.</div>`}</div>`;
+  }
+
+  /** Bloco de preparo de uma medicação, usado no cartão e na tela da emergência. */
+  function blocoPreparo(p) {
+    return `<dl class="kv"><dt>Apresentação</dt><dd>${esc(p.apresentacao || '—')}</dd></dl>
+      <ol class="passos">${(p.preparo || []).map(x => `<li>${esc(x)}</li>`).join('')}</ol>
+      <dl class="kv">
+        ${p.concentracaoFinal ? `<dt>Fica</dt><dd>${esc(p.concentracaoFinal)}</dd>` : ''}
+        ${p.volumePorKg ? `<dt>Volume</dt><dd>${esc(p.volumePorKg)}</dd>` : ''}
+        ${p.administrar ? `<dt>Administrar</dt><dd>${esc(p.administrar)}</dd>` : ''}</dl>
+      ${(p.cuidados || []).length ? `<div class="alert amber"><strong>Cuidados</strong>${U.list(p.cuidados)}</div>` : ''}
+      ${p.verificar ? '<div class="alert blue"><strong>Varia entre serviços</strong>Confirmar a padronização do seu hospital antes de preparar.</div>' : ''}
+      <small class="muted">Fontes: ${esc((p.fontes || []).map(x => x.nome + (x.ano ? ' (' + x.ano + ')' : '')).join('; ') || '—')}${p.atualizadoEm ? ' · atualizado em ' + esc(p.atualizadoEm) : ''}</small>`;
+  }
+
+  route('/flashcards', () => {
+    const bs = FL().baralhos();
+    const geral = FL().progresso('tudo');
+    const destaque = bs.filter(b => !b.emergencia);
+    const porEmerg = bs.filter(b => b.emergencia);
+    const cartao = (b) => { const pr = FL().progresso(b.id);
+      return `<a class="row" href="#/flashcards/${encodeURIComponent(b.id)}">
+        <span style="font-size:1.4rem">${b.icone}</span>
+        <div class="grow"><div class="title">${esc(b.nome)}</div><div class="sub">${esc(b.descricao || '')}</div>
+          <div class="barraProg"><span style="width:${pr.porcento}%"></span></div></div>
+        <div style="text-align:right"><b>${pr.total}</b><br><small class="muted">${pr.sei} sei</small></div></a>`; };
+    return `<div class="section-title"><h1>🃏 Flashcards de emergência</h1></div>
+      <p class="muted">A pergunta aparece sozinha. Um toque mostra a conduta; outro toque mostra as doses e como diluir. Tente lembrar antes de virar.</p>
+      <div class="card compact"><b>${geral.sei} de ${geral.total}</b> cartões marcados como sabidos${geral.rever ? ` · ${geral.rever} para rever` : ''}
+        <div class="barraProg" style="margin-top:.4rem"><span style="width:${geral.porcento}%"></span></div></div>
+      <div class="list">${destaque.map(cartao).join('')}</div>
+      <h2>Por emergência</h2>
+      <div class="list">${porEmerg.map(cartao).join('')}</div>
+      ${disclaimer}`;
+  });
+
+  route('/flashcards/:baralho', ({ baralho }, q) => {
+    const b = FL().baralho(baralho);
+    if (!b) return '<div class="empty">Baralho não encontrado.</div>';
+    let cs = FL().cartas(baralho);
+    if (!cs.length) return `<div class="section-title"><h1>${b.icone} ${esc(b.nome)}</h1></div><div class="empty">Nenhum cartão aqui por enquanto.</div><div class="btnrow"><a class="btn" href="#/flashcards">Voltar aos baralhos</a></div>`;
+    if (q.ord === 'aleatorio') cs = FL().embaralhar(cs, q.s || 1);
+    const i = Math.max(0, Math.min(cs.length - 1, Number(q.i || 0)));
+    const chave = baralho + '|' + i + '|' + (q.ord || '') + (q.s || '');
+    if (chave !== cartaAtual) { cartaAtual = chave; nivelCarta = 0; }   // cartão novo vira de volta para a pergunta
+    const c = cs[i];
+    const peso = pesoAtivo();
+    const marca = FL().estado(c.id);
+    const ir = (n) => `#/flashcards/${encodeURIComponent(baralho)}?i=${n}${q.ord === 'aleatorio' ? '&ord=aleatorio&s=' + esc(q.s || 1) : ''}`;
+    const pr = FL().progresso(baralho);
+    return `<div class="section-title"><h1>${b.icone} ${esc(b.nome)}</h1>
+        <a class="btn sm ghost" href="#/flashcards/${encodeURIComponent(baralho)}?ord=${q.ord === 'aleatorio' ? 'ordem' : 'aleatorio'}&s=${Date.now() % 100000}">${q.ord === 'aleatorio' ? '↕️ na ordem' : '🔀 embaralhar'}</a></div>
+      <div class="card compact" style="display:flex;align-items:center;gap:.6rem">
+        <small class="muted">${i + 1} de ${cs.length}</small>
+        <div class="barraProg" style="flex:1"><span style="width:${Math.round(100 * (i + 1) / cs.length)}%"></span></div>
+        <small class="muted">${pr.sei} sabidos</small></div>
+      ${nivelCarta > 1 ? pesoBoxEmergencia() : ''}
+      <div class="flashcard ${nivelCarta ? 'aberto' : ''}" data-act="revelar">
+        <div class="fcTopo"><span class="chip ${c.cor === 'vermelho' ? 'red' : 'amber'}">${esc(c.contexto)}</span>
+          ${marca ? `<span class="chip ${marca === 'sei' ? 'green' : 'amber'}">${marca === 'sei' ? 'sei' : 'rever'}</span>` : ''}</div>
+        <div class="fcTitulo">${c.icone} ${esc(c.titulo)}</div>
+        ${c.sinais && c.sinais.length ? `<ul class="fcSinais">${c.sinais.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
+        <div class="fcPergunta">${esc(c.pergunta)}</div>
+        ${nivelCarta === 0 ? `<div class="fcVirar">👆 toque para ver a resposta</div>` : ''}
+      </div>
+      ${nivelCarta > 0 ? versoCarta(c, peso) : ''}
+      ${nivelCarta > 0 ? `<div class="card compact"><small class="muted">Fontes: ${esc((c.fontes || []).map(x => x.nome + (x.ano ? ' (' + x.ano + ')' : '')).join('; ') || '—')}${c.atualizadoEm ? ' · atualizado em ' + esc(c.atualizadoEm) : ''}</small>
+          <div class="btnrow" style="margin:.4rem 0 0"><a class="btn sm ghost" href="#/emergencias/${esc(c.emergenciaId)}">abrir a emergência inteira</a></div></div>` : ''}
+      <div class="fcBotoes">
+        <a class="btn ghost ${i === 0 ? 'desab' : ''}" href="${i === 0 ? '#' : ir(i - 1)}">◀</a>
+        <button class="btn ${marca === 'rever' ? '' : 'secondary'}" data-act="marcarCarta" data-c="${esc(c.id)}" data-e="rever" data-p="${ir(Math.min(cs.length - 1, i + 1))}">🔁 Rever</button>
+        <button class="btn ${marca === 'sei' ? '' : 'secondary'}" data-act="marcarCarta" data-c="${esc(c.id)}" data-e="sei" data-p="${ir(Math.min(cs.length - 1, i + 1))}">✓ Sei</button>
+        <a class="btn ghost ${i >= cs.length - 1 ? 'desab' : ''}" href="${i >= cs.length - 1 ? '#' : ir(i + 1)}">▶</a>
+      </div>
+      <div class="btnrow"><a class="btn ghost sm" href="#/flashcards">todos os baralhos</a><button class="btn ghost sm" data-act="limparBaralho" data-b="${esc(baralho)}">zerar o que marquei aqui</button></div>
+      <p class="disclaimer">Material de estudo e consulta rápida. Confirme dose e diluição na bula e na padronização do serviço antes de administrar.</p>`;
+  });
+
   /* ---------- Agenda do Google e espaço compartilhado ---------- */
   const AG = () => PED.agenda;
   let compromissos = { chave: '', itens: [], carregando: false };
@@ -1687,7 +1874,7 @@ window.PED = window.PED || {};
         <div class="btnrow"><button class="btn" data-act="criarEspaco">👥 Criar um espaço compartilhado</button></div>
         <form id="formEntrarEspaco" class="fields" style="margin-top:.5rem">
           <div class="field full"><label>Ou entre com o código que a outra pessoa passou</label>
-            <input name="codigo" placeholder="mucu-0000-0000" autocapitalize="none" spellcheck="false">
+            <input name="codigo" placeholder="ped-0000-0000" autocapitalize="none" spellcheck="false">
             <small class="muted">É preciso que ela já tenha convidado o seu e-mail (${esc((e.usuario || {}).email || '')}).</small></div>
           <div class="field full"><button class="btn secondary" type="submit">Entrar no espaço</button></div>
         </form>`;
@@ -1746,7 +1933,7 @@ window.PED = window.PED || {};
            <div class="btnrow"><button class="btn" data-act="enviarGoogleMes">☁️ Enviar o mês atual</button><button class="btn ghost" data-act="googleSair">Desconectar</button></div>`
         : `<div class="btnrow"><button class="btn" data-act="googleConectar">Conectar à conta do Google</button></div>`}
       <div class="btnrow"><button class="btn ghost sm" data-act="limparGoogle">Remover a configuração do Google</button></div>
-      <p class="muted"><small>Os eventos criados daqui ficam marcados como do Mucurinha: enviar de novo atualiza o mesmo evento, e um plantão apagado aqui some de lá no próximo envio.</small></p>`;
+      <p class="muted"><small>Os eventos criados daqui ficam marcados como do PedTudo: enviar de novo atualiza o mesmo evento, e um plantão apagado aqui some de lá no próximo envio.</small></p>`;
   }
 
   /** Manda os plantões do mês para a agenda do Google e conta o que fez. */
@@ -1835,7 +2022,8 @@ window.PED = window.PED || {};
     <div class="card"><h2>⚙️ Revisão clínica</h2><p class="muted">Itens das bases que pedem conferência da médica antes do uso assistencial.</p>
       <p><strong>${revisao.pendencias().filter(x => revisao.get(x.tipo, x.id, x.sub)).length} de ${revisao.pendencias().length}</strong> conferidos.</p>
       <div class="btnrow"><a class="btn" href="#/revisao">Abrir revisão clínica</a></div></div>
-    <div class="card"><h2>Sobre</h2><p>Mucurinha – protótipo MVP de apoio à decisão clínica pediátrica no Amazonas. Versão 0.1.0.</p></div>`);
+    <div class="card"><h2>Sobre</h2><p>PedTudo – apoio à decisão clínica pediátrica no Amazonas. Versão 0.2.0.</p>
+      <p class="muted"><small>A mucurinha continua sendo a mascote da casa: aqui seu filho é atendido como se fosse uma mucurinha, com carinho, cuidado e acolhimento.</small></p></div>`);
 
   /* ---------------- Eventos ---------------- */
   function formData(form) { const o = {}; new FormData(form).forEach((v, k) => o[k] = typeof v === 'string' ? v.trim() : v); return o; }
@@ -2205,9 +2393,21 @@ window.PED = window.PED || {};
         catch (err) { alert(PED.nuvem.mensagemErro(err)); render(); }
       },
       async sairNuvem() { await PED.nuvem.sair(); equipeCache = { id: '', dados: null, carregando: false }; render(); },
+      /* ---- Flashcards ---- */
+      revelar() { if (nivelCarta < 2) nivelCarta++; render(); },
+      marcarCarta() {
+        const atual = PED.flash.estado(el.dataset.c);
+        PED.flash.marcar(el.dataset.c, atual === el.dataset.e ? null : el.dataset.e);
+        if (atual !== el.dataset.e && el.dataset.p && el.dataset.p !== '#') location.hash = el.dataset.p;
+        else render();
+      },
+      limparBaralho() {
+        if (!confirm('Zerar o que foi marcado neste baralho?')) return;
+        PED.flash.limpar(el.dataset.b); U.toast('Marcações zeradas'); render();
+      },
       /* ---- Espaço compartilhado ---- */
       async criarEspaco() {
-        const nome = prompt('Nome do espaço (aparece só aqui):', 'Mucurinha') || 'Mucurinha';
+        const nome = prompt('Nome do espaço (aparece só aqui):', 'PedTudo') || 'PedTudo';
         U.toast('Criando o espaço…');
         try {
           const id = await PED.nuvem.criarEspaco(nome);
@@ -2254,7 +2454,7 @@ window.PED = window.PED || {};
       async enviarGoogle() { await enviarAoGoogle(Number(el.dataset.ano), Number(el.dataset.mes)); },
       async enviarGoogleMes() { const r = mesRef(); await enviarAoGoogle(r.ano, r.mes); },
       limparNuvem() { if (!confirm('Remover a configuração do Firebase deste aparelho? Os dados locais continuam aqui.')) return; PED.nuvem.limparConfig(); render(); },
-      exportar() { const blob = new Blob([S.exportJSON()], { type: 'application/json' }); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'mucurinha-' + U.today() + '.json'; a.click(); S.pref('ultimoBackup', new Date().toISOString()); U.toast('Cópia gerada'); render(); },
+      exportar() { const blob = new Blob([S.exportJSON()], { type: 'application/json' }); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'pedtudo-' + U.today() + '.json'; a.click(); S.pref('ultimoBackup', new Date().toISOString()); U.toast('Cópia gerada'); render(); },
       copiarBackup() { const txt = S.exportJSON();
         const ok = () => { S.pref('ultimoBackup', new Date().toISOString()); U.toast('Dados copiados: cole em um bloco de notas ou mensagem para guardar'); render(); };
         if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(ok).catch(() => mostrarBackupTexto(txt));
@@ -2274,10 +2474,10 @@ window.PED = window.PED || {};
   }
 
   /* ---------------- Init ---------------- */
-  const temaAtual = () => { try { return localStorage.getItem('mucurinha.tema') || 'claro'; } catch (e) { return 'claro'; } };
+  const temaAtual = () => { try { return localStorage.getItem('pedtudo.tema') || localStorage.getItem('mucurinha.tema') || 'claro'; } catch (e) { return 'claro'; } };
   function alternarTema() {
     const novo = temaAtual() === 'dark' ? 'claro' : 'dark';
-    try { localStorage.setItem('mucurinha.tema', novo); } catch (e) {}
+    try { localStorage.setItem('pedtudo.tema', novo); } catch (e) {}
     if (novo === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
     else document.documentElement.removeAttribute('data-theme');
     const b = $('#themeBtn'); if (b) b.textContent = novo === 'dark' ? '☀️' : '🌙';

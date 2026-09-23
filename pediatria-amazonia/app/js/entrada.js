@@ -1,4 +1,4 @@
-/* Entrada rápida – Mucurinha
+/* Entrada rápida – PedTudo
    Objetivo: digitar o mínimo. Datas são digitadas (não selecionadas), a idade pode
    substituir a data de nascimento, e os campos de texto sugerem ao digitar as primeiras letras. */
 window.PED = window.PED || {};

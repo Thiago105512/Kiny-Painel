@@ -1,6 +1,6 @@
 {
-  "name": "Mucurinha – Pediatria no Amazonas",
-  "short_name": "Mucurinha",
+  "name": "PedTudo – Pediatria no Amazonas",
+  "short_name": "PedTudo",
   "description": "Aqui seu filho é atendido como se fosse uma mucurinha. Apoio à decisão clínica pediátrica no contexto amazônico.",
   "start_url": "./index.html",
   "display": "standalone",
