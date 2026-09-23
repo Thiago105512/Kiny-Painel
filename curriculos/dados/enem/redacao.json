@@ -1,0 +1,531 @@
+{
+ "competencias": [
+  {
+   "n": 1,
+   "nome": "Domínio da modalidade escrita formal da língua portuguesa",
+   "descricao": "Avalia o domínio da norma-padrão: estrutura sintática, convenções da escrita (ortografia, acentuação, hífen, maiúsculas e minúsculas, separação silábica), gramática (concordância, regência, pontuação, crase, flexão) e escolha de registro adequado à situação formal, evitando marcas de oralidade e informalidade.",
+   "niveis": [
+    "0: demonstra desconhecimento da modalidade escrita formal da língua portuguesa.",
+    "40: demonstra domínio precário da modalidade escrita formal, de forma sistemática, com diversificados e frequentes desvios gramaticais, de escolha de registro e de convenções da escrita.",
+    "80: demonstra domínio insuficiente da modalidade escrita formal, com muitos desvios gramaticais, de escolha de registro e de convenções da escrita.",
+    "120: demonstra domínio mediano da modalidade escrita formal, com alguns desvios gramaticais e de convenções da escrita.",
+    "160: demonstra bom domínio da modalidade escrita formal, com poucos desvios gramaticais e de convenções da escrita.",
+    "200: demonstra excelente domínio da modalidade escrita formal; desvios gramaticais ou de convenções da escrita são aceitos apenas como excepcionalidade e quando não caracterizam reincidência."
+   ]
+  },
+  {
+   "n": 2,
+   "nome": "Compreensão da proposta e aplicação de conceitos das várias áreas do conhecimento, nos limites do texto dissertativo-argumentativo em prosa",
+   "descricao": "Avalia se o participante compreendeu o tema (sem tangenciá-lo nem fugir dele), se usou repertório sociocultural pertinente e produtivo e se domina a estrutura do texto dissertativo-argumentativo, com proposição (tese), argumentação e conclusão.",
+   "niveis": [
+    "0: fuga ao tema ou não atendimento à estrutura dissertativo-argumentativa; nesses casos a redação recebe nota zero.",
+    "40: apresenta o assunto, tangenciando o tema, ou demonstra domínio precário do texto dissertativo-argumentativo, com traços constantes de outros tipos textuais.",
+    "80: desenvolve o tema recorrendo à cópia de trechos dos textos motivadores ou apresenta domínio insuficiente do texto dissertativo-argumentativo, sem atender à estrutura com proposição, argumentação e conclusão.",
+    "120: desenvolve o tema por meio de argumentação previsível e apresenta domínio mediano do texto dissertativo-argumentativo, com proposição, argumentação e conclusão.",
+    "160: desenvolve o tema por meio de argumentação consistente e apresenta bom domínio do texto dissertativo-argumentativo, com proposição, argumentação e conclusão.",
+    "200: desenvolve o tema por meio de argumentação consistente, a partir de repertório sociocultural produtivo, e apresenta excelente domínio do texto dissertativo-argumentativo."
+   ]
+  },
+  {
+   "n": 3,
+   "nome": "Seleção, relação, organização e interpretação de informações, fatos, opiniões e argumentos em defesa de um ponto de vista",
+   "descricao": "Avalia o projeto de texto: se os argumentos são pertinentes ao tema, bem selecionados, desenvolvidos e organizados de forma estratégica para defender um ponto de vista, configurando autoria, e não apenas reproduzindo os textos motivadores.",
+   "niveis": [
+    "0: apresenta informações, fatos e opiniões não relacionados ao tema e sem defesa de um ponto de vista.",
+    "40: apresenta informações, fatos e opiniões pouco relacionados ao tema ou incoerentes, sem defesa de um ponto de vista.",
+    "80: apresenta informações, fatos e opiniões relacionados ao tema, mas desorganizados ou contraditórios e limitados aos argumentos dos textos motivadores.",
+    "120: apresenta informações, fatos e opiniões relacionados ao tema, limitados aos argumentos dos textos motivadores e pouco organizados, em defesa de um ponto de vista.",
+    "160: apresenta informações, fatos e opiniões relacionados ao tema, de forma organizada, com indícios de autoria, em defesa de um ponto de vista.",
+    "200: apresenta informações, fatos e opiniões relacionados ao tema, de forma consistente e organizada, configurando autoria, em defesa de um ponto de vista."
+   ]
+  },
+  {
+   "n": 4,
+   "nome": "Conhecimento dos mecanismos linguísticos necessários para a construção da argumentação",
+   "descricao": "Avalia a coesão textual: o uso adequado e variado de conectivos entre parágrafos e dentro deles, de mecanismos de referenciação (pronomes, sinônimos, expressões resumitivas) e a articulação entre as partes do texto, evitando repetições e rupturas.",
+   "niveis": [
+    "0: não articula as informações.",
+    "40: articula as partes do texto de forma precária.",
+    "80: articula as partes do texto de forma insuficiente, com muitas inadequações, e apresenta repertório limitado de recursos coesivos.",
+    "120: articula as partes do texto de forma mediana, com inadequações, e apresenta repertório pouco diversificado de recursos coesivos.",
+    "160: articula as partes do texto com poucas inadequações e apresenta repertório diversificado de recursos coesivos.",
+    "200: articula bem as partes do texto e apresenta repertório diversificado de recursos coesivos."
+   ]
+  },
+  {
+   "n": 5,
+   "nome": "Elaboração de proposta de intervenção para o problema abordado, respeitando os direitos humanos",
+   "descricao": "Avalia a proposta de solução para o problema discutido: se é concreta, relacionada ao tema, articulada à argumentação e detalhada (agente, ação, modo ou meio, efeito ou finalidade e detalhamento). Propostas que desrespeitam os direitos humanos recebem nota zero nesta competência.",
+   "niveis": [
+    "0: não apresenta proposta ou apresenta proposta não relacionada ao tema ou ao assunto.",
+    "40: apresenta proposta de intervenção vaga, precária ou relacionada apenas ao assunto.",
+    "80: elabora, de forma insuficiente, proposta de intervenção relacionada ao tema ou não articulada com a discussão desenvolvida no texto.",
+    "120: elabora, de forma mediana, proposta de intervenção relacionada ao tema e articulada à discussão desenvolvida no texto.",
+    "160: elabora bem proposta de intervenção relacionada ao tema e articulada à discussão desenvolvida no texto.",
+    "200: elabora muito bem proposta de intervenção, detalhada, relacionada ao tema e articulada à discussão desenvolvida no texto."
+   ]
+  }
+ ],
+ "zeram": [
+  "fuga total ao tema",
+  "não obediência ao tipo dissertativo-argumentativo",
+  "extensão de até 7 linhas (texto insuficiente)",
+  "cópia de trechos dos textos motivadores ou do caderno de questões sem que haja ao menos 8 linhas de produção própria (as linhas copiadas são desconsideradas na contagem)",
+  "impropérios, desenhos e outras formas propositais de anulação",
+  "parte do texto deliberadamente desconectada do tema proposto",
+  "assinatura, nome, iniciais, apelido, codinome ou rubrica fora do local destinado à assinatura",
+  "predominância ou totalidade do texto em língua estrangeira",
+  "números ou sinais gráficos fora do texto e sem função clara",
+  "folha de redação em branco, mesmo que haja texto na folha de rascunho"
+ ],
+ "estrutura": {
+  "introducao": [
+   "Contextualize o tema com um repertório legitimado (fato histórico, lei, conceito, obra) ligado ao recorte proposto.",
+   "Apresente com clareza a tese, ou seja, o ponto de vista que será defendido.",
+   "Anuncie os dois eixos argumentativos que serão desenvolvidos.",
+   "Mantenha o recorte exato do tema, sem generalizar o assunto."
+  ],
+  "desenvolvimento": [
+   "Use, em geral, dois parágrafos, um para cada eixo anunciado na introdução.",
+   "Abra cada parágrafo com um tópico frasal que retome a tese.",
+   "Fundamente o argumento com repertório pertinente e explique a relação dele com o tema (uso produtivo).",
+   "Aprofunde causas e consequências, evitando apenas descrever o problema.",
+   "Feche o parágrafo relacionando o argumento à tese, com conectivos variados entre e dentro dos parágrafos."
+  ],
+  "conclusao": [
+   "Retome brevemente a tese e os problemas discutidos.",
+   "Apresente proposta de intervenção com agente, ação, modo ou meio, efeito ou finalidade e detalhamento.",
+   "Articule a proposta aos problemas apontados no desenvolvimento.",
+   "Respeite os direitos humanos na proposta."
+  ]
+ },
+ "propostas": [
+  {
+   "id": "prop-queimadas-amazonia",
+   "tema": "Desafios para o combate às queimadas e ao desmatamento na Amazônia",
+   "textosMotivadores": [
+    "A floresta amazônica participa da regulação do clima e das chuvas em várias regiões do Brasil, por meio dos chamados 'rios voadores'.",
+    "A Constituição Federal (art. 225) garante a todos o direito ao meio ambiente ecologicamente equilibrado e impõe ao poder público e à coletividade o dever de defendê-lo.",
+    "Queimadas afetam a qualidade do ar e a saúde de moradores de cidades amazônicas, como Manaus, especialmente no período de seca."
+   ],
+   "eixos": [
+    "Fiscalização ambiental insuficiente",
+    "Pressão da fronteira agropecuária e da grilagem",
+    "Impactos na saúde e no clima",
+    "Valorização da economia da floresta em pé"
+   ],
+   "autoral": true
+  },
+  {
+   "id": "prop-saude-mental-jovens",
+   "tema": "Caminhos para ampliar o cuidado com a saúde mental dos jovens no Brasil",
+   "textosMotivadores": [
+    "A Constituição (art. 196) define a saúde como direito de todos e dever do Estado.",
+    "Especialistas associam o uso excessivo de redes sociais à comparação constante e à ansiedade entre adolescentes.",
+    "Escolas relatam dificuldade em identificar e encaminhar estudantes em sofrimento psíquico."
+   ],
+   "eixos": [
+    "Estigma em torno do sofrimento psíquico",
+    "Acesso limitado a atendimento especializado",
+    "Papel da escola e da família",
+    "Influência das redes sociais"
+   ],
+   "autoral": true
+  },
+  {
+   "id": "prop-exclusao-digital",
+   "tema": "Os impactos da exclusão digital na formação escolar no Brasil",
+   "textosMotivadores": [
+    "Durante o ensino remoto na pandemia de covid-19, estudantes sem internet ou sem computador tiveram mais dificuldade para acompanhar as aulas.",
+    "Em muitas comunidades rurais e ribeirinhas, a conexão à internet é inexistente ou instável.",
+    "Serviços públicos, como matrículas e benefícios sociais, passaram a ser oferecidos principalmente por meios digitais."
+   ],
+   "eixos": [
+    "Desigualdade de infraestrutura entre regiões",
+    "Letramento digital de alunos e professores",
+    "Acesso a serviços e cidadania"
+   ],
+   "autoral": true
+  },
+  {
+   "id": "prop-violencia-contra-mulher",
+   "tema": "Desafios para o enfrentamento da violência doméstica contra a mulher no Brasil",
+   "textosMotivadores": [
+    "A Lei Maria da Penha (Lei nº 11.340/2006) criou mecanismos para coibir a violência doméstica e familiar contra a mulher, incluindo medidas protetivas de urgência.",
+    "A dependência econômica e o medo de represálias estão entre os motivos que levam vítimas a não denunciarem agressores.",
+    "Redes de acolhimento, como delegacias especializadas e casas-abrigo, não estão presentes em todos os municípios."
+   ],
+   "eixos": [
+    "Raízes culturais do machismo",
+    "Subnotificação e medo de denunciar",
+    "Alcance desigual da rede de proteção"
+   ],
+   "autoral": true
+  },
+  {
+   "id": "prop-envelhecimento",
+   "tema": "O envelhecimento da população brasileira e os desafios do cuidado com a pessoa idosa",
+   "textosMotivadores": [
+    "A queda da fecundidade e o aumento da expectativa de vida vêm alterando a pirâmide etária brasileira.",
+    "O Estatuto da Pessoa Idosa (Lei nº 10.741/2003) assegura direitos como prioridade no atendimento e proteção contra violência e abandono.",
+    "Muitas famílias assumem sozinhas o cuidado de parentes idosos, frequentemente sobrecarregando mulheres."
+   ],
+   "eixos": [
+    "Etarismo e invisibilidade social",
+    "Sobrecarga do cuidado familiar",
+    "Preparo dos serviços de saúde e previdência"
+   ],
+   "autoral": true
+  },
+  {
+   "id": "prop-desinformacao",
+   "tema": "Os efeitos da desinformação nas redes sociais sobre a democracia e a saúde pública",
+   "textosMotivadores": [
+    "Notícias falsas tendem a circular rapidamente por explorarem emoções como medo e indignação.",
+    "Durante campanhas de vacinação, conteúdos enganosos contribuíram para a hesitação vacinal de parte da população.",
+    "Algoritmos de recomendação podem reforçar bolhas de opinião, expondo usuários sempre a conteúdos semelhantes."
+   ],
+   "eixos": [
+    "Educação midiática",
+    "Responsabilidade das plataformas",
+    "Impactos na saúde pública e no debate democrático"
+   ],
+   "autoral": true
+  },
+  {
+   "id": "prop-trabalho-infantil",
+   "tema": "A persistência do trabalho infantil no Brasil",
+   "textosMotivadores": [
+    "A Constituição proíbe qualquer trabalho a menores de 16 anos, salvo na condição de aprendiz, a partir dos 14 anos.",
+    "O Estatuto da Criança e do Adolescente (Lei nº 8.069/1990) estabelece a proteção integral de crianças e adolescentes.",
+    "Em situações de pobreza, o trabalho de crianças costuma ser visto pelas famílias como complemento de renda."
+   ],
+   "eixos": [
+    "Pobreza e naturalização cultural",
+    "Evasão escolar",
+    "Fiscalização e políticas de transferência de renda"
+   ],
+   "autoral": true
+  },
+  {
+   "id": "prop-povos-indigenas",
+   "tema": "Caminhos para a valorização dos saberes e dos direitos dos povos indígenas no Brasil",
+   "textosMotivadores": [
+    "A Constituição (art. 231) reconhece aos indígenas sua organização social, costumes, línguas, crenças e tradições, e os direitos originários sobre as terras que tradicionalmente ocupam.",
+    "Diversas línguas indígenas faladas no Brasil correm risco de desaparecer.",
+    "Estudos associam terras indígenas a taxas menores de desmatamento em comparação com áreas vizinhas não protegidas."
+   ],
+   "eixos": [
+    "Preconceito e invisibilidade",
+    "Proteção territorial",
+    "Educação escolar indígena e preservação das línguas"
+   ],
+   "autoral": true
+  }
+ ],
+ "repertorios": [
+  {
+   "id": "rep-cf-art6",
+   "tipo": "lei",
+   "titulo": "Constituição Federal de 1988, art. 6º",
+   "ideia": "Define como direitos sociais a educação, a saúde, a alimentação, o trabalho, a moradia, o transporte, o lazer, a segurança, a previdência social, a proteção à maternidade e à infância e a assistência aos desamparados.",
+   "usoSugerido": [
+    "educação",
+    "saúde",
+    "moradia",
+    "fome e alimentação",
+    "mobilidade urbana",
+    "desigualdade"
+   ]
+  },
+  {
+   "id": "rep-cf-art205",
+   "tipo": "lei",
+   "titulo": "Constituição Federal, art. 205",
+   "ideia": "A educação é direito de todos e dever do Estado e da família, visando ao pleno desenvolvimento da pessoa, seu preparo para a cidadania e sua qualificação para o trabalho.",
+   "usoSugerido": [
+    "educação",
+    "evasão escolar",
+    "exclusão digital",
+    "trabalho infantil"
+   ]
+  },
+  {
+   "id": "rep-cf-art196",
+   "tipo": "lei",
+   "titulo": "Constituição Federal, art. 196",
+   "ideia": "A saúde é direito de todos e dever do Estado, garantida por políticas sociais e econômicas que reduzam o risco de doenças, com acesso universal e igualitário.",
+   "usoSugerido": [
+    "saúde pública",
+    "saúde mental",
+    "vacinação",
+    "acesso ao SUS"
+   ]
+  },
+  {
+   "id": "rep-cf-art225",
+   "tipo": "lei",
+   "titulo": "Constituição Federal, art. 225",
+   "ideia": "Todos têm direito ao meio ambiente ecologicamente equilibrado, cabendo ao poder público e à coletividade o dever de defendê-lo e preservá-lo para as presentes e futuras gerações.",
+   "usoSugerido": [
+    "meio ambiente",
+    "Amazônia",
+    "queimadas",
+    "resíduos sólidos",
+    "mudanças climáticas"
+   ]
+  },
+  {
+   "id": "rep-eca",
+   "tipo": "lei",
+   "titulo": "Estatuto da Criança e do Adolescente (Lei nº 8.069/1990)",
+   "ideia": "Adota a doutrina da proteção integral, reconhecendo crianças e adolescentes como sujeitos de direitos e atribuindo à família, à sociedade e ao Estado o dever de assegurá-los com absoluta prioridade.",
+   "usoSugerido": [
+    "trabalho infantil",
+    "violência contra crianças",
+    "educação",
+    "exposição de menores na internet"
+   ]
+  },
+  {
+   "id": "rep-maria-da-penha",
+   "tipo": "lei",
+   "titulo": "Lei Maria da Penha (Lei nº 11.340/2006)",
+   "ideia": "Cria mecanismos para coibir a violência doméstica e familiar contra a mulher, como as medidas protetivas de urgência, e reconhece formas de violência física, psicológica, sexual, patrimonial e moral.",
+   "usoSugerido": [
+    "violência contra a mulher",
+    "desigualdade de gênero",
+    "feminicídio"
+   ]
+  },
+  {
+   "id": "rep-estatuto-idoso",
+   "tipo": "lei",
+   "titulo": "Estatuto da Pessoa Idosa (Lei nº 10.741/2003)",
+   "ideia": "Garante direitos às pessoas com 60 anos ou mais, como prioridade no atendimento e proteção contra negligência, discriminação e violência.",
+   "usoSugerido": [
+    "envelhecimento",
+    "etarismo",
+    "cuidado familiar",
+    "previdência"
+   ]
+  },
+  {
+   "id": "rep-lbi",
+   "tipo": "lei",
+   "titulo": "Lei Brasileira de Inclusão (Lei nº 13.146/2015)",
+   "ideia": "O Estatuto da Pessoa com Deficiência busca assegurar e promover, em condições de igualdade, o exercício dos direitos e liberdades fundamentais da pessoa com deficiência, visando à sua inclusão social e cidadania.",
+   "usoSugerido": [
+    "acessibilidade",
+    "inclusão",
+    "educação inclusiva",
+    "mercado de trabalho"
+   ]
+  },
+  {
+   "id": "rep-lgpd",
+   "tipo": "lei",
+   "titulo": "Lei Geral de Proteção de Dados (Lei nº 13.709/2018)",
+   "ideia": "Regula o tratamento de dados pessoais, inclusive nos meios digitais, para proteger os direitos fundamentais de liberdade, privacidade e livre desenvolvimento da personalidade.",
+   "usoSugerido": [
+    "privacidade na internet",
+    "manipulação de dados",
+    "tecnologia",
+    "golpes digitais"
+   ]
+  },
+  {
+   "id": "rep-dudh",
+   "tipo": "historia",
+   "titulo": "Declaração Universal dos Direitos Humanos (ONU, 1948)",
+   "ideia": "Adotada após a Segunda Guerra Mundial, afirma que todos os seres humanos nascem livres e iguais em dignidade e direitos.",
+   "usoSugerido": [
+    "direitos humanos",
+    "migração e refúgio",
+    "discriminação",
+    "dignidade"
+   ]
+  },
+  {
+   "id": "rep-bauman",
+   "tipo": "sociologia",
+   "titulo": "Zygmunt Bauman: modernidade líquida",
+   "ideia": "Bauman descreve a sociedade contemporânea como 'líquida', marcada por relações frágeis e passageiras, individualismo e consumo, em contraste com a solidez das instituições do passado.",
+   "usoSugerido": [
+    "relações nas redes sociais",
+    "consumismo",
+    "saúde mental",
+    "solidão"
+   ]
+  },
+  {
+   "id": "rep-durkheim-anomia",
+   "tipo": "sociologia",
+   "titulo": "Émile Durkheim: anomia",
+   "ideia": "Anomia é o estado de enfraquecimento das normas sociais que orientam a conduta dos indivíduos, frequentemente associado a períodos de crise e mudança rápida.",
+   "usoSugerido": [
+    "violência",
+    "crise de valores",
+    "saúde mental",
+    "desinformação"
+   ]
+  },
+  {
+   "id": "rep-bourdieu",
+   "tipo": "sociologia",
+   "titulo": "Pierre Bourdieu: violência simbólica",
+   "ideia": "Bourdieu chama de violência simbólica a dominação exercida de forma sutil, por meio de valores e padrões culturais que os próprios dominados aceitam como naturais.",
+   "usoSugerido": [
+    "desigualdade de gênero",
+    "preconceito linguístico",
+    "padrões de beleza",
+    "racismo"
+   ]
+  },
+  {
+   "id": "rep-sergio-buarque",
+   "tipo": "sociologia",
+   "titulo": "Sérgio Buarque de Holanda: o 'homem cordial' (Raízes do Brasil, 1936)",
+   "ideia": "O conceito descreve a tendência brasileira de misturar o público e o privado, guiando as relações pela emoção e pela pessoalidade em vez de regras impessoais.",
+   "usoSugerido": [
+    "corrupção",
+    "patrimonialismo",
+    "cidadania",
+    "desigualdade"
+   ]
+  },
+  {
+   "id": "rep-arendt",
+   "tipo": "filosofia",
+   "titulo": "Hannah Arendt: banalidade do mal",
+   "ideia": "Ao acompanhar o julgamento do nazista Adolf Eichmann, Arendt observou que grandes crimes podem ser cometidos por pessoas comuns que obedecem sem refletir sobre seus atos.",
+   "usoSugerido": [
+    "discurso de ódio",
+    "violência",
+    "obediência e ética",
+    "cyberbullying"
+   ]
+  },
+  {
+   "id": "rep-kant-esclarecimento",
+   "tipo": "filosofia",
+   "titulo": "Immanuel Kant: esclarecimento (1784)",
+   "ideia": "Kant define o esclarecimento como a saída do ser humano de sua menoridade, isto é, da incapacidade de usar o próprio entendimento sem a direção de outro.",
+   "usoSugerido": [
+    "desinformação",
+    "educação",
+    "pensamento crítico",
+    "manipulação"
+   ]
+  },
+  {
+   "id": "rep-adorno-horkheimer",
+   "tipo": "filosofia",
+   "titulo": "Adorno e Horkheimer: indústria cultural",
+   "ideia": "Na 'Dialética do Esclarecimento', os autores criticam a produção cultural padronizada e voltada ao lucro, que transforma a cultura em mercadoria e favorece a passividade do público.",
+   "usoSugerido": [
+    "consumo",
+    "mídia e redes sociais",
+    "acesso à cultura",
+    "padrões de beleza"
+   ]
+  },
+  {
+   "id": "rep-paulo-freire",
+   "tipo": "filosofia",
+   "titulo": "Paulo Freire: Pedagogia do Oprimido",
+   "ideia": "Freire critica a 'educação bancária', na qual o professor apenas deposita conteúdos no aluno, e defende uma educação dialógica e libertadora, que desenvolva a consciência crítica.",
+   "usoSugerido": [
+    "educação",
+    "evasão escolar",
+    "cidadania",
+    "letramento digital"
+   ]
+  },
+  {
+   "id": "rep-lei-aurea",
+   "tipo": "historia",
+   "titulo": "Lei Áurea (1888) e o pós-abolição",
+   "ideia": "A abolição da escravidão em 13 de maio de 1888 não foi acompanhada de políticas de acesso à terra, à educação e ao trabalho para a população liberta, o que ajuda a explicar desigualdades raciais persistentes.",
+   "usoSugerido": [
+    "racismo",
+    "desigualdade social",
+    "trabalho",
+    "moradia"
+   ]
+  },
+  {
+   "id": "rep-chico-mendes",
+   "tipo": "historia",
+   "titulo": "Chico Mendes e os seringueiros",
+   "ideia": "Líder seringueiro do Acre assassinado em 1988, Chico Mendes defendeu a floresta e o modo de vida de seus povos, inspirando a criação das reservas extrativistas.",
+   "usoSugerido": [
+    "Amazônia",
+    "desmatamento",
+    "conflitos no campo",
+    "desenvolvimento sustentável"
+   ]
+  },
+  {
+   "id": "rep-carolina",
+   "tipo": "literatura",
+   "titulo": "Carolina Maria de Jesus: Quarto de Despejo (1960)",
+   "ideia": "Diário de uma mulher negra e catadora de papel na favela do Canindé, em São Paulo, que denuncia a fome e a exclusão social a partir da experiência de quem as vive.",
+   "usoSugerido": [
+    "fome",
+    "desigualdade",
+    "racismo",
+    "moradia",
+    "acesso à leitura"
+   ]
+  },
+  {
+   "id": "rep-vidas-secas",
+   "tipo": "literatura",
+   "titulo": "Graciliano Ramos: Vidas Secas (1938)",
+   "ideia": "O romance acompanha a família de Fabiano, retirantes no sertão, e mostra como a miséria e a opressão limitam até a capacidade de expressão dos personagens.",
+   "usoSugerido": [
+    "fome",
+    "migração",
+    "desigualdade regional",
+    "acesso à educação"
+   ]
+  },
+  {
+   "id": "rep-dois-irmaos",
+   "tipo": "literatura",
+   "titulo": "Milton Hatoum: Dois Irmãos",
+   "ideia": "Ambientado em Manaus, o romance narra o conflito entre os gêmeos Yaqub e Omar em uma família de origem libanesa, tendo como pano de fundo as transformações da cidade ao longo do século XX.",
+   "usoSugerido": [
+    "Amazônia e urbanização",
+    "imigração",
+    "memória",
+    "relações familiares"
+   ]
+  },
+  {
+   "id": "rep-orwell-1984",
+   "tipo": "literatura",
+   "titulo": "George Orwell: 1984",
+   "ideia": "O romance distópico retrata um Estado totalitário que vigia constantemente os cidadãos e manipula a informação e a linguagem para controlar o pensamento.",
+   "usoSugerido": [
+    "vigilância e privacidade",
+    "desinformação",
+    "liberdade de expressão",
+    "tecnologia"
+   ]
+  },
+  {
+   "id": "rep-censo-indigenas",
+   "tipo": "dado",
+   "titulo": "Censo Demográfico 2022 (IBGE): população indígena",
+   "ideia": "O Censo 2022 contabilizou cerca de 1,7 milhão de pessoas indígenas no Brasil, e o Amazonas foi o estado com a maior população indígena. Fonte: IBGE, Censo 2022 (divulgação de 2023).",
+   "usoSugerido": [
+    "povos indígenas",
+    "Amazônia",
+    "diversidade cultural",
+    "demarcação de terras"
+   ]
+  }
+ ]
+}

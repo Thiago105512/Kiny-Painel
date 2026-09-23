@@ -11,7 +11,14 @@
    "Concurso público"
   ],
   "correta": 1,
-  "explicacao": "Art. 8º, IV, do Estatuto da Advocacia (Lei 8.906/1994)."
+  "explicacao": "Art. 8º, IV, do Estatuto da Advocacia (Lei 8.906/1994).",
+  "disciplina": "Ética",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-488b6d6d",
@@ -25,7 +32,14 @@
    "Metade à parte, metade ao advogado"
   ],
   "correta": 1,
-  "explicacao": "Art. 23 do EAOAB: pertencem ao advogado, que pode executá-los autonomamente."
+  "explicacao": "Art. 23 do EAOAB: pertencem ao advogado, que pode executá-los autonomamente.",
+  "disciplina": "Ética",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-95dc217e",
@@ -39,7 +53,14 @@
    "20 dias úteis"
   ],
   "correta": 1,
-  "explicacao": "Art. 335 do CPC."
+  "explicacao": "Art. 335 do CPC.",
+  "disciplina": "Processo Civil",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-4c56a54c",
@@ -53,7 +74,14 @@
    "8 dias"
   ],
   "correta": 2,
-  "explicacao": "Art. 1.003, §5º: 15 dias para todos os recursos, exceto embargos de declaração (5 dias)."
+  "explicacao": "Art. 1.003, §5º: 15 dias para todos os recursos, exceto embargos de declaração (5 dias).",
+  "disciplina": "Processo Civil",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-51160cef",
@@ -67,7 +95,14 @@
    "60 dias"
   ],
   "correta": 1,
-  "explicacao": "Art. 10 do CPP: 10 dias se preso, 30 se solto. Há leis especiais com prazos diferentes."
+  "explicacao": "Art. 10 do CPP: 10 dias se preso, 30 se solto. Há leis especiais com prazos diferentes.",
+  "disciplina": "Processo Penal",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-19a76129",
@@ -81,7 +116,14 @@
    "13 e 17 anos"
   ],
   "correta": 1,
-  "explicacao": "Art. 2º do ECA: criança até 12 anos incompletos; adolescente de 12 a 18 anos incompletos."
+  "explicacao": "Art. 2º do ECA: criança até 12 anos incompletos; adolescente de 12 a 18 anos incompletos.",
+  "disciplina": "ECA",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-9ab054b5",
@@ -95,7 +137,14 @@
    "1 ano"
   ],
   "correta": 1,
-  "explicacao": "Art. 26, II, do CDC. Não durável: 30 dias. Os 7 dias são o arrependimento em compras fora do estabelecimento (art. 49)."
+  "explicacao": "Art. 26, II, do CDC. Não durável: 30 dias. Os 7 dias são o arrependimento em compras fora do estabelecimento (art. 49).",
+  "disciplina": "Consumidor",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-280a8198",
@@ -109,7 +158,14 @@
    "É proporcional ao lucro"
   ],
   "correta": 1,
-  "explicacao": "Art. 1.052 do Código Civil: a responsabilidade de cada sócio é restrita ao valor de suas quotas, mas todos respondem solidariamente pela integralização do capital social."
+  "explicacao": "Art. 1.052 do Código Civil: a responsabilidade de cada sócio é restrita ao valor de suas quotas, mas todos respondem solidariamente pela integralização do capital social.",
+  "disciplina": "Empresarial",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-c337b16a",
@@ -123,7 +179,14 @@
    "Não prescreve, por se tratar de processo disciplinar de natureza ética"
   ],
   "correta": 1,
-  "explicacao": "Art. 43 do Estatuto da Advocacia (Lei 8.906/1994): a pretensão à punibilidade das infrações disciplinares prescreve em cinco anos, contados da constatação oficial do fato."
+  "explicacao": "Art. 43 do Estatuto da Advocacia (Lei 8.906/1994): a pretensão à punibilidade das infrações disciplinares prescreve em cinco anos, contados da constatação oficial do fato.",
+  "disciplina": "Ética",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-06f7e527",
@@ -137,7 +200,14 @@
    "Só pode recusar-se mediante autorização prévia do Conselho Seccional"
   ],
   "correta": 2,
-  "explicacao": "Art. 7º, XIX, do Estatuto da Advocacia: é direito do advogado recusar-se a depor sobre fato relacionado a pessoa de quem seja ou foi advogado, mesmo quando autorizado ou solicitado pelo constituinte."
+  "explicacao": "Art. 7º, XIX, do Estatuto da Advocacia: é direito do advogado recusar-se a depor sobre fato relacionado a pessoa de quem seja ou foi advogado, mesmo quando autorizado ou solicitado pelo constituinte.",
+  "disciplina": "Ética",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-f088d205",
@@ -151,7 +221,14 @@
    "Só se desobriga após homologação judicial da renúncia"
   ],
   "correta": 3,
-  "explicacao": "Art. 5º, § 3º, do Estatuto da Advocacia: o advogado que renunciar ao mandato continuará, durante os dez dias seguintes à notificação da renúncia, a representar o mandante, salvo se for substituído antes."
+  "explicacao": "Art. 5º, § 3º, do Estatuto da Advocacia: o advogado que renunciar ao mandato continuará, durante os dez dias seguintes à notificação da renúncia, a representar o mandante, salvo se for substituído antes.",
+  "disciplina": "Ética",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-e3946a33",
@@ -165,7 +242,14 @@
    "Pode advogar se obtiver autorização do comandante da corporação"
   ],
   "correta": 3,
-  "explicacao": "Art. 28, V, do Estatuto da Advocacia: a advocacia é incompatível com as atividades de ocupantes de cargos ou funções vinculados direta ou indiretamente a atividade policial de qualquer natureza; a incompatibilidade gera proibição total (art. 27)."
+  "explicacao": "Art. 28, V, do Estatuto da Advocacia: a advocacia é incompatível com as atividades de ocupantes de cargos ou funções vinculados direta ou indiretamente a atividade policial de qualquer natureza; a incompatibilidade gera proibição total (art. 27).",
+  "disciplina": "Ética",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-a209c66f",
@@ -179,7 +263,14 @@
    "Está impedida de advogar contra a Fazenda Pública que a remunera"
   ],
   "correta": 4,
-  "explicacao": "Art. 30, I, do Estatuto da Advocacia: os servidores da administração direta, indireta e fundacional são impedidos de exercer a advocacia contra a Fazenda Pública que os remunere ou à qual seja vinculada a entidade empregadora."
+  "explicacao": "Art. 30, I, do Estatuto da Advocacia: os servidores da administração direta, indireta e fundacional são impedidos de exercer a advocacia contra a Fazenda Pública que os remunere ou à qual seja vinculada a entidade empregadora.",
+  "disciplina": "Ética",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-656d73b7",
@@ -193,7 +284,14 @@
    "É vedada, pois o Código proíbe publicidade por meio de outdoors"
   ],
   "correta": 4,
-  "explicacao": "Art. 40, II, do Código de Ética e Disciplina da OAB: é vedado o uso de outdoors, painéis luminosos ou formas assemelhadas de publicidade."
+  "explicacao": "Art. 40, II, do Código de Ética e Disciplina da OAB: é vedado o uso de outdoors, painéis luminosos ou formas assemelhadas de publicidade.",
+  "disciplina": "Ética",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-5ad7c482",
@@ -207,7 +305,14 @@
    "Constitui título executivo, permitindo a execução direta do crédito"
   ],
   "correta": 4,
-  "explicacao": "Art. 24 do Estatuto da Advocacia: a decisão judicial que fixar ou arbitrar honorários e o contrato escrito que os estipular são títulos executivos e constituem crédito privilegiado na falência, concordata, concurso de credores, insolvência civil e liquidação extrajudicial."
+  "explicacao": "Art. 24 do Estatuto da Advocacia: a decisão judicial que fixar ou arbitrar honorários e o contrato escrito que os estipular são títulos executivos e constituem crédito privilegiado na falência, concordata, concurso de credores, insolvência civil e liquidação extrajudicial.",
+  "disciplina": "Ética",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-255411d8",
@@ -221,7 +326,14 @@
    "Só pode integrar a segunda sociedade se ela for unipessoal"
   ],
   "correta": 0,
-  "explicacao": "Art. 15, § 4º, do Estatuto da Advocacia: nenhum advogado pode integrar mais de uma sociedade de advogados com sede ou filial na mesma área territorial do respectivo Conselho Seccional."
+  "explicacao": "Art. 15, § 4º, do Estatuto da Advocacia: nenhum advogado pode integrar mais de uma sociedade de advogados com sede ou filial na mesma área territorial do respectivo Conselho Seccional.",
+  "disciplina": "Ética",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-14c81919",
@@ -235,7 +347,14 @@
    "Ação popular"
   ],
   "correta": 0,
-  "explicacao": "Art. 5º, LXXII, a, da Constituição: conceder-se-á habeas data para assegurar o conhecimento de informações relativas à pessoa do impetrante, constantes de registros ou bancos de dados de entidades governamentais ou de caráter público."
+  "explicacao": "Art. 5º, LXXII, a, da Constituição: conceder-se-á habeas data para assegurar o conhecimento de informações relativas à pessoa do impetrante, constantes de registros ou bancos de dados de entidades governamentais ou de caráter público.",
+  "disciplina": "Constitucional",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-2886890b",
@@ -249,7 +368,14 @@
    "Inconstitucional, pois é vedada a edição de medida provisória sobre direito penal"
   ],
   "correta": 4,
-  "explicacao": "Art. 62, § 1º, I, b, da Constituição: é vedada a edição de medidas provisórias sobre matéria relativa a direito penal, processual penal e processual civil."
+  "explicacao": "Art. 62, § 1º, I, b, da Constituição: é vedada a edição de medidas provisórias sobre matéria relativa a direito penal, processual penal e processual civil.",
+  "disciplina": "Constitucional",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-80975d76",
@@ -263,7 +389,14 @@
    "Mais da metade das Assembleias Legislativas das unidades da Federação"
   ],
   "correta": 4,
-  "explicacao": "Art. 60, I a III, da Constituição: a Constituição pode ser emendada mediante proposta de um terço dos membros da Câmara ou do Senado, do Presidente da República ou de mais da metade das Assembleias Legislativas, cada uma pela maioria relativa de seus membros."
+  "explicacao": "Art. 60, I a III, da Constituição: a Constituição pode ser emendada mediante proposta de um terço dos membros da Câmara ou do Senado, do Presidente da República ou de mais da metade das Assembleias Legislativas, cada uma pela maioria relativa de seus membros.",
+  "disciplina": "Constitucional",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-cc61cf3d",
@@ -277,7 +410,14 @@
    "Vereadora"
   ],
   "correta": 2,
-  "explicacao": "Art. 14, § 3º, VI, da Constituição: a idade mínima é de 35 anos para Presidente, Vice-Presidente e Senador; 30 para Governador; 21 para Deputado e Prefeito; 18 para Vereador."
+  "explicacao": "Art. 14, § 3º, VI, da Constituição: a idade mínima é de 35 anos para Presidente, Vice-Presidente e Senador; 30 para Governador; 21 para Deputado e Prefeito; 18 para Vereador.",
+  "disciplina": "Constitucional",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-b2f5b9ec",
@@ -291,7 +431,14 @@
    "3 anos"
   ],
   "correta": 4,
-  "explicacao": "Art. 206, § 3º, V, do Código Civil: prescreve em três anos a pretensão de reparação civil."
+  "explicacao": "Art. 206, § 3º, V, do Código Civil: prescreve em três anos a pretensão de reparação civil.",
+  "disciplina": "Civil",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-b20158c8",
@@ -305,7 +452,14 @@
    "O maior de 16 e menor de 18 anos"
   ],
   "correta": 2,
-  "explicacao": "Art. 3º do Código Civil: são absolutamente incapazes apenas os menores de 16 anos; pródigos, ébrios habituais e maiores de 16 e menores de 18 são relativamente incapazes (art. 4º)."
+  "explicacao": "Art. 3º do Código Civil: são absolutamente incapazes apenas os menores de 16 anos; pródigos, ébrios habituais e maiores de 16 e menores de 18 são relativamente incapazes (art. 4º).",
+  "disciplina": "Civil",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-122e164d",
@@ -319,7 +473,14 @@
    "30 dias, contados da entrega efetiva"
   ],
   "correta": 4,
-  "explicacao": "Art. 445 do Código Civil: o adquirente decai do direito de obter a redibição ou abatimento no preço no prazo de 30 dias se a coisa for móvel, e de um ano se for imóvel, contado da entrega efetiva."
+  "explicacao": "Art. 445 do Código Civil: o adquirente decai do direito de obter a redibição ou abatimento no preço no prazo de 30 dias se a coisa for móvel, e de um ano se for imóvel, contado da entrega efetiva.",
+  "disciplina": "Civil",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-921f649c",
@@ -333,7 +494,14 @@
    "Pode dispor de todo o patrimônio, desde que os filhos sejam maiores"
   ],
   "correta": 0,
-  "explicacao": "Arts. 1.845, 1.846 e 1.789 do Código Civil: descendentes são herdeiros necessários, e pertence a eles, de pleno direito, a metade dos bens da herança; havendo herdeiros necessários, o testador só pode dispor da metade."
+  "explicacao": "Arts. 1.845, 1.846 e 1.789 do Código Civil: descendentes são herdeiros necessários, e pertence a eles, de pleno direito, a metade dos bens da herança; havendo herdeiros necessários, o testador só pode dispor da metade.",
+  "disciplina": "Civil",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-fb8fc796",
@@ -347,7 +515,14 @@
    "Suspende o prazo apenas se os embargos forem acolhidos"
   ],
   "correta": 2,
-  "explicacao": "Art. 1.026 do CPC: os embargos de declaração não possuem efeito suspensivo e interrompem o prazo para a interposição de recurso."
+  "explicacao": "Art. 1.026 do CPC: os embargos de declaração não possuem efeito suspensivo e interrompem o prazo para a interposição de recurso.",
+  "disciplina": "Processo Civil",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-d7ef213c",
@@ -361,7 +536,14 @@
    "Agravo de instrumento"
   ],
   "correta": 4,
-  "explicacao": "Art. 1.015, I, do CPC: cabe agravo de instrumento contra as decisões interlocutórias que versarem sobre tutelas provisórias."
+  "explicacao": "Art. 1.015, I, do CPC: cabe agravo de instrumento contra as decisões interlocutórias que versarem sobre tutelas provisórias.",
+  "disciplina": "Processo Civil",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-099cbebb",
@@ -375,7 +557,14 @@
    "O réu revel será condenado automaticamente, sem produção de provas"
   ],
   "correta": 1,
-  "explicacao": "Art. 345, I, do CPC: a revelia não produz o efeito de presunção de veracidade se, havendo pluralidade de réus, algum deles contestar a ação."
+  "explicacao": "Art. 345, I, do CPC: a revelia não produz o efeito de presunção de veracidade se, havendo pluralidade de réus, algum deles contestar a ação.",
+  "disciplina": "Processo Civil",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-942d0685",
@@ -389,7 +578,14 @@
    "90 dias, contados do trânsito em julgado"
   ],
   "correta": 1,
-  "explicacao": "Art. 975 do CPC: o direito à rescisão se extingue em dois anos contados do trânsito em julgado da última decisão proferida no processo; a incompetência absoluta é hipótese de rescisória (art. 966, II)."
+  "explicacao": "Art. 975 do CPC: o direito à rescisão se extingue em dois anos contados do trânsito em julgado da última decisão proferida no processo; a incompetência absoluta é hipótese de rescisória (art. 966, II).",
+  "disciplina": "Processo Civil",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-50b1a0b7",
@@ -403,7 +599,14 @@
    "Não terá qualquer benefício, pois o crime já se consumou"
   ],
   "correta": 0,
-  "explicacao": "Art. 16 do Código Penal: nos crimes cometidos sem violência ou grave ameaça, reparado o dano ou restituída a coisa até o recebimento da denúncia, por ato voluntário do agente, a pena será reduzida de um a dois terços."
+  "explicacao": "Art. 16 do Código Penal: nos crimes cometidos sem violência ou grave ameaça, reparado o dano ou restituída a coisa até o recebimento da denúncia, por ato voluntário do agente, a pena será reduzida de um a dois terços.",
+  "disciplina": "Penal",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-cdbbb050",
@@ -417,7 +620,14 @@
    "Não responde por crime algum, por se tratar de crime impossível"
   ],
   "correta": 1,
-  "explicacao": "Art. 15 do Código Penal: o agente que voluntariamente desiste de prosseguir na execução só responde pelos atos já praticados (no caso, eventualmente, disparo de arma de fogo ou perigo para a vida)."
+  "explicacao": "Art. 15 do Código Penal: o agente que voluntariamente desiste de prosseguir na execução só responde pelos atos já praticados (no caso, eventualmente, disparo de arma de fogo ou perigo para a vida).",
+  "disciplina": "Penal",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-8fd049ba",
@@ -431,7 +641,14 @@
    "Há legítima defesa putativa, que exclui a ilicitude"
   ],
   "correta": 2,
-  "explicacao": "Art. 20, caput, do Código Penal: o erro sobre elemento constitutivo do tipo legal exclui o dolo, mas permite a punição por crime culposo, se previsto em lei."
+  "explicacao": "Art. 20, caput, do Código Penal: o erro sobre elemento constitutivo do tipo legal exclui o dolo, mas permite a punição por crime culposo, se previsto em lei.",
+  "disciplina": "Penal",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-50c34185",
@@ -445,7 +662,14 @@
    "São contados em dobro, por se tratar de réu jovem"
   ],
   "correta": 0,
-  "explicacao": "Art. 115 do Código Penal: são reduzidos de metade os prazos de prescrição quando o criminoso era, ao tempo do crime, menor de 21 anos, ou, na data da sentença, maior de 70 anos."
+  "explicacao": "Art. 115 do Código Penal: são reduzidos de metade os prazos de prescrição quando o criminoso era, ao tempo do crime, menor de 21 anos, ou, na data da sentença, maior de 70 anos.",
+  "disciplina": "Penal",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-d0abd164",
@@ -459,7 +683,14 @@
    "15 dias, contados do conhecimento da autoria"
   ],
   "correta": 2,
-  "explicacao": "Art. 38 do CPP: o ofendido decai do direito de queixa se não o exercer dentro de seis meses, contados do dia em que vier a saber quem é o autor do crime."
+  "explicacao": "Art. 38 do CPP: o ofendido decai do direito de queixa se não o exercer dentro de seis meses, contados do dia em que vier a saber quem é o autor do crime.",
+  "disciplina": "Processo Penal",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-8f008e4c",
@@ -473,7 +704,14 @@
    "Embargos infringentes"
   ],
   "correta": 0,
-  "explicacao": "Art. 581, I, do CPP: cabe recurso em sentido estrito da decisão que não receber a denúncia ou a queixa."
+  "explicacao": "Art. 581, I, do CPP: cabe recurso em sentido estrito da decisão que não receber a denúncia ou a queixa.",
+  "disciplina": "Processo Penal",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-02647e6d",
@@ -487,7 +725,14 @@
    "O juízo singular apenas se a morte resultar de culpa"
   ],
   "correta": 1,
-  "explicacao": "Súmula 603 do STF: a competência para o processo e julgamento de latrocínio é do juiz singular e não do Tribunal do Júri, que julga os crimes dolosos contra a vida (art. 5º, XXXVIII, d, da Constituição; art. 74, § 1º, do CPP)."
+  "explicacao": "Súmula 603 do STF: a competência para o processo e julgamento de latrocínio é do juiz singular e não do Tribunal do Júri, que julga os crimes dolosos contra a vida (art. 5º, XXXVIII, d, da Constituição; art. 74, § 1º, do CPP).",
+  "disciplina": "Processo Penal",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-846a8377",
@@ -501,7 +746,14 @@
    "Tem direito apenas a indenização de um terço da remuneração"
   ],
   "correta": 0,
-  "explicacao": "Art. 137 da CLT: sempre que as férias forem concedidas após o prazo do art. 134 (12 meses subsequentes ao período aquisitivo), o empregador pagará em dobro a respectiva remuneração."
+  "explicacao": "Art. 137 da CLT: sempre que as férias forem concedidas após o prazo do art. 134 (12 meses subsequentes ao período aquisitivo), o empregador pagará em dobro a respectiva remuneração.",
+  "disciplina": "Trabalho",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-7bf63d39",
@@ -515,7 +767,14 @@
    "Do parto até um ano após o parto"
   ],
   "correta": 0,
-  "explicacao": "Art. 10, II, b, do ADCT: fica vedada a dispensa arbitrária ou sem justa causa da empregada gestante, desde a confirmação da gravidez até cinco meses após o parto."
+  "explicacao": "Art. 10, II, b, do ADCT: fica vedada a dispensa arbitrária ou sem justa causa da empregada gestante, desde a confirmação da gravidez até cinco meses após o parto.",
+  "disciplina": "Trabalho",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-52b96464",
@@ -529,7 +788,14 @@
    "Entre as 22h de um dia e as 5h do dia seguinte, com adicional de pelo menos 20% sobre a hora diurna"
   ],
   "correta": 4,
-  "explicacao": "Art. 73, caput e § 2º, da CLT: considera-se noturno o trabalho urbano executado entre as 22h de um dia e as 5h do dia seguinte, com remuneração acrescida de pelo menos 20% sobre a hora diurna."
+  "explicacao": "Art. 73, caput e § 2º, da CLT: considera-se noturno o trabalho urbano executado entre as 22h de um dia e as 5h do dia seguinte, com remuneração acrescida de pelo menos 20% sobre a hora diurna.",
+  "disciplina": "Trabalho",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-7ec7fda0",
@@ -543,7 +809,14 @@
    "30 dias"
   ],
   "correta": 1,
-  "explicacao": "Art. 895, I, da CLT e art. 6º da Lei 5.584/1970: o recurso ordinário é cabível no prazo de oito dias, prazo que é a regra geral dos recursos trabalhistas."
+  "explicacao": "Art. 895, I, da CLT e art. 6º da Lei 5.584/1970: o recurso ordinário é cabível no prazo de oito dias, prazo que é a regra geral dos recursos trabalhistas.",
+  "disciplina": "Processo do Trabalho",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-d6ec5e46",
@@ -557,7 +830,14 @@
    "5 testemunhas"
   ],
   "correta": 3,
-  "explicacao": "Art. 852-H, § 2º, da CLT: no procedimento sumaríssimo, as testemunhas, até o máximo de duas para cada parte, comparecerão independentemente de intimação; no rito ordinário, o limite é de três (art. 821)."
+  "explicacao": "Art. 852-H, § 2º, da CLT: no procedimento sumaríssimo, as testemunhas, até o máximo de duas para cada parte, comparecerão independentemente de intimação; no rito ordinário, o limite é de três (art. 821).",
+  "disciplina": "Processo do Trabalho",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-c599afc2",
@@ -571,7 +851,14 @@
    "Deve convalidar obrigatoriamente o ato, qualquer que seja o vício"
   ],
   "correta": 3,
-  "explicacao": "Súmula 473 do STF: a Administração pode anular seus próprios atos, quando eivados de vícios que os tornem ilegais, porque deles não se originam direitos; ou revogá-los por motivo de conveniência ou oportunidade (no mesmo sentido, art. 53 da Lei 9.784/1999)."
+  "explicacao": "Súmula 473 do STF: a Administração pode anular seus próprios atos, quando eivados de vícios que os tornem ilegais, porque deles não se originam direitos; ou revogá-los por motivo de conveniência ou oportunidade (no mesmo sentido, art. 53 da Lei 9.784/1999).",
+  "disciplina": "Administrativo",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-d12b825c",
@@ -585,7 +872,14 @@
    "O Estado responde subjetivamente, com base na culpa do serviço"
   ],
   "correta": 2,
-  "explicacao": "Art. 37, § 6º, da Constituição: as pessoas jurídicas de direito público responderão pelos danos que seus agentes, nessa qualidade, causarem a terceiros, assegurado o direito de regresso contra o responsável nos casos de dolo ou culpa."
+  "explicacao": "Art. 37, § 6º, da Constituição: as pessoas jurídicas de direito público responderão pelos danos que seus agentes, nessa qualidade, causarem a terceiros, assegurado o direito de regresso contra o responsável nos casos de dolo ou culpa.",
+  "disciplina": "Administrativo",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-1ec7c178",
@@ -599,7 +893,14 @@
    "Pode anular o ato em até vinte anos, por se tratar de verba pública"
   ],
   "correta": 3,
-  "explicacao": "Art. 54 da Lei 9.784/1999: o direito da Administração de anular atos de que decorram efeitos favoráveis para os destinatários decai em cinco anos, contados da data em que foram praticados, salvo comprovada má-fé."
+  "explicacao": "Art. 54 da Lei 9.784/1999: o direito da Administração de anular atos de que decorram efeitos favoráveis para os destinatários decai em cinco anos, contados da data em que foram praticados, salvo comprovada má-fé.",
+  "disciplina": "Administrativo",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-4230a631",
@@ -613,7 +914,14 @@
    "3 anos, contados da entrega da declaração"
   ],
   "correta": 2,
-  "explicacao": "Art. 150, § 4º, do CTN: se a lei não fixar prazo, a homologação ocorre em cinco anos a contar da ocorrência do fato gerador; expirado esse prazo sem pronunciamento, considera-se homologado o lançamento, salvo dolo, fraude ou simulação."
+  "explicacao": "Art. 150, § 4º, do CTN: se a lei não fixar prazo, a homologação ocorre em cinco anos a contar da ocorrência do fato gerador; expirado esse prazo sem pronunciamento, considera-se homologado o lançamento, salvo dolo, fraude ou simulação.",
+  "disciplina": "Tributário",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-293524fb",
@@ -627,7 +935,14 @@
    "Devida, pois IPTU é tributo real e não se sujeita a imunidades"
   ],
   "correta": 1,
-  "explicacao": "Art. 150, VI, b, da Constituição: é vedado aos entes federativos instituir impostos sobre entidades religiosas e templos de qualquer culto; a imunidade abrange o imóvel onde se realizam os cultos."
+  "explicacao": "Art. 150, VI, b, da Constituição: é vedado aos entes federativos instituir impostos sobre entidades religiosas e templos de qualquer culto; a imunidade abrange o imóvel onde se realizam os cultos.",
+  "disciplina": "Tributário",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-1de2028f",
@@ -641,7 +956,14 @@
    "Tem a responsabilidade excluída apenas se o débito for parcelado"
   ],
   "correta": 3,
-  "explicacao": "Art. 138 do CTN: a responsabilidade é excluída pela denúncia espontânea da infração, acompanhada do pagamento do tributo devido e dos juros de mora, antes do início de qualquer procedimento administrativo ou medida de fiscalização."
+  "explicacao": "Art. 138 do CTN: a responsabilidade é excluída pela denúncia espontânea da infração, acompanhada do pagamento do tributo devido e dos juros de mora, antes do início de qualquer procedimento administrativo ou medida de fiscalização.",
+  "disciplina": "Tributário",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-4d3c2249",
@@ -655,7 +977,14 @@
    "90 dias, contados da data de emissão"
   ],
   "correta": 1,
-  "explicacao": "Art. 33 da Lei 7.357/1985: o cheque deve ser apresentado para pagamento em 30 dias, quando emitido no lugar onde houver de ser pago, e em 60 dias, quando emitido em outro lugar."
+  "explicacao": "Art. 33 da Lei 7.357/1985: o cheque deve ser apresentado para pagamento em 30 dias, quando emitido no lugar onde houver de ser pago, e em 60 dias, quando emitido em outro lugar.",
+  "disciplina": "Empresarial",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-8030f13d",
@@ -669,7 +998,14 @@
    "Não preenche requisito legal, pois exige-se atividade regular há mais de 5 anos"
   ],
   "correta": 1,
-  "explicacao": "Art. 48, caput, da Lei 11.101/2005: poderá requerer recuperação judicial o devedor que, no momento do pedido, exerça regularmente suas atividades há mais de 2 anos, atendidos os demais requisitos."
+  "explicacao": "Art. 48, caput, da Lei 11.101/2005: poderá requerer recuperação judicial o devedor que, no momento do pedido, exerça regularmente suas atividades há mais de 2 anos, atendidos os demais requisitos.",
+  "disciplina": "Empresarial",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-42996f65",
@@ -683,7 +1019,14 @@
    "Pode desistir em 90 dias, por se tratar de produto durável"
   ],
   "correta": 3,
-  "explicacao": "Art. 49 do CDC: o consumidor pode desistir do contrato no prazo de 7 dias a contar de sua assinatura ou do recebimento do produto, sempre que a contratação ocorrer fora do estabelecimento comercial, com devolução imediata dos valores pagos, monetariamente atualizados."
+  "explicacao": "Art. 49 do CDC: o consumidor pode desistir do contrato no prazo de 7 dias a contar de sua assinatura ou do recebimento do produto, sempre que a contratação ocorrer fora do estabelecimento comercial, com devolução imediata dos valores pagos, monetariamente atualizados.",
+  "disciplina": "Consumidor",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-3cc601e6",
@@ -697,7 +1040,14 @@
    "Tem prazo indeterminado, cessando apenas aos 18 anos"
   ],
   "correta": 3,
-  "explicacao": "Art. 121, §§ 2º e 3º, do ECA: a internação não comporta prazo determinado, sua manutenção deve ser reavaliada no máximo a cada seis meses e o período máximo não excederá três anos; a liberação é compulsória aos 21 anos (§ 5º)."
+  "explicacao": "Art. 121, §§ 2º e 3º, do ECA: a internação não comporta prazo determinado, sua manutenção deve ser reavaliada no máximo a cada seis meses e o período máximo não excederá três anos; a liberação é compulsória aos 21 anos (§ 5º).",
+  "disciplina": "ECA",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-cb839b1c",
@@ -711,7 +1061,14 @@
    "Qualquer Estado membro da ONU"
   ],
   "correta": 3,
-  "explicacao": "Art. 61.1 da Convenção Americana sobre Direitos Humanos: somente os Estados Partes e a Comissão têm direito de submeter caso à decisão da Corte; o indivíduo apresenta petição à Comissão (art. 44)."
+  "explicacao": "Art. 61.1 da Convenção Americana sobre Direitos Humanos: somente os Estados Partes e a Comissão têm direito de submeter caso à decisão da Corte; o indivíduo apresenta petição à Comissão (art. 44).",
+  "disciplina": "Direitos Humanos",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-51092f8a",
@@ -725,7 +1082,14 @@
    "Na eficácia social das normas perante os destinatários"
   ],
   "correta": 0,
-  "explicacao": "Para Kelsen, a validade de cada norma decorre de uma norma superior, até a norma fundamental, que é pressuposta pelo pensamento jurídico; a regra de reconhecimento, que é uma prática social, é conceito de Hart."
+  "explicacao": "Para Kelsen, a validade de cada norma decorre de uma norma superior, até a norma fundamental, que é pressuposta pelo pensamento jurídico; a regra de reconhecimento, que é uma prática social, é conceito de Hart.",
+  "disciplina": "Filosofia do Direito",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "oab-bc76875a",
@@ -739,6 +1103,13 @@
    "Responde subsidiariamente ao Poder Público que concedeu a licença"
   ],
   "correta": 2,
-  "explicacao": "Art. 14, § 1º, da Lei 6.938/1981 (Política Nacional do Meio Ambiente): o poluidor é obrigado, independentemente da existência de culpa, a indenizar ou reparar os danos causados ao meio ambiente e a terceiros; a licença não afasta essa obrigação (art. 225, § 3º, da Constituição)."
+  "explicacao": "Art. 14, § 1º, da Lei 6.938/1981 (Política Nacional do Meio Ambiente): o poluidor é obrigado, independentemente da existência de culpa, a indenizar ou reparar os danos causados ao meio ambiente e a terceiros; a licença não afasta essa obrigação (art. 225, § 3º, da Constituição).",
+  "disciplina": "Ambiental",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  }
 ]

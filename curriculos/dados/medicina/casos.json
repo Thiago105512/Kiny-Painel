@@ -1,0 +1,613 @@
+[
+ {
+  "id": "caso-urgencia-hipertensiva",
+  "titulo": "Cefaleia e pressão muito elevada após abandono do tratamento",
+  "tema": "Hipertensão arterial",
+  "especialidade": "Cardiologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 1,
+  "identificacao": "M.L.S., 61 anos, sexo feminino, parda, costureira, natural e residente em Manaus (AM).",
+  "queixaPrincipal": "\"Dor de cabeça forte desde ontem e a pressão está muito alta.\"",
+  "hda": "Paciente com diagnóstico de hipertensão arterial há cerca de 10 anos refere ter suspendido por conta própria os anti-hipertensivos há aproximadamente 2 meses, por sentir-se bem. Há 1 dia iniciou cefaleia occipital, de moderada intensidade, sem náuseas ou vômitos. Aferiu a pressão em farmácia, que estava muito elevada, e procurou o serviço de pronto atendimento. Nega dor torácica, dispneia, ortopneia, alteração de força ou sensibilidade, alteração de fala, confusão, crise convulsiva ou alteração visual. Nega uso de descongestionantes, anti-inflamatórios ou drogas ilícitas.",
+  "antecedentes": "Hipertensão arterial há 10 anos, com acompanhamento irregular na UBS. Dislipidemia. Nega diabetes, doença renal ou evento cardiovascular prévio. Ex-tabagista (parou há 8 anos). Consome sal em excesso e é sedentária. Mãe hipertensa, falecida por AVC.",
+  "exameFisico": "Bom estado geral, lúcida e orientada, ansiosa. PA 206/122 mmHg no braço direito e 204/120 mmHg no esquerdo, confirmada em nova medida após repouso em ambiente calmo (200/118 mmHg). FC 86 bpm, rítmica. FR 16 irpm. SatO2 97% em ar ambiente. Tax 36,4 °C. IMC 31 kg/m². Ausculta cardíaca: ritmo regular, B4 presente, sem sopros. Ausculta pulmonar: murmúrio vesicular presente bilateralmente, sem ruídos adventícios. Pulsos periféricos simétricos. Sem edema. Exame neurológico sem déficits focais, sem sinais meníngeos. Fundoscopia: estreitamento arteriolar e cruzamentos arteriovenosos patológicos, sem hemorragias, exsudatos ou papiledema.",
+  "exames": "ECG: ritmo sinusal, sinais de sobrecarga ventricular esquerda, sem alterações isquêmicas agudas. Creatinina 1,0 mg/dL; ureia 34 mg/dL; potássio 4,2 mEq/L; sódio 140 mEq/L. Urina tipo 1 sem proteinúria ou hematúria.",
+  "perguntas": [
+   {
+    "pergunta": "Qual a principal hipótese diagnóstica?",
+    "resposta": "Urgência hipertensiva (elevação acentuada da pressão arterial sem evidência de lesão aguda e progressiva de órgão-alvo) em paciente com hipertensão arterial crônica e má adesão ao tratamento."
+   },
+   {
+    "pergunta": "Como diferenciar urgência de emergência hipertensiva neste caso?",
+    "resposta": "A diferença não está no valor da pressão, e sim na presença de lesão aguda de órgão-alvo. A paciente não apresenta déficit neurológico, confusão, dor torácica, dispneia/edema agudo de pulmão, alterações agudas no fundo de olho (hemorragias, exsudatos, papiledema) nem piora aguda da função renal. Na emergência hipertensiva, haveria lesão aguda (ex.: AVC, encefalopatia hipertensiva, síndrome coronariana aguda, edema agudo de pulmão, dissecção de aorta)."
+   },
+   {
+    "pergunta": "Quais erros de conduta devem ser evitados?",
+    "resposta": "Reduzir a pressão de forma abrupta e intensa (risco de hipoperfusão cerebral, coronariana e renal) e usar nifedipina de ação rápida por via sublingual, prática abandonada por causar quedas imprevisíveis da pressão e eventos isquêmicos. Também não se deve liberar a paciente sem garantir a retomada do tratamento e o seguimento ambulatorial."
+   },
+   {
+    "pergunta": "Qual a importância da pseudocrise hipertensiva no diagnóstico diferencial?",
+    "resposta": "Muitas elevações pressóricas são secundárias a dor, ansiedade ou outros estímulos, sem lesão de órgão-alvo, e melhoram com repouso, analgesia e controle do fator desencadeante. É importante reavaliar a pressão após repouso e tratar a causa antes de rotular o quadro como crise hipertensiva."
+   }
+  ],
+  "hipoteses": [
+   "Urgência hipertensiva",
+   "Hipertensão arterial sistêmica com má adesão ao tratamento",
+   "Lesão crônica de órgão-alvo (hipertrofia ventricular esquerda e retinopatia hipertensiva crônica)"
+  ],
+  "diferenciais": [
+   "Emergência hipertensiva (encefalopatia hipertensiva, AVC, síndrome coronariana aguda, dissecção de aorta)",
+   "Pseudocrise hipertensiva (dor, ansiedade)",
+   "Cefaleia primária com elevação reativa da pressão",
+   "Hipertensão secundária (doença renal, hiperaldosteronismo primário, apneia do sono)"
+  ],
+  "conduta": "Em linhas gerais: repouso em ambiente calmo, analgesia para a cefaleia e reavaliação da pressão. Uso de anti-hipertensivo por via oral, com redução gradual da pressão ao longo de 24 a 48 horas, sem necessidade de internação quando não há lesão aguda de órgão-alvo. Reintrodução e otimização do tratamento anti-hipertensivo crônico, orientação sobre adesão, redução do sal, atividade física e controle do peso. Retorno precoce à UBS para reavaliação e rastreamento de lesões de órgão-alvo e de fatores de risco cardiovascular.",
+  "discussao": "As crises hipertensivas classicamente são divididas em urgência e emergência. O ponto central é a avaliação dirigida de órgãos-alvo (cérebro, coração, rins, retina, aorta), e não o número da pressão. A causa mais comum de descontrole é a má adesão ao tratamento, frequentemente por ausência de sintomas, efeitos adversos ou dificuldade de acesso. Na urgência, a redução é gradual e o foco está em retomar o tratamento e garantir seguimento; na emergência, a redução é feita com medicação parenteral em ambiente monitorizado. Algumas diretrizes internacionais recentes deixaram de enfatizar o termo 'urgência hipertensiva', preferindo falar em hipertensão grave sem lesão aguda de órgão-alvo, mas o raciocínio clínico é o mesmo. O caso também ilustra lesões crônicas de órgão-alvo (sobrecarga ventricular e retinopatia), que reforçam o alto risco cardiovascular da paciente.",
+  "referencias": [
+   "Diretrizes Brasileiras de Hipertensão Arterial – Sociedade Brasileira de Cardiologia",
+   "Caderno de Atenção Básica – Hipertensão Arterial Sistêmica (Ministério da Saúde)",
+   "Harrison – Medicina Interna, capítulo de hipertensão arterial"
+  ]
+ },
+ {
+  "id": "caso-insuficiencia-cardiaca-descompensada",
+  "titulo": "Falta de ar para deitar e inchaço nas pernas",
+  "tema": "Insuficiência cardíaca",
+  "especialidade": "Cardiologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "identificacao": "R.A.P., 67 anos, sexo masculino, aposentado (ex-motorista), natural de Parintins e residente em Manaus (AM).",
+  "queixaPrincipal": "\"Falta de ar que piorou muito e as pernas inchadas.\"",
+  "hda": "Paciente refere dispneia aos grandes esforços há cerca de 1 ano, com piora progressiva nas últimas 3 semanas, atualmente aos mínimos esforços (ao tomar banho). Relata ortopneia (dorme com três travesseiros) e episódios de dispneia paroxística noturna. Notou edema de membros inferiores ascendente e aumento do volume abdominal, além de ganho de cerca de 4 kg no período. Conta que há 1 mês deixou de tomar parte dos remédios por falta na farmácia e que nas festas de fim de ano aumentou o consumo de alimentos salgados (charque, peixe salgado). Nega dor torácica recente, febre, tosse produtiva ou palpitações.",
+  "antecedentes": "Infarto agudo do miocárdio há 5 anos, tratado com angioplastia. Hipertensão arterial há 20 anos. Diabetes tipo 2 há 10 anos. Ex-tabagista (40 anos-maço). Etilismo social. Relata ter sido informado de que 'o coração estava fraco' em ecocardiograma prévio.",
+  "exameFisico": "Regular estado geral, dispneico em repouso, falando frases curtas, prefere ficar sentado. Corado, hidratado, acianótico, afebril. PA 138/86 mmHg; FC 104 bpm, rítmica; FR 26 irpm; SatO2 91% em ar ambiente. Extremidades aquecidas, enchimento capilar normal. Turgência jugular patológica a 45°, com refluxo hepatojugular positivo. Ictus desviado para a esquerda e para baixo (6º espaço intercostal, linha axilar anterior). Ausculta cardíaca: ritmo regular em três tempos (B3), sopro sistólico em foco mitral. Ausculta pulmonar: estertores crepitantes em terços inferiores bilateralmente. Abdome: fígado palpável a 4 cm do rebordo costal direito, doloroso; macicez móvel discreta. Edema de membros inferiores até raiz das coxas, com cacifo (3+/4+).",
+  "exames": "ECG: ritmo sinusal, área eletricamente inativa em parede anterior, sem supradesnivelamento agudo do ST. Radiografia de tórax: aumento da área cardíaca, cefalização da trama vascular, linhas B de Kerley e pequeno derrame pleural bilateral. BNP muito elevado. Troponina com discreta elevação, estável em medidas seriadas, sem curva. Creatinina 1,4 mg/dL (basal 1,2); ureia 62 mg/dL; sódio 134 mEq/L; potássio 4,6 mEq/L. Hemoglobina 12,8 g/dL. Ecocardiograma: ventrículo esquerdo dilatado, acinesia anterior e apical, fração de ejeção do ventrículo esquerdo reduzida (cerca de 30%), insuficiência mitral moderada funcional.",
+  "perguntas": [
+   {
+    "pergunta": "Qual a principal hipótese diagnóstica?",
+    "resposta": "Insuficiência cardíaca crônica com fração de ejeção reduzida, de etiologia isquêmica, agudamente descompensada, em perfil hemodinâmico 'quente e úmido' (congesto e com perfusão preservada)."
+   },
+   {
+    "pergunta": "Quais fatores precipitaram a descompensação?",
+    "resposta": "Má adesão ao tratamento (suspensão de medicamentos) e transgressão alimentar com excesso de sal. Outros precipitantes que sempre devem ser pesquisados: isquemia aguda, arritmias (ex.: fibrilação atrial), infecções, hipertensão não controlada, uso de anti-inflamatórios e piora da função renal."
+   },
+   {
+    "pergunta": "Como se classifica o perfil clínico-hemodinâmico deste paciente e por que isso importa?",
+    "resposta": "Pela avaliação à beira do leito (congestão e perfusão), o paciente é 'quente e úmido': tem sinais de congestão (ortopneia, turgência jugular, estertores, edema, hepatomegalia) com boa perfusão (extremidades quentes, PA preservada). É o perfil mais comum e orienta a conduta: o foco inicial é a descongestão com diurético, sem necessidade de inotrópico."
+   },
+   {
+    "pergunta": "Quais classes de medicamentos modificam o prognóstico na IC com fração de ejeção reduzida?",
+    "resposta": "Betabloqueadores específicos para IC, inibidores do sistema renina-angiotensina (IECA, BRA ou, preferencialmente em muitos casos, inibidor da neprilisina associado a BRA), antagonistas dos receptores mineralocorticoides e inibidores de SGLT2. Diuréticos aliviam a congestão, mas não demonstraram reduzir mortalidade."
+   }
+  ],
+  "hipoteses": [
+   "Insuficiência cardíaca com fração de ejeção reduzida agudamente descompensada (perfil quente e úmido)",
+   "Cardiopatia isquêmica",
+   "Descompensação por má adesão e excesso de sal"
+  ],
+  "diferenciais": [
+   "Síndrome coronariana aguda como causa da descompensação",
+   "Exacerbação de DPOC",
+   "Pneumonia",
+   "Síndrome nefrótica ou doença renal crônica com hipervolemia",
+   "Cirrose hepática com ascite e edema",
+   "Tromboembolismo pulmonar"
+  ],
+  "conduta": "Em linhas gerais: internação, cabeceira elevada, oxigênio suplementar se houver hipoxemia (ventilação não invasiva se desconforto respiratório importante), diurético de alça por via venosa com monitorização de diurese, peso diário, função renal e eletrólitos. Restrição de sal e controle hídrico conforme a evolução. Investigação e correção dos precipitantes. Após estabilização, reintrodução e otimização progressiva da terapia que modifica prognóstico. Educação do paciente e da família (adesão, sal, pesagem diária, sinais de piora), vacinação e seguimento ambulatorial precoce após a alta.",
+  "discussao": "A insuficiência cardíaca descompensada é uma das principais causas de internação em idosos. A avaliação sistematizada de congestão e perfusão (perfis 'quente/frio' e 'seco/úmido') permite definir rapidamente a estratégia terapêutica. A presença de B3, turgência jugular e refluxo hepatojugular tem boa especificidade para pressões de enchimento elevadas. Na IC de etiologia isquêmica, a acinesia segmentar e a área inativa no ECG sustentam o diagnóstico. A discreta elevação estável de troponina é comum na IC descompensada e não indica, por si, infarto agudo; a interpretação depende da curva e do contexto. O desfecho a longo prazo depende muito da terapia medicamentosa otimizada, da adesão e do acompanhamento multiprofissional.",
+  "referencias": [
+   "Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda – Sociedade Brasileira de Cardiologia",
+   "Braunwald – Tratado de Doenças Cardiovasculares",
+   "Harrison – Medicina Interna, capítulo de insuficiência cardíaca"
+  ]
+ },
+ {
+  "id": "caso-iam-com-supra-st",
+  "titulo": "Dor no peito em aperto com sudorese",
+  "tema": "Síndrome coronariana aguda",
+  "especialidade": "Cardiologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "identificacao": "J.C.O., 56 anos, sexo masculino, comerciante, residente em Manaus (AM).",
+  "queixaPrincipal": "\"Dor muito forte no peito há duas horas.\"",
+  "hda": "Paciente refere dor retroesternal em aperto, de forte intensidade, iniciada há cerca de 2 horas, em repouso, com irradiação para o membro superior esquerdo e mandíbula, acompanhada de sudorese fria, náuseas e sensação de mal-estar. A dor não varia com a respiração, a posição ou a palpação. Nega episódios semelhantes, mas relata 'queimação no peito' aos esforços nas últimas semanas, que melhorava com repouso. Foi trazido pela família ao pronto-socorro.",
+  "antecedentes": "Hipertensão arterial e diabetes tipo 2, com seguimento irregular. Dislipidemia sem tratamento. Tabagista ativo (30 anos-maço). Sedentário. Pai faleceu de infarto aos 60 anos. Nega uso de cocaína. Nega cirurgias ou sangramentos recentes, AVC prévio ou uso de anticoagulantes.",
+  "exameFisico": "Regular estado geral, ansioso, sudoreico, pálido. PA 152/94 mmHg em ambos os braços; FC 98 bpm, rítmica; FR 20 irpm; SatO2 96% em ar ambiente; Tax 36,2 °C. Ausculta cardíaca: ritmo regular, bulhas normofonéticas, presença de B4, sem sopros ou atrito. Ausculta pulmonar: murmúrio vesicular presente, sem estertores. Pulsos periféricos presentes e simétricos. Sem turgência jugular. Sem edema. Classificação de Killip I.",
+  "exames": "ECG (realizado nos primeiros minutos da chegada): ritmo sinusal, supradesnivelamento do segmento ST em V1 a V5 e em DI e aVL, com infradesnivelamento recíproco em parede inferior. Troponina ultrassensível elevada (o resultado não deve atrasar a reperfusão). Glicemia 212 mg/dL. Creatinina 1,0 mg/dL; potássio 4,1 mEq/L. Hemograma sem alterações. Radiografia de tórax sem congestão e sem alargamento de mediastino.",
+  "perguntas": [
+   {
+    "pergunta": "Qual a principal hipótese diagnóstica?",
+    "resposta": "Síndrome coronariana aguda com supradesnivelamento do segmento ST (infarto agudo do miocárdio com supra de ST) de parede anterior extensa, provavelmente por oclusão da artéria descendente anterior, Killip I."
+   },
+   {
+    "pergunta": "Por que o ECG é o exame mais importante na chegada?",
+    "resposta": "Porque, diante de dor torácica sugestiva, o ECG deve ser feito e interpretado em até 10 minutos da chegada e é ele que define o infarto com supra de ST, condição que exige reperfusão imediata. A troponina confirma necrose miocárdica, mas não se deve aguardar seu resultado para indicar a reperfusão."
+   },
+   {
+    "pergunta": "Quais são as opções de reperfusão?",
+    "resposta": "Angioplastia coronária primária, preferencial quando pode ser realizada em tempo hábil por equipe experiente, ou terapia fibrinolítica quando o acesso à hemodinâmica não é possível em tempo adequado e não há contraindicações. Em regiões com grandes distâncias, como o interior do Amazonas, a fibrinólise no serviço de origem seguida de transferência para centro com hemodinâmica é estratégia importante."
+   },
+   {
+    "pergunta": "Quais diagnósticos diferenciais graves devem ser lembrados antes de antiagregar e anticoagular?",
+    "resposta": "Dissecção aguda de aorta (dor lancinante irradiada para o dorso, assimetria de pulsos ou de PA, alargamento de mediastino), tromboembolismo pulmonar, pericardite aguda (supra de ST difuso, dor pleurítica e posicional) e pneumotórax hipertensivo."
+   }
+  ],
+  "hipoteses": [
+   "Infarto agudo do miocárdio com supradesnivelamento do ST de parede anterior extensa",
+   "Doença arterial coronariana com múltiplos fatores de risco"
+  ],
+  "diferenciais": [
+   "Dissecção aguda de aorta",
+   "Tromboembolismo pulmonar",
+   "Pericardite aguda",
+   "Espasmo coronariano",
+   "Síndrome de Takotsubo",
+   "Doença do refluxo gastroesofágico / espasmo esofágico"
+  ],
+  "conduta": "Em linhas gerais: monitorização contínua, acesso venoso, oxigênio apenas se houver hipoxemia. Antiagregação plaquetária dupla (ácido acetilsalicílico associado a inibidor de P2Y12) e anticoagulação, conforme a estratégia de reperfusão. Reperfusão imediata por angioplastia primária ou fibrinólise. Nitrato para alívio da dor se não houver contraindicações (hipotensão, infarto de ventrículo direito, uso recente de inibidores da fosfodiesterase-5) e analgesia. Estatina de alta potência. Betabloqueador e inibidor do sistema renina-angiotensina quando não houver contraindicações (ex.: sinais de insuficiência cardíaca ou choque para betabloqueador). Internação em unidade coronariana, ecocardiograma e controle rigoroso dos fatores de risco, com cessação do tabagismo e reabilitação cardíaca.",
+  "discussao": "O infarto com supra de ST resulta, em geral, da ruptura ou erosão de placa aterosclerótica com trombose oclusiva. O tempo é determinante: quanto mais precoce a reperfusão, maior a quantidade de miocárdio preservado ('tempo é músculo'). O paciente tinha angina de esforço prévia não investigada e vários fatores de risco modificáveis (tabagismo, diabetes, hipertensão e dislipidemia não controlados). A classificação de Killip-Kimball à admissão tem valor prognóstico. Em sistemas de saúde com grandes distâncias geográficas, como na Amazônia, redes organizadas de atendimento ao infarto, telemedicina para leitura do ECG e fibrinólise precoce fazem diferença nos desfechos.",
+  "referencias": [
+   "Diretriz da Sociedade Brasileira de Cardiologia sobre Tratamento do Infarto Agudo do Miocárdio com Supradesnível do Segmento ST",
+   "Braunwald – Tratado de Doenças Cardiovasculares",
+   "Linha de Cuidado do Infarto Agudo do Miocárdio – Ministério da Saúde"
+  ]
+ },
+ {
+  "id": "caso-cetoacidose-diabetica",
+  "titulo": "Jovem com vômitos, respiração rápida e muita sede",
+  "tema": "Diabetes mellitus – cetoacidose diabética",
+  "especialidade": "Endocrinologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 3,
+  "identificacao": "L.F.M., 19 anos, sexo feminino, estudante universitária, residente em Manaus (AM).",
+  "queixaPrincipal": "\"Vômitos, dor na barriga e cansaço para respirar.\"",
+  "hda": "Paciente trazida pela mãe ao pronto-socorro com história de cerca de 3 semanas de sede intensa, aumento do volume urinário (acorda várias vezes à noite para urinar) e perda de peso não intencional de aproximadamente 6 kg, apesar de apetite preservado. Há 2 dias iniciou náuseas, vômitos repetidos, dor abdominal difusa e mal-estar. Há 1 dia a mãe notou respiração 'funda e rápida' e sonolência. Relata quadro de disúria há 5 dias, sem tratamento.",
+  "antecedentes": "Previamente hígida. Sem uso de medicamentos. Nega gestação (última menstruação há 2 semanas). Avô materno com diabetes. Nega uso de álcool ou drogas.",
+  "exameFisico": "Regular estado geral, sonolenta, mas despertável e orientada (Glasgow 14). Desidratada (mucosas secas, turgor diminuído). Hálito cetônico ('de fruta'). Respiração profunda e rápida (padrão de Kussmaul). PA 98/60 mmHg; FC 122 bpm; FR 30 irpm; SatO2 98% em ar ambiente; Tax 37,4 °C. Enchimento capilar de 3 segundos. Ausculta cardíaca e pulmonar sem alterações, além da taquicardia. Abdome: dor difusa à palpação, sem sinais de irritação peritoneal, ruídos hidroaéreos presentes. Punho-percussão lombar negativa. Peso 48 kg.",
+  "exames": "Glicemia capilar 'HI'; glicemia plasmática 486 mg/dL. Gasometria venosa: pH 7,10; bicarbonato 7 mEq/L. Sódio 131 mEq/L; cloro 97 mEq/L; potássio 5,3 mEq/L; ânion gap aumentado (131 − [97 + 7] = 27). Beta-hidroxibutirato sérico elevado; cetonúria 3+. Ureia 58 mg/dL; creatinina 1,3 mg/dL. Hemograma: leucócitos 17.800/mm³ (comum na cetoacidose, mesmo sem infecção). Urina tipo 1: glicosúria, cetonúria, leucocitúria e nitrito positivo. Beta-hCG negativo. Amilase discretamente elevada. ECG: taquicardia sinusal, sem alterações de onda T.",
+  "perguntas": [
+   {
+    "pergunta": "Qual a principal hipótese diagnóstica?",
+    "resposta": "Cetoacidose diabética grave como abertura de diabetes mellitus tipo 1, provavelmente precipitada por infecção do trato urinário."
+   },
+   {
+    "pergunta": "Quais achados confirmam a cetoacidose diabética?",
+    "resposta": "A tríade de hiperglicemia, cetose (cetonemia/cetonúria) e acidose metabólica com ânion gap aumentado. Os sinais clínicos de Kussmaul, hálito cetônico, desidratação e alteração do nível de consciência são compatíveis. O pH e o bicarbonato muito baixos e a sonolência indicam quadro grave."
+   },
+   {
+    "pergunta": "Por que o potássio 'normal-alto' não significa que o potássio corporal está normal?",
+    "resposta": "Na cetoacidose há depleção importante do potássio corporal total (perdas urinárias pela diurese osmótica e por vômitos). A deficiência de insulina e a acidose deslocam o potássio para fora das células, mascarando o déficit. Com a hidratação e a insulina, o potássio volta para dentro das células e pode cair perigosamente, por isso ele deve ser dosado antes de iniciar a insulina e monitorizado com frequência, com reposição conforme protocolo."
+   },
+   {
+    "pergunta": "Quais são os pilares do tratamento?",
+    "resposta": "Hidratação venosa vigorosa, insulinoterapia venosa contínua (iniciada após conhecer o potássio), reposição de potássio, monitorização clínica e laboratorial seriada (glicemia, eletrólitos, gasometria, cetonas) e tratamento do fator precipitante. A transição para insulina subcutânea é feita após resolução da acidose e retomada da alimentação, com sobreposição adequada."
+   }
+  ],
+  "hipoteses": [
+   "Cetoacidose diabética grave",
+   "Diabetes mellitus tipo 1 (abertura do quadro)",
+   "Infecção do trato urinário como fator precipitante",
+   "Lesão renal aguda pré-renal por desidratação"
+  ],
+  "diferenciais": [
+   "Estado hiperglicêmico hiperosmolar",
+   "Cetoacidose alcoólica ou de jejum",
+   "Acidose láctica (sepse, hipoperfusão)",
+   "Intoxicações que cursam com ânion gap aumentado (salicilatos, metanol, etilenoglicol)",
+   "Abdome agudo cirúrgico (a dor abdominal da cetoacidose costuma melhorar com a correção metabólica)",
+   "Pancreatite aguda"
+  ],
+  "conduta": "Em linhas gerais: internação em unidade com monitorização (preferencialmente terapia intensiva, pela gravidade), acesso venoso, hidratação venosa com cristaloide, insulina regular por via venosa em infusão contínua após dosagem de potássio, reposição de potássio conforme os níveis séricos, controle glicêmico horário e eletrólitos/gasometria seriados. Acréscimo de solução glicosada quando a glicemia cair, mantendo a insulina até a resolução da cetoacidose. Bicarbonato apenas em situações restritas previstas em protocolo. Coleta de urocultura e antibioticoterapia para a infecção urinária. Após a resolução, insulinoterapia basal-bolus subcutânea, educação em diabetes (aplicação de insulina, monitorização glicêmica, conduta em dias de doença) e seguimento com endocrinologia.",
+  "discussao": "A cetoacidose diabética resulta de deficiência absoluta ou relativa de insulina associada ao aumento de hormônios contrarreguladores, levando a hiperglicemia, lipólise e produção de corpos cetônicos. É frequentemente a forma de apresentação do diabetes tipo 1 em crianças e jovens, e os sintomas clássicos (poliúria, polidipsia, perda de peso) costumam preceder o quadro por semanas, o que reforça a importância do diagnóstico precoce. Infecções e omissão de insulina são os precipitantes mais comuns. O sódio medido baixo reflete, em parte, o efeito osmótico da hiperglicemia (hiponatremia dilucional/translocacional, pela saída de água das células), devendo-se calcular o sódio corrigido. As principais complicações do tratamento são hipoglicemia, hipocalemia e, sobretudo em crianças e adolescentes, edema cerebral, que exige vigilância neurológica.",
+  "referencias": [
+   "Diretrizes da Sociedade Brasileira de Diabetes",
+   "Consenso internacional sobre crises hiperglicêmicas em adultos com diabetes (ADA/EASD)",
+   "Harrison – Medicina Interna, capítulo de diabetes mellitus"
+  ]
+ },
+ {
+  "id": "caso-pneumonia-comunidade",
+  "titulo": "Idoso com febre, tosse produtiva e dor ao respirar",
+  "tema": "Pneumonia adquirida na comunidade",
+  "especialidade": "Pneumologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 1,
+  "identificacao": "A.B.N., 70 anos, sexo masculino, aposentado, residente em Manaus (AM).",
+  "queixaPrincipal": "\"Febre e tosse com catarro há quatro dias.\"",
+  "hda": "Paciente refere início há 4 dias de febre aferida de até 39 °C, com calafrios, tosse produtiva com expectoração amarelo-esverdeada e, há 2 dias, dor em base do hemitórax direito que piora com a inspiração profunda e a tosse. Refere cansaço aos esforços e inapetência. Nega hemoptise, perda de peso prévia ou sudorese noturna. Relata quadro gripal na família na semana anterior. Não usou antibióticos nos últimos meses e não esteve internado recentemente.",
+  "antecedentes": "Hipertensão arterial controlada. Nega DPOC, insuficiência cardíaca, diabetes, doença renal ou hepática. Ex-tabagista (parou há 15 anos). Vacinação contra influenza em dia; não recebeu vacina pneumocócica. Mora com a esposa, independente para as atividades diárias.",
+  "exameFisico": "Regular estado geral, lúcido e orientado, corado, hidratado, febril (Tax 38,6 °C). PA 128/76 mmHg; FC 104 bpm; FR 32 irpm; SatO2 92% em ar ambiente. Ausculta pulmonar: expansibilidade reduzida à direita, frêmito toracovocal aumentado, macicez à percussão, estertores crepitantes e sopro tubário em base direita. Ausculta cardíaca: ritmo regular, taquicárdico, sem sopros. Abdome sem alterações. Sem edema.",
+  "exames": "Radiografia de tórax (PA e perfil): consolidação em lobo inferior direito com broncograma aéreo, sem derrame pleural significativo e sem cavitação. Hemograma: leucócitos 16.800/mm³ com desvio à esquerda; hemoglobina 13,5 g/dL; plaquetas 260.000/mm³. Ureia 38 mg/dL; creatinina 1,0 mg/dL; sódio 137 mEq/L. Proteína C-reativa elevada. Glicemia 118 mg/dL. Hemoculturas e escarro para Gram e cultura coletados. Teste rápido para influenza/SARS-CoV-2 negativo. Teste rápido para HIV não reagente.",
+  "perguntas": [
+   {
+    "pergunta": "Qual a principal hipótese diagnóstica?",
+    "resposta": "Pneumonia adquirida na comunidade em lobo inferior direito, de provável etiologia bacteriana típica (Streptococcus pneumoniae é o agente mais comum)."
+   },
+   {
+    "pergunta": "Como avaliar a gravidade e o local de tratamento?",
+    "resposta": "Pelo escore CURB-65 (Confusão, Ureia elevada, frequência respiratória ≥ 30 irpm, PA baixa – sistólica < 90 ou diastólica ≤ 60 mmHg –, idade ≥ 65 anos). O paciente pontua 2 (idade e frequência respiratória), o que, somado à hipoxemia, favorece o tratamento hospitalar. O escore deve ser complementado pelo julgamento clínico, pela oxigenação, pelas comorbidades e pelas condições sociais."
+   },
+   {
+    "pergunta": "Qual o racional da antibioticoterapia empírica?",
+    "resposta": "Cobrir os agentes mais prováveis (pneumococo, Haemophilus influenzae e agentes atípicos, como Mycoplasma, Chlamydophila e Legionella). Em pacientes internados fora da UTI, as diretrizes recomendam, em geral, betalactâmico associado a macrolídeo ou monoterapia com quinolona respiratória, ajustando conforme culturas e evolução."
+   }
+  ],
+  "hipoteses": [
+   "Pneumonia adquirida na comunidade (lobo inferior direito)",
+   "Etiologia provável: Streptococcus pneumoniae"
+  ],
+  "diferenciais": [
+   "Tuberculose pulmonar",
+   "Neoplasia pulmonar com pneumonia pós-obstrutiva",
+   "Tromboembolismo pulmonar com infarto pulmonar",
+   "Pneumonia viral (influenza, SARS-CoV-2)",
+   "Insuficiência cardíaca descompensada",
+   "Derrame pleural parapneumônico/empiema (complicação)"
+  ],
+  "conduta": "Em linhas gerais: internação em enfermaria, oxigênio suplementar para corrigir a hipoxemia, hidratação e antitérmico. Coleta de culturas antes do antibiótico, sem atrasar seu início. Antibioticoterapia empírica conforme diretriz para pacientes internados fora da UTI, com reavaliação clínica em 48 a 72 horas e transição para via oral quando houver estabilidade clínica. Vigilância para complicações (derrame pleural, empiema, sepse). Após a alta, atualização vacinal (pneumocócica e influenza) e radiografia de controle após algumas semanas, sobretudo em ex-tabagistas, para afastar lesão subjacente.",
+  "discussao": "A pneumonia adquirida na comunidade é uma das principais causas de internação e óbito por doenças infecciosas, especialmente em idosos. O quadro clássico de febre, tosse produtiva, dor pleurítica e síndrome de consolidação ao exame (frêmito aumentado, macicez, sopro tubário) é típico do pneumococo. Escores de gravidade como o CURB-65 auxiliam, mas não substituem o julgamento clínico. Em idosos, o quadro pode ser atípico, com confusão, quedas ou descompensação de comorbidades, sem febre. Em regiões de alta incidência de tuberculose, como Manaus, é importante lembrar da tuberculose no diagnóstico diferencial, sobretudo se o quadro for arrastado ou não responder ao tratamento.",
+  "referencias": [
+   "Diretrizes brasileiras para pneumonia adquirida na comunidade em adultos imunocompetentes – Sociedade Brasileira de Pneumologia e Tisiologia",
+   "Harrison – Medicina Interna, capítulo de pneumonia",
+   "Diretriz ATS/IDSA para pneumonia adquirida na comunidade em adultos"
+  ]
+ },
+ {
+  "id": "caso-tuberculose-pulmonar",
+  "titulo": "Tosse há dois meses, febre ao entardecer e emagrecimento",
+  "tema": "Tuberculose pulmonar",
+  "especialidade": "Infectologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 1,
+  "identificacao": "F.S.C., 32 anos, sexo masculino, ajudante de pedreiro, residente em bairro da zona leste de Manaus (AM).",
+  "queixaPrincipal": "\"Tosse que não passa há dois meses.\"",
+  "hda": "Paciente relata tosse há cerca de 2 meses, inicialmente seca e depois produtiva, com escarro amarelado e, há 1 semana, raias de sangue. Refere febre baixa predominantemente no fim da tarde, sudorese noturna intensa, inapetência e perda de aproximadamente 8 kg no período. Usou xarope e um antibiótico por conta própria, sem melhora. Nega dispneia importante ou dor torácica.",
+  "antecedentes": "Nega comorbidades conhecidas. Tabagista (10 anos-maço) e etilista (fins de semana). Mora com a esposa, dois filhos (4 e 9 anos) e a sogra em casa de três cômodos, pouco ventilada. Um irmão com quem conviveu teve 'problema no pulmão' e fez tratamento de 6 meses há 1 ano. Nunca realizou teste para HIV. Vacinado com BCG na infância (cicatriz presente).",
+  "exameFisico": "Regular estado geral, emagrecido, hipocorado (+/4+), hidratado. Tax 37,9 °C; PA 116/72 mmHg; FC 96 bpm; FR 20 irpm; SatO2 96% em ar ambiente. IMC 18,2 kg/m². Ausculta pulmonar: estertores crepitantes em terço superior do hemitórax direito, com sopro anfórico discreto. Sem linfonodomegalias palpáveis. Ausculta cardíaca e abdome sem alterações.",
+  "exames": "Radiografia de tórax: infiltrado heterogêneo com cavitação em lobo superior direito e infiltrado nodular em ápice esquerdo. Teste rápido molecular para tuberculose (TRM-TB) no escarro: Mycobacterium tuberculosis detectado, sem resistência à rifampicina detectada. Baciloscopia de escarro positiva. Cultura com teste de sensibilidade solicitada. Teste rápido para HIV: não reagente. Sorologias para hepatites B e C não reagentes. Glicemia de jejum 92 mg/dL. Hemoglobina 11,6 g/dL; leucócitos 9.200/mm³. Função hepática e renal normais.",
+  "perguntas": [
+   {
+    "pergunta": "Qual a principal hipótese diagnóstica?",
+    "resposta": "Tuberculose pulmonar bacilífera, forma cavitária, caso novo, sensível à rifampicina pelo teste rápido molecular."
+   },
+   {
+    "pergunta": "Quem é considerado 'sintomático respiratório' e deve ser investigado para tuberculose?",
+    "resposta": "Na população geral, a pessoa com tosse por 3 semanas ou mais. Em populações vulneráveis (pessoas privadas de liberdade, em situação de rua, vivendo com HIV, indígenas, profissionais de saúde, entre outras), a investigação é indicada com tosse de qualquer duração, conforme o manual do Ministério da Saúde."
+   },
+   {
+    "pergunta": "Qual o esquema de tratamento e quais medidas de saúde pública são necessárias?",
+    "resposta": "Esquema básico para adultos: fase intensiva de 2 meses com rifampicina, isoniazida, pirazinamida e etambutol (RIPE), seguida de fase de manutenção de 4 meses com rifampicina e isoniazida, em comprimidos em dose fixa combinada ajustada ao peso. Além disso: notificação compulsória, tratamento diretamente observado, baciloscopias de controle, investigação de todos os contatos (especialmente as crianças da casa) e oferta de tratamento da infecção latente quando indicado."
+   },
+   {
+    "pergunta": "Por que é obrigatório oferecer o teste de HIV a toda pessoa com tuberculose?",
+    "resposta": "Porque a coinfecção TB-HIV é frequente, altera o manejo (interações medicamentosas, momento de início da terapia antirretroviral, profilaxias) e a tuberculose é uma das principais causas de óbito em pessoas vivendo com HIV."
+   }
+  ],
+  "hipoteses": [
+   "Tuberculose pulmonar bacilífera cavitária (caso novo, sensível à rifampicina)"
+  ],
+  "diferenciais": [
+   "Pneumonia bacteriana com abscesso pulmonar",
+   "Neoplasia de pulmão",
+   "Micoses pulmonares endêmicas (paracoccidioidomicose, histoplasmose)",
+   "Micobacterioses não tuberculosas",
+   "Bronquiectasias infectadas"
+  ],
+  "conduta": "Em linhas gerais: início do esquema básico conforme o Manual de Recomendações para o Controle da Tuberculose do Ministério da Saúde, acompanhado na atenção primária, com tratamento diretamente observado, notificação no SINAN, orientação sobre adesão, efeitos adversos (hepatotoxicidade, reações cutâneas, alterações visuais pelo etambutol) e coloração alaranjada da urina pela rifampicina. Medidas de controle de transmissão (ventilação dos ambientes, etiqueta da tosse, uso de máscara nas primeiras semanas). Avaliação dos contatos domiciliares. Baciloscopias mensais de controle, suporte nutricional, abordagem do tabagismo e do etilismo e articulação com assistência social quando necessário.",
+  "discussao": "A tuberculose é endêmica no Brasil, e o Amazonas, especialmente Manaus, está entre as unidades com maiores taxas de incidência do país. Condições de moradia com aglomeração e pouca ventilação, pobreza, desnutrição, tabagismo e etilismo favorecem a transmissão e o adoecimento. O quadro clássico inclui tosse prolongada, febre vespertina, sudorese noturna e emagrecimento, com lesões em segmentos apicais e posteriores dos lobos superiores. O teste rápido molecular tornou-se o exame de escolha para o diagnóstico e detecta resistência à rifampicina. O uso de antibiótico por conta própria, especialmente quinolonas, pode mascarar o quadro e atrasar o diagnóstico. A adesão ao tratamento completo é fundamental para a cura e para evitar resistência.",
+  "referencias": [
+   "Manual de Recomendações para o Controle da Tuberculose no Brasil – Ministério da Saúde",
+   "Guia de Vigilância em Saúde – Ministério da Saúde, capítulo de tuberculose",
+   "Veronesi – Tratado de Infectologia"
+  ]
+ },
+ {
+  "id": "caso-malaria-vivax",
+  "titulo": "Pescador ribeirinho com febre, calafrios e suor em dias alternados",
+  "tema": "Malária por Plasmodium vivax",
+  "especialidade": "Infectologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "identificacao": "E.R.S., 27 anos, sexo masculino, pescador, morador de comunidade ribeirinha no interior do Amazonas.",
+  "queixaPrincipal": "\"Febre com tremedeira que vem e volta há cinco dias.\"",
+  "hda": "Paciente refere há 5 dias episódios de calafrios intensos seguidos de febre alta, cefaleia e dores no corpo, que duram algumas horas e terminam com sudorese profusa e sensação de melhora. Os episódios parecem ocorrer em dias alternados. Entre as crises sente-se cansado, com inapetência e náuseas, sem vômitos. Relata que pesca à noite e ao amanhecer, nas margens do rio, sem uso de repelente ou mosquiteiro. Vizinhos da comunidade tiveram malária recentemente. Nega sangramentos, icterícia, dispneia, confusão, redução do volume urinário ou convulsões.",
+  "antecedentes": "Teve malária há 3 anos, 'de um tipo que não voltou'. Nega comorbidades. Nega uso de medicações contínuas. Nega doenças hematológicas conhecidas na família. Vacinação para febre amarela em dia.",
+  "exameFisico": "Bom estado geral, lúcido, orientado, hipocorado (+/4+), anictérico, hidratado. No momento, afebril (examinado fora da crise); refere febre alta na véspera. PA 114/70 mmHg; FC 88 bpm; FR 18 irpm; SatO2 98% em ar ambiente. Ausculta cardíaca e pulmonar sem alterações. Abdome: fígado palpável a 2 cm do rebordo costal direito; baço palpável no rebordo costal esquerdo, indolor. Sem sinais de sangramento. Sem sinais neurológicos.",
+  "exames": "Gota espessa (realizada no posto de diagnóstico da comunidade): Plasmodium vivax, parasitemia de ++ (duas cruzes) pela escala semiquantitativa. Hemoglobina 11,9 g/dL; leucócitos 4.300/mm³; plaquetas 96.000/mm³. Bilirrubina total 1,4 mg/dL (predomínio indireto). Creatinina 0,9 mg/dL. Glicemia 96 mg/dL. Teste de G6PD: atividade normal.",
+  "perguntas": [
+   {
+    "pergunta": "Qual a principal hipótese diagnóstica?",
+    "resposta": "Malária não complicada por Plasmodium vivax."
+   },
+   {
+    "pergunta": "Qual o exame de escolha para o diagnóstico e o que ele informa?",
+    "resposta": "A gota espessa (microscopia com coloração de Giemsa ou Walker), padrão no Brasil: identifica a espécie de Plasmodium e estima a parasitemia. Os testes rápidos imunocromatográficos são úteis onde não há microscopia disponível. O esfregaço delgado auxilia na identificação de espécie."
+   },
+   {
+    "pergunta": "Por que o tratamento do P. vivax envolve duas etapas e qual cuidado é necessário antes da segunda?",
+    "resposta": "Porque, além das formas sanguíneas (responsáveis pelos sintomas), o P. vivax forma hipnozoítos no fígado, que podem causar recaídas meses depois. O tratamento associa um esquizonticida sanguíneo a um fármaco com ação sobre hipnozoítos (primaquina ou, em situações específicas previstas pelo Ministério da Saúde, tafenoquina). Esses fármacos podem causar hemólise grave em pessoas com deficiência de G6PD, por isso a atividade da enzima deve ser avaliada conforme protocolo. A primaquina também é contraindicada em gestantes e em lactentes jovens."
+   },
+   {
+    "pergunta": "Quais sinais indicariam malária grave e necessidade de encaminhamento?",
+    "resposta": "Entre os sinais consagrados: prostração intensa, alteração do nível de consciência ou convulsões, dispneia/desconforto respiratório, icterícia, sangramentos, oligúria, hipotensão/choque, vômitos persistentes, anemia grave, hipoglicemia e hiperparasitemia. Embora a malária grave seja mais associada ao P. falciparum, ela também pode ocorrer com P. vivax."
+   }
+  ],
+  "hipoteses": [
+   "Malária não complicada por Plasmodium vivax"
+  ],
+  "diferenciais": [
+   "Malária por Plasmodium falciparum ou infecção mista",
+   "Dengue e outras arboviroses",
+   "Leptospirose",
+   "Febre tifoide",
+   "Hepatites virais agudas",
+   "Infecção do trato urinário alta / sepse",
+   "Leishmaniose visceral (febre prolongada com esplenomegalia)"
+  ],
+  "conduta": "Em linhas gerais: tratamento ambulatorial com o esquema padronizado pelo Ministério da Saúde para P. vivax (esquizonticida sanguíneo associado a droga ativa contra hipnozoítos), com medicação fornecida gratuitamente pelo SUS, orientação sobre tomar os comprimidos após as refeições e completar todo o esquema. Notificação do caso. Orientação sobre sinais de alarme para retorno imediato. Lâminas de verificação de cura durante o seguimento, conforme o guia de tratamento. Medidas de proteção individual e coletiva (mosquiteiros impregnados, repelente, roupas compridas nos horários de maior atividade do vetor) e busca ativa de casos na comunidade.",
+  "discussao": "A região amazônica concentra praticamente todos os casos de malária do Brasil, sendo o P. vivax a espécie predominante. A transmissão ocorre pela picada de fêmeas do mosquito Anopheles (principalmente A. darlingi), com maior atividade ao entardecer e ao amanhecer, o que explica o risco em pescadores e ribeirinhos. O paroxismo clássico (calafrio, febre, sudorese) com periodicidade de 48 horas (terçã benigna) é característico do P. vivax, embora a periodicidade nem sempre seja evidente no início. Trombocitopenia, anemia leve e esplenomegalia são achados comuns. A deficiência de G6PD é relativamente frequente na população, o que torna importante a avaliação antes da primaquina ou tafenoquina. O tratamento adequado dos hipnozoítos e a adesão ao esquema completo reduzem recaídas e a transmissão.",
+  "referencias": [
+   "Guia de Tratamento da Malária no Brasil – Ministério da Saúde",
+   "Guia de Vigilância em Saúde – Ministério da Saúde, capítulo de malária",
+   "Veronesi – Tratado de Infectologia"
+  ]
+ },
+ {
+  "id": "caso-dengue-sinais-alarme",
+  "titulo": "Dor abdominal intensa quando a febre passou",
+  "tema": "Dengue com sinais de alarme",
+  "especialidade": "Infectologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "identificacao": "C.M.A., 38 anos, sexo feminino, professora, residente em Manaus (AM).",
+  "queixaPrincipal": "\"A febre passou, mas a barriga dói muito e não paro de vomitar.\"",
+  "hda": "Paciente refere início há 5 dias de febre alta de início súbito, cefaleia, dor retro-orbitária, mialgia intensa e artralgia leve. Há 2 dias surgiu exantema pruriginoso em tronco. No 3º dia foi atendida na UBS, onde realizou NS1 (reagente) e foi orientada a hidratar-se em casa. Hoje, com a queda da febre, iniciou dor abdominal intensa e contínua, vômitos repetidos (5 episódios desde a manhã, não conseguindo ingerir líquidos), tontura ao levantar-se e sangramento gengival ao escovar os dentes. Refere redução do volume urinário. Usou apenas dipirona; nega uso de anti-inflamatórios ou AAS. Vários vizinhos com quadro semelhante.",
+  "antecedentes": "Nega comorbidades. Não gestante (última menstruação há 10 dias; beta-hCG negativo). Refere ter tido 'dengue' há alguns anos.",
+  "exameFisico": "Regular estado geral, lúcida, sonolenta entre as avaliações, hipocorada (+/4+), desidratada (++/4+). Tax 36,6 °C. PA 112/76 mmHg deitada e 92/68 mmHg sentada, com tontura; FC 112 bpm; FR 22 irpm; SatO2 97% em ar ambiente. Pulsos periféricos cheios; enchimento capilar menor que 2 segundos. Exantema maculopapular em tronco e membros, com petéquias em membros inferiores. Sangramento gengival discreto. Ausculta pulmonar: murmúrio diminuído em base direita. Abdome: dor à palpação difusa, mais intensa em hipocôndrio direito; fígado palpável a 3 cm do rebordo costal direito; macicez móvel discreta. Prova do laço não realizada por já haver petéquias espontâneas.",
+  "exames": "Hematócrito 49% (há 2 dias, na UBS: 40%); hemoglobina 16,2 g/dL; leucócitos 2.900/mm³; plaquetas 38.000/mm³. Albumina 2,9 g/dL. TGO 210 U/L; TGP 160 U/L. Creatinina 1,1 mg/dL. Ultrassonografia: pequeno volume de líquido livre em cavidade abdominal, pequeno derrame pleural à direita e espessamento da parede da vesícula biliar. Gota espessa negativa para plasmódio.",
+  "perguntas": [
+   {
+    "pergunta": "Qual a principal hipótese diagnóstica e a classificação de risco?",
+    "resposta": "Dengue com sinais de alarme, correspondente ao Grupo C da classificação do Ministério da Saúde. Os sinais de alarme surgiram na fase crítica, próximo à defervescência, como é típico."
+   },
+   {
+    "pergunta": "Quais sinais de alarme estão presentes?",
+    "resposta": "Dor abdominal intensa e contínua, vômitos persistentes, hipotensão postural com tontura, acúmulo de líquidos (ascite e derrame pleural), hepatomegalia dolorosa, sangramento de mucosa (gengival), sonolência e aumento progressivo do hematócrito. Todos fazem parte da lista consagrada de sinais de alarme da dengue."
+   },
+   {
+    "pergunta": "Qual o mecanismo fisiopatológico dos sinais de alarme?",
+    "resposta": "Aumento da permeabilidade vascular com extravasamento de plasma para o terceiro espaço, levando a hemoconcentração (aumento do hematócrito), hipoalbuminemia, derrames cavitários e, se não tratado, choque. A fase crítica costuma ocorrer entre o 3º e o 7º dia, geralmente com a queda da febre."
+   },
+   {
+    "pergunta": "Quais medicamentos devem ser evitados?",
+    "resposta": "Anti-inflamatórios não esteroidais e ácido acetilsalicílico, pelo risco de sangramentos, além de medicações por via intramuscular. Corticoides e antibióticos não têm indicação no tratamento da dengue."
+   }
+  ],
+  "hipoteses": [
+   "Dengue com sinais de alarme (Grupo C)",
+   "Extravasamento plasmático com hemoconcentração, ascite e derrame pleural",
+   "Plaquetopenia e sangramento de mucosa"
+  ],
+  "diferenciais": [
+   "Dengue grave / choque por dengue (evolução possível)",
+   "Chikungunya e Zika",
+   "Malária (afastada pela gota espessa, mas obrigatória na Amazônia)",
+   "Leptospirose",
+   "Sepse bacteriana",
+   "Hepatites virais agudas",
+   "Abdome agudo cirúrgico (colecistite, apendicite)"
+  ],
+  "conduta": "Em linhas gerais: internação em leito com observação contínua, acesso venoso e reposição volêmica venosa imediata conforme o protocolo do Ministério da Saúde para o Grupo C, com reavaliações clínicas frequentes (sinais vitais, perfusão, diurese, sinais de alarme) e hematócrito seriado. Se houver melhora, redução progressiva da hidratação venosa e posterior transição para via oral; se houver piora ou sinais de choque, conduzir como Grupo D (dengue grave), com expansão rápida e suporte em terapia intensiva. Sintomáticos com dipirona ou paracetamol, sem AINE ou AAS. Notificação imediata do caso. Após a alta, retorno para reavaliação e orientação sobre sinais de alarme.",
+  "discussao": "A dengue é endêmica em Manaus, com epidemias sazonais, e o manejo se baseia na classificação de risco e na hidratação adequada. A fase febril é seguida, por volta da defervescência, pela fase crítica, na qual o extravasamento plasmático pode evoluir para choque. Por isso, a queda da febre não significa melhora, e o paciente e a família devem ser orientados a retornar diante de sinais de alarme. A plaquetopenia isolada não define a gravidade; a principal causa de óbito é o choque por extravasamento plasmático não reconhecido ou tratado tardiamente. O NS1 é útil nos primeiros dias; após cerca do 6º dia, a sorologia IgM passa a ser mais sensível. Na Amazônia, todo paciente febril deve ser investigado também para malária.",
+  "referencias": [
+   "Dengue: diagnóstico e manejo clínico – adulto e criança – Ministério da Saúde",
+   "Guia de Vigilância em Saúde – Ministério da Saúde, capítulo de arboviroses",
+   "Veronesi – Tratado de Infectologia"
+  ]
+ },
+ {
+  "id": "caso-apendicite-aguda",
+  "titulo": "Dor que começou no umbigo e foi para o lado direito",
+  "tema": "Apendicite aguda",
+  "especialidade": "Cirurgia Geral",
+  "disciplina": "Clínica Cirúrgica",
+  "dificuldade": 1,
+  "identificacao": "T.O.L., 20 anos, sexo masculino, estudante, residente em Manaus (AM).",
+  "queixaPrincipal": "\"Dor na barriga do lado direito desde ontem.\"",
+  "hda": "Paciente refere dor abdominal iniciada há cerca de 20 horas, inicialmente vaga, em região periumbilical, em cólica, que após algumas horas migrou para a fossa ilíaca direita, tornando-se contínua e mais intensa, com piora ao caminhar, tossir e com os solavancos do ônibus. Refere perda do apetite, náuseas e um episódio de vômito, que ocorreu após o início da dor. Relata febre baixa não aferida. Nega diarreia, sintomas urinários ou episódios semelhantes.",
+  "antecedentes": "Previamente hígido. Nega cirurgias prévias. Nega uso de medicações. Nega alergias.",
+  "exameFisico": "Bom estado geral, fácies de dor, deambulando com leve flexão do tronco. Tax 38,0 °C; PA 124/78 mmHg; FC 102 bpm; FR 18 irpm. Abdome: plano, ruídos hidroaéreos diminuídos, dor à palpação da fossa ilíaca direita, mais intensa no ponto de McBurney, com defesa voluntária localizada. Sinal de Blumberg positivo. Sinal de Rovsing positivo. Sinal do psoas positivo à direita. Punho-percussão lombar negativa. Exame da genitália sem alterações (testículos tópicos, indolores).",
+  "exames": "Hemograma: leucócitos 15.200/mm³ com neutrofilia e desvio à esquerda. Proteína C-reativa elevada. Urina tipo 1 sem alterações. Ultrassonografia de abdome: apêndice cecal não compressível, com diâmetro aumentado, paredes espessadas e borramento da gordura periapendicular, sem coleções.",
+  "perguntas": [
+   {
+    "pergunta": "Qual a principal hipótese diagnóstica?",
+    "resposta": "Apendicite aguda, sem sinais de perfuração ou abscesso nos exames de imagem."
+   },
+   {
+    "pergunta": "Qual a sequência clássica de sintomas e qual sua explicação?",
+    "resposta": "Dor periumbilical mal localizada (dor visceral, pela distensão do apêndice obstruído, referida no dermátomo do intestino médio), seguida de anorexia, náuseas/vômitos e posterior migração da dor para a fossa ilíaca direita (dor somática, quando a inflamação atinge o peritônio parietal). O vômito geralmente ocorre após o início da dor."
+   },
+   {
+    "pergunta": "Como o escore de Alvarado pode ajudar?",
+    "resposta": "Ele soma pontos para migração da dor, anorexia, náuseas/vômitos, dor em fossa ilíaca direita, descompressão brusca dolorosa, febre, leucocitose e desvio à esquerda. Este paciente tem pontuação alta, o que torna o diagnóstico muito provável. O escore auxilia na estratificação, mas não substitui a avaliação cirúrgica e o julgamento clínico."
+   },
+   {
+    "pergunta": "Qual o tratamento?",
+    "resposta": "Apendicectomia (videolaparoscópica ou aberta, conforme disponibilidade e experiência), precedida de jejum, hidratação venosa, analgesia e antibioticoprofilaxia/antibioticoterapia. O tratamento não operatório com antibióticos é estudado em casos selecionados de apendicite não complicada, mas a cirurgia permanece o tratamento padrão na maioria dos serviços."
+   }
+  ],
+  "hipoteses": [
+   "Apendicite aguda não complicada"
+  ],
+  "diferenciais": [
+   "Linfadenite mesentérica",
+   "Gastroenterite aguda",
+   "Doença de Crohn (ileíte terminal)",
+   "Diverticulite de Meckel",
+   "Litíase ureteral à direita / pielonefrite",
+   "Torção testicular (dor referida)",
+   "Em mulheres: gravidez ectópica, torção ou cisto ovariano roto, doença inflamatória pélvica"
+  ],
+  "conduta": "Em linhas gerais: jejum, hidratação venosa, analgesia (não mascara o diagnóstico e deve ser oferecida), antibiótico conforme protocolo da instituição e avaliação da equipe de cirurgia para apendicectomia em caráter de urgência. No pós-operatório, retorno precoce da dieta, deambulação, controle da dor e alta geralmente em curto prazo nos casos não complicados. Orientação sobre sinais de infecção da ferida ou de coleção intra-abdominal.",
+  "discussao": "A apendicite aguda é a causa mais comum de abdome agudo cirúrgico, com pico entre a adolescência e o adulto jovem. Resulta, em geral, da obstrução da luz apendicular (fecalito, hiperplasia linfoide), levando a distensão, isquemia, infecção e, sem tratamento, perfuração. O diagnóstico é essencialmente clínico; exames de imagem auxiliam nos casos duvidosos, sendo a ultrassonografia preferida em crianças, gestantes e jovens, e a tomografia mais acurada em adultos. Em mulheres em idade fértil, o beta-hCG é obrigatório. O atraso no diagnóstico aumenta o risco de perfuração, abscesso e peritonite, sobretudo em crianças pequenas e idosos, nos quais a apresentação costuma ser atípica.",
+  "referencias": [
+   "Sabiston – Tratado de Cirurgia",
+   "Diretrizes da World Society of Emergency Surgery (WSES) para apendicite aguda",
+   "Manual de Semiologia – Porto, Semiologia Médica"
+  ]
+ },
+ {
+  "id": "caso-pre-eclampsia-grave",
+  "titulo": "Gestante com dor de cabeça e 'pontos brilhantes' na visão",
+  "tema": "Pré-eclâmpsia",
+  "especialidade": "Obstetrícia",
+  "disciplina": "Ginecologia e Obstetrícia",
+  "dificuldade": 3,
+  "identificacao": "K.S.B., 22 anos, primigesta, 35 semanas de idade gestacional (pela ultrassonografia de 1º trimestre), moradora de município do interior do Amazonas.",
+  "queixaPrincipal": "\"Dor de cabeça forte e vendo pontinhos brilhantes.\"",
+  "hda": "Gestante refere cefaleia frontal intensa há 1 dia, que não melhorou com analgésico comum, associada desde hoje a escotomas cintilantes e visão turva. Relata também dor em 'boca do estômago' e náusea. Notou inchaço progressivo em mãos e face na última semana. Movimentos fetais presentes. Nega perda de líquido, sangramento vaginal ou contrações regulares. No pré-natal da UBS, a pressão estava normal até 30 semanas; na última consulta, há 2 semanas, foi observada PA de 142/92 mmHg e ela foi encaminhada ao pré-natal de alto risco, ainda sem consulta.",
+  "antecedentes": "Primigesta. Nega hipertensão, diabetes, doença renal ou autoimune prévias. Mãe teve 'pressão alta na gravidez'. Pré-natal com 6 consultas, exames do 1º trimestre normais.",
+  "exameFisico": "Regular estado geral, consciente, orientada, queixosa. PA 164/112 mmHg, confirmada após 15 minutos (166/110 mmHg). FC 92 bpm; FR 18 irpm; SatO2 97% em ar ambiente; Tax 36,5 °C. Edema de face, mãos e membros inferiores (++/4+). Ausculta pulmonar sem estertores. Reflexos patelares vivos, sem clônus sustentado. Dor à palpação em epigástrio e hipocôndrio direito. Altura uterina compatível com a idade gestacional; útero sem hipertonia, sem contrações. Batimentos cardíacos fetais 142 bpm. Toque vaginal: colo posterior, grosso, fechado. Sem perdas vaginais.",
+  "exames": "Proteinúria em fita 3+; relação proteína/creatinina urinária elevada. Hemoglobina 12,1 g/dL; plaquetas 142.000/mm³. TGO 46 U/L; TGP 40 U/L. LDH e bilirrubinas normais. Creatinina 0,8 mg/dL. Ácido úrico elevado. Cardiotocografia: categoria I (feto reativo). Ultrassonografia obstétrica: feto único, cefálico, crescimento no limite inferior da normalidade, líquido amniótico normal, Doppler sem centralização.",
+  "perguntas": [
+   {
+    "pergunta": "Qual a principal hipótese diagnóstica?",
+    "resposta": "Pré-eclâmpsia com sinais de gravidade (hipertensão grave e sintomas de iminência de eclâmpsia: cefaleia intensa, escotomas e dor epigástrica), em gestação de 35 semanas, sem critérios laboratoriais de síndrome HELLP no momento."
+   },
+   {
+    "pergunta": "Quais são os sinais de gravidade consagrados na pré-eclâmpsia?",
+    "resposta": "Hipertensão grave (PA sistólica ≥ 160 mmHg e/ou diastólica ≥ 110 mmHg, confirmada), sintomas neurológicos/visuais (cefaleia intensa, escotomas, turvação visual), dor epigástrica ou em hipocôndrio direito, edema agudo de pulmão, trombocitopenia, elevação de transaminases, insuficiência renal, além de eclâmpsia e síndrome HELLP como complicações. Alterações fetais, como restrição de crescimento, também pesam na decisão."
+   },
+   {
+    "pergunta": "Qual a medicação indicada para prevenir a eclâmpsia?",
+    "resposta": "Sulfato de magnésio, que é a droga de escolha para prevenção e tratamento das convulsões eclâmpticas. Durante o uso, monitorizam-se reflexos patelares, frequência respiratória e diurese, pelo risco de intoxicação; o gluconato de cálcio é o antídoto."
+   },
+   {
+    "pergunta": "Qual é o tratamento definitivo?",
+    "resposta": "A interrupção da gestação (retirada da placenta). Em gestação próxima do termo com sinais de gravidade, após estabilização materna (controle da pressão e sulfato de magnésio), indica-se a resolução da gestação. A via de parto segue indicação obstétrica; a pré-eclâmpsia, por si só, não é indicação de cesárea."
+   }
+  ],
+  "hipoteses": [
+   "Pré-eclâmpsia com sinais de gravidade",
+   "Iminência de eclâmpsia"
+  ],
+  "diferenciais": [
+   "Síndrome HELLP (em evolução)",
+   "Hipertensão arterial crônica com pré-eclâmpsia sobreposta",
+   "Hipertensão gestacional",
+   "Esteatose hepática aguda da gravidez",
+   "Púrpura trombocitopênica trombótica / síndrome hemolítico-urêmica",
+   "Causas neurológicas de cefaleia (trombose venosa cerebral, hemorragia)"
+  ],
+  "conduta": "Em linhas gerais: internação, acesso venoso, sulfato de magnésio para prevenção de eclâmpsia, anti-hipertensivo de ação rápida para controle da hipertensão grave (com redução cuidadosa para não comprometer a perfusão placentária), monitorização materna (PA, diurese, reflexos, sintomas, exames laboratoriais seriados) e fetal. Por se tratar de município do interior, estabilização e transferência para maternidade de referência com UTI materna e neonatal, sem atrasar o sulfato de magnésio e o controle pressórico. Após estabilização, interrupção da gestação pela via obstétrica mais adequada. No puerpério, manter vigilância (a eclâmpsia e a HELLP podem ocorrer após o parto), ajuste dos anti-hipertensivos e seguimento, pois a pré-eclâmpsia aumenta o risco cardiovascular futuro.",
+  "discussao": "A pré-eclâmpsia é uma das principais causas de morte materna no Brasil. Caracteriza-se por hipertensão que surge após 20 semanas de gestação associada a proteinúria e/ou disfunção de órgãos-alvo, decorrente de placentação anormal e disfunção endotelial sistêmica. Primiparidade, história familiar, hipertensão crônica, diabetes, obesidade, gestação múltipla e doenças autoimunes são fatores de risco. A presença de cefaleia intensa, escotomas e dor epigástrica caracteriza iminência de eclâmpsia. O caso ilustra ainda uma falha na linha de cuidado: a elevação pressórica detectada 2 semanas antes deveria ter levado a avaliação rápida. O rastreamento de risco no pré-natal permite indicar a profilaxia com ácido acetilsalicílico e cálcio em gestantes de risco, conforme protocolos vigentes.",
+  "referencias": [
+   "Manual de Gestação de Alto Risco – Ministério da Saúde",
+   "Protocolos FEBRASGO – Pré-eclâmpsia",
+   "Rezende – Obstetrícia Fundamental",
+   "Diretrizes da Rede Brasileira de Estudos sobre Hipertensão na Gravidez (RBEHG)"
+  ]
+ },
+ {
+  "id": "caso-bronquiolite-viral-aguda",
+  "titulo": "Lactente com chiado e dificuldade para mamar",
+  "tema": "Bronquiolite viral aguda",
+  "especialidade": "Pediatria",
+  "disciplina": "Pediatria",
+  "dificuldade": 2,
+  "identificacao": "B.S.L., 4 meses, sexo feminino, residente em Manaus (AM), acompanhada pela mãe.",
+  "queixaPrincipal": "\"Está com chiado, cansada e não quer mamar direito.\"",
+  "hda": "Mãe relata que há 4 dias a lactente iniciou coriza hialina, obstrução nasal e tosse leve, com febre baixa no primeiro dia. Há 2 dias a tosse piorou e surgiu 'chiado' e respiração rápida. Desde ontem mama menos da metade do habitual, cansa durante as mamadas e molhou menos fraldas. Nega cianose, apneia ou convulsão. O irmão de 5 anos está resfriado. É o primeiro episódio de sibilância.",
+  "antecedentes": "Nascida a termo, parto vaginal, peso ao nascer adequado, sem intercorrências neonatais. Aleitamento materno exclusivo. Vacinação em dia para a idade. Sem cardiopatia ou doença pulmonar conhecida. Pai tabagista (fuma fora de casa, segundo a mãe). Período de maior circulação de vírus respiratórios em Manaus.",
+  "exameFisico": "Regular estado geral, ativa, irritada ao manuseio, sem toxemia. Tax 37,6 °C; FC 162 bpm; FR 64 irpm; SatO2 90% em ar ambiente, com melhora após aspiração nasal para 91%. Peso 6,4 kg. Mucosas levemente secas, fontanela anterior normotensa. Coriza abundante. Tiragem subcostal e intercostal, batimento de asas nasais discreto. Ausculta pulmonar: sibilos expiratórios e estertores crepitantes finos difusos bilateralmente, tempo expiratório prolongado. Ausculta cardíaca: taquicardia, sem sopros. Abdome: fígado palpável a 2 cm do rebordo costal direito (rebaixado pela hiperinsuflação). Enchimento capilar menor que 2 segundos.",
+  "exames": "Painel viral de secreção nasofaríngea: vírus sincicial respiratório (VSR) detectado. Radiografia de tórax (realizada pela piora do esforço respiratório, não de rotina): hiperinsuflação pulmonar, espessamento peribrônquico e pequena área de atelectasia em lobo superior direito, sem consolidação lobar. Hemograma sem alterações relevantes.",
+  "perguntas": [
+   {
+    "pergunta": "Qual a principal hipótese diagnóstica?",
+    "resposta": "Bronquiolite viral aguda por vírus sincicial respiratório, com desconforto respiratório moderado, hipoxemia e dificuldade de alimentação."
+   },
+   {
+    "pergunta": "Quais critérios indicam internação neste caso?",
+    "resposta": "Hipoxemia, desconforto respiratório com tiragem e taquipneia, e ingestão alimentar inadequada com risco de desidratação. Outros fatores que favorecem internação: idade muito jovem (sobretudo menores de 3 meses), prematuridade, cardiopatia ou doença pulmonar crônica, apneia, e dificuldade de acesso ao serviço de saúde ou de a família reconhecer a piora."
+   },
+   {
+    "pergunta": "Quais medidas não são recomendadas de rotina na bronquiolite?",
+    "resposta": "Broncodilatadores, corticoides, antibióticos (na ausência de infecção bacteriana), fisioterapia respiratória de rotina e radiografia de tórax ou exames laboratoriais rotineiros. O tratamento é essencialmente de suporte."
+   },
+   {
+    "pergunta": "Qual o motivo das crepitações e da atelectasia?",
+    "resposta": "O vírus causa inflamação, edema e necrose do epitélio dos bronquíolos, com produção de muco e rolhas que obstruem as pequenas vias aéreas, gerando aprisionamento aéreo (hiperinsuflação, sibilos) e áreas de colapso (atelectasias). A atelectasia pode ser confundida com pneumonia bacteriana na radiografia, o que leva a uso desnecessário de antibióticos."
+   }
+  ],
+  "hipoteses": [
+   "Bronquiolite viral aguda por VSR, moderada",
+   "Hipoxemia",
+   "Dificuldade alimentar com risco de desidratação"
+  ],
+  "diferenciais": [
+   "Pneumonia bacteriana",
+   "Coqueluche",
+   "Insuficiência cardíaca por cardiopatia congênita",
+   "Aspiração de corpo estranho",
+   "Refluxo gastroesofágico com aspiração",
+   "Lactente sibilante recorrente / asma (não se aplica ao primeiro episódio nessa idade)"
+  ],
+  "conduta": "Em linhas gerais: internação em enfermaria pediátrica com precaução de contato e gotículas, oxigenoterapia para corrigir a hipoxemia (cateter nasal ou, se necessário, cânula nasal de alto fluxo), aspiração das vias aéreas superiores antes das mamadas, decúbito elevado, manutenção da hidratação e da alimentação (fracionar as mamadas; se não houver aceitação segura, alimentação por sonda gástrica ou hidratação venosa). Monitorização de sinais de piora (apneia, aumento do esforço, queda da saturação, sonolência). Alta quando houver estabilidade respiratória, oxigenação adequada em ar ambiente e boa aceitação alimentar, com orientação à família. Orientação para eliminar exposição ao tabaco.",
+  "discussao": "A bronquiolite viral aguda é a principal causa de internação por doença respiratória em lactentes, com predomínio do VSR. Em Manaus, a sazonalidade dos vírus respiratórios acompanha o período chuvoso, diferente de outras regiões do país. O diagnóstico é clínico: primeiro episódio de sibilância em menor de 2 anos, precedido de pródromo de vias aéreas superiores. A evolução costuma atingir o pico entre o 3º e o 5º dia de doença, e a tosse pode persistir por semanas. As evidências mostram que as intervenções farmacológicas não alteram o curso da doença, e o suporte (oxigênio e hidratação) é o que muda desfecho. A prevenção inclui higiene das mãos, evitar exposição ao tabaco, aleitamento materno e as estratégias de imunização contra o VSR disponíveis para grupos definidos pelo Ministério da Saúde.",
+  "referencias": [
+   "Tratado de Pediatria – Sociedade Brasileira de Pediatria",
+   "Diretriz de prática clínica para bronquiolite – Academia Americana de Pediatria",
+   "Documentos científicos da Sociedade Brasileira de Pediatria sobre bronquiolite viral aguda"
+  ]
+ },
+ {
+  "id": "caso-desidratacao-diarreia-aguda",
+  "titulo": "Criança ribeirinha com diarreia e olhos fundos",
+  "tema": "Desidratação por diarreia aguda",
+  "especialidade": "Pediatria",
+  "disciplina": "Pediatria",
+  "dificuldade": 1,
+  "identificacao": "D.P.R., 1 ano e 8 meses, sexo masculino, morador de comunidade ribeirinha no interior do Amazonas, trazido pela mãe à unidade de saúde do município.",
+  "queixaPrincipal": "\"Diarreia desde anteontem e está muito mole.\"",
+  "hda": "Mãe relata que há 2 dias a criança iniciou evacuações líquidas, amareladas, volumosas, sem sangue ou muco, cerca de 7 a 8 vezes ao dia, acompanhadas de 3 episódios de vômito no primeiro dia. Teve febre baixa no início. Desde ontem está mais irritado, chorando sem lágrimas, e urinou menos. Aceita líquidos com avidez. A família consome água do rio, nem sempre tratada. Outras crianças da comunidade com diarreia. Não recebeu soro de reidratação oral em casa; ofereceu refrigerante e chá.",
+  "antecedentes": "Nascido a termo. Aleitamento materno até 1 ano. Vacinação incompleta (atrasos por dificuldade de acesso; não há registro das doses de vacina contra rotavírus no cartão). Peso na última pesagem, há 1 mês, 10,6 kg. Sem internações prévias.",
+  "exameFisico": "Irritado, choroso, sem lágrimas, consolável. Olhos fundos. Mucosas secas. Bebe avidamente o líquido oferecido. Sinal da prega: a pele volta lentamente. Pulso radial cheio. Enchimento capilar em torno de 2 segundos. Tax 37,6 °C; FC 140 bpm; FR 30 irpm. Peso 10,0 kg. Abdome flácido, ruídos hidroaéreos aumentados, sem distensão ou massas, indolor. Sem sinais de desnutrição grave. Ausculta cardíaca e pulmonar sem alterações.",
+  "exames": "Não há necessidade de exames laboratoriais de rotina na diarreia aguda com desidratação sem sinais de gravidade. Gota espessa negativa (realizada por febre em área endêmica de malária). Glicemia capilar 88 mg/dL.",
+  "perguntas": [
+   {
+    "pergunta": "Qual a principal hipótese diagnóstica e a classificação do estado de hidratação?",
+    "resposta": "Diarreia aguda aquosa, de provável etiologia viral, com desidratação (sem sinais de gravidade), segundo a classificação do Ministério da Saúde/OMS, pelos sinais: irritação, olhos fundos, ausência de lágrimas, mucosas secas, sede intensa e sinal da prega que desaparece lentamente."
+   },
+   {
+    "pergunta": "Qual plano de tratamento está indicado?",
+    "resposta": "Plano B: terapia de reidratação oral com soro de reidratação oral (SRO) na unidade de saúde, sob supervisão, com reavaliação periódica dos sinais de desidratação. Quando a criança estiver hidratada, passa-se ao Plano A (manutenção no domicílio). Se piorar ou não tolerar a via oral, considera-se hidratação por sonda nasogástrica ou Plano C (venoso)."
+   },
+   {
+    "pergunta": "Quais sinais indicariam desidratação grave (Plano C)?",
+    "resposta": "Criança comatosa ou hipotônica, que não consegue beber ou bebe muito mal, olhos muito fundos, sinal da prega que desaparece muito lentamente, pulso muito fraco ou ausente, enchimento capilar muito prolongado."
+   },
+   {
+    "pergunta": "Quais orientações são essenciais na alta?",
+    "resposta": "Oferecer SRO após cada evacuação líquida, manter a alimentação habitual (e o aleitamento, quando houver), suplementação de zinco conforme o manejo padronizado, evitar refrigerantes, sucos industrializados e chás, tratar a água de consumo (fervura ou hipoclorito de sódio), higiene das mãos, atualizar a vacinação e retornar imediatamente se houver sinais de perigo: piora da diarreia, vômitos repetidos, sangue nas fezes, sede muito intensa, recusa de líquidos, febre persistente ou sonolência."
+   }
+  ],
+  "hipoteses": [
+   "Diarreia aguda aquosa, provavelmente viral",
+   "Desidratação sem sinais de gravidade (Plano B)"
+  ],
+  "diferenciais": [
+   "Diarreia bacteriana (Escherichia coli enterotoxigênica, cólera em contexto epidemiológico sugestivo)",
+   "Disenteria (Shigella) – afastada pela ausência de sangue nas fezes",
+   "Parasitoses intestinais (giardíase)",
+   "Infecção extraintestinal com diarreia (otite, infecção urinária, malária)",
+   "Invaginação intestinal (dor em cólica, fezes em 'geleia de framboesa')"
+  ],
+  "conduta": "Em linhas gerais: Plano B na unidade de saúde, com SRO oferecido em pequenas quantidades e frequentemente (com colher ou copo), reavaliação clínica periódica e pesagem. Se vomitar, aguardar alguns minutos e recomeçar mais devagar. Após reidratação, Plano A em casa, com fornecimento de sachês de SRO e orientação à mãe sobre preparo correto, zinco conforme protocolo, alimentação continuada e sinais de perigo. Antibióticos não são indicados na diarreia aguda aquosa sem sinais específicos (exceções: disenteria, suspeita de cólera grave). Antieméticos e antidiarreicos não são recomendados de rotina em crianças. Notificação conforme a vigilância de doenças diarreicas agudas (monitorização de surtos) e articulação com a vigilância ambiental sobre a qualidade da água na comunidade.",
+  "discussao": "A diarreia aguda continua sendo causa importante de morbimortalidade infantil, especialmente em populações com acesso limitado a saneamento e água tratada, como comunidades ribeirinhas da Amazônia. A principal causa de óbito é a desidratação, e a terapia de reidratação oral é uma das intervenções de maior impacto em saúde pública, sendo eficaz na grande maioria dos casos. A avaliação do estado de hidratação é clínica e padronizada pelos planos A, B e C do Ministério da Saúde. Os rotavírus e norovírus são agentes frequentes em crianças pequenas, e a vacinação contra rotavírus reduz formas graves. A orientação sobre tratamento domiciliar da água e a busca de outras crianças acometidas são fundamentais no contexto comunitário.",
+  "referencias": [
+   "Manejo do paciente com diarreia – Ministério da Saúde (cartaz com os Planos A, B e C)",
+   "AIDPI – Atenção Integrada às Doenças Prevalentes na Infância (Ministério da Saúde/OPAS)",
+   "Tratado de Pediatria – Sociedade Brasileira de Pediatria"
+  ]
+ }
+]

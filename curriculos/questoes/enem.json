@@ -11,7 +11,15 @@
    "R$ 220,00"
   ],
   "correta": 2,
-  "explicacao": "200 × 1,10 = 220; 220 × 0,90 = 198. Aumento e desconto de mesma taxa não se anulam: o fator final é 1,1 × 0,9 = 0,99."
+  "explicacao": "200 × 1,10 = 220; 220 × 0,90 = 198. Aumento e desconto de mesma taxa não se anulam: o fator final é 1,1 × 0,9 = 0,99.",
+  "tema": "enem-mat-porcentagem",
+  "subtema": "Aumentos e descontos sucessivos",
+  "disciplina": "Matemática",
+  "areaEnem": "matematica",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-9b2c8fd6",
@@ -25,7 +33,15 @@
    "R$ 1.020,00"
   ],
   "correta": 3,
-  "explicacao": "M = C(1 + i)^t = 1000 × 1,1² = 1210. R$ 1.200 seria juros simples."
+  "explicacao": "M = C(1 + i)^t = 1000 × 1,1² = 1210. R$ 1.200 seria juros simples.",
+  "tema": "enem-mat-matematica-financeira",
+  "subtema": "Juros compostos",
+  "disciplina": "Matemática",
+  "areaEnem": "matematica",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-02f0d6df",
@@ -39,7 +55,15 @@
    "9"
   ],
   "correta": 0,
-  "explicacao": "Ordenando: 2, 3, 5, 7, 9. O termo central é 5. (5,2 é a média, pegadinha comum.)"
+  "explicacao": "Ordenando: 2, 3, 5, 7, 9. O termo central é 5. (5,2 é a média, pegadinha comum.)",
+  "tema": "enem-mat-estatistica",
+  "subtema": "Mediana",
+  "disciplina": "Matemática",
+  "areaEnem": "matematica",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-37e12bc4",
@@ -53,7 +77,15 @@
    "1/6"
   ],
   "correta": 4,
-  "explicacao": "Casos favoráveis: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6. Total 36. 6/36 = 1/6."
+  "explicacao": "Casos favoráveis: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6. Total 36. 6/36 = 1/6.",
+  "tema": "enem-mat-probabilidade",
+  "subtema": "Probabilidade simples",
+  "disciplina": "Matemática",
+  "areaEnem": "matematica",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-96cf4d2a",
@@ -67,7 +99,15 @@
    "Retículo endoplasmático liso"
   ],
   "correta": 1,
-  "explicacao": "Ciclo de Krebs e cadeia respiratória ocorrem na mitocôndria, onde se forma a maior parte do ATP."
+  "explicacao": "Ciclo de Krebs e cadeia respiratória ocorrem na mitocôndria, onde se forma a maior parte do ATP.",
+  "tema": "enem-bio-bioenergetica",
+  "subtema": "Respiração celular aeróbica",
+  "disciplina": "Biologia",
+  "areaEnem": "natureza",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-ae21eac1",
@@ -81,7 +121,15 @@
    "Todos dominantes"
   ],
   "correta": 2,
-  "explicacao": "Genótipos 1 AA : 2 Aa : 1 aa → fenótipos 3 dominantes : 1 recessivo. 1:2:1 é a proporção genotípica."
+  "explicacao": "Genótipos 1 AA : 2 Aa : 1 aa → fenótipos 3 dominantes : 1 recessivo. 1:2:1 é a proporção genotípica.",
+  "tema": "enem-bio-genetica",
+  "subtema": "Primeira Lei de Mendel",
+  "disciplina": "Biologia",
+  "areaEnem": "natureza",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-066d5a17",
@@ -95,7 +143,15 @@
    "Competição"
   ],
   "correta": 3,
-  "explicacao": "Ambos se beneficiam e a relação é obrigatória: a alga faz fotossíntese, o fungo dá proteção e absorve água e sais."
+  "explicacao": "Ambos se beneficiam e a relação é obrigatória: a alga faz fotossíntese, o fungo dá proteção e absorve água e sais.",
+  "tema": "enem-bio-ecologia",
+  "subtema": "Relações ecológicas",
+  "disciplina": "Biologia",
+  "areaEnem": "natureza",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-2f8c7497",
@@ -109,7 +165,15 @@
    "0,001"
   ],
   "correta": 0,
-  "explicacao": "pH = −log[H⁺] = −log 10⁻³ = 3 (solução ácida)."
+  "explicacao": "pH = −log[H⁺] = −log 10⁻³ = 3 (solução ácida).",
+  "tema": "enem-qui-cinetica-equilibrio",
+  "subtema": "pH e pOH",
+  "disciplina": "Química",
+  "areaEnem": "natureza",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-14d7f2e2",
@@ -123,7 +187,15 @@
    "36"
   ],
   "correta": 3,
-  "explicacao": "n = m / M = 36 / 18 = 2 mol."
+  "explicacao": "n = m / M = 36 / 18 = 2 mol.",
+  "tema": "enem-qui-estequiometria",
+  "subtema": "Mol e massa molar",
+  "disciplina": "Química",
+  "areaEnem": "natureza",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-e3e12743",
@@ -137,7 +209,15 @@
    "15 m/s²"
   ],
   "correta": 1,
-  "explicacao": "a = Δv/Δt = 20/5 = 4 m/s²."
+  "explicacao": "a = Δv/Δt = 20/5 = 4 m/s².",
+  "tema": "enem-fis-cinematica",
+  "subtema": "Movimento uniformemente variado",
+  "disciplina": "Física",
+  "areaEnem": "natureza",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-0127e825",
@@ -151,7 +231,15 @@
    "0,5 Ω"
   ],
   "correta": 2,
-  "explicacao": "Em paralelo: R = (6 × 3)/(6 + 3) = 18/9 = 2 Ω. A equivalente é sempre menor que o menor resistor."
+  "explicacao": "Em paralelo: R = (6 × 3)/(6 + 3) = 18/9 = 2 Ω. A equivalente é sempre menor que o menor resistor.",
+  "tema": "enem-fis-eletrodinamica",
+  "subtema": "Associação de resistores",
+  "disciplina": "Física",
+  "areaEnem": "natureza",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-2c673320",
@@ -165,7 +253,15 @@
    "Ciclo do café"
   ],
   "correta": 2,
-  "explicacao": "A exportação do látex (fim do séc. XIX – início do XX) enriqueceu Manaus e Belém, financiando obras como o Teatro Amazonas. A Zona Franca é de 1967."
+  "explicacao": "A exportação do látex (fim do séc. XIX – início do XX) enriqueceu Manaus e Belém, financiando obras como o Teatro Amazonas. A Zona Franca é de 1967.",
+  "tema": "enem-hist-amazonas",
+  "subtema": "Ciclo da borracha e Belle Époque manauara",
+  "disciplina": "História",
+  "areaEnem": "humanas",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-a1caa377",
@@ -179,7 +275,15 @@
    "1889"
   ],
   "correta": 3,
-  "explicacao": "13 de maio de 1888, pela Princesa Isabel. 1850: Lei Eusébio de Queirós; 1871: Ventre Livre; 1889: República."
+  "explicacao": "13 de maio de 1888, pela Princesa Isabel. 1850: Lei Eusébio de Queirós; 1871: Ventre Livre; 1889: República.",
+  "tema": "enem-hist-brasil-imperio",
+  "subtema": "Abolição da escravidão",
+  "disciplina": "História",
+  "areaEnem": "humanas",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-3a4a948a",
@@ -193,7 +297,15 @@
    "Amazonas e Xingu"
   ],
   "correta": 0,
-  "explicacao": "As águas escuras do Negro e barrentas do Solimões correm lado a lado por quilômetros por diferenças de temperatura, velocidade e densidade."
+  "explicacao": "As águas escuras do Negro e barrentas do Solimões correm lado a lado por quilômetros por diferenças de temperatura, velocidade e densidade.",
+  "tema": "enem-geo-amazonas",
+  "subtema": "Encontro das Águas",
+  "disciplina": "Geografia",
+  "areaEnem": "humanas",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-5842196b",
@@ -207,7 +319,15 @@
    "Tropical atlântico"
   ],
   "correta": 3,
-  "explicacao": "Clima equatorial: temperaturas médias altas, pequena amplitude térmica anual e chuvas abundantes."
+  "explicacao": "Clima equatorial: temperaturas médias altas, pequena amplitude térmica anual e chuvas abundantes.",
+  "tema": "enem-geo-clima",
+  "subtema": "Climas do Brasil",
+  "disciplina": "Geografia",
+  "areaEnem": "humanas",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-4dd1f9aa",
@@ -221,7 +341,15 @@
    "Aristóteles"
   ],
   "correta": 2,
-  "explicacao": "René Descartes, no Discurso do Método, marco do racionalismo moderno."
+  "explicacao": "René Descartes, no Discurso do Método, marco do racionalismo moderno.",
+  "tema": "enem-filo-moderna",
+  "subtema": "Racionalismo (Descartes)",
+  "disciplina": "Filosofia",
+  "areaEnem": "humanas",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-6033a7a6",
@@ -235,7 +363,15 @@
    "Auguste Comte"
   ],
   "correta": 2,
-  "explicacao": "Durkheim, em As Regras do Método Sociológico. Weber trabalha com ação social; Marx, com luta de classes."
+  "explicacao": "Durkheim, em As Regras do Método Sociológico. Weber trabalha com ação social; Marx, com luta de classes.",
+  "tema": "enem-socio-durkheim",
+  "subtema": "Fato social",
+  "disciplina": "Sociologia",
+  "areaEnem": "humanas",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-0853b5d1",
@@ -249,7 +385,15 @@
    "Eufemismo"
   ],
   "correta": 2,
-  "explicacao": "Comparação implícita (sem \"como\"): o rapaz é associado a uma fera pela habilidade."
+  "explicacao": "Comparação implícita (sem \"como\"): o rapaz é associado a uma fera pela habilidade.",
+  "tema": "enem-figuras-de-linguagem",
+  "subtema": "Metáfora",
+  "disciplina": "Português",
+  "areaEnem": "linguagens",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-3b7c9ac5",
@@ -263,7 +407,15 @@
    "Manuel Bandeira"
   ],
   "correta": 1,
-  "explicacao": "Mário de Andrade (1928), rapsódia que mistura lendas indígenas, folclore e crítica à identidade nacional."
+  "explicacao": "Mário de Andrade (1928), rapsódia que mistura lendas indígenas, folclore e crítica à identidade nacional.",
+  "tema": "enem-lit-modernismo-primeira-fase",
+  "subtema": "Mário de Andrade",
+  "disciplina": "Literatura",
+  "areaEnem": "linguagens",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-79ffec4b",
@@ -277,7 +429,15 @@
    "Organização dos argumentos"
   ],
   "correta": 2,
-  "explicacao": "C5: proposta com agente, ação, meio/modo, finalidade e detalhamento, respeitando os direitos humanos."
+  "explicacao": "C5: proposta com agente, ação, meio/modo, finalidade e detalhamento, respeitando os direitos humanos.",
+  "tema": "enem-redacao-competencias",
+  "subtema": "Competência 5",
+  "disciplina": "Redação",
+  "areaEnem": "redacao",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-0b187b51",
@@ -291,7 +451,15 @@
    "75"
   ],
   "correta": 0,
-  "explicacao": "aₙ = a₁ + (n − 1)r = 3 + 19 × 4 = 79. Usar 20 × 4 + 3 = 83 é o erro clássico de esquecer o (n − 1)."
+  "explicacao": "aₙ = a₁ + (n − 1)r = 3 + 19 × 4 = 79. Usar 20 × 4 + 3 = 83 é o erro clássico de esquecer o (n − 1).",
+  "tema": "enem-mat-progressoes",
+  "subtema": "Progressão aritmética (PA)",
+  "disciplina": "Matemática",
+  "areaEnem": "matematica",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-cd805bd1",
@@ -305,7 +473,15 @@
    "23 m"
   ],
   "correta": 1,
-  "explicacao": "O vértice ocorre em t = −b/2a = 3 s; h(3) = −9 + 18 + 5 = 14 m. O valor 3 é o instante do máximo, não a altura."
+  "explicacao": "O vértice ocorre em t = −b/2a = 3 s; h(3) = −9 + 18 + 5 = 14 m. O valor 3 é o instante do máximo, não a altura.",
+  "tema": "enem-mat-funcoes",
+  "subtema": "Função quadrática",
+  "disciplina": "Matemática",
+  "areaEnem": "matematica",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-c50ec98e",
@@ -319,7 +495,15 @@
    "3.600 litros"
   ],
   "correta": 2,
-  "explicacao": "V = πr²h = 3 × 2² × 3 = 36 m³. Como 1 m³ = 1.000 L, a capacidade é de 36.000 litros."
+  "explicacao": "V = πr²h = 3 × 2² × 3 = 36 m³. Como 1 m³ = 1.000 L, a capacidade é de 36.000 litros.",
+  "tema": "enem-mat-geometria-espacial",
+  "subtema": "Cilindro",
+  "disciplina": "Matemática",
+  "areaEnem": "matematica",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-50243a22",
@@ -333,7 +517,15 @@
    "60"
   ],
   "correta": 3,
-  "explicacao": "A ordem não importa, então é combinação: C(6,3) = 6!/(3!·3!) = 20. O valor 120 seria arranjo (ordem importando)."
+  "explicacao": "A ordem não importa, então é combinação: C(6,3) = 6!/(3!·3!) = 20. O valor 120 seria arranjo (ordem importando).",
+  "tema": "enem-mat-analise-combinatoria",
+  "subtema": "Combinação",
+  "disciplina": "Matemática",
+  "areaEnem": "matematica",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-0745e142",
@@ -347,7 +539,15 @@
    "10 km"
   ],
   "correta": 4,
-  "explicacao": "4 cm × 250.000 = 1.000.000 cm = 10.000 m = 10 km."
+  "explicacao": "4 cm × 250.000 = 1.000.000 cm = 10.000 m = 10 km.",
+  "tema": "enem-mat-razao-proporcao",
+  "subtema": "Escalas",
+  "disciplina": "Matemática",
+  "areaEnem": "matematica",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-71bd5a67",
@@ -361,7 +561,15 @@
    "9 m"
   ],
   "correta": 0,
-  "explicacao": "Pelo teorema de Pitágoras: c² = 6² + 8² = 36 + 64 = 100, logo c = 10 m. Somar os catetos (14 m) é a pegadinha."
+  "explicacao": "Pelo teorema de Pitágoras: c² = 6² + 8² = 36 + 64 = 100, logo c = 10 m. Somar os catetos (14 m) é a pegadinha.",
+  "tema": "enem-mat-geometria-plana",
+  "subtema": "Teorema de Pitágoras",
+  "disciplina": "Matemática",
+  "areaEnem": "matematica",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-147e590d",
@@ -375,7 +583,15 @@
    "6.000"
   ],
   "correta": 1,
-  "explicacao": "Em 12 h ocorrem 12/3 = 4 duplicações: 500 × 2⁴ = 500 × 16 = 8.000. Multiplicar 500 por 12 trata o crescimento como linear."
+  "explicacao": "Em 12 h ocorrem 12/3 = 4 duplicações: 500 × 2⁴ = 500 × 16 = 8.000. Multiplicar 500 por 12 trata o crescimento como linear.",
+  "tema": "enem-mat-funcoes",
+  "subtema": "Função exponencial",
+  "disciplina": "Matemática",
+  "areaEnem": "matematica",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-45cbc305",
@@ -389,7 +605,15 @@
    "8,0"
   ],
   "correta": 2,
-  "explicacao": "Média ponderada = (7·2 + 8·3 + 4·1)/(2 + 3 + 1) = (14 + 24 + 4)/6 = 42/6 = 7,0. O valor 6,33 é a média aritmética simples."
+  "explicacao": "Média ponderada = (7·2 + 8·3 + 4·1)/(2 + 3 + 1) = (14 + 24 + 4)/6 = 42/6 = 7,0. O valor 6,33 é a média aritmética simples.",
+  "tema": "enem-mat-estatistica",
+  "subtema": "Média aritmética e ponderada",
+  "disciplina": "Matemática",
+  "areaEnem": "matematica",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-d6755292",
@@ -403,7 +627,15 @@
    "R$ 2.600,00"
   ],
   "correta": 3,
-  "explicacao": "J = C·i·t = 2000 × 0,03 × 5 = 300; M = 2.300. O valor R$ 2.318,55 corresponderia a juros compostos (2000 × 1,03⁵)."
+  "explicacao": "J = C·i·t = 2000 × 0,03 × 5 = 300; M = 2.300. O valor R$ 2.318,55 corresponderia a juros compostos (2000 × 1,03⁵).",
+  "tema": "enem-mat-matematica-financeira",
+  "subtema": "Juros simples",
+  "disciplina": "Matemática",
+  "areaEnem": "matematica",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-72ded741",
@@ -417,7 +649,15 @@
    "2/15"
   ],
   "correta": 4,
-  "explicacao": "P = 4/10 × 3/9 = 12/90 = 2/15. O valor 4/25 seria com reposição (4/10 × 4/10)."
+  "explicacao": "P = 4/10 × 3/9 = 12/90 = 2/15. O valor 4/25 seria com reposição (4/10 × 4/10).",
+  "tema": "enem-mat-probabilidade",
+  "subtema": "Eventos sucessivos e independentes",
+  "disciplina": "Matemática",
+  "areaEnem": "matematica",
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-75f308b7",
@@ -431,7 +671,15 @@
    "3.300 kWh"
   ],
   "correta": 0,
-  "explicacao": "E = P·t = 5,5 kW × (1/3 h) × 30 = 55 kWh. Usar 20 h em vez de 20 min, ou esquecer de converter minutos em horas, gera os valores distorcidos."
+  "explicacao": "E = P·t = 5,5 kW × (1/3 h) × 30 = 55 kWh. Usar 20 h em vez de 20 min, ou esquecer de converter minutos em horas, gera os valores distorcidos.",
+  "tema": "enem-fis-eletrodinamica",
+  "subtema": "Potência e consumo de energia elétrica",
+  "disciplina": "Física",
+  "areaEnem": "natureza",
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-0465f4cd",
@@ -445,7 +693,15 @@
    "1,5 s"
   ],
   "correta": 1,
-  "explicacao": "h = gt²/2 ⇒ 45 = 5t² ⇒ t² = 9 ⇒ t = 3 s."
+  "explicacao": "h = gt²/2 ⇒ 45 = 5t² ⇒ t² = 9 ⇒ t = 3 s.",
+  "tema": "enem-fis-cinematica",
+  "subtema": "Queda livre",
+  "disciplina": "Física",
+  "areaEnem": "natureza",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-f9c6222f",
@@ -459,7 +715,15 @@
    "300 m"
   ],
   "correta": 2,
-  "explicacao": "v = λf ⇒ λ = 3 × 10⁸ / 1 × 10⁸ = 3 m (lembrando que 100 MHz = 10⁸ Hz)."
+  "explicacao": "v = λf ⇒ λ = 3 × 10⁸ / 1 × 10⁸ = 3 m (lembrando que 100 MHz = 10⁸ Hz).",
+  "tema": "enem-fis-ondulatoria",
+  "subtema": "Equação fundamental (v = λ·f)",
+  "disciplina": "Física",
+  "areaEnem": "natureza",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-45b6e2fd",
@@ -473,7 +737,15 @@
    "60.000 cal"
   ],
   "correta": 3,
-  "explicacao": "Q = m·c·ΔT = 500 × 1 × (80 − 20) = 30.000 cal. Usar a temperatura final (80) em vez da variação dá 40.000 cal."
+  "explicacao": "Q = m·c·ΔT = 500 × 1 × (80 − 20) = 30.000 cal. Usar a temperatura final (80) em vez da variação dá 40.000 cal.",
+  "tema": "enem-fis-termologia",
+  "subtema": "Calorimetria",
+  "disciplina": "Física",
+  "areaEnem": "natureza",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-7bb80274",
@@ -487,7 +759,15 @@
    "refração da luz"
   ],
   "correta": 4,
-  "explicacao": "Ao passar da água para o ar, a luz muda de velocidade e de direção (refração), e o observador vê a parte submersa numa posição aparente diferente."
+  "explicacao": "Ao passar da água para o ar, a luz muda de velocidade e de direção (refração), e o observador vê a parte submersa numa posição aparente diferente.",
+  "tema": "enem-fis-optica",
+  "subtema": "Refração da luz",
+  "disciplina": "Física",
+  "areaEnem": "natureza",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-640e27a3",
@@ -501,7 +781,15 @@
    "4 atm"
   ],
   "correta": 0,
-  "explicacao": "Pressão absoluta = pressão atmosférica + pressão da coluna d'água = 1 atm + 2 atm = 3 atm. Os 2 atm seriam só a pressão hidrostática (manométrica)."
+  "explicacao": "Pressão absoluta = pressão atmosférica + pressão da coluna d'água = 1 atm + 2 atm = 3 atm. Os 2 atm seriam só a pressão hidrostática (manométrica).",
+  "tema": "enem-fis-hidrostatica",
+  "subtema": "Teorema de Stevin",
+  "disciplina": "Física",
+  "areaEnem": "natureza",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-f7a2d82d",
@@ -515,7 +803,15 @@
    "8"
   ],
   "correta": 1,
-  "explicacao": "Balanceando: CH₄ + 2 O₂ → CO₂ + 2 H₂O. Soma = 1 + 2 + 1 + 2 = 6."
+  "explicacao": "Balanceando: CH₄ + 2 O₂ → CO₂ + 2 H₂O. Soma = 1 + 2 + 1 + 2 = 6.",
+  "tema": "enem-qui-estequiometria",
+  "subtema": "Balanceamento de equações",
+  "disciplina": "Química",
+  "areaEnem": "natureza",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-173f5b26",
@@ -529,7 +825,15 @@
    "4 g/L"
   ],
   "correta": 2,
-  "explicacao": "C = m/V = 20 g / 0,5 L = 40 g/L. Dividir por 500 sem converter mL em L leva a 0,04 g/L."
+  "explicacao": "C = m/V = 20 g / 0,5 L = 40 g/L. Dividir por 500 sem converter mL em L leva a 0,04 g/L.",
+  "tema": "enem-qui-solucoes",
+  "subtema": "Concentração comum",
+  "disciplina": "Química",
+  "areaEnem": "natureza",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-2141df2e",
@@ -543,7 +847,15 @@
    "0,5 mol/L"
   ],
   "correta": 3,
-  "explicacao": "Na diluição o número de mols se conserva: C₁V₁ = C₂V₂ ⇒ 2 × 100 = C₂ × 500 ⇒ C₂ = 0,4 mol/L."
+  "explicacao": "Na diluição o número de mols se conserva: C₁V₁ = C₂V₂ ⇒ 2 × 100 = C₂ × 500 ⇒ C₂ = 0,4 mol/L.",
+  "tema": "enem-qui-solucoes",
+  "subtema": "Diluição e mistura",
+  "disciplina": "Química",
+  "areaEnem": "natureza",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-7b70b230",
@@ -557,7 +869,15 @@
    "álcool"
   ],
   "correta": 4,
-  "explicacao": "O etanol possui hidroxila (−OH) ligada a carbono saturado, característica dos álcoois. No fenol a hidroxila está ligada a anel aromático."
+  "explicacao": "O etanol possui hidroxila (−OH) ligada a carbono saturado, característica dos álcoois. No fenol a hidroxila está ligada a anel aromático.",
+  "tema": "enem-qui-organica",
+  "subtema": "Funções oxigenadas",
+  "disciplina": "Química",
+  "areaEnem": "natureza",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-98b047cc",
@@ -571,7 +891,15 @@
    "4 g"
   ],
   "correta": 0,
-  "explicacao": "4 g de H₂ (2 g/mol) = 2 mol; a proporção H₂ : H₂O é 1 : 1, logo formam-se 2 mol de água = 2 × 18 g = 36 g."
+  "explicacao": "4 g de H₂ (2 g/mol) = 2 mol; a proporção H₂ : H₂O é 1 : 1, logo formam-se 2 mol de água = 2 × 18 g = 36 g.",
+  "tema": "enem-qui-estequiometria",
+  "subtema": "Cálculo estequiométrico",
+  "disciplina": "Química",
+  "areaEnem": "natureza",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-6801db77",
@@ -585,7 +913,15 @@
    "26,7 g"
   ],
   "correta": 1,
-  "explicacao": "15 anos correspondem a 3 meias-vidas: 80 → 40 → 20 → 10 g. Dividir 80 por 3 (26,7 g) trata o decaimento como linear."
+  "explicacao": "15 anos correspondem a 3 meias-vidas: 80 → 40 → 20 → 10 g. Dividir 80 por 3 (26,7 g) trata o decaimento como linear.",
+  "tema": "enem-qui-radioatividade",
+  "subtema": "Meia-vida",
+  "disciplina": "Química",
+  "areaEnem": "natureza",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-a4a44250",
@@ -599,7 +935,15 @@
    "apenas AB"
   ],
   "correta": 2,
-  "explicacao": "A mãe é ii e o pai IᴬIᴮ; os filhos serão Iᴬi (tipo A) ou Iᴮi (tipo B). Nenhum pode ser O nem AB."
+  "explicacao": "A mãe é ii e o pai IᴬIᴮ; os filhos serão Iᴬi (tipo A) ou Iᴮi (tipo B). Nenhum pode ser O nem AB.",
+  "tema": "enem-bio-genetica",
+  "subtema": "Grupos sanguíneos (ABO e Rh)",
+  "disciplina": "Biologia",
+  "areaEnem": "natureza",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-a37fda44",
@@ -613,7 +957,15 @@
    "da síntese de ATP"
   ],
   "correta": 3,
-  "explicacao": "O O₂ vem da fotólise da água na fase clara (dependente de luz). O carbono do CO₂ é incorporado à glicose, não liberado como O₂."
+  "explicacao": "O O₂ vem da fotólise da água na fase clara (dependente de luz). O carbono do CO₂ é incorporado à glicose, não liberado como O₂.",
+  "tema": "enem-bio-bioenergetica",
+  "subtema": "Fotossíntese",
+  "disciplina": "Biologia",
+  "areaEnem": "natureza",
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-3079253c",
@@ -627,7 +979,15 @@
    "a cada nível trófico parte da energia é perdida, sobretudo como calor"
   ],
   "correta": 4,
-  "explicacao": "O fluxo de energia é unidirecional e, em cada nível, grande parte é dissipada na respiração como calor; por isso cada nível tem menos energia que o anterior. Diferente da matéria, a energia não é reciclada."
+  "explicacao": "O fluxo de energia é unidirecional e, em cada nível, grande parte é dissipada na respiração como calor; por isso cada nível tem menos energia que o anterior. Diferente da matéria, a energia não é reciclada.",
+  "tema": "enem-bio-ecologia",
+  "subtema": "Pirâmides ecológicas",
+  "disciplina": "Biologia",
+  "areaEnem": "natureza",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-5536f0ff",
@@ -641,7 +1001,15 @@
    "o antibiótico transforma bactérias em vírus resistentes"
   ],
   "correta": 0,
-  "explicacao": "Pela seleção natural (darwinismo), as variantes resistentes já existiam por mutação ao acaso; o antibiótico elimina as sensíveis e favorece as resistentes. A ideia de adquirir resistência por necessidade é lamarckista."
+  "explicacao": "Pela seleção natural (darwinismo), as variantes resistentes já existiam por mutação ao acaso; o antibiótico elimina as sensíveis e favorece as resistentes. A ideia de adquirir resistência por necessidade é lamarckista.",
+  "tema": "enem-bio-evolucao",
+  "subtema": "Darwinismo e seleção natural",
+  "disciplina": "Biologia",
+  "areaEnem": "natureza",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-e39bef34",
@@ -655,7 +1023,15 @@
    "a gripe é uma doença genética"
   ],
   "correta": 1,
-  "explicacao": "Antibióticos atuam em estruturas e processos de bactérias (como parede celular e ribossomos bacterianos). Vírus são acelulares e se replicam dentro das células do hospedeiro."
+  "explicacao": "Antibióticos atuam em estruturas e processos de bactérias (como parede celular e ribossomos bacterianos). Vírus são acelulares e se replicam dentro das células do hospedeiro.",
+  "tema": "enem-bio-microbiologia",
+  "subtema": "Antibióticos",
+  "disciplina": "Biologia",
+  "areaEnem": "natureza",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-a83e11fc",
@@ -669,7 +1045,15 @@
    "pelas baixas temperaturas, que conservam a matéria orgânica"
   ],
   "correta": 2,
-  "explicacao": "Com calor e umidade elevados, fungos e bactérias decompõem rapidamente folhas e galhos, e as raízes reabsorvem os nutrientes; o estoque fica na biomassa, não no solo. Por isso o desmatamento tende a empobrecer o solo rapidamente."
+  "explicacao": "Com calor e umidade elevados, fungos e bactérias decompõem rapidamente folhas e galhos, e as raízes reabsorvem os nutrientes; o estoque fica na biomassa, não no solo. Por isso o desmatamento tende a empobrecer o solo rapidamente.",
+  "tema": "enem-bio-ecossistemas-amazonicos",
+  "subtema": "Ciclagem de nutrientes",
+  "disciplina": "Biologia",
+  "areaEnem": "natureza",
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-da34228a",
@@ -683,7 +1067,15 @@
    "verme e água contaminada"
   ],
   "correta": 3,
-  "explicacao": "O agente da malária é o protozoário Plasmodium, transmitido pela picada da fêmea do mosquito Anopheles. Aedes transmite dengue; o barbeiro transmite a doença de Chagas."
+  "explicacao": "O agente da malária é o protozoário Plasmodium, transmitido pela picada da fêmea do mosquito Anopheles. Aedes transmite dengue; o barbeiro transmite a doença de Chagas.",
+  "tema": "enem-bio-parasitologia",
+  "subtema": "Malária",
+  "disciplina": "Biologia",
+  "areaEnem": "natureza",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-c5996c33",
@@ -697,7 +1089,15 @@
    "imunização passiva, com anticorpos prontos"
   ],
   "correta": 4,
-  "explicacao": "O soro contém anticorpos já produzidos (em geral por cavalos), de ação imediata e sem memória imunológica: imunização passiva. A vacina, ao contrário, estimula o próprio organismo (imunização ativa)."
+  "explicacao": "O soro contém anticorpos já produzidos (em geral por cavalos), de ação imediata e sem memória imunológica: imunização passiva. A vacina, ao contrário, estimula o próprio organismo (imunização ativa).",
+  "tema": "enem-bio-imunologia",
+  "subtema": "Soros (imunização passiva)",
+  "disciplina": "Biologia",
+  "areaEnem": "natureza",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-04d874b4",
@@ -711,7 +1111,15 @@
    "Período Joanino"
   ],
   "correta": 0,
-  "explicacao": "Entre a abdicação de D. Pedro I (1831) e o Golpe da Maioridade (1840), o Brasil viveu o Período Regencial, marcado por revoltas provinciais como a Cabanagem, a Balaiada, a Sabinada e a Farroupilha."
+  "explicacao": "Entre a abdicação de D. Pedro I (1831) e o Golpe da Maioridade (1840), o Brasil viveu o Período Regencial, marcado por revoltas provinciais como a Cabanagem, a Balaiada, a Sabinada e a Farroupilha.",
+  "tema": "enem-hist-amazonas",
+  "subtema": "Cabanagem",
+  "disciplina": "História",
+  "areaEnem": "humanas",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-cc27b83e",
@@ -725,7 +1133,15 @@
    "promover a reforma agrária nas várzeas do Amazonas"
   ],
   "correta": 1,
-  "explicacao": "O Decreto-Lei nº 288/1967 concedeu isenções e incentivos fiscais para atrair indústrias e comércio a Manaus, dentro de uma estratégia de ocupação e integração da Amazônia."
+  "explicacao": "O Decreto-Lei nº 288/1967 concedeu isenções e incentivos fiscais para atrair indústrias e comércio a Manaus, dentro de uma estratégia de ocupação e integração da Amazônia.",
+  "tema": "enem-hist-amazonas",
+  "subtema": "Zona Franca de Manaus",
+  "disciplina": "História",
+  "areaEnem": "humanas",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-12286e30",
@@ -739,7 +1155,15 @@
    "a falta de interesse da burguesia por inovações técnicas"
   ],
   "correta": 2,
-  "explicacao": "A Inglaterra reunia capitais do comércio colonial, reservas de carvão e ferro e mão de obra barata formada por camponeses expulsos das terras pelos cercamentos (enclosures)."
+  "explicacao": "A Inglaterra reunia capitais do comércio colonial, reservas de carvão e ferro e mão de obra barata formada por camponeses expulsos das terras pelos cercamentos (enclosures).",
+  "tema": "enem-hist-revolucoes",
+  "subtema": "Revolução Industrial",
+  "disciplina": "História",
+  "areaEnem": "humanas",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-7297b9e1",
@@ -753,7 +1177,15 @@
    "na República da Espada"
   ],
   "correta": 3,
-  "explicacao": "A CLT reuniu a legislação trabalhista em 1943, no Estado Novo (1937–1945), dentro da política varguista de controle e aproximação com os trabalhadores urbanos."
+  "explicacao": "A CLT reuniu a legislação trabalhista em 1943, no Estado Novo (1937–1945), dentro da política varguista de controle e aproximação com os trabalhadores urbanos.",
+  "tema": "enem-hist-era-vargas",
+  "subtema": "Legislação trabalhista",
+  "disciplina": "História",
+  "areaEnem": "humanas",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-072ab839",
@@ -767,7 +1199,15 @@
    "autorizou o fechamento do Congresso Nacional"
   ],
   "correta": 4,
-  "explicacao": "O AI-5 deu ao presidente poderes para fechar o Legislativo, cassar mandatos e suspender direitos políticos, além de suspender o habeas corpus em crimes políticos. Anistia (1979) e pluripartidarismo vieram na abertura."
+  "explicacao": "O AI-5 deu ao presidente poderes para fechar o Legislativo, cassar mandatos e suspender direitos políticos, além de suspender o habeas corpus em crimes políticos. Anistia (1979) e pluripartidarismo vieram na abertura.",
+  "tema": "enem-hist-ditadura-militar",
+  "subtema": "Atos Institucionais",
+  "disciplina": "História",
+  "areaEnem": "humanas",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-68818d6c",
@@ -781,7 +1221,15 @@
    "da Revolução Russa"
   ],
   "correta": 0,
-  "explicacao": "O muro, erguido em 1961, separava Berlim Ocidental e Oriental. Sua queda antecipou a reunificação alemã (1990) e o colapso da URSS (1991), encerrando a bipolaridade e a divisão da Europa entre os blocos capitalista e socialista."
+  "explicacao": "O muro, erguido em 1961, separava Berlim Ocidental e Oriental. Sua queda antecipou a reunificação alemã (1990) e o colapso da URSS (1991), encerrando a bipolaridade e a divisão da Europa entre os blocos capitalista e socialista.",
+  "tema": "enem-hist-guerra-fria",
+  "subtema": "Queda do Muro de Berlim",
+  "disciplina": "História",
+  "areaEnem": "humanas",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-69674aa4",
@@ -795,7 +1243,15 @@
    "indústrias têxteis mecanizadas"
   ],
   "correta": 1,
-  "explicacao": "O sistema de plantation colonial combinava grandes propriedades, um único produto de exportação e mão de obra escravizada, atendendo aos interesses mercantilistas da metrópole."
+  "explicacao": "O sistema de plantation colonial combinava grandes propriedades, um único produto de exportação e mão de obra escravizada, atendendo aos interesses mercantilistas da metrópole.",
+  "tema": "enem-hist-brasil-colonia",
+  "subtema": "Economia açucareira",
+  "disciplina": "História",
+  "areaEnem": "humanas",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-aa9253a0",
@@ -809,7 +1265,15 @@
    "correntes marítimas frias do litoral sul"
   ],
   "correta": 2,
-  "explicacao": "A floresta devolve à atmosfera grande quantidade de vapor d'água pela evapotranspiração; esse vapor é transportado pelos ventos e barrado pelos Andes, desviando-se para o centro-sul. O desmatamento ameaça esse mecanismo."
+  "explicacao": "A floresta devolve à atmosfera grande quantidade de vapor d'água pela evapotranspiração; esse vapor é transportado pelos ventos e barrado pelos Andes, desviando-se para o centro-sul. O desmatamento ameaça esse mecanismo.",
+  "tema": "enem-geo-amazonas",
+  "subtema": "Rios voadores",
+  "disciplina": "Geografia",
+  "areaEnem": "humanas",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-65d41fb6",
@@ -823,7 +1287,15 @@
    "serem cobertas por vegetação de cerrado"
   ],
   "correta": 3,
-  "explicacao": "As várzeas margeiam principalmente rios de água branca (como o Solimões-Amazonas) e são alagadas nas cheias; a deposição de sedimentos as torna férteis para a agricultura de vazante. A terra firme não alaga."
+  "explicacao": "As várzeas margeiam principalmente rios de água branca (como o Solimões-Amazonas) e são alagadas nas cheias; a deposição de sedimentos as torna férteis para a agricultura de vazante. A terra firme não alaga.",
+  "tema": "enem-geo-amazonas",
+  "subtema": "Várzea e terra firme",
+  "disciplina": "Geografia",
+  "areaEnem": "humanas",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-2cb859ea",
@@ -837,7 +1309,15 @@
    "10 h"
   ],
   "correta": 4,
-  "explicacao": "Cada 15° equivalem a 1 hora. A diferença é de 30°, ou seja, 2 horas; como B está mais a oeste, seu horário é atrasado: 12 − 2 = 10 h."
+  "explicacao": "Cada 15° equivalem a 1 hora. A diferença é de 30°, ou seja, 2 horas; como B está mais a oeste, seu horário é atrasado: 12 − 2 = 10 h.",
+  "tema": "enem-geo-cartografia",
+  "subtema": "Fusos horários",
+  "disciplina": "Geografia",
+  "areaEnem": "humanas",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-0dcf2167",
@@ -851,7 +1331,15 @@
    "desmetropolização"
   ],
   "correta": 0,
-  "explicacao": "Conurbação é a junção física de malhas urbanas de municípios diferentes. Gentrificação é a valorização de uma área que expulsa moradores de menor renda."
+  "explicacao": "Conurbação é a junção física de malhas urbanas de municípios diferentes. Gentrificação é a valorização de uma área que expulsa moradores de menor renda.",
+  "tema": "enem-geo-urbanizacao",
+  "subtema": "Conurbação e metropolização",
+  "disciplina": "Geografia",
+  "areaEnem": "humanas",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-5f9b1cf2",
@@ -865,7 +1353,15 @@
    "a redução da expectativa de vida"
   ],
   "correta": 1,
-  "explicacao": "Menos nascimentos estreitam a base, e a maior longevidade alarga o topo: é o envelhecimento populacional típico da transição demográfica."
+  "explicacao": "Menos nascimentos estreitam a base, e a maior longevidade alarga o topo: é o envelhecimento populacional típico da transição demográfica.",
+  "tema": "enem-geo-populacao",
+  "subtema": "Pirâmides etárias",
+  "disciplina": "Geografia",
+  "areaEnem": "humanas",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-7df379a3",
@@ -879,7 +1375,15 @@
    "a geotérmica"
   ],
   "correta": 2,
-  "explicacao": "A matriz elétrica brasileira é majoritariamente renovável, com predomínio da hidreletricidade, favorecida por rios caudalosos de planalto. Eólica e solar crescem, mas a hidráulica continua sendo a maior."
+  "explicacao": "A matriz elétrica brasileira é majoritariamente renovável, com predomínio da hidreletricidade, favorecida por rios caudalosos de planalto. Eólica e solar crescem, mas a hidráulica continua sendo a maior.",
+  "tema": "enem-geo-industria-energia",
+  "subtema": "Matriz elétrica",
+  "disciplina": "Geografia",
+  "areaEnem": "humanas",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-f065425f",
@@ -893,7 +1397,15 @@
    "não está sobre nenhuma placa tectônica"
   ],
   "correta": 3,
-  "explicacao": "Vulcanismo e grandes sismos concentram-se nas bordas das placas; o Brasil está no interior da Placa Sul-Americana, região de relativa estabilidade. Os Andes, na borda oeste, são área de alta atividade."
+  "explicacao": "Vulcanismo e grandes sismos concentram-se nas bordas das placas; o Brasil está no interior da Placa Sul-Americana, região de relativa estabilidade. Os Andes, na borda oeste, são área de alta atividade.",
+  "tema": "enem-geo-geologia-relevo",
+  "subtema": "Tectônica de placas",
+  "disciplina": "Geografia",
+  "areaEnem": "humanas",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-be12df20",
@@ -907,7 +1419,15 @@
    "os que tomam as aparências do mundo sensível pela verdade"
   ],
   "correta": 4,
-  "explicacao": "Para Platão, as sombras simbolizam a opinião (doxa) baseada nos sentidos; sair da caverna representa o caminho do conhecimento rumo ao mundo inteligível das Ideias."
+  "explicacao": "Para Platão, as sombras simbolizam a opinião (doxa) baseada nos sentidos; sair da caverna representa o caminho do conhecimento rumo ao mundo inteligível das Ideias.",
+  "tema": "enem-filo-socrates-platao",
+  "subtema": "Alegoria da Caverna",
+  "disciplina": "Filosofia",
+  "areaEnem": "humanas",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-d2b5125a",
@@ -921,7 +1441,15 @@
    "à dúvida metódica de Descartes"
   ],
   "correta": 0,
-  "explicacao": "Para Kant, a ação moral é incondicionada e deve poder ser universalizada, independentemente de suas consequências, ao contrário do utilitarismo, que julga pelos resultados."
+  "explicacao": "Para Kant, a ação moral é incondicionada e deve poder ser universalizada, independentemente de suas consequências, ao contrário do utilitarismo, que julga pelos resultados.",
+  "tema": "enem-filo-etica",
+  "subtema": "Imperativo categórico (Kant)",
+  "disciplina": "Filosofia",
+  "areaEnem": "humanas",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-6145f4c0",
@@ -935,7 +1463,15 @@
    "obedecer ao governante mais forte"
   ],
   "correta": 1,
-  "explicacao": "Na Ética a Nicômaco, a virtude é uma disposição adquirida pelo hábito e situada no meio-termo: a coragem, por exemplo, está entre a covardia (falta) e a temeridade (excesso)."
+  "explicacao": "Na Ética a Nicômaco, a virtude é uma disposição adquirida pelo hábito e situada no meio-termo: a coragem, por exemplo, está entre a covardia (falta) e a temeridade (excesso).",
+  "tema": "enem-filo-aristoteles",
+  "subtema": "Ética das virtudes e justa medida",
+  "disciplina": "Filosofia",
+  "areaEnem": "humanas",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-56fe51c0",
@@ -949,7 +1485,15 @@
    "teocrática"
   ],
   "correta": 2,
-  "explicacao": "Weber distingue três tipos puros de dominação legítima: tradicional, carismática e racional-legal. Esta última se baseia em regras formais e é típica da burocracia moderna."
+  "explicacao": "Weber distingue três tipos puros de dominação legítima: tradicional, carismática e racional-legal. Esta última se baseia em regras formais e é típica da burocracia moderna.",
+  "tema": "enem-socio-weber",
+  "subtema": "Tipos de dominação legítima",
+  "disciplina": "Sociologia",
+  "areaEnem": "humanas",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-508ff7af",
@@ -963,7 +1507,15 @@
    "luta de classes"
   ],
   "correta": 3,
-  "explicacao": "A mais-valia é o trabalho excedente não pago, base da acumulação capitalista. Alienação e fetichismo são conceitos relacionados, mas descrevem outros aspectos da relação de trabalho."
+  "explicacao": "A mais-valia é o trabalho excedente não pago, base da acumulação capitalista. Alienação e fetichismo são conceitos relacionados, mas descrevem outros aspectos da relação de trabalho.",
+  "tema": "enem-socio-marx",
+  "subtema": "Mais-valia",
+  "disciplina": "Sociologia",
+  "areaEnem": "humanas",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-8abc118c",
@@ -977,7 +1529,15 @@
    "etnocentrismo"
   ],
   "correta": 4,
-  "explicacao": "Etnocentrismo é julgar outras culturas tomando a própria como padrão superior. O relativismo cultural, ao contrário, busca compreender cada cultura em seu próprio contexto."
+  "explicacao": "Etnocentrismo é julgar outras culturas tomando a própria como padrão superior. O relativismo cultural, ao contrário, busca compreender cada cultura em seu próprio contexto.",
+  "tema": "enem-socio-cultura",
+  "subtema": "Etnocentrismo",
+  "disciplina": "Sociologia",
+  "areaEnem": "humanas",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-ed2b772c",
@@ -991,7 +1551,15 @@
    "Ficamos frente à frente."
   ],
   "correta": 0,
-  "explicacao": "Há crase quando a preposição 'a' (entregar algo a alguém) se funde ao artigo feminino 'a' (a diretora). Não ocorre crase antes de verbo, de palavra masculina, de pronome de tratamento como 'você' nem entre palavras repetidas."
+  "explicacao": "Há crase quando a preposição 'a' (entregar algo a alguém) se funde ao artigo feminino 'a' (a diretora). Não ocorre crase antes de verbo, de palavra masculina, de pronome de tratamento como 'você' nem entre palavras repetidas.",
+  "tema": "enem-crase-e-regencia",
+  "subtema": "Crase",
+  "disciplina": "Português",
+  "areaEnem": "linguagens",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-8c1866b7",
@@ -1005,7 +1573,15 @@
    "decorrente de erro gramatical"
   ],
   "correta": 1,
-  "explicacao": "'Oxente', 'visse' e 'arretado' são marcas associadas a falares do Nordeste, caracterizando variação geográfica. Variação não é erro, mas diversidade legítima da língua."
+  "explicacao": "'Oxente', 'visse' e 'arretado' são marcas associadas a falares do Nordeste, caracterizando variação geográfica. Variação não é erro, mas diversidade legítima da língua.",
+  "tema": "enem-variacao-linguistica",
+  "subtema": "Regional (diatópica)",
+  "disciplina": "Português",
+  "areaEnem": "linguagens",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-40499f0e",
@@ -1019,7 +1595,15 @@
    "fática"
   ],
   "correta": 2,
-  "explicacao": "A função metalinguística ocorre quando o código explica o próprio código, como em dicionários e gramáticas. A referencial foca em informar sobre um assunto externo à língua."
+  "explicacao": "A função metalinguística ocorre quando o código explica o próprio código, como em dicionários e gramáticas. A referencial foca em informar sobre um assunto externo à língua.",
+  "tema": "enem-funcoes-da-linguagem",
+  "subtema": "Metalinguística",
+  "disciplina": "Português",
+  "areaEnem": "linguagens",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-686272c1",
@@ -1033,7 +1617,15 @@
    "consequência"
   ],
   "correta": 3,
-  "explicacao": "'Embora' é conjunção concessiva: apresenta um obstáculo (o cansaço) que não impede o fato principal (terminar a prova)."
+  "explicacao": "'Embora' é conjunção concessiva: apresenta um obstáculo (o cansaço) que não impede o fato principal (terminar a prova).",
+  "tema": "enem-sintaxe-oracoes",
+  "subtema": "Orações subordinadas adverbiais",
+  "disciplina": "Português",
+  "areaEnem": "linguagens",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-0d11b644",
@@ -1047,7 +1639,15 @@
    "a ambiguidade sobre a suposta traição de Capitu"
   ],
   "correta": 4,
-  "explicacao": "Bento Santiago (Bentinho) narra a própria história em primeira pessoa, a partir de seu ponto de vista, e a traição nunca é comprovada; essa ambiguidade é uma marca do Realismo machadiano."
+  "explicacao": "Bento Santiago (Bentinho) narra a própria história em primeira pessoa, a partir de seu ponto de vista, e a traição nunca é comprovada; essa ambiguidade é uma marca do Realismo machadiano.",
+  "tema": "enem-lit-realismo-naturalismo",
+  "subtema": "Machado de Assis",
+  "disciplina": "Literatura",
+  "areaEnem": "linguagens",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-9a5b9431",
@@ -1061,7 +1661,15 @@
    "do Realismo de Machado de Assis"
   ],
   "correta": 0,
-  "explicacao": "A obra integra o romance de 30, da segunda fase do Modernismo, que denunciava problemas sociais como a seca, a miséria e a opressão, com linguagem seca e enxuta."
+  "explicacao": "A obra integra o romance de 30, da segunda fase do Modernismo, que denunciava problemas sociais como a seca, a miséria e a opressão, com linguagem seca e enxuta.",
+  "tema": "enem-lit-romance-de-30",
+  "subtema": "Graciliano Ramos",
+  "disciplina": "Literatura",
+  "areaEnem": "linguagens",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-bf1da4ca",
@@ -1075,7 +1683,15 @@
    "a vida da corte portuguesa no Rio de Janeiro"
   ],
   "correta": 1,
-  "explicacao": "Hatoum, nascido em Manaus, narra em Dois Irmãos o conflito entre os gêmeos Yaqub e Omar, filhos de Halim e Zana, tendo a cidade de Manaus e suas transformações como pano de fundo."
+  "explicacao": "Hatoum, nascido em Manaus, narra em Dois Irmãos o conflito entre os gêmeos Yaqub e Omar, filhos de Halim e Zana, tendo a cidade de Manaus e suas transformações como pano de fundo.",
+  "tema": "enem-lit-amazonense",
+  "subtema": "Milton Hatoum",
+  "disciplina": "Literatura",
+  "areaEnem": "linguagens",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-7f818000",
@@ -1089,7 +1705,15 @@
    "registram as maiores taxas de desmatamento"
   ],
   "correta": 2,
-  "explicacao": "O trecho 'have shown lower deforestation rates' significa 'têm mostrado taxas de desmatamento menores'. O conectivo 'However' introduz o contraste com o problema descrito na primeira frase."
+  "explicacao": "O trecho 'have shown lower deforestation rates' significa 'têm mostrado taxas de desmatamento menores'. O conectivo 'However' introduz o contraste com o problema descrito na primeira frase.",
+  "tema": "enem-ingles-estrategias-de-leitura",
+  "subtema": "Scanning (informação específica)",
+  "disciplina": "Inglês",
+  "areaEnem": "linguagens",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-fbfb9938",
@@ -1103,7 +1727,15 @@
    "prometer"
   ],
   "correta": 3,
-  "explicacao": "'Pretend' é falso cognato: significa 'fingir', não 'pretender' (que em inglês seria 'intend'). Também 'actually' significa 'na verdade', e não 'atualmente'."
+  "explicacao": "'Pretend' é falso cognato: significa 'fingir', não 'pretender' (que em inglês seria 'intend'). Também 'actually' significa 'na verdade', e não 'atualmente'.",
+  "tema": "enem-ingles-vocabulario",
+  "subtema": "Falsos cognatos",
+  "disciplina": "Inglês",
+  "areaEnem": "linguagens",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "ene-dd8fc321",
@@ -1117,6 +1749,14 @@
    "Fugir totalmente ao tema proposto"
   ],
   "correta": 4,
-  "explicacao": "A fuga total ao tema zera a redação, assim como não atender ao tipo dissertativo-argumentativo ou ter até 7 linhas. Título é opcional, e desvios gramaticais apenas reduzem a nota na competência 1."
+  "explicacao": "A fuga total ao tema zera a redação, assim como não atender ao tipo dissertativo-argumentativo ou ter até 7 linhas. Título é opcional, e desvios gramaticais apenas reduzem a nota na competência 1.",
+  "tema": "enem-redacao-competencias",
+  "subtema": "Situações de nota zero",
+  "disciplina": "Redação",
+  "areaEnem": "redacao",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  }
 ]

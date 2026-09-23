@@ -90,16 +90,16 @@ VESTIBULARES = {
     "UFAM – PSC (Processo Seletivo Contínuo)": [
         "Seriado em 3 etapas (1º, 2º e 3º ano do EM), conteúdo do ano cursado",
         "Parte das vagas também via SISU/Enem",
-        "Inclui leituras de obras (frequentemente autores amazônicos)",
+        "Lista de obras e conteúdos definida em edital (conferir o edital vigente)",
     ],
     "UEA – Vestibular e SIS (Sistema de Ingresso Seriado)": [
         "Vestibular (acesso direto) + SIS em 3 etapas ao longo do EM",
         "Reserva de vagas para quem cursou o EM no Amazonas e para o interior",
-        "Temas regionais (Amazônia, história/geografia do AM) aparecem com frequência",
+        "Conteúdos definidos em edital (conferir o edital vigente)",
     ],
     "Fametro / Nilton Lins / Afya (Amazonas)": [
         "Vestibular próprio (prova objetiva + redação) ou aproveitamento da nota do ENEM",
-        "Aceitam FIES e/ou ProUni conforme oferta do semestre",
+        "Formas de ingresso e financiamento: dado pendente de validação (conferir edital)",
     ],
 }
 
@@ -136,27 +136,19 @@ MEDICINA = {
         "Metodologias: tradicional, integrada e PBL (aprendizagem baseada em problemas)",
     ],
     "UFAM – Faculdade de Medicina (Manaus)": [
-        "Pública federal; ingresso via PSC e SISU",
-        "Campo de prática no Hospital Universitário Getúlio Vargas (HUGV/Ebserh)",
-        "Ênfase em doenças tropicais, saúde indígena e ribeirinha",
+        "Dado curricular pendente de validação: importe a matriz oficial no app (Medicina → Importar matriz)",
     ],
     "UEA – Escola Superior de Ciências da Saúde (ESA)": [
-        "Pública estadual; ingresso via Vestibular e SIS (com reserva regional)",
-        "Parceria com a Fundação de Medicina Tropical Dr. Heitor Vieira Dourado (FMT-HVD)",
-        "Forte em Medicina Tropical e interiorização do atendimento",
+        "Dado curricular pendente de validação: importe a matriz oficial no app (Medicina → Importar matriz)",
     ],
     "Fametro (Manaus)": [
-        "Privada; metodologias ativas e integração ensino-serviço com a rede do SUS",
-        "Ingresso por vestibular próprio ou ENEM; FIES/ProUni",
+        "Dado curricular pendente de validação: importe a matriz oficial no app (Medicina → Importar matriz)",
     ],
     "Nilton Lins (Manaus)": [
-        "Privada; possui hospital/clínicas-escola para prática",
-        "Ingresso por vestibular próprio ou ENEM; FIES/ProUni",
+        "Dado curricular pendente de validação: importe a matriz oficial no app (Medicina → Importar matriz)",
     ],
     "Afya (unidade no Amazonas)": [
-        "Rede nacional focada em Medicina; modelo PBL, tutoria e laboratórios de simulação",
-        "Plataformas digitais próprias (ex.: Afya Whitebook/Medcel) no apoio ao estudo",
-        "Confirmar município/campus e PPC no site oficial da Afya",
+        "Dado curricular pendente de validação: importe a matriz oficial no app (Medicina → Importar matriz)",
     ],
 }
 
@@ -164,7 +156,7 @@ RESIDENCIA_MEDICA = {
     "Provas": [
         "ENARE (Ebserh): exame nacional, inclui hospitais universitários como o HUGV/UFAM",
         "SUS-SP, USP (FMUSP/HC), Unifesp, Unicamp, UFRJ, UERJ, Santa Casa-SP, Einstein",
-        "Amazonas: processos da UEA/FMT-HVD, SES-AM e hospitais conveniados",
+        "Amazonas: consultar os editais locais vigentes (dado pendente de validação)",
     ],
     "Conteúdo cobrado (acesso direto: 5 grandes áreas)": [
         "Clínica Médica", "Cirurgia Geral", "Pediatria", "Ginecologia e Obstetrícia",
@@ -212,21 +204,19 @@ DIREITO = {
         "UFPR", "UFRJ (Faculdade Nacional)", "UFPE", "FGV Direito SP e Rio",
     ],
     "UFAM – Faculdade de Direito (Manaus)": [
-        "Pública federal; herdeira da Escola Universitária Livre de Manáos (1909)",
-        "Ingresso via PSC e SISU; destaque em Direito Ambiental e Amazônico",
+        "Dado curricular pendente de validação: importe a matriz oficial no app (Medicina → Importar matriz)",
     ],
     "UEA – Escola de Direito": [
-        "Pública estadual; ingresso via Vestibular e SIS",
-        "Linhas fortes: Direito Ambiental, Povos Tradicionais, Constitucional",
+        "Dado curricular pendente de validação: importe a matriz oficial no app (Medicina → Importar matriz)",
     ],
     "Fametro (Manaus)": [
-        "Privada; NPJ com atendimento à comunidade; ingresso por vestibular ou ENEM",
+        "Dado curricular pendente de validação: importe a matriz oficial no app (Medicina → Importar matriz)",
     ],
     "Nilton Lins (Manaus)": [
-        "Privada; NPJ e escritório-modelo; ingresso por vestibular ou ENEM",
+        "Dado curricular pendente de validação: importe a matriz oficial no app (Medicina → Importar matriz)",
     ],
     "Afya": [
-        "Afya é focada em Medicina/Saúde; normalmente não oferta Direito (confirmar)",
+        "Dado curricular pendente de validação: importe a matriz oficial no app (Medicina → Importar matriz)",
     ],
 }
 
@@ -243,8 +233,8 @@ POS_DIREITO = {
     ],
     "Carreiras (o 'equivalente à residência')": [
         "Magistratura, MP, Defensoria, Delegado, Procuradorias, AGU (concursos + 3 anos de prática para Mag/MP)",
-        "Especialização, mestrado e doutorado (ex.: PPGD/UFAM, PPGDA/UEA em Direito Ambiental)",
-        "Escolas: ESMAM/AM, Escola Superior da Advocacia (ESA-OAB/AM)",
+        "Especialização, mestrado e doutorado (programas locais: dado pendente de validação)",
+        "Escolas da magistratura e da advocacia do estado (conferir oferta local)",
     ],
 }
 

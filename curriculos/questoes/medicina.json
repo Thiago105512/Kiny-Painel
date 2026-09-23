@@ -11,7 +11,15 @@
    "Acessório"
   ],
   "correta": 1,
-  "explicacao": "Nervo frênico (C3–C5): \"C3, 4, 5 mantêm o diafragma vivo\"."
+  "explicacao": "Nervo frênico (C3–C5): \"C3, 4, 5 mantêm o diafragma vivo\".",
+  "tema": "anatomia-do-torax",
+  "subtema": "anatomia-do-torax.diafragma-e-nervo-frenico",
+  "especialidade": "anatomia",
+  "disciplina": "Anatomia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-423796fc",
@@ -25,7 +33,15 @@
    "Bomba Na⁺/K⁺"
   ],
   "correta": 2,
-  "explicacao": "Abertura de canais de Na⁺ voltagem-dependentes. A repolarização é por saída de K⁺."
+  "explicacao": "Abertura de canais de Na⁺ voltagem-dependentes. A repolarização é por saída de K⁺.",
+  "tema": "potencial-de-acao",
+  "subtema": "potencial-de-acao.fases-do-potencial-de-acao",
+  "especialidade": "fisiologia",
+  "disciplina": "Fisiologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-942f20fc",
@@ -39,7 +55,15 @@
    "38"
   ],
   "correta": 0,
-  "explicacao": "Gera 4 ATP, mas consome 2 na fase preparatória: saldo 2 ATP (+ 2 NADH)."
+  "explicacao": "Gera 4 ATP, mas consome 2 na fase preparatória: saldo 2 ATP (+ 2 NADH).",
+  "tema": "metabolismo-dos-carboidratos",
+  "subtema": "metabolismo-dos-carboidratos.glicolise",
+  "especialidade": "bioquimica",
+  "disciplina": "Bioquímica",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-254a112e",
@@ -53,7 +77,15 @@
    "De transição"
   ],
   "correta": 2,
-  "explicacao": "Várias camadas, células superficiais achatadas e queratina para proteção."
+  "explicacao": "Várias camadas, células superficiais achatadas e queratina para proteção.",
+  "tema": "tecido-epitelial",
+  "subtema": "tecido-epitelial.classificacao-dos-epitelios",
+  "especialidade": "histologia-embriologia",
+  "disciplina": "Histologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-7e102a2d",
@@ -67,7 +99,15 @@
    "IgD"
   ],
   "correta": 3,
-  "explicacao": "IgG passa por transporte ativo (receptor FcRn), conferindo imunidade passiva ao feto."
+  "explicacao": "IgG passa por transporte ativo (receptor FcRn), conferindo imunidade passiva ao feto.",
+  "tema": "imunoglobulinas",
+  "subtema": "imunoglobulinas.imunidade-passiva-materna",
+  "especialidade": "imunologia",
+  "disciplina": "Imunologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-3ed4da34",
@@ -81,7 +121,15 @@
    "Hematoxilina-eosina"
   ],
   "correta": 1,
-  "explicacao": "Ziehl-Neelsen evidencia a parede rica em ácidos micólicos do Mycobacterium."
+  "explicacao": "Ziehl-Neelsen evidencia a parede rica em ácidos micólicos do Mycobacterium.",
+  "tema": "tuberculose",
+  "subtema": "tuberculose.etiologia-e-diagnostico-microbiologico",
+  "especialidade": "microbiologia",
+  "disciplina": "Microbiologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-9e30497d",
@@ -95,7 +143,15 @@
    "Triatoma"
   ],
   "correta": 3,
-  "explicacao": "Anopheles (no Amazonas, principalmente A. darlingi). Aedes: dengue; Lutzomyia: leishmaniose; Triatoma: Chagas."
+  "explicacao": "Anopheles (no Amazonas, principalmente A. darlingi). Aedes: dengue; Lutzomyia: leishmaniose; Triatoma: Chagas.",
+  "tema": "malaria",
+  "subtema": "malaria.transmissao-e-ciclo-biologico",
+  "especialidade": "parasitologia",
+  "disciplina": "Parasitologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-adce296a",
@@ -109,7 +165,15 @@
    "Caramujo"
   ],
   "correta": 0,
-  "explicacao": "Flebotomíneos (mosquito-palha; Lutzomyia/Nyssomyia) transmitem Leishmania; comum em áreas de mata e desmatamento."
+  "explicacao": "Flebotomíneos (mosquito-palha; Lutzomyia/Nyssomyia) transmitem Leishmania; comum em áreas de mata e desmatamento.",
+  "tema": "leishmaniose",
+  "subtema": "leishmaniose.ciclo-biologico-e-vetor",
+  "especialidade": "parasitologia",
+  "disciplina": "Parasitologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-23afa8df",
@@ -123,7 +187,15 @@
    "Vitamina K"
   ],
   "correta": 3,
-  "explicacao": "A N-acetilcisteína repõe glutationa e neutraliza o metabólito tóxico NAPQI."
+  "explicacao": "A N-acetilcisteína repõe glutationa e neutraliza o metabólito tóxico NAPQI.",
+  "tema": "intoxicacoes-exogenas",
+  "subtema": "intoxicacoes-exogenas.paracetamol",
+  "especialidade": "farmacologia",
+  "disciplina": "Farmacologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-a29a0869",
@@ -137,7 +209,15 @@
    "Glucagon"
   ],
   "correta": 1,
-  "explicacao": "Flumazenil é antagonista competitivo do receptor benzodiazepínico (GABA-A). Naloxona é para opioides."
+  "explicacao": "Flumazenil é antagonista competitivo do receptor benzodiazepínico (GABA-A). Naloxona é para opioides.",
+  "tema": "intoxicacoes-exogenas",
+  "subtema": "intoxicacoes-exogenas.benzodiazepinicos-e-opioides",
+  "especialidade": "farmacologia",
+  "disciplina": "Farmacologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-b115c2eb",
@@ -151,7 +231,15 @@
    "Pielonefrite"
   ],
   "correta": 2,
-  "explicacao": "Sinal de Murphy positivo: inflamação da vesícula biliar."
+  "explicacao": "Sinal de Murphy positivo: inflamação da vesícula biliar.",
+  "tema": "doencas-biliares",
+  "subtema": "doencas-biliares.colecistite-aguda",
+  "especialidade": "semiologia",
+  "disciplina": "Semiologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-f3825734",
@@ -165,7 +253,15 @@
    "Posterior isolada"
   ],
   "correta": 3,
-  "explicacao": "DII, DIII e aVF olham a parede inferior (geralmente coronária direita)."
+  "explicacao": "DII, DIII e aVF olham a parede inferior (geralmente coronária direita).",
+  "tema": "sindrome-coronariana-aguda",
+  "subtema": "sindrome-coronariana-aguda.eletrocardiograma-e-localizacao",
+  "especialidade": "cardiologia",
+  "disciplina": "Cardiologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-20f0b586",
@@ -179,7 +275,15 @@
    "Fibrinoide"
   ],
   "correta": 2,
-  "explicacao": "Necrose caseosa, de aspecto de queijo, dentro de granulomas."
+  "explicacao": "Necrose caseosa, de aspecto de queijo, dentro de granulomas.",
+  "tema": "lesao-celular",
+  "subtema": "lesao-celular.tipos-de-necrose",
+  "especialidade": "patologia",
+  "disciplina": "Patologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-32be8f52",
@@ -193,7 +297,15 @@
    "Axilar"
   ],
   "correta": 0,
-  "explicacao": "O nervo radial percorre o sulco do nervo radial na diáfise umeral e inerva os extensores do punho e dos dedos; sua lesão causa a 'mão caída'."
+  "explicacao": "O nervo radial percorre o sulco do nervo radial na diáfise umeral e inerva os extensores do punho e dos dedos; sua lesão causa a 'mão caída'.",
+  "tema": "plexo-braquial",
+  "subtema": "plexo-braquial.nervo-radial",
+  "especialidade": "anatomia",
+  "disciplina": "Anatomia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-e2399887",
@@ -207,7 +319,15 @@
    "Artéria basilar"
   ],
   "correta": 3,
-  "explicacao": "A artéria meníngea média passa profundamente ao ptério; sua ruptura gera hematoma epidural. Veias-ponte associam-se ao hematoma subdural."
+  "explicacao": "A artéria meníngea média passa profundamente ao ptério; sua ruptura gera hematoma epidural. Veias-ponte associam-se ao hematoma subdural.",
+  "tema": "traumatismo-cranioencefalico",
+  "subtema": "traumatismo-cranioencefalico.hematoma-extradural",
+  "especialidade": "anatomia",
+  "disciplina": "Anatomia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-7b46be61",
@@ -221,7 +341,15 @@
    "Forame jugular"
   ],
   "correta": 1,
-  "explicacao": "V3 passa pelo forame oval; V2 pelo forame redondo e V1 pela fissura orbital superior. O forame espinhoso dá passagem à artéria meníngea média."
+  "explicacao": "V3 passa pelo forame oval; V2 pelo forame redondo e V1 pela fissura orbital superior. O forame espinhoso dá passagem à artéria meníngea média.",
+  "tema": "nervos-cranianos",
+  "subtema": "nervos-cranianos.forames-da-base-do-cranio",
+  "especialidade": "anatomia",
+  "disciplina": "Anatomia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-e1e0e8a7",
@@ -235,7 +363,15 @@
    "Ureter"
   ],
   "correta": 4,
-  "explicacao": "O ureter passa inferiormente à artéria uterina ('a água passa por baixo da ponte'), cerca de 2 cm lateral ao colo."
+  "explicacao": "O ureter passa inferiormente à artéria uterina ('a água passa por baixo da ponte'), cerca de 2 cm lateral ao colo.",
+  "tema": "anatomia-da-pelve",
+  "subtema": "anatomia-da-pelve.ureter-pelvico",
+  "especialidade": "anatomia",
+  "disciplina": "Anatomia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-8aac1302",
@@ -249,7 +385,15 @@
    "Brônquio principal esquerdo"
   ],
   "correta": 2,
-  "explicacao": "O laríngeo recorrente esquerdo curva-se sob o arco da aorta; o direito contorna a artéria subclávia direita. Por isso aneurismas do arco podem causar rouquidão."
+  "explicacao": "O laríngeo recorrente esquerdo curva-se sob o arco da aorta; o direito contorna a artéria subclávia direita. Por isso aneurismas do arco podem causar rouquidão.",
+  "tema": "nervos-cranianos",
+  "subtema": "nervos-cranianos.nervo-vago-e-nervos-laringeos",
+  "especialidade": "anatomia",
+  "disciplina": "Anatomia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-10337e37",
@@ -263,7 +407,15 @@
    "O débito cardíaco e a resistência vascular pulmonar"
   ],
   "correta": 0,
-  "explicacao": "Quanto maior o enchimento diastólico, maior o estiramento das fibras e a força de contração, dentro de limites fisiológicos (Guyton)."
+  "explicacao": "Quanto maior o enchimento diastólico, maior o estiramento das fibras e a força de contração, dentro de limites fisiológicos (Guyton).",
+  "tema": "fisiologia-cardiovascular",
+  "subtema": "fisiologia-cardiovascular.debito-cardiaco-e-lei-de-frank-starling",
+  "especialidade": "fisiologia",
+  "disciplina": "Fisiologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-5f97d882",
@@ -277,7 +429,15 @@
    "Mácula densa"
   ],
   "correta": 3,
-  "explicacao": "O ADH atua via receptores V2 nas células principais do ducto coletor, levando aquaporinas-2 à membrana apical e concentrando a urina."
+  "explicacao": "O ADH atua via receptores V2 nas células principais do ducto coletor, levando aquaporinas-2 à membrana apical e concentrando a urina.",
+  "tema": "fisiologia-renal",
+  "subtema": "fisiologia-renal.concentracao-urinaria-e-adh",
+  "especialidade": "fisiologia",
+  "disciplina": "Fisiologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-7ce66bb7",
@@ -291,7 +451,15 @@
    "Aumento da hemoglobina fetal"
   ],
   "correta": 1,
-  "explicacao": "Aumento de 2,3-BPG, H⁺ (acidose), CO₂ e temperatura desviam a curva para a direita, facilitando a liberação de O₂ aos tecidos; a HbF desvia para a esquerda."
+  "explicacao": "Aumento de 2,3-BPG, H⁺ (acidose), CO₂ e temperatura desviam a curva para a direita, facilitando a liberação de O₂ aos tecidos; a HbF desvia para a esquerda.",
+  "tema": "fisiologia-respiratoria",
+  "subtema": "fisiologia-respiratoria.transporte-de-oxigenio",
+  "especialidade": "fisiologia",
+  "disciplina": "Fisiologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-67c55cc1",
@@ -305,7 +473,15 @@
    "Secretina"
   ],
   "correta": 4,
-  "explicacao": "A secretina neutraliza a acidez duodenal estimulando bicarbonato pancreático; a colecistocinina estimula principalmente enzimas pancreáticas e contração da vesícula."
+  "explicacao": "A secretina neutraliza a acidez duodenal estimulando bicarbonato pancreático; a colecistocinina estimula principalmente enzimas pancreáticas e contração da vesícula.",
+  "tema": "fisiologia-gastrointestinal",
+  "subtema": "fisiologia-gastrointestinal.hormonios-gastrointestinais",
+  "especialidade": "fisiologia",
+  "disciplina": "Fisiologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-2fd2fe07",
@@ -319,7 +495,15 @@
    "Aumento da diurese por inibição do ADH"
   ],
   "correta": 2,
-  "explicacao": "Menor estiramento reduz os disparos dos barorreceptores, o que diminui o tônus vagal e aumenta o simpático: taquicardia, maior contratilidade e vasoconstrição."
+  "explicacao": "Menor estiramento reduz os disparos dos barorreceptores, o que diminui o tônus vagal e aumenta o simpático: taquicardia, maior contratilidade e vasoconstrição.",
+  "tema": "fisiologia-cardiovascular",
+  "subtema": "fisiologia-cardiovascular.controle-da-pressao-arterial",
+  "especialidade": "fisiologia",
+  "disciplina": "Fisiologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-e482e68b",
@@ -333,7 +517,15 @@
    "Glicogênio sintase"
   ],
   "correta": 0,
-  "explicacao": "A HMG-CoA redutase converte HMG-CoA em mevalonato, etapa limitante da colesterogênese; as estatinas a inibem competitivamente."
+  "explicacao": "A HMG-CoA redutase converte HMG-CoA em mevalonato, etapa limitante da colesterogênese; as estatinas a inibem competitivamente.",
+  "tema": "metabolismo-dos-lipidios",
+  "subtema": "metabolismo-dos-lipidios.sintese-de-colesterol",
+  "especialidade": "bioquimica",
+  "disciplina": "Bioquímica",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-ac0994bf",
@@ -347,7 +539,15 @@
    "Glicocinase, com hipoglicemia grave"
   ],
   "correta": 3,
-  "explicacao": "A G6PD inicia a via das pentoses, fonte de NADPH para manter a glutationa reduzida; sem ela, oxidantes como a primaquina causam hemólise."
+  "explicacao": "A G6PD inicia a via das pentoses, fonte de NADPH para manter a glutationa reduzida; sem ela, oxidantes como a primaquina causam hemólise.",
+  "tema": "anemias",
+  "subtema": "anemias.anemias-hemoliticas",
+  "especialidade": "bioquimica",
+  "disciplina": "Bioquímica",
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-82f9e235",
@@ -361,7 +561,15 @@
    "Argininossuccinato liase"
   ],
   "correta": 1,
-  "explicacao": "A CPS I mitocondrial forma carbamoil-fosfato a partir de NH₄⁺ e depende de N-acetilglutamato; a CPS II é citosólica e atua na síntese de pirimidinas."
+  "explicacao": "A CPS I mitocondrial forma carbamoil-fosfato a partir de NH₄⁺ e depende de N-acetilglutamato; a CPS II é citosólica e atua na síntese de pirimidinas.",
+  "tema": "metabolismo-dos-aminoacidos",
+  "subtema": "metabolismo-dos-aminoacidos.ciclo-da-ureia",
+  "especialidade": "bioquimica",
+  "disciplina": "Bioquímica",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-66718c50",
@@ -375,7 +583,15 @@
    "A hidroxilação de prolina e lisina na síntese do colágeno"
   ],
   "correta": 4,
-  "explicacao": "O ascorbato é cofator das prolil e lisil hidroxilases; sem hidroxilação o colágeno é instável, gerando sangramento gengival e fragilidade vascular."
+  "explicacao": "O ascorbato é cofator das prolil e lisil hidroxilases; sem hidroxilação o colágeno é instável, gerando sangramento gengival e fragilidade vascular.",
+  "tema": "vitaminas",
+  "subtema": "vitaminas.escorbuto",
+  "especialidade": "bioquimica",
+  "disciplina": "Bioquímica",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-be4568f9",
@@ -389,7 +605,15 @@
    "Célula enterocromafim-símile"
   ],
   "correta": 2,
-  "explicacao": "As células parietais produzem HCl e fator intrínseco; as principais secretam pepsinogênio, as G gastrina e as enterocromafim-símiles histamina."
+  "explicacao": "As células parietais produzem HCl e fator intrínseco; as principais secretam pepsinogênio, as G gastrina e as enterocromafim-símiles histamina.",
+  "tema": "fisiologia-gastrointestinal",
+  "subtema": "fisiologia-gastrointestinal.secrecao-gastrica",
+  "especialidade": "histologia-embriologia",
+  "disciplina": "Histologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-64a55a8d",
@@ -403,7 +627,15 @@
    "Célula ependimária"
   ],
   "correta": 0,
-  "explicacao": "No SNC a mielina é feita por oligodendrócitos (cada um mieliniza vários axônios); no SNP, pelas células de Schwann."
+  "explicacao": "No SNC a mielina é feita por oligodendrócitos (cada um mieliniza vários axônios); no SNP, pelas células de Schwann.",
+  "tema": "tecido-nervoso",
+  "subtema": "tecido-nervoso.celulas-da-glia",
+  "especialidade": "histologia-embriologia",
+  "disciplina": "Histologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-1b2cafc2",
@@ -417,7 +649,15 @@
    "Tipo X"
   ],
   "correta": 3,
-  "explicacao": "O colágeno IV forma rede na lâmina basal. O tipo I predomina em osso e tendão, o II na cartilagem hialina e o III nas fibras reticulares."
+  "explicacao": "O colágeno IV forma rede na lâmina basal. O tipo I predomina em osso e tendão, o II na cartilagem hialina e o III nas fibras reticulares.",
+  "tema": "tecido-epitelial",
+  "subtema": "tecido-epitelial.membrana-basal",
+  "especialidade": "histologia-embriologia",
+  "disciplina": "Histologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-9763bc7f",
@@ -431,7 +671,15 @@
    "Mesoderma da placa lateral"
   ],
   "correta": 1,
-  "explicacao": "A notocorda induz o ectoderma a formar a placa neural, que se dobra em tubo neural, origem do encéfalo e da medula espinal."
+  "explicacao": "A notocorda induz o ectoderma a formar a placa neural, que se dobra em tubo neural, origem do encéfalo e da medula espinal.",
+  "tema": "embriologia-geral",
+  "subtema": "embriologia-geral.neurulacao",
+  "especialidade": "histologia-embriologia",
+  "disciplina": "Embriologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-7e609d00",
@@ -445,7 +693,15 @@
    "Ligamento redondo do fígado"
   ],
   "correta": 4,
-  "explicacao": "Veia umbilical dá o ligamento redondo do fígado; ducto venoso, o ligamento venoso; ducto arterioso, o ligamento arterioso; úraco, o umbilical mediano; artérias umbilicais, os umbilicais mediais."
+  "explicacao": "Veia umbilical dá o ligamento redondo do fígado; ducto venoso, o ligamento venoso; ducto arterioso, o ligamento arterioso; úraco, o umbilical mediano; artérias umbilicais, os umbilicais mediais.",
+  "tema": "circulacao-fetal",
+  "subtema": "circulacao-fetal.estruturas-remanescentes",
+  "especialidade": "histologia-embriologia",
+  "disciplina": "Embriologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-cdc49cae",
@@ -459,7 +715,15 @@
    "Microdeleção no braço longo do cromossomo 21"
   ],
   "correta": 2,
-  "explicacao": "Cerca de 95% dos casos são trissomia livre por não disjunção, geralmente na meiose materna e associada à idade materna avançada; translocações e mosaicismo são minoria."
+  "explicacao": "Cerca de 95% dos casos são trissomia livre por não disjunção, geralmente na meiose materna e associada à idade materna avançada; translocações e mosaicismo são minoria.",
+  "tema": "cromossomopatias",
+  "subtema": "cromossomopatias.sindrome-de-down",
+  "especialidade": "genetica",
+  "disciplina": "Genética",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-8506a7fb",
@@ -473,7 +737,15 @@
    "25% da prole seja afetada, independentemente do sexo"
   ],
   "correta": 0,
-  "explicacao": "O pai transmite seu X a todas as filhas (portadoras) e o Y a todos os filhos (que recebem o X normal da mãe); não há transmissão pai-filho."
+  "explicacao": "O pai transmite seu X a todas as filhas (portadoras) e o Y a todos os filhos (que recebem o X normal da mãe); não há transmissão pai-filho.",
+  "tema": "padroes-de-heranca",
+  "subtema": "padroes-de-heranca.heranca-ligada-ao-x",
+  "especialidade": "genetica",
+  "disciplina": "Genética",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-d55de8d8",
@@ -487,7 +759,15 @@
    "Tipo I, mediada por IgG e complemento"
   ],
   "correta": 3,
-  "explicacao": "Na hipersensibilidade imediata (tipo I), o antígeno liga IgE fixada a mastócitos e basófilos, liberando histamina e outros mediadores em minutos (Abbas)."
+  "explicacao": "Na hipersensibilidade imediata (tipo I), o antígeno liga IgE fixada a mastócitos e basófilos, liberando histamina e outros mediadores em minutos (Abbas).",
+  "tema": "hipersensibilidade",
+  "subtema": "hipersensibilidade.tipo-i-imediata",
+  "especialidade": "imunologia",
+  "disciplina": "Imunologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-d3fc06af",
@@ -501,7 +781,15 @@
    "Receptores de complemento (CR1)"
   ],
   "correta": 1,
-  "explicacao": "O MHC I, presente em todas as células nucleadas, apresenta peptídeos citosólicos a T CD8⁺; o MHC II apresenta a T CD4⁺."
+  "explicacao": "O MHC I, presente em todas as células nucleadas, apresenta peptídeos citosólicos a T CD8⁺; o MHC II apresenta a T CD4⁺.",
+  "tema": "imunidade-celular-e-mhc",
+  "subtema": "imunidade-celular-e-mhc.mhc-classe-i-e-ii",
+  "especialidade": "imunologia",
+  "disciplina": "Imunologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-dd01423f",
@@ -515,7 +803,15 @@
    "IgM"
   ],
   "correta": 4,
-  "explicacao": "A IgM pentamérica surge primeiro; depois a mudança de classe gera IgG, de maior afinidade. IgM específica indica infecção recente."
+  "explicacao": "A IgM pentamérica surge primeiro; depois a mudança de classe gera IgG, de maior afinidade. IgM específica indica infecção recente.",
+  "tema": "imunoglobulinas",
+  "subtema": "imunoglobulinas.resposta-primaria-e-secundaria",
+  "especialidade": "imunologia",
+  "disciplina": "Imunologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-0e26b9ac",
@@ -529,7 +825,15 @@
    "Streptococcus agalactiae"
   ],
   "correta": 2,
-  "explicacao": "Meningococo: diplococo gram-negativo associado a petéquias/púrpura. O pneumococo é diplococo gram-positivo; H. influenzae, cocobacilo gram-negativo; Listeria, bacilo gram-positivo."
+  "explicacao": "Meningococo: diplococo gram-negativo associado a petéquias/púrpura. O pneumococo é diplococo gram-positivo; H. influenzae, cocobacilo gram-negativo; Listeria, bacilo gram-positivo.",
+  "tema": "meningites",
+  "subtema": "meningites.etiologia",
+  "especialidade": "microbiologia",
+  "disciplina": "Microbiologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-65c43e0b",
@@ -543,7 +847,15 @@
    "Lisa diretamente as fibras musculares esqueléticas"
   ],
   "correta": 0,
-  "explicacao": "A toxina tetânica cliva sinaptobrevina nos interneurônios inibitórios da medula, gerando paralisia espástica; a botulínica atua na junção neuromuscular, causando paralisia flácida."
+  "explicacao": "A toxina tetânica cliva sinaptobrevina nos interneurônios inibitórios da medula, gerando paralisia espástica; a botulínica atua na junção neuromuscular, causando paralisia flácida.",
+  "tema": "tetano",
+  "subtema": "tetano.patogenese",
+  "especialidade": "microbiologia",
+  "disciplina": "Microbiologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-c18d8de0",
@@ -557,7 +869,15 @@
    "Teste CAMP"
   ],
   "correta": 3,
-  "explicacao": "S. aureus é coagulase-positivo. A catalase separa estafilococos de estreptococos; optoquina identifica pneumococo; bacitracina, S. pyogenes; CAMP, S. agalactiae."
+  "explicacao": "S. aureus é coagulase-positivo. A catalase separa estafilococos de estreptococos; optoquina identifica pneumococo; bacitracina, S. pyogenes; CAMP, S. agalactiae.",
+  "tema": "estafilococos-e-estreptococos",
+  "subtema": "estafilococos-e-estreptococos.provas-laboratoriais",
+  "especialidade": "microbiologia",
+  "disciplina": "Microbiologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-8c36fda8",
@@ -571,7 +891,15 @@
    "Picada de Aedes aegypti"
   ],
   "correta": 1,
-  "explicacao": "A transmissão oral de Trypanosoma cruzi, por alimentos processados com triatomíneos infectados, é a principal forma na Amazônia e causa surtos familiares de casos agudos."
+  "explicacao": "A transmissão oral de Trypanosoma cruzi, por alimentos processados com triatomíneos infectados, é a principal forma na Amazônia e causa surtos familiares de casos agudos.",
+  "tema": "doenca-de-chagas",
+  "subtema": "doenca-de-chagas.transmissao",
+  "especialidade": "parasitologia",
+  "disciplina": "Parasitologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-7c6f0939",
@@ -585,7 +913,15 @@
    "Hipnozoítos latentes nos hepatócitos"
   ],
   "correta": 4,
-  "explicacao": "P. vivax (e P. ovale) formam hipnozoítos hepáticos que podem ser reativados meses depois; por isso a cura radical exige droga esquizonticida tecidual, como a primaquina."
+  "explicacao": "P. vivax (e P. ovale) formam hipnozoítos hepáticos que podem ser reativados meses depois; por isso a cura radical exige droga esquizonticida tecidual, como a primaquina.",
+  "tema": "malaria",
+  "subtema": "malaria.transmissao-e-ciclo-biologico",
+  "especialidade": "parasitologia",
+  "disciplina": "Parasitologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-1b8e14c0",
@@ -599,7 +935,15 @@
    "Esporozoíto, nos hepatócitos"
   ],
   "correta": 2,
-  "explicacao": "No vertebrado a Leishmania vive como amastigota intracelular em macrófagos; a forma promastigota ocorre no flebotomíneo e é a inoculada na picada."
+  "explicacao": "No vertebrado a Leishmania vive como amastigota intracelular em macrófagos; a forma promastigota ocorre no flebotomíneo e é a inoculada na picada.",
+  "tema": "leishmaniose",
+  "subtema": "leishmaniose.ciclo-biologico-e-vetor",
+  "especialidade": "parasitologia",
+  "disciplina": "Parasitologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-a2239c8d",
@@ -613,7 +957,15 @@
    "Método de Knott"
   ],
   "correta": 0,
-  "explicacao": "A gota espessa concentra o sangue e permite detectar, identificar a espécie e estimar a parasitemia. Os demais métodos são usados para helmintos."
+  "explicacao": "A gota espessa concentra o sangue e permite detectar, identificar a espécie e estimar a parasitemia. Os demais métodos são usados para helmintos.",
+  "tema": "malaria",
+  "subtema": "malaria.diagnostico",
+  "especialidade": "parasitologia",
+  "disciplina": "Parasitologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-fbbc43ba",
@@ -627,7 +979,15 @@
    "Anaplasia"
   ],
   "correta": 3,
-  "explicacao": "Metaplasia é a troca reversível de um tipo celular adulto por outro, mais resistente ao agressor (refluxo ácido); pode evoluir para displasia e adenocarcinoma."
+  "explicacao": "Metaplasia é a troca reversível de um tipo celular adulto por outro, mais resistente ao agressor (refluxo ácido); pode evoluir para displasia e adenocarcinoma.",
+  "tema": "lesao-celular",
+  "subtema": "lesao-celular.adaptacoes-celulares",
+  "especialidade": "patologia",
+  "disciplina": "Patologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-5174c334",
@@ -641,7 +1001,15 @@
    "Fibrinoide"
   ],
   "correta": 1,
-  "explicacao": "No SNC, a isquemia produz necrose liquefativa, com formação de cavidade; nos demais órgãos sólidos predomina a necrose de coagulação (Robbins)."
+  "explicacao": "No SNC, a isquemia produz necrose liquefativa, com formação de cavidade; nos demais órgãos sólidos predomina a necrose de coagulação (Robbins).",
+  "tema": "lesao-celular",
+  "subtema": "lesao-celular.tipos-de-necrose",
+  "especialidade": "patologia",
+  "disciplina": "Patologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-0022ef01",
@@ -655,7 +1023,15 @@
    "Reed-Sternberg"
   ],
   "correta": 4,
-  "explicacao": "A célula de Reed-Sternberg, grande e binucleada em 'olhos de coruja', é a célula neoplásica do linfoma de Hodgkin clássico. Células de Langhans aparecem em granulomas."
+  "explicacao": "A célula de Reed-Sternberg, grande e binucleada em 'olhos de coruja', é a célula neoplásica do linfoma de Hodgkin clássico. Células de Langhans aparecem em granulomas.",
+  "tema": "linfomas",
+  "subtema": "linfomas.linfoma-de-hodgkin",
+  "especialidade": "patologia",
+  "disciplina": "Patologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-8739ae62",
@@ -669,7 +1045,15 @@
    "Liberação de histamina por mastócitos pulmonares"
   ],
   "correta": 2,
-  "explicacao": "A ECA (cininase II) também degrada bradicinina; com IECA ela se acumula e causa tosse e angioedema. Bloqueadores de AT1 raramente causam tosse."
+  "explicacao": "A ECA (cininase II) também degrada bradicinina; com IECA ela se acumula e causa tosse e angioedema. Bloqueadores de AT1 raramente causam tosse.",
+  "tema": "hipertensao-arterial",
+  "subtema": "hipertensao-arterial.tratamento-farmacologico",
+  "especialidade": "farmacologia",
+  "disciplina": "Farmacologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-add4d965",
@@ -683,7 +1067,15 @@
    "Potencialização da antitrombina"
   ],
   "correta": 0,
-  "explicacao": "O AAS acetila irreversivelmente a COX-1, reduzindo a síntese de tromboxano A₂; a plaqueta, sem núcleo, não sintetiza nova enzima, e o efeito dura a vida da plaqueta (Goodman)."
+  "explicacao": "O AAS acetila irreversivelmente a COX-1, reduzindo a síntese de tromboxano A₂; a plaqueta, sem núcleo, não sintetiza nova enzima, e o efeito dura a vida da plaqueta (Goodman).",
+  "tema": "antiagregantes-e-anticoagulantes",
+  "subtema": "antiagregantes-e-anticoagulantes.acido-acetilsalicilico",
+  "especialidade": "farmacologia",
+  "disciplina": "Farmacologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-2109d92b",
@@ -697,7 +1089,15 @@
    "Naloxona"
   ],
   "correta": 3,
-  "explicacao": "Organofosforados inibem a acetilcolinesterase, acumulando acetilcolina; a atropina bloqueia receptores muscarínicos. Neostigmina e fisostigmina são anticolinesterásicos e piorariam o quadro."
+  "explicacao": "Organofosforados inibem a acetilcolinesterase, acumulando acetilcolina; a atropina bloqueia receptores muscarínicos. Neostigmina e fisostigmina são anticolinesterásicos e piorariam o quadro.",
+  "tema": "intoxicacoes-exogenas",
+  "subtema": "intoxicacoes-exogenas.organofosforados-e-carbamatos",
+  "especialidade": "farmacologia",
+  "disciplina": "Farmacologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-f6f86b34",
@@ -711,7 +1111,15 @@
    "Inibição da síntese de folato"
   ],
   "correta": 1,
-  "explicacao": "Os β-lactâmicos inibem as PBPs e impedem as ligações cruzadas do peptidoglicano. Aminoglicosídeos atuam na 30S, macrolídeos na 50S, quinolonas na DNA-girase e sulfas no folato."
+  "explicacao": "Os β-lactâmicos inibem as PBPs e impedem as ligações cruzadas do peptidoglicano. Aminoglicosídeos atuam na 30S, macrolídeos na 50S, quinolonas na DNA-girase e sulfas no folato.",
+  "tema": "antimicrobianos",
+  "subtema": "antimicrobianos.betalactamicos",
+  "especialidade": "farmacologia",
+  "disciplina": "Farmacologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-d7497f8d",
@@ -725,7 +1133,15 @@
    "Irritação peritoneal, como na apendicite aguda"
   ],
   "correta": 4,
-  "explicacao": "A dor à descompressão brusca reflete inflamação do peritônio parietal; no ponto de McBurney, sugere apendicite. Giordano sugere comprometimento renal."
+  "explicacao": "A dor à descompressão brusca reflete inflamação do peritônio parietal; no ponto de McBurney, sugere apendicite. Giordano sugere comprometimento renal.",
+  "tema": "abdome-agudo",
+  "subtema": "abdome-agudo.sinais-de-irritacao-peritoneal",
+  "especialidade": "semiologia",
+  "disciplina": "Semiologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-628cbce9",
@@ -739,7 +1155,15 @@
    "Insuficiência tricúspide"
   ],
   "correta": 2,
-  "explicacao": "A estenose aórtica gera sopro mesossistólico em crescendo-decrescendo com irradiação para o pescoço; a insuficiência mitral é holossistólica e irradia para a axila; insuficiência aórtica e estenose mitral são diastólicas."
+  "explicacao": "A estenose aórtica gera sopro mesossistólico em crescendo-decrescendo com irradiação para o pescoço; a insuficiência mitral é holossistólica e irradia para a axila; insuficiência aórtica e estenose mitral são diastólicas.",
+  "tema": "valvopatias",
+  "subtema": "valvopatias.estenose-aortica",
+  "especialidade": "semiologia",
+  "disciplina": "Semiologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-800cb33a",
@@ -753,7 +1177,15 @@
    "Atelectasia por obstrução brônquica"
   ],
   "correta": 0,
-  "explicacao": "O parênquima condensado com brônquio pérvio transmite melhor as vibrações (frêmito aumentado e sopro tubário). No derrame, pneumotórax e atelectasia obstrutiva o frêmito diminui (Porto)."
+  "explicacao": "O parênquima condensado com brônquio pérvio transmite melhor as vibrações (frêmito aumentado e sopro tubário). No derrame, pneumotórax e atelectasia obstrutiva o frêmito diminui (Porto).",
+  "tema": "pneumonia",
+  "subtema": "pneumonia.sindrome-de-consolidacao",
+  "especialidade": "semiologia",
+  "disciplina": "Semiologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-2ac65fe6",
@@ -767,7 +1199,15 @@
    "Lesão do nervo facial"
   ],
   "correta": 3,
-  "explicacao": "Sem a visão, o equilíbrio depende da propriocepção (cordões posteriores/nervos periféricos). Na ataxia cerebelar, a instabilidade existe mesmo de olhos abertos."
+  "explicacao": "Sem a visão, o equilíbrio depende da propriocepção (cordões posteriores/nervos periféricos). Na ataxia cerebelar, a instabilidade existe mesmo de olhos abertos.",
+  "tema": "exame-neurologico",
+  "subtema": "exame-neurologico.marcha-e-equilibrio",
+  "especialidade": "semiologia",
+  "disciplina": "Semiologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-fce0f741",
@@ -781,7 +1221,15 @@
    "Ondas P precedendo cada QRS com intervalo PR constante"
   ],
   "correta": 1,
-  "explicacao": "Na FA a atividade atrial desorganizada substitui a onda P por ondas f irregulares e a condução ao ventrículo é irregularmente irregular. 'Dente de serra' é do flutter."
+  "explicacao": "Na FA a atividade atrial desorganizada substitui a onda P por ondas f irregulares e a condução ao ventrículo é irregularmente irregular. 'Dente de serra' é do flutter.",
+  "tema": "arritmias-cardiacas",
+  "subtema": "arritmias-cardiacas.fibrilacao-atrial",
+  "especialidade": "cardiologia",
+  "disciplina": "Cardiologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-a600992f",
@@ -795,7 +1243,15 @@
    "Onda T apiculada e simétrica (em tenda)"
   ],
   "correta": 4,
-  "explicacao": "A hipercalemia acelera a repolarização e gera T em tenda; com a piora, alarga QRS e some a onda P. Onda U sugere hipocalemia; QT curto, hipercalcemia; delta, pré-excitação; Osborn, hipotermia."
+  "explicacao": "A hipercalemia acelera a repolarização e gera T em tenda; com a piora, alarga QRS e some a onda P. Onda U sugere hipocalemia; QT curto, hipercalcemia; delta, pré-excitação; Osborn, hipotermia.",
+  "tema": "disturbios-hidroeletroliticos",
+  "subtema": "disturbios-hidroeletroliticos.disturbios-do-potassio",
+  "especialidade": "cardiologia",
+  "disciplina": "Cardiologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-5cbfc6a5",
@@ -809,7 +1265,15 @@
    "Apenas na fase de convalescença"
   ],
   "correta": 2,
-  "explicacao": "A queda da febre coincide com o aumento da permeabilidade capilar; é quando o paciente deve ser vigiado para sinais de alarme e choque."
+  "explicacao": "A queda da febre coincide com o aumento da permeabilidade capilar; é quando o paciente deve ser vigiado para sinais de alarme e choque.",
+  "tema": "dengue",
+  "subtema": "dengue.fases-clinicas",
+  "especialidade": "infectologia",
+  "disciplina": "Infectologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-dfded720",
@@ -823,7 +1287,15 @@
    "Doença de Chagas aguda"
   ],
   "correta": 0,
-  "explicacao": "Exposição a água contaminada por urina de roedores, dor em panturrilhas e sufusão conjuntival sugerem leptospirose; a forma icterohemorrágica (síndrome de Weil) cursa com icterícia rubínica e lesão renal."
+  "explicacao": "Exposição a água contaminada por urina de roedores, dor em panturrilhas e sufusão conjuntival sugerem leptospirose; a forma icterohemorrágica (síndrome de Weil) cursa com icterícia rubínica e lesão renal.",
+  "tema": "leptospirose",
+  "subtema": "leptospirose.quadro-clinico",
+  "especialidade": "infectologia",
+  "disciplina": "Infectologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-b75bf021",
@@ -837,7 +1309,15 @@
    "Simulium e Culicoides"
   ],
   "correta": 3,
-  "explicacao": "Haemagogus e Sabethes mantêm o ciclo silvestre; o Aedes aegypti é o vetor do ciclo urbano. Anopheles transmite malária; Lutzomyia, leishmanioses; triatomíneos, Chagas."
+  "explicacao": "Haemagogus e Sabethes mantêm o ciclo silvestre; o Aedes aegypti é o vetor do ciclo urbano. Anopheles transmite malária; Lutzomyia, leishmanioses; triatomíneos, Chagas.",
+  "tema": "febre-amarela",
+  "subtema": "febre-amarela.ciclos-de-transmissao",
+  "especialidade": "infectologia",
+  "disciplina": "Infectologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-1d06ecbd",
@@ -851,7 +1331,15 @@
    "Deve revelar o fato sigiloso ao depor como testemunha sempre que intimado"
   ],
   "correta": 1,
-  "explicacao": "O CEM veda revelar fato conhecido pela profissão salvo motivo justo, dever legal ou consentimento escrito; a proibição persiste mesmo se o fato for público ou o paciente falecido, e, como testemunha, o médico declara seu impedimento."
+  "explicacao": "O CEM veda revelar fato conhecido pela profissão salvo motivo justo, dever legal ou consentimento escrito; a proibição persiste mesmo se o fato for público ou o paciente falecido, e, como testemunha, o médico declara seu impedimento.",
+  "tema": "codigo-de-etica-medica",
+  "subtema": "codigo-de-etica-medica.sigilo-profissional",
+  "especialidade": "etica-medica",
+  "disciplina": "Ética Médica",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-b2475dd8",
@@ -865,7 +1353,15 @@
    "Proporção de doentes que apresentam resultado positivo"
   ],
   "correta": 4,
-  "explicacao": "Sensibilidade = VP/(VP+FN). A proporção de não doentes com teste negativo é a especificidade; as probabilidades pós-teste são os valores preditivos; os acertos totais, a acurácia."
+  "explicacao": "Sensibilidade = VP/(VP+FN). A proporção de não doentes com teste negativo é a especificidade; as probabilidades pós-teste são os valores preditivos; os acertos totais, a acurácia.",
+  "tema": "testes-diagnosticos",
+  "subtema": "testes-diagnosticos.sensibilidade-e-especificidade",
+  "especialidade": "epidemiologia",
+  "disciplina": "Epidemiologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "med-6cbb53a6",
@@ -879,6 +1375,14 @@
    "Série de casos"
   ],
   "correta": 2,
-  "explicacao": "A coorte parte da exposição para o desfecho, permitindo calcular incidência e risco relativo; o caso-controle parte da doença e investiga exposições passadas."
+  "explicacao": "A coorte parte da exposição para o desfecho, permitindo calcular incidência e risco relativo; o caso-controle parte da doença e investiga exposições passadas.",
+  "tema": "estudos-epidemiologicos",
+  "subtema": "estudos-epidemiologicos.estudos-de-coorte",
+  "especialidade": "epidemiologia",
+  "disciplina": "Epidemiologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  }
 ]

@@ -1,0 +1,5261 @@
+{
+ "areas": [
+  {
+   "id": "ciencias-basicas",
+   "nome": "Ciências Básicas",
+   "especialidades": [
+    {
+     "id": "anatomia",
+     "nome": "Anatomia"
+    },
+    {
+     "id": "fisiologia",
+     "nome": "Fisiologia"
+    },
+    {
+     "id": "bioquimica",
+     "nome": "Bioquímica"
+    },
+    {
+     "id": "histologia-embriologia",
+     "nome": "Histologia e Embriologia"
+    },
+    {
+     "id": "genetica",
+     "nome": "Genética"
+    },
+    {
+     "id": "imunologia",
+     "nome": "Imunologia"
+    },
+    {
+     "id": "microbiologia",
+     "nome": "Microbiologia"
+    },
+    {
+     "id": "parasitologia",
+     "nome": "Parasitologia"
+    },
+    {
+     "id": "patologia",
+     "nome": "Patologia"
+    },
+    {
+     "id": "farmacologia",
+     "nome": "Farmacologia"
+    },
+    {
+     "id": "semiologia",
+     "nome": "Semiologia"
+    }
+   ]
+  },
+  {
+   "id": "clinica-medica",
+   "nome": "Clínica Médica",
+   "especialidades": [
+    {
+     "id": "cardiologia",
+     "nome": "Cardiologia"
+    },
+    {
+     "id": "pneumologia",
+     "nome": "Pneumologia"
+    },
+    {
+     "id": "endocrinologia",
+     "nome": "Endocrinologia"
+    },
+    {
+     "id": "nefrologia",
+     "nome": "Nefrologia"
+    },
+    {
+     "id": "gastroenterologia",
+     "nome": "Gastroenterologia"
+    },
+    {
+     "id": "hematologia",
+     "nome": "Hematologia"
+    },
+    {
+     "id": "reumatologia",
+     "nome": "Reumatologia"
+    },
+    {
+     "id": "infectologia",
+     "nome": "Infectologia"
+    },
+    {
+     "id": "neurologia",
+     "nome": "Neurologia"
+    },
+    {
+     "id": "dermatologia",
+     "nome": "Dermatologia"
+    },
+    {
+     "id": "oncologia",
+     "nome": "Oncologia"
+    },
+    {
+     "id": "medicina-de-urgencia",
+     "nome": "Medicina de Urgência"
+    }
+   ]
+  },
+  {
+   "id": "cirurgia",
+   "nome": "Cirurgia",
+   "especialidades": [
+    {
+     "id": "cirurgia-geral",
+     "nome": "Cirurgia Geral"
+    },
+    {
+     "id": "trauma",
+     "nome": "Trauma"
+    },
+    {
+     "id": "urologia",
+     "nome": "Urologia"
+    },
+    {
+     "id": "ortopedia",
+     "nome": "Ortopedia e Traumatologia"
+    },
+    {
+     "id": "anestesiologia",
+     "nome": "Anestesiologia"
+    }
+   ]
+  },
+  {
+   "id": "pediatria",
+   "nome": "Pediatria",
+   "especialidades": [
+    {
+     "id": "pediatria-geral",
+     "nome": "Pediatria Geral"
+    },
+    {
+     "id": "neonatologia",
+     "nome": "Neonatologia"
+    }
+   ]
+  },
+  {
+   "id": "ginecologia-obstetricia",
+   "nome": "Ginecologia e Obstetrícia",
+   "especialidades": [
+    {
+     "id": "ginecologia",
+     "nome": "Ginecologia"
+    },
+    {
+     "id": "obstetricia",
+     "nome": "Obstetrícia"
+    }
+   ]
+  },
+  {
+   "id": "medicina-preventiva",
+   "nome": "Medicina Preventiva e Social",
+   "especialidades": [
+    {
+     "id": "epidemiologia",
+     "nome": "Epidemiologia"
+    },
+    {
+     "id": "saude-publica-sus",
+     "nome": "Saúde Pública e SUS"
+    },
+    {
+     "id": "medicina-de-familia",
+     "nome": "Medicina de Família e Comunidade"
+    }
+   ]
+  },
+  {
+   "id": "saude-mental",
+   "nome": "Saúde Mental",
+   "especialidades": [
+    {
+     "id": "psiquiatria",
+     "nome": "Psiquiatria"
+    }
+   ]
+  },
+  {
+   "id": "etica-medicina-legal",
+   "nome": "Ética Médica e Medicina Legal",
+   "especialidades": [
+    {
+     "id": "etica-medica",
+     "nome": "Ética Médica"
+    },
+    {
+     "id": "medicina-legal",
+     "nome": "Medicina Legal"
+    }
+   ]
+  }
+ ],
+ "temas": [
+  {
+   "id": "plexo-braquial",
+   "nome": "Plexo braquial e nervos do membro superior",
+   "sinonimos": [
+    "lesão do nervo radial",
+    "lesões de nervos periféricos do membro superior"
+   ],
+   "especialidades": [
+    "anatomia",
+    "ortopedia",
+    "neurologia"
+   ],
+   "disciplinas": [
+    "Anatomia",
+    "Ortopedia e Traumatologia",
+    "Neurologia"
+   ],
+   "subtemas": [
+    {
+     "id": "plexo-braquial.formacao-e-raizes",
+     "nome": "Formação e raízes"
+    },
+    {
+     "id": "plexo-braquial.nervo-radial",
+     "nome": "Nervo radial"
+    },
+    {
+     "id": "plexo-braquial.nervo-mediano",
+     "nome": "Nervo mediano"
+    },
+    {
+     "id": "plexo-braquial.nervo-ulnar",
+     "nome": "Nervo ulnar"
+    },
+    {
+     "id": "plexo-braquial.lesoes-do-plexo",
+     "nome": "Lesões do plexo"
+    }
+   ],
+   "objetivos": [
+    "Descrever a organização do plexo braquial a partir das raízes C5–T1",
+    "Relacionar a lesão de cada nervo terminal ao déficit motor e sensitivo correspondente",
+    "Correlacionar fraturas do membro superior com os nervos em risco"
+   ],
+   "resumo": "O plexo braquial origina-se dos ramos ventrais de C5 a T1 e organiza-se em raízes, troncos, divisões, fascículos e ramos terminais. O nervo radial percorre o sulco do nervo radial no úmero, e sua lesão em fraturas da diáfise causa queda do punho. Lesões dos nervos mediano e ulnar produzem padrões característicos de déficit na mão."
+  },
+  {
+   "id": "nervos-cranianos",
+   "nome": "Nervos cranianos",
+   "sinonimos": [
+    "pares cranianos"
+   ],
+   "especialidades": [
+    "anatomia",
+    "neurologia",
+    "semiologia"
+   ],
+   "disciplinas": [
+    "Anatomia",
+    "Neuroanatomia",
+    "Semiologia",
+    "Neurologia"
+   ],
+   "subtemas": [
+    {
+     "id": "nervos-cranianos.forames-da-base-do-cranio",
+     "nome": "Forames da base do crânio"
+    },
+    {
+     "id": "nervos-cranianos.nervo-trigemeo",
+     "nome": "Nervo trigêmeo"
+    },
+    {
+     "id": "nervos-cranianos.nervo-facial",
+     "nome": "Nervo facial"
+    },
+    {
+     "id": "nervos-cranianos.nervo-vago-e-nervos-laringeos",
+     "nome": "Nervo vago e nervos laríngeos"
+    },
+    {
+     "id": "nervos-cranianos.exame-dos-nervos-cranianos",
+     "nome": "Exame dos nervos cranianos"
+    }
+   ],
+   "objetivos": [
+    "Identificar os forames por onde cada nervo craniano deixa o crânio",
+    "Descrever o trajeto e as relações dos nervos laríngeos",
+    "Correlacionar lesões de nervos cranianos com os achados do exame físico"
+   ],
+   "resumo": "São doze pares de nervos que emergem do encéfalo e do tronco encefálico e deixam o crânio por forames específicos, como o forame oval (nervo mandibular). O nervo vago origina o nervo laríngeo recorrente, que à esquerda contorna o arco da aorta e à direita a artéria subclávia. Lesões dos nervos cranianos produzem déficits que ajudam a localizar a lesão neurológica."
+  },
+  {
+   "id": "anatomia-do-torax",
+   "nome": "Anatomia do tórax e do diafragma",
+   "sinonimos": [
+    "mediastino",
+    "nervo frênico"
+   ],
+   "especialidades": [
+    "anatomia",
+    "cirurgia-geral"
+   ],
+   "disciplinas": [
+    "Anatomia",
+    "Cirurgia"
+   ],
+   "subtemas": [
+    {
+     "id": "anatomia-do-torax.diafragma-e-nervo-frenico",
+     "nome": "Diafragma e nervo frênico"
+    },
+    {
+     "id": "anatomia-do-torax.mediastino",
+     "nome": "Mediastino"
+    },
+    {
+     "id": "anatomia-do-torax.grandes-vasos",
+     "nome": "Grandes vasos"
+    },
+    {
+     "id": "anatomia-do-torax.pleuras-e-pulmoes",
+     "nome": "Pleuras e pulmões"
+    }
+   ],
+   "objetivos": [
+    "Descrever a inervação e a função do diafragma",
+    "Identificar o conteúdo dos compartimentos do mediastino",
+    "Relacionar a anatomia torácica com procedimentos e traumas"
+   ],
+   "resumo": "O diafragma é o principal músculo da inspiração e recebe inervação motora do nervo frênico, formado principalmente pelas raízes C3 a C5. O mediastino contém coração, grandes vasos, traqueia, esôfago e os nervos vago e frênico. Essas relações são essenciais para interpretar traumas, imagens e procedimentos torácicos."
+  },
+  {
+   "id": "anatomia-da-pelve",
+   "nome": "Anatomia da pelve e do períneo",
+   "sinonimos": [
+    "pelve feminina"
+   ],
+   "especialidades": [
+    "anatomia",
+    "ginecologia",
+    "urologia"
+   ],
+   "disciplinas": [
+    "Anatomia",
+    "Ginecologia e Obstetrícia",
+    "Urologia",
+    "Cirurgia"
+   ],
+   "subtemas": [
+    {
+     "id": "anatomia-da-pelve.vascularizacao-pelvica",
+     "nome": "Vascularização pélvica"
+    },
+    {
+     "id": "anatomia-da-pelve.ureter-pelvico",
+     "nome": "Ureter pélvico"
+    },
+    {
+     "id": "anatomia-da-pelve.orgaos-genitais-internos",
+     "nome": "Órgãos genitais internos"
+    },
+    {
+     "id": "anatomia-da-pelve.assoalho-pelvico",
+     "nome": "Assoalho pélvico"
+    }
+   ],
+   "objetivos": [
+    "Descrever a vascularização dos órgãos pélvicos",
+    "Explicar a relação entre o ureter e a artéria uterina",
+    "Reconhecer estruturas em risco em cirurgias pélvicas"
+   ],
+   "resumo": "Os órgãos pélvicos são irrigados principalmente por ramos da artéria ilíaca interna. Próximo ao colo uterino, o ureter passa inferiormente à artéria uterina, o que o torna vulnerável durante a histerectomia. O assoalho pélvico, formado sobretudo pelo músculo levantador do ânus, sustenta as vísceras pélvicas."
+  },
+  {
+   "id": "potencial-de-acao",
+   "nome": "Potencial de membrana e potencial de ação",
+   "sinonimos": [
+    "excitabilidade celular"
+   ],
+   "especialidades": [
+    "fisiologia",
+    "neurologia"
+   ],
+   "disciplinas": [
+    "Fisiologia",
+    "Biofísica",
+    "Farmacologia",
+    "Neurologia"
+   ],
+   "subtemas": [
+    {
+     "id": "potencial-de-acao.potencial-de-repouso",
+     "nome": "Potencial de repouso"
+    },
+    {
+     "id": "potencial-de-acao.canais-ionicos-voltagem-dependentes",
+     "nome": "Canais iônicos voltagem-dependentes"
+    },
+    {
+     "id": "potencial-de-acao.fases-do-potencial-de-acao",
+     "nome": "Fases do potencial de ação"
+    },
+    {
+     "id": "potencial-de-acao.conducao-e-sinapse",
+     "nome": "Condução e sinapse"
+    }
+   ],
+   "objetivos": [
+    "Explicar a gênese do potencial de repouso",
+    "Descrever as fases do potencial de ação e os íons envolvidos",
+    "Relacionar a mielinização com a velocidade de condução"
+   ],
+   "resumo": "O potencial de repouso depende principalmente do gradiente de potássio e é mantido pela bomba Na⁺/K⁺-ATPase. No potencial de ação neuronal, a despolarização rápida decorre da entrada de sódio por canais voltagem-dependentes, e a repolarização, da saída de potássio. A mielina permite a condução saltatória, aumentando a velocidade de propagação."
+  },
+  {
+   "id": "sistema-nervoso-autonomo",
+   "nome": "Sistema nervoso autônomo",
+   "sinonimos": [
+    "SNA",
+    "simpático e parassimpático"
+   ],
+   "especialidades": [
+    "fisiologia",
+    "farmacologia",
+    "anatomia"
+   ],
+   "disciplinas": [
+    "Fisiologia",
+    "Farmacologia",
+    "Anatomia"
+   ],
+   "subtemas": [
+    {
+     "id": "sistema-nervoso-autonomo.divisoes-simpatica-e-parassimpatica",
+     "nome": "Divisões simpática e parassimpática"
+    },
+    {
+     "id": "sistema-nervoso-autonomo.receptores-adrenergicos",
+     "nome": "Receptores adrenérgicos"
+    },
+    {
+     "id": "sistema-nervoso-autonomo.receptores-colinergicos",
+     "nome": "Receptores colinérgicos"
+    },
+    {
+     "id": "sistema-nervoso-autonomo.farmacos-autonomicos",
+     "nome": "Fármacos autonômicos"
+    }
+   ],
+   "objetivos": [
+    "Comparar a organização das divisões simpática e parassimpática",
+    "Relacionar os receptores autonômicos aos seus efeitos nos órgãos",
+    "Prever os efeitos de agonistas e antagonistas autonômicos"
+   ],
+   "resumo": "O sistema nervoso autônomo regula funções viscerais por meio das divisões simpática e parassimpática. A acetilcolina atua em receptores nicotínicos e muscarínicos, e a noradrenalina e a adrenalina, em receptores alfa e beta-adrenérgicos. Muitos fármacos e toxinas, como os inibidores da colinesterase, agem sobre essas vias e produzem síndromes previsíveis."
+  },
+  {
+   "id": "fisiologia-cardiovascular",
+   "nome": "Fisiologia cardiovascular",
+   "sinonimos": [
+    "hemodinâmica"
+   ],
+   "especialidades": [
+    "fisiologia",
+    "cardiologia"
+   ],
+   "disciplinas": [
+    "Fisiologia",
+    "Cardiologia",
+    "Semiologia"
+   ],
+   "subtemas": [
+    {
+     "id": "fisiologia-cardiovascular.ciclo-cardiaco",
+     "nome": "Ciclo cardíaco"
+    },
+    {
+     "id": "fisiologia-cardiovascular.debito-cardiaco-e-lei-de-frank-starling",
+     "nome": "Débito cardíaco e lei de Frank-Starling"
+    },
+    {
+     "id": "fisiologia-cardiovascular.controle-da-pressao-arterial",
+     "nome": "Controle da pressão arterial"
+    },
+    {
+     "id": "fisiologia-cardiovascular.eletrofisiologia-cardiaca",
+     "nome": "Eletrofisiologia cardíaca"
+    }
+   ],
+   "objetivos": [
+    "Descrever os eventos do ciclo cardíaco",
+    "Explicar os determinantes do débito cardíaco",
+    "Explicar o barorreflexo e o controle da pressão arterial"
+   ],
+   "resumo": "O débito cardíaco é o produto da frequência cardíaca pelo volume sistólico, que depende de pré-carga, pós-carga e contratilidade. Pela lei de Frank-Starling, maior volume diastólico final aumenta a força de contração, dentro de limites fisiológicos. Os barorreceptores carotídeos e aórticos ajustam rapidamente a pressão arterial por meio do sistema nervoso autônomo."
+  },
+  {
+   "id": "fisiologia-respiratoria",
+   "nome": "Fisiologia respiratória",
+   "sinonimos": [],
+   "especialidades": [
+    "fisiologia",
+    "pneumologia"
+   ],
+   "disciplinas": [
+    "Fisiologia",
+    "Pneumologia"
+   ],
+   "subtemas": [
+    {
+     "id": "fisiologia-respiratoria.mecanica-respiratoria",
+     "nome": "Mecânica respiratória"
+    },
+    {
+     "id": "fisiologia-respiratoria.trocas-gasosas",
+     "nome": "Trocas gasosas"
+    },
+    {
+     "id": "fisiologia-respiratoria.transporte-de-oxigenio",
+     "nome": "Transporte de oxigênio"
+    },
+    {
+     "id": "fisiologia-respiratoria.controle-da-ventilacao",
+     "nome": "Controle da ventilação"
+    }
+   ],
+   "objetivos": [
+    "Descrever a mecânica da ventilação",
+    "Explicar os fatores que deslocam a curva de dissociação da oxi-hemoglobina",
+    "Descrever o controle neural e químico da respiração"
+   ],
+   "resumo": "As trocas gasosas ocorrem por difusão através da membrana alvéolo-capilar. A curva de dissociação da oxi-hemoglobina desloca-se para a direita com aumento de temperatura, CO₂, H⁺ e 2,3-bifosfoglicerato, facilitando a liberação de O₂ aos tecidos. A ventilação é controlada por centros bulbares e por quimiorreceptores centrais e periféricos."
+  },
+  {
+   "id": "fisiologia-renal",
+   "nome": "Fisiologia renal",
+   "sinonimos": [],
+   "especialidades": [
+    "fisiologia",
+    "nefrologia"
+   ],
+   "disciplinas": [
+    "Fisiologia",
+    "Nefrologia"
+   ],
+   "subtemas": [
+    {
+     "id": "fisiologia-renal.filtracao-glomerular",
+     "nome": "Filtração glomerular"
+    },
+    {
+     "id": "fisiologia-renal.transporte-tubular",
+     "nome": "Transporte tubular"
+    },
+    {
+     "id": "fisiologia-renal.concentracao-urinaria-e-adh",
+     "nome": "Concentração urinária e ADH"
+    },
+    {
+     "id": "fisiologia-renal.sistema-renina-angiotensina-aldosterona",
+     "nome": "Sistema renina-angiotensina-aldosterona"
+    }
+   ],
+   "objetivos": [
+    "Descrever os determinantes da filtração glomerular",
+    "Explicar o mecanismo de concentração urinária e a ação do ADH",
+    "Descrever o papel do sistema renina-angiotensina-aldosterona"
+   ],
+   "resumo": "O rim regula volume, osmolaridade, eletrólitos e equilíbrio ácido-base por meio de filtração glomerular, reabsorção e secreção tubular. O hormônio antidiurético atua no ducto coletor, inserindo aquaporinas-2 na membrana apical e aumentando a reabsorção de água. O sistema renina-angiotensina-aldosterona participa do controle da volemia e da pressão arterial."
+  },
+  {
+   "id": "fisiologia-gastrointestinal",
+   "nome": "Fisiologia e histologia do trato gastrointestinal",
+   "sinonimos": [
+    "secreção gástrica",
+    "hormônios gastrointestinais"
+   ],
+   "especialidades": [
+    "fisiologia",
+    "histologia-embriologia",
+    "gastroenterologia"
+   ],
+   "disciplinas": [
+    "Fisiologia",
+    "Histologia",
+    "Gastroenterologia"
+   ],
+   "subtemas": [
+    {
+     "id": "fisiologia-gastrointestinal.secrecao-gastrica",
+     "nome": "Secreção gástrica"
+    },
+    {
+     "id": "fisiologia-gastrointestinal.hormonios-gastrointestinais",
+     "nome": "Hormônios gastrointestinais"
+    },
+    {
+     "id": "fisiologia-gastrointestinal.secrecao-pancreatica-e-biliar",
+     "nome": "Secreção pancreática e biliar"
+    },
+    {
+     "id": "fisiologia-gastrointestinal.digestao-e-absorcao",
+     "nome": "Digestão e absorção"
+    }
+   ],
+   "objetivos": [
+    "Identificar as células da mucosa gástrica e seus produtos",
+    "Descrever as ações dos principais hormônios gastrointestinais",
+    "Explicar a digestão e a absorção dos nutrientes"
+   ],
+   "resumo": "As células parietais do estômago secretam ácido clorídrico e fator intrínseco, e as células principais secretam pepsinogênio. A secretina, liberada pelas células S do duodeno em resposta ao quimo ácido, estimula secreção pancreática rica em bicarbonato, enquanto a colecistocinina estimula enzimas pancreáticas e a contração da vesícula. A absorção de nutrientes ocorre principalmente no intestino delgado."
+  },
+  {
+   "id": "metabolismo-dos-carboidratos",
+   "nome": "Glicólise e metabolismo dos carboidratos",
+   "sinonimos": [
+    "glicólise",
+    "metabolismo energético"
+   ],
+   "especialidades": [
+    "bioquimica",
+    "endocrinologia"
+   ],
+   "disciplinas": [
+    "Bioquímica",
+    "Fisiologia",
+    "Endocrinologia"
+   ],
+   "subtemas": [
+    {
+     "id": "metabolismo-dos-carboidratos.glicolise",
+     "nome": "Glicólise"
+    },
+    {
+     "id": "metabolismo-dos-carboidratos.ciclo-de-krebs-e-cadeia-respiratoria",
+     "nome": "Ciclo de Krebs e cadeia respiratória"
+    },
+    {
+     "id": "metabolismo-dos-carboidratos.gliconeogenese-e-glicogenio",
+     "nome": "Gliconeogênese e glicogênio"
+    },
+    {
+     "id": "metabolismo-dos-carboidratos.via-das-pentoses-fosfato",
+     "nome": "Via das pentoses-fosfato"
+    }
+   ],
+   "objetivos": [
+    "Descrever as etapas e o saldo energético da glicólise",
+    "Explicar a integração entre glicólise, ciclo de Krebs e cadeia respiratória",
+    "Relacionar a via das pentoses-fosfato à produção de NADPH"
+   ],
+   "resumo": "Na glicólise, uma molécula de glicose é convertida em duas de piruvato, com saldo líquido de 2 ATP e 2 NADH. Em aerobiose, o piruvato é oxidado no ciclo de Krebs e a cadeia respiratória gera a maior parte do ATP. A via das pentoses-fosfato produz NADPH, essencial para proteger a hemácia contra o estresse oxidativo."
+  },
+  {
+   "id": "metabolismo-dos-lipidios",
+   "nome": "Metabolismo dos lipídios e dislipidemias",
+   "sinonimos": [
+    "colesterol",
+    "dislipidemia",
+    "hipercolesterolemia"
+   ],
+   "especialidades": [
+    "bioquimica",
+    "cardiologia",
+    "endocrinologia"
+   ],
+   "disciplinas": [
+    "Bioquímica",
+    "Farmacologia",
+    "Cardiologia",
+    "Clínica Médica"
+   ],
+   "subtemas": [
+    {
+     "id": "metabolismo-dos-lipidios.sintese-de-colesterol",
+     "nome": "Síntese de colesterol"
+    },
+    {
+     "id": "metabolismo-dos-lipidios.lipoproteinas",
+     "nome": "Lipoproteínas"
+    },
+    {
+     "id": "metabolismo-dos-lipidios.beta-oxidacao-e-corpos-cetonicos",
+     "nome": "Beta-oxidação e corpos cetônicos"
+    },
+    {
+     "id": "metabolismo-dos-lipidios.dislipidemias",
+     "nome": "Dislipidemias"
+    }
+   ],
+   "objetivos": [
+    "Descrever a síntese do colesterol e sua regulação",
+    "Caracterizar as lipoproteínas plasmáticas",
+    "Relacionar dislipidemias ao risco cardiovascular"
+   ],
+   "resumo": "A HMG-CoA redutase é a enzima limitante da síntese de colesterol e é inibida pelas estatinas. Lipoproteínas como quilomícrons, VLDL, LDL e HDL transportam lipídios no plasma, e a elevação do LDL é fator de risco para aterosclerose. A beta-oxidação de ácidos graxos gera acetil-CoA, que no jejum prolongado origina corpos cetônicos no fígado."
+  },
+  {
+   "id": "metabolismo-dos-aminoacidos",
+   "nome": "Metabolismo dos aminoácidos e ciclo da ureia",
+   "sinonimos": [
+    "ciclo da ureia"
+   ],
+   "especialidades": [
+    "bioquimica"
+   ],
+   "disciplinas": [
+    "Bioquímica",
+    "Pediatria"
+   ],
+   "subtemas": [
+    {
+     "id": "metabolismo-dos-aminoacidos.transaminacao-e-desaminacao",
+     "nome": "Transaminação e desaminação"
+    },
+    {
+     "id": "metabolismo-dos-aminoacidos.ciclo-da-ureia",
+     "nome": "Ciclo da ureia"
+    },
+    {
+     "id": "metabolismo-dos-aminoacidos.erros-inatos-do-metabolismo",
+     "nome": "Erros inatos do metabolismo"
+    }
+   ],
+   "objetivos": [
+    "Descrever o destino do nitrogênio dos aminoácidos",
+    "Identificar as etapas e a regulação do ciclo da ureia",
+    "Reconhecer as consequências clínicas dos defeitos do ciclo da ureia"
+   ],
+   "resumo": "O nitrogênio dos aminoácidos é eliminado principalmente como ureia, sintetizada no fígado. A carbamoil-fosfato sintetase I, ativada alostericamente pelo N-acetilglutamato, é a enzima limitante do ciclo da ureia. Defeitos enzimáticos nesse ciclo causam hiperamonemia."
+  },
+  {
+   "id": "vitaminas",
+   "nome": "Vitaminas e deficiências nutricionais",
+   "sinonimos": [
+    "hipovitaminoses",
+    "escorbuto"
+   ],
+   "especialidades": [
+    "bioquimica",
+    "pediatria-geral",
+    "medicina-de-familia"
+   ],
+   "disciplinas": [
+    "Bioquímica",
+    "Nutrição",
+    "Pediatria",
+    "Clínica Médica"
+   ],
+   "subtemas": [
+    {
+     "id": "vitaminas.vitaminas-hidrossoluveis",
+     "nome": "Vitaminas hidrossolúveis"
+    },
+    {
+     "id": "vitaminas.vitaminas-lipossoluveis",
+     "nome": "Vitaminas lipossolúveis"
+    },
+    {
+     "id": "vitaminas.escorbuto",
+     "nome": "Escorbuto"
+    },
+    {
+     "id": "vitaminas.desnutricao",
+     "nome": "Desnutrição"
+    }
+   ],
+   "objetivos": [
+    "Relacionar cada vitamina à sua função bioquímica",
+    "Reconhecer os quadros clínicos das principais hipovitaminoses"
+   ],
+   "resumo": "Vitaminas atuam como cofatores de reações enzimáticas, e suas deficiências geram quadros clínicos característicos. A vitamina C é necessária à hidroxilação de prolina e lisina na síntese do colágeno, e sua falta causa escorbuto, com sangramento gengival e fragilidade capilar. Deficiências de vitaminas A, D, B12 e folato também têm grande relevância clínica."
+  },
+  {
+   "id": "tecido-epitelial",
+   "nome": "Tecido epitelial e membrana basal",
+   "sinonimos": [
+    "epitélios"
+   ],
+   "especialidades": [
+    "histologia-embriologia",
+    "dermatologia"
+   ],
+   "disciplinas": [
+    "Histologia",
+    "Patologia",
+    "Dermatologia"
+   ],
+   "subtemas": [
+    {
+     "id": "tecido-epitelial.classificacao-dos-epitelios",
+     "nome": "Classificação dos epitélios"
+    },
+    {
+     "id": "tecido-epitelial.membrana-basal",
+     "nome": "Membrana basal"
+    },
+    {
+     "id": "tecido-epitelial.pele",
+     "nome": "Pele"
+    }
+   ],
+   "objetivos": [
+    "Classificar os epitélios quanto a camadas e forma celular",
+    "Descrever a composição da membrana basal",
+    "Descrever as camadas da pele"
+   ],
+   "resumo": "Os epitélios são classificados pelo número de camadas e pela forma das células superficiais. A epiderme é um epitélio estratificado pavimentoso queratinizado. A lâmina basal, rica em colágeno tipo IV e laminina, separa o epitélio do tecido conjuntivo."
+  },
+  {
+   "id": "tecido-nervoso",
+   "nome": "Tecido nervoso",
+   "sinonimos": [
+    "glia",
+    "mielina"
+   ],
+   "especialidades": [
+    "histologia-embriologia",
+    "neurologia"
+   ],
+   "disciplinas": [
+    "Histologia",
+    "Neuroanatomia",
+    "Neurologia"
+   ],
+   "subtemas": [
+    {
+     "id": "tecido-nervoso.neuronios",
+     "nome": "Neurônios"
+    },
+    {
+     "id": "tecido-nervoso.celulas-da-glia",
+     "nome": "Células da glia"
+    },
+    {
+     "id": "tecido-nervoso.mielinizacao",
+     "nome": "Mielinização"
+    }
+   ],
+   "objetivos": [
+    "Descrever os componentes do tecido nervoso",
+    "Diferenciar as células da glia do sistema nervoso central e periférico"
+   ],
+   "resumo": "O tecido nervoso é formado por neurônios e células da glia. No sistema nervoso central, a mielina é produzida pelos oligodendrócitos e, no periférico, pelas células de Schwann. Astrócitos, micróglia e células ependimárias completam a glia central."
+  },
+  {
+   "id": "embriologia-geral",
+   "nome": "Folhetos embrionários e organogênese",
+   "sinonimos": [
+    "gastrulação",
+    "neurulação"
+   ],
+   "especialidades": [
+    "histologia-embriologia",
+    "genetica"
+   ],
+   "disciplinas": [
+    "Embriologia",
+    "Genética",
+    "Pediatria"
+   ],
+   "subtemas": [
+    {
+     "id": "embriologia-geral.gastrulacao-e-folhetos-embrionarios",
+     "nome": "Gastrulação e folhetos embrionários"
+    },
+    {
+     "id": "embriologia-geral.neurulacao",
+     "nome": "Neurulação"
+    },
+    {
+     "id": "embriologia-geral.malformacoes-congenitas",
+     "nome": "Malformações congênitas"
+    }
+   ],
+   "objetivos": [
+    "Relacionar cada folheto embrionário aos órgãos que origina",
+    "Descrever a neurulação e os defeitos do tubo neural"
+   ],
+   "resumo": "Na gastrulação formam-se ectoderma, mesoderma e endoderma. O sistema nervoso central origina-se do neuroectoderma pela neurulação, e falhas no fechamento do tubo neural causam defeitos como a espinha bífida. A suplementação periconcepcional de ácido fólico reduz o risco desses defeitos."
+  },
+  {
+   "id": "circulacao-fetal",
+   "nome": "Circulação fetal e transição neonatal",
+   "sinonimos": [],
+   "especialidades": [
+    "histologia-embriologia",
+    "neonatologia",
+    "cardiologia"
+   ],
+   "disciplinas": [
+    "Embriologia",
+    "Fisiologia",
+    "Pediatria"
+   ],
+   "subtemas": [
+    {
+     "id": "circulacao-fetal.shunts-fetais",
+     "nome": "Shunts fetais"
+    },
+    {
+     "id": "circulacao-fetal.adaptacao-ao-nascimento",
+     "nome": "Adaptação ao nascimento"
+    },
+    {
+     "id": "circulacao-fetal.estruturas-remanescentes",
+     "nome": "Estruturas remanescentes"
+    }
+   ],
+   "objetivos": [
+    "Descrever o trajeto do sangue na circulação fetal",
+    "Explicar as mudanças circulatórias ao nascimento",
+    "Identificar as estruturas remanescentes da circulação fetal"
+   ],
+   "resumo": "Na circulação fetal, o sangue oxigenado chega pela veia umbilical e desvia do fígado e dos pulmões pelo ducto venoso, forame oval e canal arterial. Após o nascimento, esses desvios se fecham com a expansão pulmonar. A veia umbilical origina o ligamento redondo do fígado, e o ducto venoso, o ligamento venoso."
+  },
+  {
+   "id": "cromossomopatias",
+   "nome": "Cromossomopatias",
+   "sinonimos": [
+    "síndrome de Down",
+    "trissomias"
+   ],
+   "especialidades": [
+    "genetica",
+    "pediatria-geral"
+   ],
+   "disciplinas": [
+    "Genética",
+    "Pediatria",
+    "Obstetrícia"
+   ],
+   "subtemas": [
+    {
+     "id": "cromossomopatias.sindrome-de-down",
+     "nome": "Síndrome de Down"
+    },
+    {
+     "id": "cromossomopatias.outras-trissomias",
+     "nome": "Outras trissomias"
+    },
+    {
+     "id": "cromossomopatias.sindromes-de-turner-e-klinefelter",
+     "nome": "Síndromes de Turner e Klinefelter"
+    },
+    {
+     "id": "cromossomopatias.rastreamento-pre-natal",
+     "nome": "Rastreamento pré-natal"
+    }
+   ],
+   "objetivos": [
+    "Explicar os mecanismos de alterações cromossômicas numéricas e estruturais",
+    "Reconhecer o quadro clínico das principais cromossomopatias"
+   ],
+   "resumo": "Cromossomopatias resultam de alterações numéricas ou estruturais dos cromossomos. A síndrome de Down decorre, na maioria dos casos, de trissomia livre do cromossomo 21 por não disjunção na meiose materna, com risco crescente com a idade materna. Translocações robertsonianas e mosaicismo respondem por uma minoria dos casos."
+  },
+  {
+   "id": "padroes-de-heranca",
+   "nome": "Padrões de herança mendeliana",
+   "sinonimos": [
+    "heredograma"
+   ],
+   "especialidades": [
+    "genetica"
+   ],
+   "disciplinas": [
+    "Genética",
+    "Pediatria"
+   ],
+   "subtemas": [
+    {
+     "id": "padroes-de-heranca.heranca-autossomica",
+     "nome": "Herança autossômica"
+    },
+    {
+     "id": "padroes-de-heranca.heranca-ligada-ao-x",
+     "nome": "Herança ligada ao X"
+    },
+    {
+     "id": "padroes-de-heranca.heredograma",
+     "nome": "Heredograma"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar os padrões de herança monogênica",
+    "Calcular riscos de recorrência a partir de heredogramas"
+   ],
+   "resumo": "Doenças monogênicas seguem padrões autossômicos dominantes, autossômicos recessivos ou ligados ao X. Na herança recessiva ligada ao X, como na hemofilia A, um homem afetado transmite o alelo a todas as filhas, que serão portadoras, e a nenhum dos filhos. A análise do heredograma permite estimar riscos de recorrência."
+  },
+  {
+   "id": "imunoglobulinas",
+   "nome": "Imunoglobulinas e resposta humoral",
+   "sinonimos": [
+    "anticorpos"
+   ],
+   "especialidades": [
+    "imunologia"
+   ],
+   "disciplinas": [
+    "Imunologia",
+    "Pediatria",
+    "Obstetrícia"
+   ],
+   "subtemas": [
+    {
+     "id": "imunoglobulinas.classes-de-imunoglobulinas",
+     "nome": "Classes de imunoglobulinas"
+    },
+    {
+     "id": "imunoglobulinas.resposta-primaria-e-secundaria",
+     "nome": "Resposta primária e secundária"
+    },
+    {
+     "id": "imunoglobulinas.imunidade-passiva-materna",
+     "nome": "Imunidade passiva materna"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar as classes de imunoglobulinas quanto a estrutura e função",
+    "Comparar as respostas humorais primária e secundária"
+   ],
+   "resumo": "A IgM é a primeira imunoglobulina produzida na resposta primária e é um pentâmero eficiente na ativação do complemento. A IgG é a mais abundante no soro e a única que atravessa a placenta, conferindo imunidade passiva ao recém-nascido. A IgA predomina nas mucosas e no leite materno, e a IgE participa de reações alérgicas e da defesa contra helmintos."
+  },
+  {
+   "id": "hipersensibilidade",
+   "nome": "Reações de hipersensibilidade e anafilaxia",
+   "sinonimos": [
+    "anafilaxia",
+    "alergia",
+    "Gell e Coombs"
+   ],
+   "especialidades": [
+    "imunologia",
+    "medicina-de-urgencia"
+   ],
+   "disciplinas": [
+    "Imunologia",
+    "Clínica Médica",
+    "Urgência e Emergência"
+   ],
+   "subtemas": [
+    {
+     "id": "hipersensibilidade.tipo-i-imediata",
+     "nome": "Tipo I (imediata)"
+    },
+    {
+     "id": "hipersensibilidade.tipo-ii",
+     "nome": "Tipo II"
+    },
+    {
+     "id": "hipersensibilidade.tipo-iii",
+     "nome": "Tipo III"
+    },
+    {
+     "id": "hipersensibilidade.tipo-iv",
+     "nome": "Tipo IV"
+    },
+    {
+     "id": "hipersensibilidade.anafilaxia",
+     "nome": "Anafilaxia"
+    }
+   ],
+   "objetivos": [
+    "Classificar as reações de hipersensibilidade segundo Gell e Coombs",
+    "Explicar a fisiopatologia da anafilaxia",
+    "Reconhecer a anafilaxia como emergência"
+   ],
+   "resumo": "A classificação de Gell e Coombs divide as reações de hipersensibilidade em quatro tipos. O tipo I é mediado por IgE ligada a mastócitos e basófilos e inclui a anafilaxia; o tipo II envolve anticorpos contra antígenos celulares; o tipo III, imunocomplexos; e o tipo IV, linfócitos T. A anafilaxia é uma emergência cujo tratamento de primeira linha é a adrenalina."
+  },
+  {
+   "id": "imunidade-celular-e-mhc",
+   "nome": "Imunidade celular e MHC",
+   "sinonimos": [
+    "apresentação de antígenos",
+    "HLA"
+   ],
+   "especialidades": [
+    "imunologia"
+   ],
+   "disciplinas": [
+    "Imunologia"
+   ],
+   "subtemas": [
+    {
+     "id": "imunidade-celular-e-mhc.mhc-classe-i-e-ii",
+     "nome": "MHC classe I e II"
+    },
+    {
+     "id": "imunidade-celular-e-mhc.linfocitos-t-cd4-e-cd8",
+     "nome": "Linfócitos T CD4 e CD8"
+    },
+    {
+     "id": "imunidade-celular-e-mhc.imunidade-inata",
+     "nome": "Imunidade inata"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar a apresentação de antígenos por MHC de classe I e II",
+    "Descrever as funções dos linfócitos T CD4⁺ e CD8⁺"
+   ],
+   "resumo": "Moléculas do MHC de classe I, presentes em quase todas as células nucleadas, apresentam peptídeos endógenos a linfócitos T CD8⁺. O MHC de classe II, expresso em células apresentadoras de antígeno, apresenta peptídeos a linfócitos T CD4⁺. Essa distinção explica a resposta contra vírus e tumores e a coordenação da resposta imune adaptativa."
+  },
+  {
+   "id": "estafilococos-e-estreptococos",
+   "nome": "Cocos gram-positivos: estafilococos e estreptococos",
+   "sinonimos": [
+    "Staphylococcus aureus",
+    "Streptococcus"
+   ],
+   "especialidades": [
+    "microbiologia",
+    "infectologia"
+   ],
+   "disciplinas": [
+    "Microbiologia",
+    "Infectologia"
+   ],
+   "subtemas": [
+    {
+     "id": "estafilococos-e-estreptococos.staphylococcus-aureus",
+     "nome": "Staphylococcus aureus"
+    },
+    {
+     "id": "estafilococos-e-estreptococos.estafilococos-coagulase-negativos",
+     "nome": "Estafilococos coagulase-negativos"
+    },
+    {
+     "id": "estafilococos-e-estreptococos.estreptococos",
+     "nome": "Estreptococos"
+    },
+    {
+     "id": "estafilococos-e-estreptococos.provas-laboratoriais",
+     "nome": "Provas laboratoriais"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar estafilococos e estreptococos por provas laboratoriais",
+    "Relacionar os principais cocos gram-positivos às doenças que causam"
+   ],
+   "resumo": "Estafilococos são catalase-positivos e estreptococos, catalase-negativos. A coagulase diferencia Staphylococcus aureus dos estafilococos coagulase-negativos. S. aureus causa infecções de pele, osteomielite, endocardite e doenças mediadas por toxinas."
+  },
+  {
+   "id": "tetano",
+   "nome": "Tétano",
+   "sinonimos": [
+    "Clostridium tetani"
+   ],
+   "especialidades": [
+    "microbiologia",
+    "infectologia"
+   ],
+   "disciplinas": [
+    "Microbiologia",
+    "Infectologia",
+    "Medicina de Família e Comunidade"
+   ],
+   "subtemas": [
+    {
+     "id": "tetano.patogenese",
+     "nome": "Patogênese"
+    },
+    {
+     "id": "tetano.quadro-clinico",
+     "nome": "Quadro clínico"
+    },
+    {
+     "id": "tetano.prevencao-e-vacinacao",
+     "nome": "Prevenção e vacinação"
+    }
+   ],
+   "objetivos": [
+    "Explicar o mecanismo de ação da tetanospasmina",
+    "Reconhecer o quadro clínico do tétano",
+    "Descrever as medidas de prevenção"
+   ],
+   "resumo": "O tétano é causado pela toxina do Clostridium tetani, cujos esporos penetram por ferimentos contaminados. A tetanospasmina bloqueia a liberação de glicina e GABA por interneurônios inibitórios da medula, gerando rigidez e espasmos musculares. A doença é prevenível por vacinação."
+  },
+  {
+   "id": "antimicrobianos",
+   "nome": "Antimicrobianos",
+   "sinonimos": [
+    "antibióticos",
+    "penicilinas"
+   ],
+   "especialidades": [
+    "farmacologia",
+    "infectologia"
+   ],
+   "disciplinas": [
+    "Farmacologia",
+    "Microbiologia",
+    "Infectologia"
+   ],
+   "subtemas": [
+    {
+     "id": "antimicrobianos.betalactamicos",
+     "nome": "Betalactâmicos"
+    },
+    {
+     "id": "antimicrobianos.mecanismos-de-acao",
+     "nome": "Mecanismos de ação"
+    },
+    {
+     "id": "antimicrobianos.resistencia-bacteriana",
+     "nome": "Resistência bacteriana"
+    },
+    {
+     "id": "antimicrobianos.uso-racional",
+     "nome": "Uso racional"
+    }
+   ],
+   "objetivos": [
+    "Classificar os antimicrobianos pelo mecanismo de ação",
+    "Explicar os principais mecanismos de resistência bacteriana"
+   ],
+   "resumo": "Antimicrobianos são classificados pelo mecanismo de ação: inibição da parede celular, da síntese proteica, dos ácidos nucleicos ou de vias metabólicas. Os betalactâmicos, como as penicilinas, ligam-se às proteínas ligadoras de penicilina e inibem a síntese do peptidoglicano, sendo bactericidas. O uso racional é fundamental para conter a resistência bacteriana."
+  },
+  {
+   "id": "lesao-celular",
+   "nome": "Lesão celular, adaptação e necrose",
+   "sinonimos": [
+    "necrose",
+    "metaplasia",
+    "apoptose"
+   ],
+   "especialidades": [
+    "patologia"
+   ],
+   "disciplinas": [
+    "Patologia"
+   ],
+   "subtemas": [
+    {
+     "id": "lesao-celular.adaptacoes-celulares",
+     "nome": "Adaptações celulares"
+    },
+    {
+     "id": "lesao-celular.tipos-de-necrose",
+     "nome": "Tipos de necrose"
+    },
+    {
+     "id": "lesao-celular.apoptose",
+     "nome": "Apoptose"
+    },
+    {
+     "id": "lesao-celular.inflamacao",
+     "nome": "Inflamação"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar as adaptações celulares",
+    "Relacionar os tipos de necrose aos tecidos e às causas",
+    "Diferenciar necrose de apoptose"
+   ],
+   "resumo": "Diante de estímulos, as células podem adaptar-se por hipertrofia, hiperplasia, atrofia ou metaplasia, como no esôfago de Barrett. Quando a lesão é irreversível, ocorre necrose, cujos padrões incluem a coagulativa, a liquefativa (típica do infarto encefálico), a caseosa (tuberculose) e a gordurosa. A apoptose é uma morte celular programada, sem inflamação significativa."
+  },
+  {
+   "id": "intoxicacoes-exogenas",
+   "nome": "Intoxicações exógenas e antídotos",
+   "sinonimos": [
+    "envenenamentos",
+    "toxicologia",
+    "síndromes toxicológicas"
+   ],
+   "especialidades": [
+    "farmacologia",
+    "medicina-de-urgencia"
+   ],
+   "disciplinas": [
+    "Farmacologia",
+    "Toxicologia",
+    "Urgência e Emergência"
+   ],
+   "subtemas": [
+    {
+     "id": "intoxicacoes-exogenas.paracetamol",
+     "nome": "Paracetamol"
+    },
+    {
+     "id": "intoxicacoes-exogenas.benzodiazepinicos-e-opioides",
+     "nome": "Benzodiazepínicos e opioides"
+    },
+    {
+     "id": "intoxicacoes-exogenas.organofosforados-e-carbamatos",
+     "nome": "Organofosforados e carbamatos"
+    },
+    {
+     "id": "intoxicacoes-exogenas.sindromes-toxicologicas",
+     "nome": "Síndromes toxicológicas"
+    }
+   ],
+   "objetivos": [
+    "Reconhecer as principais síndromes toxicológicas",
+    "Relacionar agentes tóxicos aos seus antídotos específicos"
+   ],
+   "resumo": "O reconhecimento das síndromes toxicológicas (colinérgica, anticolinérgica, simpaticomimética, opioide e sedativo-hipnótica) orienta a abordagem inicial. Alguns agentes têm antídotos específicos: N-acetilcisteína para o paracetamol, flumazenil para benzodiazepínicos, naloxona para opioides e atropina para os efeitos muscarínicos dos organofosforados. A estabilização clínica precede e acompanha o uso de antídotos."
+  },
+  {
+   "id": "antiagregantes-e-anticoagulantes",
+   "nome": "Antiagregantes plaquetários e anticoagulantes",
+   "sinonimos": [
+    "AAS",
+    "heparina",
+    "varfarina"
+   ],
+   "especialidades": [
+    "farmacologia",
+    "hematologia",
+    "cardiologia"
+   ],
+   "disciplinas": [
+    "Farmacologia",
+    "Hematologia",
+    "Cardiologia"
+   ],
+   "subtemas": [
+    {
+     "id": "antiagregantes-e-anticoagulantes.acido-acetilsalicilico",
+     "nome": "Ácido acetilsalicílico"
+    },
+    {
+     "id": "antiagregantes-e-anticoagulantes.inibidores-de-p2y12",
+     "nome": "Inibidores de P2Y12"
+    },
+    {
+     "id": "antiagregantes-e-anticoagulantes.heparinas",
+     "nome": "Heparinas"
+    },
+    {
+     "id": "antiagregantes-e-anticoagulantes.anticoagulantes-orais",
+     "nome": "Anticoagulantes orais"
+    }
+   ],
+   "objetivos": [
+    "Explicar o mecanismo de ação dos antiagregantes plaquetários",
+    "Comparar os mecanismos dos anticoagulantes parenterais e orais"
+   ],
+   "resumo": "O ácido acetilsalicílico inibe irreversivelmente a COX-1 plaquetária, reduzindo a síntese de tromboxano A2 durante toda a vida da plaqueta. Inibidores de P2Y12 bloqueiam a ativação plaquetária pelo ADP. As heparinas potencializam a antitrombina, e os anticoagulantes orais atuam sobre os fatores dependentes de vitamina K ou inibem diretamente fatores da coagulação."
+  },
+  {
+   "id": "exame-neurologico",
+   "nome": "Semiologia neurológica",
+   "sinonimos": [
+    "exame neurológico",
+    "sinal de Romberg"
+   ],
+   "especialidades": [
+    "semiologia",
+    "neurologia"
+   ],
+   "disciplinas": [
+    "Semiologia",
+    "Neurologia"
+   ],
+   "subtemas": [
+    {
+     "id": "exame-neurologico.marcha-e-equilibrio",
+     "nome": "Marcha e equilíbrio"
+    },
+    {
+     "id": "exame-neurologico.forca-e-reflexos",
+     "nome": "Força e reflexos"
+    },
+    {
+     "id": "exame-neurologico.sensibilidade",
+     "nome": "Sensibilidade"
+    },
+    {
+     "id": "exame-neurologico.coordenacao",
+     "nome": "Coordenação"
+    }
+   ],
+   "objetivos": [
+    "Executar as etapas do exame neurológico",
+    "Interpretar sinais semiológicos na localização de lesões"
+   ],
+   "resumo": "O exame neurológico avalia estado mental, nervos cranianos, motricidade, reflexos, sensibilidade, coordenação e marcha. O sinal de Romberg é positivo quando o paciente mantém o equilíbrio de olhos abertos e oscila ou cai ao fechá-los, indicando ataxia sensitiva por déficit proprioceptivo. Na ataxia cerebelar, a instabilidade não depende significativamente da visão."
+  },
+  {
+   "id": "hipertensao-arterial",
+   "nome": "Hipertensão arterial",
+   "sinonimos": [
+    "HAS",
+    "pressão alta",
+    "hipertensão arterial sistêmica"
+   ],
+   "especialidades": [
+    "cardiologia",
+    "medicina-de-familia",
+    "nefrologia"
+   ],
+   "disciplinas": [
+    "Fisiologia",
+    "Farmacologia",
+    "Clínica Médica",
+    "Cardiologia",
+    "Medicina de Família e Comunidade"
+   ],
+   "subtemas": [
+    {
+     "id": "hipertensao-arterial.diagnostico",
+     "nome": "Diagnóstico"
+    },
+    {
+     "id": "hipertensao-arterial.estratificacao-de-risco",
+     "nome": "Estratificação de risco"
+    },
+    {
+     "id": "hipertensao-arterial.tratamento-nao-farmacologico",
+     "nome": "Tratamento não farmacológico"
+    },
+    {
+     "id": "hipertensao-arterial.tratamento-farmacologico",
+     "nome": "Tratamento farmacológico"
+    },
+    {
+     "id": "hipertensao-arterial.emergencias-hipertensivas",
+     "nome": "Emergências hipertensivas"
+    }
+   ],
+   "objetivos": [
+    "Definir hipertensão arterial e seus critérios diagnósticos",
+    "Explicar a fisiopatologia e as lesões de órgãos-alvo",
+    "Descrever as classes de anti-hipertensivos, seus mecanismos e efeitos adversos"
+   ],
+   "resumo": "A hipertensão arterial é uma condição crônica multifatorial caracterizada por elevação sustentada da pressão arterial, confirmada por medidas repetidas. É importante fator de risco para AVC, doença coronariana, insuficiência cardíaca e doença renal crônica. O tratamento combina mudanças no estilo de vida e fármacos como IECA, BRA, diuréticos tiazídicos e bloqueadores dos canais de cálcio; os IECA podem causar tosse seca por acúmulo de bradicinina."
+  },
+  {
+   "id": "insuficiencia-cardiaca",
+   "nome": "Insuficiência cardíaca",
+   "sinonimos": [
+    "IC",
+    "ICC"
+   ],
+   "especialidades": [
+    "cardiologia"
+   ],
+   "disciplinas": [
+    "Fisiologia",
+    "Farmacologia",
+    "Clínica Médica",
+    "Cardiologia"
+   ],
+   "subtemas": [
+    {
+     "id": "insuficiencia-cardiaca.fisiopatologia",
+     "nome": "Fisiopatologia"
+    },
+    {
+     "id": "insuficiencia-cardiaca.diagnostico-e-classificacao",
+     "nome": "Diagnóstico e classificação"
+    },
+    {
+     "id": "insuficiencia-cardiaca.tratamento-cronico",
+     "nome": "Tratamento crônico"
+    },
+    {
+     "id": "insuficiencia-cardiaca.insuficiencia-cardiaca-descompensada",
+     "nome": "Insuficiência cardíaca descompensada"
+    }
+   ],
+   "objetivos": [
+    "Explicar a fisiopatologia e os mecanismos compensatórios da insuficiência cardíaca",
+    "Classificar a insuficiência cardíaca pela fração de ejeção e pela classe funcional",
+    "Descrever as classes de fármacos que modificam o prognóstico"
+   ],
+   "resumo": "A insuficiência cardíaca é uma síndrome em que o coração não mantém débito adequado ou o faz à custa de pressões de enchimento elevadas. Classifica-se pela fração de ejeção e pela classe funcional da NYHA. A ativação neuro-hormonal é central na fisiopatologia e é alvo das terapias que reduzem a mortalidade."
+  },
+  {
+   "id": "sindrome-coronariana-aguda",
+   "nome": "Síndrome coronariana aguda",
+   "sinonimos": [
+    "SCA",
+    "infarto agudo do miocárdio",
+    "IAM",
+    "angina instável"
+   ],
+   "especialidades": [
+    "cardiologia",
+    "medicina-de-urgencia"
+   ],
+   "disciplinas": [
+    "Fisiologia",
+    "Patologia",
+    "Clínica Médica",
+    "Cardiologia",
+    "Urgência e Emergência"
+   ],
+   "subtemas": [
+    {
+     "id": "sindrome-coronariana-aguda.angina-instavel-e-iam-sem-supra-de-st",
+     "nome": "Angina instável e IAM sem supra de ST"
+    },
+    {
+     "id": "sindrome-coronariana-aguda.iam-com-supra-de-st",
+     "nome": "IAM com supra de ST"
+    },
+    {
+     "id": "sindrome-coronariana-aguda.eletrocardiograma-e-localizacao",
+     "nome": "Eletrocardiograma e localização"
+    },
+    {
+     "id": "sindrome-coronariana-aguda.marcadores-de-necrose",
+     "nome": "Marcadores de necrose"
+    },
+    {
+     "id": "sindrome-coronariana-aguda.doenca-coronariana-cronica",
+     "nome": "Doença coronariana crônica"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar as apresentações da síndrome coronariana aguda",
+    "Localizar a parede acometida pelo eletrocardiograma",
+    "Descrever os princípios da reperfusão e da terapia antitrombótica"
+   ],
+   "resumo": "A síndrome coronariana aguda resulta geralmente da ruptura de placa aterosclerótica com trombose coronariana. Divide-se em IAM com supradesnivelamento de ST e síndromes sem supra (angina instável e IAM sem supra), diferenciadas pelo ECG e pelos marcadores de necrose miocárdica. Supradesnivelamento em DII, DIII e aVF indica acometimento da parede inferior."
+  },
+  {
+   "id": "arritmias-cardiacas",
+   "nome": "Arritmias cardíacas",
+   "sinonimos": [
+    "fibrilação atrial",
+    "taquicardia",
+    "bradicardia"
+   ],
+   "especialidades": [
+    "cardiologia",
+    "medicina-de-urgencia"
+   ],
+   "disciplinas": [
+    "Fisiologia",
+    "Clínica Médica",
+    "Cardiologia",
+    "Urgência e Emergência"
+   ],
+   "subtemas": [
+    {
+     "id": "arritmias-cardiacas.fibrilacao-atrial",
+     "nome": "Fibrilação atrial"
+    },
+    {
+     "id": "arritmias-cardiacas.taquiarritmias",
+     "nome": "Taquiarritmias"
+    },
+    {
+     "id": "arritmias-cardiacas.bradiarritmias",
+     "nome": "Bradiarritmias"
+    },
+    {
+     "id": "arritmias-cardiacas.eletrocardiograma",
+     "nome": "Eletrocardiograma"
+    }
+   ],
+   "objetivos": [
+    "Reconhecer as principais arritmias no eletrocardiograma",
+    "Identificar sinais de instabilidade hemodinâmica",
+    "Explicar o risco tromboembólico da fibrilação atrial"
+   ],
+   "resumo": "A fibrilação atrial é a arritmia sustentada mais comum e caracteriza-se no ECG por ausência de ondas P e intervalos RR irregulares. Aumenta o risco de eventos tromboembólicos, especialmente AVC. A presença de instabilidade hemodinâmica orienta a urgência do tratamento das arritmias."
+  },
+  {
+   "id": "valvopatias",
+   "nome": "Valvopatias",
+   "sinonimos": [
+    "estenose aórtica",
+    "estenose mitral",
+    "febre reumática"
+   ],
+   "especialidades": [
+    "cardiologia",
+    "semiologia"
+   ],
+   "disciplinas": [
+    "Semiologia",
+    "Clínica Médica",
+    "Cardiologia"
+   ],
+   "subtemas": [
+    {
+     "id": "valvopatias.estenose-aortica",
+     "nome": "Estenose aórtica"
+    },
+    {
+     "id": "valvopatias.insuficiencia-aortica",
+     "nome": "Insuficiência aórtica"
+    },
+    {
+     "id": "valvopatias.estenose-mitral",
+     "nome": "Estenose mitral"
+    },
+    {
+     "id": "valvopatias.insuficiencia-mitral",
+     "nome": "Insuficiência mitral"
+    },
+    {
+     "id": "valvopatias.febre-reumatica",
+     "nome": "Febre reumática"
+    }
+   ],
+   "objetivos": [
+    "Reconhecer os sopros das principais valvopatias",
+    "Relacionar etiologia, fisiopatologia e manifestações de cada valvopatia"
+   ],
+   "resumo": "As valvopatias são reconhecidas pelas características dos sopros e confirmadas pelo ecocardiograma. A estenose aórtica produz sopro sistólico ejetivo, em diamante, no foco aórtico, irradiado para as carótidas. A febre reumática é causa importante de valvopatia mitral em países em desenvolvimento."
+  },
+  {
+   "id": "endocardite-infecciosa",
+   "nome": "Endocardite infecciosa",
+   "sinonimos": [],
+   "especialidades": [
+    "cardiologia",
+    "infectologia"
+   ],
+   "disciplinas": [
+    "Clínica Médica",
+    "Cardiologia",
+    "Infectologia"
+   ],
+   "subtemas": [
+    {
+     "id": "endocardite-infecciosa.etiologia",
+     "nome": "Etiologia"
+    },
+    {
+     "id": "endocardite-infecciosa.criterios-diagnosticos",
+     "nome": "Critérios diagnósticos"
+    },
+    {
+     "id": "endocardite-infecciosa.complicacoes",
+     "nome": "Complicações"
+    }
+   ],
+   "objetivos": [
+    "Identificar os principais agentes e fatores predisponentes",
+    "Descrever os critérios diagnósticos de Duke"
+   ],
+   "resumo": "A endocardite infecciosa é a infecção do endocárdio, geralmente valvar, com formação de vegetações. Estafilococos, estreptococos e enterococos são os principais agentes. O diagnóstico baseia-se em hemoculturas, ecocardiograma e nos critérios de Duke."
+  },
+  {
+   "id": "tromboembolismo-venoso",
+   "nome": "Tromboembolismo venoso",
+   "sinonimos": [
+    "TVP",
+    "TEP",
+    "embolia pulmonar",
+    "trombose venosa profunda"
+   ],
+   "especialidades": [
+    "pneumologia",
+    "hematologia",
+    "cardiologia"
+   ],
+   "disciplinas": [
+    "Clínica Médica",
+    "Pneumologia",
+    "Hematologia",
+    "Cirurgia"
+   ],
+   "subtemas": [
+    {
+     "id": "tromboembolismo-venoso.fatores-de-risco",
+     "nome": "Fatores de risco"
+    },
+    {
+     "id": "tromboembolismo-venoso.trombose-venosa-profunda",
+     "nome": "Trombose venosa profunda"
+    },
+    {
+     "id": "tromboembolismo-venoso.tromboembolismo-pulmonar",
+     "nome": "Tromboembolismo pulmonar"
+    },
+    {
+     "id": "tromboembolismo-venoso.profilaxia",
+     "nome": "Profilaxia"
+    }
+   ],
+   "objetivos": [
+    "Identificar os fatores de risco pela tríade de Virchow",
+    "Descrever a abordagem diagnóstica baseada na probabilidade clínica"
+   ],
+   "resumo": "O tromboembolismo venoso engloba a trombose venosa profunda e o tromboembolismo pulmonar. Os fatores de risco seguem a tríade de Virchow: estase, lesão endotelial e hipercoagulabilidade. A avaliação diagnóstica combina probabilidade clínica pré-teste, D-dímero e exames de imagem."
+  },
+  {
+   "id": "asma",
+   "nome": "Asma",
+   "sinonimos": [
+    "broncoespasmo"
+   ],
+   "especialidades": [
+    "pneumologia",
+    "pediatria-geral"
+   ],
+   "disciplinas": [
+    "Fisiologia",
+    "Farmacologia",
+    "Clínica Médica",
+    "Pneumologia",
+    "Pediatria"
+   ],
+   "subtemas": [
+    {
+     "id": "asma.fisiopatologia",
+     "nome": "Fisiopatologia"
+    },
+    {
+     "id": "asma.diagnostico",
+     "nome": "Diagnóstico"
+    },
+    {
+     "id": "asma.tratamento-de-manutencao",
+     "nome": "Tratamento de manutenção"
+    },
+    {
+     "id": "asma.crise-asmatica",
+     "nome": "Crise asmática"
+    }
+   ],
+   "objetivos": [
+    "Explicar a fisiopatologia inflamatória da asma",
+    "Diferenciar asma de DPOC pela espirometria",
+    "Reconhecer sinais de gravidade na crise"
+   ],
+   "resumo": "A asma é uma doença inflamatória crônica das vias aéreas, com hiper-responsividade brônquica e obstrução variável ao fluxo aéreo. A espirometria demonstra obstrução com resposta ao broncodilatador. Os corticoides inalatórios são a base do controle da inflamação."
+  },
+  {
+   "id": "dpoc",
+   "nome": "Doença pulmonar obstrutiva crônica",
+   "sinonimos": [
+    "DPOC",
+    "enfisema",
+    "bronquite crônica"
+   ],
+   "especialidades": [
+    "pneumologia",
+    "medicina-de-familia"
+   ],
+   "disciplinas": [
+    "Fisiologia",
+    "Clínica Médica",
+    "Pneumologia",
+    "Medicina de Família e Comunidade"
+   ],
+   "subtemas": [
+    {
+     "id": "dpoc.fatores-de-risco",
+     "nome": "Fatores de risco"
+    },
+    {
+     "id": "dpoc.diagnostico-e-espirometria",
+     "nome": "Diagnóstico e espirometria"
+    },
+    {
+     "id": "dpoc.tratamento-estavel",
+     "nome": "Tratamento estável"
+    },
+    {
+     "id": "dpoc.exacerbacoes",
+     "nome": "Exacerbações"
+    }
+   ],
+   "objetivos": [
+    "Relacionar o tabagismo à fisiopatologia da DPOC",
+    "Interpretar a espirometria no diagnóstico",
+    "Descrever a abordagem das exacerbações"
+   ],
+   "resumo": "A DPOC caracteriza-se por limitação persistente ao fluxo aéreo, geralmente progressiva, associada principalmente ao tabagismo. O diagnóstico exige espirometria com relação VEF1/CVF menor que 0,70 após broncodilatador. A cessação do tabagismo é a intervenção que mais altera sua evolução."
+  },
+  {
+   "id": "pneumonia",
+   "nome": "Pneumonia adquirida na comunidade",
+   "sinonimos": [
+    "PAC",
+    "pneumonia comunitária"
+   ],
+   "especialidades": [
+    "pneumologia",
+    "infectologia",
+    "semiologia",
+    "pediatria-geral"
+   ],
+   "disciplinas": [
+    "Semiologia",
+    "Microbiologia",
+    "Clínica Médica",
+    "Pneumologia",
+    "Pediatria"
+   ],
+   "subtemas": [
+    {
+     "id": "pneumonia.sindrome-de-consolidacao",
+     "nome": "Síndrome de consolidação"
+    },
+    {
+     "id": "pneumonia.etiologia",
+     "nome": "Etiologia"
+    },
+    {
+     "id": "pneumonia.estratificacao-de-gravidade",
+     "nome": "Estratificação de gravidade"
+    },
+    {
+     "id": "pneumonia.tratamento",
+     "nome": "Tratamento"
+    },
+    {
+     "id": "pneumonia.pneumonia-na-infancia",
+     "nome": "Pneumonia na infância"
+    }
+   ],
+   "objetivos": [
+    "Reconhecer a síndrome de consolidação ao exame físico",
+    "Identificar os principais agentes etiológicos",
+    "Aplicar escores de gravidade como o CURB-65"
+   ],
+   "resumo": "A pneumonia adquirida na comunidade é infecção do parênquima pulmonar, tendo o Streptococcus pneumoniae como principal agente bacteriano. A consolidação produz frêmito toracovocal aumentado, macicez e sopro tubário. Escores como o CURB-65 (confusão, ureia, frequência respiratória, pressão arterial e idade ≥ 65 anos) ajudam a definir o local de tratamento."
+  },
+  {
+   "id": "tuberculose",
+   "nome": "Tuberculose",
+   "sinonimos": [
+    "TB",
+    "Mycobacterium tuberculosis",
+    "BAAR"
+   ],
+   "especialidades": [
+    "infectologia",
+    "pneumologia",
+    "microbiologia",
+    "saude-publica-sus"
+   ],
+   "disciplinas": [
+    "Microbiologia",
+    "Patologia",
+    "Clínica Médica",
+    "Infectologia",
+    "Pneumologia",
+    "Saúde Coletiva"
+   ],
+   "subtemas": [
+    {
+     "id": "tuberculose.etiologia-e-diagnostico-microbiologico",
+     "nome": "Etiologia e diagnóstico microbiológico"
+    },
+    {
+     "id": "tuberculose.patologia-e-granuloma",
+     "nome": "Patologia e granuloma"
+    },
+    {
+     "id": "tuberculose.tratamento",
+     "nome": "Tratamento"
+    },
+    {
+     "id": "tuberculose.infeccao-latente-e-contatos",
+     "nome": "Infecção latente e contatos"
+    }
+   ],
+   "objetivos": [
+    "Descrever a transmissão e a patogenia da tuberculose",
+    "Interpretar os exames diagnósticos (baciloscopia, cultura e teste molecular)",
+    "Descrever as fases do esquema básico de tratamento"
+   ],
+   "resumo": "A tuberculose é causada pelo Mycobacterium tuberculosis, bacilo álcool-ácido resistente identificado pela coloração de Ziehl-Neelsen. A lesão característica é o granuloma com necrose caseosa. O esquema básico no Brasil tem fase intensiva com quatro fármacos (rifampicina, isoniazida, pirazinamida e etambutol) seguida de fase de manutenção."
+  },
+  {
+   "id": "derrame-pleural",
+   "nome": "Derrame pleural",
+   "sinonimos": [],
+   "especialidades": [
+    "pneumologia"
+   ],
+   "disciplinas": [
+    "Semiologia",
+    "Clínica Médica",
+    "Pneumologia"
+   ],
+   "subtemas": [
+    {
+     "id": "derrame-pleural.semiologia-do-derrame",
+     "nome": "Semiologia do derrame"
+    },
+    {
+     "id": "derrame-pleural.criterios-de-light",
+     "nome": "Critérios de Light"
+    },
+    {
+     "id": "derrame-pleural.causas-de-transudato-e-exsudato",
+     "nome": "Causas de transudato e exsudato"
+    },
+    {
+     "id": "derrame-pleural.derrame-parapneumonico-e-empiema",
+     "nome": "Derrame parapneumônico e empiema"
+    }
+   ],
+   "objetivos": [
+    "Reconhecer o derrame pleural ao exame físico e na imagem",
+    "Aplicar os critérios de Light para diferenciar transudato de exsudato"
+   ],
+   "resumo": "O derrame pleural é o acúmulo anormal de líquido no espaço pleural. Pelos critérios de Light, é exsudato quando há relação proteína pleural/sérica > 0,5, relação LDH pleural/sérica > 0,6 ou LDH pleural acima de dois terços do limite superior sérico. Transudatos sugerem causas sistêmicas, como insuficiência cardíaca, e exsudatos, causas locais, como infecção e neoplasia."
+  },
+  {
+   "id": "diabetes-mellitus",
+   "nome": "Diabetes mellitus",
+   "sinonimos": [
+    "DM",
+    "diabetes",
+    "hiperglicemia"
+   ],
+   "especialidades": [
+    "endocrinologia",
+    "medicina-de-familia"
+   ],
+   "disciplinas": [
+    "Bioquímica",
+    "Fisiologia",
+    "Farmacologia",
+    "Clínica Médica",
+    "Endocrinologia",
+    "Medicina de Família e Comunidade"
+   ],
+   "subtemas": [
+    {
+     "id": "diabetes-mellitus.diagnostico",
+     "nome": "Diagnóstico"
+    },
+    {
+     "id": "diabetes-mellitus.tratamento",
+     "nome": "Tratamento"
+    },
+    {
+     "id": "diabetes-mellitus.complicacoes-agudas",
+     "nome": "Complicações agudas"
+    },
+    {
+     "id": "diabetes-mellitus.complicacoes-cronicas",
+     "nome": "Complicações crônicas"
+    }
+   ],
+   "objetivos": [
+    "Aplicar os critérios diagnósticos de diabetes",
+    "Diferenciar diabetes tipo 1 e tipo 2",
+    "Reconhecer e descrever a abordagem inicial das complicações agudas"
+   ],
+   "resumo": "O diabetes mellitus é um grupo de distúrbios metabólicos caracterizados por hiperglicemia resultante de defeitos na secreção e/ou na ação da insulina. O diagnóstico usa glicemia de jejum, hemoglobina glicada ou teste oral de tolerância, confirmados em nova amostra na ausência de hiperglicemia inequívoca. A cetoacidose diabética tem como pilares a reposição volêmica, a insulinoterapia e a correção eletrolítica."
+  },
+  {
+   "id": "doencas-da-tireoide",
+   "nome": "Doenças da tireoide",
+   "sinonimos": [
+    "hipotireoidismo",
+    "hipertireoidismo",
+    "tireoidite"
+   ],
+   "especialidades": [
+    "endocrinologia"
+   ],
+   "disciplinas": [
+    "Fisiologia",
+    "Clínica Médica",
+    "Endocrinologia"
+   ],
+   "subtemas": [
+    {
+     "id": "doencas-da-tireoide.hipotireoidismo",
+     "nome": "Hipotireoidismo"
+    },
+    {
+     "id": "doencas-da-tireoide.hipertireoidismo",
+     "nome": "Hipertireoidismo"
+    },
+    {
+     "id": "doencas-da-tireoide.nodulos-tireoidianos",
+     "nome": "Nódulos tireoidianos"
+    }
+   ],
+   "objetivos": [
+    "Interpretar TSH e T4 livre nas disfunções tireoidianas",
+    "Reconhecer as manifestações clínicas de hipo e hipertireoidismo"
+   ],
+   "resumo": "A função tireoidiana é avaliada principalmente pelo TSH e pelo T4 livre. No hipotireoidismo primário o TSH está elevado; quando o T4 livre é normal, fala-se em hipotireoidismo subclínico. A tireoidite de Hashimoto é a principal causa de hipotireoidismo em áreas sem deficiência de iodo, e a doença de Graves, de hipertireoidismo."
+  },
+  {
+   "id": "lesao-renal-aguda",
+   "nome": "Lesão renal aguda",
+   "sinonimos": [
+    "IRA",
+    "insuficiência renal aguda"
+   ],
+   "especialidades": [
+    "nefrologia"
+   ],
+   "disciplinas": [
+    "Fisiologia",
+    "Clínica Médica",
+    "Nefrologia"
+   ],
+   "subtemas": [
+    {
+     "id": "lesao-renal-aguda.classificacao-pre-renal-renal-e-pos-renal",
+     "nome": "Classificação pré-renal, renal e pós-renal"
+    },
+    {
+     "id": "lesao-renal-aguda.diagnostico",
+     "nome": "Diagnóstico"
+    },
+    {
+     "id": "lesao-renal-aguda.complicacoes-e-indicacoes-de-dialise",
+     "nome": "Complicações e indicações de diálise"
+    }
+   ],
+   "objetivos": [
+    "Classificar a lesão renal aguda segundo o mecanismo",
+    "Reconhecer as complicações com risco de vida"
+   ],
+   "resumo": "A lesão renal aguda é a redução abrupta da função renal, detectada por elevação da creatinina e/ou queda do débito urinário. Classifica-se em pré-renal, renal (intrínseca) e pós-renal. Hipercalemia, acidose e hipervolemia refratárias estão entre as complicações que podem indicar diálise."
+  },
+  {
+   "id": "doenca-renal-cronica",
+   "nome": "Doença renal crônica",
+   "sinonimos": [
+    "DRC",
+    "insuficiência renal crônica"
+   ],
+   "especialidades": [
+    "nefrologia",
+    "medicina-de-familia"
+   ],
+   "disciplinas": [
+    "Clínica Médica",
+    "Nefrologia",
+    "Medicina de Família e Comunidade"
+   ],
+   "subtemas": [
+    {
+     "id": "doenca-renal-cronica.definicao-e-estadiamento",
+     "nome": "Definição e estadiamento"
+    },
+    {
+     "id": "doenca-renal-cronica.causas",
+     "nome": "Causas"
+    },
+    {
+     "id": "doenca-renal-cronica.complicacoes",
+     "nome": "Complicações"
+    },
+    {
+     "id": "doenca-renal-cronica.terapia-renal-substitutiva",
+     "nome": "Terapia renal substitutiva"
+    }
+   ],
+   "objetivos": [
+    "Definir e estadiar a doença renal crônica",
+    "Identificar as principais causas e complicações"
+   ],
+   "resumo": "A doença renal crônica é definida por alteração estrutural ou funcional renal persistente por mais de três meses. É estadiada pela taxa de filtração glomerular e pela albuminúria. Diabetes e hipertensão são as principais causas, e anemia, distúrbios minerais e ósseos, acidose e hipercalemia são complicações frequentes."
+  },
+  {
+   "id": "sindromes-glomerulares",
+   "nome": "Síndromes glomerulares",
+   "sinonimos": [
+    "síndrome nefrótica",
+    "síndrome nefrítica",
+    "glomerulonefrite"
+   ],
+   "especialidades": [
+    "nefrologia",
+    "pediatria-geral"
+   ],
+   "disciplinas": [
+    "Patologia",
+    "Clínica Médica",
+    "Nefrologia",
+    "Pediatria"
+   ],
+   "subtemas": [
+    {
+     "id": "sindromes-glomerulares.sindrome-nefrotica",
+     "nome": "Síndrome nefrótica"
+    },
+    {
+     "id": "sindromes-glomerulares.sindrome-nefritica",
+     "nome": "Síndrome nefrítica"
+    },
+    {
+     "id": "sindromes-glomerulares.doenca-de-lesoes-minimas",
+     "nome": "Doença de lesões mínimas"
+    },
+    {
+     "id": "sindromes-glomerulares.glomerulonefrite-pos-estreptococica",
+     "nome": "Glomerulonefrite pós-estreptocócica"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar síndrome nefrótica de síndrome nefrítica",
+    "Relacionar faixa etária às principais causas de glomerulopatia"
+   ],
+   "resumo": "A síndrome nefrótica caracteriza-se por proteinúria maciça (acima de 3,5 g/24 h no adulto), hipoalbuminemia, edema e dislipidemia. A síndrome nefrítica cursa com hematúria, hipertensão, edema e graus variáveis de perda de função renal. Em crianças, a doença de lesões mínimas é a principal causa de síndrome nefrótica."
+  },
+  {
+   "id": "disturbios-hidroeletroliticos",
+   "nome": "Distúrbios hidroeletrolíticos",
+   "sinonimos": [
+    "hiponatremia",
+    "hipercalemia",
+    "hipocalemia"
+   ],
+   "especialidades": [
+    "nefrologia",
+    "medicina-de-urgencia",
+    "cardiologia"
+   ],
+   "disciplinas": [
+    "Fisiologia",
+    "Clínica Médica",
+    "Nefrologia",
+    "Urgência e Emergência"
+   ],
+   "subtemas": [
+    {
+     "id": "disturbios-hidroeletroliticos.disturbios-do-sodio",
+     "nome": "Distúrbios do sódio"
+    },
+    {
+     "id": "disturbios-hidroeletroliticos.disturbios-do-potassio",
+     "nome": "Distúrbios do potássio"
+    },
+    {
+     "id": "disturbios-hidroeletroliticos.disturbios-do-calcio-e-do-magnesio",
+     "nome": "Distúrbios do cálcio e do magnésio"
+    }
+   ],
+   "objetivos": [
+    "Reconhecer as manifestações clínicas e eletrocardiográficas dos distúrbios do potássio",
+    "Explicar os riscos da correção rápida da hiponatremia crônica",
+    "Descrever as prioridades na abordagem da hipercalemia grave"
+   ],
+   "resumo": "Os distúrbios do sódio refletem alterações do balanço de água, e a correção rápida da hiponatremia crônica pode causar síndrome de desmielinização osmótica. A hipercalemia produz ondas T apiculadas, alargamento do QRS e risco de arritmias fatais. Na hipercalemia com alterações no ECG, o cálcio intravenoso estabiliza a membrana miocárdica enquanto se promove a redução do potássio."
+  },
+  {
+   "id": "disturbios-acido-base",
+   "nome": "Distúrbios do equilíbrio ácido-base",
+   "sinonimos": [
+    "gasometria",
+    "acidose",
+    "alcalose",
+    "ânion gap"
+   ],
+   "especialidades": [
+    "nefrologia",
+    "medicina-de-urgencia"
+   ],
+   "disciplinas": [
+    "Fisiologia",
+    "Bioquímica",
+    "Clínica Médica",
+    "Nefrologia",
+    "Urgência e Emergência"
+   ],
+   "subtemas": [
+    {
+     "id": "disturbios-acido-base.interpretacao-da-gasometria",
+     "nome": "Interpretação da gasometria"
+    },
+    {
+     "id": "disturbios-acido-base.acidose-metabolica-e-anion-gap",
+     "nome": "Acidose metabólica e ânion gap"
+    },
+    {
+     "id": "disturbios-acido-base.alcalose-metabolica",
+     "nome": "Alcalose metabólica"
+    },
+    {
+     "id": "disturbios-acido-base.disturbios-respiratorios",
+     "nome": "Distúrbios respiratórios"
+    }
+   ],
+   "objetivos": [
+    "Interpretar sistematicamente uma gasometria arterial",
+    "Calcular e interpretar o ânion gap",
+    "Avaliar a adequação da compensação"
+   ],
+   "resumo": "A interpretação da gasometria parte do pH, identifica o distúrbio primário (metabólico ou respiratório) e avalia a compensação. Na acidose metabólica, o ânion gap (Na⁺ − [Cl⁻ + HCO₃⁻]) separa causas com acúmulo de ácidos, como cetoacidose e acidose lática, das causas hiperclorêmicas. A compensação respiratória esperada pode ser estimada pela fórmula de Winter."
+  },
+  {
+   "id": "infeccao-do-trato-urinario",
+   "nome": "Infecção do trato urinário",
+   "sinonimos": [
+    "ITU",
+    "cistite",
+    "pielonefrite"
+   ],
+   "especialidades": [
+    "nefrologia",
+    "infectologia",
+    "urologia",
+    "pediatria-geral"
+   ],
+   "disciplinas": [
+    "Microbiologia",
+    "Clínica Médica",
+    "Infectologia",
+    "Urologia",
+    "Pediatria"
+   ],
+   "subtemas": [
+    {
+     "id": "infeccao-do-trato-urinario.cistite",
+     "nome": "Cistite"
+    },
+    {
+     "id": "infeccao-do-trato-urinario.pielonefrite",
+     "nome": "Pielonefrite"
+    },
+    {
+     "id": "infeccao-do-trato-urinario.bacteriuria-assintomatica",
+     "nome": "Bacteriúria assintomática"
+    },
+    {
+     "id": "infeccao-do-trato-urinario.itu-na-infancia",
+     "nome": "ITU na infância"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar infecção urinária baixa e alta",
+    "Identificar os principais agentes etiológicos"
+   ],
+   "resumo": "A infecção do trato urinário é uma das infecções bacterianas mais comuns, tendo a Escherichia coli como principal agente. A cistite cursa com disúria, polaciúria e urgência, e a pielonefrite, com febre, dor lombar e acometimento sistêmico. A bacteriúria assintomática tem indicação de tratamento em situações específicas, como a gestação."
+  },
+  {
+   "id": "doenca-do-refluxo-e-ulcera-peptica",
+   "nome": "Doença do refluxo gastroesofágico e úlcera péptica",
+   "sinonimos": [
+    "DRGE",
+    "úlcera péptica",
+    "Helicobacter pylori",
+    "esôfago de Barrett"
+   ],
+   "especialidades": [
+    "gastroenterologia",
+    "cirurgia-geral"
+   ],
+   "disciplinas": [
+    "Fisiologia",
+    "Farmacologia",
+    "Clínica Médica",
+    "Gastroenterologia"
+   ],
+   "subtemas": [
+    {
+     "id": "doenca-do-refluxo-e-ulcera-peptica.doenca-do-refluxo-gastroesofagico",
+     "nome": "Doença do refluxo gastroesofágico"
+    },
+    {
+     "id": "doenca-do-refluxo-e-ulcera-peptica.esofago-de-barrett",
+     "nome": "Esôfago de Barrett"
+    },
+    {
+     "id": "doenca-do-refluxo-e-ulcera-peptica.ulcera-peptica",
+     "nome": "Úlcera péptica"
+    },
+    {
+     "id": "doenca-do-refluxo-e-ulcera-peptica.helicobacter-pylori",
+     "nome": "Helicobacter pylori"
+    }
+   ],
+   "objetivos": [
+    "Explicar a fisiopatologia da DRGE e da úlcera péptica",
+    "Relacionar H. pylori e anti-inflamatórios à doença ulcerosa"
+   ],
+   "resumo": "A doença do refluxo gastroesofágico resulta do refluxo do conteúdo gástrico, e sua complicação, o esôfago de Barrett, é uma metaplasia intestinal que aumenta o risco de adenocarcinoma. A úlcera péptica está associada principalmente ao Helicobacter pylori e ao uso de anti-inflamatórios não esteroides. Os inibidores da bomba de prótons são a base do tratamento farmacológico."
+  },
+  {
+   "id": "hemorragia-digestiva",
+   "nome": "Hemorragia digestiva",
+   "sinonimos": [
+    "HDA",
+    "HDB",
+    "hematêmese",
+    "melena"
+   ],
+   "especialidades": [
+    "gastroenterologia",
+    "cirurgia-geral",
+    "medicina-de-urgencia"
+   ],
+   "disciplinas": [
+    "Clínica Médica",
+    "Gastroenterologia",
+    "Cirurgia",
+    "Urgência e Emergência"
+   ],
+   "subtemas": [
+    {
+     "id": "hemorragia-digestiva.hemorragia-digestiva-alta",
+     "nome": "Hemorragia digestiva alta"
+    },
+    {
+     "id": "hemorragia-digestiva.hemorragia-digestiva-baixa",
+     "nome": "Hemorragia digestiva baixa"
+    },
+    {
+     "id": "hemorragia-digestiva.abordagem-inicial",
+     "nome": "Abordagem inicial"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar hemorragia digestiva alta e baixa",
+    "Priorizar a estabilização hemodinâmica na abordagem inicial"
+   ],
+   "resumo": "A hemorragia digestiva é classificada em alta ou baixa conforme a origem em relação ao ângulo de Treitz. A úlcera péptica é a principal causa de hemorragia digestiva alta, e as varizes esofágicas são causa importante em cirróticos. A abordagem inicial prioriza a estabilização hemodinâmica, seguida da endoscopia para diagnóstico e tratamento."
+  },
+  {
+   "id": "hepatites-virais",
+   "nome": "Hepatites virais",
+   "sinonimos": [
+    "hepatite B",
+    "hepatite C",
+    "hepatite A"
+   ],
+   "especialidades": [
+    "gastroenterologia",
+    "infectologia"
+   ],
+   "disciplinas": [
+    "Microbiologia",
+    "Clínica Médica",
+    "Infectologia",
+    "Gastroenterologia"
+   ],
+   "subtemas": [
+    {
+     "id": "hepatites-virais.hepatite-a-e-e",
+     "nome": "Hepatite A e E"
+    },
+    {
+     "id": "hepatites-virais.hepatite-b",
+     "nome": "Hepatite B"
+    },
+    {
+     "id": "hepatites-virais.hepatite-c",
+     "nome": "Hepatite C"
+    },
+    {
+     "id": "hepatites-virais.marcadores-sorologicos",
+     "nome": "Marcadores sorológicos"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar as hepatites virais quanto à transmissão e à cronificação",
+    "Interpretar os marcadores sorológicos da hepatite B"
+   ],
+   "resumo": "As hepatites A e E têm transmissão fecal-oral e geralmente curso agudo autolimitado. As hepatites B e C têm transmissão parenteral, sexual ou vertical e podem cronificar, evoluindo para cirrose e carcinoma hepatocelular. A vacinação previne a hepatite A e a hepatite B."
+  },
+  {
+   "id": "cirrose-hepatica",
+   "nome": "Cirrose hepática",
+   "sinonimos": [
+    "cirrose",
+    "hipertensão portal",
+    "ascite"
+   ],
+   "especialidades": [
+    "gastroenterologia"
+   ],
+   "disciplinas": [
+    "Patologia",
+    "Clínica Médica",
+    "Gastroenterologia"
+   ],
+   "subtemas": [
+    {
+     "id": "cirrose-hepatica.etiologia",
+     "nome": "Etiologia"
+    },
+    {
+     "id": "cirrose-hepatica.hipertensao-portal-e-varizes",
+     "nome": "Hipertensão portal e varizes"
+    },
+    {
+     "id": "cirrose-hepatica.ascite-e-peritonite-bacteriana-espontanea",
+     "nome": "Ascite e peritonite bacteriana espontânea"
+    },
+    {
+     "id": "cirrose-hepatica.encefalopatia-hepatica",
+     "nome": "Encefalopatia hepática"
+    }
+   ],
+   "objetivos": [
+    "Identificar as principais causas de cirrose",
+    "Reconhecer as complicações da hipertensão portal"
+   ],
+   "resumo": "A cirrose é o estágio final de diversas hepatopatias crônicas, com fibrose e nódulos de regeneração. Álcool, hepatites virais B e C e doença hepática gordurosa são as principais causas. As complicações incluem ascite, varizes esofágicas, peritonite bacteriana espontânea, encefalopatia hepática e carcinoma hepatocelular."
+  },
+  {
+   "id": "pancreatite-aguda",
+   "nome": "Pancreatite aguda",
+   "sinonimos": [
+    "pancreatite"
+   ],
+   "especialidades": [
+    "gastroenterologia",
+    "cirurgia-geral"
+   ],
+   "disciplinas": [
+    "Clínica Médica",
+    "Cirurgia",
+    "Gastroenterologia"
+   ],
+   "subtemas": [
+    {
+     "id": "pancreatite-aguda.etiologia",
+     "nome": "Etiologia"
+    },
+    {
+     "id": "pancreatite-aguda.diagnostico-e-classificacao",
+     "nome": "Diagnóstico e classificação"
+    },
+    {
+     "id": "pancreatite-aguda.complicacoes",
+     "nome": "Complicações"
+    }
+   ],
+   "objetivos": [
+    "Identificar as principais causas de pancreatite aguda",
+    "Aplicar os critérios diagnósticos e a classificação de Atlanta revisada"
+   ],
+   "resumo": "A pancreatite aguda tem como principais causas a litíase biliar e o álcool. Pela classificação de Atlanta revisada, o diagnóstico exige pelo menos dois de três critérios: dor abdominal típica, elevação de amilase ou lipase acima de três vezes o limite superior e achados de imagem compatíveis. A gravidade é definida pela presença e pela duração de falência orgânica e por complicações locais."
+  },
+  {
+   "id": "anemias",
+   "nome": "Anemias",
+   "sinonimos": [
+    "anemia ferropriva",
+    "anemia hemolítica",
+    "deficiência de G6PD",
+    "anemia falciforme"
+   ],
+   "especialidades": [
+    "hematologia",
+    "bioquimica",
+    "pediatria-geral"
+   ],
+   "disciplinas": [
+    "Bioquímica",
+    "Fisiologia",
+    "Clínica Médica",
+    "Hematologia",
+    "Pediatria"
+   ],
+   "subtemas": [
+    {
+     "id": "anemias.anemia-ferropriva",
+     "nome": "Anemia ferropriva"
+    },
+    {
+     "id": "anemias.anemias-megaloblasticas",
+     "nome": "Anemias megaloblásticas"
+    },
+    {
+     "id": "anemias.anemias-hemoliticas",
+     "nome": "Anemias hemolíticas"
+    },
+    {
+     "id": "anemias.doenca-falciforme",
+     "nome": "Doença falciforme"
+    }
+   ],
+   "objetivos": [
+    "Classificar as anemias pela morfologia e pela resposta medular",
+    "Interpretar o perfil de ferro",
+    "Relacionar defeitos enzimáticos e de membrana à hemólise"
+   ],
+   "resumo": "As anemias são classificadas pelo volume corpuscular médio e pela contagem de reticulócitos. A anemia ferropriva, a mais comum, é microcítica e hipocrômica, com ferritina baixa e capacidade total de ligação do ferro elevada. Na deficiência de G6PD, a menor produção de NADPH torna as hemácias vulneráveis ao estresse oxidativo, e fármacos oxidantes, como a primaquina, podem desencadear hemólise."
+  },
+  {
+   "id": "leucemias",
+   "nome": "Leucemias",
+   "sinonimos": [
+    "LLA",
+    "LMA",
+    "LMC",
+    "LLC"
+   ],
+   "especialidades": [
+    "hematologia",
+    "oncologia",
+    "pediatria-geral"
+   ],
+   "disciplinas": [
+    "Patologia",
+    "Clínica Médica",
+    "Hematologia",
+    "Pediatria"
+   ],
+   "subtemas": [
+    {
+     "id": "leucemias.leucemias-agudas",
+     "nome": "Leucemias agudas"
+    },
+    {
+     "id": "leucemias.leucemias-cronicas",
+     "nome": "Leucemias crônicas"
+    },
+    {
+     "id": "leucemias.leucemia-na-infancia",
+     "nome": "Leucemia na infância"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar leucemias agudas e crônicas",
+    "Reconhecer as manifestações de falência medular"
+   ],
+   "resumo": "As leucemias são neoplasias hematológicas originadas na medula óssea. As agudas cursam com acúmulo de blastos e falência medular (anemia, sangramentos e infecções), e as crônicas têm evolução mais arrastada. A leucemia linfoblástica aguda é o câncer mais comum da infância."
+  },
+  {
+   "id": "linfomas",
+   "nome": "Linfomas",
+   "sinonimos": [
+    "linfoma de Hodgkin",
+    "linfoma não Hodgkin"
+   ],
+   "especialidades": [
+    "hematologia",
+    "patologia",
+    "oncologia"
+   ],
+   "disciplinas": [
+    "Patologia",
+    "Clínica Médica",
+    "Hematologia"
+   ],
+   "subtemas": [
+    {
+     "id": "linfomas.linfoma-de-hodgkin",
+     "nome": "Linfoma de Hodgkin"
+    },
+    {
+     "id": "linfomas.linfomas-nao-hodgkin",
+     "nome": "Linfomas não Hodgkin"
+    },
+    {
+     "id": "linfomas.estadiamento",
+     "nome": "Estadiamento"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar linfoma de Hodgkin de linfomas não Hodgkin",
+    "Reconhecer os sintomas B e sua importância prognóstica"
+   ],
+   "resumo": "Os linfomas são neoplasias de linfócitos que se manifestam frequentemente por linfonodomegalia. O linfoma de Hodgkin clássico é caracterizado pela célula de Reed-Sternberg em meio a um infiltrado inflamatório reativo. Febre, sudorese noturna e perda de peso constituem os sintomas B."
+  },
+  {
+   "id": "hemostasia-e-coagulopatias",
+   "nome": "Hemostasia e coagulopatias",
+   "sinonimos": [
+    "hemofilia",
+    "trombocitopenia",
+    "coagulação"
+   ],
+   "especialidades": [
+    "hematologia"
+   ],
+   "disciplinas": [
+    "Fisiologia",
+    "Genética",
+    "Clínica Médica",
+    "Hematologia"
+   ],
+   "subtemas": [
+    {
+     "id": "hemostasia-e-coagulopatias.hemostasia-primaria-e-secundaria",
+     "nome": "Hemostasia primária e secundária"
+    },
+    {
+     "id": "hemostasia-e-coagulopatias.hemofilias",
+     "nome": "Hemofilias"
+    },
+    {
+     "id": "hemostasia-e-coagulopatias.doenca-de-von-willebrand",
+     "nome": "Doença de von Willebrand"
+    },
+    {
+     "id": "hemostasia-e-coagulopatias.plaquetopenias",
+     "nome": "Plaquetopenias"
+    }
+   ],
+   "objetivos": [
+    "Descrever as etapas da hemostasia",
+    "Diferenciar sangramentos de origem plaquetária e de fatores de coagulação"
+   ],
+   "resumo": "A hemostasia primária envolve plaquetas e fator de von Willebrand, e a secundária, a cascata da coagulação. As hemofilias A e B, deficiências dos fatores VIII e IX, têm herança recessiva ligada ao X e causam sangramentos articulares e musculares. Petéquias e sangramento mucoso sugerem defeitos plaquetários."
+  },
+  {
+   "id": "artrite-reumatoide",
+   "nome": "Artrite reumatoide",
+   "sinonimos": [
+    "AR"
+   ],
+   "especialidades": [
+    "reumatologia"
+   ],
+   "disciplinas": [
+    "Imunologia",
+    "Clínica Médica",
+    "Reumatologia"
+   ],
+   "subtemas": [
+    {
+     "id": "artrite-reumatoide.quadro-clinico",
+     "nome": "Quadro clínico"
+    },
+    {
+     "id": "artrite-reumatoide.diagnostico",
+     "nome": "Diagnóstico"
+    },
+    {
+     "id": "artrite-reumatoide.tratamento",
+     "nome": "Tratamento"
+    }
+   ],
+   "objetivos": [
+    "Reconhecer o padrão articular da artrite reumatoide",
+    "Descrever o papel dos autoanticorpos no diagnóstico"
+   ],
+   "resumo": "A artrite reumatoide é uma doença autoimune com poliartrite simétrica, crônica e erosiva, que acomete preferencialmente pequenas articulações de mãos e pés. Fator reumatoide e anticorpos anti-CCP auxiliam o diagnóstico. O tratamento precoce com drogas modificadoras do curso da doença reduz o dano articular."
+  },
+  {
+   "id": "lupus-eritematoso-sistemico",
+   "nome": "Lúpus eritematoso sistêmico",
+   "sinonimos": [
+    "LES",
+    "lúpus"
+   ],
+   "especialidades": [
+    "reumatologia",
+    "dermatologia",
+    "nefrologia"
+   ],
+   "disciplinas": [
+    "Imunologia",
+    "Clínica Médica",
+    "Reumatologia"
+   ],
+   "subtemas": [
+    {
+     "id": "lupus-eritematoso-sistemico.manifestacoes-clinicas",
+     "nome": "Manifestações clínicas"
+    },
+    {
+     "id": "lupus-eritematoso-sistemico.autoanticorpos",
+     "nome": "Autoanticorpos"
+    },
+    {
+     "id": "lupus-eritematoso-sistemico.nefrite-lupica",
+     "nome": "Nefrite lúpica"
+    }
+   ],
+   "objetivos": [
+    "Reconhecer as manifestações multissistêmicas do lúpus",
+    "Interpretar os principais autoanticorpos"
+   ],
+   "resumo": "O lúpus eritematoso sistêmico é uma doença autoimune multissistêmica, mais frequente em mulheres jovens. O FAN é sensível, e anticorpos anti-DNA de dupla hélice e anti-Sm são mais específicos. A nefrite lúpica é uma das manifestações de maior impacto prognóstico."
+  },
+  {
+   "id": "sepse",
+   "nome": "Sepse e choque séptico",
+   "sinonimos": [
+    "choque séptico",
+    "SIRS"
+   ],
+   "especialidades": [
+    "infectologia",
+    "medicina-de-urgencia"
+   ],
+   "disciplinas": [
+    "Fisiologia",
+    "Microbiologia",
+    "Clínica Médica",
+    "Infectologia",
+    "Urgência e Emergência"
+   ],
+   "subtemas": [
+    {
+     "id": "sepse.definicoes",
+     "nome": "Definições"
+    },
+    {
+     "id": "sepse.reconhecimento-precoce",
+     "nome": "Reconhecimento precoce"
+    },
+    {
+     "id": "sepse.abordagem-inicial",
+     "nome": "Abordagem inicial"
+    },
+    {
+     "id": "sepse.choque-septico",
+     "nome": "Choque séptico"
+    }
+   ],
+   "objetivos": [
+    "Definir sepse e choque séptico",
+    "Reconhecer precocemente a disfunção orgânica",
+    "Descrever os princípios da abordagem inicial"
+   ],
+   "resumo": "Sepse é a disfunção orgânica ameaçadora à vida causada por resposta desregulada do hospedeiro à infecção. Choque séptico é o subgrupo com anormalidades circulatórias e metabólicas graves, com necessidade de vasopressor e hiperlactatemia apesar de reposição volêmica. O reconhecimento precoce, a coleta de culturas, a antibioticoterapia e o suporte hemodinâmico são os pilares do tratamento."
+  },
+  {
+   "id": "hiv-aids",
+   "nome": "HIV e aids",
+   "sinonimos": [
+    "HIV",
+    "aids",
+    "infecção pelo HIV"
+   ],
+   "especialidades": [
+    "infectologia",
+    "saude-publica-sus"
+   ],
+   "disciplinas": [
+    "Imunologia",
+    "Microbiologia",
+    "Clínica Médica",
+    "Infectologia",
+    "Saúde Coletiva"
+   ],
+   "subtemas": [
+    {
+     "id": "hiv-aids.transmissao-e-prevencao",
+     "nome": "Transmissão e prevenção"
+    },
+    {
+     "id": "hiv-aids.diagnostico",
+     "nome": "Diagnóstico"
+    },
+    {
+     "id": "hiv-aids.infeccoes-oportunistas",
+     "nome": "Infecções oportunistas"
+    },
+    {
+     "id": "hiv-aids.terapia-antirretroviral",
+     "nome": "Terapia antirretroviral"
+    }
+   ],
+   "objetivos": [
+    "Descrever a história natural da infecção pelo HIV",
+    "Relacionar a contagem de CD4 às infecções oportunistas",
+    "Descrever as estratégias de prevenção combinada"
+   ],
+   "resumo": "O HIV infecta principalmente linfócitos T CD4⁺, levando à imunodeficiência progressiva. A aids caracteriza-se por infecções e neoplasias oportunistas, cujo risco aumenta com a queda do CD4. A terapia antirretroviral combinada suprime a replicação viral, e a carga viral indetectável impede a transmissão sexual."
+  },
+  {
+   "id": "dengue",
+   "nome": "Dengue",
+   "sinonimos": [
+    "arboviroses",
+    "Aedes aegypti"
+   ],
+   "especialidades": [
+    "infectologia",
+    "saude-publica-sus",
+    "pediatria-geral"
+   ],
+   "disciplinas": [
+    "Microbiologia",
+    "Clínica Médica",
+    "Infectologia",
+    "Saúde Coletiva",
+    "Pediatria"
+   ],
+   "subtemas": [
+    {
+     "id": "dengue.fases-clinicas",
+     "nome": "Fases clínicas"
+    },
+    {
+     "id": "dengue.sinais-de-alarme",
+     "nome": "Sinais de alarme"
+    },
+    {
+     "id": "dengue.classificacao-e-manejo",
+     "nome": "Classificação e manejo"
+    },
+    {
+     "id": "dengue.chikungunya-e-zika",
+     "nome": "Chikungunya e Zika"
+    }
+   ],
+   "objetivos": [
+    "Descrever as fases clínicas da dengue",
+    "Reconhecer os sinais de alarme e de gravidade",
+    "Explicar os princípios do manejo baseado em hidratação"
+   ],
+   "resumo": "A dengue é uma arbovirose transmitida pelo Aedes aegypti, com quatro sorotipos. Evolui em fase febril, fase crítica e fase de recuperação; a fase crítica ocorre em torno da defervescência, geralmente entre o 3º e o 7º dia, quando podem surgir sinais de alarme e extravasamento plasmático. O manejo baseia-se na classificação de risco e na hidratação adequada."
+  },
+  {
+   "id": "febre-amarela",
+   "nome": "Febre amarela",
+   "sinonimos": [],
+   "especialidades": [
+    "infectologia",
+    "saude-publica-sus"
+   ],
+   "disciplinas": [
+    "Microbiologia",
+    "Infectologia",
+    "Saúde Coletiva"
+   ],
+   "subtemas": [
+    {
+     "id": "febre-amarela.ciclos-de-transmissao",
+     "nome": "Ciclos de transmissão"
+    },
+    {
+     "id": "febre-amarela.quadro-clinico",
+     "nome": "Quadro clínico"
+    },
+    {
+     "id": "febre-amarela.prevencao-e-vacinacao",
+     "nome": "Prevenção e vacinação"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar os ciclos silvestre e urbano da febre amarela",
+    "Reconhecer as formas graves da doença"
+   ],
+   "resumo": "A febre amarela é uma arbovirose com ciclo silvestre, que envolve primatas não humanos e mosquitos dos gêneros Haemagogus e Sabethes, e ciclo urbano, transmitido pelo Aedes aegypti. As formas graves cursam com icterícia, hemorragias e insuficiência renal. A vacinação é a principal medida de prevenção."
+  },
+  {
+   "id": "leptospirose",
+   "nome": "Leptospirose",
+   "sinonimos": [
+    "doença de Weil"
+   ],
+   "especialidades": [
+    "infectologia",
+    "saude-publica-sus"
+   ],
+   "disciplinas": [
+    "Microbiologia",
+    "Clínica Médica",
+    "Infectologia",
+    "Saúde Coletiva"
+   ],
+   "subtemas": [
+    {
+     "id": "leptospirose.transmissao",
+     "nome": "Transmissão"
+    },
+    {
+     "id": "leptospirose.quadro-clinico",
+     "nome": "Quadro clínico"
+    },
+    {
+     "id": "leptospirose.forma-grave-sindrome-de-weil",
+     "nome": "Forma grave (síndrome de Weil)"
+    }
+   ],
+   "objetivos": [
+    "Relacionar a exposição a enchentes e à urina de roedores com a transmissão",
+    "Reconhecer as manifestações da forma grave"
+   ],
+   "resumo": "A leptospirose é uma zoonose causada por Leptospira, transmitida pelo contato com água ou solo contaminados pela urina de roedores, especialmente após enchentes. Cursa com febre, mialgia intensa em panturrilhas e sufusão conjuntival. A forma grave (síndrome de Weil) combina icterícia rubínica, insuficiência renal aguda e hemorragias."
+  },
+  {
+   "id": "malaria",
+   "nome": "Malária",
+   "sinonimos": [
+    "Plasmodium",
+    "impaludismo"
+   ],
+   "especialidades": [
+    "infectologia",
+    "parasitologia",
+    "saude-publica-sus"
+   ],
+   "disciplinas": [
+    "Parasitologia",
+    "Clínica Médica",
+    "Infectologia",
+    "Saúde Coletiva"
+   ],
+   "subtemas": [
+    {
+     "id": "malaria.transmissao-e-ciclo-biologico",
+     "nome": "Transmissão e ciclo biológico"
+    },
+    {
+     "id": "malaria.quadro-clinico",
+     "nome": "Quadro clínico"
+    },
+    {
+     "id": "malaria.diagnostico",
+     "nome": "Diagnóstico"
+    },
+    {
+     "id": "malaria.tratamento",
+     "nome": "Tratamento"
+    }
+   ],
+   "objetivos": [
+    "Descrever o ciclo biológico do Plasmodium",
+    "Explicar as recaídas por P. vivax",
+    "Descrever os métodos diagnósticos"
+   ],
+   "resumo": "A malária é transmitida pela picada da fêmea do mosquito Anopheles e, no Brasil, concentra-se na região amazônica. O P. vivax forma hipnozoítos hepáticos responsáveis por recaídas tardias, e o P. falciparum causa as formas mais graves. A gota espessa corada é o método de referência para o diagnóstico de rotina."
+  },
+  {
+   "id": "leishmaniose",
+   "nome": "Leishmanioses",
+   "sinonimos": [
+    "leishmaniose tegumentar",
+    "leishmaniose visceral",
+    "calazar"
+   ],
+   "especialidades": [
+    "infectologia",
+    "parasitologia",
+    "dermatologia"
+   ],
+   "disciplinas": [
+    "Parasitologia",
+    "Clínica Médica",
+    "Infectologia",
+    "Dermatologia"
+   ],
+   "subtemas": [
+    {
+     "id": "leishmaniose.ciclo-biologico-e-vetor",
+     "nome": "Ciclo biológico e vetor"
+    },
+    {
+     "id": "leishmaniose.leishmaniose-tegumentar",
+     "nome": "Leishmaniose tegumentar"
+    },
+    {
+     "id": "leishmaniose.leishmaniose-visceral",
+     "nome": "Leishmaniose visceral"
+    },
+    {
+     "id": "leishmaniose.diagnostico",
+     "nome": "Diagnóstico"
+    }
+   ],
+   "objetivos": [
+    "Descrever o ciclo biológico da Leishmania e seu vetor",
+    "Diferenciar as formas tegumentar e visceral"
+   ],
+   "resumo": "As leishmanioses são transmitidas pela picada de flebotomíneos. No hospedeiro humano, a Leishmania vive na forma amastigota no interior de macrófagos. A forma tegumentar causa úlceras cutâneas e lesões mucosas, e a visceral (calazar) cursa com febre prolongada, hepatoesplenomegalia e pancitopenia."
+  },
+  {
+   "id": "doenca-de-chagas",
+   "nome": "Doença de Chagas",
+   "sinonimos": [
+    "tripanossomíase americana",
+    "Trypanosoma cruzi"
+   ],
+   "especialidades": [
+    "infectologia",
+    "parasitologia",
+    "cardiologia"
+   ],
+   "disciplinas": [
+    "Parasitologia",
+    "Clínica Médica",
+    "Infectologia",
+    "Cardiologia"
+   ],
+   "subtemas": [
+    {
+     "id": "doenca-de-chagas.transmissao",
+     "nome": "Transmissão"
+    },
+    {
+     "id": "doenca-de-chagas.fase-aguda",
+     "nome": "Fase aguda"
+    },
+    {
+     "id": "doenca-de-chagas.forma-cronica",
+     "nome": "Forma crônica"
+    },
+    {
+     "id": "doenca-de-chagas.diagnostico",
+     "nome": "Diagnóstico"
+    }
+   ],
+   "objetivos": [
+    "Descrever as formas de transmissão do Trypanosoma cruzi",
+    "Reconhecer as formas clínicas crônicas"
+   ],
+   "resumo": "A doença de Chagas é causada pelo Trypanosoma cruzi, transmitido classicamente pelas fezes de triatomíneos. Na Amazônia, surtos da forma aguda têm sido associados à transmissão oral por alimentos contaminados, como o açaí. Na fase crônica, podem surgir as formas cardíaca e digestiva (megaesôfago e megacólon)."
+  },
+  {
+   "id": "meningites",
+   "nome": "Meningites",
+   "sinonimos": [
+    "meningite bacteriana",
+    "doença meningocócica"
+   ],
+   "especialidades": [
+    "infectologia",
+    "neurologia",
+    "microbiologia",
+    "pediatria-geral"
+   ],
+   "disciplinas": [
+    "Microbiologia",
+    "Clínica Médica",
+    "Infectologia",
+    "Neurologia",
+    "Pediatria"
+   ],
+   "subtemas": [
+    {
+     "id": "meningites.etiologia",
+     "nome": "Etiologia"
+    },
+    {
+     "id": "meningites.analise-do-liquor",
+     "nome": "Análise do líquor"
+    },
+    {
+     "id": "meningites.tratamento-e-quimioprofilaxia",
+     "nome": "Tratamento e quimioprofilaxia"
+    },
+    {
+     "id": "meningites.doenca-meningococica",
+     "nome": "Doença meningocócica"
+    }
+   ],
+   "objetivos": [
+    "Identificar os agentes conforme a faixa etária",
+    "Diferenciar meningite bacteriana e viral pelo líquor"
+   ],
+   "resumo": "As meningites bacterianas em adolescentes e adultos são causadas principalmente por Streptococcus pneumoniae e Neisseria meningitidis, esta um diplococo gram-negativo associado a petéquias. O líquor da meningite bacteriana mostra pleocitose neutrofílica, glicose baixa e proteína elevada. Contatos próximos de doença meningocócica têm indicação de quimioprofilaxia."
+  },
+  {
+   "id": "sifilis",
+   "nome": "Sífilis",
+   "sinonimos": [
+    "sífilis congênita",
+    "sífilis gestacional",
+    "Treponema pallidum"
+   ],
+   "especialidades": [
+    "infectologia",
+    "obstetricia",
+    "neonatologia",
+    "dermatologia"
+   ],
+   "disciplinas": [
+    "Microbiologia",
+    "Clínica Médica",
+    "Infectologia",
+    "Ginecologia e Obstetrícia",
+    "Pediatria"
+   ],
+   "subtemas": [
+    {
+     "id": "sifilis.sifilis-adquirida",
+     "nome": "Sífilis adquirida"
+    },
+    {
+     "id": "sifilis.diagnostico-sorologico",
+     "nome": "Diagnóstico sorológico"
+    },
+    {
+     "id": "sifilis.sifilis-na-gestacao-e-congenita",
+     "nome": "Sífilis na gestação e congênita"
+    }
+   ],
+   "objetivos": [
+    "Descrever as fases clínicas da sífilis",
+    "Interpretar testes treponêmicos e não treponêmicos",
+    "Explicar a prevenção da sífilis congênita"
+   ],
+   "resumo": "A sífilis é causada pelo Treponema pallidum e evolui em fases primária, secundária, latente e terciária. O diagnóstico combina testes não treponêmicos, como o VDRL, e treponêmicos. Na gestação, a penicilina benzatina é o único tratamento considerado adequado para a prevenção da sífilis congênita."
+  },
+  {
+   "id": "hanseniase",
+   "nome": "Hanseníase",
+   "sinonimos": [
+    "lepra",
+    "Mycobacterium leprae"
+   ],
+   "especialidades": [
+    "infectologia",
+    "dermatologia",
+    "saude-publica-sus"
+   ],
+   "disciplinas": [
+    "Microbiologia",
+    "Dermatologia",
+    "Infectologia",
+    "Saúde Coletiva"
+   ],
+   "subtemas": [
+    {
+     "id": "hanseniase.classificacao",
+     "nome": "Classificação"
+    },
+    {
+     "id": "hanseniase.diagnostico",
+     "nome": "Diagnóstico"
+    },
+    {
+     "id": "hanseniase.reacoes-hansenicas",
+     "nome": "Reações hansênicas"
+    },
+    {
+     "id": "hanseniase.tratamento",
+     "nome": "Tratamento"
+    }
+   ],
+   "objetivos": [
+    "Reconhecer as lesões cutâneas com alteração de sensibilidade",
+    "Diferenciar as formas paucibacilar e multibacilar"
+   ],
+   "resumo": "A hanseníase é uma doença infecciosa crônica causada pelo Mycobacterium leprae, que acomete pele e nervos periféricos. O diagnóstico é essencialmente clínico, com lesões de pele com alteração de sensibilidade e espessamento neural. A poliquimioterapia é disponibilizada pelo SUS."
+  },
+  {
+   "id": "acidente-vascular-cerebral",
+   "nome": "Acidente vascular cerebral",
+   "sinonimos": [
+    "AVC",
+    "derrame",
+    "AVE"
+   ],
+   "especialidades": [
+    "neurologia",
+    "medicina-de-urgencia"
+   ],
+   "disciplinas": [
+    "Anatomia",
+    "Patologia",
+    "Clínica Médica",
+    "Neurologia",
+    "Urgência e Emergência"
+   ],
+   "subtemas": [
+    {
+     "id": "acidente-vascular-cerebral.avc-isquemico",
+     "nome": "AVC isquêmico"
+    },
+    {
+     "id": "acidente-vascular-cerebral.avc-hemorragico",
+     "nome": "AVC hemorrágico"
+    },
+    {
+     "id": "acidente-vascular-cerebral.abordagem-na-fase-aguda",
+     "nome": "Abordagem na fase aguda"
+    },
+    {
+     "id": "acidente-vascular-cerebral.prevencao-secundaria",
+     "nome": "Prevenção secundária"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar AVC isquêmico e hemorrágico",
+    "Relacionar déficits neurológicos ao território vascular",
+    "Explicar a importância do tempo na fase aguda"
+   ],
+   "resumo": "O AVC é um déficit neurológico focal súbito de causa vascular, isquêmico na maioria dos casos. A tomografia sem contraste diferencia o AVC isquêmico do hemorrágico e é essencial antes da terapia de reperfusão, que depende do tempo de início dos sintomas. O infarto encefálico evolui com necrose liquefativa."
+  },
+  {
+   "id": "epilepsia",
+   "nome": "Epilepsia e crises epilépticas",
+   "sinonimos": [
+    "convulsão",
+    "estado de mal epiléptico"
+   ],
+   "especialidades": [
+    "neurologia",
+    "pediatria-geral",
+    "medicina-de-urgencia"
+   ],
+   "disciplinas": [
+    "Clínica Médica",
+    "Neurologia",
+    "Pediatria",
+    "Urgência e Emergência"
+   ],
+   "subtemas": [
+    {
+     "id": "epilepsia.classificacao-das-crises",
+     "nome": "Classificação das crises"
+    },
+    {
+     "id": "epilepsia.estado-de-mal-epileptico",
+     "nome": "Estado de mal epiléptico"
+    },
+    {
+     "id": "epilepsia.crise-febril",
+     "nome": "Crise febril"
+    }
+   ],
+   "objetivos": [
+    "Classificar as crises epilépticas",
+    "Reconhecer o estado de mal epiléptico como emergência"
+   ],
+   "resumo": "Crise epiléptica é a manifestação transitória de atividade neuronal anormal, e epilepsia é a predisposição duradoura a crises recorrentes. As crises são classificadas como focais ou generalizadas. O estado de mal epiléptico é uma emergência neurológica."
+  },
+  {
+   "id": "cefaleias",
+   "nome": "Cefaleias",
+   "sinonimos": [
+    "enxaqueca",
+    "migrânea",
+    "cefaleia tensional"
+   ],
+   "especialidades": [
+    "neurologia",
+    "medicina-de-familia"
+   ],
+   "disciplinas": [
+    "Clínica Médica",
+    "Neurologia",
+    "Medicina de Família e Comunidade"
+   ],
+   "subtemas": [
+    {
+     "id": "cefaleias.cefaleias-primarias",
+     "nome": "Cefaleias primárias"
+    },
+    {
+     "id": "cefaleias.sinais-de-alarme",
+     "nome": "Sinais de alarme"
+    },
+    {
+     "id": "cefaleias.cefaleias-secundarias",
+     "nome": "Cefaleias secundárias"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar cefaleias primárias e secundárias",
+    "Reconhecer os sinais de alarme"
+   ],
+   "resumo": "As cefaleias primárias mais comuns são a tensional e a migrânea. Sinais de alarme, como início súbito e intenso, déficit focal, febre com rigidez de nuca ou início após os 50 anos, sugerem causa secundária e indicam investigação."
+  },
+  {
+   "id": "cancer-de-pele",
+   "nome": "Câncer de pele",
+   "sinonimos": [
+    "melanoma",
+    "carcinoma basocelular",
+    "carcinoma espinocelular"
+   ],
+   "especialidades": [
+    "dermatologia",
+    "oncologia"
+   ],
+   "disciplinas": [
+    "Patologia",
+    "Dermatologia"
+   ],
+   "subtemas": [
+    {
+     "id": "cancer-de-pele.carcinoma-basocelular",
+     "nome": "Carcinoma basocelular"
+    },
+    {
+     "id": "cancer-de-pele.carcinoma-espinocelular",
+     "nome": "Carcinoma espinocelular"
+    },
+    {
+     "id": "cancer-de-pele.melanoma",
+     "nome": "Melanoma"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar os principais tipos de câncer de pele",
+    "Aplicar a regra do ABCDE na avaliação de lesões pigmentadas"
+   ],
+   "resumo": "O câncer de pele é o mais frequente no Brasil, e a exposição solar é o principal fator de risco. O carcinoma basocelular é o mais comum e raramente produz metástases, enquanto o melanoma é o de maior letalidade. A regra do ABCDE auxilia a identificar lesões pigmentadas suspeitas."
+  },
+  {
+   "id": "abdome-agudo",
+   "nome": "Abdome agudo",
+   "sinonimos": [
+    "dor abdominal aguda",
+    "peritonite",
+    "irritação peritoneal"
+   ],
+   "especialidades": [
+    "cirurgia-geral",
+    "semiologia"
+   ],
+   "disciplinas": [
+    "Semiologia",
+    "Cirurgia",
+    "Urgência e Emergência"
+   ],
+   "subtemas": [
+    {
+     "id": "abdome-agudo.sinais-de-irritacao-peritoneal",
+     "nome": "Sinais de irritação peritoneal"
+    },
+    {
+     "id": "abdome-agudo.abdome-agudo-inflamatorio",
+     "nome": "Abdome agudo inflamatório"
+    },
+    {
+     "id": "abdome-agudo.abdome-agudo-obstrutivo",
+     "nome": "Abdome agudo obstrutivo"
+    },
+    {
+     "id": "abdome-agudo.abdome-agudo-perfurativo",
+     "nome": "Abdome agudo perfurativo"
+    },
+    {
+     "id": "abdome-agudo.abdome-agudo-vascular-e-hemorragico",
+     "nome": "Abdome agudo vascular e hemorrágico"
+    }
+   ],
+   "objetivos": [
+    "Classificar o abdome agudo por síndromes",
+    "Reconhecer os sinais de irritação peritoneal",
+    "Identificar critérios de indicação cirúrgica"
+   ],
+   "resumo": "Abdome agudo é a dor abdominal de início recente que pode exigir intervenção de urgência. Classifica-se em inflamatório, obstrutivo, perfurativo, vascular e hemorrágico. A dor à descompressão brusca (sinal de Blumberg) indica irritação peritoneal."
+  },
+  {
+   "id": "apendicite-aguda",
+   "nome": "Apendicite aguda",
+   "sinonimos": [
+    "apendicite"
+   ],
+   "especialidades": [
+    "cirurgia-geral",
+    "pediatria-geral"
+   ],
+   "disciplinas": [
+    "Semiologia",
+    "Cirurgia",
+    "Pediatria"
+   ],
+   "subtemas": [
+    {
+     "id": "apendicite-aguda.diagnostico",
+     "nome": "Diagnóstico"
+    },
+    {
+     "id": "apendicite-aguda.complicacoes",
+     "nome": "Complicações"
+    },
+    {
+     "id": "apendicite-aguda.tratamento",
+     "nome": "Tratamento"
+    }
+   ],
+   "objetivos": [
+    "Descrever a evolução clínica típica da apendicite",
+    "Reconhecer os sinais semiológicos associados"
+   ],
+   "resumo": "A apendicite aguda é a causa mais comum de abdome agudo cirúrgico. A dor tipicamente começa periumbilical e migra para a fossa ilíaca direita, acompanhada de anorexia, náuseas e febre baixa. O tratamento habitual é a apendicectomia."
+  },
+  {
+   "id": "doencas-biliares",
+   "nome": "Doenças das vias biliares",
+   "sinonimos": [
+    "colelitíase",
+    "colecistite",
+    "coledocolitíase",
+    "colangite"
+   ],
+   "especialidades": [
+    "cirurgia-geral",
+    "gastroenterologia",
+    "semiologia"
+   ],
+   "disciplinas": [
+    "Semiologia",
+    "Cirurgia",
+    "Gastroenterologia"
+   ],
+   "subtemas": [
+    {
+     "id": "doencas-biliares.colelitiase",
+     "nome": "Colelitíase"
+    },
+    {
+     "id": "doencas-biliares.colecistite-aguda",
+     "nome": "Colecistite aguda"
+    },
+    {
+     "id": "doencas-biliares.coledocolitiase",
+     "nome": "Coledocolitíase"
+    },
+    {
+     "id": "doencas-biliares.colangite-aguda",
+     "nome": "Colangite aguda"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar as complicações da litíase biliar",
+    "Reconhecer as tríades e pêntades clínicas das doenças biliares",
+    "Indicar o exame de imagem inicial"
+   ],
+   "resumo": "A colecistite aguda cursa com dor em hipocôndrio direito, febre e sinal de Murphy, e a ultrassonografia é o exame inicial de escolha. A colangite aguda manifesta-se pela tríade de Charcot (febre, icterícia e dor em hipocôndrio direito); com hipotensão e confusão mental, forma a pêntade de Reynolds, que indica gravidade. A coledocolitíase pode causar icterícia obstrutiva, colangite e pancreatite."
+  },
+  {
+   "id": "obstrucao-intestinal",
+   "nome": "Obstrução intestinal",
+   "sinonimos": [
+    "abdome agudo obstrutivo",
+    "bridas"
+   ],
+   "especialidades": [
+    "cirurgia-geral"
+   ],
+   "disciplinas": [
+    "Cirurgia"
+   ],
+   "subtemas": [
+    {
+     "id": "obstrucao-intestinal.etiologia",
+     "nome": "Etiologia"
+    },
+    {
+     "id": "obstrucao-intestinal.diagnostico",
+     "nome": "Diagnóstico"
+    },
+    {
+     "id": "obstrucao-intestinal.tratamento",
+     "nome": "Tratamento"
+    }
+   ],
+   "objetivos": [
+    "Identificar as principais causas de obstrução intestinal",
+    "Reconhecer sinais de sofrimento de alça"
+   ],
+   "resumo": "A obstrução intestinal manifesta-se por dor em cólica, vômitos, distensão e parada de eliminação de gases e fezes. No intestino delgado, as aderências pós-operatórias (bridas) são a causa mais comum em pacientes com cirurgia abdominal prévia. Sinais de estrangulamento indicam abordagem cirúrgica."
+  },
+  {
+   "id": "hernias-da-parede-abdominal",
+   "nome": "Hérnias da parede abdominal",
+   "sinonimos": [
+    "hérnia inguinal",
+    "hérnia femoral"
+   ],
+   "especialidades": [
+    "cirurgia-geral",
+    "anatomia"
+   ],
+   "disciplinas": [
+    "Anatomia",
+    "Cirurgia"
+   ],
+   "subtemas": [
+    {
+     "id": "hernias-da-parede-abdominal.hernias-inguinais",
+     "nome": "Hérnias inguinais"
+    },
+    {
+     "id": "hernias-da-parede-abdominal.hernia-femoral",
+     "nome": "Hérnia femoral"
+    },
+    {
+     "id": "hernias-da-parede-abdominal.hernias-umbilical-e-incisional",
+     "nome": "Hérnias umbilical e incisional"
+    },
+    {
+     "id": "hernias-da-parede-abdominal.complicacoes",
+     "nome": "Complicações"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar hérnias inguinais direta e indireta pela anatomia",
+    "Reconhecer hérnias encarceradas e estranguladas"
+   ],
+   "resumo": "A hérnia inguinal indireta emerge lateralmente aos vasos epigástricos inferiores, pelo anel inguinal profundo, e a direta, medialmente, pelo triângulo de Hesselbach. A hérnia femoral, mais comum em mulheres, tem maior risco de estrangulamento. Hérnias encarceradas com sinais de isquemia exigem cirurgia de urgência."
+  },
+  {
+   "id": "atendimento-inicial-ao-politraumatizado",
+   "nome": "Atendimento inicial ao politraumatizado",
+   "sinonimos": [
+    "ATLS",
+    "ABCDE do trauma",
+    "choque hemorrágico"
+   ],
+   "especialidades": [
+    "trauma",
+    "medicina-de-urgencia"
+   ],
+   "disciplinas": [
+    "Cirurgia",
+    "Urgência e Emergência"
+   ],
+   "subtemas": [
+    {
+     "id": "atendimento-inicial-ao-politraumatizado.avaliacao-primaria-abcde",
+     "nome": "Avaliação primária (ABCDE)"
+    },
+    {
+     "id": "atendimento-inicial-ao-politraumatizado.via-aerea-e-protecao-cervical",
+     "nome": "Via aérea e proteção cervical"
+    },
+    {
+     "id": "atendimento-inicial-ao-politraumatizado.choque-hemorragico",
+     "nome": "Choque hemorrágico"
+    },
+    {
+     "id": "atendimento-inicial-ao-politraumatizado.avaliacao-secundaria",
+     "nome": "Avaliação secundária"
+    },
+    {
+     "id": "atendimento-inicial-ao-politraumatizado.trauma-abdominal",
+     "nome": "Trauma abdominal"
+    }
+   ],
+   "objetivos": [
+    "Aplicar a sequência ABCDE na avaliação primária",
+    "Classificar o choque hemorrágico",
+    "Reconhecer lesões com risco imediato à vida"
+   ],
+   "resumo": "O atendimento ao politraumatizado segue a avaliação primária ABCDE: via aérea com proteção da coluna cervical, respiração, circulação com controle de hemorragia, avaliação neurológica e exposição com controle do ambiente. O choque hemorrágico é classificado em quatro classes conforme a perda volêmica estimada e os sinais clínicos. As lesões com risco imediato à vida são tratadas à medida que são identificadas."
+  },
+  {
+   "id": "trauma-toracico",
+   "nome": "Trauma torácico",
+   "sinonimos": [
+    "pneumotórax hipertensivo",
+    "tamponamento cardíaco",
+    "hemotórax"
+   ],
+   "especialidades": [
+    "trauma",
+    "cirurgia-geral"
+   ],
+   "disciplinas": [
+    "Anatomia",
+    "Cirurgia",
+    "Urgência e Emergência"
+   ],
+   "subtemas": [
+    {
+     "id": "trauma-toracico.pneumotorax-hipertensivo",
+     "nome": "Pneumotórax hipertensivo"
+    },
+    {
+     "id": "trauma-toracico.hemotorax",
+     "nome": "Hemotórax"
+    },
+    {
+     "id": "trauma-toracico.tamponamento-cardiaco",
+     "nome": "Tamponamento cardíaco"
+    },
+    {
+     "id": "trauma-toracico.torax-instavel",
+     "nome": "Tórax instável"
+    }
+   ],
+   "objetivos": [
+    "Reconhecer clinicamente as lesões torácicas com risco imediato à vida",
+    "Diferenciar pneumotórax hipertensivo e tamponamento cardíaco"
+   ],
+   "resumo": "O pneumotórax hipertensivo é diagnóstico clínico: dispneia, hipotensão, turgência jugular, desvio da traqueia para o lado oposto e murmúrio abolido no lado afetado, exigindo descompressão imediata. O tamponamento cardíaco manifesta-se pela tríade de Beck (hipotensão, turgência jugular e bulhas abafadas), com murmúrio vesicular preservado. Ambos são causas de choque obstrutivo."
+  },
+  {
+   "id": "traumatismo-cranioencefalico",
+   "nome": "Traumatismo cranioencefálico",
+   "sinonimos": [
+    "TCE",
+    "hematoma epidural",
+    "escala de Glasgow"
+   ],
+   "especialidades": [
+    "trauma",
+    "neurologia",
+    "anatomia"
+   ],
+   "disciplinas": [
+    "Anatomia",
+    "Cirurgia",
+    "Neurologia",
+    "Urgência e Emergência"
+   ],
+   "subtemas": [
+    {
+     "id": "traumatismo-cranioencefalico.escala-de-coma-de-glasgow",
+     "nome": "Escala de coma de Glasgow"
+    },
+    {
+     "id": "traumatismo-cranioencefalico.hematoma-extradural",
+     "nome": "Hematoma extradural"
+    },
+    {
+     "id": "traumatismo-cranioencefalico.hematoma-subdural",
+     "nome": "Hematoma subdural"
+    },
+    {
+     "id": "traumatismo-cranioencefalico.hipertensao-intracraniana",
+     "nome": "Hipertensão intracraniana"
+    }
+   ],
+   "objetivos": [
+    "Aplicar a escala de coma de Glasgow",
+    "Diferenciar hematomas extradural e subdural pela anatomia e pela imagem"
+   ],
+   "resumo": "A escala de coma de Glasgow avalia abertura ocular, resposta verbal e resposta motora, com pontuação de 3 a 15. O hematoma extradural decorre geralmente de lesão da artéria meníngea média após fratura na região do ptério, tem forma biconvexa e pode cursar com intervalo lúcido. O hematoma subdural resulta de lesão de veias ponte e tem forma em crescente."
+  },
+  {
+   "id": "queimaduras",
+   "nome": "Queimaduras",
+   "sinonimos": [
+    "grande queimado"
+   ],
+   "especialidades": [
+    "trauma",
+    "cirurgia-geral",
+    "pediatria-geral"
+   ],
+   "disciplinas": [
+    "Cirurgia",
+    "Urgência e Emergência",
+    "Pediatria"
+   ],
+   "subtemas": [
+    {
+     "id": "queimaduras.classificacao-e-profundidade",
+     "nome": "Classificação e profundidade"
+    },
+    {
+     "id": "queimaduras.superficie-corporal-queimada",
+     "nome": "Superfície corporal queimada"
+    },
+    {
+     "id": "queimaduras.reposicao-volemica",
+     "nome": "Reposição volêmica"
+    },
+    {
+     "id": "queimaduras.lesao-inalatoria",
+     "nome": "Lesão inalatória"
+    }
+   ],
+   "objetivos": [
+    "Classificar as queimaduras quanto à profundidade",
+    "Estimar a superfície corporal queimada",
+    "Aplicar a fórmula de Parkland no cálculo da reposição inicial"
+   ],
+   "resumo": "As queimaduras são classificadas pela profundidade em primeiro, segundo e terceiro graus, e a extensão é estimada pela regra dos nove ou pela tabela de Lund-Browder. No cálculo da reposição volêmica, apenas queimaduras de segundo e terceiro graus entram na superfície corporal queimada. A fórmula de Parkland estima o volume das primeiras 24 horas, com metade administrada nas primeiras 8 horas."
+  },
+  {
+   "id": "cancer-colorretal",
+   "nome": "Câncer colorretal",
+   "sinonimos": [
+    "adenocarcinoma de cólon"
+   ],
+   "especialidades": [
+    "cirurgia-geral",
+    "gastroenterologia",
+    "oncologia"
+   ],
+   "disciplinas": [
+    "Patologia",
+    "Cirurgia",
+    "Gastroenterologia",
+    "Medicina de Família e Comunidade"
+   ],
+   "subtemas": [
+    {
+     "id": "cancer-colorretal.fatores-de-risco",
+     "nome": "Fatores de risco"
+    },
+    {
+     "id": "cancer-colorretal.rastreamento",
+     "nome": "Rastreamento"
+    },
+    {
+     "id": "cancer-colorretal.diagnostico-e-estadiamento",
+     "nome": "Diagnóstico e estadiamento"
+    }
+   ],
+   "objetivos": [
+    "Descrever a sequência adenoma-carcinoma",
+    "Identificar populações para rastreamento"
+   ],
+   "resumo": "A maioria dos cânceres colorretais origina-se de pólipos adenomatosos, pela sequência adenoma-carcinoma. Manifesta-se por alteração do hábito intestinal, sangramento e anemia ferropriva. O rastreamento permite detectar e remover lesões precursoras."
+  },
+  {
+   "id": "cancer-de-mama",
+   "nome": "Câncer de mama",
+   "sinonimos": [],
+   "especialidades": [
+    "ginecologia",
+    "cirurgia-geral",
+    "oncologia"
+   ],
+   "disciplinas": [
+    "Patologia",
+    "Ginecologia e Obstetrícia",
+    "Cirurgia",
+    "Medicina de Família e Comunidade"
+   ],
+   "subtemas": [
+    {
+     "id": "cancer-de-mama.fatores-de-risco",
+     "nome": "Fatores de risco"
+    },
+    {
+     "id": "cancer-de-mama.rastreamento",
+     "nome": "Rastreamento"
+    },
+    {
+     "id": "cancer-de-mama.diagnostico",
+     "nome": "Diagnóstico"
+    },
+    {
+     "id": "cancer-de-mama.tratamento",
+     "nome": "Tratamento"
+    }
+   ],
+   "objetivos": [
+    "Identificar os fatores de risco",
+    "Descrever as estratégias de rastreamento e a propedêutica de nódulos mamários"
+   ],
+   "resumo": "O câncer de mama é o câncer mais incidente em mulheres no Brasil, excluídos os de pele não melanoma. Idade, fatores hormonais e história familiar estão entre os principais fatores de risco. A mamografia é o exame de rastreamento, e a confirmação diagnóstica é histopatológica."
+  },
+  {
+   "id": "litiase-urinaria",
+   "nome": "Litíase urinária",
+   "sinonimos": [
+    "cólica renal",
+    "cálculo renal",
+    "nefrolitíase"
+   ],
+   "especialidades": [
+    "urologia",
+    "nefrologia"
+   ],
+   "disciplinas": [
+    "Urologia",
+    "Clínica Médica",
+    "Cirurgia"
+   ],
+   "subtemas": [
+    {
+     "id": "litiase-urinaria.colica-renal",
+     "nome": "Cólica renal"
+    },
+    {
+     "id": "litiase-urinaria.diagnostico-por-imagem",
+     "nome": "Diagnóstico por imagem"
+    },
+    {
+     "id": "litiase-urinaria.tratamento",
+     "nome": "Tratamento"
+    }
+   ],
+   "objetivos": [
+    "Reconhecer o quadro de cólica renal",
+    "Identificar situações que exigem desobstrução de urgência"
+   ],
+   "resumo": "A litíase urinária manifesta-se tipicamente por cólica renal, dor lombar intensa com irradiação para a região inguinal, frequentemente com hematúria. Os cálculos de oxalato de cálcio são os mais comuns. Obstrução associada a infecção é uma urgência urológica que exige desobstrução."
+  },
+  {
+   "id": "doencas-da-prostata",
+   "nome": "Doenças da próstata",
+   "sinonimos": [
+    "hiperplasia prostática benigna",
+    "câncer de próstata"
+   ],
+   "especialidades": [
+    "urologia",
+    "oncologia"
+   ],
+   "disciplinas": [
+    "Urologia",
+    "Patologia",
+    "Clínica Médica"
+   ],
+   "subtemas": [
+    {
+     "id": "doencas-da-prostata.hiperplasia-prostatica-benigna",
+     "nome": "Hiperplasia prostática benigna"
+    },
+    {
+     "id": "doencas-da-prostata.cancer-de-prostata",
+     "nome": "Câncer de próstata"
+    },
+    {
+     "id": "doencas-da-prostata.sintomas-do-trato-urinario-inferior",
+     "nome": "Sintomas do trato urinário inferior"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar hiperplasia prostática benigna e câncer de próstata",
+    "Descrever a avaliação dos sintomas do trato urinário inferior"
+   ],
+   "resumo": "A hiperplasia prostática benigna acomete principalmente a zona de transição e causa sintomas obstrutivos e irritativos do trato urinário inferior. O câncer de próstata origina-se sobretudo na zona periférica e costuma ser assintomático nas fases iniciais. O PSA e o toque retal participam da avaliação."
+  },
+  {
+   "id": "fraturas-e-luxacoes",
+   "nome": "Fraturas e luxações",
+   "sinonimos": [
+    "ortopedia do trauma",
+    "síndrome compartimental"
+   ],
+   "especialidades": [
+    "ortopedia",
+    "trauma"
+   ],
+   "disciplinas": [
+    "Anatomia",
+    "Ortopedia e Traumatologia",
+    "Cirurgia"
+   ],
+   "subtemas": [
+    {
+     "id": "fraturas-e-luxacoes.principios-de-classificacao",
+     "nome": "Princípios de classificação"
+    },
+    {
+     "id": "fraturas-e-luxacoes.fraturas-expostas",
+     "nome": "Fraturas expostas"
+    },
+    {
+     "id": "fraturas-e-luxacoes.sindrome-compartimental",
+     "nome": "Síndrome compartimental"
+    },
+    {
+     "id": "fraturas-e-luxacoes.lesoes-neurovasculares-associadas",
+     "nome": "Lesões neurovasculares associadas"
+    }
+   ],
+   "objetivos": [
+    "Descrever os princípios do atendimento às fraturas",
+    "Reconhecer complicações como fratura exposta e síndrome compartimental"
+   ],
+   "resumo": "As fraturas são descritas por localização, traço, desvio e exposição. Fraturas expostas exigem prevenção de infecção e tratamento cirúrgico precoce. A síndrome compartimental é uma emergência caracterizada por dor desproporcional e aumento da pressão no compartimento."
+  },
+  {
+   "id": "anestesia-principios",
+   "nome": "Princípios de anestesiologia",
+   "sinonimos": [
+    "anestesia",
+    "avaliação pré-anestésica",
+    "anestésicos locais"
+   ],
+   "especialidades": [
+    "anestesiologia",
+    "farmacologia"
+   ],
+   "disciplinas": [
+    "Farmacologia",
+    "Fisiologia",
+    "Cirurgia",
+    "Anestesiologia"
+   ],
+   "subtemas": [
+    {
+     "id": "anestesia-principios.avaliacao-pre-anestesica",
+     "nome": "Avaliação pré-anestésica"
+    },
+    {
+     "id": "anestesia-principios.anestesicos-locais",
+     "nome": "Anestésicos locais"
+    },
+    {
+     "id": "anestesia-principios.anestesia-geral",
+     "nome": "Anestesia geral"
+    },
+    {
+     "id": "anestesia-principios.bloqueios-do-neuroeixo",
+     "nome": "Bloqueios do neuroeixo"
+    }
+   ],
+   "objetivos": [
+    "Descrever os objetivos da avaliação pré-anestésica",
+    "Explicar o mecanismo de ação dos anestésicos locais"
+   ],
+   "resumo": "A avaliação pré-anestésica identifica riscos e planeja a técnica anestésica, frequentemente com o apoio da classificação ASA. Os anestésicos locais bloqueiam canais de sódio voltagem-dependentes, impedindo a condução nervosa. A anestesia geral combina hipnose, analgesia e, quando necessário, bloqueio neuromuscular."
+  },
+  {
+   "id": "puericultura",
+   "nome": "Puericultura, crescimento e desenvolvimento",
+   "sinonimos": [
+    "DNPM",
+    "desenvolvimento neuropsicomotor",
+    "crescimento infantil"
+   ],
+   "especialidades": [
+    "pediatria-geral",
+    "medicina-de-familia"
+   ],
+   "disciplinas": [
+    "Pediatria",
+    "Medicina de Família e Comunidade"
+   ],
+   "subtemas": [
+    {
+     "id": "puericultura.crescimento",
+     "nome": "Crescimento"
+    },
+    {
+     "id": "puericultura.desenvolvimento-neuropsicomotor",
+     "nome": "Desenvolvimento neuropsicomotor"
+    },
+    {
+     "id": "puericultura.consultas-de-rotina",
+     "nome": "Consultas de rotina"
+    },
+    {
+     "id": "puericultura.prevencao-de-acidentes",
+     "nome": "Prevenção de acidentes"
+    }
+   ],
+   "objetivos": [
+    "Avaliar o crescimento com curvas de referência",
+    "Identificar os marcos do desenvolvimento neuropsicomotor",
+    "Descrever o conteúdo das consultas de puericultura"
+   ],
+   "resumo": "A puericultura é o acompanhamento periódico da criança, com avaliação de crescimento, desenvolvimento, alimentação, vacinação e prevenção de agravos. O crescimento é avaliado em curvas de referência. Os marcos do desenvolvimento, como o sorriso social por volta dos 2 meses, ajudam a identificar precocemente atrasos."
+  },
+  {
+   "id": "aleitamento-materno",
+   "nome": "Aleitamento materno",
+   "sinonimos": [
+    "amamentação"
+   ],
+   "especialidades": [
+    "pediatria-geral",
+    "neonatologia",
+    "medicina-de-familia"
+   ],
+   "disciplinas": [
+    "Pediatria",
+    "Ginecologia e Obstetrícia",
+    "Medicina de Família e Comunidade"
+   ],
+   "subtemas": [
+    {
+     "id": "aleitamento-materno.recomendacoes",
+     "nome": "Recomendações"
+    },
+    {
+     "id": "aleitamento-materno.tecnica-e-manejo",
+     "nome": "Técnica e manejo"
+    },
+    {
+     "id": "aleitamento-materno.contraindicacoes",
+     "nome": "Contraindicações"
+    }
+   ],
+   "objetivos": [
+    "Descrever as recomendações de duração do aleitamento",
+    "Explicar os benefícios para a criança e a mãe"
+   ],
+   "resumo": "A OMS e o Ministério da Saúde recomendam aleitamento materno exclusivo até os 6 meses e complementado até os 2 anos ou mais. O leite materno oferece proteção imunológica, incluindo IgA secretora. As contraindicações verdadeiras são poucas."
+  },
+  {
+   "id": "imunizacoes",
+   "nome": "Imunizações",
+   "sinonimos": [
+    "vacinação",
+    "PNI",
+    "calendário vacinal"
+   ],
+   "especialidades": [
+    "pediatria-geral",
+    "saude-publica-sus",
+    "medicina-de-familia",
+    "imunologia"
+   ],
+   "disciplinas": [
+    "Imunologia",
+    "Pediatria",
+    "Saúde Coletiva",
+    "Medicina de Família e Comunidade"
+   ],
+   "subtemas": [
+    {
+     "id": "imunizacoes.calendario-vacinal",
+     "nome": "Calendário vacinal"
+    },
+    {
+     "id": "imunizacoes.tipos-de-vacinas",
+     "nome": "Tipos de vacinas"
+    },
+    {
+     "id": "imunizacoes.contraindicacoes-e-eventos-adversos",
+     "nome": "Contraindicações e eventos adversos"
+    }
+   ],
+   "objetivos": [
+    "Conhecer o calendário básico do Programa Nacional de Imunizações",
+    "Diferenciar vacinas vivas atenuadas e inativadas"
+   ],
+   "resumo": "O Programa Nacional de Imunizações define o calendário vacinal oferecido gratuitamente pelo SUS. A BCG e a primeira dose da vacina contra hepatite B são aplicadas ao nascer. Vacinas de agentes vivos atenuados têm contraindicações específicas, como em imunodeprimidos graves e gestantes."
+  },
+  {
+   "id": "bronquiolite-viral-aguda",
+   "nome": "Bronquiolite viral aguda",
+   "sinonimos": [
+    "bronquiolite",
+    "VSR"
+   ],
+   "especialidades": [
+    "pediatria-geral",
+    "pneumologia"
+   ],
+   "disciplinas": [
+    "Pediatria",
+    "Pneumologia"
+   ],
+   "subtemas": [
+    {
+     "id": "bronquiolite-viral-aguda.etiologia",
+     "nome": "Etiologia"
+    },
+    {
+     "id": "bronquiolite-viral-aguda.quadro-clinico",
+     "nome": "Quadro clínico"
+    },
+    {
+     "id": "bronquiolite-viral-aguda.manejo",
+     "nome": "Manejo"
+    }
+   ],
+   "objetivos": [
+    "Reconhecer o quadro clínico da bronquiolite no lactente",
+    "Identificar o principal agente e os fatores de risco para gravidade"
+   ],
+   "resumo": "A bronquiolite viral aguda acomete lactentes, principalmente no primeiro ano de vida, e tem o vírus sincicial respiratório como principal agente. Após pródromo de coriza, surgem taquipneia, desconforto respiratório, sibilos e crepitações. O tratamento é essencialmente de suporte."
+  },
+  {
+   "id": "laringotraqueobronquite-viral",
+   "nome": "Laringotraqueobronquite viral (crupe)",
+   "sinonimos": [
+    "crupe",
+    "laringite"
+   ],
+   "especialidades": [
+    "pediatria-geral"
+   ],
+   "disciplinas": [
+    "Pediatria"
+   ],
+   "subtemas": [
+    {
+     "id": "laringotraqueobronquite-viral.etiologia",
+     "nome": "Etiologia"
+    },
+    {
+     "id": "laringotraqueobronquite-viral.quadro-clinico",
+     "nome": "Quadro clínico"
+    },
+    {
+     "id": "laringotraqueobronquite-viral.diagnostico-diferencial",
+     "nome": "Diagnóstico diferencial"
+    }
+   ],
+   "objetivos": [
+    "Reconhecer o quadro clínico do crupe",
+    "Diferenciar crupe viral de outras causas de estridor"
+   ],
+   "resumo": "O crupe viral é causado principalmente pelo vírus parainfluenza e acomete sobretudo crianças entre 6 meses e 3 anos. Caracteriza-se por tosse ladrante, rouquidão e estridor inspiratório, frequentemente com piora noturna. Deve ser diferenciado de epiglotite, traqueíte bacteriana e corpo estranho."
+  },
+  {
+   "id": "diarreia-aguda-e-desidratacao",
+   "nome": "Diarreia aguda e desidratação",
+   "sinonimos": [
+    "TRO",
+    "terapia de reidratação oral",
+    "gastroenterite"
+   ],
+   "especialidades": [
+    "pediatria-geral",
+    "medicina-de-familia"
+   ],
+   "disciplinas": [
+    "Pediatria",
+    "Medicina de Família e Comunidade"
+   ],
+   "subtemas": [
+    {
+     "id": "diarreia-aguda-e-desidratacao.avaliacao-do-estado-de-hidratacao",
+     "nome": "Avaliação do estado de hidratação"
+    },
+    {
+     "id": "diarreia-aguda-e-desidratacao.planos-de-hidratacao",
+     "nome": "Planos de hidratação"
+    },
+    {
+     "id": "diarreia-aguda-e-desidratacao.etiologia",
+     "nome": "Etiologia"
+    }
+   ],
+   "objetivos": [
+    "Avaliar o grau de desidratação",
+    "Indicar os planos de hidratação A, B e C"
+   ],
+   "resumo": "A diarreia aguda é importante causa de morbimortalidade infantil, e a desidratação é sua principal complicação. O Ministério da Saúde classifica o estado de hidratação e orienta os planos A (sem desidratação, no domicílio), B (desidratação, com reidratação oral na unidade de saúde) e C (desidratação grave, com hidratação venosa). A terapia de reidratação oral é a base do tratamento."
+  },
+  {
+   "id": "ictericia-neonatal",
+   "nome": "Icterícia neonatal",
+   "sinonimos": [
+    "hiperbilirrubinemia neonatal",
+    "kernicterus"
+   ],
+   "especialidades": [
+    "neonatologia"
+   ],
+   "disciplinas": [
+    "Bioquímica",
+    "Pediatria"
+   ],
+   "subtemas": [
+    {
+     "id": "ictericia-neonatal.ictericia-fisiologica",
+     "nome": "Icterícia fisiológica"
+    },
+    {
+     "id": "ictericia-neonatal.ictericia-patologica",
+     "nome": "Icterícia patológica"
+    },
+    {
+     "id": "ictericia-neonatal.doenca-hemolitica",
+     "nome": "Doença hemolítica"
+    },
+    {
+     "id": "ictericia-neonatal.fototerapia",
+     "nome": "Fototerapia"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar icterícia fisiológica de patológica",
+    "Identificar as principais causas de hiperbilirrubinemia indireta"
+   ],
+   "resumo": "A icterícia é frequente no recém-nascido e, na maioria das vezes, fisiológica, surgindo após 24 horas de vida. Icterícia nas primeiras 24 horas é considerada patológica e sugere doença hemolítica. Níveis elevados de bilirrubina indireta podem causar encefalopatia bilirrubínica."
+  },
+  {
+   "id": "assistencia-ao-recem-nascido",
+   "nome": "Assistência ao recém-nascido e reanimação neonatal",
+   "sinonimos": [
+    "boletim de Apgar",
+    "reanimação neonatal"
+   ],
+   "especialidades": [
+    "neonatologia"
+   ],
+   "disciplinas": [
+    "Pediatria"
+   ],
+   "subtemas": [
+    {
+     "id": "assistencia-ao-recem-nascido.boletim-de-apgar",
+     "nome": "Boletim de Apgar"
+    },
+    {
+     "id": "assistencia-ao-recem-nascido.reanimacao-neonatal",
+     "nome": "Reanimação neonatal"
+    },
+    {
+     "id": "assistencia-ao-recem-nascido.triagem-neonatal",
+     "nome": "Triagem neonatal"
+    }
+   ],
+   "objetivos": [
+    "Calcular e interpretar o boletim de Apgar",
+    "Descrever os passos iniciais da reanimação neonatal"
+   ],
+   "resumo": "O boletim de Apgar avalia frequência cardíaca, esforço respiratório, tônus muscular, irritabilidade reflexa e cor, cada um pontuado de 0 a 2, no 1º e no 5º minuto. Não é usado para decidir o início da reanimação, que se baseia na respiração e na frequência cardíaca. A triagem neonatal inclui os testes do pezinho, do olhinho, da orelhinha e do coraçãozinho."
+  },
+  {
+   "id": "doencas-exantematicas",
+   "nome": "Doenças exantemáticas",
+   "sinonimos": [
+    "sarampo",
+    "rubéola",
+    "exantema súbito",
+    "eritema infeccioso",
+    "varicela"
+   ],
+   "especialidades": [
+    "pediatria-geral",
+    "infectologia"
+   ],
+   "disciplinas": [
+    "Pediatria",
+    "Infectologia"
+   ],
+   "subtemas": [
+    {
+     "id": "doencas-exantematicas.sarampo",
+     "nome": "Sarampo"
+    },
+    {
+     "id": "doencas-exantematicas.rubeola",
+     "nome": "Rubéola"
+    },
+    {
+     "id": "doencas-exantematicas.exantema-subito",
+     "nome": "Exantema súbito"
+    },
+    {
+     "id": "doencas-exantematicas.eritema-infeccioso",
+     "nome": "Eritema infeccioso"
+    },
+    {
+     "id": "doencas-exantematicas.varicela-e-escarlatina",
+     "nome": "Varicela e escarlatina"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar as doenças exantemáticas pelas características do exantema e pela relação com a febre",
+    "Identificar os agentes etiológicos e as complicações das principais doenças exantemáticas"
+   ],
+   "resumo": "As doenças exantemáticas da infância distinguem-se pela evolução da febre e pelas características do exantema. No exantema súbito (roséola), causado pelo herpesvírus humano 6, o exantema surge quando a febre alta cessa. O sarampo cursa com tosse, coriza, conjuntivite e manchas de Koplik antes do exantema."
+  },
+  {
+   "id": "doenca-de-kawasaki",
+   "nome": "Doença de Kawasaki",
+   "sinonimos": [
+    "síndrome linfonodo-mucocutânea"
+   ],
+   "especialidades": [
+    "pediatria-geral",
+    "reumatologia",
+    "cardiologia"
+   ],
+   "disciplinas": [
+    "Pediatria",
+    "Reumatologia",
+    "Cardiologia"
+   ],
+   "subtemas": [
+    {
+     "id": "doenca-de-kawasaki.criterios-diagnosticos",
+     "nome": "Critérios diagnósticos"
+    },
+    {
+     "id": "doenca-de-kawasaki.complicacoes",
+     "nome": "Complicações"
+    },
+    {
+     "id": "doenca-de-kawasaki.tratamento",
+     "nome": "Tratamento"
+    }
+   ],
+   "objetivos": [
+    "Reconhecer os critérios diagnósticos da doença de Kawasaki",
+    "Identificar sua principal complicação"
+   ],
+   "resumo": "A doença de Kawasaki é uma vasculite de médios vasos que acomete principalmente crianças pequenas. O diagnóstico clássico exige febre persistente associada a alterações de conjuntiva, mucosa oral, extremidades, exantema e linfonodomegalia cervical. A principal complicação é o aneurisma de artérias coronárias."
+  },
+  {
+   "id": "estenose-hipertrofica-do-piloro",
+   "nome": "Estenose hipertrófica do piloro",
+   "sinonimos": [],
+   "especialidades": [
+    "pediatria-geral",
+    "cirurgia-geral"
+   ],
+   "disciplinas": [
+    "Pediatria",
+    "Cirurgia"
+   ],
+   "subtemas": [
+    {
+     "id": "estenose-hipertrofica-do-piloro.quadro-clinico",
+     "nome": "Quadro clínico"
+    },
+    {
+     "id": "estenose-hipertrofica-do-piloro.disturbios-metabolicos",
+     "nome": "Distúrbios metabólicos"
+    },
+    {
+     "id": "estenose-hipertrofica-do-piloro.diagnostico-e-tratamento",
+     "nome": "Diagnóstico e tratamento"
+    }
+   ],
+   "objetivos": [
+    "Reconhecer o quadro clínico da estenose hipertrófica do piloro",
+    "Explicar o distúrbio metabólico associado"
+   ],
+   "resumo": "A estenose hipertrófica do piloro acomete lactentes nas primeiras semanas de vida, mais frequentemente meninos, com vômitos não biliosos em jato após as mamadas. A perda de conteúdo gástrico leva à alcalose metabólica hipoclorêmica e hipocalêmica. O diagnóstico é confirmado por ultrassonografia, e o tratamento é a piloromiotomia após correção hidroeletrolítica."
+  },
+  {
+   "id": "pre-natal",
+   "nome": "Assistência pré-natal",
+   "sinonimos": [
+    "pré-natal",
+    "idade gestacional"
+   ],
+   "especialidades": [
+    "obstetricia",
+    "medicina-de-familia"
+   ],
+   "disciplinas": [
+    "Ginecologia e Obstetrícia",
+    "Medicina de Família e Comunidade"
+   ],
+   "subtemas": [
+    {
+     "id": "pre-natal.idade-gestacional-e-datacao",
+     "nome": "Idade gestacional e datação"
+    },
+    {
+     "id": "pre-natal.exames-de-rotina",
+     "nome": "Exames de rotina"
+    },
+    {
+     "id": "pre-natal.consultas-e-calendario",
+     "nome": "Consultas e calendário"
+    }
+   ],
+   "objetivos": [
+    "Calcular a idade gestacional e a data provável do parto",
+    "Descrever os exames de rotina do pré-natal"
+   ],
+   "resumo": "O pré-natal visa prevenir, detectar e tratar precocemente intercorrências da gestação. A idade gestacional é calculada pela data da última menstruação e/ou pela ultrassonografia precoce. A gestação a termo corresponde ao período de 37 semanas a 41 semanas e 6 dias."
+  },
+  {
+   "id": "sindromes-hipertensivas-da-gestacao",
+   "nome": "Síndromes hipertensivas da gestação",
+   "sinonimos": [
+    "pré-eclâmpsia",
+    "eclâmpsia",
+    "síndrome HELLP"
+   ],
+   "especialidades": [
+    "obstetricia"
+   ],
+   "disciplinas": [
+    "Fisiologia",
+    "Farmacologia",
+    "Ginecologia e Obstetrícia"
+   ],
+   "subtemas": [
+    {
+     "id": "sindromes-hipertensivas-da-gestacao.classificacao",
+     "nome": "Classificação"
+    },
+    {
+     "id": "sindromes-hipertensivas-da-gestacao.pre-eclampsia",
+     "nome": "Pré-eclâmpsia"
+    },
+    {
+     "id": "sindromes-hipertensivas-da-gestacao.eclampsia-e-prevencao-de-convulsoes",
+     "nome": "Eclâmpsia e prevenção de convulsões"
+    },
+    {
+     "id": "sindromes-hipertensivas-da-gestacao.sindrome-hellp",
+     "nome": "Síndrome HELLP"
+    }
+   ],
+   "objetivos": [
+    "Classificar as síndromes hipertensivas da gestação",
+    "Reconhecer sinais de gravidade da pré-eclâmpsia",
+    "Identificar o fármaco de escolha para prevenir e tratar a eclâmpsia"
+   ],
+   "resumo": "A pré-eclâmpsia é a hipertensão surgida após 20 semanas de gestação associada a proteinúria ou a sinais de disfunção de órgãos-alvo. A eclâmpsia é a ocorrência de convulsões nesse contexto, e o sulfato de magnésio é o fármaco de escolha para preveni-las e tratá-las. A síndrome HELLP caracteriza-se por hemólise, elevação de enzimas hepáticas e plaquetopenia."
+  },
+  {
+   "id": "hemorragias-da-primeira-metade-da-gestacao",
+   "nome": "Hemorragias da primeira metade da gestação",
+   "sinonimos": [
+    "abortamento",
+    "gravidez ectópica",
+    "mola hidatiforme",
+    "doença trofoblástica"
+   ],
+   "especialidades": [
+    "obstetricia",
+    "ginecologia"
+   ],
+   "disciplinas": [
+    "Ginecologia e Obstetrícia"
+   ],
+   "subtemas": [
+    {
+     "id": "hemorragias-da-primeira-metade-da-gestacao.abortamento",
+     "nome": "Abortamento"
+    },
+    {
+     "id": "hemorragias-da-primeira-metade-da-gestacao.gravidez-ectopica",
+     "nome": "Gravidez ectópica"
+    },
+    {
+     "id": "hemorragias-da-primeira-metade-da-gestacao.doenca-trofoblastica-gestacional",
+     "nome": "Doença trofoblástica gestacional"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar as causas de sangramento na primeira metade da gestação",
+    "Reconhecer a gravidez ectópica rota como emergência"
+   ],
+   "resumo": "As principais causas de sangramento na primeira metade da gestação são abortamento, gravidez ectópica e doença trofoblástica gestacional. A gravidez ectópica rota com instabilidade hemodinâmica exige cirurgia imediata. A mola hidatiforme cursa com útero aumentado para a idade gestacional e β-hCG muito elevado, sendo tratada por esvaziamento uterino com seguimento seriado do β-hCG."
+  },
+  {
+   "id": "hemorragias-da-segunda-metade-da-gestacao",
+   "nome": "Hemorragias da segunda metade da gestação",
+   "sinonimos": [
+    "placenta prévia",
+    "descolamento prematuro de placenta",
+    "DPP"
+   ],
+   "especialidades": [
+    "obstetricia"
+   ],
+   "disciplinas": [
+    "Ginecologia e Obstetrícia"
+   ],
+   "subtemas": [
+    {
+     "id": "hemorragias-da-segunda-metade-da-gestacao.placenta-previa",
+     "nome": "Placenta prévia"
+    },
+    {
+     "id": "hemorragias-da-segunda-metade-da-gestacao.descolamento-prematuro-de-placenta",
+     "nome": "Descolamento prematuro de placenta"
+    },
+    {
+     "id": "hemorragias-da-segunda-metade-da-gestacao.rotura-uterina-e-vasa-previa",
+     "nome": "Rotura uterina e vasa prévia"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar placenta prévia e descolamento prematuro de placenta pelo quadro clínico",
+    "Identificar os fatores de risco das hemorragias da segunda metade da gestação"
+   ],
+   "resumo": "A placenta prévia manifesta-se por sangramento vermelho vivo, indolor e de repetição, com útero de tônus normal, e o toque vaginal deve ser evitado até a localização placentária pela ultrassonografia. O descolamento prematuro de placenta cursa com dor súbita, sangramento escuro, hipertonia uterina e sofrimento fetal, sendo a hipertensão seu principal fator de risco."
+  },
+  {
+   "id": "hemorragia-pos-parto",
+   "nome": "Hemorragia pós-parto",
+   "sinonimos": [
+    "HPP",
+    "atonia uterina"
+   ],
+   "especialidades": [
+    "obstetricia"
+   ],
+   "disciplinas": [
+    "Ginecologia e Obstetrícia"
+   ],
+   "subtemas": [
+    {
+     "id": "hemorragia-pos-parto.causas-4-ts",
+     "nome": "Causas (4 Ts)"
+    },
+    {
+     "id": "hemorragia-pos-parto.prevencao",
+     "nome": "Prevenção"
+    },
+    {
+     "id": "hemorragia-pos-parto.abordagem-inicial",
+     "nome": "Abordagem inicial"
+    }
+   ],
+   "objetivos": [
+    "Identificar as causas de hemorragia pós-parto pelos 4 Ts",
+    "Descrever as medidas de prevenção no terceiro período do parto"
+   ],
+   "resumo": "A hemorragia pós-parto é uma das principais causas de morte materna. Suas causas são resumidas pelos 4 Ts: tônus (atonia uterina, a mais comum), trauma, tecido (retenção placentária) e trombina (coagulopatias). A ocitocina após o nascimento é a principal medida de prevenção."
+  },
+  {
+   "id": "aloimunizacao-rh",
+   "nome": "Aloimunização Rh",
+   "sinonimos": [
+    "doença hemolítica perinatal",
+    "isoimunização"
+   ],
+   "especialidades": [
+    "obstetricia",
+    "neonatologia",
+    "imunologia"
+   ],
+   "disciplinas": [
+    "Imunologia",
+    "Ginecologia e Obstetrícia",
+    "Pediatria"
+   ],
+   "subtemas": [
+    {
+     "id": "aloimunizacao-rh.fisiopatologia",
+     "nome": "Fisiopatologia"
+    },
+    {
+     "id": "aloimunizacao-rh.rastreamento-com-coombs-indireto",
+     "nome": "Rastreamento com Coombs indireto"
+    },
+    {
+     "id": "aloimunizacao-rh.profilaxia-com-imunoglobulina-anti-d",
+     "nome": "Profilaxia com imunoglobulina anti-D"
+    }
+   ],
+   "objetivos": [
+    "Explicar a fisiopatologia da aloimunização Rh",
+    "Indicar a profilaxia com imunoglobulina anti-D"
+   ],
+   "resumo": "A aloimunização Rh ocorre quando uma gestante Rh negativo produz anticorpos contra hemácias fetais Rh positivo, podendo causar doença hemolítica perinatal em gestações subsequentes. O Coombs indireto rastreia a sensibilização materna. A imunoglobulina anti-D, administrada à puérpera não sensibilizada com recém-nascido Rh positivo até 72 horas após o parto, previne a aloimunização."
+  },
+  {
+   "id": "diabetes-gestacional",
+   "nome": "Diabetes mellitus gestacional",
+   "sinonimos": [
+    "DMG"
+   ],
+   "especialidades": [
+    "obstetricia",
+    "endocrinologia"
+   ],
+   "disciplinas": [
+    "Ginecologia e Obstetrícia",
+    "Endocrinologia"
+   ],
+   "subtemas": [
+    {
+     "id": "diabetes-gestacional.rastreamento-e-diagnostico",
+     "nome": "Rastreamento e diagnóstico"
+    },
+    {
+     "id": "diabetes-gestacional.complicacoes-maternas-e-fetais",
+     "nome": "Complicações maternas e fetais"
+    },
+    {
+     "id": "diabetes-gestacional.tratamento",
+     "nome": "Tratamento"
+    }
+   ],
+   "objetivos": [
+    "Descrever o rastreamento do diabetes gestacional",
+    "Relacionar a hiperglicemia materna às complicações fetais"
+   ],
+   "resumo": "O diabetes mellitus gestacional é a hiperglicemia diagnosticada pela primeira vez na gestação, sem critérios de diabetes prévio. Associa-se a macrossomia, hipoglicemia neonatal e maior risco futuro de diabetes tipo 2 na mãe. O tratamento inicial baseia-se em orientação nutricional e atividade física."
+  },
+  {
+   "id": "assistencia-ao-parto",
+   "nome": "Assistência ao trabalho de parto e parto",
+   "sinonimos": [
+    "partograma",
+    "mecanismo de parto"
+   ],
+   "especialidades": [
+    "obstetricia"
+   ],
+   "disciplinas": [
+    "Ginecologia e Obstetrícia"
+   ],
+   "subtemas": [
+    {
+     "id": "assistencia-ao-parto.fases-do-trabalho-de-parto",
+     "nome": "Fases do trabalho de parto"
+    },
+    {
+     "id": "assistencia-ao-parto.partograma",
+     "nome": "Partograma"
+    },
+    {
+     "id": "assistencia-ao-parto.mecanismo-de-parto",
+     "nome": "Mecanismo de parto"
+    },
+    {
+     "id": "assistencia-ao-parto.puerperio",
+     "nome": "Puerpério"
+    }
+   ],
+   "objetivos": [
+    "Descrever os períodos clínicos do parto",
+    "Interpretar o partograma"
+   ],
+   "resumo": "O trabalho de parto divide-se em dilatação, expulsão, dequitação e período de Greenberg. O partograma é a representação gráfica da evolução da dilatação e da descida da apresentação e auxilia a identificar distocias. O puerpério é o período de retorno do organismo materno às condições pré-gravídicas."
+  },
+  {
+   "id": "sindrome-dos-ovarios-policisticos",
+   "nome": "Síndrome dos ovários policísticos",
+   "sinonimos": [
+    "SOP",
+    "anovulação crônica"
+   ],
+   "especialidades": [
+    "ginecologia",
+    "endocrinologia"
+   ],
+   "disciplinas": [
+    "Ginecologia e Obstetrícia",
+    "Endocrinologia"
+   ],
+   "subtemas": [
+    {
+     "id": "sindrome-dos-ovarios-policisticos.criterios-diagnosticos",
+     "nome": "Critérios diagnósticos"
+    },
+    {
+     "id": "sindrome-dos-ovarios-policisticos.manifestacoes-clinicas-e-metabolicas",
+     "nome": "Manifestações clínicas e metabólicas"
+    },
+    {
+     "id": "sindrome-dos-ovarios-policisticos.tratamento",
+     "nome": "Tratamento"
+    }
+   ],
+   "objetivos": [
+    "Aplicar os critérios de Rotterdam",
+    "Relacionar a SOP à resistência insulínica e ao risco metabólico"
+   ],
+   "resumo": "A síndrome dos ovários policísticos é uma das endocrinopatias mais comuns em mulheres em idade reprodutiva. Pelos critérios de Rotterdam, o diagnóstico exige dois de três achados — oligo/anovulação, hiperandrogenismo clínico ou laboratorial e ovários policísticos à ultrassonografia — após exclusão de outras causas. Associa-se a resistência insulínica e maior risco metabólico."
+  },
+  {
+   "id": "vulvovaginites",
+   "nome": "Vulvovaginites",
+   "sinonimos": [
+    "vaginose bacteriana",
+    "candidíase vulvovaginal",
+    "tricomoníase"
+   ],
+   "especialidades": [
+    "ginecologia",
+    "infectologia"
+   ],
+   "disciplinas": [
+    "Microbiologia",
+    "Ginecologia e Obstetrícia",
+    "Medicina de Família e Comunidade"
+   ],
+   "subtemas": [
+    {
+     "id": "vulvovaginites.vaginose-bacteriana",
+     "nome": "Vaginose bacteriana"
+    },
+    {
+     "id": "vulvovaginites.candidiase-vulvovaginal",
+     "nome": "Candidíase vulvovaginal"
+    },
+    {
+     "id": "vulvovaginites.tricomoniase",
+     "nome": "Tricomoníase"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar as vulvovaginites pelas características do corrimento e pelo pH vaginal",
+    "Relacionar cada vulvovaginite ao seu tratamento de escolha"
+   ],
+   "resumo": "A vaginose bacteriana cursa com corrimento acinzentado e homogêneo, odor de peixe, pH vaginal acima de 4,5, teste das aminas positivo e clue cells, e é tratada com metronidazol. A candidíase produz corrimento branco grumoso com prurido e pH normal. A tricomoníase é uma infecção sexualmente transmissível com corrimento amarelo-esverdeado e bolhoso."
+  },
+  {
+   "id": "cancer-de-colo-uterino",
+   "nome": "Câncer do colo do útero",
+   "sinonimos": [
+    "câncer cervical",
+    "HPV",
+    "citopatológico"
+   ],
+   "especialidades": [
+    "ginecologia",
+    "oncologia",
+    "medicina-de-familia"
+   ],
+   "disciplinas": [
+    "Patologia",
+    "Ginecologia e Obstetrícia",
+    "Medicina de Família e Comunidade",
+    "Saúde Coletiva"
+   ],
+   "subtemas": [
+    {
+     "id": "cancer-de-colo-uterino.hpv-e-lesoes-precursoras",
+     "nome": "HPV e lesões precursoras"
+    },
+    {
+     "id": "cancer-de-colo-uterino.rastreamento-citopatologico",
+     "nome": "Rastreamento citopatológico"
+    },
+    {
+     "id": "cancer-de-colo-uterino.prevencao-por-vacinacao",
+     "nome": "Prevenção por vacinação"
+    }
+   ],
+   "objetivos": [
+    "Relacionar a infecção persistente pelo HPV às lesões precursoras",
+    "Descrever o rastreamento do câncer do colo do útero"
+   ],
+   "resumo": "O câncer do colo do útero está associado à infecção persistente por tipos oncogênicos do HPV. Lesões precursoras podem ser detectadas pelo rastreamento com exame citopatológico ou teste de DNA-HPV. A vacinação contra o HPV é oferecida pelo SUS como prevenção primária."
+  },
+  {
+   "id": "planejamento-familiar-e-contracepcao",
+   "nome": "Planejamento reprodutivo e contracepção",
+   "sinonimos": [
+    "anticoncepção",
+    "métodos contraceptivos"
+   ],
+   "especialidades": [
+    "ginecologia",
+    "medicina-de-familia"
+   ],
+   "disciplinas": [
+    "Farmacologia",
+    "Ginecologia e Obstetrícia",
+    "Medicina de Família e Comunidade"
+   ],
+   "subtemas": [
+    {
+     "id": "planejamento-familiar-e-contracepcao.metodos-hormonais",
+     "nome": "Métodos hormonais"
+    },
+    {
+     "id": "planejamento-familiar-e-contracepcao.dispositivo-intrauterino",
+     "nome": "Dispositivo intrauterino"
+    },
+    {
+     "id": "planejamento-familiar-e-contracepcao.metodos-de-barreira",
+     "nome": "Métodos de barreira"
+    },
+    {
+     "id": "planejamento-familiar-e-contracepcao.criterios-de-elegibilidade",
+     "nome": "Critérios de elegibilidade"
+    }
+   ],
+   "objetivos": [
+    "Comparar a eficácia dos métodos contraceptivos",
+    "Aplicar critérios de elegibilidade na escolha do método"
+   ],
+   "resumo": "O planejamento reprodutivo é direito garantido e envolve a escolha informada do método. Os métodos de longa duração, como DIU e implante, têm a maior eficácia em uso típico. Os critérios médicos de elegibilidade da OMS orientam a escolha segura conforme as condições da paciente."
+  },
+  {
+   "id": "sus-principios-e-legislacao",
+   "nome": "SUS: princípios e legislação",
+   "sinonimos": [
+    "Sistema Único de Saúde",
+    "Lei 8.080",
+    "Lei 8.142",
+    "controle social"
+   ],
+   "especialidades": [
+    "saude-publica-sus",
+    "medicina-de-familia"
+   ],
+   "disciplinas": [
+    "Saúde Coletiva",
+    "Medicina de Família e Comunidade"
+   ],
+   "subtemas": [
+    {
+     "id": "sus-principios-e-legislacao.principios-e-diretrizes",
+     "nome": "Princípios e diretrizes"
+    },
+    {
+     "id": "sus-principios-e-legislacao.lei-8-080-1990",
+     "nome": "Lei 8.080/1990"
+    },
+    {
+     "id": "sus-principios-e-legislacao.lei-8-142-1990-e-controle-social",
+     "nome": "Lei 8.142/1990 e controle social"
+    },
+    {
+     "id": "sus-principios-e-legislacao.financiamento-e-gestao",
+     "nome": "Financiamento e gestão"
+    }
+   ],
+   "objetivos": [
+    "Identificar os princípios doutrinários e organizativos do SUS",
+    "Descrever o conteúdo das Leis 8.080/1990 e 8.142/1990",
+    "Explicar as instâncias de participação social"
+   ],
+   "resumo": "O SUS foi instituído pela Constituição de 1988 e regulamentado pela Lei 8.080/1990 (Lei Orgânica da Saúde). Seus princípios doutrinários são universalidade, integralidade e equidade, e as diretrizes organizativas incluem descentralização, regionalização, hierarquização e participação da comunidade. A Lei 8.142/1990 dispõe sobre a participação da comunidade, por meio das Conferências e dos Conselhos de Saúde, e sobre as transferências de recursos."
+  },
+  {
+   "id": "atencao-primaria-a-saude",
+   "nome": "Atenção primária à saúde e Estratégia Saúde da Família",
+   "sinonimos": [
+    "APS",
+    "ESF",
+    "atenção básica"
+   ],
+   "especialidades": [
+    "medicina-de-familia",
+    "saude-publica-sus"
+   ],
+   "disciplinas": [
+    "Medicina de Família e Comunidade",
+    "Saúde Coletiva"
+   ],
+   "subtemas": [
+    {
+     "id": "atencao-primaria-a-saude.atributos-da-atencao-primaria",
+     "nome": "Atributos da atenção primária"
+    },
+    {
+     "id": "atencao-primaria-a-saude.estrategia-saude-da-familia",
+     "nome": "Estratégia Saúde da Família"
+    },
+    {
+     "id": "atencao-primaria-a-saude.redes-de-atencao",
+     "nome": "Redes de atenção"
+    }
+   ],
+   "objetivos": [
+    "Descrever os atributos da atenção primária",
+    "Explicar a organização da Estratégia Saúde da Família"
+   ],
+   "resumo": "A atenção primária é a porta de entrada preferencial do sistema de saúde, com atributos de primeiro contato, longitudinalidade, integralidade e coordenação do cuidado. No Brasil, organiza-se principalmente pela Estratégia Saúde da Família, com equipes multiprofissionais responsáveis por território adscrito. Ela ordena as redes de atenção à saúde."
+  },
+  {
+   "id": "niveis-de-prevencao-e-rastreamento",
+   "nome": "Níveis de prevenção e rastreamento",
+   "sinonimos": [
+    "prevenção quaternária",
+    "screening",
+    "sobrediagnóstico"
+   ],
+   "especialidades": [
+    "medicina-de-familia",
+    "epidemiologia"
+   ],
+   "disciplinas": [
+    "Epidemiologia",
+    "Medicina de Família e Comunidade",
+    "Saúde Coletiva"
+   ],
+   "subtemas": [
+    {
+     "id": "niveis-de-prevencao-e-rastreamento.niveis-de-prevencao",
+     "nome": "Níveis de prevenção"
+    },
+    {
+     "id": "niveis-de-prevencao-e-rastreamento.prevencao-quaternaria",
+     "nome": "Prevenção quaternária"
+    },
+    {
+     "id": "niveis-de-prevencao-e-rastreamento.criterios-para-rastreamento",
+     "nome": "Critérios para rastreamento"
+    },
+    {
+     "id": "niveis-de-prevencao-e-rastreamento.vieses-do-rastreamento",
+     "nome": "Vieses do rastreamento"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar os níveis de prevenção primária a quaternária",
+    "Aplicar os critérios que justificam um programa de rastreamento",
+    "Reconhecer os vieses na avaliação do rastreamento"
+   ],
+   "resumo": "A prevenção primária evita o surgimento da doença; a secundária promove diagnóstico e tratamento precoces; a terciária reduz sequelas; e a quaternária protege o paciente de intervenções excessivas e do sobrediagnóstico. A avaliação de programas de rastreamento está sujeita a vieses como o de tempo de antecipação (lead-time), o de duração e o de sobrediagnóstico. Por isso, a redução da mortalidade é o desfecho mais adequado para julgar sua efetividade."
+  },
+  {
+   "id": "testes-diagnosticos",
+   "nome": "Testes diagnósticos",
+   "sinonimos": [
+    "sensibilidade",
+    "especificidade",
+    "valor preditivo"
+   ],
+   "especialidades": [
+    "epidemiologia"
+   ],
+   "disciplinas": [
+    "Epidemiologia",
+    "Medicina de Família e Comunidade",
+    "Clínica Médica"
+   ],
+   "subtemas": [
+    {
+     "id": "testes-diagnosticos.sensibilidade-e-especificidade",
+     "nome": "Sensibilidade e especificidade"
+    },
+    {
+     "id": "testes-diagnosticos.valores-preditivos",
+     "nome": "Valores preditivos"
+    },
+    {
+     "id": "testes-diagnosticos.razao-de-verossimilhanca-e-curva-roc",
+     "nome": "Razão de verossimilhança e curva ROC"
+    }
+   ],
+   "objetivos": [
+    "Calcular sensibilidade, especificidade e valores preditivos a partir de uma tabela 2×2",
+    "Explicar a influência da prevalência sobre os valores preditivos"
+   ],
+   "resumo": "A sensibilidade é a proporção de doentes com teste positivo, e a especificidade, a proporção de não doentes com teste negativo. Os valores preditivos dependem da prevalência: quanto menor a prevalência, menor o valor preditivo positivo. Testes sensíveis são úteis para excluir doença, e testes específicos, para confirmá-la."
+  },
+  {
+   "id": "estudos-epidemiologicos",
+   "nome": "Desenhos de estudos epidemiológicos",
+   "sinonimos": [
+    "coorte",
+    "caso-controle",
+    "ensaio clínico",
+    "odds ratio",
+    "risco relativo",
+    "NNT"
+   ],
+   "especialidades": [
+    "epidemiologia"
+   ],
+   "disciplinas": [
+    "Epidemiologia",
+    "Saúde Coletiva",
+    "Medicina Baseada em Evidências"
+   ],
+   "subtemas": [
+    {
+     "id": "estudos-epidemiologicos.estudos-transversais",
+     "nome": "Estudos transversais"
+    },
+    {
+     "id": "estudos-epidemiologicos.estudos-de-coorte",
+     "nome": "Estudos de coorte"
+    },
+    {
+     "id": "estudos-epidemiologicos.estudos-caso-controle",
+     "nome": "Estudos caso-controle"
+    },
+    {
+     "id": "estudos-epidemiologicos.ensaios-clinicos",
+     "nome": "Ensaios clínicos"
+    },
+    {
+     "id": "estudos-epidemiologicos.medidas-de-associacao-e-de-efeito",
+     "nome": "Medidas de associação e de efeito"
+    }
+   ],
+   "objetivos": [
+    "Identificar o desenho de um estudo a partir de sua descrição",
+    "Calcular e interpretar risco relativo, odds ratio e NNT",
+    "Reconhecer vantagens e limitações de cada desenho"
+   ],
+   "resumo": "Nos estudos de coorte, expostos e não expostos são acompanhados ao longo do tempo para observar a ocorrência da doença, permitindo calcular incidência e risco relativo. Nos estudos caso-controle, parte-se de doentes e não doentes e investiga-se a exposição prévia, usando-se o odds ratio. Nos ensaios clínicos, o NNT é o inverso da redução absoluta do risco."
+  },
+  {
+   "id": "medidas-de-frequencia-e-indicadores",
+   "nome": "Medidas de frequência e indicadores de saúde",
+   "sinonimos": [
+    "incidência",
+    "prevalência",
+    "mortalidade infantil"
+   ],
+   "especialidades": [
+    "epidemiologia",
+    "saude-publica-sus"
+   ],
+   "disciplinas": [
+    "Epidemiologia",
+    "Saúde Coletiva"
+   ],
+   "subtemas": [
+    {
+     "id": "medidas-de-frequencia-e-indicadores.incidencia-e-prevalencia",
+     "nome": "Incidência e prevalência"
+    },
+    {
+     "id": "medidas-de-frequencia-e-indicadores.mortalidade-infantil",
+     "nome": "Mortalidade infantil"
+    },
+    {
+     "id": "medidas-de-frequencia-e-indicadores.outros-indicadores-de-saude",
+     "nome": "Outros indicadores de saúde"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar incidência e prevalência e relacioná-las à duração da doença",
+    "Calcular os principais coeficientes de mortalidade"
+   ],
+   "resumo": "Incidência é a ocorrência de casos novos em um período, e prevalência é a proporção de casos existentes. Em situação estável, a prevalência é aproximadamente o produto da incidência pela duração média da doença, de modo que tratamentos que prolongam a sobrevida sem curar aumentam a prevalência. O coeficiente de mortalidade infantil é o número de óbitos de menores de 1 ano por mil nascidos vivos."
+  },
+  {
+   "id": "vigilancia-em-saude",
+   "nome": "Vigilância em saúde",
+   "sinonimos": [
+    "notificação compulsória",
+    "vigilância epidemiológica"
+   ],
+   "especialidades": [
+    "epidemiologia",
+    "saude-publica-sus"
+   ],
+   "disciplinas": [
+    "Epidemiologia",
+    "Saúde Coletiva",
+    "Infectologia"
+   ],
+   "subtemas": [
+    {
+     "id": "vigilancia-em-saude.vigilancia-epidemiologica",
+     "nome": "Vigilância epidemiológica"
+    },
+    {
+     "id": "vigilancia-em-saude.notificacao-compulsoria",
+     "nome": "Notificação compulsória"
+    },
+    {
+     "id": "vigilancia-em-saude.investigacao-de-surtos",
+     "nome": "Investigação de surtos"
+    }
+   ],
+   "objetivos": [
+    "Descrever os componentes da vigilância em saúde",
+    "Identificar as situações de notificação compulsória"
+   ],
+   "resumo": "A vigilância em saúde reúne as vigilâncias epidemiológica, sanitária, ambiental e em saúde do trabalhador. A notificação compulsória de doenças e agravos é obrigação de médicos e demais profissionais de saúde. A investigação de surtos busca identificar a fonte e interromper a transmissão."
+  },
+  {
+   "id": "transtornos-do-humor",
+   "nome": "Transtornos do humor",
+   "sinonimos": [
+    "depressão",
+    "transtorno bipolar",
+    "suicídio"
+   ],
+   "especialidades": [
+    "psiquiatria",
+    "medicina-de-familia"
+   ],
+   "disciplinas": [
+    "Psiquiatria",
+    "Farmacologia",
+    "Medicina de Família e Comunidade"
+   ],
+   "subtemas": [
+    {
+     "id": "transtornos-do-humor.transtorno-depressivo-maior",
+     "nome": "Transtorno depressivo maior"
+    },
+    {
+     "id": "transtornos-do-humor.transtorno-bipolar",
+     "nome": "Transtorno bipolar"
+    },
+    {
+     "id": "transtornos-do-humor.avaliacao-do-risco-de-suicidio",
+     "nome": "Avaliação do risco de suicídio"
+    },
+    {
+     "id": "transtornos-do-humor.antidepressivos-e-estabilizadores-do-humor",
+     "nome": "Antidepressivos e estabilizadores do humor"
+    }
+   ],
+   "objetivos": [
+    "Reconhecer os critérios de episódio depressivo e maníaco",
+    "Avaliar o risco de suicídio",
+    "Descrever as classes de psicofármacos usadas"
+   ],
+   "resumo": "O transtorno depressivo maior caracteriza-se por humor deprimido e/ou anedonia persistentes, associados a outros sintomas, com prejuízo funcional. O transtorno bipolar inclui episódios maníacos ou hipomaníacos. A avaliação do risco de suicídio é parte essencial da abordagem de todo paciente com transtorno do humor."
+  },
+  {
+   "id": "transtornos-de-ansiedade",
+   "nome": "Transtornos de ansiedade",
+   "sinonimos": [
+    "ansiedade generalizada",
+    "transtorno de pânico"
+   ],
+   "especialidades": [
+    "psiquiatria",
+    "medicina-de-familia"
+   ],
+   "disciplinas": [
+    "Psiquiatria",
+    "Medicina de Família e Comunidade"
+   ],
+   "subtemas": [
+    {
+     "id": "transtornos-de-ansiedade.transtorno-de-ansiedade-generalizada",
+     "nome": "Transtorno de ansiedade generalizada"
+    },
+    {
+     "id": "transtornos-de-ansiedade.transtorno-de-panico",
+     "nome": "Transtorno de pânico"
+    },
+    {
+     "id": "transtornos-de-ansiedade.fobias",
+     "nome": "Fobias"
+    }
+   ],
+   "objetivos": [
+    "Diferenciar os principais transtornos de ansiedade",
+    "Descrever as abordagens psicoterápicas e farmacológicas"
+   ],
+   "resumo": "Os transtornos de ansiedade estão entre os transtornos mentais mais prevalentes. O transtorno de ansiedade generalizada envolve preocupação excessiva e persistente, e o transtorno de pânico, crises recorrentes e inesperadas de medo intenso. Psicoterapia e antidepressivos são as bases do tratamento."
+  },
+  {
+   "id": "esquizofrenia-e-psicoses",
+   "nome": "Esquizofrenia e transtornos psicóticos",
+   "sinonimos": [
+    "psicose",
+    "antipsicóticos"
+   ],
+   "especialidades": [
+    "psiquiatria"
+   ],
+   "disciplinas": [
+    "Psiquiatria",
+    "Farmacologia"
+   ],
+   "subtemas": [
+    {
+     "id": "esquizofrenia-e-psicoses.sintomas-positivos-e-negativos",
+     "nome": "Sintomas positivos e negativos"
+    },
+    {
+     "id": "esquizofrenia-e-psicoses.diagnostico",
+     "nome": "Diagnóstico"
+    },
+    {
+     "id": "esquizofrenia-e-psicoses.antipsicoticos",
+     "nome": "Antipsicóticos"
+    }
+   ],
+   "objetivos": [
+    "Reconhecer os sintomas positivos e negativos",
+    "Relacionar os antipsicóticos a seus efeitos adversos"
+   ],
+   "resumo": "A esquizofrenia é um transtorno psicótico crônico com sintomas positivos (delírios e alucinações), negativos (embotamento afetivo, abulia) e cognitivos. Os antipsicóticos atuam principalmente no bloqueio de receptores dopaminérgicos D2. Efeitos extrapiramidais e metabólicos estão entre seus principais efeitos adversos."
+  },
+  {
+   "id": "dependencia-quimica",
+   "nome": "Transtornos por uso de substâncias",
+   "sinonimos": [
+    "alcoolismo",
+    "tabagismo",
+    "dependência química"
+   ],
+   "especialidades": [
+    "psiquiatria",
+    "medicina-de-familia"
+   ],
+   "disciplinas": [
+    "Psiquiatria",
+    "Farmacologia",
+    "Medicina de Família e Comunidade"
+   ],
+   "subtemas": [
+    {
+     "id": "dependencia-quimica.alcool",
+     "nome": "Álcool"
+    },
+    {
+     "id": "dependencia-quimica.tabaco",
+     "nome": "Tabaco"
+    },
+    {
+     "id": "dependencia-quimica.outras-substancias",
+     "nome": "Outras substâncias"
+    },
+    {
+     "id": "dependencia-quimica.sindromes-de-abstinencia",
+     "nome": "Síndromes de abstinência"
+    }
+   ],
+   "objetivos": [
+    "Identificar critérios de uso nocivo e dependência",
+    "Reconhecer as síndromes de abstinência"
+   ],
+   "resumo": "Os transtornos por uso de substâncias envolvem padrão de uso com prejuízo e perda de controle. A abstinência alcoólica pode evoluir com convulsões e delirium tremens, e a tiamina previne a encefalopatia de Wernicke. A abordagem motivacional é útil na atenção primária."
+  },
+  {
+   "id": "codigo-de-etica-medica",
+   "nome": "Código de Ética Médica e bioética",
+   "sinonimos": [
+    "ética médica",
+    "sigilo médico",
+    "bioética"
+   ],
+   "especialidades": [
+    "etica-medica"
+   ],
+   "disciplinas": [
+    "Ética Médica",
+    "Bioética",
+    "Medicina Legal"
+   ],
+   "subtemas": [
+    {
+     "id": "codigo-de-etica-medica.sigilo-profissional",
+     "nome": "Sigilo profissional"
+    },
+    {
+     "id": "codigo-de-etica-medica.autonomia-e-consentimento",
+     "nome": "Autonomia e consentimento"
+    },
+    {
+     "id": "codigo-de-etica-medica.relacao-medico-paciente",
+     "nome": "Relação médico-paciente"
+    },
+    {
+     "id": "codigo-de-etica-medica.publicidade-e-responsabilidade",
+     "nome": "Publicidade e responsabilidade"
+    }
+   ],
+   "objetivos": [
+    "Identificar as situações em que o sigilo pode ser quebrado",
+    "Aplicar os princípios bioéticos a casos práticos"
+   ],
+   "resumo": "O Código de Ética Médica estabelece os deveres do médico, incluindo o sigilo profissional, que só pode ser quebrado por motivo justo, dever legal ou consentimento por escrito do paciente. Os princípios bioéticos de autonomia, beneficência, não maleficência e justiça orientam a tomada de decisão. O consentimento livre e esclarecido é expressão da autonomia do paciente."
+  },
+  {
+   "id": "tanatologia-e-declaracao-de-obito",
+   "nome": "Tanatologia e declaração de óbito",
+   "sinonimos": [
+    "atestado de óbito",
+    "morte encefálica"
+   ],
+   "especialidades": [
+    "medicina-legal",
+    "etica-medica",
+    "saude-publica-sus"
+   ],
+   "disciplinas": [
+    "Medicina Legal",
+    "Ética Médica",
+    "Saúde Coletiva"
+   ],
+   "subtemas": [
+    {
+     "id": "tanatologia-e-declaracao-de-obito.sinais-de-morte",
+     "nome": "Sinais de morte"
+    },
+    {
+     "id": "tanatologia-e-declaracao-de-obito.declaracao-de-obito",
+     "nome": "Declaração de óbito"
+    },
+    {
+     "id": "tanatologia-e-declaracao-de-obito.morte-encefalica",
+     "nome": "Morte encefálica"
+    }
+   ],
+   "objetivos": [
+    "Reconhecer os fenômenos cadavéricos",
+    "Preencher corretamente a declaração de óbito",
+    "Diferenciar morte natural de morte violenta quanto ao encaminhamento"
+   ],
+   "resumo": "A tanatologia estuda a morte e os fenômenos cadavéricos, como livores, rigidez e resfriamento. A declaração de óbito é documento obrigatório e fonte de dados de mortalidade; nas mortes por causas externas, deve ser emitida pelo Instituto Médico Legal. A morte encefálica é determinada por protocolo específico definido em resolução do CFM."
+  },
+  {
+   "id": "traumatologia-forense",
+   "nome": "Traumatologia forense",
+   "sinonimos": [
+    "lesões corporais",
+    "perícia médico-legal"
+   ],
+   "especialidades": [
+    "medicina-legal"
+   ],
+   "disciplinas": [
+    "Medicina Legal"
+   ],
+   "subtemas": [
+    {
+     "id": "traumatologia-forense.instrumentos-e-lesoes",
+     "nome": "Instrumentos e lesões"
+    },
+    {
+     "id": "traumatologia-forense.lesoes-corporais-no-codigo-penal",
+     "nome": "Lesões corporais no Código Penal"
+    },
+    {
+     "id": "traumatologia-forense.pericia-e-documentos-medico-legais",
+     "nome": "Perícia e documentos médico-legais"
+    }
+   ],
+   "objetivos": [
+    "Classificar as lesões conforme o instrumento",
+    "Descrever os documentos médico-legais"
+   ],
+   "resumo": "A traumatologia forense estuda as lesões produzidas por energias de ordem mecânica, física, química e outras. Os instrumentos podem ser perfurantes, cortantes, contundentes ou mistos, cada um com lesões características. O laudo pericial e o relatório médico-legal são os documentos que registram os achados."
+  }
+ ]
+}

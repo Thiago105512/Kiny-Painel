@@ -1,0 +1,1522 @@
+{
+ "fonte": "Matriz de Referência do ENEM (INEP) — organização resumida para estudo",
+ "areas": [
+  {
+   "id": "linguagens",
+   "nome": "Linguagens, Códigos e suas Tecnologias",
+   "disciplinas": [
+    {
+     "id": "portugues",
+     "nome": "Português",
+     "assuntos": [
+      {
+       "id": "enem-interpretacao-de-texto",
+       "nome": "Interpretação de texto",
+       "subassuntos": [
+        "Inferência",
+        "Tese e argumentos",
+        "Tema e ideia central",
+        "Intertextualidade",
+        "Pressupostos e subentendidos"
+       ],
+       "teoria": "Interpretar é reconstruir o sentido global do texto a partir do que está explícito e do que pode ser inferido com base nele. No ENEM, a resposta correta sempre se apoia em marcas do próprio texto; alternativas que extrapolam, reduzem ou contradizem o texto devem ser descartadas. Identificar a tese (posição defendida) e os argumentos que a sustentam é essencial nos textos opinativos."
+      },
+      {
+       "id": "enem-generos-textuais",
+       "nome": "Gêneros e tipos textuais",
+       "subassuntos": [
+        "Tipos textuais (narração, descrição, dissertação, injunção, exposição)",
+        "Gêneros textuais e suportes",
+        "Propósito comunicativo"
+       ],
+       "teoria": "Tipos textuais são modos de organização da linguagem (narrar, descrever, argumentar, expor, instruir); gêneros são formas relativamente estáveis de texto usadas em situações sociais concretas (notícia, crônica, receita, artigo de opinião). Um mesmo gênero pode combinar vários tipos. Reconhecer o gênero ajuda a identificar a finalidade, o público e o suporte do texto."
+      },
+      {
+       "id": "enem-funcoes-da-linguagem",
+       "nome": "Funções da linguagem",
+       "subassuntos": [
+        "Referencial",
+        "Emotiva",
+        "Conativa",
+        "Fática",
+        "Metalinguística",
+        "Poética"
+       ],
+       "teoria": "Segundo Roman Jakobson, cada função destaca um elemento da comunicação: referencial (contexto/informação), emotiva (emissor), conativa ou apelativa (receptor), fática (canal), metalinguística (código explicando o próprio código) e poética (a forma da mensagem). Um texto costuma ter várias funções, mas uma predomina."
+      },
+      {
+       "id": "enem-variacao-linguistica",
+       "nome": "Variação linguística",
+       "subassuntos": [
+        "Regional (diatópica)",
+        "Social (diastrática)",
+        "Situacional (diafásica)",
+        "Histórica (diacrônica)",
+        "Preconceito linguístico"
+       ],
+       "teoria": "Toda língua varia conforme a região (diatópica), o grupo social (diastrática), a situação de uso (diafásica) e o tempo (diacrônica). Não existe variedade 'errada', mas usos adequados ou inadequados a cada contexto. O ENEM valoriza o combate ao preconceito linguístico e o reconhecimento da norma-padrão como uma das variedades, exigida em situações formais."
+      },
+      {
+       "id": "enem-figuras-de-linguagem",
+       "nome": "Figuras de linguagem",
+       "subassuntos": [
+        "Metáfora",
+        "Metonímia",
+        "Comparação",
+        "Ironia",
+        "Hipérbole",
+        "Antítese e paradoxo",
+        "Personificação (prosopopeia)"
+       ],
+       "teoria": "Figuras de linguagem são recursos que exploram o sentido conotativo para produzir expressividade. A metáfora é uma comparação implícita (sem conectivo), enquanto a comparação usa 'como', 'tal qual' etc.; a metonímia substitui um termo por outro com o qual mantém relação de proximidade (autor pela obra, parte pelo todo). Ironia diz o contrário do que se pensa; hipérbole exagera."
+      },
+      {
+       "id": "enem-coesao-e-coerencia",
+       "nome": "Coesão e coerência",
+       "subassuntos": [
+        "Conectivos e relações lógicas",
+        "Referenciação (anáfora e catáfora)",
+        "Progressão textual",
+        "Coerência"
+       ],
+       "teoria": "Coesão é a ligação entre as partes do texto por meio de recursos linguísticos (pronomes, sinônimos, conjunções, elipses). Coerência é a unidade de sentido, a não contradição e a adequação ao contexto. Conectivos estabelecem relações como adição, oposição, causa, consequência, conclusão e concessão."
+      },
+      {
+       "id": "enem-sintaxe-oracoes",
+       "nome": "Sintaxe do período",
+       "subassuntos": [
+        "Termos da oração",
+        "Orações coordenadas",
+        "Orações subordinadas adverbiais",
+        "Orações subordinadas adjetivas",
+        "Orações subordinadas substantivas"
+       ],
+       "teoria": "No período composto por coordenação, as orações são sintaticamente independentes; na subordinação, uma oração exerce função sintática em relação à principal. As adverbiais expressam circunstâncias como causa, concessão ('embora'), condição, finalidade e tempo. Reconhecer o valor semântico do conectivo é mais cobrado no ENEM do que a nomenclatura."
+      },
+      {
+       "id": "enem-crase-e-regencia",
+       "nome": "Crase e regência",
+       "subassuntos": [
+        "Crase",
+        "Regência verbal",
+        "Regência nominal"
+       ],
+       "teoria": "Regência é a relação de dependência entre um termo e seu complemento, muitas vezes mediada por preposição. A crase é a fusão da preposição 'a' com o artigo feminino 'a' (ou com 'aquele', 'aquela'), marcada pelo acento grave. Por isso não há crase antes de palavras masculinas, verbos e da maioria dos pronomes."
+      },
+      {
+       "id": "enem-concordancia-e-pontuacao",
+       "nome": "Concordância e pontuação",
+       "subassuntos": [
+        "Concordância verbal",
+        "Concordância nominal",
+        "Uso da vírgula",
+        "Outros sinais de pontuação"
+       ],
+       "teoria": "Na concordância verbal, o verbo concorda em número e pessoa com o sujeito; na nominal, adjetivos, artigos e pronomes concordam em gênero e número com o substantivo. Não se separa com vírgula o sujeito do verbo nem o verbo de seus complementos. A vírgula marca, entre outros casos, termos deslocados, apostos, vocativos e orações intercaladas."
+      },
+      {
+       "id": "enem-semantica",
+       "nome": "Semântica e vocabulário",
+       "subassuntos": [
+        "Denotação e conotação",
+        "Polissemia e ambiguidade",
+        "Sinonímia e antonímia",
+        "Formação de palavras"
+       ],
+       "teoria": "Denotação é o sentido literal; conotação é o sentido figurado, dependente do contexto. Polissemia é a multiplicidade de sentidos de uma palavra, e a ambiguidade pode ser defeito ou recurso expressivo (como em anúncios e piadas). O ENEM cobra o sentido das palavras no contexto, não definições isoladas."
+      },
+      {
+       "id": "enem-textos-multimodais",
+       "nome": "Textos multimodais",
+       "subassuntos": [
+        "Charges e tirinhas",
+        "Publicidade e propaganda",
+        "Infográficos",
+        "Linguagem digital"
+       ],
+       "teoria": "Textos multimodais combinam linguagem verbal e não verbal (imagem, cor, diagramação, som). O sentido surge da relação entre esses elementos; em charges e tirinhas, o humor costuma depender de crítica social, quebra de expectativa ou ironia. Na publicidade, predominam a função conativa e estratégias de persuasão."
+      }
+     ]
+    },
+    {
+     "id": "literatura",
+     "nome": "Literatura",
+     "assuntos": [
+      {
+       "id": "enem-lit-quinhentismo-barroco-arcadismo",
+       "nome": "Quinhentismo, Barroco e Arcadismo",
+       "subassuntos": [
+        "Literatura de informação e jesuítica",
+        "Barroco (Gregório de Matos, Padre Antônio Vieira)",
+        "Arcadismo (Cláudio Manuel da Costa, Tomás Antônio Gonzaga)"
+       ],
+       "teoria": "O Quinhentismo reúne textos informativos (como a Carta de Pero Vaz de Caminha) e a literatura catequética jesuítica (José de Anchieta). O Barroco (século XVII) expressa o conflito entre fé e razão, com antíteses, paradoxos, cultismo e conceptismo. O Arcadismo (século XVIII) busca simplicidade e racionalidade, com bucolismo, pastoralismo e lemas como 'fugere urbem' e 'carpe diem'."
+      },
+      {
+       "id": "enem-lit-romantismo",
+       "nome": "Romantismo",
+       "subassuntos": [
+        "Poesia indianista e nacionalista (Gonçalves Dias)",
+        "Ultrarromantismo (Álvares de Azevedo)",
+        "Poesia social (Castro Alves)",
+        "Romance romântico (José de Alencar)"
+       ],
+       "teoria": "O Romantismo brasileiro (a partir de 1836) valoriza a subjetividade, o sentimentalismo, a natureza e a construção de uma identidade nacional após a Independência. A primeira geração é nacionalista e indianista; a segunda, ultrarromântica e marcada pelo 'mal do século'; a terceira, condoreira, com poesia social e abolicionista. José de Alencar produziu romances indianistas, urbanos, regionalistas e históricos."
+      },
+      {
+       "id": "enem-lit-realismo-naturalismo",
+       "nome": "Realismo e Naturalismo",
+       "subassuntos": [
+        "Machado de Assis",
+        "Naturalismo (Aluísio Azevedo)",
+        "Ironia e análise psicológica"
+       ],
+       "teoria": "O Realismo (a partir de 1881, com 'Memórias Póstumas de Brás Cubas') critica a sociedade burguesa com objetividade, ironia e análise psicológica; Machado de Assis é seu principal nome. O Naturalismo, influenciado pelo determinismo e pelo cientificismo, apresenta o ser humano condicionado pelo meio, pela raça e pelo momento histórico, como em 'O Cortiço', de Aluísio Azevedo."
+      },
+      {
+       "id": "enem-lit-parnasianismo-simbolismo",
+       "nome": "Parnasianismo e Simbolismo",
+       "subassuntos": [
+        "Parnasianismo (Olavo Bilac)",
+        "Simbolismo (Cruz e Sousa, Alphonsus de Guimaraens)"
+       ],
+       "teoria": "O Parnasianismo defende a 'arte pela arte', com rigor formal, rimas ricas, preferência pelo soneto e objetividade. O Simbolismo reage a esse racionalismo com musicalidade, sinestesia, misticismo e sugestão. Cruz e Sousa, com 'Missal' e 'Broquéis' (1893), marca o início do Simbolismo no Brasil."
+      },
+      {
+       "id": "enem-lit-pre-modernismo",
+       "nome": "Pré-Modernismo",
+       "subassuntos": [
+        "Euclides da Cunha (Os Sertões)",
+        "Lima Barreto",
+        "Monteiro Lobato",
+        "Augusto dos Anjos"
+       ],
+       "teoria": "O Pré-Modernismo (início do século XX) não é uma escola, mas um período de transição que revela um Brasil marginalizado: o sertão de Canudos em 'Os Sertões', de Euclides da Cunha, o subúrbio carioca de Lima Barreto e o caipira de Monteiro Lobato. Augusto dos Anjos mistura vocabulário científico e pessimismo em sua poesia."
+      },
+      {
+       "id": "enem-lit-modernismo-primeira-fase",
+       "nome": "Modernismo: Semana de 22 e primeira fase",
+       "subassuntos": [
+        "Semana de Arte Moderna de 1922",
+        "Mário de Andrade",
+        "Oswald de Andrade e a Antropofagia",
+        "Manuel Bandeira"
+       ],
+       "teoria": "A Semana de Arte Moderna (fevereiro de 1922, São Paulo) marcou a ruptura com o academicismo. A primeira fase modernista defende o verso livre, a linguagem coloquial, o humor, a paródia e a valorização crítica da cultura brasileira. O 'Manifesto Antropófago' (1928), de Oswald de Andrade, propõe 'devorar' a cultura estrangeira para produzir algo nacional; 'Macunaíma' (1928), de Mário de Andrade, é a rapsódia do 'herói sem nenhum caráter'."
+      },
+      {
+       "id": "enem-lit-romance-de-30",
+       "nome": "Romance de 30 (regionalismo)",
+       "subassuntos": [
+        "Graciliano Ramos",
+        "Rachel de Queiroz",
+        "Jorge Amado",
+        "José Lins do Rego"
+       ],
+       "teoria": "A segunda fase modernista, na prosa, produz o romance regionalista de denúncia social, centrado no Nordeste: seca, migração, coronelismo e desigualdade. Obras como 'Vidas Secas' (Graciliano Ramos), 'O Quinze' (Rachel de Queiroz) e 'Menino de Engenho' (José Lins do Rego) aliam linguagem enxuta e crítica social."
+      },
+      {
+       "id": "enem-lit-poesia-de-30-e-45",
+       "nome": "Poesia da segunda e terceira fases",
+       "subassuntos": [
+        "Carlos Drummond de Andrade",
+        "Cecília Meireles",
+        "Vinicius de Moraes",
+        "João Cabral de Melo Neto"
+       ],
+       "teoria": "A poesia de 30 amadurece as conquistas de 22, com reflexão existencial, social e religiosa, como em Drummond, Cecília Meireles e Vinicius de Moraes. João Cabral de Melo Neto, ligado à geração de 45, busca uma poesia objetiva e 'construída'; 'Morte e Vida Severina' trata do retirante nordestino."
+      },
+      {
+       "id": "enem-lit-prosa-de-45",
+       "nome": "Prosa de 45 e intimismo",
+       "subassuntos": [
+        "Guimarães Rosa",
+        "Clarice Lispector"
+       ],
+       "teoria": "Guimarães Rosa reinventa a linguagem do sertão com neologismos e reflexão universal, como em 'Grande Sertão: Veredas' (1956). Clarice Lispector explora o fluxo de consciência, a introspecção e as epifanias de personagens comuns, como em 'A Hora da Estrela' (1977)."
+      },
+      {
+       "id": "enem-lit-contemporanea",
+       "nome": "Literatura contemporânea",
+       "subassuntos": [
+        "Literatura marginal e periférica",
+        "Literatura afro-brasileira",
+        "Literatura indígena",
+        "Crônica"
+       ],
+       "teoria": "A produção contemporânea é plural e dá voz a sujeitos historicamente silenciados: autores periféricos, negros e indígenas. O ENEM cobra textos de autores como Carolina Maria de Jesus ('Quarto de Despejo'), Conceição Evaristo e Daniel Munduruku, valorizando a relação entre literatura, identidade e denúncia social. A crônica, gênero híbrido entre literatura e jornalismo, é muito frequente."
+      },
+      {
+       "id": "enem-lit-amazonense",
+       "nome": "Literatura amazonense",
+       "subassuntos": [
+        "Milton Hatoum",
+        "Márcio Souza",
+        "Thiago de Mello",
+        "Amazônia na literatura"
+       ],
+       "teoria": "A literatura produzida no Amazonas e sobre a Amazônia é cobrada nos vestibulares regionais (PSC/UFAM e SIS/UEA). Milton Hatoum, nascido em Manaus, ambienta 'Relato de um Certo Oriente' e 'Dois Irmãos' na cidade, tratando de memória, família e imigração libanesa. Thiago de Mello, poeta de Barreirinha (AM), escreveu 'Os Estatutos do Homem'; Márcio Souza satirizou o ciclo da borracha em 'Galvez, Imperador do Acre'."
+      }
+     ]
+    },
+    {
+     "id": "ingles",
+     "nome": "Inglês",
+     "assuntos": [
+      {
+       "id": "enem-ingles-estrategias-de-leitura",
+       "nome": "Estratégias de leitura em inglês",
+       "subassuntos": [
+        "Skimming (ideia geral)",
+        "Scanning (informação específica)",
+        "Inferência",
+        "Palavras-chave"
+       ],
+       "teoria": "A prova de inglês do ENEM avalia compreensão leitora, não gramática isolada. Skimming é a leitura rápida para captar a ideia geral; scanning é a busca por uma informação específica. A resposta correta deve estar apoiada no texto, mesmo quando exige inferência."
+      },
+      {
+       "id": "enem-ingles-vocabulario",
+       "nome": "Vocabulário e falsos cognatos",
+       "subassuntos": [
+        "Cognatos",
+        "Falsos cognatos",
+        "Conectivos (however, although, therefore)",
+        "Vocabulário pelo contexto"
+       ],
+       "teoria": "Cognatos são palavras parecidas com o português e de sentido semelhante; falsos cognatos se parecem mas têm outro sentido, como 'pretend' (fingir), 'actually' (na verdade) e 'push' (empurrar). Conectivos indicam a lógica do texto: 'however' introduz contraste e 'therefore', conclusão."
+      },
+      {
+       "id": "enem-ingles-generos",
+       "nome": "Gêneros textuais em inglês",
+       "subassuntos": [
+        "Notícias e reportagens",
+        "Anúncios e campanhas",
+        "Tirinhas e charges",
+        "Letras de música e poemas"
+       ],
+       "teoria": "O ENEM usa textos autênticos de diversos gêneros, frequentemente sobre temas sociais, ambientais e culturais. Identificar o gênero, o público e a finalidade ajuda a responder questões sobre propósito comunicativo. Em tirinhas e charges, o humor costuma depender da relação entre imagem e texto."
+      },
+      {
+       "id": "enem-ingles-gramatica-contextual",
+       "nome": "Gramática em contexto",
+       "subassuntos": [
+        "Tempos verbais",
+        "Verbos modais",
+        "Pronomes e referência",
+        "Graus do adjetivo"
+       ],
+       "teoria": "A gramática aparece a serviço do sentido: tempos verbais situam os fatos, modais expressam possibilidade ('may', 'might'), obrigação ('must') ou conselho ('should'). Pronomes retomam termos anteriores, e identificar a que se referem é uma habilidade frequentemente cobrada."
+      }
+     ]
+    },
+    {
+     "id": "espanhol",
+     "nome": "Espanhol",
+     "assuntos": [
+      {
+       "id": "enem-espanhol-leitura",
+       "nome": "Compreensão de textos em espanhol",
+       "subassuntos": [
+        "Ideia central",
+        "Inferência",
+        "Finalidade do texto"
+       ],
+       "teoria": "Assim como em inglês, a prova de espanhol do ENEM avalia a compreensão de textos autênticos. A proximidade com o português ajuda, mas exige atenção a palavras enganosas. A resposta deve estar fundamentada no texto."
+      },
+      {
+       "id": "enem-espanhol-falsos-amigos",
+       "nome": "Heterossemânticos e falsos amigos",
+       "subassuntos": [
+        "Heterossemânticos (falsos amigos)",
+        "Heterogenéricos",
+        "Heterotônicos"
+       ],
+       "teoria": "Heterossemânticos são palavras semelhantes ao português com significado diferente, como 'exquisito' (delicioso), 'embarazada' (grávida), 'oficina' (escritório) e 'polvo' (pó). Heterogenéricos mudam de gênero (el viaje, la leche) e heterotônicos mudam a sílaba tônica."
+      },
+      {
+       "id": "enem-espanhol-gramatica-contextual",
+       "nome": "Gramática em contexto",
+       "subassuntos": [
+        "Artigo neutro 'lo'",
+        "Uso de 'muy' e 'mucho'",
+        "Conectores (sin embargo, aunque)"
+       ],
+       "teoria": "O artigo neutro 'lo' substantiva adjetivos e expressões ('lo importante'). 'Muy' acompanha adjetivos e advérbios; 'mucho' acompanha substantivos e verbos, ou aparece isolado. Conectores como 'sin embargo' (contraste) e 'aunque' (concessão) organizam a argumentação."
+      },
+      {
+       "id": "enem-espanhol-cultura",
+       "nome": "Cultura hispânica",
+       "subassuntos": [
+        "Variedades do espanhol",
+        "Cultura hispano-americana"
+       ],
+       "teoria": "O espanhol é falado em diversos países, com variações de pronúncia, vocabulário e uso de pronomes (como o 'voseo' em países do Rio da Prata). As questões frequentemente abordam identidade latino-americana, memória histórica e diversidade cultural."
+      }
+     ]
+    },
+    {
+     "id": "artes",
+     "nome": "Artes",
+     "assuntos": [
+      {
+       "id": "enem-artes-vanguardas",
+       "nome": "Vanguardas europeias",
+       "subassuntos": [
+        "Cubismo",
+        "Expressionismo",
+        "Futurismo",
+        "Dadaísmo",
+        "Surrealismo"
+       ],
+       "teoria": "As vanguardas do início do século XX romperam com a representação acadêmica. O Cubismo fragmenta a forma em planos geométricos; o Expressionismo deforma a realidade para expressar emoções; o Futurismo exalta a máquina e a velocidade; o Dadaísmo questiona a própria arte; o Surrealismo explora o inconsciente e o sonho."
+      },
+      {
+       "id": "enem-artes-arte-brasileira",
+       "nome": "Arte no Brasil",
+       "subassuntos": [
+        "Barroco mineiro (Aleijadinho)",
+        "Modernismo nas artes visuais (Tarsila do Amaral, Anita Malfatti)",
+        "Arte afro-brasileira"
+       ],
+       "teoria": "O Barroco mineiro, com Aleijadinho, desenvolveu uma expressão própria na escultura e na arquitetura religiosa do século XVIII. No Modernismo, Anita Malfatti e Tarsila do Amaral incorporaram as vanguardas a temas brasileiros; 'Abaporu' (1928), de Tarsila, inspirou o movimento antropofágico."
+      },
+      {
+       "id": "enem-artes-contemporanea",
+       "nome": "Arte contemporânea",
+       "subassuntos": [
+        "Performance",
+        "Instalação",
+        "Arte urbana (grafite)",
+        "Arte conceitual"
+       ],
+       "teoria": "A arte contemporânea privilegia a ideia, o processo e a interação com o público, muitas vezes rompendo com o suporte tradicional. Performances, instalações e intervenções urbanas questionam os limites entre arte e vida. Hélio Oiticica e Lygia Clark são referências brasileiras da arte participativa."
+      },
+      {
+       "id": "enem-artes-patrimonio-cultural",
+       "nome": "Patrimônio e cultura popular",
+       "subassuntos": [
+        "Patrimônio material e imaterial",
+        "Arte indígena",
+        "Festival Folclórico de Parintins",
+        "Manifestações populares"
+       ],
+       "teoria": "Patrimônio material inclui bens concretos (edifícios, obras, sítios); o imaterial abrange saberes, celebrações, formas de expressão e lugares, registrados pelo IPHAN. A arte indígena integra funções rituais, sociais e estéticas. O Festival de Parintins, com a disputa entre os bois Garantido e Caprichoso, é uma das maiores manifestações culturais da Amazônia."
+      },
+      {
+       "id": "enem-artes-musica-danca-teatro",
+       "nome": "Música, dança e teatro",
+       "subassuntos": [
+        "Música popular brasileira",
+        "Dança como linguagem",
+        "Teatro"
+       ],
+       "teoria": "Música, dança e teatro são linguagens artísticas que expressam identidades e contextos históricos. O ENEM relaciona movimentos musicais (samba, bossa nova, Tropicália, rap) a transformações sociais e políticas. A dança e o teatro são analisados como práticas corporais e culturais."
+      }
+     ]
+    },
+    {
+     "id": "educacao-fisica",
+     "nome": "Educação Física",
+     "assuntos": [
+      {
+       "id": "enem-edfisica-corpo-e-saude",
+       "nome": "Corpo, saúde e qualidade de vida",
+       "subassuntos": [
+        "Atividade física e saúde",
+        "Sedentarismo",
+        "Padrões de beleza e mídia"
+       ],
+       "teoria": "A atividade física regular contribui para a prevenção de doenças crônicas e para o bem-estar físico e mental. O ENEM discute criticamente os padrões de beleza impostos pela mídia e seus riscos, como transtornos alimentares e uso de anabolizantes. Saúde é entendida de forma ampla, não apenas como ausência de doença."
+      },
+      {
+       "id": "enem-edfisica-esporte-e-sociedade",
+       "nome": "Esporte e sociedade",
+       "subassuntos": [
+        "Esporte de rendimento, escolar e de lazer",
+        "Esporte e mídia",
+        "Inclusão e esporte adaptado"
+       ],
+       "teoria": "O esporte pode ser praticado como rendimento (competição), educação ou lazer, com objetivos diferentes. A espetacularização pela mídia transforma o esporte em produto de consumo. O esporte adaptado e as práticas inclusivas ampliam o direito de todos às práticas corporais."
+      },
+      {
+       "id": "enem-edfisica-praticas-corporais",
+       "nome": "Práticas corporais e cultura",
+       "subassuntos": [
+        "Danças",
+        "Lutas e capoeira",
+        "Jogos e brincadeiras populares"
+       ],
+       "teoria": "Práticas corporais como danças, lutas, jogos e brincadeiras são expressões culturais que carregam história e identidade. A capoeira, de origem afro-brasileira, combina luta, dança e música; sua roda é patrimônio cultural imaterial reconhecido pela UNESCO (2014). Jogos populares variam conforme a região e o grupo social."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "humanas",
+   "nome": "Ciências Humanas e suas Tecnologias",
+   "disciplinas": [
+    {
+     "id": "historia",
+     "nome": "História",
+     "assuntos": [
+      {
+       "id": "enem-hist-antiguidade",
+       "nome": "Antiguidade clássica",
+       "subassuntos": [
+        "Democracia ateniense",
+        "República romana",
+        "Império romano"
+       ],
+       "teoria": "Em Atenas, a democracia (séculos V e IV a.C.) era direta, mas restrita aos cidadãos homens livres, excluindo mulheres, estrangeiros (metecos) e escravizados. Roma passou de monarquia a república, com instituições como o Senado, e depois a império. Conceitos como cidadania e república têm origem nesse período."
+      },
+      {
+       "id": "enem-hist-idade-media",
+       "nome": "Idade Média",
+       "subassuntos": [
+        "Feudalismo",
+        "Igreja medieval",
+        "Crise do século XIV"
+       ],
+       "teoria": "O feudalismo caracterizou-se pela economia agrária, pela descentralização política e por relações de suserania e vassalagem. A Igreja Católica exerceu grande poder cultural e político. A crise do século XIV (fome, Peste Negra e guerras) contribuiu para a desagregação do sistema feudal."
+      },
+      {
+       "id": "enem-hist-idade-moderna",
+       "nome": "Idade Moderna",
+       "subassuntos": [
+        "Grandes navegações",
+        "Renascimento",
+        "Reformas religiosas",
+        "Absolutismo e mercantilismo"
+       ],
+       "teoria": "A Idade Moderna marca a formação dos Estados nacionais, o absolutismo monárquico e a política econômica mercantilista (metalismo, balança comercial favorável, colonialismo). O Renascimento valorizou o humanismo e o antropocentrismo. A Reforma Protestante, iniciada por Lutero em 1517, rompeu a unidade cristã ocidental."
+      },
+      {
+       "id": "enem-hist-revolucoes",
+       "nome": "Iluminismo e revoluções burguesas",
+       "subassuntos": [
+        "Iluminismo",
+        "Revolução Industrial",
+        "Independência dos EUA",
+        "Revolução Francesa"
+       ],
+       "teoria": "O Iluminismo defendeu a razão, a liberdade e a crítica ao absolutismo (Locke, Montesquieu, Rousseau, Voltaire). A Revolução Industrial começou na Inglaterra no século XVIII, favorecida pelo acúmulo de capitais, pela disponibilidade de carvão e ferro e pela mão de obra liberada pelos cercamentos. A Revolução Francesa (1789) difundiu os ideais de liberdade, igualdade e fraternidade."
+      },
+      {
+       "id": "enem-hist-brasil-colonia",
+       "nome": "Brasil Colônia",
+       "subassuntos": [
+        "Economia açucareira",
+        "Mineração",
+        "Escravidão e resistência",
+        "Rebeliões coloniais"
+       ],
+       "teoria": "A economia colonial baseou-se no tripé latifúndio, monocultura exportadora e trabalho escravo, com destaque para o açúcar nos séculos XVI e XVII e o ouro no século XVIII. Indígenas e africanos escravizados resistiram de várias formas, como os quilombos (Palmares). Inconfidência Mineira (1789) e Conjuração Baiana (1798) são exemplos de revoltas de caráter emancipacionista."
+      },
+      {
+       "id": "enem-hist-brasil-imperio",
+       "nome": "Brasil Império",
+       "subassuntos": [
+        "Independência",
+        "Primeiro Reinado",
+        "Período Regencial e revoltas",
+        "Segundo Reinado",
+        "Abolição da escravidão"
+       ],
+       "teoria": "A Independência (1822) manteve a monarquia, a escravidão e a estrutura agrária. O Período Regencial (1831–1840) foi marcado por revoltas provinciais como a Cabanagem, a Farroupilha, a Sabinada e a Balaiada. A abolição foi gradual (Lei Eusébio de Queirós, 1850; Ventre Livre, 1871; Sexagenários, 1885) até a Lei Áurea, de 13 de maio de 1888, sem políticas de integração dos libertos."
+      },
+      {
+       "id": "enem-hist-primeira-republica",
+       "nome": "Primeira República",
+       "subassuntos": [
+        "Proclamação da República",
+        "Coronelismo e política dos governadores",
+        "Revoltas (Canudos, Contestado, Vacina, Chibata)",
+        "Tenentismo"
+       ],
+       "teoria": "A Primeira República (1889–1930) foi dominada pelas oligarquias, com a política do 'café com leite' entre São Paulo e Minas Gerais e o coronelismo baseado no voto de cabresto. Houve revoltas sociais no campo (Canudos, Contestado) e na cidade (Revolta da Vacina, Revolta da Chibata). O tenentismo contestou o sistema nos anos 1920."
+      },
+      {
+       "id": "enem-hist-era-vargas",
+       "nome": "Era Vargas",
+       "subassuntos": [
+        "Revolução de 1930",
+        "Governo Constitucional",
+        "Estado Novo",
+        "Legislação trabalhista"
+       ],
+       "teoria": "Getúlio Vargas chegou ao poder com a Revolução de 1930, que encerrou a Primeira República. O Estado Novo (1937–1945) foi uma ditadura com censura (DIP) e centralização política. Vargas combinou repressão e concessões aos trabalhadores, como a Consolidação das Leis do Trabalho (CLT, 1943), reunindo a legislação trabalhista existente, com controle estatal dos sindicatos."
+      },
+      {
+       "id": "enem-hist-republica-1946-1964",
+       "nome": "República de 1946 a 1964",
+       "subassuntos": [
+        "Populismo",
+        "Nacional-desenvolvimentismo (JK)",
+        "Crise de 1964"
+       ],
+       "teoria": "O período democrático de 1946 a 1964 foi marcado pelo populismo e pelo nacional-desenvolvimentismo. Juscelino Kubitschek implementou o Plano de Metas e construiu Brasília (inaugurada em 1960). O governo João Goulart e as propostas de reformas de base geraram forte polarização, que culminou no golpe de 1964."
+      },
+      {
+       "id": "enem-hist-ditadura-militar",
+       "nome": "Ditadura militar",
+       "subassuntos": [
+        "Golpe de 1964",
+        "Atos Institucionais",
+        "Milagre econômico",
+        "Redemocratização"
+       ],
+       "teoria": "A ditadura militar (1964–1985) governou por meio de Atos Institucionais; o AI-5 (1968) fechou o Congresso, suspendeu o habeas corpus para crimes políticos e intensificou a censura e a repressão. O 'milagre econômico' (1968–1973) trouxe crescimento com concentração de renda e endividamento. A abertura 'lenta, gradual e segura' incluiu a Lei da Anistia (1979) e as Diretas Já (1984)."
+      },
+      {
+       "id": "enem-hist-nova-republica",
+       "nome": "Nova República",
+       "subassuntos": [
+        "Constituição de 1988",
+        "Planos econômicos e Plano Real",
+        "Cidadania e direitos"
+       ],
+       "teoria": "A Constituição de 1988, chamada de 'Constituição Cidadã', ampliou direitos sociais e políticos e criou instrumentos de participação. O período enfrentou hiperinflação até o Plano Real (1994). Temas de cidadania, direitos humanos e movimentos sociais são frequentes no ENEM."
+      },
+      {
+       "id": "enem-hist-seculo-xx",
+       "nome": "Guerras mundiais e totalitarismos",
+       "subassuntos": [
+        "Primeira Guerra Mundial",
+        "Revolução Russa",
+        "Crise de 1929",
+        "Nazifascismo",
+        "Segunda Guerra Mundial"
+       ],
+       "teoria": "A Primeira Guerra (1914–1918) resultou de rivalidades imperialistas e nacionalistas. A crise de 1929 e o ressentimento do pós-guerra favoreceram regimes totalitários como o fascismo italiano e o nazismo alemão, caracterizados por partido único, culto ao líder, propaganda e perseguição a minorias. A Segunda Guerra (1939–1945) terminou com a derrota do Eixo e o Holocausto como marco da violação de direitos humanos."
+      },
+      {
+       "id": "enem-hist-guerra-fria",
+       "nome": "Guerra Fria e mundo contemporâneo",
+       "subassuntos": [
+        "Bipolaridade",
+        "Descolonização afro-asiática",
+        "Queda do Muro de Berlim",
+        "Fim da URSS e nova ordem mundial"
+       ],
+       "teoria": "A Guerra Fria (1947–1991) opôs o bloco capitalista, liderado pelos EUA, ao socialista, liderado pela URSS, em disputas ideológicas, armamentistas e por áreas de influência, sem confronto direto entre as potências. A queda do Muro de Berlim (1989) simbolizou o fim da bipolaridade, consolidado com a dissolução da URSS em 1991."
+      },
+      {
+       "id": "enem-hist-amazonas",
+       "nome": "História do Amazonas e da Amazônia",
+       "subassuntos": [
+        "Povos indígenas e ocupação colonial",
+        "Missões religiosas e Diretório dos Índios",
+        "Cabanagem",
+        "Ciclo da borracha e Belle Époque manauara",
+        "Zona Franca de Manaus"
+       ],
+       "teoria": "A ocupação colonial da Amazônia envolveu fortificações, missões religiosas e exploração das 'drogas do sertão' com mão de obra indígena. A Cabanagem (1835–1840), no Grão-Pará, que então incluía o atual Amazonas, foi uma revolta com ampla participação popular. O ciclo da borracha (fim do século XIX e início do XX) trouxe riqueza e modernização a Manaus, simbolizada pelo Teatro Amazonas (1896), baseada na exploração dos seringueiros; a Zona Franca de Manaus, reformulada em 1967, buscou desenvolver e integrar a região por meio de incentivos fiscais."
+      }
+     ]
+    },
+    {
+     "id": "geografia",
+     "nome": "Geografia",
+     "assuntos": [
+      {
+       "id": "enem-geo-cartografia",
+       "nome": "Cartografia",
+       "subassuntos": [
+        "Escalas",
+        "Coordenadas geográficas",
+        "Fusos horários",
+        "Projeções cartográficas"
+       ],
+       "teoria": "Escala é a relação entre a medida no mapa e a medida real: em 1:250.000, 1 cm no mapa corresponde a 2,5 km. Latitude mede a distância angular em relação ao Equador e longitude, em relação ao Meridiano de Greenwich. Cada fuso horário teórico corresponde a 15° de longitude; a leste as horas estão adiantadas e a oeste, atrasadas."
+      },
+      {
+       "id": "enem-geo-geologia-relevo",
+       "nome": "Geologia, relevo e solos",
+       "subassuntos": [
+        "Tectônica de placas",
+        "Estrutura geológica do Brasil",
+        "Formas de relevo",
+        "Solos e erosão"
+       ],
+       "teoria": "A crosta terrestre é dividida em placas tectônicas; terremotos e vulcões concentram-se em suas bordas. O Brasil está no interior da Placa Sul-Americana, sobre estruturas antigas (escudos cristalinos e bacias sedimentares), por isso tem baixa atividade sísmica e não possui vulcões ativos. O relevo brasileiro é classificado em planaltos, planícies e depressões."
+      },
+      {
+       "id": "enem-geo-clima",
+       "nome": "Clima",
+       "subassuntos": [
+        "Fatores e elementos do clima",
+        "Climas do Brasil",
+        "Massas de ar",
+        "Fenômenos El Niño e La Niña"
+       ],
+       "teoria": "Clima é o comportamento médio da atmosfera ao longo de décadas; tempo é o estado momentâneo. Latitude, altitude, maritimidade, massas de ar e correntes marítimas influenciam o clima. No Brasil predominam climas tropicais; o equatorial, quente e úmido o ano todo, ocorre na Amazônia; o semiárido, no interior do Nordeste."
+      },
+      {
+       "id": "enem-geo-hidrografia",
+       "nome": "Hidrografia",
+       "subassuntos": [
+        "Bacias hidrográficas brasileiras",
+        "Aquíferos",
+        "Uso e crise da água"
+       ],
+       "teoria": "O Brasil possui grande disponibilidade de água doce, mas distribuída de forma desigual em relação à população. A Bacia Amazônica é a maior do mundo em área e volume de água. Aquíferos como o Guarani e o Alter do Chão são reservas subterrâneas importantes; a gestão da água envolve conflitos entre abastecimento, agricultura, indústria e energia."
+      },
+      {
+       "id": "enem-geo-biomas",
+       "nome": "Biomas e domínios morfoclimáticos",
+       "subassuntos": [
+        "Biomas brasileiros",
+        "Domínios morfoclimáticos (Aziz Ab'Sáber)",
+        "Desmatamento e conservação"
+       ],
+       "teoria": "O Brasil possui seis biomas continentais: Amazônia, Cerrado, Mata Atlântica, Caatinga, Pampa e Pantanal. Aziz Ab'Sáber classificou os domínios morfoclimáticos integrando clima, relevo, vegetação e solos. A Mata Atlântica é o bioma mais devastado historicamente, e o Cerrado e a Amazônia sofrem forte pressão da fronteira agropecuária."
+      },
+      {
+       "id": "enem-geo-populacao",
+       "nome": "População",
+       "subassuntos": [
+        "Transição demográfica",
+        "Pirâmides etárias",
+        "Migrações",
+        "Indicadores sociais"
+       ],
+       "teoria": "A transição demográfica é a passagem de altas para baixas taxas de natalidade e mortalidade. No Brasil, a queda da fecundidade e o aumento da expectativa de vida estreitam a base e alargam o topo da pirâmide etária, indicando envelhecimento populacional. Isso traz desafios à previdência e à saúde."
+      },
+      {
+       "id": "enem-geo-urbanizacao",
+       "nome": "Urbanização",
+       "subassuntos": [
+        "Conurbação e metropolização",
+        "Rede e hierarquia urbana",
+        "Problemas urbanos",
+        "Segregação socioespacial"
+       ],
+       "teoria": "A urbanização brasileira foi rápida e concentrada a partir da segunda metade do século XX, associada ao êxodo rural e à industrialização. Conurbação é a junção física de cidades vizinhas formando uma mancha urbana contínua. O crescimento sem planejamento gerou favelização, segregação socioespacial, problemas de mobilidade e de saneamento."
+      },
+      {
+       "id": "enem-geo-espaco-agrario",
+       "nome": "Espaço agrário",
+       "subassuntos": [
+        "Agronegócio e modernização do campo",
+        "Estrutura fundiária",
+        "Conflitos no campo e reforma agrária"
+       ],
+       "teoria": "A modernização da agricultura brasileira (mecanização, insumos químicos, biotecnologia) aumentou a produtividade, mas manteve a concentração fundiária. O agronegócio é voltado sobretudo à exportação de commodities, enquanto a agricultura familiar tem grande importância no abastecimento interno. A concentração de terras está na origem de conflitos e de movimentos pela reforma agrária."
+      },
+      {
+       "id": "enem-geo-industria-energia",
+       "nome": "Indústria e energia",
+       "subassuntos": [
+        "Industrialização brasileira",
+        "Matriz energética",
+        "Matriz elétrica",
+        "Fontes renováveis e não renováveis"
+       ],
+       "teoria": "A matriz elétrica brasileira é predominantemente renovável, com maior participação da hidreletricidade, seguida pelo crescimento das fontes eólica e solar. A matriz energética (que inclui transportes e indústria) ainda depende bastante do petróleo. Hidrelétricas geram energia renovável, mas causam impactos socioambientais, como alagamentos e deslocamento de populações."
+      },
+      {
+       "id": "enem-geo-globalizacao",
+       "nome": "Globalização e geopolítica",
+       "subassuntos": [
+        "Globalização",
+        "Blocos econômicos",
+        "Divisão internacional do trabalho",
+        "Conflitos contemporâneos"
+       ],
+       "teoria": "A globalização intensificou fluxos de mercadorias, capitais, informações e pessoas, apoiada nas tecnologias de transporte e comunicação. Blocos econômicos como o Mercosul e a União Europeia buscam integração comercial. A divisão internacional do trabalho mantém desigualdades entre países centrais e periféricos."
+      },
+      {
+       "id": "enem-geo-questoes-ambientais",
+       "nome": "Questões ambientais",
+       "subassuntos": [
+        "Efeito estufa e aquecimento global",
+        "Conferências e acordos ambientais",
+        "Poluição e resíduos",
+        "Desenvolvimento sustentável"
+       ],
+       "teoria": "O efeito estufa é um fenômeno natural, intensificado pela emissão humana de gases como o CO₂ e o metano, o que provoca o aquecimento global. Marcos internacionais incluem a Rio-92, o Protocolo de Kyoto (1997) e o Acordo de Paris (2015). Desenvolvimento sustentável é aquele que atende às necessidades atuais sem comprometer as das futuras gerações."
+      },
+      {
+       "id": "enem-geo-amazonas",
+       "nome": "Geografia do Amazonas e da Amazônia",
+       "subassuntos": [
+        "Encontro das Águas",
+        "Várzea e terra firme",
+        "Regime de cheias e vazantes",
+        "Rios voadores",
+        "Transporte fluvial",
+        "Zona Franca e economia regional"
+       ],
+       "teoria": "O Amazonas é o maior estado brasileiro em área e tem nos rios seus principais caminhos. O Encontro das Águas, perto de Manaus, reúne o Rio Negro (águas escuras) e o Rio Solimões (águas barrentas), que correm lado a lado sem se misturar por vários quilômetros devido a diferenças de temperatura, velocidade e densidade. As várzeas são inundadas periodicamente e fertilizadas por sedimentos, enquanto a terra firme não alaga; os 'rios voadores' transportam umidade da Amazônia para outras regiões do país."
+      }
+     ]
+    },
+    {
+     "id": "filosofia",
+     "nome": "Filosofia",
+     "assuntos": [
+      {
+       "id": "enem-filo-pre-socraticos",
+       "nome": "Pré-socráticos",
+       "subassuntos": [
+        "Busca da arché",
+        "Heráclito e o devir",
+        "Parmênides e o ser"
+       ],
+       "teoria": "Os pré-socráticos inauguraram a explicação racional da natureza (physis), buscando o princípio originário de todas as coisas (arché): a água para Tales, o ar para Anaxímenes. Heráclito afirmou o devir (tudo flui), e Parmênides, a permanência do ser. Marcam a passagem do mito ao logos."
+      },
+      {
+       "id": "enem-filo-socrates-platao",
+       "nome": "Sócrates e Platão",
+       "subassuntos": [
+        "Método socrático",
+        "Teoria das Ideias",
+        "Alegoria da Caverna"
+       ],
+       "teoria": "Sócrates praticava a ironia e a maiêutica, levando o interlocutor a reconhecer a própria ignorância ('só sei que nada sei'). Platão distinguiu o mundo sensível, das aparências, do mundo inteligível, das Ideias. Na Alegoria da Caverna, os prisioneiros que veem sombras representam quem vive preso às aparências e ao senso comum; a saída da caverna simboliza o caminho até o conhecimento."
+      },
+      {
+       "id": "enem-filo-aristoteles",
+       "nome": "Aristóteles",
+       "subassuntos": [
+        "Ética das virtudes e justa medida",
+        "Política (o homem como animal político)",
+        "Lógica"
+       ],
+       "teoria": "Para Aristóteles, a finalidade da vida humana é a felicidade (eudaimonia), alcançada pela prática das virtudes. A virtude moral é um hábito e consiste na justa medida entre dois extremos viciosos (a coragem entre a covardia e a temeridade). O ser humano é um 'animal político', que se realiza na vida em comunidade (pólis)."
+      },
+      {
+       "id": "enem-filo-medieval",
+       "nome": "Filosofia medieval",
+       "subassuntos": [
+        "Santo Agostinho",
+        "São Tomás de Aquino",
+        "Fé e razão"
+       ],
+       "teoria": "A filosofia medieval buscou conciliar fé cristã e razão filosófica. Santo Agostinho, influenciado por Platão, tratou do livre-arbítrio e da iluminação divina. São Tomás de Aquino, apoiado em Aristóteles, formulou as cinco vias para demonstrar racionalmente a existência de Deus."
+      },
+      {
+       "id": "enem-filo-moderna",
+       "nome": "Filosofia moderna e teoria do conhecimento",
+       "subassuntos": [
+        "Racionalismo (Descartes)",
+        "Empirismo (Locke e Hume)",
+        "Criticismo kantiano"
+       ],
+       "teoria": "O racionalismo de Descartes parte da dúvida metódica até a certeza do 'penso, logo existo' (cogito) e valoriza as ideias inatas. O empirismo de Locke e Hume sustenta que o conhecimento vem da experiência; Locke comparou a mente a uma 'tábula rasa'. Kant buscou superar essa oposição, afirmando que o conhecimento resulta da experiência organizada pelas estruturas do sujeito."
+      },
+      {
+       "id": "enem-filo-politica",
+       "nome": "Filosofia política",
+       "subassuntos": [
+        "Maquiavel",
+        "Hobbes",
+        "Locke",
+        "Rousseau",
+        "Montesquieu"
+       ],
+       "teoria": "Maquiavel separou a política da moral cristã, analisando como o governante conquista e mantém o poder. Os contratualistas explicam o Estado por um pacto: para Hobbes, o estado de natureza é uma guerra de todos contra todos e exige um soberano forte; Locke defende direitos naturais (vida, liberdade, propriedade); Rousseau, a soberania da vontade geral. Montesquieu propôs a separação dos poderes."
+      },
+      {
+       "id": "enem-filo-etica",
+       "nome": "Ética",
+       "subassuntos": [
+        "Imperativo categórico (Kant)",
+        "Utilitarismo",
+        "Ética e liberdade"
+       ],
+       "teoria": "Kant fundamenta a moral no dever e na razão: o imperativo categórico manda agir apenas segundo uma máxima que se possa querer como lei universal e tratar a humanidade sempre como fim, nunca apenas como meio. O utilitarismo (Bentham, Stuart Mill) avalia as ações por suas consequências, buscando a maior felicidade para o maior número."
+      },
+      {
+       "id": "enem-filo-contemporanea",
+       "nome": "Filosofia contemporânea",
+       "subassuntos": [
+        "Nietzsche",
+        "Existencialismo (Sartre)",
+        "Escola de Frankfurt",
+        "Hannah Arendt"
+       ],
+       "teoria": "Nietzsche criticou a moral tradicional e anunciou a 'morte de Deus'. Para Sartre, 'a existência precede a essência': o ser humano está condenado a ser livre e é responsável por suas escolhas. A Escola de Frankfurt (Adorno, Horkheimer) criticou a indústria cultural, e Hannah Arendt analisou o totalitarismo e a 'banalidade do mal'."
+      }
+     ]
+    },
+    {
+     "id": "sociologia",
+     "nome": "Sociologia",
+     "assuntos": [
+      {
+       "id": "enem-socio-durkheim",
+       "nome": "Émile Durkheim",
+       "subassuntos": [
+        "Fato social",
+        "Solidariedade mecânica e orgânica",
+        "Anomia"
+       ],
+       "teoria": "Para Durkheim, a sociologia estuda fatos sociais: maneiras de agir, pensar e sentir exteriores ao indivíduo, gerais e coercitivas. Sociedades simples têm solidariedade mecânica (baseada na semelhança); sociedades complexas, solidariedade orgânica (baseada na divisão do trabalho). Anomia é o enfraquecimento das normas que orientam a conduta."
+      },
+      {
+       "id": "enem-socio-weber",
+       "nome": "Max Weber",
+       "subassuntos": [
+        "Ação social",
+        "Tipos de dominação legítima",
+        "Burocracia e racionalização"
+       ],
+       "teoria": "Weber estuda a ação social, orientada pelo sentido que os indivíduos atribuem a ela. Ele identifica três tipos puros de dominação legítima: tradicional, carismática e racional-legal, esta baseada em regras impessoais, típica da burocracia. Em 'A Ética Protestante e o Espírito do Capitalismo', relaciona valores religiosos ao desenvolvimento do capitalismo."
+      },
+      {
+       "id": "enem-socio-marx",
+       "nome": "Karl Marx",
+       "subassuntos": [
+        "Luta de classes",
+        "Mais-valia",
+        "Alienação",
+        "Materialismo histórico"
+       ],
+       "teoria": "Para Marx, a história é marcada pela luta de classes, e no capitalismo a burguesia detém os meios de produção enquanto o proletariado vende sua força de trabalho. A mais-valia é a diferença entre o valor produzido pelo trabalhador e o salário que recebe, apropriada pelo capitalista. Alienação é o estranhamento do trabalhador em relação ao produto e ao processo de seu trabalho."
+      },
+      {
+       "id": "enem-socio-cultura",
+       "nome": "Cultura e diversidade",
+       "subassuntos": [
+        "Etnocentrismo",
+        "Relativismo cultural",
+        "Indústria cultural",
+        "Identidade e diversidade"
+       ],
+       "teoria": "Cultura é o conjunto de saberes, crenças, valores e práticas compartilhados por um grupo. Etnocentrismo é julgar outras culturas a partir dos valores da própria, considerando-a superior; o relativismo cultural propõe compreender cada cultura em seus próprios termos. A indústria cultural transforma a cultura em mercadoria padronizada."
+      },
+      {
+       "id": "enem-socio-trabalho",
+       "nome": "Mundo do trabalho",
+       "subassuntos": [
+        "Taylorismo e fordismo",
+        "Toyotismo",
+        "Precarização e informalidade"
+       ],
+       "teoria": "O taylorismo racionalizou o trabalho com controle de tempos e movimentos; o fordismo introduziu a linha de montagem e a produção em massa. O toyotismo trouxe produção flexível, 'just in time' e trabalhador multifuncional. Transformações recentes incluem terceirização, informalidade e trabalho por plataformas digitais."
+      },
+      {
+       "id": "enem-socio-cidadania",
+       "nome": "Cidadania, Estado e movimentos sociais",
+       "subassuntos": [
+        "Cidadania e direitos",
+        "Democracia",
+        "Movimentos sociais"
+       ],
+       "teoria": "Cidadania envolve direitos civis, políticos e sociais e a participação na vida pública. Movimentos sociais são ações coletivas que reivindicam direitos e transformações, como os movimentos negro, feminista, indígena e ambiental. A democracia pressupõe participação, pluralismo e respeito aos direitos fundamentais."
+      },
+      {
+       "id": "enem-socio-desigualdade",
+       "nome": "Desigualdades sociais",
+       "subassuntos": [
+        "Estratificação social",
+        "Racismo",
+        "Desigualdade de gênero"
+       ],
+       "teoria": "Estratificação é a divisão da sociedade em camadas com acesso desigual a recursos, prestígio e poder. No Brasil, as desigualdades de renda articulam-se com as de raça e gênero, herança de um passado escravista e patriarcal. O racismo estrutural refere-se à desigualdade racial reproduzida pelas próprias instituições e práticas sociais."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "natureza",
+   "nome": "Ciências da Natureza e suas Tecnologias",
+   "disciplinas": [
+    {
+     "id": "biologia",
+     "nome": "Biologia",
+     "assuntos": [
+      {
+       "id": "enem-bio-citologia",
+       "nome": "Citologia",
+       "subassuntos": [
+        "Membrana plasmática e transporte",
+        "Organelas celulares",
+        "Divisão celular (mitose e meiose)"
+       ],
+       "teoria": "A célula é a unidade básica dos seres vivos; procariontes não têm núcleo organizado, eucariontes têm. A membrana plasmática controla a entrada e saída de substâncias por transporte passivo (difusão, osmose) ou ativo. A mitose gera células idênticas (crescimento e reparo), e a meiose gera gametas com metade do número de cromossomos."
+      },
+      {
+       "id": "enem-bio-bioenergetica",
+       "nome": "Bioenergética",
+       "subassuntos": [
+        "Respiração celular aeróbica",
+        "Fotossíntese",
+        "Fermentação"
+       ],
+       "teoria": "Na respiração aeróbica, a glicose é oxidada com uso de O₂, gerando CO₂, água e ATP; a maior parte do ATP é produzida na mitocôndria. A fotossíntese, nos cloroplastos, usa luz, CO₂ e água para produzir glicose, e o O₂ liberado vem da quebra (fotólise) da água. A fermentação produz pouco ATP sem uso de oxigênio, gerando etanol ou ácido lático."
+      },
+      {
+       "id": "enem-bio-genetica",
+       "nome": "Genética",
+       "subassuntos": [
+        "Primeira Lei de Mendel",
+        "Grupos sanguíneos (ABO e Rh)",
+        "Heredogramas",
+        "DNA e biotecnologia"
+       ],
+       "teoria": "A Primeira Lei de Mendel afirma que cada característica é determinada por um par de fatores (alelos) que se separam na formação dos gametas; o cruzamento Aa × Aa gera proporção fenotípica 3:1 com dominância completa. No sistema ABO, os alelos IA e IB são codominantes e dominantes sobre i. Biotecnologias como transgenia e testes de DNA aparecem com frequência."
+      },
+      {
+       "id": "enem-bio-evolucao",
+       "nome": "Evolução",
+       "subassuntos": [
+        "Lamarckismo",
+        "Darwinismo e seleção natural",
+        "Neodarwinismo",
+        "Especiação"
+       ],
+       "teoria": "Lamarck propôs o uso e desuso e a herança de caracteres adquiridos, ideia não aceita atualmente. Darwin explicou a evolução pela seleção natural: entre indivíduos que variam, os mais adaptados ao ambiente sobrevivem e se reproduzem mais. A resistência bacteriana a antibióticos é exemplo de seleção de variantes preexistentes, não de adaptação provocada pelo remédio."
+      },
+      {
+       "id": "enem-bio-ecologia",
+       "nome": "Ecologia",
+       "subassuntos": [
+        "Cadeias e teias alimentares",
+        "Pirâmides ecológicas",
+        "Relações ecológicas",
+        "Ciclos biogeoquímicos",
+        "Sucessão ecológica"
+       ],
+       "teoria": "A energia flui em sentido único ao longo das cadeias alimentares e diminui a cada nível trófico, pois parte é perdida como calor; por isso a pirâmide de energia nunca é invertida. Relações ecológicas podem ser harmônicas (mutualismo, como nos liquens; comensalismo) ou desarmônicas (predação, parasitismo, competição). A matéria circula nos ciclos biogeoquímicos, como os do carbono e do nitrogênio."
+      },
+      {
+       "id": "enem-bio-microbiologia",
+       "nome": "Vírus, bactérias e fungos",
+       "subassuntos": [
+        "Vírus",
+        "Bactérias",
+        "Fungos",
+        "Antibióticos"
+       ],
+       "teoria": "Vírus são acelulares e só se reproduzem dentro de células hospedeiras. Bactérias são procariontes unicelulares; antibióticos atuam sobre estruturas ou processos bacterianos e, por isso, não têm efeito sobre vírus, como os da gripe. Fungos são eucariontes heterotróficos que atuam como decompositores e em associações como liquens e micorrizas."
+      },
+      {
+       "id": "enem-bio-parasitologia",
+       "nome": "Doenças e parasitoses",
+       "subassuntos": [
+        "Malária",
+        "Arboviroses (dengue, zika, chikungunya)",
+        "Doença de Chagas",
+        "Verminoses"
+       ],
+       "teoria": "Muitas doenças do ENEM envolvem agente causador, vetor e forma de prevenção. A malária é causada por protozoários do gênero Plasmodium e transmitida pela picada da fêmea do mosquito Anopheles, sendo endêmica na Amazônia. Dengue, zika e chikungunya são viroses transmitidas pelo Aedes aegypti; saneamento básico previne várias verminoses."
+      },
+      {
+       "id": "enem-bio-imunologia",
+       "nome": "Imunologia",
+       "subassuntos": [
+        "Vacinas (imunização ativa)",
+        "Soros (imunização passiva)",
+        "Anticorpos e memória imunológica"
+       ],
+       "teoria": "Na imunização ativa (vacina), o organismo recebe antígenos e produz seus próprios anticorpos e células de memória, com proteção duradoura. Na imunização passiva (soro, como o antiofídico), recebe anticorpos prontos, com ação imediata e temporária. A vacinação em massa gera proteção coletiva."
+      },
+      {
+       "id": "enem-bio-fisiologia-humana",
+       "nome": "Fisiologia humana",
+       "subassuntos": [
+        "Sistema digestório",
+        "Sistema circulatório",
+        "Sistema nervoso",
+        "Sistema endócrino"
+       ],
+       "teoria": "Os sistemas do corpo humano atuam de forma integrada para manter a homeostase. O ENEM costuma relacionar fisiologia a saúde: alimentação e nutrientes, pressão arterial, efeitos de drogas no sistema nervoso e regulação hormonal, como a da glicemia pela insulina."
+      },
+      {
+       "id": "enem-bio-botanica-zoologia",
+       "nome": "Botânica e zoologia",
+       "subassuntos": [
+        "Grupos vegetais",
+        "Transporte de seiva",
+        "Características dos grupos animais"
+       ],
+       "teoria": "Os vegetais se dividem em briófitas, pteridófitas, gimnospermas e angiospermas; só as angiospermas têm flores e frutos. O xilema conduz a seiva bruta (água e sais) e o floema, a seiva elaborada (açúcares). Na zoologia, cobram-se adaptações dos grupos animais ao ambiente."
+      },
+      {
+       "id": "enem-bio-ecossistemas-amazonicos",
+       "nome": "Ecossistemas amazônicos",
+       "subassuntos": [
+        "Ciclagem de nutrientes",
+        "Biodiversidade",
+        "Desmatamento e queimadas"
+       ],
+       "teoria": "Grande parte dos solos de terra firme amazônicos é pobre em nutrientes; a exuberância da floresta depende da rápida ciclagem da matéria orgânica da serapilheira, decomposta por fungos e bactérias. Por isso, quando a floresta é derrubada, o solo empobrece rapidamente. A Amazônia abriga enorme biodiversidade e participa da regulação do clima e das chuvas."
+      }
+     ]
+    },
+    {
+     "id": "quimica",
+     "nome": "Química",
+     "assuntos": [
+      {
+       "id": "enem-qui-atomistica",
+       "nome": "Atomística",
+       "subassuntos": [
+        "Modelos atômicos",
+        "Número atômico, massa e isótopos",
+        "Distribuição eletrônica"
+       ],
+       "teoria": "Os modelos atômicos evoluíram de Dalton (esfera maciça) a Thomson (pudim de passas), Rutherford (núcleo e eletrosfera) e Bohr (níveis de energia). O número atômico (Z) é o número de prótons e define o elemento; isótopos têm mesmo Z e diferentes números de massa. O modelo de Bohr explica emissões de luz como as dos fogos de artifício."
+      },
+      {
+       "id": "enem-qui-ligacoes",
+       "nome": "Tabela periódica e ligações químicas",
+       "subassuntos": [
+        "Tabela periódica",
+        "Ligações iônica, covalente e metálica",
+        "Polaridade e forças intermoleculares"
+       ],
+       "teoria": "A tabela periódica organiza os elementos por número atômico, com propriedades periódicas como raio atômico e eletronegatividade. Ligações iônicas ocorrem por transferência de elétrons (metal e ametal); covalentes, por compartilhamento. Forças intermoleculares (ligações de hidrogênio, dipolo-dipolo, dispersão) explicam pontos de ebulição e solubilidade ('semelhante dissolve semelhante')."
+      },
+      {
+       "id": "enem-qui-funcoes-inorganicas",
+       "nome": "Funções inorgânicas",
+       "subassuntos": [
+        "Ácidos",
+        "Bases",
+        "Sais",
+        "Óxidos"
+       ],
+       "teoria": "Segundo Arrhenius, ácidos liberam H⁺ em água e bases liberam OH⁻; a reação entre eles (neutralização) forma sal e água. Óxidos são compostos binários com oxigênio; alguns, como SO₂ e NO₂, formam a chuva ácida. Aplicações cotidianas, como antiácidos e correção da acidez do solo com calcário, são frequentes."
+      },
+      {
+       "id": "enem-qui-estequiometria",
+       "nome": "Estequiometria",
+       "subassuntos": [
+        "Mol e massa molar",
+        "Balanceamento de equações",
+        "Cálculo estequiométrico",
+        "Rendimento e pureza"
+       ],
+       "teoria": "O mol é a quantidade de matéria que contém cerca de 6,02 × 10²³ entidades; a massa molar é a massa de 1 mol, em g/mol. O balanceamento garante a conservação dos átomos (Lei de Lavoisier). O cálculo estequiométrico usa a proporção dos coeficientes da equação balanceada para relacionar massas, mols e volumes."
+      },
+      {
+       "id": "enem-qui-solucoes",
+       "nome": "Soluções",
+       "subassuntos": [
+        "Concentração comum",
+        "Concentração em mol/L",
+        "Diluição e mistura",
+        "Solubilidade"
+       ],
+       "teoria": "Concentração comum é a massa de soluto por volume de solução (g/L); concentração em quantidade de matéria é mols de soluto por litro (mol/L). Na diluição, a quantidade de soluto se mantém: C₁·V₁ = C₂·V₂. A solubilidade depende da natureza das substâncias e da temperatura."
+      },
+      {
+       "id": "enem-qui-termoquimica",
+       "nome": "Termoquímica",
+       "subassuntos": [
+        "Reações exotérmicas e endotérmicas",
+        "Entalpia",
+        "Lei de Hess",
+        "Combustíveis"
+       ],
+       "teoria": "Reações exotérmicas liberam calor (ΔH < 0), e endotérmicas absorvem calor (ΔH > 0). A Lei de Hess afirma que a variação de entalpia depende apenas dos estados inicial e final. O ENEM compara combustíveis pela energia liberada e pelos impactos ambientais."
+      },
+      {
+       "id": "enem-qui-cinetica-equilibrio",
+       "nome": "Cinética e equilíbrio químico",
+       "subassuntos": [
+        "Fatores que alteram a velocidade",
+        "Catalisadores",
+        "Equilíbrio e Le Chatelier",
+        "pH e pOH"
+       ],
+       "teoria": "A velocidade das reações aumenta com temperatura, concentração, superfície de contato e catalisadores (que diminuem a energia de ativação). Pelo princípio de Le Chatelier, um sistema em equilíbrio se desloca para minimizar uma perturbação. pH = −log[H⁺]; a 25 °C, pH < 7 é ácido, pH = 7 é neutro e pH > 7 é básico."
+      },
+      {
+       "id": "enem-qui-eletroquimica",
+       "nome": "Eletroquímica",
+       "subassuntos": [
+        "Oxirredução",
+        "Pilhas e baterias",
+        "Eletrólise",
+        "Corrosão"
+       ],
+       "teoria": "Oxidação é perda de elétrons e redução é ganho. Nas pilhas, uma reação espontânea de oxirredução gera corrente elétrica, com elétrons fluindo do ânodo (oxidação) para o cátodo (redução). A eletrólise usa corrente elétrica para provocar reações não espontâneas, como na produção de alumínio. Metais de sacrifício protegem contra a corrosão."
+      },
+      {
+       "id": "enem-qui-organica",
+       "nome": "Química orgânica",
+       "subassuntos": [
+        "Hidrocarbonetos",
+        "Funções oxigenadas",
+        "Funções nitrogenadas",
+        "Isomeria",
+        "Polímeros"
+       ],
+       "teoria": "A química orgânica estuda compostos de carbono. Funções orgânicas são identificadas por grupos funcionais: álcool (−OH ligado a carbono saturado, como no etanol), ácido carboxílico (−COOH), éster, amina, amida, entre outros. Polímeros, como plásticos, são macromoléculas formadas pela união de monômeros."
+      },
+      {
+       "id": "enem-qui-radioatividade",
+       "nome": "Radioatividade",
+       "subassuntos": [
+        "Emissões alfa, beta e gama",
+        "Meia-vida",
+        "Fissão e fusão nuclear"
+       ],
+       "teoria": "Radioatividade é a emissão espontânea de partículas ou radiação por núcleos instáveis. Meia-vida é o tempo para que metade da amostra radioativa se desintegre: após n meias-vidas resta 1/2ⁿ da massa inicial. A fissão nuclear é usada em usinas; a fusão ocorre nas estrelas."
+      },
+      {
+       "id": "enem-qui-ambiental",
+       "nome": "Química ambiental",
+       "subassuntos": [
+        "Efeito estufa",
+        "Chuva ácida",
+        "Tratamento de água e esgoto",
+        "Mercúrio e contaminação dos rios"
+       ],
+       "teoria": "A química ambiental relaciona reações a problemas como o aquecimento global (CO₂, CH₄), a chuva ácida (óxidos de enxofre e nitrogênio) e a contaminação de águas. O tratamento de água envolve coagulação, floculação, decantação, filtração e desinfecção. O mercúrio usado no garimpo contamina rios e se acumula ao longo da cadeia alimentar (bioacumulação)."
+      },
+      {
+       "id": "enem-qui-separacao-misturas",
+       "nome": "Substâncias e separação de misturas",
+       "subassuntos": [
+        "Substâncias puras e misturas",
+        "Métodos de separação",
+        "Propriedades da matéria"
+       ],
+       "teoria": "Substâncias puras têm propriedades físicas constantes, como pontos de fusão e ebulição definidos; misturas não. Misturas heterogêneas podem ser separadas por filtração, decantação e centrifugação; homogêneas, por destilação ou evaporação. A escolha do método depende das propriedades dos componentes."
+      }
+     ]
+    },
+    {
+     "id": "fisica",
+     "nome": "Física",
+     "assuntos": [
+      {
+       "id": "enem-fis-cinematica",
+       "nome": "Cinemática",
+       "subassuntos": [
+        "Movimento uniforme",
+        "Movimento uniformemente variado",
+        "Queda livre",
+        "Velocidade média"
+       ],
+       "teoria": "No movimento uniforme a velocidade é constante; no uniformemente variado a aceleração é constante (a = Δv/Δt). Na queda livre, desprezando o ar, todos os corpos caem com aceleração g e v² = 2·g·h. Velocidade média é o deslocamento dividido pelo tempo total."
+      },
+      {
+       "id": "enem-fis-dinamica",
+       "nome": "Dinâmica",
+       "subassuntos": [
+        "Leis de Newton",
+        "Atrito",
+        "Força peso e normal"
+       ],
+       "teoria": "A Primeira Lei de Newton (inércia) diz que um corpo mantém repouso ou movimento retilíneo uniforme se a força resultante for nula. A Segunda Lei afirma que F = m·a. A Terceira Lei diz que a toda ação corresponde uma reação de mesma intensidade e sentido oposto, atuando em corpos diferentes."
+      },
+      {
+       "id": "enem-fis-energia",
+       "nome": "Trabalho, energia e potência",
+       "subassuntos": [
+        "Energia cinética e potencial",
+        "Conservação da energia",
+        "Potência e rendimento"
+       ],
+       "teoria": "Energia cinética é Ec = m·v²/2 e energia potencial gravitacional é Ep = m·g·h. Em sistemas sem atrito, a energia mecânica se conserva; na prática, parte se transforma em calor. Potência é energia por unidade de tempo, e rendimento é a razão entre energia útil e energia total."
+      },
+      {
+       "id": "enem-fis-hidrostatica",
+       "nome": "Hidrostática",
+       "subassuntos": [
+        "Pressão",
+        "Teorema de Stevin",
+        "Princípio de Pascal",
+        "Empuxo (Arquimedes)"
+       ],
+       "teoria": "Pressão é força por área. Pelo Teorema de Stevin, a pressão num líquido aumenta com a profundidade: p = p₀ + d·g·h; na água, cerca de 1 atm a cada 10 m. O Princípio de Pascal explica prensas hidráulicas, e o empuxo, igual ao peso do líquido deslocado, explica a flutuação."
+      },
+      {
+       "id": "enem-fis-termologia",
+       "nome": "Termologia",
+       "subassuntos": [
+        "Calorimetria",
+        "Mudanças de estado",
+        "Dilatação térmica",
+        "Termodinâmica"
+       ],
+       "teoria": "Calor sensível altera a temperatura: Q = m·c·Δθ; calor latente muda o estado físico sem variar a temperatura. O calor se propaga por condução, convecção e irradiação. A Primeira Lei da Termodinâmica relaciona calor, trabalho e energia interna; nenhuma máquina térmica tem rendimento de 100%."
+      },
+      {
+       "id": "enem-fis-ondulatoria",
+       "nome": "Ondulatória",
+       "subassuntos": [
+        "Equação fundamental (v = λ·f)",
+        "Ondas sonoras",
+        "Espectro eletromagnético",
+        "Fenômenos ondulatórios"
+       ],
+       "teoria": "A velocidade de uma onda é o produto do comprimento de onda pela frequência: v = λ·f. O som é uma onda mecânica e longitudinal e não se propaga no vácuo; ondas eletromagnéticas (luz, rádio, micro-ondas) se propagam no vácuo a cerca de 3 × 10⁸ m/s. Reflexão, refração, difração, interferência e ressonância são fenômenos frequentes na prova."
+      },
+      {
+       "id": "enem-fis-optica",
+       "nome": "Óptica",
+       "subassuntos": [
+        "Reflexão da luz",
+        "Refração da luz",
+        "Espelhos e lentes",
+        "Visão e defeitos visuais"
+       ],
+       "teoria": "Na reflexão, a luz volta ao meio de origem; na refração, muda de meio e de velocidade, podendo mudar de direção, o que explica o canudo que parece 'quebrado' na água. Lentes convergentes corrigem a hipermetropia e divergentes corrigem a miopia. Espelhos planos formam imagens virtuais, direitas e do mesmo tamanho do objeto."
+      },
+      {
+       "id": "enem-fis-eletrodinamica",
+       "nome": "Eletrodinâmica",
+       "subassuntos": [
+        "Lei de Ohm",
+        "Associação de resistores",
+        "Potência e consumo de energia elétrica",
+        "Circuitos residenciais"
+       ],
+       "teoria": "A Lei de Ohm relaciona tensão, resistência e corrente: U = R·i. Em série, as resistências se somam; em paralelo, 1/Req = 1/R₁ + 1/R₂ (para dois resistores, Req = R₁·R₂/(R₁ + R₂)). Potência elétrica é P = U·i, e o consumo de energia é E = P·Δt, geralmente medido em kWh."
+      },
+      {
+       "id": "enem-fis-eletrostatica-eletromagnetismo",
+       "nome": "Eletrostática e eletromagnetismo",
+       "subassuntos": [
+        "Carga e processos de eletrização",
+        "Campo elétrico",
+        "Campo magnético",
+        "Indução eletromagnética"
+       ],
+       "teoria": "Cargas de mesmo sinal se repelem e de sinais opostos se atraem; a eletrização pode ocorrer por atrito, contato ou indução. Corrente elétrica gera campo magnético, e a variação do fluxo magnético induz corrente (Lei de Faraday), princípio de geradores de usinas e transformadores."
+      },
+      {
+       "id": "enem-fis-gravitacao",
+       "nome": "Gravitação",
+       "subassuntos": [
+        "Leis de Kepler",
+        "Lei da Gravitação Universal",
+        "Satélites"
+       ],
+       "teoria": "As Leis de Kepler descrevem órbitas elípticas, com o Sol em um dos focos, e maior velocidade do planeta perto do Sol. A Lei da Gravitação Universal de Newton afirma que a atração é proporcional ao produto das massas e inversamente proporcional ao quadrado da distância. Satélites permanecem em órbita porque estão em queda livre contínua ao redor da Terra."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "matematica",
+   "nome": "Matemática e suas Tecnologias",
+   "disciplinas": [
+    {
+     "id": "matematica",
+     "nome": "Matemática",
+     "assuntos": [
+      {
+       "id": "enem-mat-numeros-operacoes",
+       "nome": "Números e operações",
+       "subassuntos": [
+        "Frações e decimais",
+        "Potências e notação científica",
+        "MMC e MDC",
+        "Divisibilidade"
+       ],
+       "teoria": "Operações com frações, decimais e potências são a base da maioria das questões. A notação científica expressa números como a × 10ⁿ, com 1 ≤ a < 10. MMC resolve problemas de coincidência (eventos que se repetem) e MDC, problemas de divisão em partes iguais máximas."
+      },
+      {
+       "id": "enem-mat-razao-proporcao",
+       "nome": "Razão, proporção e escalas",
+       "subassuntos": [
+        "Razão e proporção",
+        "Regra de três simples e composta",
+        "Escalas",
+        "Grandezas diretamente e inversamente proporcionais"
+       ],
+       "teoria": "Duas grandezas são diretamente proporcionais quando sua razão é constante e inversamente proporcionais quando seu produto é constante. A regra de três resolve problemas com essas relações. Em mapas, escala = medida no desenho / medida real, com as duas na mesma unidade."
+      },
+      {
+       "id": "enem-mat-porcentagem",
+       "nome": "Porcentagem",
+       "subassuntos": [
+        "Cálculo de porcentagem",
+        "Aumentos e descontos sucessivos",
+        "Variação percentual"
+       ],
+       "teoria": "Porcentagem é uma razão de denominador 100. Um aumento de i% multiplica o valor por (1 + i/100) e um desconto de i% por (1 − i/100); aumentos e descontos sucessivos são multiplicados, não somados. Por isso, aumento de 10% seguido de desconto de 10% resulta em queda de 1%."
+      },
+      {
+       "id": "enem-mat-matematica-financeira",
+       "nome": "Matemática financeira",
+       "subassuntos": [
+        "Juros simples",
+        "Juros compostos",
+        "Comparação de planos de pagamento"
+       ],
+       "teoria": "Nos juros simples, os juros incidem sempre sobre o capital inicial: J = C·i·t e M = C + J. Nos juros compostos, incidem sobre o montante acumulado: M = C·(1 + i)ᵗ. Taxa e tempo devem estar na mesma unidade."
+      },
+      {
+       "id": "enem-mat-estatistica",
+       "nome": "Estatística",
+       "subassuntos": [
+        "Média aritmética e ponderada",
+        "Mediana",
+        "Moda",
+        "Desvio padrão e dispersão",
+        "Leitura de gráficos e tabelas"
+       ],
+       "teoria": "Média aritmética é a soma dos valores dividida pela quantidade; na ponderada, cada valor é multiplicado por seu peso e a soma é dividida pela soma dos pesos. Mediana é o valor central dos dados em ordem (ou a média dos dois centrais), e moda é o valor mais frequente. O desvio padrão mede a dispersão dos dados em torno da média."
+      },
+      {
+       "id": "enem-mat-probabilidade",
+       "nome": "Probabilidade",
+       "subassuntos": [
+        "Probabilidade simples",
+        "Eventos sucessivos e independentes",
+        "Probabilidade condicional",
+        "Evento complementar"
+       ],
+       "teoria": "Probabilidade é a razão entre casos favoráveis e casos possíveis, quando todos são igualmente prováveis. Para eventos sucessivos, multiplicam-se as probabilidades, atualizando os totais quando não há reposição. A probabilidade do complementar é 1 − P(A)."
+      },
+      {
+       "id": "enem-mat-analise-combinatoria",
+       "nome": "Análise combinatória",
+       "subassuntos": [
+        "Princípio fundamental da contagem",
+        "Permutação",
+        "Arranjo",
+        "Combinação"
+       ],
+       "teoria": "Pelo princípio fundamental da contagem, se uma decisão tem m opções e outra n, há m·n possibilidades. Arranjo é usado quando a ordem importa; combinação, quando não importa: C(n,p) = n!/(p!·(n−p)!). Permutação é o arranjo de todos os elementos (n!)."
+      },
+      {
+       "id": "enem-mat-funcoes",
+       "nome": "Funções",
+       "subassuntos": [
+        "Função afim",
+        "Função quadrática",
+        "Função exponencial",
+        "Função logarítmica",
+        "Leitura de gráficos"
+       ],
+       "teoria": "Função afim (f(x) = ax + b) tem gráfico reto e taxa de variação constante. Na função quadrática (f(x) = ax² + bx + c), o vértice dá o valor máximo (a < 0) ou mínimo (a > 0), com xᵥ = −b/2a. A função exponencial modela crescimentos por fator constante, como população de bactérias que dobra a cada período; o logaritmo é sua inversa."
+      },
+      {
+       "id": "enem-mat-progressoes",
+       "nome": "Progressões",
+       "subassuntos": [
+        "Progressão aritmética (PA)",
+        "Progressão geométrica (PG)"
+       ],
+       "teoria": "Na PA, cada termo é o anterior somado a uma razão constante: aₙ = a₁ + (n − 1)·r, e a soma é Sₙ = (a₁ + aₙ)·n/2. Na PG, cada termo é o anterior multiplicado pela razão: aₙ = a₁·qⁿ⁻¹. PAs modelam crescimentos lineares; PGs, crescimentos exponenciais."
+      },
+      {
+       "id": "enem-mat-geometria-plana",
+       "nome": "Geometria plana",
+       "subassuntos": [
+        "Áreas e perímetros",
+        "Teorema de Pitágoras",
+        "Semelhança de triângulos",
+        "Ângulos e polígonos"
+       ],
+       "teoria": "Áreas básicas: retângulo (b·h), triângulo (b·h/2), círculo (π·r²). O Teorema de Pitágoras, válido para triângulos retângulos, afirma que a² = b² + c², sendo a a hipotenusa. Triângulos semelhantes têm ângulos iguais e lados proporcionais."
+      },
+      {
+       "id": "enem-mat-geometria-espacial",
+       "nome": "Geometria espacial",
+       "subassuntos": [
+        "Prismas e cubos",
+        "Cilindro",
+        "Cone e pirâmide",
+        "Esfera",
+        "Planificações e vistas"
+       ],
+       "teoria": "O volume de prismas e cilindros é área da base × altura; o do cilindro é V = π·r²·h. Cones e pirâmides têm um terço do volume do prisma ou cilindro de mesma base e altura. 1 m³ equivale a 1.000 litros, conversão muito cobrada em problemas de capacidade."
+      },
+      {
+       "id": "enem-mat-trigonometria",
+       "nome": "Trigonometria",
+       "subassuntos": [
+        "Razões trigonométricas no triângulo retângulo",
+        "Ciclo trigonométrico",
+        "Funções periódicas"
+       ],
+       "teoria": "No triângulo retângulo, seno = cateto oposto/hipotenusa, cosseno = cateto adjacente/hipotenusa e tangente = cateto oposto/cateto adjacente. As funções seno e cosseno são periódicas e modelam fenômenos cíclicos, como marés e variações de temperatura."
+      },
+      {
+       "id": "enem-mat-grandezas-medidas",
+       "nome": "Grandezas e medidas",
+       "subassuntos": [
+        "Conversão de unidades",
+        "Área e volume",
+        "Velocidade e vazão"
+       ],
+       "teoria": "Conversões de unidades exigem atenção aos fatores: 1 km = 1.000 m, 1 m² = 10.000 cm², 1 m³ = 1.000 L, 1 h = 60 min. Grandezas compostas, como velocidade (distância/tempo) e vazão (volume/tempo), são frequentes em problemas contextualizados."
+      },
+      {
+       "id": "enem-mat-geometria-analitica",
+       "nome": "Geometria analítica",
+       "subassuntos": [
+        "Plano cartesiano e distância entre pontos",
+        "Equação da reta",
+        "Circunferência"
+       ],
+       "teoria": "No plano cartesiano, a distância entre dois pontos deriva do Teorema de Pitágoras. A reta tem equação y = mx + n, em que m é o coeficiente angular (inclinação). A circunferência de centro (a, b) e raio r tem equação (x − a)² + (y − b)² = r²."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "redacao",
+   "nome": "Redação",
+   "disciplinas": [
+    {
+     "id": "redacao",
+     "nome": "Redação",
+     "assuntos": [
+      {
+       "id": "enem-redacao-estrutura",
+       "nome": "Estrutura do texto dissertativo-argumentativo",
+       "subassuntos": [
+        "Introdução e tese",
+        "Desenvolvimento e argumentação",
+        "Conclusão",
+        "Tipologia dissertativo-argumentativa"
+       ],
+       "teoria": "A redação do ENEM deve ser um texto dissertativo-argumentativo em prosa, de até 30 linhas, que defenda um ponto de vista sobre o tema proposto. Tradicionalmente organiza-se em introdução (contextualização e tese), desenvolvimento (argumentos fundamentados) e conclusão (proposta de intervenção). Narrar, fazer poema ou apenas expor informações não atende à tipologia."
+      },
+      {
+       "id": "enem-redacao-competencias",
+       "nome": "Competências avaliadas",
+       "subassuntos": [
+        "Competência 1",
+        "Competência 2",
+        "Competência 3",
+        "Competência 4",
+        "Competência 5",
+        "Situações de nota zero"
+       ],
+       "teoria": "A redação é avaliada em cinco competências, cada uma valendo de 0 a 200 pontos, somando até 1.000: norma-padrão (C1), compreensão do tema e tipologia (C2), seleção e organização de argumentos (C3), mecanismos de coesão (C4) e proposta de intervenção que respeite os direitos humanos (C5). Algumas situações, como fuga total ao tema e texto com até 7 linhas, levam à nota zero."
+      },
+      {
+       "id": "enem-redacao-repertorio",
+       "nome": "Repertório sociocultural",
+       "subassuntos": [
+        "Repertório legitimado",
+        "Repertório pertinente ao tema",
+        "Uso produtivo do repertório"
+       ],
+       "teoria": "Repertório sociocultural é a informação, o fato, a citação ou a experiência que o candidato traz de fora dos textos motivadores para fundamentar sua argumentação. Para ser valorizado, deve ser legitimado (verificável), pertinente ao tema e usado de forma produtiva, isto é, articulado à discussão, e não apenas citado."
+      },
+      {
+       "id": "enem-redacao-proposta-de-intervencao",
+       "nome": "Proposta de intervenção",
+       "subassuntos": [
+        "Agente",
+        "Ação",
+        "Modo ou meio",
+        "Finalidade ou efeito",
+        "Detalhamento"
+       ],
+       "teoria": "A proposta de intervenção deve apresentar solução concreta para o problema discutido, articulada aos argumentos e respeitando os direitos humanos. Para obter a nota máxima na competência 5, costuma-se contemplar cinco elementos: agente, ação, modo ou meio, efeito ou finalidade e detalhamento de algum desses elementos."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

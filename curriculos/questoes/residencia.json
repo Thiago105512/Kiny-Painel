@@ -11,7 +11,15 @@
    "TOTG 2 h ≥ 140 mg/dL"
   ],
   "correta": 1,
-  "explicacao": "Jejum ≥ 126, HbA1c ≥ 6,5%, TOTG 2 h ≥ 200 ou casual ≥ 200 com sintomas. 100–125 é pré-diabetes."
+  "explicacao": "Jejum ≥ 126, HbA1c ≥ 6,5%, TOTG 2 h ≥ 200 ou casual ≥ 200 com sintomas. 100–125 é pré-diabetes.",
+  "tema": "diabetes-mellitus",
+  "subtema": "diabetes-mellitus.diagnostico",
+  "especialidade": "endocrinologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-f757fbd2",
@@ -25,7 +33,15 @@
    "Glicose a 5%"
   ],
   "correta": 2,
-  "explicacao": "Hidratação vem primeiro. Insulina só após checar K⁺ (se < 3,3 mEq/L, repor potássio antes)."
+  "explicacao": "Hidratação vem primeiro. Insulina só após checar K⁺ (se < 3,3 mEq/L, repor potássio antes).",
+  "tema": "diabetes-mellitus",
+  "subtema": "diabetes-mellitus.complicacoes-agudas",
+  "especialidade": "endocrinologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-630b1f2d",
@@ -39,7 +55,15 @@
    "Respiração"
   ],
   "correta": 1,
-  "explicacao": "A: via aérea + proteção cervical; B: respiração; C: circulação e hemorragia; D: neurológico; E: exposição/ambiente."
+  "explicacao": "A: via aérea + proteção cervical; B: respiração; C: circulação e hemorragia; D: neurológico; E: exposição/ambiente.",
+  "tema": "atendimento-inicial-ao-politraumatizado",
+  "subtema": "atendimento-inicial-ao-politraumatizado.avaliacao-primaria-abcde",
+  "especialidade": "trauma",
+  "disciplina": "Cirurgia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-c570bc3a",
@@ -53,7 +77,15 @@
    "Litíase renal"
   ],
   "correta": 1,
-  "explicacao": "Blumberg indica irritação peritoneal, classicamente no ponto de McBurney na apendicite."
+  "explicacao": "Blumberg indica irritação peritoneal, classicamente no ponto de McBurney na apendicite.",
+  "tema": "apendicite-aguda",
+  "subtema": "apendicite-aguda.diagnostico",
+  "especialidade": "cirurgia-geral",
+  "disciplina": "Cirurgia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-7576a2af",
@@ -67,7 +99,15 @@
    "Aos 6 meses"
   ],
   "correta": 1,
-  "explicacao": "Dose única ao nascer (ou o mais cedo possível), protege contra formas graves de tuberculose."
+  "explicacao": "Dose única ao nascer (ou o mais cedo possível), protege contra formas graves de tuberculose.",
+  "tema": "imunizacoes",
+  "subtema": "imunizacoes.calendario-vacinal",
+  "especialidade": "pediatria-geral",
+  "disciplina": "Pediatria",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-a2ba5aa5",
@@ -81,7 +121,15 @@
    "Falar frases"
   ],
   "correta": 1,
-  "explicacao": "Sorriso social ~2 meses; sentar sem apoio ~6 meses; pinça ~9–10 meses; andar ~12 meses."
+  "explicacao": "Sorriso social ~2 meses; sentar sem apoio ~6 meses; pinça ~9–10 meses; andar ~12 meses.",
+  "tema": "puericultura",
+  "subtema": "puericultura.desenvolvimento-neuropsicomotor",
+  "especialidade": "pediatria-geral",
+  "disciplina": "Pediatria",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-44bd0d73",
@@ -95,7 +143,15 @@
    "Nifedipino"
   ],
   "correta": 2,
-  "explicacao": "Sulfato de magnésio (esquemas de Pritchard ou Zuspan). Hidralazina/nifedipino tratam a pressão."
+  "explicacao": "Sulfato de magnésio (esquemas de Pritchard ou Zuspan). Hidralazina/nifedipino tratam a pressão.",
+  "tema": "sindromes-hipertensivas-da-gestacao",
+  "subtema": "sindromes-hipertensivas-da-gestacao.eclampsia-e-prevencao-de-convulsoes",
+  "especialidade": "obstetricia",
+  "disciplina": "Ginecologia e Obstetrícia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-a15d620b",
@@ -109,7 +165,15 @@
    "≥ 42 semanas"
   ],
   "correta": 1,
-  "explicacao": "Pré-termo < 37 semanas; termo 37 a 41s6d; pós-termo ≥ 42 semanas."
+  "explicacao": "Pré-termo < 37 semanas; termo 37 a 41s6d; pós-termo ≥ 42 semanas.",
+  "tema": "pre-natal",
+  "subtema": "pre-natal.idade-gestacional-e-datacao",
+  "especialidade": "obstetricia",
+  "disciplina": "Ginecologia e Obstetrícia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-ea256408",
@@ -123,7 +187,15 @@
    "Taxa de falsos positivos"
   ],
   "correta": 0,
-  "explicacao": "Sensibilidade = VP/(VP+FN). Especificidade = VN/(VN+FP). A probabilidade de doença dado teste positivo é o valor preditivo positivo."
+  "explicacao": "Sensibilidade = VP/(VP+FN). Especificidade = VN/(VN+FP). A probabilidade de doença dado teste positivo é o valor preditivo positivo.",
+  "tema": "testes-diagnosticos",
+  "subtema": "testes-diagnosticos.sensibilidade-e-especificidade",
+  "especialidade": "epidemiologia",
+  "disciplina": "Epidemiologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-2ecf9576",
@@ -137,7 +209,15 @@
    "Constituição, art. 5º"
   ],
   "correta": 1,
-  "explicacao": "Lei 8.080/1990. A 8.142/1990 trata de participação social e financiamento; a 9.656/1998, de planos de saúde."
+  "explicacao": "Lei 8.080/1990. A 8.142/1990 trata de participação social e financiamento; a 9.656/1998, de planos de saúde.",
+  "tema": "sus-principios-e-legislacao",
+  "subtema": "sus-principios-e-legislacao.lei-8-080-1990",
+  "especialidade": "saude-publica-sus",
+  "disciplina": "Saúde Coletiva",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-72daf190",
@@ -151,7 +231,15 @@
    "Participação popular e cofinanciamento"
   ],
   "correta": 0,
-  "explicacao": "Doutrinários: universalidade, integralidade, equidade. Descentralização, regionalização e hierarquização são princípios organizativos."
+  "explicacao": "Doutrinários: universalidade, integralidade, equidade. Descentralização, regionalização e hierarquização são princípios organizativos.",
+  "tema": "sus-principios-e-legislacao",
+  "subtema": "sus-principios-e-legislacao.principios-e-diretrizes",
+  "especialidade": "saude-publica-sus",
+  "disciplina": "Saúde Coletiva",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-53920861",
@@ -165,7 +253,15 @@
    "Síndrome de Guillain-Barré"
   ],
   "correta": 0,
-  "explicacao": "A correção rápida da hiponatremia crônica causa desmielinização osmótica (mielinólise pontina), com quadro bifásico de disartria, disfagia e tetraparesia; por isso a velocidade de correção deve ser limitada."
+  "explicacao": "A correção rápida da hiponatremia crônica causa desmielinização osmótica (mielinólise pontina), com quadro bifásico de disartria, disfagia e tetraparesia; por isso a velocidade de correção deve ser limitada.",
+  "tema": "disturbios-hidroeletroliticos",
+  "subtema": "disturbios-hidroeletroliticos.disturbios-do-sodio",
+  "especialidade": "nefrologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-8c625d79",
@@ -179,7 +275,15 @@
    "Bicarbonato de sódio como primeira escolha"
   ],
   "correta": 1,
-  "explicacao": "Com alteração eletrocardiográfica, o cálcio EV estabiliza a membrana do cardiomiócito em minutos, sem reduzir o potássio; em seguida vêm as medidas que deslocam o K⁺ para dentro da célula (insulina com glicose, beta-2 agonista) e as que o removem."
+  "explicacao": "Com alteração eletrocardiográfica, o cálcio EV estabiliza a membrana do cardiomiócito em minutos, sem reduzir o potássio; em seguida vêm as medidas que deslocam o K⁺ para dentro da célula (insulina com glicose, beta-2 agonista) e as que o removem.",
+  "tema": "disturbios-hidroeletroliticos",
+  "subtema": "disturbios-hidroeletroliticos.disturbios-do-potassio",
+  "especialidade": "nefrologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-a2cbe9d5",
@@ -193,7 +297,15 @@
    "Indeterminado, sendo obrigatório dosar o gradiente de albumina"
   ],
   "correta": 2,
-  "explicacao": "Light: exsudato se proteína pleural/sérica > 0,5 (aqui 0,67), LDH pleural/sérica > 0,6 (aqui 1,2) ou LDH pleural > 2/3 do limite superior sérico (300 > 160). Basta um critério; este caso preenche os três."
+  "explicacao": "Light: exsudato se proteína pleural/sérica > 0,5 (aqui 0,67), LDH pleural/sérica > 0,6 (aqui 1,2) ou LDH pleural > 2/3 do limite superior sérico (300 > 160). Basta um critério; este caso preenche os três.",
+  "tema": "derrame-pleural",
+  "subtema": "derrame-pleural.criterios-de-light",
+  "especialidade": "pneumologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-938bf64a",
@@ -207,7 +319,15 @@
    "5"
   ],
   "correta": 3,
-  "explicacao": "CURB-65: Confusão (1), Ureia > 50 mg/dL (0), FR ≥ 30 (1), PAS < 90 ou PAD ≤ 60 (0), idade ≥ 65 (1) = 3, o que indica pneumonia grave com indicação de internação."
+  "explicacao": "CURB-65: Confusão (1), Ureia > 50 mg/dL (0), FR ≥ 30 (1), PAS < 90 ou PAD ≤ 60 (0), idade ≥ 65 (1) = 3, o que indica pneumonia grave com indicação de internação.",
+  "tema": "pneumonia",
+  "subtema": "pneumonia.estratificacao-de-gravidade",
+  "especialidade": "pneumologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-47c52df8",
@@ -221,7 +341,15 @@
    "Ferritina baixa e capacidade total de ligação do ferro elevada"
   ],
   "correta": 4,
-  "explicacao": "Na ferropenia os estoques caem (ferritina baixa) e a transferrina aumenta (CTLF alta, saturação baixa). Ferritina alta com CTLF baixa sugere anemia de doença crônica."
+  "explicacao": "Na ferropenia os estoques caem (ferritina baixa) e a transferrina aumenta (CTLF alta, saturação baixa). Ferritina alta com CTLF baixa sugere anemia de doença crônica.",
+  "tema": "anemias",
+  "subtema": "anemias.anemia-ferropriva",
+  "especialidade": "hematologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-d4b2f7e4",
@@ -235,7 +363,15 @@
    "Síndrome do eutireoidiano doente"
   ],
   "correta": 0,
-  "explicacao": "TSH elevado com T4 livre normal define hipotireoidismo subclínico; TSH alto com T4 livre baixo é hipotireoidismo primário franco; TSH baixo/normal com T4 livre baixo sugere causa central."
+  "explicacao": "TSH elevado com T4 livre normal define hipotireoidismo subclínico; TSH alto com T4 livre baixo é hipotireoidismo primário franco; TSH baixo/normal com T4 livre baixo sugere causa central.",
+  "tema": "doencas-da-tireoide",
+  "subtema": "doencas-da-tireoide.hipotireoidismo",
+  "especialidade": "endocrinologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-23e6a1e9",
@@ -249,7 +385,15 @@
    "Glicosúria com glicemia normal"
   ],
   "correta": 1,
-  "explicacao": "Síndrome nefrótica: proteinúria > 3,5 g/24 h (no adulto), hipoalbuminemia, edema e dislipidemia. Hematúria dismórfica com cilindros hemáticos caracteriza síndrome nefrítica."
+  "explicacao": "Síndrome nefrótica: proteinúria > 3,5 g/24 h (no adulto), hipoalbuminemia, edema e dislipidemia. Hematúria dismórfica com cilindros hemáticos caracteriza síndrome nefrítica.",
+  "tema": "sindromes-glomerulares",
+  "subtema": "sindromes-glomerulares.sindrome-nefrotica",
+  "especialidade": "nefrologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-fea5e4d7",
@@ -263,7 +407,15 @@
    "Posterior isolada"
   ],
   "correta": 2,
-  "explicacao": "DII, DIII e aVF exploram a parede inferior, geralmente irrigada pela coronária direita. V1–V4 correspondem à parede anterosseptal e DI/aVL à lateral alta."
+  "explicacao": "DII, DIII e aVF exploram a parede inferior, geralmente irrigada pela coronária direita. V1–V4 correspondem à parede anterosseptal e DI/aVL à lateral alta.",
+  "tema": "sindrome-coronariana-aguda",
+  "subtema": "sindrome-coronariana-aguda.eletrocardiograma-e-localizacao",
+  "especialidade": "cardiologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-b3ec8e48",
@@ -277,7 +429,15 @@
    "Carcinomatosa"
   ],
   "correta": 3,
-  "explicacao": "Pleocitose neutrofílica intensa, glicose baixa (relação líquor/sangue < 0,4) e proteína alta caracterizam meningite bacteriana. A viral tem predomínio linfocitário e glicose normal; a tuberculosa, linfócitos com glicose baixa e evolução subaguda."
+  "explicacao": "Pleocitose neutrofílica intensa, glicose baixa (relação líquor/sangue < 0,4) e proteína alta caracterizam meningite bacteriana. A viral tem predomínio linfocitário e glicose normal; a tuberculosa, linfócitos com glicose baixa e evolução subaguda.",
+  "tema": "meningites",
+  "subtema": "meningites.analise-do-liquor",
+  "especialidade": "infectologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-7eb4f1dd",
@@ -291,7 +451,15 @@
    "2 meses de rifampicina, isoniazida, pirazinamida e etambutol, seguidos de 4 meses de rifampicina e isoniazida"
   ],
   "correta": 4,
-  "explicacao": "O esquema básico brasileiro para adultos é 2RHZE/4RH: fase intensiva de 2 meses com quatro fármacos e fase de manutenção de 4 meses com rifampicina e isoniazida."
+  "explicacao": "O esquema básico brasileiro para adultos é 2RHZE/4RH: fase intensiva de 2 meses com quatro fármacos e fase de manutenção de 4 meses com rifampicina e isoniazida.",
+  "tema": "tuberculose",
+  "subtema": "tuberculose.tratamento",
+  "especialidade": "infectologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-bb2bc86e",
@@ -305,7 +473,15 @@
    "Alcalose respiratória com compensação metabólica"
   ],
   "correta": 0,
-  "explicacao": "Ânion gap = 140 − (104 + 14) = 22 (aumentado). Pela fórmula de Winters, pCO₂ esperada = 1,5 × 14 + 8 = 29 ± 2; a pCO₂ medida (29) indica compensação respiratória adequada."
+  "explicacao": "Ânion gap = 140 − (104 + 14) = 22 (aumentado). Pela fórmula de Winters, pCO₂ esperada = 1,5 × 14 + 8 = 29 ± 2; a pCO₂ medida (29) indica compensação respiratória adequada.",
+  "tema": "disturbios-acido-base",
+  "subtema": "disturbios-acido-base.acidose-metabolica-e-anion-gap",
+  "especialidade": "nefrologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-9c606336",
@@ -319,7 +495,15 @@
    "Capacidade de difusão do CO aumentada"
   ],
   "correta": 1,
-  "explicacao": "Segundo a GOLD, o diagnóstico exige VEF1/CVF < 0,70 pós-broncodilatador. CVF reduzida com relação preservada ou aumentada sugere distúrbio restritivo."
+  "explicacao": "Segundo a GOLD, o diagnóstico exige VEF1/CVF < 0,70 pós-broncodilatador. CVF reduzida com relação preservada ou aumentada sugere distúrbio restritivo.",
+  "tema": "dpoc",
+  "subtema": "dpoc.diagnostico-e-espirometria",
+  "especialidade": "pneumologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-5523c7de",
@@ -333,7 +517,15 @@
    "11.200 mL"
   ],
   "correta": 2,
-  "explicacao": "Considera-se só a área de 2º e 3º graus: 4 × 70 × 30 = 8.400 mL em 24 h, metade (4.200 mL) nas primeiras 8 h a partir do momento da queimadura. A 10ª edição do ATLS propõe iniciar com 2 mL/kg/%SCQ em adultos, ajustando pela diurese."
+  "explicacao": "Considera-se só a área de 2º e 3º graus: 4 × 70 × 30 = 8.400 mL em 24 h, metade (4.200 mL) nas primeiras 8 h a partir do momento da queimadura. A 10ª edição do ATLS propõe iniciar com 2 mL/kg/%SCQ em adultos, ajustando pela diurese.",
+  "tema": "queimaduras",
+  "subtema": "queimaduras.reposicao-volemica",
+  "especialidade": "trauma",
+  "disciplina": "Cirurgia",
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-6873edc4",
@@ -347,7 +539,15 @@
    "12"
   ],
   "correta": 3,
-  "explicacao": "Abertura ocular à pressão = 2; resposta verbal com palavras inapropriadas = 3; resposta motora que localiza = 5. Total: 10."
+  "explicacao": "Abertura ocular à pressão = 2; resposta verbal com palavras inapropriadas = 3; resposta motora que localiza = 5. Total: 10.",
+  "tema": "traumatismo-cranioencefalico",
+  "subtema": "traumatismo-cranioencefalico.escala-de-coma-de-glasgow",
+  "especialidade": "trauma",
+  "disciplina": "Cirurgia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-41922d8e",
@@ -361,7 +561,15 @@
    "30% a 40% (classe III)"
   ],
   "correta": 4,
-  "explicacao": "A classe III (30–40%) é a primeira com queda da pressão arterial, além de taquicardia acentuada, confusão e oligúria. Na classe II a PA ainda está preservada; na classe IV há hipotensão grave, letargia e diurese mínima."
+  "explicacao": "A classe III (30–40%) é a primeira com queda da pressão arterial, além de taquicardia acentuada, confusão e oligúria. Na classe II a PA ainda está preservada; na classe IV há hipotensão grave, letargia e diurese mínima.",
+  "tema": "atendimento-inicial-ao-politraumatizado",
+  "subtema": "atendimento-inicial-ao-politraumatizado.choque-hemorragico",
+  "especialidade": "trauma",
+  "disciplina": "Cirurgia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-c0790836",
@@ -375,7 +583,15 @@
    "Toracotomia de reanimação no centro cirúrgico"
   ],
   "correta": 0,
-  "explicacao": "O quadro é de pneumotórax hipertensivo, cujo diagnóstico é clínico. O ATLS recomenda descompressão imediata (agulha ou digital) seguida de drenagem em selo d'água; aguardar imagem ou ventilar com pressão positiva antes piora o quadro."
+  "explicacao": "O quadro é de pneumotórax hipertensivo, cujo diagnóstico é clínico. O ATLS recomenda descompressão imediata (agulha ou digital) seguida de drenagem em selo d'água; aguardar imagem ou ventilar com pressão positiva antes piora o quadro.",
+  "tema": "trauma-toracico",
+  "subtema": "trauma-toracico.pneumotorax-hipertensivo",
+  "especialidade": "trauma",
+  "disciplina": "Cirurgia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-3303de46",
@@ -389,7 +605,15 @@
    "De Spiegel"
   ],
   "correta": 1,
-  "explicacao": "A hérnia indireta passa pelo anel inguinal profundo, lateral aos vasos epigástricos inferiores. A direta protrui pelo triângulo de Hesselbach, medial a esses vasos; a femoral fica abaixo do ligamento inguinal."
+  "explicacao": "A hérnia indireta passa pelo anel inguinal profundo, lateral aos vasos epigástricos inferiores. A direta protrui pelo triângulo de Hesselbach, medial a esses vasos; a femoral fica abaixo do ligamento inguinal.",
+  "tema": "hernias-da-parede-abdominal",
+  "subtema": "hernias-da-parede-abdominal.hernias-inguinais",
+  "especialidade": "cirurgia-geral",
+  "disciplina": "Cirurgia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-85bf277a",
@@ -403,7 +627,15 @@
    "Radiografia simples de abdome"
   ],
   "correta": 2,
-  "explicacao": "O sinal de Murphy sugere colecistite aguda. A ultrassonografia é o exame inicial (Diretrizes de Tóquio): barata, sem radiação e sensível para cálculos, espessamento da parede e líquido perivesicular."
+  "explicacao": "O sinal de Murphy sugere colecistite aguda. A ultrassonografia é o exame inicial (Diretrizes de Tóquio): barata, sem radiação e sensível para cálculos, espessamento da parede e líquido perivesicular.",
+  "tema": "doencas-biliares",
+  "subtema": "doencas-biliares.colecistite-aguda",
+  "especialidade": "cirurgia-geral",
+  "disciplina": "Cirurgia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-0ff88a16",
@@ -417,7 +649,15 @@
    "Volvo de sigmoide"
   ],
   "correta": 3,
-  "explicacao": "As aderências pós-operatórias são a principal causa de obstrução de intestino delgado em adultos com cirurgia abdominal prévia; hérnias e neoplasias vêm em seguida."
+  "explicacao": "As aderências pós-operatórias são a principal causa de obstrução de intestino delgado em adultos com cirurgia abdominal prévia; hérnias e neoplasias vêm em seguida.",
+  "tema": "obstrucao-intestinal",
+  "subtema": "obstrucao-intestinal.etiologia",
+  "especialidade": "cirurgia-geral",
+  "disciplina": "Cirurgia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-b3d648ff",
@@ -431,7 +671,15 @@
    "Colangite aguda grave (pêntade de Reynolds)"
   ],
   "correta": 4,
-  "explicacao": "Febre, icterícia e dor em hipocôndrio direito formam a tríade de Charcot da colangite; somadas a hipotensão e alteração do estado mental formam a pêntade de Reynolds, que indica colangite grave com necessidade de drenagem biliar urgente."
+  "explicacao": "Febre, icterícia e dor em hipocôndrio direito formam a tríade de Charcot da colangite; somadas a hipotensão e alteração do estado mental formam a pêntade de Reynolds, que indica colangite grave com necessidade de drenagem biliar urgente.",
+  "tema": "doencas-biliares",
+  "subtema": "doencas-biliares.colangite-aguda",
+  "especialidade": "cirurgia-geral",
+  "disciplina": "Cirurgia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-f7a696e7",
@@ -445,7 +693,15 @@
    "Choque neurogênico"
   ],
   "correta": 0,
-  "explicacao": "Hipotensão, turgência jugular e abafamento de bulhas compõem a tríade de Beck. Murmúrio simétrico afasta pneumotórax hipertensivo e hemotórax maciço, que causariam murmúrio abolido de um lado."
+  "explicacao": "Hipotensão, turgência jugular e abafamento de bulhas compõem a tríade de Beck. Murmúrio simétrico afasta pneumotórax hipertensivo e hemotórax maciço, que causariam murmúrio abolido de um lado.",
+  "tema": "trauma-toracico",
+  "subtema": "trauma-toracico.tamponamento-cardiaco",
+  "especialidade": "trauma",
+  "disciplina": "Cirurgia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-162b9bc1",
@@ -459,7 +715,15 @@
    "Três ou mais critérios de Ranson na admissão"
   ],
   "correta": 1,
-  "explicacao": "Atlanta revisada: dois de três critérios (dor típica; amilase/lipase ≥ 3× o limite superior; imagem compatível). Ranson avalia gravidade, não diagnóstico, e os sinais de Cullen e Grey-Turner são raros e inespecíficos."
+  "explicacao": "Atlanta revisada: dois de três critérios (dor típica; amilase/lipase ≥ 3× o limite superior; imagem compatível). Ranson avalia gravidade, não diagnóstico, e os sinais de Cullen e Grey-Turner são raros e inespecíficos.",
+  "tema": "pancreatite-aguda",
+  "subtema": "pancreatite-aguda.diagnostico-e-classificacao",
+  "especialidade": "cirurgia-geral",
+  "disciplina": "Cirurgia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-0e8a6af8",
@@ -473,7 +737,15 @@
    "Bordetella pertussis"
   ],
   "correta": 2,
-  "explicacao": "O quadro é de bronquiolite viral aguda, primeiro episódio de sibilância no lactente, cujo principal agente é o vírus sincicial respiratório, com pico no outono e inverno."
+  "explicacao": "O quadro é de bronquiolite viral aguda, primeiro episódio de sibilância no lactente, cujo principal agente é o vírus sincicial respiratório, com pico no outono e inverno.",
+  "tema": "bronquiolite-viral-aguda",
+  "subtema": "bronquiolite-viral-aguda.etiologia",
+  "especialidade": "pediatria-geral",
+  "disciplina": "Pediatria",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-7c1e8d52",
@@ -487,7 +759,15 @@
    "Antibiótico empírico e antidiarreico"
   ],
   "correta": 3,
-  "explicacao": "Dois ou mais sinais (irritabilidade, sede, olhos fundos, prega que desaparece lentamente) indicam desidratação, tratada com o Plano B (SRO sob supervisão na unidade). O Plano C é para desidratação grave (letargia, prega muito lenta, incapacidade de beber)."
+  "explicacao": "Dois ou mais sinais (irritabilidade, sede, olhos fundos, prega que desaparece lentamente) indicam desidratação, tratada com o Plano B (SRO sob supervisão na unidade). O Plano C é para desidratação grave (letargia, prega muito lenta, incapacidade de beber).",
+  "tema": "diarreia-aguda-e-desidratacao",
+  "subtema": "diarreia-aguda-e-desidratacao.planos-de-hidratacao",
+  "especialidade": "pediatria-geral",
+  "disciplina": "Pediatria",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-2ee0c524",
@@ -501,7 +781,15 @@
    "Considerar a icterícia patológica e investigar hemólise"
   ],
   "correta": 4,
-  "explicacao": "Icterícia nas primeiras 24 horas de vida é sempre patológica, geralmente por hemólise (incompatibilidade ABO/Rh), e exige investigação com dosagem de bilirrubinas. A fisiológica surge após 24 horas."
+  "explicacao": "Icterícia nas primeiras 24 horas de vida é sempre patológica, geralmente por hemólise (incompatibilidade ABO/Rh), e exige investigação com dosagem de bilirrubinas. A fisiológica surge após 24 horas.",
+  "tema": "ictericia-neonatal",
+  "subtema": "ictericia-neonatal.ictericia-patologica",
+  "especialidade": "neonatologia",
+  "disciplina": "Pediatria",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-061df4bc",
@@ -515,7 +803,15 @@
    "10"
   ],
   "correta": 0,
-  "explicacao": "FC > 100 = 2; choro forte = 2; flexão ativa = 2; careta = 1; acrocianose = 1. Total: 8."
+  "explicacao": "FC > 100 = 2; choro forte = 2; flexão ativa = 2; careta = 1; acrocianose = 1. Total: 8.",
+  "tema": "assistencia-ao-recem-nascido",
+  "subtema": "assistencia-ao-recem-nascido.boletim-de-apgar",
+  "especialidade": "neonatologia",
+  "disciplina": "Pediatria",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-65c66e7f",
@@ -529,7 +825,15 @@
    "Nefropatia por IgA"
   ],
   "correta": 1,
-  "explicacao": "A doença de lesões mínimas responde pela maioria das síndromes nefróticas entre 1 e 10 anos e costuma ser corticossensível. A pós-estreptocócica e a nefropatia por IgA são nefríticas, com hematúria."
+  "explicacao": "A doença de lesões mínimas responde pela maioria das síndromes nefróticas entre 1 e 10 anos e costuma ser corticossensível. A pós-estreptocócica e a nefropatia por IgA são nefríticas, com hematúria.",
+  "tema": "sindromes-glomerulares",
+  "subtema": "sindromes-glomerulares.doenca-de-lesoes-minimas",
+  "especialidade": "pediatria-geral",
+  "disciplina": "Pediatria",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-a71a87fe",
@@ -543,7 +847,15 @@
    "Streptococcus pyogenes"
   ],
   "correta": 2,
-  "explicacao": "O quadro é de laringotraqueíte viral (crupe), cuja principal causa é o parainfluenza. O Haemophilus influenzae tipo b causa epiglotite, com toxemia, sialorreia e sem tosse ladrante."
+  "explicacao": "O quadro é de laringotraqueíte viral (crupe), cuja principal causa é o parainfluenza. O Haemophilus influenzae tipo b causa epiglotite, com toxemia, sialorreia e sem tosse ladrante.",
+  "tema": "laringotraqueobronquite-viral",
+  "subtema": "laringotraqueobronquite-viral.etiologia",
+  "especialidade": "pediatria-geral",
+  "disciplina": "Pediatria",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-af83c75f",
@@ -557,7 +869,15 @@
    "Artrite séptica"
   ],
   "correta": 3,
-  "explicacao": "É a doença de Kawasaki, vasculite de médios vasos cuja complicação mais importante são os aneurismas coronarianos; o tratamento com imunoglobulina endovenosa e AAS reduz esse risco."
+  "explicacao": "É a doença de Kawasaki, vasculite de médios vasos cuja complicação mais importante são os aneurismas coronarianos; o tratamento com imunoglobulina endovenosa e AAS reduz esse risco.",
+  "tema": "doenca-de-kawasaki",
+  "subtema": "doenca-de-kawasaki.complicacoes",
+  "especialidade": "pediatria-geral",
+  "disciplina": "Pediatria",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-66649a88",
@@ -571,7 +891,15 @@
    "Alcalose metabólica hipoclorêmica e hipocalêmica"
   ],
   "correta": 4,
-  "explicacao": "Na estenose hipertrófica do piloro, a perda de ácido clorídrico pelos vômitos causa alcalose metabólica hipoclorêmica, e a hipocalemia decorre da perda renal de potássio por hiperaldosteronismo secundário."
+  "explicacao": "Na estenose hipertrófica do piloro, a perda de ácido clorídrico pelos vômitos causa alcalose metabólica hipoclorêmica, e a hipocalemia decorre da perda renal de potássio por hiperaldosteronismo secundário.",
+  "tema": "estenose-hipertrofica-do-piloro",
+  "subtema": "estenose-hipertrofica-do-piloro.disturbios-metabolicos",
+  "especialidade": "pediatria-geral",
+  "disciplina": "Pediatria",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-98247263",
@@ -585,7 +913,15 @@
    "Rubéola"
   ],
   "correta": 0,
-  "explicacao": "O exantema súbito caracteriza-se por febre alta por 3 a 5 dias com exantema que aparece após a defervescência, típico de lactentes, causado pelo HHV-6 (e HHV-7). No sarampo e na escarlatina o exantema surge com febre."
+  "explicacao": "O exantema súbito caracteriza-se por febre alta por 3 a 5 dias com exantema que aparece após a defervescência, típico de lactentes, causado pelo HHV-6 (e HHV-7). No sarampo e na escarlatina o exantema surge com febre.",
+  "tema": "doencas-exantematicas",
+  "subtema": "doencas-exantematicas.exantema-subito",
+  "especialidade": "pediatria-geral",
+  "disciplina": "Pediatria",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-04a21f49",
@@ -599,7 +935,15 @@
    "Complementado com água e chás desde o 1º mês"
   ],
   "correta": 1,
-  "explicacao": "Recomenda-se aleitamento materno exclusivo até os 6 meses, sem água ou chás, e mantido com alimentação complementar até 2 anos ou mais."
+  "explicacao": "Recomenda-se aleitamento materno exclusivo até os 6 meses, sem água ou chás, e mantido com alimentação complementar até 2 anos ou mais.",
+  "tema": "aleitamento-materno",
+  "subtema": "aleitamento-materno.recomendacoes",
+  "especialidade": "pediatria-geral",
+  "disciplina": "Pediatria",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-51600c9b",
@@ -613,7 +957,15 @@
    "Trabalho de parto prematuro; tocólise e toque vaginal seriado"
   ],
   "correta": 2,
-  "explicacao": "Sangramento vermelho vivo, indolor e com útero relaxado sugere placenta prévia. O toque vaginal pode provocar hemorragia grave e deve ser evitado até a ultrassonografia definir a posição da placenta."
+  "explicacao": "Sangramento vermelho vivo, indolor e com útero relaxado sugere placenta prévia. O toque vaginal pode provocar hemorragia grave e deve ser evitado até a ultrassonografia definir a posição da placenta.",
+  "tema": "hemorragias-da-segunda-metade-da-gestacao",
+  "subtema": "hemorragias-da-segunda-metade-da-gestacao.placenta-previa",
+  "especialidade": "obstetricia",
+  "disciplina": "Ginecologia e Obstetrícia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-45b1eb4c",
@@ -627,7 +979,15 @@
    "Apendicite aguda na gestação"
   ],
   "correta": 3,
-  "explicacao": "Dor súbita, hipertonia uterina, sangramento escuro e sofrimento fetal, com hipertensão como principal fator de risco, caracterizam o descolamento prematuro de placenta."
+  "explicacao": "Dor súbita, hipertonia uterina, sangramento escuro e sofrimento fetal, com hipertensão como principal fator de risco, caracterizam o descolamento prematuro de placenta.",
+  "tema": "hemorragias-da-segunda-metade-da-gestacao",
+  "subtema": "hemorragias-da-segunda-metade-da-gestacao.descolamento-prematuro-de-placenta",
+  "especialidade": "obstetricia",
+  "disciplina": "Ginecologia e Obstetrícia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-9b60b71a",
@@ -641,7 +1001,15 @@
    "Cirurgia imediata"
   ],
   "correta": 4,
-  "explicacao": "É gravidez ectópica rota com instabilidade hemodinâmica, o que exige cirurgia imediata. Metotrexato e conduta expectante só cabem em pacientes estáveis, com massa íntegra."
+  "explicacao": "É gravidez ectópica rota com instabilidade hemodinâmica, o que exige cirurgia imediata. Metotrexato e conduta expectante só cabem em pacientes estáveis, com massa íntegra.",
+  "tema": "hemorragias-da-primeira-metade-da-gestacao",
+  "subtema": "hemorragias-da-primeira-metade-da-gestacao.gravidez-ectopica",
+  "especialidade": "obstetricia",
+  "disciplina": "Ginecologia e Obstetrícia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-d5c77329",
@@ -655,7 +1023,15 @@
    "Eritromicina"
   ],
   "correta": 0,
-  "explicacao": "Para o Ministério da Saúde, só a penicilina benzatina (iniciada até 30 dias antes do parto) trata adequadamente o feto. Outros antimicrobianos não previnem a sífilis congênita; em caso de alergia, faz-se dessensibilização."
+  "explicacao": "Para o Ministério da Saúde, só a penicilina benzatina (iniciada até 30 dias antes do parto) trata adequadamente o feto. Outros antimicrobianos não previnem a sífilis congênita; em caso de alergia, faz-se dessensibilização.",
+  "tema": "sifilis",
+  "subtema": "sifilis.sifilis-na-gestacao-e-congenita",
+  "especialidade": "obstetricia",
+  "disciplina": "Ginecologia e Obstetrícia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-4180a88b",
@@ -669,7 +1045,15 @@
    "Inversão uterina"
   ],
   "correta": 1,
-  "explicacao": "Dos \"4 T\" (tônus, trauma, tecido, trombina), o tônus, isto é, a atonia uterina, é a causa mais frequente. Útero amolecido e aumentado confirma o mecanismo; as primeiras medidas são massagem uterina e uterotônicos, com ocitocina como primeira escolha."
+  "explicacao": "Dos \"4 T\" (tônus, trauma, tecido, trombina), o tônus, isto é, a atonia uterina, é a causa mais frequente. Útero amolecido e aumentado confirma o mecanismo; as primeiras medidas são massagem uterina e uterotônicos, com ocitocina como primeira escolha.",
+  "tema": "hemorragia-pos-parto",
+  "subtema": "hemorragia-pos-parto.causas-4-ts",
+  "especialidade": "obstetricia",
+  "disciplina": "Ginecologia e Obstetrícia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-1a81202d",
@@ -683,7 +1067,15 @@
    "Mioma uterino; miomectomia"
   ],
   "correta": 2,
-  "explicacao": "Útero aumentado, β-hCG muito alto e imagem em flocos de neve sem embrião caracterizam mola completa. Trata-se com esvaziamento (preferencialmente por aspiração) e segue-se com β-hCG seriado até normalizar, para detectar neoplasia trofoblástica gestacional."
+  "explicacao": "Útero aumentado, β-hCG muito alto e imagem em flocos de neve sem embrião caracterizam mola completa. Trata-se com esvaziamento (preferencialmente por aspiração) e segue-se com β-hCG seriado até normalizar, para detectar neoplasia trofoblástica gestacional.",
+  "tema": "hemorragias-da-primeira-metade-da-gestacao",
+  "subtema": "hemorragias-da-primeira-metade-da-gestacao.doenca-trofoblastica-gestacional",
+  "especialidade": "obstetricia",
+  "disciplina": "Ginecologia e Obstetrícia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-07e7fe47",
@@ -697,7 +1089,15 @@
    "Não pode ser feito sem LH/FSH maior que 2"
   ],
   "correta": 3,
-  "explicacao": "Rotterdam: dois de três critérios (oligo/anovulação, hiperandrogenismo clínico ou laboratorial, morfologia policística à ultrassonografia), após excluir outras causas. Resistência insulínica, obesidade e relação LH/FSH não são critérios."
+  "explicacao": "Rotterdam: dois de três critérios (oligo/anovulação, hiperandrogenismo clínico ou laboratorial, morfologia policística à ultrassonografia), após excluir outras causas. Resistência insulínica, obesidade e relação LH/FSH não são critérios.",
+  "tema": "sindrome-dos-ovarios-policisticos",
+  "subtema": "sindrome-dos-ovarios-policisticos.criterios-diagnosticos",
+  "especialidade": "ginecologia",
+  "disciplina": "Ginecologia e Obstetrícia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-31ff7aa0",
@@ -711,7 +1111,15 @@
    "Imunoglobulina anti-D até 72 horas após o parto"
   ],
   "correta": 4,
-  "explicacao": "Mãe Rh negativo não sensibilizada (Coombs indireto negativo) com RN Rh positivo deve receber imunoglobulina anti-D em até 72 horas. Se já estiver sensibilizada, a imunoglobulina não tem mais efeito."
+  "explicacao": "Mãe Rh negativo não sensibilizada (Coombs indireto negativo) com RN Rh positivo deve receber imunoglobulina anti-D em até 72 horas. Se já estiver sensibilizada, a imunoglobulina não tem mais efeito.",
+  "tema": "aloimunizacao-rh",
+  "subtema": "aloimunizacao-rh.profilaxia-com-imunoglobulina-anti-d",
+  "especialidade": "obstetricia",
+  "disciplina": "Ginecologia e Obstetrícia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-4c7767b9",
@@ -725,7 +1133,15 @@
    "Cervicite gonocócica; ceftriaxona"
   ],
   "correta": 0,
-  "explicacao": "Os critérios de Amsel (corrimento homogêneo, pH > 4,5, teste das aminas positivo, clue cells; três de quatro) confirmam vaginose bacteriana, tratada com metronidazol. A candidíase tem pH < 4,5 e corrimento grumoso."
+  "explicacao": "Os critérios de Amsel (corrimento homogêneo, pH > 4,5, teste das aminas positivo, clue cells; três de quatro) confirmam vaginose bacteriana, tratada com metronidazol. A candidíase tem pH < 4,5 e corrimento grumoso.",
+  "tema": "vulvovaginites",
+  "subtema": "vulvovaginites.vaginose-bacteriana",
+  "especialidade": "ginecologia",
+  "disciplina": "Ginecologia e Obstetrícia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-b63e3a89",
@@ -739,7 +1155,15 @@
    "98,8%"
   ],
   "correta": 1,
-  "explicacao": "Doentes: 100 (90 VP, 10 FN). Sadios: 900 (810 VN, 90 FP). VPP = 90/(90 + 90) = 50%. O VPN seria 810/820 ≈ 98,8%; a baixa prevalência derruba o VPP."
+  "explicacao": "Doentes: 100 (90 VP, 10 FN). Sadios: 900 (810 VN, 90 FP). VPP = 90/(90 + 90) = 50%. O VPN seria 810/820 ≈ 98,8%; a baixa prevalência derruba o VPP.",
+  "tema": "testes-diagnosticos",
+  "subtema": "testes-diagnosticos.valores-preditivos",
+  "especialidade": "epidemiologia",
+  "disciplina": "Epidemiologia",
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-b1ebedba",
@@ -753,7 +1177,15 @@
    "25"
   ],
   "correta": 2,
-  "explicacao": "Redução absoluta do risco = 20% − 15% = 5% (0,05); NNT = 1/0,05 = 20. A redução relativa do risco seria de 25%."
+  "explicacao": "Redução absoluta do risco = 20% − 15% = 5% (0,05); NNT = 1/0,05 = 20. A redução relativa do risco seria de 25%.",
+  "tema": "estudos-epidemiologicos",
+  "subtema": "estudos-epidemiologicos.medidas-de-associacao-e-de-efeito",
+  "especialidade": "epidemiologia",
+  "disciplina": "Epidemiologia",
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-33d4cacf",
@@ -767,7 +1199,15 @@
    "Incidência de 60% nos expostos"
   ],
   "correta": 3,
-  "explicacao": "No caso-controle não se calcula incidência nem risco relativo; usa-se a odds ratio = (60 × 70)/(40 × 30) = 4.200/1.200 = 3,5."
+  "explicacao": "No caso-controle não se calcula incidência nem risco relativo; usa-se a odds ratio = (60 × 70)/(40 × 30) = 4.200/1.200 = 3,5.",
+  "tema": "estudos-epidemiologicos",
+  "subtema": "estudos-epidemiologicos.medidas-de-associacao-e-de-efeito",
+  "especialidade": "epidemiologia",
+  "disciplina": "Epidemiologia",
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-8ce34aec",
@@ -781,7 +1221,15 @@
    "Aumente"
   ],
   "correta": 4,
-  "explicacao": "Em situação estável, prevalência ≈ incidência × duração média da doença. Prolongar a sobrevida sem curar aumenta a duração e, portanto, a prevalência."
+  "explicacao": "Em situação estável, prevalência ≈ incidência × duração média da doença. Prolongar a sobrevida sem curar aumenta a duração e, portanto, a prevalência.",
+  "tema": "medidas-de-frequencia-e-indicadores",
+  "subtema": "medidas-de-frequencia-e-indicadores.incidencia-e-prevalencia",
+  "especialidade": "epidemiologia",
+  "disciplina": "Epidemiologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-d440cf32",
@@ -795,7 +1243,15 @@
    "Ensaio clínico randomizado"
   ],
   "correta": 0,
-  "explicacao": "Partir da exposição em pessoas livres da doença e segui-las para medir a incidência define o estudo de coorte, que permite calcular o risco relativo. No caso-controle, parte-se da doença para investigar exposições passadas."
+  "explicacao": "Partir da exposição em pessoas livres da doença e segui-las para medir a incidência define o estudo de coorte, que permite calcular o risco relativo. No caso-controle, parte-se da doença para investigar exposições passadas.",
+  "tema": "estudos-epidemiologicos",
+  "subtema": "estudos-epidemiologicos.estudos-de-coorte",
+  "especialidade": "epidemiologia",
+  "disciplina": "Epidemiologia",
+  "dificuldade": 1,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-75c991a9",
@@ -809,7 +1265,15 @@
    "Somente quando convocada pelo Congresso Nacional"
   ],
   "correta": 1,
-  "explicacao": "A Lei 8.142/1990 define a Conferência de Saúde (a cada 4 anos) e o Conselho de Saúde (permanente e deliberativo), com representação paritária dos usuários em relação aos demais segmentos."
+  "explicacao": "A Lei 8.142/1990 define a Conferência de Saúde (a cada 4 anos) e o Conselho de Saúde (permanente e deliberativo), com representação paritária dos usuários em relação aos demais segmentos.",
+  "tema": "sus-principios-e-legislacao",
+  "subtema": "sus-principios-e-legislacao.lei-8-142-1990-e-controle-social",
+  "especialidade": "saude-publica-sus",
+  "disciplina": "Saúde Coletiva",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-2d9d331f",
@@ -823,7 +1287,15 @@
    "Primordial"
   ],
   "correta": 2,
-  "explicacao": "A prevenção quaternária (Jamoulle) busca identificar pessoas em risco de medicalização excessiva e protegê-las de intervenções desnecessárias e de iatrogenia."
+  "explicacao": "A prevenção quaternária (Jamoulle) busca identificar pessoas em risco de medicalização excessiva e protegê-las de intervenções desnecessárias e de iatrogenia.",
+  "tema": "niveis-de-prevencao-e-rastreamento",
+  "subtema": "niveis-de-prevencao-e-rastreamento.prevencao-quaternaria",
+  "especialidade": "medicina-de-familia",
+  "disciplina": "Medicina de Família e Comunidade",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-f21c97df",
@@ -837,7 +1309,15 @@
    "Viés de publicação"
   ],
   "correta": 3,
-  "explicacao": "O rastreamento antecipa o diagnóstico, e o tempo de sobrevida medido a partir dele aumenta mesmo sem mudar a data do óbito. Por isso, o desfecho adequado para avaliar rastreamento é a mortalidade."
+  "explicacao": "O rastreamento antecipa o diagnóstico, e o tempo de sobrevida medido a partir dele aumenta mesmo sem mudar a data do óbito. Por isso, o desfecho adequado para avaliar rastreamento é a mortalidade.",
+  "tema": "niveis-de-prevencao-e-rastreamento",
+  "subtema": "niveis-de-prevencao-e-rastreamento.vieses-do-rastreamento",
+  "especialidade": "epidemiologia",
+  "disciplina": "Epidemiologia",
+  "dificuldade": 3,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  },
  {
   "id": "res-808bdcee",
@@ -851,6 +1331,14 @@
    "15 por 1.000 nascidos vivos"
   ],
   "correta": 4,
-  "explicacao": "Coeficiente de mortalidade infantil = óbitos de menores de 1 ano / nascidos vivos × 1.000 = 30/2.000 × 1.000 = 15. Óbitos fetais não entram, e 12/2.000 = 6 seria o componente neonatal."
+  "explicacao": "Coeficiente de mortalidade infantil = óbitos de menores de 1 ano / nascidos vivos × 1.000 = 30/2.000 × 1.000 = 15. Óbitos fetais não entram, e 12/2.000 = 6 seria o componente neonatal.",
+  "tema": "medidas-de-frequencia-e-indicadores",
+  "subtema": "medidas-de-frequencia-e-indicadores.mortalidade-infantil",
+  "especialidade": "epidemiologia",
+  "disciplina": "Epidemiologia",
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null
  }
 ]
