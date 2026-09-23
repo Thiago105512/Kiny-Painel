@@ -40,11 +40,11 @@ rota("/", () => {
   if (pend.cards.length) fazer.push([`${pend.cards.length} flashcard(s) para revisar`, `<a class="btn mini" href="#/flashcards/estudar">Estudar</a>`]);
   pend.temas.slice(0, 4).forEach(t => fazer.push([`Revisão do tema ${linkTema(t.id)} <span class="muted small">(${quando(t.srs.prox)})</span>`, `<a class="btn mini" href="#/revisoes/tema/${encodeURIComponent(t.id)}">Revisar</a>`]));
   if (pend.temas.length > 4) fazer.push([`+${pend.temas.length - 4} temas vencidos`, `<a class="btn mini sec" href="#/revisoes">Ver todos</a>`]);
-  if (pend.erros.length) fazer.push([`${pend.erros.length} questão(ões) do caderno de erros para refazer`, `<a class="btn mini" href="#/revisoes/erros">Refazer</a>`]);
+  if (pend.erros.length) fazer.push([`${pend.erros.length} questão(ões) do caderno de erros para refazer`, `<a class="btn mini" href="#/revisoes/erros">Refazer por tema</a>`]);
   planoHoje.forEach(p => fazer.push([`<label class="check" style="padding:0"><input type="checkbox" data-chg="plano-feito" data-id="${esc(p.id)}" ${p.feito ? "checked" : ""}><span>${esc(p.titulo)}${p.tema ? " · " + linkTema(p.tema) : ""} <span class="muted small">${p.min ? p.min + " min" : ""}${p.nq ? " · " + p.nq + " questões" : ""}</span></span></label>`, p.tema ? `<a class="btn mini sec" href="#/tema/${encodeURIComponent(p.tema)}">Abrir</a>` : ""]));
   return {
     secao: "inicio", titulo: "Início", sub: new Date().toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" }),
-    html: `<div class="kpis">
+    html: `${avisoBackup()}<div class="kpis">
       <div class="kpi"><b>${d.q}<small class="muted" style="font-size:14px">/${metas.questoes}</small></b><span>questões hoje</span>${medidor(pct(d.q, metas.questoes), "ok")}</div>
       <div class="kpi"><b>${d.q ? pct(d.ac, d.q) + "%" : "—"}</b><span>acerto hoje</span></div>
       <div class="kpi"><b>${Math.round((d.seg || 0) / 60)}<small class="muted" style="font-size:14px">/${metas.minutos} min</small></b><span>tempo de estudo</span>${medidor(pct((d.seg || 0) / 60, metas.minutos), "ok")}</div>

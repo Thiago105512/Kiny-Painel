@@ -74,7 +74,7 @@ await p.click(`[data-act="erro-detalhe"][data-q="${qErr}"]`);await p.click('[dat
 const E=await p.evaluate(q=>store.doc('erros').itens[q],qErr);ok(E.motivo==='Confundi conceitos parecidos'&&E.coment==='nota pessoal teste'&&E.card,'motivo, comentário e flashcard registrados no erro');
 await p.evaluate(q=>{const e=store.doc('erros').itens[q];e.srs.prox=hoje();store.mudou('erros');},qErr); // "amanhã chegou"
 await go('#/revisoes');ok((await txt()).includes('Refazer'),'revisão do erro aparece como pendente');
-await go('#/revisoes/erros');await responder(true);
+await go('#/revisoes/erros');ok((await txt()).includes('Refazer lote'),'erros agrupados em lotes por tema');await go('#/revisoes/erros/todos');await responder(true);
 const E2=await p.evaluate(q=>store.doc('erros').itens[q].srs,qErr);ok(E2.etapa===1&&E2.int===7,'acertou na revisão → próxima em 7 dias');
 
 console.log('Fluxo 4: ENEM → Matemática → assunto → questões → simulado → desempenho');

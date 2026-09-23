@@ -9,10 +9,12 @@
   document.body.appendChild(dl);
 
   store.aoRemoto(() => { invalidarQuestoes(); render(); });
-  store.conectar().then(() => { invalidarQuestoes(); render(); });
+  const conta = store.conectar().then(() => { invalidarQuestoes(); render(); });
   render();
   IA.iniciar();
-  iniciarArquivos().then(() => { if (/biblioteca/.test(caminhoAtual())) render(); });
+  const arquivos = iniciarArquivos().then(() => { if (/biblioteca/.test(caminhoAtual())) render(); });
+  // Backup semanal: só depois de carregar a conta e o armazenamento de arquivos
+  Promise.all([conta, arquivos]).then(() => setTimeout(backupAutomatico, 4000));
 
   // Tempo de estudo: conta blocos de 15 s com a página visível e interação nos últimos 3 min.
   let ultimaAcao = Date.now(), acumulado = 0;

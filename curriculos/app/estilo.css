@@ -212,3 +212,21 @@ main:focus{outline:none}
 .grid>.caixa+.caixa,.grid>.caixa{margin-top:0}
 @media (max-width:560px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.kpis .kpi:last-child:nth-child(odd){grid-column:1/-1}}
 @media (max-width:860px){.fab{width:52px;height:52px;padding:0;font-size:0;gap:0}.fab .icone{width:22px;height:22px}}
+
+/* Mapa mental (árvore) */
+.arvore,.arvore ul{list-style:none;margin:0;padding:0}
+.arvore ul{padding-left:16px}
+.arvore li{position:relative;padding:4px 0 4px 16px}
+.arvore li::before{content:"";position:absolute;left:0;top:0;bottom:0;border-left:1.5px solid var(--line)}
+.arvore li::after{content:"";position:absolute;left:0;top:18px;width:12px;border-top:1.5px solid var(--line)}
+.arvore li:last-child::before{bottom:auto;height:18px}
+.arvore>li{padding-left:0}.arvore>li::before,.arvore>li::after{display:none}
+.arvore summary{cursor:pointer;list-style:none;display:inline}
+.arvore summary::-webkit-details-marker{display:none}
+.arvore .no{display:inline-block;max-width:100%;border:1px solid var(--line);border-radius:6px;padding:4px 9px;background:var(--sheet);font-size:14px;line-height:1.35;vertical-align:top}
+.arvore .no a{text-decoration:none;font-weight:600}
+.arvore .no small{color:var(--muted);font:11px var(--mono)}
+.arvore>li>details>summary .no{font-weight:700;font-size:16px;border-color:var(--pen);color:var(--pen);background:var(--pen-soft)}
+.arvore .no.ok{border-color:var(--ok);background:var(--ok-soft)}
+.arvore .no.bad{border-color:var(--bad);background:var(--bad-soft)}
+.legenda{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--muted);margin:0 0 10px}

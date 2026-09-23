@@ -67,11 +67,17 @@ rota("/medicina/inst/:id", ({ id }) => {
     ${tabela([{ t: "Curso" }, { t: "Versão" }, { t: "Períodos", num: 1 }, { t: "Disciplinas/módulos", num: 1 }, { t: "Situação" }, { t: "Fonte" }],
       gs.map(g => [esc(CURSOS[g.curso] || g.curso), `<a href="#/medicina/grade/${esc(g.id)}">${esc(g.versao || "sem versão")}</a>`, (g.periodos || []).length, itensGrade(g).length, pill(itensGrade(g).length ? statusGrade(g).nome : PENDENTE, itensGrade(g).length ? statusGrade(g).cls : "warn"), g.fonte?.ref ? `<span class="small">${esc(g.fonte.titulo || g.fonte.tipo || "")} ${/^https?:/.test(g.fonte.ref) ? `<a href="${esc(g.fonte.ref)}" target="_blank" rel="noopener">abrir</a>` : esc(g.fonte.ref)}</span>` : "—"]),
       { vaziaMsg: "Nenhuma matriz cadastrada." })}
-    ${(i.fontes || []).length ? `<h2 class="sec">Documentos oficiais para importar</h2><p class="small muted">Localizados em busca, ainda não lidos pelo app. Baixe o PDF e use "Importar matriz".</p><ul>${i.fontes.map(f => `<li><a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.titulo)}</a>${f.obs ? ` <span class="small muted">— ${esc(f.obs)}</span>` : ""}</li>`).join("")}</ul>` : ""}
+    ${(i.fontes || []).length ? `<h2 class="sec">Documentos oficiais para importar</h2><p class="small muted">Localizados em busca, ainda não lidos pelo app. Baixe o PDF e use "Importar matriz".</p>${tabela([{ t: "Documento" }, { t: "" }], i.fontes.map((f, k) => [`<a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.titulo)}</a>${f.obs ? `<br><span class="small muted">${esc(f.obs)}</span>` : ""}`, `<button class="btn mini" data-act="imp-fonte" data-inst="${esc(id)}" data-k="${k}">Importar este documento</button>`]))}
+    <p class="small muted">Passo a passo: abra o link → baixe o PDF da matriz → "Importar este documento" → envie o PDF → revise → confira item a item → marque como validada.</p>` : ""}
     <div class="acoes"><button class="btn sec" data-act="grade-vazia" data-inst="${esc(id)}">Cadastrar matriz manualmente</button></div>`,
     ctx: { texto: "Instituição: " + (i.nome || i.sigla) },
   };
 });
+ACOES["imp-fonte"] = el => {
+  const f = instPorId(el.dataset.inst).fontes[+el.dataset.k], ver = (f.titulo.match(/\b(20\d\d(?:\/\d)?)\b/) || [])[1] || "";
+  Object.assign(IMP, { inst: el.dataset.inst, curso: "medicina", versao: ver, fonteTipo: "pdf", fonteRef: f.url, texto: "", linhas: [], msg: "Fonte preenchida. Baixe o PDF no link oficial e envie o arquivo abaixo." });
+  ir("#/medicina/importar/" + el.dataset.inst);
+};
 ACOES["grade-vazia"] = el => abrirFolha(`<h2 class="sec">Nova matriz (cadastro manual)</h2><form class="pilha" data-form="grade-vazia" data-inst="${esc(el.dataset.inst)}">
   <label class="campo"><span class="lab">Curso</span><select id="gv-curso">${opcoes(Object.entries(CURSOS), "medicina")}</select></label>
   <label class="campo"><span class="lab">Versão / ano da matriz</span><input type="text" id="gv-versao" required placeholder="ex.: PPC 2025/2"></label>
@@ -96,7 +102,7 @@ rota("/medicina/grade/:g", ({ g: gid }) => {
   return {
     secao: "medicina", crumbs: crumbsGrade(g).slice(0, 2), titulo: `${nomeInst(g.instituicao)} — ${CURSOS[g.curso] || g.curso} (${g.versao || "sem versão"})`,
     sub: `${pill(st.nome, st.cls)} ${g.fonte?.ref ? `Fonte: ${esc(g.fonte.titulo || g.fonte.ref)}` : "Fonte não informada"}${g.atualizado ? ` · atualizada em ${dataBR(g.atualizado)}` : ""}`,
-    acoes: `${g.status !== "validado" && itensGrade(g).length ? `<button class="btn sec" data-act="grade-validar" data-g="${esc(g.id)}">Marcar como validada</button>` : ""}<a class="btn sec" href="#/medicina/importar/${esc(g.instituicao)}">Reimportar</a>`,
+    acoes: `${g.status !== "validado" && itensGrade(g).length ? `<a class="btn" href="#/medicina/grade/${esc(g.id)}/conferir">Conferir com o documento (${itensGrade(g).filter(i => i.conferido).length}/${itensGrade(g).length})</a>` : ""}<a class="btn sec" href="#/medicina/importar/${esc(g.instituicao)}">Reimportar</a>`,
     html: `${itensGrade(g).length ? "" : `<div class="aviso">${PENDENTE}. Importe o documento oficial ou cadastre as disciplinas manualmente em cada período.</div>`}
       ${g.observacoes ? `<p class="aviso info">${esc(g.observacoes)}</p>` : ""}
       <div class="kpis"><div class="kpi"><b>${(g.periodos || []).length}</b><span>períodos</span></div><div class="kpi"><b>${ch.itens}</b><span>disciplinas/módulos</span></div><div class="kpi"><b>${ch.conhecidas ? ch.total + " h" : "—"}</b><span>carga horária conhecida${ch.conhecidas < ch.itens ? ` (${ch.itens - ch.conhecidas} pendentes)` : ""}</span></div></div>
@@ -106,7 +112,27 @@ rota("/medicina/grade/:g", ({ g: gid }) => {
     ctx: { grade: g.id },
   };
 });
-ACOES["grade-validar"] = el => { const g = gradePorId(el.dataset.g); g.status = "validado"; salvarGrade(g); toast("Matriz marcada como validada"); atualizar(); };
+ACOES["grade-validar"] = el => { const g = gradePorId(el.dataset.g); if (itensGrade(g).some(i => !i.conferido)) { toast("Confira todos os itens antes de validar"); return; }
+  g.status = "validado"; g.validadoEm = new Date().toISOString(); salvarGrade(g); toast("Matriz validada"); ir("#/medicina/grade/" + g.id); };
+rota("/medicina/grade/:g/conferir", ({ g: gid }) => {
+  const g = gradePorId(gid); if (!g) return paginaNaoEncontrada();
+  const it = itensGrade(g), ok = it.filter(i => i.conferido).length;
+  return { secao: "medicina", crumbs: crumbsGrade(g), titulo: "Conferir com o documento oficial",
+    sub: `Compare cada linha com ${g.fonte?.ref ? (/^https?:/.test(g.fonte.ref) ? `<a href="${esc(g.fonte.ref)}" target="_blank" rel="noopener">o documento de origem</a>` : esc(g.fonte.ref)) : "o documento oficial"}. Corrija o que estiver diferente e marque como conferido.`,
+    html: `<div class="kpis"><div class="kpi"><b>${ok}/${it.length}</b><span>itens conferidos</span>${medidor(pct(ok, it.length), "ok")}</div></div>
+      ${(g.periodos || []).map(p => `<h2 class="sec">${esc(p.nome || p.numero + "º período")} <button class="btn mini sec" data-act="conf-periodo" data-g="${esc(g.id)}" data-p="${p.numero}">Marcar período como conferido</button></h2>
+        <div class="tabela-wrap"><table><thead><tr><th>Ok</th><th>Tipo</th><th>Nome (como no documento)</th><th class="num">CH</th></tr></thead><tbody>${(p.itens || []).map(x => `<tr>
+          <td><input type="checkbox" data-chg="conf-item" data-g="${esc(g.id)}" data-i="${esc(x.id)}" data-c="conferido" ${x.conferido ? "checked" : ""} aria-label="Conferido: ${esc(x.nome)}" style="width:20px;height:20px;accent-color:var(--ok)"></td>
+          <td><select data-chg="conf-item" data-g="${esc(g.id)}" data-i="${esc(x.id)}" data-c="tipo" aria-label="Tipo">${opcoes([["disciplina", "Disciplina"], ["modulo", "Módulo"]], x.tipo)}</select></td>
+          <td><input type="text" value="${esc(x.nome)}" data-chg="conf-item" data-g="${esc(g.id)}" data-i="${esc(x.id)}" data-c="nome" style="min-width:200px;width:100%" aria-label="Nome"></td>
+          <td class="num"><input type="number" min="0" value="${x.ch ?? ""}" data-chg="conf-item" data-g="${esc(g.id)}" data-i="${esc(x.id)}" data-c="ch" style="width:80px" aria-label="Carga horária"></td></tr>`).join("") || `<tr><td colspan="4" class="muted">Sem itens.</td></tr>`}</tbody></table></div>`).join("")}
+      <div class="acoes"><button class="btn azul" data-act="grade-validar" data-g="${esc(g.id)}" ${ok === it.length && it.length ? "" : "disabled"}>Marcar matriz como validada</button><span class="small muted">${ok === it.length ? "Tudo conferido." : `Faltam ${it.length - ok} itens.`}</span></div>`,
+    ctx: { grade: g.id } };
+});
+MUDANCAS["conf-item"] = el => editarItem(el.dataset.g, el.dataset.i, it => { const c = el.dataset.c;
+  if (c === "conferido") it.conferido = el.checked; else if (c === "ch") it.ch = el.value === "" ? null : +el.value; else if (c === "nome") it.nome = el.value.trim() || it.nome; else it[c] = el.value;
+  if (c !== "conferido") it.conferido = false; });
+ACOES["conf-periodo"] = el => { const g = gradePorId(el.dataset.g), p = g.periodos.find(x => String(x.numero) === el.dataset.p); (p.itens || []).forEach(x => { x.conferido = true; }); salvarGrade(g); atualizar(); };
 ACOES["grade-excluir"] = el => abrirFolha(`<h2 class="sec">Excluir matriz?</h2><p>Os temas, questões e o seu desempenho não são apagados — só esta matriz.</p><button class="btn perigo" data-act="grade-excluir-ok" data-g="${esc(el.dataset.g)}">Excluir</button>`);
 ACOES["grade-excluir-ok"] = el => { const G = store.doc("grades"); const inst = G.itens[el.dataset.g]?.instituicao; delete G.itens[el.dataset.g]; store.mudou("grades"); fecharFolha(); ir("#/medicina/inst/" + (inst || "")); };
 
@@ -228,9 +254,17 @@ function interpretarTexto(txt) {
     const mp = l.match(rePer);
     if (mp && l.length < 50) { per = +(mp[1] || mp[2]); continue; }
     if (ignorar.test(l) || l.length < 4 || /^[\d\s.,h]+$/i.test(l)) continue;
-    let resto = l, ch = null, codigo = null;
-    const mch = resto.match(/(\d{2,4})\s*(?:h\b|horas\b|h\/a\b)/i) || resto.match(/[\s;,](\d{2,4})\s*$/);
+    let resto = l.replace(/\b\d+\.\d+\.\d+\b/g, " "), ch = null, codigo = null; // "4.2.0" = créditos
+    const mch = resto.match(/(\d{2,4})\s*(?:h\b|horas\b|h\/a\b|h\.)/i);
     if (mch) { ch = +mch[1]; resto = resto.replace(mch[0], " "); }
+    else {
+      // Colunas numéricas no fim (CH total, teórica, prática, créditos…): a total é a maior.
+      const mt = resto.match(/((?:[\s;,|]+\d{1,4}){1,6})\s*$/);
+      let toks = mt ? mt[1].trim().split(/[\s;,|]+/) : [];
+      let k = 0; while (k < toks.length - 1 && +toks[k] < 10) k++;       // "Saúde Coletiva 2 60 …": o 2 é do nome
+      const cand = toks.slice(k).map(Number).filter(n => n >= 15);
+      if (cand.length) { ch = Math.max(...cand); resto = resto.slice(0, resto.length - mt[0].length) + (k ? " " + toks.slice(0, k).join(" ") : ""); }
+    }
     const mcod = resto.match(/^([A-Z]{2,5}[\s-]?\d{2,6}[A-Z]?)\b/); if (mcod) { codigo = mcod[1]; resto = resto.slice(mcod[0].length); }
     const nome = resto.replace(/\s{2,}/g, " ").replace(/^[\s\-–:;,.]+|[\s\-–:;,.]+$/g, "").trim();
     if (nome.length < 3 || per === null) continue;

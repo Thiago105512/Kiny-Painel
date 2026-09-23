@@ -83,7 +83,8 @@ const IA = (() => {
     try {
       const t = await texto(pedido, s => { const el = document.getElementById("ia-out"); if (el) el.textContent = s; });
       const tema = PAGINA?.ctx?.tema;
-      saida(`<h3>${esc(titulo)}</h3><div class="ia-txt ${titulo === "Mapa mental" ? "mm" : ""}">${esc(t)}</div>${tema ? `<div class="acoes"><button class="btn sec mini" data-act="ia-salvar-nota">Salvar nas anotações do tema</button></div>` : ""}`);
+      const corpo = titulo === "Mapa mental" ? `${arvore(textoParaArvore(t, TEMAS[tema]?.nome || "Mapa mental"))}<details style="margin-top:8px"><summary class="small">Ver como texto</summary><div class="ia-txt mm">${esc(t)}</div></details>` : `<div class="ia-txt">${esc(t)}</div>`;
+      saida(`<h3>${esc(titulo)}</h3>${corpo}${tema ? `<div class="acoes"><button class="btn sec mini" data-act="ia-salvar-nota">Salvar nas anotações do tema</button></div>` : ""}`);
       IA._txt = { titulo, t, tema };
     } catch (e) { saida(`<div class="aviso">${mensagemErro(e)}</div>`); }
     gerando = false;

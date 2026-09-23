@@ -89,7 +89,7 @@ rota("/questoes/q/:id", ({ id }) => {
 });
 
 /* ---------- Caderno de erros ---------- */
-const FE = { status: "aberto", tema: "", motivo: "" };
+const FE = { status: "aberto", tema: "", motivo: "", agrupar: false };
 function tabelaErros(errs) {
   return tabela([{ t: "Questão" }, { t: "Tema" }, { t: "Sua resposta" }, { t: "Motivo" }, { t: "Revisão" }, { t: "" }],
     errs.sort((a, b) => (a.srs?.prox || "").localeCompare(b.srs?.prox || "")).map(e => { const q = qPorId(e.qid); if (!q) return null;
@@ -111,10 +111,13 @@ rota("/erros", () => {
         <label class="campo"><span class="lab">Status</span><select data-chg="fe" data-c="status">${opcoes([["aberto", "Abertos"], ["resolvido", "Resolvidos"]], FE.status, "Todos")}</select></label>
         <label class="campo"><span class="lab">Tema</span><select data-chg="fe" data-c="tema">${opcoes(ordenarPt(unicos(todos.map(e => e.tema)).filter(Boolean), nomeTema).map(t => [t, nomeTema(t)]), FE.tema, "Todos")}</select></label>
         <label class="campo"><span class="lab">Motivo</span><select data-chg="fe" data-c="motivo">${opcoes(MOTIVOS.map(m => [m, m]), FE.motivo, "Todos")}</select></label></div>
-      ${todos.length ? tabelaErros(lista) : vazio("Nenhum erro registrado ainda. Quando você errar uma questão, ela aparece aqui com revisão programada.", `<a class="btn" href="#/questoes">Praticar questões</a>`)}`,
+      ${todos.length ? `<label class="check" style="margin-bottom:8px"><input type="checkbox" data-chg="fe-agrupar" ${FE.agrupar ? "checked" : ""}><span>Agrupar por tema</span></label>` : ""}
+      ${todos.length && FE.agrupar ? tabela([{ t: "Tema" }, { t: "Erros", num: 1 }, { t: "Abertos", num: 1 }, { t: "Vencidos", num: 1 }, { t: "" }], Object.entries(porChave(lista, e => e.tema || "_sem")).sort((a, b) => b[1].length - a[1].length).map(([tm, es]) => [tm === "_sem" ? "Sem tema" : linkTema(tm), es.length, es.filter(e => e.status === "aberto").length, es.filter(e => e.status === "aberto" && vencido(e.srs)).length || "—", es.some(e => e.status === "aberto") ? `<a class="btn mini" href="#/revisoes/erros/${encodeURIComponent(tm)}">Refazer lote</a>` : ""]))
+      : todos.length ? tabelaErros(lista) : vazio("Nenhum erro registrado ainda. Quando você errar uma questão, ela aparece aqui com revisão programada.", `<a class="btn" href="#/questoes">Praticar questões</a>`)}`,
   };
 });
 MUDANCAS.fe = el => { FE[el.dataset.c] = el.value; atualizar(); };
+MUDANCAS["fe-agrupar"] = el => { FE.agrupar = el.checked; atualizar(); };
 ACOES["erro-detalhe"] = el => {
   const e = store.doc("erros").itens[el.dataset.q], q = qPorId(el.dataset.q); if (!e || !q) return;
   abrirFolha(`<h2 class="sec">Registro do erro</h2><p class="leitura" style="margin:0 0 8px">${esc(q.q)}</p>

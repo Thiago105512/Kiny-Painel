@@ -45,7 +45,8 @@ function paginaBiblioteca(aba) {
     const nomes = store.nomes().filter(n => n !== "perfil");
     corpo = `<section class="caixa"><h2 class="sec">Onde seus dados ficam</h2><p>${store.naConta ? "Na sua conta Claude (sincronizados entre aparelhos) e em cópia local neste navegador." : "Somente neste navegador. Abra pelo link do Claude para sincronizar, ou faça backup regularmente."}</p>
       <p class="small muted">${nomes.length} coleções: ${nomes.map(esc).join(", ")}</p></section>
-      <section class="caixa"><h2 class="sec">Backup</h2><div class="linha">${DOWNLOADS ? `<button class="btn" data-act="bk-baixar">Baixar backup (.json)</button>` : ""}<button class="btn sec" data-act="bk-copiar">Copiar backup</button>
+      ${blocoBackups()}
+      <section class="caixa"><h2 class="sec">Backup manual</h2><div class="linha">${DOWNLOADS ? `<button class="btn" data-act="bk-baixar">Baixar backup (.json)</button>` : ""}<button class="btn sec" data-act="bk-copiar">Copiar backup</button>
         <label class="btn sec">Restaurar de arquivo<input type="file" accept=".json,application/json" data-chg="bk-arquivo" hidden></label></div>
         <label class="campo" style="margin-top:10px"><span class="lab">Ou cole um backup (inclui o formato da versão anterior)</span><textarea id="bk-txt" rows="3"></textarea></label><div class="acoes"><button class="btn sec" data-act="bk-colar">Restaurar do texto</button></div></section>
       <section class="caixa"><h2 class="sec">Zerar progresso</h2><p class="small">Apaga respostas, erros, revisões, flashcards, simulados e plano. Matrizes, questões próprias, anotações e materiais são mantidos.</p><button class="btn perigo" data-act="zerar-conf">Zerar progresso…</button></section>`;
@@ -84,8 +85,8 @@ FORMS["q-nova"] = () => {
   salvarQuestaoPropria(x); toast("Questão adicionada ao banco"); atualizar();
 };
 ACOES["q-del"] = el => { apagarQuestaoPropria(el.dataset.id); toast("Questão excluída"); atualizar(); };
-ACOES["bk-baixar"] = async () => { try { await DOWNLOADS.save({ filename: `gabarito-am-backup-${hoje()}.json`, data: JSON.stringify(store.exportar()) }); } catch (e) { if (e?.code !== "cancelled" && e?.code !== "declined") toast("Não foi possível baixar. Use Copiar backup."); } };
-ACOES["bk-copiar"] = async () => { const t = JSON.stringify(store.exportar()); try { await navigator.clipboard.writeText(t); toast("Backup copiado"); } catch (e) { const a = $("#bk-txt"); a.value = t; a.select(); toast("Selecionado — copie com Ctrl+C"); } };
+ACOES["bk-baixar"] = async () => { try { await DOWNLOADS.save({ filename: `gabarito-am-backup-${hoje()}.json`, data: JSON.stringify(store.exportar()) }); const P = store.doc("perfil"); P.ultimoDownload = Date.now(); store.mudou("perfil"); } catch (e) { if (e?.code !== "cancelled" && e?.code !== "declined") toast("Não foi possível baixar. Use Copiar backup."); } };
+ACOES["bk-copiar"] = async () => { const t = JSON.stringify(store.exportar()); try { await navigator.clipboard.writeText(t); toast("Backup copiado"); const P = store.doc("perfil"); P.ultimoDownload = Date.now(); store.mudou("perfil"); } catch (e) { const a = $("#bk-txt"); a.value = t; a.select(); toast("Selecionado — copie com Ctrl+C"); } };
 function restaurar(txt) { try { store.importar(JSON.parse(txt)); invalidarQuestoes(); toast("Backup restaurado"); atualizar(); } catch (e) { toast("Arquivo inválido: use um backup exportado por este app"); } }
 ACOES["bk-colar"] = () => restaurar($("#bk-txt").value);
 MUDANCAS["bk-arquivo"] = async el => { const f = el.files[0]; if (f) restaurar(await f.text()); };

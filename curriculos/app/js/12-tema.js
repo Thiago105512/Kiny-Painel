@@ -16,7 +16,7 @@ function crumbsTema(t) {
   const e = ESPECIALIDADES[t.especialidades?.[0]];
   return e ? [CRUMB_MED, ["Especialidades", "#/medicina/especialidades"], [e.nome, "#/medicina/esp/" + e.id]] : [CRUMB_MED];
 }
-const ABAS_TEMA = [["visao", "Visão geral"], ["questoes", "Questões"], ["flashcards", "Flashcards"], ["casos", "Casos"], ["notas", "Anotações"], ["materiais", "Materiais"], ["erros", "Erros"], ["desempenho", "Desempenho"]];
+const ABAS_TEMA = [["visao", "Visão geral"], ["mapa", "Mapa"], ["questoes", "Questões"], ["flashcards", "Flashcards"], ["casos", "Casos"], ["notas", "Anotações"], ["materiais", "Materiais"], ["erros", "Erros"], ["desempenho", "Desempenho"]];
 rota("/tema/:id", p => paginaTema(p.id, "visao"));
 rota("/tema/:id/:aba", p => paginaTema(p.id, p.aba));
 
@@ -46,6 +46,10 @@ function paginaTema(id, aba) {
       <section><h2 class="sec">Disciplinas e especialidades relacionadas</h2><p class="small muted" style="margin-top:0">Referência geral (não é a grade de uma faculdade).</p>
         <div class="chips">${(t.especialidades || []).map(e => `<a class="chip" href="#/medicina/esp/${esc(e)}">${esc(ESPECIALIDADES[e]?.nome || e)}</a>`).join("")}</div>
         <p class="small" style="margin-top:8px">${(t.disciplinas || []).map(esc).join(" · ")}</p></section></div>` : ""}`;
+  }
+  else if (aba === "mapa") {
+    corpo = `<p class="legenda"><span>Toque num ramo para abrir ou fechar.</span><span><span class="pill ok">verde</span> ≥70% de acerto</span><span><span class="pill bad">vermelho</span> &lt;50%</span></p>${arvore(mapaDoTema(id))}
+      ${IA.disponivel() ? `<div class="acoes"><button class="btn sec" data-act="ia-abrir">Gerar mapa mental detalhado com IA</button></div>` : ""}`;
   }
   else if (aba === "questoes") {
     const chave = "tema:" + id;
@@ -103,4 +107,33 @@ function listaQuestoes(qs, limite = 200) {
   return tabela([{ t: "Questão" }, { t: "Tema" }, { t: "Dif." }, { t: "Status" }],
     qs.slice(0, limite).map(q => { const s = statusQ(q); return [`<a href="#/questoes/q/${esc(q.id)}">${esc(q.q.length > 110 ? q.q.slice(0, 110) + "…" : q.q)}</a>`, q.tema ? linkTema(q.tema) : esc(q.a), q.dif ? DIFICULDADE[q.dif] : "—", pill(s.nome, cls[s.chave]) + (s.marcada ? " ★" : "") + (s.revisar ? " ↻" : "")]; }))
     + (qs.length > limite ? `<p class="small muted">Mostrando ${limite} de ${qs.length}. Use os filtros para refinar.</p>` : "");
+}
+
+/** Mapa do tema montado só com dados do app: subtemas (com desempenho), objetivos, grade, especialidades, materiais e temas relacionados. */
+function mapaDoTema(id) {
+  const t = TEMAS[id], med = t.dominio === "medicina", enc = encodeURIComponent(id);
+  const qs = questoes().filter(q => q.tema === id), cs = cards().filter(c => c.tema === id), casos = todosCasos().filter(c => c.temaId === id);
+  const nota = store.doc("notas").temas[id]?.texto, mats = Object.values(store.doc("materiais").itens).filter(m => m.tema === id);
+  const subs = (t.subtemas || []).map(s => { const a = agregados(q => q.tema === id && q.subtema === s.id), n = qs.filter(q => q.subtema === s.id).length;
+    return { t: s.nome, sub: n ? `${n} q.${a.n ? " · " + pct(a.ac, a.n) + "%" : ""}` : "", cls: clsDesempenho(a) }; });
+  const rel = med ? Object.values(TEMAS).filter(x => x.id !== id && x.dominio === "medicina").map(x => ({ x, s: (x.especialidades || []).filter(e => (t.especialidades || []).includes(e)).length * 2 + (x.disciplinas || []).filter(d => (t.disciplinas || []).includes(d)).length }))
+    .filter(o => o.s >= 3).sort((a, b) => b.s - a.s).slice(0, 6).map(o => ({ t: o.x.nome, href: "#/tema/" + encodeURIComponent(o.x.id) }))
+    : Object.values(TEMAS).filter(x => x.id !== id && x.disciplinaId === t.disciplinaId).slice(0, 6).map(x => ({ t: x.nome, href: "#/tema/" + encodeURIComponent(x.id) }));
+  const onde = med ? ondeNaGrade(id) : [];
+  const d = desempenhoTema(id);
+  return { t: t.nome, sub: d.n ? `${pct(d.ac, d.n)}% em ${d.n} resp.` : "", filhos: [
+    subs.length && { t: "Subtemas", filhos: subs },
+    (t.objetivos || []).length && { t: "Objetivos", filhos: t.objetivos.map(o => ({ t: o })) },
+    onde.length && { t: "Na grade", filhos: onde.map(o => ({ t: `${nomeInst(o.g.instituicao)} · ${o.periodo}º · ${o.item.nome}`, href: `#/medicina/grade/${o.g.id}/item/${o.item.id}` })) },
+    med && (t.especialidades || []).length && { t: "Especialidades", filhos: t.especialidades.map(e => ({ t: ESPECIALIDADES[e]?.nome || e, href: "#/medicina/esp/" + e })) },
+    (t.disciplinas || []).length && { t: "Disciplinas relacionadas", filhos: t.disciplinas.map(x => ({ t: x })) },
+    { t: "Estudar", filhos: [
+      { t: "Questões", sub: String(qs.length), href: `#/tema/${enc}/questoes`, cls: clsDesempenho(d) },
+      { t: "Flashcards", sub: String(cs.length), href: `#/tema/${enc}/flashcards` },
+      med && { t: "Casos clínicos", sub: String(casos.length), href: `#/tema/${enc}/casos`, filhos: casos.map(c => ({ t: c.titulo, href: "#/casos/" + c.id })) },
+      nota && { t: "Minhas anotações", href: `#/tema/${enc}/notas` },
+      mats.length && { t: "Materiais", sub: String(mats.length), href: `#/tema/${enc}/materiais` },
+    ] },
+    rel.length && { t: "Temas relacionados", filhos: rel },
+  ] };
 }

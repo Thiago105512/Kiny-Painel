@@ -20,6 +20,7 @@ const DOC_PADRAO = {
   grades:       () => ({ itens: {} }),   // matrizes importadas/editadas
   instituicoes: () => ({ itens: {} }),   // instituições adicionadas pelo usuário
   guia:         () => ({ g: {} }),       // checklist do guia de referência
+  backups:      () => ({ itens: [] }),   // registro dos backups automáticos (não entra no próprio backup)
 };
 // Progresso das questões, fragmentado por trilha para cada doc ficar pequeno:
 // prog-<trilha>.q[qid] = {n, ac, h:[[ts, resp, ok, ms, origem]…], m: marcada, r: revisar}
@@ -113,12 +114,14 @@ const store = (() => {
   }
 
   /** Backup completo (exportação/importação manual). */
-  const exportar = () => ({ formato: "gabarito-am", versao: 2, exportado: new Date().toISOString(), docs: Object.fromEntries(Object.keys(docs).map(n => [n, docs[n]])) });
+  const exportar = () => ({ formato: "gabarito-am", versao: 2, exportado: new Date().toISOString(), docs: Object.fromEntries(Object.keys(docs).filter(n => n !== "backups").map(n => [n, docs[n]])) });
   function importar(obj) {
     if (obj && obj.estado) { aplicarV1(obj.estado, obj.extras); return; } // backup antigo
     if (!obj || obj.formato !== "gabarito-am" || typeof obj.docs !== "object") throw new Error("formato");
+    // Restaurar = voltar ao estado do backup: coleções que não existiam nele voltam ao padrão.
+    Object.keys(docs).forEach(n => { if (n !== "backups" && !(n in obj.docs)) { docs[n] = padrao(n); mudou(n); } });
     for (const [n, corpo] of Object.entries(obj.docs)) {
-      if (!(n in DOC_PADRAO || n.startsWith("prog-")) || typeof corpo !== "object") continue;
+      if (!(n in DOC_PADRAO || n.startsWith("prog-")) || n === "backups" || typeof corpo !== "object") continue;
       docs[n] = Object.assign(padrao(n), corpo); mudou(n);
     }
   }

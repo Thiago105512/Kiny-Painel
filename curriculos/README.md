@@ -77,7 +77,8 @@ Um tema como *Hipertensão arterial* existe **uma vez só**. As disciplinas e os
 | `redacoes` | Essay: texto, autoavaliação e estimativa da IA por competência |
 | `notas`, `materiais` | anotações e materiais por tema; PDFs no armazenamento do app |
 | `questoes`, `casos` | questões e casos criados por você ou pela IA |
-| `grades`, `instituicoes` | matrizes importadas ou editadas e faculdades adicionadas |
+| `grades`, `instituicoes` | matrizes importadas ou editadas (cada item com `conferido`) e faculdades adicionadas |
+| `backups` | registro dos backups automáticos (não entra no próprio backup) |
 
 **Revisão espaçada:** etapas de 1 → 7 → 30 → 90 dias; depois disso, o intervalo × a facilidade.
 
@@ -95,7 +96,9 @@ Na revisão de um tema, a nota vem do aproveitamento nas questões: menos de 50%
 1. **Pelo app** (recomendado): Medicina → UFAM (ou UEA) → **Importar matriz**.
    - Envie PDF, XLSX/CSV, DOCX ou TXT, ou cole o texto.
    - Escolha **Interpretar por regras** ou **Estruturar com IA**.
-   - Revise a tabela e salve. A matriz entra como "Importada — conferir" até você marcar **validada**.
+   - Revise a tabela e salve. A matriz entra como "Importada — conferir".
+   - Em **Conferir com o documento**, marque item a item (ou o período inteiro) conforme o PDF. Só com tudo conferido o botão **Marcar matriz como validada** é liberado.
+   - Na página da UFAM, os links oficiais têm o botão **Importar este documento**, que já preenche a fonte.
 2. **Pelo repositório:** crie `dados/grades/ufam-medicina-<versao>.json` no formato abaixo e rode o build.
 
 ```json
@@ -107,6 +110,14 @@ Na revisão de um tema, a nota vem do aproveitamento nas questões: menos de 50%
 
 Nunca preencha disciplina, CH ou período sem documento oficial. Sem dado, o app mostra "Dado curricular pendente de validação".
 
+## Backup
+
+- **Automático semanal:** na abertura do app, se o último backup tiver mais de 7 dias.
+  - Na conta, grava um arquivo JSON no armazenamento do app.
+  - Sem conta, guarda uma cópia neste navegador e mostra no Início um aviso para baixar.
+- **Restaurar:** em Biblioteca → Dados. Antes de restaurar, o app salva o estado atual ("antes de restaurar").
+- **Arquivos antigos:** só são apagados pelo botão "Apagar antigos (manter 4)".
+
 ## Testes
 
 Precisam de Node e Playwright. Na raiz do repositório:
@@ -117,4 +128,5 @@ python3 -m http.server 8765 &
 node curriculos/testes/fumaca.js     # 41 rotas em 390/768/1280 px: erros de JS e rolagem horizontal
 node curriculos/testes/fluxos.js     # os 5 fluxos de estudo de ponta a ponta
 node curriculos/testes/migracao.js   # migração do formato antigo e sincronização com a conta
+node curriculos/testes/etapa2.js     # mapa mental, erros em lote, backup semanal, conferência da matriz
 ```

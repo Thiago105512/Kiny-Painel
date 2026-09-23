@@ -44,11 +44,46 @@ ACOES["rev-iniciar"] = el => {
   }); atualizar();
 };
 ACOES["rev-auto"] = el => { revisarTema(el.dataset.t, +el.dataset.n); toast(`Próxima revisão em ${store.doc("revisoes").temas[el.dataset.t].int} dias`); ir("#/revisoes"); };
+/* ---------- Erros em lote, agrupados por tema ---------- */
+function lotesDeErros() {
+  const abertos = Object.values(store.doc("erros").itens).filter(e => e.status === "aberto" && qPorId(e.qid));
+  return Object.entries(porChave(abertos, e => e.tema || "_sem")).map(([tema, es]) => ({ tema, abertos: es, vencidos: es.filter(e => vencido(e.srs)) }))
+    .sort((a, b) => b.vencidos.length - a.vencidos.length || b.abertos.length - a.abertos.length);
+}
+const nomeLote = t => t === "_sem" ? "Sem tema" : nomeTema(t);
 rota("/revisoes/erros", () => {
-  if (!playerAtivo("erros")) {
-    const ids = pendencias().erros.map(e => e.qid);
-    if (!ids.length) return { secao: "revisoes", crumbs: [["Revisões", "#/revisoes"]], titulo: "Refazer erros", html: vazio("Nenhuma questão errada vencida hoje.", `<a class="btn sec" href="#/erros">Abrir caderno de erros</a>`) };
-    iniciarPlayer("erros", embaralhar(ids), "erro", res => { const ok = res.filter(r => r.ok).length; return `${ok} de ${res.length} acertadas. As acertadas avançam no intervalo; as erradas voltam para amanhã.`; });
-  }
-  return { secao: "revisoes", crumbs: [["Revisões", "#/revisoes"]], titulo: "Refazer questões erradas", html: htmlPlayer(), ctx: { questao: PL.ids[PL.i], tema: qPorId(PL.ids[PL.i])?.tema } };
+  const lotes = lotesDeErros(), venc = lotes.reduce((s, l) => s + l.vencidos.length, 0);
+  return { secao: "revisoes", crumbs: [["Revisões", "#/revisoes"]], titulo: "Refazer erros por tema", sub: "Refazer os erros de um mesmo tema juntos ajuda a fechar a lacuna de conteúdo, não só a questão.",
+    acoes: venc ? `<a class="btn" href="#/revisoes/erros/todos">Refazer todos os vencidos (${venc})</a>` : "",
+    html: lotes.length ? tabela([{ t: "Tema" }, { t: "Vencidos", num: 1 }, { t: "Abertos", num: 1 }, { t: "Motivo mais comum" }, { t: "" }], lotes.map(l => {
+      const mot = Object.entries(porChave(l.abertos, e => e.motivo || e.motivoSugerido || "—")).sort((a, b) => b[1].length - a[1].length)[0]?.[0];
+      return [l.tema === "_sem" ? "Sem tema" : linkTema(l.tema), l.vencidos.length || "—", l.abertos.length, `<span class="small">${esc(mot || "—")}</span>`,
+        `<a class="btn mini ${l.vencidos.length ? "" : "sec"}" href="#/revisoes/erros/${encodeURIComponent(l.tema)}">Refazer lote</a>`]; }))
+      : vazio("Nenhum erro aberto. Quando você errar questões, elas aparecem aqui agrupadas por tema.", `<a class="btn sec" href="#/erros">Caderno de erros</a>`) };
 });
+rota("/revisoes/erros/:tema", ({ tema }) => {
+  const chave = "erros:" + tema;
+  if (!playerAtivo(chave)) {
+    let es;
+    if (tema === "todos") es = lotesDeErros().flatMap(l => l.vencidos);
+    else { const l = lotesDeErros().find(x => x.tema === tema); es = l ? (l.vencidos.length ? l.vencidos : l.abertos) : []; }
+    if (!es.length) return { secao: "revisoes", crumbs: [["Revisões", "#/revisoes"], ["Erros", "#/revisoes/erros"]], titulo: "Refazer erros", html: vazio("Nenhum erro aberto neste lote.", `<a class="btn sec" href="#/revisoes/erros">Ver lotes</a>`) };
+    iniciarPlayer(chave, embaralhar(es.map(e => e.qid)), "erro", res => {
+      const ok = res.filter(r => r.ok).length, p = pct(ok, res.length), errou = res.filter(r => !r.ok).map(r => r.id);
+      PL.errouDeNovo = errou;
+      const temas = unicos(res.map(r => r.tema)).filter(Boolean);
+      return `${ok} de ${res.length} acertadas (${p}%). As acertadas avançam no intervalo; as erradas voltam para amanhã.`
+        + (p < 60 && temas.length === 1 ? ` <br>Aproveitamento baixo neste tema: vale <a href="#/tema/${encodeURIComponent(temas[0])}">rever o conteúdo</a> antes da próxima rodada.` : "")
+        + (errou.length ? ` <br><button class="btn mini" data-act="erros-cards" style="margin-top:6px">Criar flashcards das ${errou.length} que errei de novo</button>` : "");
+    });
+  }
+  return { secao: "revisoes", crumbs: [["Revisões", "#/revisoes"], ["Erros", "#/revisoes/erros"]], titulo: tema === "todos" ? "Refazer todos os erros vencidos" : "Erros: " + nomeLote(tema),
+    html: htmlPlayer(), ctx: { questao: PL.ids[PL.i], tema: tema !== "todos" && tema !== "_sem" ? tema : qPorId(PL.ids[PL.i])?.tema } };
+});
+ACOES["erros-cards"] = el => {
+  const E = store.doc("erros"); let n = 0;
+  (PL.errouDeNovo || []).forEach(id => { const e = E.itens[id], q = qPorId(id); if (!q || e?.card) return;
+    const card = criarCard({ frente: q.q, verso: `${q.o[q.c]}\n\n${q.e || ""}${e?.coment ? "\n\nMinha nota: " + e.coment : ""}`.trim(), tema: q.tema, subtema: q.subtema, origem: "erro", ref: q.id, dif: q.dif || 2 });
+    if (e) e.card = card; n++; });
+  store.mudou("erros"); el.disabled = true; el.textContent = n ? `${n} flashcards criados` : "Já tinham flashcard"; toast(n ? `${n} flashcards criados` : "Essas questões já tinham flashcard");
+};
