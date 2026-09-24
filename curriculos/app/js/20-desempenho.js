@@ -23,12 +23,6 @@ rota("/desempenho", () => {
   else if (DV.aba === "tema") tab = tabelaDesempenho(listaPor(ag.por.tema), "Tema", linkTema);
   else if (DV.aba === "enem") tab = `<h3 class="small muted" style="margin:0 0 6px">Por área do conhecimento</h3>${tabelaDesempenho(listaPor(ag.por.ae), "Área do ENEM", k => { const a = ENEM_AREAS.find(x => x.id === k); return a ? `<a href="#/enem/${esc(k)}">${esc(a.nome)}</a>` : esc(k); })}
     <h3 class="small muted" style="margin:14px 0 6px">Por disciplina (História, Geografia, Física…)</h3>${tabelaDesempenho(listaPor(ag.por.discEnem), "Disciplina do ENEM")}`;
-  else if (DV.aba === "nivel") {
-    const porNivel = [1, 2, 3].filter(d => ag.por.dif[d]).map(d => barra(DIFICULDADE[d], ag.por.dif[d].ac, ag.por.dif[d].n)).join("");
-    const pc = ag.por.pc, tot = Object.values(pc).reduce((s, v) => s + v.n, 0);
-    tab = `<h3 class="small muted" style="margin:0 0 6px">Acerto por nível da questão (classificação do banco)</h3>${porNivel ? `<div class="barras">${porNivel}</div>` : vazio("Responda algumas questões para ver.")}
-      <h3 class="small muted" style="margin:14px 0 6px">Como você classificou as questões depois de responder</h3>${tot ? `<div class="barras">${[1, 2, 3, 4].filter(k => pc[k]).map(k => barra(`${PERCEPCAO[k]} · ${pc[k].n}×`, pc[k].ac, pc[k].n)).join("")}</div><p class="small muted">A barra mostra quanto você acertou dentro de cada grupo. Acertos marcados como "Difícil" ou "Chutei" vão para "Revisar" (filtro em Questões).</p>` : vazio("Depois de responder, toque em Fácil, Média, Difícil ou Chutei para registrar como foi para você.")}`;
-  }
   else if (DV.aba === "trilha") tab = tabelaDesempenho(listaPor(ag.por.trilha), "Trilha", k => esc(TRILHAS[k]?.nome || k));
   const temTempo = Object.values(D).some(d => d.seg >= 60), sem = semanasComDados(4);
   return {
@@ -36,7 +30,7 @@ rota("/desempenho", () => {
     html: `${chips([["", "Tudo"], ["med", "Medicina"], ["enem", "ENEM"], ["direito", "Direito"], ["oab", "OAB"]], DV.trilha, "dv-trilha")}
       <div class="kpis"><div class="kpi"><b>${ag.n ? pct(ag.ac, ag.n) + "%" : "—"}</b><span>acerto geral</span></div><div class="kpi"><b>${ag.n}</b><span>respostas</span></div>
         <div class="kpi"><b>${ag.vistas}<small class="muted" style="font-size:13px"> / ${questoes().filter(filtro).length}</small></b><span>questões vistas</span></div><div class="kpi"><b>${horas(segTotal)}</b><span>tempo de estudo</span></div></div>
-      <section><h2 class="sec">Onde melhorar</h2>${abas([["disciplina", "Disciplinas"], ["tema", "Temas"], ["especialidade", "Especialidades"], ["nivel", "Nível"], ["enem", "ENEM"]], DV.aba, "dv-aba")}${tab}</section>
+      <section><h2 class="sec">Onde melhorar</h2>${abas([["disciplina", "Disciplinas"], ["tema", "Temas"], ["especialidade", "Especialidades"], ["enem", "ENEM"]], DV.aba, "dv-aba")}${tab}</section>
       <section><h2 class="sec">Questões nos últimos 14 dias</h2>${blocoEvolucao(14)}</section>
       ${temTempo ? `<section><h2 class="sec">Minutos de estudo</h2>${colunasTempo()}</section>` : ""}
       ${sem ? `<section><h2 class="sec">Por semana</h2>${sem}</section>` : ""}

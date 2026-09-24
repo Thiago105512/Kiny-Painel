@@ -141,7 +141,7 @@ function iniciarPlayer(chave, ids, origem = "pratica", aoFim = null) {
   Object.assign(PL, { ativo: true, chave, ids: ids.slice(), i: 0, esc: null, resp: false, origem, res: [], aoFim, ia: "", fim: false });
   prepararQuestao();
 }
-function prepararQuestao() { PL.ordem = embaralhar([0, 1, 2, 3, 4]); PL.esc = null; PL.resp = false; PL.pc = null; PL.t0 = Date.now(); PL.ia = ""; }
+function prepararQuestao() { PL.ordem = embaralhar([0, 1, 2, 3, 4]); PL.esc = null; PL.resp = false; PL.t0 = Date.now(); PL.ia = ""; }
 const playerAtivo = chave => PL.ativo && PL.chave === chave;
 function htmlPlayer() {
   if (PL.fim) {
@@ -166,7 +166,6 @@ function htmlPlayer() {
     <ol class="alts">${alts}</ol>
     ${PL.resp ? `<div class="retorno"><p class="veredito ${ok ? "ok" : "bad"}">${ok ? "Certo" : "Errado — gabarito " + letra(q.c)}${PL.ms ? ` · ${mmss(PL.ms)}` : ""}</p><p class="leitura" style="color:var(--ink2);margin:0">${esc(q.e || "Sem explicação cadastrada.")}</p>
       ${!ok ? `<p class="small muted" style="margin:8px 0 0">Registrado no <a href="#/erros">caderno de erros</a> com revisão amanhã.</p>` : ""}
-      <div class="perc"><span class="lab">Como foi para você?${q.dif ? ` <span class="muted">(nível do banco: ${DIFICULDADE[q.dif]})</span>` : ""}</span>${chips([[1, "Fácil"], [2, "Média"], [3, "Difícil"], ...(ok ? [[4, "Acertei no chute"]] : [])], PL.pc ?? "", "pl-perc")}</div>
       ${PL.ia ? `<h3>Assistente</h3><div class="ia-txt" id="pl-ia">${esc(PL.ia)}</div>` : ""}</div>` : ""}
     <div class="acoes">
       ${PL.resp ? `<button class="btn" data-act="pl-prox">${PL.i < PL.ids.length - 1 ? "Próxima" : "Concluir"}</button>` : `<button class="btn" data-act="pl-confirmar" ${PL.esc === null ? "disabled" : ""}>Confirmar</button><button class="btn sec" data-act="pl-pular">Pular</button>`}
@@ -176,7 +175,6 @@ function htmlPlayer() {
       ${PL.ids.length > 1 ? `<button class="btn sec mini dir" data-act="pl-encerrar">Encerrar sessão</button>` : ""}
     </div></article><p class="small muted">Atalhos: A–E escolhem · Enter confirma/avança</p>`;
 }
-ACOES["pl-perc"] = el => { const q = qPorId(PL.ids[PL.i]); PL.pc = +el.dataset.v; if (registrarPercepcao(q, PL.pc)) toast("Acertou, mas não com segurança — marcada para revisar"); atualizar(); };
 ACOES["pl-alt"] = el => { if (PL.resp) return; PL.esc = +el.dataset.i; atualizar(); };
 ACOES["pl-confirmar"] = () => {
   if (PL.esc === null || PL.resp) return;

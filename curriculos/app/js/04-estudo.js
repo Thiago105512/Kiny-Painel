@@ -33,16 +33,7 @@ function statusQ(q) {
   const p = progDe(q);
   if (!p || !p.n) return { chave: "nao", nome: "Não respondida", marcada: !!p?.m, revisar: !!p?.r };
   const ult = p.h[p.h.length - 1];
-  return { chave: ult && ult[2] ? "correta" : "incorreta", nome: ult && ult[2] ? "Correta" : "Incorreta", marcada: !!p.m, revisar: !!p.r, n: p.n, ac: p.ac, perc: p.pc || null };
-}
-/** Autoavaliação depois de responder: como a questão pareceu para você. */
-const PERCEPCAO = { 1: "Fácil", 2: "Média", 3: "Difícil", 4: "Chutei" };
-/** Guarda a percepção na última tentativa. Acerto com "Difícil" ou "Chutei" vai para "Revisar". Retorna true se marcou para revisar. */
-function registrarPercepcao(q, v) {
-  const d = store.doc(docProg(q.t)), p = d.q[q.id], ult = p?.h?.[p.h.length - 1]; if (!ult) return false;
-  p.pc = v; ult[5] = v;
-  const marcar = !!ult[2] && v >= 3 && !p.r; if (marcar) p.r = 1;
-  store.mudou(docProg(q.t)); return marcar;
+  return { chave: ult && ult[2] ? "correta" : "incorreta", nome: ult && ult[2] ? "Correta" : "Incorreta", marcada: !!p.m, revisar: !!p.r, n: p.n, ac: p.ac };
 }
 function alternarFlag(q, flag) {
   const d = store.doc(docProg(q.t)); const p = d.q[q.id] = d.q[q.id] || { n: 0, ac: 0, h: [], m: 0, r: 0 };
@@ -146,7 +137,7 @@ function pendencias() {
 
 /* ---------- Desempenho (PerformanceMetric calculado sob demanda) ---------- */
 function agregados(filtro = () => true) {
-  const res = { n: 0, ac: 0, ms: 0, nms: 0, vistas: 0, por: { disc: {}, esp: {}, tema: {}, trilha: {}, area: {}, ae: {}, discEnem: {}, dif: {}, pc: {} } };
+  const res = { n: 0, ac: 0, ms: 0, nms: 0, vistas: 0, por: { disc: {}, esp: {}, tema: {}, trilha: {}, area: {}, ae: {}, discEnem: {} } };
   const soma = (m, k, p, ok) => { if (!k) return; const x = m[k] = m[k] || { n: 0, ac: 0 }; x.n += p; x.ac += ok; };
   for (const q of questoes()) {
     if (!filtro(q)) continue;
@@ -155,7 +146,6 @@ function agregados(filtro = () => true) {
     for (const h of p.h) if (h[3]) { res.ms += h[3]; res.nms++; }
     soma(res.por.disc, q.disc, p.n, p.ac); soma(res.por.esp, q.esp, p.n, p.ac); soma(res.por.tema, q.tema, p.n, p.ac);
     soma(res.por.trilha, q.t, p.n, p.ac); soma(res.por.area, q.a, p.n, p.ac);
-    soma(res.por.dif, q.dif, p.n, p.ac); if (p.pc) soma(res.por.pc, p.pc, 1, p.h[p.h.length - 1]?.[2] || 0);
     if (q.ae) { soma(res.por.ae, q.ae, p.n, p.ac); soma(res.por.discEnem, q.disc, p.n, p.ac); }
   }
   return res;
