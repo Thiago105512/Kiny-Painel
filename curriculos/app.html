@@ -294,6 +294,11 @@ details.mais>summary{cursor:pointer;color:var(--pen);font-weight:600;font-size:1
 .atalhos a:hover{border-color:var(--pen)}
 .atalhos b{font-size:15px}
 .atalhos small{font-size:12px;color:var(--muted)}
+.nivel{display:inline-flex;align-items:center;gap:2px;font:600 12px var(--mono);border-radius:999px;padding:2px 9px 2px 7px;border:1px solid currentColor;white-space:nowrap}
+.nivel i{width:4px;border-radius:1px;background:currentColor;opacity:.25;margin-right:1px}
+.nivel i:nth-child(1){height:6px}.nivel i:nth-child(2){height:9px}.nivel i:nth-child(3){height:12px;margin-right:5px}
+.nivel.n1{color:var(--ok);background:var(--ok-soft)}.nivel.n2{color:var(--warn);background:var(--warn-soft)}.nivel.n3{color:var(--bad);background:var(--bad-soft)}
+.nivel.n1 i:nth-child(1),.nivel.n2 i:nth-child(-n+2),.nivel.n3 i{opacity:1}
 
 </style>
 
@@ -732,7 +737,7 @@ function pendencias() {
 
 /* ---------- Desempenho (PerformanceMetric calculado sob demanda) ---------- */
 function agregados(filtro = () => true) {
-  const res = { n: 0, ac: 0, ms: 0, nms: 0, vistas: 0, por: { disc: {}, esp: {}, tema: {}, trilha: {}, area: {}, ae: {}, discEnem: {} } };
+  const res = { n: 0, ac: 0, ms: 0, nms: 0, vistas: 0, por: { disc: {}, esp: {}, tema: {}, trilha: {}, area: {}, ae: {}, discEnem: {}, dif: {} } };
   const soma = (m, k, p, ok) => { if (!k) return; const x = m[k] = m[k] || { n: 0, ac: 0 }; x.n += p; x.ac += ok; };
   for (const q of questoes()) {
     if (!filtro(q)) continue;
@@ -741,6 +746,7 @@ function agregados(filtro = () => true) {
     for (const h of p.h) if (h[3]) { res.ms += h[3]; res.nms++; }
     soma(res.por.disc, q.disc, p.n, p.ac); soma(res.por.esp, q.esp, p.n, p.ac); soma(res.por.tema, q.tema, p.n, p.ac);
     soma(res.por.trilha, q.t, p.n, p.ac); soma(res.por.area, q.a, p.n, p.ac);
+    soma(res.por.dif, q.dif, p.n, p.ac);
     if (q.ae) { soma(res.por.ae, q.ae, p.n, p.ac); soma(res.por.discEnem, q.disc, p.n, p.ac); }
   }
   return res;
@@ -1035,6 +1041,8 @@ function paginaNaoEncontrada() { return { titulo: "Página não encontrada", htm
 
 /* ---------- Componentes ---------- */
 const vazio = (txt, botoes = "") => `<div class="vazio"><p>${txt}</p>${botoes ? `<div class="linha">${botoes}</div>` : ""}</div>`;
+/** Selo do nível da questão (definido pelo banco): barrinhas + nome, com cor. */
+const seloNivel = (d, curto = false) => DIFICULDADE[d] ? `<span class="nivel n${d}" title="Nível da questão: ${DIFICULDADE[d]}"><i></i><i></i><i></i>${curto ? "" : "Nível: "}${DIFICULDADE[d]}</span>` : "";
 const pill = (t, cls = "") => `<span class="pill ${cls}">${esc(t)}</span>`;
 const medidor = (p, cls = "") => `<div class="meter ${cls}" role="img" aria-label="${Math.round(p)}%"><i style="width:${Math.max(0, Math.min(100, p))}%"></i></div>`;
 const barra = (rotulo, a, n, extra = "") => `<div class="barra"><span>${rotulo}</span><small>${pct(a, n)}% · ${a}/${n}${extra}</small>${medidor(pct(a, n), pct(a, n) < 50 ? "bad" : "")}</div>`;
@@ -1110,7 +1118,8 @@ function htmlPlayer() {
   const letra = i => LETRAS[PL.ordem.indexOf(i)];
   const ok = PL.esc === q.c;
   return `<article class="caixa questao" id="pl">
-    <div class="meta"><span>${PL.i + 1}/${PL.ids.length}</span><span>${esc(TRILHAS[q.t]?.curto || q.t)}</span>${q.ae ? `<span>${esc(nomeAreaEnem(q.ae))}${q.disc ? " · " + esc(q.disc) : ""}</span>` : ""}${q.tema ? `<span>${linkTema(q.tema)}</span>` : `<span>${esc(q.a)}</span>`}${q.dif ? `<span>${DIFICULDADE[q.dif]}</span>` : ""}${q.src !== "banco" ? `<span>${q.src === "ia" ? "gerada por IA" : "minha"}</span>` : ""}${st.n ? `<span>${st.ac}/${st.n} antes</span>` : ""}</div>
+    <div class="meta"><span>${PL.i + 1}/${PL.ids.length}</span><span>${esc(TRILHAS[q.t]?.curto || q.t)}</span>${q.ae ? `<span>${esc(nomeAreaEnem(q.ae))}${q.disc ? " · " + esc(q.disc) : ""}</span>` : ""}${q.tema ? `<span>${linkTema(q.tema)}</span>` : `<span>${esc(q.a)}</span>`}${q.src !== "banco" ? `<span>${q.src === "ia" ? "gerada por IA" : "minha"}</span>` : ""}${st.n ? `<span>${st.ac}/${st.n} antes</span>` : ""}</div>
+    ${q.dif ? `<div style="margin:-4px 0 10px">${seloNivel(q.dif)}</div>` : ""}
     <p class="enunciado">${esc(q.q)}</p>
     <ol class="alts">${alts}</ol>
     ${PL.resp ? `<div class="retorno"><p class="veredito ${ok ? "ok" : "bad"}">${ok ? "Certo" : "Errado — gabarito " + letra(q.c)}${PL.ms ? ` · ${mmss(PL.ms)}` : ""}</p><p class="leitura" style="color:var(--ink2);margin:0">${esc(q.e || "Sem explicação cadastrada.")}</p>
@@ -1791,7 +1800,7 @@ function listaQuestoes(qs, limite = 20, paginar = false) {
   if (!qs.length) return vazio("Nenhuma questão com esses critérios.");
   const cls = { correta: "ok", incorreta: "bad", nao: "" };
   return `<div class="lista-q">${qs.slice(0, limite).map(q => { const s = statusQ(q);
-    return `<a href="#/questoes/q/${esc(q.id)}"><span class="txt">${esc(q.q)}</span><span class="meta">${pill(s.nome, cls[s.chave])}${s.marcada ? "<span>★ marcada</span>" : ""}<span>${esc(q.tema ? nomeTema(q.tema) : q.a)}</span>${q.dif ? `<span>${DIFICULDADE[q.dif]}</span>` : ""}</span></a>`; }).join("")}</div>`
+    return `<a href="#/questoes/q/${esc(q.id)}"><span class="txt">${esc(q.q)}</span><span class="meta">${pill(s.nome, cls[s.chave])}${s.marcada ? "<span>★ marcada</span>" : ""}<span>${esc(q.tema ? nomeTema(q.tema) : q.a)}</span>${seloNivel(q.dif, true)}</span></a>`; }).join("")}</div>`
     + (qs.length > limite ? (paginar ? `<div class="acoes"><button class="btn sec" data-act="lq-mais">Mostrar mais (${qs.length - limite} restantes)</button></div>` : `<p class="small muted">Mostrando ${limite} de ${qs.length}.</p>`) : "");
 }
 
@@ -1910,7 +1919,7 @@ function formFiltros(F, prefixo = "fq", { rapidos = false } = {}) {
     ${sel("esp", "Especialidade", espL.map(e => [e, ESPECIALIDADES[e].nome]))}
     ${sel("tema", "Tema", temasL.map(t => [t, nomeTema(t)]), "Todos")}
     ${F.tema ? sel("subtema", "Subtema", (TEMAS[F.tema]?.subtemas || []).map(s => [s.id, s.nome]), "Todos") : ""}
-    ${sel("dif", "Dificuldade", Object.entries(DIFICULDADE))}
+    ${sel("dif", "Nível", Object.entries(DIFICULDADE), "Todos")}
     ${sel("fonte", "Fonte", fontes.map(f => [f, { autoral: "Autoral (banco do app)", ia: "Gerada por IA", minha: "Minhas" }[f] || f]))}
     ${anos.length ? sel("ano", "Ano", anos.map(a => [a, a]), "Todos") : ""}${provas.length ? sel("prova", "Prova", provas.map(p => [p, p])) : ""}
     <label class="campo"><span class="lab">Texto</span><input type="search" value="${esc(F.texto)}" data-inp="${prefixo}-txt" placeholder="Palavra no enunciado"></label></div>
@@ -1927,13 +1936,14 @@ const TRILHAS_RAPIDAS = [["", "Todas"], ["med", "Medicina"], ["enem", "ENEM"], [
 const STATUS_RAPIDOS = [["nao", "Não respondidas"], ["incorreta", "Erradas"], ["marcada", "Marcadas"], ["revisar", "Revisar"]];
 rota("/questoes", () => {
   if (playerAtivo("banco")) return { secao: "questoes", crumbs: [["Questões", "#/questoes"]], titulo: PL.rotulo || "Praticando", html: htmlPlayer(), ctx: { questao: PL.ids[PL.i], tema: qPorId(PL.ids[PL.i])?.tema } };
-  const qs = filtrarQuestoes(FQ), extras = Object.entries(FQ).filter(([k, v]) => !["trilha", "status", "texto", ...(FQ.trilha === "enem" ? ["area", "disc"] : [])].includes(k) && v).length;
+  const qs = filtrarQuestoes(FQ), extras = Object.entries(FQ).filter(([k, v]) => !["trilha", "status", "texto", "dif", ...(FQ.trilha === "enem" ? ["area", "disc"] : [])].includes(k) && v).length;
   return {
     secao: "questoes", titulo: "Questões", sub: `${qs.length} de ${questoes().length}`,
     html: `${abas([["banco", "Banco"], ["erros", "Caderno de erros"]], "banco", "ir-aba-q")}
       <div class="pilha">
         ${chips(TRILHAS_RAPIDAS, FQ.trilha, "fq-trilha")}
         ${FQ.trilha === "enem" ? chipsEnem() : ""}
+        ${chipsNivel()}
         <div class="chips">${STATUS_RAPIDOS.map(([k, t]) => `<button class="chip" data-act="fq-st" data-v="${k}" aria-pressed="${FQ.status.includes(k)}">${t}</button>`).join("")}</div>
         <details class="filtros" ${extras ? "open" : ""} style="margin:0"><summary>Mais filtros${extras ? ` (${extras})` : ""}</summary><div style="margin-top:10px">${formFiltros(FQ, "fq", { rapidos: true })}</div>${extras || FQ.status.length || FQ.trilha ? `<div class="acoes"><button class="btn sec mini" data-act="fq-limpar">Limpar tudo</button></div>` : ""}</details>
         ${qs.length ? `<div class="linha"><button class="btn" data-act="praticar-filtro">Praticar ${Math.min(qs.length, 20)}</button><button class="btn sec" data-act="sim-do-filtro">Fazer simulado</button></div>` : ""}
@@ -1951,6 +1961,12 @@ function chipsEnem() {
   return `<div class="pilha" style="gap:6px"><span class="lab">Área do conhecimento</span>${chips(areas, FQ.area, "fq-area")}
     ${discs.length > 1 ? `<span class="lab">Disciplina</span>${chips([["", "Todas"], ...discs.map(d => [d, `${d} (${n(q => q.ae === FQ.area && q.disc === d)})`])], FQ.disc, "fq-disc")}` : ""}</div>`;
 }
+/** Nível da questão (Fácil/Média/Difícil), com a contagem dentro dos outros filtros. */
+function chipsNivel() {
+  const base = filtrarQuestoes({ ...FQ, dif: "" }), n = d => base.filter(q => String(q.dif) === d).length;
+  return `<div class="pilha" style="gap:6px"><span class="lab">Nível da questão</span>${chips([["", "Todos"], ...Object.entries(DIFICULDADE).map(([d, t]) => [d, `${t} (${n(d)})`])], FQ.dif, "fq-nivel")}</div>`;
+}
+ACOES["fq-nivel"] = el => { FQ.dif = el.dataset.v; QPAG = 20; atualizar(); };
 ACOES["fq-area"] = el => { FQ.area = el.dataset.v; Object.assign(FQ, { disc: "", tema: "", subtema: "" }); QPAG = 20; atualizar(); };
 ACOES["fq-disc"] = el => { FQ.disc = el.dataset.v; Object.assign(FQ, { tema: "", subtema: "" }); QPAG = 20; atualizar(); };
 ACOES["ir-aba-q"] = el => ir(el.dataset.v === "erros" ? "#/erros" : "#/questoes");
@@ -2210,7 +2226,7 @@ const SECOES_FIM = [["hipoteses", "Hipóteses diagnósticas"], ["diferenciais", 
 const todosCasos = () => CASOS_BASE.concat(Object.values(store.doc("casos").itens).map(c => ({ ...c, src: c.src || "minha" })));
 const casoPorId = id => todosCasos().find(c => c.id === id);
 function tabelaCasos(cs) {
-  return tabela([{ t: "Caso" }, { t: "Tema" }, { t: "Especialidade" }, { t: "Dif." }], cs.map(c => [`<a href="#/casos/${esc(c.id)}">${esc(c.titulo)}</a>${c.src !== "banco" ? " " + pill(c.src === "ia" ? "IA" : "meu") : ""}`, c.temaId ? linkTema(c.temaId) : esc(c.tema || "—"), esc(ESPECIALIDADES[c.espId]?.nome || c.especialidade || "—"), DIFICULDADE[c.dificuldade] || "—"]), { vaziaMsg: "Nenhum caso com esses filtros." });
+  return tabela([{ t: "Caso" }, { t: "Tema" }, { t: "Especialidade" }, { t: "Dif." }], cs.map(c => [`<a href="#/casos/${esc(c.id)}">${esc(c.titulo)}</a>${c.src !== "banco" ? " " + pill(c.src === "ia" ? "IA" : "meu") : ""}`, c.temaId ? linkTema(c.temaId) : esc(c.tema || "—"), esc(ESPECIALIDADES[c.espId]?.nome || c.especialidade || "—"), seloNivel(c.dificuldade, true) || "—"]), { vaziaMsg: "Nenhum caso com esses filtros." });
 }
 const FC2 = { esp: "", disc: "", dif: "", tema: "" };
 rota("/casos", () => {
@@ -2517,6 +2533,8 @@ rota("/desempenho", () => {
   else if (DV.aba === "tema") tab = tabelaDesempenho(listaPor(ag.por.tema), "Tema", linkTema);
   else if (DV.aba === "enem") tab = `<h3 class="small muted" style="margin:0 0 6px">Por área do conhecimento</h3>${tabelaDesempenho(listaPor(ag.por.ae), "Área do ENEM", k => { const a = ENEM_AREAS.find(x => x.id === k); return a ? `<a href="#/enem/${esc(k)}">${esc(a.nome)}</a>` : esc(k); })}
     <h3 class="small muted" style="margin:14px 0 6px">Por disciplina (História, Geografia, Física…)</h3>${tabelaDesempenho(listaPor(ag.por.discEnem), "Disciplina do ENEM")}`;
+  else if (DV.aba === "nivel") { const l = [1, 2, 3].filter(d => ag.por.dif[d]); tab = l.length ? `<div class="barras">${l.map(d => barra(DIFICULDADE[d], ag.por.dif[d].ac, ag.por.dif[d].n)).join("")}</div><p class="small muted">Seu acerto em cada nível de questão. O esperado é acertar mais as fáceis; se o acerto nas difíceis já estiver alto, priorize simulados com questões difíceis.</p>` : vazio("Responda algumas questões para ver.");
+  }
   else if (DV.aba === "trilha") tab = tabelaDesempenho(listaPor(ag.por.trilha), "Trilha", k => esc(TRILHAS[k]?.nome || k));
   const temTempo = Object.values(D).some(d => d.seg >= 60), sem = semanasComDados(4);
   return {
@@ -2524,7 +2542,7 @@ rota("/desempenho", () => {
     html: `${chips([["", "Tudo"], ["med", "Medicina"], ["enem", "ENEM"], ["direito", "Direito"], ["oab", "OAB"]], DV.trilha, "dv-trilha")}
       <div class="kpis"><div class="kpi"><b>${ag.n ? pct(ag.ac, ag.n) + "%" : "—"}</b><span>acerto geral</span></div><div class="kpi"><b>${ag.n}</b><span>respostas</span></div>
         <div class="kpi"><b>${ag.vistas}<small class="muted" style="font-size:13px"> / ${questoes().filter(filtro).length}</small></b><span>questões vistas</span></div><div class="kpi"><b>${horas(segTotal)}</b><span>tempo de estudo</span></div></div>
-      <section><h2 class="sec">Onde melhorar</h2>${abas([["disciplina", "Disciplinas"], ["tema", "Temas"], ["especialidade", "Especialidades"], ["enem", "ENEM"]], DV.aba, "dv-aba")}${tab}</section>
+      <section><h2 class="sec">Onde melhorar</h2>${abas([["disciplina", "Disciplinas"], ["tema", "Temas"], ["especialidade", "Especialidades"], ["nivel", "Nível"], ["enem", "ENEM"]], DV.aba, "dv-aba")}${tab}</section>
       <section><h2 class="sec">Questões nos últimos 14 dias</h2>${blocoEvolucao(14)}</section>
       ${temTempo ? `<section><h2 class="sec">Minutos de estudo</h2>${colunasTempo()}</section>` : ""}
       ${sem ? `<section><h2 class="sec">Por semana</h2>${sem}</section>` : ""}

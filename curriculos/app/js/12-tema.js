@@ -109,7 +109,7 @@ function listaQuestoes(qs, limite = 20, paginar = false) {
   if (!qs.length) return vazio("Nenhuma questão com esses critérios.");
   const cls = { correta: "ok", incorreta: "bad", nao: "" };
   return `<div class="lista-q">${qs.slice(0, limite).map(q => { const s = statusQ(q);
-    return `<a href="#/questoes/q/${esc(q.id)}"><span class="txt">${esc(q.q)}</span><span class="meta">${pill(s.nome, cls[s.chave])}${s.marcada ? "<span>★ marcada</span>" : ""}<span>${esc(q.tema ? nomeTema(q.tema) : q.a)}</span>${q.dif ? `<span>${DIFICULDADE[q.dif]}</span>` : ""}</span></a>`; }).join("")}</div>`
+    return `<a href="#/questoes/q/${esc(q.id)}"><span class="txt">${esc(q.q)}</span><span class="meta">${pill(s.nome, cls[s.chave])}${s.marcada ? "<span>★ marcada</span>" : ""}<span>${esc(q.tema ? nomeTema(q.tema) : q.a)}</span>${seloNivel(q.dif, true)}</span></a>`; }).join("")}</div>`
     + (qs.length > limite ? (paginar ? `<div class="acoes"><button class="btn sec" data-act="lq-mais">Mostrar mais (${qs.length - limite} restantes)</button></div>` : `<p class="small muted">Mostrando ${limite} de ${qs.length}.</p>`) : "");
 }
 

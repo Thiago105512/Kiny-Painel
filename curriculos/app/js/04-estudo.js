@@ -137,7 +137,7 @@ function pendencias() {
 
 /* ---------- Desempenho (PerformanceMetric calculado sob demanda) ---------- */
 function agregados(filtro = () => true) {
-  const res = { n: 0, ac: 0, ms: 0, nms: 0, vistas: 0, por: { disc: {}, esp: {}, tema: {}, trilha: {}, area: {}, ae: {}, discEnem: {} } };
+  const res = { n: 0, ac: 0, ms: 0, nms: 0, vistas: 0, por: { disc: {}, esp: {}, tema: {}, trilha: {}, area: {}, ae: {}, discEnem: {}, dif: {} } };
   const soma = (m, k, p, ok) => { if (!k) return; const x = m[k] = m[k] || { n: 0, ac: 0 }; x.n += p; x.ac += ok; };
   for (const q of questoes()) {
     if (!filtro(q)) continue;
@@ -146,6 +146,7 @@ function agregados(filtro = () => true) {
     for (const h of p.h) if (h[3]) { res.ms += h[3]; res.nms++; }
     soma(res.por.disc, q.disc, p.n, p.ac); soma(res.por.esp, q.esp, p.n, p.ac); soma(res.por.tema, q.tema, p.n, p.ac);
     soma(res.por.trilha, q.t, p.n, p.ac); soma(res.por.area, q.a, p.n, p.ac);
+    soma(res.por.dif, q.dif, p.n, p.ac);
     if (q.ae) { soma(res.por.ae, q.ae, p.n, p.ac); soma(res.por.discEnem, q.disc, p.n, p.ac); }
   }
   return res;

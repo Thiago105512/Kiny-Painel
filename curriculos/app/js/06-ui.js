@@ -86,6 +86,8 @@ function paginaNaoEncontrada() { return { titulo: "Página não encontrada", htm
 
 /* ---------- Componentes ---------- */
 const vazio = (txt, botoes = "") => `<div class="vazio"><p>${txt}</p>${botoes ? `<div class="linha">${botoes}</div>` : ""}</div>`;
+/** Selo do nível da questão (definido pelo banco): barrinhas + nome, com cor. */
+const seloNivel = (d, curto = false) => DIFICULDADE[d] ? `<span class="nivel n${d}" title="Nível da questão: ${DIFICULDADE[d]}"><i></i><i></i><i></i>${curto ? "" : "Nível: "}${DIFICULDADE[d]}</span>` : "";
 const pill = (t, cls = "") => `<span class="pill ${cls}">${esc(t)}</span>`;
 const medidor = (p, cls = "") => `<div class="meter ${cls}" role="img" aria-label="${Math.round(p)}%"><i style="width:${Math.max(0, Math.min(100, p))}%"></i></div>`;
 const barra = (rotulo, a, n, extra = "") => `<div class="barra"><span>${rotulo}</span><small>${pct(a, n)}% · ${a}/${n}${extra}</small>${medidor(pct(a, n), pct(a, n) < 50 ? "bad" : "")}</div>`;
@@ -161,7 +163,8 @@ function htmlPlayer() {
   const letra = i => LETRAS[PL.ordem.indexOf(i)];
   const ok = PL.esc === q.c;
   return `<article class="caixa questao" id="pl">
-    <div class="meta"><span>${PL.i + 1}/${PL.ids.length}</span><span>${esc(TRILHAS[q.t]?.curto || q.t)}</span>${q.ae ? `<span>${esc(nomeAreaEnem(q.ae))}${q.disc ? " · " + esc(q.disc) : ""}</span>` : ""}${q.tema ? `<span>${linkTema(q.tema)}</span>` : `<span>${esc(q.a)}</span>`}${q.dif ? `<span>${DIFICULDADE[q.dif]}</span>` : ""}${q.src !== "banco" ? `<span>${q.src === "ia" ? "gerada por IA" : "minha"}</span>` : ""}${st.n ? `<span>${st.ac}/${st.n} antes</span>` : ""}</div>
+    <div class="meta"><span>${PL.i + 1}/${PL.ids.length}</span><span>${esc(TRILHAS[q.t]?.curto || q.t)}</span>${q.ae ? `<span>${esc(nomeAreaEnem(q.ae))}${q.disc ? " · " + esc(q.disc) : ""}</span>` : ""}${q.tema ? `<span>${linkTema(q.tema)}</span>` : `<span>${esc(q.a)}</span>`}${q.src !== "banco" ? `<span>${q.src === "ia" ? "gerada por IA" : "minha"}</span>` : ""}${st.n ? `<span>${st.ac}/${st.n} antes</span>` : ""}</div>
+    ${q.dif ? `<div style="margin:-4px 0 10px">${seloNivel(q.dif)}</div>` : ""}
     <p class="enunciado">${esc(q.q)}</p>
     <ol class="alts">${alts}</ol>
     ${PL.resp ? `<div class="retorno"><p class="veredito ${ok ? "ok" : "bad"}">${ok ? "Certo" : "Errado — gabarito " + letra(q.c)}${PL.ms ? ` · ${mmss(PL.ms)}` : ""}</p><p class="leitura" style="color:var(--ink2);margin:0">${esc(q.e || "Sem explicação cadastrada.")}</p>

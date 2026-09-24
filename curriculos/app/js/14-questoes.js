@@ -46,7 +46,7 @@ function formFiltros(F, prefixo = "fq", { rapidos = false } = {}) {
     ${sel("esp", "Especialidade", espL.map(e => [e, ESPECIALIDADES[e].nome]))}
     ${sel("tema", "Tema", temasL.map(t => [t, nomeTema(t)]), "Todos")}
     ${F.tema ? sel("subtema", "Subtema", (TEMAS[F.tema]?.subtemas || []).map(s => [s.id, s.nome]), "Todos") : ""}
-    ${sel("dif", "Dificuldade", Object.entries(DIFICULDADE))}
+    ${sel("dif", "Nível", Object.entries(DIFICULDADE), "Todos")}
     ${sel("fonte", "Fonte", fontes.map(f => [f, { autoral: "Autoral (banco do app)", ia: "Gerada por IA", minha: "Minhas" }[f] || f]))}
     ${anos.length ? sel("ano", "Ano", anos.map(a => [a, a]), "Todos") : ""}${provas.length ? sel("prova", "Prova", provas.map(p => [p, p])) : ""}
     <label class="campo"><span class="lab">Texto</span><input type="search" value="${esc(F.texto)}" data-inp="${prefixo}-txt" placeholder="Palavra no enunciado"></label></div>
@@ -63,13 +63,14 @@ const TRILHAS_RAPIDAS = [["", "Todas"], ["med", "Medicina"], ["enem", "ENEM"], [
 const STATUS_RAPIDOS = [["nao", "Não respondidas"], ["incorreta", "Erradas"], ["marcada", "Marcadas"], ["revisar", "Revisar"]];
 rota("/questoes", () => {
   if (playerAtivo("banco")) return { secao: "questoes", crumbs: [["Questões", "#/questoes"]], titulo: PL.rotulo || "Praticando", html: htmlPlayer(), ctx: { questao: PL.ids[PL.i], tema: qPorId(PL.ids[PL.i])?.tema } };
-  const qs = filtrarQuestoes(FQ), extras = Object.entries(FQ).filter(([k, v]) => !["trilha", "status", "texto", ...(FQ.trilha === "enem" ? ["area", "disc"] : [])].includes(k) && v).length;
+  const qs = filtrarQuestoes(FQ), extras = Object.entries(FQ).filter(([k, v]) => !["trilha", "status", "texto", "dif", ...(FQ.trilha === "enem" ? ["area", "disc"] : [])].includes(k) && v).length;
   return {
     secao: "questoes", titulo: "Questões", sub: `${qs.length} de ${questoes().length}`,
     html: `${abas([["banco", "Banco"], ["erros", "Caderno de erros"]], "banco", "ir-aba-q")}
       <div class="pilha">
         ${chips(TRILHAS_RAPIDAS, FQ.trilha, "fq-trilha")}
         ${FQ.trilha === "enem" ? chipsEnem() : ""}
+        ${chipsNivel()}
         <div class="chips">${STATUS_RAPIDOS.map(([k, t]) => `<button class="chip" data-act="fq-st" data-v="${k}" aria-pressed="${FQ.status.includes(k)}">${t}</button>`).join("")}</div>
         <details class="filtros" ${extras ? "open" : ""} style="margin:0"><summary>Mais filtros${extras ? ` (${extras})` : ""}</summary><div style="margin-top:10px">${formFiltros(FQ, "fq", { rapidos: true })}</div>${extras || FQ.status.length || FQ.trilha ? `<div class="acoes"><button class="btn sec mini" data-act="fq-limpar">Limpar tudo</button></div>` : ""}</details>
         ${qs.length ? `<div class="linha"><button class="btn" data-act="praticar-filtro">Praticar ${Math.min(qs.length, 20)}</button><button class="btn sec" data-act="sim-do-filtro">Fazer simulado</button></div>` : ""}
@@ -87,6 +88,12 @@ function chipsEnem() {
   return `<div class="pilha" style="gap:6px"><span class="lab">Área do conhecimento</span>${chips(areas, FQ.area, "fq-area")}
     ${discs.length > 1 ? `<span class="lab">Disciplina</span>${chips([["", "Todas"], ...discs.map(d => [d, `${d} (${n(q => q.ae === FQ.area && q.disc === d)})`])], FQ.disc, "fq-disc")}` : ""}</div>`;
 }
+/** Nível da questão (Fácil/Média/Difícil), com a contagem dentro dos outros filtros. */
+function chipsNivel() {
+  const base = filtrarQuestoes({ ...FQ, dif: "" }), n = d => base.filter(q => String(q.dif) === d).length;
+  return `<div class="pilha" style="gap:6px"><span class="lab">Nível da questão</span>${chips([["", "Todos"], ...Object.entries(DIFICULDADE).map(([d, t]) => [d, `${t} (${n(d)})`])], FQ.dif, "fq-nivel")}</div>`;
+}
+ACOES["fq-nivel"] = el => { FQ.dif = el.dataset.v; QPAG = 20; atualizar(); };
 ACOES["fq-area"] = el => { FQ.area = el.dataset.v; Object.assign(FQ, { disc: "", tema: "", subtema: "" }); QPAG = 20; atualizar(); };
 ACOES["fq-disc"] = el => { FQ.disc = el.dataset.v; Object.assign(FQ, { tema: "", subtema: "" }); QPAG = 20; atualizar(); };
 ACOES["ir-aba-q"] = el => ir(el.dataset.v === "erros" ? "#/erros" : "#/questoes");

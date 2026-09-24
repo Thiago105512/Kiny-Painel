@@ -7,7 +7,7 @@ const SECOES_FIM = [["hipoteses", "Hipóteses diagnósticas"], ["diferenciais", 
 const todosCasos = () => CASOS_BASE.concat(Object.values(store.doc("casos").itens).map(c => ({ ...c, src: c.src || "minha" })));
 const casoPorId = id => todosCasos().find(c => c.id === id);
 function tabelaCasos(cs) {
-  return tabela([{ t: "Caso" }, { t: "Tema" }, { t: "Especialidade" }, { t: "Dif." }], cs.map(c => [`<a href="#/casos/${esc(c.id)}">${esc(c.titulo)}</a>${c.src !== "banco" ? " " + pill(c.src === "ia" ? "IA" : "meu") : ""}`, c.temaId ? linkTema(c.temaId) : esc(c.tema || "—"), esc(ESPECIALIDADES[c.espId]?.nome || c.especialidade || "—"), DIFICULDADE[c.dificuldade] || "—"]), { vaziaMsg: "Nenhum caso com esses filtros." });
+  return tabela([{ t: "Caso" }, { t: "Tema" }, { t: "Especialidade" }, { t: "Dif." }], cs.map(c => [`<a href="#/casos/${esc(c.id)}">${esc(c.titulo)}</a>${c.src !== "banco" ? " " + pill(c.src === "ia" ? "IA" : "meu") : ""}`, c.temaId ? linkTema(c.temaId) : esc(c.tema || "—"), esc(ESPECIALIDADES[c.espId]?.nome || c.especialidade || "—"), seloNivel(c.dificuldade, true) || "—"]), { vaziaMsg: "Nenhum caso com esses filtros." });
 }
 const FC2 = { esp: "", disc: "", dif: "", tema: "" };
 rota("/casos", () => {

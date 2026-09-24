@@ -286,3 +286,8 @@ details.mais>summary{cursor:pointer;color:var(--pen);font-weight:600;font-size:1
 .atalhos a:hover{border-color:var(--pen)}
 .atalhos b{font-size:15px}
 .atalhos small{font-size:12px;color:var(--muted)}
+.nivel{display:inline-flex;align-items:center;gap:2px;font:600 12px var(--mono);border-radius:999px;padding:2px 9px 2px 7px;border:1px solid currentColor;white-space:nowrap}
+.nivel i{width:4px;border-radius:1px;background:currentColor;opacity:.25;margin-right:1px}
+.nivel i:nth-child(1){height:6px}.nivel i:nth-child(2){height:9px}.nivel i:nth-child(3){height:12px;margin-right:5px}
+.nivel.n1{color:var(--ok);background:var(--ok-soft)}.nivel.n2{color:var(--warn);background:var(--warn-soft)}.nivel.n3{color:var(--bad);background:var(--bad-soft)}
+.nivel.n1 i:nth-child(1),.nivel.n2 i:nth-child(-n+2),.nivel.n3 i{opacity:1}
