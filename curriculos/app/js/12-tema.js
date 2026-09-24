@@ -47,6 +47,7 @@ function paginaTema(id, aba) {
       ${subs.length ? `<section><h2 class="sec">Subtemas</h2><div class="chips">${subs.join("")}</div></section>` : ""}
       ${med ? `<section><h2 class="sec">Onde aparece</h2>${onde.length ? `<div class="links-lista">${onde.map(o => `<a href="#/medicina/grade/${esc(o.g.id)}/item/${esc(o.item.id)}"><span>${esc(o.item.nome)}</span><small>${esc(nomeInst(o.g.instituicao))} · ${o.periodo}º período</small></a>`).join("")}</div>` : `<p class="small muted" style="margin:0">Ainda não vinculado às disciplinas da sua grade.</p>`}
         <p class="small" style="margin:10px 0 0"><span class="muted">Especialidades:</span> ${(t.especialidades || []).map(e => `<a href="#/medicina/esp/${esc(e)}">${esc(ESPECIALIDADES[e]?.nome || e)}</a>`).join(", ")}</p></section>` : ""}
+      ${(() => { const ps = PILULAS.filter(p => p.tema === id); return ps.length ? `<section><h2 class="sec">Pílulas deste tema</h2><div class="lista-q">${ps.map(p => `<a href="#/estudar/p/${esc(p.id)}"><span class="txt">${vistasPil()[p.id] ? "✓ " : ""}${esc(p.titulo)}</span><span class="meta"><span>${esc(TIPOS_PIL[p.tipo]?.[0] || p.tipo)}</span></span></a>`).join("")}</div></section>` : ""; })()}
       <p class="small muted">Resumo de referência (autoral) — aprofunde na bibliografia${med ? " da disciplina" : ""}.</p>`;
   }
   else if (aba === "praticar") {

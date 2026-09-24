@@ -298,3 +298,19 @@ details.mais>summary{cursor:pointer;color:var(--pen);font-weight:600;font-size:c
 @media (pointer:coarse){.so-teclado{display:none}}
 .alt{min-height:52px}
 .lista-q .txt{display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+
+/* ---------- Pílulas de estudo ---------- */
+.pilula .pil-tit{font:700 calc(20px * var(--k))/1.3 var(--display);margin:0 0 10px}
+.pil-perg{font:500 calc(18px * var(--k))/1.5 var(--read);margin:0 0 12px}
+.pil-resp{border-top:1px dashed var(--line);padding-top:12px;margin-top:4px}
+.pil-r{font:700 calc(17px * var(--k))/1.45 var(--display);color:var(--ok);margin:0 0 10px}
+.pil-porque{background:var(--pen-soft);border-radius:8px;padding:10px 12px;margin:0 0 10px}
+.pil-porque b{display:block;font:700 calc(14px * var(--k)) var(--display);color:var(--pen);margin-bottom:2px}
+.pil-porque p{margin:0;line-height:1.5}
+.pil-link{display:grid;gap:4px;background:var(--sheet);border:1px solid var(--line);border-left:4px solid var(--pen);border-radius:10px;padding:12px 14px;text-decoration:none;color:var(--ink);margin-bottom:16px}
+.pil-link small{color:var(--ink2);line-height:1.4}
+.linha-tempo{display:grid;border-left:3px solid var(--pen);margin-left:6px}
+.linha-tempo a{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:baseline;padding:10px 0 10px 14px;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--line2);position:relative}
+.linha-tempo a::before{content:"";position:absolute;left:-8px;top:17px;width:11px;height:11px;border-radius:50%;background:var(--pen)}
+.linha-tempo em{font:700 calc(15px * var(--k)) var(--mono);font-style:normal;color:var(--pen);min-width:4.2em}
+.linha-tempo small{display:block;color:var(--muted)}

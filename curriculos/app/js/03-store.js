@@ -20,6 +20,7 @@ const DOC_PADRAO = {
   grades:       () => ({ itens: {} }),   // matrizes importadas/editadas
   instituicoes: () => ({ itens: {} }),   // instituições adicionadas pelo usuário
   guia:         () => ({ g: {} }),       // checklist do guia de referência
+  pilulas:      () => ({ v: {} }),       // v[id] = [ts, sabia 0/1] — pílulas de estudo vistas
   backups:      () => ({ itens: [] }),   // registro dos backups automáticos (não entra no próprio backup)
 };
 // Progresso das questões, fragmentado por trilha para cada doc ficar pequeno:

@@ -78,6 +78,23 @@ def validar_grade(g, arq, insts):
                 erros.append(f"{arq}: CH de '{it.get('nome')}' deve ser número ou null")
 
 
+def validar_pilulas(pils, temas):
+    """Pílulas de estudo: id único, tipo e domínio válidos, tema existente, textos presentes."""
+    tipos = {"curiosidade", "data", "pessoa", "conceito", "macete", "pegadinha", "comparacao"}
+    vistos, erros = set(), []
+    for p in pils:
+        onde = f"pilulas ({p.get('id')})"
+        if p.get("id") in vistos: erros.append(f"{onde}: id repetido")
+        vistos.add(p.get("id"))
+        if p.get("tipo") not in tipos: erros.append(f"{onde}: tipo inválido")
+        if p.get("dominio") not in ("medicina", "enem", "direito"): erros.append(f"{onde}: domínio inválido")
+        if p.get("tema") and p["tema"] not in temas: erros.append(f"{onde}: tema inexistente {p['tema']}")
+        for c in ("titulo", "pergunta", "resposta", "texto", "porque", "area"):
+            if not p.get(c): erros.append(f"{onde}: falta {c}")
+        if p.get("tipo") == "data" and not isinstance(p.get("ano"), int): erros.append(f"{onde}: data sem ano")
+    if erros: sys.exit("Pílulas inválidas:\n" + "\n".join(erros[:40]))
+
+
 if __name__ == "__main__":
     banco = {t: ler(f"questoes/{t}.json", []) for t in TRILHAS}
     mapa = ler("dados/medicina/mapa.json", {})
@@ -91,7 +108,9 @@ if __name__ == "__main__":
         "casos": ler("dados/medicina/casos.json", []),
         "instituicoes": ler("dados/instituicoes.json", []),
         "grades": [],
+        "pilulas": [p for arq in sorted((AQUI / "pilulas").glob("*.json")) for p in json.loads(arq.read_text(encoding="utf-8"))] if (AQUI / "pilulas").exists() else [],
     }
+    validar_pilulas(dados["pilulas"], catalogo_temas(mapa, enem))
     insts = {i["id"] for i in dados["instituicoes"]}
     for arq in sorted((AQUI / "dados" / "grades").glob("*.json")) if (AQUI / "dados" / "grades").exists() else []:
         g = json.loads(arq.read_text(encoding="utf-8"))
@@ -118,4 +137,4 @@ if __name__ == "__main__":
     kb = len(html.encode("utf-8")) // 1024
     print(f"app.html gerado ({kb} KB): questões {sum(map(len, banco.values()))}, temas {len(mapa.get('temas', []))}, "
           f"assuntos ENEM {sum(len(d.get('assuntos', [])) for a in enem.get('areas', []) for d in a.get('disciplinas', []))}, "
-          f"casos {len(dados['casos'])}, matrizes {len(dados['grades'])}")
+          f"casos {len(dados['casos'])}, matrizes {len(dados['grades'])}, pílulas {len(dados['pilulas'])}")

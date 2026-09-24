@@ -34,6 +34,7 @@ const IC = {
   biblioteca: "M5 4h4v16H5zM10 4h4v16h-4zM15 5l4 1-3 14-4-1z",
   mais: "M5 12h.01M12 12h.01M19 12h.01",
   ia: "M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4zM18 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z",
+  estudar: "M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z",
   busca: "M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM21 21l-5-5",
 };
 const icone = n => `<svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="${IC[n] || ""}"/></svg>`;
@@ -41,7 +42,7 @@ const icone = n => `<svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><p
 /* Navegação em grupos: o que estudar, praticar, revisar e organizar */
 const GRUPOS_NAV = [
   ["", [["inicio", "#/", "Início"]]],
-  ["Estudar", [["medicina", "#/medicina", "Medicina"], ["enem", "#/enem", "ENEM e vestibulares"]]],
+  ["Estudar", [["estudar", "#/estudar", "Pílulas de estudo"], ["medicina", "#/medicina", "Medicina"], ["enem", "#/enem", "ENEM e vestibulares"]]],
   ["Praticar", [["questoes", "#/questoes", "Questões"], ["simulados", "#/simulados", "Simulados"], ["casos", "#/casos", "Casos clínicos"]]],
   ["Revisar", [["revisoes", "#/revisoes", "Revisões"], ["flashcards", "#/flashcards", "Flashcards"]]],
   ["Organizar", [["plano", "#/plano", "Planejamento"], ["desempenho", "#/desempenho", "Desempenho"], ["biblioteca", "#/biblioteca", "Biblioteca"]]],

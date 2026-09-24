@@ -1,7 +1,7 @@
 /* ============================================================
    15-flashcards — cards ligados a tema/subtema, com repetição espaçada.
    ============================================================ */
-const ORIGEM_CARD = { manual: "manual", erro: "caderno de erros", questao: "questão", ia: "IA" };
+const ORIGEM_CARD = { manual: "manual", erro: "caderno de erros", questao: "questão", ia: "IA", pilula: "pílula" };
 function tabelaCards(cs, vaziaMsg = "Nenhum flashcard.") {
   if (!cs.length) return vazio(vaziaMsg);
   return `<div class="lista-q">${cs.sort((a, b) => a.srs.prox.localeCompare(b.srs.prox)).map(c => `<a href="#" data-act="card-editar" data-id="${esc(c.id)}"><span class="txt">${esc(c.frente)}</span><span class="meta">${vencido(c.srs) ? pill("hoje", "azul") : `<span>${quando(c.srs.prox)}</span>`}${c.tema ? `<span>${esc(nomeTema(c.tema))}</span>` : ""}<span>${esc(ORIGEM_CARD[c.origem] || c.origem)}</span></span></a>`).join("")}</div>`;

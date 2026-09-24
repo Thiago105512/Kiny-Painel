@@ -16,7 +16,8 @@ rota("/busca/:q", ({ q }) => {
   const notas = Object.entries(store.doc("notas").temas).filter(([, v]) => tem(v.texto || ""));
   const mats = Object.values(store.doc("materiais").itens).filter(m => tem(m.titulo) || tem(m.texto || ""));
   const reps = (REDACAO.repertorios || []).filter(r => tem(r.titulo) || tem(r.ideia));
-  const total = temas.length + esps.length + itens.length + qs.length + cs.length + casos.length + notas.length + mats.length + reps.length + discRef.length;
+  const pils = PILULAS.filter(p => tem(p.titulo) || tem(p.pergunta) || tem(p.texto) || tem(p.pessoa || ""));
+  const total = temas.length + esps.length + itens.length + qs.length + cs.length + casos.length + notas.length + mats.length + reps.length + discRef.length + pils.length;
   const sec = (titulo, n, html) => n ? `<section><h2 class="sec">${titulo} <span class="small muted">${n}</span></h2>${html}</section>` : "";
   return {
     secao: "", titulo: `Busca: “${q}”`, sub: `${total} resultado(s)`,
@@ -25,6 +26,7 @@ rota("/busca/:q", ({ q }) => {
       sec("Especialidades", esps.length, `<div class="chips">${esps.map(e => `<a class="chip" href="#/medicina/esp/${esc(e.id)}">${esc(e.nome)}</a>`).join("")}</div>`),
       sec("Nas matrizes das faculdades", itens.length, tabela([{ t: "Disciplina/módulo" }, { t: "Instituição" }, { t: "Período", num: 1 }], itens.slice(0, 30).map(({ g, it }) => [`<a href="#/medicina/grade/${esc(g.id)}/item/${esc(it.id)}">${esc(it.nome)}</a>`, esc(nomeInst(g.instituicao)), it.periodo + "º"]))),
       sec("Disciplinas de referência", discRef.length, `<p class="small">${discRef.map(d => `<a href="#/questoes" data-act="busca-disc" data-v="${esc(d)}">${esc(d)}</a>`).join(" · ")}</p>`),
+      sec("Pílulas de estudo", pils.length, `<div class="lista-q">${pils.slice(0, 20).map(p => `<a href="#/estudar/p/${esc(p.id)}"><span class="txt">${esc(p.titulo)}</span><span class="meta"><span>${esc(TIPOS_PIL[p.tipo]?.[0] || p.tipo)}</span><span>${esc(p.area)}</span></span></a>`).join("")}</div>`),
       sec("Questões", qs.length, listaQuestoes(qs, 20)),
       sec("Flashcards", cs.length, tabelaCards(cs.slice(0, 20))),
       sec("Casos clínicos", casos.length, tabelaCasos(casos)),

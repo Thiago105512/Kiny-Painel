@@ -64,6 +64,7 @@ rota("/", () => {
       ${prox ? `<p class="hero-tit">${esc(prox.tit)}</p><p class="small muted" style="margin:0">${esc(prox.det)}${tarefas.length > 1 ? ` · depois: mais ${tarefas.length - 1}` : ""}</p><a class="btn azul grande" href="${prox.href}">${prox.bt}</a>`
         : `<p class="hero-tit">${esc(sug.tit)}</p><p class="small muted" style="margin:0">Nada pendente para hoje · ${esc(sug.det)}</p><button class="btn azul grande" data-act="inicio-praticar" data-disc="${esc(sug.disc || "")}">Começar</button>`}
     </section>
+    ${(() => { const p = pilulaDoDia(); return p ? `<a class="pil-link" href="#/estudar/p/${esc(p.id)}"><span class="lab">Pílula do dia</span><b>${esc(p.titulo)}</b><small>${esc(p.pergunta)}</small></a>` : ""; })()}
     <section class="caixa"><div class="metas">
       <div class="meta-item"><span>Questões hoje</span><b>${d.q}<small class="muted" style="font-size:calc(13px * var(--k))"> de ${metas.questoes}</small></b>${medidor(pct(d.q, metas.questoes), "ok")}</div>
       <div class="meta-item"><span>Tempo de estudo</span><b>${min}<small class="muted" style="font-size:calc(13px * var(--k))"> de ${metas.minutos} min</small></b>${medidor(pct(min, metas.minutos), "ok")}</div>
