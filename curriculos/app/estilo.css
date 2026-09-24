@@ -297,3 +297,4 @@ details.mais>summary{cursor:pointer;color:var(--pen);font-weight:600;font-size:c
 .letra-btn{flex:none;min-width:44px;min-height:40px;border:1px solid var(--line);background:var(--sheet);border-radius:6px;font:700 calc(15px * var(--k)) var(--display);cursor:pointer}
 @media (pointer:coarse){.so-teclado{display:none}}
 .alt{min-height:52px}
+.lista-q .txt{display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
