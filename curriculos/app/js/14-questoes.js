@@ -71,8 +71,8 @@ rota("/questoes", () => {
         ${chips(TRILHAS_RAPIDAS, FQ.trilha, "fq-trilha")}
         ${FQ.trilha === "enem" ? chipsEnem() : ""}
         ${chipsNivel()}
-        <div class="chips">${STATUS_RAPIDOS.map(([k, t]) => `<button class="chip" data-act="fq-st" data-v="${k}" aria-pressed="${FQ.status.includes(k)}">${t}</button>`).join("")}</div>
-        <details class="filtros" ${extras ? "open" : ""} style="margin:0"><summary>Mais filtros${extras ? ` (${extras})` : ""}</summary><div style="margin-top:10px">${formFiltros(FQ, "fq", { rapidos: true })}</div>${extras || FQ.status.length || FQ.trilha ? `<div class="acoes"><button class="btn sec mini" data-act="fq-limpar">Limpar tudo</button></div>` : ""}</details>
+        <details class="filtros" ${extras || FQ.status.length ? "open" : ""} style="margin:0"><summary>Mais filtros${extras + FQ.status.length ? ` (${extras + FQ.status.length})` : ""}</summary><div style="margin-top:10px">
+          <span class="lab">Situação</span><div class="chips" style="margin:4px 0 12px">${STATUS_RAPIDOS.map(([k, t]) => `<button class="chip" data-act="fq-st" data-v="${k}" aria-pressed="${FQ.status.includes(k)}">${t}</button>`).join("")}</div>${formFiltros(FQ, "fq", { rapidos: true })}</div>${extras || FQ.status.length || FQ.trilha ? `<div class="acoes"><button class="btn sec mini" data-act="fq-limpar">Limpar tudo</button></div>` : ""}</details>
         ${qs.length ? `<div class="linha"><button class="btn" data-act="praticar-filtro">Praticar ${Math.min(qs.length, 20)}</button><button class="btn sec" data-act="sim-do-filtro">Fazer simulado</button></div>` : ""}
       </div>
       ${listaQuestoes(qs, QPAG, true)}`,

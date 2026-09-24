@@ -65,8 +65,8 @@ rota("/", () => {
         : `<p class="hero-tit">${esc(sug.tit)}</p><p class="small muted" style="margin:0">Nada pendente para hoje · ${esc(sug.det)}</p><button class="btn azul grande" data-act="inicio-praticar" data-disc="${esc(sug.disc || "")}">Começar</button>`}
     </section>
     <section class="caixa"><div class="metas">
-      <div class="meta-item"><span>Questões hoje</span><b>${d.q}<small class="muted" style="font-size:13px"> de ${metas.questoes}</small></b>${medidor(pct(d.q, metas.questoes), "ok")}</div>
-      <div class="meta-item"><span>Tempo de estudo</span><b>${min}<small class="muted" style="font-size:13px"> de ${metas.minutos} min</small></b>${medidor(pct(min, metas.minutos), "ok")}</div>
+      <div class="meta-item"><span>Questões hoje</span><b>${d.q}<small class="muted" style="font-size:calc(13px * var(--k))"> de ${metas.questoes}</small></b>${medidor(pct(d.q, metas.questoes), "ok")}</div>
+      <div class="meta-item"><span>Tempo de estudo</span><b>${min}<small class="muted" style="font-size:calc(13px * var(--k))"> de ${metas.minutos} min</small></b>${medidor(pct(min, metas.minutos), "ok")}</div>
       <div class="meta-item"><span>Acerto hoje</span><b>${d.q ? pct(d.ac, d.q) + "%" : "—"}</b></div>
       <div class="meta-item"><span>Sequência</span><b>${seq} ${seq === 1 ? "dia" : "dias"}</b></div></div>
       ${estudados.length ? `<p class="small" style="margin:12px 0 0"><span class="muted">Estudado hoje:</span> ${estudados.slice(0, 3).map(linkTema).join(", ")}${estudados.length > 3 ? ` <span class="muted">e mais ${estudados.length - 3}</span>` : ""}</p>` : ""}

@@ -86,6 +86,11 @@ function paginaNaoEncontrada() { return { titulo: "Página não encontrada", htm
 
 /* ---------- Componentes ---------- */
 const vazio = (txt, botoes = "") => `<div class="vazio"><p>${txt}</p>${botoes ? `<div class="linha">${botoes}</div>` : ""}</div>`;
+/** Tamanho da letra (só neste aparelho): Grande é o padrão. */
+const TAM_LETRA = [[1.25, "Grande"], [1.45, "Muito grande"], [1.7, "Enorme"], [1, "Normal"]];
+function aplicarLetra(k) { document.documentElement.style.setProperty("--k", k); const b = document.getElementById("letra-btn"); if (b) b.title = "Letra: " + (TAM_LETRA.find(x => x[0] === k)?.[1] || ""); }
+aplicarLetra(ls.get("gab2:letra", 1.25));
+ACOES.letra = () => { const k = ls.get("gab2:letra", 1.25), i = TAM_LETRA.findIndex(x => x[0] === k), prox = TAM_LETRA[(i + 1) % TAM_LETRA.length]; ls.set("gab2:letra", prox[0]); aplicarLetra(prox[0]); toast("Letra: " + prox[1]); };
 /** Selo do nível da questão (definido pelo banco): barrinhas + nome, com cor. */
 const seloNivel = (d, curto = false) => DIFICULDADE[d] ? `<span class="nivel n${d}" title="Nível da questão: ${DIFICULDADE[d]}"><i></i><i></i><i></i>${curto ? "" : "Nível: "}${DIFICULDADE[d]}</span>` : "";
 const pill = (t, cls = "") => `<span class="pill ${cls}">${esc(t)}</span>`;
@@ -163,20 +168,20 @@ function htmlPlayer() {
   const letra = i => LETRAS[PL.ordem.indexOf(i)];
   const ok = PL.esc === q.c;
   return `<article class="caixa questao" id="pl">
-    <div class="meta"><span>${PL.i + 1}/${PL.ids.length}</span><span>${esc(TRILHAS[q.t]?.curto || q.t)}</span>${q.ae ? `<span>${esc(nomeAreaEnem(q.ae))}${q.disc ? " · " + esc(q.disc) : ""}</span>` : ""}${q.tema ? `<span>${linkTema(q.tema)}</span>` : `<span>${esc(q.a)}</span>`}${q.src !== "banco" ? `<span>${q.src === "ia" ? "gerada por IA" : "minha"}</span>` : ""}${st.n ? `<span>${st.ac}/${st.n} antes</span>` : ""}</div>
-    ${q.dif ? `<div style="margin:-4px 0 10px">${seloNivel(q.dif)}</div>` : ""}
+    <div class="linha entre" style="margin-bottom:12px"><b>${PL.ids.length > 1 ? `Questão ${PL.i + 1} de ${PL.ids.length}` : "Questão"}</b>${seloNivel(q.dif)}</div>
     <p class="enunciado">${esc(q.q)}</p>
     <ol class="alts">${alts}</ol>
     ${PL.resp ? `<div class="retorno"><p class="veredito ${ok ? "ok" : "bad"}">${ok ? "Certo" : "Errado — gabarito " + letra(q.c)}${PL.ms ? ` · ${mmss(PL.ms)}` : ""}</p><p class="leitura" style="color:var(--ink2);margin:0">${esc(q.e || "Sem explicação cadastrada.")}</p>
+      <p class="small muted" style="margin:8px 0 0">${[TRILHAS[q.t]?.curto || q.t, q.ae && nomeAreaEnem(q.ae), q.ae && q.disc].filter(Boolean).map(esc).join(" · ")}${q.tema ? " · " + linkTema(q.tema) : ""}${q.src !== "banco" ? " · " + (q.src === "ia" ? "gerada por IA" : "minha") : ""}${st.n > 1 ? ` · você já acertou ${st.ac} de ${st.n}` : ""}</p>
       ${!ok ? `<p class="small muted" style="margin:8px 0 0">Registrado no <a href="#/erros">caderno de erros</a> com revisão amanhã.</p>` : ""}
       ${PL.ia ? `<h3>Assistente</h3><div class="ia-txt" id="pl-ia">${esc(PL.ia)}</div>` : ""}</div>` : ""}
     <div class="acoes">
       ${PL.resp ? `<button class="btn" data-act="pl-prox">${PL.i < PL.ids.length - 1 ? "Próxima" : "Concluir"}</button>` : `<button class="btn" data-act="pl-confirmar" ${PL.esc === null ? "disabled" : ""}>Confirmar</button><button class="btn sec" data-act="pl-pular">Pular</button>`}
-      <button class="btn sec mini" data-act="pl-flag" data-f="m" aria-pressed="${st.marcada}">${st.marcada ? "★ Marcada" : "☆ Marcar"}</button>
-      <button class="btn sec mini" data-act="pl-flag" data-f="r" aria-pressed="${st.revisar}">${st.revisar ? "↻ Revisar" : "Revisar depois"}</button>
+      ${PL.resp ? `<button class="btn sec mini" data-act="pl-flag" data-f="m" aria-pressed="${st.marcada}">${st.marcada ? "★ Marcada" : "☆ Marcar"}</button>
+      <button class="btn sec mini" data-act="pl-flag" data-f="r" aria-pressed="${st.revisar}">${st.revisar ? "↻ Revisar" : "Revisar depois"}</button>` : ""}
       ${PL.resp ? `<button class="btn sec mini" data-act="pl-card">+ Flashcard</button>${IA.disponivel() ? `<button class="btn sec mini" data-act="pl-ia">Explicar com IA</button>` : ""}` : ""}
       ${PL.ids.length > 1 ? `<button class="btn sec mini dir" data-act="pl-encerrar">Encerrar sessão</button>` : ""}
-    </div></article><p class="small muted">Atalhos: A–E escolhem · Enter confirma/avança</p>`;
+    </div></article><p class="small muted so-teclado">Atalhos: A–E escolhem · Enter confirma/avança</p>`;
 }
 ACOES["pl-alt"] = el => { if (PL.resp) return; PL.esc = +el.dataset.i; atualizar(); };
 ACOES["pl-confirmar"] = () => {
