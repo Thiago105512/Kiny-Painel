@@ -161,7 +161,7 @@ function htmlPlayer() {
   const letra = i => LETRAS[PL.ordem.indexOf(i)];
   const ok = PL.esc === q.c;
   return `<article class="caixa questao" id="pl">
-    <div class="meta"><span>${PL.i + 1}/${PL.ids.length}</span><span>${esc(TRILHAS[q.t]?.curto || q.t)}</span>${q.tema ? `<span>${linkTema(q.tema)}</span>` : `<span>${esc(q.a)}</span>`}${q.dif ? `<span>${DIFICULDADE[q.dif]}</span>` : ""}${q.src !== "banco" ? `<span>${q.src === "ia" ? "gerada por IA" : "minha"}</span>` : ""}${st.n ? `<span>${st.ac}/${st.n} antes</span>` : ""}</div>
+    <div class="meta"><span>${PL.i + 1}/${PL.ids.length}</span><span>${esc(TRILHAS[q.t]?.curto || q.t)}</span>${q.ae ? `<span>${esc(nomeAreaEnem(q.ae))}${q.disc ? " · " + esc(q.disc) : ""}</span>` : ""}${q.tema ? `<span>${linkTema(q.tema)}</span>` : `<span>${esc(q.a)}</span>`}${q.dif ? `<span>${DIFICULDADE[q.dif]}</span>` : ""}${q.src !== "banco" ? `<span>${q.src === "ia" ? "gerada por IA" : "minha"}</span>` : ""}${st.n ? `<span>${st.ac}/${st.n} antes</span>` : ""}</div>
     <p class="enunciado">${esc(q.q)}</p>
     <ol class="alts">${alts}</ol>
     ${PL.resp ? `<div class="retorno"><p class="veredito ${ok ? "ok" : "bad"}">${ok ? "Certo" : "Errado — gabarito " + letra(q.c)}${PL.ms ? ` · ${mmss(PL.ms)}` : ""}</p><p class="leitura" style="color:var(--ink2);margin:0">${esc(q.e || "Sem explicação cadastrada.")}</p>

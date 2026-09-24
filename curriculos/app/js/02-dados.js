@@ -48,11 +48,16 @@ const espPorNome = nome => Object.values(ESPECIALIDADES).find(e => norm(e.nome) 
 
 /* ---------- Questões ----------
    Formato interno curto: t trilha, a área, q enunciado, o alternativas, c correta, e explicação. */
+/** Área do conhecimento do ENEM: pelo tema ou, sem tema, pelo nome da disciplina. */
+const AREA_CURTA = { linguagens: "Linguagens", humanas: "Humanas", natureza: "Natureza", matematica: "Matemática", redacao: "Redação" };
+const nomeAreaEnem = id => AREA_CURTA[id] || ENEM_AREAS.find(a => a.id === id)?.nome || id || "";
+const areaEnemDe = q => TEMAS[q.tema]?.area || Object.values(ENEM_DISC).find(d => norm(d.nome) === norm(q.disciplina ?? q.disc ?? q.area ?? ""))?.area || null;
 const normQuestao = (q, t, src = "banco") => ({
   id: q.id, t, a: q.area || q.a || "Geral", q: q.enunciado ?? q.q, o: q.alternativas ?? q.o, c: q.correta ?? q.c, e: q.explicacao ?? q.e ?? "",
   tema: q.tema ?? null, subtema: q.subtema ?? null, esp: q.especialidade ?? q.esp ?? null,
   disc: q.disciplina ?? q.disc ?? q.area ?? q.a ?? null, dif: q.dificuldade ?? q.dif ?? null,
   fonte: q.fonte ?? (src === "banco" ? "autoral" : src), ano: q.ano ?? null, prova: q.prova ?? null, src,
+  ae: q.areaEnem ?? q.ae ?? (t === "enem" ? areaEnemDe(q) : null),
 });
 const QUESTOES_BASE = Object.entries(DADOS.banco || {}).flatMap(([t, arr]) => arr.map(q => normQuestao(q, t)));
 

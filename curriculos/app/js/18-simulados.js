@@ -81,7 +81,7 @@ rota("/simulados", () => {
     const id = SIM.ids[SIM.i], q = qPorId(id), ord = SIM.ordens[id], marc = SIM.resp[id], rest = restante(), brancos = SIM.ids.filter(x => SIM.resp[x] === undefined).length;
     return { secao: "simulados", titulo: "Simulado em andamento", ctx: {},
       html: `<div class="provabar" id="prova"><span class="small muted">${esc(TRILHAS[SIM.tReal]?.curto || "")} · questão ${SIM.i + 1} de ${SIM.ids.length}</span><span class="relogio ${rest !== null && rest < 300000 ? "pouco" : ""}" id="relogio">${rest === null ? mmss(Date.now() - SIM.inicio) : mmss(rest)}</span></div>
-      ${q ? `<article class="caixa questao"><div class="meta"><span>${esc(q.disc || q.a)}</span></div><p class="enunciado">${esc(q.q)}</p>
+      ${q ? `<article class="caixa questao"><div class="meta">${q.ae ? `<span>${esc(nomeAreaEnem(q.ae))}</span>` : ""}<span>${esc(q.disc || q.a)}</span></div><p class="enunciado">${esc(q.q)}</p>
         <ol class="alts">${ord.map((i, pos) => `<li><button class="alt" data-act="sim-marcar" data-i="${i}" data-s="${marc === i ? "sel" : ""}"><span class="bolha">${LETRAS[pos]}</span><span>${esc(q.o[i])}</span></button></li>`).join("")}</ol>
         <div class="acoes"><button class="btn sec" data-act="sim-nav" data-d="-1" ${SIM.i ? "" : "disabled"}>Anterior</button>${SIM.i < SIM.ids.length - 1 ? `<button class="btn" data-act="sim-nav" data-d="1">Próxima</button>` : `<button class="btn" data-act="sim-entregar">Entregar prova</button>`}</div></article>` : vazio("Questão removida do banco. Siga para a próxima.")}
       <h2 class="sec">Cartão-resposta <span class="small muted">${SIM.ids.length - brancos}/${SIM.ids.length} marcadas</span></h2>

@@ -21,10 +21,8 @@ rota("/desempenho", () => {
   if (DV.aba === "disciplina") tab = tabelaDesempenho(listaPor(ag.por.disc), "Disciplina");
   else if (DV.aba === "especialidade") tab = tabelaDesempenho(listaPor(ag.por.esp), "Especialidade", k => ESPECIALIDADES[k] ? `<a href="#/medicina/esp/${esc(k)}">${esc(ESPECIALIDADES[k].nome)}</a>` : esc(k));
   else if (DV.aba === "tema") tab = tabelaDesempenho(listaPor(ag.por.tema), "Tema", linkTema);
-  else if (DV.aba === "enem") {
-    const porA = {}; for (const [t, v] of Object.entries(ag.por.tema)) { const a = TEMAS[t]?.dominio === "enem" ? TEMAS[t].areaNome : null; if (!a) continue; const x = porA[a] = porA[a] || { n: 0, ac: 0 }; x.n += v.n; x.ac += v.ac; }
-    tab = tabelaDesempenho(listaPor(porA), "Área do ENEM");
-  }
+  else if (DV.aba === "enem") tab = `<h3 class="small muted" style="margin:0 0 6px">Por área do conhecimento</h3>${tabelaDesempenho(listaPor(ag.por.ae), "Área do ENEM", k => { const a = ENEM_AREAS.find(x => x.id === k); return a ? `<a href="#/enem/${esc(k)}">${esc(a.nome)}</a>` : esc(k); })}
+    <h3 class="small muted" style="margin:14px 0 6px">Por disciplina (História, Geografia, Física…)</h3>${tabelaDesempenho(listaPor(ag.por.discEnem), "Disciplina do ENEM")}`;
   else if (DV.aba === "trilha") tab = tabelaDesempenho(listaPor(ag.por.trilha), "Trilha", k => esc(TRILHAS[k]?.nome || k));
   const temTempo = Object.values(D).some(d => d.seg >= 60), sem = semanasComDados(4);
   return {

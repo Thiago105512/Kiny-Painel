@@ -421,11 +421,16 @@ const espPorNome = nome => Object.values(ESPECIALIDADES).find(e => norm(e.nome) 
 
 /* ---------- Questões ----------
    Formato interno curto: t trilha, a área, q enunciado, o alternativas, c correta, e explicação. */
+/** Área do conhecimento do ENEM: pelo tema ou, sem tema, pelo nome da disciplina. */
+const AREA_CURTA = { linguagens: "Linguagens", humanas: "Humanas", natureza: "Natureza", matematica: "Matemática", redacao: "Redação" };
+const nomeAreaEnem = id => AREA_CURTA[id] || ENEM_AREAS.find(a => a.id === id)?.nome || id || "";
+const areaEnemDe = q => TEMAS[q.tema]?.area || Object.values(ENEM_DISC).find(d => norm(d.nome) === norm(q.disciplina ?? q.disc ?? q.area ?? ""))?.area || null;
 const normQuestao = (q, t, src = "banco") => ({
   id: q.id, t, a: q.area || q.a || "Geral", q: q.enunciado ?? q.q, o: q.alternativas ?? q.o, c: q.correta ?? q.c, e: q.explicacao ?? q.e ?? "",
   tema: q.tema ?? null, subtema: q.subtema ?? null, esp: q.especialidade ?? q.esp ?? null,
   disc: q.disciplina ?? q.disc ?? q.area ?? q.a ?? null, dif: q.dificuldade ?? q.dif ?? null,
   fonte: q.fonte ?? (src === "banco" ? "autoral" : src), ano: q.ano ?? null, prova: q.prova ?? null, src,
+  ae: q.areaEnem ?? q.ae ?? (t === "enem" ? areaEnemDe(q) : null),
 });
 const QUESTOES_BASE = Object.entries(DADOS.banco || {}).flatMap(([t, arr]) => arr.map(q => normQuestao(q, t)));
 
@@ -727,7 +732,7 @@ function pendencias() {
 
 /* ---------- Desempenho (PerformanceMetric calculado sob demanda) ---------- */
 function agregados(filtro = () => true) {
-  const res = { n: 0, ac: 0, ms: 0, nms: 0, vistas: 0, por: { disc: {}, esp: {}, tema: {}, trilha: {}, area: {} } };
+  const res = { n: 0, ac: 0, ms: 0, nms: 0, vistas: 0, por: { disc: {}, esp: {}, tema: {}, trilha: {}, area: {}, ae: {}, discEnem: {} } };
   const soma = (m, k, p, ok) => { if (!k) return; const x = m[k] = m[k] || { n: 0, ac: 0 }; x.n += p; x.ac += ok; };
   for (const q of questoes()) {
     if (!filtro(q)) continue;
@@ -736,6 +741,7 @@ function agregados(filtro = () => true) {
     for (const h of p.h) if (h[3]) { res.ms += h[3]; res.nms++; }
     soma(res.por.disc, q.disc, p.n, p.ac); soma(res.por.esp, q.esp, p.n, p.ac); soma(res.por.tema, q.tema, p.n, p.ac);
     soma(res.por.trilha, q.t, p.n, p.ac); soma(res.por.area, q.a, p.n, p.ac);
+    if (q.ae) { soma(res.por.ae, q.ae, p.n, p.ac); soma(res.por.discEnem, q.disc, p.n, p.ac); }
   }
   return res;
 }
@@ -1104,7 +1110,7 @@ function htmlPlayer() {
   const letra = i => LETRAS[PL.ordem.indexOf(i)];
   const ok = PL.esc === q.c;
   return `<article class="caixa questao" id="pl">
-    <div class="meta"><span>${PL.i + 1}/${PL.ids.length}</span><span>${esc(TRILHAS[q.t]?.curto || q.t)}</span>${q.tema ? `<span>${linkTema(q.tema)}</span>` : `<span>${esc(q.a)}</span>`}${q.dif ? `<span>${DIFICULDADE[q.dif]}</span>` : ""}${q.src !== "banco" ? `<span>${q.src === "ia" ? "gerada por IA" : "minha"}</span>` : ""}${st.n ? `<span>${st.ac}/${st.n} antes</span>` : ""}</div>
+    <div class="meta"><span>${PL.i + 1}/${PL.ids.length}</span><span>${esc(TRILHAS[q.t]?.curto || q.t)}</span>${q.ae ? `<span>${esc(nomeAreaEnem(q.ae))}${q.disc ? " · " + esc(q.disc) : ""}</span>` : ""}${q.tema ? `<span>${linkTema(q.tema)}</span>` : `<span>${esc(q.a)}</span>`}${q.dif ? `<span>${DIFICULDADE[q.dif]}</span>` : ""}${q.src !== "banco" ? `<span>${q.src === "ia" ? "gerada por IA" : "minha"}</span>` : ""}${st.n ? `<span>${st.ac}/${st.n} antes</span>` : ""}</div>
     <p class="enunciado">${esc(q.q)}</p>
     <ol class="alts">${alts}</ol>
     ${PL.resp ? `<div class="retorno"><p class="veredito ${ok ? "ok" : "bad"}">${ok ? "Certo" : "Errado — gabarito " + letra(q.c)}${PL.ms ? ` · ${mmss(PL.ms)}` : ""}</p><p class="leitura" style="color:var(--ink2);margin:0">${esc(q.e || "Sem explicação cadastrada.")}</p>
@@ -1823,6 +1829,8 @@ function mapaDoTema(id) {
    13-enem — ENEM e vestibulares: Área → Disciplina → Assunto (tema) → Subassunto.
    ============================================================ */
 const CRUMB_ENEM = ["ENEM", "#/enem"];
+const idsDaArea = area => questoes().filter(q => q.t === "enem" && q.ae === area).map(q => q.id);
+const btnPraticarArea = a => { const ids = idsDaArea(a.id); return ids.length ? `<button class="btn sec mini" data-act="praticar-ids" data-ids="${ids.join(",")}" data-ctx="ENEM ${esc(a.nome)}">Praticar a área (${ids.length})</button>` : ""; };
 const temasEnemDe = discId => Object.values(TEMAS).filter(t => t.dominio === "enem" && t.disciplinaId === discId);
 function resumoDisc(discId) {
   const ts = temasEnemDe(discId).map(t => t.id), qs = questoes().filter(q => q.t === "enem" && ts.includes(q.tema)), a = agregados(q => q.t === "enem" && ts.includes(q.tema));
@@ -1831,14 +1839,14 @@ function resumoDisc(discId) {
 rota("/enem", () => ({
   secao: "enem", titulo: "ENEM e vestibulares", sub: "Organizado pela Matriz de Referência do ENEM (resumo para estudo). Serve também para PSC/UFAM e SIS/UEA.",
   acoes: `<a class="btn" href="#/simulados">Simulado</a><a class="btn sec" href="#/redacao">Redação</a>`,
-  html: ENEM_AREAS.map(a => `<section><h2 class="sec"><a href="#/enem/${esc(a.id)}" style="color:inherit;text-decoration:none">${esc(a.nome)}</a></h2>
+  html: ENEM_AREAS.map(a => `<section><div class="linha entre"><h2 class="sec"><a href="#/enem/${esc(a.id)}" style="color:inherit;text-decoration:none">${esc(a.nome)}</a></h2>${a.id === "redacao" ? "" : btnPraticarArea(a)}</div>
     ${a.id === "redacao" ? `<p><a class="btn sec" href="#/redacao">Abrir módulo de redação</a></p>` : tabela([{ t: "Disciplina" }, { t: "Assuntos", num: 1 }, { t: "Questões", num: 1 }, { t: "Acerto", num: 1 }], (a.disciplinas || []).map(d => { const r = resumoDisc(d.id); return [`<a href="#/enem/${esc(a.id)}/${esc(d.id)}">${esc(d.nome)}</a>`, r.assuntos, r.questoes, r.a.n ? pct(r.a.ac, r.a.n) + "%" : "—"]; }))}</section>`).join("")
     + `<p class="small muted">Guias de formato das provas (FUVEST, Unicamp, UERJ, PSC, SIS…) estão em <a href="#/biblioteca/guia">Biblioteca → Guias de referência</a>.</p>`,
 }));
 rota("/enem/:area", ({ area }) => {
   const a = ENEM_AREAS.find(x => x.id === area); if (!a) return paginaNaoEncontrada();
   if (area === "redacao") { location.hash = "#/redacao"; return { html: "" }; }
-  return { secao: "enem", crumbs: [CRUMB_ENEM], titulo: a.nome,
+  return { secao: "enem", crumbs: [CRUMB_ENEM], titulo: a.nome, acoes: btnPraticarArea(a),
     html: tabela([{ t: "Disciplina" }, { t: "Assuntos", num: 1 }, { t: "Questões", num: 1 }, { t: "Acerto", num: 1 }], (a.disciplinas || []).map(d => { const r = resumoDisc(d.id); return [`<a href="#/enem/${esc(a.id)}/${esc(d.id)}">${esc(d.nome)}</a>`, r.assuntos, r.questoes, r.a.n ? pct(r.a.ac, r.a.n) + "%" : "—"]; })) };
 });
 rota("/enem/:area/:disc", ({ area, disc }) => {
@@ -1858,7 +1866,7 @@ rota("/enem/:area/:disc", ({ area, disc }) => {
    14-questoes — banco de questões (filtros completos), página da questão
    com histórico de tentativas, e caderno de erros.
    ============================================================ */
-const FQ = { trilha: "", inst: "", periodo: "", disc: "", esp: "", tema: "", subtema: "", dif: "", fonte: "", ano: "", prova: "", status: [], texto: "" };
+const FQ = { trilha: "", area: "", inst: "", periodo: "", disc: "", esp: "", tema: "", subtema: "", dif: "", fonte: "", ano: "", prova: "", status: [], texto: "" };
 const STATUS_Q = [["nao", "Não respondida"], ["correta", "Correta"], ["incorreta", "Incorreta"], ["marcada", "Marcada"], ["revisar", "Revisar"]];
 
 /** Temas presentes nas matrizes de uma instituição (opcionalmente só de um período). */
@@ -1872,6 +1880,7 @@ function filtrarQuestoes(F) {
   return questoes().filter(q => {
     if (F.trilha && (F.trilha === "med" ? TRILHAS[q.t]?.dominio !== "medicina" : q.t !== F.trilha)) return false;
     if (temasInst && !temasInst.has(q.tema)) return false;
+    if (F.area && q.ae !== F.area) return false;
     if (F.disc && q.disc !== F.disc) return false;
     if (F.esp && q.esp !== F.esp && !(TEMAS[q.tema]?.especialidades || []).includes(F.esp)) return false;
     if (F.tema && q.tema !== F.tema) return false;
@@ -1886,7 +1895,8 @@ function filtrarQuestoes(F) {
   });
 }
 function formFiltros(F, prefixo = "fq", { rapidos = false } = {}) {
-  const base = questoes().filter(q => !F.trilha || (F.trilha === "med" ? TRILHAS[q.t]?.dominio === "medicina" : q.t === F.trilha));
+  const base0 = questoes().filter(q => !F.trilha || (F.trilha === "med" ? TRILHAS[q.t]?.dominio === "medicina" : q.t === F.trilha));
+  const areasL = ENEM_AREAS.filter(a => base0.some(q => q.ae === a.id)), base = F.area ? base0.filter(q => q.ae === F.area) : base0;
   const discs = ordenarPt(unicos(base.map(q => q.disc))), temasL = ordenarPt(unicos(base.map(q => q.tema)).filter(t => TEMAS[t]), nomeTema);
   const espL = ordenarPt(unicos(base.flatMap(q => [q.esp, ...(TEMAS[q.tema]?.especialidades || [])])).filter(e => ESPECIALIDADES[e]), e => ESPECIALIDADES[e].nome);
   const anos = unicos(base.map(q => q.ano)).sort(), provas = unicos(base.map(q => q.prova)), fontes = unicos(base.map(q => q.fonte || q.src));
@@ -1895,6 +1905,7 @@ function formFiltros(F, prefixo = "fq", { rapidos = false } = {}) {
     ${rapidos ? "" : sel("trilha", "Trilha", [["med", "Medicina (graduação + residência)"], ...Object.entries(TRILHAS).map(([k, v]) => [k, v.nome])])}
     ${sel("inst", "Instituição (via grade)", instituicoes().map(i => [i.id, i.sigla]))}
     ${sel("periodo", "Período", Array.from({ length: 12 }, (_, i) => [i + 1, i + 1 + "º"]), "Todos")}
+    ${areasL.length ? sel("area", "Área do conhecimento (ENEM)", areasL.map(a => [a.id, a.nome])) : ""}
     ${sel("disc", "Disciplina", discs.map(d => [d, d]))}
     ${sel("esp", "Especialidade", espL.map(e => [e, ESPECIALIDADES[e].nome]))}
     ${sel("tema", "Tema", temasL.map(t => [t, nomeTema(t)]), "Todos")}
@@ -1906,22 +1917,23 @@ function formFiltros(F, prefixo = "fq", { rapidos = false } = {}) {
     ${rapidos ? "" : `<div style="margin-top:10px"><span class="lab">Status</span><div class="chips">${STATUS_Q.map(([k, t]) => `<button class="chip" data-act="${prefixo}-st" data-v="${k}" aria-pressed="${F.status.includes(k)}">${t}</button>`).join("")}</div></div>`}
     ${F.inst && !temasDaInstituicao(F.inst).size ? `<p class="aviso" style="margin-top:10px">A instituição escolhida não tem matriz importada com temas vinculados (${PENDENTE}). Nenhuma questão pode ser associada a ela ainda.</p>` : ""}`;
 }
-MUDANCAS.fq = el => { FQ[el.dataset.c] = el.value; if (el.dataset.c === "tema") FQ.subtema = ""; if (el.dataset.c === "trilha") Object.assign(FQ, { disc: "", tema: "", subtema: "", esp: "" }); atualizar(); };
+MUDANCAS.fq = el => { FQ[el.dataset.c] = el.value; if (el.dataset.c === "tema") FQ.subtema = ""; if (el.dataset.c === "trilha") Object.assign(FQ, { area: "", disc: "", tema: "", subtema: "", esp: "" }); if (el.dataset.c === "area") Object.assign(FQ, { disc: "", tema: "", subtema: "" }); atualizar(); };
 ENTRADAS["fq-txt"] = el => { FQ.texto = el.value; atualizar(); const i = document.querySelector('[data-inp="fq-txt"]'); if (i) { i.focus(); i.setSelectionRange(i.value.length, i.value.length); } };
 ACOES["fq-st"] = el => { QPAG = 20; const k = el.dataset.v; FQ.status = FQ.status.includes(k) ? FQ.status.filter(x => x !== k) : [...FQ.status, k]; atualizar(); };
-ACOES["fq-limpar"] = () => { Object.assign(FQ, { trilha: "", inst: "", periodo: "", disc: "", esp: "", tema: "", subtema: "", dif: "", fonte: "", ano: "", prova: "", status: [], texto: "" }); atualizar(); };
+ACOES["fq-limpar"] = () => { Object.assign(FQ, { trilha: "", area: "", inst: "", periodo: "", disc: "", esp: "", tema: "", subtema: "", dif: "", fonte: "", ano: "", prova: "", status: [], texto: "" }); atualizar(); };
 
 let QPAG = 20;
 const TRILHAS_RAPIDAS = [["", "Todas"], ["med", "Medicina"], ["enem", "ENEM"], ["direito", "Direito"], ["oab", "OAB"]];
 const STATUS_RAPIDOS = [["nao", "Não respondidas"], ["incorreta", "Erradas"], ["marcada", "Marcadas"], ["revisar", "Revisar"]];
 rota("/questoes", () => {
   if (playerAtivo("banco")) return { secao: "questoes", crumbs: [["Questões", "#/questoes"]], titulo: PL.rotulo || "Praticando", html: htmlPlayer(), ctx: { questao: PL.ids[PL.i], tema: qPorId(PL.ids[PL.i])?.tema } };
-  const qs = filtrarQuestoes(FQ), extras = Object.entries(FQ).filter(([k, v]) => !["trilha", "status", "texto"].includes(k) && v).length;
+  const qs = filtrarQuestoes(FQ), extras = Object.entries(FQ).filter(([k, v]) => !["trilha", "status", "texto", ...(FQ.trilha === "enem" ? ["area", "disc"] : [])].includes(k) && v).length;
   return {
     secao: "questoes", titulo: "Questões", sub: `${qs.length} de ${questoes().length}`,
     html: `${abas([["banco", "Banco"], ["erros", "Caderno de erros"]], "banco", "ir-aba-q")}
       <div class="pilha">
         ${chips(TRILHAS_RAPIDAS, FQ.trilha, "fq-trilha")}
+        ${FQ.trilha === "enem" ? chipsEnem() : ""}
         <div class="chips">${STATUS_RAPIDOS.map(([k, t]) => `<button class="chip" data-act="fq-st" data-v="${k}" aria-pressed="${FQ.status.includes(k)}">${t}</button>`).join("")}</div>
         <details class="filtros" ${extras ? "open" : ""} style="margin:0"><summary>Mais filtros${extras ? ` (${extras})` : ""}</summary><div style="margin-top:10px">${formFiltros(FQ, "fq", { rapidos: true })}</div>${extras || FQ.status.length || FQ.trilha ? `<div class="acoes"><button class="btn sec mini" data-act="fq-limpar">Limpar tudo</button></div>` : ""}</details>
         ${qs.length ? `<div class="linha"><button class="btn" data-act="praticar-filtro">Praticar ${Math.min(qs.length, 20)}</button><button class="btn sec" data-act="sim-do-filtro">Fazer simulado</button></div>` : ""}
@@ -1930,7 +1942,17 @@ rota("/questoes", () => {
   };
 });
 ACOES["lq-mais"] = () => { QPAG += 20; atualizar(); };
-ACOES["fq-trilha"] = el => { FQ.trilha = el.dataset.v; Object.assign(FQ, { disc: "", tema: "", subtema: "", esp: "" }); QPAG = 20; atualizar(); };
+ACOES["fq-trilha"] = el => { FQ.trilha = el.dataset.v; Object.assign(FQ, { area: "", disc: "", tema: "", subtema: "", esp: "" }); QPAG = 20; atualizar(); };
+/** ENEM: área do conhecimento e, dentro dela, a disciplina (História, Geografia…), com a contagem de questões. */
+function chipsEnem() {
+  const qs = questoes().filter(q => q.t === "enem"), n = f => qs.filter(f).length;
+  const areas = [["", `Todas as áreas (${qs.length})`], ...ENEM_AREAS.map(a => [a.id, `${nomeAreaEnem(a.id)} (${n(q => q.ae === a.id)})`])];
+  const discs = FQ.area ? ordenarPt(unicos(qs.filter(q => q.ae === FQ.area).map(q => q.disc))) : [];
+  return `<div class="pilha" style="gap:6px"><span class="lab">Área do conhecimento</span>${chips(areas, FQ.area, "fq-area")}
+    ${discs.length > 1 ? `<span class="lab">Disciplina</span>${chips([["", "Todas"], ...discs.map(d => [d, `${d} (${n(q => q.ae === FQ.area && q.disc === d)})`])], FQ.disc, "fq-disc")}` : ""}</div>`;
+}
+ACOES["fq-area"] = el => { FQ.area = el.dataset.v; Object.assign(FQ, { disc: "", tema: "", subtema: "" }); QPAG = 20; atualizar(); };
+ACOES["fq-disc"] = el => { FQ.disc = el.dataset.v; Object.assign(FQ, { tema: "", subtema: "" }); QPAG = 20; atualizar(); };
 ACOES["ir-aba-q"] = el => ir(el.dataset.v === "erros" ? "#/erros" : "#/questoes");
 function praticar(ids, rotulo) { iniciarPlayer("banco", ids, "pratica"); PL.rotulo = rotulo || "Praticando"; ir("#/questoes"); }
 ACOES["praticar-filtro"] = () => { const qs = filtrarQuestoes(FQ); const pri = qs.filter(q => statusQ(q).chave === "nao"); praticar(embaralhar(pri.length >= 10 ? pri : qs).slice(0, 20).map(q => q.id), "Praticando questões filtradas"); };
@@ -1944,7 +1966,7 @@ rota("/questoes/q/:id", ({ id }) => {
   const hist = (p?.h || []).slice().reverse().map(h => [new Date(h[0]).toLocaleString("pt-BR"), h[1] == null ? "—" : esc(q.o[h[1]] || "—"), h[2] ? pill("certa", "ok") : pill("errada", "bad"), h[3] ? mmss(h[3]) : "—", esc({ pratica: "prática", tema: "tema", simulado: "simulado", revisao: "revisão", erro: "caderno de erros", v1: "versão anterior" }[h[4]] || h[4] || "")]);
   return {
     secao: "questoes", crumbs: [["Questões", "#/questoes"]], titulo: "Questão",
-    sub: `${esc(TRILHAS[q.t]?.nome || q.t)} · ${q.tema ? linkTema(q.tema) : esc(q.a)}${q.subtema ? " · " + esc(nomeSubtema(q.tema, q.subtema) || "") : ""} · fonte: ${esc(q.fonte || q.src)}${q.ano ? " · " + q.ano : ""}${q.prova ? " · " + esc(q.prova) : ""}`,
+    sub: `${esc(TRILHAS[q.t]?.nome || q.t)}${q.ae ? " · " + esc(nomeAreaEnem(q.ae)) + (q.disc ? " · " + esc(q.disc) : "") : ""} · ${q.tema ? linkTema(q.tema) : esc(q.a)}${q.subtema ? " · " + esc(nomeSubtema(q.tema, q.subtema) || "") : ""} · fonte: ${esc(q.fonte || q.src)}${q.ano ? " · " + q.ano : ""}${q.prova ? " · " + esc(q.prova) : ""}`,
     html: `${htmlPlayer()}
       <h2 class="sec">Histórico de tentativas</h2>${tabela([{ t: "Quando" }, { t: "Sua resposta" }, { t: "Resultado" }, { t: "Tempo", num: 1 }, { t: "Origem" }], hist, { vaziaMsg: "Nenhuma tentativa ainda." })}
       ${E ? `<h2 class="sec">No caderno de erros</h2><p>${pill(E.status === "aberto" ? "aberto" : "resolvido", E.status === "aberto" ? "bad" : "ok")} Errou ${E.n}× · motivo: ${esc(E.motivo || E.motivoSugerido + " (sugerido)")} · próxima revisão ${dataBR(E.srs?.prox)}</p><button class="btn sec mini" data-act="erro-detalhe" data-q="${esc(id)}">Editar registro do erro</button>` : ""}`,
@@ -2330,7 +2352,7 @@ rota("/simulados", () => {
     const id = SIM.ids[SIM.i], q = qPorId(id), ord = SIM.ordens[id], marc = SIM.resp[id], rest = restante(), brancos = SIM.ids.filter(x => SIM.resp[x] === undefined).length;
     return { secao: "simulados", titulo: "Simulado em andamento", ctx: {},
       html: `<div class="provabar" id="prova"><span class="small muted">${esc(TRILHAS[SIM.tReal]?.curto || "")} · questão ${SIM.i + 1} de ${SIM.ids.length}</span><span class="relogio ${rest !== null && rest < 300000 ? "pouco" : ""}" id="relogio">${rest === null ? mmss(Date.now() - SIM.inicio) : mmss(rest)}</span></div>
-      ${q ? `<article class="caixa questao"><div class="meta"><span>${esc(q.disc || q.a)}</span></div><p class="enunciado">${esc(q.q)}</p>
+      ${q ? `<article class="caixa questao"><div class="meta">${q.ae ? `<span>${esc(nomeAreaEnem(q.ae))}</span>` : ""}<span>${esc(q.disc || q.a)}</span></div><p class="enunciado">${esc(q.q)}</p>
         <ol class="alts">${ord.map((i, pos) => `<li><button class="alt" data-act="sim-marcar" data-i="${i}" data-s="${marc === i ? "sel" : ""}"><span class="bolha">${LETRAS[pos]}</span><span>${esc(q.o[i])}</span></button></li>`).join("")}</ol>
         <div class="acoes"><button class="btn sec" data-act="sim-nav" data-d="-1" ${SIM.i ? "" : "disabled"}>Anterior</button>${SIM.i < SIM.ids.length - 1 ? `<button class="btn" data-act="sim-nav" data-d="1">Próxima</button>` : `<button class="btn" data-act="sim-entregar">Entregar prova</button>`}</div></article>` : vazio("Questão removida do banco. Siga para a próxima.")}
       <h2 class="sec">Cartão-resposta <span class="small muted">${SIM.ids.length - brancos}/${SIM.ids.length} marcadas</span></h2>
@@ -2493,10 +2515,8 @@ rota("/desempenho", () => {
   if (DV.aba === "disciplina") tab = tabelaDesempenho(listaPor(ag.por.disc), "Disciplina");
   else if (DV.aba === "especialidade") tab = tabelaDesempenho(listaPor(ag.por.esp), "Especialidade", k => ESPECIALIDADES[k] ? `<a href="#/medicina/esp/${esc(k)}">${esc(ESPECIALIDADES[k].nome)}</a>` : esc(k));
   else if (DV.aba === "tema") tab = tabelaDesempenho(listaPor(ag.por.tema), "Tema", linkTema);
-  else if (DV.aba === "enem") {
-    const porA = {}; for (const [t, v] of Object.entries(ag.por.tema)) { const a = TEMAS[t]?.dominio === "enem" ? TEMAS[t].areaNome : null; if (!a) continue; const x = porA[a] = porA[a] || { n: 0, ac: 0 }; x.n += v.n; x.ac += v.ac; }
-    tab = tabelaDesempenho(listaPor(porA), "Área do ENEM");
-  }
+  else if (DV.aba === "enem") tab = `<h3 class="small muted" style="margin:0 0 6px">Por área do conhecimento</h3>${tabelaDesempenho(listaPor(ag.por.ae), "Área do ENEM", k => { const a = ENEM_AREAS.find(x => x.id === k); return a ? `<a href="#/enem/${esc(k)}">${esc(a.nome)}</a>` : esc(k); })}
+    <h3 class="small muted" style="margin:14px 0 6px">Por disciplina (História, Geografia, Física…)</h3>${tabelaDesempenho(listaPor(ag.por.discEnem), "Disciplina do ENEM")}`;
   else if (DV.aba === "trilha") tab = tabelaDesempenho(listaPor(ag.por.trilha), "Trilha", k => esc(TRILHAS[k]?.nome || k));
   const temTempo = Object.values(D).some(d => d.seg >= 60), sem = semanasComDados(4);
   return {
