@@ -3,7 +3,7 @@
    com histórico de tentativas, e caderno de erros.
    ============================================================ */
 const FQ = { trilha: "", area: "", inst: "", periodo: "", disc: "", esp: "", tema: "", subtema: "", dif: "", fonte: "", ano: "", prova: "", status: [], texto: "" };
-const STATUS_Q = [["nao", "Não respondida"], ["correta", "Correta"], ["incorreta", "Incorreta"], ["marcada", "Marcada"], ["revisar", "Revisar"]];
+const STATUS_Q = [["nao", "Não respondida"], ["correta", "Correta"], ["incorreta", "Incorreta"], ["marcada", "Marcada"], ["revisar", "Revisar"], ["dificil", "Achei difícil"], ["chute", "Acertei no chute"]];
 
 /** Temas presentes nas matrizes de uma instituição (opcionalmente só de um período). */
 function temasDaInstituicao(instId, periodo) {
@@ -25,7 +25,7 @@ function filtrarQuestoes(F) {
     if (F.fonte && q.fonte !== F.fonte && q.src !== F.fonte) return false;
     if (F.ano && String(q.ano) !== F.ano) return false;
     if (F.prova && q.prova !== F.prova) return false;
-    if (F.status?.length) { const s = statusQ(q); if (!F.status.some(k => k === s.chave || (k === "marcada" && s.marcada) || (k === "revisar" && s.revisar))) return false; }
+    if (F.status?.length) { const s = statusQ(q); if (!F.status.some(k => k === s.chave || (k === "marcada" && s.marcada) || (k === "revisar" && s.revisar) || (k === "dificil" && s.perc === 3) || (k === "chute" && s.perc === 4))) return false; }
     if (txt && !norm(q.q + " " + q.o.join(" ")).includes(txt)) return false;
     return true;
   });
@@ -46,7 +46,7 @@ function formFiltros(F, prefixo = "fq", { rapidos = false } = {}) {
     ${sel("esp", "Especialidade", espL.map(e => [e, ESPECIALIDADES[e].nome]))}
     ${sel("tema", "Tema", temasL.map(t => [t, nomeTema(t)]), "Todos")}
     ${F.tema ? sel("subtema", "Subtema", (TEMAS[F.tema]?.subtemas || []).map(s => [s.id, s.nome]), "Todos") : ""}
-    ${sel("dif", "Dificuldade", Object.entries(DIFICULDADE))}
+    ${sel("dif", "Dificuldade (do banco)", Object.entries(DIFICULDADE))}
     ${sel("fonte", "Fonte", fontes.map(f => [f, { autoral: "Autoral (banco do app)", ia: "Gerada por IA", minha: "Minhas" }[f] || f]))}
     ${anos.length ? sel("ano", "Ano", anos.map(a => [a, a]), "Todos") : ""}${provas.length ? sel("prova", "Prova", provas.map(p => [p, p])) : ""}
     <label class="campo"><span class="lab">Texto</span><input type="search" value="${esc(F.texto)}" data-inp="${prefixo}-txt" placeholder="Palavra no enunciado"></label></div>
@@ -60,7 +60,7 @@ ACOES["fq-limpar"] = () => { Object.assign(FQ, { trilha: "", area: "", inst: "",
 
 let QPAG = 20;
 const TRILHAS_RAPIDAS = [["", "Todas"], ["med", "Medicina"], ["enem", "ENEM"], ["direito", "Direito"], ["oab", "OAB"]];
-const STATUS_RAPIDOS = [["nao", "Não respondidas"], ["incorreta", "Erradas"], ["marcada", "Marcadas"], ["revisar", "Revisar"]];
+const STATUS_RAPIDOS = [["nao", "Não respondidas"], ["incorreta", "Erradas"], ["marcada", "Marcadas"], ["revisar", "Revisar"], ["dificil", "Achei difícil"]];
 rota("/questoes", () => {
   if (playerAtivo("banco")) return { secao: "questoes", crumbs: [["Questões", "#/questoes"]], titulo: PL.rotulo || "Praticando", html: htmlPlayer(), ctx: { questao: PL.ids[PL.i], tema: qPorId(PL.ids[PL.i])?.tema } };
   const qs = filtrarQuestoes(FQ), extras = Object.entries(FQ).filter(([k, v]) => !["trilha", "status", "texto", ...(FQ.trilha === "enem" ? ["area", "disc"] : [])].includes(k) && v).length;

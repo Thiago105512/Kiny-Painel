@@ -286,3 +286,4 @@ details.mais>summary{cursor:pointer;color:var(--pen);font-weight:600;font-size:1
 .atalhos a:hover{border-color:var(--pen)}
 .atalhos b{font-size:15px}
 .atalhos small{font-size:12px;color:var(--muted)}
+.perc{margin-top:12px;display:flex;flex-direction:column;gap:6px}
