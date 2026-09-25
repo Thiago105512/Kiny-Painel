@@ -24,3 +24,9 @@ Pasta: /tmp/claude-0/-home-user-Kiny-Painel/1a6e6749-2018-5b88-94f4-cc7b8d68edda
 - Gere em partes com scripts Python (prefixo <LOTE>) para não estourar a saída de uma ferramenta; não mexa em outros arquivos nem no repositório.
 - Rode o validador até passar e releia todas conferindo gabarito por gabarito.
 - Relatório final curto: quantidade, distribuição (níveis/tamanhos), temas cobertos, e as questões em que escolheu diretriz/entendimento específico.
+
+## Qualidade extra (a partir do 2º lote de 400 de Medicina)
+- Posição da correta: sorteie com `random.shuffle` as alternativas de CADA questão (não use ciclo 0,1,2,3,4 nem nenhum padrão previsível), mantendo o equilíbrio geral.
+- Explicação em três partes, em texto corrido: (1) por que a correta está certa; (2) por que cada distrator plausível está errado; (3) quando fizer sentido (em cerca de metade das questões), uma frase final "Para lembrar: …" com um gancho de memória — curiosidade histórica real (epônimo, descoberta, data), macete, comparação ou pegadinha clássica. Só fatos verificáveis; nada de citação inventada.
+- Diretrizes: use a versão vigente em 2026. Se um ponto mudou recentemente (ex.: calendário vacinal, faixas de rastreamento, número de consultas de pré-natal) e você não tem certeza da regra atual, NÃO pergunte sobre ele.
+- Dificuldade: 1 = um passo (reconhecer); 2 = dois passos (aplicar/distinguir); 3 = três ou mais passos, integração, cálculo ou exceção. Classifique pelo raciocínio exigido, não pelo tamanho.
