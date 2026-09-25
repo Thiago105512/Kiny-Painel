@@ -123,3 +123,4 @@ dmypy.json
 
 # Verificador de tipo Pyre
 .pyre/
+.claude/settings.local.json
