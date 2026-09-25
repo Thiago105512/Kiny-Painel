@@ -116,10 +116,10 @@ rota("/medicina/grade/:g/conferir", ({ g: gid }) => {
     html: `<div class="kpis"><div class="kpi"><b>${ok}/${it.length}</b><span>itens conferidos</span>${medidor(pct(ok, it.length), "ok")}</div></div>
       ${(g.periodos || []).map(p => `<h2 class="sec">${esc(p.nome || p.numero + "º período")} <button class="btn mini sec" data-act="conf-periodo" data-g="${esc(g.id)}" data-p="${p.numero}">Marcar período como conferido</button></h2>
         <div class="tabela-wrap"><table><thead><tr><th>Ok</th><th>Tipo</th><th>Nome (como no documento)</th><th class="num">CH</th></tr></thead><tbody>${(p.itens || []).map(x => `<tr>
-          <td><input type="checkbox" data-chg="conf-item" data-g="${esc(g.id)}" data-i="${esc(x.id)}" data-c="conferido" ${x.conferido ? "checked" : ""} aria-label="Conferido: ${esc(x.nome)}" style="width:20px;height:20px;accent-color:var(--ok)"></td>
+          <td><input type="checkbox" data-chg="conf-item" data-g="${esc(g.id)}" data-i="${esc(x.id)}" data-c="conferido" ${x.conferido ? "checked" : ""} aria-label="Conferido: ${esc(x.nome)}" style="width:calc(20px * var(--k));height:calc(20px * var(--k));accent-color:var(--ok)"></td>
           <td><select data-chg="conf-item" data-g="${esc(g.id)}" data-i="${esc(x.id)}" data-c="tipo" aria-label="Tipo">${opcoes([["disciplina", "Disciplina"], ["modulo", "Módulo"]], x.tipo)}</select></td>
           <td><input type="text" value="${esc(x.nome)}" data-chg="conf-item" data-g="${esc(g.id)}" data-i="${esc(x.id)}" data-c="nome" style="min-width:200px;width:100%" aria-label="Nome"></td>
-          <td class="num"><input type="number" min="0" value="${x.ch ?? ""}" data-chg="conf-item" data-g="${esc(g.id)}" data-i="${esc(x.id)}" data-c="ch" style="width:80px" aria-label="Carga horária"></td></tr>`).join("") || `<tr><td colspan="4" class="muted">Sem itens.</td></tr>`}</tbody></table></div>`).join("")}
+          <td class="num"><input type="number" min="0" value="${x.ch ?? ""}" data-chg="conf-item" data-g="${esc(g.id)}" data-i="${esc(x.id)}" data-c="ch" style="width:calc(80px * var(--k))" aria-label="Carga horária"></td></tr>`).join("") || `<tr><td colspan="4" class="muted">Sem itens.</td></tr>`}</tbody></table></div>`).join("")}
       <div class="acoes"><button class="btn azul" data-act="grade-validar" data-g="${esc(g.id)}" ${ok === it.length && it.length ? "" : "disabled"}>Marcar matriz como validada</button><span class="small muted">${ok === it.length ? "Tudo conferido." : `Faltam ${it.length - ok} itens.`}</span></div>`,
     ctx: { grade: g.id } };
 });
@@ -275,11 +275,11 @@ function paginaImportar(inst) {
   const prev = IMP.linhas.length ? `<h2 class="sec">3. Revise antes de salvar <span class="small muted">${IMP.linhas.length} itens · ${unicos(IMP.linhas.map(l => l.periodo)).length} períodos</span></h2>
     <p class="small muted">Corrija nomes, períodos e cargas horárias conforme o documento. Deixe CH em branco se não constar.</p>
     <div class="tabela-wrap"><table><thead><tr><th>Per.</th><th>Tipo</th><th>Código</th><th>Nome</th><th class="num">CH</th><th></th></tr></thead><tbody>${IMP.linhas.map((l, k) => `<tr>
-      <td><input type="number" min="0" max="14" value="${l.periodo}" data-chg="imp-cel" data-k="${k}" data-c="periodo" style="width:64px" aria-label="Período"></td>
+      <td><input type="number" min="0" max="14" value="${l.periodo}" data-chg="imp-cel" data-k="${k}" data-c="periodo" style="width:calc(64px * var(--k))" aria-label="Período"></td>
       <td><select data-chg="imp-cel" data-k="${k}" data-c="tipo" aria-label="Tipo">${opcoes([["disciplina", "Disciplina"], ["modulo", "Módulo"]], l.tipo)}</select></td>
-      <td><input type="text" value="${esc(l.codigo || "")}" data-chg="imp-cel" data-k="${k}" data-c="codigo" style="width:90px" aria-label="Código"></td>
+      <td><input type="text" value="${esc(l.codigo || "")}" data-chg="imp-cel" data-k="${k}" data-c="codigo" style="width:calc(90px * var(--k))" aria-label="Código"></td>
       <td><input type="text" value="${esc(l.nome)}" data-chg="imp-cel" data-k="${k}" data-c="nome" style="min-width:220px;width:100%" aria-label="Nome"></td>
-      <td class="num"><input type="number" min="0" value="${l.ch ?? ""}" data-chg="imp-cel" data-k="${k}" data-c="ch" style="width:80px" aria-label="Carga horária"></td>
+      <td class="num"><input type="number" min="0" value="${l.ch ?? ""}" data-chg="imp-cel" data-k="${k}" data-c="ch" style="width:calc(80px * var(--k))" aria-label="Carga horária"></td>
       <td><button class="btn mini sec" data-act="imp-del" data-k="${k}" aria-label="Remover linha">×</button></td></tr>`).join("")}</tbody></table></div>
     <div class="acoes"><button class="btn sec" data-act="imp-add">+ Linha</button><button class="btn azul dir" data-act="imp-salvar">Salvar matriz</button></div>` : "";
   return {

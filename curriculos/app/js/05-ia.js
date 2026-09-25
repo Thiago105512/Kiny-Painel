@@ -97,7 +97,7 @@ const IA = (() => {
     try {
       const arr = await json(`Crie ${n} questões de múltipla escolha INÉDITAS sobre o tema em foco (${trilha === "enem" ? "nível ENEM/vestibular" : "nível graduação/residência em Medicina"}), com 5 alternativas, uma correta, e explicação curta citando a base. Varie a posição da correta.`,
         `[{"enunciado":"","alternativas":["","","","",""],"correta":0,"explicacao":"","dificuldade":2}]`);
-      const ok = (Array.isArray(arr) ? arr : []).filter(x => x && typeof x.enunciado === "string" && Array.isArray(x.alternativas) && x.alternativas.length === 5 && x.correta >= 0 && x.correta < 5);
+      const ok = (Array.isArray(arr) ? arr : []).filter(x => x && typeof x.enunciado === "string" && Array.isArray(x.alternativas) && x.alternativas.length === 5 && new Set(x.alternativas.map(String)).size === 5 && Number.isInteger(+x.correta) && +x.correta >= 0 && +x.correta < 5);
       IA._lote = ok.map(x => ({ id: novoId("q"), t: trilha, area: t?.disciplinas?.[0] || t?.nome || "Geral", enunciado: x.enunciado, alternativas: x.alternativas.map(String), correta: +x.correta, explicacao: String(x.explicacao || ""), tema: c.tema || null, disciplina: c.disciplina || t?.disciplinas?.[0] || null, dificuldade: [1, 2, 3].includes(x.dificuldade) ? x.dificuldade : 2, src: "ia", fonte: "ia" }));
       saida(ok.length ? `<h3>${ok.length} questões geradas</h3><ol class="small">${IA._lote.map(x => `<li>${esc(x.enunciado.slice(0, 140))}</li>`).join("")}</ol><div class="acoes"><button class="btn" data-act="ia-salvar-questoes">Salvar no banco</button></div>` : `<div class="aviso">A resposta não trouxe questões válidas. Tente de novo.</div>`);
     } catch (e) { saida(`<div class="aviso">${mensagemErro(e)}</div>`); }
@@ -145,7 +145,8 @@ const IA = (() => {
   ACOES["ia-acao"] = el => {
     const k = el.dataset.v, a = ACOES_IA.find(x => x[0] === k);
     if (a[2]) return rodarTexto(a[2], a[1]);
-    ({ questoes: gerarQuestoes, cards: gerarCards, caso: gerarCaso, plano: gerarPlano })[k]();
+    if (gerando) return; gerando = true;   // um pedido de cada vez (evita toques repetidos)
+    Promise.resolve(({ questoes: gerarQuestoes, cards: gerarCards, caso: gerarCaso, plano: gerarPlano })[k]()).finally(() => { gerando = false; });
   };
   FORMS["ia-pergunta"] = f => { const q = f.querySelector("#ia-q").value.trim(); if (q) rodarTexto(q, "Resposta"); };
   ACOES["ia-salvar-nota"] = () => {
@@ -156,7 +157,7 @@ const IA = (() => {
   };
   ACOES["ia-salvar-questoes"] = () => { (IA._lote || []).forEach(salvarQuestaoPropria); toast(`${IA._lote?.length || 0} questões salvas`); IA._lote = []; saida(""); atualizar(); };
   ACOES["ia-salvar-cards"] = () => { (IA._cards || []).forEach(criarCard); toast(`${IA._cards?.length || 0} flashcards criados`); IA._cards = []; saida(""); atualizar(); };
-  ACOES["ia-salvar-caso"] = () => { const C = store.doc("casos"); C.itens[IA._caso.id] = IA._caso; store.mudou("casos"); toast("Caso salvo"); saida(""); fecharFolha(); ir("#/casos/" + IA._caso.id); };
+  ACOES["ia-salvar-caso"] = () => { if (!IA._caso) return; const C = store.doc("casos"); C.itens[IA._caso.id] = IA._caso; store.mudou("casos"); const id = IA._caso.id; IA._caso = null; toast("Caso salvo"); saida(""); fecharFolha(); ir("#/casos/" + id); };
   ACOES["ia-salvar-plano"] = () => { const P = store.doc("plano"); (IA._plano || []).forEach(x => { const id = novoId("p"); P.itens[id] = { id, ...x, tema: null, disciplina: null, rev: false, feito: false }; }); store.mudou("plano"); toast("Plano adicionado"); saida(""); fecharFolha(); ir("#/plano"); };
 
   return { iniciar, disponivel, contexto, explicarQuestao, texto, json, mensagemErro, abrir };

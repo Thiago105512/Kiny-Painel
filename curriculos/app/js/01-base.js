@@ -33,7 +33,8 @@ const ordenarPt = (a, f = x => x) => a.slice().sort((x, y) => String(f(x)).local
 /** localStorage tolerante a falhas (aba privada, bloqueio, prévia). */
 const ls = {
   get(k, def = null) { try { const v = localStorage.getItem(k); return v == null ? def : JSON.parse(v); } catch (e) { return def; } },
-  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { } },
+  /** Devolve false quando o navegador recusa (cota cheia, aba privada). */
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch (e) { return false; } },
   del(k) { try { localStorage.removeItem(k); } catch (e) { } },
 };
 

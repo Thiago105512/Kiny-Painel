@@ -2,7 +2,7 @@
    19-plano — planejamento diário, semanal e mensal.
    Cada item: disciplina, tema, tempo previsto, nº de questões, revisão, concluído.
    ============================================================ */
-const PV = { vista: "semana", data: hoje() };
+const PV = { vista: "semana", data: null };   // null = hoje (resolvido a cada abertura)
 const itensPlano = () => Object.values(store.doc("plano").itens);
 const inicioSemana = iso => { const d = new Date(iso + "T12:00"); return somaDias(iso, -((d.getDay() + 6) % 7)); };
 function linhaPlano(p) {
@@ -13,6 +13,7 @@ function linhaPlano(p) {
     <span class="linha" style="flex-wrap:nowrap">${p.tema && !p.feito ? `<button class="btn mini" data-act="plano-comecar" data-id="${esc(p.id)}">Começar</button>` : ""}<button class="btn mini sec" data-act="plano-del" data-id="${esc(p.id)}" aria-label="Remover">×</button></span></div>`;
 }
 rota("/plano", () => {
+  if (!PV.escolhida) PV.data = hoje();   // acompanha o dia atual até a pessoa navegar
   const todos = itensPlano(), doDia = d => todos.filter(p => p.data === d);
   let corpo = "", titulo = "";
   if (PV.vista === "dia") {
@@ -39,9 +40,9 @@ rota("/plano", () => {
   };
 });
 ACOES["plano-vista"] = el => { PV.vista = el.dataset.v; atualizar(); };
-ACOES["plano-mover"] = el => { const n = +el.dataset.n; PV.data = PV.vista === "mes" ? diaISO(new Date(+PV.data.slice(0, 4), +PV.data.slice(5, 7) - 1 + Math.sign(n), 1)) : somaDias(PV.data, n); atualizar(); };
-ACOES["plano-hoje"] = () => { PV.data = hoje(); atualizar(); };
-ACOES["plano-dia"] = el => { PV.data = el.dataset.d; PV.vista = "dia"; atualizar(); };
+ACOES["plano-mover"] = el => { const n = +el.dataset.n; PV.escolhida = true; PV.data = PV.vista === "mes" ? diaISO(new Date(+PV.data.slice(0, 4), +PV.data.slice(5, 7) - 1 + Math.sign(n), 1)) : somaDias(PV.data, n); atualizar(); };
+ACOES["plano-hoje"] = () => { PV.escolhida = false; PV.data = hoje(); atualizar(); };
+ACOES["plano-dia"] = el => { PV.escolhida = true; PV.data = el.dataset.d; PV.vista = "dia"; atualizar(); };
 ACOES["plano-del"] = el => { const P = store.doc("plano"); delete P.itens[el.dataset.id]; store.mudou("plano"); atualizar(); };
 ACOES["plano-comecar"] = el => {
   const p = store.doc("plano").itens[el.dataset.id];

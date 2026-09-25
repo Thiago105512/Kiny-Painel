@@ -2,11 +2,14 @@
    15-flashcards — cards ligados a tema/subtema, com repetição espaçada.
    ============================================================ */
 const ORIGEM_CARD = { manual: "manual", erro: "caderno de erros", questao: "questão", ia: "IA", pilula: "pílula" };
-function tabelaCards(cs, vaziaMsg = "Nenhum flashcard.") {
+let CPAG = 30;   // cards mostrados na lista; "Mostrar mais" amplia
+function tabelaCards(cs, vaziaMsg = "Nenhum flashcard.", limite = CPAG) {
   if (!cs.length) return vazio(vaziaMsg);
-  return `<div class="lista-q">${cs.sort((a, b) => a.srs.prox.localeCompare(b.srs.prox)).map(c => `<a href="#" data-act="card-editar" data-id="${esc(c.id)}"><span class="txt">${esc(c.frente)}</span><span class="meta">${vencido(c.srs) ? pill("hoje", "azul") : `<span>${quando(c.srs.prox)}</span>`}${c.tema ? `<span>${esc(nomeTema(c.tema))}</span>` : ""}<span>${esc(ORIGEM_CARD[c.origem] || c.origem)}</span></span></a>`).join("")}</div>`;
+  const ord = cs.sort((a, b) => a.srs.prox.localeCompare(b.srs.prox)), mais = ord.length > limite;
+  return `<div class="lista-q">${ord.slice(0, limite).map(c => `<a href="#" data-act="card-editar" data-id="${esc(c.id)}"><span class="txt">${esc(c.frente)}</span><span class="meta">${vencido(c.srs) ? pill("hoje", "azul") : `<span>${quando(c.srs.prox)}</span>`}${c.tema ? `<span>${esc(nomeTema(c.tema))}</span>` : ""}<span>${esc(ORIGEM_CARD[c.origem] || c.origem)}</span></span></a>`).join("")}</div>${mais ? `<div class="acoes"><button class="btn sec" data-act="cards-mais">Mostrar mais (${ord.length - limite} restantes)</button></div>` : ""}`;
 }
 const FF = { tema: "" };
+ACOES["cards-mais"] = () => { CPAG += 30; atualizar(); };
 rota("/flashcards", () => {
   const todos = cards(), lista = todos.filter(c => !FF.tema || c.tema === FF.tema), venc = todos.filter(c => vencido(c.srs));
   const temasC = ordenarPt(unicos(todos.map(c => c.tema)).filter(Boolean), nomeTema);
@@ -26,14 +29,16 @@ MUDANCAS.ff = el => { FF.tema = el.value; atualizar(); };
 const FC = { chave: null, fila: [], i: 0, mostrar: false, feitos: [] };
 function paginaEstudoCards(temaId) {
   const chave = temaId || "*";
-  if (FC.chave !== chave) Object.assign(FC, { chave, fila: embaralhar(cards().filter(c => vencido(c.srs) && (!temaId || c.tema === temaId))).map(c => c.id), i: 0, mostrar: false, feitos: [] });
+  const venc = cards().filter(c => vencido(c.srs) && (!temaId || c.tema === temaId)).map(c => c.id);
+  const concluida = FC.chave === chave && FC.i >= FC.fila.length, novos = venc.some(id => !FC.fila.includes(id));
+  if (FC.chave !== chave || (concluida && novos)) Object.assign(FC, { chave, fila: embaralhar(venc), i: 0, mostrar: false, feitos: [] });
   const crumbs = [["Flashcards", "#/flashcards"]].concat(temaId ? [[nomeTema(temaId), "#/tema/" + encodeURIComponent(temaId) + "/flashcards"]] : []);
   if (!FC.fila.length) return { secao: "flashcards", crumbs, titulo: "Estudar flashcards", html: vazio("Nenhum card vencido agora. Volte mais tarde ou crie novos.", `<a class="btn sec" href="#/flashcards">Voltar</a>`) };
   if (FC.i >= FC.fila.length) {
     const n = FC.feitos.length, ok = FC.feitos.filter(x => x >= 2).length;
     return { secao: "flashcards", crumbs, titulo: "Sessão concluída", html: `<div class="kpis"><div class="kpi"><b>${n}</b><span>cards revisados</span></div><div class="kpi"><b>${pct(ok, n)}%</b><span>lembrei (bom/fácil)</span></div></div><div class="acoes"><a class="btn" href="#/revisoes">Outras revisões</a><button class="btn sec" data-act="fc-reiniciar">Nova sessão</button></div>` };
   }
-  const c = store.doc("cards").itens[FC.fila[FC.i]];
+  const c = cardPorId(FC.fila[FC.i]);
   if (!c) { FC.i++; return paginaEstudoCards(temaId); }
   const rot = [[0, "Errei"], [1, "Difícil"], [2, "Bom"], [3, "Fácil"]];
   return {
@@ -70,13 +75,13 @@ function formCard(c = {}) {
     ${c.srs?.hist?.length ? `<p class="small muted">Histórico: ${c.srs.hist.map(h => `${dataCurta(h[0])} ${["errei", "difícil", "bom", "fácil"][h[1]]}`).join(" · ")}</p>` : ""}</form>`;
 }
 ACOES["card-novo"] = el => abrirFolha(`<h2 class="sec">Novo flashcard</h2>${formCard({ tema: el.dataset.t || null })}`);
-ACOES["card-editar"] = el => abrirFolha(`<h2 class="sec">Editar flashcard</h2>${formCard(store.doc("cards").itens[el.dataset.id])}`);
+ACOES["card-editar"] = el => abrirFolha(`<h2 class="sec">Editar flashcard</h2>${formCard(cardPorId(el.dataset.id))}`);
 FORMS["card-salvar"] = f => {
   const frente = $("#cd-f").value.trim(), verso = $("#cd-v").value.trim(); if (!frente || !verso) return;
   const tema = lerTema("cd-tema"), sub = $("#cd-sub")?.value || null, dif = +$("#cd-dif").value;
   if ($("#cd-tema").value.trim() && !tema) { toast("Tema não encontrado — escolha um da lista"); return; }
-  if (f.dataset.id) { const C = store.doc("cards"), c = C.itens[f.dataset.id]; Object.assign(c, { frente, verso, tema, subtema: sub, dif }); store.mudou("cards"); }
+  if (f.dataset.id) { const c = cardPorId(f.dataset.id); if (c) { Object.assign(c, { frente, verso, tema, subtema: sub, dif }); cardMudou(f.dataset.id); } }
   else criarCard({ frente, verso, tema, subtema: sub, dif, origem: "manual" });
   fecharFolha(); toast("Flashcard salvo"); atualizar();
 };
-ACOES["card-excluir"] = el => { const C = store.doc("cards"); delete C.itens[el.dataset.id]; store.mudou("cards"); fecharFolha(); toast("Flashcard excluído"); atualizar(); };
+ACOES["card-excluir"] = el => { excluirCard(el.dataset.id); fecharFolha(); toast("Flashcard excluído"); atualizar(); };

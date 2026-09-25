@@ -9,15 +9,6 @@ function blocoEvolucao(nDias = 14) {
   const max = Math.max(1, ...dias.map(d => d.q));
   return `<div class="colunas" role="img" aria-label="Questões por dia nos últimos ${nDias} dias">${dias.map(d => `<div class="col ${d.k === hoje() ? "hoje" : ""}" title="${dataBR(d.k)}: ${d.q} questões, ${pct(d.ac, d.q)}% de acerto, ${horas(d.seg || 0)}"><em>${d.q || ""}</em><i style="height:${d.q / max * 100}%"></i><small>${d.k.slice(8)}</small></div>`).join("")}</div>`;
 }
-function semanas(n = 4) {
-  const D = store.doc("dias").d, linhas = [];
-  for (let w = 0; w < n; w++) {
-    let q = 0, ac = 0, seg = 0;
-    for (let i = 0; i < 7; i++) { const d = D[somaDias(hoje(), -(w * 7 + i))]; if (d) { q += d.q || 0; ac += d.ac || 0; seg += d.seg || 0; } }
-    linhas.push([w === 0 ? "Últimos 7 dias" : `${w * 7 + 1}–${w * 7 + 7} dias atrás`, q, q ? pct(ac, q) + "%" : "—", horas(seg)]);
-  }
-  return tabela([{ t: "Semana" }, { t: "Questões", num: 1 }, { t: "Acerto", num: 1 }, { t: "Tempo", num: 1 }], linhas);
-}
 
 /** Uma linha sobre a faculdade: o próximo conteúdo do período ou o que falta configurar. */
 function linhaFaculdade() {

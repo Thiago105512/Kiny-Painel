@@ -10,7 +10,7 @@ async function iniciarArquivos() {
 const TIPO_MAT = { link: "Link", pdf: "PDF", texto: "Texto", aula: "Aula (vídeo)" };
 function listaMateriais(mats) {
   return tabela([{ t: "Material" }, { t: "Tipo" }, { t: "Tema" }, { t: "" }], mats.sort((a, b) => b.criado - a.criado).map(m => [
-    m.url ? `<a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.titulo)}</a>` : `<a href="#" data-act="mat-ver" data-id="${esc(m.id)}">${esc(m.titulo)}</a>`,
+    m.url && /^https?:\/\//i.test(m.url) ? `<a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.titulo)}</a>` : `<a href="#" data-act="mat-ver" data-id="${esc(m.id)}">${esc(m.titulo)}</a>`,
     esc(TIPO_MAT[m.tipo] || m.tipo), m.tema ? linkTema(m.tema) : "—", `<button class="btn mini sec" data-act="mat-del" data-id="${esc(m.id)}" aria-label="Excluir">Excluir</button>`]), { vaziaMsg: "Nenhum material ainda." });
 }
 const ABAS_BIB = [["materiais", "Materiais"], ["guia", "Guias de referência"], ["questoes", "Minhas questões"], ["dados", "Dados e backup"]];
@@ -90,4 +90,4 @@ function restaurar(txt) { try { store.importar(JSON.parse(txt)); invalidarQuesto
 ACOES["bk-colar"] = () => restaurar($("#bk-txt").value);
 MUDANCAS["bk-arquivo"] = async el => { const f = el.files[0]; if (f) restaurar(await f.text()); };
 ACOES["zerar-conf"] = () => abrirFolha(`<h2 class="sec">Zerar progresso?</h2><p>Respostas, erros, revisões, flashcards, simulados, plano e tempo de estudo serão apagados. Não tem volta — faça um backup antes.</p><button class="btn perigo" data-act="zerar-ok">Zerar</button>`);
-ACOES["zerar-ok"] = () => { store.zerar([...Object.keys(TRILHAS).map(docProg), "dias", "erros", "cards", "revisoes", "simulados", "plano", "guia"]); fecharFolha(); toast("Progresso zerado"); ir("#/"); };
+ACOES["zerar-ok"] = () => { store.zerar([...Object.keys(TRILHAS).map(docProg), "dias", "erros", ...blocosCards(), "revisoes", "simulados", "plano", "guia"]); fecharFolha(); toast("Progresso zerado"); ir("#/"); };

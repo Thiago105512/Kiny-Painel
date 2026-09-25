@@ -68,13 +68,12 @@ ACOES["menu-mais"] = () => abrirFolha(GRUPOS_NAV.filter(([g]) => g).map(([g, ite
 /* ---------- Render ---------- */
 function render(opts = {}) {
   const cam = caminhoAtual().split("?")[0];
-  const m = casar(cam);
   let pg;
-  try { pg = m ? m.r.fn(m.p) : paginaNaoEncontrada(); }
+  try { const m = casar(cam); pg = m ? m.r.fn(m.p) : paginaNaoEncontrada(); }
   catch (e) { console.error(e); pg = { secao: "", titulo: "Algo deu errado nesta página", html: `<div class="aviso">A página não pôde ser montada (${esc(e.message)}). Seus dados não foram afetados. <a href="#/">Voltar ao início</a></div>` }; }
   if (typeof pg === "string") pg = { html: pg };
   PAGINA = pg;
-  desenharNav(pg.secao);
+  try { desenharNav(pg.secao); } catch (e) { console.error(e); }
   const crumbs = pg.crumbs?.length ? `<nav class="crumbs" aria-label="Você está em">${pg.crumbs.map(([t, h], i) => (i ? '<span aria-hidden="true">›</span>' : "") + (h ? `<a href="${h}">${esc(t)}</a>` : `<span>${esc(t)}</span>`)).join("")}</nav>` : "";
   const titulo = pg.titulo ? `<div class="titulo"><h1>${esc(pg.titulo)}</h1>${pg.acoes ? `<div class="linha">${pg.acoes}</div>` : ""}${pg.sub ? `<div class="sub">${pg.sub}</div>` : ""}</div>` : "";
   const fab = IA.disponivel() && pg.secao !== "assistente" ? `<button class="btn azul fab" data-act="ia-abrir" aria-label="Abrir assistente de estudo">${icone("ia")} Assistente</button>` : "";
@@ -89,7 +88,9 @@ function paginaNaoEncontrada() { return { titulo: "Página não encontrada", htm
 const vazio = (txt, botoes = "") => `<div class="vazio"><p>${txt}</p>${botoes ? `<div class="linha">${botoes}</div>` : ""}</div>`;
 /** Tamanho da letra (só neste aparelho): Grande é o padrão. */
 const TAM_LETRA = [[1.25, "Grande"], [1.45, "Muito grande"], [1.7, "Enorme"], [1, "Normal"]];
-function aplicarLetra(k) { document.documentElement.style.setProperty("--k", k); const b = document.getElementById("letra-btn"); if (b) b.title = "Letra: " + (TAM_LETRA.find(x => x[0] === k)?.[1] || ""); }
+function medirTopo() { const t = document.querySelector(".topo"); if (t) document.documentElement.style.setProperty("--topo-h", t.offsetHeight + "px"); }
+addEventListener("resize", medirTopo);
+function aplicarLetra(k) { document.documentElement.style.setProperty("--k", k); requestAnimationFrame(medirTopo); const b = document.getElementById("letra-btn"); if (b) b.title = "Letra: " + (TAM_LETRA.find(x => x[0] === k)?.[1] || ""); }
 aplicarLetra(ls.get("gab2:letra", 1.25));
 ACOES.letra = () => { const k = ls.get("gab2:letra", 1.25), i = TAM_LETRA.findIndex(x => x[0] === k), prox = TAM_LETRA[(i + 1) % TAM_LETRA.length]; ls.set("gab2:letra", prox[0]); aplicarLetra(prox[0]); toast("Letra: " + prox[1]); };
 /** Selo do nível da questão (definido pelo banco): barrinhas + nome, com cor. */
@@ -109,9 +110,9 @@ const linkTema = id => TEMAS[id] ? `<a href="#/tema/${encodeURIComponent(id)}">$
 const campoTema = (id, valor, rotulo = "Tema") => `<label class="campo"><span class="lab">${rotulo}</span><input type="text" id="${id}" list="dl-temas" value="${esc(TEMAS[valor]?.nome || "")}" placeholder="Digite para buscar"></label>`;
 const lerTema = id => { const v = document.getElementById(id)?.value.trim(); return v ? (temaPorNome(v) || null) : null; };
 
-function toast(msg) {
+function toast(msg, ms = 2600) {
   const t = document.createElement("div"); t.className = "toast"; t.setAttribute("role", "status"); t.textContent = msg;
-  document.body.appendChild(t); setTimeout(() => t.remove(), 2600);
+  document.body.appendChild(t); setTimeout(() => t.remove(), ms);
 }
 function abrirFolha(html, { titulo } = {}) {
   $("#camada").innerHTML = `<div class="folha-fundo" data-act="fechar-folha"></div><div class="folha" role="dialog" aria-modal="true" ${titulo ? `aria-label="${esc(titulo)}"` : ""}><button class="btn sec mini fechar-x" data-act="fechar-folha" aria-label="Fechar">✕</button>${titulo ? `<h2 class="sec">${esc(titulo)}</h2>` : ""}${html}</div>`;
@@ -145,12 +146,22 @@ window.addEventListener("hashchange", () => { fecharFolha(); render({ topo: true
    Registra resposta, tempo, erro e oferece flashcard / IA.
    ============================================================ */
 const PL = { ativo: false, chave: null, ids: [], i: 0, ordem: [], esc: null, resp: false, t0: 0, origem: "pratica", res: [], aoFim: null, ia: "", fim: false };
+/* Sessões em andamento de outras telas ficam guardadas por chave: abrir uma questão avulsa
+   (pela busca, por exemplo) não descarta a sessão de 20 questões que estava pela metade. */
+const SALVOS = {};
+const guardarSessao = () => { if (PL.ativo && !PL.fim && PL.ids.length > 1) SALVOS[PL.chave] = { ...PL }; };
 function iniciarPlayer(chave, ids, origem = "pratica", aoFim = null) {
-  Object.assign(PL, { ativo: true, chave, ids: ids.slice(), i: 0, esc: null, resp: false, origem, res: [], aoFim, ia: "", fim: false });
+  if (PL.chave !== chave) guardarSessao();
+  Object.assign(PL, { ativo: true, chave, ids: ids.slice(), i: 0, esc: null, resp: false, origem, res: [], aoFim, ia: "", fim: false, msgFim: "" });
+  delete SALVOS[chave];
   prepararQuestao();
 }
 function prepararQuestao() { PL.ordem = embaralhar([0, 1, 2, 3, 4]); PL.esc = null; PL.resp = false; PL.t0 = Date.now(); PL.ia = ""; }
-const playerAtivo = chave => PL.ativo && PL.chave === chave;
+function playerAtivo(chave) {
+  if (PL.ativo && PL.chave === chave) return true;
+  const s = SALVOS[chave]; if (!s) return false;
+  guardarSessao(); Object.assign(PL, s); delete SALVOS[chave]; return true;
+}
 function htmlPlayer() {
   if (PL.fim) {
     const ac = PL.res.filter(r => r.ok).length, n = PL.res.length;
@@ -160,7 +171,8 @@ function htmlPlayer() {
       ${PL.msgFim ? `<p class="aviso info">${PL.msgFim}</p>` : ""}
       <div class="acoes"><button class="btn sec" data-act="pl-sair">Fechar</button>${PL.res.some(r => !r.ok) ? `<a class="btn" href="#/erros">Ver caderno de erros</a>` : ""}</div></div>`;
   }
-  const q = qPorId(PL.ids[PL.i]); if (!q) return vazio("Questão indisponível.");
+  const q = qPorId(PL.ids[PL.i]);
+  if (!q) return `<div class="caixa">${vazio("Esta questão não está mais disponível.")}<div class="acoes"><button class="btn" data-act="pl-pular">${PL.i < PL.ids.length - 1 ? "Próxima" : "Concluir"}</button><button class="btn sec" data-act="pl-encerrar">Encerrar sessão</button></div></div>`;
   const st = statusQ(q);
   const alts = PL.ordem.map((i, pos) => {
     let s = ""; if (PL.resp) { if (i === q.c) s = "ok"; else if (i === PL.esc) s = "bad"; } else if (i === PL.esc) s = "sel";
@@ -194,7 +206,7 @@ ACOES["pl-confirmar"] = () => {
 ACOES["pl-prox"] = () => { if (PL.i < PL.ids.length - 1) { PL.i++; prepararQuestao(); } else { PL.fim = true; PL.msgFim = PL.aoFim ? PL.aoFim(PL.res) : ""; } atualizar(); document.getElementById("pl")?.scrollIntoView({ block: "start" }); };
 ACOES["pl-pular"] = () => { if (PL.i < PL.ids.length - 1) { PL.i++; prepararQuestao(); } else { PL.fim = true; PL.msgFim = PL.aoFim ? PL.aoFim(PL.res) : ""; } atualizar(); };
 ACOES["pl-flag"] = el => { const q = qPorId(PL.ids[PL.i]); const v = alternarFlag(q, el.dataset.f); toast(el.dataset.f === "m" ? (v ? "Questão marcada" : "Marcação removida") : (v ? "Adicionada a revisar" : "Removida de revisar")); atualizar(); };
-ACOES["pl-card"] = () => { const q = qPorId(PL.ids[PL.i]); const id = cardDeQuestao(q, PL.esc === q.c ? "questao" : "erro"); const E = store.doc("erros"); if (E.itens[q.id]) { E.itens[q.id].card = id; store.mudou("erros"); } toast("Flashcard criado — revisão a partir de hoje"); };
+ACOES["pl-card"] = () => { const q = qPorId(PL.ids[PL.i]); if (cards().some(c => c.ref === q.id)) { toast("Esta questão já tem flashcard"); return; } const id = cardDeQuestao(q, PL.esc === q.c ? "questao" : "erro"); const E = store.doc("erros"); if (E.itens[q.id]) { E.itens[q.id].card = id; store.mudou("erros"); } toast("Flashcard criado — revisão a partir de hoje"); };
 ACOES["pl-ia"] = () => { const q = qPorId(PL.ids[PL.i]); IA.explicarQuestao(q, PL.esc, PL.ordem, t => { PL.ia = t; const el = document.getElementById("pl-ia"); if (el) el.textContent = t; else atualizar(); }); };
 ACOES["pl-sair"] = () => { PL.ativo = false; atualizar(); };
 ACOES["pl-encerrar"] = () => { if (!PL.res.length) { PL.ativo = false; } else { PL.fim = true; PL.msgFim = PL.aoFim ? PL.aoFim(PL.res) : ""; } atualizar(); };

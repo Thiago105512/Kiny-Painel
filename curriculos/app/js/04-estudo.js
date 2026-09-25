@@ -115,16 +115,24 @@ function revisarTema(temaId, nota) {
 }
 
 /* ---------- Flashcards ---------- */
+/* Flashcards em blocos ("cards", "cards-1"…) para nenhum documento passar do limite de 256 KB da conta. */
+const TAM_BLOCO_C = 120;
+const blocosCards = () => ["cards", ...store.nomes().filter(n => /^cards-\d+$/.test(n)).sort((a, b) => +a.slice(6) - +b.slice(6))];
+const blocoDoCard = id => blocosCards().find(n => store.doc(n).itens[id]);
+const cardPorId = id => { const n = blocoDoCard(id); return n ? store.doc(n).itens[id] : null; };
+function cardMudou(id) { const n = blocoDoCard(id); if (n) store.mudou(n); }
+function excluirCard(id) { const n = blocoDoCard(id); if (!n) return; delete store.doc(n).itens[id]; store.mudou(n); }
 function criarCard(c) {
-  const C = store.doc("cards"), id = novoId("c");
-  C.itens[id] = { id, frente: c.frente, verso: c.verso, tema: c.tema || null, subtema: c.subtema || null, origem: c.origem || "manual", ref: c.ref || null, dif: c.dif || 2, criado: Date.now(), srs: { etapa: -1, ease: 2.2, int: 0, prox: hoje(), hist: [] } };
-  store.mudou("cards"); return id;
+  const blocos = blocosCards(), nome = blocos.find(n => Object.keys(store.doc(n).itens).length < TAM_BLOCO_C) || "cards-" + blocos.length;
+  const C = store.doc(nome), id = novoId("c");
+  C.itens[id] = { id, frente: c.frente, verso: c.verso, tema: c.tema || null, subtema: c.subtema || null, origem: c.origem || "manual", ref: c.ref || null, dif: c.dif || 2, criado: Date.now(), srs: { etapa: -1, ease: 2.2, int: 0, prox: c.origem === "pilula" ? somaDias(hoje(), 1) : hoje(), hist: [] } };
+  store.mudou(nome); return id;
 }
 function cardDeQuestao(q, origem = "questao") {
   return criarCard({ frente: q.q, verso: `${q.o[q.c]}\n\n${q.e || ""}`.trim(), tema: q.tema, subtema: q.subtema, origem, ref: q.id, dif: q.dif || 2 });
 }
-function avaliarCard(id, nota) { const C = store.doc("cards"); const c = C.itens[id]; if (!c) return; c.srs = agendar(c.srs, nota); store.mudou("cards"); if (c.tema) marcarTemaEstudado(c.tema); }
-const cards = () => Object.values(store.doc("cards").itens);
+function avaliarCard(id, nota) { const c = cardPorId(id); if (!c) return; c.srs = agendar(c.srs, nota); cardMudou(id); if (c.tema) marcarTemaEstudado(c.tema); }
+const cards = () => blocosCards().flatMap(n => Object.values(store.doc(n).itens));
 
 /* ---------- Pendências de revisão (agenda unificada) ---------- */
 function pendencias() {

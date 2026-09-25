@@ -23,7 +23,7 @@ function paginaRedacao(aba) {
     const prop = REDACAO.propostas.find(p => p.id === RD.proposta), l = linhasEstimadas(RD.texto), pal = RD.texto.trim() ? RD.texto.trim().split(/\s+/).length : 0;
     corpo = `<section class="caixa pilha">
       <label class="campo"><span class="lab">Tema</span><input type="text" id="rd-tema" value="${esc(prop?.tema || RD.tema)}" data-inp="rd-tema" placeholder="Escolha uma proposta ou escreva o tema"></label>
-      <label class="campo"><span class="lab">Texto (rascunho salvo automaticamente neste aparelho)</span><textarea id="rd-txt" rows="18" data-inp="rd-txt" style="font:400 16px/1.7 var(--read)">${esc(RD.texto)}</textarea></label>
+      <label class="campo"><span class="lab">Texto (rascunho salvo automaticamente neste aparelho)</span><textarea id="rd-txt" rows="18" data-inp="rd-txt" style="font:400 calc(17px * var(--k))/1.7 var(--read)">${esc(RD.texto)}</textarea></label>
       <p class="small muted" id="rd-cont">${pal} palavras · ≈ ${l} linhas de folha (mín. 7 para não zerar; máx. 30)</p>
       <div class="linha"><button class="btn" data-act="red-salvar">Salvar e avaliar</button><button class="btn sec" data-act="red-limpar">Limpar rascunho</button></div></section>
       <details class="filtros" style="margin-top:12px"><summary>Lembrete da estrutura</summary>${Object.entries(REDACAO.estrutura || {}).map(([k, v]) => `<h3>${esc(k)}</h3><ul class="small">${(v || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul>`).join("")}</details>`;

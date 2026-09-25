@@ -32,7 +32,7 @@ await p.evaluate(ts=>{ts.flat().forEach(id=>{const q=qPorId(id);registrarRespost
 await go('#/revisoes/erros');
 ok((await p.$$('a[href^="#/revisoes/erros/"]')).length>=3,'lotes agrupados por tema + "todos"');
 const tema1=await p.evaluate(id=>qPorId(id).tema,temas[0][0]);
-await go('#/revisoes/erros/'+encodeURIComponent(tema1));
+await go('#/revisoes/erros/'+encodeURIComponent(tema1));await p.click('[data-act="erros-iniciar"]');await p.waitForTimeout(150);
 const ids=await p.evaluate(()=>PL.ids.map(i=>qPorId(i).tema));ok(ids.length===temas[0].length&&ids.every(t=>t===tema1),'lote contém só erros do tema ('+ids.length+')');
 for(let i=0;i<ids.length;i++){await p.evaluate(ultima=>{const q=qPorId(PL.ids[PL.i]);const r=ultima?(q.c+1)%5:q.c;document.querySelector(`[data-act="pl-alt"][data-i="${r}"]`).click();},i===ids.length-1);await p.click('[data-act="pl-confirmar"]');await p.click('[data-act="pl-prox"]');}
 ok((await txt()).includes('acertadas'),'resumo do lote exibido');

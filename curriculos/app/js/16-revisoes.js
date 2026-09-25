@@ -41,7 +41,10 @@ rota("/revisoes/tema/:id", ({ id }) => {
 });
 ACOES["rev-iniciar"] = el => {
   const id = el.dataset.t;
-  iniciarPlayer("rev:" + id, questoesParaRevisao(id), "revisao", res => {
+  const ids = questoesParaRevisao(id);
+  iniciarPlayer("rev:" + id, ids, "revisao", res => {
+    const minimo = Math.max(1, Math.ceil(ids.length / 2));
+    if (res.length < minimo) return `Você respondeu ${res.length} de ${ids.length}. Para reagendar a revisão, responda pelo menos ${minimo} — a data da próxima revisão não mudou.`;
     const p = pct(res.filter(r => r.ok).length, res.length), nota = notaPorDesempenho(p); revisarTema(id, nota);
     return `Aproveitamento ${p}% → próxima revisão em ${store.doc("revisoes").temas[id].int} dias (${dataBR(store.doc("revisoes").temas[id].prox)}).`;
   }); atualizar();
@@ -64,13 +67,19 @@ rota("/revisoes/erros", () => {
         `<a class="btn mini ${l.vencidos.length ? "" : "sec"}" href="#/revisoes/erros/${encodeURIComponent(l.tema)}">Refazer lote</a>`]; }))
       : vazio("Nenhum erro aberto. Quando você errar questões, elas aparecem aqui agrupadas por tema.", `<a class="btn sec" href="#/erros">Caderno de erros</a>`) };
 });
+let ERR_INICIAR = null;   // só inicia a sessão por um toque em "Começar" (fechar não reinicia)
+ACOES["erros-iniciar"] = el => { ERR_INICIAR = el.dataset.c; atualizar(); };
 rota("/revisoes/erros/:tema", ({ tema }) => {
   const chave = "erros:" + tema;
   if (!playerAtivo(chave)) {
     let es;
     if (tema === "todos") es = lotesDeErros().flatMap(l => l.vencidos);
     else { const l = lotesDeErros().find(x => x.tema === tema); es = l ? (l.vencidos.length ? l.vencidos : l.abertos) : []; }
-    if (!es.length) return { secao: "revisoes", crumbs: [["Revisões", "#/revisoes"], ["Erros", "#/revisoes/erros"]], titulo: "Refazer erros", html: vazio("Nenhum erro aberto neste lote.", `<a class="btn sec" href="#/revisoes/erros">Ver lotes</a>`) };
+    const cr = [["Revisões", "#/revisoes"], ["Erros", "#/revisoes/erros"]], tit = tema === "todos" ? "Refazer todos os erros vencidos" : "Erros: " + nomeLote(tema);
+    if (!es.length) return { secao: "revisoes", crumbs: cr, titulo: "Refazer erros", html: vazio("Nenhum erro aberto neste lote.", `<a class="btn sec" href="#/revisoes/erros">Ver lotes</a>`) };
+    if (ERR_INICIAR !== chave) return { secao: "revisoes", crumbs: cr, titulo: tit,
+      html: `<section class="hero"><span class="lab">Refazer erros</span><p class="hero-tit">${es.length} ${es.length === 1 ? "questão" : "questões"}</p><button class="btn azul grande" data-act="erros-iniciar" data-c="${esc(chave)}">Começar</button></section>` };
+    ERR_INICIAR = null;
     iniciarPlayer(chave, embaralhar(es.map(e => e.qid)), "erro", res => {
       const ok = res.filter(r => r.ok).length, p = pct(ok, res.length), errou = res.filter(r => !r.ok).map(r => r.id);
       PL.errouDeNovo = errou;
