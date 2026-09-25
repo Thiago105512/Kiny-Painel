@@ -48,8 +48,8 @@ rota("/", () => {
   const novato = ag.n < 10;
   const passo = (ok, txt, href, bt) => `<div class="tarefa"><div class="o" style="${ok ? "color:var(--muted);text-decoration:line-through" : ""}">${ok ? "✓ " : ""}${txt}</div>${ok ? "" : `<a class="btn mini sec" href="${href}">${bt}</a>`}</div>`;
   return {
-    secao: "inicio", titulo: saudacao(), sub: new Date().toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" }),
-    acoes: `<button class="btn sec mini" data-act="metas-editar">Metas</button>`,
+    secao: "inicio", titulo: saudacao() + (P.nome ? ", " + P.nome.split(" ")[0] : ""), sub: [P.apresentacao && P.apresentacao + (P.faculdade ? " · " + nomeInst(P.faculdade) : ""), new Date().toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" })].filter(Boolean).map(esc).join("<br>"),
+    acoes: `<button class="btn sec mini" data-act="perfil-fac">Perfil</button><button class="btn sec mini" data-act="metas-editar">Metas</button>`,
     html: `${avisoBackup()}
     <section class="hero"><span class="lab">Próximo passo</span>
       ${prox ? `<p class="hero-tit">${esc(prox.tit)}</p><p class="small muted" style="margin:0">${esc(prox.det)}${tarefas.length > 1 ? ` · depois: mais ${tarefas.length - 1}` : ""}</p><a class="btn azul grande" href="${prox.href}">${prox.bt}</a>`

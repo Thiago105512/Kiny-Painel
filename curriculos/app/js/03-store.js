@@ -6,7 +6,7 @@
    ao vivo as mudanças de outros aparelhos. Escritas são agrupadas (1 por doc por vez).
    ============================================================ */
 const DOC_PADRAO = {
-  perfil:       () => ({ faculdade: null, gradeId: null, periodo: null, metas: { questoes: 20, minutos: 60 } }),
+  perfil:       () => ({ nome: null, apresentacao: null, faculdade: null, gradeId: null, periodo: null, metas: { questoes: 20, minutos: 60 } }),
   dias:         () => ({ d: {} }),       // d[AAAA-MM-DD] = {q, ac, seg, temas:[]}  → StudySession diária
   erros:        () => ({ itens: {} }),   // itens[qid] = {qid, tema, ts, resp, motivo, coment, card, srs, status}
   cards:        () => ({ itens: {} }),   // itens[id]  = {id, frente, verso, tema, subtema, origem, dif, criado, srs}
