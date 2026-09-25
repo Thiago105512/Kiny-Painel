@@ -1,0 +1,1323 @@
+{
+ "id": "ufam-medicina-2025-2",
+ "instituicao": "ufam",
+ "curso": "medicina",
+ "versao": "2025/2",
+ "status": "importado",
+ "fonte": {
+  "tipo": "pdf",
+  "ref": "Currículo de Curso (por versão e situação) — UFAM, curso FS02 Medicina, versão 2025/2, situação Corrente, emitido em 25/09/2026",
+  "titulo": "Currículo FS02 Medicina UFAM 2025/2 (PDF enviado pelo usuário)"
+ },
+ "turno": "Diurno",
+ "grau": "Médico/Médica",
+ "codigoCurso": "FS02",
+ "totais": {
+  "chTotal": 7480,
+  "chObrigatorias": 7260,
+  "chOptativas": 120,
+  "chAtividadesComplementares": 100,
+  "creditosTotal": 322,
+  "creditosObrigatorias": 314,
+  "creditosOptativas": 8,
+  "periodosMin": 12,
+  "periodosMax": 18,
+  "creditosPorPeriodoMin": 7,
+  "creditosPorPeriodoMax": 30
+ },
+ "observacoes": "Carga horária total: 7.480 h = 7.260 h obrigatórias + 120 h de optativas + 100 h de atividades acadêmico-científico-culturais. Mínimo de 12 e máximo de 18 períodos. Também são componentes obrigatórios o ENADE Ingressante e o ENADE Concluinte (sem carga horária). O documento não indica o período de cada estágio do internato. Os temas de estudo de algumas disciplinas foram vinculados automaticamente pelo nome da disciplina (não pela ementa oficial): confira e ajuste em cada disciplina.",
+ "periodos": [
+  {
+   "numero": 1,
+   "nome": "1º período",
+   "itens": [
+    {
+     "id": "dpm001",
+     "tipo": "disciplina",
+     "codigo": "DPM001",
+     "nome": "Metodologia do Trabalho Científico",
+     "ch": 60,
+     "creditos": 3,
+     "chTeorica": 30,
+     "chPratica": 30,
+     "chExtensao": 0,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "dpm002",
+     "tipo": "disciplina",
+     "codigo": "DPM002",
+     "nome": "Ética Médica",
+     "ch": 30,
+     "creditos": 2,
+     "chTeorica": 30,
+     "chPratica": 0,
+     "chExtensao": 0,
+     "prerequisitos": [],
+     "temas": [
+      "codigo-de-etica-medica",
+      "tanatologia-e-declaracao-de-obito"
+     ],
+     "unidades": []
+    },
+    {
+     "id": "dsc001",
+     "tipo": "disciplina",
+     "codigo": "DSC001",
+     "nome": "Introdução à Saúde Coletiva",
+     "ch": 75,
+     "creditos": 3,
+     "chTeorica": 15,
+     "chPratica": 60,
+     "chExtensao": 0,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "ibm064",
+     "tipo": "disciplina",
+     "codigo": "IBM064",
+     "nome": "Biologia Celular e Molecular",
+     "ch": 45,
+     "creditos": 2,
+     "chTeorica": 15,
+     "chPratica": 30,
+     "chExtensao": 0,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "ibm624",
+     "tipo": "disciplina",
+     "codigo": "IBM624",
+     "nome": "Anatomia Humana I",
+     "ch": 120,
+     "creditos": 5,
+     "chTeorica": 30,
+     "chPratica": 90,
+     "chExtensao": 0,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "ibm627",
+     "tipo": "disciplina",
+     "codigo": "IBM627",
+     "nome": "Embriologia",
+     "ch": 30,
+     "creditos": 2,
+     "chTeorica": 30,
+     "chPratica": 0,
+     "chExtensao": 0,
+     "prerequisitos": [],
+     "temas": [
+      "embriologia-geral",
+      "circulacao-fetal"
+     ],
+     "unidades": []
+    }
+   ]
+  },
+  {
+   "numero": 2,
+   "nome": "2º período",
+   "itens": [
+    {
+     "id": "dsc002",
+     "tipo": "disciplina",
+     "codigo": "DSC002",
+     "nome": "Política, Planejamento e Gestão em Saúde",
+     "ch": 75,
+     "creditos": 3,
+     "chTeorica": 15,
+     "chPratica": 60,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DSC001"
+     ],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "ibb127",
+     "tipo": "disciplina",
+     "codigo": "IBB127",
+     "nome": "Genética",
+     "ch": 60,
+     "creditos": 3,
+     "chTeorica": 30,
+     "chPratica": 30,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "IBM064"
+     ],
+     "temas": [
+      "embriologia-geral",
+      "cromossomopatias",
+      "padroes-de-heranca",
+      "hemostasia-e-coagulopatias"
+     ],
+     "unidades": []
+    },
+    {
+     "id": "ibf060",
+     "tipo": "disciplina",
+     "codigo": "IBF060",
+     "nome": "Bioquímica Celular e Metabólica",
+     "ch": 90,
+     "creditos": 4,
+     "chTeorica": 30,
+     "chPratica": 60,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "IBM064"
+     ],
+     "temas": [
+      "metabolismo-dos-carboidratos",
+      "metabolismo-dos-lipidios",
+      "metabolismo-dos-aminoacidos",
+      "vitaminas",
+      "diabetes-mellitus",
+      "disturbios-acido-base",
+      "anemias",
+      "ictericia-neonatal"
+     ],
+     "unidades": []
+    },
+    {
+     "id": "ibm067",
+     "tipo": "disciplina",
+     "codigo": "IBM067",
+     "nome": "Histologia",
+     "ch": 60,
+     "creditos": 3,
+     "chTeorica": 30,
+     "chPratica": 30,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "IBM064"
+     ],
+     "temas": [
+      "fisiologia-gastrointestinal",
+      "tecido-epitelial",
+      "tecido-nervoso"
+     ],
+     "unidades": []
+    },
+    {
+     "id": "ibm628",
+     "tipo": "disciplina",
+     "codigo": "IBM628",
+     "nome": "Anatomia Humana II",
+     "ch": 120,
+     "creditos": 5,
+     "chTeorica": 30,
+     "chPratica": 90,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "IBM624"
+     ],
+     "temas": [],
+     "unidades": []
+    }
+   ]
+  },
+  {
+   "numero": 3,
+   "nome": "3º período",
+   "itens": [
+    {
+     "id": "dsc003",
+     "tipo": "disciplina",
+     "codigo": "DSC003",
+     "nome": "Epidemiologia e Bioestatística",
+     "ch": 90,
+     "creditos": 5,
+     "chTeorica": 60,
+     "chPratica": 30,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DSC002"
+     ],
+     "temas": [
+      "niveis-de-prevencao-e-rastreamento",
+      "testes-diagnosticos",
+      "estudos-epidemiologicos",
+      "medidas-de-frequencia-e-indicadores",
+      "vigilancia-em-saude"
+     ],
+     "unidades": []
+    },
+    {
+     "id": "ibf074",
+     "tipo": "disciplina",
+     "codigo": "IBF074",
+     "nome": "Fisiologia Humana",
+     "ch": 120,
+     "creditos": 6,
+     "chTeorica": 60,
+     "chPratica": 60,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "IBM064"
+     ],
+     "temas": [
+      "potencial-de-acao",
+      "sistema-nervoso-autonomo",
+      "fisiologia-cardiovascular",
+      "fisiologia-respiratoria",
+      "fisiologia-renal",
+      "fisiologia-gastrointestinal",
+      "metabolismo-dos-carboidratos",
+      "circulacao-fetal",
+      "hipertensao-arterial",
+      "insuficiencia-cardiaca",
+      "sindrome-coronariana-aguda",
+      "arritmias-cardiacas",
+      "asma",
+      "dpoc",
+      "diabetes-mellitus",
+      "doencas-da-tireoide",
+      "lesao-renal-aguda",
+      "disturbios-hidroeletroliticos",
+      "disturbios-acido-base",
+      "doenca-do-refluxo-e-ulcera-peptica",
+      "anemias",
+      "hemostasia-e-coagulopatias",
+      "sepse",
+      "anestesia-principios",
+      "sindromes-hipertensivas-da-gestacao"
+     ],
+     "unidades": []
+    },
+    {
+     "id": "ibp074",
+     "tipo": "disciplina",
+     "codigo": "IBP074",
+     "nome": "Imunologia Médica",
+     "ch": 45,
+     "creditos": 2,
+     "chTeorica": 15,
+     "chPratica": 30,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "IBM064"
+     ],
+     "temas": [
+      "imunoglobulinas",
+      "hipersensibilidade",
+      "imunidade-celular-e-mhc",
+      "artrite-reumatoide",
+      "lupus-eritematoso-sistemico",
+      "hiv-aids",
+      "imunizacoes",
+      "aloimunizacao-rh"
+     ],
+     "unidades": []
+    },
+    {
+     "id": "ibp603",
+     "tipo": "disciplina",
+     "codigo": "IBP603",
+     "nome": "Microbiologia Médica",
+     "ch": 60,
+     "creditos": 3,
+     "chTeorica": 30,
+     "chPratica": 30,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "IBM064"
+     ],
+     "temas": [
+      "estafilococos-e-estreptococos",
+      "tetano",
+      "antimicrobianos",
+      "pneumonia",
+      "tuberculose",
+      "infeccao-do-trato-urinario",
+      "hepatites-virais",
+      "sepse",
+      "hiv-aids",
+      "dengue",
+      "febre-amarela",
+      "leptospirose",
+      "meningites",
+      "sifilis",
+      "hanseniase",
+      "vulvovaginites"
+     ],
+     "unidades": []
+    },
+    {
+     "id": "ibp604",
+     "tipo": "disciplina",
+     "codigo": "IBP604",
+     "nome": "Parasitologia Médica",
+     "ch": 60,
+     "creditos": 3,
+     "chTeorica": 30,
+     "chPratica": 30,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "IBM064"
+     ],
+     "temas": [
+      "malaria",
+      "leishmaniose",
+      "doenca-de-chagas"
+     ],
+     "unidades": []
+    },
+    {
+     "id": "ibp605",
+     "tipo": "disciplina",
+     "codigo": "IBP605",
+     "nome": "Micologia Médica",
+     "ch": 60,
+     "creditos": 3,
+     "chTeorica": 30,
+     "chPratica": 30,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "IBM064"
+     ],
+     "temas": [],
+     "unidades": []
+    }
+   ]
+  },
+  {
+   "numero": 4,
+   "nome": "4º período",
+   "itens": [
+    {
+     "id": "dcc001",
+     "tipo": "disciplina",
+     "codigo": "DCC001",
+     "nome": "Técnica Operatória e Cirurgia Experimental",
+     "ch": 90,
+     "creditos": 4,
+     "chTeorica": 30,
+     "chPratica": 60,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "IBM628"
+     ],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "dcm001",
+     "tipo": "disciplina",
+     "codigo": "DCM001",
+     "nome": "Propedêutica Médica",
+     "ch": 150,
+     "creditos": 6,
+     "chTeorica": 30,
+     "chPratica": 120,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "IBM628"
+     ],
+     "temas": [
+      "nervos-cranianos",
+      "fisiologia-cardiovascular",
+      "exame-neurologico",
+      "valvopatias",
+      "pneumonia",
+      "derrame-pleural",
+      "abdome-agudo",
+      "apendicite-aguda",
+      "doencas-biliares"
+     ],
+     "unidades": []
+    },
+    {
+     "id": "dpm003",
+     "tipo": "disciplina",
+     "codigo": "DPM003",
+     "nome": "Patologia Geral",
+     "ch": 90,
+     "creditos": 4,
+     "chTeorica": 30,
+     "chPratica": 60,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "IBM067"
+     ],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "dsc004",
+     "tipo": "disciplina",
+     "codigo": "DSC004",
+     "nome": "Atenção Primária em Saúde",
+     "ch": 75,
+     "creditos": 3,
+     "chTeorica": 15,
+     "chPratica": 60,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DSC002"
+     ],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "ibf075",
+     "tipo": "disciplina",
+     "codigo": "IBF075",
+     "nome": "Farmacologia I",
+     "ch": 60,
+     "creditos": 4,
+     "chTeorica": 60,
+     "chPratica": 0,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "IBP074"
+     ],
+     "temas": [],
+     "unidades": []
+    }
+   ]
+  },
+  {
+   "numero": 5,
+   "nome": "5º período",
+   "itens": [
+    {
+     "id": "dcc002",
+     "tipo": "disciplina",
+     "codigo": "DCC002",
+     "nome": "Anestesiologia Clínica",
+     "ch": 45,
+     "creditos": 2,
+     "chTeorica": 15,
+     "chPratica": 30,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "IBF075"
+     ],
+     "temas": [
+      "anestesia-principios"
+     ],
+     "unidades": []
+    },
+    {
+     "id": "dcc003",
+     "tipo": "disciplina",
+     "codigo": "DCC003",
+     "nome": "Cirurgia do Sistema Digestório e Anexos",
+     "ch": 90,
+     "creditos": 4,
+     "chTeorica": 30,
+     "chPratica": 60,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DCC001"
+     ],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "dcc004",
+     "tipo": "disciplina",
+     "codigo": "DCC004",
+     "nome": "Atenção ao Trauma",
+     "ch": 45,
+     "creditos": 2,
+     "chTeorica": 15,
+     "chPratica": 30,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DCC001"
+     ],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "dcm002",
+     "tipo": "disciplina",
+     "codigo": "DCM002",
+     "nome": "Clínica Médica Integrada I",
+     "ch": 120,
+     "creditos": 6,
+     "chTeorica": 60,
+     "chPratica": 60,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DCM001"
+     ],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "dpm004",
+     "tipo": "disciplina",
+     "codigo": "DPM004",
+     "nome": "Patologia Especial",
+     "ch": 90,
+     "creditos": 5,
+     "chTeorica": 60,
+     "chPratica": 30,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DPM003"
+     ],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "ibf085",
+     "tipo": "disciplina",
+     "codigo": "IBF085",
+     "nome": "Farmacologia II",
+     "ch": 45,
+     "creditos": 3,
+     "chTeorica": 45,
+     "chPratica": 0,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "IBF075"
+     ],
+     "temas": [],
+     "unidades": []
+    }
+   ]
+  },
+  {
+   "numero": 6,
+   "nome": "6º período",
+   "itens": [
+    {
+     "id": "dcc005",
+     "tipo": "disciplina",
+     "codigo": "DCC005",
+     "nome": "Cirurgia Integrada",
+     "ch": 90,
+     "creditos": 4,
+     "chTeorica": 30,
+     "chPratica": 60,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DCC001"
+     ],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "dcc006",
+     "tipo": "disciplina",
+     "codigo": "DCC006",
+     "nome": "Otorrino e Cirurgia de Cabeça e Pescoço",
+     "ch": 90,
+     "creditos": 4,
+     "chTeorica": 30,
+     "chPratica": 60,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DCC001"
+     ],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "dcm003",
+     "tipo": "disciplina",
+     "codigo": "DCM003",
+     "nome": "Clínica Médica Integrada II",
+     "ch": 150,
+     "creditos": 7,
+     "chTeorica": 60,
+     "chPratica": 90,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DCM001"
+     ],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "dsc005",
+     "tipo": "disciplina",
+     "codigo": "DSC005",
+     "nome": "Doenças Infecciosas e Parasitárias",
+     "ch": 90,
+     "creditos": 4,
+     "chTeorica": 30,
+     "chPratica": 60,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DCM001"
+     ],
+     "temas": [
+      "estafilococos-e-estreptococos",
+      "tetano",
+      "antimicrobianos",
+      "endocardite-infecciosa",
+      "tuberculose",
+      "infeccao-do-trato-urinario",
+      "hepatites-virais",
+      "sepse",
+      "hiv-aids",
+      "dengue",
+      "febre-amarela",
+      "leptospirose",
+      "malaria",
+      "leishmaniose",
+      "doenca-de-chagas",
+      "meningites",
+      "sifilis",
+      "hanseniase",
+      "doencas-exantematicas",
+      "vigilancia-em-saude"
+     ],
+     "unidades": []
+    }
+   ]
+  },
+  {
+   "numero": 7,
+   "nome": "7º período",
+   "itens": [
+    {
+     "id": "dcc007",
+     "tipo": "disciplina",
+     "codigo": "DCC007",
+     "nome": "Urologia",
+     "ch": 60,
+     "creditos": 3,
+     "chTeorica": 30,
+     "chPratica": 30,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DCC001",
+      "DCM001"
+     ],
+     "temas": [
+      "anatomia-da-pelve",
+      "infeccao-do-trato-urinario",
+      "litiase-urinaria",
+      "doencas-da-prostata"
+     ],
+     "unidades": []
+    },
+    {
+     "id": "dcc008",
+     "tipo": "disciplina",
+     "codigo": "DCC008",
+     "nome": "Oftalmologia",
+     "ch": 45,
+     "creditos": 2,
+     "chTeorica": 15,
+     "chPratica": 30,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DCM001"
+     ],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "dcc009",
+     "tipo": "disciplina",
+     "codigo": "DCC009",
+     "nome": "Neurociências",
+     "ch": 90,
+     "creditos": 4,
+     "chTeorica": 30,
+     "chPratica": 60,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DCC001",
+      "DCM001"
+     ],
+     "temas": [
+      "plexo-braquial",
+      "nervos-cranianos",
+      "potencial-de-acao",
+      "tecido-nervoso",
+      "exame-neurologico",
+      "meningites",
+      "acidente-vascular-cerebral",
+      "epilepsia",
+      "cefaleias",
+      "traumatismo-cranioencefalico"
+     ],
+     "unidades": []
+    },
+    {
+     "id": "dcm004",
+     "tipo": "disciplina",
+     "codigo": "DCM004",
+     "nome": "Clínica Médica Integrada III",
+     "ch": 120,
+     "creditos": 6,
+     "chTeorica": 60,
+     "chPratica": 60,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DCM001"
+     ],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "dmi001",
+     "tipo": "disciplina",
+     "codigo": "DMI001",
+     "nome": "Saúde da Mulher I",
+     "ch": 75,
+     "creditos": 3,
+     "chTeorica": 15,
+     "chPratica": 60,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DCM001"
+     ],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "dsc006",
+     "tipo": "disciplina",
+     "codigo": "DSC006",
+     "nome": "Dermatologia",
+     "ch": 60,
+     "creditos": 3,
+     "chTeorica": 30,
+     "chPratica": 30,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DCM001"
+     ],
+     "temas": [
+      "tecido-epitelial",
+      "leishmaniose",
+      "hanseniase",
+      "cancer-de-pele"
+     ],
+     "unidades": []
+    }
+   ]
+  },
+  {
+   "numero": 8,
+   "nome": "8º período",
+   "itens": [
+    {
+     "id": "dcc010",
+     "tipo": "disciplina",
+     "codigo": "DCC010",
+     "nome": "Traumatologia e Ortopedia",
+     "ch": 90,
+     "creditos": 4,
+     "chTeorica": 30,
+     "chPratica": 60,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DCC001",
+      "DCM001"
+     ],
+     "temas": [
+      "plexo-braquial",
+      "fraturas-e-luxacoes"
+     ],
+     "unidades": []
+    },
+    {
+     "id": "dcm005",
+     "tipo": "disciplina",
+     "codigo": "DCM005",
+     "nome": "Saúde do Idoso",
+     "ch": 30,
+     "creditos": 2,
+     "chTeorica": 30,
+     "chPratica": 0,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DCM001"
+     ],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "dcm006",
+     "tipo": "disciplina",
+     "codigo": "DCM006",
+     "nome": "Saúde Mental",
+     "ch": 60,
+     "creditos": 3,
+     "chTeorica": 30,
+     "chPratica": 30,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DCM001"
+     ],
+     "temas": [
+      "transtornos-do-humor",
+      "transtornos-de-ansiedade",
+      "esquizofrenia-e-psicoses",
+      "dependencia-quimica"
+     ],
+     "unidades": []
+    },
+    {
+     "id": "dmi002",
+     "tipo": "disciplina",
+     "codigo": "DMI002",
+     "nome": "Saúde da Mulher II",
+     "ch": 90,
+     "creditos": 4,
+     "chTeorica": 30,
+     "chPratica": 60,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DCM001"
+     ],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "dmi003",
+     "tipo": "disciplina",
+     "codigo": "DMI003",
+     "nome": "Saúde da Criança",
+     "ch": 120,
+     "creditos": 5,
+     "chTeorica": 30,
+     "chPratica": 90,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DCM001"
+     ],
+     "temas": [
+      "metabolismo-dos-aminoacidos",
+      "vitaminas",
+      "embriologia-geral",
+      "circulacao-fetal",
+      "cromossomopatias",
+      "padroes-de-heranca",
+      "imunoglobulinas",
+      "asma",
+      "pneumonia",
+      "sindromes-glomerulares",
+      "infeccao-do-trato-urinario",
+      "anemias",
+      "leucemias",
+      "dengue",
+      "meningites",
+      "sifilis",
+      "epilepsia",
+      "apendicite-aguda",
+      "queimaduras",
+      "puericultura",
+      "aleitamento-materno",
+      "imunizacoes",
+      "bronquiolite-viral-aguda",
+      "laringotraqueobronquite-viral",
+      "diarreia-aguda-e-desidratacao",
+      "ictericia-neonatal",
+      "assistencia-ao-recem-nascido",
+      "doencas-exantematicas",
+      "doenca-de-kawasaki",
+      "estenose-hipertrofica-do-piloro",
+      "aloimunizacao-rh"
+     ],
+     "unidades": []
+    },
+    {
+     "id": "dpm005",
+     "tipo": "disciplina",
+     "codigo": "DPM005",
+     "nome": "Medicina Legal",
+     "ch": 60,
+     "creditos": 3,
+     "chTeorica": 30,
+     "chPratica": 30,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DCM001"
+     ],
+     "temas": [
+      "codigo-de-etica-medica",
+      "tanatologia-e-declaracao-de-obito",
+      "traumatologia-forense"
+     ],
+     "unidades": []
+    }
+   ]
+  },
+  {
+   "numero": 9,
+   "nome": "Internato — estágios obrigatórios",
+   "obs": "O documento lista os estágios sem indicar o período de cada um.",
+   "itens": [
+    {
+     "id": "ecm001",
+     "tipo": "estagio",
+     "codigo": "ECM001",
+     "nome": "Estágio em Clínica Médica",
+     "ch": 480,
+     "creditos": 19,
+     "chTeorica": 0,
+     "chPratica": 390,
+     "chExtensao": 90,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "ecm002",
+     "tipo": "estagio",
+     "codigo": "ECM002",
+     "nome": "Estágio em Clínica Cirúrgica",
+     "ch": 480,
+     "creditos": 19,
+     "chTeorica": 0,
+     "chPratica": 390,
+     "chExtensao": 90,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "ecm003",
+     "tipo": "estagio",
+     "codigo": "ECM003",
+     "nome": "Estágio em Saúde da Criança",
+     "ch": 480,
+     "creditos": 19,
+     "chTeorica": 0,
+     "chPratica": 390,
+     "chExtensao": 90,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "ecm004",
+     "tipo": "estagio",
+     "codigo": "ECM004",
+     "nome": "Estágio em Saúde da Mulher",
+     "ch": 480,
+     "creditos": 19,
+     "chTeorica": 0,
+     "chPratica": 390,
+     "chExtensao": 90,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "ecm005",
+     "tipo": "estagio",
+     "codigo": "ECM005",
+     "nome": "Estágio em Urgência e Emergência",
+     "ch": 480,
+     "creditos": 19,
+     "chTeorica": 0,
+     "chPratica": 390,
+     "chExtensao": 90,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "ecm006",
+     "tipo": "estagio",
+     "codigo": "ECM006",
+     "nome": "Estágio em Doenças Tropicais e Infecciosas",
+     "ch": 120,
+     "creditos": 5,
+     "chTeorica": 0,
+     "chPratica": 90,
+     "chExtensao": 30,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "ecm007",
+     "tipo": "estagio",
+     "codigo": "ECM007",
+     "nome": "Estágio em Oncologia",
+     "ch": 120,
+     "creditos": 5,
+     "chTeorica": 0,
+     "chPratica": 90,
+     "chExtensao": 30,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "ecm008",
+     "tipo": "estagio",
+     "codigo": "ECM008",
+     "nome": "Estágio em Neurociências",
+     "ch": 120,
+     "creditos": 5,
+     "chTeorica": 0,
+     "chPratica": 90,
+     "chExtensao": 30,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "ecm009",
+     "tipo": "estagio",
+     "codigo": "ECM009",
+     "nome": "Estágio em Saúde Mental",
+     "ch": 120,
+     "creditos": 5,
+     "chTeorica": 0,
+     "chPratica": 90,
+     "chExtensao": 30,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "ecm010",
+     "tipo": "estagio",
+     "codigo": "ECM010",
+     "nome": "Estágio em Saúde Coletiva Rural",
+     "ch": 480,
+     "creditos": 19,
+     "chTeorica": 0,
+     "chPratica": 390,
+     "chExtensao": 90,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "ecm011",
+     "tipo": "estagio",
+     "codigo": "ECM011",
+     "nome": "Estágio em Saúde Coletiva Urbana",
+     "ch": 75,
+     "creditos": 3,
+     "chTeorica": 0,
+     "chPratica": 60,
+     "chExtensao": 15,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": []
+    },
+    {
+     "id": "ecm012",
+     "tipo": "estagio",
+     "codigo": "ECM012",
+     "nome": "Estágio Complementar",
+     "ch": 405,
+     "creditos": 16,
+     "chTeorica": 0,
+     "chPratica": 330,
+     "chExtensao": 75,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": []
+    }
+   ]
+  },
+  {
+   "numero": 0,
+   "nome": "Optativas",
+   "itens": [
+    {
+     "id": "dcc011",
+     "tipo": "disciplina",
+     "codigo": "DCC011",
+     "nome": "Fundamentos do Ensino da Dor",
+     "ch": 45,
+     "creditos": 3,
+     "chTeorica": 45,
+     "chPratica": 0,
+     "chExtensao": 0,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": [],
+     "optativa": true
+    },
+    {
+     "id": "dcm007",
+     "tipo": "disciplina",
+     "codigo": "DCM007",
+     "nome": "Estudo e Diagnóstico da Radiologia",
+     "ch": 30,
+     "creditos": 2,
+     "chTeorica": 30,
+     "chPratica": 0,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "DCM001"
+     ],
+     "temas": [],
+     "unidades": [],
+     "optativa": true
+    },
+    {
+     "id": "dcm008",
+     "tipo": "disciplina",
+     "codigo": "DCM008",
+     "nome": "Psicologia Médica",
+     "ch": 60,
+     "creditos": 3,
+     "chTeorica": 30,
+     "chPratica": 30,
+     "chExtensao": 0,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": [],
+     "optativa": true
+    },
+    {
+     "id": "dcm009",
+     "tipo": "disciplina",
+     "codigo": "DCM009",
+     "nome": "Psicossomática",
+     "ch": 60,
+     "creditos": 3,
+     "chTeorica": 30,
+     "chPratica": 30,
+     "chExtensao": 0,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": [],
+     "optativa": true
+    },
+    {
+     "id": "dcm010",
+     "tipo": "disciplina",
+     "codigo": "DCM010",
+     "nome": "Seminários para o Enade",
+     "ch": 60,
+     "creditos": 3,
+     "chTeorica": 30,
+     "chPratica": 30,
+     "chExtensao": 0,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": [],
+     "optativa": true
+    },
+    {
+     "id": "dpm006",
+     "tipo": "disciplina",
+     "codigo": "DPM006",
+     "nome": "Fundamentos de Bioética",
+     "ch": 30,
+     "creditos": 2,
+     "chTeorica": 30,
+     "chPratica": 0,
+     "chExtensao": 0,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": [],
+     "optativa": true
+    },
+    {
+     "id": "dsc007",
+     "tipo": "disciplina",
+     "codigo": "DSC007",
+     "nome": "Saúde Indígena",
+     "ch": 75,
+     "creditos": 3,
+     "chTeorica": 15,
+     "chPratica": 60,
+     "chExtensao": 0,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": [],
+     "optativa": true
+    },
+    {
+     "id": "ihe018",
+     "tipo": "disciplina",
+     "codigo": "IHE018",
+     "nome": "Espanhol I",
+     "ch": 75,
+     "creditos": 5,
+     "chTeorica": 75,
+     "chPratica": 0,
+     "chExtensao": 0,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": [],
+     "optativa": true
+    },
+    {
+     "id": "ihe028",
+     "tipo": "disciplina",
+     "codigo": "IHE028",
+     "nome": "Espanhol II",
+     "ch": 75,
+     "creditos": 5,
+     "chTeorica": 75,
+     "chPratica": 0,
+     "chExtensao": 0,
+     "prerequisitos": [
+      "IHE018"
+     ],
+     "temas": [],
+     "unidades": [],
+     "optativa": true
+    },
+    {
+     "id": "ihe130",
+     "tipo": "disciplina",
+     "codigo": "IHE130",
+     "nome": "Inglês Instrumental I",
+     "ch": 60,
+     "creditos": 4,
+     "chTeorica": 60,
+     "chPratica": 0,
+     "chExtensao": 0,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": [],
+     "optativa": true
+    },
+    {
+     "id": "ihp123",
+     "tipo": "disciplina",
+     "codigo": "IHP123",
+     "nome": "Lingua Brasileira de Sinais B",
+     "ch": 60,
+     "creditos": 4,
+     "chTeorica": 60,
+     "chPratica": 0,
+     "chExtensao": 0,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": [],
+     "optativa": true
+    },
+    {
+     "id": "ihp164",
+     "tipo": "disciplina",
+     "codigo": "IHP164",
+     "nome": "Português Instrumental",
+     "ch": 60,
+     "creditos": 4,
+     "chTeorica": 60,
+     "chPratica": 0,
+     "chExtensao": 0,
+     "prerequisitos": [],
+     "temas": [],
+     "unidades": [],
+     "optativa": true
+    }
+   ]
+  }
+ ]
+}

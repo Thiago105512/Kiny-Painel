@@ -99,7 +99,7 @@ rota("/medicina/grade/:g", ({ g: gid }) => {
     acoes: `${g.status !== "validado" && itensGrade(g).length ? `<a class="btn" href="#/medicina/grade/${esc(g.id)}/conferir">Conferir com o documento (${itensGrade(g).filter(i => i.conferido).length}/${itensGrade(g).length})</a>` : ""}<a class="btn sec" href="#/medicina/importar/${esc(g.instituicao)}">Reimportar</a>`,
     html: `${itensGrade(g).length ? "" : `<div class="aviso">${PENDENTE}. Importe o documento oficial ou cadastre as disciplinas manualmente em cada período.</div>`}
       ${g.observacoes ? `<p class="aviso info">${esc(g.observacoes)}</p>` : ""}
-      <div class="kpis"><div class="kpi"><b>${(g.periodos || []).length}</b><span>períodos</span></div><div class="kpi"><b>${ch.itens}</b><span>disciplinas/módulos</span></div><div class="kpi"><b>${ch.conhecidas ? ch.total + " h" : "—"}</b><span>carga horária conhecida${ch.conhecidas < ch.itens ? ` (${ch.itens - ch.conhecidas} pendentes)` : ""}</span></div></div>
+      <div class="kpis"><div class="kpi"><b>${g.totais?.periodosMin || (g.periodos || []).filter(p => p.numero > 0).length}</b><span>${g.totais?.periodosMin ? "períodos (mínimo)" : "períodos"}</span></div><div class="kpi"><b>${ch.itens}</b><span>disciplinas/módulos</span></div><div class="kpi"><b>${ch.conhecidas ? ch.total + " h" : "—"}</b><span>carga horária conhecida${ch.conhecidas < ch.itens ? ` (${ch.itens - ch.conhecidas} pendentes)` : ""}</span></div></div>
       ${tabela([{ t: "Período" }, { t: "Itens", num: 1 }, { t: "CH", num: 1 }, { t: "Temas vinculados", num: 1 }], linhas, { vaziaMsg: "Sem períodos." })}
       ${ch.conhecidas < ch.itens ? `<p class="small muted">* soma apenas das cargas horárias informadas.</p>` : ""}
       <div class="acoes">${g.origem !== "base" ? `<button class="btn sec perigo" data-act="grade-excluir" data-g="${esc(g.id)}">Excluir matriz</button>` : ""}</div>`,
@@ -133,10 +133,10 @@ ACOES["grade-excluir-ok"] = el => { const G = store.doc("grades"); const inst = 
 rota("/medicina/grade/:g/p/:n", ({ g: gid, n }) => {
   const g = gradePorId(gid); if (!g) return paginaNaoEncontrada();
   const p = (g.periodos || []).find(x => String(x.numero) === n); if (!p) return paginaNaoEncontrada();
-  const linhas = (p.itens || []).map(it => [pill(it.tipo === "modulo" ? "Módulo" : "Disciplina"), `<a href="#/medicina/grade/${esc(g.id)}/item/${esc(it.id)}">${esc(it.nome)}</a>${it.codigo ? ` <span class="small muted">${esc(it.codigo)}</span>` : ""}`, typeof it.ch === "number" ? it.ch + " h" : `<span class="small muted">pendente</span>`, temasDoItem(it).length]);
+  const linhas = (p.itens || []).map(it => [pill(tipoItem(it)), `<a href="#/medicina/grade/${esc(g.id)}/item/${esc(it.id)}">${esc(it.nome)}</a>${it.codigo ? ` <span class="small muted">${esc(it.codigo)}</span>` : ""}`, typeof it.ch === "number" ? it.ch + " h" : `<span class="small muted">pendente</span>`, temasDoItem(it).length]);
   return {
     secao: "medicina", crumbs: crumbsGrade(g), titulo: p.nome || `${p.numero}º período`,
-    html: `${tabela([{ t: "Tipo" }, { t: "Disciplina/módulo" }, { t: "CH", num: 1 }, { t: "Temas", num: 1 }], linhas, { vaziaMsg: `Nenhuma disciplina/módulo cadastrado neste período. ${PENDENTE}.` })}
+    html: `${p.obs ? `<p class="aviso info">${esc(p.obs)}</p>` : ""}${tabela([{ t: "Tipo" }, { t: "Disciplina/módulo" }, { t: "CH", num: 1 }, { t: "Temas", num: 1 }], linhas, { vaziaMsg: `Nenhuma disciplina/módulo cadastrado neste período. ${PENDENTE}.` })}
       <details class="filtros" style="margin-top:12px"><summary>Adicionar disciplina/módulo manualmente</summary>
       <form class="campos" data-form="item-novo" data-g="${esc(g.id)}" data-p="${p.numero}" style="margin-top:10px">
         <label class="campo"><span class="lab">Tipo</span><select id="in-tipo"><option value="disciplina">Disciplina</option><option value="modulo">Módulo</option></select></label>
@@ -168,9 +168,9 @@ rota("/medicina/grade/:g/item/:i", ({ g: gid, i: iid }) => {
   const qs = questoes().filter(q => temas.includes(q.tema));
   return {
     secao: "medicina", crumbs: [...crumbsGrade(g), [p.nome || p.numero + "º período", `#/medicina/grade/${g.id}/p/${p.numero}`]], titulo: it.nome,
-    sub: `${pill(it.tipo === "modulo" ? "Módulo" : "Disciplina")} ${it.codigo ? esc(it.codigo) + " · " : ""}${typeof it.ch === "number" ? it.ch + " h" : "Carga horária: " + PENDENTE}`,
+    sub: `${pill(tipoItem(it))} ${it.codigo ? esc(it.codigo) + " · " : ""}${typeof it.ch === "number" ? it.ch + " h" : "Carga horária: " + PENDENTE}${detalhesItem(g, it) ? `<br><span class="small">${esc(detalhesItem(g, it))}</span>` : ""}`,
     acoes: qs.length ? `<button class="btn" data-act="praticar-ids" data-ids="${qs.map(q => q.id).join(",")}" data-ctx="Disciplina ${esc(it.nome)}">Praticar ${qs.length} questões</button>` : "",
-    html: `<h2 class="sec">Temas desta ${it.tipo === "modulo" ? "módulo" : "disciplina"}</h2>
+    html: `<h2 class="sec">Temas ${it.tipo === "modulo" ? "deste módulo" : it.tipo === "estagio" ? "deste estágio" : "desta disciplina"}</h2>
       ${temas.length ? tabela([{ t: "Tema" }, { t: "Questões", num: 1 }, { t: "Acerto", num: 1 }, { t: "" }], temas.map(t => { const d = desempenhoTema(t); return [linkTema(t), d.total, d.n ? pct(d.ac, d.n) + "%" : "—", `<button class="btn mini sec" data-act="item-tema-del" data-g="${esc(g.id)}" data-i="${esc(it.id)}" data-t="${esc(t)}" aria-label="Desvincular">Desvincular</button>`]; })) : vazio("Nenhum tema vinculado. Vincule temas do catálogo para ligar esta disciplina a questões, flashcards, casos e revisões.")}
       <form class="linha" data-form="item-tema" data-g="${esc(g.id)}" data-i="${esc(it.id)}" style="margin-top:10px">${campoTema("it-tema", null, "Vincular tema")}<button class="btn sec" style="align-self:end">Vincular</button></form>
       ${sug.length ? `<h3>Sugestões pelo nome (confirme pela ementa)</h3><div class="chips">${sug.map(t => `<button class="chip" data-act="item-tema-add" data-g="${esc(g.id)}" data-i="${esc(it.id)}" data-t="${esc(t)}">+ ${esc(nomeTema(t))}</button>`).join("")}</div>` : ""}
@@ -178,7 +178,7 @@ rota("/medicina/grade/:g/item/:i", ({ g: gid, i: iid }) => {
       <h2 class="sec">Unidades</h2>
       ${(it.unidades || []).length ? tabela([{ t: "Unidade" }, { t: "Temas" }], it.unidades.map(u => [esc(u.nome), (u.temas || []).map(linkTema).join(", ") || "—"])) : `<p class="muted small">Sem unidades cadastradas (só aparecem se constarem na ementa oficial).</p>`}
       <form class="linha" data-form="item-unidade" data-g="${esc(g.id)}" data-i="${esc(it.id)}"><label class="campo" style="flex:1"><span class="lab">Nova unidade</span><input type="text" id="un-nome" required></label><button class="btn sec" style="align-self:end">Adicionar</button></form>
-      <details class="filtros" style="margin-top:14px"><summary>Editar dados da ${it.tipo === "modulo" ? "módulo" : "disciplina"}</summary>
+      <details class="filtros" style="margin-top:14px"><summary>Editar dados ${it.tipo === "modulo" ? "do módulo" : it.tipo === "estagio" ? "do estágio" : "da disciplina"}</summary>
         <form class="campos" data-form="item-editar" data-g="${esc(g.id)}" data-i="${esc(it.id)}" style="margin-top:10px">
           <label class="campo"><span class="lab">Nome</span><input type="text" id="ie-nome" value="${esc(it.nome)}" required></label>
           <label class="campo"><span class="lab">Código</span><input type="text" id="ie-cod" value="${esc(it.codigo || "")}"></label>

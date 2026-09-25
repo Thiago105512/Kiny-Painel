@@ -23,7 +23,7 @@ curriculos/
       99-main.js          inicialização e contagem do tempo de estudo
   dados/
     instituicoes.json   ← faculdades (UFAM, UEA, FAMETRO, Nilton Lins, Afya) + fontes oficiais a importar
-    grades/<id>.json    ← matrizes OFICIAIS (uma por instituição/curso/versão) — hoje vazio: pendente
+    grades/<id>.json    ← matrizes OFICIAIS (uma por instituição/curso/versão): UFAM Medicina 2025/2; demais pendentes
     medicina/mapa.json  ← Área → Especialidade → Tema (128 temas, subtemas, objetivos, resumo)
     medicina/casos.json ← casos clínicos educacionais
     enem/matriz.json    ← Área → Disciplina → Assunto → Subassunto (130 assuntos)

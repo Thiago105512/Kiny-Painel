@@ -192,5 +192,16 @@ function temasNaGrade(g) {
   itensGrade(g).forEach(it => temasDoItem(it).forEach(t => { (m[t] = m[t] || []).push({ periodo: it.periodo, item: it }); }));
   return m;
 }
-const chTotal = g => { const it = itensGrade(g); const conhecidas = it.filter(x => typeof x.ch === "number"); return { total: conhecidas.reduce((s, x) => s + x.ch, 0), conhecidas: conhecidas.length, itens: it.length }; };
+const chTotal = g => { const it = itensGrade(g).filter(x => !x.optativa); const conhecidas = it.filter(x => typeof x.ch === "number"); return { total: conhecidas.reduce((s, x) => s + x.ch, 0), conhecidas: conhecidas.length, itens: it.length }; };
+/** Rótulo do tipo de item da matriz. */
+const tipoItem = it => it.optativa ? "Optativa" : it.tipo === "modulo" ? "Módulo" : it.tipo === "estagio" ? "Estágio" : "Disciplina";
+/** Créditos, divisão da carga horária e pré-requisitos, quando constam do documento. */
+function detalhesItem(g, it) {
+  const partes = [];
+  if (typeof it.creditos === "number") partes.push(it.creditos + " créditos");
+  const ch = [["teórica", it.chTeorica], ["prática", it.chPratica], ["extensão", it.chExtensao]].filter(([, v]) => v).map(([n, v]) => `${v} h ${n}`);
+  if (ch.length) partes.push(ch.join(" + "));
+  if (it.prerequisitos?.length) partes.push("pré-requisito: " + it.prerequisitos.map(c => itensGrade(g).find(x => x.codigo === c)?.nome || c).join(", "));
+  return partes.join(" · ");
+}
 const statusGrade = g => g?.status === "validado" ? { nome: "Validada por você", cls: "ok" } : g?.status === "importado" ? { nome: "Importada — conferir", cls: "warn" } : { nome: PENDENTE, cls: "warn" };

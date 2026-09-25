@@ -12,7 +12,7 @@ function ondeNaGrade(temaId) {
 function crumbsTema(t) {
   if (t.dominio === "enem") { const d = ENEM_DISC[t.disciplinaId]; return [["ENEM", "#/enem"], [t.areaNome, "#/enem/" + t.area], [d?.nome || "", "#/enem/" + t.area + "/" + t.disciplinaId]]; }
   const o = ondeNaGrade(t.id).find(x => x.minha);
-  if (o) return [CRUMB_MED, [nomeInst(o.g.instituicao), "#/medicina/inst/" + o.g.instituicao], [o.periodo + "º período", `#/medicina/grade/${o.g.id}/p/${o.periodo}`], [o.item.nome, `#/medicina/grade/${o.g.id}/item/${o.item.id}`]];
+  if (o) return [CRUMB_MED, [nomeInst(o.g.instituicao), "#/medicina/inst/" + o.g.instituicao], [o.item.periodoNome || o.periodo + "º período", `#/medicina/grade/${o.g.id}/p/${o.periodo}`], [o.item.nome, `#/medicina/grade/${o.g.id}/item/${o.item.id}`]];
   const e = ESPECIALIDADES[t.especialidades?.[0]];
   return e ? [CRUMB_MED, ["Especialidades", "#/medicina/especialidades"], [e.nome, "#/medicina/esp/" + e.id]] : [CRUMB_MED];
 }
@@ -45,7 +45,7 @@ function paginaTema(id, aba) {
       ${t.resumo ? `<section><p class="leitura" style="margin:0">${esc(t.resumo)}</p></section>` : ""}
       ${t.objetivos?.length ? `<section><h2 class="sec">Objetivos</h2><ul style="margin:0;padding-left:20px">${t.objetivos.map(o => `<li>${esc(o)}</li>`).join("")}</ul></section>` : ""}
       ${subs.length ? `<section><h2 class="sec">Subtemas</h2><div class="chips">${subs.join("")}</div></section>` : ""}
-      ${med ? `<section><h2 class="sec">Onde aparece</h2>${onde.length ? `<div class="links-lista">${onde.map(o => `<a href="#/medicina/grade/${esc(o.g.id)}/item/${esc(o.item.id)}"><span>${esc(o.item.nome)}</span><small>${esc(nomeInst(o.g.instituicao))} · ${o.periodo}º período</small></a>`).join("")}</div>` : `<p class="small muted" style="margin:0">Ainda não vinculado às disciplinas da sua grade.</p>`}
+      ${med ? `<section><h2 class="sec">Onde aparece</h2>${onde.length ? `<div class="links-lista">${onde.map(o => `<a href="#/medicina/grade/${esc(o.g.id)}/item/${esc(o.item.id)}"><span>${esc(o.item.nome)}</span><small>${esc(nomeInst(o.g.instituicao))} · ${esc(o.item.periodoNome || o.periodo + "º período")}</small></a>`).join("")}</div>` : `<p class="small muted" style="margin:0">Ainda não vinculado às disciplinas da sua grade.</p>`}
         <p class="small" style="margin:10px 0 0"><span class="muted">Especialidades:</span> ${(t.especialidades || []).map(e => `<a href="#/medicina/esp/${esc(e)}">${esc(ESPECIALIDADES[e]?.nome || e)}</a>`).join(", ")}</p></section>` : ""}
       ${(() => { const ps = PILULAS.filter(p => p.tema === id); return ps.length ? `<section><h2 class="sec">Pílulas deste tema</h2><div class="lista-q">${ps.map(p => `<a href="#/estudar/p/${esc(p.id)}"><span class="txt">${vistasPil()[p.id] ? "✓ " : ""}${esc(p.titulo)}</span><span class="meta"><span>${esc(TIPOS_PIL[p.tipo]?.[0] || p.tipo)}</span></span></a>`).join("")}</div></section>` : ""; })()}
       <p class="small muted">Resumo de referência (autoral) — aprofunde na bibliografia${med ? " da disciplina" : ""}.</p>`;
@@ -129,7 +129,7 @@ function mapaDoTema(id) {
   return { t: t.nome, sub: d.n ? `${pct(d.ac, d.n)}% em ${d.n} resp.` : "", filhos: [
     subs.length && { t: "Subtemas", filhos: subs },
     (t.objetivos || []).length && { t: "Objetivos", filhos: t.objetivos.map(o => ({ t: o })) },
-    onde.length && { t: "Na grade", filhos: onde.map(o => ({ t: `${nomeInst(o.g.instituicao)} · ${o.periodo}º · ${o.item.nome}`, href: `#/medicina/grade/${o.g.id}/item/${o.item.id}` })) },
+    onde.length && { t: "Na grade", filhos: onde.map(o => ({ t: `${nomeInst(o.g.instituicao)} · ${o.item.periodoNome || o.periodo + "º"} · ${o.item.nome}`, href: `#/medicina/grade/${o.g.id}/item/${o.item.id}` })) },
     med && (t.especialidades || []).length && { t: "Especialidades", filhos: t.especialidades.map(e => ({ t: ESPECIALIDADES[e]?.nome || e, href: "#/medicina/esp/" + e })) },
     (t.disciplinas || []).length && { t: "Disciplinas relacionadas", filhos: t.disciplinas.map(x => ({ t: x })) },
     { t: "Estudar", filhos: [

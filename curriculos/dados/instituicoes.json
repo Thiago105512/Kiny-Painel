@@ -1,9 +1,5 @@
 [
- {"id": "ufam", "sigla": "UFAM", "nome": "Universidade Federal do Amazonas", "cidade": "Manaus/AM", "cursos": ["medicina", "direito"],
-  "fontes": [
-   {"titulo": "Grade curricular — Faculdade de Medicina da UFAM (versões 2025/2 e 2010/1, segundo a busca)", "url": "https://fm.ufam.edu.br/graduacao/grade-curricular.html", "obs": "não lido: acesso bloqueado no ambiente de construção"},
-   {"titulo": "PPC do curso de Medicina — PROEG/UFAM", "url": "https://proeg.ufam.edu.br/dae/57-proeg/1176-ppc-do-curso-de-medicina.html", "obs": "não lido"}
-  ]},
+ {"id": "ufam", "sigla": "UFAM", "nome": "Universidade Federal do Amazonas", "cidade": "Manaus/AM", "cursos": ["medicina", "direito"], "fontes": [{"titulo": "Grade curricular — Faculdade de Medicina da UFAM (versões 2025/2 e 2010/1, segundo a busca)", "url": "https://fm.ufam.edu.br/graduacao/grade-curricular.html", "obs": "acesso bloqueado no ambiente de construção; matriz 2025/2 obtida do PDF enviado pelo usuário"}, {"titulo": "PPC do curso de Medicina — PROEG/UFAM", "url": "https://proeg.ufam.edu.br/dae/57-proeg/1176-ppc-do-curso-de-medicina.html", "obs": "não lido"}]},
  {"id": "uea", "sigla": "UEA", "nome": "Universidade do Estado do Amazonas", "cidade": "Manaus/AM", "cursos": ["medicina", "direito"], "fontes": []},
  {"id": "fametro", "sigla": "FAMETRO", "nome": null, "cidade": "Manaus/AM", "cursos": ["medicina", "direito"], "fontes": []},
  {"id": "nilton-lins", "sigla": "Nilton Lins", "nome": null, "cidade": "Manaus/AM", "cursos": ["medicina", "direito"], "fontes": []},
