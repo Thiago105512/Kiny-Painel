@@ -132,5 +132,6 @@ node curriculos/testes/fluxos.js     # os 5 fluxos de estudo de ponta a ponta
 node curriculos/testes/migracao.js   # migração do formato antigo e sincronização com a conta
 node curriculos/testes/curso.js      # Meu curso: objetivo, situação, notas, faltas, provas com revisão, histórico
 node curriculos/testes/humor.js      # Pausa para rir: cartão, sem repetição, foco no objetivo, esconder/religar
+node curriculos/testes/jogos.js      # Jogos: os 5 jogos do começo ao fim, recorde, caderno de erros, foco no objetivo
 node curriculos/testes/etapa2.js     # mapa mental, erros em lote, backup semanal, conferência da matriz
 ```

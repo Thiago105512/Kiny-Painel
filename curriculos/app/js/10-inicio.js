@@ -75,6 +75,7 @@ rota("/", () => {
       <a href="#/simulados">${ilustra("relogio", "#0F766E", "m")}<b>Simulado</b><small>${store.doc("simulados").hist.length ? store.doc("simulados").hist.length + " feitos" : "prova cronometrada"}</small></a>
       <a href="#/flashcards">${ilustra("livro", "#A21CAF", "m")}<b>Flashcards</b><small>${pend.cards.length ? pend.cards.length + " para hoje" : cards().length + " cards"}</small></a>
       <a href="#/casos">${ilustra("estetoscopio", "#C0265F", "m")}<b>Casos clínicos</b><small>${todosCasos().length} casos</small></a>
+      <a href="#/jogos" class="largo">${ilustra("controle", "#0F766E", "m")}<b>Jogos</b><small>Contra o relógio, Três vidas, Certo ou errado e mais</small></a>
     </div></section>
     ${tarefas.length > 1 ? `<section><h2 class="sec">Também para hoje</h2><div class="tarefas">${tarefas.slice(1, 5).map(t => `<div class="tarefa"><div class="o">${t.link ? "Revisar " + t.link : esc(t.tit)}<small>${esc(t.det)}</small></div><a class="btn mini sec" href="${t.href}">${t.bt}</a></div>`).join("")}</div>${tarefas.length > 5 ? `<p class="small"><a href="#/revisoes">Ver todas as ${tarefas.length}</a></p>` : ""}</section>` : ""}
     ${novato && passos.length ? `<section><h2 class="sec">Primeiros passos</h2><div class="tarefas">${passos.join("")}</div></section>`

@@ -28,6 +28,7 @@ const IC = {
   flashcards: "M4 7h13v12H4zM7 4h13v12",
   revisoes: "M4 12a8 8 0 1 0 3-6.2M4 4v4h4M12 8v4l3 2",
   casos: "M8 4h8v3H8zM6 6H5v15h14V6h-1M9 12h6M9 16h4",
+  jogos: "M7 8h10a5 5 0 0 1 5 5v1a3 3 0 0 1-5.5 1.7L15 14H9l-1.5 1.7A3 3 0 0 1 2 14v-1a5 5 0 0 1 5-5zM7 10.5v3M5.5 12h3M15.5 11.5h.01M17.5 13h.01",
   simulados: "M12 8v4l2 2M12 21a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM10 2h4",
   plano: "M4 6h16v14H4zM4 10h16M8 3v5M16 3v5",
   desempenho: "M4 20V10M10 20V4M16 20v-7M22 20H2",
@@ -44,7 +45,7 @@ const icone = n => `<svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><p
 const GRUPOS_NAV_BASE = [
   ["", [["inicio", "#/", "Início"], ["curso", "#/curso", "Meu curso"]]],
   ["Estudar", [["estudar", "#/estudar", "Pílulas de estudo"], ["medicina", "#/medicina", "Medicina"], ["enem", "#/enem", "ENEM e vestibulares"]]],
-  ["Praticar", [["questoes", "#/questoes", "Questões"], ["simulados", "#/simulados", "Simulados"], ["casos", "#/casos", "Casos clínicos"]]],
+  ["Praticar", [["questoes", "#/questoes", "Questões"], ["simulados", "#/simulados", "Simulados"], ["casos", "#/casos", "Casos clínicos"], ["jogos", "#/jogos", "Jogos"]]],
   ["Revisar", [["revisoes", "#/revisoes", "Revisões"], ["flashcards", "#/flashcards", "Flashcards"]]],
   ["Organizar", [["plano", "#/plano", "Planejamento"], ["desempenho", "#/desempenho", "Desempenho"], ["biblioteca", "#/biblioteca", "Biblioteca"]]],
 ];

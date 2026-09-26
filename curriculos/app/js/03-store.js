@@ -23,9 +23,10 @@ const DOC_PADRAO = {
   guia:         () => ({ g: {} }),       // checklist do guia de referência
   pilulas:      () => ({ v: {} }),       // v[id] = [ts, sabia 0/1] — pílulas de estudo vistas
   academico:    () => ({ disc: {}, aval: {} }),   // disc[itemId] = situação/notas/faltas; aval[id] = provas e trabalhos
-  ajudas:       () => ({ itens: {} }),
-  reportes:     () => ({ itens: {} }),
-  humor:        () => ({ v: {} }),       // v[id] = [ts, reação 1 ri / 0 passou] — piadas já vistas   // problemas apontados em questões (cópia local; também vão para a coleção compartilhada "reportes")   // pedidos de correção/ajuda à IA e respostas
+  ajudas:       () => ({ itens: {} }),   // pedidos de correção/ajuda à IA e respostas
+  reportes:     () => ({ itens: {} }),   // problemas apontados em questões (cópia local; também vão para a coleção compartilhada "reportes")
+  humor:        () => ({ v: {} }),       // v[id] = [ts, reação 1 ri / 0 passou] — piadas já vistas
+  jogos:        () => ({ rec: {}, n: {} }),   // rec[jogo] = melhor pontuação; n[jogo] = partidas jogadas
   backups:      () => ({ itens: [] }),   // registro dos backups automáticos (não entra no próprio backup)
 };
 // Progresso das questões, fragmentado por trilha para cada doc ficar pequeno:
