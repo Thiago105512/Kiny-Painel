@@ -37,7 +37,7 @@ if __import__("os").environ.get("SEM_DISTRIBUICAO") != "1" and pos and max(pos.v
 FAIXAS = {"enem": [(.10, .20), (.45, .60), (.25, .40)], "residencia": [(.10, .20), (.50, .65), (.20, .35)],
           "medicina": [(.10, .20), (.50, .65), (.20, .30)], "direito": [(.15, .25), (.50, .65), (.15, .25)], "oab": [(.10, .20), (.55, .70), (.15, .25)]}
 import os
-trilha = lote.split("-")[0]; fx = FAIXAS[trilha]
+trilha = lote.split("-")[0]; fx = FAIXAS.get(trilha, FAIXAS["medicina"])   # lotes de auditoria (aud*) são de Medicina
 if os.environ.get("ALVO"): fx = [tuple(map(float, p.split(","))) for p in os.environ["ALVO"].split(";")]   # lotes de ampliação/ajuste
 SEM_DIST = os.environ.get("SEM_DISTRIBUICAO") == "1"
 cls = [0 if l < 250 else 1 if l < 600 else 2 for l in L]
