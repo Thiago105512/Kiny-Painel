@@ -11,14 +11,15 @@
    "I, II e III"
   ],
   "correta": 2,
-  "explicacao": "O art. 60, § 4º, da CF/88 veda deliberação sobre proposta de emenda tendente a abolir a forma federativa de Estado, o voto direto, secreto, universal e periódico, a separação dos Poderes e os direitos e garantias individuais. A PEC I atinge o voto secreto e a III, a forma federativa — ambas vedadas. A forma republicana de governo não figura no rol expresso do § 4º; ela foi submetida ao plebiscito de 1993 (art. 2º do ADCT) e é tratada como princípio sensível (art. 34, VII, a), mas não como cláusula pétrea expressa. Por isso, a PEC II não se inclui na vedação expressa do § 4º (a eventual existência de limites implícitos é debate doutrinário, fora do comando da questão).",
+  "explicacao": "O art. 60, § 4º, da CF/88 veda deliberação sobre proposta de emenda tendente a abolir a forma federativa de Estado, o voto direto, secreto, universal e periódico, a separação dos Poderes e os direitos e garantias individuais. A PEC I atinge o voto secreto e a III, a forma federativa — ambas vedadas. A forma republicana de governo não figura no rol expresso do § 4º; ela foi submetida ao plebiscito de 1993 (art. 2º do ADCT) e é tratada como princípio sensível (art. 34, VII, a), mas não como cláusula pétrea expressa. Por isso, a PEC II não se inclui na vedação expressa do § 4º (a eventual existência de limites implícitos é debate doutrinário, fora do comando da questão). Para lembrar: a forma republicana já foi cláusula pétrea expressa no Brasil — as Constituições de 1891 (art. 90, § 4º), 1934, 1946 e 1967 vedavam emendas tendentes a abolir a República; a CF/88 retirou-a do rol e a submeteu ao plebiscito de 1993.",
   "disciplina": "Constitucional",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-88cf9e94",
@@ -32,14 +33,15 @@
    "Habeas corpus"
   ],
   "correta": 4,
-  "explicacao": "Pelo art. 5º, LXVIII, da CF/88, conceder-se-á habeas corpus sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder. A prisão sem flagrante e sem ordem escrita e fundamentada da autoridade judiciária é ilegal (art. 5º, LXI). O mandado de segurança é residual, cabendo quando o direito líquido e certo não é amparado por habeas corpus ou habeas data (LXIX); habeas data protege informações pessoais; mandado de injunção supre falta de norma regulamentadora; ação popular anula ato lesivo ao patrimônio público.",
+  "explicacao": "Pelo art. 5º, LXVIII, da CF/88, conceder-se-á habeas corpus sempre que alguém sofrer ou se achar ameaçado de sofrer violência ou coação em sua liberdade de locomoção, por ilegalidade ou abuso de poder. A prisão sem flagrante e sem ordem escrita e fundamentada da autoridade judiciária é ilegal (art. 5º, LXI). O mandado de segurança é residual, cabendo quando o direito líquido e certo não é amparado por habeas corpus ou habeas data (LXIX); habeas data protege informações pessoais; mandado de injunção supre falta de norma regulamentadora; ação popular anula ato lesivo ao patrimônio público. Para lembrar: o habeas corpus remonta à tradição inglesa (Magna Carta de 1215 e Habeas Corpus Act de 1679); no Brasil, surgiu no Código de Processo Criminal de 1832 e ganhou status constitucional em 1891.",
   "disciplina": "Constitucional",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-bef15209",
@@ -53,14 +55,15 @@
    "Não deve ser conhecido, pois habeas data só serve para conhecer informações, não para retificá-las"
   ],
   "correta": 1,
-  "explicacao": "O habeas data é cabível para assegurar o conhecimento de informações relativas ao impetrante em registros de entidades governamentais ou de caráter público e para a retificação de dados (art. 5º, LXXII, a e b). Contudo, a petição inicial deve ser instruída com prova da recusa ao acesso ou à retificação, ou do decurso de prazo sem decisão (art. 8º, parágrafo único, da Lei 9.507/1997), e a Súmula 2 do STJ afirma que não cabe habeas data se não houve recusa de informações pela autoridade administrativa. Sem pretensão resistida, falta interesse de agir. As ações de habeas corpus e habeas data são gratuitas (art. 5º, LXXVII).",
+  "explicacao": "O habeas data é cabível para assegurar o conhecimento de informações relativas ao impetrante em registros de entidades governamentais ou de caráter público e para a retificação de dados (art. 5º, LXXII, a e b). Contudo, a petição inicial deve ser instruída com prova da recusa ao acesso ou à retificação, ou do decurso de prazo sem decisão (art. 8º, parágrafo único, da Lei 9.507/1997), e a Súmula 2 do STJ afirma que não cabe habeas data se não houve recusa de informações pela autoridade administrativa. Sem pretensão resistida, falta interesse de agir. As ações de habeas corpus e habeas data são gratuitas (art. 5º, LXXVII). Para lembrar: o habeas data é criação da CF/88, sem precedente nas Constituições brasileiras anteriores — uma resposta aos arquivos secretos mantidos pelo regime militar (como os do antigo SNI).",
   "disciplina": "Constitucional",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-6b1671e3",
@@ -81,7 +84,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-a223d292",
@@ -102,7 +106,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-743b9371",
@@ -145,7 +150,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-e02d9936",
@@ -166,7 +172,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-b4d50a67",
@@ -187,12 +194,13 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-56817d1a",
   "area": "Tributário",
-  "enunciado": "Um contribuinte é cobrado por um tributo cujo fato gerador é ser proprietário de veículo, sem qualquer serviço ou obra estatal voltada a ele.\n\nO tributo cuja obrigação independe de atividade estatal específica relativa ao contribuinte é o:",
+  "enunciado": "Um contribuinte é cobrado por um tributo cujo fato gerador é ser proprietário de veículo, sem qualquer serviço ou obra estatal voltada a ele.\n\nA espécie tributária cuja obrigação independe de qualquer atividade estatal específica relativa ao contribuinte denomina-se:",
   "alternativas": [
    "Taxa",
    "Contribuição de melhoria",
@@ -201,14 +209,15 @@
    "Imposto"
   ],
   "correta": 4,
-  "explicacao": "O art. 16 do CTN define imposto como o tributo cuja obrigação tem por fato gerador uma situação independente de qualquer atividade estatal específica, relativa ao contribuinte, como a propriedade de veículo (IPVA). A taxa (art. 77) tem fato gerador vinculado ao exercício do poder de polícia ou à prestação de serviço público específico e divisível. A contribuição de melhoria (art. 81) decorre de obra pública que valoriza o imóvel. Preço público não é tributo, e o pedágio é cobrado pela utilização de via conservada pelo poder público.",
+  "explicacao": "O art. 16 do CTN define imposto como o tributo cuja obrigação tem por fato gerador uma situação independente de qualquer atividade estatal específica, relativa ao contribuinte, como a propriedade de veículo (IPVA). A taxa (art. 77) tem fato gerador vinculado ao exercício do poder de polícia ou à prestação de serviço público específico e divisível. A contribuição de melhoria (art. 81) decorre de obra pública que valoriza o imóvel. Preço público não é tributo, e o pedágio é cobrado pela utilização de via conservada pelo poder público. Para lembrar: o imposto é o tributo \"não vinculado\"; taxa e contribuição de melhoria são \"vinculados\" a uma atuação estatal — por isso a receita de impostos, em regra, não pode ser vinculada a órgão, fundo ou despesa (art. 167, IV, da CF).",
   "disciplina": "Tributário",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-6cbe0dd8",
@@ -226,10 +235,11 @@
   "disciplina": "Ambiental",
   "tema": null,
   "subtema": null,
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-2adeb60c",
@@ -243,14 +253,15 @@
    "18 dias corridos, pois as ausências pelo casamento contam em dobro"
   ],
   "correta": 2,
-  "explicacao": "O art. 130 da CLT fixa a proporção: 30 dias corridos para até 5 faltas; 24 dias de 6 a 14 faltas; 18 dias de 15 a 23; e 12 dias de 24 a 32. O art. 131, I, da CLT não considera falta ao serviço, para esse efeito, a ausência nos casos do art. 473, entre eles até 3 dias consecutivos em virtude de casamento (art. 473, II). Excluídos esses 3 dias, Rosa tem 4 faltas, o que garante 30 dias. O art. 130, § 1º, veda descontar do período de férias as faltas do empregado ao serviço. Não existe redução de um dia por falta nem cômputo em dobro.",
+  "explicacao": "O art. 130 da CLT fixa a proporção: 30 dias corridos para até 5 faltas; 24 dias de 6 a 14 faltas; 18 dias de 15 a 23; e 12 dias de 24 a 32. O art. 131, I, da CLT não considera falta ao serviço, para esse efeito, a ausência nos casos do art. 473, entre eles até 3 dias consecutivos em virtude de casamento (art. 473, II). Excluídos esses 3 dias, Rosa tem 4 faltas, o que garante 30 dias. O art. 130, § 1º, veda descontar do período de férias as faltas do empregado ao serviço. Não existe redução de um dia por falta nem cômputo em dobro. Para lembrar: a doutrina chama a folga do art. 473, II (casamento) de \"licença gala\", e a do inciso I (falecimento de familiar, 2 dias) de \"licença nojo\".",
   "disciplina": "Trabalho",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-775adf8a",
@@ -308,14 +319,15 @@
    "Deve ser acolhido em parte, restaurando-se a Lei A apenas quanto aos benefícios já concedidos"
   ],
   "correta": 3,
-  "explicacao": "O art. 2º, § 3º, da LINDB estabelece que, salvo disposição em contrário, a lei revogada não se restaura por ter a lei revogadora perdido a vigência. Assim, a repristinação no direito brasileiro depende de previsão expressa; como a Lei C nada disse sobre a Lei A, esta não volta a vigorar. Não existe repristinação tácita como regra, nem restauração por decisão judicial em caso de simples revogação. O chamado efeito repristinatório ocorre na declaração de inconstitucionalidade em controle concentrado, hipótese expressamente afastada no enunciado.",
+  "explicacao": "O art. 2º, § 3º, da LINDB estabelece que, salvo disposição em contrário, a lei revogada não se restaura por ter a lei revogadora perdido a vigência. Assim, a repristinação no direito brasileiro depende de previsão expressa; como a Lei C nada disse sobre a Lei A, esta não volta a vigorar. Não existe repristinação tácita como regra, nem restauração por decisão judicial em caso de simples revogação. O chamado efeito repristinatório ocorre na declaração de inconstitucionalidade em controle concentrado, hipótese expressamente afastada no enunciado. Para lembrar: \"repristinar\" vem do latim pristinus (antigo, primitivo) — restaurar ao estado anterior; no Brasil ela nunca é tácita, e o efeito repristinatório da declaração de inconstitucionalidade é outro fenômeno.",
   "disciplina": "Introdução ao Direito",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-91b927af",
@@ -336,7 +348,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-6389dd49",
@@ -401,7 +414,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-d5260823",
@@ -415,14 +429,15 @@
    "Deputado Estadual"
   ],
   "correta": 3,
-  "explicacao": "O art. 14, § 3º, VI, da CF/88 fixa as idades mínimas: 35 anos para Presidente, Vice-Presidente da República e Senador; 30 anos para Governador e Vice-Governador; 21 anos para Deputado Federal, Deputado Estadual ou Distrital, Prefeito, Vice-Prefeito e juiz de paz; e 18 anos para Vereador. Assim, Mariana ainda não pode concorrer a Senador, mas atende à idade para Governador, Deputado e Prefeito.",
+  "explicacao": "O art. 14, § 3º, VI, da CF/88 fixa as idades mínimas: 35 anos para Presidente, Vice-Presidente da República e Senador; 30 anos para Governador e Vice-Governador; 21 anos para Deputado Federal, Deputado Estadual ou Distrital, Prefeito, Vice-Prefeito e juiz de paz; e 18 anos para Vereador. Assim, Mariana ainda não pode concorrer a Senador, mas atende à idade para Governador, Deputado e Prefeito. Para lembrar: a escada das idades é 35-30-21-18 (Presidente/Vice/Senador; Governador/Vice; Deputados, Prefeito/Vice e juiz de paz; Vereador), e o TSE afere a idade na data da posse — salvo para vereador, aferida na data-limite do registro (art. 11, § 2º, da Lei 9.504/1997).",
   "disciplina": "Constitucional",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-7f4a108d",
@@ -443,7 +458,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-6e5765c2",
@@ -464,12 +480,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-5c99154b",
   "area": "Civil",
-  "enunciado": "Heitor nasceu em 01/06/2000. Em 01/06/2012, surgiu para ele uma pretensão patrimonial contra Otávio, para a qual a lei não fixa prazo específico, sujeitando-se, portanto, ao prazo prescricional geral do Código Civil. Não houve causa interruptiva, e Heitor não foi representado em nenhuma medida judicial ou extrajudicial. Heitor pretende ajuizar a ação agora e quer saber até quando pode fazê-lo sem que a pretensão esteja prescrita.\n\nConsiderando os arts. 3º, 198, I, e 205 do Código Civil, o prazo prescricional se consuma em:",
+  "enunciado": "Heitor nasceu em 01/06/2000. Em 01/06/2012, surgiu para ele uma pretensão patrimonial contra Otávio, para a qual a lei não fixa prazo específico, sujeitando-se, portanto, ao prazo prescricional geral do Código Civil. Não houve causa interruptiva, e Heitor não foi representado em nenhuma medida judicial ou extrajudicial. Heitor consulta um advogado para saber em que data a pretensão estaria prescrita.\n\nConsiderando os arts. 3º, 198, I, e 205 do Código Civil, o prazo prescricional se consuma em:",
   "alternativas": [
    "01/06/2022",
    "01/06/2028",
@@ -485,7 +502,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-5e6ec6a7",
@@ -499,14 +517,15 @@
    "Não está prescrita, pois o prazo de cinco anos das relações extracontratuais vai até 2026"
   ],
   "correta": 0,
-  "explicacao": "O art. 206, § 3º, V, do CC fixa em três anos a prescrição da pretensão de reparação civil, aplicável à responsabilidade extracontratual. Iniciado o prazo em 10/05/2021, ele se consumou em 10/05/2024, antes do ajuizamento (20/06/2024). O prazo geral de dez anos (art. 205) só incide quando a lei não fixar prazo menor, e aqui há prazo específico. Danos morais decorrentes de acidente não são imprescritíveis, e o mesmo prazo trienal se aplica a danos materiais e morais. Não existe prazo quinquenal geral para a responsabilidade extracontratual no CC; também não se aplica a causa impeditiva do art. 200, pois não houve apuração criminal.",
+  "explicacao": "O art. 206, § 3º, V, do CC fixa em três anos a prescrição da pretensão de reparação civil, aplicável à responsabilidade extracontratual. Iniciado o prazo em 10/05/2021, ele se consumou em 10/05/2024, antes do ajuizamento (20/06/2024). O prazo geral de dez anos (art. 205) só incide quando a lei não fixar prazo menor, e aqui há prazo específico. Danos morais decorrentes de acidente não são imprescritíveis, e o mesmo prazo trienal se aplica a danos materiais e morais. Não existe prazo quinquenal geral para a responsabilidade extracontratual no CC; também não se aplica a causa impeditiva do art. 200, pois não houve apuração criminal. Para lembrar: o STJ (EREsp 1.281.594/SP, 2019) fixou o contraste — responsabilidade extracontratual prescreve em 3 anos (art. 206, § 3º, V) e a contratual em 10 anos (art. 205).",
   "disciplina": "Civil",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-4aff4014",
@@ -520,14 +539,15 @@
    "Integralmente a Luana, pois o filho, nascido com vida, herdou do pai e transmitiu a herança à mãe"
   ],
   "correta": 4,
-  "explicacao": "A personalidade civil começa do nascimento com vida, mas a lei põe a salvo, desde a concepção, os direitos do nascituro (art. 2º do CC); legitimam-se a suceder as pessoas nascidas ou já concebidas no momento da abertura da sucessão (art. 1.798). Como a criança nasceu com vida (respirou), adquiriu personalidade e herdou todo o patrimônio do pai, pois descendentes excluem ascendentes (art. 1.829, I e II). Com a morte do bebê, sua herança passou aos seus ascendentes; o grau mais próximo exclui o mais remoto (art. 1.836, § 1º), e a mãe (1º grau) exclui os avós paternos (2º grau). O CC não exige viabilidade nem tempo mínimo de vida. A divisão por linhas (§ 2º) só ocorre entre ascendentes de mesmo grau. Se o bebê tivesse nascido morto, a herança iria aos pais de Rafael.",
+  "explicacao": "A personalidade civil começa do nascimento com vida, mas a lei põe a salvo, desde a concepção, os direitos do nascituro (art. 2º do CC); legitimam-se a suceder as pessoas nascidas ou já concebidas no momento da abertura da sucessão (art. 1.798). Como a criança nasceu com vida (respirou), adquiriu personalidade e herdou todo o patrimônio do pai, pois descendentes excluem ascendentes (art. 1.829, I e II). Com a morte do bebê, sua herança passou aos seus ascendentes; o grau mais próximo exclui o mais remoto (art. 1.836, § 1º), e a mãe (1º grau) exclui os avós paternos (2º grau). O CC não exige viabilidade nem tempo mínimo de vida. A divisão por linhas (§ 2º) só ocorre entre ascendentes de mesmo grau. Se o bebê tivesse nascido morto, a herança iria aos pais de Rafael. Para lembrar: a prova de que o bebê respirou costuma vir da docimasia hidrostática pulmonar (de Galeno): pulmões que respiraram flutuam na água.",
   "disciplina": "Civil",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-5c3098e1",
@@ -563,19 +583,20 @@
    "Trata-se de lesão; o prazo para anular é de dois anos, contados da data do registro"
   ],
   "correta": 1,
-  "explicacao": "Ocorre lesão quando uma pessoa, sob premente necessidade ou por inexperiência, se obriga a prestação manifestamente desproporcional ao valor da prestação oposta (art. 157). A lesão, no CC, não exige dolo de aproveitamento da outra parte. O negócio é anulável (art. 171, II), e o prazo decadencial é de quatro anos, contados do dia em que se realizou o negócio (art. 178, II) — em 2025 ele não se esgotou. Pelo art. 157, § 2º, não se decreta a anulação se for oferecido suplemento suficiente ou se a parte favorecida concordar com a redução do proveito. Não há estado de perigo (que exige necessidade de salvar-se ou a alguém de grave dano conhecido pela outra parte, art. 156) nem dolo, pois não houve artifício para enganar.",
+  "explicacao": "Ocorre lesão quando uma pessoa, sob premente necessidade ou por inexperiência, se obriga a prestação manifestamente desproporcional ao valor da prestação oposta (art. 157). A lesão, no CC, não exige dolo de aproveitamento da outra parte. O negócio é anulável (art. 171, II), e o prazo decadencial é de quatro anos, contados do dia em que se realizou o negócio (art. 178, II) — em 2025 ele não se esgotou. Pelo art. 157, § 2º, não se decreta a anulação se for oferecido suplemento suficiente ou se a parte favorecida concordar com a redução do proveito. Não há estado de perigo (que exige necessidade de salvar-se ou a alguém de grave dano conhecido pela outra parte, art. 156) nem dolo, pois não houve artifício para enganar. Para lembrar: a lesão vem da laesio enormis do direito romano (Código de Justiniano, 4.44.2, atribuída a Diocleciano): o vendedor podia desfazer a venda feita por menos da metade do justo preço.",
   "disciplina": "Civil",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-3d2f9a72",
   "area": "Civil",
-  "enunciado": "Caio, de 15 anos, que mora com os pais, arremessou uma pedra e quebrou a vitrine de uma loja, causando prejuízo de R$ 6.000,00. Os pais provaram que Caio estava na escola, fora de sua vigilância direta, e que sempre o educaram com cuidado. Considere as afirmativas:\n\nI. Os pais respondem pela reparação ainda que não haja culpa de sua parte.\nII. Caio pode responder com seu patrimônio se os pais não dispuserem de meios suficientes, em valor equitativo que não o prive do necessário.\nIII. Os pais que indenizarem a loja terão direito de regresso contra Caio.\n\nÀ luz dos arts. 928, 932, 933 e 934 do Código Civil, está correto o que se afirma em:",
+  "enunciado": "Caio, de 15 anos, que mora com os pais, arremessou uma pedra e quebrou a vitrine de uma loja, causando prejuízo de R$ 6.000,00. Os pais provaram que Caio estava na rua, com amigos, fora de sua vigilância direta, e que sempre o educaram com cuidado. Considere as afirmativas:\n\nI. Os pais respondem pela reparação ainda que não haja culpa de sua parte.\nII. Caio pode responder com seu patrimônio se os pais não dispuserem de meios suficientes, em valor equitativo que não o prive do necessário.\nIII. Os pais que indenizarem a loja terão direito de regresso contra Caio.\n\nÀ luz dos arts. 928, 932, 933 e 934 do Código Civil, está correto o que se afirma em:",
   "alternativas": [
    "I, apenas",
    "II e III, apenas",
@@ -584,14 +605,15 @@
    "I, II e III"
   ],
   "correta": 2,
-  "explicacao": "Os pais respondem pelos filhos menores que estiverem sob sua autoridade e em sua companhia (art. 932, I), e essa responsabilidade independe de culpa deles (art. 933), razão pela qual a prova de boa educação não os exime (I correta). O incapaz responde pelos prejuízos que causar se as pessoas por ele responsáveis não tiverem obrigação de fazê-lo ou não dispuserem de meios suficientes, com indenização equitativa que não o prive, nem as pessoas que dele dependem, do necessário (art. 928 e parágrafo único) — II correta. A III está errada: o art. 934 excepciona o direito de regresso quando o causador do dano for descendente absoluta ou relativamente incapaz.",
+  "explicacao": "Os pais respondem pelos filhos menores que estiverem sob sua autoridade e em sua companhia (art. 932, I), e essa responsabilidade independe de culpa deles (art. 933), razão pela qual a prova de boa educação não os exime (I correta). O incapaz responde pelos prejuízos que causar se as pessoas por ele responsáveis não tiverem obrigação de fazê-lo ou não dispuserem de meios suficientes, com indenização equitativa que não o prive, nem as pessoas que dele dependem, do necessário (art. 928 e parágrafo único) — II correta. A III está errada: o art. 934 excepciona o direito de regresso quando o causador do dano for descendente absoluta ou relativamente incapaz. Para lembrar: o CC/1916 exigia culpa in vigilando dos pais (presumida pela jurisprudência); o CC/2002 (art. 933) tornou essa responsabilidade objetiva.",
   "disciplina": "Civil",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-bd853c25",
@@ -612,7 +634,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-8a66c7e9",
@@ -626,14 +649,15 @@
    "5 anos, aplicando-se redução de um sexto, por ser a fração própria das atenuantes"
   ],
   "correta": 2,
-  "explicacao": "O art. 14, parágrafo único, do CP determina que, salvo disposição em contrário, pune-se a tentativa com a pena correspondente ao crime consumado, diminuída de um a dois terços. A jurisprudência consolidada escolhe a fração conforme o iter criminis percorrido: quanto mais próximo da consumação, menor a redução. Como Márcio sofreu lesões graves e correu risco de morte, aplica-se a fração mínima: 6 anos menos 1/3 (2 anos) resulta em 4 anos. Não há fração fixa de metade, a tentativa cruenta não equivale à consumação, e o fato de o carro ser alugado é irrelevante.",
+  "explicacao": "O art. 14, parágrafo único, do CP determina que, salvo disposição em contrário, pune-se a tentativa com a pena correspondente ao crime consumado, diminuída de um a dois terços. A jurisprudência consolidada escolhe a fração conforme o iter criminis percorrido: quanto mais próximo da consumação, menor a redução. Como Márcio sofreu lesões graves e correu risco de morte, aplica-se a fração mínima: 6 anos menos 1/3 (2 anos) resulta em 4 anos. Não há fração fixa de metade, a tentativa cruenta não equivale à consumação, e o fato de o carro ser alugado é irrelevante. Para lembrar: o iter criminis tem as fases cogitação, preparação, execução e consumação (o exaurimento é pós-consumativo); a fração da tentativa \"caminha\" ao contrário do percurso — quanto mais perto da consumação, menor a redução.",
   "disciplina": "Penal",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-cbb6b7de",
@@ -654,7 +678,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-27488d4f",
@@ -675,7 +700,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-8695925c",
@@ -689,14 +715,15 @@
    "I, II, III e IV"
   ],
   "correta": 1,
-  "explicacao": "O art. 28 do CP dispõe que não excluem a imputabilidade penal a emoção ou a paixão (inciso I) e a embriaguez voluntária ou culposa, pelo álcool ou substância de efeitos análogos (inciso II). O § 1º do mesmo artigo isenta de pena o agente que, por embriaguez completa proveniente de caso fortuito ou força maior, era inteiramente incapaz de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento, o que confirma a III. A afirmativa IV é falsa: a embriaguez preordenada não isenta de pena e, ao contrário, é circunstância agravante (art. 61, II, l, do CP).",
+  "explicacao": "O art. 28 do CP dispõe que não excluem a imputabilidade penal a emoção ou a paixão (inciso I) e a embriaguez voluntária ou culposa, pelo álcool ou substância de efeitos análogos (inciso II). O § 1º do mesmo artigo isenta de pena o agente que, por embriaguez completa proveniente de caso fortuito ou força maior, era inteiramente incapaz de entender o caráter ilícito do fato ou de determinar-se de acordo com esse entendimento, o que confirma a III. A afirmativa IV é falsa: a embriaguez preordenada não isenta de pena e, ao contrário, é circunstância agravante (art. 61, II, l, do CP). Para lembrar: a punição da embriaguez voluntária e da preordenada se explica pela teoria da actio libera in causa — a imputabilidade é aferida no momento em que o agente, ainda livre, decidiu se embriagar.",
   "disciplina": "Penal",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-001609eb",
@@ -717,7 +744,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-5107cd57",
@@ -738,7 +766,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-53a88342",
@@ -746,20 +775,21 @@
   "enunciado": "Proferida sentença de parcial procedência, a empresa Beta foi intimada em 2 de fevereiro e, no quarto dia útil do prazo, opôs embargos de declaração apontando omissão sobre os juros de mora. Os embargos foram rejeitados, e a decisão foi publicada semanas depois. Beta agora quer apelar e pergunta como fica o prazo, já que \"gastou\" quatro dias úteis com os embargos.\n\nSegundo o CPC/2015, é correto afirmar que:",
   "alternativas": [
    "Os embargos suspenderam o prazo, restando a Beta 11 dias úteis para apelar",
-   "Os embargos interromperam o prazo, que recomeça por inteiro: 15 dias úteis após a intimação",
+   "Os embargos interromperam o prazo, que recomeça por inteiro após a decisão dos embargos",
    "O prazo não foi afetado, pois os embargos foram rejeitados, e a apelação é intempestiva",
    "Os embargos interromperam o prazo, que recomeça com 5 dias úteis, igual ao dos embargos",
    "O prazo de apelação só é interrompido se os embargos forem acolhidos com efeitos infringentes"
   ],
   "correta": 1,
-  "explicacao": "O prazo para opor embargos de declaração é de 5 dias (art. 1.023 do CPC), e Beta os opôs tempestivamente. Pelo art. 1.026, os embargos não possuem efeito suspensivo e interrompem o prazo para a interposição de recurso. Interrupção significa que o prazo recomeça integralmente, e não apenas pelo saldo (o que seria suspensão). Assim, publicada a decisão dos embargos, Beta tem novamente 15 dias úteis para apelar (art. 1.003, § 5º). A interrupção independe do acolhimento dos embargos; só se afastaria em hipóteses como a intempestividade.",
+  "explicacao": "O prazo para opor embargos de declaração é de 5 dias (art. 1.023 do CPC), e Beta os opôs tempestivamente. Pelo art. 1.026, os embargos não possuem efeito suspensivo e interrompem o prazo para a interposição de recurso. Interrupção significa que o prazo recomeça integralmente, e não apenas pelo saldo (o que seria suspensão). Assim, publicada a decisão dos embargos, Beta tem novamente 15 dias úteis para apelar (art. 1.003, § 5º). A interrupção independe do acolhimento dos embargos; só se afastaria em hipóteses como a intempestividade. Para lembrar: interromper = zerar o cronômetro (o prazo volta inteiro); suspender = pausar (volta só o saldo). No CPC/2015 os embargos de declaração interrompem; nos Juizados Especiais, desde o CPC/2015 (art. 1.065, que alterou o art. 50 da Lei 9.099/1995), também interrompem.",
   "disciplina": "Processo Civil",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-2988a31b",
@@ -780,7 +810,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-29d5cdb3",
@@ -801,7 +832,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-f73f25e6",
@@ -815,14 +847,15 @@
    "É competente Itacoatiara: a competência é absoluta e deve ser declarada de ofício"
   ],
   "correta": 4,
-  "explicacao": "O art. 47 do CPC determina que, para as ações fundadas em direito real sobre imóveis, é competente o foro de situação da coisa. O § 1º permite ao autor optar pelo domicílio do réu ou pelo foro de eleição apenas se o litígio não recair sobre direito de propriedade, vizinhança, servidão, divisão e demarcação de terras e nunciação de obra nova. A ação reivindicatória recai sobre o direito de propriedade, de modo que a competência de Itacoatiara é absoluta: não admite modificação por eleição de foro nem prorrogação pela inércia do réu, e deve ser declarada de ofício (arts. 62, 63 e 64, § 1º).",
+  "explicacao": "O art. 47 do CPC determina que, para as ações fundadas em direito real sobre imóveis, é competente o foro de situação da coisa. O § 1º permite ao autor optar pelo domicílio do réu ou pelo foro de eleição apenas se o litígio não recair sobre direito de propriedade, vizinhança, servidão, divisão e demarcação de terras e nunciação de obra nova. A ação reivindicatória recai sobre o direito de propriedade, de modo que a competência de Itacoatiara é absoluta: não admite modificação por eleição de foro nem prorrogação pela inércia do réu, e deve ser declarada de ofício (arts. 62, 63 e 64, § 1º). Para lembrar: a regra é o velho forum rei sitae (foro da situação da coisa), e o § 1º do art. 47 do CPC traz o rol das ações imobiliárias em que ele é absoluto: propriedade, vizinhança, servidão, divisão e demarcação de terras e nunciação de obra nova.",
   "disciplina": "Processo Civil",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-afaebb34",
@@ -836,14 +869,15 @@
    "10 dias se preso e 30 dias se solto"
   ],
   "correta": 4,
-  "explicacao": "O art. 10 do CPP dispõe que o inquérito deverá terminar no prazo de 10 dias se o indiciado tiver sido preso em flagrante ou preventivamente, contado o prazo a partir do dia em que se executar a ordem de prisão, ou no prazo de 30 dias quando estiver solto, mediante fiança ou sem ela. Os demais prazos são previstos em leis especiais (por exemplo, inquéritos da Justiça Federal ou da Lei de Drogas) ou simplesmente não correspondem à regra geral do Código.",
+  "explicacao": "O art. 10 do CPP dispõe que o inquérito deverá terminar no prazo de 10 dias se o indiciado tiver sido preso em flagrante ou preventivamente, contado o prazo a partir do dia em que se executar a ordem de prisão, ou no prazo de 30 dias quando estiver solto, mediante fiança ou sem ela. Os demais prazos são previstos em leis especiais (por exemplo, inquéritos da Justiça Federal ou da Lei de Drogas) ou simplesmente não correspondem à regra geral do Código. Para lembrar: na Justiça Federal o inquérito com preso tem 15 dias, prorrogáveis por mais 15 (art. 66 da Lei 5.010/1966); na Lei de Drogas, 30 dias com preso e 90 solto, duplicáveis (art. 51 da Lei 11.343/2006).",
   "disciplina": "Processo Penal",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-dc8a110b",
@@ -857,14 +891,15 @@
    "A queixa é tempestiva: como o prazo terminou num domingo, prorrogou-se para o dia útil seguinte"
   ],
   "correta": 1,
-  "explicacao": "O art. 38 do CPP estabelece que o ofendido decai do direito de queixa se não o exercer dentro de seis meses, contado do dia em que vier a saber quem é o autor do crime (15/3/2026, e não a data da ofensa). A decadência é prazo de natureza penal, contado pelo art. 10 do CP: inclui-se o dia do começo e contam-se os meses pelo calendário comum, sem prorrogação para dia útil e sem suspensão ou interrupção pela instauração de inquérito. Assim, o prazo se encerrou em 14/9/2026 (segunda-feira), e a queixa de 15/9 é intempestiva, com extinção da punibilidade (art. 107, IV, do CP). A regra de excluir o dia do começo (art. 798, § 1º, do CPP) vale para prazos processuais.",
+  "explicacao": "O art. 38 do CPP estabelece que o ofendido decai do direito de queixa se não o exercer dentro de seis meses, contado do dia em que vier a saber quem é o autor do crime (15/3/2026, e não a data da ofensa). A decadência é prazo de natureza penal, contado pelo art. 10 do CP: inclui-se o dia do começo e contam-se os meses pelo calendário comum, sem prorrogação para dia útil e sem suspensão ou interrupção pela instauração de inquérito. Assim, o prazo se encerrou em 14/9/2026 (segunda-feira), e a queixa de 15/9 é intempestiva, com extinção da punibilidade (art. 107, IV, do CP). A regra de excluir o dia do começo (art. 798, § 1º, do CPP) vale para prazos processuais. Para lembrar: prazo penal (decadência, prescrição) conta o dia do começo e não se prorroga (art. 10 do CP); prazo processual exclui o dia do começo e prorroga para dia útil (art. 798, § 1º e § 3º, do CPP).",
   "disciplina": "Processo Penal",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-acfa3811",
@@ -885,7 +920,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-bb726343",
@@ -906,7 +942,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-cc6c791d",
@@ -927,7 +964,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-58efd06c",
@@ -985,14 +1023,15 @@
    "Ambas as alterações podem ser aplicadas imediatamente, pois a lei entrou em vigor na publicação"
   ],
   "correta": 0,
-  "explicacao": "O art. 150, III, b e c, da CF veda cobrar tributos no mesmo exercício da publicação da lei que os instituiu ou aumentou e antes de decorridos 90 dias dessa publicação. O aumento do ISS se submete às duas regras: não basta chegar a 1º/1/2027, pois só em 1º/3/2027 se completam 90 dias da publicação. Já o § 1º do art. 150 exclui da anterioridade nonagesimal a fixação da base de cálculo do IPTU (art. 156, I), que respeita apenas a anterioridade anual e pode ser aplicada a partir de 1º/1/2027. A vigência imediata da lei não afasta as limitações constitucionais.",
+  "explicacao": "O art. 150, III, b e c, da CF veda cobrar tributos no mesmo exercício da publicação da lei que os instituiu ou aumentou e antes de decorridos 90 dias dessa publicação. O aumento do ISS se submete às duas regras: não basta chegar a 1º/1/2027, pois só em 1º/3/2027 se completam 90 dias da publicação. Já o § 1º do art. 150 exclui da anterioridade nonagesimal a fixação da base de cálculo do IPTU (art. 156, I), que respeita apenas a anterioridade anual e pode ser aplicada a partir de 1º/1/2027. A vigência imediata da lei não afasta as limitações constitucionais. Para lembrar: a anterioridade nonagesimal geral (alínea c) foi criada pela EC 42/2003, que já nasceu com as exceções da base de cálculo do IPTU e do IPVA — para que a nova planta de valores publicada no fim do ano valha em 1º de janeiro.",
   "disciplina": "Tributário",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-9d9d0a1a",
@@ -1028,14 +1067,15 @@
    "Não incidem IPTU nem taxa de fiscalização, mas a taxa de coleta de lixo é devida"
   ],
   "correta": 2,
-  "explicacao": "O art. 156, § 1º-A, da CF, incluído pela EC 116/2022, dispõe que o IPTU não incide sobre templos de qualquer culto, ainda que as entidades abrangidas pela imunidade do art. 150, VI, b, sejam apenas locatárias do bem imóvel. Assim, o fato de o prédio pertencer a empresa privada não afasta a não incidência. Já a imunidade do art. 150, VI, b, alcança apenas impostos, de modo que taxas (de fiscalização e de coleta de lixo) permanecem devidas. Convenções particulares sobre responsabilidade tributária não podem ser opostas à Fazenda (art. 123 do CTN).",
+  "explicacao": "O art. 156, § 1º-A, da CF, incluído pela EC 116/2022, dispõe que o IPTU não incide sobre templos de qualquer culto, ainda que as entidades abrangidas pela imunidade do art. 150, VI, b, sejam apenas locatárias do bem imóvel. Assim, o fato de o prédio pertencer a empresa privada não afasta a não incidência. Já a imunidade do art. 150, VI, b, alcança apenas impostos, de modo que taxas (de fiscalização e de coleta de lixo) permanecem devidas. Convenções particulares sobre responsabilidade tributária não podem ser opostas à Fazenda (art. 123 do CTN). Para lembrar: o § 1º-A do art. 156 foi incluído pela EC 116/2022 justamente para superar o entendimento de que a imunidade não alcançaria o templo alugado; a EC 132/2023 ampliou ainda a alínea b às organizações assistenciais e beneficentes das entidades religiosas.",
   "disciplina": "Tributário",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-327eacf7",
@@ -1049,14 +1089,15 @@
    "A não eventualidade"
   ],
   "correta": 2,
-  "explicacao": "Os arts. 2º e 3º da CLT caracterizam o empregado como pessoa física que presta serviços de natureza não eventual, sob a dependência do empregador (subordinação) e mediante salário (onerosidade), com pessoalidade. Todos esses elementos estão presentes no caso. A exclusividade não é requisito: o empregado pode ter mais de um vínculo ou outras atividades, como os bicos de Renata. Pelo princípio da primazia da realidade, o rótulo de \"prestadora de serviços\" no contrato escrito não afasta o vínculo quando presentes os requisitos legais, e o art. 9º da CLT considera nulos os atos destinados a fraudar a aplicação da lei.",
+  "explicacao": "Os arts. 2º e 3º da CLT caracterizam o empregado como pessoa física que presta serviços de natureza não eventual, sob a dependência do empregador (subordinação) e mediante salário (onerosidade), com pessoalidade. Todos esses elementos estão presentes no caso. A exclusividade não é requisito: o empregado pode ter mais de um vínculo ou outras atividades, como os bicos de Renata. Pelo princípio da primazia da realidade, o rótulo de \"prestadora de serviços\" no contrato escrito não afasta o vínculo quando presentes os requisitos legais, e o art. 9º da CLT considera nulos os atos destinados a fraudar a aplicação da lei. Para lembrar: os requisitos do vínculo cabem na sigla SHOPP — Subordinação, Habitualidade (não eventualidade), Onerosidade, Pessoalidade e Pessoa física; exclusividade não entra na lista.",
   "disciplina": "Trabalho",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-b0d89039",
@@ -1070,14 +1111,15 @@
    "R$ 165,00"
   ],
   "correta": 0,
-  "explicacao": "O salário-hora é R$ 2.420,00 ÷ 220 = R$ 11,00. O art. 7º, XVI, da CF e o art. 59, § 1º, da CLT fixam a remuneração da hora extraordinária em, no mínimo, 50% superior à da hora normal: R$ 11,00 × 1,5 = R$ 16,50. Multiplicando por 12 horas, obtém-se R$ 198,00. O valor de R$ 132,00 corresponde às horas sem adicional; R$ 264,00 aplica indevidamente adicional de 100%; R$ 217,80 usa indevidamente o divisor 200, próprio de jornada de 40 horas semanais. A distância até a residência é irrelevante.",
+  "explicacao": "O salário-hora é R$ 2.420,00 ÷ 220 = R$ 11,00. O art. 7º, XVI, da CF e o art. 59, § 1º, da CLT fixam a remuneração da hora extraordinária em, no mínimo, 50% superior à da hora normal: R$ 11,00 × 1,5 = R$ 16,50. Multiplicando por 12 horas, obtém-se R$ 198,00. O valor de R$ 132,00 corresponde às horas sem adicional; R$ 264,00 aplica indevidamente adicional de 100%; R$ 217,80 usa indevidamente o divisor 200, próprio de jornada de 40 horas semanais. A distância até a residência é irrelevante. Para lembrar: a redação original do art. 59 da CLT (1943) previa adicional de apenas 20%; foi a CF/88 (art. 7º, XVI) que elevou o mínimo para 50%.",
   "disciplina": "Trabalho",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-e851d773",
@@ -1091,14 +1133,15 @@
    "Aline tem garantia de emprego, pois basta a gravidez ser anterior à dispensa, ainda que ignorada"
   ],
   "correta": 4,
-  "explicacao": "O art. 10, II, b, do ADCT veda a dispensa arbitrária ou sem justa causa da empregada gestante desde a confirmação da gravidez até cinco meses após o parto. A Súmula 244, I, do TST afirma que o desconhecimento do estado gravídico pelo empregador não afasta o direito, e o STF (Tema 497) fixou que basta a anterioridade da gravidez à dispensa. Como a gestação já existia em 10 de março, Aline tem direito à reintegração durante o período de garantia ou, esgotado este, à indenização correspondente (Súmula 244, II). A garantia se estende até cinco meses após o parto, e não há indenização em dobro prevista.",
+  "explicacao": "O art. 10, II, b, do ADCT veda a dispensa arbitrária ou sem justa causa da empregada gestante desde a confirmação da gravidez até cinco meses após o parto. A Súmula 244, I, do TST afirma que o desconhecimento do estado gravídico pelo empregador não afasta o direito, e o STF (Tema 497) fixou que basta a anterioridade da gravidez à dispensa. Como a gestação já existia em 10 de março, Aline tem direito à reintegração durante o período de garantia ou, esgotado este, à indenização correspondente (Súmula 244, II). A garantia se estende até cinco meses após o parto, e não há indenização em dobro prevista. Para lembrar: a garantia da gestante tem natureza objetiva — o STF (Tema 497, RE 629.053, 2018) fixou que basta a gravidez ser anterior à dispensa, ainda que nem a própria empregada soubesse.",
   "disciplina": "Trabalho",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-1da77ad9",
@@ -1119,7 +1162,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-c67cc917",
@@ -1162,7 +1206,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-c5edb85e",
@@ -1198,14 +1243,15 @@
    "I, II e III"
   ],
   "correta": 1,
-  "explicacao": "A I reproduz o art. 5º, § 3º, da CF/88 (EC 45/2004), que dá equivalência de emenda constitucional aos tratados de direitos humanos aprovados pelo rito especial. A II reflete o entendimento do STF (RE 466.343): os tratados de direitos humanos incorporados sem esse rito têm hierarquia supralegal. A III está errada: embora o art. 5º, LXVII, mencione o depositário infiel, o Pacto de São José da Costa Rica (supralegal) paralisou a eficácia da legislação que regulava essa prisão, e a Súmula Vinculante 25 declara ilícita a prisão civil de depositário infiel, qualquer que seja a modalidade do depósito.",
+  "explicacao": "A I reproduz o art. 5º, § 3º, da CF/88 (EC 45/2004), que dá equivalência de emenda constitucional aos tratados de direitos humanos aprovados pelo rito especial. A II reflete o entendimento do STF (RE 466.343): os tratados de direitos humanos incorporados sem esse rito têm hierarquia supralegal. A III está errada: embora o art. 5º, LXVII, mencione o depositário infiel, o Pacto de São José da Costa Rica (supralegal) paralisou a eficácia da legislação que regulava essa prisão, e a Súmula Vinculante 25 declara ilícita a prisão civil de depositário infiel, qualquer que seja a modalidade do depósito. Para lembrar: o primeiro tratado aprovado pelo rito do § 3º foi a Convenção sobre os Direitos das Pessoas com Deficiência (Decreto 6.949/2009); depois vieram o Tratado de Marraqueche e a Convenção Interamericana contra o Racismo.",
   "disciplina": "Direitos Humanos",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-c14d1569",
@@ -1248,7 +1294,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-2951abf1",
@@ -1262,14 +1309,15 @@
    "Do país de nascimento dos pais de Pierre, pelo critério do sangue"
   ],
   "correta": 0,
-  "explicacao": "O art. 7º da LINDB adota o critério do domicílio: a lei do país em que domiciliada a pessoa determina as regras sobre o começo e o fim da personalidade, o nome, a capacidade e os direitos de família. Como Pierre é domiciliado em Manaus, aplica-se a lei brasileira. O critério da nacionalidade não é o adotado pela LINDB vigente. A lei do local da celebração (art. 9º) rege as obrigações quanto à sua forma e substância, mas não a capacidade das partes. Não há escolha livre pelo juiz nem critério ligado aos pais.",
+  "explicacao": "O art. 7º da LINDB adota o critério do domicílio: a lei do país em que domiciliada a pessoa determina as regras sobre o começo e o fim da personalidade, o nome, a capacidade e os direitos de família. Como Pierre é domiciliado em Manaus, aplica-se a lei brasileira. O critério da nacionalidade não é o adotado pela LINDB vigente. A lei do local da celebração (art. 9º) rege as obrigações quanto à sua forma e substância, mas não a capacidade das partes. Não há escolha livre pelo juiz nem critério ligado aos pais. Para lembrar: a antiga Introdução ao Código Civil de 1916 adotava a lei da nacionalidade; a LINDB (Decreto-Lei 4.657/1942) trocou-a pela lei do domicílio.",
   "disciplina": "Introdução ao Direito",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-f4719833",
@@ -1290,7 +1338,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-1550ebd4",
@@ -1326,14 +1375,15 @@
    "Apenas Rita e Antônio"
   ],
   "correta": 2,
-  "explicacao": "O art. 14, § 1º, da CF/88 torna o alistamento eleitoral e o voto obrigatórios para os maiores de 18 anos (inciso I) e facultativos para os analfabetos, os maiores de setenta anos e os maiores de dezesseis e menores de dezoito anos (inciso II). Lúcia (17 anos), Antônio (74 anos) e Rita (analfabeta) enquadram-se, cada um, em uma das hipóteses de facultatividade. Excluir qualquer deles ignora uma das três categorias do inciso II.",
+  "explicacao": "O art. 14, § 1º, da CF/88 torna o alistamento eleitoral e o voto obrigatórios para os maiores de 18 anos (inciso I) e facultativos para os analfabetos, os maiores de setenta anos e os maiores de dezesseis e menores de dezoito anos (inciso II). Lúcia (17 anos), Antônio (74 anos) e Rita (analfabeta) enquadram-se, cada um, em uma das hipóteses de facultatividade. Excluir qualquer deles ignora uma das três categorias do inciso II. Para lembrar: o voto facultativo tem três grupos — \"os 3 As\": adolescentes (16 e 17 anos), anciãos (mais de 70) e analfabetos; e analfabeto pode votar, mas é inelegível (art. 14, § 4º).",
   "disciplina": "Constitucional",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-1793ebb4",
@@ -1347,14 +1397,15 @@
    "Cabe a prisão em flagrante, com remessa dos autos em 24 horas à Câmara, que decide sobre ela pelo voto da maioria de seus membros"
   ],
   "correta": 4,
-  "explicacao": "Pelo art. 53, § 2º, da CF/88, desde a expedição do diploma, os membros do Congresso não poderão ser presos, salvo em flagrante de crime inafiançável; nesse caso, os autos serão remetidos dentro de vinte e quatro horas à Casa respectiva, para que, pelo voto da maioria de seus membros, resolva sobre a prisão. O racismo é crime inafiançável e imprescritível (art. 5º, XLII), e a imunidade já existia, pois conta da diplomação, não da posse. A licença prévia foi abolida pela EC 35/2001, e a votação não é secreta. A decisão sobre a manutenção da prisão cabe à Casa legislativa, não ao STF.",
+  "explicacao": "Pelo art. 53, § 2º, da CF/88, desde a expedição do diploma, os membros do Congresso não poderão ser presos, salvo em flagrante de crime inafiançável; nesse caso, os autos serão remetidos dentro de vinte e quatro horas à Casa respectiva, para que, pelo voto da maioria de seus membros, resolva sobre a prisão. O racismo é crime inafiançável e imprescritível (art. 5º, XLII), e a imunidade já existia, pois conta da diplomação, não da posse. A licença prévia foi abolida pela EC 35/2001, e a votação não é secreta. A decisão sobre a manutenção da prisão cabe à Casa legislativa, não ao STF. Para lembrar: antes da EC 35/2001, o parlamentar só podia ser processado com licença prévia da Casa, que quase nunca era concedida; hoje o processo corre, e a Casa pode apenas sustar o andamento da ação (art. 53, § 3º).",
   "disciplina": "Constitucional",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-14558452",
@@ -1419,7 +1470,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-65dcbaa8",
@@ -1484,7 +1536,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-6a962b70",
@@ -1498,14 +1551,15 @@
    "Comete ato ilícito"
   ],
   "correta": 4,
-  "explicacao": "O art. 187 do CC dispõe que também comete ato ilícito o titular de um direito que, ao exercê-lo, excede manifestamente os limites impostos pelo seu fim econômico ou social, pela boa-fé ou pelos bons costumes. É o abuso de direito, que gera dever de indenizar (art. 927). O exercício de direito próprio não é ilimitado; não se trata de anulabilidade de negócio jurídico; e o critério é objetivo — não depende de dolo (Enunciado 37 das Jornadas de Direito Civil) nem de proibição legal específica da conduta.",
+  "explicacao": "O art. 187 do CC dispõe que também comete ato ilícito o titular de um direito que, ao exercê-lo, excede manifestamente os limites impostos pelo seu fim econômico ou social, pela boa-fé ou pelos bons costumes. É o abuso de direito, que gera dever de indenizar (art. 927). O exercício de direito próprio não é ilimitado; não se trata de anulabilidade de negócio jurídico; e o critério é objetivo — não depende de dolo (Enunciado 37 das Jornadas de Direito Civil) nem de proibição legal específica da conduta. Para lembrar: um marco da teoria do abuso de direito é o caso Clément-Bayard (Corte de Cassação francesa, 1915): o vizinho Coquerel ergueu estacas de madeira com pontas de ferro no terreno só para furar os dirigíveis que o industrial Clément-Bayard fazia decolar da propriedade ao lado.",
   "disciplina": "Civil",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-b9bdeb06",
@@ -1541,14 +1595,15 @@
    "Separação obrigatória de bens"
   ],
   "correta": 0,
-  "explicacao": "Não havendo convenção, ou sendo ela nula ou ineficaz, vigorará, quanto aos bens entre os cônjuges, o regime da comunhão parcial (art. 1.640 do CC). A comunhão universal foi o regime legal supletivo até a Lei 6.515/1977, e hoje depende de pacto antenupcial, assim como a separação convencional e a participação final nos aquestos. A separação obrigatória só se impõe nas hipóteses do art. 1.641 (por exemplo, pessoa maior de 70 anos), que não é o caso.",
+  "explicacao": "Não havendo convenção, ou sendo ela nula ou ineficaz, vigorará, quanto aos bens entre os cônjuges, o regime da comunhão parcial (art. 1.640 do CC). A comunhão universal foi o regime legal supletivo até a Lei 6.515/1977, e hoje depende de pacto antenupcial, assim como a separação convencional e a participação final nos aquestos. A separação obrigatória só se impõe nas hipóteses do art. 1.641 (por exemplo, pessoa maior de 70 anos), que não é o caso. Para lembrar: desde 2024 o STF (Tema 1.236, ARE 1.309.642) admite que os maiores de 70 anos afastem a separação obrigatória por escritura pública — a regra do art. 1.641, II, deixou de ser absoluta.",
   "disciplina": "Civil",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-3224136a",
@@ -1569,7 +1624,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-efe01716",
@@ -1583,14 +1639,15 @@
    "Na data do pagamento do imposto de transmissão"
   ],
   "correta": 3,
-  "explicacao": "Pelo art. 1.784 do CC, aberta a sucessão, a herança transmite-se, desde logo, aos herdeiros legítimos e testamentários. É o princípio da saisine: a transmissão ocorre no exato momento da morte, independentemente de abertura de inventário, partilha, registro ou recolhimento de tributo. Esses atos posteriores apenas individualizam os quinhões e regularizam a titularidade, sem alterar o momento da transmissão.",
+  "explicacao": "Pelo art. 1.784 do CC, aberta a sucessão, a herança transmite-se, desde logo, aos herdeiros legítimos e testamentários. É o princípio da saisine: a transmissão ocorre no exato momento da morte, independentemente de abertura de inventário, partilha, registro ou recolhimento de tributo. Esses atos posteriores apenas individualizam os quinhões e regularizam a titularidade, sem alterar o momento da transmissão. Para lembrar: \"saisine\" vem do direito costumeiro francês — le mort saisit le vif (\"o morto prende o vivo\"): a posse passa ao herdeiro no instante da morte.",
   "disciplina": "Civil",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-d9ea1ac2",
@@ -1604,14 +1661,15 @@
    "Não procede: o crime considera-se praticado em 10 de março, e José responde pelo ECA"
   ],
   "correta": 4,
-  "explicacao": "O art. 4º do CP adota a teoria da atividade quanto ao tempo do crime: considera-se praticado o crime no momento da ação ou omissão, ainda que outro seja o momento do resultado. Em 10 de março José tinha 17 anos e era penalmente inimputável (art. 27 do CP e art. 228 da CF), sujeitando-se às normas da legislação especial (ECA), pela prática de ato infracional. A data da morte é irrelevante para aferir a imputabilidade. A teoria da ubiquidade (art. 6º) trata do lugar do crime, não do tempo. A atenuante da menoridade relativa pressupõe agente entre 18 e 21 anos na data do fato, e não cabe converter o fato em tentativa.",
+  "explicacao": "O art. 4º do CP adota a teoria da atividade quanto ao tempo do crime: considera-se praticado o crime no momento da ação ou omissão, ainda que outro seja o momento do resultado. Em 10 de março José tinha 17 anos e era penalmente inimputável (art. 27 do CP e art. 228 da CF), sujeitando-se às normas da legislação especial (ECA), pela prática de ato infracional. A data da morte é irrelevante para aferir a imputabilidade. A teoria da ubiquidade (art. 6º) trata do lugar do crime, não do tempo. A atenuante da menoridade relativa pressupõe agente entre 18 e 21 anos na data do fato, e não cabe converter o fato em tentativa. Para lembrar: use o macete LUTA — Lugar: Ubiquidade (art. 6º); Tempo: Atividade (art. 4º).",
   "disciplina": "Penal",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-26ed0ac2",
@@ -1632,7 +1690,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-83675435",
@@ -1646,14 +1705,15 @@
    "Inexigibilidade de conduta diversa"
   ],
   "correta": 3,
-  "explicacao": "O art. 24 do CP considera em estado de necessidade quem pratica o fato para salvar de perigo atual, que não provocou por sua vontade nem podia de outro modo evitar, direito próprio ou alheio, cujo sacrifício não era razoável exigir-se. Rita sacrificou o patrimônio do vizinho para salvar a vida da criança diante do incêndio. Não há legítima defesa, que exige agressão injusta de uma pessoa (art. 25), nem dever legal específico de particular ou exercício de direito. A inexigibilidade de conduta diversa é tese de exclusão de culpabilidade, e aqui a própria ilicitude já está excluída (art. 23, I).",
+  "explicacao": "O art. 24 do CP considera em estado de necessidade quem pratica o fato para salvar de perigo atual, que não provocou por sua vontade nem podia de outro modo evitar, direito próprio ou alheio, cujo sacrifício não era razoável exigir-se. Rita sacrificou o patrimônio do vizinho para salvar a vida da criança diante do incêndio. Não há legítima defesa, que exige agressão injusta de uma pessoa (art. 25), nem dever legal específico de particular ou exercício de direito. A inexigibilidade de conduta diversa é tese de exclusão de culpabilidade, e aqui a própria ilicitude já está excluída (art. 23, I). Para lembrar: no estado de necessidade há conflito entre bens diante de um perigo (fogo, naufrágio, animal); na legítima defesa há reação a uma agressão humana injusta. O exemplo clássico é a \"tábua de salvação\" de Carnéades.",
   "disciplina": "Penal",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-29461e83",
@@ -1667,14 +1727,15 @@
    "Condenar Ivo à pena integral, pois a capacidade parcial não produz nenhum efeito penal"
   ],
   "correta": 2,
-  "explicacao": "Ivo é semi-imputável: pelo art. 26, parágrafo único, do CP, a pena pode ser reduzida de um a dois terços se o agente, por perturbação de saúde mental, não era inteiramente capaz de entender o caráter ilícito do fato. Há condenação, não absolvição imprópria, que é reservada ao inimputável (art. 26, caput). Pelo art. 98 do CP, se o semi-imputável necessitar de especial tratamento curativo, a pena privativa de liberdade pode ser substituída por medida de segurança. O sistema vicariante adotado pela reforma de 1984 veda a cumulação de pena e medida de segurança (duplo binário).",
+  "explicacao": "Ivo é semi-imputável: pelo art. 26, parágrafo único, do CP, a pena pode ser reduzida de um a dois terços se o agente, por perturbação de saúde mental, não era inteiramente capaz de entender o caráter ilícito do fato. Há condenação, não absolvição imprópria, que é reservada ao inimputável (art. 26, caput). Pelo art. 98 do CP, se o semi-imputável necessitar de especial tratamento curativo, a pena privativa de liberdade pode ser substituída por medida de segurança. O sistema vicariante adotado pela reforma de 1984 veda a cumulação de pena e medida de segurança (duplo binário). Para lembrar: o duplo binário (pena + medida de segurança) vigorou no CP de 1940 até a reforma da Parte Geral pela Lei 7.209/1984, que adotou o sistema vicariante (\"ou um, ou outro\").",
   "disciplina": "Penal",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-cb1c0d65",
@@ -1695,7 +1756,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-f3bd9298",
@@ -1760,7 +1822,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-f5d69b14",
@@ -1774,14 +1837,15 @@
    "I, II e III"
   ],
   "correta": 2,
-  "explicacao": "O art. 99, § 3º, do CPC presume verdadeira a alegação de insuficiência deduzida exclusivamente por pessoa natural (I correta), e o § 4º dispõe que a assistência do requerente por advogado particular não impede a concessão de gratuidade (II correta). A afirmativa III é falsa: a presunção legal limita-se à pessoa natural, e a Súmula 481 do STJ exige que a pessoa jurídica, com ou sem fins lucrativos, demonstre a impossibilidade de arcar com os encargos processuais. O juiz, ainda assim, só pode indeferir o pedido de Maria se houver nos autos elementos que evidenciem a falta dos pressupostos (art. 99, § 2º).",
+  "explicacao": "O art. 99, § 3º, do CPC presume verdadeira a alegação de insuficiência deduzida exclusivamente por pessoa natural (I correta), e o § 4º dispõe que a assistência do requerente por advogado particular não impede a concessão de gratuidade (II correta). A afirmativa III é falsa: a presunção legal limita-se à pessoa natural, e a Súmula 481 do STJ exige que a pessoa jurídica, com ou sem fins lucrativos, demonstre a impossibilidade de arcar com os encargos processuais. O juiz, ainda assim, só pode indeferir o pedido de Maria se houver nos autos elementos que evidenciem a falta dos pressupostos (art. 99, § 2º). Para lembrar: a matéria era regida pela Lei 1.060/1950, cujos arts. 2º, 3º, 4º, 6º, 7º, 11, 12 e 17 foram revogados pelo art. 1.072, III, do CPC/2015.",
   "disciplina": "Processo Civil",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-de534c59",
@@ -1824,7 +1888,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-2a2dc2d9",
@@ -1860,14 +1925,15 @@
    "O MP não pode desistir da ação nem do recurso interposto, mas pode pedir a absolvição"
   ],
   "correta": 4,
-  "explicacao": "Pelo princípio da indisponibilidade, o art. 42 do CPP proíbe o Ministério Público de desistir da ação penal, e o art. 576 veda que desista de recurso que haja interposto. Isso não o impede de pedir a absolvição em alegações finais, se convencido da inocência. Ainda assim, o art. 385 do CPP permite ao juiz proferir sentença condenatória nos crimes de ação pública, ainda que o MP tenha opinado pela absolvição, de modo que o pedido não vincula o julgador. A interposição de recurso é voluntária (art. 574), não havendo dever de recorrer de toda absolvição.",
+  "explicacao": "Pelo princípio da indisponibilidade, o art. 42 do CPP proíbe o Ministério Público de desistir da ação penal, e o art. 576 veda que desista de recurso que haja interposto. Isso não o impede de pedir a absolvição em alegações finais, se convencido da inocência. Ainda assim, o art. 385 do CPP permite ao juiz proferir sentença condenatória nos crimes de ação pública, ainda que o MP tenha opinado pela absolvição, de modo que o pedido não vincula o julgador. A interposição de recurso é voluntária (art. 574), não havendo dever de recorrer de toda absolvição. Para lembrar: mesmo após o Pacote Anticrime, a Sexta Turma do STJ (REsp 2.022.413/PA, 2023) manteve a validade do art. 385 — o juiz pode condenar apesar do pedido de absolvição, desde que com fundamentação reforçada; o tema segue debatido na doutrina à luz do sistema acusatório.",
   "disciplina": "Processo Penal",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-19c12c63",
@@ -1932,7 +1998,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-501aef32",
@@ -1975,7 +2042,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-1d4221ff",
@@ -1996,7 +2064,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-d7803cdb",
@@ -2010,14 +2079,15 @@
    "Não procede: a execução fiscal suspende a prescrição até o trânsito em julgado"
   ],
   "correta": 2,
-  "explicacao": "O art. 174 do CTN fixa em cinco anos, contados da constituição definitiva do crédito, o prazo para a ação de cobrança; o termo final seria 5/5/2025. Desde a LC 118/2005, o parágrafo único, I, do art. 174 prevê que a prescrição se interrompe pelo despacho do juiz que ordenar a citação em execução fiscal, e não mais pela citação pessoal. O despacho de 10/4/2025 ocorreu antes do termo final (e, segundo o STJ, a interrupção retroage à data da propositura, 20/3/2025). O prazo não conta do fato gerador (este é marco da decadência, art. 173) e não é decenal.",
+  "explicacao": "O art. 174 do CTN fixa em cinco anos, contados da constituição definitiva do crédito, o prazo para a ação de cobrança; o termo final seria 5/5/2025. Desde a LC 118/2005, o parágrafo único, I, do art. 174 prevê que a prescrição se interrompe pelo despacho do juiz que ordenar a citação em execução fiscal, e não mais pela citação pessoal. O despacho de 10/4/2025 ocorreu antes do termo final (e, segundo o STJ, a interrupção retroage à data da propositura, 20/3/2025). O prazo não conta do fato gerador (este é marco da decadência, art. 173) e não é decenal. Para lembrar: a troca da \"citação pessoal\" pelo \"despacho que ordena a citação\" veio com a LC 118/2005; e o STJ (REsp 1.120.295/SP, repetitivo) diz que a interrupção retroage à data da propositura da execução (art. 240, § 1º, do CPC).",
   "disciplina": "Tributário",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-90b1de57",
@@ -2031,14 +2101,15 @@
    "A moratória"
   ],
   "correta": 0,
-  "explicacao": "O art. 151 do CTN enumera as causas de suspensão da exigibilidade do crédito tributário: moratória, depósito do seu montante integral, reclamações e recursos administrativos, concessão de liminar em mandado de segurança, concessão de liminar ou tutela antecipada em outras ações e parcelamento. O pagamento não suspende, mas extingue o crédito tributário, conforme o art. 156, I, do CTN. Por isso, das opções avaliadas pela empresa, apenas a quitação produz extinção, enquanto as demais apenas impedem a cobrança.",
+  "explicacao": "O art. 151 do CTN enumera as causas de suspensão da exigibilidade do crédito tributário: moratória, depósito do seu montante integral, reclamações e recursos administrativos, concessão de liminar em mandado de segurança, concessão de liminar ou tutela antecipada em outras ações e parcelamento. O pagamento não suspende, mas extingue o crédito tributário, conforme o art. 156, I, do CTN. Por isso, das opções avaliadas pela empresa, apenas a quitação produz extinção, enquanto as demais apenas impedem a cobrança. Para lembrar: as causas de suspensão cabem no mnemônico \"MO-DE-RE-CO-CO-PA\": MOratória, DEpósito integral, REclamações e recursos, COncessão de liminar em MS, COncessão de liminar/tutela em outras ações e PArcelamento.",
   "disciplina": "Tributário",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-03f0405c",
@@ -2081,7 +2152,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-674d90bf",
@@ -2095,14 +2167,15 @@
    "Rejeitado: a redução do intervalo por ordem do empregador é válida se houver refeitório"
   ],
   "correta": 3,
-  "explicacao": "O art. 71, caput, da CLT exige intervalo mínimo de uma hora para trabalho contínuo acima de seis horas. A redução para 30 minutos só é admitida por negociação coletiva (art. 611-A, III) ou por autorização do Ministério do Trabalho nas hipóteses do § 3º, o que não ocorreu. Após a reforma, o § 4º do art. 71 dispõe que a concessão parcial do intervalo implica o pagamento, de natureza indenizatória, apenas do período suprimido, com acréscimo de 50% sobre a hora normal. Luana, admitida em 2023, recebe 30 minutos diários (R$ 9,00 por dia), sem reflexos, pois a verba não tem natureza salarial.",
+  "explicacao": "O art. 71, caput, da CLT exige intervalo mínimo de uma hora para trabalho contínuo acima de seis horas. A redução para 30 minutos só é admitida por negociação coletiva (art. 611-A, III) ou por autorização do Ministério do Trabalho nas hipóteses do § 3º, o que não ocorreu. Após a reforma, o § 4º do art. 71 dispõe que a concessão parcial do intervalo implica o pagamento, de natureza indenizatória, apenas do período suprimido, com acréscimo de 50% sobre a hora normal. Luana, admitida em 2023, recebe 30 minutos diários (R$ 9,00 por dia), sem reflexos, pois a verba não tem natureza salarial. Para lembrar: antes da reforma de 2017, a Súmula 437 do TST mandava pagar a hora inteira do intervalo, com natureza salarial e reflexos; o novo § 4º do art. 71 reduziu a condenação ao tempo suprimido e tirou os reflexos.",
   "disciplina": "Trabalho",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-2f41e5d7",
@@ -2123,7 +2196,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-8eb2184d",
@@ -2137,14 +2211,15 @@
    "Rui não responde por nenhuma das dívidas, porque a alteração do nome fantasia descaracterizou a sucessão"
   ],
   "correta": 2,
-  "explicacao": "Pelo art. 1.146 do CC, o adquirente responde pelos débitos anteriores à transferência desde que regularmente contabilizados (A e B), e o devedor primitivo continua solidariamente obrigado pelo prazo de um ano, contado da publicação quanto aos créditos vencidos e da data do vencimento quanto aos demais. A solidariedade de Helena por A terminou em 1º/3/2026; por B, vencida em 10/8/2025, perdura até 10/8/2026. A dívida C, não contabilizada, não se transmite ao adquirente por força do art. 1.146. A mudança de nome fantasia é irrelevante, e não há prazo contado da propositura da ação nem sucessão restrita a dívidas vincendas.",
+  "explicacao": "Pelo art. 1.146 do CC, o adquirente responde pelos débitos anteriores à transferência desde que regularmente contabilizados (A e B), e o devedor primitivo continua solidariamente obrigado pelo prazo de um ano, contado da publicação quanto aos créditos vencidos e da data do vencimento quanto aos demais. A solidariedade de Helena por A terminou em 1º/3/2026; por B, vencida em 10/8/2025, perdura até 10/8/2026. A dívida C, não contabilizada, não se transmite ao adquirente por força do art. 1.146. A mudança de nome fantasia é irrelevante, e não há prazo contado da propositura da ação nem sucessão restrita a dívidas vincendas. Para lembrar: \"trespasse\" é a alienação do estabelecimento (disciplinada nos arts. 1.144 a 1.149 do CC); e, sem bens suficientes para pagar o passivo, a eficácia da venda depende do pagamento ou do consentimento dos credores em 30 dias (art. 1.145).",
   "disciplina": "Empresarial",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-5eb6bc5b",
@@ -2165,7 +2240,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-496629e0",
@@ -2179,14 +2255,15 @@
    "Não está prescrita, pois o dano à integridade física é imprescritível nas relações de consumo"
   ],
   "correta": 1,
-  "explicacao": "A explosão caracteriza fato do produto (acidente de consumo), pelo qual o fabricante responde independentemente de culpa (art. 12 do CDC). A pretensão à reparação pelos danos causados por fato do produto prescreve em cinco anos, iniciando-se a contagem a partir do conhecimento do dano e de sua autoria (art. 27): de 05/03/2021 a 05/03/2026 — a ação de 20/02/2026 é tempestiva. O prazo decadencial de 90 dias para bens duráveis (art. 26, II) refere-se à reclamação por vícios do produto, não à reparação de danos do acidente. O prazo trienal do CC não se aplica, pois há regra especial no CDC, e não há imprescritibilidade.",
+  "explicacao": "A explosão caracteriza fato do produto (acidente de consumo), pelo qual o fabricante responde independentemente de culpa (art. 12 do CDC). A pretensão à reparação pelos danos causados por fato do produto prescreve em cinco anos, iniciando-se a contagem a partir do conhecimento do dano e de sua autoria (art. 27): de 05/03/2021 a 05/03/2026 — a ação de 20/02/2026 é tempestiva. O prazo decadencial de 90 dias para bens duráveis (art. 26, II) refere-se à reclamação por vícios do produto, não à reparação de danos do acidente. O prazo trienal do CC não se aplica, pois há regra especial no CDC, e não há imprescritibilidade. Para lembrar: fato do produto (acidente, dano à segurança) → prescrição de 5 anos (art. 27); vício do produto (inadequação, mau funcionamento) → decadência de 30 ou 90 dias (art. 26).",
   "disciplina": "Consumidor",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-56233474",
@@ -2213,7 +2290,7 @@
  {
   "id": "dir-a5c8f358",
   "area": "Ambiental",
-  "enunciado": "Para a instalação de obra ou atividade potencialmente causadora de significativa degradação do meio ambiente (por exemplo, uma grande hidrelétrica), o art. 225, § 1º, IV, da CF/88 exige, na forma da lei:",
+  "enunciado": "Uma empresa pretende construir uma grande hidrelétrica em rio amazônico e sugere ao órgão licenciador que o estudo de impacto ambiental seja feito depois do início das obras e mantido em sigilo, para proteger informações estratégicas.\n\nPara a instalação de obra ou atividade potencialmente causadora de significativa degradação do meio ambiente, o art. 225, § 1º, IV, da CF/88 exige, na forma da lei:",
   "alternativas": [
    "Estudo prévio de impacto ambiental, a que se dará publicidade",
    "Estudo de impacto ambiental posterior, em caráter sigiloso",
@@ -2222,14 +2299,15 @@
    "Audiência pública facultativa, dispensado estudo técnico"
   ],
   "correta": 0,
-  "explicacao": "O art. 225, § 1º, IV, da CF/88 incumbe ao Poder Público exigir, na forma da lei, para instalação de obra ou atividade potencialmente causadora de significativa degradação do meio ambiente, estudo prévio de impacto ambiental, a que se dará publicidade. Portanto, o estudo deve ser prévio (não posterior) e público (não sigiloso), o que afasta a sugestão do empreendedor. A Constituição não exige, como regra, autorização do Congresso nem plebiscito, e o estudo técnico não pode ser dispensado.",
+  "explicacao": "O art. 225, § 1º, IV, da CF/88 incumbe ao Poder Público exigir, na forma da lei, para instalação de obra ou atividade potencialmente causadora de significativa degradação do meio ambiente, estudo prévio de impacto ambiental, a que se dará publicidade. Portanto, o estudo deve ser prévio (não posterior) e público (não sigiloso), o que afasta a sugestão do empreendedor. A Constituição não exige, como regra, autorização do Congresso nem plebiscito, e o estudo técnico não pode ser dispensado. Para lembrar: o EIA e seu relatório em linguagem acessível (RIMA) já eram exigidos pela Resolução CONAMA 1/1986; a CF/88 elevou o estudo prévio a exigência constitucional.",
   "disciplina": "Ambiental",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-cd3ce117",
@@ -2287,14 +2365,15 @@
    "sentença consultiva proferida pela Corte Internacional de Justiça"
   ],
   "correta": 2,
-  "explicacao": "A Declaração Universal dos Direitos Humanos foi proclamada pela Assembleia Geral das Nações Unidas por meio da Resolução 217 A (III), de 10/12/1948. Não é tratado: não passou por assinatura e ratificação, embora hoje muitos de seus dispositivos sejam reconhecidos como costume internacional. Não resultou de decisão do Conselho de Segurança nem de parecer da Corte Internacional de Justiça, e a OEA, em Bogotá (1948), aprovou outro documento, a Declaração Americana dos Direitos e Deveres do Homem.",
+  "explicacao": "A Declaração Universal dos Direitos Humanos foi proclamada pela Assembleia Geral das Nações Unidas por meio da Resolução 217 A (III), de 10/12/1948. Não é tratado: não passou por assinatura e ratificação, embora hoje muitos de seus dispositivos sejam reconhecidos como costume internacional. Não resultou de decisão do Conselho de Segurança nem de parecer da Corte Internacional de Justiça, e a OEA, em Bogotá (1948), aprovou outro documento, a Declaração Americana dos Direitos e Deveres do Homem. Para lembrar: a Declaração foi aprovada em Paris por 48 votos a favor, nenhum contra e 8 abstenções; a comissão de redação foi presidida por Eleanor Roosevelt, e o 10 de dezembro virou o Dia Internacional dos Direitos Humanos.",
   "disciplina": "Direitos Humanos",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-af06d1dd",
@@ -2315,7 +2394,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-81d63e66",
@@ -2336,7 +2416,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-22d62a9e",
@@ -2344,20 +2425,21 @@
   "enunciado": "Caso hipotético: no \"Caso Moradores do Igarapé Verde vs. Brasil\", a Comissão Interamericana concluiu que houve violação dos direitos à vida e às garantias judiciais de uma comunidade ribeirinha e fez recomendações ao Estado. Como elas não foram cumpridas, a própria Comissão submeteu o caso à Corte Interamericana. Em sentença notificada ao Estado em 5 de maio de 2026, a Corte reconheceu a responsabilidade internacional do Brasil e fixou indenização compensatória às famílias. O Estado discorda do alcance de um dos pontos resolutivos, e as famílias querem saber como receber a indenização.\n\nTexto elaborado para fins didáticos.\n\nÀ luz da Convenção Americana sobre Direitos Humanos, é correto afirmar que a sentença:",
   "alternativas": [
    "admite recurso à própria Corte em 90 dias, com efeito suspensivo, e a indenização depende de nova ação de conhecimento no Brasil",
-   "é definitiva e inapelável, cabendo pedido de interpretação em 90 dias, e a parte indenizatória pode ser executada pelo processo interno contra o Estado",
+   "é definitiva e inapelável, admite pedido de interpretação em 90 dias, e a indenização se executa pelo processo interno",
    "só vincula o Brasil depois de aprovada pelo Congresso Nacional por decreto legislativo, que fixa o modo de pagar a indenização",
    "pode ser revista pelo STF em controle de convencionalidade, e a indenização é paga por ordem do Secretário-Geral da OEA",
    "é definitiva, mas admite recurso ao Conselho de Segurança da ONU, e a indenização é executada perante a Justiça Estadual"
   ],
   "correta": 1,
-  "explicacao": "O art. 67 da Convenção Americana dispõe que a sentença da Corte é definitiva e inapelável; havendo divergência sobre seu sentido ou alcance, a Corte a interpreta a pedido de qualquer das partes, desde que o pedido seja apresentado em 90 dias da notificação. O art. 68.1 obriga os Estados a cumprir as decisões, e o art. 68.2 prevê que a parte da sentença que determina indenização compensatória pode ser executada no país pelo processo interno vigente para a execução de sentenças contra o Estado. Não existe recurso com efeito suspensivo, nem necessidade de aprovação pelo Congresso (o Brasil já reconheceu a competência contenciosa da Corte). O STF não é instância revisora da Corte, e o Conselho de Segurança da ONU não integra o sistema interamericano.",
+  "explicacao": "O art. 67 da Convenção Americana dispõe que a sentença da Corte é definitiva e inapelável; havendo divergência sobre seu sentido ou alcance, a Corte a interpreta a pedido de qualquer das partes, desde que o pedido seja apresentado em 90 dias da notificação. O art. 68.1 obriga os Estados a cumprir as decisões, e o art. 68.2 prevê que a parte da sentença que determina indenização compensatória pode ser executada no país pelo processo interno vigente para a execução de sentenças contra o Estado. Não existe recurso com efeito suspensivo, nem necessidade de aprovação pelo Congresso (o Brasil já reconheceu a competência contenciosa da Corte). O STF não é instância revisora da Corte, e o Conselho de Segurança da ONU não integra o sistema interamericano. Para lembrar: o Brasil reconheceu a competência contenciosa da Corte pelo Decreto Legislativo 89/1998, e a primeira condenação do país foi no Caso Ximenes Lopes (2006), sobre a morte de um paciente em clínica psiquiátrica no Ceará.",
   "disciplina": "Direitos Humanos",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-980bbc79",
@@ -2371,14 +2453,15 @@
    "consultiva, sem poder de condenar pessoas físicas"
   ],
   "correta": 1,
-  "explicacao": "O Estatuto de Roma (preâmbulo e art. 1º) estabelece que o TPI é complementar às jurisdições penais nacionais: atua quando o Estado não tem vontade ou capacidade de processar efetivamente o caso (art. 17). Por isso, não é exclusivo nem preferencial, e a Justiça brasileira continua competente em primeiro plano. O TPI julga e condena pessoas físicas por genocídio, crimes contra a humanidade, crimes de guerra e agressão, não sendo órgão meramente consultivo. A CF, no art. 5º, § 4º (EC 45/2004), prevê a submissão do Brasil ao TPI a cuja criação tenha manifestado adesão.",
+  "explicacao": "O Estatuto de Roma (preâmbulo e art. 1º) estabelece que o TPI é complementar às jurisdições penais nacionais: atua quando o Estado não tem vontade ou capacidade de processar efetivamente o caso (art. 17). Por isso, não é exclusivo nem preferencial, e a Justiça brasileira continua competente em primeiro plano. O TPI julga e condena pessoas físicas por genocídio, crimes contra a humanidade, crimes de guerra e agressão, não sendo órgão meramente consultivo. A CF, no art. 5º, § 4º (EC 45/2004), prevê a submissão do Brasil ao TPI a cuja criação tenha manifestado adesão. Para lembrar: o Estatuto de Roma é de 1998 e entrou em vigor em 1º/7/2002; o TPI fica em Haia e não se confunde com a Corte Internacional de Justiça, que julga Estados, e não pessoas.",
   "disciplina": "Direitos Humanos",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-dda831ee",
@@ -2399,7 +2482,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-a5b66075",
@@ -2413,14 +2497,15 @@
    "pode desistir em até 30 dias, por se tratar de produto não durável"
   ],
   "correta": 1,
-  "explicacao": "O art. 49 do CDC assegura ao consumidor o direito de desistir do contrato no prazo de 7 dias, contado da assinatura ou do recebimento do produto, quando a contratação ocorre fora do estabelecimento comercial, como nas compras pela internet. O direito independe de vício ou justificativa. O parágrafo único determina a devolução imediata dos valores pagos, a qualquer título, monetariamente atualizados — o que inclui o frete, segundo o STJ. O prazo de 30 dias do art. 26 refere-se à reclamação por vício, instituto diferente.",
+  "explicacao": "O art. 49 do CDC assegura ao consumidor o direito de desistir do contrato no prazo de 7 dias, contado da assinatura ou do recebimento do produto, quando a contratação ocorre fora do estabelecimento comercial, como nas compras pela internet. O direito independe de vício ou justificativa. O parágrafo único determina a devolução imediata dos valores pagos, a qualquer título, monetariamente atualizados — o que inclui o frete, segundo o STJ. O prazo de 30 dias do art. 26 refere-se à reclamação por vício, instituto diferente. Para lembrar: o Decreto 7.962/2013 (comércio eletrônico) obriga o fornecedor a informar de forma clara os meios para o exercício do arrependimento e a comunicar imediatamente a administradora do cartão para que a compra não seja lançada ou seja estornada.",
   "disciplina": "Consumidor",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-589297c5",
@@ -2441,7 +2526,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-c08f388c",
@@ -2462,7 +2548,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-8491f8dd",
@@ -2483,7 +2570,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-76c25db6",
@@ -2504,7 +2592,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-6a907c48",
@@ -2540,14 +2629,15 @@
    "pode ser deferido, mas atinge apenas os bens adquiridos pelos sócios depois da data da celebração dos contratos"
   ],
   "correta": 3,
-  "explicacao": "O CDC adota a chamada teoria menor da desconsideração: pelo art. 28, § 5º, a pessoa jurídica pode ser desconsiderada sempre que sua personalidade for, de alguma forma, obstáculo ao ressarcimento de prejuízos causados aos consumidores, sem exigir fraude ou abuso. A exigência de desvio de finalidade ou confusão patrimonial é da teoria maior, adotada pelo art. 50 do Código Civil para as relações civis e empresariais comuns. O pedido não depende de falência nem de ação autônoma: pode ser feito no próprio processo, pelo incidente de desconsideração dos arts. 133 a 137 do CPC. Não há limitação temporal aos bens dos sócios como a sugerida.",
+  "explicacao": "O CDC adota a chamada teoria menor da desconsideração: pelo art. 28, § 5º, a pessoa jurídica pode ser desconsiderada sempre que sua personalidade for, de alguma forma, obstáculo ao ressarcimento de prejuízos causados aos consumidores, sem exigir fraude ou abuso. A exigência de desvio de finalidade ou confusão patrimonial é da teoria maior, adotada pelo art. 50 do Código Civil para as relações civis e empresariais comuns. O pedido não depende de falência nem de ação autônoma: pode ser feito no próprio processo, pelo incidente de desconsideração dos arts. 133 a 137 do CPC. Não há limitação temporal aos bens dos sócios como a sugerida. Para lembrar: teoria MENOR = MENOS requisitos (basta o obstáculo ao ressarcimento: CDC, art. 28, § 5º, e Lei 9.605/1998, art. 4º); teoria MAIOR = MAIS requisitos (abuso por desvio de finalidade ou confusão patrimonial: CC, art. 50, com redação da Lei 13.874/2019).",
   "disciplina": "Consumidor",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-f4cf6325",
@@ -2583,14 +2673,15 @@
    "I, II e III"
   ],
   "correta": 2,
-  "explicacao": "Pelo art. 33 da Lei 7.357/1985, o cheque deve ser apresentado em 30 dias quando emitido no lugar onde deve ser pago, e em 60 dias quando emitido em outro lugar do país ou no exterior; emitido em Belém e pagável em Manaus, o prazo é de 60 dias (I correta). O art. 59 fixa em 6 meses, contados da expiração do prazo de apresentação, a prescrição da ação executiva (II correta). A III está errada: após a execução prescrita, cabe a ação de enriquecimento do art. 61 em 2 anos contados da consumação da prescrição, e a ação monitória (Súmula 299 do STJ) pode ser proposta em 5 anos, contados do dia seguinte à data de emissão estampada na cártula (Súmula 503 do STJ).",
+  "explicacao": "Pelo art. 33 da Lei 7.357/1985, o cheque deve ser apresentado em 30 dias quando emitido no lugar onde deve ser pago, e em 60 dias quando emitido em outro lugar do país ou no exterior; emitido em Belém e pagável em Manaus, o prazo é de 60 dias (I correta). O art. 59 fixa em 6 meses, contados da expiração do prazo de apresentação, a prescrição da ação executiva (II correta). A III está errada: após a execução prescrita, cabe a ação de enriquecimento do art. 61 em 2 anos contados da consumação da prescrição, e a ação monitória (Súmula 299 do STJ) pode ser proposta em 5 anos, contados do dia seguinte à data de emissão estampada na cártula (Súmula 503 do STJ). Para lembrar: a sequência de prazos do cheque é 30/60 dias (apresentação), 6 meses (execução), 2 anos (enriquecimento do art. 61) e 5 anos (monitória, Súmula 503 do STJ).",
   "disciplina": "Empresarial",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-b770a574",
@@ -2604,14 +2695,15 @@
    "o sacado seja notificado judicialmente para aceitar o título em 10 dias, sob pena de aceite presumido pelo juiz"
   ],
   "correta": 0,
-  "explicacao": "O art. 15, II, da Lei 5.474/1968 admite a execução de duplicata não aceita quando, cumulativamente, ela houver sido protestada, estiver acompanhada de documento hábil comprobatório da entrega e do recebimento da mercadoria e o sacado não tiver recusado o aceite nos prazos e pelas razões dos arts. 7º e 8º. O aceite expresso só é requisito para a execução sem protesto (art. 15, I). O protesto não é dispensável na duplicata sem aceite, a lei não restringe a execução a bancos endossatários e não existe notificação judicial para aceite presumido.",
+  "explicacao": "O art. 15, II, da Lei 5.474/1968 admite a execução de duplicata não aceita quando, cumulativamente, ela houver sido protestada, estiver acompanhada de documento hábil comprobatório da entrega e do recebimento da mercadoria e o sacado não tiver recusado o aceite nos prazos e pelas razões dos arts. 7º e 8º. O aceite expresso só é requisito para a execução sem protesto (art. 15, I). O protesto não é dispensável na duplicata sem aceite, a lei não restringe a execução a bancos endossatários e não existe notificação judicial para aceite presumido. Para lembrar: a duplicata é título genuinamente brasileiro, nascido do Código Comercial de 1850 (art. 219), e não tem equivalente exato nas legislações estrangeiras.",
   "disciplina": "Empresarial",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-ee0d8427",
@@ -2625,14 +2717,15 @@
    "apenas Gama, e o plano deve ser apresentado em 60 dias da publicação da decisão que deferir o processamento"
   ],
   "correta": 4,
-  "explicacao": "O art. 48 da Lei 11.101/2005 exige que o devedor exerça regularmente suas atividades há mais de 2 anos no momento do pedido e que, entre outros requisitos, não tenha obtido concessão de recuperação judicial há menos de 5 anos (inciso II) nem tenha administrador ou sócio controlador condenado por crime falimentar. Alfa, registrada em 5/3/2024, tem menos de 2 anos de atividade em 2/2/2026. Beta obteve concessão em agosto de 2022, há menos de 5 anos. Somente Gama preenche os requisitos. Deferido o processamento, o plano deve ser apresentado em 60 dias da publicação da decisão, sob pena de convolação em falência (art. 53). O prazo de 180 dias, prorrogável uma vez, refere-se à suspensão das execuções (stay period, art. 6º, § 4º), e não ao plano.",
+  "explicacao": "O art. 48 da Lei 11.101/2005 exige que o devedor exerça regularmente suas atividades há mais de 2 anos no momento do pedido e que, entre outros requisitos, não tenha obtido concessão de recuperação judicial há menos de 5 anos (inciso II) nem tenha administrador ou sócio controlador condenado por crime falimentar. Alfa, registrada em 5/3/2024, tem menos de 2 anos de atividade em 2/2/2026. Beta obteve concessão em agosto de 2022, há menos de 5 anos. Somente Gama preenche os requisitos. Deferido o processamento, o plano deve ser apresentado em 60 dias da publicação da decisão, sob pena de convolação em falência (art. 53). O prazo de 180 dias, prorrogável uma vez, refere-se à suspensão das execuções (stay period, art. 6º, § 4º), e não ao plano. Para lembrar: \"stay period\" é o prazo de 180 dias de suspensão das execuções (art. 6º, § 4º), prorrogável uma única vez desde a Lei 14.112/2020; já o plano tem prazo improrrogável de 60 dias (art. 53).",
   "disciplina": "Empresarial",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-94f8f997",
@@ -2675,7 +2768,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-315774e3",
@@ -2696,7 +2790,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-056bc552",
@@ -2717,7 +2812,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-bbeef8b1",
@@ -2731,14 +2827,15 @@
    "vedação ao retrocesso"
   ],
   "correta": 3,
-  "explicacao": "O princípio da precaução orienta a adoção de medidas protetivas mesmo diante de incerteza científica sobre o risco de dano grave ou irreversível (Princípio 15 da Declaração do Rio, de 1992). O princípio da prevenção, próximo, aplica-se quando o risco já é conhecido e comprovado cientificamente. A ubiquidade indica que a variável ambiental deve ser considerada em todas as políticas; a vedação ao retrocesso impede a redução injustificada de níveis de proteção já alcançados; e a função social da posse não se relaciona ao caso.",
+  "explicacao": "O princípio da precaução orienta a adoção de medidas protetivas mesmo diante de incerteza científica sobre o risco de dano grave ou irreversível (Princípio 15 da Declaração do Rio, de 1992). O princípio da prevenção, próximo, aplica-se quando o risco já é conhecido e comprovado cientificamente. A ubiquidade indica que a variável ambiental deve ser considerada em todas as políticas; a vedação ao retrocesso impede a redução injustificada de níveis de proteção já alcançados; e a função social da posse não se relaciona ao caso. Para lembrar: PRE-VENÇÃO = risco já conhecido (\"já VEjo o risco\"); PRE-CAUÇÃO = risco incerto, \"na dúvida, cautela\" (in dubio pro natura), consagrado no Princípio 15 da Rio-92.",
   "disciplina": "Ambiental",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-4e424083",
@@ -2752,14 +2849,15 @@
    "não é admitido, pois não se aplica a teoria do fato consumado em tema de direito ambiental"
   ],
   "correta": 4,
-  "explicacao": "A Súmula 613 do STJ dispõe que não se admite a aplicação da teoria do fato consumado em tema de direito ambiental. O tempo de ocupação irregular não gera direito adquirido de degradar, e a reparação do dano ambiental é imprescritível (Tema 999 do STF). A mera concessão de alvará municipal não convalida ocupação irregular de APP, a indenização não substitui automaticamente o dever de recompor, e o Código Florestal de 2012 disciplina hipóteses específicas de área consolidada em imóveis rurais, sem criar uma regra geral de estabilização pelo tempo.",
+  "explicacao": "A Súmula 613 do STJ dispõe que não se admite a aplicação da teoria do fato consumado em tema de direito ambiental. O tempo de ocupação irregular não gera direito adquirido de degradar, e a reparação do dano ambiental é imprescritível (Tema 999 do STF). A mera concessão de alvará municipal não convalida ocupação irregular de APP, a indenização não substitui automaticamente o dever de recompor, e o Código Florestal de 2012 disciplina hipóteses específicas de área consolidada em imóveis rurais, sem criar uma regra geral de estabilização pelo tempo. Para lembrar: guarde a dupla de súmulas ambientais do STJ — 613 (sem fato consumado em direito ambiental) e 623 (obrigação ambiental propter rem, cobrável do atual ou dos anteriores proprietários).",
   "disciplina": "Ambiental",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-ff819773",
@@ -2773,14 +2871,15 @@
    "20 metros, e o plantio exatamente nesse limite está autorizado"
   ],
   "correta": 1,
-  "explicacao": "O art. 4º, I, do Código Florestal fixa as faixas marginais de APP dos cursos d'água naturais perenes e intermitentes, medidas desde a borda da calha do leito regular: 30 metros para cursos com menos de 10 metros de largura; 50 metros para os de 10 a 50 metros; 100 metros para os de 50 a 200 metros; 200 metros para os de 200 a 600 metros; e 500 metros para os de largura superior a 600 metros. Com 35 metros de largura, o rio exige faixa de 50 metros. As faixas de 15 e de 20 metros não correspondem às hipóteses do art. 4º, I, e as de 30 e 100 metros aplicam-se a rios mais estreitos ou mais largos.",
+  "explicacao": "O art. 4º, I, do Código Florestal fixa as faixas marginais de APP dos cursos d'água naturais perenes e intermitentes, medidas desde a borda da calha do leito regular: 30 metros para cursos com menos de 10 metros de largura; 50 metros para os de 10 a 50 metros; 100 metros para os de 50 a 200 metros; 200 metros para os de 200 a 600 metros; e 500 metros para os de largura superior a 600 metros. Com 35 metros de largura, o rio exige faixa de 50 metros. As faixas de 15 e de 20 metros não correspondem às hipóteses do art. 4º, I, e as de 30 e 100 metros aplicam-se a rios mais estreitos ou mais largos. Para lembrar: a tabela do art. 4º, I, sobe em degraus 30-50-100-200-500 metros para rios de até 10, 10-50, 50-200, 200-600 e mais de 600 metros de largura.",
   "disciplina": "Ambiental",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-06c3288d",
@@ -2816,14 +2915,15 @@
    "2 de março de 2026"
   ],
   "correta": 1,
-  "explicacao": "O art. 8º, § 1º, da LC 95/1998 determina que a contagem do prazo de vacatio legis se faz com a inclusão da data da publicação e do último dia do prazo, entrando a lei em vigor no dia subsequente à sua consumação integral. Contando 15/1 como primeiro dia, o 30º dia é 13/2/2026; a lei entra em vigor no dia seguinte, 14/2/2026, mesmo sendo sábado, pois a vigência não se prorroga para dia útil. A data de 13/2 é o último dia da vacância, e não o de início da vigência; a de 15/2 resultaria da exclusão indevida do dia da publicação; e as de 1º/3 e 2/3 aplicariam o prazo supletivo de 45 dias do art. 1º da LINDB (com e sem inclusão do dia da publicação), afastado pela cláusula expressa de 30 dias.",
+  "explicacao": "O art. 8º, § 1º, da LC 95/1998 determina que a contagem do prazo de vacatio legis se faz com a inclusão da data da publicação e do último dia do prazo, entrando a lei em vigor no dia subsequente à sua consumação integral. Contando 15/1 como primeiro dia, o 30º dia é 13/2/2026; a lei entra em vigor no dia seguinte, 14/2/2026, mesmo sendo sábado, pois a vigência não se prorroga para dia útil. A data de 13/2 é o último dia da vacância, e não o de início da vigência; a de 15/2 resultaria da exclusão indevida do dia da publicação; e as de 1º/3 e 2/3 aplicariam o prazo supletivo de 45 dias do art. 1º da LINDB (com e sem inclusão do dia da publicação), afastado pela cláusula expressa de 30 dias. Para lembrar: na vacatio legis, conta-se o dia da publicação E o último dia, e a lei vige no dia seguinte — mesmo que caia em sábado, domingo ou feriado; o \"dia útil\" não entra nessa conta.",
   "disciplina": "Introdução ao Direito",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-1a78dabc",
@@ -2837,14 +2937,15 @@
    "prevalece a lei de 2010 somente se o permissionário tiver obtido a permissão antes de 2024, por força do direito adquirido"
   ],
   "correta": 0,
-  "explicacao": "O art. 2º, § 2º, da LINDB dispõe que a lei nova que estabeleça disposições gerais ou especiais a par das já existentes não revoga nem modifica a lei anterior. Aplicando o critério da especialidade, a lei especial de 2010 continua regendo o transporte escolar, e a lei geral de 2024 rege os demais serviços, pois não houve revogação expressa nem regulação inteira da matéria específica (art. 2º, § 1º). O critério cronológico não prevalece automaticamente sobre o da especialidade, as leis são do mesmo ente e da mesma hierarquia, não há lacuna que imponha a integração do art. 4º, e a solução não depende de direito adquirido.",
+  "explicacao": "O art. 2º, § 2º, da LINDB dispõe que a lei nova que estabeleça disposições gerais ou especiais a par das já existentes não revoga nem modifica a lei anterior. Aplicando o critério da especialidade, a lei especial de 2010 continua regendo o transporte escolar, e a lei geral de 2024 rege os demais serviços, pois não houve revogação expressa nem regulação inteira da matéria específica (art. 2º, § 1º). O critério cronológico não prevalece automaticamente sobre o da especialidade, as leis são do mesmo ente e da mesma hierarquia, não há lacuna que imponha a integração do art. 4º, e a solução não depende de direito adquirido. Para lembrar: os três critérios de Bobbio para antinomias são hierárquico, cronológico e da especialidade; entre o cronológico e o da especialidade, prevalece em regra a especialidade (lex posterior generalis non derogat priori speciali).",
   "disciplina": "Introdução ao Direito",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-f33e4e81",
@@ -2887,7 +2988,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-5b15a1d4",
@@ -2901,14 +3003,15 @@
    "não procede, pois o prazo decadencial do ISS não declarado é de dez anos, somando-se os prazos de homologação e de lançamento"
   ],
   "correta": 3,
-  "explicacao": "O art. 150, § 4º, do CTN (prazo de cinco anos contado do fato gerador) pressupõe que haja algo a homologar, isto é, pagamento antecipado ou declaração. Sem declaração nem pagamento, aplica-se o art. 173, I: o prazo de cinco anos conta-se do primeiro dia do exercício seguinte àquele em que o lançamento poderia ter sido efetuado. É o que dispõe a Súmula 555 do STJ, para os casos em que não há declaração do débito. Com fato gerador em 2020, o prazo começou em 1º/1/2021 e terminou em 31/12/2025; a notificação em 20/8/2025 foi, portanto, tempestiva. O CTN não prevê contagem a partir do vencimento nem do conhecimento pelo Fisco, e a tese dos \"cinco mais cinco\" (dez anos) foi abandonada pela jurisprudência.",
+  "explicacao": "O art. 150, § 4º, do CTN (prazo de cinco anos contado do fato gerador) pressupõe que haja algo a homologar, isto é, pagamento antecipado ou declaração. Sem declaração nem pagamento, aplica-se o art. 173, I: o prazo de cinco anos conta-se do primeiro dia do exercício seguinte àquele em que o lançamento poderia ter sido efetuado. É o que dispõe a Súmula 555 do STJ, para os casos em que não há declaração do débito. Com fato gerador em 2020, o prazo começou em 1º/1/2021 e terminou em 31/12/2025; a notificação em 20/8/2025 foi, portanto, tempestiva. O CTN não prevê contagem a partir do vencimento nem do conhecimento pelo Fisco, e a tese dos \"cinco mais cinco\" (dez anos) foi abandonada pela jurisprudência. Para lembrar: com pagamento antecipado (ainda que parcial) → art. 150, § 4º (5 anos do fato gerador); declarou e não pagou → o crédito já está constituído pela declaração (Súmula 436 do STJ) e só corre prescrição; sem nada a homologar → art. 173, I (5 anos a partir de 1º de janeiro do exercício seguinte); com dolo, fraude ou simulação → também art. 173, I.",
   "disciplina": "Tributário",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-7b5eaace",
@@ -2944,14 +3047,15 @@
    "não procede, pois o débito declarado e pago com atraso não gera denúncia espontânea"
   ],
   "correta": 4,
-  "explicacao": "O art. 138 do CTN exclui a responsabilidade pela infração quando o sujeito passivo, espontaneamente e antes de qualquer procedimento fiscal, denuncia a infração e paga o tributo com juros. Contudo, a Súmula 360 do STJ estabelece que o benefício da denúncia espontânea não se aplica aos tributos sujeitos a lançamento por homologação regularmente declarados, mas pagos a destempo: com a declaração, o crédito já estava constituído e conhecido do Fisco (Súmula 436 do STJ). Os juros de mora são sempre devidos, e a denúncia espontânea não se limita a tributos lançados de ofício.",
+  "explicacao": "O art. 138 do CTN exclui a responsabilidade pela infração quando o sujeito passivo, espontaneamente e antes de qualquer procedimento fiscal, denuncia a infração e paga o tributo com juros. Contudo, a Súmula 360 do STJ estabelece que o benefício da denúncia espontânea não se aplica aos tributos sujeitos a lançamento por homologação regularmente declarados, mas pagos a destempo: com a declaração, o crédito já estava constituído e conhecido do Fisco (Súmula 436 do STJ). Os juros de mora são sempre devidos, e a denúncia espontânea não se limita a tributos lançados de ofício. Para lembrar: declarou e pagou atrasado = \"confissão\", não \"denúncia\" — o Fisco já conhecia o débito (Súmula 360 do STJ); a denúncia espontânea serve ao que o Fisco ainda não sabe.",
   "disciplina": "Tributário",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-5731efa1",
@@ -2972,7 +3076,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-75be9682",
@@ -2986,14 +3091,15 @@
    "exigíveis a partir de 10 de março de 2024, pois só as parcelas dos dois últimos anos são devidas"
   ],
   "correta": 3,
-  "explicacao": "O art. 7º, XXIX, da CF (e o art. 11 da CLT) fixa prescrição de cinco anos para os créditos trabalhistas, até o limite de dois anos após a extinção do contrato. Gilberto ajuizou a ação em 10/3/2026, antes de 15/4/2026, respeitando o biênio. Pela Súmula 308, I, do TST, a prescrição quinquenal alcança as pretensões anteriores a cinco anos contados da data do ajuizamento, e não da extinção do contrato; por isso, só são exigíveis as parcelas a partir de 10/3/2021. O biênio não permite cobrar todo o contrato, e não há prazo de um ano nem limitação a dois anos de parcelas.",
+  "explicacao": "O art. 7º, XXIX, da CF (e o art. 11 da CLT) fixa prescrição de cinco anos para os créditos trabalhistas, até o limite de dois anos após a extinção do contrato. Gilberto ajuizou a ação em 10/3/2026, antes de 15/4/2026, respeitando o biênio. Pela Súmula 308, I, do TST, a prescrição quinquenal alcança as pretensões anteriores a cinco anos contados da data do ajuizamento, e não da extinção do contrato; por isso, só são exigíveis as parcelas a partir de 10/3/2021. O biênio não permite cobrar todo o contrato, e não há prazo de um ano nem limitação a dois anos de parcelas. Para lembrar: \"2 para entrar, 5 para trás\" — até 2 anos após o fim do contrato para ajuizar, e a condenação alcança os 5 anos anteriores ao ajuizamento.",
   "disciplina": "Trabalho",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-f004be74",
@@ -3007,14 +3113,15 @@
    "40% do salário, depositados na rescisão do contrato"
   ],
   "correta": 0,
-  "explicacao": "O art. 15 da Lei 8.036/1990 obriga o empregador a depositar, até o dia 20 de cada mês, 8% da remuneração paga ou devida no mês anterior a cada trabalhador, incluídas parcelas como horas extras e gratificação natalina. O percentual de 2% vale para o contrato de aprendizagem (art. 15, § 7º). O índice de 11% não se refere ao FGTS, e os 40% correspondem à indenização compensatória devida na dispensa sem justa causa (art. 18, § 1º), calculada sobre os depósitos, e não a um depósito mensal.",
+  "explicacao": "O art. 15 da Lei 8.036/1990 obriga o empregador a depositar, até o dia 20 de cada mês, 8% da remuneração paga ou devida no mês anterior a cada trabalhador, incluídas parcelas como horas extras e gratificação natalina. O percentual de 2% vale para o contrato de aprendizagem (art. 15, § 7º). O índice de 11% não se refere ao FGTS, e os 40% correspondem à indenização compensatória devida na dispensa sem justa causa (art. 18, § 1º), calculada sobre os depósitos, e não a um depósito mensal. Para lembrar: para o empregado doméstico, a LC 150/2015 somou aos 8% de FGTS mais 3,2% mensais, depositados como antecipação da indenização rescisória.",
   "disciplina": "Trabalho",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-47d27606",
@@ -3028,14 +3135,15 @@
    "90 dias, e a data de saída na CTPS deve ser 18 de outubro de 2026"
   ],
   "correta": 0,
-  "explicacao": "A Lei 12.506/2011 fixa aviso prévio de 30 dias para empregados com até um ano de serviço, acrescido de 3 dias por ano de serviço prestado na mesma empresa, até o máximo de 60 dias de acréscimo (total de 90). Em 20/7/2026, Heitor contava 7 anos completos (o 8º ano só se completaria em 3/2/2027, mesmo com a projeção do aviso): 30 + 7 × 3 = 51 dias. O aviso indenizado integra o tempo de serviço (art. 487, § 1º, da CLT), e a OJ 82 da SDI-1 do TST determina que a data de saída anotada na CTPS corresponda à do término do aviso prévio, ainda que indenizado. Excluindo-se o dia da comunicação e incluindo-se o do vencimento (Súmula 380 do TST), 51 dias a partir de 20/7 terminam em 9/9/2026. Os 54 dias pressupõem um 8º ano ainda não completo, e os 90 dias, o teto legal, só se atingem com 20 anos de serviço.",
+  "explicacao": "A Lei 12.506/2011 fixa aviso prévio de 30 dias para empregados com até um ano de serviço, acrescido de 3 dias por ano de serviço prestado na mesma empresa, até o máximo de 60 dias de acréscimo (total de 90). Em 20/7/2026, Heitor contava 7 anos completos (o 8º ano só se completaria em 3/2/2027, mesmo com a projeção do aviso): 30 + 7 × 3 = 51 dias. O aviso indenizado integra o tempo de serviço (art. 487, § 1º, da CLT), e a OJ 82 da SDI-1 do TST determina que a data de saída anotada na CTPS corresponda à do término do aviso prévio, ainda que indenizado. Excluindo-se o dia da comunicação e incluindo-se o do vencimento (Súmula 380 do TST), 51 dias a partir de 20/7 terminam em 9/9/2026. Os 54 dias pressupõem um 8º ano ainda não completo, e os 90 dias, o teto legal, só se atingem com 20 anos de serviço. Para lembrar: o aviso prévio proporcional estava previsto no art. 7º, XXI, da CF desde 1988, mas só foi regulamentado 23 anos depois, pela Lei 12.506/2011 — após o STF começar a julgar mandados de injunção sobre o tema.",
   "disciplina": "Trabalho",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-1d8bf6a8",
@@ -3056,7 +3164,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-47213fd3",
@@ -3077,7 +3186,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-76e1b662",
@@ -3091,14 +3201,15 @@
    "não é cabível, pois Rafael foi beneficiado com transação penal nos cinco anos anteriores"
   ],
   "correta": 4,
-  "explicacao": "O art. 28-A do CPP admite o acordo de não persecução penal quando, não sendo caso de arquivamento, o investigado confessa formal e circunstancialmente infração penal sem violência ou grave ameaça, com pena mínima inferior a 4 anos — requisitos que Rafael preenche. Contudo, o § 2º, III, veda o acordo se o agente foi beneficiado, nos cinco anos anteriores ao cometimento da infração, com acordo de não persecução, transação penal ou suspensão condicional do processo. A pena máxima não é critério do instituto, e a exigência de representação no estelionato não impede o acordo.",
+  "explicacao": "O art. 28-A do CPP admite o acordo de não persecução penal quando, não sendo caso de arquivamento, o investigado confessa formal e circunstancialmente infração penal sem violência ou grave ameaça, com pena mínima inferior a 4 anos — requisitos que Rafael preenche. Contudo, o § 2º, III, veda o acordo se o agente foi beneficiado, nos cinco anos anteriores ao cometimento da infração, com acordo de não persecução, transação penal ou suspensão condicional do processo. A pena máxima não é critério do instituto, e a exigência de representação no estelionato não impede o acordo. Para lembrar: o ANPP nasceu na Resolução 181/2017 do CNMP e só ganhou base legal com o Pacote Anticrime (Lei 13.964/2019), que criou o art. 28-A do CPP.",
   "disciplina": "Processo Penal",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-fc512311",
@@ -3119,7 +3230,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-8e806ca7",
@@ -3162,7 +3274,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-fffa679a",
@@ -3198,14 +3311,15 @@
    "a delegação à CTCV é constitucional apenas quanto à fiscalização, pois a aplicação de multas é sempre indelegável a pessoa de direito privado"
   ],
   "correta": 0,
-  "explicacao": "No Tema 532 da repercussão geral (RE 633.782), o STF fixou ser constitucional a delegação do poder de polícia, por meio de lei, a pessoas jurídicas de direito privado integrantes da Administração Pública indireta de capital social majoritariamente público que prestem exclusivamente serviço público de atuação própria do Estado e em regime não concorrencial. A CTCV preenche todos esses requisitos, e o STF admitiu, nesses casos, a delegação das fases de consentimento, fiscalização e sanção, ficando indelegável apenas a ordem de polícia (a edição das normas). Já a Estaciona Fácil é particular, de capital privado, atuante em regime concorrencial e fora da Administração indireta, de modo que não pode receber o poder de aplicar multas.",
+  "explicacao": "No Tema 532 da repercussão geral (RE 633.782), o STF fixou ser constitucional a delegação do poder de polícia, por meio de lei, a pessoas jurídicas de direito privado integrantes da Administração Pública indireta de capital social majoritariamente público que prestem exclusivamente serviço público de atuação própria do Estado e em regime não concorrencial. A CTCV preenche todos esses requisitos, e o STF admitiu, nesses casos, a delegação das fases de consentimento, fiscalização e sanção, ficando indelegável apenas a ordem de polícia (a edição das normas). Já a Estaciona Fácil é particular, de capital privado, atuante em regime concorrencial e fora da Administração indireta, de modo que não pode receber o poder de aplicar multas. Para lembrar: o ciclo de polícia tem quatro fases — ordem, consentimento, fiscalização e sanção; pelo Tema 532 do STF, só a ordem de polícia (legislar) é indelegável à estatal de direito privado.",
   "disciplina": "Administrativo",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-ee8e06b1",
@@ -3248,7 +3362,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-f18bc0fb",
@@ -3262,14 +3377,15 @@
    "10 de fevereiro de 2026"
   ],
   "correta": 2,
-  "explicacao": "A apelação deve ser interposta em 15 dias (art. 1.003, § 5º, do CPC), contados apenas em dias úteis (art. 219), excluindo-se o dia do começo e incluindo-se o do vencimento (art. 224). O art. 220 suspende o curso dos prazos processuais entre 20 de dezembro e 20 de janeiro, inclusive. O prazo começa em 16/12/2025 e corre nos dias úteis 16, 17, 18 e 19/12 (4 dias); suspenso, retoma em 21/1/2026 pelo que faltava, e não do zero: 21 a 23/1 (7 dias), 26 a 30/1 (12 dias) e 2, 3 e 4/2 (15 dias). Termina, assim, em 4/2/2026. O dia 30/12/2025 resultaria da contagem em dias corridos sem suspensão; 20/1 é o último dia de suspensão; 5/2 resultaria de iniciar a contagem no dia 17/12; e 10/2, de reiniciar os 15 dias após o recesso, como se fosse interrupção.",
+  "explicacao": "A apelação deve ser interposta em 15 dias (art. 1.003, § 5º, do CPC), contados apenas em dias úteis (art. 219), excluindo-se o dia do começo e incluindo-se o do vencimento (art. 224). O art. 220 suspende o curso dos prazos processuais entre 20 de dezembro e 20 de janeiro, inclusive. O prazo começa em 16/12/2025 e corre nos dias úteis 16, 17, 18 e 19/12 (4 dias); suspenso, retoma em 21/1/2026 pelo que faltava, e não do zero: 21 a 23/1 (7 dias), 26 a 30/1 (12 dias) e 2, 3 e 4/2 (15 dias). Termina, assim, em 4/2/2026. O dia 30/12/2025 resultaria da contagem em dias corridos sem suspensão; 20/1 é o último dia de suspensão; 5/2 resultaria de iniciar a contagem no dia 17/12; e 10/2, de reiniciar os 15 dias após o recesso, como se fosse interrupção. Para lembrar: o \"recesso\" do art. 220 vai de 20/12 a 20/1, inclusive, e SUSPENDE (retoma-se o saldo); nesse período, o art. 220, § 2º, também veda audiências e sessões de julgamento.",
   "disciplina": "Processo Civil",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-7880c0b9",
@@ -3305,14 +3421,15 @@
    "8 anos"
   ],
   "correta": 0,
-  "explicacao": "Após o trânsito em julgado para a acusação, a prescrição regula-se pela pena aplicada (art. 110, § 1º, do CP). Pena de 1 ano e 6 meses, igual ou superior a 1 ano e não excedente a 2, prescreve em 4 anos (art. 109, V). Como Davi era menor de 21 anos ao tempo do crime, o art. 115 reduz o prazo pela metade: 2 anos. O prazo de 4 anos ignora essa redução; o de 3 anos corresponde a penas inferiores a 1 ano (art. 109, VI); e o de 8 anos, a penas superiores a 2 e até 4 anos. O prazo não coincide com a pena aplicada.",
+  "explicacao": "Após o trânsito em julgado para a acusação, a prescrição regula-se pela pena aplicada (art. 110, § 1º, do CP). Pena de 1 ano e 6 meses, igual ou superior a 1 ano e não excedente a 2, prescreve em 4 anos (art. 109, V). Como Davi era menor de 21 anos ao tempo do crime, o art. 115 reduz o prazo pela metade: 2 anos. O prazo de 4 anos ignora essa redução; o de 3 anos corresponde a penas inferiores a 1 ano (art. 109, VI); e o de 8 anos, a penas superiores a 2 e até 4 anos. O prazo não coincide com a pena aplicada. Para lembrar: o art. 115 do CP reduz a prescrição à metade nos \"extremos da idade\" — menor de 21 na data do fato ou maior de 70 na data da sentença.",
   "disciplina": "Penal",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-f9bf04b1",
@@ -3326,13 +3443,14 @@
    "só pode ser proposta pelo Procurador-Geral da República"
   ],
   "correta": 2,
-  "explicacao": "O art. 103-A, § 3º, da CF prevê reclamação ao STF contra ato administrativo ou decisão judicial que contrarie súmula vinculante ou a aplique indevidamente; julgada procedente, o STF anula o ato ou cassa a decisão. Contudo, o art. 7º, § 1º, da Lei 11.417/2006 dispõe que, contra omissão ou ato da Administração Pública, o uso da reclamação só será admitido após o esgotamento das vias administrativas. A reclamação é julgada pelo STF, e não pelo TJ, e pode ser proposta pelo interessado prejudicado, sem exclusividade do PGR.",
+  "explicacao": "O art. 103-A, § 3º, da CF prevê reclamação ao STF contra ato administrativo ou decisão judicial que contrarie súmula vinculante ou a aplique indevidamente; julgada procedente, o STF anula o ato ou cassa a decisão. Contudo, o art. 7º, § 1º, da Lei 11.417/2006 dispõe que, contra omissão ou ato da Administração Pública, o uso da reclamação só será admitido após o esgotamento das vias administrativas. A reclamação é julgada pelo STF, e não pelo TJ, e pode ser proposta pelo interessado prejudicado, sem exclusividade do PGR. Para lembrar: a súmula vinculante foi criada pela EC 45/2004 (Reforma do Judiciário), e a primeira delas, de 2007, tratou dos acordos do FGTS da LC 110/2001.",
   "disciplina": "Constitucional",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  }
 ]
