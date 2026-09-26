@@ -21,7 +21,8 @@ rota("/estudar/atlas", () => {
   const lista = Object.entries(IMAGENS);
   return { secao: "estudar", crumbs: [["Estudar", "#/estudar"]], titulo: "Atlas de ECG",
     sub: "Olhe o traçado, tente dar o diagnóstico e só depois toque em “Ver interpretação”. Traçados didáticos simulados, no papel padrão (25 mm/s, 10 mm/mV).",
-    html: lista.length ? lista.map(([id, im]) => { const qs = questoes().filter(q => q.img === id);
+    html: lista.length ? (() => { const todas = questoes().filter(q => q.img && doObjetivo(q)).map(q => q.id);
+      return todas.length ? `<p><button class="btn" data-act="praticar-ids" data-ids="${todas.join(",")}" data-ctx="ECG: todos os traçados">Praticar as ${todas.length} questões com traçado</button></p>` : ""; })() + lista.map(([id, im]) => { const qs = questoes().filter(q => q.img === id);
       return `<section class="caixa"><div class="fig-img">${im.svg}</div>
         <div class="linha entre" style="margin-top:8px"><button class="btn sec" data-act="atlas-ver" data-img="${esc(id)}">${ATLAS.aberta[id] ? "Esconder" : "Ver interpretação"}</button>
         <span class="linha">${qs.length ? `<button class="btn mini" data-act="praticar-ids" data-ids="${qs.map(q => q.id).join(",")}" data-ctx="ECG: ${esc(im.titulo)}">Praticar ${qs.length}</button>` : ""}<button type="button" class="btn mini sec" data-act="img-ampliar" data-img="${esc(id)}">Ampliar</button></span></div>
