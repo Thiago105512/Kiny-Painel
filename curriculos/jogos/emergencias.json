@@ -363,9 +363,9 @@
     },
     "acoes": [
      {
-      "txt": "Fibrinólise (tenecteplase) em até 30 min",
+      "txt": "Tenecteplase + enoxaparina em até 30 min",
       "vai": "e4",
-      "nota": "Certo. Se a angioplastia demora >120 min, fibrinólise é a escolha.",
+      "nota": "Certo. Se a angioplastia demora >120 min, fibrinólise (com anticoagulante) em até 30 min.",
       "pontos": 10
      },
      {
@@ -461,7 +461,7 @@
    "ECG em até 10 min na dor torácica; não espere troponina se há supra de ST.",
    "Angioplastia primária se porta-balão ≤120 min; senão, fibrinólise em até 30 min.",
    "Após fibrinólise: cateterismo em 2–24 h, ou imediato se falhar (resgate).",
-   "O2 só se SatO2 <90%. AAS + inibidor P2Y12 o quanto antes."
+   "O2 só se SatO2 <90%. AAS + inibidor P2Y12 (clopidogrel se fibrinólise) o quanto antes."
   ],
   "referencia": "Diretriz SBC IAM com supra de ST / AHA-ACC 2025 SCA"
  },
@@ -894,7 +894,7 @@
      {
       "txt": "Bicarbonato IV para corrigir o pH",
       "vai": "e1b",
-      "nota": "Inadequado. Só se pH <6,9; e empurra o potássio para dentro da célula.",
+      "nota": "Inadequado. Só se pH <7,0; e empurra o potássio para dentro da célula.",
       "pontos": -5
      }
     ]
@@ -910,9 +910,9 @@
     },
     "acoes": [
      {
-      "txt": "Suspender insulina, repor KCl IV e hidratar",
+      "txt": "Pausar insulina/bicarbonato, repor KCl IV e hidratar",
       "vai": "e3",
-      "nota": "Recuperou. K+ baixo é perigoso: repor antes de continuar a insulina.",
+      "nota": "Recuperou. K+ baixo é perigoso: repor até K+ ≥3,5 antes da insulina.",
       "pontos": 5
      },
      {
@@ -1035,13 +1035,13 @@
    }
   },
   "debriefing": [
-   "Hidratação com SF 0,9% é a 1ª medida.",
+   "Hidratação com cristaloide (SF 0,9% ou balanceado) é a 1ª medida.",
    "Potássio antes da insulina: se K+ <3,5, repor e adiar a insulina.",
-   "Insulina regular IV 0,1 U/kg/h; com glicemia ~250, associar soro glicosado.",
-   "Bicarbonato só se pH <6,9.",
-   "Resolução: pH >7,3, bicarbonato ≥15 ou ânion gap normal; sobrepor SC por 1–2 h."
+   "Insulina regular IV 0,1 U/kg/h; com glicemia <250, associar soro glicosado.",
+   "Bicarbonato só se pH <7,0.",
+   "Resolução: cetonemia <0,6 mmol/L e pH ≥7,3 ou bicarbonato ≥18; sobrepor SC por 1–2 h."
   ],
-  "referencia": "ADA 2024 Hyperglycemic Crises / SBD 2025"
+  "referencia": "Consenso ADA/EASD/JBDS/AACE/DTS 2024 – Crises hiperglicêmicas / SBD 2025"
  },
  {
   "id": "em-06",
@@ -1417,7 +1417,7 @@
    "O tratamento definitivo é a drenagem torácica em selo d'água.",
    "Ventilação com pressão positiva piora o hipertensivo não drenado."
   ],
-  "referencia": "ATLS 10ª edição"
+  "referencia": "ATLS 11ª edição (ACS, 2025)"
  },
  {
   "id": "em-08",
@@ -1429,7 +1429,7 @@
   "inicio": "e1",
   "etapas": {
    "e1": {
-    "texto": "Afasia, hemiparesia direita. NIHSS 10. Pulso irregular. Último momento bem: 13h30.",
+    "texto": "Afasia, hemiparesia direita. NIHSS 10. Pulso irregular. Não usa anticoagulante. Último momento bem: 13h30.",
     "vitais": {
      "FC": 92,
      "PA": "196x108",
@@ -1459,7 +1459,7 @@
      {
       "txt": "Aguardar coagulograma antes da TC",
       "vai": "e1b",
-      "nota": "Inadequado. Sem anticoagulante em uso, não se espera exame.",
+      "nota": "Inadequado. Sem anticoagulante ou suspeita de coagulopatia, a trombólise não espera o coagulograma.",
       "pontos": -5
      }
     ]
@@ -1525,7 +1525,7 @@
     ]
    },
    "e3": {
-    "texto": "PA 176x98 após anti-hipertensivo IV. São 2h45 do início dos sintomas.",
+    "texto": "PA 176x98 após anti-hipertensivo IV. Cerca de 2h30 desde o último momento bem.",
     "vitais": {
      "FC": 90,
      "PA": "176x98",
@@ -1555,7 +1555,7 @@
     ]
    },
    "e3b": {
-    "texto": "A ressonância atrasou 1 hora. Já são 3h50 do início.",
+    "texto": "A ressonância atrasou mais de 1 hora. Já são quase 4 h do último momento bem.",
     "vitais": {
      "FC": 92,
      "PA": "178x100",
@@ -1573,7 +1573,7 @@
      {
       "txt": "Esperar laudo formal da ressonância",
       "vai": "f-parcial",
-      "nota": "Inadequado. A janela de 4,5 h se fecha.",
+      "nota": "Perigoso. A janela de 4,5 h se fecha.",
       "pontos": -10
      },
      {
@@ -1631,8 +1631,8 @@
   },
   "debriefing": [
    "Glicemia e TC sem contraste imediatas; o horário que vale é o último momento bem.",
-   "Trombólise IV até 4,5 h com PA <185x110 antes e <180x105 nas 24 h seguintes.",
-   "Oclusão de grande vaso: trombectomia mecânica, mesmo após trombólise.",
+   "Trombólise IV (alteplase ou tenecteplase) até 4,5 h com PA <185x110 antes e <180x105 nas 24 h seguintes.",
+   "Oclusão de grande vaso: trombectomia, mesmo após trombólise; até 24 h com seleção por imagem.",
    "Sem antitrombóticos nas 24 h após trombólise. Não baixar PA com nifedipino SL."
   ],
   "referencia": "AHA/ASA AVC isquêmico agudo 2026 / SBDCV / Linha de cuidado AVC – MS"
@@ -1688,7 +1688,7 @@
     "acoes": [
      {
       "txt": "Massagem, ocitocina, ácido tranexâmico e sangue",
-      "vai": "e2b",
+      "vai": "e3",
       "nota": "Recuperou. Tudo ao mesmo tempo, com protocolo de transfusão.",
       "pontos": 5
      },
@@ -1719,7 +1719,7 @@
      {
       "txt": "Ácido tranexâmico 1 g IV em 10 minutos",
       "vai": "e3",
-      "nota": "Certo. Até 3 h do parto, reduz morte por sangramento.",
+      "nota": "Certo. Até 3 h do parto (quanto antes, melhor), reduz morte por sangramento.",
       "pontos": 10
      },
      {
@@ -1843,12 +1843,12 @@
   },
   "debriefing": [
    "Causas: 4 Ts – tônus (atonia, a mais comum), trauma, tecido e trombina.",
-   "Atonia: massagem uterina bimanual e ocitocina IV imediatas.",
-   "Ácido tranexâmico 1 g IV em 10 min nas primeiras 3 h; pode repetir.",
+   "Pacote de 1ª resposta (OMS/E-MOTIVE): massagem uterina, ocitocina IV, tranexâmico, cristaloide, exame e escalonamento.",
+   "Ácido tranexâmico 1 g IV em 10 min nas primeiras 3 h; repetir se sangrar após 30 min.",
    "Índice de choque (FC/PAS) ≥1 sinaliza perda grave: pense em transfusão.",
    "2ª linha: metilergometrina (evitar se hipertensa), misoprostol, balão."
   ],
-  "referencia": "OMS 2023 HPP / MS – Estratégia Zero Morte Materna por Hemorragia (OPAS)"
+  "referencia": "OMS 2023 HPP / FEBRASGO / OPAS-MS – Estratégia Zero Morte Materna por Hemorragia"
  },
  {
   "id": "em-10",
@@ -1872,7 +1872,7 @@
      {
       "txt": "Retirar o garrote, hidratar e soro antibotrópico IV",
       "vai": "e2",
-      "nota": "Certo. O soro específico IV é o tratamento; garrote piora a lesão.",
+      "nota": "Certo. Soro específico IV (moderado: 4–8 ampolas) o quanto antes; garrote piora a lesão.",
       "pontos": 10
      },
      {
@@ -1908,7 +1908,7 @@
      {
       "txt": "Tirar o garrote, soro antibotrópico IV e hidratar",
       "vai": "e2",
-      "nota": "Recuperou. Ainda há tempo de neutralizar o veneno circulante.",
+      "nota": "Recuperou. Oligúria e urina escura: agora é grave (12 ampolas). Ainda dá para neutralizar o veneno.",
       "pontos": 5
      },
      {
@@ -1996,9 +1996,9 @@
     },
     "acoes": [
      {
-      "txt": "Hidratar, elevar o membro, analgesia e TC em 24 h",
+      "txt": "Hidratar, elevar o membro, analgesia e repetir o TC em 24 h",
       "vai": "f-bom",
-      "nota": "Certo. Diurese adequada protege o rim; TC mostra a resposta ao soro.",
+      "nota": "Certo. Diurese adequada protege o rim; o tempo de coagulação mostra a resposta ao soro.",
       "pontos": 10
      },
      {
@@ -2032,11 +2032,11 @@
   },
   "debriefing": [
    "Não usar garrote, não cortar nem sugar. Elevar o membro e hidratar.",
-   "Soro antibotrópico IV conforme gravidade: leve 3, moderado 6, grave 12 ampolas (MS).",
-   "Tempo de coagulação guia o diagnóstico e o controle (repetir em 24 h).",
+   "Soro antibotrópico IV conforme gravidade: leve 2–4, moderado 4–8, grave 12 ampolas (MS).",
+   "Tempo de coagulação (TC) guia o diagnóstico e o controle: repetir 24 h após o soro.",
    "Reação ao soro: pausar, tratar e completar a dose. Pré-medicação não é rotina."
   ],
-  "referencia": "MS – Guia de Vigilância em Saúde / Manual de acidentes por animais peçonhentos"
+  "referencia": "MS – Guia de Vigilância em Saúde (6ª ed., 2024) / Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos"
  },
  {
   "id": "em-11",
@@ -2220,11 +2220,11 @@
   },
   "debriefing": [
    "Defervescência (dias 3–7) é a fase crítica: atenção aos sinais de alarme.",
-   "Choque (grupo D): SF 0,9% 20 mL/kg em 20 min, até 3 vezes, com reavaliação.",
+   "Choque (grupo D): cristaloide 20 mL/kg em 20 min, até 3 vezes; melhorou, segue como grupo C; sem resposta, UTI e albumina.",
    "Hematócrito subindo = extravasamento; caindo com choque = pense em sangramento.",
    "Plaquetas não se transfundem por número. Nada de AAS ou AINE."
   ],
-  "referencia": "MS – Dengue: diagnóstico e manejo clínico, 2024"
+  "referencia": "MS – Dengue: diagnóstico e manejo clínico, adulto e criança, 6ª ed., 2024"
  },
  {
   "id": "em-12",
@@ -2254,8 +2254,8 @@
      {
       "txt": "Resina de troca oral e aguardar",
       "vai": "e1b",
-      "nota": "Inadequado. Age em horas; o ECG exige ação imediata.",
-      "pontos": -5
+      "nota": "Perigoso. Age em horas; QRS largo com bradicardia exige cálcio IV imediato.",
+      "pontos": -10
      },
      {
       "txt": "Repetir o potássio para confirmar",
@@ -2401,11 +2401,11 @@
    }
   },
   "debriefing": [
-   "Hipercalemia com ECG alterado: cálcio IV primeiro, repetir se o ECG não melhora.",
-   "Deslocar K+ para a célula: insulina regular 10 U IV com glicose e salbutamol.",
-   "Remover K+: hemodiálise (dialítico), diurético ou resinas.",
+   "Hipercalemia com ECG alterado: gluconato de cálcio 10% 30 mL IV primeiro; repetir se o ECG não melhora.",
+   "Deslocar K+ para a célula: insulina regular 10 U IV com 25 g de glicose, e salbutamol nebulizado.",
+   "Remover K+: hemodiálise (dialítico), diurético ou quelantes (ciclossilicato de zircônio, patirômer, resinas).",
    "Vigie a glicemia após insulina: risco de hipoglicemia."
   ],
-  "referencia": "KDIGO / AHA 2025 – situações especiais do ACLS"
+  "referencia": "UK Kidney Association 2023 / KDIGO / AHA 2025 – situações especiais do ACLS"
  }
 ]

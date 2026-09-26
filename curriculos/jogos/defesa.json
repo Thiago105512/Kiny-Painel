@@ -68,9 +68,15 @@
   },
   {
    "id": "vancomicina",
-   "nome": "Vancomicina",
+   "nome": "Vancomicina IV",
    "classe": "Glicopeptídeo",
    "cor": "#AD1457"
+  },
+  {
+   "id": "vancomicina-oral",
+   "nome": "Vancomicina oral",
+   "classe": "Glicopeptídeo (ação intraluminal)",
+   "cor": "#F06292"
   },
   {
    "id": "metronidazol",
@@ -332,10 +338,10 @@
    "fase": 1,
    "tipo": "bacteria",
    "nome": "Hanseníase multibacilar",
-   "detalhe": "Múltiplas placas hipoestésicas e espessamento do nervo ulnar",
+   "detalhe": "Mais de 5 placas hipoestésicas e espessamento do nervo ulnar",
    "certa": "pqt-u",
    "aceitaveis": [],
-   "porque": "Mais de 5 lesões ou nervo acometido: PQT-U (rifampicina, dapsona, clofazimina) por 12 doses mensais supervisionadas.",
+   "porque": "Mais de 5 lesões (ou baciloscopia positiva) = multibacilar: PQT-U (rifampicina, dapsona, clofazimina) por 12 doses mensais supervisionadas.",
    "armadilha": "Esquema RIPE: é para tuberculose; hanseníase usa PQT-U."
   },
   {
@@ -365,10 +371,10 @@
    "fase": 1,
    "tipo": "bacteria",
    "nome": "Otite média aguda",
-   "detalhe": "Criança de 2 anos, otalgia, febre, tímpano abaulado; sem antibiótico recente",
+   "detalhe": "Criança de 18 meses, febre 39 °C, otalgia, tímpanos abaulados bilaterais; sem ATB recente",
    "certa": "amoxicilina",
    "aceitaveis": [],
-   "porque": "Amoxicilina em dose alta (80 a 90 mg/kg/dia) é 1ª escolha: cobre bem pneumococo, principal agente.",
+   "porque": "< 2 anos com OMA bilateral: tratar (sem observação). Amoxicilina (dose alta, 80-90 mg/kg/dia) é 1ª escolha: cobre o pneumococo.",
    "armadilha": "Amoxicilina-clavulanato: reservar para falha, ATB nos últimos 30 dias ou otite com conjuntivite."
   },
   {
@@ -380,7 +386,7 @@
    "certa": "ceftriaxona",
    "aceitaveis": [],
    "porque": "Empírico no adulto imunocompetente: ceftriaxona 2 g 12/12 h (+ dexametasona). Não atrasar o ATB por exames.",
-   "armadilha": "Vancomicina: associar só se suspeita de pneumococo resistente; sozinha não cobre meningococo."
+   "armadilha": "Vancomicina IV: sozinha não cobre meningococo nem hemófilo; se usada (pneumococo resistente), vai junto da ceftriaxona."
   },
   {
    "id": "inv-018",
@@ -435,11 +441,11 @@
    "tipo": "fungo",
    "nome": "Candidíase vulvovaginal",
    "detalhe": "Corrimento branco grumoso, prurido intenso, pH vaginal < 4,5",
-   "certa": "fluconazol",
+   "certa": "nistatina",
    "aceitaveis": [
-    "nistatina"
+    "fluconazol"
    ],
-   "porque": "Fluconazol 150 mg VO dose única ou azólico/nistatina creme vaginal por 7 a 14 dias; ambos 1ª linha no PCDT IST.",
+   "porque": "PCDT IST: 1ª opção creme vaginal (miconazol 7 dias ou nistatina 14 dias); fluconazol 150 mg VO dose única é a alternativa oral.",
    "armadilha": "Metronidazol: trata vaginose e tricomoníase; pode até precipitar candidíase."
   },
   {
@@ -461,10 +467,11 @@
    "detalhe": "Placa quente e eritematosa na perna, sem abscesso, sem sinais sistêmicos",
    "certa": "cefalexina",
    "aceitaveis": [
-    "amoxicilina-clavulanato"
+    "amoxicilina-clavulanato",
+    "amoxicilina"
    ],
    "porque": "Celulite leve: tratamento oral contra estreptococo e S. aureus sensível. Cefalexina 500 mg 6/6 h por 5 a 7 dias.",
-   "armadilha": "Vancomicina: celulite leve sem risco de MRSA não precisa de ATB venoso."
+   "armadilha": "Vancomicina IV: celulite leve sem risco de MRSA não precisa de ATB venoso."
   },
   {
    "id": "inv-025",
@@ -496,7 +503,7 @@
    "detalhe": "Úlcera indolor, adulto hígido do Pará; PCR: L. (V.) braziliensis",
    "certa": "antimoniato-meglumina",
    "aceitaveis": [],
-   "porque": "L. braziliensis: antimoniato de meglumina 10 a 20 mg Sb/kg/dia por 20 dias segue como 1ª escolha fora de contraindicações.",
+   "porque": "L. braziliensis: antimoniato de meglumina 15 mg Sb/kg/dia (10-20) por 20 dias segue 1ª escolha do MS; miltefosina VO é a opção oral no SUS.",
    "armadilha": "Pentamidina: preferida para L. guyanensis; contra L. braziliensis a resposta é inferior."
   },
   {
@@ -619,10 +626,10 @@
    "tipo": "bacteria",
    "nome": "Colite por C. difficile",
    "detalhe": "Diarreia após clindamicina, toxina A/B positiva, leucócitos 18 mil",
-   "certa": "vancomicina",
+   "certa": "vancomicina-oral",
    "aceitaveis": [],
-   "porque": "Vancomicina ORAL 125 mg 6/6 h por 10 dias é 1ª linha; suspender o antibiótico causador se possível.",
-   "armadilha": "Metronidazol: inferior à vancomicina oral, sobretudo em forma grave."
+   "porque": "Vancomicina VO 125 mg 6/6 h por 10 dias (ou fidaxomicina) é 1ª linha; suspender o antibiótico causador se possível.",
+   "armadilha": "Vancomicina IV não chega à luz do cólon. Metronidazol: inferior à vancomicina oral, sobretudo na forma grave."
   },
   {
    "id": "inv-039",
@@ -784,7 +791,7 @@
    "certa": "oxacilina",
    "aceitaveis": [],
    "porque": "Para MSSA, betalactâmico antiestafilocócico (oxacilina) é superior à vancomicina: descalonar assim que sair o antibiograma.",
-   "armadilha": "Vancomicina: manter é pior para MSSA (mais falha e mortalidade)."
+   "armadilha": "Vancomicina IV: manter é pior para MSSA (mais falha e mortalidade)."
   },
   {
    "id": "inv-053",

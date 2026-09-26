@@ -168,8 +168,8 @@ CASOS.append({
                  ]),
         "e3": E("A transferência para angioplastia em Manaus levaria mais de 120 min. Sem contraindicações a fibrinolítico.",
                 V(98, "140x86", 96, 20, "sinusal"), [
-                    A("Fibrinólise (tenecteplase) em até 30 min", "e4",
-                      "Certo. Se a angioplastia demora >120 min, fibrinólise é a escolha.", 10),
+                    A("Tenecteplase + enoxaparina em até 30 min", "e4",
+                      "Certo. Se a angioplastia demora >120 min, fibrinólise (com anticoagulante) em até 30 min.", 10),
                     A("Transferir sem fibrinólise, mesmo com atraso", "e3b",
                       "Inadequado. O atraso >120 min anula a vantagem da angioplastia.", -5),
                     A("Aguardar vaga de UTI sem reperfundir", "f-ruim",
@@ -203,7 +203,7 @@ CASOS.append({
         "ECG em até 10 min na dor torácica; não espere troponina se há supra de ST.",
         "Angioplastia primária se porta-balão ≤120 min; senão, fibrinólise em até 30 min.",
         "Após fibrinólise: cateterismo em 2–24 h, ou imediato se falhar (resgate).",
-        "O2 só se SatO2 <90%. AAS + inibidor P2Y12 o quanto antes.",
+        "O2 só se SatO2 <90%. AAS + inibidor P2Y12 (clopidogrel se fibrinólise) o quanto antes.",
     ],
     "referencia": "Diretriz SBC IAM com supra de ST / AHA-ACC 2025 SCA",
 })
@@ -375,12 +375,12 @@ CASOS.append({
                     A("Insulina regular IV em bolus antes de tudo", "e1b",
                       "Perigoso. Insulina sem saber o potássio pode causar hipocalemia grave.", -10),
                     A("Bicarbonato IV para corrigir o pH", "e1b",
-                      "Inadequado. Só se pH <6,9; e empurra o potássio para dentro da célula.", -5),
+                      "Inadequado. Só se pH <7,0; e empurra o potássio para dentro da célula.", -5),
                 ]),
         "e1b": E("O potássio caiu para 2,6 mEq/L. Lucas está fraco e com extrassístoles.",
                  V(118, "94x58", 98, 28, "taqui-sinusal"), [
-                     A("Suspender insulina, repor KCl IV e hidratar", "e3",
-                       "Recuperou. K+ baixo é perigoso: repor antes de continuar a insulina.", 5),
+                     A("Pausar insulina/bicarbonato, repor KCl IV e hidratar", "e3",
+                       "Recuperou. K+ baixo é perigoso: repor até K+ ≥3,5 antes da insulina.", 5),
                      A("Aumentar a insulina", "f-ruim",
                        "Perigoso. Derruba ainda mais o potássio: risco de arritmia fatal.", -10),
                      A("Dar mais bicarbonato", "f-ruim",
@@ -420,13 +420,13 @@ CASOS.append({
         "f-ruim": F("ruim", "Lucas teve arritmia grave por hipocalemia e foi para a UTI em estado crítico."),
     },
     "debriefing": [
-        "Hidratação com SF 0,9% é a 1ª medida.",
+        "Hidratação com cristaloide (SF 0,9% ou balanceado) é a 1ª medida.",
         "Potássio antes da insulina: se K+ <3,5, repor e adiar a insulina.",
-        "Insulina regular IV 0,1 U/kg/h; com glicemia ~250, associar soro glicosado.",
-        "Bicarbonato só se pH <6,9.",
-        "Resolução: pH >7,3, bicarbonato ≥15 ou ânion gap normal; sobrepor SC por 1–2 h.",
+        "Insulina regular IV 0,1 U/kg/h; com glicemia <250, associar soro glicosado.",
+        "Bicarbonato só se pH <7,0.",
+        "Resolução: cetonemia <0,6 mmol/L e pH ≥7,3 ou bicarbonato ≥18; sobrepor SC por 1–2 h.",
     ],
-    "referencia": "ADA 2024 Hyperglycemic Crises / SBD 2025",
+    "referencia": "Consenso ADA/EASD/JBDS/AACE/DTS 2024 – Crises hiperglicêmicas / SBD 2025",
 })
 
 # ---------------------------------------------------------------- em-06 Asma
@@ -570,7 +570,7 @@ CASOS.append({
         "O tratamento definitivo é a drenagem torácica em selo d'água.",
         "Ventilação com pressão positiva piora o hipertensivo não drenado.",
     ],
-    "referencia": "ATLS 10ª edição",
+    "referencia": "ATLS 11ª edição (ACS, 2025)",
 })
 
 # ---------------------------------------------------------------- em-08 AVC isquêmico
@@ -583,7 +583,7 @@ CASOS.append({
     "diagnostico": "AVC isquêmico agudo (artéria cerebral média esquerda)",
     "inicio": "e1",
     "etapas": {
-        "e1": E("Afasia, hemiparesia direita. NIHSS 10. Pulso irregular. Último momento bem: 13h30.",
+        "e1": E("Afasia, hemiparesia direita. NIHSS 10. Pulso irregular. Não usa anticoagulante. Último momento bem: 13h30.",
                 V(92, "196x108", 96, 18, "fa"), [
                     A("Glicemia capilar e TC de crânio sem contraste já", "e2",
                       "Certo. Excluir hipoglicemia e sangramento o mais rápido possível.", 10),
@@ -592,7 +592,7 @@ CASOS.append({
                     A("AAS 300 mg antes da TC", "e1b",
                       "Perigoso. Sem TC, pode ser hemorragia; e contraindica trombólise.", -10),
                     A("Aguardar coagulograma antes da TC", "e1b",
-                      "Inadequado. Sem anticoagulante em uso, não se espera exame.", -5),
+                      "Inadequado. Sem anticoagulante ou suspeita de coagulopatia, a trombólise não espera o coagulograma.", -5),
                 ]),
         "e1b": E("Tempo perdido: o déficit piorou e agora são 15h40.",
                  V(96, "188x104", 95, 18, "fa"), [
@@ -612,7 +612,7 @@ CASOS.append({
                     A("Desistir da trombólise pela PA alta", "f-parcial",
                       "Inadequado. PA alta se controla; não é motivo para perder a janela.", -5),
                 ]),
-        "e3": E("PA 176x98 após anti-hipertensivo IV. São 2h45 do início dos sintomas.",
+        "e3": E("PA 176x98 após anti-hipertensivo IV. Cerca de 2h30 desde o último momento bem.",
                 V(90, "176x98", 96, 18, "fa"), [
                     A("Trombólise IV e angio-TC para trombectomia", "e4",
                       "Certo. Trombolítico na janela de 4,5 h e busca de oclusão de grande vaso.", 10),
@@ -621,12 +621,12 @@ CASOS.append({
                     A("AAS e heparina em vez da trombólise", "f-parcial",
                       "Inadequado. Perde o benefício da reperfusão.", -5),
                 ]),
-        "e3b": E("A ressonância atrasou 1 hora. Já são 3h50 do início.",
+        "e3b": E("A ressonância atrasou mais de 1 hora. Já são quase 4 h do último momento bem.",
                  V(92, "178x100", 96, 18, "fa"), [
                      A("Trombolisar agora e pedir angio-TC", "e4",
                        "Recuperou. Ainda na janela, mas com menos benefício.", 5),
                      A("Esperar laudo formal da ressonância", "f-parcial",
-                       "Inadequado. A janela de 4,5 h se fecha.", -10),
+                       "Perigoso. A janela de 4,5 h se fecha.", -10),
                      A("Iniciar AAS e internar", "f-parcial",
                        "Inadequado. Perde a reperfusão.", -5),
                  ]),
@@ -647,8 +647,8 @@ CASOS.append({
     },
     "debriefing": [
         "Glicemia e TC sem contraste imediatas; o horário que vale é o último momento bem.",
-        "Trombólise IV até 4,5 h com PA <185x110 antes e <180x105 nas 24 h seguintes.",
-        "Oclusão de grande vaso: trombectomia mecânica, mesmo após trombólise.",
+        "Trombólise IV (alteplase ou tenecteplase) até 4,5 h com PA <185x110 antes e <180x105 nas 24 h seguintes.",
+        "Oclusão de grande vaso: trombectomia, mesmo após trombólise; até 24 h com seleção por imagem.",
         "Sem antitrombóticos nas 24 h após trombólise. Não baixar PA com nifedipino SL.",
     ],
     "referencia": "AHA/ASA AVC isquêmico agudo 2026 / SBDCV / Linha de cuidado AVC – MS",
@@ -675,7 +675,7 @@ CASOS.append({
                 ]),
         "e1b": E("Perda já de 1.500 mL. Joana está pálida e sonolenta.",
                  V(136, "76x44", 96, 26, "taqui-sinusal"), [
-                     A("Massagem, ocitocina, ácido tranexâmico e sangue", "e2b",
+                     A("Massagem, ocitocina, ácido tranexâmico e sangue", "e3",
                        "Recuperou. Tudo ao mesmo tempo, com protocolo de transfusão.", 5),
                      A("Aguardar o hemograma", "f-ruim",
                        "Perigoso. Transfusão na HPP grave é decisão clínica.", -10),
@@ -685,7 +685,7 @@ CASOS.append({
         "e2": E("Ocitocina em curso. O útero contrai parcialmente, mas o sangramento continua.",
                 V(122, "88x54", 97, 22, "taqui-sinusal"), [
                     A("Ácido tranexâmico 1 g IV em 10 minutos", "e3",
-                      "Certo. Até 3 h do parto, reduz morte por sangramento.", 10),
+                      "Certo. Até 3 h do parto (quanto antes, melhor), reduz morte por sangramento.", 10),
                     A("Suspender a ocitocina: não funcionou", "e2b",
                       "Inadequado. Mantenha a ocitocina e associe outras medidas.", -5),
                     A("Esperar a hemoglobina para decidir", "e2b",
@@ -726,12 +726,12 @@ CASOS.append({
     },
     "debriefing": [
         "Causas: 4 Ts – tônus (atonia, a mais comum), trauma, tecido e trombina.",
-        "Atonia: massagem uterina bimanual e ocitocina IV imediatas.",
-        "Ácido tranexâmico 1 g IV em 10 min nas primeiras 3 h; pode repetir.",
+        "Pacote de 1ª resposta (OMS/E-MOTIVE): massagem uterina, ocitocina IV, tranexâmico, cristaloide, exame e escalonamento.",
+        "Ácido tranexâmico 1 g IV em 10 min nas primeiras 3 h; repetir se sangrar após 30 min.",
         "Índice de choque (FC/PAS) ≥1 sinaliza perda grave: pense em transfusão.",
         "2ª linha: metilergometrina (evitar se hipertensa), misoprostol, balão.",
     ],
-    "referencia": "OMS 2023 HPP / MS – Estratégia Zero Morte Materna por Hemorragia (OPAS)",
+    "referencia": "OMS 2023 HPP / FEBRASGO / OPAS-MS – Estratégia Zero Morte Materna por Hemorragia",
 })
 
 # ---------------------------------------------------------------- em-10 Botrópico
@@ -747,7 +747,7 @@ CASOS.append({
         "e1": E("Pé e perna inchados até o joelho, dor intensa, gengiva sangrando. Tempo de coagulação: incoagulável.",
                 V(104, "132x84", 97, 20, "taqui-sinusal"), [
                     A("Retirar o garrote, hidratar e soro antibotrópico IV", "e2",
-                      "Certo. O soro específico IV é o tratamento; garrote piora a lesão.", 10),
+                      "Certo. Soro específico IV (moderado: 4–8 ampolas) o quanto antes; garrote piora a lesão.", 10),
                     A("Cortar e sugar o local da picada", "e1b",
                       "Perigoso. Aumenta sangramento e infecção, sem remover veneno.", -10),
                     A("Manter o garrote e aguardar exames", "e1b",
@@ -758,7 +758,7 @@ CASOS.append({
         "e1b": E("Uma hora depois: mais sangramento, urina escura e pouca diurese.",
                  V(118, "100x62", 96, 22, "taqui-sinusal"), [
                      A("Tirar o garrote, soro antibotrópico IV e hidratar", "e2",
-                       "Recuperou. Ainda há tempo de neutralizar o veneno circulante.", 5),
+                       "Recuperou. Oligúria e urina escura: agora é grave (12 ampolas). Ainda dá para neutralizar o veneno.", 5),
                      A("Plasma fresco sem soro antiveneno", "f-ruim",
                        "Perigoso. O veneno consome os fatores de novo.", -10),
                      A("Transferir sem aplicar o soro", "f-ruim",
@@ -784,8 +784,8 @@ CASOS.append({
                  ]),
         "e3": E("Soro completo. Dor e edema importantes no membro; diurese ainda limítrofe.",
                 V(98, "122x76", 97, 18, "sinusal"), [
-                    A("Hidratar, elevar o membro, analgesia e TC em 24 h", "f-bom",
-                      "Certo. Diurese adequada protege o rim; TC mostra a resposta ao soro.", 10),
+                    A("Hidratar, elevar o membro, analgesia e repetir o TC em 24 h", "f-bom",
+                      "Certo. Diurese adequada protege o rim; o tempo de coagulação mostra a resposta ao soro.", 10),
                     A("Anti-inflamatório (AINE) para a dor", "f-parcial",
                       "Inadequado. AINE piora o risco renal e de sangramento.", -5),
                     A("Antibiótico profilático de rotina", "f-parcial",
@@ -799,11 +799,11 @@ CASOS.append({
     },
     "debriefing": [
         "Não usar garrote, não cortar nem sugar. Elevar o membro e hidratar.",
-        "Soro antibotrópico IV conforme gravidade: leve 3, moderado 6, grave 12 ampolas (MS).",
-        "Tempo de coagulação guia o diagnóstico e o controle (repetir em 24 h).",
+        "Soro antibotrópico IV conforme gravidade: leve 2–4, moderado 4–8, grave 12 ampolas (MS).",
+        "Tempo de coagulação (TC) guia o diagnóstico e o controle: repetir 24 h após o soro.",
         "Reação ao soro: pausar, tratar e completar a dose. Pré-medicação não é rotina.",
     ],
-    "referencia": "MS – Guia de Vigilância em Saúde / Manual de acidentes por animais peçonhentos",
+    "referencia": "MS – Guia de Vigilância em Saúde (6ª ed., 2024) / Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos",
 })
 
 # ---------------------------------------------------------------- em-11 Dengue grave
@@ -871,11 +871,11 @@ CASOS.append({
     },
     "debriefing": [
         "Defervescência (dias 3–7) é a fase crítica: atenção aos sinais de alarme.",
-        "Choque (grupo D): SF 0,9% 20 mL/kg em 20 min, até 3 vezes, com reavaliação.",
+        "Choque (grupo D): cristaloide 20 mL/kg em 20 min, até 3 vezes; melhorou, segue como grupo C; sem resposta, UTI e albumina.",
         "Hematócrito subindo = extravasamento; caindo com choque = pense em sangramento.",
         "Plaquetas não se transfundem por número. Nada de AAS ou AINE.",
     ],
-    "referencia": "MS – Dengue: diagnóstico e manejo clínico, 2024",
+    "referencia": "MS – Dengue: diagnóstico e manejo clínico, adulto e criança, 6ª ed., 2024",
 })
 
 # ---------------------------------------------------------------- em-12 Hipercalemia
@@ -893,7 +893,7 @@ CASOS.append({
                     A("Gluconato de cálcio 10% IV", "e2",
                       "Certo. Cálcio estabiliza a membrana do miocárdio em minutos.", 10),
                     A("Resina de troca oral e aguardar", "e1b",
-                      "Inadequado. Age em horas; o ECG exige ação imediata.", -5),
+                      "Perigoso. Age em horas; QRS largo com bradicardia exige cálcio IV imediato.", -10),
                     A("Repetir o potássio para confirmar", "e1b",
                       "Perigoso. ECG alterado já confirma a urgência.", -10),
                 ]),
@@ -940,12 +940,12 @@ CASOS.append({
         "f-ruim": F("ruim", "Seu Antônio evoluiu com fibrilação ventricular e parada cardíaca."),
     },
     "debriefing": [
-        "Hipercalemia com ECG alterado: cálcio IV primeiro, repetir se o ECG não melhora.",
-        "Deslocar K+ para a célula: insulina regular 10 U IV com glicose e salbutamol.",
-        "Remover K+: hemodiálise (dialítico), diurético ou resinas.",
+        "Hipercalemia com ECG alterado: gluconato de cálcio 10% 30 mL IV primeiro; repetir se o ECG não melhora.",
+        "Deslocar K+ para a célula: insulina regular 10 U IV com 25 g de glicose, e salbutamol nebulizado.",
+        "Remover K+: hemodiálise (dialítico), diurético ou quelantes (ciclossilicato de zircônio, patirômer, resinas).",
         "Vigie a glicemia após insulina: risco de hipoglicemia.",
     ],
-    "referencia": "KDIGO / AHA 2025 – situações especiais do ACLS",
+    "referencia": "UK Kidney Association 2023 / KDIGO / AHA 2025 – situações especiais do ACLS",
 })
 
 

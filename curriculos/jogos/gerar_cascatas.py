@@ -80,7 +80,7 @@ CASCATAS = [
        "o PTU também reduz a conversão periférica de T4 em T3."),
 
     ("Cetoacidose diabética", "fisiopatologia", 2, [
-        "Deficiência absoluta de insulina",
+        "Deficiência de insulina com excesso de glucagon",
         "Lipólise aumentada libera ácidos graxos",
         "Fígado oxida ácidos graxos em corpos cetônicos",
         "Cetoácidos consomem o bicarbonato",
@@ -185,15 +185,15 @@ CASCATAS = [
        "Nunca interromper a RCP por mais de 10 s."),
 
     ("Sequência rápida de intubação", "procedimento", 2, [
-        "Preparar material, monitor e plano B",
+        "Preparar material, drogas, monitor e plano B",
         "Pré-oxigenar com O2 a 100% por 3 minutos",
-        "Otimizar hemodinâmica (pré-tratamento)",
         "Indução com hipnótico (etomidato, cetamina)",
         "Bloqueador neuromuscular (succinilcolina, rocurônio)",
+        "Aguardar 45–60 s até o relaxamento muscular",
         "Laringoscopia e passagem do tubo",
         "Confirmar posição com capnografia",
-    ], "Na SRI, hipnótico e bloqueador são dados em sequência imediata, sem "
-       "ventilar com bolsa se possível. Capnografia é o padrão-ouro de confirmação."),
+    ], "Otimizar a hemodinâmica ocorre em paralelo à pré-oxigenação. Hipnótico e "
+       "bloqueador vêm em sequência imediata; capnografia é o padrão-ouro de confirmação."),
 
     ("Atendimento inicial ao trauma (XABCDE)", "procedimento", 1, [
         "X: conter hemorragia exsanguinante",
@@ -240,7 +240,7 @@ CASCATAS = [
         "Clivagem em blastômeros",
         "Mórula",
         "Blastocisto (embrioblasto e trofoblasto)",
-        "Implantação no endométrio (6º–7º dia)",
+        "Início da implantação no endométrio (6º–7º dia)",
         "Disco bilaminar (epiblasto e hipoblasto)",
         "Gastrulação: disco trilaminar",
     ], "A gastrulação, na 3ª semana, forma ectoderma, mesoderma e endoderma "
@@ -366,8 +366,8 @@ CASCATAS = [
         "Suporte avançado de vida",
         "Cuidados pós-PCR",
         "Recuperação e reabilitação",
-    ], "Cadeia extra-hospitalar da AHA. Cada minuto sem RCP e desfibrilação "
-       "reduz muito a chance de sobreviver à FV."),
+    ], "Cadeia única da AHA (2025), para qualquer idade e local. Cada minuto sem "
+       "RCP e desfibrilação reduz muito a chance de sobreviver à FV."),
 
     ("Punção venosa periférica", "procedimento", 1, [
         "Higienizar as mãos e identificar o paciente",
@@ -385,7 +385,7 @@ CASCATAS = [
         "Isquemia placentária",
         "Placenta libera sFlt-1 (antiangiogênico)",
         "Disfunção endotelial materna",
-        "HAS e proteinúria após 20 semanas",
+        "HAS após 20 semanas, com proteinúria ou lesão de órgão",
         "Formas graves: HELLP ou eclâmpsia",
     ], "AAS em baixa dose e cálcio previnem em gestantes de risco. "
        "Sulfato de magnésio previne e trata a eclâmpsia."),
