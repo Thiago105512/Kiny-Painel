@@ -58,7 +58,7 @@ const normQuestao = (q, t, src = "banco") => ({
   disc: q.disciplina ?? q.disc ?? q.area ?? q.a ?? null, dif: q.dificuldade ?? q.dif ?? null,
   fonte: q.fonte ?? (src === "banco" ? "autoral" : src), ano: q.ano ?? null, prova: q.prova ?? null, src,
   ae: q.areaEnem ?? q.ae ?? (t === "enem" ? areaEnemDe(q) : null),
-  img: q.imagem ?? null, serie: q.serie ?? null, parte: q.parte ?? null, partes: q.partes ?? null, rev: q.revisado ?? null,
+  img: q.imagem ?? null, serie: q.serie ?? null, familia: q.familia ?? null, parte: q.parte ?? null, partes: q.partes ?? null, rev: q.revisado ?? null,
 });
 const QUESTOES_BASE = Object.entries(DADOS.banco || {}).flatMap(([t, arr]) => arr.map(q => normQuestao(q, t)));
 

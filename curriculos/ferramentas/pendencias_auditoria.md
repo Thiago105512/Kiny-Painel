@@ -1,6 +1,6 @@
 # Pendências da auditoria (para o ciclo contínuo)
 - Pista de tamanho: RESOLVIDO (set/2026) — 560 questões rebalanceadas em 2 passadas e verificadas às cegas; posição da correta por tamanho = 20% em cada uma das 5 posições.
-- Possível par repetido: med-527a22e5 × med-d0cd1596 (úlcera péptica perfurada) — mudar o ângulo de uma delas.
-- Estruturas de abertura novas que se repetiram após reescrita ("X traz ao pronto-socorro…", "Exame: valor. É o resultado…") — contar padrões no banco e variar.
+- Pares repetidos: RESOLVIDO (set/2026) — 780 pares suspeitos lidos por revisores; 551 viraram 'familia' (376 famílias, 873 questões) e nunca caem juntos na sessão nem no simulado (ferramentas/familias_pares.json). Grupos grandes (Kawasaki 7, TRO 7) mostram temas saturados: priorizar temas menos cobertos ao criar questões.
+- Aberturas repetidas: CONFERIDO (set/2026) — nenhuma abertura de 3 palavras passa de 37 em 1.993 questões; "É o resultado" zerado.
 - 'Para lembrar' padronizado: RESOLVIDO (set/2026) — 246 ganchos históricos trocados por pontos clínicos e revisados.
-- Residência: res-7fe9f06e × res-75c52fd3 (varfarina/hemorragia cerebral) não devem cair no mesmo simulado; temas repetidos no lote 7 (invaginação 3, pancreatite 5, diverticulite 3).
+- Residência: par da varfarina agora é família (não cai junto). Temas repetidos no lote 7 (invaginação 3, pancreatite 5, diverticulite 3).

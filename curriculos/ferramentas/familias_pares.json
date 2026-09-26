@@ -1,0 +1,2757 @@
+[
+ {
+  "a": "med-0caf187b",
+  "b": "res-37559888",
+  "motivo": "Mesmo caso de LMC com mesma resposta (BCR-ABL1/ITK)"
+ },
+ {
+  "a": "med-06815663",
+  "b": "res-a623b3fc",
+  "motivo": "Mesmo caso de tricoleucemia, mesma resposta"
+ },
+ {
+  "a": "med-226ca3f4",
+  "b": "res-4a9e7b67",
+  "motivo": "Mesmo cenário de AR, mesma resposta (anti-CCP)"
+ },
+ {
+  "a": "med-7b1f2167",
+  "b": "res-7afb6494",
+  "motivo": "Mesma luxação posterior do quadril com lesão do ciático"
+ },
+ {
+  "a": "med-8a12036e",
+  "b": "res-9c606336",
+  "motivo": "Mesma espirometria de DPOC GOLD 2"
+ },
+ {
+  "a": "med-1cef2834",
+  "b": "res-b63e3a89",
+  "motivo": "Mesmo conceito de VPP x prevalência com cálculo análogo"
+ },
+ {
+  "a": "med-a68df11c",
+  "b": "med-0de7281b",
+  "motivo": "Perfil de janela imunológica da hepatite B repetido (Diego) com mesmo contexto"
+ },
+ {
+  "a": "med-6b6c932d",
+  "b": "res-1562a607",
+  "motivo": "Mesmo caso de ruptura de músculo papilar pós-IAM inferior"
+ },
+ {
+  "a": "med-6af9d064",
+  "b": "res-512cd290",
+  "motivo": "Mesmo caso de von Willebrand tipo 1 com DDAVP"
+ },
+ {
+  "a": "med-aaa80a30",
+  "b": "res-1ba190c7",
+  "motivo": "Mesmo estado de mal epiléptico sem acesso: midazolam IM"
+ },
+ {
+  "a": "med-5129386f",
+  "b": "res-51ad091d",
+  "motivo": "Mesmo câncer de cólon estádio III com adjuvância FOLFOX"
+ },
+ {
+  "a": "med-c7d95508",
+  "b": "res-16d898d2",
+  "motivo": "Mesmo cálculo de FENa em LRA pré-renal por vômitos/diarreia"
+ },
+ {
+  "a": "med-fe133dda",
+  "b": "res-09257775",
+  "motivo": "Mesmo volvo de sigmoide com distorção endoscópica"
+ },
+ {
+  "a": "med-8a12036e",
+  "b": "med-d6fd96e8",
+  "motivo": "Mesmo tema de classificação GOLD espirométrica em tabagista"
+ },
+ {
+  "a": "med-468f1e54",
+  "b": "res-86fff0fe",
+  "motivo": "Mesmo hiperparatireoidismo secundário da DRC, mesma resposta"
+ },
+ {
+  "a": "med-95333eb7",
+  "b": "res-336a1f02",
+  "motivo": "Mesmo caso de epilepsia mioclônica juvenil; um revela o diagnóstico do outro"
+ },
+ {
+  "a": "med-5673fc7c",
+  "b": "res-75c991a9",
+  "motivo": "Mesmo conteúdo da Lei 8.142 sobre conselho e conferência"
+ },
+ {
+  "a": "med-c010a1b0",
+  "b": "res-c652ca01",
+  "motivo": "Mesmo linfoma do manto com t(11;14)"
+ },
+ {
+  "a": "med-1eebcd87",
+  "b": "res-40bfd395",
+  "motivo": "Mesma laceração perineal de 3º grau pós-fórceps"
+ },
+ {
+  "a": "med-7fa4d972",
+  "b": "med-db5c47e3",
+  "motivo": "Mesma reversão de dabigatrana com idarucizumabe"
+ },
+ {
+  "a": "med-a72cea2b",
+  "b": "res-a8cb7bed",
+  "motivo": "Mesma lesão do fibular comum pós-bariátrica"
+ },
+ {
+  "a": "med-a7b116cb",
+  "b": "res-51c44498",
+  "motivo": "Mesma metaplasia escamosa brônquica; epitélio pseudoestratificado"
+ },
+ {
+  "a": "med-7adbba11",
+  "b": "res-5be119e9",
+  "motivo": "Mesma esquizofrenia refratária com clozapina"
+ },
+ {
+  "a": "med-09a76aca",
+  "b": "res-c283d982",
+  "motivo": "Mesma candidíase vulvovaginal com azólico tópico"
+ },
+ {
+  "a": "med-1ee17d93",
+  "b": "res-9e4c5619",
+  "motivo": "Mesmo cálculo ureteral distal pequeno com terapia expulsiva"
+ },
+ {
+  "a": "med-2d0459ad",
+  "b": "res-752ef6ef",
+  "motivo": "Mesma intoxicação por AAS com gasometria idêntica"
+ },
+ {
+  "a": "med-36451307",
+  "b": "res-be3529cb",
+  "motivo": "Mesmo risco intermediário ASGE para coledocolitíase"
+ },
+ {
+  "a": "med-68781593",
+  "b": "res-bb5d2a20",
+  "motivo": "Mesma questão sobre protamina em HNF x enoxaparina"
+ },
+ {
+  "a": "med-4dd77bed",
+  "b": "res-c44d11ed",
+  "motivo": "Mesmo caso de escarlatina e tratamento"
+ },
+ {
+  "a": "med-ec70e7b8",
+  "b": "res-d6eafa4b",
+  "motivo": "Mesma triagem de TB latente antes de anti-TNF na AR"
+ },
+ {
+  "a": "med-963fd3f9",
+  "b": "med-42583044",
+  "motivo": "Mesma sífilis latente em gestante com penicilina 3 doses"
+ },
+ {
+  "a": "med-08987ebd",
+  "b": "res-c7f9acf7",
+  "motivo": "Mesma hipertensão do avental branco"
+ },
+ {
+  "a": "med-e10fb3dd",
+  "b": "res-823cd4f0",
+  "motivo": "Mesmo TOTG com valor de 1h alterado: DMG"
+ },
+ {
+  "a": "med-e3bf9e02",
+  "b": "res-d890e3f3",
+  "motivo": "Mesma intoxicação por anestésico local com emulsão lipídica"
+ },
+ {
+  "a": "med-78de4b39",
+  "b": "res-d143931e",
+  "motivo": "Mesma contracepção de emergência com DIU de cobre"
+ },
+ {
+  "a": "med-1a447a4c",
+  "b": "res-8f73ff3e",
+  "motivo": "Mesma lesão de entrada com tatuagem e esfumaçamento"
+ },
+ {
+  "a": "med-b115c2eb",
+  "b": "res-85bf277a",
+  "motivo": "Mesma colecistite aguda com USG"
+ },
+ {
+  "a": "med-4f25f0f0",
+  "b": "res-d1192c56",
+  "motivo": "Mesma síndrome compartimental com fasciotomia"
+ },
+ {
+  "a": "med-4448163f",
+  "b": "res-360db55d",
+  "motivo": "Mesma suspeita de atresia biliar"
+ },
+ {
+  "a": "med-58565af5",
+  "b": "res-75c52fd3",
+  "motivo": "Mesmo AVCh em uso de varfarina: CCP e vitamina K"
+ },
+ {
+  "a": "med-3ba8edeb",
+  "b": "res-38f7fabd",
+  "motivo": "Mesma arterite temporal: corticoide imediato"
+ },
+ {
+  "a": "med-391ec1cf",
+  "b": "res-9d9a927f",
+  "motivo": "Mesma encefalopatia hepática com lactulose"
+ },
+ {
+  "a": "med-c8a29b42",
+  "b": "res-e6baaa4a",
+  "motivo": "Mesmo DMG sem controle com dieta: insulina"
+ },
+ {
+  "a": "med-a2972d60",
+  "b": "res-ac4fdb6c",
+  "motivo": "Mesma puérpera com TB bacilífera amamentando"
+ },
+ {
+  "a": "med-1e94857e",
+  "b": "res-17501161",
+  "motivo": "Mesma síndrome serotoninérgica fluoxetina+tramadol"
+ },
+ {
+  "a": "med-14b8e04f",
+  "b": "res-9b4add45",
+  "motivo": "Mesma participação complementar privada no SUS"
+ },
+ {
+  "a": "med-5633c732",
+  "b": "med-5823a1b0",
+  "motivo": "Gestante C de A é o mesmo cenário de diabetes franco de B"
+ },
+ {
+  "a": "med-6d9dc3e2",
+  "b": "med-10342137",
+  "motivo": "Mesmo cálculo de Poiseuille (raio pela metade = 16x)"
+ },
+ {
+  "a": "med-7b04f27c",
+  "b": "med-7583920a",
+  "motivo": "Mesma pielonefrite obstrutiva séptica: desobstrução"
+ },
+ {
+  "a": "med-7583920a",
+  "b": "res-124662ea",
+  "motivo": "Mesma pielonefrite obstrutiva séptica: desobstrução"
+ },
+ {
+  "a": "med-1ee0e797",
+  "b": "res-e7a0defa",
+  "motivo": "Mesmo caso de ELA com mesma interpretação"
+ },
+ {
+  "a": "med-f7b1fe0f",
+  "b": "res-4c7767b9",
+  "motivo": "Mesma vaginose bacteriana com metronidazol"
+ },
+ {
+  "a": "med-aabb0fe3",
+  "b": "res-a02d1292",
+  "motivo": "Mesmo nódulo BI-RADS 3 com controle em 6 meses"
+ },
+ {
+  "a": "med-67dc28ec",
+  "b": "med-2c9af66c",
+  "motivo": "Mesmo caso de Kawasaki; enunciado de um revela resposta do outro"
+ },
+ {
+  "a": "med-db5c47e3",
+  "b": "res-015f91aa",
+  "motivo": "Mesma reversão de dabigatrana com idarucizumabe"
+ },
+ {
+  "a": "med-4efc955d",
+  "b": "res-594d43ac",
+  "motivo": "Mesmo tema de vacinas vivas em imunodeprimido; resposta de um entrega a do outro"
+ },
+ {
+  "a": "med-c31b50df",
+  "b": "res-ddf6ede4",
+  "motivo": "Mesma hipercapnia induzida por O2 na DPOC"
+ },
+ {
+  "a": "med-c16d46d8",
+  "b": "res-cae2f7d5",
+  "motivo": "Mesmo trauma abdominal instável com FAST+: laparotomia"
+ },
+ {
+  "a": "med-4ae832b3",
+  "b": "res-583a9d71",
+  "motivo": "Mesma vasa prévia rota com cesárea"
+ },
+ {
+  "a": "med-f01435d9",
+  "b": "res-4245e9f9",
+  "motivo": "Mesma HAC não clássica com hirsutismo"
+ },
+ {
+  "a": "med-6dba7e38",
+  "b": "res-46a98db2",
+  "motivo": "Mesma leptospirose e forma de transmissão"
+ },
+ {
+  "a": "med-f7b1fe0f",
+  "b": "med-96de079d",
+  "motivo": "Mesma vaginose bacteriana tratada com metronidazol oral"
+ },
+ {
+  "a": "med-1f90187c",
+  "b": "res-809ad5e9",
+  "motivo": "Mesmo caso de PBT em cirrótico"
+ },
+ {
+  "a": "med-99259bfa",
+  "b": "res-7793dc87",
+  "motivo": "Testes em série aumentam especificidade; um entrega o raciocínio do outro"
+ },
+ {
+  "a": "med-5eb8f255",
+  "b": "res-b46edfd8",
+  "motivo": "Mesmo cenário de via aérea falha em trauma de face (cricotireoidostomia)"
+ },
+ {
+  "a": "med-ce618ab0",
+  "b": "res-b3869ade",
+  "motivo": "Mesma febre em lúpus: infecção bacteriana, não atividade"
+ },
+ {
+  "a": "med-4e2f8af4",
+  "b": "res-808bdcee",
+  "motivo": "Mesmo cálculo de mortalidade perinatal"
+ },
+ {
+  "a": "med-fb0bcd71",
+  "b": "med-a0e840cb",
+  "motivo": "Mesma CAD em jovem de 19 anos com mesma pergunta de interpretação ácido-base"
+ },
+ {
+  "a": "med-58f8a10e",
+  "b": "res-56145176",
+  "motivo": "Mesmo quilotórax pós-esofagectomia (ducto torácico)"
+ },
+ {
+  "a": "med-ccae23ae",
+  "b": "res-80d31e1b",
+  "motivo": "Resposta de um (junções oclusivas) entrega a do outro"
+ },
+ {
+  "a": "res-912e8c26",
+  "b": "res-14b15eda",
+  "motivo": "Mesmo BAVT; enunciado de um revela conduta do outro"
+ },
+ {
+  "a": "med-2ccd27ef",
+  "b": "res-b594a7ac",
+  "motivo": "Mesma estenose mitral; enunciado de um entrega o diagnóstico do outro"
+ },
+ {
+  "a": "med-65333457",
+  "b": "med-4dd77bed",
+  "motivo": "Mesmo caso de escarlatina"
+ },
+ {
+  "a": "med-859ff98f",
+  "b": "med-95dba7e1",
+  "motivo": "Mesma desidratação plano B"
+ },
+ {
+  "a": "med-cb846e01",
+  "b": "med-0c889653",
+  "motivo": "Enunciado de um (mutação do receptor de LDL na HF) entrega a resposta do outro"
+ },
+ {
+  "a": "med-3cedcc45",
+  "b": "res-30bbf7ad",
+  "motivo": "Mesma LRA pré-renal sob diurético com FEureia"
+ },
+ {
+  "a": "med-86f1c002",
+  "b": "res-4180a88b",
+  "motivo": "Mesma HPP por atonia com cenário quase idêntico"
+ },
+ {
+  "a": "med-b6a9e5ba",
+  "b": "med-2af89cfe",
+  "motivo": "Mesma deficiência de vitamina K no RN; um entrega a resposta do outro"
+ },
+ {
+  "a": "med-654bf955",
+  "b": "res-e3f30a3c",
+  "motivo": "Mesma lesão ureteral na ligadura da artéria uterina"
+ },
+ {
+  "a": "med-5acbb87f",
+  "b": "res-3e1d7c33",
+  "motivo": "Mesmo cálculo de LDL por Friedewald"
+ },
+ {
+  "a": "med-06b11378",
+  "b": "res-569ad374",
+  "motivo": "Mesma redatação pela USG de 10s2d"
+ },
+ {
+  "a": "med-d744638d",
+  "b": "res-d45c0ee2",
+  "motivo": "Mesma aloimunização Rh; enunciado de um entrega o Doppler da ACM"
+ },
+ {
+  "a": "res-62a3d029",
+  "b": "res-85df0548",
+  "motivo": "Mesmo caso de doença anti-MBG"
+ },
+ {
+  "a": "med-770542df",
+  "b": "res-e6d2328e",
+  "motivo": "Mesmo sarampo com notificação imediata"
+ },
+ {
+  "a": "med-96b28177",
+  "b": "res-f2873de2",
+  "motivo": "Mesma AR inicial com metotrexato"
+ },
+ {
+  "a": "med-9639f79a",
+  "b": "med-9500b816",
+  "motivo": "Mesmo pneumotórax hipertensivo com descompressão"
+ },
+ {
+  "a": "med-645c8598",
+  "b": "res-2ee0c524",
+  "motivo": "Mesma icterícia nas primeiras 24 h como patológica"
+ },
+ {
+  "a": "med-042829fd",
+  "b": "res-da38384f",
+  "motivo": "Mesma queimadura por soda cáustica com irrigação"
+ },
+ {
+  "a": "med-11bb5684",
+  "b": "res-c283d982",
+  "motivo": "Mesma candidíase na gestante com azólico tópico"
+ },
+ {
+  "a": "med-5345b462",
+  "b": "res-720f06c7",
+  "motivo": "Mesma galactosemia com suspensão do aleitamento"
+ },
+ {
+  "a": "med-ff88f049",
+  "b": "res-8ce34aec",
+  "motivo": "Mesmo conceito de prevalência que aumenta com sobrevida"
+ },
+ {
+  "a": "med-42bca04c",
+  "b": "med-04594256",
+  "motivo": "Mesma classificação de ações por Leavell e Clark com itens sobrepostos"
+ },
+ {
+  "a": "med-1f375ae3",
+  "b": "res-92960bf1",
+  "motivo": "Mesmo Turner com material Y: gonadectomia"
+ },
+ {
+  "a": "med-11d07042",
+  "b": "res-a14883e0",
+  "motivo": "Mesmo hemotórax maciço com toracotomia"
+ },
+ {
+  "a": "med-ce3fa57d",
+  "b": "res-1a13baac",
+  "motivo": "Mesma necrose pancreática infectada com step-up"
+ },
+ {
+  "a": "med-20795dff",
+  "b": "res-c87681d9",
+  "motivo": "Mesma endocardite por S. gallolyticus com colonoscopia"
+ },
+ {
+  "a": "med-458a2b2c",
+  "b": "med-21b1190c",
+  "motivo": "Mesmo sinal de Grey Turner por hemorragia retroperitoneal"
+ },
+ {
+  "a": "med-03a2290d",
+  "b": "res-71768130",
+  "motivo": "Mesma apendicite na gestação com RM"
+ },
+ {
+  "a": "med-ac0994bf",
+  "b": "res-6fa62501",
+  "motivo": "Mesma hemólise por deficiência de G6PD com primaquina"
+ },
+ {
+  "a": "med-85a97177",
+  "b": "res-2d9d331f",
+  "motivo": "Mesma prevenção quaternária no check-up"
+ },
+ {
+  "a": "med-b53d0c3e",
+  "b": "res-bb3e7c14",
+  "motivo": "Mesmo esquema TDF+3TC+DTG; resposta de um entrega a do outro"
+ },
+ {
+  "a": "med-c1f13bd4",
+  "b": "med-56c906d6",
+  "motivo": "Mesmo caso de espasmos na esclerose tuberosa; enunciado de um entrega a vigabatrina"
+ },
+ {
+  "a": "med-5ba0b6a4",
+  "b": "res-475c686c",
+  "motivo": "Resposta de um (ligamento suspensor/vasos ováricos) entrega a do outro"
+ },
+ {
+  "a": "med-8d0b31f7",
+  "b": "med-5ba0b6a4",
+  "motivo": "Mesma anatomia dos vasos ováricos no ligamento suspensor"
+ },
+ {
+  "a": "med-bbb3d89e",
+  "b": "res-ca20e083",
+  "motivo": "Mesmo delirium tremens com benzodiazepínico"
+ },
+ {
+  "a": "med-58565af5",
+  "b": "res-7fe9f06e",
+  "motivo": "Mesmo AVCh sob varfarina; enunciado de um entrega CCP + vitamina K"
+ },
+ {
+  "a": "med-36111ac6",
+  "b": "res-baea7085",
+  "motivo": "Mesmo diagnóstico clínico da bronquiolite sem exames"
+ },
+ {
+  "a": "med-d744638d",
+  "b": "res-a002862a",
+  "motivo": "Mesma aloimunização Rh; enunciado de um entrega o Doppler da ACM"
+ },
+ {
+  "a": "med-545760e9",
+  "b": "res-eb0e38a8",
+  "motivo": "Mesmo caso de TAG (tratamento vs diagnóstico)"
+ },
+ {
+  "a": "med-099bb686",
+  "b": "res-5b1e56dc",
+  "motivo": "Mesmo choque séptico; enunciado de um entrega noradrenalina e meta PAM 65"
+ },
+ {
+  "a": "med-43b53e80",
+  "b": "res-07e7fe47",
+  "motivo": "Mesma pergunta sobre critérios de Rotterdam na SOP"
+ },
+ {
+  "a": "med-d65ebe83",
+  "b": "res-6fa62501",
+  "motivo": "Mesma hemólise por deficiência de G6PD"
+ },
+ {
+  "a": "med-a7b67c04",
+  "b": "res-ab489641",
+  "motivo": "Mesma hipertermia maligna com dantroleno"
+ },
+ {
+  "a": "med-91d8a1ae",
+  "b": "res-7570e9b8",
+  "motivo": "Mesma fase rápida do plano C (SF 20 mL/kg)"
+ },
+ {
+  "a": "med-31e6b1cf",
+  "b": "res-67bd2124",
+  "motivo": "Mesmo câncer de colo com hidronefrose: FIGO IIIB"
+ },
+ {
+  "a": "med-32393086",
+  "b": "res-56b92e45",
+  "motivo": "Mesma doença de Chagas aguda por açaí: pesquisa direta"
+ },
+ {
+  "a": "med-0022ef01",
+  "b": "res-6a3e1d58",
+  "motivo": "Mesmo linfoma de Hodgkin com células de Reed-Sternberg"
+ },
+ {
+  "a": "med-91d8a1ae",
+  "b": "med-c3f947b4",
+  "motivo": "Mesma desidratação grave com plano C; um entrega o outro"
+ },
+ {
+  "a": "med-a1f2c259",
+  "b": "res-31e1ed35",
+  "motivo": "Mesma FA pré-excitada com procainamida"
+ },
+ {
+  "a": "med-63757cab",
+  "b": "res-d37a84dd",
+  "motivo": "Mesma GNPE; enunciado de um entrega o diagnóstico do outro"
+ },
+ {
+  "a": "med-039cc264",
+  "b": "med-fe095ccb",
+  "motivo": "Mesma síndrome de Ogilvie pós-artroplastia com cenário quase idêntico"
+ },
+ {
+  "a": "med-ac9c705f",
+  "b": "res-80f1c693",
+  "motivo": "Mesmo BAV de 2º grau Mobitz II (infra-hissiano, marca-passo)"
+ },
+ {
+  "a": "med-42583044",
+  "b": "med-3a3b3f53",
+  "motivo": "Mesma sífilis latente na gestação; resposta de um (tratar parceria) entrega a do outro"
+ },
+ {
+  "a": "med-deb2f4a0",
+  "b": "res-d9900181",
+  "motivo": "Mesma cólica renal com TC sem contraste"
+ },
+ {
+  "a": "med-8739ae62",
+  "b": "med-e21a953f",
+  "motivo": "Mesmo mecanismo (bradicinina por IECA); resposta de um entrega a do outro"
+ },
+ {
+  "a": "med-942b85ca",
+  "b": "res-f4a06726",
+  "motivo": "Mesma torsades de pointes por QT longo induzido por fármacos"
+ },
+ {
+  "a": "med-39f39dea",
+  "b": "med-12107041",
+  "motivo": "Mesmo WPW; resposta de um (via acessória) entrega a do outro"
+ },
+ {
+  "a": "med-42583044",
+  "b": "res-2c1ce7db",
+  "motivo": "Mesma sífilis latente na gestação tratada com benzatina (variação alergia)"
+ },
+ {
+  "a": "med-a9393ec5",
+  "b": "res-c241d127",
+  "motivo": "Mesma HPP por atonia com pré-eclâmpsia; enunciado de um entrega a conduta do outro"
+ },
+ {
+  "a": "med-feca8478",
+  "b": "med-aa85eb53",
+  "motivo": "Mesmo caso de discinesia ciliar primária (Kartagener)"
+ },
+ {
+  "a": "med-124b8efa",
+  "b": "res-9b60b71a",
+  "motivo": "Mesma gravidez ectópica rota com instabilidade: cirurgia"
+ },
+ {
+  "a": "med-0e26b9ac",
+  "b": "res-b3ec8e48",
+  "motivo": "Mesmo caso de meningite meningocócica com líquor quase idêntico"
+ },
+ {
+  "a": "med-b2475dd8",
+  "b": "res-ea256408",
+  "motivo": "Mesmo cálculo de sensibilidade em tabela 2x2"
+ },
+ {
+  "a": "med-fa4e4c64",
+  "b": "med-e1a7ab51",
+  "motivo": "Mesma TIH; enunciado de um entrega a conduta (suspender heparina, argatrobana) do outro"
+ },
+ {
+  "a": "med-92e88c01",
+  "b": "res-6fa62501",
+  "motivo": "Mesma deficiência de G6PD e primaquina na malária vivax"
+ },
+ {
+  "a": "res-dbfbc27c",
+  "b": "res-afcdfb86",
+  "motivo": "Mesmo estudo caso-controle; enunciado de um entrega a resposta do outro"
+ },
+ {
+  "a": "med-735a11e0",
+  "b": "res-a01a4c3c",
+  "motivo": "Mesma HSIL; enunciado de um revela a colposcopia do outro"
+ },
+ {
+  "a": "med-1f4e8da1",
+  "b": "res-1a81202d",
+  "motivo": "Mesma mola hidatiforme com hipertireoidismo"
+ },
+ {
+  "a": "med-7e036d04",
+  "b": "res-1c58985d",
+  "motivo": "Mesmo manejo da asma com budesonida-formoterol"
+ },
+ {
+  "a": "med-0cb202a2",
+  "b": "res-c241d127",
+  "motivo": "Mesma atonia com pré-eclâmpsia; resposta de um entrega a do outro (metilergometrina contraindicada)"
+ },
+ {
+  "a": "med-ec2d001a",
+  "b": "res-3f2fd06f",
+  "motivo": "Mesma fratura Salter-Harris II no rádio distal, mesma resposta"
+ },
+ {
+  "a": "med-b2ca7efe",
+  "b": "res-8e50d9da",
+  "motivo": "Mesmo cenário: pedido de cópia do prontuário, mesma resposta"
+ },
+ {
+  "a": "med-22e2699f",
+  "b": "res-a9c19057",
+  "motivo": "Wernicke após glicose em etilista; tiamina/PDH em ambas"
+ },
+ {
+  "a": "med-3d00970c",
+  "b": "res-227c3fbb",
+  "motivo": "Mesmo quadro de carcinoma basocelular em agricultor"
+ },
+ {
+  "a": "med-cb40737c",
+  "b": "res-caea4c95",
+  "motivo": "Calcificação distrófica da valva aórtica, mesma pergunta"
+ },
+ {
+  "a": "med-c001e375",
+  "b": "res-8f14eede",
+  "motivo": "Bloqueio pudendo: enunciado de uma revela a resposta da outra"
+ },
+ {
+  "a": "med-95da4aca",
+  "b": "res-56406680",
+  "motivo": "Lesão inalatória em incêndio; intubação precoce em ambas"
+ },
+ {
+  "a": "med-dd2753e9",
+  "b": "res-223f974a",
+  "motivo": "Cefaleia por uso excessivo de analgésico, mesma conduta"
+ },
+ {
+  "a": "med-f6fcafbd",
+  "b": "res-21d89581",
+  "motivo": "SHU por STEC pós-hambúrguer, mesma conduta sem antibiótico"
+ },
+ {
+  "a": "med-5d7acf57",
+  "b": "res-ee32d9c6",
+  "motivo": "Cálculo piélico de 2,5 cm; nefrolitotripsia percutânea"
+ },
+ {
+  "a": "med-7a8948f0",
+  "b": "res-139ae3ea",
+  "motivo": "Doença granulomatosa crônica, DHR alterado, NADPH oxidase"
+ },
+ {
+  "a": "med-2109d92b",
+  "b": "res-0d711c96",
+  "motivo": "Organofosforado: fraqueza nicotínica não responde à atropina"
+ },
+ {
+  "a": "med-dfe6e234",
+  "b": "res-5533f558",
+  "motivo": "Bronquiolite obliterante pós-adenovírus, vinhetas quase iguais"
+ },
+ {
+  "a": "med-a68df11c",
+  "b": "res-2b9dd917",
+  "motivo": "Hepatite B aguda por sexo desprotegido, vinhetas quase iguais"
+ },
+ {
+  "a": "med-7f3c11a1",
+  "b": "res-79e60130",
+  "motivo": "HBV crônica HBeAg-negativa com mesmos dados e conduta"
+ },
+ {
+  "a": "med-fae98c45",
+  "b": "res-b1f57c84",
+  "motivo": "Cálculo de SCQ pela regra dos nove com áreas quase iguais"
+ },
+ {
+  "a": "med-d0a4eb9b",
+  "b": "res-2b602630",
+  "motivo": "Lesão do interósseo posterior, mesmo exame e resposta"
+ },
+ {
+  "a": "med-7e102a2d",
+  "b": "res-aa2dbfe4",
+  "motivo": "Transferência de IgG via FcRn no 3º trimestre, mesmos números"
+ },
+ {
+  "a": "med-4b31347d",
+  "b": "med-a0e840cb",
+  "motivo": "CAD com vômitos: AG elevado + alcalose metabólica"
+ },
+ {
+  "a": "med-27ecc5f5",
+  "b": "res-77505e75",
+  "motivo": "Hipertensão intracraniana idiopática, perda de peso e acetazolamida"
+ },
+ {
+  "a": "med-773d7213",
+  "b": "res-c5d4d5db",
+  "motivo": "Endocardite tricúspide por S. aureus em UDI"
+ },
+ {
+  "a": "med-3f697d67",
+  "b": "res-e45756cb",
+  "motivo": "Cessação do tabagismo em epiléptico; TRN combinada"
+ },
+ {
+  "a": "med-d6fd96e8",
+  "b": "res-9c606336",
+  "motivo": "DPOC: classificação GOLD em tabagista com espirometria"
+ },
+ {
+  "a": "med-c43c369b",
+  "b": "res-6c90b502",
+  "motivo": "Síndrome hepatorrenal; terlipressina + albumina"
+ },
+ {
+  "a": "med-24754fc7",
+  "b": "res-72511994",
+  "motivo": "PTT; plasmaférese com corticoide, vinhetas quase iguais"
+ },
+ {
+  "a": "med-76bca93e",
+  "b": "res-3f106abc",
+  "motivo": "Controle de erradicação do H. pylori; teste respiratório"
+ },
+ {
+  "a": "med-1d06ecbd",
+  "b": "res-7f892e1d",
+  "motivo": "Item III de A é a resposta de B (testemunha declara impedimento)"
+ },
+ {
+  "a": "med-53d91486",
+  "b": "res-4ac34182",
+  "motivo": "Tríplice viral após IGIV por Kawasaki; adiar 11 meses"
+ },
+ {
+  "a": "med-daa1e585",
+  "b": "res-2bee1feb",
+  "motivo": "Distocia de ombro; McRoberts + pressão suprapúbica"
+ },
+ {
+  "a": "med-4bc8bc88",
+  "b": "res-94673388",
+  "motivo": "Hipercalemia e inativação de canais de Na, mesma pergunta"
+ },
+ {
+  "a": "med-2f57298f",
+  "b": "res-5362adf7",
+  "motivo": "Tricomoníase; metronidazol e tratar parceria"
+ },
+ {
+  "a": "med-d078fa11",
+  "b": "res-1be2249e",
+  "motivo": "Graves: hipersensibilidade tipo II estimulatória em ambas"
+ },
+ {
+  "a": "med-db49576b",
+  "b": "med-fa4e4c64",
+  "motivo": "TIH com TVP; trocar para anticoagulante não heparínico"
+ },
+ {
+  "a": "med-f8d585ec",
+  "b": "med-3f5cf432",
+  "motivo": "Bacteriúria assintomática na gestação, mesma conduta"
+ },
+ {
+  "a": "med-de8ce8ee",
+  "b": "res-209f59d8",
+  "motivo": "Chagas crônica indeterminada em jovem; benznidazol pré-gestação"
+ },
+ {
+  "a": "med-63f605b0",
+  "b": "res-2cf8527f",
+  "motivo": "Chagas congênito: sorologia após 9 meses"
+ },
+ {
+  "a": "res-867e21c6",
+  "b": "res-37626142",
+  "motivo": "Trajeto da veia umbilical/ramo esquerdo da porta: uma dá pista da outra"
+ },
+ {
+  "a": "med-c4851bfa",
+  "b": "res-f93794d4",
+  "motivo": "Lactente febril sem foco; urocultura por cateterismo/punção"
+ },
+ {
+  "a": "med-86f1c002",
+  "b": "med-a9393ec5",
+  "motivo": "Mesma vinheta de HPP por atonia (causa e conduta)"
+ },
+ {
+  "a": "med-d0e91dbf",
+  "b": "res-106dc28b",
+  "motivo": "Paralisia do troclear direito, mesma resposta"
+ },
+ {
+  "a": "med-148dbc1b",
+  "b": "res-ba79cd9e",
+  "motivo": "Intoxicação por metadona; naloxona de meia-vida curta"
+ },
+ {
+  "a": "med-9e7d0d8c",
+  "b": "res-8ad7bb57",
+  "motivo": "Pancreatite biliar leve; colecistectomia na mesma internação"
+ },
+ {
+  "a": "med-3a13cbcf",
+  "b": "res-0cb4eee3",
+  "motivo": "Hematoma subdural crônico por veias-ponte"
+ },
+ {
+  "a": "med-0e1caf20",
+  "b": "res-f7a696e7",
+  "motivo": "Tamponamento cardíaco por facada, mesma vinheta"
+ },
+ {
+  "a": "med-e553ae81",
+  "b": "res-ebd89122",
+  "motivo": "Síndrome do homem vermelho por vancomicina, mesma conduta"
+ },
+ {
+  "a": "med-f8baf001",
+  "b": "res-f7a696e7",
+  "motivo": "Tamponamento cardíaco por facada, mesma vinheta"
+ },
+ {
+  "a": "med-ea4de835",
+  "b": "res-0ff88a16",
+  "motivo": "Obstrução de delgado por bridas, mesma vinheta"
+ },
+ {
+  "a": "med-34b0d99f",
+  "b": "res-00e42d25",
+  "motivo": "Dengue em gestante: grupo B, hemograma obrigatório"
+ },
+ {
+  "a": "med-58565af5",
+  "b": "med-6c3bf872",
+  "motivo": "Reversão de varfarina com CCP + vitamina K em hemorragia intracraniana"
+ },
+ {
+  "a": "med-dd2753e9",
+  "b": "med-fb559d42",
+  "motivo": "Cefaleia por uso excessivo de medicação em migranosa"
+ },
+ {
+  "a": "med-0f55bc24",
+  "b": "med-cf7267f8",
+  "motivo": "Colangite por coledocolitíase; CPRE com papilotomia"
+ },
+ {
+  "a": "med-4b0f4dc5",
+  "b": "res-19f95f59",
+  "motivo": "Fratura exposta de tíbia em motociclista, classificação de Gustilo"
+ },
+ {
+  "a": "med-98f1a271",
+  "b": "med-8a7fa4fc",
+  "motivo": "Colangite aguda grave, vinhetas quase iguais"
+ },
+ {
+  "a": "med-f8baf001",
+  "b": "med-0e1caf20",
+  "motivo": "Tamponamento cardíaco por facada, praticamente iguais"
+ },
+ {
+  "a": "med-d10d555d",
+  "b": "res-d2c8ea7b",
+  "motivo": "Placenta prévia com sangramento cessado; conduta expectante"
+ },
+ {
+  "a": "med-1cb0424c",
+  "b": "res-59135050",
+  "motivo": "Viés de memória em estudo de malformação"
+ },
+ {
+  "a": "med-974d7cf6",
+  "b": "res-86b04ac5",
+  "motivo": "Sono seguro do lactente para prevenir morte súbita"
+ },
+ {
+  "a": "med-96f835cf",
+  "b": "res-b2a73841",
+  "motivo": "Leishmaniose tegumentar, úlcera em moldura"
+ },
+ {
+  "a": "med-fdd18cfc",
+  "b": "med-6612bbe0",
+  "motivo": "Mecanismo da SRO (SGLT1), mesma pergunta"
+ },
+ {
+  "a": "med-69c20e71",
+  "b": "res-4ad9c681",
+  "motivo": "Enterococo e resistência intrínseca a cefalosporinas; ampicilina"
+ },
+ {
+  "a": "med-e87e1d47",
+  "b": "res-0661fa53",
+  "motivo": "Candidíase recorrente; fluconazol indução + semanal"
+ },
+ {
+  "a": "med-0c68dbb5",
+  "b": "res-b3b2694b",
+  "motivo": "V/Q no ápice e TB, praticamente a mesma questão"
+ },
+ {
+  "a": "med-a97dce08",
+  "b": "res-27f88412",
+  "motivo": "Mastite puerperal; manter amamentação e cefalexina"
+ },
+ {
+  "a": "med-77e76626",
+  "b": "res-14107f12",
+  "motivo": "Bacteremia por MSSA em hemodiálise; trocar para cefazolina"
+ },
+ {
+  "a": "med-93aa8579",
+  "b": "med-43a1f133",
+  "motivo": "Puérpera Rh negativo: indicação de anti-D conforme Rh do RN, vinhetas iguais"
+ },
+ {
+  "a": "med-963fd3f9",
+  "b": "med-3a3b3f53",
+  "motivo": "Sífilis latente na gestação; A revela tratamento da parceria"
+ },
+ {
+  "a": "med-7796b302",
+  "b": "res-3a6a2155",
+  "motivo": "HPB e finasterida (inibidor da 5-alfa-redutase)"
+ },
+ {
+  "a": "med-b1b04274",
+  "b": "med-cb4bfe32",
+  "motivo": "Reanimação neonatal: VPP após passos iniciais"
+ },
+ {
+  "a": "med-51db6398",
+  "b": "res-cb5d0f50",
+  "motivo": "Hérnia inguinal estrangulada; cirurgia sem redução"
+ },
+ {
+  "a": "med-fe62d493",
+  "b": "res-56145176",
+  "motivo": "Quilotórax pós-esofagectomia; ducto torácico"
+ },
+ {
+  "a": "med-fa4e4c64",
+  "b": "res-4e89a494",
+  "motivo": "TIH com TVP; anticoagulante não heparínico"
+ },
+ {
+  "a": "med-0ebb17e1",
+  "b": "res-4c7767b9",
+  "motivo": "Vaginose bacteriana: B mostra os critérios de Amsel"
+ },
+ {
+  "a": "med-1d06ecbd",
+  "b": "med-596ce138",
+  "motivo": "Item IV de A responde B (notificação compulsória)"
+ },
+ {
+  "a": "med-7cccad0b",
+  "b": "res-d3fd6332",
+  "motivo": "IAM com falha da fibrinólise; angioplastia de resgate"
+ },
+ {
+  "a": "med-ebfff2aa",
+  "b": "res-39d92607",
+  "motivo": "Ectópica com metotrexato e seguimento de beta-hCG"
+ },
+ {
+  "a": "med-fc70025a",
+  "b": "res-755df3d7",
+  "motivo": "Sigilo da adolescente sobre contracepção"
+ },
+ {
+  "a": "med-4065238c",
+  "b": "res-ed910fb1",
+  "motivo": "Síndrome de lise tumoral; rasburicase"
+ },
+ {
+  "a": "med-527a22e5",
+  "b": "res-cfdbc9ed",
+  "motivo": "Úlcera perfurada com pneumoperitônio; B revela A"
+ },
+ {
+  "a": "med-db2a8554",
+  "b": "res-7c645ae0",
+  "motivo": "SIADH em carcinoma de pequenas células"
+ },
+ {
+  "a": "med-dc29ba5b",
+  "b": "res-430f707f",
+  "motivo": "Análise por intenção de tratar, mesma questão"
+ },
+ {
+  "a": "med-8c7fde11",
+  "b": "res-731e29ed",
+  "motivo": "Teste do coraçãozinho alterado, mesma vinheta"
+ },
+ {
+  "a": "res-a01a4c3c",
+  "b": "res-4a618567",
+  "motivo": "HSIL: B revela que a conduta é colposcopia"
+ },
+ {
+  "a": "med-5fcf00b4",
+  "b": "res-e6b73fa8",
+  "motivo": "Síndrome de DiGeorge (22q11.2), mesmo RN"
+ },
+ {
+  "a": "res-3e487826",
+  "b": "res-9e3fd7ba",
+  "motivo": "Crupe: B revela tratamento de A"
+ },
+ {
+  "a": "med-e4352c0f",
+  "b": "res-41e97314",
+  "motivo": "Estenose hipertrófica do piloro, mesma vinheta"
+ },
+ {
+  "a": "med-df2a23a9",
+  "b": "med-8de47d25",
+  "motivo": "Bronquiolite viral, mesma vinheta (manejo vs agente)"
+ },
+ {
+  "a": "med-859ff98f",
+  "b": "res-7c1e8d52",
+  "motivo": "Desidratação plano B, mesmo volume"
+ },
+ {
+  "a": "med-42583044",
+  "b": "res-d5c77329",
+  "motivo": "Sífilis na gestação; esquema de 3 doses revelado"
+ },
+ {
+  "a": "med-6c3bf872",
+  "b": "res-7fe9f06e",
+  "motivo": "Reversão da varfarina: B revela CCP + vitamina K"
+ },
+ {
+  "a": "med-93144b36",
+  "b": "res-0d236bf1",
+  "motivo": "Lesão corporal grave por incapacidade > 30 dias"
+ },
+ {
+  "a": "med-a43bde88",
+  "b": "res-661898cb",
+  "motivo": "Tétano não confere imunidade; vacinar"
+ },
+ {
+  "a": "med-082a92af",
+  "b": "res-29d8383c",
+  "motivo": "Risco de fibrose cística com irmão afetado, mesma Carla"
+ },
+ {
+  "a": "med-fe133dda",
+  "b": "med-cff87ad2",
+  "motivo": "Volvo de sigmoide; B revela distorção endoscópica"
+ },
+ {
+  "a": "med-e47f85c9",
+  "b": "res-d37fca59",
+  "motivo": "Cálculo de incidência acumulada, quase igual"
+ },
+ {
+  "a": "med-e10fb3dd",
+  "b": "med-5633c732",
+  "motivo": "DMG por TOTG: gestante D de B é igual a A"
+ },
+ {
+  "a": "med-11793325",
+  "b": "res-cc7cf79d",
+  "motivo": "Pós-DMG: TOTG no puerpério"
+ },
+ {
+  "a": "med-aa942d42",
+  "b": "res-41922d8e",
+  "motivo": "Choque hemorrágico classe III, mesma vinheta"
+ },
+ {
+  "a": "med-bb2c7f67",
+  "b": "res-66649a88",
+  "motivo": "Estenose do piloro com alcalose hipoclorêmica"
+ },
+ {
+  "a": "med-98e342ba",
+  "b": "res-242b255a",
+  "motivo": "Flutter atrial pelo istmo cavotricuspídeo"
+ },
+ {
+  "a": "med-7319a4b2",
+  "b": "res-c6db14c3",
+  "motivo": "BAVT sem resposta à atropina; marca-passo transcutâneo"
+ },
+ {
+  "a": "med-9b7273a1",
+  "b": "res-dd635f90",
+  "motivo": "LPA com CIVD; ATRA imediato"
+ },
+ {
+  "a": "med-30335326",
+  "b": "res-e6d2328e",
+  "motivo": "Sarampo: notificação imediata"
+ },
+ {
+  "a": "med-54b4fd67",
+  "b": "res-8dcbcd27",
+  "motivo": "Anafilaxia em betabloqueado; glucagon"
+ },
+ {
+  "a": "med-78714ff0",
+  "b": "res-a002862a",
+  "motivo": "Aloimunização Rh com Doppler ACM alterado; transfusão intrauterina"
+ },
+ {
+  "a": "med-457ac371",
+  "b": "res-04a21f49",
+  "motivo": "Aleitamento exclusivo até 6 meses e até 2 anos"
+ },
+ {
+  "a": "med-78487513",
+  "b": "res-609db561",
+  "motivo": "Ressecção ileal e sais biliares: item II de A responde B"
+ },
+ {
+  "a": "med-df2a23a9",
+  "b": "res-0e8a6af8",
+  "motivo": "Bronquiolite por VSR, mesma vinheta"
+ },
+ {
+  "a": "res-93c6b099",
+  "b": "res-32422a7e",
+  "motivo": "Derrame parapneumônico complicado; drenagem"
+ },
+ {
+  "a": "med-e8ed31f8",
+  "b": "res-fb221897",
+  "motivo": "Paciente 1 de A é o caso de febre amarela de B"
+ },
+ {
+  "a": "med-099bb686",
+  "b": "res-987aa13b",
+  "motivo": "Choque séptico: B revela noradrenalina"
+ },
+ {
+  "a": "med-0912d893",
+  "b": "res-b3ec8e48",
+  "motivo": "Meningite bacteriana; dexametasona + ceftriaxona"
+ },
+ {
+  "a": "med-f7b1fe0f",
+  "b": "med-c7d061b4",
+  "motivo": "Vaginose bacteriana sem tratar parceiro; B contém A"
+ },
+ {
+  "a": "med-3dc91840",
+  "b": "res-6873edc4",
+  "motivo": "Glasgow e TCE moderado, mesma questão"
+ },
+ {
+  "a": "med-b1ce73bc",
+  "b": "res-32bae240",
+  "motivo": "Câncer de mama HER2+ RH-negativo"
+ },
+ {
+  "a": "med-c93bfc42",
+  "b": "res-45b1eb4c",
+  "motivo": "DPP: condutas contrastantes na mesma situação"
+ },
+ {
+  "a": "med-72df44da",
+  "b": "med-c1a5e150",
+  "motivo": "Crise aplásica por parvovírus B19 em falciforme"
+ },
+ {
+  "a": "med-c6329cba",
+  "b": "res-3e487826",
+  "motivo": "Crupe viral, mesma vinheta"
+ },
+ {
+  "a": "med-0c7c8a4c",
+  "b": "res-eb18680d",
+  "motivo": "Hiponatremia grave com convulsão; salina 3% em bolus"
+ },
+ {
+  "a": "med-53357afd",
+  "b": "med-87efcd59",
+  "motivo": "Anti-D em perda gestacional precoce (ectópica/abortamento)"
+ },
+ {
+  "a": "med-37ce43f1",
+  "b": "med-88ef4556",
+  "motivo": "Hiperaldosteronismo primário: A revela aldosterona/renina"
+ },
+ {
+  "a": "med-009e272e",
+  "b": "res-3afc3201",
+  "motivo": "Vômito bilioso sugere má rotação com volvo"
+ },
+ {
+  "a": "med-daa1e585",
+  "b": "res-0a49b4ff",
+  "motivo": "Distocia de ombro: A revela diagnóstico de B"
+ },
+ {
+  "a": "med-2d80a8ac",
+  "b": "res-f66afde6",
+  "motivo": "Malária vivax na gestação: primaquina contraindicada"
+ },
+ {
+  "a": "med-2f0c1afe",
+  "b": "res-b3ec8e48",
+  "motivo": "Meningite: A revela dexametasona + ceftriaxona"
+ },
+ {
+  "a": "med-67dc28ec",
+  "b": "med-e87091d5",
+  "motivo": "Kawasaki: B revela IGIV + AAS"
+ },
+ {
+  "a": "med-31e6b1cf",
+  "b": "med-950d91fe",
+  "motivo": "Estadiamento FIGO por invasão parametrial"
+ },
+ {
+  "a": "med-5633c732",
+  "b": "res-6ac7009b",
+  "motivo": "Glicemia de jejum 92-125 no 1º trimestre = DMG"
+ },
+ {
+  "a": "med-66e47af9",
+  "b": "res-c186fc7f",
+  "motivo": "ICFEr: acréscimo de betabloqueador, vinhetas iguais"
+ },
+ {
+  "a": "med-ae7d4bf1",
+  "b": "med-98e342ba",
+  "motivo": "Flutter atrial típico em DPOC"
+ },
+ {
+  "a": "med-fc3b1b8e",
+  "b": "res-51600c9b",
+  "motivo": "Placenta prévia: evitar toque vaginal"
+ },
+ {
+  "a": "med-aea0686d",
+  "b": "res-21c38665",
+  "motivo": "Graves no 1º trimestre; propiltiouracil"
+ },
+ {
+  "a": "res-af83c75f",
+  "b": "res-d91dd36a",
+  "motivo": "Kawasaki completo e incompleto; IGIV + AAS"
+ },
+ {
+  "a": "med-cfe3e236",
+  "b": "res-50d01fd0",
+  "motivo": "E6/p53 e E7/pRb: A responde item II de B"
+ },
+ {
+  "a": "med-13e621e3",
+  "b": "med-abe01441",
+  "motivo": "Hemotórax maciço; indicação de toracotomia"
+ },
+ {
+  "a": "med-28c1fb74",
+  "b": "med-50c5066a",
+  "motivo": "Pericardite urêmica; B revela hemodiálise"
+ },
+ {
+  "a": "med-8d0b31f7",
+  "b": "res-475c686c",
+  "motivo": "Vasos ovarianos no ligamento suspensor: A responde B"
+ },
+ {
+  "a": "med-cadcf152",
+  "b": "res-a2a61a9c",
+  "motivo": "Febre reumática; profilaxia secundária com benzatina"
+ },
+ {
+  "a": "med-27549e46",
+  "b": "res-60870265",
+  "motivo": "Canal arterial e inibição de prostaglandinas: A explica B"
+ },
+ {
+  "a": "med-8d167876",
+  "b": "res-d3ad67cd",
+  "motivo": "HDA varicosa; terlipressina, antibiótico e EDA com ligadura"
+ },
+ {
+  "a": "med-cff87ad2",
+  "b": "res-09257775",
+  "motivo": "Volvo de sigmoide: distorção endoscópica"
+ },
+ {
+  "a": "med-17146d8e",
+  "b": "med-046c6de0",
+  "motivo": "HBV na gestação: A revela tenofovir no 3º trimestre"
+ },
+ {
+  "a": "med-fc91c615",
+  "b": "res-179a2aa9",
+  "motivo": "Mesma lesão do torácico longo pós-mastectomia"
+ },
+ {
+  "a": "med-eb4a2bec",
+  "b": "res-f79d5c1d",
+  "motivo": "Mesmo percentual mínimo da LC 141/2012"
+ },
+ {
+  "a": "med-ec3a007e",
+  "b": "res-fbe25e90",
+  "motivo": "Mesmo eritema nodoso hansênico; talidomida"
+ },
+ {
+  "a": "med-a0e840cb",
+  "b": "res-c05ed6fd",
+  "motivo": "Mesma CAD com alcalose por vômitos, mesma resposta"
+ },
+ {
+  "a": "med-cef46338",
+  "b": "res-1221f1a4",
+  "motivo": "Mesmo cenário pré-anestésico, ASA II em ambos"
+ },
+ {
+  "a": "med-7c1c7f4b",
+  "b": "res-996962a9",
+  "motivo": "Mesma endometrite pós-cesárea, mesmo tratamento"
+ },
+ {
+  "a": "med-91999235",
+  "b": "res-96cb4650",
+  "motivo": "Mesma pergunta sobre mecanismo da vareniclina"
+ },
+ {
+  "a": "med-90457164",
+  "b": "res-fea5e4d7",
+  "motivo": "Mesmo IAM inferior com VD; uma resposta revela a outra"
+ },
+ {
+  "a": "med-a29e8f96",
+  "b": "res-ecfa2f74",
+  "motivo": "Mesma lesão do interósseo anterior pós-supracondiliana"
+ },
+ {
+  "a": "med-ccf002c0",
+  "b": "res-d8b76426",
+  "motivo": "Mesmo tumor neuroendócrino de apêndice 0,8 cm"
+ },
+ {
+  "a": "med-c5a781e1",
+  "b": "res-44d4b421",
+  "motivo": "Mesma espirometria de asma com resposta ao BD"
+ },
+ {
+  "a": "med-735a11e0",
+  "b": "res-4a618567",
+  "motivo": "Mesmo HSIL com ZT tipo 1; ver e tratar"
+ },
+ {
+  "a": "med-14fe5dfc",
+  "b": "res-44bd0d73",
+  "motivo": "Mesma intoxicação por magnésio; gluconato de cálcio"
+ },
+ {
+  "a": "med-8b847319",
+  "b": "res-71b465fa",
+  "motivo": "Mesmo óbito sem assistência; contraste com/sem SVO revela resposta"
+ },
+ {
+  "a": "med-d49913e2",
+  "b": "res-5523c7de",
+  "motivo": "Mesmo cálculo de Parkland no mesmo cenário"
+ },
+ {
+  "a": "med-e082f465",
+  "b": "res-e9aaa79d",
+  "motivo": "Mesmo abscesso apendicular; drenagem percutânea"
+ },
+ {
+  "a": "med-148b118e",
+  "b": "res-0d8d68a1",
+  "motivo": "Mesma tireoidite subaguda; AINE e betabloqueador"
+ },
+ {
+  "a": "med-a4655269",
+  "b": "res-16969b9c",
+  "motivo": "Mesmo diabético com ICFEr; iSGLT2"
+ },
+ {
+  "a": "med-b162ef63",
+  "b": "res-d632d81d",
+  "motivo": "Mesma pneumocistose; SMX-TMP + corticoide"
+ },
+ {
+  "a": "med-c283c071",
+  "b": "res-1a0f09be",
+  "motivo": "Mesmo atraso constitucional do crescimento"
+ },
+ {
+  "a": "med-5197a056",
+  "b": "res-b046893f",
+  "motivo": "Mesmo nódulo BI-RADS 5; core biopsy"
+ },
+ {
+  "a": "med-20795dff",
+  "b": "med-f9f0c00d",
+  "motivo": "Mesmo S. gallolyticus pedindo colonoscopia"
+ },
+ {
+  "a": "med-5549627d",
+  "b": "res-2eff2062",
+  "motivo": "Mesmo AVC de cerebral anterior esquerda"
+ },
+ {
+  "a": "med-f7b1fe0f",
+  "b": "med-0ebb17e1",
+  "motivo": "Enunciado de A traz os critérios de Amsel perguntados em B"
+ },
+ {
+  "a": "med-d479f1e7",
+  "b": "res-c79e41eb",
+  "motivo": "Mesmo sinal do psoas/apêndice retrocecal"
+ },
+ {
+  "a": "med-d0cd1596",
+  "b": "res-cfdbc9ed",
+  "motivo": "Mesma úlcera perfurada por AINE"
+ },
+ {
+  "a": "med-98dc2341",
+  "b": "res-fcfbd755",
+  "motivo": "Mesma enxaqueca com aura; combinado categoria 4"
+ },
+ {
+  "a": "med-4c379d3b",
+  "b": "res-f05ffef9",
+  "motivo": "Mesma lesão do hipoglosso pós-endarterectomia"
+ },
+ {
+  "a": "med-04d9fe45",
+  "b": "res-35e1ce87",
+  "motivo": "Mesma intolerância hereditária à frutose"
+ },
+ {
+  "a": "med-7b04f27c",
+  "b": "res-124662ea",
+  "motivo": "Mesma pielonefrite obstrutiva; desobstrução urgente"
+ },
+ {
+  "a": "med-50bd41a2",
+  "b": "res-55bfaf81",
+  "motivo": "Mesma alcalose metabólica por estenose pilórica"
+ },
+ {
+  "a": "med-b0e02bdc",
+  "b": "med-17146d8e",
+  "motivo": "Mesmo RN de mãe HBV; vacina + imunoglobulina"
+ },
+ {
+  "a": "med-b92a07c4",
+  "b": "res-3e487826",
+  "motivo": "Mesmo crupe moderado; adrenalina, dexa e observação"
+ },
+ {
+  "a": "med-457d999c",
+  "b": "res-264b183c",
+  "motivo": "Mesma paralisia de Erb-Duchenne"
+ },
+ {
+  "a": "med-c31fb56f",
+  "b": "res-d983c635",
+  "motivo": "Mesma traqueíte bacteriana pós-crupe"
+ },
+ {
+  "a": "med-96228c78",
+  "b": "res-01851d9c",
+  "motivo": "Mesma síndrome de Lynch"
+ },
+ {
+  "a": "med-9500b816",
+  "b": "res-c0790836",
+  "motivo": "Mesmo pneumotórax hipertensivo; descompressão"
+ },
+ {
+  "a": "med-02b59d96",
+  "b": "res-f290cd8b",
+  "motivo": "Mesma epizootia de febre amarela"
+ },
+ {
+  "a": "med-95671eb7",
+  "b": "res-d252d732",
+  "motivo": "Mesma distonia aguda por haloperidol"
+ },
+ {
+  "a": "med-9d50f54b",
+  "b": "res-62d400e5",
+  "motivo": "Contato de TB bacilífera; resposta de A antecipa B"
+ },
+ {
+  "a": "med-d02dc7e3",
+  "b": "res-591044b0",
+  "motivo": "Mesma lesão do nervo axilar pós-luxação"
+ },
+ {
+  "a": "med-7c38d09c",
+  "b": "med-38d4a27c",
+  "motivo": "Mesmo divertículo de Meckel"
+ },
+ {
+  "a": "med-cbfb994f",
+  "b": "res-d91dd36a",
+  "motivo": "Mesmo Kawasaki incompleto em lactente"
+ },
+ {
+  "a": "med-ed3e1fef",
+  "b": "res-9d727c8a",
+  "motivo": "Mesmo derrame pleural tuberculoso"
+ },
+ {
+  "a": "med-636e3537",
+  "b": "res-53920861",
+  "motivo": "Mesma desmielinização osmótica"
+ },
+ {
+  "a": "med-2c9af66c",
+  "b": "res-af83c75f",
+  "motivo": "Mesmo Kawasaki; aneurisma coronariano"
+ },
+ {
+  "a": "med-d0cd1318",
+  "b": "res-99abc997",
+  "motivo": "Mesma proteção ABO contra aloimunização Rh"
+ },
+ {
+  "a": "med-7945f146",
+  "b": "res-643e9078",
+  "motivo": "Mesma pergunta de classificação operacional da hanseníase"
+ },
+ {
+  "a": "med-950d91fe",
+  "b": "res-67bd2124",
+  "motivo": "Mesmo câncer de colo com paramétrio; IIB vs IIIB por hidronefrose"
+ },
+ {
+  "a": "med-6c3bf872",
+  "b": "res-75c52fd3",
+  "motivo": "Mesma reversão de varfarina com CCP e vitamina K"
+ },
+ {
+  "a": "med-dab52bd3",
+  "b": "res-703704c6",
+  "motivo": "Mesma crise febril simples"
+ },
+ {
+  "a": "med-f589289e",
+  "b": "res-288a7935",
+  "motivo": "Mesmas afirmativas sobre lesão celular; mesma resposta"
+ },
+ {
+  "a": "med-fbbc43ba",
+  "b": "res-1e78b165",
+  "motivo": "Mesmo esôfago de Barrett"
+ },
+ {
+  "a": "med-481ec827",
+  "b": "res-b28038a4",
+  "motivo": "Mesma lesão incisa/instrumento cortante"
+ },
+ {
+  "a": "med-931a8c65",
+  "b": "res-95c4e270",
+  "motivo": "Mesma hérnia femoral encarcerada em idosa"
+ },
+ {
+  "a": "med-76108fc6",
+  "b": "med-11e58014",
+  "motivo": "Mesma cistinúria; diagnóstico compartilhado"
+ },
+ {
+  "a": "med-7e609d00",
+  "b": "res-37626142",
+  "motivo": "Mesmo remanescente da veia umbilical"
+ },
+ {
+  "a": "med-f6d33aed",
+  "b": "res-844cfd88",
+  "motivo": "Mesma SOP; letrozol"
+ },
+ {
+  "a": "med-3d5b24e2",
+  "b": "res-0e56faa0",
+  "motivo": "Mesmo clampeamento tardio ≥60 s"
+ },
+ {
+  "a": "med-50f8fba2",
+  "b": "res-947a932a",
+  "motivo": "Mesma coleta do teste do pezinho 3º-5º dia"
+ },
+ {
+  "a": "med-e4805a62",
+  "b": "med-d02dc7e3",
+  "motivo": "Mesmo nervo axilar lesado no ombro"
+ },
+ {
+  "a": "med-ba5d890f",
+  "b": "res-39d92607",
+  "motivo": "Mesma gravidez ectópica; metotrexato"
+ },
+ {
+  "a": "med-a9712feb",
+  "b": "res-f757fbd2",
+  "motivo": "Mesma CAD com hipocalemia; adiar insulina"
+ },
+ {
+  "a": "med-93b0aec9",
+  "b": "res-37df8d20",
+  "motivo": "Mesmo transtorno de pânico; ISRS + TCC"
+ },
+ {
+  "a": "med-45be7657",
+  "b": "res-31ff7aa0",
+  "motivo": "Mesmo anti-D passivo pós-28 semanas"
+ },
+ {
+  "a": "med-47659217",
+  "b": "res-9e940ad4",
+  "motivo": "Mesma prostatite bacteriana aguda"
+ },
+ {
+  "a": "med-fb559d42",
+  "b": "res-223f974a",
+  "motivo": "Mesma cefaleia por uso excessivo de medicação"
+ },
+ {
+  "a": "med-001bbe82",
+  "b": "res-7eb4f1dd",
+  "motivo": "Mesmo esquema RHZE"
+ },
+ {
+  "a": "med-8db96ecc",
+  "b": "res-760379d8",
+  "motivo": "Mesma fobia de sangue; tensão aplicada"
+ },
+ {
+  "a": "med-58f5ddb6",
+  "b": "res-809ad5e9",
+  "motivo": "Mesma PBE; cefalosporina + albumina"
+ },
+ {
+  "a": "med-7bd2727d",
+  "b": "res-e9ef267d",
+  "motivo": "Mesmo NS1 na dengue precoce"
+ },
+ {
+  "a": "med-99259bfa",
+  "b": "res-fc2e2db8",
+  "motivo": "Testes em paralelo: conceito de A resolve B"
+ },
+ {
+  "a": "med-14fe5dfc",
+  "b": "med-dd46984b",
+  "motivo": "Enunciado de A mostra o arreflexo perguntado em B"
+ },
+ {
+  "a": "med-2b1e15b2",
+  "b": "res-8ea43ec2",
+  "motivo": "Mesma hemofilia A"
+ },
+ {
+  "a": "med-c39d28b4",
+  "b": "res-aa068854",
+  "motivo": "Mesma leishmaniose visceral; A traz o perfil pedido em B"
+ },
+ {
+  "a": "med-a5d197ac",
+  "b": "res-00e3f68b",
+  "motivo": "Mesma suspeita de TVP com Wells baixo; D-dímero"
+ },
+ {
+  "a": "med-c0c4c5b1",
+  "b": "res-cc0bbf34",
+  "motivo": "Mesma longitudinalidade"
+ },
+ {
+  "a": "med-39a35658",
+  "b": "med-3aa53da4",
+  "motivo": "Mesma DPOC exacerbada; VNI com O2 titulado"
+ },
+ {
+  "a": "med-f9f0c00d",
+  "b": "res-c87681d9",
+  "motivo": "Mesmo S. gallolyticus; colonoscopia"
+ },
+ {
+  "a": "med-c3f947b4",
+  "b": "res-2146af6a",
+  "motivo": "Mesma desidratação grave; plano C"
+ },
+ {
+  "a": "med-6f47d303",
+  "b": "res-abe4b151",
+  "motivo": "Mesma infecção aguda por HIV; carga viral"
+ },
+ {
+  "a": "med-7e0a4d8b",
+  "b": "res-424c7217",
+  "motivo": "Mesma intoxicação organofosforada"
+ },
+ {
+  "a": "med-494aee63",
+  "b": "res-1bc071ca",
+  "motivo": "Mesma pergunta de Duke definitiva por 2 critérios maiores"
+ },
+ {
+  "a": "med-827766ef",
+  "b": "res-2ae0a043",
+  "motivo": "Mesma sepse com hipoperfusão; bundle 1ª hora"
+ },
+ {
+  "a": "med-feca8478",
+  "b": "res-84126f01",
+  "motivo": "Mesma discinesia ciliar primária"
+ },
+ {
+  "a": "med-e1cb658e",
+  "b": "res-9b2c071c",
+  "motivo": "Mesma leptospirose leve; doxiciclina vs amoxicilina na gestante"
+ },
+ {
+  "a": "med-0822577e",
+  "b": "res-f646d3e4",
+  "motivo": "Mesma renúncia ao atendimento pelo CEM"
+ },
+ {
+  "a": "med-6d1d96eb",
+  "b": "res-c983aa0c",
+  "motivo": "Mesmo canal endêmico acima do limite = epidemia"
+ },
+ {
+  "a": "med-3c17ef17",
+  "b": "res-720f06c7",
+  "motivo": "Mesma galactosemia clássica"
+ },
+ {
+  "a": "med-757a4e26",
+  "b": "res-a7d50545",
+  "motivo": "Mesma deficiência de IgA; A revela a causa de B"
+ },
+ {
+  "a": "med-dd9ffa54",
+  "b": "res-32422a7e",
+  "motivo": "Mesmo derrame parapneumônico complicado; drenagem"
+ },
+ {
+  "a": "med-6cbb53a6",
+  "b": "res-d440cf32",
+  "motivo": "Mesma coorte com risco relativo"
+ },
+ {
+  "a": "med-68fdbb50",
+  "b": "res-899ee840",
+  "motivo": "Mesma úlcera Forrest IIa; terapia endoscópica"
+ },
+ {
+  "a": "med-c4068320",
+  "b": "res-8642f25b",
+  "motivo": "Mesma anemia da DRC G4; status do ferro decide conduta"
+ },
+ {
+  "a": "med-a1f2c259",
+  "b": "res-b94cec13",
+  "motivo": "Mesma FA pré-excitada (WPW) no futebol"
+ },
+ {
+  "a": "med-0819ba28",
+  "b": "res-33d4cacf",
+  "motivo": "Mesma confusão pelo tabagismo na relação café"
+ },
+ {
+  "a": "med-c18d8de0",
+  "b": "med-0a194b7a",
+  "motivo": "Estafilococos coagulase-negativos; novobiocina diferencia, um revela o outro"
+ },
+ {
+  "a": "med-2109d92b",
+  "b": "res-424c7217",
+  "motivo": "Organofosforado; A mostra resposta à atropina perguntada em B"
+ },
+ {
+  "a": "med-da566837",
+  "b": "res-ba79cd9e",
+  "motivo": "Mesma intoxicação por opioide; renarcotização"
+ },
+ {
+  "a": "med-d744638d",
+  "b": "med-78714ff0",
+  "motivo": "Aloimunização anti-D; resposta de A é premissa de B"
+ },
+ {
+  "a": "med-62c42fae",
+  "b": "res-ed499061",
+  "motivo": "Chagas; A traz o ECG perguntado em B"
+ },
+ {
+  "a": "med-963fd3f9",
+  "b": "res-d5c77329",
+  "motivo": "Mesma sífilis na gestação; 3 doses semanais"
+ },
+ {
+  "a": "med-22e2699f",
+  "b": "res-1316bbc2",
+  "motivo": "Mesma encefalopatia de Wernicke; tiamina"
+ },
+ {
+  "a": "res-424c7217",
+  "b": "res-0d711c96",
+  "motivo": "Mesma intoxicação organofosforada; atropina/pralidoxima"
+ },
+ {
+  "a": "med-2f0c1afe",
+  "b": "res-780ec030",
+  "motivo": "Pneumococo: resposta de A revela diagnóstico de B"
+ },
+ {
+  "a": "med-ae7d4bf1",
+  "b": "res-242b255a",
+  "motivo": "Flutter típico; A identifica o ritmo de B"
+ },
+ {
+  "a": "med-cff87ad2",
+  "b": "res-53bbbde7",
+  "motivo": "Mesmo volvo de sigmoide chagásico; cirurgia na internação"
+ },
+ {
+  "a": "med-0d96a34e",
+  "b": "res-abf65892",
+  "motivo": "Mesma instabilidade atlantoaxial na AR"
+ },
+ {
+  "a": "med-db49576b",
+  "b": "med-e1a7ab51",
+  "motivo": "Mesma TIH pós-artroplastia; B revela troca de heparina"
+ },
+ {
+  "a": "med-6cc24fd5",
+  "b": "res-7fe62faf",
+  "motivo": "Mesma deficiência de B12 com degeneração combinada"
+ },
+ {
+  "a": "med-2eebe222",
+  "b": "res-66649a88",
+  "motivo": "Mesma estenose hipertrófica de piloro; alcalose"
+ },
+ {
+  "a": "med-0508799f",
+  "b": "res-a71a87fe",
+  "motivo": "Mesmo crupe leve; dexametasona"
+ },
+ {
+  "a": "med-5cbfc6a5",
+  "b": "res-e4b726ca",
+  "motivo": "Mesma dengue grupo C"
+ },
+ {
+  "a": "med-93aa8579",
+  "b": "res-31ff7aa0",
+  "motivo": "Mesma profilaxia anti-D pós-parto em 72 h"
+ },
+ {
+  "a": "med-b92a07c4",
+  "b": "res-9e3fd7ba",
+  "motivo": "Mesmo crupe após adrenalina; observação/recorrência"
+ },
+ {
+  "a": "med-bc990cf0",
+  "b": "res-91c7a686",
+  "motivo": "Mesma malária grave; artesunato IV"
+ },
+ {
+  "a": "med-296ca7a9",
+  "b": "med-2d0169ae",
+  "motivo": "HPPN: resposta de A explica circulação fetal de B"
+ },
+ {
+  "a": "med-a2811525",
+  "b": "res-16969b9c",
+  "motivo": "Mesmo iSGLT2 em diabético com metformina"
+ },
+ {
+  "a": "med-e1a7ab51",
+  "b": "res-4e89a494",
+  "motivo": "Mesma TIH pós-artroplastia"
+ },
+ {
+  "a": "res-2b9dd917",
+  "b": "res-fb34363e",
+  "motivo": "B informa hepatite B aguda, resposta de A"
+ },
+ {
+  "a": "med-2109d92b",
+  "b": "med-029e49a2",
+  "motivo": "Organofosforado; A mostra o alvo de titulação da atropina"
+ },
+ {
+  "a": "med-af4431a1",
+  "b": "res-5bde9362",
+  "motivo": "B informa o piridoxal-fosfato perguntado em A"
+ },
+ {
+  "a": "med-da566837",
+  "b": "med-148dbc1b",
+  "motivo": "Mesma renarcotização por opioide"
+ },
+ {
+  "a": "med-2821e269",
+  "b": "res-40a66ee1",
+  "motivo": "Mesma pneumonia infantil; amoxicilina ambulatorial"
+ },
+ {
+  "a": "med-8a7fa4fc",
+  "b": "res-b3d648ff",
+  "motivo": "Mesma colangite grave com pêntade de Reynolds"
+ },
+ {
+  "a": "med-86edc0f4",
+  "b": "res-62a3d029",
+  "motivo": "Goodpasture; A revela anticorpo anti-colágeno IV"
+ },
+ {
+  "a": "med-acb4915b",
+  "b": "res-2ee0c524",
+  "motivo": "Mesma icterícia precoce por ABO"
+ },
+ {
+  "a": "res-7fe9f06e",
+  "b": "res-75c52fd3",
+  "motivo": "Reversão de varfarina; B antecipa vitamina K de A"
+ },
+ {
+  "a": "med-706ed4ec",
+  "b": "res-8d72de25",
+  "motivo": "Mesmo rastreamento por pai com CCR aos 48"
+ },
+ {
+  "a": "med-92f5192f",
+  "b": "res-6f5a18e2",
+  "motivo": "Mesma depressão psicótica grave; ECT"
+ },
+ {
+  "a": "med-1102aafe",
+  "b": "res-585a34a7",
+  "motivo": "A informa mecanismo e uso da ivabradina de B"
+ },
+ {
+  "a": "med-4234063e",
+  "b": "res-d76b5c50",
+  "motivo": "Mesmo cálculo de regeneração a 1 mm/dia"
+ },
+ {
+  "a": "med-b0e02bdc",
+  "b": "med-046c6de0",
+  "motivo": "HBV na gestação; B revela vacina + imunoglobulina de A"
+ },
+ {
+  "a": "med-cdc03c3e",
+  "b": "res-14107f12",
+  "motivo": "S. aureus em cateter de hemodiálise; MRSA vs MSSA se entregam"
+ },
+ {
+  "a": "med-eaba027a",
+  "b": "res-fa6bb3d8",
+  "motivo": "Mesma síndrome HELLP"
+ },
+ {
+  "a": "med-9606285f",
+  "b": "res-ed499061",
+  "motivo": "Chagas: mesmo caso e mesma pergunta (ECG BRD+BDAS)"
+ },
+ {
+  "a": "med-3e771c56",
+  "b": "res-2db73de3",
+  "motivo": "Lúpus induzido por hidralazina, mesmo caso"
+ },
+ {
+  "a": "med-a0d274d6",
+  "b": "res-117b18a0",
+  "motivo": "Klinefelter, mesmo caso e resposta"
+ },
+ {
+  "a": "med-8aac1302",
+  "b": "med-347c56f4",
+  "motivo": "Aneurisma de arco aórtico e laríngeo recorrente, mesma pergunta"
+ },
+ {
+  "a": "med-8de47d25",
+  "b": "res-0e8a6af8",
+  "motivo": "Bronquiolite por VSR, mesmo caso"
+ },
+ {
+  "a": "med-1c50891f",
+  "b": "res-55fd2c8a",
+  "motivo": "Parada secundária da dilatação por DCP, mesmo partograma"
+ },
+ {
+  "a": "med-a7283147",
+  "b": "res-02ad3c72",
+  "motivo": "Úlcera de Marjolin, mesmo caso"
+ },
+ {
+  "a": "med-596ce138",
+  "b": "res-91bc920d",
+  "motivo": "Sífilis e sigilo x notificação compulsória, mesma questão"
+ },
+ {
+  "a": "med-dcab6b15",
+  "b": "med-7796b302",
+  "motivo": "Finasterida em HPB: mecanismo e queda do PSA"
+ },
+ {
+  "a": "med-d4439d5f",
+  "b": "res-3b63ce8d",
+  "motivo": "Melanoma Breslow >1 mm: ampliação e linfonodo sentinela"
+ },
+ {
+  "a": "med-6ef6452a",
+  "b": "res-940ac5c3",
+  "motivo": "Maturação de afinidade após reforço vacinal"
+ },
+ {
+  "a": "med-2ceefc88",
+  "b": "res-b8fd80d5",
+  "motivo": "Síndrome de Heyde: troca valvar"
+ },
+ {
+  "a": "med-5f97d882",
+  "b": "med-bdcac625",
+  "motivo": "Diabetes insípido nefrogênico por lítio, mesmo caso"
+ },
+ {
+  "a": "med-80f24c1a",
+  "b": "res-10a917db",
+  "motivo": "Álcool tóxico com gap osmolar idêntico (fomepizol+HD); um orienta o outro"
+ },
+ {
+  "a": "med-acd8a6c2",
+  "b": "res-e2bf5303",
+  "motivo": "AIT com estenose carotídea 80%: endarterectomia"
+ },
+ {
+  "a": "med-95dba7e1",
+  "b": "res-7c1e8d52",
+  "motivo": "Diarreia com desidratação: plano B"
+ },
+ {
+  "a": "med-82d6b215",
+  "b": "res-00e42d25",
+  "motivo": "Dengue grupo B com hemograma obrigatório, cenário muito semelhante"
+ },
+ {
+  "a": "med-ca5a3258",
+  "b": "res-f9a7da39",
+  "motivo": "Linfoma primário do SNC no HIV, mesmo caso"
+ },
+ {
+  "a": "med-4b31347d",
+  "b": "res-c05ed6fd",
+  "motivo": "CAD com alcalose metabólica associada (delta/delta), mesmo caso"
+ },
+ {
+  "a": "med-77dcad12",
+  "b": "res-aea024fe",
+  "motivo": "Eritromicina agonista da motilina na gastroparesia"
+ },
+ {
+  "a": "med-9bb7ff72",
+  "b": "res-76b401b1",
+  "motivo": "Eritromicina neonatal e estenose hipertrófica do piloro"
+ },
+ {
+  "a": "med-13179894",
+  "b": "res-c570bc3a",
+  "motivo": "Apendicite com escore de Alvarado, mesmo cenário"
+ },
+ {
+  "a": "med-992897cf",
+  "b": "res-ac1021ec",
+  "motivo": "IC descompensada quente e úmida, mesmo caso"
+ },
+ {
+  "a": "med-3d2e17f2",
+  "b": "res-5eff446f",
+  "motivo": "Intoxicação por lítio por tiazídico, mesmo caso e mecanismo"
+ },
+ {
+  "a": "med-66491066",
+  "b": "res-e5cf04a7",
+  "motivo": "Drenagem torácica na borda superior da costela"
+ },
+ {
+  "a": "med-527a22e5",
+  "b": "med-d0cd1596",
+  "motivo": "Úlcera péptica perfurada com pneumoperitônio; um enunciado dá a resposta do outro"
+ },
+ {
+  "a": "med-c6329cba",
+  "b": "res-a71a87fe",
+  "motivo": "Crupe viral por parainfluenza, mesmo caso"
+ },
+ {
+  "a": "med-a061b8ae",
+  "b": "res-592f8527",
+  "motivo": "Perda auditiva após meningite pneumocócica"
+ },
+ {
+  "a": "med-db49576b",
+  "b": "res-4e89a494",
+  "motivo": "Trombocitopenia induzida por heparina com TVP"
+ },
+ {
+  "a": "med-b551a55c",
+  "b": "res-40e2794c",
+  "motivo": "Crise de asma: salbutamol inalatório"
+ },
+ {
+  "a": "med-4b31347d",
+  "b": "med-fb0bcd71",
+  "motivo": "CAD em jovem: mesmo cenário de cetoacidose, interpretação ácido-base"
+ },
+ {
+  "a": "med-d83f16c5",
+  "b": "res-8d2e1dcd",
+  "motivo": "CBC esclerodermiforme recidivado: Mohs"
+ },
+ {
+  "a": "med-f4f25b6a",
+  "b": "res-2cea865a",
+  "motivo": "Probabilidade pós-teste 20% e RV+ 8, mesmos números"
+ },
+ {
+  "a": "med-6df35fbc",
+  "b": "res-8d33af6d",
+  "motivo": "Síndrome neuroléptica maligna, mesmo caso"
+ },
+ {
+  "a": "med-78ac165e",
+  "b": "res-cb04b285",
+  "motivo": "TEP maciço: trombólise, mesmo caso"
+ },
+ {
+  "a": "med-82d6b215",
+  "b": "med-34b0d99f",
+  "motivo": "Dengue grupo B em gestante x prova do laço positiva, mesma conduta"
+ },
+ {
+  "a": "med-27be9e91",
+  "b": "res-f2094351",
+  "motivo": "Cefaleia em salvas: oxigênio a 100%"
+ },
+ {
+  "a": "med-96de079d",
+  "b": "res-4c7767b9",
+  "motivo": "Vaginose bacteriana: metronidazol, mesmo quadro"
+ },
+ {
+  "a": "med-b15cac2e",
+  "b": "res-f1562536",
+  "motivo": "Dor torácica por cocaína: benzodiazepínico"
+ },
+ {
+  "a": "med-6ae0a009",
+  "b": "res-98247263",
+  "motivo": "Exantema súbito por HHV-6"
+ },
+ {
+  "a": "med-984ae57a",
+  "b": "res-62a3d029",
+  "motivo": "Doença anti-MBG (Goodpasture), mesmo caso; item II revela resposta do outro"
+ },
+ {
+  "a": "med-6faab2ed",
+  "b": "res-1bbc61d1",
+  "motivo": "Falta de ocultação da alocação, mesmo cenário"
+ },
+ {
+  "a": "med-a7777b09",
+  "b": "res-219c7c92",
+  "motivo": "Artrite reumatoide pelos critérios ACR/EULAR 2010, casos semelhantes (tabela de um resolve o outro)"
+ },
+ {
+  "a": "med-5abac442",
+  "b": "res-707979ea",
+  "motivo": "Reação reversa (tipo 1) na hanseníase: prednisona mantendo PQT"
+ },
+ {
+  "a": "med-37e5f52a",
+  "b": "res-073914ec",
+  "motivo": "Diverticulite Hinchey I com abscesso"
+ },
+ {
+  "a": "med-47b0ce50",
+  "b": "res-5b1e56dc",
+  "motivo": "Definição de choque séptico pelo Sepsis-3; resposta de um explica o outro"
+ },
+ {
+  "a": "med-984ae57a",
+  "b": "res-85df0548",
+  "motivo": "Doença anti-MBG, mesmo caso"
+ },
+ {
+  "a": "med-a4d194ad",
+  "b": "res-2df30c24",
+  "motivo": "Pelagra na síndrome carcinoide, mesmo mecanismo"
+ },
+ {
+  "a": "med-acb4915b",
+  "b": "res-35318d9a",
+  "motivo": "Doença hemolítica ABO, mesmo caso"
+ },
+ {
+  "a": "med-3210e8fd",
+  "b": "res-a15d620b",
+  "motivo": "Mesma DUM e mesma DPP (17/10/2026) pela regra de Naegele"
+ },
+ {
+  "a": "med-65c43e0b",
+  "b": "res-5fcea2ab",
+  "motivo": "Mecanismo da tetanospasmina (glicina/GABA)"
+ },
+ {
+  "a": "med-bcddb758",
+  "b": "res-cdf25187",
+  "motivo": "Tórax instável com contusão pulmonar, mesmo caso"
+ },
+ {
+  "a": "med-8860d16a",
+  "b": "res-3b65fe8b",
+  "motivo": "Estadiamento KDIGO da DRC em diabética, praticamente mesma questão"
+ },
+ {
+  "a": "med-98f1a271",
+  "b": "res-b3d648ff",
+  "motivo": "Colangite aguda grave: CPRE urgente"
+ },
+ {
+  "a": "med-09a76aca",
+  "b": "med-11bb5684",
+  "motivo": "Candidíase vulvovaginal, quadro semelhante"
+ },
+ {
+  "a": "med-5193181b",
+  "b": "res-f4a95f24",
+  "motivo": "AVC isquêmico com PA >185/110 antes da trombólise"
+ },
+ {
+  "a": "med-e1e0e8a7",
+  "b": "res-475c686c",
+  "motivo": "Ureter e ligamento infundibulopélvico; enunciado de um responde o outro"
+ },
+ {
+  "a": "med-edfa583a",
+  "b": "res-1be16bb6",
+  "motivo": "Síndrome de Wallenberg, mesma pergunta"
+ },
+ {
+  "a": "med-61979307",
+  "b": "res-67300578",
+  "motivo": "Invaginação intestinal, mesmo caso"
+ },
+ {
+  "a": "med-45bdff13",
+  "b": "res-808bdcee",
+  "motivo": "Indicadores de mortalidade infantil municipal, praticamente mesma questão"
+ },
+ {
+  "a": "med-fe62d493",
+  "b": "med-58f8a10e",
+  "motivo": "Quilotórax pós-esofagectomia: ducto torácico"
+ },
+ {
+  "a": "med-e62fe66e",
+  "b": "res-a1b6da28",
+  "motivo": "Reação de Jarisch-Herxheimer, mesmo caso"
+ },
+ {
+  "a": "med-7913b941",
+  "b": "res-b4ac6e06",
+  "motivo": "HII com paresia do abducente, mesmo caso"
+ },
+ {
+  "a": "med-88ef4556",
+  "b": "res-6823a006",
+  "motivo": "Hiperaldosteronismo primário: relação aldosterona/renina"
+ },
+ {
+  "a": "med-dd9ffa54",
+  "b": "res-93c6b099",
+  "motivo": "Derrame parapneumônico complicado: drenagem"
+ },
+ {
+  "a": "med-d2e5be83",
+  "b": "res-4d37d6eb",
+  "motivo": "ODP na DPOC com PaO2 56-59 e policitemia/cor pulmonale"
+ },
+ {
+  "a": "med-ee64fee0",
+  "b": "res-ab95e360",
+  "motivo": "Sarampo: vitamina A"
+ },
+ {
+  "a": "med-25e88d3c",
+  "b": "res-faa3713e",
+  "motivo": "Crise de ausência típica; um enunciado dá o EEG do outro"
+ },
+ {
+  "a": "med-b91a8a09",
+  "b": "res-a92b77d1",
+  "motivo": "Suspeita de HSA com TC normal: punção lombar, mesmo caso"
+ },
+ {
+  "a": "med-fb0bcd71",
+  "b": "res-c05ed6fd",
+  "motivo": "CAD em jovem: mesmo cenário de interpretação ácido-base"
+ },
+ {
+  "a": "res-a71a87fe",
+  "b": "res-3e487826",
+  "motivo": "Crupe viral: parainfluenza e dexametasona, casos semelhantes"
+ },
+ {
+  "a": "med-7fa4d972",
+  "b": "res-015f91aa",
+  "motivo": "Reversão de dabigatrana com idarucizumabe"
+ },
+ {
+  "a": "med-ac0994bf",
+  "b": "med-d65ebe83",
+  "motivo": "Deficiência de G6PD, mesmo mecanismo"
+ },
+ {
+  "a": "med-5f5b1f20",
+  "b": "res-7fe62faf",
+  "motivo": "Deficiência de B12, quadro semelhante"
+ },
+ {
+  "a": "med-91d8a1ae",
+  "b": "res-2146af6a",
+  "motivo": "Desidratação grave: plano C, mesmo cenário"
+ },
+ {
+  "a": "res-a002862a",
+  "b": "res-d45c0ee2",
+  "motivo": "Aloimunização Rh com Doppler da ACM, mesmo cenário; limiar 1,5 MoM dado no outro"
+ },
+ {
+  "a": "med-177b6669",
+  "b": "res-066bf5f3",
+  "motivo": "Prevenção de pré-eclâmpsia: AAS e cálcio"
+ },
+ {
+  "a": "med-3fda6447",
+  "b": "res-f21c97df",
+  "motivo": "Viés de tempo de antecipação (lead time)"
+ },
+ {
+  "a": "med-09dc2f37",
+  "b": "res-3cada997",
+  "motivo": "Zona periférica da próstata para adenocarcinoma"
+ },
+ {
+  "a": "med-a9393ec5",
+  "b": "res-4180a88b",
+  "motivo": "HPP por atonia com ácido tranexâmico, mesmo caso"
+ },
+ {
+  "a": "med-b1ce73bc",
+  "b": "res-54137a61",
+  "motivo": "Trastuzumabe e monitorização da FEVE"
+ },
+ {
+  "a": "med-264ea076",
+  "b": "med-b7c3938a",
+  "motivo": "Cálculo coraliforme por Proteus/urease"
+ },
+ {
+  "a": "med-9606285f",
+  "b": "med-62c42fae",
+  "motivo": "Chagas: enunciado do AVC cardioembólico traz BRD+BDAS, resposta do outro"
+ },
+ {
+  "a": "med-bb441019",
+  "b": "res-399aec1d",
+  "motivo": "BAVT com escape ventricular (ondas a em canhão), mesma resposta"
+ },
+ {
+  "a": "med-a51bf1b3",
+  "b": "res-7d221429",
+  "motivo": "Abortamento incompleto: AMIU"
+ },
+ {
+  "a": "med-9639f79a",
+  "b": "res-c0790836",
+  "motivo": "Pneumotórax hipertensivo: descompressão imediata"
+ },
+ {
+  "a": "med-2c7ad219",
+  "b": "res-f26bcdb6",
+  "motivo": "HDB volumosa com ureia alta: EDA primeiro"
+ },
+ {
+  "a": "med-8c9a31d6",
+  "b": "res-229be15d",
+  "motivo": "Esferocitose hereditária, mesmo caso"
+ },
+ {
+  "a": "med-de6afc9c",
+  "b": "res-fa92e2d9",
+  "motivo": "Estenose mitral com FA: varfarina"
+ },
+ {
+  "a": "med-356e6643",
+  "b": "res-a2cbe9d5",
+  "motivo": "Pseudoexsudato por diurético na IC, mesmo caso"
+ },
+ {
+  "a": "med-abe01441",
+  "b": "med-11d07042",
+  "motivo": "Hemotórax maciço: toracotomia"
+ },
+ {
+  "a": "med-5345b462",
+  "b": "med-3c17ef17",
+  "motivo": "Galactosemia: caso clínico de um responde o outro (suspender aleitamento)"
+ },
+ {
+  "a": "med-66718c50",
+  "b": "res-7aef2b79",
+  "motivo": "Escorbuto: hidroxilação do colágeno"
+ },
+ {
+  "a": "med-291446f7",
+  "b": "res-2b1d2067",
+  "motivo": "Reanimação neonatal: massagem 3:1, mesmo caso"
+ },
+ {
+  "a": "med-95540588",
+  "b": "res-65c66e7f",
+  "motivo": "Síndrome nefrótica por lesões mínimas: corticoide sem biópsia"
+ },
+ {
+  "a": "med-dd46984b",
+  "b": "res-44bd0d73",
+  "motivo": "Intoxicação por magnésio e reflexo patelar, mesmo tema e cenário"
+ },
+ {
+  "a": "med-dcab6b15",
+  "b": "res-3a6a2155",
+  "motivo": "Finasterida/inibidor da 5-alfa-redutase na HPB volumosa"
+ },
+ {
+  "a": "med-db32922b",
+  "b": "res-4d326cab",
+  "motivo": "Dengue grupo D: expansão 20 mL/kg"
+ },
+ {
+  "a": "med-78714ff0",
+  "b": "res-d45c0ee2",
+  "motivo": "Aloimunização Rh com Doppler da ACM, mesmo cenário"
+ },
+ {
+  "a": "med-f8bd6186",
+  "b": "med-dd6f88a5",
+  "motivo": "SAF: enunciado de um traz a confirmação após 12 semanas"
+ },
+ {
+  "a": "med-27549e46",
+  "b": "res-a7b4997c",
+  "motivo": "PCA no prematuro: ibuprofeno"
+ },
+ {
+  "a": "med-32be8f52",
+  "b": "res-93deba7d",
+  "motivo": "Fratura de úmero com lesão do nervo radial"
+ },
+ {
+  "a": "med-bac96190",
+  "b": "res-45b1eb4c",
+  "motivo": "Descolamento prematuro de placenta, mesmo caso"
+ },
+ {
+  "a": "med-950d91fe",
+  "b": "res-584bb00f",
+  "motivo": "Câncer de colo localmente avançado: quimiorradiação, casos muito semelhantes"
+ },
+ {
+  "a": "med-cc245c9a",
+  "b": "med-a1b85246",
+  "motivo": "Rifampicina reduz eficácia do anticoncepcional oral"
+ },
+ {
+  "a": "med-e87091d5",
+  "b": "res-72e6211e",
+  "motivo": "Kawasaki refratário: repetir imunoglobulina"
+ },
+ {
+  "a": "med-11a5a4fd",
+  "b": "res-a2ba5aa5",
+  "motivo": "Sorriso social aos 2 meses"
+ },
+ {
+  "a": "med-5583e974",
+  "b": "res-6564280f",
+  "motivo": "Anti-Ro e BAV congênito"
+ },
+ {
+  "a": "med-966bfad1",
+  "b": "res-71e47137",
+  "motivo": "Hipertensão sem lesão aguda de órgão-alvo: reiniciar orais"
+ },
+ {
+  "a": "med-ba5d890f",
+  "b": "med-9d67e37e",
+  "motivo": "Gravidez ectópica íntegra: enunciado de um revela o diagnóstico do outro"
+ },
+ {
+  "a": "med-8c253a2d",
+  "b": "res-31b3c14c",
+  "motivo": "HPP por trauma do canal de parto, mesmo caso"
+ },
+ {
+  "a": "med-a862a469",
+  "b": "res-31ff7aa0",
+  "motivo": "Imunoglobulina anti-D no pós-parto, mesmo cenário"
+ },
+ {
+  "a": "med-b28dba56",
+  "b": "res-65c66e7f",
+  "motivo": "Síndrome nefrótica por lesões mínimas, mesmo caso"
+ },
+ {
+  "a": "med-88ab61d2",
+  "b": "med-a9393ec5",
+  "motivo": "HPP por atonia com ácido tranexâmico"
+ },
+ {
+  "a": "med-773d7213",
+  "b": "med-b10157eb",
+  "motivo": "Rivero-Carvallo na insuficiência tricúspide; enunciado de um responde o outro"
+ },
+ {
+  "a": "med-abd3a17f",
+  "b": "res-7520e513",
+  "motivo": "Transtorno esquizofreniforme, mesmo caso"
+ },
+ {
+  "a": "med-b92a07c4",
+  "b": "med-0508799f",
+  "motivo": "Crupe viral: dexametasona e adrenalina, casos semelhantes"
+ },
+ {
+  "a": "med-e2399887",
+  "b": "res-43a9d7b3",
+  "motivo": "Hematoma extradural, mesmo caso"
+ },
+ {
+  "a": "med-a4655269",
+  "b": "med-66e47af9",
+  "motivo": "Inibidor de SGLT2 na IC com FE reduzida; resposta de um dá a do outro"
+ },
+ {
+  "a": "med-bed6ac60",
+  "b": "res-8c625d79",
+  "motivo": "Hiperpotassemia grave: enunciado de um traz a resposta do outro (gluconato de cálcio)"
+ },
+ {
+  "a": "med-d3fc06af",
+  "b": "med-3237c300",
+  "motivo": "Perda de MHC I e ativação de NK; item de um responde o outro"
+ },
+ {
+  "a": "res-4180a88b",
+  "b": "res-c241d127",
+  "motivo": "HPP por atonia: enunciado de um traz o ácido tranexâmico"
+ },
+ {
+  "a": "res-b4ac6e06",
+  "b": "res-77505e75",
+  "motivo": "HII: mesmo caso (diplopia x tratamento)"
+ },
+ {
+  "a": "med-fa92eb9f",
+  "b": "res-1be2249e",
+  "motivo": "Doença de Graves: TRAb e captação difusa"
+ },
+ {
+  "a": "med-abfe5a2f",
+  "b": "res-eb44f33b",
+  "motivo": "Isquemia mesentérica embólica, mesmo caso"
+ },
+ {
+  "a": "med-fce0f741",
+  "b": "med-342a8743",
+  "motivo": "Fibrilação atrial em idoso, mesmo cenário (ECG x complicação)"
+ },
+ {
+  "a": "med-39f39dea",
+  "b": "res-b94cec13",
+  "motivo": "WPW: enunciado de um traz PR curto e onda delta"
+ },
+ {
+  "a": "med-b53d0c3e",
+  "b": "med-13a2508b",
+  "motivo": "TARV inicial: enunciado de um traz o esquema TDF+3TC+DTG"
+ },
+ {
+  "a": "med-2109d92b",
+  "b": "med-7e0a4d8b",
+  "motivo": "Intoxicação por organofosforado, mesmo caso"
+ },
+ {
+  "a": "med-88ab61d2",
+  "b": "res-4180a88b",
+  "motivo": "HPP por atonia com ácido tranexâmico"
+ },
+ {
+  "a": "med-93aa8579",
+  "b": "med-a862a469",
+  "motivo": "Imunoglobulina anti-D no pós-parto, mesmo cenário"
+ },
+ {
+  "a": "med-95dba7e1",
+  "b": "med-c3f947b4",
+  "motivo": "Mesma criança: plano B e depois plano C; enunciado revela o outro"
+ },
+ {
+  "a": "med-10e43444",
+  "b": "med-e8ed31f8",
+  "motivo": "Febre amarela x leptospirose: mesma distinção laboratorial"
+ },
+ {
+  "a": "med-7319a4b2",
+  "b": "res-912e8c26",
+  "motivo": "BAVT instável sem resposta à atropina: marcapasso transcutâneo"
+ },
+ {
+  "a": "med-3fce4cf0",
+  "b": "res-6873edc4",
+  "motivo": "Glasgow 10 com mesmos achados"
+ }
+]
