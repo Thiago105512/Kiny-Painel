@@ -4804,7 +4804,7 @@
    "Fluconazol oral 150 mg em dose única, com tratamento simultâneo do parceiro"
   ],
   "correta": 2,
-  "explicacao": "Corrimento homogêneo com odor de peixe, pH acima de 4,5, teste das aminas positivo e células-guia preenchem os critérios de Amsel para vaginose bacteriana, um desequilíbrio da microbiota (substituição de lactobacilos por Gardnerella e anaeróbios, cujas aminas voláteis explicam o odor). O PCDT de IST do Ministério da Saúde recomenda metronidazol 500 mg VO de 12/12 horas por 7 dias (ou gel vaginal); por não ser IST, o parceiro não precisa ser tratado. O tratamento do parceiro é necessário na tricomoníase, que também pode ser tratada com metronidazol, mas cursa com corrimento amarelo-esverdeado e colpite. Fluconazol e nistatina tratam candidíase; ceftriaxona e azitromicina tratam cervicite por gonococo e clamídia; duchas pioram a microbiota. Para lembrar: o odor piora após a relação porque o sêmen, alcalino, volatiliza as aminas (putrescina e cadaverina) — o mesmo princípio do teste com KOH.",
+  "explicacao": "Corrimento homogêneo com odor de peixe, pH acima de 4,5, teste das aminas positivo e células-guia preenchem os critérios de Amsel para vaginose bacteriana, um desequilíbrio da microbiota (substituição de lactobacilos por Gardnerella e anaeróbios, cujas aminas voláteis explicam o odor). O PCDT de IST do Ministério da Saúde recomenda metronidazol 500 mg VO de 12/12 horas por 7 dias (ou gel vaginal); o PCDT não indica tratar o parceiro. Atualização: um ensaio randomizado (Vodstrcil et al., NEJM 2025) mostrou que tratar o parceiro masculino fixo (metronidazol oral + creme de clindamicina peniano por 7 dias) reduziu a recorrência, e o ACOG (Clinical Practice Update, out/2025) passou a sugerir considerar esse tratamento na VB recorrente sintomática; o PCDT de IST do Ministério da Saúde, porém, ainda não recomenda tratar a parceria. O tratamento do parceiro é necessário na tricomoníase, que também pode ser tratada com metronidazol, mas cursa com corrimento amarelo-esverdeado e colpite. Fluconazol e nistatina tratam candidíase; ceftriaxona e azitromicina tratam cervicite por gonococo e clamídia; duchas pioram a microbiota. Para lembrar: o odor piora após a relação porque o sêmen, alcalino, volatiliza as aminas (putrescina e cadaverina) — o mesmo princípio do teste com KOH.",
   "tema": "vulvovaginites",
   "subtema": "vulvovaginites.vaginose-bacteriana",
   "especialidade": "ginecologia",
@@ -5820,7 +5820,7 @@
    "Cálcio corrigido ≈ 13,2 mg/dL; hidratação com SF 0,9% e bisfosfonato IV"
   ],
   "correta": 4,
-  "explicacao": "O cálcio corrigido é o cálcio total + 0,8 × (4,0 − albumina): 11,6 + 0,8 × 2,0 = 13,2 mg/dL, hipercalcemia moderada e sintomática. O PTH suprimido indica causa não paratireoidiana, aqui a hipercalcemia da malignidade (osteólise e/ou PTHrP). O tratamento inicial é hidratação vigorosa com soro fisiológico, pois a hipercalcemia causa diabetes insípido nefrogênico e hipovolemia, associada a bisfosfonato IV (como ácido zoledrônico, com ajuste à função renal); calcitonina pode ser ponte, e denosumabe é alternativa. Furosemida só é usada após reposição volêmica, se houver hipervolemia. Paratireoidectomia trataria hiperparatireoidismo primário, e dar cálcio pioraria o quadro.",
+  "explicacao": "O cálcio corrigido é o cálcio total + 0,8 × (4,0 − albumina): 11,6 + 0,8 × 2,0 = 13,2 mg/dL, hipercalcemia moderada e sintomática. O PTH suprimido indica causa não paratireoidiana, aqui a hipercalcemia da malignidade (osteólise e/ou PTHrP). O tratamento inicial é hidratação vigorosa com soro fisiológico, pois a hipercalcemia causa diabetes insípido nefrogênico e hipovolemia, associada a bisfosfonato IV (como ácido zoledrônico, com ajuste à função renal); calcitonina pode ser ponte, e denosumabe é alternativa. A furosemida não é tratamento de rotina (Endocrine Society, 2023): só se usa após reposição volêmica, se houver hipervolemia. Paratireoidectomia trataria hiperparatireoidismo primário, e dar cálcio pioraria o quadro.",
   "tema": "disturbios-hidroeletroliticos",
   "subtema": "disturbios-hidroeletroliticos.disturbios-do-calcio-e-do-magnesio",
   "especialidade": "nefrologia",
@@ -6987,7 +6987,7 @@
    "Frequência cardíaca, temperatura e leucócitos; 3 pontos"
   ],
   "correta": 1,
-  "explicacao": "O qSOFA (quick SOFA), proposto no Sepsis-3, tem três critérios clínicos à beira do leito, um ponto cada: frequência respiratória ≥ 22 irpm, alteração do estado mental (Glasgow < 15) e PA sistólica ≤ 100 mmHg. A paciente pontua nos três (FR de 24, desorientação e PAS de 98), totalizando 3 pontos; ≥ 2 pontos indica maior risco de desfecho desfavorável. Frequência cardíaca, temperatura e leucócitos são critérios da SIRS, e o lactato não faz parte do qSOFA. A Surviving Sepsis Campaign de 2021 recomenda não usar o qSOFA isoladamente como ferramenta de triagem, pela baixa sensibilidade, preferindo combiná-lo a SIRS, NEWS ou MEWS.",
+  "explicacao": "O qSOFA (quick SOFA), proposto no Sepsis-3, tem três critérios clínicos à beira do leito, um ponto cada: frequência respiratória ≥ 22 irpm, alteração do estado mental (Glasgow < 15) e PA sistólica ≤ 100 mmHg. A paciente pontua nos três (FR de 24, desorientação e PAS de 98), totalizando 3 pontos; ≥ 2 pontos indica maior risco de desfecho desfavorável. Frequência cardíaca, temperatura e leucócitos são critérios da SIRS, e o lactato não faz parte do qSOFA. A Surviving Sepsis Campaign de 2026 recomenda não usar o qSOFA como ferramenta única de triagem, pela baixa sensibilidade, preferindo NEWS, NEWS2, MEWS ou SIRS.",
   "tema": "sepse",
   "subtema": "sepse.reconhecimento-precoce",
   "especialidade": "medicina-de-urgencia",
@@ -8906,7 +8906,7 @@
  {
   "id": "med-c7d061b4",
   "area": "Ginecologia",
-  "enunciado": "Três mulheres não gestantes, com queixa de corrimento vaginal, foram avaliadas no mesmo dia em uma unidade de saúde:\n\n• Paciente 1: pH 4,0; teste das aminas negativo; microscopia com pseudo-hifas e esporos; prurido intenso.\n• Paciente 2: pH 5,0; teste das aminas positivo; microscopia com células-guia (clue cells) e poucos leucócitos; odor pior após relação sexual.\n• Paciente 3: pH 6,0; teste das aminas positivo; microscopia com numerosos leucócitos e organismos flagelados móveis; colo com pontos avermelhados.\n\nQual associação entre diagnóstico e conduta sobre as parcerias sexuais está correta?",
+  "enunciado": "Três mulheres não gestantes, com queixa de corrimento vaginal, foram avaliadas no mesmo dia em uma unidade de saúde:\n\n• Paciente 1: pH 4,0; teste das aminas negativo; microscopia com pseudo-hifas e esporos; prurido intenso.\n• Paciente 2: pH 5,0; teste das aminas positivo; microscopia com células-guia (clue cells) e poucos leucócitos; odor pior após relação sexual.\n• Paciente 3: pH 6,0; teste das aminas positivo; microscopia com numerosos leucócitos e organismos flagelados móveis; colo com pontos avermelhados.\n\nSegundo o PCDT de IST do Ministério da Saúde, qual associação entre diagnóstico e conduta sobre as parcerias sexuais está correta?",
   "alternativas": [
    "1: vaginose bacteriana, sem tratar parceria; 2: candidíase, sem tratar parceria; 3: tricomoníase, tratando a parceria",
    "1: candidíase, sem tratar parceria; 2: vaginose bacteriana, tratando a parceria; 3: tricomoníase, sem tratar parceria",
@@ -8915,7 +8915,7 @@
    "1: candidíase, sem tratar parceria; 2: tricomoníase, tratando a parceria; 3: vaginose bacteriana, sem tratar parceria"
   ],
   "correta": 2,
-  "explicacao": "A paciente 1 tem pH normal, teste das aminas negativo e pseudo-hifas: candidíase, que não é IST, e a parceria só é tratada se tiver sintomas. A paciente 2 preenche os critérios de Amsel para vaginose bacteriana (pH acima de 4,5, teste das aminas positivo e células-guia, com poucos leucócitos por não haver inflamação verdadeira); é um desequilíbrio da microbiota, com substituição dos lactobacilos por anaeróbios como Gardnerella, e o tratamento do parceiro não reduz recorrências, segundo o PCDT de IST. A paciente 3 tem pH elevado, inflamação intensa, flagelados móveis e colpite macular: tricomoníase, IST cuja parceria deve ser tratada. O teste das aminas também pode ser positivo na tricomoníase, por isso a microscopia é decisiva.",
+  "explicacao": "A paciente 1 tem pH normal, teste das aminas negativo e pseudo-hifas: candidíase, que não é IST, e a parceria só é tratada se tiver sintomas. A paciente 2 preenche os critérios de Amsel para vaginose bacteriana (pH acima de 4,5, teste das aminas positivo e células-guia, com poucos leucócitos por não haver inflamação verdadeira); é um desequilíbrio da microbiota, com substituição dos lactobacilos por anaeróbios como Gardnerella, e o PCDT de IST não indica tratar a parceria. Atualização: um ensaio randomizado (Vodstrcil et al., NEJM 2025) mostrou que tratar o parceiro masculino fixo (metronidazol oral + creme de clindamicina peniano por 7 dias) reduziu a recorrência, e o ACOG (Clinical Practice Update, out/2025) passou a sugerir considerar esse tratamento na VB recorrente sintomática; o PCDT de IST do Ministério da Saúde, porém, ainda não recomenda tratar a parceria. A paciente 3 tem pH elevado, inflamação intensa, flagelados móveis e colpite macular: tricomoníase, IST cuja parceria deve ser tratada. O teste das aminas também pode ser positivo na tricomoníase, por isso a microscopia é decisiva.",
   "tema": "vulvovaginites",
   "subtema": "vulvovaginites.vaginose-bacteriana",
   "especialidade": "ginecologia",
@@ -9636,7 +9636,7 @@
    "Distimia; benzodiazepínico diário por tempo indeterminado para melhorar o sono e o humor"
   ],
   "correta": 3,
-  "explicacao": "Pelo DSM-5, o episódio depressivo maior exige cinco ou mais sintomas por pelo menos 2 semanas, com humor deprimido ou perda de interesse entre eles, causando sofrimento ou prejuízo. A paciente tem humor deprimido, anedonia, insônia terminal, perda de peso, fadiga, culpa e dificuldade de concentração há 2 meses, sem causa orgânica (TSH e demais exames normais), sem substâncias e sem história de mania ou hipomania. O tratamento inicial de primeira linha é antidepressivo, em geral um inibidor seletivo da recaptação de serotonina, associado a psicoterapia, com reavaliação do risco de suicídio. Ajustamento pressupõe estressor e não preenche critérios de episódio maior; distimia é crônica, com 2 anos ou mais; benzodiazepínicos não tratam depressão; não houve perda para caracterizar luto.",
+  "explicacao": "Pelo DSM-5-TR, o episódio depressivo maior exige cinco ou mais sintomas por pelo menos 2 semanas, com humor deprimido ou perda de interesse entre eles, causando sofrimento ou prejuízo. A paciente tem humor deprimido, anedonia, insônia terminal, perda de peso, fadiga, culpa e dificuldade de concentração há 2 meses, sem causa orgânica (TSH e demais exames normais), sem substâncias e sem história de mania ou hipomania. O tratamento inicial de primeira linha é antidepressivo, em geral um inibidor seletivo da recaptação de serotonina, associado a psicoterapia, com reavaliação do risco de suicídio. Ajustamento pressupõe estressor e não preenche critérios de episódio maior; distimia é crônica, com 2 anos ou mais; benzodiazepínicos não tratam depressão; não houve perda para caracterizar luto.",
   "tema": "transtornos-do-humor",
   "subtema": "transtornos-do-humor.transtorno-depressivo-maior",
   "especialidade": "psiquiatria",
@@ -9789,7 +9789,7 @@
  {
   "id": "med-abd3a17f",
   "area": "Psiquiatria",
-  "enunciado": "Rapaz de 21 anos, sem uso de substâncias e com exames clínicos e de neuroimagem normais, apresenta há 3 meses delírios de perseguição, alucinações auditivas e isolamento social, com queda do desempenho na faculdade. Não há sintomas de humor proeminentes.\n\nPelo DSM-5, qual é o diagnóstico atual?",
+  "enunciado": "Rapaz de 21 anos, sem uso de substâncias e com exames clínicos e de neuroimagem normais, apresenta há 3 meses delírios de perseguição, alucinações auditivas e isolamento social, com queda do desempenho na faculdade. Não há sintomas de humor proeminentes.\n\nPelo DSM-5-TR, qual é o diagnóstico atual?",
   "alternativas": [
    "Transtorno esquizofreniforme",
    "Transtorno psicótico breve, sem estressor",
@@ -9798,7 +9798,7 @@
    "Transtorno esquizoafetivo tipo depressivo"
   ],
   "correta": 0,
-  "explicacao": "O DSM-5 diferencia os quadros psicóticos primários, sem transtorno do humor proeminente, pela duração: o transtorno psicótico breve dura de 1 dia a menos de 1 mês; o transtorno esquizofreniforme, de 1 mês a menos de 6 meses; a esquizofrenia exige sinais contínuos por pelo menos 6 meses, incluindo fases prodrômica e residual. Com 3 meses de delírios e alucinações, o diagnóstico atual é transtorno esquizofreniforme, que será revisto para esquizofrenia se o quadro persistir por 6 meses. O transtorno delirante tem apenas delírios, sem alucinações proeminentes nem desorganização, e o esquizoafetivo exige episódio de humor maior concomitante. Para lembrar: os cortes são 1 mês e 6 meses — breve (< 1 mês), esquizofreniforme (1 a < 6 meses), esquizofrenia (≥ 6 meses).",
+  "explicacao": "O DSM-5-TR diferencia os quadros psicóticos primários, sem transtorno do humor proeminente, pela duração: o transtorno psicótico breve dura de 1 dia a menos de 1 mês; o transtorno esquizofreniforme, de 1 mês a menos de 6 meses; a esquizofrenia exige sinais contínuos por pelo menos 6 meses, incluindo fases prodrômica e residual. Com 3 meses de delírios e alucinações, o diagnóstico atual é transtorno esquizofreniforme, que será revisto para esquizofrenia se o quadro persistir por 6 meses. O transtorno delirante tem apenas delírios, sem alucinações proeminentes nem desorganização, e o esquizoafetivo exige episódio de humor maior concomitante. Para lembrar: os cortes são 1 mês e 6 meses — breve (< 1 mês), esquizofreniforme (1 a < 6 meses), esquizofrenia (≥ 6 meses).",
   "tema": "esquizofrenia-e-psicoses",
   "subtema": "esquizofrenia-e-psicoses.diagnostico",
   "especialidade": "psiquiatria",
@@ -10383,7 +10383,7 @@
    "Furosemida inibe o NKCC2 na alça e aumenta a calciúria; tiazida inibe o NCC no túbulo distal e a reduz"
   ],
   "correta": 4,
-  "explicacao": "Na porção espessa ascendente da alça de Henle, o NKCC2 e a reciclagem de K⁺ pelo ROMK geram um potencial positivo no lúmen que impulsiona a reabsorção paracelular de Ca²⁺ e Mg²⁺; a furosemida, ao inibir o NKCC2, abole esse potencial e aumenta a calciúria (por isso é usada na hipercalcemia, após hidratação). A tiazida inibe o cotransportador Na⁺-Cl⁻ (NCC) do túbulo contorcido distal; a queda do Na⁺ intracelular aumenta a troca Na⁺/Ca²⁺ basolateral e a reabsorção de Ca²⁺, e a leve contração de volume aumenta a reabsorção proximal — a calciúria cai (útil na nefrolitíase hipercalciúrica). Ambos causam hipocalemia por maior oferta distal de Na⁺ e hiperaldosteronismo secundário.",
+  "explicacao": "Na porção espessa ascendente da alça de Henle, o NKCC2 e a reciclagem de K⁺ pelo ROMK geram um potencial positivo no lúmen que impulsiona a reabsorção paracelular de Ca²⁺ e Mg²⁺; a furosemida, ao inibir o NKCC2, abole esse potencial e aumenta a calciúria (por isso já foi usada rotineiramente na hipercalcemia; hoje não é rotina — a Endocrine Society, 2023, reserva o diurético de alça à sobrecarga de volume após a hidratação). A tiazida inibe o cotransportador Na⁺-Cl⁻ (NCC) do túbulo contorcido distal; a queda do Na⁺ intracelular aumenta a troca Na⁺/Ca²⁺ basolateral e a reabsorção de Ca²⁺, e a leve contração de volume aumenta a reabsorção proximal — a calciúria cai (útil na nefrolitíase hipercalciúrica). Ambos causam hipocalemia por maior oferta distal de Na⁺ e hiperaldosteronismo secundário.",
   "tema": "fisiologia-renal",
   "subtema": "fisiologia-renal.transporte-tubular",
   "especialidade": "fisiologia",
@@ -11697,7 +11697,7 @@
  {
   "id": "med-37dbafd8",
   "area": "Cardiologia",
-  "enunciado": "No ambulatório de cardiologia, um aposentado de 76 anos com fibrilação atrial permanente, hipertenso e diabético, pergunta se \"um AAS não basta\". Não tem insuficiência cardíaca, AVC prévio nem doença vascular. Clearance de creatinina de 70 mL/min, hemoglobina normal e nenhuma história de sangramento; não usa anti-inflamatórios.\n\nQual é o escore CHA2DS2-VASc e a conduta antitrombótica?",
+  "enunciado": "No ambulatório de cardiologia, um aposentado de 76 anos com fibrilação atrial permanente, hipertenso e diabético, pergunta se \"um AAS não basta\". Não tem insuficiência cardíaca, AVC prévio nem doença vascular. Clearance de creatinina de 70 mL/min, hemoglobina normal e nenhuma história de sangramento; não usa anti-inflamatórios.\n\nQual é o escore CHA2DS2-VA, adotado pela Diretriz Brasileira de Fibrilação Atrial de 2025, e a conduta antitrombótica?",
   "alternativas": [
    "4 pontos; anticoagulação oral, de preferência com anticoagulante oral direto",
    "5 pontos; anticoagulação contraindicada pela idade acima de 75 anos",
@@ -11706,7 +11706,7 @@
    "2 pontos; anticoagulação opcional, conforme a preferência do paciente"
   ],
   "correta": 0,
-  "explicacao": "CHA2DS2-VASc: insuficiência cardíaca (1), hipertensão (1), idade ≥ 75 anos (2), diabetes (1), AVC/AIT/embolia prévios (2), doença vascular (1), idade 65–74 anos (1) e sexo feminino (1). O paciente soma 2 (idade) + 1 (hipertensão) + 1 (diabetes) = 4 pontos, risco alto de AVC, com indicação de anticoagulação oral; os anticoagulantes orais diretos são preferidos à varfarina na FA não valvar. A antiagregação (AAS isolado ou dupla) é menos eficaz e não tem sangramento significativamente menor em idosos. A idade avançada aumenta o benefício da anticoagulação e não a contraindica. Para lembrar: a diretriz europeia de 2024 passou a usar o CHA2DS2-VA, sem o ponto do sexo feminino; para este paciente, o total continua sendo 4.",
+  "explicacao": "CHA2DS2-VA (escore adotado pela ESC 2024 e pela Diretriz Brasileira de Fibrilação Atrial (SBC/SOBRAC, 2025), sem o ponto do sexo feminino): insuficiência cardíaca (1), hipertensão (1), idade ≥ 75 anos (2), diabetes (1), AVC/AIT/embolia prévios (2), doença vascular (1) e idade 65–74 anos (1); anticoagulação indicada com ≥ 2 pontos e considerada com 1. O paciente soma 2 (idade) + 1 (hipertensão) + 1 (diabetes) = 4 pontos, risco alto de AVC, com indicação de anticoagulação oral; os anticoagulantes orais diretos são preferidos à varfarina na FA não valvar. A antiagregação (AAS isolado ou dupla) é menos eficaz e não tem sangramento significativamente menor em idosos. A idade avançada aumenta o benefício da anticoagulação e não a contraindica. Para lembrar: no homem, CHA2DS2-VASc e CHA2DS2-VA dão o mesmo valor; na mulher, o novo escore tem 1 ponto a menos.",
   "tema": "arritmias-cardiacas",
   "subtema": "arritmias-cardiacas.fibrilacao-atrial",
   "especialidade": "cardiologia",
@@ -12436,7 +12436,7 @@
    "Anticoagulação oral, com anticoagulante direto ou varfarina com RNI entre 2 e 3"
   ],
   "correta": 4,
-  "explicacao": "AVC isquêmico com fibrilação atrial não valvar é indicação de anticoagulação oral, independentemente de a FA ser paroxística, persistente ou permanente, pois o risco embólico é semelhante. O CHA2DS2-VASc do paciente é 5 (hipertensão, diabetes, idade 65–74 anos e AVC prévio, que vale 2). Os anticoagulantes orais diretos são preferidos à varfarina na FA não valvar (menos hemorragia intracraniana); a varfarina usa RNI alvo 2–3. AAS ou dupla antiagregação são claramente inferiores à anticoagulação nesse cenário, RNI de 3,5–4,5 aumenta o sangramento sem benefício, e heparina de baixo peso molecular prolongada não é a estratégia padrão.",
+  "explicacao": "AVC isquêmico com fibrilação atrial não valvar é indicação de anticoagulação oral, independentemente de a FA ser paroxística, persistente ou permanente, pois o risco embólico é semelhante. O CHA2DS2-VA do paciente (escore da Diretriz Brasileira de FA 2025) é 5 (hipertensão, diabetes, idade 65–74 anos e AVC prévio, que vale 2). Os anticoagulantes orais diretos são preferidos à varfarina na FA não valvar (menos hemorragia intracraniana); a varfarina usa RNI alvo 2–3. AAS ou dupla antiagregação são claramente inferiores à anticoagulação nesse cenário, RNI de 3,5–4,5 aumenta o sangramento sem benefício, e heparina de baixo peso molecular prolongada não é a estratégia padrão.",
   "tema": "acidente-vascular-cerebral",
   "subtema": "acidente-vascular-cerebral.prevencao-secundaria",
   "especialidade": "neurologia",
@@ -17182,16 +17182,16 @@
  {
   "id": "med-de6afc9c",
   "area": "Cardiologia",
-  "enunciado": "Palpitações há uma semana levam ao ambulatório de valvopatias uma costureira de 45 anos com estenose mitral reumática moderada (área valvar de 1,3 cm²). O ECG confirma fibrilação atrial com resposta ventricular controlada. Tem função renal normal, nenhum episódio prévio de sangramento e nenhuma contraindicação a anticoagulantes; pergunta se pode usar \"um anticoagulante que não precise de exame de sangue\".\n\nQual é a estratégia antitrombótica recomendada?",
+  "enunciado": "Palpitações há uma semana levam ao ambulatório de valvopatias uma costureira de 45 anos com estenose mitral reumática importante (área valvar de 1,3 cm²). O ECG confirma fibrilação atrial com resposta ventricular controlada. Tem função renal normal, nenhum episódio prévio de sangramento e nenhuma contraindicação a anticoagulantes; pergunta se pode usar \"um anticoagulante que não precise de exame de sangue\".\n\nQual é a estratégia antitrombótica recomendada?",
   "alternativas": [
    "Dabigatrana, desde que a área valvar mitral seja maior que 1,0 cm²",
-   "Anticoagulação apenas se o escore CHA2DS2-VASc for igual ou maior que 2",
+   "Anticoagulação apenas se o escore CHA2DS2-VA for igual ou maior que 2",
    "Ácido acetilsalicílico isolado, pelo baixo risco embólico da FA valvar",
    "Rivaroxabana, por ser tão eficaz e mais segura que a varfarina nesse caso",
-   "Varfarina, com RNI-alvo entre 2 e 3, independentemente do CHA2DS2-VASc"
+   "Varfarina, com RNI-alvo entre 2 e 3, independentemente do CHA2DS2-VA"
   ],
   "correta": 4,
-  "explicacao": "Fibrilação atrial com estenose mitral moderada ou grave tem risco embólico muito alto, e a anticoagulação está indicada independentemente de escores; o fármaco recomendado é o antagonista da vitamina K (varfarina) com RNI entre 2 e 3. O CHA2DS2-VASc foi validado para FA não valvar e não se aplica a esse grupo. Os anticoagulantes orais diretos não são indicados na estenose mitral moderada a grave: no ensaio INVICTUS (2022), com pacientes com cardiopatia reumática, a rivaroxabana teve mais eventos e mortes que a varfarina. O AAS não previne adequadamente o tromboembolismo na FA. A área de 1,3 cm² já é estenose moderada, e a dabigatrana não é opção nesse contexto. Para lembrar: \"FA valvar\", na prática, significa estenose mitral moderada/grave ou prótese mecânica — é aí que só a varfarina serve.",
+  "explicacao": "Fibrilação atrial com estenose mitral moderada ou grave tem risco embólico muito alto, e a anticoagulação está indicada independentemente de escores; o fármaco recomendado é o antagonista da vitamina K (varfarina) com RNI entre 2 e 3. O CHA2DS2-VA foi validado para FA não valvar e não se aplica a esse grupo. Os anticoagulantes orais diretos não são indicados na estenose mitral moderada a grave: no ensaio INVICTUS (2022), com pacientes com cardiopatia reumática, a rivaroxabana teve mais eventos e mortes que a varfarina. O AAS não previne adequadamente o tromboembolismo na FA. A área de 1,3 cm² (< 1,5 cm² na Diretriz Brasileira de Valvopatias; ≤ 1,5 cm² na AHA/ACC) já caracteriza estenose mitral importante — e, mesmo pela classificação antiga, que a chamaria de moderada, a indicação de varfarina seria a mesma, e a dabigatrana não é opção nesse contexto. A Diretriz Brasileira de FA 2025 mantém os anticoagulantes diretos como preferência, exceto na estenose mitral reumática moderada a grave e na prótese mecânica. Para lembrar: \"FA valvar\", na prática, significa estenose mitral moderada/grave ou prótese mecânica — é aí que só a varfarina serve.",
   "tema": "valvopatias",
   "subtema": "valvopatias.estenose-mitral",
   "especialidade": "cardiologia",
@@ -22723,13 +22723,13 @@
   "enunciado": "Gestante de 20 semanas, sem comorbidades, refere corrimento acinzentado e fluido, com odor de peixe que piora após as relações, sem prurido nem ardor. Ao exame: pH vaginal de 5,5, teste das aminas com KOH a 10% positivo e clue cells na microscopia a fresco.\n\nQual é a conduta?",
   "alternativas": [
    "Adiar o metronidazol até o 3º trimestre, por ser teratogênico",
-   "Tratar também o parceiro, pois isso evita a recorrência",
+   "Tratar apenas o parceiro, pois a gestante não deve receber antibiótico",
    "Não tratar, pois o tratamento só é indicado após o parto",
    "Tratar com metronidazol oral, que pode ser usado na gestação",
    "Tratar com tinidazol em dose única, preferido na gestação"
   ],
   "correta": 3,
-  "explicacao": "A paciente preenche os critérios de Amsel (corrimento homogêneo, pH acima de 4,5, teste das aminas positivo e clue cells), confirmando vaginose bacteriana. Na gestante sintomática, ela deve ser tratada, e o metronidazol oral por 7 dias é a opção recomendada; estudos não mostraram teratogenicidade, e ele pode ser usado em qualquer trimestre. A vaginose na gestação associa-se a rotura prematura de membranas e parto pré-termo, e o tratamento alivia os sintomas. Adiar até o parto ou até o 3º trimestre não tem fundamento. O tinidazol é evitado na gestação por falta de dados de segurança. O tratamento do parceiro masculino não reduz a recorrência. Para lembrar: o receio do metronidazol no 1º trimestre vem de estudos em animais que não se confirmaram em humanos.",
+  "explicacao": "A paciente preenche os critérios de Amsel (corrimento homogêneo, pH acima de 4,5, teste das aminas positivo e clue cells), confirmando vaginose bacteriana. Na gestante sintomática, ela deve ser tratada, e o metronidazol oral por 7 dias é a opção recomendada; estudos não mostraram teratogenicidade, e ele pode ser usado em qualquer trimestre. A vaginose na gestação associa-se a rotura prematura de membranas e parto pré-termo, e o tratamento alivia os sintomas. Adiar até o parto ou até o 3º trimestre não tem fundamento. O tinidazol é evitado na gestação por falta de dados de segurança. Tratar só o parceiro não trata a gestante sintomática; o PCDT não indica tratar a parceria na VB (o benefício de tratar o parceiro, mostrado em 2025 no NEJM, refere-se à prevenção de recorrência em não gestantes e ainda não foi incorporado ao PCDT). Para lembrar: o receio do metronidazol no 1º trimestre vem de estudos em animais que não se confirmaram em humanos.",
   "tema": "vulvovaginites",
   "subtema": "vulvovaginites.vaginose-bacteriana",
   "especialidade": "ginecologia",
@@ -22767,7 +22767,7 @@
  {
   "id": "med-1540a103",
   "area": "Ginecologia",
-  "enunciado": "Sobre a vaginose bacteriana, considere as afirmativas:\n\nI. Resulta da substituição dos lactobacilos por bactérias anaeróbias e Gardnerella vaginalis, e o tratamento rotineiro do parceiro masculino não reduz recorrências.\nII. O isolamento de Gardnerella vaginalis em cultura vaginal basta para o diagnóstico.\nIII. Associa-se a maior risco de doença inflamatória pélvica e de parto pré-termo.\nIV. As células-guia são células epiteliais vaginais recobertas por cocobacilos aderidos.\n\nEstão corretas:",
+  "enunciado": "Sobre a vaginose bacteriana, considere as afirmativas:\n\nI. Resulta da substituição dos lactobacilos por bactérias anaeróbias e Gardnerella vaginalis, com poucos leucócitos no exame a fresco.\nII. O isolamento de Gardnerella vaginalis em cultura vaginal basta para o diagnóstico.\nIII. Associa-se a maior risco de doença inflamatória pélvica e de parto pré-termo.\nIV. As células-guia são células epiteliais vaginais recobertas por cocobacilos aderidos.\n\nEstão corretas:",
   "alternativas": [
    "I, II e IV, apenas",
    "I e II, apenas",
@@ -22776,12 +22776,12 @@
    "I, III e IV, apenas"
   ],
   "correta": 4,
-  "explicacao": "A afirmativa I está correta: a vaginose é um desequilíbrio da microbiota, com perda de lactobacilos e proliferação de Gardnerella e anaeróbios (Prevotella, Mobiluncus, Atopobium), e tratar rotineiramente o parceiro masculino não reduz recorrências. A II está errada: a Gardnerella coloniza muitas mulheres sem doença, e a cultura não é usada para diagnóstico, que se baseia nos critérios de Amsel ou no escore de Nugent. A III está correta: a vaginose aumenta o risco de doença inflamatória pélvica, de infecção após procedimentos ginecológicos, de aquisição de IST e de parto pré-termo. A IV está correta: as células-guia são células epiteliais com as bordas borradas por cocobacilos aderidos. Para lembrar: na vaginose, muitas bactérias e poucos leucócitos.",
+  "explicacao": "A afirmativa I está correta: a vaginose é um desequilíbrio da microbiota, com perda de lactobacilos e proliferação de Gardnerella e anaeróbios (Prevotella, Mobiluncus, Atopobium), sem resposta inflamatória importante — daí os poucos leucócitos. A II está errada: a Gardnerella coloniza muitas mulheres sem doença, e a cultura não é usada para diagnóstico, que se baseia nos critérios de Amsel ou no escore de Nugent. A III está correta: a vaginose aumenta o risco de doença inflamatória pélvica, de infecção após procedimentos ginecológicos, de aquisição de IST e de parto pré-termo. A IV está correta: as células-guia são células epiteliais com as bordas borradas por cocobacilos aderidos. Sobre o parceiro (tema fora das afirmativas): o PCDT de IST não indica tratá-lo, mas um ensaio randomizado (NEJM 2025) mostrou menos recorrência quando o parceiro masculino fixo foi tratado, e o ACOG (2025) passou a sugerir considerar essa conduta na VB recorrente. Para lembrar: na vaginose, muitas bactérias e poucos leucócitos.",
   "tema": "vulvovaginites",
   "subtema": "vulvovaginites.vaginose-bacteriana",
   "especialidade": "ginecologia",
   "disciplina": "Ginecologia",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
   "prova": null,
@@ -23491,7 +23491,7 @@
  {
   "id": "med-ca9abbaa",
   "area": "Psiquiatria",
-  "enunciado": "\"Eu sempre fui meio pra baixo, doutor, mas nos últimos anos piorou\", diz uma mulher de 40 anos. Sente-se desanimada na maior parte dos dias há cerca de 3 anos, com baixa autoestima, cansaço e sono ruim, sem nunca ter ficado mais de 2 meses bem nesse período. Continua trabalhando e cuidando dos filhos. Nunca teve períodos de euforia ou de menor necessidade de sono, os sintomas não variam com o ciclo menstrual e não houve estressor recente específico.\n\nQual é o diagnóstico mais provável pelo DSM-5?",
+  "enunciado": "\"Eu sempre fui meio pra baixo, doutor, mas nos últimos anos piorou\", diz uma mulher de 40 anos. Sente-se desanimada na maior parte dos dias há cerca de 3 anos, com baixa autoestima, cansaço e sono ruim, sem nunca ter ficado mais de 2 meses bem nesse período. Continua trabalhando e cuidando dos filhos. Nunca teve períodos de euforia ou de menor necessidade de sono, os sintomas não variam com o ciclo menstrual e não houve estressor recente específico.\n\nQual é o diagnóstico mais provável pelo DSM-5-TR?",
   "alternativas": [
    "Transtorno disfórico pré-menstrual",
    "Episódio depressivo maior único, em remissão",
@@ -23702,7 +23702,7 @@
  {
   "id": "med-eb81a816",
   "area": "Psiquiatria",
-  "enunciado": "Linha do tempo apresentada na discussão de caso: mulher de 33 anos tem, há 2 anos, delírios persecutórios e alucinações auditivas contínuos. Nesse período, teve dois episódios depressivos maiores, de cerca de 8 meses cada, durante os quais a psicose continuou. No intervalo de 6 semanas entre os episódios, sem nenhum sintoma de humor, os delírios e as alucinações persistiram. Nunca teve mania ou hipomania. Não usa substâncias; exames clínicos e de imagem normais.\n\nQual diagnóstico, pelo DSM-5, a linha do tempo sustenta?",
+  "enunciado": "Linha do tempo apresentada na discussão de caso: mulher de 33 anos tem, há 2 anos, delírios persecutórios e alucinações auditivas contínuos. Nesse período, teve dois episódios depressivos maiores, de cerca de 8 meses cada, durante os quais a psicose continuou. No intervalo de 6 semanas entre os episódios, sem nenhum sintoma de humor, os delírios e as alucinações persistiram. Nunca teve mania ou hipomania. Não usa substâncias; exames clínicos e de imagem normais.\n\nQual diagnóstico, pelo DSM-5-TR, a linha do tempo sustenta?",
   "alternativas": [
    "Transtorno esquizoafetivo, tipo depressivo",
    "Transtorno bipolar tipo I com sintomas psicóticos",
@@ -23757,7 +23757,7 @@
    "Diagnóstico confirmado de transtorno grave por uso de álcool"
   ],
   "correta": 2,
-  "explicacao": "O CAGE tem quatro perguntas (Cut down, Annoyed, Guilty, Eye-opener); duas ou mais respostas afirmativas tornam o rastreamento positivo para uso problemático ou dependência de álcool. Aqui há duas respostas positivas, uma delas o eye-opener (beber pela manhã), que sugere abstinência. O CAGE é instrumento de rastreamento, e não de diagnóstico: o passo seguinte é aprofundar a avaliação (padrão e quantidade de consumo, AUDIT, critérios do DSM-5) e oferecer intervenção. Marcadores como gama-GT e VCM têm baixa sensibilidade e não são necessários para interpretar o teste; nenhum item é obrigatório.",
+  "explicacao": "O CAGE tem quatro perguntas (Cut down, Annoyed, Guilty, Eye-opener); duas ou mais respostas afirmativas tornam o rastreamento positivo para uso problemático ou dependência de álcool. Aqui há duas respostas positivas, uma delas o eye-opener (beber pela manhã), que sugere abstinência. O CAGE é instrumento de rastreamento, e não de diagnóstico: o passo seguinte é aprofundar a avaliação (padrão e quantidade de consumo, AUDIT, critérios do DSM-5-TR) e oferecer intervenção. Marcadores como gama-GT e VCM têm baixa sensibilidade e não são necessários para interpretar o teste; nenhum item é obrigatório.",
   "tema": "dependencia-quimica",
   "subtema": "dependencia-quimica.alcool",
   "especialidade": "medicina-de-familia",
@@ -27224,7 +27224,7 @@
    "Toracotomia de reanimação na sala de emergência para clampeamento da aorta"
   ],
   "correta": 3,
-  "explicacao": "Hipotensão, turgência jugular, desvio contralateral da traqueia, murmúrio abolido e hipertimpanismo do lado afetado configuram pneumotórax hipertensivo, diagnóstico clínico que exige descompressão imediata, sem esperar exame de imagem. Em adultos, o ATLS (10ª edição) recomenda a punção com agulha no 4º ou 5º espaço intercostal, logo anterior à linha axilar média, pela menor espessura da parede nesse ponto (a toracostomia digital é alternativa); em seguida, drena-se o tórax. A radiografia só atrasaria o tratamento. A ventilação com pressão positiva, antes da descompressão, aumenta a pressão intratorácica e pode precipitar parada cardíaca. A pericardiocentese trataria tamponamento, que também gera turgência jugular, mas não explica o desvio traqueal e o hipertimpanismo com murmúrio abolido. A toracotomia de reanimação não é o passo indicado para um paciente com pulso e causa reversível identificada. Para lembrar: em crianças, a punção continua no 2º espaço intercostal, na linha hemiclavicular.",
+  "explicacao": "Hipotensão, turgência jugular, desvio contralateral da traqueia, murmúrio abolido e hipertimpanismo do lado afetado configuram pneumotórax hipertensivo, diagnóstico clínico que exige descompressão imediata, sem esperar exame de imagem. Em adultos, o ATLS (recomendação da 10ª edição, mantida na 11ª, de 2025) recomenda a punção com agulha no 4º ou 5º espaço intercostal, logo anterior à linha axilar média, pela menor espessura da parede nesse ponto (a toracostomia digital é alternativa); em seguida, drena-se o tórax. A radiografia só atrasaria o tratamento. A ventilação com pressão positiva, antes da descompressão, aumenta a pressão intratorácica e pode precipitar parada cardíaca. A pericardiocentese trataria tamponamento, que também gera turgência jugular, mas não explica o desvio traqueal e o hipertimpanismo com murmúrio abolido. A toracotomia de reanimação não é o passo indicado para um paciente com pulso e causa reversível identificada. Para lembrar: em crianças, a punção continua no 2º espaço intercostal, na linha hemiclavicular.",
   "tema": "atendimento-inicial-ao-politraumatizado",
   "subtema": "atendimento-inicial-ao-politraumatizado.avaliacao-primaria-abcde",
   "especialidade": "trauma",
@@ -28849,7 +28849,7 @@
  {
   "id": "med-af817e51",
   "area": "Psiquiatria",
-  "enunciado": "Homem de 52 anos, contador, está convencido há 8 meses de que a esposa o trai com um vizinho; revista o celular dela e segue seu carro. Continua trabalhando bem, mantém as finanças da família e o convívio social. Não tem alucinações, discurso desorganizado, sintomas negativos ou alterações de humor relevantes. Não usa álcool ou outras substâncias, e os exames clínicos e de neuroimagem são normais.\n\nQual é o diagnóstico mais provável pelo DSM-5?",
+  "enunciado": "Homem de 52 anos, contador, está convencido há 8 meses de que a esposa o trai com um vizinho; revista o celular dela e segue seu carro. Continua trabalhando bem, mantém as finanças da família e o convívio social. Não tem alucinações, discurso desorganizado, sintomas negativos ou alterações de humor relevantes. Não usa álcool ou outras substâncias, e os exames clínicos e de neuroimagem são normais.\n\nQual é o diagnóstico mais provável pelo DSM-5-TR?",
   "alternativas": [
    "Transtorno esquizofreniforme",
    "Transtorno de personalidade paranoide",
@@ -28858,7 +28858,7 @@
    "Transtorno psicótico breve"
   ],
   "correta": 2,
-  "explicacao": "O transtorno delirante caracteriza-se por um ou mais delírios com duração de pelo menos 1 mês, sem preencher o critério A da esquizofrenia (não há alucinações proeminentes, discurso desorganizado ou sintomas negativos) e com funcionamento pouco prejudicado fora do tema do delírio. O subtipo ciumento envolve a convicção infundada de infidelidade do parceiro, comum em homens de meia-idade. A esquizofrenia exige dois ou mais sintomas do critério A e prejuízo funcional importante; o DSM-5 aboliu os subtipos, como o paranoide. O transtorno psicótico breve dura menos de 1 mês, e o esquizofreniforme, de 1 a 6 meses, mas ambos exigem os sintomas do critério A. No transtorno de personalidade paranoide há desconfiança persistente, mas sem convicção delirante fixa. Para lembrar: o ciúme delirante já foi chamado de síndrome de Otelo, pelo personagem de Shakespeare.",
+  "explicacao": "O transtorno delirante caracteriza-se por um ou mais delírios com duração de pelo menos 1 mês, sem preencher o critério A da esquizofrenia (não há alucinações proeminentes, discurso desorganizado ou sintomas negativos) e com funcionamento pouco prejudicado fora do tema do delírio. O subtipo ciumento envolve a convicção infundada de infidelidade do parceiro, comum em homens de meia-idade. A esquizofrenia exige dois ou mais sintomas do critério A e prejuízo funcional importante; os subtipos, como o paranoide, foram abolidos no DSM-5 (2013), e o DSM-5-TR manteve essa mudança. O transtorno psicótico breve dura menos de 1 mês, e o esquizofreniforme, de 1 a 6 meses, mas ambos exigem os sintomas do critério A. No transtorno de personalidade paranoide há desconfiança persistente, mas sem convicção delirante fixa. Para lembrar: o ciúme delirante já foi chamado de síndrome de Otelo, pelo personagem de Shakespeare.",
   "tema": "esquizofrenia-e-psicoses",
   "subtema": "esquizofrenia-e-psicoses.diagnostico",
   "especialidade": "psiquiatria",
@@ -29083,16 +29083,16 @@
  {
   "id": "med-cc37b094",
   "area": "Cardiologia",
-  "enunciado": "Homem de 58 anos, hipertenso, procura o pronto-socorro por palpitações que começaram há cerca de 4 dias, sem saber precisar o horário. Nega uso de álcool ou de estimulantes. Está estável: PA 132/84 mmHg, sem dor torácica, dispneia ou sinais de insuficiência cardíaca. O ECG mostra fibrilação atrial com resposta ventricular de 128 bpm. Não usa anticoagulante. O CHA2DS2-VASc é 1 (hipertensão), a função renal e a tireoide são normais e o ecocardiograma transtorácico mostra átrio esquerdo de tamanho normal e fração de ejeção preservada. O paciente prefere tentar voltar ao ritmo sinusal.\n\nQual é a conduta mais adequada neste momento?",
+  "enunciado": "Homem de 58 anos, hipertenso, procura o pronto-socorro por palpitações que começaram há cerca de 4 dias, sem saber precisar o horário. Nega uso de álcool ou de estimulantes. Está estável: PA 132/84 mmHg, sem dor torácica, dispneia ou sinais de insuficiência cardíaca. O ECG mostra fibrilação atrial com resposta ventricular de 128 bpm. Não usa anticoagulante. O CHA2DS2-VA é 1 (hipertensão), a função renal e a tireoide são normais e o ecocardiograma transtorácico mostra átrio esquerdo de tamanho normal e fração de ejeção preservada. O paciente prefere tentar voltar ao ritmo sinusal.\n\nQual é a conduta mais adequada neste momento?",
   "alternativas": [
-   "Apenas controle da frequência com betabloqueador, sem anticoagular, pelo CHA2DS2-VASc baixo",
+   "Apenas controle da frequência com betabloqueador, sem anticoagular, pelo CHA2DS2-VA baixo",
    "Anticoagular e controlar a FC; cardioverter após 3 semanas ou após ETE sem trombo",
    "Amiodarona intravenosa para cardioversão química imediata, sem anticoagulação",
    "Cardioversão elétrica sincronizada imediata, dispensando anticoagulação",
    "Cardioversão imediata e anticoagulação somente se houver recorrência da arritmia"
   ],
   "correta": 1,
-  "explicacao": "Com fibrilação atrial de duração superior a 48 horas ou desconhecida, o átrio pode já conter trombo, e qualquer cardioversão (elétrica ou química) aumenta o risco de embolia no momento em que o átrio volta a contrair. Em paciente estável, a estratégia é controlar a frequência, anticoagular por pelo menos 3 semanas antes e cardioverter, ou antecipar a cardioversão se o ecocardiograma transesofágico excluir trombo; após o procedimento, a anticoagulação é mantida por pelo menos 4 semanas, independentemente do escore. Cardioversão imediata sem anticoagular só se justifica diante de instabilidade hemodinâmica. A amiodarona também pode reverter o ritmo e, portanto, carrega o mesmo risco embólico. Deixar de anticoagular pelo CHA2DS2-VASc baixo ignora que a indicação aqui é peri-cardioversão, e não só a prevenção de longo prazo. Para lembrar: a regra “3 semanas antes, 4 semanas depois” vale para toda cardioversão eletiva de FA com mais de 48 horas.",
+  "explicacao": "Com fibrilação atrial de duração superior a 24 horas ou desconhecida (limite reduzido de 48 para 24 horas pela ESC 2024 e pela Diretriz Brasileira de Fibrilação Atrial de 2025), o átrio pode já conter trombo, e qualquer cardioversão (elétrica ou química) aumenta o risco de embolia no momento em que o átrio volta a contrair. Em paciente estável, a estratégia é controlar a frequência, anticoagular por pelo menos 3 semanas antes e cardioverter, ou antecipar a cardioversão se o ecocardiograma transesofágico excluir trombo; após o procedimento, a anticoagulação é mantida por pelo menos 4 semanas, independentemente do escore. Cardioversão imediata sem anticoagular só se justifica diante de instabilidade hemodinâmica. A amiodarona também pode reverter o ritmo e, portanto, carrega o mesmo risco embólico. Deixar de anticoagular pelo CHA2DS2-VA baixo ignora que a indicação aqui é peri-cardioversão, e não só a prevenção de longo prazo. Para lembrar: a regra “3 semanas antes, 4 semanas depois” vale para toda cardioversão eletiva de FA com mais de 24 horas (ou de duração desconhecida); abaixo de 24 horas, só se cardioverte sem anticoagulação prévia se o risco tromboembólico for baixo.",
   "tema": "arritmias-cardiacas",
   "subtema": "arritmias-cardiacas.fibrilacao-atrial",
   "especialidade": "cardiologia",
@@ -30069,7 +30069,7 @@
    "Iniciar noradrenalina por acesso periférico, sem esperar o cateter central"
   ],
   "correta": 4,
-  "explicacao": "A diretriz Surviving Sepsis Campaign de 2021 sugere iniciar o vasopressor por acesso periférico, em vez de adiar até a inserção do cateter central, pois o atraso na correção da hipotensão aumenta a mortalidade. A noradrenalina é o vasopressor de primeira escolha, e seu uso periférico por curto período, em veia calibrosa proximal e com vigilância do local de infusão, é seguro, com baixo risco de extravasamento. Esperar o cateter mantém a hipoperfusão. Hidratação ilimitada sem vasopressor leva a sobrecarga de volume sem garantir a PAM. A dopamina tem mais arritmias e não é preferível, e a vasopressina é segunda escolha, usada em infusão contínua, não em bolus.",
+  "explicacao": "A diretriz Surviving Sepsis Campaign de 2026 (mantendo a sugestão de 2021) sugere iniciar o vasopressor por acesso periférico, em vez de adiar até a inserção do cateter central, pois o atraso na correção da hipotensão aumenta a mortalidade. A noradrenalina é o vasopressor de primeira escolha, e seu uso periférico por curto período, em veia calibrosa proximal e com vigilância do local de infusão, é seguro, com baixo risco de extravasamento. Esperar o cateter mantém a hipoperfusão. Hidratação ilimitada sem vasopressor leva a sobrecarga de volume sem garantir a PAM. A dopamina tem mais arritmias e não é preferível, e a vasopressina é segunda escolha, usada em infusão contínua, não em bolus.",
   "tema": "sepse",
   "subtema": "sepse.choque-septico",
   "especialidade": "medicina-de-urgencia",
@@ -30996,7 +30996,7 @@
    "Ansiedade devida a hipertireoidismo; betabloqueador e tratar a causa"
   ],
   "correta": 4,
-  "explicacao": "Antes de diagnosticar transtorno de ansiedade primário, é preciso excluir causas clínicas e substâncias. Aqui, perda de peso com apetite preservado, taquicardia persistente, pressão divergente, pele quente, tremor fino, retração palpebral e bócio com sopro, com TSH suprimido e T4 livre elevado, indicam hipertireoidismo (provável doença de Graves), e os sintomas ansiosos são consequência dele: pelo DSM-5, transtorno de ansiedade devido a outra condição médica. A conduta inicial é betabloqueador para os sintomas adrenérgicos e investigação e tratamento da tireotoxicose; a ansiedade tende a regredir com o eutireoidismo. Iniciar ISRS, benzodiazepínico ou terapia de exposição como se fosse transtorno primário deixaria a causa sem tratamento. Não há uso de cafeína ou drogas que sustente a hipótese de ansiedade induzida por substância. Para lembrar: diante de “pânico” novo em adulto, olhe o pulso, o peso e o pescoço — e peça TSH.",
+  "explicacao": "Antes de diagnosticar transtorno de ansiedade primário, é preciso excluir causas clínicas e substâncias. Aqui, perda de peso com apetite preservado, taquicardia persistente, pressão divergente, pele quente, tremor fino, retração palpebral e bócio com sopro, com TSH suprimido e T4 livre elevado, indicam hipertireoidismo (provável doença de Graves), e os sintomas ansiosos são consequência dele: pelo DSM-5-TR, transtorno de ansiedade devido a outra condição médica. A conduta inicial é betabloqueador para os sintomas adrenérgicos e investigação e tratamento da tireotoxicose; a ansiedade tende a regredir com o eutireoidismo. Iniciar ISRS, benzodiazepínico ou terapia de exposição como se fosse transtorno primário deixaria a causa sem tratamento. Não há uso de cafeína ou drogas que sustente a hipótese de ansiedade induzida por substância. Para lembrar: diante de “pânico” novo em adulto, olhe o pulso, o peso e o pescoço — e peça TSH.",
   "tema": "transtornos-de-ansiedade",
   "subtema": "transtornos-de-ansiedade.transtorno-de-panico",
   "especialidade": "psiquiatria",
@@ -31042,7 +31042,7 @@
    "Transtorno esquizoafetivo"
   ],
   "correta": 1,
-  "explicacao": "Pelo DSM-5, o transtorno psicótico breve tem um ou mais sintomas psicóticos (delírios, alucinações, discurso desorganizado ou comportamento desorganizado) com duração de pelo menos 1 dia e menos de 1 mês, seguidos de retorno completo ao nível de funcionamento anterior; pode ocorrer após estressor importante. No transtorno esquizofreniforme, os sintomas duram de 1 a 6 meses; na esquizofrenia, o quadro, incluindo pródromos e sintomas residuais, dura 6 meses ou mais. O transtorno delirante tem delírios por pelo menos 1 mês, sem alucinações proeminentes e com funcionamento relativamente preservado. O esquizoafetivo exige episódios de humor concomitantes aos sintomas psicóticos na maior parte do tempo. Para lembrar: 1 mês e 6 meses são as fronteiras entre breve, esquizofreniforme e esquizofrenia.",
+  "explicacao": "Pelo DSM-5-TR, o transtorno psicótico breve tem um ou mais sintomas psicóticos (delírios, alucinações, discurso desorganizado ou comportamento desorganizado) com duração de pelo menos 1 dia e menos de 1 mês, seguidos de retorno completo ao nível de funcionamento anterior; pode ocorrer após estressor importante. No transtorno esquizofreniforme, os sintomas duram de 1 a 6 meses; na esquizofrenia, o quadro, incluindo pródromos e sintomas residuais, dura 6 meses ou mais. O transtorno delirante tem delírios por pelo menos 1 mês, sem alucinações proeminentes e com funcionamento relativamente preservado. O esquizoafetivo exige episódios de humor concomitantes aos sintomas psicóticos na maior parte do tempo. Para lembrar: 1 mês e 6 meses são as fronteiras entre breve, esquizofreniforme e esquizofrenia.",
   "tema": "esquizofrenia-e-psicoses",
   "subtema": "esquizofrenia-e-psicoses.diagnostico",
   "especialidade": "psiquiatria",
@@ -32493,7 +32493,7 @@
    "Morte súbita por degeneração frequente em fibrilação ventricular"
   ],
   "correta": 2,
-  "explicacao": "O traçado não tem ondas P; a linha de base mostra ondas fibrilatórias finas, os intervalos RR são irregularmente irregulares e o QRS é estreito: fibrilação atrial. A perda da contração atrial organizada causa estase sanguínea, sobretudo no apêndice atrial esquerdo, onde se formam trombos que embolizam para a circulação sistêmica, principalmente para o cérebro. Este paciente tem CHA₂DS₂-VASc de 3 (idade de 65 a 74 anos, hipertensão e diabetes), com indicação de anticoagulação. A FA de QRS estreito não costuma degenerar em fibrilação ventricular (a exceção é a FA pré-excitada). O AVC hemorrágico não é o mecanismo típico. O traçado mostra condução atrioventricular, sem bloqueio total. Trombos da FA surgem nas câmaras esquerdas e embolizam para a circulação sistêmica, não para o pulmão. Para lembrar: na FA não valvar, cerca de 90% dos trombos atriais ficam no apêndice atrial esquerdo, o que fundamenta a oclusão percutânea dessa estrutura.",
+  "explicacao": "O traçado não tem ondas P; a linha de base mostra ondas fibrilatórias finas, os intervalos RR são irregularmente irregulares e o QRS é estreito: fibrilação atrial. A perda da contração atrial organizada causa estase sanguínea, sobretudo no apêndice atrial esquerdo, onde se formam trombos que embolizam para a circulação sistêmica, principalmente para o cérebro. Este paciente tem CHA₂DS₂-VA (escore da Diretriz Brasileira de FA 2025) de 3 (idade de 65 a 74 anos, hipertensão e diabetes), com indicação de anticoagulação. A FA de QRS estreito não costuma degenerar em fibrilação ventricular (a exceção é a FA pré-excitada). O AVC hemorrágico não é o mecanismo típico. O traçado mostra condução atrioventricular, sem bloqueio total. Trombos da FA surgem nas câmaras esquerdas e embolizam para a circulação sistêmica, não para o pulmão. Para lembrar: na FA não valvar, cerca de 90% dos trombos atriais ficam no apêndice atrial esquerdo, o que fundamenta a oclusão percutânea dessa estrutura.",
   "tema": "arritmias-cardiacas",
   "subtema": "arritmias-cardiacas.fibrilacao-atrial",
   "especialidade": "cardiologia",

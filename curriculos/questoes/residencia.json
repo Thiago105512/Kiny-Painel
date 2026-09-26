@@ -1222,7 +1222,7 @@
    "Vaginose bacteriana; metronidazol para ela e o parceiro assintomático"
   ],
   "correta": 0,
-  "explicacao": "A paciente preenche os quatro critérios de Amsel (são necessários 3): corrimento homogêneo, pH > 4,5, teste das aminas positivo e clue cells — vaginose bacteriana. O PCDT de IST do MS recomenda metronidazol 500 mg VO de 12/12 horas por 7 dias (alternativa: gel vaginal). Não é IST clássica, e o tratamento do parceiro não é recomendado por não reduzir recorrência. Tricomoníase cursa com corrimento amarelo-esverdeado bolhoso, colo em framboesa e protozoários móveis; candidíase, com pH < 4,5 e prurido. Para lembrar: na vaginose bacteriana não se trata o parceiro; na tricomoníase, sim — é a IST do trio das vulvovaginites.",
+  "explicacao": "A paciente preenche os quatro critérios de Amsel (são necessários 3): corrimento homogêneo, pH > 4,5, teste das aminas positivo e clue cells — vaginose bacteriana. O PCDT de IST do MS recomenda metronidazol 500 mg VO de 12/12 horas por 7 dias (alternativa: gel vaginal). O PCDT não recomenda tratar o parceiro. Atualização: um ensaio randomizado (Vodstrcil et al., NEJM 2025) mostrou que tratar o parceiro masculino fixo (metronidazol oral + creme de clindamicina peniano por 7 dias) reduziu a recorrência, e o ACOG (Clinical Practice Update, out/2025) passou a sugerir considerar esse tratamento na VB recorrente sintomática; o PCDT de IST do Ministério da Saúde, porém, ainda não recomenda tratar a parceria. Num primeiro episódio, como o desta paciente, a conduta do PCDT segue sendo tratar só a mulher. Tricomoníase cursa com corrimento amarelo-esverdeado bolhoso, colo em framboesa e protozoários móveis; candidíase, com pH < 4,5 e prurido. Para lembrar: pelo PCDT, na tricomoníase trata-se sempre a parceria; na vaginose bacteriana, não — tema em revisão pelas evidências de 2025 para os casos recorrentes.",
   "tema": "vulvovaginites",
   "subtema": "vulvovaginites.vaginose-bacteriana",
   "especialidade": "ginecologia",
@@ -1532,7 +1532,7 @@
    "Transtorno de adaptação com ansiedade"
   ],
   "correta": 2,
-  "explicacao": "Preocupação excessiva e difícil de controlar sobre vários temas, na maioria dos dias por ≥ 6 meses, com ao menos 3 de 6 sintomas (inquietação, fadiga, dificuldade de concentração, irritabilidade, tensão muscular, alteração do sono) e prejuízo funcional define o transtorno de ansiedade generalizada (DSM-5). Não há ataques de pânico inesperados, o medo não é restrito a situações sociais, não há obsessões/compulsões ritualizadas, e o transtorno de adaptação exige estressor identificável com sintomas que não persistem além de 6 meses após seu término.",
+  "explicacao": "Preocupação excessiva e difícil de controlar sobre vários temas, na maioria dos dias por ≥ 6 meses, com ao menos 3 de 6 sintomas (inquietação, fadiga, dificuldade de concentração, irritabilidade, tensão muscular, alteração do sono) e prejuízo funcional define o transtorno de ansiedade generalizada (DSM-5-TR). Não há ataques de pânico inesperados, o medo não é restrito a situações sociais, não há obsessões/compulsões ritualizadas, e o transtorno de adaptação exige estressor identificável com sintomas que não persistem além de 6 meses após seu término.",
   "tema": "transtornos-de-ansiedade",
   "subtema": "transtornos-de-ansiedade.transtorno-de-ansiedade-generalizada",
   "especialidade": "psiquiatria",
@@ -3933,7 +3933,7 @@
  {
   "id": "res-fa92e2d9",
   "area": "Clínica Médica",
-  "enunciado": "CHA₂DS₂-VASc de 4, calcula corretamente o residente, que propõe apixabana lembrando que os anticoagulantes orais diretos são preferidos à varfarina na fibrilação atrial. A paciente, de 70 anos, hipertensa e diabética, teve febre reumática na infância e procura o ambulatório por palpitações há 2 meses. ECG: fibrilação atrial com resposta ventricular de 88 bpm. Ecocardiograma: estenose mitral reumática com área valvar de 1,3 cm², átrio esquerdo de 52 mm e fração de ejeção de 60%. Nunca teve AVC; creatinina 0,9 mg/dL (clearance estimado de 62 mL/min), sem sangramentos prévios nem uso de anti-inflamatórios.\n\nQual é a melhor conduta antitrombótica?",
+  "enunciado": "CHA₂DS₂-VA de 3, calcula corretamente o residente, que propõe apixabana lembrando que os anticoagulantes orais diretos são preferidos à varfarina na fibrilação atrial. A paciente, de 70 anos, hipertensa e diabética, teve febre reumática na infância e procura o ambulatório por palpitações há 2 meses. ECG: fibrilação atrial com resposta ventricular de 88 bpm. Ecocardiograma: estenose mitral reumática com área valvar de 1,3 cm², átrio esquerdo de 52 mm e fração de ejeção de 60%. Nunca teve AVC; creatinina 0,9 mg/dL (clearance estimado de 62 mL/min), sem sangramentos prévios nem uso de anti-inflamatórios.\n\nQual é a melhor conduta antitrombótica?",
   "alternativas": [
    "Apixabana 5 mg duas vezes ao dia",
    "Ácido acetilsalicílico 100 mg ao dia isolado",
@@ -3942,7 +3942,7 @@
    "Rivaroxabana 20 mg uma vez ao dia"
   ],
   "correta": 3,
-  "explicacao": "O escore da paciente é de fato 4 (idade 65–74 anos: 1; hipertensão: 1; diabetes: 1; sexo feminino: 1), o que indica anticoagulação. Porém, a estenose mitral moderada a grave de origem reumática caracteriza a chamada fibrilação atrial valvar, situação em que os DOAC não foram adequadamente estudados ou foram inferiores: no estudo INVICTUS, a rivaroxabana teve mais eventos que o antagonista da vitamina K na FA reumática. As diretrizes da SBC e das sociedades internacionais indicam varfarina (INR 2–3) nesses pacientes, independentemente do escore. Apixabana e rivaroxabana seriam adequadas se a FA fosse não valvar. AAS isolado não previne AVC de forma satisfatória, e deixar de anticoagular expõe a paciente a alto risco embólico. Para lembrar: hoje, 'FA valvar' refere-se apenas à estenose mitral moderada a grave e às próteses valvares mecânicas; outras valvopatias não impedem o uso de DOAC.",
+  "explicacao": "O CHA₂DS₂-VA, escore adotado pela Diretriz Brasileira de Fibrilação Atrial (SBC/SOBRAC, 2025) e pela ESC 2024, é de fato 3 (idade 65–74 anos: 1; hipertensão: 1; diabetes: 1; o sexo feminino não pontua mais), o que indicaria anticoagulação. Porém, a estenose mitral moderada a grave de origem reumática caracteriza a chamada fibrilação atrial valvar, situação em que os DOAC não foram adequadamente estudados ou foram inferiores: no estudo INVICTUS, a rivaroxabana teve mais eventos que o antagonista da vitamina K na FA reumática. A Diretriz Brasileira de FA 2025 e as sociedades internacionais indicam varfarina (INR 2–3) nesses pacientes, independentemente do escore, que nem se aplica à FA valvar. Apixabana e rivaroxabana seriam adequadas se a FA fosse não valvar. AAS isolado não previne AVC de forma satisfatória, e deixar de anticoagular expõe a paciente a alto risco embólico. Para lembrar: hoje, 'FA valvar' refere-se apenas à estenose mitral moderada a grave e às próteses valvares mecânicas; outras valvopatias não impedem o uso de DOAC.",
   "tema": "arritmias-cardiacas",
   "subtema": "arritmias-cardiacas.fibrilacao-atrial",
   "especialidade": "cardiologia",
@@ -6554,7 +6554,7 @@
  {
   "id": "res-2f473286",
   "area": "Clínica Médica",
-  "enunciado": "Uma comissão de controle de infecção propõe que, nas enfermarias, o protocolo de sepse seja acionado apenas quando o paciente com suspeita de infecção tiver qSOFA ≥ 2 (frequência respiratória ≥ 22 irpm, alteração do nível de consciência e PAS ≤ 100 mmHg).\n\nÀ luz das recomendações de 2021 da Campanha Sobrevivendo à Sepse, essa proposta é:",
+  "enunciado": "Uma comissão de controle de infecção propõe que, nas enfermarias, o protocolo de sepse seja acionado apenas quando o paciente com suspeita de infecção tiver qSOFA ≥ 2 (frequência respiratória ≥ 22 irpm, alteração do nível de consciência e PAS ≤ 100 mmHg).\n\nÀ luz das diretrizes de 2026 da Campanha Sobrevivendo à Sepse, essa proposta é:",
   "alternativas": [
    "Inadequada, pois o qSOFA tem baixa sensibilidade e não deve ser a única ferramenta de triagem",
    "Adequada, desde que o lactato sérico seja incluído como quarto componente obrigatório do escore",
@@ -6563,7 +6563,7 @@
    "Adequada, pois qSOFA ≥ 2 é o critério que define sepse no consenso Sepsis-3 e dispensa o lactato"
   ],
   "correta": 0,
-  "explicacao": "O qSOFA foi proposto no Sepsis-3 como marcador de maior risco de desfecho ruim fora da UTI, não como definição de sepse. Por ter baixa sensibilidade, deixa passar muitos pacientes que já têm disfunção orgânica, e a Campanha Sobrevivendo à Sepse de 2021 recomenda não usá-lo isoladamente como ferramenta de triagem, em comparação com SIRS, NEWS ou MEWS. No Sepsis-3, sepse é disfunção orgânica ameaçadora à vida causada por resposta desregulada à infecção, operacionalizada por aumento agudo de 2 ou mais pontos no SOFA; o qSOFA não substitui o SOFA. O lactato não faz parte do qSOFA, e o escore foi derivado justamente fora da UTI, onde seu desempenho é melhor do que dentro dela. Para lembrar: qSOFA tem três itens de beira de leito, e nenhum deles é laboratorial.",
+  "explicacao": "O qSOFA foi proposto no Sepsis-3 como marcador de maior risco de desfecho ruim fora da UTI, não como definição de sepse. Por ter baixa sensibilidade, deixa passar muitos pacientes que já têm disfunção orgânica, e as diretrizes de 2026 da Campanha Sobrevivendo à Sepse (que substituíram as de 2021) recomendam usar NEWS, NEWS2, MEWS ou SIRS em vez do qSOFA como ferramenta única de triagem. No Sepsis-3, sepse é disfunção orgânica ameaçadora à vida causada por resposta desregulada à infecção, operacionalizada por aumento agudo de 2 ou mais pontos no SOFA; o qSOFA não substitui o SOFA. O lactato não faz parte do qSOFA, e o escore foi derivado justamente fora da UTI, onde seu desempenho é melhor do que dentro dela. Para lembrar: qSOFA tem três itens de beira de leito, e nenhum deles é laboratorial.",
   "tema": "sepse",
   "subtema": "sepse.reconhecimento-precoce",
   "especialidade": "medicina-de-urgencia",
@@ -7504,7 +7504,7 @@
  {
   "id": "res-7520e513",
   "area": "Clínica Médica",
-  "enunciado": "Os pais de um universitário de 22 anos, até então bem adaptado, contam que há 3 meses ele mudou: acredita que colegas implantaram um chip em sua cabeça para roubar seus pensamentos, ouve vozes que comentam suas ações e às vezes fala de modo desorganizado. Abandonou as aulas. Não há sintomas depressivos ou maníacos significativos, e a triagem toxicológica e os exames clínicos são normais.\n\nQual diagnóstico o DSM-5 permite fazer neste momento?",
+  "enunciado": "Os pais de um universitário de 22 anos, até então bem adaptado, contam que há 3 meses ele mudou: acredita que colegas implantaram um chip em sua cabeça para roubar seus pensamentos, ouve vozes que comentam suas ações e às vezes fala de modo desorganizado. Abandonou as aulas. Não há sintomas depressivos ou maníacos significativos, e a triagem toxicológica e os exames clínicos são normais.\n\nQual diagnóstico o DSM-5-TR permite fazer neste momento?",
   "alternativas": [
    "Esquizofrenia, primeiro episódio",
    "Transtorno esquizofreniforme",
@@ -7513,7 +7513,7 @@
    "Transtorno delirante persecutório"
   ],
   "correta": 1,
-  "explicacao": "O quadro tem sintomas psicóticos característicos (delírios bizarros, alucinações auditivas em comentário, discurso desorganizado), sem causa orgânica ou induzida por substância e sem episódio de humor dominante. Pelo DSM-5, a duração define o diagnóstico: transtorno psicótico breve dura de 1 dia a menos de 1 mês; transtorno esquizofreniforme, de 1 a menos de 6 meses; esquizofrenia exige sinais contínuos da perturbação por pelo menos 6 meses, incluindo pródromos e sintomas residuais. Com 3 meses de evolução, o diagnóstico é esquizofreniforme, que pode ser revisto se persistir além de 6 meses. O esquizoafetivo requer episódio de humor concomitante com a fase ativa, e o transtorno delirante tem apenas delírios, sem alucinações proeminentes nem desorganização. Para lembrar: 1 mês e 6 meses são as duas linhas de corte.",
+  "explicacao": "O quadro tem sintomas psicóticos característicos (delírios bizarros, alucinações auditivas em comentário, discurso desorganizado), sem causa orgânica ou induzida por substância e sem episódio de humor dominante. Pelo DSM-5-TR, a duração define o diagnóstico: transtorno psicótico breve dura de 1 dia a menos de 1 mês; transtorno esquizofreniforme, de 1 a menos de 6 meses; esquizofrenia exige sinais contínuos da perturbação por pelo menos 6 meses, incluindo pródromos e sintomas residuais. Com 3 meses de evolução, o diagnóstico é esquizofreniforme, que pode ser revisto se persistir além de 6 meses. O esquizoafetivo requer episódio de humor concomitante com a fase ativa, e o transtorno delirante tem apenas delírios, sem alucinações proeminentes nem desorganização. Para lembrar: 1 mês e 6 meses são as duas linhas de corte.",
   "tema": "esquizofrenia-e-psicoses",
   "subtema": "esquizofrenia-e-psicoses.diagnostico",
   "especialidade": "psiquiatria",
@@ -14395,7 +14395,7 @@
    "Infundir bicarbonato até pH acima de 7,35 para melhorar a ação da noradrenalina"
   ],
   "correta": 3,
-  "explicacao": "A Campanha de Sobrevivência à Sepse (2021, com recomendações mantidas na atualização de 2026) recomenda estratégia restritiva de transfusão, com gatilho de hemoglobina de 7 g/dL em adultos sem isquemia miocárdica, hemorragia ou hipoxemia grave; com 7,6 g/dL e lactato em queda, não há indicação. Também sugere não usar bicarbonato na acidose láctica por hipoperfusão com pH ≥ 7,2; o benefício possível restringe-se a pH ≤ 7,2 com lesão renal aguda grave. A insulina é iniciada com glicemia ≥ 180 mg/dL, com alvo de 144 a 180 mg/dL; metas de 80 a 110 mg/dL aumentaram hipoglicemia e mortalidade (estudo NICE-SUGAR). Transfundir até 10 g/dL, conceito da terapia precoce guiada por metas, não se mostrou benéfico nos ensaios ProCESS, ARISE e ProMISe. Para lembrar: o estudo TRISS, de 2014, mostrou que o gatilho de 7 g/dL é seguro no choque séptico.",
+  "explicacao": "A Campanha de Sobrevivência à Sepse (diretriz de 2026) recomenda estratégia restritiva de transfusão, com gatilho de hemoglobina de 7 g/dL em adultos sem isquemia miocárdica, hemorragia ou hipoxemia grave; com 7,6 g/dL e lactato em queda, não há indicação. Também sugere não usar bicarbonato na acidose láctica por hipoperfusão para melhorar a hemodinâmica ou poupar vasopressor; só sugere usá-lo com pH ≤ 7,2 associado a lesão renal aguda moderada a grave (AKIN 2–3). A insulina é iniciada com glicemia ≥ 180 mg/dL, com alvo de 144 a 180 mg/dL; metas de 80 a 110 mg/dL aumentaram hipoglicemia e mortalidade (estudo NICE-SUGAR). Transfundir até 10 g/dL, conceito da terapia precoce guiada por metas, não se mostrou benéfico nos ensaios ProCESS, ARISE e ProMISe. Para lembrar: o estudo TRISS, de 2014, mostrou que o gatilho de 7 g/dL é seguro no choque séptico.",
   "tema": "sepse",
   "subtema": "sepse.choque-septico",
   "especialidade": "medicina-de-urgencia",
