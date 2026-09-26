@@ -68,6 +68,13 @@ const ARTE_ESP = {
 };
 const ARTE_PIL = { curiosidade: "lampada", data: "calendario", pessoa: "pessoa", conceito: "livro", macete: "chave", pegadinha: "alerta", comparacao: "balanca" };
 const COR_PIL = { curiosidade: "#D97706", data: "#0F766E", pessoa: "#6D28D9", conceito: "#2340B8", macete: "#15803D", pegadinha: "#C0265F", comparacao: "#475569" };
+/* Cor e figura de cada seção: pintam o cabeçalho da página e os títulos. */
+const SECAO_VISUAL = {
+  inicio: ["sorriso", "#2340B8"], medicina: ["estetoscopio", "#C0265F"], casos: ["pessoa", "#C0265F"], questoes: ["alvo", "#2340B8"],
+  simulados: ["relogio", "#B45309"], flashcards: ["lampada", "#D97706"], revisoes: ["calendario", "#6D28D9"], estudar: ["lupa", "#15803D"],
+  enem: ["livro", "#2340B8"], curso: ["livro", "#0F766E"], desempenho: ["grafico", "#B45309"], plano: ["calendario", "#0F766E"], biblioteca: ["livro", "#6D28D9"],
+};
+const iluSecao = (s, tam = "g") => SECAO_VISUAL[s] ? ilustra(SECAO_VISUAL[s][0], SECAO_VISUAL[s][1], tam) : "";
 const areaDaEsp = id => AREAS_MED.find(a => (a.especialidades || []).some(e => e.id === id))?.id;
 /** Desenho num círculo colorido. tam: p (pequeno), m, g (grande), xg (destaque). */
 function ilustra(nome, cor = "#2340B8", tam = "m", rotulo = "") {

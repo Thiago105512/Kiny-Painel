@@ -67,15 +67,19 @@ main{flex:1;min-width:0;padding-inline:16px;padding-block:14px 90px}
 .crumbs a{color:var(--muted);text-decoration:none}
 .crumbs a:hover{color:var(--pen);text-decoration:underline}
 .crumbs span[aria-hidden]{opacity:.6}
-.titulo{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 16px;margin:0 0 14px}
-.titulo h1{font:700 calc(24px * var(--k))/1.15 var(--display);margin:0;letter-spacing:-.01em}
-.titulo .sub{color:var(--muted);font-size:calc(13px * var(--k));width:100%}
-h2.sec{font:700 calc(17px * var(--k)) var(--display);margin:22px 0 10px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+/* Cada seção tem sua cor (--sec, definida pelo render): cabeçalho em faixa colorida com figura, títulos coloridos. */
+body{--sec:var(--pen);--sec-tx:color-mix(in oklab,var(--sec) 76%,var(--ink));--sec-soft:color-mix(in oklab,var(--sec) 11%,var(--sheet));--sec-linha:color-mix(in oklab,var(--sec) 35%,var(--line))}
+.titulo{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:0 0 16px;padding:14px 16px;background:var(--sec-soft);border:1px solid var(--sec-linha);border-left:6px solid var(--sec);border-radius:14px}
+.titulo-tx{flex:1 1 220px;min-width:0;display:grid;gap:4px}
+.titulo h1{font:800 calc(24px * var(--k))/1.15 var(--display);margin:0;letter-spacing:-.01em;color:var(--sec-tx)}
+.titulo .sub{color:var(--ink2);font-size:calc(13px * var(--k))}
+.titulo>.linha{margin-left:auto}
+h2.sec{font:700 calc(17px * var(--k)) var(--display);margin:22px 0 10px;color:var(--sec-tx);border-left:4px solid var(--sec);padding-left:10px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
 h2.sec:first-child{margin-top:0}
 #view>*+*{margin-top:18px}
 #view>.crumbs+.titulo,#view>.titulo+.tabs{margin-top:0}
 #view>section>h2.sec:first-child{margin-top:0}
-h3{font:600 calc(13px * var(--k)) var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:16px 0 6px}
+h3{font:700 calc(13px * var(--k)) var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--sec-tx);margin:16px 0 6px}
 .muted{color:var(--muted)} .small{font-size:calc(13px * var(--k))}
 .leitura{font:400 calc(16px * var(--k))/1.6 var(--read);max-width:68ch;white-space:pre-wrap}
 .lab{font:600 calc(13px * var(--k)) var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);display:block;margin-bottom:4px}
@@ -196,8 +200,20 @@ td a{text-decoration:none;font-weight:600}
 .notas small{font:calc(13px * var(--k)) var(--mono);opacity:.8}
 
 /* ---------- Caso clínico ---------- */
-.caso-sec{border-top:1px solid var(--line2);padding-block:12px}
-.caso-sec h3{margin-top:0}
+.caso-sec{--tx:color-mix(in oklab,var(--h,var(--sec)) 76%,var(--ink));border-top:1px solid var(--line2);padding-block:14px}
+.caso-sec:first-child{border-top:0;padding-top:0}
+.caso-sec h3{text-transform:none;letter-spacing:0;margin:0 0 8px;display:flex;align-items:center;gap:10px;color:var(--tx);font:700 calc(16px * var(--k)) var(--display)}
+.caso-sec .btn.sec{border-color:color-mix(in oklab,var(--h) 45%,var(--line));color:var(--tx)}
+.vitais{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
+.vital{font:500 calc(14px * var(--k)) var(--mono);padding:5px 10px;border-radius:999px;background:color-mix(in oklab,var(--h) 12%,var(--sheet));border:1px solid color-mix(in oklab,var(--h) 35%,var(--line))}
+.vital b{color:var(--tx)}
+/* Lista de casos em cartões com a figura da especialidade */
+.cartoes-caso{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:12px}
+.cartao-caso{display:flex;gap:14px;align-items:center;padding:14px;background:var(--sheet);border:1px solid var(--line);border-left:6px solid var(--h);border-radius:12px;text-decoration:none;color:var(--ink)}
+.cartao-caso:hover{border-color:var(--h)}
+.cartao-caso>div{min-width:0;display:grid;gap:4px;justify-items:start}
+.cartao-caso b{font:700 calc(16px * var(--k))/1.3 var(--display);color:color-mix(in oklab,var(--h) 72%,var(--ink))}
+.cartao-caso small{color:var(--muted);font-size:calc(13px * var(--k))}
 
 /* ---------- Assistente ---------- */
 .ia-txt{font:400 calc(15px * var(--k))/1.55 var(--read);white-space:pre-wrap;background:var(--sheet);border:1px solid var(--line);border-radius:8px;padding:12px;max-height:50vh;overflow:auto}
@@ -356,3 +372,13 @@ details.mais>summary{cursor:pointer;color:var(--pen);font-weight:600;font-size:c
 .humor{border:1px dashed var(--line);border-radius:12px;padding:12px 14px;background:transparent;margin:12px 0}
 .humor .lab{color:var(--warn)}
 .humor-txt{margin:0;font:500 calc(16px * var(--k))/1.45 var(--read);color:var(--ink)}
+
+/* ---------- Mais cor: alternativas, explicação e "Para lembrar" ---------- */
+.alt:not([data-s]) .bolha,.alt[data-s=""] .bolha{background:var(--sec-soft);border-color:var(--sec-linha);color:var(--sec-tx)}
+.explica{margin-top:10px;padding:12px 14px;border-radius:12px;background:var(--pen-soft);border:1px solid color-mix(in oklab,var(--pen) 30%,var(--line))}
+.explica h3{display:flex;align-items:center;gap:8px;margin:0 0 6px;color:var(--pen)}
+.explica .leitura{margin:0;color:var(--ink)}
+.lembrar{margin-top:10px;padding:12px 14px;border-radius:12px;background:var(--warn-soft);border:1px solid color-mix(in oklab,var(--warn) 40%,var(--line));align-items:flex-start}
+.lembrar b{font:700 calc(13px * var(--k)) var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--warn)}
+.lembrar .leitura{margin:0;color:var(--ink)}
+@media (max-width:480px){.titulo .ilu-g{width:calc(42px * var(--k));height:calc(42px * var(--k))}.titulo h1{font-size:calc(21px * var(--k))}.titulo{padding:12px 14px}}

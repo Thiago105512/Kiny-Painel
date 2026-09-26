@@ -6,8 +6,22 @@ const SECOES_CASO = [["identificacao", "Identificação"], ["queixaPrincipal", "
 const SECOES_FIM = [["hipoteses", "Hipóteses diagnósticas"], ["diferenciais", "Diagnóstico diferencial"], ["conduta", "Conduta"], ["discussao", "Discussão"]];
 const todosCasos = () => CASOS_BASE.concat(Object.values(store.doc("casos").itens).map(c => ({ ...c, src: c.src || "minha" })));
 const casoPorId = id => todosCasos().find(c => c.id === id);
+/* Cada parte do caso tem figura e cor próprias, como abas de um prontuário. */
+const VISUAL_CASO = { identificacao: ["pessoa", "#2340B8"], queixaPrincipal: ["alerta", "#C0265F"], hda: ["relogio", "#B45309"], antecedentes: ["familia", "#6D28D9"],
+  exameFisico: ["estetoscopio", "#0F766E"], exames: ["frasco", "#0369A1"], perguntas: ["lampada", "#D97706"], hipoteses: ["lupa", "#2340B8"],
+  diferenciais: ["balanca", "#475569"], conduta: ["pilula", "#15803D"], discussao: ["livro", "#6D28D9"], referencias: ["livro", "#475569"] };
+const corCaso = c => COR_AREA[areaDaEsp(c.espId)] || "#C0265F";
+/** Sinais vitais citados no exame físico, para mostrar como etiquetas. */
+function sinaisVitais(txt) {
+  const re = /\b(PA|FC|FR|SatO2|SpO2|Tax|Temperatura|HGT|Glasgow|IMC)\s*(?:de\s*)?[:=]?\s*(\d[\d.,/x ]*?\s*(?:mmHg|bpm|irpm|ipm|%|°C|ºC|kg\/m²|mg\/dL)?)(?=[\s,;.)]|$)/g, vistos = {}, out = [];
+  for (const m of String(txt || "").matchAll(re)) { const k = m[1] === "SpO2" ? "SatO2" : m[1]; if (!vistos[k] && /\d/.test(m[2])) { vistos[k] = 1; out.push([k === "Temperatura" ? "Tax" : k, m[2].trim()]); } }
+  return out;
+}
 function tabelaCasos(cs) {
-  return tabela([{ t: "Caso" }, { t: "Tema" }, { t: "Especialidade" }, { t: "Dif." }], cs.map(c => [`<a href="#/casos/${esc(c.id)}">${esc(c.titulo)}</a>${c.src !== "banco" ? " " + pill(c.src === "ia" ? "IA" : "meu") : ""}`, c.temaId ? linkTema(c.temaId) : esc(c.tema || "—"), esc(ESPECIALIDADES[c.espId]?.nome || c.especialidade || "—"), seloNivel(c.dificuldade, true) || "—"]), { vaziaMsg: "Nenhum caso com esses filtros." });
+  if (!cs.length) return vazio("Nenhum caso com esses filtros.");
+  return `<div class="cartoes-caso">${cs.map(c => `<a class="cartao-caso" href="#/casos/${esc(c.id)}" style="--h:${corCaso(c)}">${iluEsp(c.espId, "g")}<div>
+    <b>${esc(c.titulo)}</b><small>${esc(ESPECIALIDADES[c.espId]?.nome || c.especialidade || "")}${c.temaId && TEMAS[c.temaId] ? " · " + esc(TEMAS[c.temaId].nome) : ""}</small>
+    <span class="linha">${pill(DIFICULDADE[c.dificuldade] || "—", ({ 1: "ok", 2: "warn", 3: "bad" })[c.dificuldade] || "")}${c.src !== "banco" ? pill(c.src === "ia" ? "IA" : "meu") : ""}</span></div></a>`).join("")}</div>`;
 }
 const FC2 = { esp: "", disc: "", dif: "", tema: "" };
 rota("/casos", () => {
@@ -29,15 +43,17 @@ rota("/casos/:id", ({ id }) => {
   const c = casoPorId(id); if (!c) return paginaNaoEncontrada();
   const rv = REVELADO[id] = REVELADO[id] || new Set(["identificacao", "queixaPrincipal", "hda"]);
   const val = v => Array.isArray(v) ? `<ul>${v.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : `<p class="leitura" style="margin:0">${esc(v || "—")}</p>`;
-  const sec = ([k, t]) => c[k] == null || (Array.isArray(c[k]) && !c[k].length) ? "" : `<div class="caso-sec"><h3>${t}</h3>${rv.has(k) ? val(c[k]) : `<button class="btn sec mini" data-act="caso-revelar" data-id="${esc(id)}" data-k="${k}">Mostrar ${t.toLowerCase()}</button>`}</div>`;
+  const cab = (k, t) => `<h3>${ilustra(...VISUAL_CASO[k], "p")}${t}</h3>`, estilo = k => `style="--h:${VISUAL_CASO[k][1]}"`;
+  const vit = k => k === "exameFisico" && rv.has(k) ? (v => v.length ? `<div class="vitais">${v.map(([a, b]) => `<span class="vital"><b>${a}</b> ${esc(b)}</span>`).join("")}</div>` : "")(sinaisVitais(c[k])) : "";
+  const sec = ([k, t]) => c[k] == null || (Array.isArray(c[k]) && !c[k].length) ? "" : `<div class="caso-sec" ${estilo(k)}>${cab(k, t)}${vit(k)}${rv.has(k) ? val(c[k]) : `<button class="btn sec mini" data-act="caso-revelar" data-id="${esc(id)}" data-k="${k}">Mostrar ${t.toLowerCase()}</button>`}</div>`;
   return {
-    secao: "casos", crumbs: [["Casos clínicos", "#/casos"]], titulo: c.titulo,
+    secao: "casos", crumbs: [["Casos clínicos", "#/casos"]], titulo: c.titulo, ilu: iluEsp(c.espId, "g"), cor: corCaso(c),
     sub: `${c.temaId ? linkTema(c.temaId) + " · " : ""}${esc(ESPECIALIDADES[c.espId]?.nome || c.especialidade || "")} · ${esc(c.disciplina || "")} · ${DIFICULDADE[c.dificuldade] || ""}`,
     acoes: `<button class="btn sec mini" data-act="caso-tudo" data-id="${esc(id)}">Revelar tudo</button>`,
     html: `<div class="aviso">${AVISO_CASO}</div><article class="caixa">${SECOES_CASO.map(sec).join("")}
-      ${(c.perguntas || []).length ? `<div class="caso-sec"><h3>Perguntas</h3>${c.perguntas.map((p, i) => `<div style="margin-bottom:10px"><p style="margin:0 0 4px;font-weight:600">${i + 1}. ${esc(p.pergunta)}</p>${rv.has("p" + i) ? `<p class="leitura" style="margin:0;color:var(--ink2)">${esc(p.resposta)}</p>` : `<button class="btn sec mini" data-act="caso-revelar" data-id="${esc(id)}" data-k="p${i}">Ver resposta</button>`}</div>`).join("")}</div>` : ""}
+      ${(c.perguntas || []).length ? `<div class="caso-sec" ${estilo("perguntas")}>${cab("perguntas", "Perguntas")}${c.perguntas.map((p, i) => `<div style="margin-bottom:10px"><p style="margin:0 0 4px;font-weight:600">${i + 1}. ${esc(p.pergunta)}</p>${rv.has("p" + i) ? `<p class="leitura" style="margin:0;color:var(--ink2)">${esc(p.resposta)}</p>` : `<button class="btn sec mini" data-act="caso-revelar" data-id="${esc(id)}" data-k="p${i}">Ver resposta</button>`}</div>`).join("")}</div>` : ""}
       ${SECOES_FIM.map(sec).join("")}
-      ${(c.referencias || []).length && rv.has("discussao") ? `<div class="caso-sec"><h3>Referências</h3>${val(c.referencias)}</div>` : ""}</article>
+      ${(c.referencias || []).length && rv.has("discussao") ? `<div class="caso-sec" ${estilo("referencias")}>${cab("referencias", "Referências")}${val(c.referencias)}</div>` : ""}</article>
       <div class="acoes">${c.temaId ? `<a class="btn sec" href="#/tema/${encodeURIComponent(c.temaId)}">Estudar o tema</a>` : ""}${c.src !== "banco" ? `<button class="btn perigo mini" data-act="caso-excluir" data-id="${esc(id)}">Excluir caso</button>` : ""}</div>`,
     ctx: { tema: c.temaId, caso: `${c.titulo}. ${c.queixaPrincipal || ""} ${c.hda || ""}`.slice(0, 600) },
   };

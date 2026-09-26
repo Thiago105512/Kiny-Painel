@@ -88,7 +88,9 @@ function render(opts = {}) {
   PAGINA = pg;
   try { desenharNav(pg.secao); } catch (e) { console.error(e); }
   const crumbs = pg.crumbs?.length ? `<nav class="crumbs" aria-label="Você está em">${pg.crumbs.map(([t, h], i) => (i ? '<span aria-hidden="true">›</span>' : "") + (h ? `<a href="${h}">${esc(t)}</a>` : `<span>${esc(t)}</span>`)).join("")}</nav>` : "";
-  const titulo = pg.titulo ? `<div class="titulo"><h1>${esc(pg.titulo)}</h1>${pg.acoes ? `<div class="linha">${pg.acoes}</div>` : ""}${pg.sub ? `<div class="sub">${pg.sub}</div>` : ""}</div>` : "";
+  document.body.style.setProperty("--sec", pg.cor || SECAO_VISUAL[pg.secao]?.[1] || "#2340B8");
+  const ilu = pg.ilu ?? iluSecao(pg.secao);
+  const titulo = pg.titulo ? `<div class="titulo${ilu ? " com-figura" : ""}">${ilu}<div class="titulo-tx"><h1>${esc(pg.titulo)}</h1>${pg.sub ? `<div class="sub">${pg.sub}</div>` : ""}</div>${pg.acoes ? `<div class="linha">${pg.acoes}</div>` : ""}</div>` : "";
   const fab = IA.disponivel() && pg.secao !== "assistente" ? `<button class="btn azul fab" data-act="ia-abrir" aria-label="Abrir assistente de estudo">${icone("ia")} Assistente</button>` : "";
   $("#view").innerHTML = crumbs + titulo + (pg.html || "") + fab;
   document.title = (pg.titulo ? pg.titulo + " · " : "") + "Gabarito Amazonas";
@@ -187,6 +189,11 @@ function playerAtivo(chave) {
   const s = SALVOS[chave]; if (!s) return false;
   guardarSessao(); Object.assign(PL, s); delete SALVOS[chave]; return true;
 }
+/** Explicação em caixa colorida; o gancho "Para lembrar:" vira um destaque à parte. */
+function htmlExplicacao(e) {
+  const [corpo, ...resto] = String(e || "Sem explicação cadastrada.").split(/\s*Para lembrar:\s*/), gancho = resto.join(" ");
+  return `<div class="explica"><h3>${ilustra("livro", "#2340B8", "p")}Por quê</h3><p class="leitura">${esc(corpo)}</p></div>${gancho ? `<div class="lembrar com-ilu">${ilustra("lampada", "#D97706", "m")}<div><b>Para lembrar</b><p class="leitura">${esc(gancho)}</p></div></div>` : ""}`;
+}
 function htmlPlayer() {
   if (PL.fim) {
     const ac = PL.res.filter(r => r.ok).length, n = PL.res.length;
@@ -210,7 +217,7 @@ function htmlPlayer() {
     <div class="linha entre" style="margin-bottom:12px"><b>${PL.ids.length > 1 ? `Questão ${PL.i + 1} de ${PL.ids.length}` : "Questão"}${q.serie ? `<br><span class="small muted">Caso em ${q.partes} partes · parte ${q.parte}</span>` : ""}</b>${seloNivel(q.dif)}</div>
     <p class="enunciado">${esc(q.q)}</p>${q.img ? figuraImg(q.img) : ""}
     <ol class="alts">${alts}</ol>
-    ${PL.resp ? `<div class="retorno"><p class="veredito ${ok ? "ok" : "bad"}">${ok ? `<span class="festa">✓ ${esc(PL.frase || "Certo")}</span>` : `Errado · gabarito ${letra(q.c)}`}${PL.ms ? ` · ${mmss(PL.ms)}` : ""}</p>${!ok && PL.frase ? `<p class="small muted" style="margin:0 0 6px">${esc(PL.frase)}</p>` : ""}<p class="leitura" style="color:var(--ink2);margin:0">${esc(q.e || "Sem explicação cadastrada.")}</p>
+    ${PL.resp ? `<div class="retorno"><p class="veredito ${ok ? "ok" : "bad"}">${ok ? `<span class="festa">✓ ${esc(PL.frase || "Certo")}</span>` : `Errado · gabarito ${letra(q.c)}`}${PL.ms ? ` · ${mmss(PL.ms)}` : ""}</p>${!ok && PL.frase ? `<p class="small muted" style="margin:0 0 6px">${esc(PL.frase)}</p>` : ""}${htmlExplicacao(q.e)}
       <p class="small muted com-ilu" style="margin:8px 0 0;gap:8px">${q.tema ? iluTema(q.tema, "p") : ""}<span>${[TRILHAS[q.t]?.curto || q.t, q.ae && nomeAreaEnem(q.ae), q.ae && q.disc].filter(Boolean).map(esc).join(" · ")}${q.tema ? " · " + linkTema(q.tema) : ""}${q.src !== "banco" ? " · " + (q.src === "ia" ? "gerada por IA" : "minha") : ""}${st.n > 1 ? ` · você já acertou ${st.ac} de ${st.n}` : ""}${q.rev ? ` · revisada em ${esc(mesAno(q.rev))}` : ""}${acertoGeral(q) ? " · " + esc(acertoGeral(q)) : ""}</span></p>
       ${!ok ? `<p class="small muted" style="margin:8px 0 0">Registrado no <a href="#/erros">caderno de erros</a> com revisão amanhã.</p>${irmaDe(q) ? `<div class="acoes"><button class="btn sec" data-act="pl-irma">Treinar este ponto de novo</button></div>` : ""}` : ""}
       ${PL.ia ? `<h3>Assistente</h3><div class="ia-txt" id="pl-ia">${esc(PL.ia)}</div>` : ""}</div>` : ""}

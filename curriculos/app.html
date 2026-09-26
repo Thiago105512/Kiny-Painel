@@ -75,15 +75,19 @@ main{flex:1;min-width:0;padding-inline:16px;padding-block:14px 90px}
 .crumbs a{color:var(--muted);text-decoration:none}
 .crumbs a:hover{color:var(--pen);text-decoration:underline}
 .crumbs span[aria-hidden]{opacity:.6}
-.titulo{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 16px;margin:0 0 14px}
-.titulo h1{font:700 calc(24px * var(--k))/1.15 var(--display);margin:0;letter-spacing:-.01em}
-.titulo .sub{color:var(--muted);font-size:calc(13px * var(--k));width:100%}
-h2.sec{font:700 calc(17px * var(--k)) var(--display);margin:22px 0 10px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+/* Cada seção tem sua cor (--sec, definida pelo render): cabeçalho em faixa colorida com figura, títulos coloridos. */
+body{--sec:var(--pen);--sec-tx:color-mix(in oklab,var(--sec) 76%,var(--ink));--sec-soft:color-mix(in oklab,var(--sec) 11%,var(--sheet));--sec-linha:color-mix(in oklab,var(--sec) 35%,var(--line))}
+.titulo{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:0 0 16px;padding:14px 16px;background:var(--sec-soft);border:1px solid var(--sec-linha);border-left:6px solid var(--sec);border-radius:14px}
+.titulo-tx{flex:1 1 220px;min-width:0;display:grid;gap:4px}
+.titulo h1{font:800 calc(24px * var(--k))/1.15 var(--display);margin:0;letter-spacing:-.01em;color:var(--sec-tx)}
+.titulo .sub{color:var(--ink2);font-size:calc(13px * var(--k))}
+.titulo>.linha{margin-left:auto}
+h2.sec{font:700 calc(17px * var(--k)) var(--display);margin:22px 0 10px;color:var(--sec-tx);border-left:4px solid var(--sec);padding-left:10px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
 h2.sec:first-child{margin-top:0}
 #view>*+*{margin-top:18px}
 #view>.crumbs+.titulo,#view>.titulo+.tabs{margin-top:0}
 #view>section>h2.sec:first-child{margin-top:0}
-h3{font:600 calc(13px * var(--k)) var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:16px 0 6px}
+h3{font:700 calc(13px * var(--k)) var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--sec-tx);margin:16px 0 6px}
 .muted{color:var(--muted)} .small{font-size:calc(13px * var(--k))}
 .leitura{font:400 calc(16px * var(--k))/1.6 var(--read);max-width:68ch;white-space:pre-wrap}
 .lab{font:600 calc(13px * var(--k)) var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);display:block;margin-bottom:4px}
@@ -204,8 +208,20 @@ td a{text-decoration:none;font-weight:600}
 .notas small{font:calc(13px * var(--k)) var(--mono);opacity:.8}
 
 /* ---------- Caso clínico ---------- */
-.caso-sec{border-top:1px solid var(--line2);padding-block:12px}
-.caso-sec h3{margin-top:0}
+.caso-sec{--tx:color-mix(in oklab,var(--h,var(--sec)) 76%,var(--ink));border-top:1px solid var(--line2);padding-block:14px}
+.caso-sec:first-child{border-top:0;padding-top:0}
+.caso-sec h3{text-transform:none;letter-spacing:0;margin:0 0 8px;display:flex;align-items:center;gap:10px;color:var(--tx);font:700 calc(16px * var(--k)) var(--display)}
+.caso-sec .btn.sec{border-color:color-mix(in oklab,var(--h) 45%,var(--line));color:var(--tx)}
+.vitais{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}
+.vital{font:500 calc(14px * var(--k)) var(--mono);padding:5px 10px;border-radius:999px;background:color-mix(in oklab,var(--h) 12%,var(--sheet));border:1px solid color-mix(in oklab,var(--h) 35%,var(--line))}
+.vital b{color:var(--tx)}
+/* Lista de casos em cartões com a figura da especialidade */
+.cartoes-caso{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:12px}
+.cartao-caso{display:flex;gap:14px;align-items:center;padding:14px;background:var(--sheet);border:1px solid var(--line);border-left:6px solid var(--h);border-radius:12px;text-decoration:none;color:var(--ink)}
+.cartao-caso:hover{border-color:var(--h)}
+.cartao-caso>div{min-width:0;display:grid;gap:4px;justify-items:start}
+.cartao-caso b{font:700 calc(16px * var(--k))/1.3 var(--display);color:color-mix(in oklab,var(--h) 72%,var(--ink))}
+.cartao-caso small{color:var(--muted);font-size:calc(13px * var(--k))}
 
 /* ---------- Assistente ---------- */
 .ia-txt{font:400 calc(15px * var(--k))/1.55 var(--read);white-space:pre-wrap;background:var(--sheet);border:1px solid var(--line);border-radius:8px;padding:12px;max-height:50vh;overflow:auto}
@@ -364,6 +380,16 @@ details.mais>summary{cursor:pointer;color:var(--pen);font-weight:600;font-size:c
 .humor{border:1px dashed var(--line);border-radius:12px;padding:12px 14px;background:transparent;margin:12px 0}
 .humor .lab{color:var(--warn)}
 .humor-txt{margin:0;font:500 calc(16px * var(--k))/1.45 var(--read);color:var(--ink)}
+
+/* ---------- Mais cor: alternativas, explicação e "Para lembrar" ---------- */
+.alt:not([data-s]) .bolha,.alt[data-s=""] .bolha{background:var(--sec-soft);border-color:var(--sec-linha);color:var(--sec-tx)}
+.explica{margin-top:10px;padding:12px 14px;border-radius:12px;background:var(--pen-soft);border:1px solid color-mix(in oklab,var(--pen) 30%,var(--line))}
+.explica h3{display:flex;align-items:center;gap:8px;margin:0 0 6px;color:var(--pen)}
+.explica .leitura{margin:0;color:var(--ink)}
+.lembrar{margin-top:10px;padding:12px 14px;border-radius:12px;background:var(--warn-soft);border:1px solid color-mix(in oklab,var(--warn) 40%,var(--line));align-items:flex-start}
+.lembrar b{font:700 calc(13px * var(--k)) var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--warn)}
+.lembrar .leitura{margin:0;color:var(--ink)}
+@media (max-width:480px){.titulo .ilu-g{width:calc(42px * var(--k));height:calc(42px * var(--k))}.titulo h1{font-size:calc(21px * var(--k))}.titulo{padding:12px 14px}}
 
 </style>
 
@@ -1251,7 +1277,9 @@ function render(opts = {}) {
   PAGINA = pg;
   try { desenharNav(pg.secao); } catch (e) { console.error(e); }
   const crumbs = pg.crumbs?.length ? `<nav class="crumbs" aria-label="Você está em">${pg.crumbs.map(([t, h], i) => (i ? '<span aria-hidden="true">›</span>' : "") + (h ? `<a href="${h}">${esc(t)}</a>` : `<span>${esc(t)}</span>`)).join("")}</nav>` : "";
-  const titulo = pg.titulo ? `<div class="titulo"><h1>${esc(pg.titulo)}</h1>${pg.acoes ? `<div class="linha">${pg.acoes}</div>` : ""}${pg.sub ? `<div class="sub">${pg.sub}</div>` : ""}</div>` : "";
+  document.body.style.setProperty("--sec", pg.cor || SECAO_VISUAL[pg.secao]?.[1] || "#2340B8");
+  const ilu = pg.ilu ?? iluSecao(pg.secao);
+  const titulo = pg.titulo ? `<div class="titulo${ilu ? " com-figura" : ""}">${ilu}<div class="titulo-tx"><h1>${esc(pg.titulo)}</h1>${pg.sub ? `<div class="sub">${pg.sub}</div>` : ""}</div>${pg.acoes ? `<div class="linha">${pg.acoes}</div>` : ""}</div>` : "";
   const fab = IA.disponivel() && pg.secao !== "assistente" ? `<button class="btn azul fab" data-act="ia-abrir" aria-label="Abrir assistente de estudo">${icone("ia")} Assistente</button>` : "";
   $("#view").innerHTML = crumbs + titulo + (pg.html || "") + fab;
   document.title = (pg.titulo ? pg.titulo + " · " : "") + "Gabarito Amazonas";
@@ -1350,6 +1378,11 @@ function playerAtivo(chave) {
   const s = SALVOS[chave]; if (!s) return false;
   guardarSessao(); Object.assign(PL, s); delete SALVOS[chave]; return true;
 }
+/** Explicação em caixa colorida; o gancho "Para lembrar:" vira um destaque à parte. */
+function htmlExplicacao(e) {
+  const [corpo, ...resto] = String(e || "Sem explicação cadastrada.").split(/\s*Para lembrar:\s*/), gancho = resto.join(" ");
+  return `<div class="explica"><h3>${ilustra("livro", "#2340B8", "p")}Por quê</h3><p class="leitura">${esc(corpo)}</p></div>${gancho ? `<div class="lembrar com-ilu">${ilustra("lampada", "#D97706", "m")}<div><b>Para lembrar</b><p class="leitura">${esc(gancho)}</p></div></div>` : ""}`;
+}
 function htmlPlayer() {
   if (PL.fim) {
     const ac = PL.res.filter(r => r.ok).length, n = PL.res.length;
@@ -1373,7 +1406,7 @@ function htmlPlayer() {
     <div class="linha entre" style="margin-bottom:12px"><b>${PL.ids.length > 1 ? `Questão ${PL.i + 1} de ${PL.ids.length}` : "Questão"}${q.serie ? `<br><span class="small muted">Caso em ${q.partes} partes · parte ${q.parte}</span>` : ""}</b>${seloNivel(q.dif)}</div>
     <p class="enunciado">${esc(q.q)}</p>${q.img ? figuraImg(q.img) : ""}
     <ol class="alts">${alts}</ol>
-    ${PL.resp ? `<div class="retorno"><p class="veredito ${ok ? "ok" : "bad"}">${ok ? `<span class="festa">✓ ${esc(PL.frase || "Certo")}</span>` : `Errado · gabarito ${letra(q.c)}`}${PL.ms ? ` · ${mmss(PL.ms)}` : ""}</p>${!ok && PL.frase ? `<p class="small muted" style="margin:0 0 6px">${esc(PL.frase)}</p>` : ""}<p class="leitura" style="color:var(--ink2);margin:0">${esc(q.e || "Sem explicação cadastrada.")}</p>
+    ${PL.resp ? `<div class="retorno"><p class="veredito ${ok ? "ok" : "bad"}">${ok ? `<span class="festa">✓ ${esc(PL.frase || "Certo")}</span>` : `Errado · gabarito ${letra(q.c)}`}${PL.ms ? ` · ${mmss(PL.ms)}` : ""}</p>${!ok && PL.frase ? `<p class="small muted" style="margin:0 0 6px">${esc(PL.frase)}</p>` : ""}${htmlExplicacao(q.e)}
       <p class="small muted com-ilu" style="margin:8px 0 0;gap:8px">${q.tema ? iluTema(q.tema, "p") : ""}<span>${[TRILHAS[q.t]?.curto || q.t, q.ae && nomeAreaEnem(q.ae), q.ae && q.disc].filter(Boolean).map(esc).join(" · ")}${q.tema ? " · " + linkTema(q.tema) : ""}${q.src !== "banco" ? " · " + (q.src === "ia" ? "gerada por IA" : "minha") : ""}${st.n > 1 ? ` · você já acertou ${st.ac} de ${st.n}` : ""}${q.rev ? ` · revisada em ${esc(mesAno(q.rev))}` : ""}${acertoGeral(q) ? " · " + esc(acertoGeral(q)) : ""}</span></p>
       ${!ok ? `<p class="small muted" style="margin:8px 0 0">Registrado no <a href="#/erros">caderno de erros</a> com revisão amanhã.</p>${irmaDe(q) ? `<div class="acoes"><button class="btn sec" data-act="pl-irma">Treinar este ponto de novo</button></div>` : ""}` : ""}
       ${PL.ia ? `<h3>Assistente</h3><div class="ia-txt" id="pl-ia">${esc(PL.ia)}</div>` : ""}</div>` : ""}
@@ -1534,6 +1567,13 @@ const ARTE_ESP = {
 };
 const ARTE_PIL = { curiosidade: "lampada", data: "calendario", pessoa: "pessoa", conceito: "livro", macete: "chave", pegadinha: "alerta", comparacao: "balanca" };
 const COR_PIL = { curiosidade: "#D97706", data: "#0F766E", pessoa: "#6D28D9", conceito: "#2340B8", macete: "#15803D", pegadinha: "#C0265F", comparacao: "#475569" };
+/* Cor e figura de cada seção: pintam o cabeçalho da página e os títulos. */
+const SECAO_VISUAL = {
+  inicio: ["sorriso", "#2340B8"], medicina: ["estetoscopio", "#C0265F"], casos: ["pessoa", "#C0265F"], questoes: ["alvo", "#2340B8"],
+  simulados: ["relogio", "#B45309"], flashcards: ["lampada", "#D97706"], revisoes: ["calendario", "#6D28D9"], estudar: ["lupa", "#15803D"],
+  enem: ["livro", "#2340B8"], curso: ["livro", "#0F766E"], desempenho: ["grafico", "#B45309"], plano: ["calendario", "#0F766E"], biblioteca: ["livro", "#6D28D9"],
+};
+const iluSecao = (s, tam = "g") => SECAO_VISUAL[s] ? ilustra(SECAO_VISUAL[s][0], SECAO_VISUAL[s][1], tam) : "";
 const areaDaEsp = id => AREAS_MED.find(a => (a.especialidades || []).some(e => e.id === id))?.id;
 /** Desenho num círculo colorido. tam: p (pequeno), m, g (grande), xg (destaque). */
 function ilustra(nome, cor = "#2340B8", tam = "m", rotulo = "") {
@@ -2629,8 +2669,22 @@ const SECOES_CASO = [["identificacao", "Identificação"], ["queixaPrincipal", "
 const SECOES_FIM = [["hipoteses", "Hipóteses diagnósticas"], ["diferenciais", "Diagnóstico diferencial"], ["conduta", "Conduta"], ["discussao", "Discussão"]];
 const todosCasos = () => CASOS_BASE.concat(Object.values(store.doc("casos").itens).map(c => ({ ...c, src: c.src || "minha" })));
 const casoPorId = id => todosCasos().find(c => c.id === id);
+/* Cada parte do caso tem figura e cor próprias, como abas de um prontuário. */
+const VISUAL_CASO = { identificacao: ["pessoa", "#2340B8"], queixaPrincipal: ["alerta", "#C0265F"], hda: ["relogio", "#B45309"], antecedentes: ["familia", "#6D28D9"],
+  exameFisico: ["estetoscopio", "#0F766E"], exames: ["frasco", "#0369A1"], perguntas: ["lampada", "#D97706"], hipoteses: ["lupa", "#2340B8"],
+  diferenciais: ["balanca", "#475569"], conduta: ["pilula", "#15803D"], discussao: ["livro", "#6D28D9"], referencias: ["livro", "#475569"] };
+const corCaso = c => COR_AREA[areaDaEsp(c.espId)] || "#C0265F";
+/** Sinais vitais citados no exame físico, para mostrar como etiquetas. */
+function sinaisVitais(txt) {
+  const re = /\b(PA|FC|FR|SatO2|SpO2|Tax|Temperatura|HGT|Glasgow|IMC)\s*(?:de\s*)?[:=]?\s*(\d[\d.,/x ]*?\s*(?:mmHg|bpm|irpm|ipm|%|°C|ºC|kg\/m²|mg\/dL)?)(?=[\s,;.)]|$)/g, vistos = {}, out = [];
+  for (const m of String(txt || "").matchAll(re)) { const k = m[1] === "SpO2" ? "SatO2" : m[1]; if (!vistos[k] && /\d/.test(m[2])) { vistos[k] = 1; out.push([k === "Temperatura" ? "Tax" : k, m[2].trim()]); } }
+  return out;
+}
 function tabelaCasos(cs) {
-  return tabela([{ t: "Caso" }, { t: "Tema" }, { t: "Especialidade" }, { t: "Dif." }], cs.map(c => [`<a href="#/casos/${esc(c.id)}">${esc(c.titulo)}</a>${c.src !== "banco" ? " " + pill(c.src === "ia" ? "IA" : "meu") : ""}`, c.temaId ? linkTema(c.temaId) : esc(c.tema || "—"), esc(ESPECIALIDADES[c.espId]?.nome || c.especialidade || "—"), seloNivel(c.dificuldade, true) || "—"]), { vaziaMsg: "Nenhum caso com esses filtros." });
+  if (!cs.length) return vazio("Nenhum caso com esses filtros.");
+  return `<div class="cartoes-caso">${cs.map(c => `<a class="cartao-caso" href="#/casos/${esc(c.id)}" style="--h:${corCaso(c)}">${iluEsp(c.espId, "g")}<div>
+    <b>${esc(c.titulo)}</b><small>${esc(ESPECIALIDADES[c.espId]?.nome || c.especialidade || "")}${c.temaId && TEMAS[c.temaId] ? " · " + esc(TEMAS[c.temaId].nome) : ""}</small>
+    <span class="linha">${pill(DIFICULDADE[c.dificuldade] || "—", ({ 1: "ok", 2: "warn", 3: "bad" })[c.dificuldade] || "")}${c.src !== "banco" ? pill(c.src === "ia" ? "IA" : "meu") : ""}</span></div></a>`).join("")}</div>`;
 }
 const FC2 = { esp: "", disc: "", dif: "", tema: "" };
 rota("/casos", () => {
@@ -2652,15 +2706,17 @@ rota("/casos/:id", ({ id }) => {
   const c = casoPorId(id); if (!c) return paginaNaoEncontrada();
   const rv = REVELADO[id] = REVELADO[id] || new Set(["identificacao", "queixaPrincipal", "hda"]);
   const val = v => Array.isArray(v) ? `<ul>${v.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : `<p class="leitura" style="margin:0">${esc(v || "—")}</p>`;
-  const sec = ([k, t]) => c[k] == null || (Array.isArray(c[k]) && !c[k].length) ? "" : `<div class="caso-sec"><h3>${t}</h3>${rv.has(k) ? val(c[k]) : `<button class="btn sec mini" data-act="caso-revelar" data-id="${esc(id)}" data-k="${k}">Mostrar ${t.toLowerCase()}</button>`}</div>`;
+  const cab = (k, t) => `<h3>${ilustra(...VISUAL_CASO[k], "p")}${t}</h3>`, estilo = k => `style="--h:${VISUAL_CASO[k][1]}"`;
+  const vit = k => k === "exameFisico" && rv.has(k) ? (v => v.length ? `<div class="vitais">${v.map(([a, b]) => `<span class="vital"><b>${a}</b> ${esc(b)}</span>`).join("")}</div>` : "")(sinaisVitais(c[k])) : "";
+  const sec = ([k, t]) => c[k] == null || (Array.isArray(c[k]) && !c[k].length) ? "" : `<div class="caso-sec" ${estilo(k)}>${cab(k, t)}${vit(k)}${rv.has(k) ? val(c[k]) : `<button class="btn sec mini" data-act="caso-revelar" data-id="${esc(id)}" data-k="${k}">Mostrar ${t.toLowerCase()}</button>`}</div>`;
   return {
-    secao: "casos", crumbs: [["Casos clínicos", "#/casos"]], titulo: c.titulo,
+    secao: "casos", crumbs: [["Casos clínicos", "#/casos"]], titulo: c.titulo, ilu: iluEsp(c.espId, "g"), cor: corCaso(c),
     sub: `${c.temaId ? linkTema(c.temaId) + " · " : ""}${esc(ESPECIALIDADES[c.espId]?.nome || c.especialidade || "")} · ${esc(c.disciplina || "")} · ${DIFICULDADE[c.dificuldade] || ""}`,
     acoes: `<button class="btn sec mini" data-act="caso-tudo" data-id="${esc(id)}">Revelar tudo</button>`,
     html: `<div class="aviso">${AVISO_CASO}</div><article class="caixa">${SECOES_CASO.map(sec).join("")}
-      ${(c.perguntas || []).length ? `<div class="caso-sec"><h3>Perguntas</h3>${c.perguntas.map((p, i) => `<div style="margin-bottom:10px"><p style="margin:0 0 4px;font-weight:600">${i + 1}. ${esc(p.pergunta)}</p>${rv.has("p" + i) ? `<p class="leitura" style="margin:0;color:var(--ink2)">${esc(p.resposta)}</p>` : `<button class="btn sec mini" data-act="caso-revelar" data-id="${esc(id)}" data-k="p${i}">Ver resposta</button>`}</div>`).join("")}</div>` : ""}
+      ${(c.perguntas || []).length ? `<div class="caso-sec" ${estilo("perguntas")}>${cab("perguntas", "Perguntas")}${c.perguntas.map((p, i) => `<div style="margin-bottom:10px"><p style="margin:0 0 4px;font-weight:600">${i + 1}. ${esc(p.pergunta)}</p>${rv.has("p" + i) ? `<p class="leitura" style="margin:0;color:var(--ink2)">${esc(p.resposta)}</p>` : `<button class="btn sec mini" data-act="caso-revelar" data-id="${esc(id)}" data-k="p${i}">Ver resposta</button>`}</div>`).join("")}</div>` : ""}
       ${SECOES_FIM.map(sec).join("")}
-      ${(c.referencias || []).length && rv.has("discussao") ? `<div class="caso-sec"><h3>Referências</h3>${val(c.referencias)}</div>` : ""}</article>
+      ${(c.referencias || []).length && rv.has("discussao") ? `<div class="caso-sec" ${estilo("referencias")}>${cab("referencias", "Referências")}${val(c.referencias)}</div>` : ""}</article>
       <div class="acoes">${c.temaId ? `<a class="btn sec" href="#/tema/${encodeURIComponent(c.temaId)}">Estudar o tema</a>` : ""}${c.src !== "banco" ? `<button class="btn perigo mini" data-act="caso-excluir" data-id="${esc(id)}">Excluir caso</button>` : ""}</div>`,
     ctx: { tema: c.temaId, caso: `${c.titulo}. ${c.queixaPrincipal || ""} ${c.hda || ""}`.slice(0, 600) },
   };
