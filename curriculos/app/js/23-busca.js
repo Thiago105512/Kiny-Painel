@@ -2,29 +2,40 @@
    23-busca — busca global (sem acento, sem maiúsculas) em temas, especialidades,
    disciplinas das matrizes, questões, flashcards, casos, anotações, materiais e repertórios.
    ============================================================ */
-FORMS.busca = () => { const q = $("#busca-global").value.trim(); if (q) ir("#/busca/" + encodeURIComponent(q)); };
+const BUSCA_MIN = 2;   // busca vazia (ou só espaço/1 letra) não lista o app inteiro
+FORMS.busca = () => { const q = $("#busca-global").value.trim(); if (norm(q).replace(/[^a-z0-9]/g, "").length >= BUSCA_MIN) ir("#/busca/" + encodeURIComponent(q)); else toast("Digite pelo menos 2 letras para buscar"); };
+rota("/busca", () => paginaBuscaVazia(""));
+function paginaBuscaVazia(q) {
+  return { secao: "", titulo: "Busca", html: vazio(`${q ? `“${esc(q)}” é curto demais. ` : ""}Digite pelo menos 2 letras no campo de busca, lá em cima (ex.: “IC” ou “insuficiência”).`) };
+}
+/** Casa no começo de palavra (“enem” não casa com o meio de outra palavra). */
+const reBusca = n => new RegExp("(^|[^a-z0-9])" + n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
 rota("/busca/:q", ({ q }) => {
-  const n = norm(q), tem = s => norm(s).includes(n);
+  const n = norm(q).trim().replace(/\s+/g, " ");
+  if (n.replace(/[^a-z0-9]/g, "").length < BUSCA_MIN) return paginaBuscaVazia(q.trim());
+  const re = reBusca(n), tem = s => re.test(norm(s));
+  const P = store.doc("perfil"), verMed = trilhaVisivel("medicina");
   const temas = Object.values(TEMAS).filter(temaDoObjetivo).filter(t => tem(t.nome) || (t.sinonimos || []).some(tem) || (t.subtemas || []).some(s => tem(s.nome)))
     .sort((a, b) => (norm(b.nome).startsWith(n) - norm(a.nome).startsWith(n)) || a.nome.localeCompare(b.nome, "pt"));
-  const esps = ["enem", "direito", "oab"].includes(objetivo()) ? [] : Object.values(ESPECIALIDADES).filter(e => tem(e.nome));
-  const itens = grades().flatMap(g => itensGrade(g).filter(it => tem(it.nome) || (it.unidades || []).some(u => tem(u.nome))).map(it => ({ g, it })));
+  const esps = verMed ? Object.values(ESPECIALIDADES).filter(e => tem(e.nome)) : [];
+  /* Matrizes: só a faculdade do perfil (UFAM e UEA nunca se misturam); só para quem estuda Medicina. */
+  const itens = !verMed ? [] : (P.faculdade ? grades().filter(g => g.instituicao === P.faculdade) : grades()).flatMap(g => itensGrade(g).filter(it => tem(it.nome) || (it.unidades || []).some(u => tem(u.nome))).map(it => ({ g, it })));
   const discRef = unicos(Object.values(TEMAS).filter(temaDoObjetivo).flatMap(t => t.disciplinas || []).filter(tem));
-  const qs = questoes().filter(x => doObjetivo(x) && (tem(x.q) || tem(x.o.join(" "))));
-  const cs = cards().filter(c => tem(c.frente) || tem(c.verso));
-  const casos = todosCasos().filter(c => tem(c.titulo) || tem(c.tema || "") || tem(c.hda || ""));
-  const notas = Object.entries(store.doc("notas").temas).filter(([, v]) => tem(v.texto || ""));
+  const qs = questoes().filter(x => doObjetivo(x) && re.test(txtBusca(x)));
+  const cs = cards().filter(c => cardDoObjetivo(c) && (tem(c.frente) || tem(c.verso)));
+  const casos = verMed ? todosCasos().filter(c => tem(c.titulo) || tem(c.tema || "") || tem(c.hda || "")) : [];
+  const notas = Object.entries(store.doc("notas").temas).filter(([t, v]) => temaIdDoObjetivo(t) && tem(v.texto || ""));
   const mats = Object.values(store.doc("materiais").itens).filter(m => tem(m.titulo) || tem(m.texto || ""));
-  const reps = (REDACAO.repertorios || []).filter(r => tem(r.titulo) || tem(r.ideia));
+  const reps = trilhaVisivel("enem") ? (REDACAO.repertorios || []).filter(r => tem(r.titulo) || tem(r.ideia)) : [];   // repertórios de redação são do ENEM
   const pils = PILULAS.filter(p => pilDoObjetivo(p)).filter(p => tem(p.titulo) || tem(p.pergunta) || tem(p.texto) || tem(p.pessoa || ""));
   const total = temas.length + esps.length + itens.length + qs.length + cs.length + casos.length + notas.length + mats.length + reps.length + discRef.length + pils.length;
   const sec = (titulo, n, html) => n ? `<section><h2 class="sec">${titulo} <span class="small muted">${n}</span></h2>${html}</section>` : "";
   return {
-    secao: "", titulo: `Busca: “${q}”`, sub: `${total} resultado(s)`,
+    secao: "", titulo: `Busca: “${q}”`, sub: plural(total, "resultado", "resultados"),
     html: total ? [
-      sec("Temas", temas.length, tabela([{ t: "Tema" }, { t: "Especialidade / área" }, { t: "Disciplinas relacionadas" }, { t: "Questões", num: 1 }], temas.slice(0, 30).map(t => [linkTema(t.id), esc(t.dominio === "enem" ? "ENEM · " + t.areaNome : (t.especialidades || []).map(e => ESPECIALIDADES[e]?.nome).filter(Boolean).join(", ")), `<span class="small">${(t.disciplinas || []).map(esc).join(", ")}</span>`, questoes().filter(x => x.tema === t.id).length]))),
+      sec("Temas", temas.length, tabela([{ t: "Tema" }, { t: "Especialidade / área" }, { t: "Disciplinas relacionadas" }, { t: "Questões", num: 1 }], temas.slice(0, 30).map(t => [linkTema(t.id), esc(t.dominio === "enem" ? "ENEM · " + t.areaNome : (t.especialidades || []).map(e => ESPECIALIDADES[e]?.nome).filter(Boolean).join(", ")), `<span class="small">${(t.disciplinas || []).map(esc).join(", ")}</span>`, questoes().filter(x => x.tema === t.id && doObjetivo(x)).length]))),
       sec("Especialidades", esps.length, `<div class="chips">${esps.map(e => `<a class="chip" href="#/medicina/esp/${esc(e.id)}">${esc(e.nome)}</a>`).join("")}</div>`),
-      sec("Nas matrizes das faculdades", itens.length, tabela([{ t: "Disciplina/módulo" }, { t: "Instituição" }, { t: "Período", num: 1 }], itens.slice(0, 30).map(({ g, it }) => [`<a href="#/medicina/grade/${esc(g.id)}/item/${esc(it.id)}">${esc(it.nome)}</a>`, esc(nomeInst(g.instituicao)), esc(it.periodoNome)]))),
+      sec("Nas matrizes das faculdades", itens.length, tabela([{ t: "Disciplina/módulo" }, { t: "Instituição" }, { t: "Período", num: 1 }], itens.slice(0, 30).map(({ g, it }) => [`<a href="#/medicina/grade/${esc(encodeURIComponent(g.id))}/item/${esc(encodeURIComponent(it.id))}">${esc(it.nome)}</a>`, esc(nomeInst(g.instituicao)), esc(it.periodoNome)]))),
       sec("Disciplinas de referência", discRef.length, `<p class="small">${discRef.map(d => `<a href="#/questoes" data-act="busca-disc" data-v="${esc(d)}">${esc(d)}</a>`).join(" · ")}</p>`),
       sec("Pílulas de estudo", pils.length, `<div class="lista-q">${pils.slice(0, 20).map(p => `<a href="#/estudar/p/${esc(p.id)}"><span class="txt">${esc(p.titulo)}</span><span class="meta"><span>${esc(TIPOS_PIL[p.tipo]?.[0] || p.tipo)}</span><span>${esc(p.area)}</span></span></a>`).join("")}</div>`),
       sec("Questões", qs.length, listaQuestoes(qs, 20)),

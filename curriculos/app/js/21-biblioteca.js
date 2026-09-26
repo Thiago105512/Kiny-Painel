@@ -8,6 +8,9 @@ async function iniciarArquivos() {
   try { [ASSETS, DOWNLOADS] = await Promise.all([use("assets"), use("downloads")]); } catch (e) { }
 }
 const TIPO_MAT = { link: "Link", pdf: "PDF", texto: "Texto", aula: "Aula (vídeo)" };
+/** Guias de referência de cada objetivo (sem objetivo: todos). */
+const GUIAS_DO_OBJ = { medicina: ["medicina", "residencia"], residencia: ["residencia", "medicina"], enem: ["enem", "vestibulares"], direito: ["direito", "oab"], oab: ["oab", "direito"] };
+const guiaVisivel = sec => { const g = GUIAS_DO_OBJ[objetivo()]; return !g || g.includes(sec); };
 function listaMateriais(mats) {
   return tabela([{ t: "Material" }, { t: "Tipo" }, { t: "Tema" }, { t: "" }], mats.sort((a, b) => b.criado - a.criado).map(m => [
     m.url && /^https?:\/\//i.test(m.url) ? `<a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.titulo)}</a>` : `<a href="#" data-act="mat-ver" data-id="${esc(m.id)}">${esc(m.titulo)}</a>`,
@@ -21,16 +24,16 @@ function paginaBiblioteca(aba) {
   if (aba === "materiais") {
     const mats = Object.values(store.doc("materiais").itens);
     corpo = `<div class="acoes" style="margin-top:0"><button class="btn" data-act="mat-novo">+ Adicionar material</button></div>${listaMateriais(mats)}
-      <p class="small muted">${ASSETS ? "PDFs enviados ficam guardados junto com este app, só para você." : "Envio de PDF disponível quando o app é aberto pelo link do Claude; aqui você pode guardar links e textos."}</p>`;
+      <p class="small muted">${ASSETS ? "PDFs enviados ficam guardados junto com este app, só para você." : "Aqui você guarda links e textos. Enviar PDF só funciona quando o app está ligado à sua conta."}</p>`;
   } else if (aba === "guia") {
-    corpo = `<div class="aviso">Resumo geral de referência (formatos de prova, diretrizes nacionais de curso). Não é a matriz oficial de nenhuma faculdade — matrizes ficam em <a href="#/medicina">Medicina</a>.</div>` + Object.entries(GUIA).map(([sec, dados]) => {
+    corpo = `<div class="aviso">Resumo geral de referência (formatos de prova, diretrizes nacionais de curso). Não é a matriz oficial de nenhuma faculdade — matrizes ficam em ${trilhaVisivel("medicina") ? `<a href="#/medicina">Medicina</a>` : "Medicina"}.</div>` + Object.entries(GUIA).filter(([sec]) => guiaVisivel(sec)).map(([sec, dados]) => {
       let tot = 0, f = 0; Object.entries(dados).forEach(([sub, it]) => it.forEach((_, i) => { tot++; if (store.doc("guia").g[`${sec}|${sub}|${i}`]) f++; }));
       return `<details class="filtros"><summary>${esc(NOME_GUIA[sec] || sec)} <span class="small muted">${f}/${tot}</span></summary>${Object.entries(dados).map(([sub, it]) => `<h3>${esc(sub)}</h3>${it.map((x, i) => { const k = `${sec}|${sub}|${i}`; return `<label class="check"><input type="checkbox" data-chg="guia" data-k="${esc(k)}" ${store.doc("guia").g[k] ? "checked" : ""}><span>${esc(x)}</span></label>`; }).join("")}`).join("")}</details>`;
     }).join("");
   } else if (aba === "questoes") {
-    const minhas = minhasQuestoes().sort((a, b) => String(b.id).localeCompare(String(a.id)));
+    const minhas = minhasQuestoes().filter(x => !TRILHAS[x.t] || trilhaVisivel(x.t)).sort((a, b) => String(b.id).localeCompare(String(a.id)));
     corpo = `<form class="caixa pilha" data-form="q-nova">
-      <div class="campos"><label class="campo"><span class="lab">Trilha</span><select id="nq-t">${opcoes(Object.entries(TRILHAS).map(([k, v]) => [k, v.nome]), "medicina")}</select></label>
+      <div class="campos"><label class="campo"><span class="lab">Trilha</span><select id="nq-t">${opcoes(Object.entries(TRILHAS).filter(([k]) => trilhaVisivel(k)).map(([k, v]) => [k, v.nome]), trilhaVisivel("medicina") ? "medicina" : trilhasDoObjetivo()[0])}</select></label>
       <label class="campo"><span class="lab">Disciplina</span><input type="text" id="nq-disc" placeholder="ex.: Farmacologia" required></label>
       <label class="campo"><span class="lab">Dificuldade</span><select id="nq-dif">${opcoes(Object.entries(DIFICULDADE), 2)}</select></label>
       <label class="campo"><span class="lab">Fonte / prova / ano</span><input type="text" id="nq-prova" placeholder="ex.: Prova de Fisiologia UFAM 2025"></label></div>
@@ -44,8 +47,9 @@ function paginaBiblioteca(aba) {
   } else if (aba === "dados") {
     corpo = `<div class="faixa"><p class="small">${store.naConta ? "Seus dados ficam na sua conta Claude e sincronizam entre aparelhos." : "Seus dados estão só neste navegador. Faça backups para não perdê-los."}</p></div>
       ${blocoBackups()}
-      <details class="filtros"><summary>Backup manual (copiar, baixar, restaurar)</summary><div class="pilha" style="margin-top:10px">
-        <div class="linha">${DOWNLOADS ? `<button class="btn sec" data-act="bk-baixar">Baixar (.json)</button>` : ""}<button class="btn sec" data-act="bk-copiar">Copiar</button>
+      <details class="filtros"><summary>Backup manual (${DOWNLOADS ? "baixar, copiar ou restaurar" : "copiar o texto ou restaurar"})</summary><div class="pilha" style="margin-top:10px">
+        <p class="small muted" style="margin:0">${DOWNLOADS ? "Baixe o arquivo do backup e guarde fora deste navegador (e-mail, Drive)." : "Toque em Copiar e cole o texto do backup num lugar seguro (e-mail para você mesma, bloco de notas, Drive). Para voltar, cole o texto em \"Ou cole um backup\"."}</p>
+        <div class="linha">${DOWNLOADS ? `<button class="btn sec" data-act="bk-baixar">Baixar (.json)</button>` : ""}<button class="btn sec" data-act="bk-copiar">Copiar o texto do backup</button>
         <label class="btn sec">Restaurar de arquivo<input type="file" accept=".json,application/json" data-chg="bk-arquivo" hidden></label></div>
         <label class="campo"><span class="lab">Ou cole um backup</span><textarea id="bk-txt" rows="3"></textarea></label><div><button class="btn sec" data-act="bk-colar">Restaurar do texto</button></div></div></details>
       <details class="filtros"><summary>Zerar progresso</summary><p class="small">Apaga respostas, erros, revisões, flashcards, simulados e plano. Matrizes, questões próprias, anotações e materiais ficam.</p><button class="btn perigo" data-act="zerar-conf">Zerar progresso…</button></details>`;
@@ -89,5 +93,5 @@ ACOES["bk-copiar"] = async () => { const t = JSON.stringify(store.exportar()); t
 function restaurar(txt) { try { store.importar(JSON.parse(txt)); invalidarQuestoes(); toast("Backup restaurado"); atualizar(); } catch (e) { toast("Arquivo inválido: use um backup exportado por este app"); } }
 ACOES["bk-colar"] = () => restaurar($("#bk-txt").value);
 MUDANCAS["bk-arquivo"] = async el => { const f = el.files[0]; if (f) restaurar(await f.text()); };
-ACOES["zerar-conf"] = () => abrirFolha(`<h2 class="sec">Zerar progresso?</h2><p>Respostas, erros, revisões, flashcards, simulados, plano e tempo de estudo serão apagados. Não tem volta — faça um backup antes.</p><button class="btn perigo" data-act="zerar-ok">Zerar</button>`);
+ACOES["zerar-conf"] = () => abrirFolha(`<h2 class="sec">Zerar progresso?</h2><p>Respostas, erros, revisões, flashcards, simulados, plano e tempo de estudo serão apagados. Não tem volta — faça um backup antes.</p><div class="linha"><button class="btn sec" data-act="fechar-folha">Cancelar</button><button class="btn perigo" data-act="zerar-ok">Zerar</button></div>`);
 ACOES["zerar-ok"] = () => { store.zerar([...Object.keys(TRILHAS).map(docProg), "dias", "erros", ...blocosCards(), "revisoes", "simulados", "plano", "guia"]); fecharFolha(); toast("Progresso zerado"); ir("#/"); };

@@ -33,16 +33,16 @@ async function textoDoBackup(reg) {
 function blocoBackups() {
   const P = store.doc("perfil"), lista = backups(), prox = P.ultimoBackup ? diaISO(new Date(P.ultimoBackup + SEMANA)) : null;
   return `<section class="caixa"><h2 class="sec">Backup automático semanal</h2>
-    <label class="check"><input type="checkbox" data-chg="bk-auto" ${P.backupAuto === false ? "" : "checked"}><span>Ligado — ${ASSETS ? "uma cópia por semana guardada junto com o app, na sua conta" : "uma cópia por semana neste navegador (baixe um backup para ter uma cópia fora dele)"}</span></label>
+    <label class="check"><input type="checkbox" data-chg="bk-auto" ${P.backupAuto === false ? "" : "checked"}><span>Ligado — ${ASSETS ? "uma cópia por semana guardada junto com o app, na sua conta" : `uma cópia por semana neste navegador (${DOWNLOADS ? "baixe um backup" : "copie o texto do backup em \"Backup manual\""} para ter uma cópia fora dele)`}</span></label>
     <p class="small muted">Último: ${P.ultimoBackup ? new Date(P.ultimoBackup).toLocaleString("pt-BR") : "nunca"}${prox && P.backupAuto !== false ? ` · próximo a partir de ${dataBR(prox)}` : ""}</p>
     <div class="linha"><button class="btn sec" data-act="bk-agora">Fazer backup agora</button>${lista.filter(b => b.onde === "conta").length > 4 && ASSETS ? `<button class="btn sec" data-act="bk-limpar">Apagar antigos (manter 4)</button>` : ""}</div>
     ${lista.length ? tabela([{ t: "Data" }, { t: "Tamanho", num: 1 }, { t: "Onde" }, { t: "" }], lista.slice(0, 12).map(b => [new Date(b.ts).toLocaleString("pt-BR") + (b.motivo !== "semanal" ? ` <span class="small muted">(${esc(b.motivo)})</span>` : ""), Math.max(1, Math.round(b.bytes / 1024)) + " KB", b.onde === "conta" ? "conta" : "este navegador",
-      `<span class="linha" style="flex-wrap:nowrap"><button class="btn mini sec" data-act="bk-restaurar" data-ts="${b.ts}">Restaurar</button>${DOWNLOADS ? `<button class="btn mini sec" data-act="bk-baixar-um" data-ts="${b.ts}">Baixar</button>` : ""}</span>`]), { resp: true }) : ""}</section>`;
+      `<span class="linha" style="flex-wrap:nowrap"><button class="btn mini sec" data-act="bk-restaurar" data-ts="${esc(b.ts)}">Restaurar</button>${DOWNLOADS ? `<button class="btn mini sec" data-act="bk-baixar-um" data-ts="${esc(b.ts)}">Baixar</button>` : ""}</span>`]), { resp: true }) : ""}</section>`;
 }
 MUDANCAS["bk-auto"] = el => { const P = store.doc("perfil"); P.backupAuto = el.checked; store.mudou("perfil"); atualizar(); };
 ACOES["bk-agora"] = async el => { el.disabled = true; const r = await fazerBackup("manual"); toast(r ? "Backup feito" : "Não foi possível fazer o backup"); atualizar(); };
 const regPorTs = ts => backups().find(b => String(b.ts) === String(ts));
-ACOES["bk-restaurar"] = el => { const b = regPorTs(el.dataset.ts); abrirFolha(`<h2 class="sec">Restaurar backup de ${new Date(b.ts).toLocaleString("pt-BR")}?</h2><p>Seus dados atuais serão substituídos pelos do backup. Antes disso, o app guarda uma cópia do estado atual (aparece na lista como "antes de restaurar").</p><button class="btn perigo" data-act="bk-restaurar-ok" data-ts="${b.ts}">Restaurar</button>`); };
+ACOES["bk-restaurar"] = el => { const b = regPorTs(el.dataset.ts); abrirFolha(`<h2 class="sec">Restaurar backup de ${new Date(b.ts).toLocaleString("pt-BR")}?</h2><p>Seus dados atuais serão substituídos pelos do backup. Antes disso, o app guarda uma cópia do estado atual (aparece na lista como "antes de restaurar").</p><div class="linha"><button class="btn sec" data-act="fechar-folha">Cancelar</button><button class="btn perigo" data-act="bk-restaurar-ok" data-ts="${esc(b.ts)}">Restaurar</button></div>`); };
 ACOES["bk-restaurar-ok"] = async el => {
   const b = regPorTs(el.dataset.ts); el.disabled = true;
   try { const txt = await textoDoBackup(b); await fazerBackup("antes de restaurar"); store.importar(JSON.parse(txt)); invalidarQuestoes(); fecharFolha(); toast("Backup restaurado"); ir("#/"); }

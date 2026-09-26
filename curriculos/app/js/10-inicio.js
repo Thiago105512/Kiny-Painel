@@ -28,8 +28,8 @@ function tarefasDoDia() {
   proximasAvals(3).forEach(a => { const g = minhaGrade(), n = diasAte(a.data);
     T.push({ tit: `${TIPO_AVAL[a.tipo] || "Avaliação"}${a.titulo ? ": " + a.titulo : nomeItem(g, a.disc) ? " de " + nomeItem(g, a.disc) : ""} ${n === 0 ? "hoje" : n === 1 ? "amanhã" : `em ${n} dias`}`, det: a.data ? dataBR(a.data) + (a.hora ? " " + a.hora : "") : "", href: `#/curso/aval/${encodeURIComponent(a.id)}`, bt: "Ver" }); });
   pend.temas.sort((a, b) => a.srs.prox.localeCompare(b.srs.prox)).forEach(t => T.push({ tit: `Revisar ${nomeTema(t.id)}`, det: `revisão ${quando(t.srs.prox)} · ~15 min`, href: `#/revisoes/tema/${encodeURIComponent(t.id)}`, bt: "Revisar", link: linkTema(t.id) }));
-  if (pend.erros.length) T.push({ tit: `Refazer ${pend.erros.length} questão(ões) que você errou`, det: "caderno de erros", href: "#/revisoes/erros", bt: "Refazer" });
-  if (pend.cards.length) T.push({ tit: `Estudar ${pend.cards.length} flashcard(s)`, det: `~${Math.max(2, Math.round(pend.cards.length / 3))} min`, href: "#/flashcards/estudar", bt: "Estudar" });
+  if (pend.erros.length) T.push({ tit: `Refazer ${plural(pend.erros.length, "questão", "questões")} que você errou`, det: "caderno de erros", href: "#/revisoes/erros", bt: "Refazer" });
+  if (pend.cards.length) T.push({ tit: `Estudar ${plural(pend.cards.length, "flashcard", "flashcards")}`, det: `~${Math.max(2, Math.round(pend.cards.length / 3))} min`, href: "#/flashcards/estudar", bt: "Estudar" });
   Object.values(store.doc("plano").itens).filter(p => p.data === hoje() && !p.feito).forEach(p => T.push({ tit: p.titulo || nomeTema(p.tema) || p.disciplina || "Estudo planejado", det: ["planejado", p.min && p.min + " min", p.nq && p.nq + " questões"].filter(Boolean).join(" · "), href: p.tema ? "#/tema/" + encodeURIComponent(p.tema) : "#/plano", bt: "Abrir" }));
   return T;
 }
@@ -60,8 +60,8 @@ function semanaBolinhas() {
 function falaDoDia(d, metas, seq) {
   const faltam = Math.max(0, metas.questoes - d.q), h = new Date().getHours();
   if (d.q >= metas.questoes && metas.questoes) return ["Meta de questões batida! Que tal um jogo para relaxar?", "festa"];
-  if (d.q && faltam <= 5) return [`Faltam só ${faltam} questões para a meta de hoje!`, "surpreso"];
-  if (d.q) return [`Bom ritmo: ${d.q} questões hoje. Bora completar ${metas.questoes}?`, "feliz"];
+  if (metas.questoes && d.q && faltam > 0 && faltam <= 5) return [`Faltam só ${plural(faltam, "questão", "questões")} para a meta de hoje!`, "surpreso"];
+  if (d.q) return [metas.questoes ? `Bom ritmo: ${plural(d.q, "questão", "questões")} hoje. Bora completar ${metas.questoes}?` : `Bom ritmo: ${plural(d.q, "questão", "questões")} hoje.`, "feliz"];
   if (seq >= 2) return [`${seq} dias seguidos! Não deixa a chama apagar hoje.`, "feliz"];
   return [h < 12 ? "Bom dia! Uma questão relâmpago para acordar o cérebro?" : h < 18 ? "Boa tarde! Que tal começar pela questão relâmpago?" : "Boa noite! Uma questão rápida antes de descansar?", "pensando"];
 }
@@ -81,16 +81,18 @@ function cardRelampago() {
     return `<li><button class="alt" data-act="qr-resp" data-i="${i}" data-s="${s}" ${QR.resp != null ? "disabled" : ""}>${formaAlt(pos)}<span>${esc(q.o[i])}</span></button></li>`; }).join("");
   return `<section class="relampago"><div class="relampago-cab"><span class="lab">⚡ Questão relâmpago</span>${q.dif ? pill(DIFICULDADE[q.dif], ({ 1: "ok", 2: "warn", 3: "bad" })[q.dif]) : ""}</div>
     <p class="enunciado">${esc(q.q)}</p><ol class="alts alts-jogo">${alts}</ol>
-    ${QR.resp != null ? `<div class="retorno"><p class="veredito ${QR.resp === q.c ? "ok" : "bad"}">${QR.resp === q.c ? "✓ " + esc(sorteio(ELOGIOS)) + " +10 XP" : "Quase! Foi para o caderno de erros."}</p>${htmlExplicacao(q.e)}
+    ${QR.resp != null ? `<div class="retorno" id="qr-retorno"><p class="veredito ${QR.resp === q.c ? "ok" : "bad"}" tabindex="-1">${QR.resp === q.c ? "✓ " + esc(sorteio(ELOGIOS)) + " +10 XP" : `Quase! A resposta certa é ${LETRAS[QR.ordem.indexOf(q.c)]} — ${esc(q.o[q.c])}.`}</p>${QR.resp !== q.c ? `<p class="small muted" style="margin:0 0 6px">Você marcou ${LETRAS[QR.ordem.indexOf(QR.resp)]} — ${esc(q.o[QR.resp])}. A questão foi para o caderno de erros.</p>` : ""}${htmlExplicacao(q.e)}
       <div class="acoes"><button class="btn" data-act="qr-outra">Mais uma</button><button class="btn sec" data-act="inicio-praticar" data-disc="">Sessão de 10</button></div></div>` : ""}</section>`;
 }
 ACOES["qr-resp"] = el => { const q = qPorId(QR.id); if (!q || QR.resp != null) return; QR.resp = +el.dataset.i; registrarResposta(q, QR.resp, 0, "inicio"); if (typeof som === "function") som(QR.resp === q.c ? "ok" : "erro"); atualizar();
+  /* O retorno fica abaixo das 5 alternativas: rola até ele e leva o foco (leitor de tela lê o resultado). */
+  const v = document.querySelector("#qr-retorno .veredito"); if (v) { v.scrollIntoView({ block: "center", behavior: "smooth" }); v.focus({ preventScroll: true }); }
   if (QR.resp === q.c) setTimeout(() => confete(document.querySelector(".relampago .veredito"), 16), 60); };
 ACOES["qr-outra"] = () => { escolherRelampago(true); atualizar(); setTimeout(() => document.querySelector(".relampago")?.scrollIntoView({ block: "start", behavior: "smooth" }), 30); };
 /** Faixa horizontal com os desafios do dia (o que já foi feito sai da faixa). */
 function faixaDesafios() {
   const itens = [], d = typeof diario === "function" ? diario() : {};
-  const p = pilulaDoDia(); if (p) itens.push(`<a class="desafio" href="#/estudar/p/${esc(p.id)}" style="--h:${COR_PIL[p.tipo] || "#D97706"}">${iluPil(p.tipo, "m")}<b>Pílula do dia</b><small>${esc(p.titulo)}</small></a>`);
+  const p = pilulaDoDia(); if (p && !vistasPil()[p.id]) itens.push(`<a class="desafio" href="#/estudar/p/${esc(p.id)}" style="--h:${COR_PIL[p.tipo] || "#D97706"}">${iluPil(p.tipo, "m")}<b>Pílula do dia</b><small>${esc(p.titulo)}</small></a>`);
   if (typeof jogoCaso !== "undefined" && jogoCaso.disponivel() && !d.caso) itens.push(`<a class="desafio" href="#/jogos/caso" style="--h:#C0265F">${ilustra("lupa", "#C0265F", "m")}<b>Caso do dia</b><small>Descubra o diagnóstico</small></a>`);
   if (typeof jogoTermo !== "undefined" && jogoTermo.disponivel() && !d.termo) itens.push(`<a class="desafio" href="#/jogos/termo" style="--h:#15803D">${ilustra("livro", "#15803D", "m")}<b>Termo do dia</b><small>Palavra de 5 letras</small></a>`);
   const J = docJornada(), ms = missoesDoDia().filter(m => !(J.missoes?.d === J.dia.d && J.missoes.ok.includes(m.id)));
@@ -102,13 +104,16 @@ rota("/", () => {
   const P = store.doc("perfil"), d = diaDe(hoje()), metas = P.metas || { questoes: 20, minutos: 60 };
   const min = Math.round((d.seg || 0) / 60), estudados = unicos(d.temas || []), seq = sequencia();
   const tarefas = tarefasDoDia(), prox = tarefas[0], sug = prox ? null : sugestaoPratica();
-  const Q = questoes().filter(doObjetivo), feitas = Q.filter(q => progDe(q)?.n).length, pend = pendencias();
+  if (precisaBoasVindas()) return paginaBoasVindas();
+  const Q = questoes().filter(doObjetivo), feitas = Q.filter(q => progDe(q)?.n).length, pend = pendencias(), nSim = store.doc("simulados").hist.filter(x => trilhaVisivel(x.t)).length;
   const ag = agregados(), fracas = listaPor(ag.por.disc, 3).sort((a, b) => a.p - b.p).slice(0, 3);
   const novato = ag.n < 10, J = docJornada(), nv = nivelDe(J.xp), [fala, humor] = falaDoDia(d, metas, seq);
   // Primeiros passos: o que já foi feito sai da tela (não fica riscado), para não poluir o Início
-  const passos = [[!!P.faculdade, "Escolher sua faculdade e período", "#/medicina", "Escolher"], [ag.n >= 10, "Responder 10 questões", "#/questoes", "Praticar"],
-    [Object.keys(store.doc("revisoes").temas).length > 0, "Marcar um tema como estudado (programa as revisões)", "#/medicina/especialidades", "Ver temas"], [cards().length > 0, "Criar seus primeiros flashcards", "#/flashcards", "Criar"]]
-    .filter(([ok]) => !ok).map(([, txt, href, bt]) => `<div class="tarefa"><div class="o">${txt}</div><a class="btn mini sec" href="${href}">${bt}</a></div>`);
+  // Os passos seguem o objetivo: quem estuda ENEM/Direito não é mandado para a Medicina.
+  const verMed = trilhaVisivel("medicina"), temTemas = Object.values(TEMAS).some(temaDoObjetivo);
+  const passos = [[!verMed || !!P.faculdade, "Escolher sua faculdade e período", "#/medicina", "Escolher"], [ag.n >= 10, "Responder 10 questões", "#/questoes", "Praticar"],
+    [!temTemas || Object.keys(store.doc("revisoes").temas).length > 0, "Marcar um tema como estudado (programa as revisões)", verMed ? "#/medicina/especialidades" : "#/enem", "Ver temas"], [cards().length > 0, "Criar seus primeiros flashcards", "#/flashcards", "Criar"]]
+    .filter(([ok]) => !ok).map(([, txt, href, bt]) => `<div class="tarefa"><div class="o">${txt}</div><a class="btn mini sec" href="${esc(href)}">${bt}</a></div>`);
   return {
     secao: "inicio", titulo: saudacao() + (P.nome ? ", " + P.nome.split(" ")[0] : ""), ilu: mascote(humor, 64, ""),
     sub: [P.apresentacao && P.apresentacao + (P.faculdade ? " · " + nomeInst(P.faculdade) : ""), new Date().toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" })].filter(Boolean).map(esc).join("<br>"),
@@ -124,28 +129,28 @@ rota("/", () => {
       ${estudados.length ? `<p class="small" style="margin:0"><span class="muted">Estudado hoje:</span> ${estudados.slice(0, 3).map(linkTema).join(", ")}${estudados.length > 3 ? ` <span class="muted">e mais ${estudados.length - 3}</span>` : ""}</p>` : ""}
     </section>
     <section class="hero com-ilu">${ilustra(prox ? (/Revisar|revis/i.test(prox.tit) ? "relogio" : /flashcard/i.test(prox.tit) ? "livro" : /Prova|Trabalho|Semin|Apresenta/i.test(prox.tit) ? "calendario" : "alvo") : "estetoscopio", "#2340B8", "xg")}<div><span class="lab">Próximo passo</span>
-      ${prox ? `<p class="hero-tit">${esc(prox.tit)}</p><p class="small muted" style="margin:0">${esc(prox.det)}${tarefas.length > 1 ? ` · depois: mais ${tarefas.length - 1}` : ""}</p><a class="btn azul grande" href="${prox.href}">${prox.bt}</a>`
+      ${prox ? `<p class="hero-tit">${esc(prox.tit)}</p><p class="small muted" style="margin:0">${esc(prox.det)}${tarefas.length > 1 ? ` · depois: mais ${tarefas.length - 1}` : ""}</p><a class="btn azul grande" href="${esc(prox.href)}">${prox.bt}</a>`
         : `<p class="hero-tit">${esc(sug.tit)}</p><p class="small muted" style="margin:0">Nada pendente para hoje · ${esc(sug.det)}</p><button class="btn azul grande" data-act="inicio-praticar" data-disc="${esc(sug.disc || "")}">Começar</button>`}
     </div></section>
     ${cardRelampago()}
     ${faixaDesafios()}
     <section><h2 class="sec">Estudar agora</h2><div class="atalhos icones cores">
-      <a href="#/questoes" style="--h:#2340B8">${ilustra("alvo", "#2340B8", "m")}<b>Questões</b><small>${Q.length} no banco · ${feitas} feitas</small></a>
-      <a href="#/simulados" style="--h:#0F766E">${ilustra("relogio", "#0F766E", "m")}<b>Simulado</b><small>${store.doc("simulados").hist.length ? store.doc("simulados").hist.length + " feitos" : "prova cronometrada"}</small></a>
-      <a href="#/flashcards" style="--h:#A21CAF">${ilustra("livro", "#A21CAF", "m")}<b>Flashcards</b><small>${pend.cards.length ? pend.cards.length + " para hoje" : cards().length + " cards"}</small></a>
-      <a href="#/casos" style="--h:#C0265F">${ilustra("estetoscopio", "#C0265F", "m")}<b>Casos clínicos</b><small>${todosCasos().length} casos</small></a>
+      <a href="#/questoes" style="--h:#2340B8">${ilustra("alvo", "#2340B8", "m")}<b>Questões</b><small>${Q.length} no banco · ${feitas} ${feitas === 1 ? "feita" : "feitas"}</small></a>
+      <a href="#/simulados" style="--h:#0F766E">${ilustra("relogio", "#0F766E", "m")}<b>Simulado</b><small>${nSim ? plural(nSim, "feito", "feitos") : "prova cronometrada"}</small></a>
+      <a href="#/flashcards" style="--h:#A21CAF">${ilustra("livro", "#A21CAF", "m")}<b>Flashcards</b><small>${pend.cards.length ? pend.cards.length + " para hoje" : plural(cards().filter(cardDoObjetivo).length, "card", "cards")}</small></a>
+      ${verMed ? `<a href="#/casos" style="--h:#C0265F">${ilustra("estetoscopio", "#C0265F", "m")}<b>Casos clínicos</b><small>${todosCasos().length} casos</small></a>` : ""}
       <a href="#/jogos" class="largo" style="--h:#DC2626">${ilustra("controle", "#DC2626", "m")}<b>Jogos</b><small>Plantão no PS, Salve o paciente, Caso do dia e mais</small></a>
     </div></section>
-    ${tarefas.length > 1 ? `<section><h2 class="sec">Também para hoje</h2><div class="tarefas">${tarefas.slice(1, 5).map(t => `<div class="tarefa"><div class="o">${t.link ? "Revisar " + t.link : esc(t.tit)}<small>${esc(t.det)}</small></div><a class="btn mini sec" href="${t.href}">${t.bt}</a></div>`).join("")}</div>${tarefas.length > 5 ? `<p class="small"><a href="#/revisoes">Ver todas as ${tarefas.length}</a></p>` : ""}</section>` : ""}
+    ${tarefas.length > 1 ? `<section><h2 class="sec">Também para hoje</h2><div class="tarefas">${tarefas.slice(1, 5).map(t => `<div class="tarefa"><div class="o">${t.link ? "Revisar " + t.link : esc(t.tit)}<small>${esc(t.det)}</small></div><a class="btn mini sec" href="${esc(t.href)}">${t.bt}</a></div>`).join("")}</div>${tarefas.length > 5 ? `<p class="small"><a href="#/revisoes">Ver todas as ${tarefas.length}</a></p>` : ""}</section>` : ""}
     ${novato && passos.length ? `<section><h2 class="sec">Primeiros passos</h2><div class="tarefas">${passos.join("")}</div></section>`
-      : `<section><h2 class="sec">Sua faculdade</h2>${linhaFaculdade()}</section>
+      : `${verMed ? `<section><h2 class="sec">Sua faculdade</h2>${linhaFaculdade()}</section>` : ""}
         ${fracas.length ? `<section><h2 class="sec">Onde focar <a class="small" href="#/desempenho">ver desempenho</a></h2><div class="barras">${fracas.map(x => barra(esc(x.k), x.ac, x.n)).join("")}</div></section>` : ""}`}
     ${cardHumor()}`,
   };
 });
 ACOES["inicio-praticar"] = el => {
   const disc = el.dataset.disc, qs = questoes().filter(q => doObjetivo(q) && statusQ(q).chave === "nao" && (!disc || q.disc === disc));
-  praticar(embaralhar(qs.length ? qs : questoes()).slice(0, 10).map(q => q.id), disc ? "Praticando " + disc : "10 questões novas");
+  praticar(embaralhar(qs.length ? qs : questoes().filter(doObjetivo)).slice(0, 10).map(q => q.id), disc ? "Praticando " + disc : "10 questões novas");
 };
 ACOES["metas-editar"] = () => { const m = store.doc("perfil").metas || { questoes: 20, minutos: 60 };
   abrirFolha(`<form class="pilha" data-form="metas"><div class="campos">

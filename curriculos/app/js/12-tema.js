@@ -3,10 +3,12 @@
    Tudo sobre o tema num lugar: resumo, objetivos, onde aparece na grade,
    questões, flashcards, casos, anotações, materiais, erros, revisão e desempenho.
    ============================================================ */
-/** Onde o tema aparece nas matrizes (priorizando a matriz do perfil). */
+/** Onde o tema aparece nas matrizes — só as da faculdade do perfil (UFAM e UEA nunca se misturam),
+    priorizando a matriz escolhida. Sem faculdade no perfil, mostra todas, cada uma com a sua sigla. */
+const gradesDaMinhaFaculdade = () => { const P = store.doc("perfil"); return P.faculdade ? grades().filter(g => g.instituicao === P.faculdade) : grades(); };
 function ondeNaGrade(temaId) {
   const P = store.doc("perfil"), res = [];
-  grades().forEach(g => (temasNaGrade(g)[temaId] || []).forEach(o => res.push({ g, ...o, minha: g.id === P.gradeId })));
+  gradesDaMinhaFaculdade().forEach(g => (temasNaGrade(g)[temaId] || []).forEach(o => res.push({ g, ...o, minha: g.id === P.gradeId })));
   return res.sort((a, b) => b.minha - a.minha || a.periodo - b.periodo);
 }
 function crumbsTema(t) {
@@ -45,7 +47,7 @@ function paginaTema(id, aba) {
       ${t.resumo ? `<section><p class="leitura" style="margin:0">${esc(t.resumo)}</p></section>` : ""}
       ${t.objetivos?.length ? `<section><h2 class="sec">Objetivos</h2><ul style="margin:0;padding-left:20px">${t.objetivos.map(o => `<li>${esc(o)}</li>`).join("")}</ul></section>` : ""}
       ${subs.length ? `<section><h2 class="sec">Subtemas</h2><div class="chips">${subs.join("")}</div></section>` : ""}
-      ${med ? `<section><h2 class="sec">Onde aparece</h2>${onde.length ? `<div class="links-lista">${onde.map(o => `<a href="#/medicina/grade/${esc(o.g.id)}/item/${esc(o.item.id)}"><span>${esc(o.item.nome)}</span><small>${esc(nomeInst(o.g.instituicao))} · ${esc(o.item.periodoNome || o.periodo + "º período")}</small></a>`).join("")}</div>` : `<p class="small muted" style="margin:0">Ainda não vinculado às disciplinas da sua grade.</p>`}
+      ${med ? `<section><h2 class="sec">Onde aparece</h2>${onde.length ? `<div class="links-lista">${onde.map(o => `<a href="#/medicina/grade/${esc(o.g.id)}/item/${esc(o.item.id)}"><span>${esc(o.item.nome)}</span><small>${esc(nomeInst(o.g.instituicao))} · ${esc(o.item.periodoNome || o.periodo + "º período")}</small></a>`).join("")}</div>` : `<p class="small muted" style="margin:0">Ainda não vinculado às disciplinas da ${store.doc("perfil").faculdade ? "sua grade" : "grade (escolha sua faculdade no Perfil)"}.</p>`}
         <p class="small" style="margin:10px 0 0"><span class="muted">Especialidades:</span> ${(t.especialidades || []).map(e => `<a href="#/medicina/esp/${esc(e)}">${esc(ESPECIALIDADES[e]?.nome || e)}</a>`).join(", ")}</p></section>` : ""}
       ${(() => { const ps = PILULAS.filter(p => p.tema === id); return ps.length ? `<section><h2 class="sec">Pílulas deste tema</h2><div class="lista-q">${ps.map(p => `<a href="#/estudar/p/${esc(p.id)}"><span class="txt">${vistasPil()[p.id] ? "✓ " : ""}${esc(p.titulo)}</span><span class="meta"><span>${esc(TIPOS_PIL[p.tipo]?.[0] || p.tipo)}</span></span></a>`).join("")}</div></section>` : ""; })()}
       <p class="small muted">Resumo de referência (autoral) — aprofunde na bibliografia${med ? " da disciplina" : ""}.</p>`;
@@ -60,7 +62,7 @@ function paginaTema(id, aba) {
         ${errsAb.length ? linhaSecao("Erros deste tema", `${errsAb.length} em aberto no caderno`, `<a class="btn mini" href="#/revisoes/erros/${enc}">Refazer</a>`) : ""}
         ${med ? linhaSecao("Casos clínicos", casos.length ? casos.map(c => esc(c.titulo)).join(" · ") : "nenhum ainda", casos.length ? `<a class="btn mini sec" href="#/casos/${esc(casos[0].id)}">Abrir</a>` : "") : ""}
       </div>
-      ${qs.length ? `<details class="mais" style="margin-top:12px"><summary>Ver as ${qs.length} questões</summary>${listaQuestoes(qs, 100)}</details>` : ""}
+      ${qs.length ? `<details class="mais" style="margin-top:12px" ${QPAG > 20 ? "open" : ""}><summary>Ver as ${qs.length} questões</summary>${listaQuestoes(qs, QPAG, true)}</details>` : ""}
       ${cs.length ? `<details class="mais"><summary>Ver os ${cs.length} flashcards</summary>${tabelaCards(cs)}</details>` : ""}`;
     }
   }
@@ -84,7 +86,7 @@ function paginaTema(id, aba) {
   return {
     secao: med ? "medicina" : "enem", crumbs: crumbsTema(t), titulo: t.nome,
     sub: `<span class="com-ilu">${iluTema(id, "g")}<span>${med ? esc((t.especialidades || []).map(e => ESPECIALIDADES[e]?.nome).filter(Boolean).join(" · ")) : `ENEM · ${esc(t.areaNome)}`}</span></span>`,
-    html: `<div class="tabs" role="tablist">${ABAS_TEMA.map(([k, n]) => `<a role="tab" href="#/tema/${enc}/${k}" aria-selected="${k === aba}">${n}${k === "praticar" && (errsAb.length || cs.some(c => vencido(c.srs))) ? " •" : ""}</a>`).join("")}</div>${corpo}`,
+    html: `<div class="tabs" role="tablist">${ABAS_TEMA.map(([k, n]) => `<a role="tab" href="#/tema/${enc}/${k}" aria-selected="${k === aba}">${n}${k === "praticar" && (errsAb.length || cs.some(c => vencido(c.srs))) ? ` <span class="pill azul" title="Há erros ou flashcards para hoje">${errsAb.length + cs.filter(c => vencido(c.srs)).length}</span>` : ""}</a>`).join("")}</div>${corpo}`,
     ctx: { tema: id, trilha: med ? "medicina" : "enem", ...(minha ? { grade: minha.g.id, periodo: minha.periodo, disciplina: minha.item.nome } : {}) },
   };
 }
@@ -129,13 +131,13 @@ function mapaDoTema(id) {
   return { t: t.nome, sub: d.n ? `${pct(d.ac, d.n)}% em ${d.n} resp.` : "", filhos: [
     subs.length && { t: "Subtemas", filhos: subs },
     (t.objetivos || []).length && { t: "Objetivos", filhos: t.objetivos.map(o => ({ t: o })) },
-    onde.length && { t: "Na grade", filhos: onde.map(o => ({ t: `${nomeInst(o.g.instituicao)} · ${o.item.periodoNome || o.periodo + "º"} · ${o.item.nome}`, href: `#/medicina/grade/${o.g.id}/item/${o.item.id}` })) },
-    med && (t.especialidades || []).length && { t: "Especialidades", filhos: t.especialidades.map(e => ({ t: ESPECIALIDADES[e]?.nome || e, href: "#/medicina/esp/" + e })) },
+    onde.length && { t: "Na grade", filhos: onde.map(o => ({ t: `${nomeInst(o.g.instituicao)} · ${o.item.periodoNome || o.periodo + "º"} · ${o.item.nome}`, href: `#/medicina/grade/${encodeURIComponent(o.g.id)}/item/${encodeURIComponent(o.item.id)}` })) },
+    med && (t.especialidades || []).length && { t: "Especialidades", filhos: t.especialidades.map(e => ({ t: ESPECIALIDADES[e]?.nome || e, href: "#/medicina/esp/" + encodeURIComponent(e) })) },
     (t.disciplinas || []).length && { t: "Disciplinas relacionadas", filhos: t.disciplinas.map(x => ({ t: x })) },
     { t: "Estudar", filhos: [
       { t: "Questões", sub: String(qs.length), href: `#/tema/${enc}/questoes`, cls: clsDesempenho(d) },
       { t: "Flashcards", sub: String(cs.length), href: `#/tema/${enc}/flashcards` },
-      med && { t: "Casos clínicos", sub: String(casos.length), href: `#/tema/${enc}/casos`, filhos: casos.map(c => ({ t: c.titulo, href: "#/casos/" + c.id })) },
+      med && { t: "Casos clínicos", sub: String(casos.length), href: `#/tema/${enc}/casos`, filhos: casos.map(c => ({ t: c.titulo, href: "#/casos/" + encodeURIComponent(c.id) })) },
       nota && { t: "Minhas anotações", href: `#/tema/${enc}/notas` },
       mats.length && { t: "Materiais", sub: String(mats.length), href: `#/tema/${enc}/materiais` },
     ] },

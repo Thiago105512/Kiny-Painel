@@ -40,7 +40,8 @@ function paginaAjuda() {
           <span class="small muted">${AJ.arquivos.length ? AJ.arquivos.map(x => esc(x.name)).join(", ") + ` <button type="button" class="btn mini sec" data-act="aj-limpar-arq">Remover</button>` : "PDF, DOCX ou TXT" + (AJ.imgs ? ", ou fotos" : "")}</span></div>
         <button class="btn azul grande" ${AJ.ocupado ? "disabled" : ""}>${AJ.ocupado ? "Gerando…" : "Enviar"}</button></form>
       <div id="aj-saida">${AJ.saida}</div>`
-    : `<div class="aviso">A correção e a ajuda usam o assistente de IA, disponível quando o app é aberto pelo link do Claude.</div>`;
+    : `<div class="aviso">A correção e a ajuda precisam do assistente de IA, que não está ligado neste aparelho agora. Abra o app pela sua conta do Claude para usar esta função.</div>
+      <div class="acoes"><a class="btn" href="#/curso">Voltar para Meu curso</a><a class="btn sec" href="#/">Ir para o Início</a></div>`;
   return {
     secao: "curso", crumbs: [["Meu curso", "#/curso"]], titulo: "Correção e ajuda",
     sub: "A IA explica, corrige e orienta para você aprender. O trabalho entregue continua sendo seu: confira fontes e informações.",

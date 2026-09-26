@@ -31,7 +31,27 @@ function montarProporcional(t, pool, n) {
 }
 
 const FS = { trilha: "", inst: "", periodo: "", disc: "", esp: "", tema: "", subtema: "", dif: "", fonte: "", ano: "", prova: "", status: [], texto: "", erradasAntes: false };
-let SIM = ls.get("gab2:sim") || { fase: "config", modo: "prova", t: "enem", n: 20, cron: true };
+const SIM_PADRAO = () => ({ fase: "config", modo: "prova", t: "enem", n: 20, cron: true });
+/** O que vem do armazenamento pode estar em formato errado (versão antiga, edição à mão): só aceita um simulado íntegro. */
+function simValido(s) {
+  if (!s || typeof s !== "object" || Array.isArray(s)) return null;
+  const obj = o => o && typeof o === "object" && !Array.isArray(o);
+  if (s.fase === "prova" || s.fase === "fim") {
+    if (!Array.isArray(s.ids) || !s.ids.length || !obj(s.ordens) || !obj(s.resp) || !Number.isFinite(s.inicio)) return null;
+    if (s.fase === "fim" && (!obj(s.areas) || !Number.isFinite(s.ac))) return null;
+    s.tq = obj(s.tq) ? s.tq : {}; s.i = Number.isInteger(s.i) && s.i >= 0 && s.i < s.ids.length ? s.i : 0;
+    s.ids.forEach(id => { if (!Array.isArray(s.ordens[id])) s.ordens[id] = [0, 1, 2, 3, 4]; });
+  } else if (s.fase !== "config") return null;
+  return { ...SIM_PADRAO(), ...s, n: TAMANHOS.includes(+s.n) ? +s.n : 20 };
+}
+let SIM = simValido(ls.get("gab2:sim")) || SIM_PADRAO();
+/* Tempo com o app fechado não conta para a questão aberta (o relógio geral da prova segue valendo). */
+if (SIM.fase === "prova") SIM.tAtual = Date.now();
+document.addEventListener("visibilitychange", () => {
+  if (SIM.fase !== "prova") return;
+  if (document.visibilityState === "hidden") { marcarTempo(); SIM.tAtual = null; guardarSim(); }
+  else SIM.tAtual = Date.now();
+});
 const guardarSim = () => ls.set("gab2:sim", SIM);
 const restante = () => SIM.limite ? Math.max(0, SIM.inicio + SIM.limite - Date.now()) : null;
 function poolPersonalizado() {
@@ -45,13 +65,13 @@ function iniciarSimulado() {
   if (!qs.length) { toast("Nenhuma questão com esses critérios"); return; }
   const minQ = (FORMATO[t] || {}).min || 2.5;
   SIM = { ...SIM, fase: "prova", tReal: t, ids: qs.map(q => q.id), ordens: Object.fromEntries(qs.map(q => [q.id, embaralhar([0, 1, 2, 3, 4])])), resp: {}, tq: {}, i: 0, tAtual: Date.now(),
-    inicio: Date.now(), limite: SIM.cron ? Math.round(qs.length * minQ * 60000) : 0, entregando: false, filtrosTxt: SIM.modo === "prova" ? "formato de prova" : descreverFiltro(FS) };
+    inicio: Date.now(), limite: SIM.cron ? Math.round(qs.length * minQ * 60000) : 0, entregando: false, abandonando: false, filtrosTxt: SIM.modo === "prova" ? "formato de prova" : descreverFiltro(FS) };
   guardarSim(); ir("#/simulados");
 }
 function descreverFiltro(F) {
   return [F.trilha && (F.trilha === "med" ? "Medicina" : TRILHAS[F.trilha]?.curto), F.inst && nomeInst(F.inst), F.periodo && F.periodo + "º período", F.disc, F.esp && ESPECIALIDADES[F.esp]?.nome, F.tema && nomeTema(F.tema), F.dif && DIFICULDADE[F.dif], F.status.length && F.status.join("/"), F.erradasAntes && "erradas antes"].filter(Boolean).join(" · ") || "todas as questões";
 }
-function marcarTempo() { const id = SIM.ids[SIM.i]; SIM.tq[id] = (SIM.tq[id] || 0) + (Date.now() - (SIM.tAtual || Date.now())); SIM.tAtual = Date.now(); }
+function marcarTempo() { const id = SIM.ids[SIM.i]; if (SIM.tAtual) SIM.tq[id] = (SIM.tq[id] || 0) + (Date.now() - SIM.tAtual); SIM.tAtual = Date.now(); }
 function entregarSimulado() {
   if (SIM.fase !== "prova") return;
   marcarTempo();
@@ -64,7 +84,7 @@ function entregarSimulado() {
     if (r !== undefined) registrarResposta(q, r, SIM.tq[id] || 0, "simulado");
   }
   const seg = Math.round((Math.min(fim, SIM.limite ? SIM.inicio + SIM.limite : fim) - SIM.inicio) / 1000);
-  const H = store.doc("simulados"); H.hist = H.hist.concat([{ d: fim, t: SIM.tReal, n: SIM.ids.length, ac, seg, areas, filtros: SIM.filtrosTxt }]).slice(-80); store.mudou("simulados");
+  const H = store.doc("simulados"); H.hist = (Array.isArray(H.hist) ? H.hist : []).concat([{ d: fim, t: SIM.tReal, n: SIM.ids.length, ac, seg, areas, filtros: SIM.filtrosTxt }]).slice(-80); store.mudou("simulados");
   SIM = { ...SIM, fase: "fim", fim, ac, seg, areas, temas, soErros: false }; guardarSim(); render({ topo: true });
 }
 setInterval(() => {
@@ -73,9 +93,13 @@ setInterval(() => {
   if (r <= 0) return entregarSimulado();
   if (el) { el.textContent = mmss(r); el.classList.toggle("pouco", r < 300000); }
 }, 1000);
+/** Histórico só das provas do objetivo do perfil (Medicina não vê simulados de ENEM/OAB feitos antes). */
+const histSim = () => (Array.isArray(store.doc("simulados").hist) ? store.doc("simulados").hist : []).filter(x => x && trilhaVisivel(x.t));
+/** Minutos por questão em pt-BR: "2,5 min". */
+const minTxt = m => (+m || 0).toLocaleString("pt-BR", { maximumFractionDigits: 2 });
 function barraSim(x) { return barra(`${new Date(x.d).toLocaleDateString("pt-BR")} · ${esc(TRILHAS[x.t]?.curto || x.t)} · ${x.n} q.${x.filtros && x.filtros !== "formato de prova" ? ` <span class="muted small">(${esc(x.filtros)})</span>` : ""}`, x.ac, x.n, ` · ${mmss(x.seg * 1000)}`); }
 function evolucaoSim(t) {
-  const h = store.doc("simulados").hist.filter(x => !t || x.t === t).slice(-12);
+  const h = histSim().filter(x => !t || x.t === t).slice(-12);
   if (h.length < 2) return "";
   return `<div class="colunas" role="img" aria-label="Aproveitamento nos últimos simulados">${h.map(x => `<div class="col" title="${new Date(x.d).toLocaleDateString("pt-BR")}: ${pct(x.ac, x.n)}%"><em>${pct(x.ac, x.n)}</em><i style="height:${pct(x.ac, x.n)}%"></i><small>${dataCurta(x.d)}</small></div>`).join("")}</div>`;
 }
@@ -92,8 +116,11 @@ rota("/simulados", () => {
         <div class="acoes"><button class="btn sec" data-act="sim-nav" data-d="-1" ${SIM.i ? "" : "disabled"}>Anterior</button>${SIM.i < SIM.ids.length - 1 ? `<button class="btn" data-act="sim-nav" data-d="1">Próxima</button>` : `<button class="btn" data-act="sim-entregar">Entregar prova</button>`}</div></article>` : vazio("Questão removida do banco. Siga para a próxima.")}
       <h2 class="sec">Cartão-resposta <span class="small muted">${SIM.ids.length - brancos}/${SIM.ids.length} marcadas</span></h2>
       <div class="cartao">${SIM.ids.map((x, k) => `<button data-act="sim-ir" data-k="${k}" data-f="${SIM.resp[x] !== undefined ? 1 : 0}" aria-current="${k === SIM.i}" aria-label="Questão ${k + 1}">${k + 1}</button>`).join("")}</div>
-      <div class="acoes">${SIM.entregando ? `<div class="aviso" style="margin:0">${brancos ? `${brancos} em branco (contam como erro). ` : ""}Entregar agora? <button class="btn mini" data-act="sim-entregar-ok">Entregar</button> <button class="btn mini sec" data-act="sim-entregar-nao">Continuar</button></div>` : `<button class="btn sec" data-act="sim-entregar">Entregar prova</button><button class="btn sec" data-act="sim-abandonar">Abandonar</button>`}</div>
-      <p class="small muted">Atalhos: A–E marcam · ← → mudam de questão</p>` };
+      <div class="acoes">${SIM.entregando ? `<div class="aviso" style="margin:0">${brancos ? `${plural(brancos, "questão em branco conta", "questões em branco contam")} como erro. ` : ""}Entregar agora? <button class="btn mini" data-act="sim-entregar-ok">Entregar</button> <button class="btn mini sec" data-act="sim-entregar-nao">Continuar</button></div>` : `<button class="btn sec" data-act="sim-entregar">Entregar prova</button>`}</div>
+      <p class="small muted so-teclado">Atalhos: A–E marcam · ← → mudam de questão</p>
+      <div class="sim-abandonar">${SIM.abandonando ? `<div class="aviso" role="alert" style="margin:0"><p style="margin:0 0 8px"><b>Abandonar a prova?</b> Você perde ${SIM.ids.length - brancos ? plural(SIM.ids.length - brancos, "resposta marcada", "respostas marcadas") : "a prova"} e nada vai para o histórico.</p>
+          <div class="linha"><button class="btn sec" data-act="sim-abandonar-nao">Continuar a prova</button><button class="btn perigo" data-act="sim-abandonar-ok">Sim, abandonar</button></div></div>`
+        : `<button class="btn sec mini perigo" data-act="sim-abandonar">Abandonar prova…</button>`}</div>` };
   }
   if (SIM.fase === "fim") {
     const ff = FORMATO[SIM.tReal] || {}, p = SIM.ac / SIM.ids.length;
@@ -119,10 +146,10 @@ rota("/simulados", () => {
       ${SIM.modo === "prova" ? `<div><span class="lab">Prova</span>${chips(Object.entries(TRILHAS).filter(([k]) => trilhasDoObjetivo().includes(k)).map(([k, v]) => [k, v.curto]), SIM.t, "sim-t")}<p class="small muted" style="margin:6px 0 0">Prova real: ${esc(f.real || "")}. Questões distribuídas pelo peso de cada área, priorizando as que você não respondeu.</p></div>`
         : `<div>${formFiltros(FS, "fs")}<label class="check"><input type="checkbox" data-chg="fs-erradas" ${FS.erradasAntes ? "checked" : ""}><span>Somente questões que já errei alguma vez</span></label></div>`}
       <div><span class="lab">Número de questões (${disp} disponíveis)</span>${chips(TAMANHOS.map(x => [x, x]), SIM.n, "sim-n")}</div>
-      <label class="check"><input type="checkbox" data-chg="sim-cron" ${SIM.cron ? "checked" : ""}><span>Cronometrar (${minQ} min por questão → ${mmss(n * minQ * 60000)})</span></label>
+      <label class="check"><input type="checkbox" data-chg="sim-cron" ${SIM.cron ? "checked" : ""}><span>Cronometrar (${minTxt(minQ)} min por questão → ${mmss(n * minQ * 60000)})</span></label>
       <div><button class="btn" data-act="sim-iniciar" ${disp ? "" : "disabled"}>Começar simulado de ${n} questões</button></div></section>
     <h2 class="sec">Evolução histórica</h2>${evolucaoSim(SIM.modo === "prova" ? SIM.t : null) || `<p class="muted small">Faça ao menos dois simulados para ver a evolução.</p>`}
-    ${store.doc("simulados").hist.length ? `<div class="barras" style="margin-top:12px">${store.doc("simulados").hist.slice(-10).reverse().map(barraSim).join("")}</div>` : ""}`,
+    ${histSim().length ? `<div class="barras" style="margin-top:12px">${histSim().slice(-10).reverse().map(barraSim).join("")}</div>` : ""}`,
   };
 });
 ACOES["sim-modo"] = el => { SIM.modo = el.dataset.v; guardarSim(); atualizar(); };
@@ -140,10 +167,13 @@ ACOES["sim-disc"] = el => { Object.assign(FS, { trilha: "enem", disc: el.dataset
 ACOES["sim-marcar"] = el => { const id = SIM.ids[SIM.i], v = +el.dataset.i; if (SIM.resp[id] === v) delete SIM.resp[id]; else SIM.resp[id] = v; guardarSim(); atualizar(); };
 ACOES["sim-nav"] = el => { marcarTempo(); SIM.i = Math.max(0, Math.min(SIM.ids.length - 1, SIM.i + +el.dataset.d)); SIM.entregando = false; guardarSim(); render({ topo: true }); };
 ACOES["sim-ir"] = el => { marcarTempo(); SIM.i = +el.dataset.k; guardarSim(); render({ topo: true }); };
-ACOES["sim-entregar"] = () => { SIM.entregando = true; atualizar(); };
+ACOES["sim-entregar"] = () => { SIM.entregando = true; SIM.abandonando = false; atualizar(); };
 ACOES["sim-entregar-nao"] = () => { SIM.entregando = false; atualizar(); };
 ACOES["sim-entregar-ok"] = () => entregarSimulado();
-ACOES["sim-abandonar"] = () => { SIM = { fase: "config", modo: SIM.modo, t: SIM.t, n: SIM.n, cron: SIM.cron }; guardarSim(); atualizar(); };
+/* Abandonar pede confirmação na própria página (confirm() não funciona aqui) e fica longe de "Entregar". */
+ACOES["sim-abandonar"] = () => { SIM.abandonando = true; SIM.entregando = false; atualizar(); document.querySelector(".sim-abandonar .aviso")?.scrollIntoView({ block: "center" }); };
+ACOES["sim-abandonar-nao"] = () => { SIM.abandonando = false; atualizar(); };
+ACOES["sim-abandonar-ok"] = () => { if (SIM.fase !== "prova" || !SIM.abandonando) return; SIM = { fase: "config", modo: SIM.modo, t: SIM.t, n: SIM.n, cron: SIM.cron }; guardarSim(); toast("Prova abandonada"); render({ topo: true }); };
 ACOES["sim-novo"] = () => { SIM = { fase: "config", modo: SIM.modo, t: SIM.t, n: SIM.n, cron: SIM.cron }; guardarSim(); render({ topo: true }); };
 function teclaProva(e) {
   const i = LETRAS.indexOf(e.key.toUpperCase()), id = SIM.ids[SIM.i];

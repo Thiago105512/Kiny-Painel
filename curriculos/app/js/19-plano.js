@@ -22,7 +22,7 @@ rota("/plano", () => {
   } else if (PV.vista === "semana") {
     const ini = inicioSemana(PV.data); titulo = `${dataCurta(new Date(ini + "T12:00"))} a ${dataCurta(new Date(somaDias(ini, 6) + "T12:00"))}`;
     corpo = `<div class="tarefas">${Array.from({ length: 7 }, (_, i) => somaDias(ini, i)).map(d => { const l = doDia(d), min = l.reduce((s, p) => s + (+p.min || 0), 0);
-      return `<div class="tarefa" style="flex-wrap:wrap;align-items:flex-start"><div class="o"><b style="${d === hoje() ? "color:var(--pen)" : ""}">${new Date(d + "T12:00").toLocaleDateString("pt-BR", { weekday: "short", day: "2-digit", month: "2-digit" })}</b><small>${l.length ? `${l.length} item(ns)${min ? " · " + horas(min * 60) : ""}` : "livre"}</small></div><button class="btn mini sec" data-act="plano-novo" data-d="${d}" aria-label="Adicionar em ${dataBR(d)}">+</button>${l.length ? `<div style="flex-basis:100%">${l.map(linhaPlano).join("")}</div>` : ""}</div>`; }).join("")}</div>`;
+      return `<div class="tarefa" style="flex-wrap:wrap;align-items:flex-start"><div class="o"><b style="${d === hoje() ? "color:var(--pen)" : ""}">${new Date(d + "T12:00").toLocaleDateString("pt-BR", { weekday: "short", day: "2-digit", month: "2-digit" })}</b><small>${l.length ? `${plural(l.length, "item", "itens")}${min ? " · " + horas(min * 60) : ""}` : "livre"}</small></div><button class="btn mini sec" data-act="plano-novo" data-d="${d}" aria-label="Adicionar em ${dataBR(d)}">+</button>${l.length ? `<div style="flex-basis:100%">${l.map(linhaPlano).join("")}</div>` : ""}</div>`; }).join("")}</div>`;
   } else {
     const [a, m] = PV.data.split("-").map(Number), prim = `${a}-${String(m).padStart(2, "0")}-01`, ini = inicioSemana(prim);
     titulo = new Date(prim + "T12:00").toLocaleDateString("pt-BR", { month: "long", year: "numeric" });
@@ -47,13 +47,13 @@ ACOES["plano-del"] = el => { const P = store.doc("plano"); delete P.itens[el.dat
 ACOES["plano-comecar"] = el => {
   const p = store.doc("plano").itens[el.dataset.id];
   const ts = p.temas?.length ? p.temas : p.tema ? [p.tema] : [];
-  if (p.nq && ts.length) { const ids = embaralhar(questoes().filter(q => ts.includes(q.tema))).slice(0, p.nq).map(q => q.id); if (ids.length) return praticar(ids, "Plano: " + (p.titulo || nomeTema(p.tema))); }
+  if (p.nq && ts.length) { const ids = embaralhar(questoes().filter(q => ts.includes(q.tema) && doObjetivo(q))).slice(0, p.nq).map(q => q.id); if (ids.length) return praticar(ids, "Plano: " + (p.titulo || nomeTema(p.tema))); }
   ir("#/tema/" + encodeURIComponent(p.tema));
 };
 function disciplinasSugeridas() {
   const P = store.doc("perfil"), g = P.gradeId && gradePorId(P.gradeId);
   const daGrade = g ? itensGrade(g).filter(i => !P.periodo || i.periodo === P.periodo).map(i => i.nome) : [];
-  return unicos([...daGrade, ...questoes().map(q => q.disc)]).slice(0, 200);
+  return unicos([...daGrade, ...questoes().filter(doObjetivo).map(q => q.disc)]).slice(0, 200);
 }
 ACOES["plano-novo"] = el => abrirFolha(`<h2 class="sec">Adicionar ao planejamento</h2><form class="pilha" data-form="plano-salvar">
   <div class="campos"><label class="campo"><span class="lab">Data</span><input type="date" id="pl-data" value="${esc(el.dataset.d || hoje())}" required></label>

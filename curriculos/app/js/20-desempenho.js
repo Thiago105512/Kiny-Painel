@@ -13,10 +13,21 @@ function colunasTempo(nDias = 14) {
   const max = Math.max(1, ...dias.map(d => d.m));
   return `<div class="colunas" role="img" aria-label="Minutos de estudo por dia">${dias.map(d => `<div class="col ${d.k === hoje() ? "hoje" : ""}" title="${dataBR(d.k)}: ${d.m} min"><em>${d.m || ""}</em><i style="height:${d.m / max * 100}%"></i><small>${d.k.slice(8)}</small></div>`).join("")}</div>`;
 }
+/** Chips de trilha só com o que é do objetivo (Medicina nunca vê ENEM/Direito/OAB). */
+function chipsTrilhaDesempenho() {
+  const o = objetivo();
+  if (!o) return [["", "Tudo"], ["med", "Medicina"], ["enem", "ENEM"], ["direito", "Direito"], ["oab", "OAB"]];
+  const ts = trilhasDoObjetivo();
+  return ts.length > 1 ? [["", "Tudo"], ...ts.map(k => [k, TRILHAS[k]?.curto || k])] : [];
+}
 rota("/desempenho", () => {
-  const filtro = q => !DV.trilha || (DV.trilha === "med" ? TRILHAS[q.t]?.dominio === "medicina" : q.t === DV.trilha);
+  const ch = chipsTrilhaDesempenho();
+  if (!ch.some(([k]) => k === DV.trilha)) DV.trilha = "";
+  const verEnem = trilhaVisivel("enem"), verMed = trilhaVisivel("medicina");
+  if ((DV.aba === "enem" && !verEnem) || (DV.aba === "especialidade" && !verMed)) DV.aba = "disciplina";
+  const filtro = q => doObjetivo(q) && (!DV.trilha || (DV.trilha === "med" ? TRILHAS[q.t]?.dominio === "medicina" : q.t === DV.trilha));
   const ag = agregados(filtro), D = store.doc("dias").d, segTotal = Object.values(D).reduce((s, d) => s + (d.seg || 0), 0);
-  const cs = cards(), sims = store.doc("simulados").hist;
+  const cs = cards().filter(cardDoObjetivo), sims = histSim();
   let tab = "";
   if (DV.aba === "disciplina") tab = tabelaDesempenho(listaPor(ag.por.disc), "Disciplina");
   else if (DV.aba === "especialidade") tab = tabelaDesempenho(listaPor(ag.por.esp), "Especialidade", k => ESPECIALIDADES[k] ? `<a href="#/medicina/esp/${esc(k)}">${esc(ESPECIALIDADES[k].nome)}</a>` : esc(k));
@@ -29,15 +40,15 @@ rota("/desempenho", () => {
   const temTempo = Object.values(D).some(d => d.seg >= 60), sem = semanasComDados(4);
   return {
     secao: "desempenho", titulo: "Desempenho",
-    html: `${chips([["", "Tudo"], ["med", "Medicina"], ["enem", "ENEM"], ["direito", "Direito"], ["oab", "OAB"]], DV.trilha, "dv-trilha")}
+    html: `${ch.length ? chips(ch, DV.trilha, "dv-trilha") : ""}
       <div class="kpis"><div class="kpi"><b>${ag.n ? pct(ag.ac, ag.n) + "%" : "—"}</b><span>acerto geral</span></div><div class="kpi"><b>${ag.n}</b><span>respostas</span></div>
         <div class="kpi"><b>${ag.vistas}<small class="muted" style="font-size:calc(13px * var(--k))"> / ${questoes().filter(filtro).length}</small></b><span>questões vistas</span></div><div class="kpi"><b>${horas(segTotal)}</b><span>tempo de estudo</span></div></div>
-      <section><h2 class="sec">Onde melhorar</h2>${abas([["disciplina", "Disciplinas"], ["tema", "Temas"], ["especialidade", "Especialidades"], ["nivel", "Nível"], ["enem", "ENEM"]], DV.aba, "dv-aba")}${tab}</section>
+      <section><h2 class="sec">Onde melhorar</h2>${abas([["disciplina", "Disciplinas"], ["tema", "Temas"], ...(verMed ? [["especialidade", "Especialidades"]] : []), ["nivel", "Nível"], ...(verEnem ? [["enem", "ENEM"]] : [])], DV.aba, "dv-aba")}${tab}</section>
       <section><h2 class="sec">Questões nos últimos 14 dias</h2>${blocoEvolucao(14)}</section>
       ${temTempo ? `<section><h2 class="sec">Minutos de estudo</h2>${colunasTempo()}</section>` : ""}
       ${sem ? `<section><h2 class="sec">Por semana</h2>${sem}</section>` : ""}
       ${sims.length ? `<section><h2 class="sec">Simulados</h2>${evolucaoSim(null)}<div class="barras" style="margin-top:10px">${sims.slice(-5).reverse().map(barraSim).join("")}</div></section>` : ""}
-      <p class="small muted">Tempo médio por questão: ${ag.nms ? mmss(ag.ms / ag.nms) : "—"} · flashcards consolidados: ${cs.filter(c => c.srs.etapa >= 2).length}/${cs.length} · sequência: ${sequencia()} dia(s)</p>`,
+      <p class="small muted">Tempo médio por questão: ${ag.nms ? mmss(ag.ms / ag.nms) : "—"} · flashcards consolidados: ${cs.filter(c => c.srs.etapa >= 2).length}/${cs.length} · sequência: ${plural(sequencia(), "dia", "dias")}</p>`,
   };
 });
 ACOES["dv-aba"] = el => { DV.aba = el.dataset.v; atualizar(); };

@@ -11,25 +11,37 @@ function tabelaCards(cs, vaziaMsg = "Nenhum flashcard.", limite = CPAG) {
 const FF = { tema: "" };
 ACOES["cards-mais"] = () => { CPAG += 30; atualizar(); };
 rota("/flashcards", () => {
-  const todos = cards(), lista = todos.filter(c => !FF.tema || c.tema === FF.tema), venc = todos.filter(c => vencido(c.srs));
+  const todos = cards().filter(cardDoObjetivo), lista = todos.filter(c => !FF.tema || c.tema === FF.tema), venc = todos.filter(c => vencido(c.srs));
+  const semCard = errosSemCard();
   const temasC = ordenarPt(unicos(todos.map(c => c.tema)).filter(Boolean), nomeTema);
   return {
     secao: "flashcards", titulo: "Flashcards", sub: todos.length ? `${todos.length} cards · ${venc.length} para hoje · ${todos.filter(c => c.srs.etapa >= 2).length} consolidados` : "",
-    acoes: `<button class="btn sec mini" data-act="card-novo">+ Novo</button>`,
+    acoes: `<button class="btn sec mini" data-act="card-novo">+ Novo</button>${todos.length && semCard.length ? `<button class="btn sec mini" data-act="cards-dos-erros">+ Dos erros (${semCard.length})</button>` : ""}`,
     html: todos.length ? `${venc.length ? `<div class="faixa"><p><b>${venc.length} para revisar hoje</b></p><a class="btn" href="#/flashcards/estudar">Estudar</a></div>` : ""}
         ${temasC.length > 1 ? `<label class="campo" style="max-width:320px"><span class="lab">Filtrar por tema</span><select data-chg="ff">${opcoes(temasC.map(t => [t, nomeTema(t)]), FF.tema, "Todos")}</select></label>` : ""}
         ${tabelaCards(lista)}
         <p class="small muted">Revisão espaçada: 1 → 7 → 30 → 90 dias, ajustada pela sua avaliação.</p>`
-      : vazio("Você ainda não tem flashcards. Crie a partir dos seus erros, das questões de um tema, com o assistente ou manualmente.", `<a class="btn" href="#/erros">Do caderno de erros</a><button class="btn sec" data-act="card-novo">Criar</button>`),
+      : vazio(`Você ainda não tem flashcards. Crie a partir dos seus erros, das questões de um tema, com o assistente ou manualmente.${semCard.length ? "" : " (Seu caderno de erros ainda está vazio: quando você errar uma questão, ela pode virar flashcard.)"}`,
+        `${semCard.length ? `<button class="btn" data-act="cards-dos-erros">Criar ${plural(semCard.length, "flashcard", "flashcards")} dos seus erros</button>` : ""}<button class="btn ${semCard.length ? "sec" : ""}" data-act="card-novo">Criar à mão</button>`),
   };
 });
 MUDANCAS.ff = el => { FF.tema = el.value; atualizar(); };
+/** Erros abertos (do objetivo) que ainda não viraram flashcard. */
+const errosSemCard = () => { const refs = new Set(cards().map(c => c.ref).filter(Boolean)); return Object.values(store.doc("erros").itens).filter(e => e.status === "aberto" && !e.card && !refs.has(e.qid) && erroDoObjetivo(e)); };
+/* "Do caderno de erros" cria os cards de verdade: um por erro aberto, com a resposta certa, a explicação e a nota pessoal. */
+ACOES["cards-dos-erros"] = () => {
+  const E = store.doc("erros"), lista = errosSemCard(); let n = 0;
+  lista.forEach(e => { const q = qPorId(e.qid); if (!q) return;
+    e.card = criarCard({ frente: q.q, verso: `${q.o[q.c]}\n\n${q.e || ""}${e.coment ? "\n\nMinha nota: " + e.coment : ""}`.trim(), tema: q.tema, subtema: q.subtema, origem: "erro", ref: q.id, dif: q.dif || 2 }); n++; });
+  if (n) store.mudou("erros");
+  toast(n ? `${plural(n, "flashcard criado", "flashcards criados")} a partir dos erros` : "Nenhum erro aberto sem flashcard"); atualizar();
+};
 
 /* ---------- Sessão de estudo ---------- */
 const FC = { chave: null, fila: [], i: 0, mostrar: false, feitos: [] };
 function paginaEstudoCards(temaId) {
   const chave = temaId || "*";
-  const venc = cards().filter(c => vencido(c.srs) && (!temaId || c.tema === temaId)).map(c => c.id);
+  const venc = cards().filter(c => vencido(c.srs) && cardDoObjetivo(c) && (!temaId || c.tema === temaId)).map(c => c.id);
   const concluida = FC.chave === chave && FC.i >= FC.fila.length, novos = venc.some(id => !FC.fila.includes(id));
   if (FC.chave !== chave || (concluida && novos)) Object.assign(FC, { chave, fila: embaralhar(venc), i: 0, mostrar: false, feitos: [] });
   const crumbs = [["Flashcards", "#/flashcards"]].concat(temaId ? [[nomeTema(temaId), "#/tema/" + encodeURIComponent(temaId) + "/flashcards"]] : []);

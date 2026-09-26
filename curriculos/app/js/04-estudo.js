@@ -15,6 +15,17 @@ function questoes() {
 }
 const invalidarQuestoes = () => { _cacheQ = null; };
 const qPorId = id => questoes().porId[id];
+/** Texto da questão normalizado para busca, calculado uma vez só por questão. */
+const txtBusca = q => q._n ??= norm(q.q + " " + q.o.join(" "));
+/** "1 questão" / "2 questões". */
+const plural = (n, um, varios) => `${n} ${n === 1 ? um : varios}`;
+
+/* ---------- Domínio do objetivo (um só filtro para o app inteiro) ----------
+   Quem escolheu Medicina/Residência nunca vê ENEM/Direito/OAB, e vice-versa. */
+const trilhaVisivel = t => trilhasDoObjetivo().includes(t);
+const temaIdDoObjetivo = id => !id || !TEMAS[id] || temaDoObjetivo(TEMAS[id]);
+const erroDoObjetivo = e => { const q = qPorId(e.qid); return !!q && doObjetivo(q); };
+const cardDoObjetivo = c => { const q = c.ref && qPorId(c.ref); return q ? doObjetivo(q) : temaIdDoObjetivo(c.tema); };
 /** Blocos de questões próprias: o antigo "questoes" + "q-1", "q-2"… */
 const blocosQ = () => ["questoes", ...store.nomes().filter(n => /^q-\d+$/.test(n)).sort((a, b) => +a.slice(2) - +b.slice(2))];
 const minhasQuestoes = () => blocosQ().flatMap(n => Object.values(store.doc(n).itens));
@@ -138,9 +149,9 @@ const cards = () => blocosCards().flatMap(n => Object.values(store.doc(n).itens)
 
 /* ---------- Pendências de revisão (agenda unificada) ---------- */
 function pendencias() {
-  const cs = cards().filter(c => vencido(c.srs));
-  const temas = Object.entries(store.doc("revisoes").temas).filter(([, s]) => vencido(s)).map(([id, s]) => ({ id, srs: s }));
-  const erros = Object.values(store.doc("erros").itens).filter(e => e.status === "aberto" && vencido(e.srs) && qPorId(e.qid));
+  const cs = cards().filter(c => vencido(c.srs) && cardDoObjetivo(c));
+  const temas = Object.entries(store.doc("revisoes").temas).filter(([id, s]) => vencido(s) && temaIdDoObjetivo(id)).map(([id, s]) => ({ id, srs: s }));
+  const erros = Object.values(store.doc("erros").itens).filter(e => e.status === "aberto" && vencido(e.srs) && erroDoObjetivo(e));
   const planoHoje = Object.values(store.doc("plano").itens).filter(p => !p.feito && p.data <= hoje());
   return { cards: cs, temas, erros, plano: planoHoje, total: cs.length + temas.length + erros.length };
 }
@@ -150,7 +161,7 @@ function agregados(filtro = () => true) {
   const res = { n: 0, ac: 0, ms: 0, nms: 0, vistas: 0, por: { disc: {}, esp: {}, tema: {}, trilha: {}, area: {}, ae: {}, discEnem: {}, dif: {} } };
   const soma = (m, k, p, ok) => { if (!k) return; const x = m[k] = m[k] || { n: 0, ac: 0 }; x.n += p; x.ac += ok; };
   for (const q of questoes()) {
-    if (!filtro(q)) continue;
+    if (!doObjetivo(q) || !filtro(q)) continue;   // desempenho só do objetivo do perfil
     const p = progDe(q); if (!p || !p.n) continue;
     res.vistas++; res.n += p.n; res.ac += p.ac;
     for (const h of p.h) if (h[3]) { res.ms += h[3]; res.nms++; }
@@ -175,11 +186,14 @@ function instituicoes() {
 const instPorId = id => instituicoes().find(i => i.id === id);
 function grades() {
   const user = store.doc("grades").itens, porId = {};
+  /* Cópia rasa: quem for alterar uma matriz usa gradeEditavel() (cópia profunda), para nunca mexer na matriz de fábrica em memória. */
   GRADES_BASE.forEach(g => { porId[g.id] = { ...g, origem: "base" }; });
   Object.values(user).forEach(g => { porId[g.id] = { ...g, origem: porId[g.id] ? "editada" : "importada" }; });
   return Object.values(porId);
 }
 const gradePorId = id => grades().find(g => g.id === id);
+/** Cópia profunda da matriz para edição: editar e salvar não altera a matriz de fábrica carregada na memória. */
+const gradeEditavel = id => { const g = gradePorId(id); return g ? JSON.parse(JSON.stringify(g)) : null; };
 const gradesDe = (instId, curso) => grades().filter(g => g.instituicao === instId && (!curso || g.curso === curso));
 /** Grava a matriz no banco do usuário (uma matriz de fábrica editada vira cópia do usuário). */
 function salvarGrade(g) {

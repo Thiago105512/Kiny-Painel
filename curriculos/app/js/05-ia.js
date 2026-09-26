@@ -92,10 +92,11 @@ const IA = (() => {
 
   async function gerarQuestoes(n = 5) {
     const c = PAGINA?.ctx || {}, t = TEMAS[c.tema];
-    const trilha = t?.dominio === "enem" ? "enem" : c.trilha || (c.tema ? "medicina" : "enem");
+    /* Sem tema na página, a trilha vem do objetivo do perfil (nunca cai em ENEM para quem estuda Medicina). */
+    const tObj = trilhasDoObjetivo(), trilha = t?.dominio === "enem" ? "enem" : c.trilha || (c.tema || tObj.includes("medicina") ? "medicina" : tObj[0] || "medicina");
     saida(`<p class="muted">Gerando ${n} questões…</p>`);
     try {
-      const arr = await json(`Crie ${n} questões de múltipla escolha INÉDITAS sobre o tema em foco (${trilha === "enem" ? "nível ENEM/vestibular" : "nível graduação/residência em Medicina"}), com 5 alternativas, uma correta, e explicação curta citando a base. Varie a posição da correta.`,
+      const arr = await json(`Crie ${n} questões de múltipla escolha INÉDITAS sobre o tema em foco (${trilha === "enem" ? "nível ENEM/vestibular" : trilha === "direito" || trilha === "oab" ? "nível graduação em Direito/OAB" : "nível graduação/residência em Medicina"}), com 5 alternativas, uma correta, e explicação curta citando a base. Varie a posição da correta.`,
         `[{"enunciado":"","alternativas":["","","","",""],"correta":0,"explicacao":"","dificuldade":2}]`);
       const ok = (Array.isArray(arr) ? arr : []).filter(x => x && typeof x.enunciado === "string" && Array.isArray(x.alternativas) && x.alternativas.length === 5 && new Set(x.alternativas.map(String)).size === 5 && Number.isInteger(+x.correta) && +x.correta >= 0 && +x.correta < 5);
       IA._lote = ok.map(x => ({ id: novoId("q"), t: trilha, area: t?.disciplinas?.[0] || t?.nome || "Geral", enunciado: x.enunciado, alternativas: x.alternativas.map(String), correta: +x.correta, explicacao: String(x.explicacao || ""), tema: c.tema || null, disciplina: c.disciplina || t?.disciplinas?.[0] || null, dificuldade: [1, 2, 3].includes(x.dificuldade) ? x.dificuldade : 2, src: "ia", fonte: "ia" }));
@@ -134,9 +135,10 @@ const IA = (() => {
 
   function explicarQuestao(q, escolhida, ordem, onText) {
     const letra = i => LETRAS[ordem.indexOf(i)];
+    if (gerando) return; gerando = true;   // um pedido de cada vez: o segundo toque não perde o Cancelar do primeiro
     onText("Pensando…");
     texto(`Explique por que a alternativa correta está certa e por que cada errada está errada, em até 200 palavras. O aluno marcou ${letra(escolhida)}.\nQuestão: ${q.q}\n${ordem.map((j, k) => LETRAS[k] + ") " + q.o[j]).join("\n")}\nGabarito: ${letra(q.c)}`, onText, { tema: q.tema })
-      .then(onText).catch(e => onText(mensagemErro(e)));
+      .then(onText).catch(e => onText(mensagemErro(e))).finally(() => { gerando = false; });
   }
 
   /* ---------- Eventos ---------- */

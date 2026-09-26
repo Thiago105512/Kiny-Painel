@@ -49,13 +49,18 @@ const GRUPOS_NAV_BASE = [
   ["Revisar", [["revisoes", "#/revisoes", "Revisões"], ["flashcards", "#/flashcards", "Flashcards"]]],
   ["Organizar", [["plano", "#/plano", "Planejamento"], ["desempenho", "#/desempenho", "Desempenho"], ["biblioteca", "#/biblioteca", "Biblioteca"]]],
 ];
-/** O menu segue o objetivo do perfil: o que não é do objetivo vai para "Outras áreas". */
+/** O menu segue o objetivo do perfil: o que não é do objetivo não aparece (nem em "Outras áreas"). */
 const FORA_DO_OBJETIVO = { medicina: ["enem"], residencia: ["enem", "curso"], enem: ["medicina", "casos", "curso"], direito: ["medicina", "enem", "casos"], oab: ["medicina", "enem", "casos", "curso"] };
 function gruposNav() {
   const fora = FORA_DO_OBJETIVO[store.doc("perfil").objetivo] || [];
-  const g = GRUPOS_NAV_BASE.map(([n, it]) => [n, it.filter(x => !fora.includes(x[0]))]).filter(([n, it]) => it.length);
-  const outras = GRUPOS_NAV_BASE.flatMap(x => x[1]).filter(x => fora.includes(x[0]));
-  return outras.length ? g.concat([["Outras áreas", outras]]) : g;
+  return GRUPOS_NAV_BASE.map(([n, it]) => [n, it.filter(x => !fora.includes(x[0]))]).filter(([, it]) => it.length);
+}
+/** Autocompletar global de temas (datalist): só temas do objetivo; remontado quando o objetivo muda. */
+let _dlObj;
+function montarListaTemas() {
+  const o = objetivo(); if (_dlObj === o && document.getElementById("dl-temas")) return; _dlObj = o;
+  let dl = document.getElementById("dl-temas"); if (!dl) { dl = document.createElement("datalist"); dl.id = "dl-temas"; document.body.appendChild(dl); }
+  dl.innerHTML = ordenarPt(Object.values(TEMAS).filter(temaDoObjetivo), t => t.nome).map(t => `<option value="${esc(t.nome)}">${esc(t.dominio === "enem" ? "ENEM · " + (ENEM_DISC[t.disciplinaId]?.nome || "") : (t.especialidades || []).map(e => ESPECIALIDADES[e]?.nome).filter(Boolean).join(", "))}</option>`).join("");
 }
 let GRUPOS_NAV = GRUPOS_NAV_BASE;
 const NAV = GRUPOS_NAV_BASE.flatMap(g => g[1]);
@@ -64,6 +69,9 @@ let INFERIOR = ["inicio", "medicina", "enem", "revisoes"];
 const CURTO = { enem: "ENEM", curso: "Curso" };
 
 function desenharNav(secao) {
+  montarListaTemas();
+  /* Boas-vindas (antes de escolher o objetivo): sem menu, para não mostrar conteúdo de nenhuma área. */
+  if (secao === "boas-vindas") { $("#nav-lateral").innerHTML = ""; $("#nav-inferior").innerHTML = ""; return; }
   GRUPOS_NAV = gruposNav(); INFERIOR = INFERIOR_POR_OBJ[store.doc("perfil").objetivo] || ["inicio", "medicina", "enem", "revisoes"];
   const n = pendencias().total;
   const badge = k => k === "revisoes" && n ? `<span class="n" aria-label="${n} pendentes">${n}</span>` : "";
@@ -88,27 +96,56 @@ function render(opts = {}) {
   if (typeof pg === "string") pg = { html: pg };
   PAGINA = pg;
   try { desenharNav(pg.secao); } catch (e) { console.error(e); }
-  const crumbs = pg.crumbs?.length ? `<nav class="crumbs" aria-label="Você está em">${pg.crumbs.map(([t, h], i) => (i ? '<span aria-hidden="true">›</span>' : "") + (h ? `<a href="${h}">${esc(t)}</a>` : `<span>${esc(t)}</span>`)).join("")}</nav>` : "";
+  const crumbs = pg.crumbs?.length ? `<nav class="crumbs" aria-label="Você está em">${pg.crumbs.map(([t, h], i) => (i ? '<span aria-hidden="true">›</span>' : "") + (h ? `<a href="${esc(h)}">${esc(t)}</a>` : `<span>${esc(t)}</span>`)).join("")}</nav>` : "";
   document.body.style.setProperty("--sec", pg.cor || SECAO_VISUAL[pg.secao]?.[1] || "#2340B8");
   const ilu = pg.ilu ?? iluSecao(pg.secao);
   const titulo = pg.titulo ? `<div class="titulo${ilu ? " com-figura" : ""}${pg.titulo.length > 44 ? " longo" : ""}">${ilu}<div class="titulo-tx"><h1>${esc(pg.titulo)}</h1>${pg.sub ? `<div class="sub">${pg.sub}</div>` : ""}</div>${pg.acoes ? `<div class="linha">${pg.acoes}</div>` : ""}</div>` : "";
   const fab = IA.disponivel() && pg.secao !== "assistente" ? `<button class="btn azul fab" data-act="ia-abrir" aria-label="Abrir assistente de estudo">${icone("ia")} Assistente</button>` : "";
+  const foco = opts.topo ? null : chaveDoFoco();
   $("#view").innerHTML = crumbs + titulo + (pg.html || "") + fab;
   document.title = (pg.titulo ? pg.titulo + " · " : "") + "Gabarito Amazonas";
   if (opts.topo) { window.scrollTo(0, 0); $("#view").focus({ preventScroll: true }); }
+  else if (foco) restaurarFoco(foco);
+}
+/* Foco preservado entre re-renderizações: quem usa teclado ou leitor de tela não volta ao topo
+   (passando pelo menu) a cada toque. O elemento é reencontrado pelo data-act e seus dados. */
+function chaveDoFoco() {
+  const f = document.activeElement;
+  if (!f || f === document.body || !$("#view").contains(f) || !f.dataset?.act) return null;
+  const extra = ["i", "v", "k", "id", "q", "t", "d", "n"].filter(k => f.dataset[k] != null).map(k => `[data-${k}="${CSS.escape(f.dataset[k])}"]`).join("");
+  return `[data-act="${CSS.escape(f.dataset.act)}"]${extra}`;
+}
+function restaurarFoco(sel) {
+  const v = $("#view"), el = v.querySelector(sel);
+  const alvo = el && !el.disabled ? el : v.querySelector(".veredito[tabindex], .retorno [tabindex='-1']") || v.querySelector("h1");
+  if (!alvo) return;
+  if (!alvo.hasAttribute("tabindex") && !/^(A|BUTTON|INPUT|SELECT|TEXTAREA)$/.test(alvo.tagName)) alvo.setAttribute("tabindex", "-1");
+  alvo.focus({ preventScroll: true });
 }
 const atualizar = () => render();
 function paginaNaoEncontrada() { return { titulo: "Página não encontrada", html: vazio("Este endereço não existe mais.", `<a class="btn" href="#/">Ir para o início</a>`) }; }
 
 /* ---------- Componentes ---------- */
 const vazio = (txt, botoes = "") => `<div class="vazio">${mascote("pensando", 64, "")}<div><p>${txt}</p>${botoes ? `<div class="linha">${botoes}</div>` : ""}</div></div>`;
-/** Tamanho da letra (só neste aparelho): Grande é o padrão. */
-const TAM_LETRA = [[1.25, "Grande"], [1.45, "Muito grande"], [1.7, "Enorme"], [1, "Normal"]];
+/** Tamanho da letra (só neste aparelho): Grande é o padrão. Em ordem crescente. */
+const TAM_LETRA = [[1, "Normal"], [1.25, "Grande"], [1.45, "Muito grande"], [1.7, "Enorme"]];
 function medirTopo() { const t = document.querySelector(".topo"); if (t) document.documentElement.style.setProperty("--topo-h", t.offsetHeight + "px"); }
 addEventListener("resize", medirTopo);
 function aplicarLetra(k) { document.documentElement.style.setProperty("--k", k); requestAnimationFrame(medirTopo); const b = document.getElementById("letra-btn"); if (b) b.title = "Letra: " + (TAM_LETRA.find(x => x[0] === k)?.[1] || ""); }
 aplicarLetra(ls.get("gab2:letra", 1.25));
-ACOES.letra = () => { const k = ls.get("gab2:letra", 1.25), i = TAM_LETRA.findIndex(x => x[0] === k), prox = TAM_LETRA[(i + 1) % TAM_LETRA.length]; ls.set("gab2:letra", prox[0]); aplicarLetra(prox[0]); toast("Letra: " + prox[1]); };
+/** Tema claro/escuro: automático (segue o celular) ou escolhido à mão. */
+const TEMAS_COR = [["auto", "Automático (segue o celular)"], ["light", "Claro"], ["dark", "Escuro"]];
+function aplicarTemaCor(t) { if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme; }
+aplicarTemaCor(ls.get("gab2:tema", "auto"));
+/* "Aa" abre uma folha com todas as opções à vista (em vez de um ciclo que voltava do Enorme para o Normal). */
+function htmlAparencia() {
+  const k = ls.get("gab2:letra", 1.25), tc = ls.get("gab2:tema", "auto");
+  return `<div class="pilha aparencia"><span class="lab">Tamanho da letra</span><div class="aparencia-opcoes">${TAM_LETRA.map(([v, n], i) => `<button class="btn ${v === k ? "azul" : "sec"}" data-act="letra-set" data-v="${v}" aria-pressed="${v === k}" style="font-size:${[16, 19, 22, 26][i]}px">${n}</button>`).join("")}</div>
+    <span class="lab">Cores</span><div class="aparencia-opcoes">${TEMAS_COR.map(([v, n]) => `<button class="btn ${v === tc ? "azul" : "sec"}" data-act="tema-cor" data-v="${v}" aria-pressed="${v === tc}">${n}</button>`).join("")}</div></div>`;
+}
+ACOES.letra = () => abrirFolha(htmlAparencia(), { titulo: "Letra e cores" });
+ACOES["letra-set"] = el => { const k = +el.dataset.v, nome = TAM_LETRA.find(x => x[0] === k)?.[1]; if (!nome) return; ls.set("gab2:letra", k); aplicarLetra(k); abrirFolha(htmlAparencia(), { titulo: "Letra e cores" }); $(`#camada [data-act="letra-set"][data-v="${k}"]`)?.focus(); toast("Letra: " + nome); };
+ACOES["tema-cor"] = el => { const t = el.dataset.v; ls.set("gab2:tema", t); aplicarTemaCor(t); abrirFolha(htmlAparencia(), { titulo: "Letra e cores" }); $(`#camada [data-act="tema-cor"][data-v="${t}"]`)?.focus(); };
 /** Selo do nível da questão (definido pelo banco): barrinhas + nome, com cor. */
 const seloNivel = (d, curto = false) => DIFICULDADE[d] ? `<span class="nivel n${d}" title="Nível da questão: ${DIFICULDADE[d]}"><i></i><i></i><i></i>${curto ? "" : "Nível: "}${DIFICULDADE[d]}</span>` : "";
 const pill = (t, cls = "") => `<span class="pill ${cls}">${esc(t)}</span>`;
@@ -152,6 +189,7 @@ document.addEventListener("submit", e => { const f = e.target.closest("form[data
 document.addEventListener("keydown", e => {
   if (e.key === "Escape" && $("#camada").innerHTML) { fecharFolha(); return; }
   if (/INPUT|TEXTAREA|SELECT/.test(e.target.tagName) || e.ctrlKey || e.metaKey || e.altKey || $("#camada").innerHTML) return;
+  if ((e.key === "Enter" || e.key === " ") && /^(BUTTON|A|SUMMARY)$/.test(e.target.tagName)) return;   // o elemento focado age (Pular, Marcar, links…)
   if (PL.ativo && document.getElementById("pl")) teclaPlayer(e);
   else if (SIM.fase === "prova" && document.getElementById("prova")) teclaProva(e);
 });
@@ -166,14 +204,15 @@ const PL = { ativo: false, chave: null, ids: [], i: 0, ordem: [], esc: null, res
    (pela busca, por exemplo) não descarta a sessão de 20 questões que estava pela metade. */
 const SALVOS = {};
 const guardarSessao = () => { if (PL.ativo && !PL.fim && PL.ids.length > 1) SALVOS[PL.chave] = { ...PL }; };
-/** Casos em sequência: as partes de um mesmo caso ficam juntas e em ordem; na prática livre, entram as partes que faltam. */
-function ordenarSeries(ids, completar) {
+/** Casos em sequência: as partes de um mesmo caso ficam juntas e em ordem. completar = puxa as partes que faltam
+    (não é usado na prática: nada de questões em sequência para conteúdo novo). familia = deixa só uma questão por família. */
+function ordenarSeries(ids, completar, familia = true) {
   const Q = questoes(), porSerie = {};
   Q.forEach(q => { if (q.serie) (porSerie[q.serie] = porSerie[q.serie] || []).push(q); });
   const saida = [], vistas = new Set(), dentro = new Set(ids), familias = new Set();
   ids.forEach(id => { const q = qPorId(id);
     /* Questões da mesma "família" (mesmo quadro visto por outro ângulo) não caem juntas: uma entregaria a outra. */
-    if (q?.familia && ids.length > 1) { if (familias.has(q.familia)) return; familias.add(q.familia); }
+    if (familia && q?.familia && ids.length > 1) { if (familias.has(q.familia)) return; familias.add(q.familia); }
     if (!q?.serie) { saida.push(id); return; }
     if (vistas.has(q.serie)) return; vistas.add(q.serie);
     (porSerie[q.serie] || []).sort((a, b) => a.parte - b.parte).forEach(x => { if (completar || dentro.has(x.id)) saida.push(x.id); }); });
@@ -181,7 +220,8 @@ function ordenarSeries(ids, completar) {
 }
 function iniciarPlayer(chave, ids, origem = "pratica", aoFim = null) {
   if (PL.chave !== chave) guardarSessao();
-  ids = ordenarSeries(ids, origem === "pratica");
+  /* Caderno de erros: cada erro vencido é tocado (sem cortar irmãs de família, que ficariam vencidas para sempre). */
+  ids = ordenarSeries(ids, false, origem !== "erro");
   Object.assign(PL, { festa: false, ativo: true, chave, ids: ids.slice(), i: 0, esc: null, resp: false, origem, res: [], aoFim, ia: "", fim: false, msgFim: "" });
   delete SALVOS[chave];
   prepararQuestao();
@@ -221,7 +261,7 @@ function htmlPlayer() {
     <div class="linha entre" style="margin-bottom:12px"><b>${PL.ids.length > 1 ? `Questão ${PL.i + 1} de ${PL.ids.length}` : "Questão"}${q.serie ? `<br><span class="small muted">Caso em ${q.partes} partes · parte ${q.parte}</span>` : ""}</b>${seloNivel(q.dif)}</div>
     <p class="enunciado">${esc(q.q)}</p>${q.img ? figuraImg(q.img) : ""}
     <ol class="alts">${alts}</ol>
-    ${PL.resp ? `<div class="retorno"><p class="veredito ${ok ? "ok" : "bad"}">${ok ? `<span class="festa">✓ ${esc(PL.frase || "Certo")}</span>` : `Errado · gabarito ${letra(q.c)}`}${PL.ms ? ` · ${mmss(PL.ms)}` : ""}</p>${!ok && PL.frase ? `<p class="small muted" style="margin:0 0 6px">${esc(PL.frase)}</p>` : ""}${htmlExplicacao(q.e)}
+    ${PL.resp ? `<div class="retorno"><p class="veredito ${ok ? "ok" : "bad"}" tabindex="-1">${ok ? `<span class="festa">✓ ${esc(PL.frase || "Certo")}</span>` : `Errado · gabarito ${letra(q.c)}`}${PL.ms ? ` · ${mmss(PL.ms)}` : ""}</p>${!ok && PL.frase ? `<p class="small muted" style="margin:0 0 6px">${esc(PL.frase)}</p>` : ""}${htmlExplicacao(q.e)}
       <p class="small muted com-ilu" style="margin:8px 0 0;gap:8px">${q.tema ? iluTema(q.tema, "p") : ""}<span>${[TRILHAS[q.t]?.curto || q.t, q.ae && nomeAreaEnem(q.ae), q.ae && q.disc].filter(Boolean).map(esc).join(" · ")}${q.tema ? " · " + linkTema(q.tema) : ""}${q.src !== "banco" ? " · " + (q.src === "ia" ? "gerada por IA" : "minha") : ""}${st.n > 1 ? ` · você já acertou ${st.ac} de ${st.n}` : ""}${q.rev ? ` · revisada em ${esc(mesAno(q.rev))}` : ""}${acertoGeral(q) ? " · " + esc(acertoGeral(q)) : ""}</span></p>
       ${!ok ? `<p class="small muted" style="margin:8px 0 0">Registrado no <a href="#/erros">caderno de erros</a> com revisão amanhã.</p>${irmaDe(q) ? `<div class="acoes"><button class="btn sec" data-act="pl-irma">Treinar este ponto de novo</button></div>` : ""}` : ""}
       ${PL.ia ? `<h3>Assistente</h3><div class="ia-txt" id="pl-ia">${esc(PL.ia)}</div>` : ""}</div>` : ""}
@@ -237,7 +277,7 @@ const mesAno = s => { const [a, m] = String(s).split("-"); return m ? new Date(+
 /** Questão irmã: mesmo subtema (ou tema), fora da sessão, de preferência ainda não respondida. */
 function irmaDe(q) {
   if (!q.tema) return null;
-  const c = questoes().filter(x => x.id !== q.id && !PL.ids.includes(x.id) && x.tema === q.tema && (!q.serie || x.serie !== q.serie));
+  const c = questoes().filter(x => x.id !== q.id && !PL.ids.includes(x.id) && x.tema === q.tema && !x.serie);
   const mesmo = c.filter(x => q.subtema && x.subtema === q.subtema), base = mesmo.length ? mesmo : c;
   return base.find(x => statusQ(x).chave === "nao") || base[0] || null;
 }

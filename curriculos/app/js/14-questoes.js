@@ -27,12 +27,13 @@ function filtrarQuestoes(F) {
     if (F.ano && String(q.ano) !== F.ano) return false;
     if (F.prova && q.prova !== F.prova) return false;
     if (F.status?.length) { const s = statusQ(q); if (!F.status.some(k => k === s.chave || (k === "marcada" && s.marcada) || (k === "revisar" && s.revisar))) return false; }
-    if (txt && !norm(q.q + " " + q.o.join(" ")).includes(txt)) return false;
+    if (txt && !txtBusca(q).includes(txt)) return false;
     return true;
   });
 }
 function formFiltros(F, prefixo = "fq", { rapidos = false } = {}) {
-  const base0 = questoes().filter(q => !F.trilha || (F.trilha === "med" ? TRILHAS[q.t]?.dominio === "medicina" : q.t === F.trilha));
+  /* As listas de filtros saem só do domínio do objetivo: Medicina não vê área do ENEM, disciplinas de Direito etc. */
+  const base0 = questoes().filter(q => doObjetivo(q) && (!F.trilha || (F.trilha === "med" ? TRILHAS[q.t]?.dominio === "medicina" : q.t === F.trilha)));
   const areasL = ENEM_AREAS.filter(a => base0.some(q => q.ae === a.id)), base = F.area ? base0.filter(q => q.ae === F.area) : base0;
   const discs = ordenarPt(unicos(base.map(q => q.disc))), temasL = ordenarPt(unicos(base.map(q => q.tema)).filter(t => TEMAS[t]), nomeTema);
   const espL = ordenarPt(unicos(base.flatMap(q => [q.esp, ...(TEMAS[q.tema]?.especialidades || [])])).filter(e => ESPECIALIDADES[e]), e => ESPECIALIDADES[e].nome);
@@ -40,11 +41,11 @@ function formFiltros(F, prefixo = "fq", { rapidos = false } = {}) {
   const sel = (c, lab, itens, vazioTxt = "Todas") => `<label class="campo"><span class="lab">${lab}</span><select data-chg="${prefixo}" data-c="${c}">${opcoes(itens, F[c], vazioTxt)}</select></label>`;
   return `<div class="campos">
     ${rapidos ? "" : sel("trilha", "Trilha", [...(objetivo() ? [] : [["med", "Medicina (graduação + residência)"]]), ...Object.entries(TRILHAS).filter(([k]) => trilhasDoObjetivo().includes(k)).map(([k, v]) => [k, v.nome])])}
-    ${sel("inst", "Instituição (via grade)", instituicoes().map(i => [i.id, i.sigla]))}
-    ${sel("periodo", "Período", Array.from({ length: 12 }, (_, i) => [i + 1, i + 1 + "º"]), "Todos")}
-    ${areasL.length ? sel("area", "Área do conhecimento (ENEM)", areasL.map(a => [a.id, a.nome])) : ""}
+    ${trilhaVisivel("medicina") ? `${sel("inst", "Instituição (via grade)", instituicoes().map(i => [i.id, i.sigla]))}
+    ${sel("periodo", "Período", Array.from({ length: 12 }, (_, i) => [i + 1, i + 1 + "º"]), "Todos")}` : ""}
+    ${areasL.length && trilhaVisivel("enem") ? sel("area", "Área do conhecimento (ENEM)", areasL.map(a => [a.id, a.nome])) : ""}
     ${sel("disc", "Disciplina", discs.map(d => [d, d]))}
-    ${sel("esp", "Especialidade", espL.map(e => [e, ESPECIALIDADES[e].nome]))}
+    ${espL.length ? sel("esp", "Especialidade", espL.map(e => [e, ESPECIALIDADES[e].nome])) : ""}
     ${sel("tema", "Tema", temasL.map(t => [t, nomeTema(t)]), "Todos")}
     ${F.tema ? sel("subtema", "Subtema", (TEMAS[F.tema]?.subtemas || []).map(s => [s.id, s.nome]), "Todos") : ""}
     ${sel("dif", "Nível", Object.entries(DIFICULDADE), "Todos")}
@@ -67,14 +68,15 @@ const STATUS_RAPIDOS = [["nao", "Não respondidas"], ["incorreta", "Erradas"], [
 let FQ_OBJ = null;   // aplica a trilha do objetivo do perfil na primeira abertura (e quando o objetivo muda)
 rota("/questoes", () => {
   if (FQ_OBJ !== objetivo()) { FQ_OBJ = objetivo(); if (!PL.ativo) FQ.trilha = trilhaDoObjetivo(); }
+  if (FQ.trilha && FQ.trilha !== "med" && !trilhaVisivel(FQ.trilha)) Object.assign(FQ, { trilha: trilhaDoObjetivo(), area: "", disc: "", tema: "", subtema: "", esp: "" });
   if (playerAtivo("banco")) return { secao: "questoes", crumbs: [["Questões", "#/questoes"]], titulo: PL.rotulo || "Praticando", html: htmlPlayer(), ctx: { questao: PL.ids[PL.i], tema: qPorId(PL.ids[PL.i])?.tema } };
   const qs = filtrarQuestoes(FQ), extras = Object.entries(FQ).filter(([k, v]) => !["trilha", "status", "texto", "dif", ...(FQ.trilha === "enem" ? ["area", "disc"] : [])].includes(k) && v).length;
   return {
-    secao: "questoes", titulo: "Questões", sub: `${qs.length} de ${questoes().length}`,
+    secao: "questoes", titulo: "Questões", sub: `${qs.length} de ${questoes().filter(doObjetivo).length}`,
     html: `${abas([["banco", "Banco"], ["erros", "Caderno de erros"]], "banco", "ir-aba-q")}
       <div class="pilha">
         ${trilhasRapidas().length > 1 ? chips(trilhasRapidas(), FQ.trilha, "fq-trilha") : ""}
-        ${FQ.trilha === "enem" ? chipsEnem() : ""}
+        ${FQ.trilha === "enem" && trilhaVisivel("enem") ? chipsEnem() : ""}
         ${chipsNivel()}
         <details class="filtros" ${extras || FQ.status.length || FQ.texto ? "open" : ""} style="margin:0"><summary>Mais filtros${extras + FQ.status.length ? ` (${extras + FQ.status.length})` : ""}</summary><div style="margin-top:10px">
           <span class="lab">Situação</span><div class="chips" style="margin:4px 0 12px">${STATUS_RAPIDOS.map(([k, t]) => `<button class="chip" data-act="fq-st" data-v="${k}" aria-pressed="${FQ.status.includes(k)}">${t}</button>`).join("")}</div>${formFiltros(FQ, "fq", { rapidos: true })}</div>${extras || FQ.status.length || FQ.trilha ? `<div class="acoes"><button class="btn sec mini" data-act="fq-limpar">Limpar tudo</button></div>` : ""}</details>
@@ -111,10 +113,10 @@ rota("/questoes/q/:id", ({ id }) => {
   const q = qPorId(id); if (!q) return paginaNaoEncontrada();
   if (!playerAtivo("q:" + id)) iniciarPlayer("q:" + id, [id], "pratica");
   const p = progDe(q), E = store.doc("erros").itens[id];
-  const hist = (p?.h || []).slice().reverse().map(h => [new Date(h[0]).toLocaleString("pt-BR"), h[1] == null ? "—" : esc(q.o[h[1]] || "—"), h[2] ? pill("certa", "ok") : pill("errada", "bad"), h[3] ? mmss(h[3]) : "—", esc({ pratica: "prática", tema: "tema", simulado: "simulado", revisao: "revisão", erro: "caderno de erros", v1: "versão anterior" }[h[4]] || h[4] || "")]);
+  const hist = (p?.h || []).slice().reverse().map(h => [new Date(h[0]).toLocaleString("pt-BR"), h[1] == null ? "—" : esc(q.o[h[1]] || "—"), h[2] ? pill("certa", "ok") : pill("errada", "bad"), h[3] ? mmss(h[3]) : "—", esc({ pratica: "prática", tema: "tema", simulado: "simulado", revisao: "revisão", erro: "caderno de erros", v1: "versão anterior", inicio: "questão relâmpago", jogo: "jogo" }[h[4]] || h[4] || "")]);
   return {
     secao: "questoes", crumbs: [["Questões", "#/questoes"]], titulo: "Questão",
-    sub: `${esc(TRILHAS[q.t]?.nome || q.t)}${q.ae ? " · " + esc(nomeAreaEnem(q.ae)) + (q.disc ? " · " + esc(q.disc) : "") : ""} · ${q.tema ? linkTema(q.tema) : esc(q.a)}${q.subtema ? " · " + esc(nomeSubtema(q.tema, q.subtema) || "") : ""} · fonte: ${esc(q.fonte || q.src)}${q.ano ? " · " + q.ano : ""}${q.prova ? " · " + esc(q.prova) : ""}`,
+    sub: `${esc(TRILHAS[q.t]?.nome || q.t)}${q.ae ? " · " + esc(nomeAreaEnem(q.ae)) + (q.disc ? " · " + esc(q.disc) : "") : ""} · ${q.tema ? linkTema(q.tema) : esc(q.a)}${q.subtema ? " · " + esc(nomeSubtema(q.tema, q.subtema) || "") : ""} · fonte: ${esc(q.fonte || q.src)}${q.ano ? " · " + esc(q.ano) : ""}${q.prova ? " · " + esc(q.prova) : ""}`,
     html: `${htmlPlayer()}
       <h2 class="sec">Histórico de tentativas</h2>${tabela([{ t: "Quando" }, { t: "Sua resposta" }, { t: "Resultado" }, { t: "Tempo", num: 1 }, { t: "Origem" }], hist, { vaziaMsg: "Nenhuma tentativa ainda." })}
       ${E ? `<h2 class="sec">No caderno de erros</h2><p>${pill(E.status === "aberto" ? "aberto" : "resolvido", E.status === "aberto" ? "bad" : "ok")} Errou ${E.n}× · motivo: ${esc(E.motivo || E.motivoSugerido + " (sugerido)")} · próxima revisão ${dataBR(E.srs?.prox)}</p><button class="btn sec mini" data-act="erro-detalhe" data-q="${esc(id)}">Editar registro do erro</button>` : ""}`,
@@ -124,14 +126,16 @@ rota("/questoes/q/:id", ({ id }) => {
 
 /* ---------- Caderno de erros ---------- */
 const FE = { status: "aberto", tema: "", motivo: "", agrupar: true };
+let EPAG = 30;   // erros mostrados em "Todas as questões"; "Mostrar mais" amplia
+ACOES["erros-mais"] = () => { EPAG += 30; atualizar(); };
 function tabelaErros(errs) {
   const l = errs.filter(e => qPorId(e.qid)).sort((a, b) => (a.srs?.prox || "").localeCompare(b.srs?.prox || ""));
   if (!l.length) return vazio("Nenhum erro com esses filtros.");
-  return `<div class="lista-q">${l.map(e => { const q = qPorId(e.qid);
-    return `<a href="#" data-act="erro-detalhe" data-q="${esc(q.id)}"><span class="txt">${esc(q.q)}</span><span class="meta">${e.status === "aberto" ? (vencido(e.srs) ? pill("revisar hoje", "bad") : `<span>revisão ${quando(e.srs?.prox)}</span>`) : pill("resolvido", "ok")}<span>${esc(e.tema ? nomeTema(e.tema) : q.a)}</span><span>${esc(e.motivo || e.motivoSugerido || "")}</span></span></a>`; }).join("")}</div>`;
+  return `<div class="lista-q">${l.slice(0, EPAG).map(e => { const q = qPorId(e.qid);
+    return `<a href="#" data-act="erro-detalhe" data-q="${esc(q.id)}"><span class="txt">${esc(q.q)}</span><span class="meta">${e.status === "aberto" ? (vencido(e.srs) ? pill("revisar hoje", "bad") : `<span>revisão ${quando(e.srs?.prox)}</span>`) : pill("resolvido", "ok")}<span>${esc(e.tema ? nomeTema(e.tema) : q.a)}</span><span>${esc(e.motivo || e.motivoSugerido || "")}</span></span></a>`; }).join("")}</div>${l.length > EPAG ? `<div class="acoes"><button class="btn sec" data-act="erros-mais">Mostrar mais (${l.length - EPAG} restantes)</button></div>` : ""}`;
 }
 rota("/erros", () => {
-  const todos = Object.values(store.doc("erros").itens).filter(e => qPorId(e.qid));
+  const todos = Object.values(store.doc("erros").itens).filter(erroDoObjetivo);
   const lista = todos.filter(e => (!FE.status || e.status === FE.status) && (!FE.tema || e.tema === FE.tema) && (!FE.motivo || (e.motivo || "") === FE.motivo));
   const venc = todos.filter(e => e.status === "aberto" && vencido(e.srs));
   return {
@@ -145,7 +149,7 @@ rota("/erros", () => {
       ${todos.length ? `${chips([["1", "Por tema"], ["0", "Todas as questões"]], FE.agrupar ? "1" : "0", "fe-vista")}` : ""}
       ${todos.length && FE.agrupar ? `<div class="tarefas">${Object.entries(porChave(lista, e => e.tema || "_sem")).sort((a, b) => b[1].length - a[1].length).map(([tm, es]) => {
         const ab = es.filter(e => e.status === "aberto").length, ve = es.filter(e => e.status === "aberto" && vencido(e.srs)).length;
-        return `<div class="tarefa"><div class="o">${tm === "_sem" ? "Sem tema" : linkTema(tm)}<small>${ab ? `${ab} aberto(s)` : "resolvidos"}${ve ? ` · <b style="color:var(--bad)">${ve} para hoje</b>` : ""}</small></div>${ab ? `<a class="btn mini ${ve ? "" : "sec"}" href="#/revisoes/erros/${encodeURIComponent(tm)}">Refazer</a>` : ""}</div>`; }).join("")}</div>`
+        return `<div class="tarefa"><div class="o">${tm === "_sem" ? "Sem tema" : linkTema(tm)}<small>${ab ? plural(ab, "aberto", "abertos") : "resolvidos"}${ve ? ` · <b style="color:var(--bad)">${ve} para hoje</b>` : ""}</small></div>${ab ? `<a class="btn mini ${ve ? "" : "sec"}" href="#/revisoes/erros/${encodeURIComponent(tm)}">Refazer</a>` : ""}</div>`; }).join("")}</div>`
       : todos.length ? tabelaErros(lista) : vazio("Nenhum erro registrado ainda. Quando você errar uma questão, ela aparece aqui com revisão programada.", `<a class="btn" href="#/questoes">Praticar questões</a>`)}`,
   };
 });
@@ -166,5 +170,6 @@ ACOES["erro-detalhe"] = el => {
 FORMS["erro-salvar"] = f => { const E = store.doc("erros"), e = E.itens[f.dataset.q]; e.motivo = $("#er-mot").value || null; e.coment = $("#er-com").value; store.mudou("erros"); fecharFolha(); toast("Erro atualizado"); atualizar(); };
 ACOES["erro-card"] = el => { const E = store.doc("erros"), q = qPorId(el.dataset.q); const e = E.itens[q.id]; const com = e.coment ? `\n\nMinha nota: ${e.coment}` : "";
   e.card = criarCard({ frente: q.q, verso: `${q.o[q.c]}\n\n${q.e || ""}${com}`.trim(), tema: q.tema, subtema: q.subtema, origem: "erro", ref: q.id, dif: q.dif || 2 }); store.mudou("erros"); fecharFolha(); toast("Flashcard criado a partir do erro"); atualizar(); };
-ACOES["erro-refazer"] = el => { fecharFolha(); iniciarPlayer("banco", [el.dataset.q], "erro"); PL.rotulo = "Refazendo questão do caderno de erros"; ir("#/questoes"); };
+/* Chave própria da questão: a sessão de prática em andamento ("banco") fica guardada, não é descartada. */
+ACOES["erro-refazer"] = el => { const id = el.dataset.q; fecharFolha(); iniciarPlayer("q:" + id, [id], "erro"); PL.rotulo = "Refazendo questão do caderno de erros"; ir("#/questoes/q/" + encodeURIComponent(id)); };
 ACOES["erro-status"] = el => { const E = store.doc("erros"), e = E.itens[el.dataset.q]; e.status = e.status === "aberto" ? "resolvido" : "aberto"; if (e.status === "aberto") e.srs = agendar(e.srs, 0); store.mudou("erros"); fecharFolha(); atualizar(); };

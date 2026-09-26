@@ -3,10 +3,9 @@
    depois conta, assistente e arquivos; contagem do tempo de estudo.
    ============================================================ */
 (function iniciar() {
-  // Lista global de temas para os campos com autocompletar
-  const dl = document.createElement("datalist"); dl.id = "dl-temas";
-  dl.innerHTML = ordenarPt(Object.values(TEMAS), t => t.nome).map(t => `<option value="${esc(t.nome)}">${esc(t.dominio === "enem" ? "ENEM · " + (ENEM_DISC[t.disciplinaId]?.nome || "") : (t.especialidades || []).map(e => ESPECIALIDADES[e]?.nome).filter(Boolean).join(", "))}</option>`).join("");
-  document.body.appendChild(dl);
+  // Lista global de temas para os campos com autocompletar: só os temas do objetivo do perfil
+  // (montada aqui e remontada pelo menu sempre que o objetivo muda — ver montarListaTemas em 06-ui).
+  montarListaTemas();
 
   store.aoRemoto(() => { invalidarQuestoes(); render(); });
   const conta = store.conectar().then(() => { invalidarQuestoes(); render(); });

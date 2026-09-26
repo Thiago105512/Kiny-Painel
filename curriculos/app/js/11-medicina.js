@@ -6,6 +6,8 @@
    ============================================================ */
 const CRUMB_MED = ["Medicina", "#/medicina"];
 const nomeInst = id => instPorId(id)?.sigla || id;
+/** Data de um carimbo ISO (UTC) no fuso do aparelho: em Manaus, depois das 20h, não vira o dia seguinte. */
+const dataLocal = iso => { const d = new Date(iso); return isNaN(d) ? dataBR(iso) : d.toLocaleDateString("pt-BR"); };
 
 /* ---------- Hub ---------- */
 rota("/medicina", () => {
@@ -15,7 +17,7 @@ rota("/medicina", () => {
     secao: "medicina", titulo: "Medicina",
     html: `<div class="faixa"><p>${P.faculdade ? `<b>${esc(nomeInst(P.faculdade))}</b>${P.periodo ? ` · ${P.periodo}º período` : ""}<br><span class="small muted">${g ? esc(g.versao || "matriz") : "matriz ainda não importada"}</span>` : "Escolha sua faculdade e período"}</p>
         <span class="linha">${g ? `<a class="btn mini" href="#/medicina/grade/${esc(g.id)}${P.periodo ? "/p/" + P.periodo : ""}">Meu período</a>` : ""}<button class="btn mini sec" data-act="perfil-fac">${P.faculdade ? "Alterar" : "Escolher"}</button></span></div>
-      <section><h2 class="sec">Estudar por área</h2><div class="mosaico">${AREAS_MED.map(a => `<a href="#/medicina/area/${esc(a.id)}" style="--h:${COR_AREA[a.id] || "#2340B8"}">${iluArea(a.id)}<span><b>${esc(a.nome)}</b><small>${(a.especialidades || []).length} especialidades</small></span></a>`).join("")}</div></section>
+      <section><h2 class="sec">Estudar por área</h2><div class="mosaico">${AREAS_MED.map(a => `<a href="#/medicina/area/${esc(a.id)}" style="--h:${COR_AREA[a.id] || "#2340B8"}">${iluArea(a.id)}<span><b>${esc(a.nome)}</b><small>${plural((a.especialidades || []).length, "especialidade", "especialidades")}</small></span></a>`).join("")}</div></section>
       <section><h2 class="sec">Mais</h2><div class="links-lista">
         <a href="#/medicina/especialidades"><span>Por especialidade</span><small>${Object.keys(ESPECIALIDADES).length} especialidades · ${Object.values(TEMAS).filter(t => t.dominio === "medicina").length} temas</small></a>
         <a href="#/medicina/comparar"><span>Comparar grades</span><small>UFAM × UEA × outras</small></a>
@@ -33,11 +35,11 @@ ACOES["perfil-fac"] = () => {
     <label class="campo"><span class="lab">Objetivo de estudo</span><select id="pf-obj">${opcoes(Object.entries(OBJETIVOS), P.objetivo, "Tudo (sem foco)")}</select></label>
     <label class="check"><input type="checkbox" id="pf-humor" ${P.humor === false ? "" : "checked"}><span>Mostrar piadas ("Pausa para rir")</span></label>
     <label class="campo"><span class="lab">Instituição</span><select id="pf-inst" data-chg="pf-inst">${opcoes(insts.map(i => [i.id, i.sigla]), P.faculdade, "Selecione")}</select></label>
-    <label class="campo"><span class="lab">Matriz (versão)</span><select id="pf-grade">${opcoes(gradesP.map(g => [g.id, g.versao || g.id]), P.gradeId, gradesP.length ? "Selecione" : "Nenhuma cadastrada")}</select></label>
+    <label class="campo"><span class="lab">Matriz (versão)</span><select id="pf-grade">${opcoes(gradesP.map(g => [g.id, g.versao || g.id]), P.gradeId, !P.faculdade ? "Escolha a instituição primeiro" : gradesP.length ? "Selecione" : "Nenhuma cadastrada")}</select></label>
     <label class="campo"><span class="lab">Período atual</span><input type="number" id="pf-per" min="1" max="12" value="${P.periodo || ""}"></label></div>
-    <button class="btn">Salvar</button></form>`, { titulo: "Meu perfil" });
+    <div class="linha"><button class="btn">Salvar</button><button class="btn sec" type="button" data-act="letra">Letra e cores (claro/escuro)</button></div></form>`, { titulo: "Meu perfil" });
 };
-MUDANCAS["pf-inst"] = el => { const gs = gradesDe(el.value); $("#pf-grade").innerHTML = opcoes(gs.map(g => [g.id, g.versao || g.id]), gs[0]?.id, gs.length ? "Selecione" : "Nenhuma cadastrada"); };
+MUDANCAS["pf-inst"] = el => { const gs = gradesDe(el.value); $("#pf-grade").innerHTML = opcoes(gs.map(g => [g.id, g.versao || g.id]), gs[0]?.id, !el.value ? "Escolha a instituição primeiro" : gs.length ? "Selecione" : "Nenhuma cadastrada"); };
 FORMS["perfil-fac"] = () => {
   const P = store.doc("perfil"); P.nome = $("#pf-nome").value.trim() || null; P.apresentacao = $("#pf-apres").value.trim() || null; P.objetivo = $("#pf-obj").value || null; P.humor = $("#pf-humor").checked;
   P.faculdade = $("#pf-inst").value || null; P.gradeId = $("#pf-grade").value || null;
@@ -101,7 +103,7 @@ rota("/medicina/grade/:g", ({ g: gid }) => {
     return [`<a href="#/medicina/grade/${esc(g.id)}/p/${p.numero}">${esc(p.nome || p.numero + "º período")}</a>`, it.length, chs.length ? chs.reduce((s, x) => s + x.ch, 0) + " h" + (chs.length < it.length ? "*" : "") : "—", unicos(it.flatMap(temasDoItem)).length]; });
   return {
     secao: "medicina", crumbs: crumbsGrade(g).slice(0, 2), titulo: `${nomeInst(g.instituicao)} — ${CURSOS[g.curso] || g.curso} (${g.versao || "sem versão"})`,
-    sub: `${pill(st.nome, st.cls)} ${g.fonte?.ref ? `Fonte: ${esc(g.fonte.titulo || g.fonte.ref)}` : "Fonte não informada"}${g.atualizado ? ` · atualizada em ${dataBR(g.atualizado)}` : ""}`,
+    sub: `${pill(st.nome, st.cls)} ${g.fonte?.ref ? `Fonte: ${esc(g.fonte.titulo || g.fonte.ref)}` : "Fonte não informada"}${g.atualizado ? ` · atualizada em ${esc(dataLocal(g.atualizado))}` : ""}`,
     acoes: `${g.status !== "validado" && itensGrade(g).length ? `<a class="btn" href="#/medicina/grade/${esc(g.id)}/conferir">Conferir com o documento (${itensGrade(g).filter(i => i.conferido).length}/${itensGrade(g).length})</a>` : ""}<a class="btn sec" href="#/medicina/importar/${esc(g.instituicao)}">Reimportar</a>`,
     html: `${itensGrade(g).length ? "" : `<div class="aviso">${PENDENTE}. Importe o documento oficial ou cadastre as disciplinas manualmente em cada período.</div>`}
       ${g.observacoes ? `<p class="aviso info">${esc(g.observacoes)}</p>` : ""}
@@ -112,7 +114,7 @@ rota("/medicina/grade/:g", ({ g: gid }) => {
     ctx: { grade: g.id },
   };
 });
-ACOES["grade-validar"] = el => { const g = gradePorId(el.dataset.g); if (itensGrade(g).some(i => !i.conferido)) { toast("Confira todos os itens antes de validar"); return; }
+ACOES["grade-validar"] = el => { const g = gradeEditavel(el.dataset.g); if (itensGrade(g).some(i => !i.conferido)) { toast("Confira todos os itens antes de validar"); return; }
   g.status = "validado"; g.validadoEm = new Date().toISOString(); salvarGrade(g); toast("Matriz validada"); ir("#/medicina/grade/" + g.id); };
 rota("/medicina/grade/:g/conferir", ({ g: gid }) => {
   const g = gradePorId(gid); if (!g) return paginaNaoEncontrada();
@@ -132,7 +134,7 @@ rota("/medicina/grade/:g/conferir", ({ g: gid }) => {
 MUDANCAS["conf-item"] = el => editarItem(el.dataset.g, el.dataset.i, it => { const c = el.dataset.c;
   if (c === "conferido") it.conferido = el.checked; else if (c === "ch") it.ch = el.value === "" ? null : +el.value; else if (c === "nome") it.nome = el.value.trim() || it.nome; else it[c] = el.value;
   if (c !== "conferido") it.conferido = false; });
-ACOES["conf-periodo"] = el => { const g = gradePorId(el.dataset.g), p = g.periodos.find(x => String(x.numero) === el.dataset.p); (p.itens || []).forEach(x => { x.conferido = true; }); salvarGrade(g); atualizar(); };
+ACOES["conf-periodo"] = el => { const g = gradeEditavel(el.dataset.g), p = g.periodos.find(x => String(x.numero) === el.dataset.p); (p.itens || []).forEach(x => { x.conferido = true; }); salvarGrade(g); atualizar(); };
 ACOES["grade-excluir"] = el => abrirFolha(`<h2 class="sec">Excluir matriz?</h2><p>Os temas, questões e o seu desempenho não são apagados — só esta matriz.</p><button class="btn perigo" data-act="grade-excluir-ok" data-g="${esc(el.dataset.g)}">Excluir</button>`);
 ACOES["grade-excluir-ok"] = el => { const G = store.doc("grades"); const inst = G.itens[el.dataset.g]?.instituicao; delete G.itens[el.dataset.g]; store.mudou("grades"); fecharFolha(); ir("#/medicina/inst/" + (inst || "")); };
 
@@ -154,7 +156,7 @@ rota("/medicina/grade/:g/p/:n", ({ g: gid, n }) => {
   };
 });
 FORMS["item-novo"] = f => {
-  const g = gradePorId(f.dataset.g), p = g.periodos.find(x => String(x.numero) === f.dataset.p), nome = $("#in-nome").value.trim(); if (!nome) return;
+  const g = gradeEditavel(f.dataset.g), p = g.periodos.find(x => String(x.numero) === f.dataset.p), nome = $("#in-nome").value.trim(); if (!nome) return;
   const ch = $("#in-ch").value === "" ? null : +$("#in-ch").value;
   p.itens = p.itens || []; p.itens.push({ id: slug(nome) + "-" + Math.random().toString(36).slice(2, 5), tipo: $("#in-tipo").value, codigo: $("#in-cod").value.trim() || null, nome, ch, temas: [], unidades: [] });
   salvarGrade(g); toast("Adicionado"); atualizar();
@@ -175,7 +177,7 @@ rota("/medicina/grade/:g/item/:i", ({ g: gid, i: iid }) => {
   return {
     secao: "medicina", crumbs: [...crumbsGrade(g), [p.nome || p.numero + "º período", `#/medicina/grade/${g.id}/p/${p.numero}`]], titulo: it.nome,
     sub: `${pill(tipoItem(it))} ${it.codigo ? esc(it.codigo) + " · " : ""}${typeof it.ch === "number" ? it.ch + " h" : "Carga horária: " + PENDENTE}${detalhesItem(g, it) ? `<br><span class="small">${esc(detalhesItem(g, it))}</span>` : ""}`,
-    acoes: qs.length ? `<button class="btn" data-act="praticar-ids" data-ids="${qs.map(q => q.id).join(",")}" data-ctx="Disciplina ${esc(it.nome)}">Praticar ${qs.length} questões</button>` : "",
+    acoes: qs.length ? `<button class="btn" data-act="praticar-ids" data-ids="${esc(qs.map(q => q.id).join(","))}" data-ctx="Disciplina ${esc(it.nome)}">Praticar ${qs.length} questões</button>` : "",
     html: `<h2 class="sec">Temas ${it.tipo === "modulo" ? "deste módulo" : it.tipo === "estagio" ? "deste estágio" : "desta disciplina"}</h2>
       ${temas.length ? tabela([{ t: "Tema" }, { t: "Questões", num: 1 }, { t: "Acerto", num: 1 }, { t: "" }], temas.map(t => { const d = desempenhoTema(t); return [linkTema(t), d.total, d.n ? pct(d.ac, d.n) + "%" : "—", `<button class="btn mini sec" data-act="item-tema-del" data-g="${esc(g.id)}" data-i="${esc(it.id)}" data-t="${esc(t)}" aria-label="Desvincular">Desvincular</button>`]; })) : vazio("Nenhum tema vinculado. Vincule temas do catálogo para ligar esta disciplina a questões, flashcards, casos e revisões.")}
       <form class="linha" data-form="item-tema" data-g="${esc(g.id)}" data-i="${esc(it.id)}" style="margin-top:10px">${campoTema("it-tema", null, "Vincular tema")}<button class="btn sec" style="align-self:end">Vincular</button></form>
@@ -194,13 +196,13 @@ rota("/medicina/grade/:g/item/:i", ({ g: gid, i: iid }) => {
     ctx: { grade: g.id, periodo: p.numero, disciplina: it.nome },
   };
 });
-function editarItem(gid, iid, f) { const g = gradePorId(gid), { it } = acharItem(g, iid); if (!it) return; f(it, g); salvarGrade(g); atualizar(); }
+function editarItem(gid, iid, f) { const g = gradeEditavel(gid); if (!g) return; const { it } = acharItem(g, iid); if (!it) return; f(it, g); salvarGrade(g); atualizar(); }
 FORMS["item-tema"] = f => { const t = lerTema("it-tema"); if (!t) { toast("Escolha um tema da lista"); return; } editarItem(f.dataset.g, f.dataset.i, it => { it.temas = unicos([...(it.temas || []), t]); }); };
 ACOES["item-tema-add"] = el => editarItem(el.dataset.g, el.dataset.i, it => { it.temas = unicos([...(it.temas || []), el.dataset.t]); });
 ACOES["item-tema-del"] = el => editarItem(el.dataset.g, el.dataset.i, it => { it.temas = (it.temas || []).filter(t => t !== el.dataset.t); (it.unidades || []).forEach(u => { u.temas = (u.temas || []).filter(t => t !== el.dataset.t); }); });
 FORMS["item-unidade"] = f => { const nome = $("#un-nome").value.trim(); if (nome) editarItem(f.dataset.g, f.dataset.i, it => { (it.unidades = it.unidades || []).push({ id: slug(nome), nome, temas: [], objetivos: [] }); }); };
 FORMS["item-editar"] = f => editarItem(f.dataset.g, f.dataset.i, it => { it.nome = $("#ie-nome").value.trim() || it.nome; it.codigo = $("#ie-cod").value.trim() || null; it.ch = $("#ie-ch").value === "" ? null : +$("#ie-ch").value; });
-ACOES["item-excluir"] = el => { const g = gradePorId(el.dataset.g), { p } = acharItem(g, el.dataset.i); p.itens = p.itens.filter(x => x.id !== el.dataset.i); salvarGrade(g); ir(`#/medicina/grade/${g.id}/p/${p.numero}`); };
+ACOES["item-excluir"] = el => { const g = gradeEditavel(el.dataset.g), { p } = acharItem(g, el.dataset.i); p.itens = p.itens.filter(x => x.id !== el.dataset.i); salvarGrade(g); ir(`#/medicina/grade/${g.id}/p/${p.numero}`); };
 ACOES["item-ia-temas"] = async el => {
   const g = gradePorId(el.dataset.g), { it } = acharItem(g, el.dataset.i), out = $("#item-ia");
   out.innerHTML = `<p class="muted">Consultando…</p>`;
@@ -275,54 +277,77 @@ function interpretarTexto(txt) {
 rota("/medicina/importar", () => paginaImportar(""));
 rota("/medicina/importar/:inst", ({ inst }) => paginaImportar(inst));
 function paginaImportar(inst) {
+  // Sem instituição no endereço, mas com uma escolhida: o endereço passa a dizer qual é (o conteúdo na tela é dela).
+  if (!inst && IMP.inst) { inst = IMP.inst; history.replaceState(null, "", "#/medicina/importar/" + encodeURIComponent(inst)); }
   // A instituição do endereço sempre manda: evita gravar a matriz de uma faculdade em outra.
   if (inst && IMP.inst !== inst) Object.assign(IMP, { inst, versao: "", fonteRef: "", texto: "", linhas: [], msg: "" });
   const insts = instituicoes();
   const prev = IMP.linhas.length ? `<h2 class="sec">3. Revise antes de salvar <span class="small muted">${IMP.linhas.length} itens · ${unicos(IMP.linhas.map(l => l.periodo)).length} períodos</span></h2>
     <p class="small muted">Corrija nomes, períodos e cargas horárias conforme o documento. Deixe CH em branco se não constar.</p>
     <div class="tabela-wrap"><table><thead><tr><th>Per.</th><th>Tipo</th><th>Código</th><th>Nome</th><th class="num">CH</th><th></th></tr></thead><tbody>${IMP.linhas.map((l, k) => `<tr>
-      <td><input type="number" min="0" max="14" value="${l.periodo}" data-chg="imp-cel" data-k="${k}" data-c="periodo" style="width:calc(64px * var(--k))" aria-label="Período"></td>
-      <td><select data-chg="imp-cel" data-k="${k}" data-c="tipo" aria-label="Tipo">${opcoes([["disciplina", "Disciplina"], ["modulo", "Módulo"]], l.tipo)}</select></td>
-      <td><input type="text" value="${esc(l.codigo || "")}" data-chg="imp-cel" data-k="${k}" data-c="codigo" style="width:calc(90px * var(--k))" aria-label="Código"></td>
-      <td><input type="text" value="${esc(l.nome)}" data-chg="imp-cel" data-k="${k}" data-c="nome" style="min-width:220px;width:100%" aria-label="Nome"></td>
-      <td class="num"><input type="number" min="0" value="${l.ch ?? ""}" data-chg="imp-cel" data-k="${k}" data-c="ch" style="width:calc(80px * var(--k))" aria-label="Carga horária"></td>
+      <td><input type="number" min="0" max="14" value="${l.periodo}" data-chg="imp-cel" data-inst="${esc(IMP.inst)}" data-k="${k}" data-c="periodo" style="width:calc(64px * var(--k))" aria-label="Período"></td>
+      <td><select data-chg="imp-cel" data-inst="${esc(IMP.inst)}" data-k="${k}" data-c="tipo" aria-label="Tipo">${opcoes([["disciplina", "Disciplina"], ["modulo", "Módulo"]], l.tipo)}</select></td>
+      <td><input type="text" value="${esc(l.codigo || "")}" data-chg="imp-cel" data-inst="${esc(IMP.inst)}" data-k="${k}" data-c="codigo" style="width:calc(90px * var(--k))" aria-label="Código"></td>
+      <td><input type="text" value="${esc(l.nome)}" data-chg="imp-cel" data-inst="${esc(IMP.inst)}" data-k="${k}" data-c="nome" style="min-width:220px;width:100%" aria-label="Nome"></td>
+      <td class="num"><input type="number" min="0" value="${l.ch ?? ""}" data-chg="imp-cel" data-inst="${esc(IMP.inst)}" data-k="${k}" data-c="ch" style="width:calc(80px * var(--k))" aria-label="Carga horária"></td>
       <td><button class="btn mini sec" data-act="imp-del" data-k="${k}" aria-label="Remover linha">×</button></td></tr>`).join("")}</tbody></table></div>
     <div class="acoes"><button class="btn sec" data-act="imp-add">+ Linha</button><button class="btn azul dir" data-act="imp-salvar">Salvar matriz</button></div>` : "";
   return {
     secao: "medicina", crumbs: [CRUMB_MED], titulo: "Importar matriz curricular",
     sub: "PDF, planilha (XLSX/CSV), DOCX, texto colado ou cadastro manual. Nada é salvo sem sua revisão.",
     html: `<section class="caixa"><h2 class="sec">1. Identificação</h2><div class="campos">
-      <label class="campo"><span class="lab">Instituição</span><select id="imp-inst" data-chg="imp-meta" data-c="inst">${opcoes(insts.map(i => [i.id, i.sigla]), IMP.inst, "Selecione")}</select></label>
-      <label class="campo"><span class="lab">Curso</span><select data-chg="imp-meta" data-c="curso">${opcoes(Object.entries(CURSOS), IMP.curso)}</select></label>
-      <label class="campo"><span class="lab">Versão/ano da matriz</span><input type="text" value="${esc(IMP.versao)}" data-chg="imp-meta" data-c="versao" placeholder="ex.: PPC 2025/2"></label>
+      <label class="campo"><span class="lab">Instituição</span><select id="imp-inst" data-chg="imp-meta" data-inst="${esc(IMP.inst)}" data-c="inst">${opcoes(insts.map(i => [i.id, i.sigla]), IMP.inst, "Selecione")}</select></label>
+      <label class="campo"><span class="lab">Curso</span><select data-chg="imp-meta" data-inst="${esc(IMP.inst)}" data-c="curso">${opcoes(Object.entries(CURSOS), IMP.curso)}</select></label>
+      <label class="campo"><span class="lab">Versão/ano da matriz</span><input type="text" value="${esc(IMP.versao)}" data-chg="imp-meta" data-inst="${esc(IMP.inst)}" data-c="versao" placeholder="ex.: PPC 2025/2"></label>
       ${IMP.inst && IMP.versao && gradePorId(`${IMP.inst}-${IMP.curso}-${slug(IMP.versao)}`) ? `<p class="aviso" style="grid-column:1/-1;margin:0">Já existe a matriz ${esc(nomeInst(IMP.inst))} — ${esc(IMP.versao)}. Salvar vai atualizá-la (vínculos de temas das disciplinas com o mesmo nome são mantidos).</p>` : ""}
-      <label class="campo"><span class="lab">Tipo de fonte</span><select data-chg="imp-meta" data-c="fonteTipo">${opcoes([["pdf", "PDF"], ["planilha", "Planilha"], ["documento", "Documento"], ["url", "URL"], ["texto", "Texto"], ["manual", "Manual"]], IMP.fonteTipo)}</select></label>
-      <label class="campo" style="grid-column:1/-1"><span class="lab">Referência da fonte (título do documento ou URL oficial)</span><input type="text" value="${esc(IMP.fonteRef)}" data-chg="imp-meta" data-c="fonteRef"></label></div>
+      <label class="campo"><span class="lab">Tipo de fonte</span><select data-chg="imp-meta" data-inst="${esc(IMP.inst)}" data-c="fonteTipo">${opcoes([["pdf", "PDF"], ["planilha", "Planilha"], ["documento", "Documento"], ["url", "URL"], ["texto", "Texto"], ["manual", "Manual"]], IMP.fonteTipo)}</select></label>
+      <label class="campo" style="grid-column:1/-1"><span class="lab">Referência da fonte (título do documento ou URL oficial)</span><input type="text" value="${esc(IMP.fonteRef)}" data-chg="imp-meta" data-inst="${esc(IMP.inst)}" data-c="fonteRef"></label></div>
       ${IMP.fonteTipo === "url" ? `<p class="aviso info">Por segurança o app não baixa páginas de outros sites. Abra a URL, baixe o PDF/planilha e envie abaixo — a URL fica registrada como fonte.</p>` : ""}</section>
     <section class="caixa"><h2 class="sec">2. Conteúdo</h2>
       <div class="linha"><label class="btn sec">Escolher arquivo<input type="file" id="imp-arq" accept=".pdf,.xlsx,.xls,.ods,.csv,.txt,.docx" data-chg="imp-arquivo" hidden></label><span class="small muted">PDF, XLSX, CSV, DOCX ou TXT</span></div>
-      <label class="campo" style="margin-top:10px"><span class="lab">Texto extraído / colado</span><textarea id="imp-txt" rows="8" data-chg="imp-texto" placeholder="Cole aqui o texto da matriz. Formato aceito, por exemplo:&#10;1º período&#10;ANA101 Anatomia Humana I 120h&#10;— ou CSV: período;tipo;nome;CH">${esc(IMP.texto)}</textarea></label>
+      <label class="campo" style="margin-top:10px"><span class="lab">Texto extraído / colado</span><textarea id="imp-txt" rows="8" data-chg="imp-texto" data-inst="${esc(IMP.inst)}" placeholder="Cole aqui o texto da matriz. Formato aceito, por exemplo:&#10;1º período&#10;ANA101 Anatomia Humana I 120h&#10;— ou CSV: período;tipo;nome;CH">${esc(IMP.texto)}</textarea></label>
       <div class="acoes"><button class="btn" data-act="imp-interpretar" ${IMP.ocupado ? "disabled" : ""}>Interpretar por regras</button>${IA.disponivel() ? `<button class="btn sec" data-act="imp-ia" ${IMP.ocupado ? "disabled" : ""}>Estruturar com IA</button>` : ""}<button class="btn sec" data-act="imp-add">Cadastrar manualmente</button></div>
       ${IMP.msg ? `<p class="small" role="status">${esc(IMP.msg)}</p>` : ""}</section>
     ${prev}`,
   };
 }
-MUDANCAS["imp-meta"] = el => { IMP[el.dataset.c] = el.value; if (el.dataset.c === "inst" && el.value) { ir("#/medicina/importar/" + el.value); return; } if (["fonteTipo", "versao", "curso"].includes(el.dataset.c)) atualizar(); };
-MUDANCAS["imp-texto"] = el => { IMP.texto = el.value; };
-MUDANCAS["imp-cel"] = el => { const l = IMP.linhas[+el.dataset.k], c = el.dataset.c; l[c] = c === "periodo" ? (+el.value || 0) : c === "ch" ? (el.value === "" ? null : +el.value) : el.value; };
+/* Um campo da tela anterior pode disparar "change" ao sair (troca de endereço com o campo em foco):
+   só vale se ele for da faculdade que está no importador agora. */
+const impDaFaculdade = el => (el.dataset.inst || "") === IMP.inst;
+MUDANCAS["imp-meta"] = el => {
+  const c = el.dataset.c;
+  if (c !== "inst" && !impDaFaculdade(el)) return;
+  if (c === "inst") {
+    /* Trocar de faculdade descarta TUDO o que foi lido/colado para a anterior (UFAM e UEA nunca se misturam). */
+    if (el.value !== IMP.inst) {
+      const tinha = IMP.linhas.length || IMP.texto || IMP.versao || IMP.fonteRef;
+      Object.assign(IMP, { inst: el.value, versao: "", fonteRef: "", texto: "", linhas: [], msg: tinha ? "Instituição trocada: o conteúdo da anterior foi descartado." : "" });
+      if (el.value) ir("#/medicina/importar/" + encodeURIComponent(el.value)); else ir("#/medicina/importar");
+    }
+    return;
+  }
+  IMP[c] = el.value; if (["fonteTipo", "versao", "curso"].includes(c)) atualizar();
+};
+MUDANCAS["imp-texto"] = el => { if (impDaFaculdade(el)) IMP.texto = el.value; };
+MUDANCAS["imp-cel"] = el => { const l = IMP.linhas[+el.dataset.k], c = el.dataset.c; if (!l || !impDaFaculdade(el)) return; l[c] = c === "periodo" ? (+el.value || 0) : c === "ch" ? (el.value === "" ? null : +el.value) : el.value; };
 MUDANCAS["imp-arquivo"] = async el => {
   const f = el.files[0]; if (!f) return;
+  const inst = IMP.inst;   // se a faculdade mudar durante a leitura, o texto lido é descartado
   IMP.ocupado = true; IMP.msg = `Lendo ${f.name}…`; if (!IMP.fonteRef) IMP.fonteRef = f.name; atualizar();
-  try { IMP.texto = (await textoDoArquivo(f)).slice(0, 400000); IMP.msg = `Texto extraído (${IMP.texto.split("\n").length} linhas). Agora interprete por regras ou com IA.`; }
-  catch (e) { IMP.msg = "Não foi possível ler o arquivo: " + (e.message || "formato não suportado") + ". Tente colar o texto."; }
-  IMP.ocupado = false; atualizar();
+  let txt = null, msg;
+  try { txt = (await textoDoArquivo(f)).slice(0, 400000); msg = `Texto extraído (${txt.split("\n").length} linhas). Agora interprete por regras ou com IA.`; }
+  catch (e) { msg = "Não foi possível ler o arquivo: " + (e.message || "formato não suportado") + ". Tente colar o texto."; }
+  IMP.ocupado = false; if (IMP.inst !== inst) return atualizar();
+  if (txt != null) IMP.texto = txt; IMP.msg = msg; atualizar();
 };
-ACOES["imp-interpretar"] = () => { IMP.texto = $("#imp-txt").value; IMP.linhas = interpretarTexto(IMP.texto); IMP.msg = IMP.linhas.length ? `${IMP.linhas.length} itens reconhecidos. Revise a tabela.` : "Nenhum item reconhecido. Verifique se há cabeçalhos de período (ex.: \"1º período\") ou use o formato CSV."; atualizar(); };
+ACOES["imp-interpretar"] = () => { if (!impDaFaculdade($("#imp-txt"))) return; IMP.texto = $("#imp-txt").value; IMP.linhas = interpretarTexto(IMP.texto); IMP.msg = IMP.linhas.length ? `${IMP.linhas.length} itens reconhecidos. Revise a tabela.` : "Nenhum item reconhecido. Verifique se há cabeçalhos de período (ex.: \"1º período\") ou use o formato CSV."; atualizar(); };
 ACOES["imp-ia"] = async () => {
-  IMP.texto = $("#imp-txt").value; if (!IMP.texto.trim()) { IMP.msg = "Envie um arquivo ou cole o texto primeiro."; return atualizar(); }
+  if (!impDaFaculdade($("#imp-txt"))) return; IMP.texto = $("#imp-txt").value; if (!IMP.texto.trim()) { IMP.msg = "Envie um arquivo ou cole o texto primeiro."; return atualizar(); }
   IMP.ocupado = true; IMP.msg = "Estruturando com IA…"; atualizar();
+  const inst = IMP.inst;
   try {
     const r = await IA.json(`Extraia a matriz curricular do texto abaixo. Use SOMENTE o que está escrito: não complete, não invente disciplinas nem cargas horárias (use null quando não constar). Optativas no período 0.\n\nTEXTO:\n${IMP.texto.slice(0, 60000)}`, `{"itens":[{"periodo":1,"tipo":"disciplina|modulo","codigo":null,"nome":"","ch":null}]}`);
+    if (IMP.inst !== inst) { IMP.ocupado = false; return atualizar(); }   // faculdade trocada no meio: descarta
     IMP.linhas = (r?.itens || []).filter(x => x?.nome).map(x => ({ periodo: +x.periodo || 0, tipo: x.tipo === "modulo" ? "modulo" : "disciplina", codigo: x.codigo || null, nome: String(x.nome), ch: typeof x.ch === "number" ? x.ch : null }));
     IMP.msg = `${IMP.linhas.length} itens estruturados pela IA. Confira cada linha com o documento.`;
   } catch (e) { IMP.msg = IA.mensagemErro(e); }
@@ -340,7 +365,8 @@ ACOES["imp-salvar"] = () => {
   const periodos = Object.keys(porP).map(Number).sort((a, b) => (a || 99) - (b || 99)).map(n => ({ numero: n, nome: n ? `${n}º período` : "Optativas/eletivas",
     itens: porP[n].map(l => { let iid = slug(l.codigo || l.nome); while (usados.has(iid)) iid += "-x"; usados.add(iid);
       const velho = antiga && itensGrade(antiga).find(x => norm(x.nome) === norm(l.nome)); // preserva vínculos de temas ao reimportar
-      return { id: velho?.id || iid, tipo: l.tipo, codigo: l.codigo || null, nome: l.nome.trim(), ch: l.ch ?? null, temas: velho?.temas || [], unidades: velho?.unidades || [] }; }) }));
+      const id = velho && !usados.has(velho.id) ? velho.id : iid; usados.add(id);   // nunca dois itens com o mesmo id
+      return { id, tipo: l.tipo, codigo: l.codigo || null, nome: l.nome.trim(), ch: l.ch ?? null, temas: velho?.temas || [], unidades: velho?.unidades || [] }; }) }));
   salvarGrade({ id, instituicao: IMP.inst, curso: IMP.curso, versao: IMP.versao.trim(), status: "importado", fonte: { tipo: IMP.fonteTipo, ref: IMP.fonteRef || null }, periodos });
   Object.assign(IMP, { inst: "", versao: "", fonteRef: "", texto: "", linhas: [], msg: "" });
   toast(antiga ? "Matriz existente atualizada (vínculos de temas preservados)" : "Matriz salva — confira e marque como validada"); ir("#/medicina/grade/" + id);
@@ -365,7 +391,7 @@ rota("/medicina/comparar", () => {
     const onde = (m, t) => unicos(m[t].map(o => o.periodo)).sort((a, b) => a - b).map(n => n + "º").join(", ");
     corpo = `<div class="kpis"><div class="kpi"><b>${(A.periodos || []).length} × ${(B.periodos || []).length}</b><span>períodos</span></div><div class="kpi"><b>${cA.itens} × ${cB.itens}</b><span>disciplinas/módulos</span></div><div class="kpi"><b>${cA.conhecidas ? cA.total : "?"} × ${cB.conhecidas ? cB.total : "?"}</b><span>CH conhecida (h)</span></div><div class="kpi"><b>${comuns.length}</b><span>temas em comum</span></div></div>
       <h2 class="sec">Por período</h2>${tabela([{ t: "Período" }, { t: nA }, { t: nB }], Array.from({ length: maxP + 1 }, (_, n) => n).filter(n => (A.periodos || []).some(p => p.numero === n) || (B.periodos || []).some(p => p.numero === n)).map(n => [n ? n + "º" : "Optativas", lista(A, n), lista(B, n)]), { resp: false })}
-      <h2 class="sec">Temas em comum e ordem de ensino</h2>${comuns.length ? tabela([{ t: "Tema" }, { t: `Período em ${nA}` }, { t: `Período em ${nB}` }, { t: "Diferença" }], comuns.map(t => { const pa = Math.min(...ta[t].map(o => o.periodo)), pb = Math.min(...tb[t].map(o => o.periodo)); return [linkTema(t), `${onde(ta, t)} <span class="small muted">${ta[t].map(o => esc(o.item.nome)).join(", ")}</span>`, `${onde(tb, t)} <span class="small muted">${tb[t].map(o => esc(o.item.nome)).join(", ")}</span>`, pa === pb ? "mesmo período" : `${Math.abs(pa - pb)} período(s) ${pa < pb ? "antes em " + nA : "antes em " + nB}`]; })) : vazio("Nenhum tema vinculado em comum. Vincule temas às disciplinas das duas matrizes para comparar conteúdo.")}
+      <h2 class="sec">Temas em comum e ordem de ensino</h2>${comuns.length ? tabela([{ t: "Tema" }, { t: `Período em ${nA}` }, { t: `Período em ${nB}` }, { t: "Diferença" }], comuns.map(t => { const pa = Math.min(...ta[t].map(o => o.periodo)), pb = Math.min(...tb[t].map(o => o.periodo)); return [linkTema(t), `${onde(ta, t)} <span class="small muted">${ta[t].map(o => esc(o.item.nome)).join(", ")}</span>`, `${onde(tb, t)} <span class="small muted">${tb[t].map(o => esc(o.item.nome)).join(", ")}</span>`, pa === pb ? "mesmo período" : `${plural(Math.abs(pa - pb), "período", "períodos")} ${pa < pb ? "antes em " + nA : "antes em " + nB}`]; })) : vazio("Nenhum tema vinculado em comum. Vincule temas às disciplinas das duas matrizes para comparar conteúdo.")}
       <div class="grid g2"><section><h2 class="sec">Só em ${esc(nA)}</h2>${soA.length ? `<div class="chips">${soA.map(t => `<a class="chip" href="#/tema/${encodeURIComponent(t)}">${esc(nomeTema(t))}</a>`).join("")}</div>` : `<p class="muted">—</p>`}</section>
       <section><h2 class="sec">Só em ${esc(nB)}</h2>${soB.length ? `<div class="chips">${soB.map(t => `<a class="chip" href="#/tema/${encodeURIComponent(t)}">${esc(nomeTema(t))}</a>`).join("")}</div>` : `<p class="muted">—</p>`}</section></div>
       <h2 class="sec">Nomes parecidos</h2><p class="small muted">Nome semelhante não significa equivalência: confira ementa e carga horária.</p>
@@ -394,7 +420,7 @@ function mosaicoEsp(a) {
 }
 rota("/medicina/area/:id", ({ id }) => {
   const a = AREAS_MED.find(x => x.id === id); if (!a) return paginaNaoEncontrada();
-  return { secao: "medicina", crumbs: [CRUMB_MED], titulo: a.nome, sub: `<span class="com-ilu">${iluArea(a.id, "g")}<span>${(a.especialidades || []).length} especialidades</span></span>`, html: mosaicoEsp(a) };
+  return { secao: "medicina", crumbs: [CRUMB_MED], titulo: a.nome, sub: `<span class="com-ilu">${iluArea(a.id, "g")}<span>${plural((a.especialidades || []).length, "especialidade", "especialidades")}</span></span>`, html: mosaicoEsp(a) };
 });
 rota("/medicina/esp/:id", ({ id }) => {
   const e = ESPECIALIDADES[id]; if (!e) return paginaNaoEncontrada();
@@ -402,7 +428,7 @@ rota("/medicina/esp/:id", ({ id }) => {
   const ids = questoes().filter(q => ts.some(t => t.id === q.tema) || q.esp === id).map(q => q.id);
   return {
     secao: "medicina", crumbs: [CRUMB_MED, ["Especialidades", "#/medicina/especialidades"], [e.areaNome, "#/medicina/especialidades"]], titulo: e.nome, sub: `<span class="com-ilu">${iluEsp(id, "g")}<span>${esc(e.areaNome || "")} · ${ts.length} temas</span></span>`,
-    acoes: ids.length ? `<button class="btn" data-act="praticar-ids" data-ids="${ids.join(",")}" data-ctx="Especialidade ${esc(e.nome)}">Praticar ${ids.length} questões</button>` : "",
+    acoes: ids.length ? `<button class="btn" data-act="praticar-ids" data-ids="${esc(ids.join(","))}" data-ctx="Especialidade ${esc(e.nome)}">Praticar ${ids.length} questões</button>` : "",
     html: tabela([{ t: "Tema" }, { t: "Questões", num: 1 }, { t: "Acerto", num: 1 }, { t: "Próxima revisão" }], ts.map(t => { const d = desempenhoTema(t.id); return [linkTema(t.id), d.total, d.n ? pct(d.ac, d.n) + "%" : "—", R[t.id] ? quando(R[t.id].prox) : "—"]; }), { vaziaMsg: "Sem temas nesta especialidade." }),
     ctx: { especialidade: id },
   };

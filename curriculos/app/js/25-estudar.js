@@ -23,12 +23,16 @@ const doDominio = p => pilDoObjetivo(p) && (!EST.dom || p.dominio === EST.dom);
 const chipsDominio = () => objetivo() ? "" : chips(DOM_PIL, EST.dom, "pil-dom");   // com objetivo definido, só aparece o conteúdo dele
 const anoTxt = a => a == null ? "" : a < 0 ? `${-a} a.C.` : String(a);
 
-/** Pílula do dia: a mesma o dia todo, mudando a cada dia; prefere as ainda não vistas. */
+/** Pílula do dia: a mesma o dia todo (fica gravada, não muda ao ser vista), mudando a cada dia; prefere as ainda não vistas. */
 function pilulaDoDia() {
+  const D = store.doc("pilulas"), fixa = D.dia?.d === hoje() && PIL[D.dia.id];
+  if (fixa && doDominio(fixa)) return fixa;
   const pool = PILULAS.filter(doDominio); if (!pool.length) return null;
   const v = vistasPil(), novas = pool.filter(p => !v[p.id]), base = novas.length ? novas : pool;
   const n = [...hoje()].reduce((s, c) => s * 31 + c.charCodeAt(0) >>> 0, 7);
-  return base[n % base.length];
+  const p = base[n % base.length];
+  D.dia = { d: hoje(), id: p.id }; store.mudou("pilulas");
+  return p;
 }
 /** Escolhe n pílulas: novas primeiro, puxando temas em que você erra ou estudou há pouco; intercala áreas e tipos. */
 function escolherSessao(n = 5) {
@@ -47,7 +51,7 @@ function escolherSessao(n = 5) {
 /** O cartão: pergunta → (Mostrar) → resposta, explicação e porquê → Sabia / Não sabia. */
 function cartaoPilula(p, { sessao = false } = {}) {
   const aberta = EST.aberta[p.id], v = vistasPil()[p.id], [nomeTipo] = TIPOS_PIL[p.tipo] || [p.tipo];
-  const qs = p.tema ? questoes().filter(q => q.tema === p.tema).length : 0;
+  const qs = p.tema ? questoes().filter(q => q.tema === p.tema && doObjetivo(q)).length : 0;
   return `<article class="caixa pilula" id="pil">
     <div class="linha entre" style="margin-bottom:10px"><span class="com-ilu" style="gap:8px">${iluPil(p.tipo, "p")}<span class="pill azul">${esc(nomeTipo)}</span></span><span class="small muted">${esc(p.area)}${p.ano != null && p.tipo === "data" ? " · " + anoTxt(p.ano) : ""}</span></div>
     <h2 class="pil-tit">${esc(p.titulo)}</h2>
@@ -115,7 +119,7 @@ function paginaSessao() {
     return { secao: "estudar", crumbs: [["Estudar", "#/estudar"]], titulo: "Sessão concluída",
       html: `<div class="caixa"><div class="kpis"><div class="kpi"><b>${sab}/${S.ids.length}</b><span>você sabia</span></div><div class="kpi"><b>${S.ids.length - sab}</b><span>viraram flashcards</span></div></div>
         <p class="small muted">O que você não sabia volta amanhã nos flashcards. Para fixar, pratique agora com questões dos mesmos temas.</p>
-        <div class="acoes">${qids.length ? `<button class="btn azul" data-act="praticar-ids" data-ids="${qids.join(",")}" data-ctx="temas das pílulas">Praticar ${Math.min(qids.length, 10)} questões</button>` : ""}<button class="btn sec" data-act="pil-sessao">Mais 5 pílulas</button><button class="btn sec" data-act="pil-sair">Voltar</button></div></div>` };
+        <div class="acoes">${qids.length ? `<button class="btn azul" data-act="praticar-ids" data-ids="${esc(qids.join(","))}" data-ctx="temas das pílulas">Praticar ${Math.min(qids.length, 10)} questões</button>` : ""}<button class="btn sec" data-act="pil-sessao">Mais 5 pílulas</button><button class="btn sec" data-act="pil-sair">Voltar</button></div></div>` };
   }
   const p = PIL[S.ids[S.i]];
   return { secao: "estudar", crumbs: [["Estudar", "#/estudar"]], titulo: `Pílula ${S.i + 1} de ${S.ids.length}`,
@@ -127,7 +131,9 @@ function paginaSessao() {
 ACOES["pil-dom"] = el => { EST.dom = el.dataset.v; atualizar(); };
 ACOES["pil-mostrar"] = el => { EST.aberta[el.dataset.id] = true; atualizar(); };
 ACOES["pil-sessao"] = el => {
-  const tipo = el.dataset.tipo, ids = tipo ? embaralhar(PILULAS.filter(p => p.tipo === tipo && doDominio(p) && !vistasPil()[p.id]).concat(PILULAS.filter(p => p.tipo === tipo && doDominio(p) && vistasPil()[p.id]))).slice(0, 5).map(p => p.id) : escolherSessao(5);
+  /* Por tipo: as não vistas vêm primeiro (cada grupo embaralhado à parte, para a prioridade não se perder). */
+  const tipo = el.dataset.tipo, doTipo = PILULAS.filter(p => p.tipo === tipo && doDominio(p)), v = vistasPil();
+  const ids = tipo ? [...embaralhar(doTipo.filter(p => !v[p.id])), ...embaralhar(doTipo.filter(p => v[p.id]))].slice(0, 5).map(p => p.id) : escolherSessao(5);
   if (!ids.length) { toast("Nenhuma pílula disponível"); return; }
   ids.forEach(i => delete EST.aberta[i]); EST.sessao = { ids, i: 0, res: [] }; ir("#/estudar"); atualizar();
 };
@@ -141,4 +147,4 @@ ACOES["pil-sabia"] = el => {
   if (S && S.ids[S.i] === p.id) { S.res.push(sabia); S.i++; atualizar(); document.getElementById("view")?.scrollIntoView({ block: "start" }); return; }
   toast(sabia ? "Ótimo!" : "Virou flashcard — revisão amanhã"); atualizar();
 };
-ACOES["pil-praticar"] = el => { const ids = embaralhar(questoes().filter(q => q.tema === el.dataset.t).map(q => q.id)).slice(0, 10); if (ids.length) praticar(ids, "Praticando: " + nomeTema(el.dataset.t)); };
+ACOES["pil-praticar"] = el => { const ids = embaralhar(questoes().filter(q => q.tema === el.dataset.t && doObjetivo(q)).map(q => q.id)).slice(0, 10); if (ids.length) praticar(ids, "Praticando: " + nomeTema(el.dataset.t)); };

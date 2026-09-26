@@ -6,6 +6,8 @@ let falhas = 0; const ok = (c, m) => { console.log((c ? '  ✓ ' : '  ✗ ') + m
 (async () => {
   const b = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM } : {}); const errs = [];
   const p = await b.newPage({ viewport: { width: 390, height: 840 } }); p.on('pageerror', e => errs.push(e.message));
+  // Pula as boas-vindas da primeira abertura (este teste é do Início já configurado)
+  await p.addInitScript(() => { if (!localStorage.getItem('gab2:perfil')) localStorage.setItem('gab2:perfil', JSON.stringify({ boasVindas: true })); });
   await p.goto(URL + '#/'); await p.waitForTimeout(700);
   console.log('1) Cartão no Início');
   ok(await p.evaluate(() => HUMOR.length >= 100), 'piadas carregadas');

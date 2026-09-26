@@ -16,7 +16,8 @@ let falhas = 0; const ok = (c, m) => { console.log((c ? '  ✓ ' : '  ✗ ') + m
   r = await p.evaluate(() => ordenarSeries(['t-s3', 't-s1'], false));
   ok(JSON.stringify(r) === '["t-s1","t-s3"]', 'fora da prática, só reordena o que foi escolhido');
   await p.evaluate(() => { praticar(['t-s2'], 'teste'); }); await p.waitForTimeout(250);
-  ok(/Caso em 3 partes · parte 1/.test(await p.innerText('#pl')), 'player mostra "Caso em 3 partes · parte 1"');
+  // Regra do produto: nada de questões em sequência para conteúdo novo — a prática livre não puxa as outras partes do caso.
+  ok(JSON.stringify(await p.evaluate(() => PL.ids)) === '["t-s2"]' && /Caso em 3 partes · parte 2/.test(await p.innerText('#pl')), 'prática não completa o caso em sequência; player mostra "Caso em 3 partes · parte 2"');
   console.log('2) Selo, questão irmã e reportar');
   await p.click('[data-act="pl-alt"][data-i="1"]'); await p.click('[data-act="pl-confirmar"]'); await p.waitForTimeout(150);
   ok(/revisada em/.test(await p.innerText('#pl')), 'selo "revisada em" aparece depois de responder');
