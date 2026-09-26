@@ -8,7 +8,7 @@
   curriculos.py                                   (guia de referência)
 Valida tudo antes de gravar. Uso:  python3 build_app.py
 """
-import json, pathlib, sys
+import json, pathlib, re, sys
 from curriculos import SECOES
 
 AQUI = pathlib.Path(__file__).parent
@@ -113,6 +113,21 @@ if __name__ == "__main__":
     validar_pilulas(dados["pilulas"], catalogo_temas(mapa, enem))
     # Humor (Pausa para rir): humor/*.json = [{id, texto, tipo, dominio}]
     dados["humor"] = [h for arq in sorted((AQUI / "humor").glob("*.json")) for h in json.loads(arq.read_text(encoding="utf-8"))] if (AQUI / "humor").exists() else []
+    # Jogos: casos-dia.json, termo.json, pares.json (cada um opcional)
+    def _jogo(nome):
+        arq = AQUI / "jogos" / nome
+        return json.loads(arq.read_text(encoding="utf-8")) if arq.exists() else []
+    dados["jogos"] = {"casos": _jogo("casos-dia.json"), "termo": _jogo("termo.json"), "pares": _jogo("pares.json")}
+    for c in dados["jogos"]["casos"]:
+        if len(c.get("pistas", [])) != 5 or c.get("diagnostico") not in c.get("opcoes", []) or len(c["opcoes"]) != 6:
+            erros.append(f"jogos/casos-dia.json: {c.get('id')} precisa de 5 pistas e 6 opções com o diagnóstico")
+    for p in dados["jogos"]["termo"]:
+        if not re.fullmatch(r"[A-Z]{5}", p.get("palavra", "")):
+            erros.append(f"jogos/termo.json: palavra inválida {p.get('palavra')!r}")
+    for c in dados["jogos"]["pares"]:
+        esq = [a for a, _ in c.get("pares", [])]; dir_ = [b for _, b in c.get("pares", [])]
+        if len(esq) < 6 or len(set(esq)) != len(esq) or len(set(dir_)) != len(dir_):
+            erros.append(f"jogos/pares.json: {c.get('id')} precisa de 6+ pares sem repetição")
     _ids_h = [h.get("id") for h in dados["humor"]]
     if len(_ids_h) != len(set(_ids_h)) or any(not h.get("texto") or h.get("dominio") not in ("medicina", "enem", "direito") for h in dados["humor"]):
         erros.append("humor/*.json: ids repetidos, texto vazio ou domínio inválido")
@@ -156,4 +171,4 @@ if __name__ == "__main__":
     kb = len(html.encode("utf-8")) // 1024
     print(f"app.html gerado ({kb} KB): questões {sum(map(len, banco.values()))}, temas {len(mapa.get('temas', []))}, "
           f"assuntos ENEM {sum(len(d.get('assuntos', [])) for a in enem.get('areas', []) for d in a.get('disciplinas', []))}, "
-          f"casos {len(dados['casos'])}, matrizes {len(dados['grades'])}, pílulas {len(dados['pilulas'])}, piadas {len(dados['humor'])}, imagens {len(dados['imagens'])}")
+          f"casos {len(dados['casos'])}, matrizes {len(dados['grades'])}, pílulas {len(dados['pilulas'])}, piadas {len(dados['humor'])}, jogos {sum(len(v) for v in dados['jogos'].values())}, imagens {len(dados['imagens'])}")

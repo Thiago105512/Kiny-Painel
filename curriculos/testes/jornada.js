@@ -1,0 +1,63 @@
+// Teste de navegador (Playwright): Jornada (XP, nível, missões, conquistas) e jogos novos
+// (Caso do dia, Termo, Pares, Onde fica?). Usa conteúdo de exemplo se os arquivos de jogos estiverem vazios.
+// Rode na raiz:   python3 -m http.server 8765 &   e   node curriculos/testes/jornada.js
+const { chromium } = require('playwright');
+const URL = process.env.APP_URL || 'http://localhost:8765/curriculos/app.html';
+let falhas = 0; const ok = (c, m) => { console.log((c ? '  ✓ ' : '  ✗ ') + m); if (!c) falhas++; };
+(async () => {
+  const b = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM } : {}); const errs = [];
+  const p = await b.newPage({ viewport: { width: 390, height: 840 } }); p.on('pageerror', e => errs.push(e.message));
+  await p.goto(URL + '#/'); await p.waitForTimeout(700);
+  await p.evaluate(() => {   // garante conteúdo mínimo para os jogos novos
+    if (!JOGOS_DADOS.casos?.length) JOGOS_DADOS.casos = [{ id: 'cd-t', diagnostico: 'Malária', especialidade: 'infectologia', nivel: 1, pistas: ['p1', 'p2', 'p3', 'p4', 'p5'], opcoes: ['Dengue', 'Malária', 'Leptospirose', 'Febre amarela', 'Leishmaniose', 'Chikungunya'], explicacao: 'x', chave: 4 }];
+    if (!JOGOS_DADOS.termo?.length) JOGOS_DADOS.termo = [{ palavra: 'FEBRE', exibir: 'febre', dica: 'sobe', definicao: 'x', area: 'clínica' }];
+  });
+  console.log('1) XP e nível');
+  let r = await p.evaluate(() => { const qs = QUESTOES_BASE.filter(q => q.t === 'medicina').slice(0, 3); registrarResposta(qs[0], qs[0].c, 1, 'pratica'); registrarResposta(qs[1], (qs[1].c + 1) % 5, 1, 'pratica'); return docJornada().xp; });
+  ok(r === 13, 'acerto +10, erro +3 (XP ' + r + ')');
+  r = await p.evaluate(() => nivelDe(800).nome + '|' + nivelDe(799).nome + '|' + nivelDe(99999).nome);
+  ok(r === 'Interno|Monitor|Lenda do plantão', 'níveis: ' + r);
+  await p.evaluate(() => fecharFolha());
+  console.log('2) Missões e conquistas');
+  r = await p.evaluate(() => { const a = missoesDoDia().map(m => m.id), b = missoesDoDia().map(m => m.id); return { a, igual: a.join() === b.join(), q: a.filter(id => ['q15', 'q25', 'ac10'].includes(id)).length }; });
+  ok(r.a.length === 3 && r.igual && r.q === 1, '3 missões fixas no dia, uma de questões: ' + r.a.join(','));
+  r = await p.evaluate(() => { const qs = QUESTOES_BASE.filter(q => q.t === 'medicina').slice(10, 22); qs.forEach(q => registrarResposta(q, q.c, 1, 'pratica')); document.querySelectorAll('.folha').forEach(() => fecharFolha()); return !!docJornada().conq.q10; });
+  ok(r, 'conquista "Primeiros passos" com 10 questões');
+  await p.goto(URL + '#/jornada'); await p.waitForTimeout(300);
+  ok(await p.locator('.missao').count() === 3 && await p.locator('.medalha-item').count() >= 20, 'página da jornada: 3 missões e as medalhas');
+  console.log('3) Caso do dia');
+  await p.goto(URL + '#/jogos/caso'); await p.waitForTimeout(300); await p.evaluate(() => fecharFolha()); await p.click('[data-act="jg-modo"][data-m="dia"]'); await p.waitForTimeout(200);
+  ok(await p.locator('.pistas li.aberta').count() === 1, 'começa com 1 pista');
+  await p.evaluate(() => { const r = JG.rodadas[0], c = casosDoDia().find(x => x.id === r.cid); [...document.querySelectorAll('[data-act="cd-palpite"]')].find(b => b.dataset.o !== c.diagnostico).click(); }); await p.waitForTimeout(100);
+  ok(await p.locator('.pistas li.aberta').count() === 2, 'palpite errado revela a 2ª pista');
+  await p.evaluate(() => { const r = JG.rodadas[0], c = casosDoDia().find(x => x.id === r.cid); [...document.querySelectorAll('[data-act="cd-palpite"]')].find(b => b.dataset.o === c.diagnostico).click(); }); await p.waitForTimeout(100);
+  r = await p.evaluate(() => JG.pontos); ok(r === 40, 'acerto na 2ª pista = 40 pontos');
+  await p.click('[data-act="jg-prox"]'); await p.waitForTimeout(150); await p.evaluate(() => document.querySelectorAll('.folha').forEach(() => fecharFolha()));
+  await p.goto(URL + '#/jogos'); await p.goto(URL + '#/jogos/caso'); await p.waitForTimeout(300); JGreset = await p.evaluate(() => { JG.id = null; atualizar(); });
+  ok(/já jogou o de hoje/.test(await p.innerText('#view')) && !(await p.$('[data-m="dia"]')), 'caso de hoje só uma vez por dia');
+  console.log('4) Termo');
+  r = await p.evaluate(() => [avaliarTermo('SOPRO', 'PULSO').join(''), avaliarTermo('EEEEE', 'FEBRE').join('')]);
+  ok(r[0] === 'pnpnc' && r[1] === 'ncnnc', 'avaliação de letras (repetidas inclusive): ' + r.join(' '));
+  await p.goto(URL + '#/jogos/termo'); await p.waitForTimeout(300); await p.evaluate(() => fecharFolha()); await p.click('[data-act="jg-modo"][data-m="treino"]'); await p.waitForTimeout(200);
+  const w = await p.evaluate(() => JG.rodadas[0].w);
+  await p.keyboard.type('abcde'); await p.keyboard.press('Enter'); await p.waitForTimeout(80);
+  for (const l of w) await p.click(`[data-act="tm-letra"][data-l="${l}"]`); await p.click('[data-act="tm-enter"]'); await p.waitForTimeout(100);
+  r = await p.evaluate(() => ({ ok: JG.rodadas[0].ok, n: JG.rodadas[0].tent.length, pts: JG.pontos }));
+  ok(r.ok && r.n === 2 && r.pts === 50, 'teclado físico e na tela; acerto na 2ª = 50 pontos');
+  console.log('5) Pares e Onde fica?');
+  await p.goto(URL + '#/jogos/pares'); await p.waitForTimeout(300); await p.evaluate(() => fecharFolha()); await p.click('[data-act="jg-comecar"]'); await p.waitForTimeout(200);
+  await p.evaluate(() => { const r = JG.rodadas[0]; const [e] = r.pares[0]; document.querySelector(`[data-act="pr-esq"][data-v="${CSS.escape(e)}"]`).click(); document.querySelector(`[data-act="pr-dir"][data-v="${CSS.escape(r.pares[1][1])}"]`).click(); });
+  ok(await p.evaluate(() => JG.rodadas[0].erros === 1), 'par errado conta erro');
+  await p.evaluate(() => { const r = JG.rodadas[0]; for (const [e, d] of r.pares) { document.querySelector(`[data-act="pr-esq"][data-v="${CSS.escape(e)}"]`)?.click(); document.querySelector(`[data-act="pr-dir"][data-v="${CSS.escape(d)}"]`)?.click(); } });
+  ok(await p.evaluate(() => JG.rodadas[0].fim) && /Para fixar/i.test(await p.innerText('#view')), 'conjunto completo mostra "Para fixar"');
+  await p.goto(URL + '#/jogos/anatomia'); await p.waitForTimeout(300); await p.evaluate(() => fecharFolha()); await p.click('[data-act="jg-comecar"]'); await p.waitForTimeout(200);
+  r = await p.evaluate(() => { const r = JG.rodadas[0]; document.querySelector(`[data-org="${r.certo}"]`).dispatchEvent(new MouseEvent('click', { bubbles: true })); return JG.pontos; });
+  ok(r === 10, 'tocar o órgão certo = 10 pontos');
+  ok(await p.evaluate(() => PERGUNTAS_ANAT.every(([, o]) => ORGAOS[o] && document.querySelector(`[data-org="${o}"]`))), 'todo órgão das perguntas existe no mapa');
+  console.log('6) XP pelos jogos');
+  r = await p.evaluate(() => { const antes = docJornada().xp; terminarJogo(); return docJornada().xp - antes; });
+  ok(r >= 8, 'fim de jogo dá XP (' + r + ')');
+  ok(!errs.length, errs.length ? 'erros de JS: ' + errs.join(' | ') : 'Sem erros de JS');
+  await b.close(); console.log(falhas ? `${falhas} FALHA(S)` : 'JORNADA E JOGOS NOVOS OK'); process.exit(falhas ? 1 : 0);
+})();
+let JGreset;

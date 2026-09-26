@@ -29,6 +29,7 @@ curriculos/
     enem/matriz.json    ← Área → Disciplina → Assunto → Subassunto (130 assuntos)
     enem/redacao.json   ← competências, o que zera, estrutura, propostas autorais, repertórios
   questoes/<trilha>.json ← banco de questões (enem, medicina, residencia, direito, oab)
+  jogos/                ← conteúdo dos jogos: casos-dia.json, termo.json, pares.json
   testes/               ← testes de navegador (Playwright)
 ```
 
@@ -133,5 +134,6 @@ node curriculos/testes/migracao.js   # migração do formato antigo e sincroniza
 node curriculos/testes/curso.js      # Meu curso: objetivo, situação, notas, faltas, provas com revisão, histórico
 node curriculos/testes/humor.js      # Pausa para rir: cartão, sem repetição, foco no objetivo, esconder/religar
 node curriculos/testes/jogos.js      # Jogos: os 5 jogos do começo ao fim, recorde, caderno de erros, foco no objetivo
+node curriculos/testes/jornada.js    # Jornada (XP, níveis, missões, medalhas) e jogos novos: Caso do dia, Termo, Pares, Onde fica?
 node curriculos/testes/etapa2.js     # mapa mental, erros em lote, backup semanal, conferência da matriz
 ```

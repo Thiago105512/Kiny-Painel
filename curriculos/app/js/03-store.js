@@ -26,7 +26,8 @@ const DOC_PADRAO = {
   ajudas:       () => ({ itens: {} }),   // pedidos de correção/ajuda à IA e respostas
   reportes:     () => ({ itens: {} }),   // problemas apontados em questões (cópia local; também vão para a coleção compartilhada "reportes")
   humor:        () => ({ v: {} }),       // v[id] = [ts, reação 1 ri / 0 passou] — piadas já vistas
-  jogos:        () => ({ rec: {}, n: {} }),   // rec[jogo] = melhor pontuação; n[jogo] = partidas jogadas
+  jogos:        () => ({ rec: {}, n: {} }),
+  jornada:      () => ({ xp: 0, dia: null, missoes: null, conq: {}, cont: {} }),   // XP, missões do dia e conquistas   // rec[jogo] = melhor pontuação; n[jogo] = partidas jogadas
   backups:      () => ({ itens: [] }),   // registro dos backups automáticos (não entra no próprio backup)
 };
 // Progresso das questões, fragmentado por trilha para cada doc ficar pequeno:
@@ -67,7 +68,7 @@ const store = (() => {
      Mapas de itens (questões, cards, erros, dias…) são mesclados chave a chave: o que só um lado
      mudou prevalece; o que um lado apagou sem que o outro tenha mexido some; se os dois mudaram
      o mesmo item, fica o que tem mais tentativas/revisões ou, no empate, o lado mais recente. */
-  const MAPAS = ["q", "itens", "temas", "d", "v", "g", "disc", "aval"];
+  const MAPAS = ["q", "itens", "temas", "d", "v", "g", "disc", "aval", "conq"];
   const eMapa = (k, x) => MAPAS.includes(k) && x && typeof x === "object" && !Array.isArray(x);
   function preferir(l, r, localVence) {
     if (l && r && typeof l === "object" && typeof r === "object") {

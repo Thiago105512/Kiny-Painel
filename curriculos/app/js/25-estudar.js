@@ -134,7 +134,7 @@ ACOES["pil-sessao"] = el => {
 ACOES["pil-sair"] = () => { EST.sessao = null; ir("#/estudar"); atualizar(); };
 ACOES["pil-sabia"] = el => {
   const p = PIL[el.dataset.id], sabia = el.dataset.v === "1", V = store.doc("pilulas");
-  V.v[p.id] = [Date.now(), sabia ? 1 : 0]; store.mudou("pilulas");
+  V.v[p.id] = [Date.now(), sabia ? 1 : 0]; store.mudou("pilulas"); jornada("pilula");
   if (!sabia && !cards().some(c => c.ref === p.id)) criarCard({ frente: p.pergunta, verso: `${p.resposta}\n\n${p.texto}\n\nPor que importa: ${p.porque}`, tema: p.tema, origem: "pilula", ref: p.id, dif: 2 });
   if (p.tema) marcarTemaEstudado(p.tema);
   const S = EST.sessao;

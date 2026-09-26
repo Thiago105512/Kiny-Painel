@@ -1,0 +1,1842 @@
+[
+  {
+    "id": "cd-001",
+    "diagnostico": "Infarto agudo do miocárdio com supra de ST",
+    "especialidade": "cardiologia",
+    "nivel": 1,
+    "pistas": [
+      "Homem de 62 anos, tabagista, hipertenso e diabético, atendido no pronto-socorro.",
+      "Dor em aperto no meio do peito há 40 minutos, irradiando para o braço esquerdo, com suor frio e náuseas.",
+      "PA 150x90 mmHg, FC 98 bpm, pulmões limpos, sem sopros.",
+      "ECG: elevação do segmento ST de 3 mm de V1 a V4, com infradesnivelamento recíproco em DII, DIII e aVF.",
+      "Troponina ultrassensível em curva ascendente; cateterismo com oclusão da artéria descendente anterior."
+    ],
+    "opcoes": [
+      "Tromboembolismo pulmonar",
+      "Angina instável",
+      "Pericardite aguda",
+      "Síndrome de Takotsubo",
+      "Dissecção aguda de aorta",
+      "Infarto agudo do miocárdio com supra de ST"
+    ],
+    "explicacao": "Dor típica em paciente de alto risco com elevação do ST em parede contínua (anterior) e imagem recíproca fecha o diagnóstico. A pista-chave é o ECG. Na pericardite a elevação é difusa, côncava, sem imagem recíproca e com infra de PR.",
+    "chave": 3
+  },
+  {
+    "id": "cd-002",
+    "diagnostico": "Pericardite aguda",
+    "especialidade": "cardiologia",
+    "nivel": 2,
+    "pistas": [
+      "Homem de 28 anos, sem doenças prévias, teve quadro gripal há duas semanas.",
+      "Dor no peito em pontada, que piora ao deitar e ao respirar fundo e melhora ao sentar inclinado para a frente.",
+      "Ausculta com ruído áspero, como couro raspando, na borda esternal esquerda.",
+      "ECG: elevação difusa do ST com concavidade para cima e infradesnivelamento do segmento PR.",
+      "Ecocardiograma com pequeno derrame ao redor do coração; troponina normal."
+    ],
+    "opcoes": [
+      "Pericardite aguda",
+      "Infarto agudo com supra de ST",
+      "Dissecção aguda de aorta",
+      "Tromboembolismo pulmonar",
+      "Miocardite viral",
+      "Pneumotórax espontâneo"
+    ],
+    "explicacao": "Dor pleurítica que alivia ao inclinar o tronco, atrito e ECG com supra difuso e infra de PR são típicos. A pista-chave é o ECG. No infarto o supra segue território coronariano, há imagem recíproca e a troponina sobe.",
+    "chave": 3
+  },
+  {
+    "id": "cd-003",
+    "diagnostico": "Estenose aórtica",
+    "especialidade": "cardiologia",
+    "nivel": 2,
+    "pistas": [
+      "Homem de 76 anos, hipertenso e dislipidêmico, levado ao cardiologista pela filha.",
+      "Cansaço aos esforços, dor no peito ao subir ladeira e um desmaio enquanto caminhava.",
+      "Pulso carotídeo de subida lenta e baixa amplitude (parvus et tardus).",
+      "Sopro sistólico em crescendo-decrescendo no 2º espaço intercostal direito, irradiando para as carótidas.",
+      "Ecocardiograma: valva calcificada, área valvar de 0,8 cm² e gradiente médio de 45 mmHg."
+    ],
+    "opcoes": [
+      "Insuficiência mitral",
+      "Doença coronariana estável",
+      "Estenose mitral",
+      "Insuficiência aórtica",
+      "Estenose aórtica",
+      "Cardiomiopatia hipertrófica obstrutiva"
+    ],
+    "explicacao": "Idoso com a tríade angina, síncope e dispneia e pulso parvus et tardus sugere obstrução valvar calcífica. A pista-chave é o pulso carotídeo. Na cardiomiopatia hipertrófica o sopro aumenta com Valsalva e o pulso carotídeo é rápido e bífido.",
+    "chave": 2
+  },
+  {
+    "id": "cd-004",
+    "diagnostico": "Cardiomiopatia chagásica crônica",
+    "especialidade": "cardiologia",
+    "nivel": 2,
+    "pistas": [
+      "Mulher de 55 anos, nascida no interior da Bahia, passou a infância em casa de pau a pique.",
+      "Falta de ar progressiva, inchaço nas pernas e palpitações há 1 ano.",
+      "Veias do pescoço distendidas, fígado aumentado e ritmo irregular com muitas extrassístoles.",
+      "ECG: bloqueio de ramo direito associado a bloqueio divisional anterossuperior esquerdo.",
+      "Eco com aneurisma na ponta do ventrículo esquerdo; sorologia IgG positiva por dois métodos diferentes."
+    ],
+    "opcoes": [
+      "Endomiocardiofibrose",
+      "Cardiomiopatia dilatada idiopática",
+      "Cardiomiopatia isquêmica",
+      "Cardiopatia hipertensiva",
+      "Cardiomiopatia alcoólica",
+      "Cardiomiopatia chagásica crônica"
+    ],
+    "explicacao": "Origem em área endêmica e casa de pau a pique indicam exposição ao barbeiro. A pista-chave é o ECG com BRD + BDAS, muito típico. Na cardiomiopatia isquêmica há fatores de risco coronarianos e déficits segmentares por território, não aneurisma apical com sorologia positiva.",
+    "chave": 3
+  },
+  {
+    "id": "cd-005",
+    "diagnostico": "Fibrilação atrial",
+    "especialidade": "cardiologia",
+    "nivel": 1,
+    "pistas": [
+      "Mulher de 70 anos, hipertensa, com hipertireoidismo recém-diagnosticado.",
+      "Palpitações há 2 dias, cansaço e leve falta de ar.",
+      "Pulso irregularmente irregular, com déficit de pulso: FC apical de 130 e radial de 110 bpm.",
+      "ECG: sem ondas P, linha de base com ondulações finas e intervalos RR totalmente irregulares.",
+      "Escore CHA2DS2-VA de 2 pontos: anticoagulação oral indicada."
+    ],
+    "opcoes": [
+      "Fibrilação atrial",
+      "Taquicardia supraventricular paroxística",
+      "Extrassístoles ventriculares",
+      "Flutter atrial",
+      "Taquicardia sinusal",
+      "Bloqueio AV de 2º grau"
+    ],
+    "explicacao": "Idosa hipertensa e com hipertireoidismo, ritmo irregularmente irregular e déficit de pulso. A pista-chave é o ECG sem onda P e com RR irregular. No flutter há ondas F em dente de serrote e a condução costuma ser regular (ex.: 2:1, FC perto de 150).",
+    "chave": 3
+  },
+  {
+    "id": "cd-006",
+    "diagnostico": "Asma",
+    "especialidade": "pneumologia",
+    "nivel": 1,
+    "pistas": [
+      "Menina de 12 anos com rinite alérgica e dermatite atópica desde pequena.",
+      "Crises de chiado, tosse à noite e aperto no peito, piores com poeira e mudança de tempo.",
+      "Na crise: sibilos expiratórios difusos e tempo expiratório prolongado.",
+      "Espirometria: padrão obstrutivo, com VEF1 que aumenta mais de 12% e 200 mL após broncodilatador.",
+      "Fração exalada de óxido nítrico elevada; entre as crises fica totalmente sem sintomas."
+    ],
+    "opcoes": [
+      "Bronquiolite obliterante",
+      "Asma",
+      "Disfunção de cordas vocais",
+      "Aspiração de corpo estranho",
+      "Tuberculose pulmonar",
+      "Fibrose cística"
+    ],
+    "explicacao": "Atopia, sintomas episódicos com gatilhos e obstrução reversível definem o quadro. A pista-chave é a espirometria com resposta ao broncodilatador. Na aspiração de corpo estranho o chiado costuma ser localizado, unilateral e de início súbito após engasgo.",
+    "chave": 3
+  },
+  {
+    "id": "cd-007",
+    "diagnostico": "Doença pulmonar obstrutiva crônica (DPOC)",
+    "especialidade": "pneumologia",
+    "nivel": 1,
+    "pistas": [
+      "Homem de 66 anos, fumante de 45 maços-ano, trabalhou em olaria.",
+      "Tosse com catarro todas as manhãs há anos e falta de ar que piora aos poucos.",
+      "Tórax em tonel, murmúrio vesicular diminuído e expiração prolongada com lábios semicerrados.",
+      "Raio X: hiperinsuflação, cúpulas diafragmáticas retificadas e aumento do espaço retroesternal.",
+      "Espirometria: relação VEF1/CVF pós-broncodilatador de 0,58, sem normalização."
+    ],
+    "opcoes": [
+      "Insuficiência cardíaca",
+      "Asma",
+      "Tuberculose pulmonar",
+      "Doença pulmonar obstrutiva crônica (DPOC)",
+      "Bronquiectasias",
+      "Fibrose pulmonar idiopática"
+    ],
+    "explicacao": "Fumante pesado com tosse produtiva crônica e dispneia progressiva. A pista-chave é a espirometria com VEF1/CVF < 0,70 após broncodilatador, que confirma limitação persistente ao fluxo aéreo. Na asma a obstrução é variável e costuma normalizar com broncodilatador.",
+    "chave": 4
+  },
+  {
+    "id": "cd-008",
+    "diagnostico": "Tromboembolismo pulmonar",
+    "especialidade": "pneumologia",
+    "nivel": 2,
+    "pistas": [
+      "Mulher de 34 anos, usa anticoncepcional combinado, no 5º dia após cirurgia de fratura de fêmur.",
+      "Falta de ar de início súbito, dor no peito ao respirar e escarro com raias de sangue.",
+      "FC 118 bpm, FR 28 irpm, SpO2 89% e panturrilha direita inchada e dolorosa.",
+      "Gasometria com hipoxemia e hipocapnia; D-dímero elevado; ECG com taquicardia sinusal e padrão S1Q3T3.",
+      "Angiotomografia de tórax com falha de enchimento nos ramos arteriais dos lobos inferiores."
+    ],
+    "opcoes": [
+      "Tromboembolismo pulmonar",
+      "Pericardite aguda",
+      "Embolia gordurosa",
+      "Pneumonia comunitária",
+      "Infarto agudo do miocárdio",
+      "Pneumotórax espontâneo"
+    ],
+    "explicacao": "Fatores de Virchow (cirurgia ortopédica, estrogênio, imobilidade) e sinais de trombose venosa profunda. A angiotomografia com falha de enchimento confirma. A embolia gordurosa surge 24–72 h após a fratura, com petéquias e confusão mental.",
+    "chave": 4
+  },
+  {
+    "id": "cd-009",
+    "diagnostico": "Pneumotórax espontâneo primário",
+    "especialidade": "pneumologia",
+    "nivel": 2,
+    "pistas": [
+      "Homem de 20 anos, alto e magro, fumante, sem doenças prévias.",
+      "Dor súbita em pontada no lado direito do peito, em repouso, seguida de falta de ar.",
+      "Hemitórax direito com murmúrio vesicular abolido, hipertimpanismo e frêmito diminuído.",
+      "Raio X: linha pleural visceral visível e ausência de trama vascular na periferia.",
+      "TC de tórax com pequenas bolhas subpleurais nos ápices."
+    ],
+    "opcoes": [
+      "Pericardite aguda",
+      "Tromboembolismo pulmonar",
+      "Derrame pleural",
+      "Crise de asma",
+      "Pneumonia lobar",
+      "Pneumotórax espontâneo primário"
+    ],
+    "explicacao": "Jovem longilíneo e fumante com dor súbita e hipertimpanismo unilateral. A pista-chave é o raio X com linha pleural e sem trama além dela. No derrame pleural há macicez à percussão, não hipertimpanismo.",
+    "chave": 3
+  },
+  {
+    "id": "cd-010",
+    "diagnostico": "Sarcoidose",
+    "especialidade": "pneumologia",
+    "nivel": 3,
+    "pistas": [
+      "Mulher de 35 anos, não fumante, com tosse seca há 3 meses.",
+      "Nódulos vermelhos e dolorosos nas pernas, febre baixa e dor nos tornozelos.",
+      "Olhos vermelhos com fotofobia; ausculta pulmonar sem alterações.",
+      "Raio X: aumento bilateral e simétrico dos linfonodos hilares; cálcio sérico e ECA elevados.",
+      "Biópsia transbrônquica: granulomas epitelioides não caseosos; PPD não reator."
+    ],
+    "opcoes": [
+      "Linfoma de Hodgkin",
+      "Tuberculose ganglionar",
+      "Silicose",
+      "Paracoccidioidomicose",
+      "Histoplasmose",
+      "Sarcoidose"
+    ],
+    "explicacao": "Eritema nodoso, artrite de tornozelos e adenopatia hilar bilateral formam a síndrome de Löfgren. A pista-chave é a adenopatia hilar bilateral simétrica. Na tuberculose o granuloma é caseoso e a adenopatia costuma ser unilateral.",
+    "chave": 3
+  },
+  {
+    "id": "cd-011",
+    "diagnostico": "Malária por Plasmodium vivax",
+    "especialidade": "infectologia",
+    "nivel": 1,
+    "pistas": [
+      "Homem de 30 anos, garimpeiro, voltou há 12 dias de área de extração de ouro no interior do Amazonas.",
+      "Febre alta com calafrios intensos e suor, que se repete a cada 48 horas.",
+      "Palidez leve, baço palpável a 2 cm do rebordo costal, sem sinais de gravidade.",
+      "Plaquetopenia leve; teste rápido positivo para espécie não falciparum.",
+      "Gota espessa: trofozoítos ameboides em hemácias aumentadas, com granulações de Schüffner."
+    ],
+    "opcoes": [
+      "Malária por Plasmodium vivax",
+      "Dengue",
+      "Malária por Plasmodium falciparum",
+      "Leptospirose",
+      "Febre tifoide",
+      "Febre amarela"
+    ],
+    "explicacao": "Garimpo na Amazônia, febre terçã e esplenomegalia sugerem malária. A espécie é definida pela gota espessa: hemácias aumentadas e granulações de Schüffner. Na espécie falciparum há hemácias de tamanho normal, formas em anel múltiplas e gametócitos em banana. O tratamento do vivax inclui cloroquina mais primaquina (ou tafenoquina conforme teste de G6PD).",
+    "chave": 4
+  },
+  {
+    "id": "cd-012",
+    "diagnostico": "Leptospirose",
+    "especialidade": "infectologia",
+    "nivel": 2,
+    "pistas": [
+      "Homem de 40 anos, mora em área alagada de Manaus e limpou a casa descalço após a cheia do rio.",
+      "Febre alta súbita, dor de cabeça e dor intensa nas panturrilhas há 6 dias.",
+      "Olhos com sufusão conjuntival bilateral, icterícia de tom alaranjado e urina escassa.",
+      "Creatinina 4,2 mg/dL com potássio normal ou baixo, CPK elevada, bilirrubina direta alta e plaquetopenia.",
+      "Tosse com sangue e infiltrado alveolar difuso por hemorragia nos pulmões."
+    ],
+    "opcoes": [
+      "Febre amarela",
+      "Leptospirose",
+      "Dengue grave",
+      "Hantavirose",
+      "Hepatite A fulminante",
+      "Malária grave"
+    ],
+    "explicacao": "Contato com água de enchente, mialgia de panturrilha e sufusão conjuntival são clássicos. A pista-chave é a tríade icterícia rubínica + insuficiência renal + sufusão conjuntival. Na febre amarela as transaminases ficam muito altas (milhares) e não há hipocalemia nem dor forte de panturrilha.",
+    "chave": 2
+  },
+  {
+    "id": "cd-013",
+    "diagnostico": "Doença de Chagas aguda por transmissão oral",
+    "especialidade": "infectologia",
+    "nivel": 3,
+    "pistas": [
+      "Família de 5 pessoas do interior do Pará adoece junta, dias após tomar açaí batido de forma artesanal.",
+      "Febre prolongada há 3 semanas, inchaço no rosto e nas pernas e cansaço.",
+      "Fígado e baço discretamente aumentados, taquicardia desproporcional à febre e bulhas abafadas.",
+      "ECG com baixa voltagem e alterações de repolarização; eco com derrame pericárdico.",
+      "Exame a fresco e gota espessa do sangue com tripomastigotas flagelados circulantes."
+    ],
+    "opcoes": [
+      "Toxoplasmose aguda",
+      "Febre tifoide",
+      "Doença de Chagas aguda por transmissão oral",
+      "Leptospirose",
+      "Malária por Plasmodium vivax",
+      "Mononucleose infecciosa"
+    ],
+    "explicacao": "Surto familiar após açaí artesanal é o cenário típico da forma oral na Amazônia, com miocardite e derrame pericárdico. A pista que fecha é o tripomastigota no sangue a fresco. Na malária a gota espessa mostra parasitas dentro das hemácias, não flagelados livres.",
+    "chave": 4
+  },
+  {
+    "id": "cd-014",
+    "diagnostico": "Tuberculose pulmonar",
+    "especialidade": "infectologia",
+    "nivel": 1,
+    "pistas": [
+      "Homem de 45 anos, privado de liberdade em unidade prisional de Manaus.",
+      "Tosse com catarro há 5 semanas, febre no fim da tarde, suor noturno e perda de 8 kg.",
+      "Emagrecido, com estertores no ápice do pulmão direito.",
+      "Raio X: consolidação com cavidade no lobo superior direito.",
+      "Baciloscopia do escarro com bacilos álcool-ácido resistentes; teste molecular sem resistência à rifampicina."
+    ],
+    "opcoes": [
+      "Paracoccidioidomicose",
+      "Tuberculose pulmonar",
+      "Pneumonia bacteriana",
+      "Câncer de pulmão",
+      "Histoplasmose pulmonar",
+      "Abscesso pulmonar"
+    ],
+    "explicacao": "População privada de liberdade tem risco muito alto, e tosse por mais de 3 semanas define o sintomático respiratório. A pista-chave é a cavitação em lobo superior. A paracoccidioidomicose também dá lesões pulmonares, mas em trabalhador rural e com lesões de boca e infiltrado em asa de borboleta.",
+    "chave": 3
+  },
+  {
+    "id": "cd-015",
+    "diagnostico": "Neurotoxoplasmose",
+    "especialidade": "infectologia",
+    "nivel": 2,
+    "pistas": [
+      "Homem de 32 anos com HIV, abandonou a terapia antirretroviral há 2 anos.",
+      "Dor de cabeça progressiva há 10 dias, febre baixa e confusão.",
+      "Fraqueza no lado direito do corpo e uma crise convulsiva focal.",
+      "CD4 de 45 células/mm³, sem profilaxia com sulfametoxazol-trimetoprima.",
+      "TC de crânio com contraste: várias lesões com realce em anel nos núcleos da base, com edema."
+    ],
+    "opcoes": [
+      "Abscesso cerebral bacteriano",
+      "Leucoencefalopatia multifocal progressiva",
+      "Meningite criptocócica",
+      "Neurotoxoplasmose",
+      "Linfoma primário do SNC",
+      "Tuberculoma cerebral"
+    ],
+    "explicacao": "HIV com CD4 < 100 sem profilaxia e déficit focal com lesões múltiplas em anel nos núcleos da base. A pista-chave é a TC. O linfoma primário do SNC costuma dar lesão única, periventricular, e não melhora com tratamento empírico em 10–14 dias.",
+    "chave": 4
+  },
+  {
+    "id": "cd-016",
+    "diagnostico": "Hepatite delta",
+    "especialidade": "gastroenterologia",
+    "nivel": 3,
+    "pistas": [
+      "Homem de 25 anos, ribeirinho do Vale do Juruá (AM), região com muitos casos de doença viral do fígado.",
+      "Cansaço, falta de apetite e urina escura há 2 meses.",
+      "Icterícia, aranhas vasculares e baço palpável.",
+      "HBsAg reagente, anti-HBc IgG reagente e ALT persistentemente elevada.",
+      "Anticorpos contra o vírus defectivo que depende do HBsAg para se replicar: reagentes."
+    ],
+    "opcoes": [
+      "Hepatite delta",
+      "Hepatite B crônica",
+      "Esquistossomose hepatoesplênica",
+      "Hepatite C crônica",
+      "Hepatite autoimune",
+      "Cirrose alcoólica"
+    ],
+    "explicacao": "A Amazônia ocidental (ex.: Vale do Juruá, Lábrea) é área endêmica do vírus D, que só infecta quem tem HBsAg. A pista que fecha é o anticorpo anti-HDV reagente. Na hepatite B isolada a evolução para cirrose costuma ser mais lenta e o anti-HDV é negativo.",
+    "chave": 4
+  },
+  {
+    "id": "cd-017",
+    "diagnostico": "Doença celíaca",
+    "especialidade": "gastroenterologia",
+    "nivel": 2,
+    "pistas": [
+      "Mulher de 26 anos com anemia por falta de ferro que não melhora com sulfato ferroso oral.",
+      "Diarreia crônica com fezes volumosas e gordurosas, barriga estufada e perda de peso.",
+      "Bolhas pequenas e muito pruriginosas nos cotovelos e joelhos.",
+      "Anticorpo antitransglutaminase tecidual IgA muito elevado, com IgA total normal.",
+      "Biópsia duodenal: atrofia das vilosidades, hiperplasia de criptas e aumento de linfócitos intraepiteliais."
+    ],
+    "opcoes": [
+      "Doença celíaca",
+      "Intolerância à lactose",
+      "Doença de Crohn",
+      "Giardíase",
+      "Síndrome do intestino irritável",
+      "Insuficiência pancreática exócrina"
+    ],
+    "explicacao": "Anemia ferropriva refratária, disabsorção e dermatite herpetiforme apontam para enteropatia por glúten. A pista-chave é a antitransglutaminase IgA alta. A giardíase também causa atrofia vilositária, mas a sorologia é negativa e há cistos ou trofozoítos nas fezes.",
+    "chave": 3
+  },
+  {
+    "id": "cd-018",
+    "diagnostico": "Pancreatite aguda biliar",
+    "especialidade": "gastroenterologia",
+    "nivel": 1,
+    "pistas": [
+      "Mulher de 48 anos, obesa, com episódios anteriores de cólica após comida gordurosa.",
+      "Dor forte no epigástrio, em faixa, irradiando para as costas, com vômitos, após uma feijoada.",
+      "Abdome doloroso no andar superior, com leve mancha arroxeada ao redor do umbigo.",
+      "Lipase 5 vezes acima do limite superior; ALT acima de 150 U/L.",
+      "USG: vesícula com vários cálculos e colédoco levemente dilatado."
+    ],
+    "opcoes": [
+      "Pancreatite alcoólica",
+      "Infarto de parede inferior",
+      "Pancreatite aguda biliar",
+      "Colangite aguda",
+      "Úlcera péptica perfurada",
+      "Colecistite aguda"
+    ],
+    "explicacao": "Dor em faixa com lipase ≥ 3 vezes o normal confirma pancreatite, e ALT > 150 U/L sugere origem em cálculo. A pista-chave é a lipase. A colecistite dá dor no hipocôndrio direito e sinal de Murphy, com lipase normal ou pouco alterada.",
+    "chave": 3
+  },
+  {
+    "id": "cd-019",
+    "diagnostico": "Retocolite ulcerativa",
+    "especialidade": "gastroenterologia",
+    "nivel": 2,
+    "pistas": [
+      "Mulher de 24 anos, não fumante, sem viagens recentes.",
+      "Diarreia com sangue e muco há 2 meses, urgência e tenesmo, até 8 evacuações por dia.",
+      "Dor em cólica no baixo ventre; exame perianal sem fístulas.",
+      "Calprotectina fecal muito elevada; p-ANCA positivo e ASCA negativo.",
+      "Colonoscopia: inflamação contínua desde o reto, sem áreas poupadas, com perda do padrão vascular."
+    ],
+    "opcoes": [
+      "Retocolite ulcerativa",
+      "Câncer colorretal",
+      "Amebíase intestinal",
+      "Colite por Clostridioides difficile",
+      "Shigelose",
+      "Doença de Crohn"
+    ],
+    "explicacao": "Diarreia sanguinolenta crônica com tenesmo e inflamação contínua a partir do reto. A pista que fecha é a colonoscopia. Na doença de Crohn as lesões são salteadas, podem poupar o reto, há fístulas perianais e ASCA costuma ser positivo.",
+    "chave": 4
+  },
+  {
+    "id": "cd-020",
+    "diagnostico": "Peritonite bacteriana espontânea",
+    "especialidade": "gastroenterologia",
+    "nivel": 2,
+    "pistas": [
+      "Homem de 58 anos com cirrose por álcool, já internado antes por ascite.",
+      "Febre baixa, dor difusa na barriga e sonolência nos últimos 2 dias.",
+      "Abdome distendido com macicez móvel, levemente doloroso, sem defesa abdominal.",
+      "Paracentese: 480 polimorfonucleares/mm³, GASA 1,6 g/dL e proteína total 0,8 g/dL.",
+      "Cultura do líquido com um único germe (E. coli); TC sem perfuração ou abscesso."
+    ],
+    "opcoes": [
+      "Peritonite bacteriana espontânea",
+      "Carcinomatose peritoneal",
+      "Síndrome hepatorrenal",
+      "Ascite tuberculosa",
+      "Peritonite bacteriana secundária",
+      "Encefalopatia hepática isolada"
+    ],
+    "explicacao": "Cirrótico com ascite, febre e encefalopatia deve ser puncionado. A pista-chave é o líquido com ≥ 250 polimorfonucleares/mm³. Na peritonite secundária a cultura é polimicrobiana, a glicose do líquido é baixa, a proteína é alta e há foco cirúrgico.",
+    "chave": 3
+  },
+  {
+    "id": "cd-021",
+    "diagnostico": "Glomerulonefrite pós-estreptocócica",
+    "especialidade": "nefrologia",
+    "nivel": 1,
+    "pistas": [
+      "Menino de 8 anos, teve feridas com crostas nas pernas (impetigo) há 3 semanas.",
+      "Urina cor de coca-cola e inchaço nas pálpebras pela manhã.",
+      "PA 140x95 mmHg, edema de pálpebras e de pernas.",
+      "Urina com hematúria dismórfica e cilindros hemáticos; proteinúria abaixo da faixa nefrótica.",
+      "Anti-DNase B elevado e C3 baixo, que volta ao normal em até 8 semanas."
+    ],
+    "opcoes": [
+      "Síndrome nefrótica por lesão mínima",
+      "Glomerulonefrite pós-estreptocócica",
+      "Nefropatia por IgA",
+      "Síndrome hemolítico-urêmica",
+      "Glomerulonefrite membranoproliferativa",
+      "Nefrite lúpica"
+    ],
+    "explicacao": "Síndrome nefrítica (hematúria, edema, hipertensão) 2–3 semanas após impetigo. A pista-chave é o sedimento com cilindros hemáticos após a infecção cutânea. Na nefropatia por IgA a hematúria surge junto ou 1–2 dias após a infecção e o complemento é normal.",
+    "chave": 3
+  },
+  {
+    "id": "cd-022",
+    "diagnostico": "Síndrome nefrótica por lesão mínima",
+    "especialidade": "nefrologia",
+    "nivel": 2,
+    "pistas": [
+      "Menino de 4 anos, previamente saudável, teve resfriado há 1 semana.",
+      "Inchaço que começou nos olhos e se espalhou pelo corpo; urina com espuma.",
+      "PA normal, edema generalizado com ascite e sem sangue visível na urina.",
+      "Proteinúria de 60 mg/kg/dia, albumina 1,8 g/dL e colesterol muito elevado.",
+      "Remissão completa após 4 semanas de prednisolona, sem precisar de biópsia."
+    ],
+    "opcoes": [
+      "Nefropatia por IgA",
+      "Glomeruloesclerose segmentar e focal",
+      "Síndrome nefrótica por lesão mínima",
+      "Nefropatia membranosa",
+      "Nefrite lúpica",
+      "Glomerulonefrite pós-estreptocócica"
+    ],
+    "explicacao": "Criança de 1 a 10 anos com síndrome nefrótica pura (sem hipertensão, hematúria ou queda do complemento). A pista-chave é o laboratório nefrótico nessa faixa etária, e a resposta ao corticoide confirma. A glomeruloesclerose segmentar e focal costuma ser corticorresistente e tem hipertensão e hematúria.",
+    "chave": 3
+  },
+  {
+    "id": "cd-023",
+    "diagnostico": "Rabdomiólise com lesão renal aguda",
+    "especialidade": "nefrologia",
+    "nivel": 3,
+    "pistas": [
+      "Homem de 22 anos, recruta do Exército, após marcha longa sob calor intenso na selva.",
+      "Dor muscular forte nas coxas, fraqueza e urina escura.",
+      "Músculos dolorosos à palpação, desidratado e urinando pouco.",
+      "Fita urinária positiva para sangue, mas sem hemácias na microscopia.",
+      "CPK 85.000 U/L, creatinina 3,1 mg/dL, potássio 6,2 mEq/L, fósforo alto e cálcio baixo."
+    ],
+    "opcoes": [
+      "Nefrite intersticial aguda",
+      "Rabdomiólise com lesão renal aguda",
+      "Glomerulonefrite rapidamente progressiva",
+      "Necrose tubular por desidratação",
+      "Hemólise intravascular",
+      "Leptospirose"
+    ],
+    "explicacao": "Esforço extremo no calor com mialgia e urina escura. A pista-chave é a fita positiva para heme sem hemácias (mioglobinúria), confirmada pela CPK muito alta. Na hemólise intravascular a fita também é positiva, mas o plasma fica rosado, a haptoglobina cai e a CPK é normal.",
+    "chave": 3
+  },
+  {
+    "id": "cd-024",
+    "diagnostico": "Doença renal policística autossômica dominante",
+    "especialidade": "nefrologia",
+    "nivel": 2,
+    "pistas": [
+      "Homem de 40 anos; o pai fazia hemodiálise e uma tia morreu de sangramento cerebral.",
+      "Dor lombar crônica, episódios de sangue na urina e pressão alta de difícil controle.",
+      "Massas palpáveis e irregulares nos dois flancos.",
+      "Creatinina 1,9 mg/dL; urina com hematúria sem dismorfismo.",
+      "USG: rins aumentados com múltiplos cistos bilaterais e cistos também no fígado."
+    ],
+    "opcoes": [
+      "Esclerose tuberosa",
+      "Doença renal cística adquirida",
+      "Carcinoma de células renais",
+      "Doença renal policística autossômica dominante",
+      "Nefropatia hipertensiva",
+      "Rim em esponja medular"
+    ],
+    "explicacao": "História familiar de diálise e de hemorragia cerebral (aneurisma) sugere herança dominante. A pista que fecha é a USG com rins grandes e múltiplos cistos bilaterais, mais cistos hepáticos. Na doença cística adquirida os cistos surgem em rins pequenos de pacientes já em diálise.",
+    "chave": 4
+  },
+  {
+    "id": "cd-025",
+    "diagnostico": "Litíase ureteral",
+    "especialidade": "nefrologia",
+    "nivel": 1,
+    "pistas": [
+      "Homem de 35 anos, trabalha ao ar livre em Manaus e bebe pouca água.",
+      "Dor em cólica muito forte na lombar esquerda, que irradia para a virilha e o testículo.",
+      "Inquieto, sem posição que alivie; punho-percussão lombar dolorosa à esquerda; sem febre.",
+      "Urina com hematúria microscópica e sem leucocitúria importante.",
+      "TC sem contraste: imagem hiperdensa de 5 mm perto da junção com a bexiga à esquerda, com leve hidronefrose."
+    ],
+    "opcoes": [
+      "Torção testicular",
+      "Pielonefrite aguda",
+      "Diverticulite aguda",
+      "Litíase ureteral",
+      "Apendicite aguda",
+      "Aneurisma de aorta roto"
+    ],
+    "explicacao": "Calor, pouca ingestão de água e dor em cólica lombar irradiada para genitais com inquietude são típicos. A pista-chave é o padrão da dor. A pielonefrite cursa com febre, calafrios e leucocitúria, e a dor é contínua.",
+    "chave": 1
+  },
+  {
+    "id": "cd-026",
+    "diagnostico": "Cetoacidose diabética",
+    "especialidade": "endocrinologia",
+    "nivel": 1,
+    "pistas": [
+      "Adolescente de 14 anos, sem doenças conhecidas, perdeu 5 kg no último mês.",
+      "Muita sede, urina em excesso, dor na barriga e vômitos há 2 dias.",
+      "Desidratado, respiração profunda e rápida, com hálito de fruta.",
+      "Glicemia 480 mg/dL, pH 7,08, bicarbonato 8 mEq/L e ânion gap de 24.",
+      "Beta-hidroxibutirato sérico elevado."
+    ],
+    "opcoes": [
+      "Intoxicação por salicilatos",
+      "Gastroenterite aguda",
+      "Acidose lática",
+      "Cetoacidose diabética",
+      "Apendicite aguda",
+      "Estado hiperglicêmico hiperosmolar"
+    ],
+    "explicacao": "Abertura típica de diabetes tipo 1 com poliúria, polidipsia, perda de peso e respiração de Kussmaul. A pista que fecha é a gasometria: hiperglicemia + acidose com ânion gap aumentado. No estado hiperosmolar a glicemia costuma passar de 600 mg/dL, a osmolalidade é alta e não há acidose importante.",
+    "chave": 3
+  },
+  {
+    "id": "cd-027",
+    "diagnostico": "Tireoidite de Hashimoto",
+    "especialidade": "endocrinologia",
+    "nivel": 1,
+    "pistas": [
+      "Mulher de 45 anos, com mãe e irmã portadoras de doenças autoimunes.",
+      "Cansaço, ganho de peso, intestino preso, muito frio e menstruação aumentada.",
+      "Pele seca, reflexos lentos e bócio difuso, indolor e de consistência firme.",
+      "TSH 18 mUI/L e T4 livre baixo.",
+      "Anticorpo antitireoperoxidase (anti-TPO) em título alto."
+    ],
+    "opcoes": [
+      "Doença de Graves",
+      "Tireoidite pós-parto",
+      "Tireoidite subaguda",
+      "Tireoidite de Hashimoto",
+      "Bócio multinodular atóxico",
+      "Hipotireoidismo central"
+    ],
+    "explicacao": "Hipotireoidismo primário (TSH alto, T4 livre baixo) com bócio firme e indolor. A pista que fecha é o anti-TPO alto, marcador da tireoidite autoimune crônica. No hipotireoidismo central o TSH está baixo ou inapropriadamente normal.",
+    "chave": 4
+  },
+  {
+    "id": "cd-028",
+    "diagnostico": "Doença de Graves",
+    "especialidade": "endocrinologia",
+    "nivel": 2,
+    "pistas": [
+      "Mulher de 30 anos, fumante.",
+      "Perda de peso com fome aumentada, palpitações, tremor e intolerância ao calor.",
+      "Bócio difuso com sopro, olhos saltados e retração palpebral.",
+      "TSH suprimido, T4 livre e T3 elevados.",
+      "TRAb positivo e captação de iodo difusamente aumentada na cintilografia."
+    ],
+    "opcoes": [
+      "Tireoidite subaguda",
+      "Tireotoxicose factícia",
+      "Adenoma tóxico",
+      "Tireoidite de Hashimoto",
+      "Doença de Graves",
+      "Bócio multinodular tóxico"
+    ],
+    "explicacao": "Tireotoxicose em mulher jovem com bócio difuso vascularizado. A pista-chave é a oftalmopatia (exoftalmia), que só ocorre na doença autoimune com TRAb. Na tireoidite subaguda a tireoide dói, há febre e a captação de iodo fica baixa.",
+    "chave": 2
+  },
+  {
+    "id": "cd-029",
+    "diagnostico": "Insuficiência adrenal primária",
+    "especialidade": "endocrinologia",
+    "nivel": 2,
+    "pistas": [
+      "Mulher de 38 anos com vitiligo e hipotireoidismo autoimune.",
+      "Cansaço intenso, perda de peso, náuseas, tontura ao levantar e vontade de comer sal.",
+      "Pele escurecida nas dobras das mãos, cicatrizes e gengivas; PA 90x60 mmHg.",
+      "Sódio 128 mEq/L, potássio 5,9 mEq/L e glicemia de jejum 62 mg/dL.",
+      "Cortisol basal baixo com ACTH muito elevado; sem resposta ao estímulo com cosintropina."
+    ],
+    "opcoes": [
+      "SIADH",
+      "Anorexia nervosa",
+      "Insuficiência adrenal primária",
+      "Insuficiência adrenal secundária",
+      "Hipotireoidismo descompensado",
+      "Hemocromatose"
+    ],
+    "explicacao": "Autoimunidade associada, hipotensão, hiponatremia e hipercalemia. A pista-chave é a hiperpigmentação, causada pelo ACTH alto. Na insuficiência secundária (hipofisária) não há hiperpigmentação nem hipercalemia, porque a aldosterona é preservada.",
+    "chave": 2
+  },
+  {
+    "id": "cd-030",
+    "diagnostico": "Hiperaldosteronismo primário",
+    "especialidade": "endocrinologia",
+    "nivel": 3,
+    "pistas": [
+      "Mulher de 42 anos com pressão alta diagnosticada aos 35 anos.",
+      "PA 170x100 mmHg com 4 anti-hipertensivos em dose plena, incluindo um diurético.",
+      "Fraqueza muscular e câimbras; sem edema.",
+      "Potássio 2,9 mEq/L e alcalose metabólica, mesmo após suspender o diurético.",
+      "Relação aldosterona/renina elevada com renina suprimida; TC com nódulo adrenal de 1,5 cm."
+    ],
+    "opcoes": [
+      "Feocromocitoma",
+      "Hiperaldosteronismo primário",
+      "Síndrome de Cushing",
+      "Estenose de artéria renal",
+      "Síndrome de Liddle",
+      "Hipertensão essencial"
+    ],
+    "explicacao": "Hipertensão resistente com hipocalemia espontânea é a principal indicação de rastreio. A pista-chave é a hipocalemia com alcalose; a relação aldosterona/renina alta confirma. Na síndrome de Liddle o quadro é parecido, mas renina e aldosterona estão ambas baixas.",
+    "chave": 3
+  },
+  {
+    "id": "cd-031",
+    "diagnostico": "AVC isquêmico",
+    "especialidade": "neurologia",
+    "nivel": 1,
+    "pistas": [
+      "Homem de 68 anos, hipertenso, com fibrilação atrial sem anticoagulação.",
+      "Há 1 hora a esposa notou a boca torta e a fala enrolada; estava bem antes.",
+      "Fraqueza no lado direito, mais em braço e face, e afasia; glicemia capilar 110 mg/dL.",
+      "TC de crânio sem contraste normal, sem sangramento.",
+      "Angiotomografia com oclusão do segmento M1 da artéria média esquerda."
+    ],
+    "opcoes": [
+      "Ataque isquêmico transitório",
+      "AVC isquêmico",
+      "Hipoglicemia",
+      "Paralisia pós-ictal de Todd",
+      "AVC hemorrágico",
+      "Enxaqueca com aura"
+    ],
+    "explicacao": "Déficit focal súbito em paciente com fonte embólica (fibrilação atrial). A pista-chave é a TC sem sangue com glicemia normal, que exclui hemorragia e hipoglicemia e permite trombólise na janela. O ataque isquêmico transitório regride em minutos, sem lesão de imagem.",
+    "chave": 3
+  },
+  {
+    "id": "cd-032",
+    "diagnostico": "Hemorragia subaracnóidea",
+    "especialidade": "neurologia",
+    "nivel": 2,
+    "pistas": [
+      "Mulher de 50 anos, fumante e hipertensa.",
+      "Dor de cabeça súbita e explosiva durante esforço, 'a pior da vida', com vômitos.",
+      "Rigidez de nuca, sem febre; perdeu a consciência por pouco tempo no início.",
+      "TC de crânio sem contraste: sangue nas cisternas da base e nas fissuras laterais.",
+      "Angiotomografia: aneurisma sacular na artéria comunicante anterior."
+    ],
+    "opcoes": [
+      "Hemorragia intraparenquimatosa",
+      "Meningite bacteriana",
+      "Hemorragia subaracnóidea",
+      "Enxaqueca sem aura",
+      "Trombose venosa cerebral",
+      "Vasoconstrição cerebral reversível"
+    ],
+    "explicacao": "Cefaleia em trovoada com rigidez de nuca e síncope. A pista-chave é a TC com sangue nas cisternas; se a TC for normal, faz-se punção lombar. A meningite também dá rigidez de nuca, mas com febre e início em horas a dias.",
+    "chave": 3
+  },
+  {
+    "id": "cd-033",
+    "diagnostico": "Síndrome de Guillain-Barré",
+    "especialidade": "neurologia",
+    "nivel": 2,
+    "pistas": [
+      "Homem de 30 anos que teve diarreia há 2 semanas.",
+      "Formigamento nos pés e fraqueza que sobe para pernas e braços em 5 dias.",
+      "Fraqueza flácida e simétrica nos quatro membros, sem reflexos, com pouca alteração de sensibilidade.",
+      "Líquor: proteína 180 mg/dL com 3 células/mm³.",
+      "Eletroneuromiografia: polirradiculoneuropatia desmielinizante aguda."
+    ],
+    "opcoes": [
+      "Síndrome de Guillain-Barré",
+      "Botulismo",
+      "Mielite transversa",
+      "Paralisia periódica hipocalêmica",
+      "Miastenia gravis",
+      "Polineuropatia do doente crítico"
+    ],
+    "explicacao": "Fraqueza ascendente arreflexa após infecção (Campylobacter, Zika). A pista-chave é a dissociação proteinocitológica no líquor. Na mielite transversa há nível sensitivo e alteração de esfíncteres, e na fase tardia os reflexos ficam aumentados.",
+    "chave": 3
+  },
+  {
+    "id": "cd-034",
+    "diagnostico": "Miastenia gravis",
+    "especialidade": "neurologia",
+    "nivel": 2,
+    "pistas": [
+      "Mulher de 28 anos, sem doenças prévias.",
+      "Visão dupla e pálpebras caídas que pioram no fim do dia.",
+      "Cansaço para mastigar e falar por muito tempo; reflexos e sensibilidade normais.",
+      "Teste do gelo positivo na ptose; anticorpo antirreceptor de acetilcolina positivo.",
+      "TC de tórax com massa no mediastino anterior."
+    ],
+    "opcoes": [
+      "Síndrome de Guillain-Barré",
+      "Esclerose múltipla",
+      "Miastenia gravis",
+      "Oftalmopatia tireoidiana",
+      "Síndrome de Lambert-Eaton",
+      "Botulismo"
+    ],
+    "explicacao": "Fraqueza flutuante que piora com o uso, com ptose e diplopia. A pista que fecha é o anticorpo antirreceptor de acetilcolina, e a massa mediastinal sugere timoma. Na síndrome de Lambert-Eaton a força melhora com o esforço repetido e os reflexos estão diminuídos.",
+    "chave": 3
+  },
+  {
+    "id": "cd-035",
+    "diagnostico": "Esclerose múltipla",
+    "especialidade": "neurologia",
+    "nivel": 3,
+    "pistas": [
+      "Mulher de 27 anos, sem comorbidades.",
+      "Perda de visão com dor no olho direito há 1 ano, que melhorou sozinha.",
+      "Agora, formigamento em faixa no tronco e choque que desce pela coluna ao dobrar o pescoço.",
+      "Líquor com bandas oligoclonais presentes só no líquor.",
+      "RM: lesões ovoides periventriculares perpendiculares ao corpo caloso e lesão medular cervical com realce."
+    ],
+    "opcoes": [
+      "Encefalomielite disseminada aguda",
+      "Lúpus neuropsiquiátrico",
+      "Neuromielite óptica",
+      "Deficiência de vitamina B12",
+      "Esclerose múltipla",
+      "Neurossífilis"
+    ],
+    "explicacao": "Mulher jovem com surtos separados no tempo e no espaço (neurite óptica e mielite). A pista que fecha é a RM com lesões periventriculares em 'dedos de Dawson'. Na neuromielite óptica a mielite é longitudinalmente extensa (3 ou mais segmentos) e o anti-aquaporina-4 é positivo.",
+    "chave": 4
+  },
+  {
+    "id": "cd-036",
+    "diagnostico": "Anemia falciforme",
+    "especialidade": "hematologia",
+    "nivel": 1,
+    "pistas": [
+      "Menino de 6 anos, negro, com teste do pezinho alterado ao nascer.",
+      "Dor forte nos ossos das pernas e nas costas após uma gripe, igual a crises anteriores.",
+      "Palidez e icterícia leve; baço não palpável (já foi grande quando menor).",
+      "Hb 7,2 g/dL, reticulócitos 12%, bilirrubina indireta e LDH elevadas.",
+      "Eletroforese de hemoglobina: HbS 90%, HbF 8% e ausência de HbA."
+    ],
+    "opcoes": [
+      "Talassemia beta maior",
+      "Deficiência de G6PD",
+      "Osteomielite aguda",
+      "Leucemia linfoide aguda",
+      "Esferocitose hereditária",
+      "Anemia falciforme"
+    ],
+    "explicacao": "Hemólise crônica com crises dolorosas vaso-oclusivas e autoesplenectomia. A pista que fecha é a eletroforese com HbS predominante e sem HbA (homozigose SS). Na talassemia beta maior a anemia é microcítica, com HbF muito alta e sem HbS.",
+    "chave": 4
+  },
+  {
+    "id": "cd-037",
+    "diagnostico": "Anemia ferropriva",
+    "especialidade": "hematologia",
+    "nivel": 1,
+    "pistas": [
+      "Mulher de 32 anos com menstruação muito volumosa por miomas.",
+      "Cansaço, queda de cabelo e vontade de comer gelo.",
+      "Palidez, unhas em forma de colher e língua lisa e ardida.",
+      "Hb 8,5 g/dL, VCM 68 fL, RDW 19% e plaquetas levemente aumentadas.",
+      "Ferritina 6 ng/mL e saturação de transferrina 7%."
+    ],
+    "opcoes": [
+      "Anemia ferropriva",
+      "Talassemia menor",
+      "Intoxicação por chumbo",
+      "Anemia de doença crônica",
+      "Anemia sideroblástica",
+      "Anemia megaloblástica"
+    ],
+    "explicacao": "Perda menstrual crônica, pica (pagofagia) e coiloníquia. A pista que fecha é a ferritina baixa, que confirma deficiência de ferro. Na talassemia menor o VCM é muito baixo, mas o RDW é normal e a ferritina também.",
+    "chave": 4
+  },
+  {
+    "id": "cd-038",
+    "diagnostico": "Púrpura trombocitopênica imune",
+    "especialidade": "hematologia",
+    "nivel": 2,
+    "pistas": [
+      "Criança de 4 anos, saudável, teve virose há 3 semanas.",
+      "Manchas roxas e pontinhos vermelhos na pele, e sangramento pelo nariz.",
+      "Bom estado geral, sem febre e sem aumento de baço, fígado ou gânglios.",
+      "Plaquetas 8.000/mm³, com hemoglobina e leucócitos normais.",
+      "Esfregaço com plaquetas grandes, sem blastos e sem esquizócitos."
+    ],
+    "opcoes": [
+      "Aplasia de medula",
+      "Dengue com plaquetopenia",
+      "Leucemia linfoide aguda",
+      "Púrpura trombocitopênica imune",
+      "Vasculite por IgA",
+      "Síndrome hemolítico-urêmica"
+    ],
+    "explicacao": "Criança bem, pós-viral, com plaquetopenia isolada. A pista-chave é o hemograma com só plaquetas baixas, e o esfregaço confirma. A leucemia aguda também dá sangramento, mas com febre, visceromegalias, alteração de outras séries e blastos.",
+    "chave": 3
+  },
+  {
+    "id": "cd-039",
+    "diagnostico": "Leucemia promielocítica aguda",
+    "especialidade": "hematologia",
+    "nivel": 3,
+    "pistas": [
+      "Homem de 35 anos, previamente saudável.",
+      "Cansaço, febre e manchas roxas espontâneas há 10 dias.",
+      "Sangramento na gengiva e nos locais de punção; sem aumento de fígado ou baço.",
+      "Pancitopenia, fibrinogênio baixo, TP e TTPa alargados e D-dímero muito alto.",
+      "Medula com células de grânulos grosseiros e feixes de bastonetes de Auer; t(15;17) PML-RARA."
+    ],
+    "opcoes": [
+      "CIVD por sepse",
+      "Anemia aplásica",
+      "Leucemia promielocítica aguda",
+      "Leucemia linfoide aguda",
+      "Leucemia mieloide crônica",
+      "Púrpura trombocitopênica trombótica"
+    ],
+    "explicacao": "Leucemia aguda com coagulação intravascular disseminada logo no início. A pista que fecha é a t(15;17) com bastonetes de Auer em feixe, e o tratamento urgente é com ácido transretinoico (ATRA). A CIVD por sepse tem foco infeccioso e não apresenta células anormais na medula.",
+    "chave": 4
+  },
+  {
+    "id": "cd-040",
+    "diagnostico": "Linfoma de Hodgkin",
+    "especialidade": "hematologia",
+    "nivel": 2,
+    "pistas": [
+      "Homem de 22 anos, universitário.",
+      "Ínguas no pescoço há 2 meses, sem dor, com febre, suor noturno e perda de 10% do peso.",
+      "Dor nos gânglios após beber álcool; linfonodos elásticos, inclusive supraclaviculares.",
+      "Raio X de tórax com alargamento do mediastino.",
+      "Biópsia com células de Reed-Sternberg (CD15 e CD30 positivas) em fundo inflamatório."
+    ],
+    "opcoes": [
+      "Toxoplasmose ganglionar",
+      "Linfoma de Hodgkin",
+      "Linfoma difuso de grandes células B",
+      "Tuberculose ganglionar",
+      "Sarcoidose",
+      "Mononucleose infecciosa"
+    ],
+    "explicacao": "Adulto jovem com adenopatia cervical, sintomas B e massa mediastinal. A pista que fecha é a célula de Reed-Sternberg CD15+/CD30+. A tuberculose ganglionar tem linfonodos que fistulizam e granuloma caseoso na biópsia.",
+    "chave": 4
+  },
+  {
+    "id": "cd-041",
+    "diagnostico": "Lúpus eritematoso sistêmico",
+    "especialidade": "reumatologia",
+    "nivel": 1,
+    "pistas": [
+      "Mulher de 25 anos, piorou depois de um dia de sol na praia da Ponta Negra, em Manaus.",
+      "Dor e inchaço nas mãos, queda de cabelo e aftas indolores na boca.",
+      "Mancha vermelha nas bochechas e no dorso do nariz, que poupa os sulcos nasolabiais.",
+      "Leucopenia e plaquetopenia; urina com proteinúria e cilindros hemáticos.",
+      "FAN 1:640 homogêneo, anti-DNA de dupla hélice e anti-Sm positivos; complemento baixo."
+    ],
+    "opcoes": [
+      "Artrite reumatoide",
+      "Dermatomiosite",
+      "Rosácea",
+      "Doença mista do tecido conjuntivo",
+      "Lúpus eritematoso sistêmico",
+      "Síndrome de Sjögren"
+    ],
+    "explicacao": "Mulher jovem com fotossensibilidade, artrite, úlceras orais, citopenias e nefrite. A pista-chave é o rash malar poupando sulcos nasolabiais; anti-Sm é muito específico. Na rosácea o eritema não poupa os sulcos, há pápulas e pústulas, e não há acometimento sistêmico.",
+    "chave": 2
+  },
+  {
+    "id": "cd-042",
+    "diagnostico": "Artrite reumatoide",
+    "especialidade": "reumatologia",
+    "nivel": 1,
+    "pistas": [
+      "Mulher de 45 anos, fumante.",
+      "Dor e inchaço nas mãos e punhos há 4 meses, com rigidez matinal por mais de 1 hora.",
+      "Sinovite simétrica nas metacarpofalangianas e interfalangianas proximais, poupando as distais.",
+      "VHS e PCR elevados; FR (anticorpo IgM contra IgG) positivo.",
+      "Anti-CCP em título alto; raio X com erosões marginais e osteopenia periarticular."
+    ],
+    "opcoes": [
+      "Chikungunya crônica",
+      "Lúpus eritematoso sistêmico",
+      "Artrite psoriásica",
+      "Artrite reumatoide",
+      "Osteoartrite de mãos",
+      "Gota poliarticular"
+    ],
+    "explicacao": "Poliartrite simétrica de pequenas articulações por mais de 6 semanas com rigidez matinal longa. A pista-chave é o padrão articular poupando interfalangianas distais. A osteoartrite acomete interfalangianas distais (nódulos de Heberden), com rigidez curta.",
+    "chave": 2
+  },
+  {
+    "id": "cd-043",
+    "diagnostico": "Artrite gotosa aguda",
+    "especialidade": "reumatologia",
+    "nivel": 2,
+    "pistas": [
+      "Homem de 52 anos, obeso, hipertenso em uso de hidroclorotiazida, bebe cerveja nos fins de semana.",
+      "Acordou de madrugada com dor intensa no dedão do pé direito; não suporta nem o lençol.",
+      "Primeira metatarsofalangiana quente, vermelha e muito inchada; febre baixa.",
+      "Ácido úrico sérico normal durante a crise; PCR elevada.",
+      "Líquido sinovial com cristais em agulha, de birrefringência negativa forte à luz polarizada."
+    ],
+    "opcoes": [
+      "Artrite reativa",
+      "Artrite gotosa aguda",
+      "Doença por pirofosfato de cálcio",
+      "Fratura por estresse",
+      "Artrite séptica",
+      "Celulite"
+    ],
+    "explicacao": "Monoartrite aguda da 1ª metatarsofalangiana (podagra) em homem com diurético tiazídico e álcool. A pista que fecha são os cristais de urato monossódico em agulha com birrefringência negativa. Na doença por pirofosfato os cristais são romboides com birrefringência positiva fraca, geralmente no joelho.",
+    "chave": 4
+  },
+  {
+    "id": "cd-044",
+    "diagnostico": "Espondilite anquilosante",
+    "especialidade": "reumatologia",
+    "nivel": 3,
+    "pistas": [
+      "Homem de 26 anos com dor lombar há 1 ano.",
+      "Dor que acorda de madrugada, melhora com exercício e piora com repouso; rigidez matinal longa.",
+      "Teste de Schober reduzido e dor nas sacroilíacas; já teve um olho vermelho e doloroso.",
+      "PCR elevada, HLA-B27 positivo e fator reumatoide negativo.",
+      "RM com edema ósseo nas sacroilíacas; raio X com sindesmófitos na coluna."
+    ],
+    "opcoes": [
+      "Artrite psoriásica",
+      "Espondilite anquilosante",
+      "Lombalgia mecânica",
+      "Hiperostose esquelética difusa",
+      "Artrite reativa",
+      "Hérnia de disco lombar"
+    ],
+    "explicacao": "Homem jovem com lombalgia inflamatória (melhora com movimento) e uveíte anterior. A pista-chave é o padrão inflamatório da dor. A lombalgia mecânica piora com esforço e melhora com repouso, sem rigidez matinal longa.",
+    "chave": 1
+  },
+  {
+    "id": "cd-045",
+    "diagnostico": "Arterite de células gigantes",
+    "especialidade": "reumatologia",
+    "nivel": 3,
+    "pistas": [
+      "Mulher de 74 anos com dor e rigidez nos ombros e quadris pela manhã.",
+      "Dor de cabeça nova na têmpora direita e dor na mandíbula ao mastigar.",
+      "Artéria temporal espessada, dolorosa e com pulso diminuído.",
+      "VHS 98 mm/h e PCR elevada; anemia normocítica.",
+      "Biópsia: infiltrado granulomatoso na parede do vaso, macrófagos multinucleados e lâmina elástica rota."
+    ],
+    "opcoes": [
+      "Arterite de células gigantes",
+      "Enxaqueca",
+      "Arterite de Takayasu",
+      "Neuralgia do trigêmeo",
+      "Disfunção temporomandibular",
+      "Polimialgia reumática isolada"
+    ],
+    "explicacao": "Idosa com cefaleia nova, claudicação de mandíbula e polimialgia reumática. A pista-chave é a artéria temporal alterada ao exame; iniciar corticoide logo evita cegueira. A arterite de Takayasu afeta mulheres jovens (abaixo de 40 anos) e a aorta e seus ramos.",
+    "chave": 2
+  },
+  {
+    "id": "cd-046",
+    "diagnostico": "Hanseníase multibacilar",
+    "especialidade": "dermatologia",
+    "nivel": 2,
+    "pistas": [
+      "Homem de 40 anos, do interior do Amazonas; um irmão fez tratamento longo para doença de pele.",
+      "Várias manchas avermelhadas no tronco e braços, sem coceira, há 1 ano.",
+      "Manchas sem sensibilidade ao calor e à dor; nervo ulnar grosso e doloroso.",
+      "Mais de 5 lesões de pele e mais de um tronco nervoso acometido.",
+      "Baciloscopia do raspado intradérmico com bacilos álcool-ácido resistentes agrupados em globias."
+    ],
+    "opcoes": [
+      "Sarcoidose cutânea",
+      "Micose fungoide",
+      "Pitiríase versicolor",
+      "Hanseníase multibacilar",
+      "Sífilis secundária",
+      "Leishmaniose cutânea difusa"
+    ],
+    "explicacao": "Manchas com perda de sensibilidade e nervo periférico espessado são sinais cardinais. A pista-chave é a alteração de sensibilidade térmica e dolorosa. Na pitiríase versicolor as manchas descamam ao estiramento e a sensibilidade é normal. O tratamento é a poliquimioterapia única (PQT-U) por 12 meses.",
+    "chave": 2
+  },
+  {
+    "id": "cd-047",
+    "diagnostico": "Leishmaniose tegumentar americana",
+    "especialidade": "dermatologia",
+    "nivel": 1,
+    "pistas": [
+      "Homem de 28 anos, trabalha em desmatamento em ramal perto de Manaus.",
+      "Picada de inseto na perna há 2 meses, que virou uma ferida que não cicatriza.",
+      "Úlcera única, indolor, redonda, com bordas elevadas em moldura e fundo granuloso.",
+      "Esfregaço da borda da úlcera com formas amastigotas dentro de macrófagos.",
+      "Transmissão por flebotomíneo (mosquito-palha); tratamento com antimonial ou pentamidina."
+    ],
+    "opcoes": [
+      "Leishmaniose tegumentar americana",
+      "Carcinoma espinocelular",
+      "Úlcera venosa",
+      "Pioderma gangrenoso",
+      "Paracoccidioidomicose",
+      "Esporotricose"
+    ],
+    "explicacao": "Trabalho em mata e úlcera crônica indolor com bordas em moldura. A pista-chave é o aspecto da úlcera; o esfregaço com amastigotas confirma. A esporotricose surge após trauma com planta ou arranhão de gato, com nódulos em trajeto linfático.",
+    "chave": 2
+  },
+  {
+    "id": "cd-048",
+    "diagnostico": "Melanoma",
+    "especialidade": "dermatologia",
+    "nivel": 2,
+    "pistas": [
+      "Homem de 60 anos, pele clara e olhos azuis, trabalhou 30 anos ao sol sem proteção.",
+      "Pinta nas costas que cresceu e mudou de cor nos últimos 6 meses.",
+      "Lesão de 9 mm, assimétrica, com bordas irregulares e várias cores (marrom, preto e azul).",
+      "Dermatoscopia com rede pigmentar atípica e véu azul-esbranquiçado.",
+      "Biópsia excisional: melanócitos atípicos invadindo a derme, espessura de Breslow 1,8 mm."
+    ],
+    "opcoes": [
+      "Dermatofibroma",
+      "Melanoma",
+      "Carcinoma basocelular pigmentado",
+      "Nevo displásico",
+      "Hemangioma",
+      "Queratose seborreica"
+    ],
+    "explicacao": "Lesão pigmentada que preenche o ABCDE (assimetria, bordas, cores, diâmetro > 6 mm, evolução). A pista-chave é o exame da lesão. O nevo displásico pode ter algumas atipias, mas não mostra crescimento rápido nem véu azul-esbranquiçado na dermatoscopia.",
+    "chave": 2
+  },
+  {
+    "id": "cd-049",
+    "diagnostico": "Psoríase em placas",
+    "especialidade": "dermatologia",
+    "nivel": 1,
+    "pistas": [
+      "Homem de 35 anos, obeso e fumante; piora em fases de estresse.",
+      "Lesões vermelhas e descamativas em cotovelos, joelhos e couro cabeludo há anos.",
+      "Escamas prateadas bem delimitadas; unhas com pequenas depressões puntiformes.",
+      "Curetagem metódica: sinal da vela, membrana final e orvalho sangrante.",
+      "Biópsia: acantose, paraqueratose e microabscessos de Munro."
+    ],
+    "opcoes": [
+      "Pitiríase rósea",
+      "Psoríase em placas",
+      "Dermatite seborreica",
+      "Líquen plano",
+      "Tinea corporis",
+      "Eczema numular"
+    ],
+    "explicacao": "Lesões eritematodescamativas em superfícies extensoras e couro cabeludo, com pitting ungueal. A pista-chave é a curetagem metódica de Brocq (sinal de Auspitz). A tinea corporis tem borda ativa com centro mais claro e exame micológico positivo.",
+    "chave": 3
+  },
+  {
+    "id": "cd-050",
+    "diagnostico": "Pênfigo foliáceo endêmico",
+    "especialidade": "dermatologia",
+    "nivel": 3,
+    "pistas": [
+      "Mulher de 22 anos, lavradora, mora perto de rios em área rural, com casos parecidos na vizinhança.",
+      "Bolhas que estouram fácil e deixam áreas em carne viva com ardor 'como fogo', no rosto e tronco.",
+      "Crostas em áreas seborreicas; boca sem lesões; descolamento da pele ao atrito (Nikolsky).",
+      "Biópsia com clivagem intraepidérmica subcórnea e acantólise.",
+      "Imunofluorescência direta com IgG intercelular; anticorpos contra desmogleína 1."
+    ],
+    "opcoes": [
+      "Pênfigo vulgar",
+      "Impetigo bolhoso",
+      "Pênfigo foliáceo endêmico",
+      "Penfigoide bolhoso",
+      "Necrólise epidérmica tóxica",
+      "Dermatite herpetiforme"
+    ],
+    "explicacao": "Forma endêmica brasileira ('fogo selvagem'), comum em jovens de áreas rurais. A pista que fecha é o anticorpo contra desmogleína 1, com clivagem alta (subcórnea). O pênfigo vulgar acomete a boca, tem clivagem suprabasal e anticorpo contra desmogleína 3.",
+    "chave": 4
+  },
+  {
+    "id": "cd-051",
+    "diagnostico": "Bronquiolite viral aguda",
+    "especialidade": "pediatria",
+    "nivel": 1,
+    "pistas": [
+      "Lactente de 4 meses, nascido a termo, em abril (época de chuva em Manaus); irmão está resfriado.",
+      "Coriza e tosse há 3 dias, depois cansaço e dificuldade para mamar.",
+      "FR 62 irpm, tiragem subcostal, sibilos e estertores finos difusos; SpO2 93%.",
+      "Primeiro episódio de chiado; raio X com hiperinsuflação e pequenas atelectasias.",
+      "Pesquisa de antígenos na secreção nasal positiva para vírus sincicial respiratório."
+    ],
+    "opcoes": [
+      "Coqueluche",
+      "Pneumonia bacteriana",
+      "Aspiração de corpo estranho",
+      "Cardiopatia congênita descompensada",
+      "Bronquiolite viral aguda",
+      "Asma do lactente"
+    ],
+    "explicacao": "Menor de 2 anos com primeiro episódio de sibilância após pródromo de via aérea superior, na sazonalidade do VSR (na região Norte, no período chuvoso). A pista-chave é o primeiro chiado com pródromo viral. A asma exige episódios recorrentes de sibilância.",
+    "chave": 3
+  },
+  {
+    "id": "cd-052",
+    "diagnostico": "Doença de Kawasaki",
+    "especialidade": "pediatria",
+    "nivel": 2,
+    "pistas": [
+      "Menino de 2 anos, previamente saudável.",
+      "Febre alta há 6 dias que não cede com antitérmicos, com muita irritabilidade.",
+      "Olhos vermelhos sem secreção, lábios rachados, língua em framboesa e manchas pelo corpo.",
+      "Mãos e pés inchados e vermelhos; um gânglio cervical de 2 cm; PCR alta e plaquetas subindo.",
+      "Ecocardiograma com dilatação das artérias coronárias; depois, descamação na ponta dos dedos."
+    ],
+    "opcoes": [
+      "Sarampo",
+      "Adenovirose",
+      "Doença de Kawasaki",
+      "Escarlatina",
+      "Síndrome de Stevens-Johnson",
+      "Síndrome inflamatória multissistêmica pediátrica"
+    ],
+    "explicacao": "Febre por 5 dias ou mais com 4 dos 5 critérios (conjuntivite sem secreção, alterações de boca, exantema, alterações de extremidades, linfonodo cervical). A pista-chave é o conjunto das alterações de extremidades. A escarlatina tem faringite estreptocócica, exantema áspero e responde a antibiótico.",
+    "chave": 3
+  },
+  {
+    "id": "cd-053",
+    "diagnostico": "Meningococcemia",
+    "especialidade": "pediatria",
+    "nivel": 2,
+    "pistas": [
+      "Menina de 7 anos, vai à escola; cartão de vacinas incompleto.",
+      "Febre alta súbita, prostração, vômitos e dor nas pernas há 12 horas.",
+      "Petéquias que viram manchas roxas rapidamente e não somem ao apertar; mãos e pés frios.",
+      "Taquicardia, enchimento capilar de 5 s e hipotensão; plaquetopenia e coagulopatia.",
+      "Hemocultura com diplococos gram-negativos."
+    ],
+    "opcoes": [
+      "Sepse pneumocócica",
+      "Vasculite por IgA",
+      "Meningococcemia",
+      "Leucemia linfoide aguda",
+      "Febre maculosa",
+      "Dengue grave"
+    ],
+    "explicacao": "Criança com febre e púrpura que progride em horas, evoluindo com choque. A pista-chave é a púrpura rapidamente progressiva que não desaparece à digitopressão. Na vasculite por IgA a criança está bem, sem febre alta, e a púrpura é palpável nas nádegas e pernas com plaquetas normais.",
+    "chave": 2
+  },
+  {
+    "id": "cd-054",
+    "diagnostico": "Estenose hipertrófica do piloro",
+    "especialidade": "pediatria",
+    "nivel": 2,
+    "pistas": [
+      "Lactente de 4 semanas, menino, primeiro filho.",
+      "Vômitos sem bile, em jato, logo após as mamadas, e continua com fome.",
+      "Desidratado; 'oliva' palpável no epigástrio e ondas peristálticas visíveis.",
+      "Gasometria com alcalose metabólica, cloro baixo e potássio baixo.",
+      "USG: músculo de 5 mm de espessura e canal de 18 mm de comprimento na saída do estômago."
+    ],
+    "opcoes": [
+      "Estenose hipertrófica do piloro",
+      "Alergia à proteína do leite de vaca",
+      "Má rotação intestinal com volvo",
+      "Doença do refluxo gastroesofágico",
+      "Hiperplasia adrenal congênita",
+      "Atresia duodenal"
+    ],
+    "explicacao": "Menino primogênito de 2 a 8 semanas com vômitos em jato não biliosos. A pista-chave é a oliva palpável. A hiperplasia adrenal perdedora de sal também causa vômitos e desidratação, mas com acidose, hiponatremia e hipercalemia.",
+    "chave": 2
+  },
+  {
+    "id": "cd-055",
+    "diagnostico": "Coqueluche",
+    "especialidade": "pediatria",
+    "nivel": 2,
+    "pistas": [
+      "Lactente de 2 meses, ainda sem vacinas; a mãe não tomou dTpa na gestação.",
+      "Coriza leve há 1 semana, depois tosse em acessos.",
+      "Acessos de tosse seguidos, com rosto arroxeado, guincho ao inspirar e vômito depois.",
+      "Hemograma: 38.000 leucócitos/mm³ com 75% de linfócitos.",
+      "PCR de swab de nasofaringe positiva para Bordetella pertussis."
+    ],
+    "opcoes": [
+      "Tuberculose primária",
+      "Aspiração de corpo estranho",
+      "Coqueluche",
+      "Bronquiolite viral aguda",
+      "Pneumonia por clamídia",
+      "Doença do refluxo gastroesofágico"
+    ],
+    "explicacao": "Lactente não vacinado e sem proteção materna (dTpa) com tosse paroxística e guincho. A pista-chave é a tosse em acessos com guincho e vômito, e a linfocitose intensa reforça. A pneumonia por clamídia dá tosse em staccato, conjuntivite e eosinofilia, sem guincho.",
+    "chave": 2
+  },
+  {
+    "id": "cd-056",
+    "diagnostico": "Pré-eclâmpsia com sinais de gravidade",
+    "especialidade": "ginecologia-obstetricia",
+    "nivel": 2,
+    "pistas": [
+      "Primigesta de 19 anos, com 34 semanas, fez poucas consultas de pré-natal.",
+      "Dor de cabeça forte, pontos brilhantes na visão e dor no estômago.",
+      "PA 168x112 mmHg em duas medidas; inchaço no rosto e nas mãos; reflexos vivos.",
+      "Relação proteína/creatinina urinária 0,8; plaquetas 140.000; TGO 55 U/L; LDH normal.",
+      "Relação sFlt-1/PlGF muito elevada; sem convulsões."
+    ],
+    "opcoes": [
+      "Esteatose hepática aguda da gestação",
+      "Hipertensão gestacional",
+      "Hipertensão crônica",
+      "Eclâmpsia",
+      "Síndrome HELLP",
+      "Pré-eclâmpsia com sinais de gravidade"
+    ],
+    "explicacao": "Hipertensão após 20 semanas com proteinúria e sintomas de lesão de órgão-alvo. A pista-chave é PA ≥ 160x110 com cefaleia, escotomas e epigastralgia, que indicam gravidade e sulfato de magnésio. Na eclâmpsia há convulsão, e na HELLP há hemólise (LDH alto), plaquetas < 100.000 e transaminases altas.",
+    "chave": 2
+  },
+  {
+    "id": "cd-057",
+    "diagnostico": "Gravidez ectópica rota",
+    "especialidade": "ginecologia-obstetricia",
+    "nivel": 1,
+    "pistas": [
+      "Mulher de 27 anos, já teve doença inflamatória pélvica; menstruação atrasada há 7 semanas.",
+      "Dor súbita e forte no baixo ventre à esquerda, com sangramento vaginal escuro e tontura.",
+      "PA 80x50 mmHg, FC 124 bpm, descompressão abdominal dolorosa e dor no ombro.",
+      "Beta-hCG 3.500 mUI/mL.",
+      "USG transvaginal: útero vazio, massa anexial esquerda e muito líquido livre na pelve."
+    ],
+    "opcoes": [
+      "Torção anexial",
+      "Apendicite aguda",
+      "Doença inflamatória pélvica",
+      "Gravidez ectópica rota",
+      "Abortamento incompleto",
+      "Cisto de corpo lúteo roto"
+    ],
+    "explicacao": "Atraso menstrual, dor pélvica, sangramento e choque em mulher com dano tubário prévio. A pista que fecha é beta-hCG acima da zona discriminatória com útero vazio e massa anexial. No abortamento incompleto há restos no útero e o colo costuma estar aberto.",
+    "chave": 4
+  },
+  {
+    "id": "cd-058",
+    "diagnostico": "Descolamento prematuro de placenta",
+    "especialidade": "ginecologia-obstetricia",
+    "nivel": 3,
+    "pistas": [
+      "Gestante de 32 anos, com 35 semanas, hipertensa e usuária de cocaína.",
+      "Dor abdominal súbita e forte, com sangramento vaginal escuro.",
+      "Útero endurecido e doloroso, que não relaxa entre as contrações.",
+      "Cardiotocografia com desacelerações tardias e bradicardia fetal.",
+      "Fibrinogênio baixo; na cesárea, parede uterina infiltrada de sangue (útero de Couvelaire)."
+    ],
+    "opcoes": [
+      "Vasa prévia",
+      "Corioamnionite",
+      "Placenta prévia",
+      "Descolamento prematuro de placenta",
+      "Trabalho de parto prematuro",
+      "Rotura uterina"
+    ],
+    "explicacao": "Hipertensão e cocaína são fatores de risco clássicos. A pista-chave é o útero lenhoso e hipertônico com dor e sangramento escuro. Na placenta prévia o sangramento é vermelho vivo, indolor e o útero é relaxado.",
+    "chave": 2
+  },
+  {
+    "id": "cd-059",
+    "diagnostico": "Síndrome dos ovários policísticos",
+    "especialidade": "ginecologia-obstetricia",
+    "nivel": 2,
+    "pistas": [
+      "Mulher de 23 anos, com sobrepeso.",
+      "Menstruação a cada 2 a 3 meses desde a menarca e dificuldade para engravidar.",
+      "Pelos em excesso no rosto e na barriga, acne e manchas escuras no pescoço.",
+      "Testosterona discretamente elevada; TSH, prolactina e 17-OH-progesterona normais.",
+      "USG transvaginal: 22 folículos de 2 a 9 mm em cada gônada, na periferia."
+    ],
+    "opcoes": [
+      "Tumor ovariano virilizante",
+      "Hipotireoidismo",
+      "Síndrome dos ovários policísticos",
+      "Síndrome de Cushing",
+      "Hiperprolactinemia",
+      "Hiperplasia adrenal congênita não clássica"
+    ],
+    "explicacao": "Oligo-ovulação e hiperandrogenismo, com resistência insulínica (acantose). A pista-chave é a exclusão das outras causas no laboratório (TSH, prolactina, 17-OH-progesterona normais), exigida pelos critérios de Rotterdam. A hiperplasia adrenal não clássica tem 17-OH-progesterona elevada.",
+    "chave": 3
+  },
+  {
+    "id": "cd-060",
+    "diagnostico": "Mola hidatiforme completa",
+    "especialidade": "ginecologia-obstetricia",
+    "nivel": 3,
+    "pistas": [
+      "Mulher de 17 anos, primeira gestação, com 11 semanas.",
+      "Sangramento vaginal escuro, vômitos muito fortes e barriga maior que o esperado.",
+      "Útero do tamanho de 16 semanas, sem batimento fetal no sonar; PA 150x95 mmHg.",
+      "Beta-hCG de 480.000 mUI/mL e TSH suprimido.",
+      "USG: massa dentro do útero com muitas imagens anecoicas em 'flocos de neve', sem embrião."
+    ],
+    "opcoes": [
+      "Abortamento incompleto",
+      "Mola hidatiforme parcial",
+      "Mola hidatiforme completa",
+      "Hiperêmese gravídica",
+      "Gestação gemelar",
+      "Coriocarcinoma"
+    ],
+    "explicacao": "Útero maior que a idade gestacional, hiperêmese, hipertensão precoce e hipertireoidismo por hCG muito alto. A pista que fecha é a USG em flocos de neve sem embrião. Na mola parcial há embrião ou partes fetais, o hCG é menos elevado e o cariótipo é triploide.",
+    "chave": 4
+  },
+  {
+    "id": "cd-061",
+    "diagnostico": "Apendicite aguda",
+    "especialidade": "cirurgia",
+    "nivel": 1,
+    "pistas": [
+      "Homem de 19 anos, sem cirurgias prévias.",
+      "Dor que começou ao redor do umbigo e em 12 horas foi para a fossa ilíaca direita; perdeu o apetite.",
+      "Febre de 38 °C, descompressão dolorosa no ponto de McBurney e sinal de Rovsing positivo.",
+      "Leucocitose de 15.000/mm³ com desvio à esquerda; escore de Alvarado 9.",
+      "TC: estrutura tubular de 11 mm na fossa ilíaca direita, com parede espessada e fecalito."
+    ],
+    "opcoes": [
+      "Adenite mesentérica",
+      "Doença de Crohn ileal",
+      "Cólica ureteral direita",
+      "Colecistite aguda",
+      "Diverticulite de Meckel",
+      "Apendicite aguda"
+    ],
+    "explicacao": "Migração da dor periumbilical para a fossa ilíaca direita com anorexia e febre é a sequência clássica. A pista-chave é a migração da dor. A adenite mesentérica costuma ocorrer em crianças após virose, sem peritonite localizada.",
+    "chave": 1
+  },
+  {
+    "id": "cd-062",
+    "diagnostico": "Colecistite aguda calculosa",
+    "especialidade": "cirurgia",
+    "nivel": 2,
+    "pistas": [
+      "Mulher de 45 anos, obesa, com 3 filhos.",
+      "Dor no lado direito, abaixo das costelas, há 20 horas, sem melhora, após comida gordurosa; vômitos.",
+      "Febre de 38,3 °C; interrompe a inspiração quando o médico palpa fundo o hipocôndrio direito.",
+      "Leucocitose de 14.000/mm³; bilirrubinas e amilase normais.",
+      "USG: parede da vesícula de 5 mm, cálculo impactado no infundíbulo e líquido ao redor."
+    ],
+    "opcoes": [
+      "Cólica biliar simples",
+      "Hepatite aguda",
+      "Colangite aguda",
+      "Pancreatite aguda",
+      "Úlcera duodenal perfurada",
+      "Colecistite aguda calculosa"
+    ],
+    "explicacao": "Dor em hipocôndrio direito por mais de 6 horas, febre e sinal de Murphy. A pista-chave é o sinal de Murphy com febre, e a USG confirma. A cólica biliar simples dura menos de 6 horas e não tem febre nem leucocitose.",
+    "chave": 2
+  },
+  {
+    "id": "cd-063",
+    "diagnostico": "Obstrução intestinal por bridas",
+    "especialidade": "cirurgia",
+    "nivel": 2,
+    "pistas": [
+      "Homem de 60 anos, operado de apendicite por laparotomia há 15 anos.",
+      "Dor em cólica difusa, vômitos fecaloides e sem eliminar gases ou fezes há 2 dias.",
+      "Abdome distendido e timpânico, ruídos aumentados de timbre metálico e cicatriz mediana.",
+      "Raio X: alças de delgado dilatadas com níveis hidroaéreos em escada e pouco gás no cólon.",
+      "TC: ponto de transição abrupto no íleo, sem tumor, hérnia ou cálculo no local."
+    ],
+    "opcoes": [
+      "Hérnia inguinal encarcerada",
+      "Íleo paralítico",
+      "Volvo de sigmoide",
+      "Obstrução intestinal por bridas",
+      "Íleo biliar",
+      "Câncer de cólon obstrutivo"
+    ],
+    "explicacao": "Cirurgia abdominal prévia é a principal causa de obstrução de delgado. A pista-chave é o raio X com níveis em escada e cólon vazio. No íleo paralítico não há cólica nem ruídos metálicos, e há gás difuso no delgado e no cólon.",
+    "chave": 3
+  },
+  {
+    "id": "cd-064",
+    "diagnostico": "Aneurisma de aorta abdominal roto",
+    "especialidade": "cirurgia",
+    "nivel": 3,
+    "pistas": [
+      "Homem de 72 anos, fumante pesado e hipertenso.",
+      "Dor súbita e intensa nas costas e no flanco esquerdo, seguida de desmaio.",
+      "PA 80x40 mmHg, FC 130 bpm; massa pulsátil e dolorosa no abdome.",
+      "Manchas roxas nos flancos; hemoglobina 8 g/dL.",
+      "TC com contraste: dilatação aórtica infrarrenal de 7 cm com hematoma retroperitoneal."
+    ],
+    "opcoes": [
+      "Pancreatite aguda grave",
+      "Aneurisma de aorta abdominal roto",
+      "Isquemia mesentérica aguda",
+      "Dissecção de aorta tipo B",
+      "Litíase ureteral",
+      "Infarto de parede inferior"
+    ],
+    "explicacao": "Idoso fumante com a tríade dor lombar/abdominal, hipotensão e massa pulsátil. A pista-chave é a massa pulsátil com choque; paciente instável vai direto ao centro cirúrgico. A cólica ureteral também dá dor lombar forte, mas sem choque nem massa pulsátil.",
+    "chave": 2
+  },
+  {
+    "id": "cd-065",
+    "diagnostico": "Pneumotórax hipertensivo",
+    "especialidade": "cirurgia",
+    "nivel": 2,
+    "pistas": [
+      "Motociclista de 25 anos após colisão numa avenida de Manaus, trazido pelo SAMU.",
+      "Muita falta de ar e dor no lado esquerdo do peito; agitado.",
+      "Veias do pescoço cheias, traqueia desviada para a direita, hipertimpanismo e MV abolido à esquerda.",
+      "PA 70x40 mmHg, FC 140 bpm e SpO2 82%.",
+      "Melhora imediata após punção no 5º espaço intercostal, linha axilar média, com saída de ar sob pressão."
+    ],
+    "opcoes": [
+      "Pneumotórax hipertensivo",
+      "Tórax instável",
+      "Hemotórax maciço",
+      "Contusão pulmonar",
+      "Tamponamento cardíaco",
+      "Lesão de aorta torácica"
+    ],
+    "explicacao": "Trauma torácico com choque obstrutivo, desvio de traqueia e hipertimpanismo. A pista-chave é o exame físico; o diagnóstico é clínico e não se espera raio X. O hemotórax maciço dá macicez à percussão e veias do pescoço vazias.",
+    "chave": 2
+  },
+  {
+    "id": "cd-066",
+    "diagnostico": "Transtorno depressivo maior",
+    "especialidade": "psiquiatria",
+    "nivel": 1,
+    "pistas": [
+      "Mulher de 34 anos, perdeu o emprego há 4 meses.",
+      "Tristeza quase todos os dias e perda de prazer nas atividades há 6 semanas.",
+      "Acorda de madrugada sem conseguir voltar a dormir, perdeu 5 kg, sem energia e sem concentração.",
+      "Culpa excessiva e pensamentos de que seria melhor morrer, sem plano.",
+      "TSH e hemograma normais; nunca teve fase de euforia ou de pouca necessidade de sono."
+    ],
+    "opcoes": [
+      "Luto normal",
+      "Transtorno de adaptação",
+      "Hipotireoidismo",
+      "Distimia",
+      "Transtorno depressivo maior",
+      "Transtorno bipolar tipo II"
+    ],
+    "explicacao": "Humor deprimido e anedonia por mais de 2 semanas com 5 ou mais sintomas e prejuízo. A pista-chave é a soma de sintomas neurovegetativos. O transtorno de adaptação não preenche critérios de episódio depressivo; excluir hipomania afasta o bipolar tipo II.",
+    "chave": 2
+  },
+  {
+    "id": "cd-067",
+    "diagnostico": "Transtorno bipolar tipo I",
+    "especialidade": "psiquiatria",
+    "nivel": 2,
+    "pistas": [
+      "Homem de 24 anos, teve um episódio de depressão aos 20 anos.",
+      "Há 10 dias dorme 2 horas por noite e diz que não sente cansaço.",
+      "Fala acelerada, muda de assunto o tempo todo, gastou o salário e diz que será presidente.",
+      "Exame toxicológico negativo e TSH normal.",
+      "Sintomas há mais de 1 semana com prejuízo grave, precisando de internação."
+    ],
+    "opcoes": [
+      "Esquizofrenia",
+      "Transtorno bipolar tipo I",
+      "Intoxicação por cocaína",
+      "Hipertireoidismo",
+      "Transtorno esquizoafetivo",
+      "Transtorno bipolar tipo II"
+    ],
+    "explicacao": "Episódio de mania: humor expansivo, menor necessidade de sono, grandiosidade e gastos excessivos. A pista-chave é o quadro maníaco por 7 dias ou mais com necessidade de internação. No bipolar tipo II há só hipomania, sem prejuízo grave nem internação.",
+    "chave": 2
+  },
+  {
+    "id": "cd-068",
+    "diagnostico": "Esquizofrenia",
+    "especialidade": "psiquiatria",
+    "nivel": 2,
+    "pistas": [
+      "Homem de 21 anos, universitário, afastado dos amigos há 1 ano.",
+      "Ouve vozes que comentam o que ele faz e acredita que a TV transmite seus pensamentos.",
+      "Discurso desorganizado, afeto embotado e descuido com a higiene.",
+      "Sem uso de drogas; exames de sangue e RM de crânio normais.",
+      "Sintomas contínuos há mais de 6 meses, com piora do funcionamento."
+    ],
+    "opcoes": [
+      "Transtorno esquizofreniforme",
+      "Esquizofrenia",
+      "Psicose induzida por substância",
+      "Transtorno delirante",
+      "Bipolar com sintomas psicóticos",
+      "Transtorno psicótico breve"
+    ],
+    "explicacao": "Adulto jovem com delírios, alucinações auditivas, desorganização e sintomas negativos. A pista que fecha é a duração acima de 6 meses. O transtorno esquizofreniforme tem o mesmo quadro, mas dura entre 1 e 6 meses.",
+    "chave": 4
+  },
+  {
+    "id": "cd-069",
+    "diagnostico": "Delirium tremens",
+    "especialidade": "psiquiatria",
+    "nivel": 3,
+    "pistas": [
+      "Homem de 50 anos, bebe 1 litro de cachaça por dia há 20 anos; internado há 3 dias por fratura.",
+      "Agitação, tremores e insônia desde ontem.",
+      "Desorientado, vê insetos andando nas paredes; suor intenso.",
+      "FC 128 bpm, PA 170x100 mmHg, temperatura 38 °C; glicemia normal.",
+      "Início cerca de 72 horas após a última dose, com atenção flutuante."
+    ],
+    "opcoes": [
+      "Crise tireotóxica",
+      "Delirium tremens",
+      "Alucinose alcoólica",
+      "Encefalopatia de Wernicke",
+      "Encefalopatia hepática",
+      "Intoxicação por cocaína"
+    ],
+    "explicacao": "Etilista pesado que parou de beber ao ser internado, com confusão, alucinações visuais e hiperatividade autonômica 48–96 h depois. A pista-chave é o quadro confusional com alucinações e sinais autonômicos. Na alucinose alcoólica as alucinações são auditivas e a consciência fica preservada.",
+    "chave": 2
+  },
+  {
+    "id": "cd-070",
+    "diagnostico": "Transtorno de pânico",
+    "especialidade": "psiquiatria",
+    "nivel": 2,
+    "pistas": [
+      "Mulher de 26 anos, foi 4 vezes ao pronto-socorro no último mês.",
+      "Crises súbitas de palpitação, falta de ar, formigamento e medo de morrer, com pico em 10 minutos.",
+      "Entre as crises, medo constante de ter outra; evita ônibus e shopping.",
+      "ECG, troponina, TSH e glicemia normais.",
+      "Crises inesperadas, sem gatilho, há mais de 1 mês, sem uso de substâncias."
+    ],
+    "opcoes": [
+      "Feocromocitoma",
+      "Taquicardia supraventricular paroxística",
+      "Hipertireoidismo",
+      "Ansiedade generalizada",
+      "Transtorno de pânico",
+      "Fobia social"
+    ],
+    "explicacao": "Ataques de pânico recorrentes e inesperados, seguidos de preocupação persistente e esquiva. A pista-chave é a ansiedade antecipatória com evitação entre as crises. Na ansiedade generalizada a preocupação é difusa e contínua, sem crises agudas com pico em minutos.",
+    "chave": 2
+  },
+  {
+    "id": "cd-071",
+    "diagnostico": "Sífilis secundária",
+    "especialidade": "medicina-preventiva",
+    "nivel": 1,
+    "pistas": [
+      "Homem de 25 anos, várias parcerias sexuais e não usa preservativo.",
+      "Ferida indolor no pênis há 2 meses, que sumiu sozinha.",
+      "Manchas avermelhadas no tronco, palmas e plantas, sem coceira; queda de cabelo em clareiras.",
+      "Gânglios aumentados em várias regiões e placas esbranquiçadas na boca.",
+      "VDRL 1:128 e teste treponêmico reagente."
+    ],
+    "opcoes": [
+      "Infecção aguda pelo HIV",
+      "Hanseníase",
+      "Farmacodermia",
+      "Pitiríase rósea",
+      "Psoríase gutata",
+      "Sífilis secundária"
+    ],
+    "explicacao": "Cancro duro prévio indolor seguido de exantema com acometimento palmoplantar. A pista-chave é a roséola com lesões em palmas e plantas. A pitiríase rósea poupa palmas e plantas e começa com uma placa-mãe. É de notificação compulsória e o tratamento é penicilina benzatina.",
+    "chave": 2
+  },
+  {
+    "id": "cd-072",
+    "diagnostico": "Infecção latente por tuberculose (ILTB)",
+    "especialidade": "medicina-preventiva",
+    "nivel": 3,
+    "pistas": [
+      "Enfermeira de 30 anos, contato próximo de paciente bacilífero no hospital.",
+      "Sem tosse, febre ou perda de peso.",
+      "Exame físico normal; HIV negativo.",
+      "Prova tuberculínica de 12 mm (antes era não reatora) e raio X de tórax normal.",
+      "IGRA positivo; indicado tratamento com rifapentina + isoniazida (3HP) ou rifampicina por 4 meses."
+    ],
+    "opcoes": [
+      "Tuberculose extrapulmonar",
+      "Micobacteriose não tuberculosa",
+      "Tuberculose pulmonar ativa",
+      "Infecção latente por tuberculose (ILTB)",
+      "Reação cruzada pela BCG",
+      "Sarcoidose"
+    ],
+    "explicacao": "Contato de caso bacilífero, assintomático, com conversão da prova tuberculínica e raio X normal. A pista que fecha é PT reatora com raio X normal e ausência de sintomas. Na doença ativa haveria sintomas ou alteração radiológica, e o tratamento seria o esquema completo (RIPE).",
+    "chave": 3
+  },
+  {
+    "id": "cd-073",
+    "diagnostico": "Silicose",
+    "especialidade": "medicina-preventiva",
+    "nivel": 3,
+    "pistas": [
+      "Homem de 50 anos, trabalhou 20 anos com jateamento de areia e corte de pedras.",
+      "Falta de ar progressiva e tosse seca há 3 anos; nunca fumou.",
+      "Estertores finos nas bases; sem baqueteamento digital.",
+      "Raio X: pequenos nódulos nos lobos superiores e linfonodos hilares com calcificação em 'casca de ovo'.",
+      "Doença de notificação compulsória ligada ao trabalho, com risco aumentado de tuberculose."
+    ],
+    "opcoes": [
+      "Histoplasmose pulmonar",
+      "Silicose",
+      "Sarcoidose",
+      "Pneumonite de hipersensibilidade",
+      "Asbestose",
+      "Tuberculose miliar"
+    ],
+    "explicacao": "Exposição ocupacional prolongada a sílica cristalina (jateamento, pedreiras). A pista-chave é o padrão nodular em lobos superiores com calcificação em casca de ovo. A asbestose predomina em bases, com placas pleurais e fibrose reticular.",
+    "chave": 3
+  },
+  {
+    "id": "cd-074",
+    "diagnostico": "Intoxicação crônica por metilmercúrio",
+    "especialidade": "medicina-preventiva",
+    "nivel": 3,
+    "pistas": [
+      "Ribeirinho de 40 anos, na bacia do Tapajós, come peixe carnívoro todos os dias; região de garimpo.",
+      "Formigamento nas mãos e ao redor da boca, e dificuldade para enxergar dos lados.",
+      "Tremor fino, marcha instável e esquecimento.",
+      "Exame neurológico com ataxia e redução do campo visual nos dois olhos.",
+      "Concentração do metal no cabelo acima de 10 µg/g."
+    ],
+    "opcoes": [
+      "Polineuropatia diabética",
+      "Esclerose múltipla",
+      "Intoxicação crônica por metilmercúrio",
+      "Doença de Parkinson",
+      "Intoxicação por chumbo",
+      "Deficiência de vitamina B12"
+    ],
+    "explicacao": "O mercúrio usado no garimpo é convertido em metilmercúrio e se acumula em peixes carnívoros consumidos por ribeirinhos. A pista-chave é a combinação parestesia perioral + constrição do campo visual + ataxia. A intoxicação por chumbo causa anemia com pontilhado basófilo, dor abdominal e neuropatia motora (punho caído).",
+    "chave": 1
+  },
+  {
+    "id": "cd-075",
+    "diagnostico": "Febre amarela",
+    "especialidade": "medicina-preventiva",
+    "nivel": 2,
+    "pistas": [
+      "Homem de 35 anos, sem vacina, trabalhou em área de mata no interior; houve macacos mortos na região.",
+      "Calafrios e temperatura alta de início súbito, dor no corpo e de cabeça; melhorou 1 dia e piorou.",
+      "Icterícia, sangramento na gengiva e vômitos com sangue escuro.",
+      "Pulso lento apesar da temperatura alta (sinal de Faget); AST 4.000 U/L, maior que ALT; creatinina alta.",
+      "RT-PCR positivo para flavivírus silvestre transmitido por Haemagogus."
+    ],
+    "opcoes": [
+      "Malária grave",
+      "Febre amarela",
+      "Leptospirose",
+      "Dengue grave",
+      "Hepatite viral fulminante",
+      "Febre maculosa"
+    ],
+    "explicacao": "Não vacinado em área de mata com epizootia de macacos e evolução bifásica. A pista-chave é a dissociação pulso-temperatura com transaminases na casa dos milhares e AST > ALT. Na leptospirose as transaminases sobem pouco e predominam dor de panturrilha e hipocalemia. A prevenção é a vacina (dose única no SUS a partir dos 5 anos).",
+    "chave": 3
+  },
+  {
+    "id": "cd-076",
+    "diagnostico": "Acidente botrópico",
+    "especialidade": "emergencia",
+    "nivel": 3,
+    "pistas": [
+      "Agricultor de 38 anos, picado no pé ao capinar a roça em comunidade rural perto de Manaus.",
+      "Dor forte e inchaço que subiu até o joelho em 3 horas.",
+      "Manchas roxas e bolhas no local e sangramento na gengiva; sem diarreia, bradicardia ou ptose.",
+      "Sangue incoagulável no tempo de coagulação; creatinina normal.",
+      "Serpente trazida: cabeça triangular, fosseta loreal, cauda lisa, sem guizo e sem escamas arrepiadas."
+    ],
+    "opcoes": [
+      "Acidente elapídico",
+      "Acidente crotálico",
+      "Acidente loxoscélico",
+      "Celulite com abscesso",
+      "Acidente botrópico",
+      "Acidente laquético"
+    ],
+    "explicacao": "Ação local intensa (dor, edema, bolhas) e incoagulabilidade é o padrão botrópico, o mais comum no Brasil e no Amazonas. A pista que fecha é a serpente de cauda lisa. O acidente laquético também tem ação local e coagulopática, mas soma sinais vagais (diarreia, bradicardia, hipotensão) e a cauda tem escamas eriçadas.",
+    "chave": 4
+  },
+  {
+    "id": "cd-077",
+    "diagnostico": "Anafilaxia",
+    "especialidade": "emergencia",
+    "nivel": 1,
+    "pistas": [
+      "Mulher de 30 anos, recebeu dipirona na veia na UPA por cólica.",
+      "Em 5 minutos: coceira, placas vermelhas e elevadas pelo corpo e inchaço nos lábios.",
+      "Rouquidão, chiado e falta de ar.",
+      "PA 70x40 mmHg, FC 130 bpm e pele quente.",
+      "Triptase sérica elevada, colhida 1 hora após o início."
+    ],
+    "opcoes": [
+      "Angioedema hereditário",
+      "Urticária aguda isolada",
+      "Anafilaxia",
+      "Choque séptico",
+      "Reação vasovagal",
+      "Crise de asma"
+    ],
+    "explicacao": "Início em minutos após exposição, com pele, vias aéreas e circulação acometidas. A pista-chave é o acometimento respiratório somado ao cutâneo; o tratamento é adrenalina intramuscular imediata. Na reação vasovagal há bradicardia e palidez, sem urticária nem broncoespasmo.",
+    "chave": 2
+  },
+  {
+    "id": "cd-078",
+    "diagnostico": "Intoxicação por organofosforado",
+    "especialidade": "emergencia",
+    "nivel": 2,
+    "pistas": [
+      "Trabalhador rural de 40 anos encontrado confuso no sítio após pulverizar a plantação.",
+      "Vômitos, diarreia, salivação, lacrimejamento e urina involuntária.",
+      "Pupilas puntiformes, bradicardia, sibilos com muita secreção e fasciculações.",
+      "Colinesterase eritrocitária muito reduzida.",
+      "Melhora das secreções com atropina em doses repetidas; pralidoxima no início."
+    ],
+    "opcoes": [
+      "AVC de tronco (ponte)",
+      "Intoxicação por benzodiazepínico",
+      "Síndrome anticolinérgica",
+      "Intoxicação por organofosforado",
+      "Intoxicação por paraquat",
+      "Intoxicação por opioide"
+    ],
+    "explicacao": "Exposição a agrotóxico com síndrome colinérgica muscarínica (secreções, miose, bradicardia) e nicotínica (fasciculações). A pista-chave é esse conjunto de sinais. Na intoxicação por opioide também há miose e rebaixamento, mas sem secreções abundantes nem fasciculações.",
+    "chave": 2
+  },
+  {
+    "id": "cd-079",
+    "diagnostico": "Tamponamento cardíaco",
+    "especialidade": "emergencia",
+    "nivel": 3,
+    "pistas": [
+      "Homem de 23 anos levado ao PS após facada no peito, à esquerda do esterno.",
+      "Agitado, com falta de ar e pele fria.",
+      "PA 80x60 mmHg, veias do pescoço cheias, bulhas abafadas e murmúrio presente dos dois lados.",
+      "Queda da PA sistólica de mais de 10 mmHg na inspiração.",
+      "FAST com líquido no saco pericárdico e colapso diastólico do ventrículo direito."
+    ],
+    "opcoes": [
+      "Pneumotórax hipertensivo",
+      "Choque hemorrágico",
+      "Tamponamento cardíaco",
+      "Infarto agudo do miocárdio",
+      "Contusão miocárdica",
+      "Hemotórax maciço"
+    ],
+    "explicacao": "Ferimento na área de Ziedler com a tríade de Beck (hipotensão, turgência jugular, bulhas abafadas). A pista-chave é a tríade com murmúrio preservado. No pneumotórax hipertensivo também há turgência jugular, mas o murmúrio é abolido de um lado e há hipertimpanismo.",
+    "chave": 2
+  },
+  {
+    "id": "cd-080",
+    "diagnostico": "Hematoma extradural",
+    "especialidade": "emergencia",
+    "nivel": 3,
+    "pistas": [
+      "Jovem de 18 anos bateu a lateral da cabeça ao cair de moto, sem capacete.",
+      "Desmaiou por alguns minutos, acordou e conversou normalmente por 2 horas.",
+      "Depois: dor de cabeça forte, vômitos, sonolência progressiva e pupila direita dilatada.",
+      "Glasgow caiu de 15 para 9; fraqueza à esquerda; fratura do osso temporal.",
+      "TC de crânio: coleção hiperdensa biconvexa (em lente), que não cruza as suturas."
+    ],
+    "opcoes": [
+      "Lesão axonal difusa",
+      "Hemorragia subaracnóidea traumática",
+      "Hematoma extradural",
+      "Contusão cerebral",
+      "Hematoma subdural agudo",
+      "Hemorragia intraparenquimatosa"
+    ],
+    "explicacao": "Trauma temporal com fratura (lesão da artéria meníngea média) e intervalo lúcido. A pista que fecha é a TC com lente biconvexa que respeita suturas. O hematoma subdural agudo tem forma de crescente, cruza suturas e costuma vir de veias ponte em idosos ou trauma de alta energia.",
+    "chave": 4
+  }
+]

@@ -418,3 +418,97 @@ details.mais>summary{cursor:pointer;color:var(--pen);font-weight:600;font-size:c
 .jg-marco[data-s="ok"] .jg-ordem{background:var(--ok);border-color:var(--ok);color:var(--sheet)}
 .jg-marco[data-s="bad"]{border-color:var(--bad);background:var(--bad-soft)}
 .jg-marco:disabled{cursor:default}
+
+/* ---------- Mascote, Jornada (XP, missões, medalhas) ---------- */
+.mascote{flex:none;display:block;overflow:visible}
+.fala-mascote{display:flex;gap:10px;align-items:flex-end;margin:10px 0}
+.balao{position:relative;margin:0 0 18px;padding:10px 14px;border-radius:16px 16px 16px 4px;background:var(--sheet);border:2px solid var(--sec-linha);font:600 calc(16px * var(--k))/1.4 var(--display);color:var(--ink)}
+.jornada-card{display:flex;gap:12px;align-items:center;padding:10px 14px;margin:12px 0;border-radius:14px;background:linear-gradient(120deg,color-mix(in oklab,#C0265F 12%,var(--sheet)),color-mix(in oklab,#D97706 10%,var(--sheet)));border:1px solid color-mix(in oklab,#C0265F 30%,var(--line));text-decoration:none;color:var(--ink)}
+.jornada-card>div{flex:1;min-width:0;display:grid;gap:6px}
+.jornada-card .lab{margin:0;color:color-mix(in oklab,#C0265F 75%,var(--ink))}
+.jornada-card small{color:var(--ink2);font-size:calc(13px * var(--k))}
+.xp-barra{height:12px;border-radius:999px;background:var(--track);overflow:hidden}
+.xp-barra i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#D97706,#C0265F);transition:width .6s ease}
+.missoes{display:grid;gap:10px}
+.missao{display:flex;gap:12px;align-items:center;padding:12px 14px;border-radius:12px;background:var(--sheet);border:1px solid var(--line)}
+.missao>div{flex:1;min-width:0;display:grid;gap:6px}
+.missao.feita{background:var(--ok-soft);border-color:var(--ok)}
+.missao.feita .xp-barra i{background:var(--ok)}
+.medalhas{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
+.medalha-item{display:grid;justify-items:center;text-align:center;gap:4px;padding:12px 8px;border-radius:12px;background:var(--sheet);border:1px solid var(--line)}
+.medalha-item b{font:700 calc(14px * var(--k))/1.25 var(--display)}
+.medalha-item small{color:var(--muted);font-size:calc(12px * var(--k));line-height:1.3}
+.medalha-item.bloq{opacity:.6}
+.medalha{position:relative;display:inline-grid;justify-items:center;padding-bottom:14px}
+.medalha .ilu{box-shadow:0 0 0 4px color-mix(in oklab,var(--h) 40%,var(--sheet)),0 0 0 7px color-mix(in oklab,var(--h) 15%,var(--sheet))}
+.medalha .fita{position:absolute;bottom:0;width:34px;height:20px;fill:var(--h)}
+.medalha.bloq .ilu{filter:grayscale(1)}
+.niveis{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.niveis li{padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--sheet);display:grid;gap:2px}
+.niveis li small{font:calc(13px * var(--k)) var(--mono);color:var(--muted)}
+.niveis li.feito{background:var(--ok-soft);border-color:var(--ok)}
+.niveis li.atual{background:color-mix(in oklab,#C0265F 12%,var(--sheet));border:2px solid #C0265F}
+.celebra{display:grid;justify-items:center;text-align:center;gap:10px;padding:10px 0}
+.celebra-tit{font:800 calc(21px * var(--k))/1.25 var(--display);margin:0;color:var(--ink)}
+@media (prefers-reduced-motion:no-preference){.celebra .mascote,.celebra .medalha{animation:pulo .6s ease-out}}
+
+/* ---------- Jogos: formas coloridas (estilo Kahoot) ---------- */
+.forma{flex:none;position:relative;display:grid;place-items:center;width:calc(34px * var(--k));height:calc(34px * var(--k));border-radius:8px;color:#fff}
+.forma svg{position:absolute;inset:5px;width:calc(100% - 10px);height:calc(100% - 10px);fill:rgba(255,255,255,.28)}
+.forma b{position:relative;font:800 calc(15px * var(--k)) var(--display)}
+.forma-0{background:#C0265F}.forma-1{background:#2340B8}.forma-2{background:#B45309}.forma-3{background:#15803D}.forma-4{background:#6D28D9}
+.alts-jogo .alt{min-height:60px;align-items:center;border-width:2px}
+.alts-jogo .alt[data-s="ok"] .forma{background:var(--ok)}.alts-jogo .alt[data-s="bad"] .forma{background:var(--bad)}
+.copiar{width:100%;font:calc(16px * var(--k)) var(--mono);padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--sheet)}
+
+/* ---------- Caso do dia ---------- */
+.grade-cd{display:inline-flex;gap:4px}
+.grade-cd .q{width:18px;height:18px;border-radius:4px;background:var(--track);border:1px solid var(--line)}
+.grade-cd .q.vista{background:var(--warn-soft);border-color:var(--warn)}
+.grade-cd .q.bad{background:var(--bad);border-color:var(--bad)}
+.grade-cd .q.ok{background:var(--ok);border-color:var(--ok)}
+.pistas{list-style:none;margin:12px 0;padding:0;display:grid;gap:8px}
+.pistas li{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:12px;font:calc(17px * var(--k))/1.45 var(--read)}
+.pistas li .n{flex:none;width:calc(28px * var(--k));height:calc(28px * var(--k));border-radius:50%;display:grid;place-items:center;font:700 calc(14px * var(--k)) var(--mono);background:#C0265F;color:#fff}
+.pistas li.aberta{background:color-mix(in oklab,#C0265F 9%,var(--sheet));border:1px solid color-mix(in oklab,#C0265F 30%,var(--line))}
+.pistas li.extra{background:var(--sheet);border:1px dashed var(--line);color:var(--ink2)}
+.pistas li.fechada{background:repeating-linear-gradient(45deg,var(--line2) 0 8px,var(--sheet) 8px 16px);border:1px dashed var(--line);color:var(--muted);font-style:italic}
+.pistas li.fechada .n{background:var(--muted)}
+/* ---------- Termo médico ---------- */
+.termo-grade{display:grid;gap:6px;justify-content:center;margin:12px 0}
+.termo-linha{display:grid;grid-template-columns:repeat(5,min(15vw,62px));gap:6px}
+.termo-casa{aspect-ratio:1;display:grid;place-items:center;border-radius:8px;border:2px solid var(--line);background:var(--sheet);font:800 calc(26px * var(--k))/1 var(--display);text-transform:uppercase;color:var(--ink)}
+.termo-linha.atual .termo-casa{border-color:var(--sec-linha)}
+.termo-casa.c{background:#15803D;border-color:#15803D;color:#fff}
+.termo-casa.p{background:#CA8A04;border-color:#CA8A04;color:#fff}
+.termo-casa.n{background:#6B7280;border-color:#6B7280;color:#fff}
+.termo-casa.c::after{content:"✓";font-size:.4em;align-self:end;justify-self:end;margin:0 3px 2px 0;position:absolute}
+.termo-casa{position:relative}
+.teclado{display:grid;gap:6px;margin-top:12px;user-select:none}
+.teclado>div{display:flex;gap:4px;justify-content:center}
+.tecla{flex:1 1 0;max-width:46px;min-height:54px;border-radius:8px;border:1px solid var(--line);background:var(--line2);color:var(--ink);font:700 calc(16px * var(--k)) var(--display);cursor:pointer;padding:0}
+.tecla.larga{flex:1.6 1 0;max-width:80px;font-size:calc(13px * var(--k))}
+.tecla.c{background:#15803D;color:#fff;border-color:#15803D}.tecla.p{background:#CA8A04;color:#fff;border-color:#CA8A04}.tecla.n{background:#6B7280;color:#fff;border-color:#6B7280;opacity:.7}
+/* ---------- Pares ---------- */
+.pares-grade{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}
+.pares-grade>div{display:grid;gap:8px;align-content:start}
+.par-item{min-width:0;overflow-wrap:anywhere;hyphens:auto;min-height:58px;padding:8px 8px;border-radius:12px;border:2px solid var(--line);background:var(--sheet);color:var(--ink);font:600 calc(14.5px * var(--k))/1.3 var(--display);cursor:pointer;text-align:center}
+.par-item[data-s="sel"]{border-color:#0369A1;background:color-mix(in oklab,#0369A1 14%,var(--sheet));box-shadow:0 0 0 3px color-mix(in oklab,#0369A1 30%,transparent)}
+.par-item[data-s="ok"]{border-color:var(--ok);background:var(--ok-soft);opacity:.75}
+.par-item[data-s="bad"]{border-color:var(--bad);background:var(--bad-soft)}
+@media (prefers-reduced-motion:no-preference){.par-item[data-s="bad"]{animation:treme .3s}}
+@keyframes treme{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.pares-notas{margin:0;padding-left:18px;display:grid;gap:8px}
+/* ---------- Onde fica? ---------- */
+.anat-mapa{display:grid;justify-items:center}
+.mapa-corpo{width:min(100%,340px);height:auto;touch-action:manipulation}
+.mapa-corpo .silhueta{fill:color-mix(in oklab,#E8B894 35%,var(--sheet));stroke:color-mix(in oklab,#B45309 45%,var(--line));stroke-width:1.5}
+.mapa-corpo .orgao{fill:color-mix(in oklab,#C0265F 22%,var(--sheet));stroke:color-mix(in oklab,#C0265F 60%,var(--ink));stroke-width:1.4;cursor:pointer;transition:fill .15s}
+.mapa-corpo .orgao:hover{fill:color-mix(in oklab,#C0265F 40%,var(--sheet))}
+.mapa-corpo .orgao.ok{fill:#15803D;stroke:#0B4F2A}
+.mapa-corpo .orgao.bad{fill:#B42318;stroke:#6B150E}
+.jg-hoje{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.jg-desafio{display:grid;justify-items:center;text-align:center;gap:8px;padding:16px 10px;border-radius:16px;text-decoration:none;color:var(--ink);background:linear-gradient(160deg,color-mix(in oklab,var(--h) 18%,var(--sheet)),var(--sheet));border:2px solid color-mix(in oklab,var(--h) 45%,var(--line))}
+.jg-desafio b{font:800 calc(17px * var(--k))/1.2 var(--display);color:color-mix(in oklab,var(--h) 74%,var(--ink))}
+.jg-desafio.feito{opacity:.8}
+.jg-lista .jg-cartao small{font-size:calc(14px * var(--k))}

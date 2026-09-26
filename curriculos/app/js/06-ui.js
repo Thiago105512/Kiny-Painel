@@ -198,6 +198,7 @@ function htmlExplicacao(e) {
 function htmlPlayer() {
   if (PL.fim) {
     const ac = PL.res.filter(r => r.ok).length, n = PL.res.length;
+    setTimeout(soltarCelebracoes, 0);
     const bom = n && ac / n >= 0.7; if (bom && !PL.festa) { PL.festa = true; setTimeout(() => confete(document.querySelector("#pl-fim h2"), 24), 60); }
     return `<div class="caixa" id="pl-fim"><h2 class="sec com-ilu" style="gap:10px">${ilustra(bom ? "alvo" : "livro", bom ? "#1C7C4A" : "#2340B8", "g")}${bom ? "Mandou bem! Sessão concluída" : "Sessão concluída"}</h2>
       <div class="kpis"><div class="kpi"><b>${ac}/${n}</b><span>acertos</span></div><div class="kpi"><b>${pct(ac, n)}%</b><span>aproveitamento</span></div>

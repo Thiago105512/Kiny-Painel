@@ -69,6 +69,7 @@ rota("/", () => {
       <div class="meta-item"><span>Sequência</span><b class="com-ilu" style="gap:6px">${seq ? ilustra("chama", "#D97706", "p") : ""}${seq} ${seq === 1 ? "dia" : "dias"}</b></div></div>
       ${estudados.length ? `<p class="small" style="margin:12px 0 0"><span class="muted">Estudado hoje:</span> ${estudados.slice(0, 3).map(linkTema).join(", ")}${estudados.length > 3 ? ` <span class="muted">e mais ${estudados.length - 3}</span>` : ""}</p>` : ""}
     </section>
+    ${cartaoJornada({ compacto: true })}
     ${cardHumor()}
     <section><div class="atalhos icones">
       <a href="#/questoes">${ilustra("alvo", "#2340B8", "m")}<b>Questões</b><small>${Q.length} no banco · ${feitas} feitas</small></a>

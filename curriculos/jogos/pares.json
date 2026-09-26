@@ -1,0 +1,1442 @@
+[
+ {
+  "id": "par-sinais-abdome",
+  "titulo": "Sinais do abdome",
+  "instrucao": "Ligue o sinal à doença",
+  "nivel": 1,
+  "pares": [
+   [
+    "Sinal de Murphy",
+    "Colecistite aguda"
+   ],
+   [
+    "Sinal de Rovsing",
+    "Apendicite aguda"
+   ],
+   [
+    "Sinal de Grey Turner",
+    "Pancreatite necro-hemorrágica"
+   ],
+   [
+    "Sinal de Courvoisier",
+    "Tumor periampular"
+   ],
+   [
+    "Sinal de Jobert",
+    "Pneumoperitônio"
+   ],
+   [
+    "Sinal de Giordano",
+    "Pielonefrite aguda"
+   ],
+   [
+    "Sinal de Kehr",
+    "Ruptura esplênica"
+   ],
+   [
+    "Sinal de Torres-Homem",
+    "Abscesso hepático"
+   ],
+   [
+    "Sinal de Dance",
+    "Intussuscepção intestinal"
+   ],
+   [
+    "Sinal do candelabro",
+    "Doença inflamatória pélvica"
+   ]
+  ],
+  "notas": {
+   "Sinal de Murphy": "Parada da inspiração ao palpar o ponto cístico.",
+   "Sinal de Rovsing": "Dor na fossa ilíaca direita ao comprimir a fossa ilíaca esquerda.",
+   "Sinal de Grey Turner": "Equimose nos flancos por sangue retroperitoneal.",
+   "Sinal de Courvoisier": "Vesícula palpável e indolor com icterícia: pense em câncer de cabeça de pâncreas.",
+   "Sinal de Jobert": "Timpanismo na área hepática: ar livre sob o diafragma.",
+   "Sinal de Giordano": "Dor à punho-percussão lombar.",
+   "Sinal de Kehr": "Dor referida no ombro esquerdo por sangue irritando o diafragma.",
+   "Sinal de Torres-Homem": "Dor localizada à percussão do hipocôndrio direito.",
+   "Sinal de Dance": "Fossa ilíaca direita vazia à palpação na criança.",
+   "Sinal do candelabro": "Dor intensa à mobilização do colo uterino no toque vaginal."
+  }
+ },
+ {
+  "id": "par-sinais-cardio",
+  "titulo": "Sinais cardiovasculares",
+  "instrucao": "Ligue o sinal à doença",
+  "nivel": 2,
+  "pares": [
+   [
+    "Tríade de Beck",
+    "Tamponamento cardíaco"
+   ],
+   [
+    "Pulso de Corrigan",
+    "Insuficiência aórtica"
+   ],
+   [
+    "Pulso parvus et tardus",
+    "Estenose aórtica"
+   ],
+   [
+    "Sopro de Graham Steell",
+    "Insuficiência pulmonar"
+   ],
+   [
+    "Sopro de Carey Coombs",
+    "Cardite reumática aguda"
+   ],
+   [
+    "Sinal de Homans",
+    "Trombose venosa profunda"
+   ],
+   [
+    "Sinal de Hamman",
+    "Pneumomediastino"
+   ],
+   [
+    "Manchas de Janeway",
+    "Endocardite infecciosa"
+   ],
+   [
+    "Sinal de Rivero-Carvallo",
+    "Insuficiência tricúspide"
+   ],
+   [
+    "Clique mesossistólico",
+    "Prolapso da valva mitral"
+   ]
+  ],
+  "notas": {
+   "Tríade de Beck": "Hipotensão, turgência jugular e bulhas abafadas.",
+   "Pulso de Corrigan": "Pulso em martelo d'água: ascensão e queda rápidas.",
+   "Pulso parvus et tardus": "Pulso pequeno e de subida lenta.",
+   "Sopro de Graham Steell": "Sopro diastólico em foco pulmonar por hipertensão pulmonar.",
+   "Sopro de Carey Coombs": "Sopro mesodiastólico mitral por valvulite na febre reumática.",
+   "Sinal de Homans": "Dor na panturrilha à dorsiflexão do pé. Pouco sensível.",
+   "Sinal de Hamman": "Crepitação sincrônica com o batimento cardíaco.",
+   "Manchas de Janeway": "Máculas indolores em palmas e plantas.",
+   "Sinal de Rivero-Carvallo": "Sopro que aumenta na inspiração profunda.",
+   "Clique mesossistólico": "Clique seguido de sopro sistólico tardio."
+  }
+ },
+ {
+  "id": "par-sinais-neuro",
+  "titulo": "Sinais neurológicos",
+  "instrucao": "Ligue o sinal ao que indica",
+  "nivel": 2,
+  "pares": [
+   [
+    "Sinal de Babinski",
+    "Lesão do neurônio motor superior"
+   ],
+   [
+    "Sinal de Romberg",
+    "Ataxia sensitiva"
+   ],
+   [
+    "Sinal de Brudzinski",
+    "Irritação meníngea"
+   ],
+   [
+    "Sinal de Lasègue",
+    "Radiculopatia lombar"
+   ],
+   [
+    "Sinal de Tinel no punho",
+    "Síndrome do túnel do carpo"
+   ],
+   [
+    "Sinal de Froment",
+    "Lesão do nervo ulnar"
+   ],
+   [
+    "Sinal de Gowers",
+    "Distrofia de Duchenne"
+   ],
+   [
+    "Sinal de Battle",
+    "Fratura de base de crânio"
+   ],
+   [
+    "Sinal de Chvostek",
+    "Hipocalcemia"
+   ],
+   [
+    "Sinal de Hoover",
+    "Fraqueza funcional"
+   ]
+  ],
+  "notas": {
+   "Sinal de Babinski": "Extensão do hálux ao estimular a planta do pé.",
+   "Sinal de Romberg": "Perde o equilíbrio ao fechar os olhos: falha da propriocepção.",
+   "Sinal de Brudzinski": "Flexão do pescoço provoca flexão dos quadris e joelhos.",
+   "Sinal de Lasègue": "Dor irradiada ao elevar a perna estendida entre 30 e 70 graus.",
+   "Sinal de Tinel no punho": "Percutir o nervo mediano causa formigamento nos dedos.",
+   "Sinal de Froment": "Flexiona o polegar para segurar papel: adutor do polegar fraco.",
+   "Sinal de Gowers": "Usa as mãos nas coxas para levantar do chão: fraqueza proximal.",
+   "Sinal de Battle": "Equimose retroauricular.",
+   "Sinal de Chvostek": "Percutir o nervo facial causa contração da face.",
+   "Sinal de Hoover": "Perna 'fraca' faz força ao elevar a outra: sugere causa não orgânica."
+  }
+ },
+ {
+  "id": "par-sinais-reumato-derma",
+  "titulo": "Sinais em reumato e dermato",
+  "instrucao": "Ligue o sinal à doença",
+  "nivel": 2,
+  "pares": [
+   [
+    "Nódulos de Heberden",
+    "Osteoartrite"
+   ],
+   [
+    "Pápulas de Gottron",
+    "Dermatomiosite"
+   ],
+   [
+    "Teste de Schober reduzido",
+    "Espondilite anquilosante"
+   ],
+   [
+    "Tofos",
+    "Gota"
+   ],
+   [
+    "Sinal de Nikolsky",
+    "Pênfigo vulgar"
+   ],
+   [
+    "Sinal de Auspitz",
+    "Psoríase"
+   ],
+   [
+    "Sinal de Darier",
+    "Mastocitose"
+   ],
+   [
+    "Teste de patergia positivo",
+    "Doença de Behçet"
+   ],
+   [
+    "Sinal de Leser-Trélat",
+    "Neoplasia maligna interna"
+   ],
+   [
+    "Eritema migrans",
+    "Doença de Lyme"
+   ]
+  ],
+  "notas": {
+   "Nódulos de Heberden": "Nódulos ósseos nas interfalangeanas distais.",
+   "Pápulas de Gottron": "Pápulas violáceas sobre as articulações dos dedos.",
+   "Teste de Schober reduzido": "Menor flexão da coluna lombar.",
+   "Tofos": "Depósitos de urato em orelhas, cotovelos e dedos.",
+   "Sinal de Nikolsky": "Pele se descola com leve fricção: bolha intraepidérmica.",
+   "Sinal de Auspitz": "Sangramento puntiforme ao raspar a escama.",
+   "Sinal de Darier": "Lesão fica vermelha e urticada após fricção.",
+   "Teste de patergia positivo": "Pápula ou pústula surge após punção com agulha.",
+   "Sinal de Leser-Trélat": "Surgimento súbito de muitas ceratoses seborreicas.",
+   "Eritema migrans": "Lesão em alvo que cresce a partir da picada do carrapato."
+  }
+ },
+ {
+  "id": "par-antidotos",
+  "titulo": "Antídotos essenciais",
+  "instrucao": "Ligue a intoxicação ao antídoto",
+  "nivel": 1,
+  "pares": [
+   [
+    "Paracetamol",
+    "N-acetilcisteína"
+   ],
+   [
+    "Opioides",
+    "Naloxona"
+   ],
+   [
+    "Benzodiazepínicos",
+    "Flumazenil"
+   ],
+   [
+    "Organofosforados",
+    "Atropina"
+   ],
+   [
+    "Metanol",
+    "Fomepizol ou etanol"
+   ],
+   [
+    "Heparina não fracionada",
+    "Protamina"
+   ],
+   [
+    "Varfarina",
+    "Vitamina K"
+   ],
+   [
+    "Digoxina",
+    "Anticorpo antidigoxina (Fab)"
+   ],
+   [
+    "Cianeto",
+    "Hidroxocobalamina"
+   ],
+   [
+    "Ferro",
+    "Deferoxamina"
+   ]
+  ],
+  "notas": {
+   "Paracetamol": "Repõe glutationa; melhor até 8 h após a ingestão.",
+   "Opioides": "Antagonista opioide; reverte a depressão respiratória.",
+   "Benzodiazepínicos": "Antagonista; cuidado: pode causar convulsão em usuários crônicos.",
+   "Organofosforados": "Bloqueia o excesso muscarínico; seque as secreções.",
+   "Metanol": "Bloqueiam a álcool desidrogenase e evitam o ácido fórmico.",
+   "Heparina não fracionada": "Liga-se à heparina e neutraliza seu efeito.",
+   "Varfarina": "Refaz os fatores II, VII, IX e X; no sangramento grave, somar complexo protrombínico.",
+   "Digoxina": "Fragmentos Fab ligam a digoxina circulante.",
+   "Cianeto": "Forma cianocobalamina, eliminada na urina.",
+   "Ferro": "Quelante que liga o ferro livre."
+  }
+ },
+ {
+  "id": "par-antidotos-2",
+  "titulo": "Antídotos avançados",
+  "instrucao": "Ligue a intoxicação ao antídoto",
+  "nivel": 3,
+  "pares": [
+   [
+    "Dabigatrana",
+    "Idarucizumabe"
+   ],
+   [
+    "Isoniazida em dose tóxica",
+    "Piridoxina"
+   ],
+   [
+    "Betabloqueador",
+    "Glucagon"
+   ],
+   [
+    "Metemoglobinemia",
+    "Azul de metileno"
+   ],
+   [
+    "Sulfonilureia",
+    "Octreotida"
+   ],
+   [
+    "Antidepressivo tricíclico",
+    "Bicarbonato de sódio"
+   ],
+   [
+    "Síndrome anticolinérgica",
+    "Fisostigmina"
+   ],
+   [
+    "Metotrexato",
+    "Ácido folínico"
+   ],
+   [
+    "Monóxido de carbono",
+    "Oxigênio a 100%"
+   ],
+   [
+    "Sulfato de magnésio",
+    "Gluconato de cálcio"
+   ]
+  ],
+  "notas": {
+   "Dabigatrana": "Anticorpo que neutraliza a dabigatrana.",
+   "Isoniazida em dose tóxica": "Vitamina B6 trata as convulsões da intoxicação.",
+   "Betabloqueador": "Aumenta o AMPc sem passar pelo receptor beta.",
+   "Metemoglobinemia": "Reduz o ferro férrico da hemoglobina de volta a ferroso.",
+   "Sulfonilureia": "Inibe a liberação de insulina e evita hipoglicemia recorrente.",
+   "Antidepressivo tricíclico": "Indicado se QRS alargado ou arritmia.",
+   "Síndrome anticolinérgica": "Anticolinesterásico que atravessa a barreira hematoencefálica.",
+   "Metotrexato": "Leucovorina: resgate que dispensa a di-hidrofolato redutase.",
+   "Monóxido de carbono": "Encurta a meia-vida da carboxi-hemoglobina.",
+   "Sulfato de magnésio": "Antagoniza a toxicidade do magnésio (ex.: na pré-eclâmpsia)."
+  }
+ },
+ {
+  "id": "par-micro-doenca",
+  "titulo": "Microrganismo e doença",
+  "instrucao": "Ligue o agente à doença",
+  "nivel": 1,
+  "pares": [
+   [
+    "Treponema pallidum",
+    "Sífilis"
+   ],
+   [
+    "Clostridioides difficile",
+    "Colite pseudomembranosa"
+   ],
+   [
+    "Helicobacter pylori",
+    "Úlcera péptica"
+   ],
+   [
+    "Mycobacterium leprae",
+    "Hanseníase"
+   ],
+   [
+    "Leptospira interrogans",
+    "Leptospirose"
+   ],
+   [
+    "Bordetella pertussis",
+    "Coqueluche"
+   ],
+   [
+    "Corynebacterium diphtheriae",
+    "Difteria"
+   ],
+   [
+    "Clostridium tetani",
+    "Tétano"
+   ],
+   [
+    "Trypanosoma cruzi",
+    "Doença de Chagas"
+   ],
+   [
+    "Vírus Epstein-Barr",
+    "Mononucleose infecciosa"
+   ]
+  ],
+  "notas": {
+   "Treponema pallidum": "Espiroqueta; tratamento com penicilina.",
+   "Clostridioides difficile": "Surge após uso de antibióticos; diarreia com pseudomembranas.",
+   "Helicobacter pylori": "Bacilo gram-negativo do estômago; também ligado ao câncer gástrico.",
+   "Mycobacterium leprae": "Bacilo de Hansen; afeta pele e nervos periféricos.",
+   "Leptospira interrogans": "Transmitida pela urina de ratos em enchentes.",
+   "Bordetella pertussis": "Tosse em crises com guincho inspiratório.",
+   "Corynebacterium diphtheriae": "Pseudomembrana acinzentada aderida na garganta.",
+   "Clostridium tetani": "Toxina causa rigidez, trismo e espasmos.",
+   "Trypanosoma cruzi": "Protozoário; pode causar cardiopatia e megavísceras.",
+   "Vírus Epstein-Barr": "Febre, faringite, linfonodos e linfócitos atípicos."
+  }
+ },
+ {
+  "id": "par-vetores",
+  "titulo": "Doenças tropicais e transmissores",
+  "instrucao": "Ligue a doença ao transmissor",
+  "nivel": 2,
+  "pares": [
+   [
+    "Malária",
+    "Mosquito Anopheles"
+   ],
+   [
+    "Dengue",
+    "Mosquito Aedes aegypti"
+   ],
+   [
+    "Febre amarela silvestre",
+    "Mosquitos Haemagogus e Sabethes"
+   ],
+   [
+    "Leishmaniose tegumentar",
+    "Flebotomíneo (mosquito-palha)"
+   ],
+   [
+    "Doença de Chagas",
+    "Triatomíneo (barbeiro)"
+   ],
+   [
+    "Oncocercose",
+    "Simulídeo (pium)"
+   ],
+   [
+    "Febre do Oropouche",
+    "Maruim (Culicoides paraensis)"
+   ],
+   [
+    "Febre maculosa",
+    "Carrapato Amblyomma"
+   ],
+   [
+    "Esquistossomose",
+    "Caramujo Biomphalaria"
+   ],
+   [
+    "Raiva humana",
+    "Morcego hematófago"
+   ]
+  ],
+  "notas": {
+   "Malária": "Fêmea do Anopheles (carapanã) transmite o Plasmodium.",
+   "Dengue": "Mosquito urbano, pica de dia; água parada.",
+   "Febre amarela silvestre": "Ciclo na mata, com macacos como hospedeiros.",
+   "Leishmaniose tegumentar": "Lutzomyia; úlcera de bordas elevadas.",
+   "Doença de Chagas": "Na Amazônia, a via oral (açaí contaminado) é importante.",
+   "Oncocercose": "Filariose que afeta pele e olhos; foco em área Yanomami.",
+   "Febre do Oropouche": "Arbovírus amazônico; quadro parecido com dengue.",
+   "Febre maculosa": "Rickettsia rickettsii; alta letalidade sem tratamento precoce.",
+   "Esquistossomose": "Hospedeiro intermediário; cercárias penetram a pele na água.",
+   "Raiva humana": "Na Amazônia, principal transmissor em surtos humanos."
+  }
+ },
+ {
+  "id": "par-tratamento",
+  "titulo": "Doença e tratamento de 1ª linha",
+  "instrucao": "Ligue a doença ao tratamento",
+  "nivel": 2,
+  "pares": [
+   [
+    "Sífilis primária",
+    "Penicilina G benzatina"
+   ],
+   [
+    "Anafilaxia",
+    "Adrenalina IM"
+   ],
+   [
+    "Hipotireoidismo primário",
+    "Levotiroxina"
+   ],
+   [
+    "Tuberculose pulmonar",
+    "RIPE por 2 meses + RI por 4"
+   ],
+   [
+    "Hanseníase",
+    "Poliquimioterapia única (PQT-U)"
+   ],
+   [
+    "Pneumocistose",
+    "Sulfametoxazol-trimetoprima"
+   ],
+   [
+    "Gonorreia",
+    "Ceftriaxona + azitromicina"
+   ],
+   [
+    "DM2 sem doença cardiovascular",
+    "Metformina"
+   ],
+   [
+    "Hiperpotassemia com ECG alterado",
+    "Gluconato de cálcio IV"
+   ],
+   [
+    "Doença de Kawasaki",
+    "Imunoglobulina IV + AAS"
+   ]
+  ],
+  "notas": {
+   "Sífilis primária": "2,4 milhões UI IM, dose única (PCDT IST, MS).",
+   "Anafilaxia": "0,5 mg IM na coxa no adulto; repetir se preciso.",
+   "Hipotireoidismo primário": "Tomar em jejum; ajustar pelo TSH.",
+   "Tuberculose pulmonar": "Rifampicina, isoniazida, pirazinamida e etambutol (esquema básico, MS).",
+   "Hanseníase": "Rifampicina, dapsona e clofazimina para todas as formas (MS).",
+   "Pneumocistose": "Por 21 dias; corticoide se hipoxemia.",
+   "Gonorreia": "Ceftriaxona 500 mg IM + azitromicina 1 g VO (PCDT IST, MS).",
+   "DM2 sem doença cardiovascular": "Primeira escolha na maioria dos casos (SBD).",
+   "Hiperpotassemia com ECG alterado": "Estabiliza a membrana do miocárdio; não baixa o potássio.",
+   "Doença de Kawasaki": "Idealmente nos primeiros 10 dias; previne aneurisma coronariano."
+  }
+ },
+ {
+  "id": "par-emergencias",
+  "titulo": "Emergências: primeira conduta",
+  "instrucao": "Ligue a situação à conduta",
+  "nivel": 3,
+  "pares": [
+   [
+    "Estado de mal epiléptico",
+    "Benzodiazepínico IV ou IM"
+   ],
+   [
+    "Crise adrenal",
+    "Hidrocortisona IV"
+   ],
+   [
+    "Hipoglicemia grave",
+    "Glicose IV"
+   ],
+   [
+    "TSV estável",
+    "Manobra vagal"
+   ],
+   [
+    "FV ou TV sem pulso",
+    "Desfibrilação imediata"
+   ],
+   [
+    "Assistolia",
+    "RCP e adrenalina, sem choque"
+   ],
+   [
+    "Torsades de pointes",
+    "Sulfato de magnésio IV"
+   ],
+   [
+    "Pneumotórax hipertensivo",
+    "Descompressão torácica imediata"
+   ],
+   [
+    "Tamponamento cardíaco",
+    "Pericardiocentese"
+   ],
+   [
+    "Bradicardia sintomática instável",
+    "Atropina IV"
+   ]
+  ],
+  "notas": {
+   "Estado de mal epiléptico": "Diazepam ou midazolam; depois, fenitoína ou similar.",
+   "Crise adrenal": "100 mg IV em bolus, mais soro fisiológico.",
+   "Hipoglicemia grave": "Sem acesso venoso: glucagon IM.",
+   "TSV estável": "Se falhar: adenosina IV.",
+   "FV ou TV sem pulso": "Choque o quanto antes e RCP de alta qualidade.",
+   "Assistolia": "Ritmo não chocável; buscar causas reversíveis.",
+   "Torsades de pointes": "2 g IV; corrigir QT longo e distúrbios eletrolíticos.",
+   "Pneumotórax hipertensivo": "Diagnóstico clínico: não esperar radiografia.",
+   "Tamponamento cardíaco": "Drena o líquido e libera o enchimento do coração.",
+   "Bradicardia sintomática instável": "1 mg IV; se falhar, marca-passo ou adrenalina/dopamina."
+  }
+ },
+ {
+  "id": "par-classes-1",
+  "titulo": "Fármaco e classe: cardio e gastro",
+  "instrucao": "Ligue o fármaco à classe",
+  "nivel": 1,
+  "pares": [
+   [
+    "Losartana",
+    "Bloqueador do receptor AT1 (BRA)"
+   ],
+   [
+    "Enalapril",
+    "Inibidor da ECA"
+   ],
+   [
+    "Anlodipino",
+    "Bloqueador de canal de cálcio"
+   ],
+   [
+    "Hidroclorotiazida",
+    "Diurético tiazídico"
+   ],
+   [
+    "Furosemida",
+    "Diurético de alça"
+   ],
+   [
+    "Espironolactona",
+    "Antagonista da aldosterona"
+   ],
+   [
+    "Metoprolol",
+    "Betabloqueador"
+   ],
+   [
+    "Atorvastatina",
+    "Estatina"
+   ],
+   [
+    "Omeprazol",
+    "Inibidor da bomba de prótons"
+   ],
+   [
+    "Clopidogrel",
+    "Inibidor do receptor P2Y12"
+   ]
+  ],
+  "notas": {
+   "Losartana": "Bloqueia a angiotensina II no receptor; não causa tosse.",
+   "Enalapril": "Reduz a formação de angiotensina II.",
+   "Anlodipino": "Di-hidropiridínico; vasodilatador arterial.",
+   "Hidroclorotiazida": "Age no túbulo contorcido distal.",
+   "Furosemida": "Bloqueia o cotransportador Na-K-2Cl na alça de Henle.",
+   "Espironolactona": "Diurético poupador de potássio.",
+   "Metoprolol": "Beta-1 seletivo; usado em IC, angina e arritmias.",
+   "Atorvastatina": "Inibe a HMG-CoA redutase e reduz o LDL.",
+   "Omeprazol": "Bloqueia a H+/K+ ATPase da célula parietal.",
+   "Clopidogrel": "Antiplaquetário; usado com AAS após stent."
+  }
+ },
+ {
+  "id": "par-classes-2",
+  "titulo": "Fármaco e classe: endócrino e psiquiatria",
+  "instrucao": "Ligue o fármaco à classe",
+  "nivel": 2,
+  "pares": [
+   [
+    "Dapagliflozina",
+    "Inibidor de SGLT2"
+   ],
+   [
+    "Sitagliptina",
+    "Inibidor de DPP-4"
+   ],
+   [
+    "Semaglutida",
+    "Agonista do receptor GLP-1"
+   ],
+   [
+    "Glibenclamida",
+    "Sulfonilureia"
+   ],
+   [
+    "Pioglitazona",
+    "Tiazolidinediona"
+   ],
+   [
+    "Fluoxetina",
+    "ISRS"
+   ],
+   [
+    "Venlafaxina",
+    "IRSN"
+   ],
+   [
+    "Amitriptilina",
+    "Antidepressivo tricíclico"
+   ],
+   [
+    "Haloperidol",
+    "Antipsicótico típico"
+   ],
+   [
+    "Rivaroxabana",
+    "Inibidor direto do fator Xa"
+   ]
+  ],
+  "notas": {
+   "Dapagliflozina": "Aumenta a glicosúria; protege coração e rins.",
+   "Sitagliptina": "Prolonga a ação das incretinas.",
+   "Semaglutida": "Reduz glicemia e peso.",
+   "Glibenclamida": "Estimula a secreção de insulina; risco de hipoglicemia.",
+   "Pioglitazona": "Aumenta a sensibilidade à insulina; retém líquido.",
+   "Fluoxetina": "Inibidor seletivo da recaptação de serotonina.",
+   "Venlafaxina": "Inibe a recaptação de serotonina e noradrenalina.",
+   "Amitriptilina": "Também usada em dor neuropática; efeitos anticolinérgicos.",
+   "Haloperidol": "Bloqueador D2 potente; risco de sintomas extrapiramidais.",
+   "Rivaroxabana": "Anticoagulante oral direto."
+  }
+ },
+ {
+  "id": "par-efeitos-1",
+  "titulo": "Fármaco e efeito adverso",
+  "instrucao": "Ligue o fármaco ao efeito",
+  "nivel": 2,
+  "pares": [
+   [
+    "Enalapril",
+    "Tosse seca"
+   ],
+   [
+    "Gentamicina",
+    "Ototoxicidade"
+   ],
+   [
+    "Clozapina",
+    "Agranulocitose"
+   ],
+   [
+    "Etambutol",
+    "Neurite óptica"
+   ],
+   [
+    "Sinvastatina",
+    "Miopatia"
+   ],
+   [
+    "Anlodipino",
+    "Edema maleolar"
+   ],
+   [
+    "Ciprofloxacino",
+    "Ruptura de tendão"
+   ],
+   [
+    "Espironolactona",
+    "Ginecomastia"
+   ],
+   [
+    "Lítio",
+    "Diabetes insípido nefrogênico"
+   ],
+   [
+    "Cloranfenicol",
+    "Síndrome do bebê cinzento"
+   ]
+  ],
+  "notas": {
+   "Enalapril": "Acúmulo de bradicinina; trocar por BRA.",
+   "Gentamicina": "Aminoglicosídeo; também nefrotóxico.",
+   "Clozapina": "Exige hemograma periódico.",
+   "Etambutol": "Perda de acuidade e de visão de cores (verde-vermelho).",
+   "Sinvastatina": "Dor muscular; raramente rabdomiólise.",
+   "Anlodipino": "Vasodilatação arteriolar aumenta a pressão capilar.",
+   "Ciprofloxacino": "Fluoroquinolona; risco maior no tendão de Aquiles e em idosos.",
+   "Espironolactona": "Efeito antiandrogênico.",
+   "Lítio": "Rim não responde ao ADH; poliúria.",
+   "Cloranfenicol": "Recém-nascido não conjuga o fármaco."
+  }
+ },
+ {
+  "id": "par-efeitos-2",
+  "titulo": "Efeitos adversos marcantes",
+  "instrucao": "Ligue o fármaco ao efeito",
+  "nivel": 3,
+  "pares": [
+   [
+    "Amiodarona",
+    "Tireoidopatia e fibrose pulmonar"
+   ],
+   [
+    "Isoniazida",
+    "Neuropatia periférica"
+   ],
+   [
+    "Isotretinoína",
+    "Teratogenicidade grave"
+   ],
+   [
+    "Dapagliflozina",
+    "Cetoacidose euglicêmica"
+   ],
+   [
+    "Sildenafila",
+    "Visão azulada"
+   ],
+   [
+    "Rifampicina",
+    "Urina e lágrima alaranjadas"
+   ],
+   [
+    "Metoclopramida",
+    "Distonia aguda"
+   ],
+   [
+    "Heparina",
+    "Trombocitopenia imune (HIT)"
+   ],
+   [
+    "Digoxina",
+    "Visão amarelada"
+   ],
+   [
+    "Dapsona",
+    "Metemoglobinemia"
+   ]
+  ],
+  "notas": {
+   "Amiodarona": "Rica em iodo; monitorar TSH e função pulmonar.",
+   "Isoniazida": "Depleta vitamina B6; prevenir com piridoxina.",
+   "Isotretinoína": "Exige contracepção eficaz durante e após o uso.",
+   "Dapagliflozina": "Cetoacidose com glicemia pouco elevada.",
+   "Sildenafila": "Inibe também a PDE6 da retina.",
+   "Rifampicina": "Efeito benigno; avisar o paciente.",
+   "Metoclopramida": "Bloqueio D2; comum em jovens.",
+   "Heparina": "Queda de plaquetas com trombose, 5 a 10 dias após o início.",
+   "Digoxina": "Xantopsia: sinal de intoxicação digitálica.",
+   "Dapsona": "Cianose com saturação baixa que não melhora com O2."
+  }
+ },
+ {
+  "id": "par-nervos-perifericos",
+  "titulo": "Nervos periféricos",
+  "instrucao": "Ligue o nervo à lesão ou função",
+  "nivel": 2,
+  "pares": [
+   [
+    "Nervo radial",
+    "Mão caída"
+   ],
+   [
+    "Nervo ulnar",
+    "Mão em garra"
+   ],
+   [
+    "Nervo mediano",
+    "Mão de bênção"
+   ],
+   [
+    "Nervo fibular comum",
+    "Pé caído"
+   ],
+   [
+    "Nervo torácico longo",
+    "Escápula alada"
+   ],
+   [
+    "Nervo axilar",
+    "Deltoide"
+   ],
+   [
+    "Nervo musculocutâneo",
+    "Bíceps braquial"
+   ],
+   [
+    "Nervo frênico",
+    "Diafragma"
+   ],
+   [
+    "Nervo femoral",
+    "Quadríceps femoral"
+   ],
+   [
+    "Nervo tibial",
+    "Flexão plantar do pé"
+   ]
+  ],
+  "notas": {
+   "Nervo radial": "Perde a extensão do punho; fratura do úmero médio.",
+   "Nervo ulnar": "Paralisia dos interósseos e lumbricais mediais.",
+   "Nervo mediano": "Lesão alta: não flexiona indicador e médio ao fechar a mão.",
+   "Nervo fibular comum": "Lesão no colo da fíbula; marcha escarvante.",
+   "Nervo torácico longo": "Paralisia do serrátil anterior.",
+   "Nervo axilar": "Abdução do ombro; lesão na fratura do colo do úmero.",
+   "Nervo musculocutâneo": "Flexão do cotovelo e supinação.",
+   "Nervo frênico": "Raízes C3 a C5.",
+   "Nervo femoral": "Extensão do joelho; reflexo patelar.",
+   "Nervo tibial": "Inerva gastrocnêmio e sóleo."
+  }
+ },
+ {
+  "id": "par-nervos-cranianos",
+  "titulo": "Nervos cranianos",
+  "instrucao": "Ligue o nervo à função",
+  "nivel": 2,
+  "pares": [
+   [
+    "I - Olfatório",
+    "Olfato"
+   ],
+   [
+    "III - Oculomotor",
+    "Ptose e midríase se lesado"
+   ],
+   [
+    "IV - Troclear",
+    "Músculo oblíquo superior"
+   ],
+   [
+    "V - Trigêmeo",
+    "Mastigação e sensibilidade facial"
+   ],
+   [
+    "VI - Abducente",
+    "Músculo reto lateral"
+   ],
+   [
+    "VII - Facial",
+    "Mímica facial"
+   ],
+   [
+    "VIII - Vestibulococlear",
+    "Audição e equilíbrio"
+   ],
+   [
+    "IX - Glossofaríngeo",
+    "Gustação do 1/3 posterior"
+   ],
+   [
+    "XI - Acessório",
+    "Trapézio e esternocleidomastoideo"
+   ],
+   [
+    "XII - Hipoglosso",
+    "Movimentos da língua"
+   ]
+  ],
+  "notas": {
+   "I - Olfatório": "Único nervo sensitivo que não passa pelo tálamo.",
+   "III - Oculomotor": "Olho 'para baixo e para fora' na lesão completa.",
+   "IV - Troclear": "Lesão: diplopia ao descer escadas.",
+   "V - Trigêmeo": "Três ramos: oftálmico, maxilar e mandibular.",
+   "VI - Abducente": "Lesão: não abduz o olho.",
+   "VII - Facial": "Paralisia de Bell: toda a hemiface.",
+   "VIII - Vestibulococlear": "Porções coclear e vestibular.",
+   "IX - Glossofaríngeo": "Também leva a sensibilidade da faringe.",
+   "XI - Acessório": "Encolher os ombros e girar a cabeça.",
+   "XII - Hipoglosso": "Na lesão, a língua desvia para o lado lesado."
+  }
+ },
+ {
+  "id": "par-hormonios",
+  "titulo": "Hormônio e onde é produzido",
+  "instrucao": "Ligue o hormônio à origem",
+  "nivel": 1,
+  "pares": [
+   [
+    "Insulina",
+    "Células beta do pâncreas"
+   ],
+   [
+    "Glucagon",
+    "Células alfa do pâncreas"
+   ],
+   [
+    "Cortisol",
+    "Zona fasciculada da adrenal"
+   ],
+   [
+    "Aldosterona",
+    "Zona glomerulosa da adrenal"
+   ],
+   [
+    "Calcitonina",
+    "Células C da tireoide"
+   ],
+   [
+    "PTH",
+    "Paratireoides"
+   ],
+   [
+    "Prolactina",
+    "Adeno-hipófise"
+   ],
+   [
+    "Melatonina",
+    "Glândula pineal"
+   ],
+   [
+    "Testosterona",
+    "Células de Leydig"
+   ],
+   [
+    "Renina",
+    "Aparelho justaglomerular"
+   ]
+  ],
+  "notas": {
+   "Insulina": "Reduz a glicemia.",
+   "Glucagon": "Eleva a glicemia no jejum.",
+   "Cortisol": "Glicocorticoide; regulado pelo ACTH.",
+   "Aldosterona": "Retém sódio e elimina potássio.",
+   "Calcitonina": "Células parafoliculares; marcador do carcinoma medular.",
+   "PTH": "Eleva o cálcio sérico.",
+   "Prolactina": "Inibida pela dopamina.",
+   "Melatonina": "Regula o ciclo sono-vigília.",
+   "Testosterona": "Estimuladas pelo LH, no testículo.",
+   "Renina": "Liberada no rim quando cai a perfusão renal."
+  }
+ },
+ {
+  "id": "par-esfregaco",
+  "titulo": "Esfregaço de sangue",
+  "instrucao": "Ligue o achado à condição",
+  "nivel": 3,
+  "pares": [
+   [
+    "Esquizócitos",
+    "Microangiopatia trombótica"
+   ],
+   [
+    "Esferócitos",
+    "Esferocitose hereditária"
+   ],
+   [
+    "Drepanócitos",
+    "Anemia falciforme"
+   ],
+   [
+    "Corpúsculos de Heinz",
+    "Deficiência de G6PD"
+   ],
+   [
+    "Bastonetes de Auer",
+    "Leucemia mieloide aguda"
+   ],
+   [
+    "Neutrófilos hipersegmentados",
+    "Anemia megaloblástica"
+   ],
+   [
+    "Dacriócitos",
+    "Mielofibrose"
+   ],
+   [
+    "Manchas de Gumprecht",
+    "Leucemia linfocítica crônica"
+   ],
+   [
+    "Hemácias em rouleaux",
+    "Mieloma múltiplo"
+   ],
+   [
+    "Pontilhado basófilo",
+    "Intoxicação por chumbo"
+   ]
+  ],
+  "notas": {
+   "Esquizócitos": "Hemácias fragmentadas: PTT, SHU ou CIVD.",
+   "Esferócitos": "Hemácias sem palidez central; teste de EMA.",
+   "Drepanócitos": "Hemácias em foice por HbS.",
+   "Corpúsculos de Heinz": "Hemoglobina oxidada precipitada.",
+   "Bastonetes de Auer": "Inclusões em forma de agulha nos blastos.",
+   "Neutrófilos hipersegmentados": "Seis ou mais lobos; falta de B12 ou folato.",
+   "Dacriócitos": "Hemácias em lágrima.",
+   "Manchas de Gumprecht": "Linfócitos frágeis que se rompem na lâmina.",
+   "Hemácias em rouleaux": "Empilhamento por excesso de proteína monoclonal.",
+   "Pontilhado basófilo": "Grânulos de RNA ribossomal nas hemácias."
+  }
+ },
+ {
+  "id": "par-marcadores",
+  "titulo": "Marcadores tumorais",
+  "instrucao": "Ligue o marcador ao tumor",
+  "nivel": 2,
+  "pares": [
+   [
+    "PSA",
+    "Câncer de próstata"
+   ],
+   [
+    "CA-125",
+    "Câncer epitelial de ovário"
+   ],
+   [
+    "CA 19-9",
+    "Adenocarcinoma de pâncreas"
+   ],
+   [
+    "CEA",
+    "Câncer colorretal"
+   ],
+   [
+    "Alfafetoproteína",
+    "Carcinoma hepatocelular"
+   ],
+   [
+    "Beta-hCG",
+    "Coriocarcinoma"
+   ],
+   [
+    "Calcitonina",
+    "Carcinoma medular de tireoide"
+   ],
+   [
+    "CA 15-3",
+    "Câncer de mama"
+   ],
+   [
+    "5-HIAA urinário",
+    "Tumor carcinoide"
+   ],
+   [
+    "Proteína de Bence Jones",
+    "Mieloma múltiplo"
+   ]
+  ],
+  "notas": {
+   "PSA": "Útil no seguimento; rastreio só com decisão compartilhada.",
+   "CA-125": "Pode subir em endometriose e gestação.",
+   "CA 19-9": "Útil no seguimento; pouco útil no rastreio.",
+   "CEA": "Seguimento após cirurgia.",
+   "Alfafetoproteína": "Também eleva em tumores de saco vitelino.",
+   "Beta-hCG": "Também útil na mola hidatiforme.",
+   "Calcitonina": "Tumor das células C; pesquisar gene RET.",
+   "CA 15-3": "Seguimento de doença metastática.",
+   "5-HIAA urinário": "Metabólito da serotonina.",
+   "Proteína de Bence Jones": "Cadeias leves livres na urina."
+  }
+ },
+ {
+  "id": "par-anticorpos",
+  "titulo": "Autoanticorpos",
+  "instrucao": "Ligue o anticorpo à doença",
+  "nivel": 2,
+  "pares": [
+   [
+    "Anti-DNA dupla hélice",
+    "Lúpus eritematoso sistêmico"
+   ],
+   [
+    "Anti-CCP",
+    "Artrite reumatoide"
+   ],
+   [
+    "Anticentrômero",
+    "Esclerose sistêmica limitada"
+   ],
+   [
+    "Anti-Jo-1",
+    "Síndrome antissintetase"
+   ],
+   [
+    "c-ANCA (anti-PR3)",
+    "Granulomatose com poliangiite"
+   ],
+   [
+    "TRAb",
+    "Doença de Graves"
+   ],
+   [
+    "Antimitocôndria",
+    "Colangite biliar primária"
+   ],
+   [
+    "Antitransglutaminase IgA",
+    "Doença celíaca"
+   ],
+   [
+    "Antirreceptor de acetilcolina",
+    "Miastenia gravis"
+   ],
+   [
+    "Antimembrana basal glomerular",
+    "Síndrome de Goodpasture"
+   ]
+  ],
+  "notas": {
+   "Anti-DNA dupla hélice": "Específico; acompanha a atividade da nefrite.",
+   "Anti-CCP": "Muito específico; pode surgir antes dos sintomas.",
+   "Anticentrômero": "Associado à forma CREST.",
+   "Anti-Jo-1": "Miosite, doença intersticial pulmonar e mãos de mecânico.",
+   "c-ANCA (anti-PR3)": "Vasculite de vias aéreas e rins.",
+   "TRAb": "Anticorpo que estimula o receptor do TSH.",
+   "Antimitocôndria": "Mulher com prurido e fosfatase alcalina alta.",
+   "Antitransglutaminase IgA": "Dosar junto com IgA total.",
+   "Antirreceptor de acetilcolina": "Fraqueza que piora com o esforço; ptose.",
+   "Antimembrana basal glomerular": "Hemorragia pulmonar e glomerulonefrite."
+  }
+ },
+ {
+  "id": "par-ecg",
+  "titulo": "Achados de ECG",
+  "instrucao": "Ligue o achado à condição",
+  "nivel": 2,
+  "pares": [
+   [
+    "Onda T apiculada",
+    "Hiperpotassemia"
+   ],
+   [
+    "Onda U proeminente",
+    "Hipopotassemia"
+   ],
+   [
+    "PR curto e onda delta",
+    "Wolff-Parkinson-White"
+   ],
+   [
+    "Onda épsilon",
+    "Cardiomiopatia arritmogênica do VD"
+   ],
+   [
+    "Onda J de Osborn",
+    "Hipotermia"
+   ],
+   [
+    "Supra de ST difuso e infra de PR",
+    "Pericardite aguda"
+   ],
+   [
+    "Padrão S1Q3T3",
+    "Tromboembolismo pulmonar"
+   ],
+   [
+    "Ondas F em dente de serra",
+    "Flutter atrial"
+   ],
+   [
+    "RR irregular sem onda P",
+    "Fibrilação atrial"
+   ],
+   [
+    "Supra de ST em cúpula em V1-V2",
+    "Síndrome de Brugada"
+   ]
+  ],
+  "notas": {
+   "Onda T apiculada": "Primeiro sinal; depois QRS largo.",
+   "Onda U proeminente": "Com achatamento da onda T.",
+   "PR curto e onda delta": "Pré-excitação por via acessória.",
+   "Onda épsilon": "Entalhe no fim do QRS em V1 a V3.",
+   "Onda J de Osborn": "Entalhe no ponto J.",
+   "Supra de ST difuso e infra de PR": "Supra côncavo em várias derivações.",
+   "Padrão S1Q3T3": "Pouco sensível; taquicardia sinusal é mais comum.",
+   "Ondas F em dente de serra": "Melhor vistas em DII, DIII e aVF.",
+   "RR irregular sem onda P": "Ritmo irregularmente irregular.",
+   "Supra de ST em cúpula em V1-V2": "Padrão tipo 1; risco de morte súbita."
+  }
+ },
+ {
+  "id": "par-radiologia",
+  "titulo": "Sinais radiológicos",
+  "instrucao": "Ligue o sinal à doença",
+  "nivel": 3,
+  "pares": [
+   [
+    "Sinal de Westermark",
+    "Tromboembolismo pulmonar"
+   ],
+   [
+    "Linhas B de Kerley",
+    "Congestão pulmonar"
+   ],
+   [
+    "Sinal do grão de café",
+    "Volvo de sigmoide"
+   ],
+   [
+    "Lesão em miolo de maçã",
+    "Câncer colorretal"
+   ],
+   [
+    "Bico de pássaro no esofagograma",
+    "Acalasia"
+   ],
+   [
+    "Coluna em bambu",
+    "Espondilite anquilosante"
+   ],
+   [
+    "Crânio em sal e pimenta",
+    "Hiperparatireoidismo"
+   ],
+   [
+    "Coração em bota",
+    "Tetralogia de Fallot"
+   ],
+   [
+    "Sinal do 3 na aorta",
+    "Coarctação da aorta"
+   ],
+   [
+    "Sinal da dupla bolha",
+    "Atresia duodenal"
+   ]
+  ],
+  "notas": {
+   "Sinal de Westermark": "Área de oligoemia distal ao êmbolo.",
+   "Linhas B de Kerley": "Linhas horizontais nas bases por edema intersticial.",
+   "Sinal do grão de café": "Alça sigmoide muito dilatada em U invertido.",
+   "Lesão em miolo de maçã": "Estenose anular no enema opaco.",
+   "Bico de pássaro no esofagograma": "Afilamento distal com esôfago dilatado.",
+   "Coluna em bambu": "Sindesmófitos unindo as vértebras.",
+   "Crânio em sal e pimenta": "Reabsorção óssea puntiforme.",
+   "Coração em bota": "Ponta elevada e arco pulmonar escavado.",
+   "Sinal do 3 na aorta": "Também há erosão dos arcos costais.",
+   "Sinal da dupla bolha": "Estômago e duodeno cheios de ar; associada à Down."
+  }
+ },
+ {
+  "id": "par-genetica",
+  "titulo": "Síndromes genéticas",
+  "instrucao": "Ligue a síndrome à alteração",
+  "nivel": 2,
+  "pares": [
+   [
+    "Síndrome de Down",
+    "Trissomia do 21"
+   ],
+   [
+    "Síndrome de Edwards",
+    "Trissomia do 18"
+   ],
+   [
+    "Síndrome de Patau",
+    "Trissomia do 13"
+   ],
+   [
+    "Síndrome de Turner",
+    "Cariótipo 45,X"
+   ],
+   [
+    "Síndrome de Klinefelter",
+    "Cariótipo 47,XXY"
+   ],
+   [
+    "Síndrome do X frágil",
+    "Expansão CGG no gene FMR1"
+   ],
+   [
+    "Síndrome de Marfan",
+    "Mutação no gene FBN1"
+   ],
+   [
+    "Doença de Huntington",
+    "Expansão CAG no gene HTT"
+   ],
+   [
+    "Síndrome de DiGeorge",
+    "Deleção 22q11.2"
+   ],
+   [
+    "Síndrome do miado do gato",
+    "Deleção 5p"
+   ]
+  ],
+  "notas": {
+   "Síndrome de Down": "Causa genética mais comum de deficiência intelectual.",
+   "Síndrome de Edwards": "Mãos fechadas com dedos sobrepostos; pés em mata-borrão.",
+   "Síndrome de Patau": "Fenda labiopalatina, polidactilia, holoprosencefalia.",
+   "Síndrome de Turner": "Baixa estatura, pescoço alado, coarctação da aorta.",
+   "Síndrome de Klinefelter": "Homem alto, testículos pequenos, infertilidade.",
+   "Síndrome do X frágil": "Deficiência intelectual, orelhas grandes, macro-orquidia.",
+   "Síndrome de Marfan": "Fibrilina-1; risco de dissecção de aorta.",
+   "Doença de Huntington": "Coreia e demência; herança autossômica dominante.",
+   "Síndrome de DiGeorge": "Hipocalcemia, cardiopatia e timo ausente.",
+   "Síndrome do miado do gato": "Choro agudo como miado; microcefalia."
+  }
+ },
+ {
+  "id": "par-vacinas",
+  "titulo": "Vacinas e idade (PNI)",
+  "instrucao": "Ligue a vacina à idade",
+  "nivel": 1,
+  "pares": [
+   [
+    "BCG",
+    "Ao nascer"
+   ],
+   [
+    "Meningocócica C (1ª dose)",
+    "3 meses"
+   ],
+   [
+    "Pentavalente",
+    "2, 4 e 6 meses"
+   ],
+   [
+    "Febre amarela (1ª dose)",
+    "9 meses"
+   ],
+   [
+    "Tríplice viral (1ª dose)",
+    "12 meses"
+   ],
+   [
+    "Hepatite A",
+    "15 meses"
+   ],
+   [
+    "HPV",
+    "9 a 14 anos"
+   ],
+   [
+    "dTpa na gestação",
+    "A partir de 20 semanas"
+   ],
+   [
+    "dT no adulto",
+    "Reforço a cada 10 anos"
+   ],
+   [
+    "Influenza",
+    "Todo ano, na campanha"
+   ]
+  ],
+  "notas": {
+   "BCG": "Dose única, intradérmica, no braço direito.",
+   "Meningocócica C (1ª dose)": "Doses aos 3 e 5 meses; reforço aos 12 meses com ACWY.",
+   "Pentavalente": "Difteria, tétano, coqueluche, Hib e hepatite B.",
+   "Febre amarela (1ª dose)": "Reforço aos 4 anos.",
+   "Tríplice viral (1ª dose)": "Sarampo, caxumba e rubéola.",
+   "Hepatite A": "Dose única na rotina infantil.",
+   "HPV": "Meninas e meninos; previne câncer de colo e outros.",
+   "dTpa na gestação": "Em toda gestação; protege o bebê da coqueluche.",
+   "dT no adulto": "Após esquema completo; antes se ferimento de risco.",
+   "Influenza": "Vírus muda; vacina atualizada a cada ano."
+  }
+ }
+]

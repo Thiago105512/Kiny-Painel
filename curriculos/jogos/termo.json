@@ -1,0 +1,1661 @@
+[
+ {
+  "palavra": "AORTA",
+  "exibir": "aorta",
+  "dica": "Maior artéria do corpo; sai do ventrículo esquerdo",
+  "definicao": "Principal artéria do organismo: nasce no ventrículo esquerdo, forma o arco e desce pelo tórax e abdome, distribuindo sangue oxigenado.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "ATRIO",
+  "exibir": "átrio",
+  "dica": "Câmara cardíaca superior que recebe o sangue",
+  "definicao": "Cada uma das duas câmaras superiores do coração; o direito recebe as veias cavas e o esquerdo, as veias pulmonares.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "TIBIA",
+  "exibir": "tíbia",
+  "dica": "Osso medial e mais robusto da perna",
+  "definicao": "Osso longo medial da perna, que suporta a maior parte do peso; articula-se com o fêmur no joelho e com o tálus no tornozelo.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "UTERO",
+  "exibir": "útero",
+  "dica": "Órgão muscular pélvico onde o embrião se implanta",
+  "definicao": "Órgão muscular oco da pelve feminina, com fundo, corpo e colo; abriga a gestação e descama o endométrio na menstruação.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "COLON",
+  "exibir": "cólon",
+  "dica": "Parte do intestino grosso entre o ceco e o reto",
+  "definicao": "Segmento do intestino grosso (ascendente, transverso, descendente e sigmoide) que absorve água e eletrólitos e forma as fezes.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "NERVO",
+  "exibir": "nervo",
+  "dica": "Feixe de axônios que leva impulsos pelo corpo",
+  "definicao": "Estrutura formada por feixes de fibras nervosas envoltas por tecido conjuntivo, que conduz impulsos entre o SNC e a periferia.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "FEMUR",
+  "exibir": "fêmur",
+  "dica": "Osso da coxa, o mais longo do corpo",
+  "definicao": "Osso da coxa, o maior e mais longo do esqueleto; articula-se com o acetábulo no quadril e com a tíbia e a patela no joelho.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "UMERO",
+  "exibir": "úmero",
+  "dica": "Osso longo do braço",
+  "definicao": "Osso do braço que se articula com a escápula no ombro e com o rádio e a ulna no cotovelo.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "RADIO",
+  "exibir": "rádio",
+  "dica": "Osso lateral do antebraço, do lado do polegar",
+  "definicao": "Osso lateral do antebraço; sua fratura distal (fratura de Colles) é comum em quedas com a mão espalmada.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "PELVE",
+  "exibir": "pelve",
+  "dica": "Anel ósseo formado pelos ossos do quadril e o sacro",
+  "definicao": "Região formada pelos ossos do quadril, sacro e cóccix, que sustenta o tronco e protege órgãos como bexiga, reto e útero.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "DENTE",
+  "exibir": "dente",
+  "dica": "Estrutura da boca com esmalte, dentina e polpa",
+  "definicao": "Órgão rígido implantado nos alvéolos da mandíbula e da maxila, usado na mastigação; o adulto tem 32 permanentes.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "LABIO",
+  "exibir": "lábio",
+  "dica": "Borda carnuda que contorna a abertura da boca",
+  "definicao": "Cada uma das pregas musculomucosas que delimitam a boca; também nomeia estruturas como os lábios maiores e menores da vulva.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "NARIZ",
+  "exibir": "nariz",
+  "dica": "Órgão da face por onde o ar entra",
+  "definicao": "Estrutura osteocartilaginosa da face que filtra, aquece e umidifica o ar inspirado e abriga o epitélio olfatório.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "PONTE",
+  "exibir": "ponte",
+  "dica": "Parte do tronco encefálico entre mesencéfalo e bulbo",
+  "definicao": "Segmento médio do tronco encefálico, que liga o cérebro ao cerebelo e contém núcleos de nervos cranianos, como o trigêmeo.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "BULBO",
+  "exibir": "bulbo",
+  "dica": "Porção inferior do tronco encefálico",
+  "definicao": "Parte mais caudal do tronco encefálico, contínua com a medula; contém centros vitais respiratório e cardiovascular.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "VALVA",
+  "exibir": "valva",
+  "dica": "Estrutura cardíaca que impede o refluxo do sangue",
+  "definicao": "Conjunto de folhetos que garante fluxo unidirecional; no coração: mitral, tricúspide, aórtica e pulmonar.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "SEPTO",
+  "exibir": "septo",
+  "dica": "Parede que separa duas cavidades, como no nariz",
+  "definicao": "Parede divisória entre cavidades, como o septo interventricular do coração ou o septo nasal.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "APICE",
+  "exibir": "ápice",
+  "dica": "Ponta de um órgão; no coração, fica no 5º espaço",
+  "definicao": "Extremidade pontiaguda de uma estrutura; o do coração situa-se em geral no 5º espaço intercostal esquerdo.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "PENIS",
+  "exibir": "pênis",
+  "dica": "Órgão genital masculino externo",
+  "definicao": "Órgão genital masculino formado pelos corpos cavernosos e esponjoso, por onde passa a uretra.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "VULVA",
+  "exibir": "vulva",
+  "dica": "Conjunto dos genitais externos femininos",
+  "definicao": "Genitália externa feminina: monte púbico, lábios maiores e menores, clitóris, vestíbulo e óstios uretral e vaginal.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "AXILA",
+  "exibir": "axila",
+  "dica": "Região côncava sob a articulação do ombro",
+  "definicao": "Região entre o braço e a parede torácica; contém linfonodos importantes na drenagem da mama e o plexo braquial.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "TALUS",
+  "exibir": "tálus",
+  "dica": "Osso do tarso que se articula com a tíbia",
+  "definicao": "Osso do tarso (antigo astrágalo) que transmite o peso da perna ao pé, articulando-se com tíbia, fíbula e calcâneo.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "CARPO",
+  "exibir": "carpo",
+  "dica": "Conjunto de oito ossos do punho",
+  "definicao": "Conjunto dos oito ossos do punho, entre o antebraço e o metacarpo; o escafoide é o que mais fratura.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "TARSO",
+  "exibir": "tarso",
+  "dica": "Conjunto de sete ossos da parte posterior do pé",
+  "definicao": "Grupo de sete ossos do pé (tálus, calcâneo, navicular, cuboide e três cuneiformes), entre a perna e o metatarso.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "HALUX",
+  "exibir": "hálux",
+  "dica": "O dedão do pé",
+  "definicao": "Primeiro dedo do pé; sede frequente de joanete (hálux valgo) e da crise de gota (podagra).",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "SOLEO",
+  "exibir": "sóleo",
+  "dica": "Músculo da panturrilha profundo ao gastrocnêmio",
+  "definicao": "Músculo posterior da perna que, com o gastrocnêmio, forma o tríceps sural e realiza a flexão plantar do pé.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "PSOAS",
+  "exibir": "psoas",
+  "dica": "Músculo flexor do quadril; dá nome a um sinal na apendicite",
+  "definicao": "Músculo que vai das vértebras lombares ao trocânter menor do fêmur e flexiona o quadril; dor ao estendê-lo sugere apendicite retrocecal.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "OMBRO",
+  "exibir": "ombro",
+  "dica": "Articulação entre o úmero e a escápula",
+  "definicao": "Região que une o braço ao tronco; a articulação glenoumeral é a de maior mobilidade e a que mais luxa no corpo.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "PUNHO",
+  "exibir": "punho",
+  "dica": "Região entre o antebraço e a mão",
+  "definicao": "Região que liga o antebraço à mão, onde ficam os ossos do carpo e onde se palpa o pulso radial.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "TORAX",
+  "exibir": "tórax",
+  "dica": "Parte do tronco entre o pescoço e o abdome",
+  "definicao": "Porção do tronco delimitada por costelas, esterno e vértebras torácicas, que contém coração, pulmões e grandes vasos.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "DORSO",
+  "exibir": "dorso",
+  "dica": "Face posterior do tronco, da mão ou do pé",
+  "definicao": "Face posterior de uma parte do corpo; o dorso do tronco corresponde às costas.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "DUCTO",
+  "exibir": "ducto",
+  "dica": "Canal que conduz secreções, como o colédoco",
+  "definicao": "Canal que transporta secreções ou líquidos, como o ducto colédoco (bile) ou o ducto torácico (linfa).",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "CANAL",
+  "exibir": "canal",
+  "dica": "Passagem tubular; o inguinal é sede de hérnias",
+  "definicao": "Passagem anatômica tubular, como o canal inguinal, por onde passam o funículo espermático ou o ligamento redondo.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "ANTRO",
+  "exibir": "antro",
+  "dica": "Porção distal do estômago, antes do piloro",
+  "definicao": "Cavidade ou região dilatada; o antro gástrico é a porção distal do estômago, rica em células produtoras de gastrina.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "ACINO",
+  "exibir": "ácino",
+  "dica": "Unidade secretora arredondada de uma glândula",
+  "definicao": "Pequena unidade glandular em forma de saco, como os ácinos do pâncreas exócrino que secretam enzimas digestivas.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "DERME",
+  "exibir": "derme",
+  "dica": "Camada da pele rica em colágeno, sob a camada mais externa",
+  "definicao": "Camada da pele entre a epiderme e a hipoderme, rica em colágeno, vasos, nervos, folículos e glândulas.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "PLEXO",
+  "exibir": "plexo",
+  "dica": "Rede de nervos, como o braquial",
+  "definicao": "Rede entrelaçada de nervos ou vasos; o plexo braquial (C5–T1) inerva o membro superior.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "FOSSA",
+  "exibir": "fossa",
+  "dica": "Depressão anatômica, como a ilíaca direita",
+  "definicao": "Depressão ou cavidade anatômica, como a fossa ilíaca direita (sede de dor na apendicite) ou a fossa cubital.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "SULCO",
+  "exibir": "sulco",
+  "dica": "Depressão entre os giros do córtex cerebral",
+  "definicao": "Fenda rasa da superfície de um órgão; o sulco central separa os lobos frontal e parietal.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "MEATO",
+  "exibir": "meato",
+  "dica": "Abertura ou canal, como o acústico externo",
+  "definicao": "Orifício ou passagem, como o meato acústico externo ou o meato uretral externo.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "OSTIO",
+  "exibir": "óstio",
+  "dica": "Abertura de um vaso ou ducto, como o coronariano",
+  "definicao": "Orifício de entrada de um vaso, ducto ou cavidade, como os óstios coronarianos na raiz da aorta.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "UVULA",
+  "exibir": "úvula",
+  "dica": "Projeção que pende do palato mole",
+  "definicao": "Pequena projeção do palato mole; desvia para o lado são na lesão do nervo vago.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "GLOTE",
+  "exibir": "glote",
+  "dica": "Parte da laringe com as pregas vocais",
+  "definicao": "Porção da laringe formada pelas pregas vocais e pelo espaço entre elas (rima da glote).",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "VOMER",
+  "exibir": "vômer",
+  "dica": "Osso ímpar que forma parte do septo nasal",
+  "definicao": "Osso fino e ímpar da face que forma a porção posteroinferior do septo nasal.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "ATLAS",
+  "exibir": "atlas",
+  "dica": "Primeira vértebra cervical, sem corpo vertebral",
+  "definicao": "Primeira vértebra cervical (C1), em forma de anel, que sustenta o crânio e gira sobre o áxis.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "SACRO",
+  "exibir": "sacro",
+  "dica": "Osso triangular formado por vértebras fundidas",
+  "definicao": "Osso formado pela fusão de cinco vértebras sacrais, que se articula com os ilíacos e forma a parede posterior da pelve.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "PUBIS",
+  "exibir": "púbis",
+  "dica": "Parte anterior do osso do quadril",
+  "definicao": "Porção anterior do osso do quadril; os dois púbis se unem na sínfise púbica.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "BURSA",
+  "exibir": "bursa",
+  "dica": "Bolsa sinovial que reduz o atrito; inflama na bursite",
+  "definicao": "Pequena bolsa com líquido sinovial que reduz o atrito entre tendões, músculos e ossos; sua inflamação é a bursite.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "DISCO",
+  "exibir": "disco",
+  "dica": "Estrutura com núcleo pulposo entre duas vértebras",
+  "definicao": "O disco intervertebral tem anel fibroso e núcleo pulposo; sua herniação pode comprimir raízes nervosas.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "HIMEN",
+  "exibir": "hímen",
+  "dica": "Membrana fina na entrada da vagina",
+  "definicao": "Membrana mucosa delgada que recobre parcialmente o óstio vaginal; se imperfurada, pode causar hematocolpo.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "LOBAR",
+  "exibir": "lobar",
+  "dica": "Relativo a um lobo; tipo clássico de pneumonia",
+  "definicao": "Relativo a um lobo de órgão; a pneumonia lobar acomete um lobo pulmonar inteiro, classicamente pelo pneumococo.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "ULNAR",
+  "exibir": "ulnar",
+  "dica": "Nervo do 'choque' no cotovelo; relativo à ulna",
+  "definicao": "Relativo à ulna; o nervo ulnar passa atrás do epicôndilo medial e inerva a maioria dos músculos intrínsecos da mão.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "RENAL",
+  "exibir": "renal",
+  "dica": "Adjetivo relativo ao rim",
+  "definicao": "Relativo aos rins, como artéria renal, cólica renal ou insuficiência renal.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "NASAL",
+  "exibir": "nasal",
+  "dica": "Adjetivo relativo ao nariz",
+  "definicao": "Relativo ao nariz, como cavidade nasal, septo nasal ou via nasal de administração.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "OSSEO",
+  "exibir": "ósseo",
+  "dica": "Adjetivo do tecido que forma o esqueleto",
+  "definicao": "Relativo a osso; o tecido ósseo é conjuntivo mineralizado com hidroxiapatita, remodelado por osteoblastos e osteoclastos.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "CORDA",
+  "exibir": "corda",
+  "dica": "As tendíneas prendem as valvas aos músculos papilares",
+  "definicao": "Estrutura fibrosa em forma de cordão, como as cordas tendíneas do coração ou as cordas (pregas) vocais.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "PALMA",
+  "exibir": "palma",
+  "dica": "Face anterior da mão",
+  "definicao": "Face anterior da mão, onde ficam as eminências tênar e hipotênar.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "MENTO",
+  "exibir": "mento",
+  "dica": "Nome anatômico do queixo",
+  "definicao": "Região anatômica do queixo, correspondente à proeminência mentual da mandíbula.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "TENAR",
+  "exibir": "tênar",
+  "dica": "Eminência muscular na base do polegar",
+  "definicao": "A eminência tênar reúne músculos curtos do polegar, inervados sobretudo pelo nervo mediano; atrofia na síndrome do túnel do carpo.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "POLPA",
+  "exibir": "polpa",
+  "dica": "Tecido vivo no interior do dente",
+  "definicao": "Tecido conjuntivo com vasos e nervos no interior do dente; o baço também tem polpa branca e polpa vermelha.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "HILAR",
+  "exibir": "hilar",
+  "dica": "Relativo à região por onde entram vasos no pulmão ou rim",
+  "definicao": "Relativo ao hilo, região por onde entram e saem vasos, nervos e ductos de um órgão; ex.: adenopatia hilar pulmonar.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "CAUDA",
+  "exibir": "cauda",
+  "dica": "A 'equina' reúne raízes nervosas lombossacrais",
+  "definicao": "Parte terminal de uma estrutura; a cauda equina é o feixe de raízes nervosas abaixo do cone medular.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "PORTA",
+  "exibir": "porta",
+  "dica": "Veia que leva o sangue do intestino ao fígado",
+  "definicao": "A veia porta, formada pelas veias mesentérica superior e esplênica, leva sangue do trato digestivo ao fígado.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "FOVEA",
+  "exibir": "fóvea",
+  "dica": "Depressão central da mácula, de maior acuidade",
+  "definicao": "Pequena depressão no centro da mácula, rica em cones, responsável pela visão de maior nitidez.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "TRATO",
+  "exibir": "trato",
+  "dica": "Feixe de fibras no SNC, como o corticoespinal",
+  "definicao": "Conjunto de fibras nervosas com mesma origem e destino no SNC; também designa sistemas, como o trato gastrointestinal.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "FEIXE",
+  "exibir": "feixe",
+  "dica": "O de His conduz o impulso do nó AV aos ventrículos",
+  "definicao": "Conjunto de fibras agrupadas; o feixe de His conduz o estímulo elétrico do nó atrioventricular aos ramos direito e esquerdo.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "HIATO",
+  "exibir": "hiato",
+  "dica": "Abertura do diafragma por onde passa o esôfago",
+  "definicao": "Abertura ou fenda; o hiato esofágico do diafragma dá passagem ao esôfago e é sede das hérnias de hiato.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "LUMEN",
+  "exibir": "lúmen",
+  "dica": "Espaço interno de um vaso ou tubo",
+  "definicao": "Cavidade interna de uma estrutura tubular, como vaso sanguíneo, intestino ou brônquio; também chamado luz.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "MALAR",
+  "exibir": "malar",
+  "dica": "Relativo à maçã do rosto; eritema típico do lúpus",
+  "definicao": "Relativo ao osso zigomático (maçã do rosto); o eritema malar em asa de borboleta é típico do lúpus.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "VASTO",
+  "exibir": "vasto",
+  "dica": "Três músculos do quadríceps levam esse nome",
+  "definicao": "Os músculos vasto lateral, medial e intermédio, com o reto femoral, formam o quadríceps, extensor do joelho.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "VOLAR",
+  "exibir": "volar",
+  "dica": "Relativo à face palmar da mão ou do punho",
+  "definicao": "Relativo à palma da mão ou à face anterior do punho e antebraço; sinônimo de palmar.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "RAQUE",
+  "exibir": "raque",
+  "dica": "Nome técnico da coluna; origem de uma anestesia",
+  "definicao": "Coluna vertebral; dá nome à raquianestesia, feita com injeção de anestésico no espaço subaracnóideo.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "PERNA",
+  "exibir": "perna",
+  "dica": "Segmento do membro inferior entre joelho e tornozelo",
+  "definicao": "Segmento do membro inferior entre o joelho e o tornozelo, formado pela tíbia e pela fíbula.",
+  "area": "anatomia"
+ },
+ {
+  "palavra": "CILIO",
+  "exibir": "cílio",
+  "dica": "Prolongamento celular que varre o muco das vias aéreas",
+  "definicao": "Projeção móvel da superfície celular; no epitélio respiratório, os cílios fazem o transporte mucociliar.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "LINFA",
+  "exibir": "linfa",
+  "dica": "Líquido claro drenado do interstício para o ducto torácico",
+  "definicao": "Líquido claro derivado do líquido intersticial, que circula nos vasos linfáticos e retorna ao sangue venoso.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "SEMEN",
+  "exibir": "sêmen",
+  "dica": "Fluido ejaculado que contém espermatozoides",
+  "definicao": "Fluido ejaculado composto por espermatozoides e secreções das vesículas seminais, próstata e glândulas bulbouretrais.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "OVULO",
+  "exibir": "óvulo",
+  "dica": "Gameta feminino liberado na ovulação",
+  "definicao": "Célula reprodutiva feminina (tecnicamente ovócito secundário) liberada pelo ovário e que pode ser fecundada.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "UREIA",
+  "exibir": "ureia",
+  "dica": "Principal produto nitrogenado excretado na urina",
+  "definicao": "Composto formado no fígado a partir da amônia (ciclo da ureia) e excretado pelos rins; eleva-se na insuficiência renal.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "SODIO",
+  "exibir": "sódio",
+  "dica": "Principal cátion do líquido extracelular",
+  "definicao": "Principal cátion extracelular, que determina a osmolaridade e a volemia; o valor normal no sangue fica em cerca de 135–145 mEq/L.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "FERRO",
+  "exibir": "ferro",
+  "dica": "Mineral da hemoglobina; sua falta causa anemia",
+  "definicao": "Mineral essencial à hemoglobina e à mioglobina; sua deficiência causa anemia microcítica e hipocrômica.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "ZINCO",
+  "exibir": "zinco",
+  "dica": "Oligoelemento importante para imunidade e cicatrização",
+  "definicao": "Oligoelemento que atua como cofator de muitas enzimas; a deficiência prejudica imunidade, crescimento e cicatrização.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "TONUS",
+  "exibir": "tônus",
+  "dica": "Estado de leve contração do músculo em repouso",
+  "definicao": "Grau de contração ou tensão de um músculo em repouso; está aumentado na espasticidade e reduzido na lesão do neurônio motor inferior.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "FLUXO",
+  "exibir": "fluxo",
+  "dica": "Volume que passa por unidade de tempo",
+  "definicao": "Volume de líquido que atravessa uma seção por unidade de tempo; o fluxo sanguíneo é igual à pressão dividida pela resistência.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "VISAO",
+  "exibir": "visão",
+  "dica": "Sentido mediado pela retina e pelo nervo óptico",
+  "definicao": "Sentido que capta a luz pela retina e a transmite pelo nervo óptico até o córtex occipital.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "BASAL",
+  "exibir": "basal",
+  "dica": "Tipo de metabolismo medido em repouso e jejum",
+  "definicao": "Relativo à base ou ao estado de repouso; a taxa metabólica basal é o gasto de energia mínimo para manter as funções vitais.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "CICLO",
+  "exibir": "ciclo",
+  "dica": "O menstrual dura em média 28 dias",
+  "definicao": "Série de eventos que se repete, como o ciclo menstrual (fases folicular e lútea) ou o ciclo cardíaco (sístole e diástole).",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "URINA",
+  "exibir": "urina",
+  "dica": "Líquido formado pelos rins e armazenado na bexiga",
+  "definicao": "Líquido produzido pelos rins por filtração, reabsorção e secreção, que elimina água, ureia, creatinina e eletrólitos.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "ALELO",
+  "exibir": "alelo",
+  "dica": "Cada versão possível de um gene",
+  "definicao": "Cada forma alternativa de um gene em um mesmo locus; pode ser dominante ou recessivo.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "CODON",
+  "exibir": "códon",
+  "dica": "Trinca de nucleotídeos do RNA mensageiro",
+  "definicao": "Sequência de três nucleotídeos do RNAm que codifica um aminoácido ou um sinal de parada da tradução.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "ANION",
+  "exibir": "ânion",
+  "dica": "Íon com carga negativa, como cloreto e bicarbonato",
+  "definicao": "Íon com carga elétrica negativa; o 'ânion gap' ajuda a classificar as acidoses metabólicas.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "VAGAL",
+  "exibir": "vagal",
+  "dica": "Relativo ao X nervo craniano; reduz a frequência cardíaca",
+  "definicao": "Relativo ao nervo vago; o estímulo vagal (parassimpático) diminui a frequência cardíaca e aumenta a motilidade intestinal.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "LUTEO",
+  "exibir": "lúteo",
+  "dica": "O corpo formado após a ovulação que produz progesterona",
+  "definicao": "Relativo ao corpo lúteo, estrutura ovariana formada após a ovulação que secreta progesterona.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "FEZES",
+  "exibir": "fezes",
+  "dica": "Resíduo final da digestão eliminado pelo ânus",
+  "definicao": "Material eliminado pelo ânus, composto de água, restos alimentares, bactérias e células descamadas.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "FIBRA",
+  "exibir": "fibra",
+  "dica": "Célula muscular alongada; também parte da dieta",
+  "definicao": "Estrutura alongada, como a fibra muscular; a fibra alimentar é a parte vegetal não digerida que favorece o trânsito intestinal.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "GLIAL",
+  "exibir": "glial",
+  "dica": "Tipo de célula que sustenta e protege os neurônios",
+  "definicao": "Relativo à glia: astrócitos, oligodendrócitos e micróglia, que dão suporte, isolamento e defesa ao tecido nervoso.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "MOTOR",
+  "exibir": "motor",
+  "dica": "Tipo de neurônio que comanda os músculos",
+  "definicao": "Relativo ao movimento; o neurônio motor conduz impulsos do SNC aos músculos, via placa motora.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "GRUPO",
+  "exibir": "grupo",
+  "dica": "Sistema ABO define o sanguíneo",
+  "definicao": "Grupo sanguíneo: classificação do sangue pelos antígenos das hemácias, como os sistemas ABO e Rh.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "NODAL",
+  "exibir": "nodal",
+  "dica": "Ritmo originado no nó atrioventricular",
+  "definicao": "Relativo a um nó; o ritmo nodal (juncional) nasce na junção atrioventricular quando o nó sinusal falha.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "ACIDO",
+  "exibir": "ácido",
+  "dica": "Substância que libera íons hidrogênio; pH < 7",
+  "definicao": "Substância que doa íons H+; o acúmulo de ácidos no sangue causa acidose, com queda do pH abaixo de 7,35.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "COITO",
+  "exibir": "coito",
+  "dica": "Relação sexual com penetração",
+  "definicao": "Ato sexual com penetração; o 'coito interrompido' é um método contraceptivo de baixa eficácia.",
+  "area": "fisiologia"
+ },
+ {
+  "palavra": "FEBRE",
+  "exibir": "febre",
+  "dica": "Elevação da temperatura por reajuste do hipotálamo",
+  "definicao": "Elevação da temperatura corporal por reajuste do centro termorregulador hipotalâmico, em geral por infecção ou inflamação.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "TOSSE",
+  "exibir": "tosse",
+  "dica": "Expulsão súbita e ruidosa de ar dos pulmões",
+  "definicao": "Reflexo de expulsão brusca de ar que protege as vias aéreas; pode ser seca ou produtiva, aguda ou crônica.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "EDEMA",
+  "exibir": "edema",
+  "dica": "Inchaço por acúmulo de líquido no interstício",
+  "definicao": "Acúmulo anormal de líquido no espaço intersticial; o edema com cacifo afunda à pressão digital.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "SOPRO",
+  "exibir": "sopro",
+  "dica": "Ruído cardíaco causado por fluxo turbulento",
+  "definicao": "Som produzido por fluxo sanguíneo turbulento no coração ou nos vasos; é descrito por fase, foco, intensidade e irradiação.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "BULHA",
+  "exibir": "bulha",
+  "dica": "B1 e B2 são exemplos; ouvidas na ausculta cardíaca",
+  "definicao": "Som cardíaco normal: B1 corresponde ao fechamento das valvas mitral e tricúspide; B2, ao das valvas aórtica e pulmonar.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "SINAL",
+  "exibir": "sinal",
+  "dica": "Achado objetivo encontrado pelo examinador",
+  "definicao": "Manifestação objetiva de doença observada no exame físico, ao contrário do sintoma, que é relatado pelo paciente.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "PULSO",
+  "exibir": "pulso",
+  "dica": "Onda palpada nas artérias, como a radial",
+  "definicao": "Expansão rítmica da parede arterial a cada sístole; avalia-se frequência, ritmo, amplitude e simetria.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "RITMO",
+  "exibir": "ritmo",
+  "dica": "O sinusal é o normal do coração",
+  "definicao": "Padrão de regularidade dos batimentos; o ritmo sinusal é o normal, gerado pelo nó sinoatrial.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "CLONO",
+  "exibir": "clono",
+  "dica": "Contrações rítmicas ao estirar o músculo; lesão piramidal",
+  "definicao": "Contrações involuntárias e repetidas após estiramento brusco de um músculo; sinal de lesão do neurônio motor superior.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "ARDOR",
+  "exibir": "ardor",
+  "dica": "Sensação de queimação, como ao urinar na cistite",
+  "definicao": "Sensação de queimação ou calor local, como o ardor miccional das infecções urinárias.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "RONCO",
+  "exibir": "ronco",
+  "dica": "Ruído grave na ausculta por secreção nas vias aéreas",
+  "definicao": "Ruído adventício grave e contínuo por secreção em brônquios maiores; também é o ruído do sono por obstrução da via aérea alta.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "MASSA",
+  "exibir": "massa",
+  "dica": "Lesão palpável ou visível que ocupa espaço",
+  "definicao": "Aumento de volume palpável ou visto em exame de imagem, descrito por tamanho, consistência, mobilidade e dor.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "BOLHA",
+  "exibir": "bolha",
+  "dica": "Lesão elevada com líquido, maior que 1 cm",
+  "definicao": "Lesão elementar de pele elevada, com conteúdo líquido e mais de 1 cm; a menor que isso chama-se vesícula.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "MIOSE",
+  "exibir": "miose",
+  "dica": "Contração da pupila",
+  "definicao": "Diminuição do diâmetro pupilar; ocorre na luz intensa, com opioides e na síndrome de Horner.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "PTOSE",
+  "exibir": "ptose",
+  "dica": "Queda da pálpebra superior ou de um órgão",
+  "definicao": "Queda de uma estrutura, sobretudo da pálpebra superior (ex.: lesão do III nervo, miastenia, síndrome de Horner).",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "CALOR",
+  "exibir": "calor",
+  "dica": "Sinal flogístico junto a rubor, tumor e dor",
+  "definicao": "Aumento da temperatura local por vasodilatação; é um dos sinais cardinais da inflamação descritos por Celsus.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "RUBOR",
+  "exibir": "rubor",
+  "dica": "Vermelhidão; um dos sinais cardinais da inflamação",
+  "definicao": "Vermelhidão da pele por vasodilatação; um dos sinais flogísticos clássicos, com calor, tumor e dor.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "EMESE",
+  "exibir": "êmese",
+  "dica": "Termo técnico para vômito",
+  "definicao": "Expulsão forçada do conteúdo gástrico pela boca; a hiperêmese gravídica é sua forma grave na gestação.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "TOQUE",
+  "exibir": "toque",
+  "dica": "Exame digital retal ou vaginal",
+  "definicao": "Exame feito com o dedo enluvado, como o toque retal (próstata, reto) ou o vaginal (colo e dilatação no parto).",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "PRONO",
+  "exibir": "prono",
+  "dica": "Decúbito ventral, de barriga para baixo",
+  "definicao": "Posição deitada com o ventre para baixo; a posição prona melhora a oxigenação na síndrome do desconforto respiratório.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "VIGIL",
+  "exibir": "vígil",
+  "dica": "Paciente acordado e alerta",
+  "definicao": "Estado de vigília: paciente desperto e alerta, termo usado na descrição do nível de consciência.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "ICTUS",
+  "exibir": "ictus",
+  "dica": "O 'cordis' é o impulso apical palpável",
+  "definicao": "O ictus cordis é o impulso do ápice cardíaco palpado na parede torácica; se desviado, sugere cardiomegalia.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "RUIDO",
+  "exibir": "ruído",
+  "dica": "Os hidroaéreos são auscultados no abdome",
+  "definicao": "Som audível na ausculta; os ruídos hidroaéreos refletem o peristaltismo e ficam ausentes no íleo paralítico.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "FLATO",
+  "exibir": "flato",
+  "dica": "Gás intestinal eliminado pelo ânus",
+  "definicao": "Gás eliminado pelo ânus; a parada de eliminação de flatos e fezes sugere obstrução intestinal.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "INGUA",
+  "exibir": "íngua",
+  "dica": "Nome popular de linfonodo aumentado",
+  "definicao": "Termo popular para linfonodo aumentado e doloroso, geralmente reacional a infecção na região drenada.",
+  "area": "semiologia"
+ },
+ {
+  "palavra": "GRIPE",
+  "exibir": "gripe",
+  "dica": "Infecção respiratória aguda causada pelo influenza",
+  "definicao": "Infecção respiratória aguda pelo vírus influenza, com febre alta, mialgia, tosse e cefaleia; prevenida por vacina anual.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "SEPSE",
+  "exibir": "sepse",
+  "dica": "Disfunção orgânica por resposta desregulada à infecção",
+  "definicao": "Disfunção orgânica ameaçadora à vida causada por resposta desregulada do hospedeiro a uma infecção (Sepsis-3).",
+  "area": "clínica"
+ },
+ {
+  "palavra": "LUPUS",
+  "exibir": "lúpus",
+  "dica": "Doença autoimune com eritema malar e anti-DNA",
+  "definicao": "Lúpus eritematoso sistêmico: doença autoimune multissistêmica, mais comum em mulheres jovens, com FAN positivo.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "CRISE",
+  "exibir": "crise",
+  "dica": "Episódio súbito, como a convulsiva ou a hipertensiva",
+  "definicao": "Episódio agudo de agravamento ou manifestação súbita, como crise convulsiva, hipertensiva ou asmática.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "DIETA",
+  "exibir": "dieta",
+  "dica": "Plano alimentar prescrito ao paciente",
+  "definicao": "Conjunto de alimentos prescritos ou consumidos; pode ser zero (jejum), líquida, branda, hipossódica etc.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "JEJUM",
+  "exibir": "jejum",
+  "dica": "Período sem comer antes de exames ou cirurgias",
+  "definicao": "Abstenção de alimentos por período definido, exigida antes de alguns exames e da anestesia para evitar broncoaspiração.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "LEITO",
+  "exibir": "leito",
+  "dica": "Cama hospitalar; unidade de contagem de vagas",
+  "definicao": "Cama destinada à internação de um paciente; também é a unidade usada para medir a capacidade hospitalar.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "EXAME",
+  "exibir": "exame",
+  "dica": "Pode ser físico, laboratorial ou de imagem",
+  "definicao": "Avaliação do paciente, seja o exame físico à beira do leito ou exames complementares laboratoriais e de imagem.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "OBESO",
+  "exibir": "obeso",
+  "dica": "Pessoa com IMC igual ou acima de 30",
+  "definicao": "Pessoa com excesso de gordura corporal; em adultos, define-se obesidade por IMC ≥ 30 kg/m².",
+  "area": "clínica"
+ },
+ {
+  "palavra": "ANGOR",
+  "exibir": "ângor",
+  "dica": "Dor torácica em aperto de origem isquêmica",
+  "definicao": "Dor ou opressão torácica por isquemia miocárdica (angina), que pode irradiar para braço esquerdo e mandíbula.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "OTITE",
+  "exibir": "otite",
+  "dica": "Inflamação do ouvido, comum em crianças",
+  "definicao": "Inflamação do ouvido; a otite média aguda é comum na infância e causa otalgia, febre e abaulamento da membrana timpânica.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "IRITE",
+  "exibir": "irite",
+  "dica": "Inflamação da íris, forma de uveíte anterior",
+  "definicao": "Inflamação da íris (uveíte anterior), com olho vermelho, dor, fotofobia e miose; associa-se a espondiloartrites.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "TINHA",
+  "exibir": "tinha",
+  "dica": "Micose superficial causada por dermatófitos",
+  "definicao": "Dermatofitose: infecção fúngica de pele, pelos ou unhas, como tinha do pé (pé de atleta) e tinha do couro cabeludo.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "SARNA",
+  "exibir": "sarna",
+  "dica": "Escabiose; coceira que piora à noite",
+  "definicao": "Nome popular da escabiose, infestação pelo ácaro Sarcoptes scabiei, com prurido intenso noturno e lesões em dobras.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "MANIA",
+  "exibir": "mania",
+  "dica": "Episódio de humor elevado do transtorno bipolar",
+  "definicao": "Episódio com humor elevado ou irritável, grandiosidade, fala acelerada e menor necessidade de sono; típico do transtorno bipolar.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "FOBIA",
+  "exibir": "fobia",
+  "dica": "Medo intenso e irracional de algo específico",
+  "definicao": "Medo intenso, persistente e desproporcional a um objeto ou situação, levando a comportamento de esquiva.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "HUMOR",
+  "exibir": "humor",
+  "dica": "Estado emocional persistente avaliado no exame psíquico",
+  "definicao": "Estado emocional de base e duradouro; os transtornos do humor incluem a depressão e o transtorno bipolar.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "AFETO",
+  "exibir": "afeto",
+  "dica": "Expressão emocional momentânea no exame psíquico",
+  "definicao": "Expressão externa das emoções no momento; pode estar embotado, lábil ou incongruente no exame do estado mental.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "TIQUE",
+  "exibir": "tique",
+  "dica": "Movimento ou som repetitivo, rápido e involuntário",
+  "definicao": "Movimento ou vocalização súbita, rápida e repetitiva, sem finalidade; múltiplos tiques definem a síndrome de Tourette.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "JUIZO",
+  "exibir": "juízo",
+  "dica": "No exame psíquico, avalia a noção de realidade",
+  "definicao": "Capacidade de avaliar corretamente a realidade; o juízo de realidade está prejudicado nos delírios.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "VICIO",
+  "exibir": "vício",
+  "dica": "Termo leigo para dependência de substância",
+  "definicao": "Termo popular para dependência: uso compulsivo de uma substância apesar dos prejuízos, com tolerância e abstinência.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "MIOPE",
+  "exibir": "míope",
+  "dica": "Quem enxerga mal de longe",
+  "definicao": "Pessoa com miopia, erro de refração em que a imagem se forma antes da retina; corrige-se com lente divergente.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "AGUDO",
+  "exibir": "agudo",
+  "dica": "Quadro de início súbito e curta duração",
+  "definicao": "Diz-se de um quadro de início súbito e evolução curta, em oposição ao crônico; ex.: abdome agudo.",
+  "area": "clínica"
+ },
+ {
+  "palavra": "TUMOR",
+  "exibir": "tumor",
+  "dica": "Aumento de volume; também sinônimo de neoplasia",
+  "definicao": "Aumento de volume de um tecido; em patologia, sinônimo de neoplasia, que pode ser benigna ou maligna.",
+  "area": "patologia"
+ },
+ {
+  "palavra": "CISTO",
+  "exibir": "cisto",
+  "dica": "Cavidade revestida por epitélio com conteúdo líquido",
+  "definicao": "Cavidade fechada revestida por epitélio, com conteúdo líquido ou semissólido, como o cisto ovariano ou renal.",
+  "area": "patologia"
+ },
+ {
+  "palavra": "MIOMA",
+  "exibir": "mioma",
+  "dica": "Tumor benigno de músculo liso do útero",
+  "definicao": "Leiomioma: tumor benigno de músculo liso, muito comum no útero; pode causar sangramento e dor pélvica.",
+  "area": "patologia"
+ },
+ {
+  "palavra": "PLACA",
+  "exibir": "placa",
+  "dica": "A aterosclerótica obstrui artérias",
+  "definicao": "Lesão elevada e plana; a placa aterosclerótica é o acúmulo de lipídios e fibrose na íntima das artérias.",
+  "area": "patologia"
+ },
+ {
+  "palavra": "BOCIO",
+  "exibir": "bócio",
+  "dica": "Aumento de volume da tireoide",
+  "definicao": "Aumento da glândula tireoide, que pode ser difuso ou nodular; a carência de iodo é causa clássica.",
+  "area": "patologia"
+ },
+ {
+  "palavra": "LESAO",
+  "exibir": "lesão",
+  "dica": "Qualquer alteração de tecido por dano ou doença",
+  "definicao": "Qualquer alteração estrutural ou funcional de um tecido causada por trauma, infecção ou outra doença.",
+  "area": "patologia"
+ },
+ {
+  "palavra": "VARIZ",
+  "exibir": "variz",
+  "dica": "Veia dilatada e tortuosa, comum nas pernas",
+  "definicao": "Veia dilatada, alongada e tortuosa por insuficiência valvar; ocorre nas pernas e, na hipertensão portal, no esôfago.",
+  "area": "patologia"
+ },
+ {
+  "palavra": "PONTO",
+  "exibir": "ponto",
+  "dica": "Cada laçada de fio que fecha uma ferida",
+  "definicao": "Cada passagem do fio de sutura; também nomeia pontos de referência, como o de McBurney na apendicite.",
+  "area": "cirurgia"
+ },
+ {
+  "palavra": "DRENO",
+  "exibir": "dreno",
+  "dica": "Tubo que retira líquido ou ar de uma cavidade",
+  "definicao": "Dispositivo tubular que permite a saída de secreções, sangue ou ar de uma cavidade ou ferida operatória.",
+  "area": "cirurgia"
+ },
+ {
+  "palavra": "SONDA",
+  "exibir": "sonda",
+  "dica": "Tubo passado pelo nariz ou uretra, como a vesical",
+  "definicao": "Tubo flexível introduzido em cavidade ou órgão, como a sonda nasogástrica ou a sonda vesical de demora.",
+  "area": "cirurgia"
+ },
+ {
+  "palavra": "PINCA",
+  "exibir": "pinça",
+  "dica": "Instrumento cirúrgico de preensão, anatômica ou hemostática",
+  "definicao": "Instrumento de preensão usado para segurar tecidos, fios ou vasos, como a pinça anatômica e a hemostática.",
+  "area": "cirurgia"
+ },
+ {
+  "palavra": "GESSO",
+  "exibir": "gesso",
+  "dica": "Material usado para imobilizar fraturas",
+  "definicao": "Material moldável que endurece e imobiliza ossos fraturados ou articulações; exige vigilância da perfusão distal.",
+  "area": "cirurgia"
+ },
+ {
+  "palavra": "CLIPE",
+  "exibir": "clipe",
+  "dica": "Pequena peça metálica que oclui um vaso",
+  "definicao": "Pequena peça metálica ou plástica usada para ocluir vasos ou ductos, como o ducto cístico na colecistectomia.",
+  "area": "cirurgia"
+ },
+ {
+  "palavra": "HASTE",
+  "exibir": "haste",
+  "dica": "Implante intramedular para fratura de osso longo",
+  "definicao": "Implante metálico introduzido no canal medular para fixar fraturas de ossos longos, como fêmur e tíbia.",
+  "area": "cirurgia"
+ },
+ {
+  "palavra": "BRIDA",
+  "exibir": "brida",
+  "dica": "Aderência fibrosa que pode obstruir o intestino",
+  "definicao": "Faixa fibrosa de aderência, geralmente pós-operatória; é a principal causa de obstrução do intestino delgado.",
+  "area": "cirurgia"
+ },
+ {
+  "palavra": "VOLVO",
+  "exibir": "volvo",
+  "dica": "Torção de alça intestinal sobre o próprio eixo",
+  "definicao": "Torção de um segmento intestinal sobre seu mesentério, causando obstrução e isquemia; o sigmoide é o local mais comum.",
+  "area": "cirurgia"
+ },
+ {
+  "palavra": "ENEMA",
+  "exibir": "enema",
+  "dica": "Introdução de líquido no reto para lavagem",
+  "definicao": "Introdução de líquido pelo ânus para limpeza intestinal, tratamento ou exame contrastado.",
+  "area": "cirurgia"
+ },
+ {
+  "palavra": "BLOCO",
+  "exibir": "bloco",
+  "dica": "O cirúrgico reúne as salas de operação",
+  "definicao": "O bloco (centro) cirúrgico é a unidade hospitalar que reúne salas de operação, recuperação e apoio.",
+  "area": "cirurgia"
+ },
+ {
+  "palavra": "LASER",
+  "exibir": "laser",
+  "dica": "Feixe de luz concentrada usado em cirurgias",
+  "definicao": "Feixe de luz coerente e concentrada usado para cortar, coagular ou ablar tecidos, como na cirurgia refrativa.",
+  "area": "cirurgia"
+ },
+ {
+  "palavra": "CAMPO",
+  "exibir": "campo",
+  "dica": "Tecido estéril que delimita a área operatória",
+  "definicao": "Pano estéril que isola a área a ser operada; o 'campo operatório' é a região exposta à cirurgia.",
+  "area": "cirurgia"
+ },
+ {
+  "palavra": "COLAR",
+  "exibir": "colar",
+  "dica": "Dispositivo que imobiliza a coluna cervical no trauma",
+  "definicao": "O colar cervical imobiliza o pescoço em vítimas de trauma com suspeita de lesão da coluna cervical.",
+  "area": "cirurgia"
+ },
+ {
+  "palavra": "TOUCA",
+  "exibir": "touca",
+  "dica": "Item da paramentação que cobre os cabelos",
+  "definicao": "Cobertura descartável para os cabelos usada na paramentação cirúrgica para reduzir contaminação.",
+  "area": "cirurgia"
+ },
+ {
+  "palavra": "DROGA",
+  "exibir": "droga",
+  "dica": "Qualquer substância que altera funções do organismo",
+  "definicao": "Substância química que modifica funções biológicas; pode ser um fármaco terapêutico ou uma substância de abuso.",
+  "area": "farmacologia"
+ },
+ {
+  "palavra": "BOLUS",
+  "exibir": "bolus",
+  "dica": "Dose dada de uma vez, rapidamente, na veia",
+  "definicao": "Administração de uma dose de uma só vez, em curto tempo, geralmente por via intravenosa.",
+  "area": "farmacologia"
+ },
+ {
+  "palavra": "CREME",
+  "exibir": "creme",
+  "dica": "Forma farmacêutica semissólida para a pele",
+  "definicao": "Forma farmacêutica semissólida, emulsão de água e óleo, para aplicação tópica na pele.",
+  "area": "farmacologia"
+ },
+ {
+  "palavra": "RETAL",
+  "exibir": "retal",
+  "dica": "Via de administração de supositórios",
+  "definicao": "Relativo ao reto; a via retal, usada em supositórios e enemas, evita parcialmente o metabolismo de primeira passagem.",
+  "area": "farmacologia"
+ },
+ {
+  "palavra": "LITIO",
+  "exibir": "lítio",
+  "dica": "Estabilizador do humor com janela terapêutica estreita",
+  "definicao": "Estabilizador do humor usado no transtorno bipolar; exige dosar nível sérico pelo risco de toxicidade renal e neurológica.",
+  "area": "farmacologia"
+ },
+ {
+  "palavra": "SULFA",
+  "exibir": "sulfa",
+  "dica": "Classe antibacteriana; associada à trimetoprima",
+  "definicao": "Nome popular das sulfonamidas, antibacterianos como o sulfametoxazol; podem causar alergia grave (Stevens-Johnson).",
+  "area": "farmacologia"
+ },
+ {
+  "palavra": "FLUOR",
+  "exibir": "flúor",
+  "dica": "Mineral adicionado à água e ao creme dental",
+  "definicao": "Elemento que fortalece o esmalte e previne cárie; em excesso na infância causa fluorose dentária.",
+  "area": "farmacologia"
+ },
+ {
+  "palavra": "TARJA",
+  "exibir": "tarja",
+  "dica": "A preta indica medicamento com receita retida",
+  "definicao": "Faixa na embalagem de medicamentos; a tarja preta indica controle especial, e a vermelha, venda sob prescrição.",
+  "area": "farmacologia"
+ },
+ {
+  "palavra": "BOMBA",
+  "exibir": "bomba",
+  "dica": "A de prótons é o alvo do omeprazol",
+  "definicao": "Proteína que transporta íons contra o gradiente, como a bomba de prótons gástrica; também o aparelho de infusão contínua.",
+  "area": "farmacologia"
+ },
+ {
+  "palavra": "AMINA",
+  "exibir": "amina",
+  "dica": "Grupo químico; as vasoativas são usadas no choque",
+  "definicao": "Composto derivado da amônia; as aminas vasoativas (noradrenalina, dopamina) são usadas no choque.",
+  "area": "farmacologia"
+ },
+ {
+  "palavra": "ATIVO",
+  "exibir": "ativo",
+  "dica": "O princípio responsável pelo efeito do remédio",
+  "definicao": "O princípio ativo é a substância do medicamento responsável pelo efeito terapêutico, distinta dos excipientes.",
+  "area": "farmacologia"
+ },
+ {
+  "palavra": "SITIO",
+  "exibir": "sítio",
+  "dica": "Local do receptor onde o fármaco se liga",
+  "definicao": "Local específico onde uma molécula atua, como o sítio de ligação de um receptor ou o sítio ativo de uma enzima.",
+  "area": "farmacologia"
+ },
+ {
+  "palavra": "LOCAO",
+  "exibir": "loção",
+  "dica": "Forma farmacêutica líquida para uso na pele",
+  "definicao": "Preparação líquida ou pouco viscosa para aplicação tópica, útil em áreas extensas ou com pelos.",
+  "area": "farmacologia"
+ },
+ {
+  "palavra": "VIRUS",
+  "exibir": "vírus",
+  "dica": "Agente infeccioso acelular que usa a célula do hospedeiro",
+  "definicao": "Agente infeccioso acelular com DNA ou RNA envolto por capsídeo, que só se replica dentro de células vivas.",
+  "area": "microbiologia"
+ },
+ {
+  "palavra": "PRION",
+  "exibir": "príon",
+  "dica": "Proteína infecciosa mal dobrada",
+  "definicao": "Proteína com dobramento anormal capaz de converter proteínas normais; causa a doença de Creutzfeldt-Jakob.",
+  "area": "microbiologia"
+ },
+ {
+  "palavra": "FUNGO",
+  "exibir": "fungo",
+  "dica": "Leveduras e bolores pertencem a este reino",
+  "definicao": "Organismo eucarioto com parede de quitina, como leveduras e fungos filamentosos; causa micoses superficiais e sistêmicas.",
+  "area": "microbiologia"
+ },
+ {
+  "palavra": "TENIA",
+  "exibir": "tênia",
+  "dica": "Verme achatado; a do porco causa cisticercose",
+  "definicao": "Cestódeo do gênero Taenia; a T. solium (porco) pode causar cisticercose e a T. saginata vem do boi.",
+  "area": "microbiologia"
+ },
+ {
+  "palavra": "VERME",
+  "exibir": "verme",
+  "dica": "Nome popular dos helmintos",
+  "definicao": "Nome popular dos helmintos, como áscaris, oxiúros e ancilóstomos, parasitas comuns do intestino.",
+  "area": "microbiologia"
+ },
+ {
+  "palavra": "LARVA",
+  "exibir": "larva",
+  "dica": "Fase jovem de insetos e helmintos",
+  "definicao": "Forma imatura de insetos e helmintos; a larva migrans cutânea (bicho-geográfico) é causada por ancilóstomos de cães e gatos.",
+  "area": "microbiologia"
+ },
+ {
+  "palavra": "ACARO",
+  "exibir": "ácaro",
+  "dica": "Aracnídeo minúsculo ligado à sarna e à alergia",
+  "definicao": "Pequeno aracnídeo; o ácaro da poeira é alérgeno respiratório e o Sarcoptes scabiei causa escabiose.",
+  "area": "microbiologia"
+ },
+ {
+  "palavra": "AMEBA",
+  "exibir": "ameba",
+  "dica": "Protozoário que causa disenteria e abscesso hepático",
+  "definicao": "Protozoário que se move por pseudópodes; a Entamoeba histolytica causa colite amebiana e abscesso hepático.",
+  "area": "microbiologia"
+ },
+ {
+  "palavra": "GERME",
+  "exibir": "germe",
+  "dica": "Termo leigo para micro-organismo patogênico",
+  "definicao": "Termo genérico para micro-organismo, sobretudo o que causa doença, como bactérias e vírus.",
+  "area": "microbiologia"
+ },
+ {
+  "palavra": "FLORA",
+  "exibir": "flora",
+  "dica": "Termo antigo para a microbiota normal",
+  "definicao": "Conjunto de micro-organismos que vivem normalmente em uma região do corpo; hoje chamado microbiota.",
+  "area": "microbiologia"
+ },
+ {
+  "palavra": "VETOR",
+  "exibir": "vetor",
+  "dica": "O Aedes aegypti é um exemplo na dengue",
+  "definicao": "Ser vivo, geralmente artrópode, que transmite um agente infeccioso, como o Aedes aegypti na dengue.",
+  "area": "microbiologia"
+ },
+ {
+  "palavra": "VIRAL",
+  "exibir": "viral",
+  "dica": "Adjetivo de infecção causada por vírus",
+  "definicao": "Relativo a vírus; infecções virais em geral não respondem a antibióticos.",
+  "area": "microbiologia"
+ },
+ {
+  "palavra": "PULGA",
+  "exibir": "pulga",
+  "dica": "Inseto saltador que transmite a peste",
+  "definicao": "Inseto hematófago sem asas; a pulga do rato transmite a Yersinia pestis, agente da peste.",
+  "area": "microbiologia"
+ },
+ {
+  "palavra": "BERNE",
+  "exibir": "berne",
+  "dica": "Miíase causada pela larva da Dermatobia hominis",
+  "definicao": "Miíase furunculoide: larva da mosca Dermatobia hominis que se desenvolve sob a pele, formando nódulo com orifício.",
+  "area": "microbiologia"
+ },
+ {
+  "palavra": "RAIVA",
+  "exibir": "raiva",
+  "dica": "Encefalite viral transmitida pela mordida de mamíferos",
+  "definicao": "Encefalite causada por vírus da família Rhabdoviridae, transmitida pela saliva de mamíferos; quase sempre fatal após sintomas.",
+  "area": "microbiologia"
+ },
+ {
+  "palavra": "PESTE",
+  "exibir": "peste",
+  "dica": "Doença causada pela Yersinia pestis",
+  "definicao": "Infecção pela bactéria Yersinia pestis, transmitida por pulgas de roedores; tem formas bubônica, septicêmica e pneumônica.",
+  "area": "microbiologia"
+ },
+ {
+  "palavra": "IMUNE",
+  "exibir": "imune",
+  "dica": "Diz-se do sistema de defesa do organismo",
+  "definicao": "Relativo à imunidade; também diz-se de quem está protegido contra uma doença, por infecção prévia ou vacina.",
+  "area": "microbiologia"
+ },
+ {
+  "palavra": "CRUPE",
+  "exibir": "crupe",
+  "dica": "Laringotraqueíte com tosse ladrante e estridor",
+  "definicao": "Laringotraqueíte viral, geralmente por parainfluenza, com tosse ladrante, rouquidão e estridor em crianças pequenas.",
+  "area": "pediatria"
+ },
+ {
+  "palavra": "APGAR",
+  "exibir": "apgar",
+  "dica": "Escore do recém-nascido no 1º e no 5º minuto",
+  "definicao": "Escore de 0 a 10 que avalia o recém-nascido no 1º e 5º minutos: frequência cardíaca, respiração, tônus, reflexos e cor.",
+  "area": "pediatria"
+ },
+ {
+  "palavra": "CURVA",
+  "exibir": "curva",
+  "dica": "A de crescimento acompanha peso e altura",
+  "definicao": "Gráfico de crescimento que acompanha peso, estatura e perímetro cefálico da criança por idade, em percentis ou escores Z.",
+  "area": "pediatria"
+ },
+ {
+  "palavra": "MARCO",
+  "exibir": "marco",
+  "dica": "Os do desenvolvimento incluem sentar e andar",
+  "definicao": "Os marcos do desenvolvimento são habilidades esperadas por idade, como sustentar a cabeça, sentar, andar e falar.",
+  "area": "pediatria"
+ },
+ {
+  "palavra": "BIRRA",
+  "exibir": "birra",
+  "dica": "Explosão de choro e raiva comum aos 2–3 anos",
+  "definicao": "Episódio de choro, raiva e oposição, comum entre 1 e 4 anos, parte do desenvolvimento emocional normal.",
+  "area": "pediatria"
+ },
+ {
+  "palavra": "CHORO",
+  "exibir": "choro",
+  "dica": "Principal forma de comunicação do lactente",
+  "definicao": "Principal forma de comunicação do bebê; choro inconsolável ou muito agudo merece investigação.",
+  "area": "pediatria"
+ },
+ {
+  "palavra": "TESTE",
+  "exibir": "teste",
+  "dica": "O do pezinho é triagem neonatal",
+  "definicao": "Procedimento de verificação; o teste do pezinho rastreia doenças como fenilcetonúria e hipotireoidismo congênito.",
+  "area": "pediatria"
+ },
+ {
+  "palavra": "LEITE",
+  "exibir": "leite",
+  "dica": "O materno é exclusivo até os 6 meses",
+  "definicao": "Secreção das glândulas mamárias; o leite materno deve ser exclusivo até os 6 meses e mantido até 2 anos ou mais.",
+  "area": "pediatria"
+ },
+ {
+  "palavra": "PARTO",
+  "exibir": "parto",
+  "dica": "Nascimento do bebê, vaginal ou cesáreo",
+  "definicao": "Processo de expulsão do feto e anexos do útero; pode ser vaginal ou por cesariana.",
+  "area": "obstetrícia"
+ },
+ {
+  "palavra": "FETAL",
+  "exibir": "fetal",
+  "dica": "Adjetivo do feto; os batimentos são avaliados no pré-natal",
+  "definicao": "Relativo ao feto; a frequência cardíaca fetal normal fica entre 110 e 160 batimentos por minuto.",
+  "area": "obstetrícia"
+ },
+ {
+  "palavra": "AMNIO",
+  "exibir": "âmnio",
+  "dica": "Membrana mais interna que envolve o feto",
+  "definicao": "Membrana fetal mais interna, que envolve o feto e o líquido amniótico.",
+  "area": "obstetrícia"
+ },
+ {
+  "palavra": "BOLSA",
+  "exibir": "bolsa",
+  "dica": "Quando 'rota', indica ruptura das membranas",
+  "definicao": "A bolsa das águas é o conjunto das membranas ovulares com o líquido amniótico; sua ruptura é a 'bolsa rota'.",
+  "area": "obstetrícia"
+ },
+ {
+  "palavra": "NUCAL",
+  "exibir": "nucal",
+  "dica": "A translucência é medida entre 11 e 14 semanas",
+  "definicao": "Relativo à nuca; a translucência nucal aumentada no 1º trimestre sugere risco de aneuploidias.",
+  "area": "obstetrícia"
+ },
+ {
+  "palavra": "DOULA",
+  "exibir": "doula",
+  "dica": "Acompanhante que dá apoio emocional no parto",
+  "definicao": "Profissional que oferece suporte físico e emocional à gestante no pré-parto, parto e pós-parto, sem realizar procedimentos.",
+  "area": "obstetrícia"
+ },
+ {
+  "palavra": "BACIA",
+  "exibir": "bacia",
+  "dica": "Nome obstétrico da pelve óssea materna",
+  "definicao": "Pelve óssea materna, avaliada em seus diâmetros para o parto; o canal ósseo por onde passa o feto.",
+  "area": "obstetrícia"
+ },
+ {
+  "palavra": "TERMO",
+  "exibir": "termo",
+  "dica": "Gestação de 37 a 41 semanas e 6 dias",
+  "definicao": "Gestação a termo é a que vai de 37 semanas a 41 semanas e 6 dias; antes disso é pré-termo e depois, pós-termo.",
+  "area": "obstetrícia"
+ },
+ {
+  "palavra": "SURTO",
+  "exibir": "surto",
+  "dica": "Aumento localizado de casos acima do esperado",
+  "definicao": "Aumento de casos de uma doença em local e período restritos, acima do esperado; também episódio agudo psiquiátrico.",
+  "area": "saúde coletiva"
+ },
+ {
+  "palavra": "RISCO",
+  "exibir": "risco",
+  "dica": "Probabilidade de um evento ocorrer",
+  "definicao": "Probabilidade de um evento ou doença ocorrer em uma população durante um período.",
+  "area": "saúde coletiva"
+ },
+ {
+  "palavra": "FATOR",
+  "exibir": "fator",
+  "dica": "O 'de risco' aumenta a chance de adoecer",
+  "definicao": "Elemento que contribui para um resultado; o fator de risco se associa a maior chance de desenvolver uma doença.",
+  "area": "saúde coletiva"
+ },
+ {
+  "palavra": "CAUSA",
+  "exibir": "causa",
+  "dica": "A 'básica' é registrada na declaração de óbito",
+  "definicao": "Aquilo que produz um efeito; a causa básica do óbito é a doença que iniciou a cadeia de eventos até a morte.",
+  "area": "saúde coletiva"
+ },
+ {
+  "palavra": "OBITO",
+  "exibir": "óbito",
+  "dica": "Morte registrada em declaração própria",
+  "definicao": "Morte de uma pessoa, registrada na declaração de óbito, base para as estatísticas de mortalidade.",
+  "area": "saúde coletiva"
+ },
+ {
+  "palavra": "SAUDE",
+  "exibir": "saúde",
+  "dica": "Para a OMS, completo bem-estar físico, mental e social",
+  "definicao": "Definida pela OMS como completo bem-estar físico, mental e social, e não apenas ausência de doença.",
+  "area": "saúde coletiva"
+ },
+ {
+  "palavra": "MEDIA",
+  "exibir": "média",
+  "dica": "Soma dos valores dividida pelo número deles",
+  "definicao": "Medida de tendência central: soma dos valores dividida pelo total de observações; é sensível a valores extremos.",
+  "area": "saúde coletiva"
+ },
+ {
+  "palavra": "RAZAO",
+  "exibir": "razão",
+  "dica": "A 'de chances' (odds ratio) é usada em caso-controle",
+  "definicao": "Divisão entre duas grandezas; a razão de chances (odds ratio) é a medida de associação dos estudos caso-controle.",
+  "area": "saúde coletiva"
+ },
+ {
+  "palavra": "CENSO",
+  "exibir": "censo",
+  "dica": "Contagem de toda a população, feita pelo IBGE",
+  "definicao": "Levantamento que inclui todos os indivíduos de uma população; no Brasil, é realizado pelo IBGE.",
+  "area": "saúde coletiva"
+ },
+ {
+  "palavra": "VALOR",
+  "exibir": "valor",
+  "dica": "O 'preditivo' depende da prevalência",
+  "definicao": "O valor preditivo positivo é a probabilidade de doença dado teste positivo; varia com a prevalência.",
+  "area": "saúde coletiva"
+ },
+ {
+  "palavra": "PODER",
+  "exibir": "poder",
+  "dica": "Estatística: 1 menos o erro beta",
+  "definicao": "Poder estatístico: probabilidade de um estudo detectar um efeito que realmente existe (1 − β).",
+  "area": "saúde coletiva"
+ },
+ {
+  "palavra": "LETAL",
+  "exibir": "letal",
+  "dica": "Adjetivo do que causa morte; dose que mata",
+  "definicao": "Que causa morte; a letalidade é a proporção de óbitos entre os doentes de uma condição.",
+  "area": "saúde coletiva"
+ },
+ {
+  "palavra": "RENDA",
+  "exibir": "renda",
+  "dica": "Determinante social de saúde ligado ao dinheiro",
+  "definicao": "Recursos financeiros de uma pessoa ou família; é um dos principais determinantes sociais da saúde.",
+  "area": "saúde coletiva"
+ },
+ {
+  "palavra": "ACASO",
+  "exibir": "acaso",
+  "dica": "Fonte de erro aleatório em estudos",
+  "definicao": "Variação aleatória que pode explicar um resultado; é avaliado pelo valor de p e pelos intervalos de confiança.",
+  "area": "saúde coletiva"
+ },
+ {
+  "palavra": "FONTE",
+  "exibir": "fonte",
+  "dica": "A 'de infecção' é de onde o agente passa ao hospedeiro",
+  "definicao": "Origem de algo; a fonte de infecção é a pessoa, animal ou objeto de onde o agente passa ao hospedeiro.",
+  "area": "saúde coletiva"
+ },
+ {
+  "palavra": "CARIE",
+  "exibir": "cárie",
+  "dica": "Destruição do dente por bactérias e açúcar",
+  "definicao": "Doença dentária em que ácidos de bactérias da placa, alimentadas por açúcar, desmineralizam esmalte e dentina.",
+  "area": "outros"
+ },
+ {
+  "palavra": "ETICA",
+  "exibir": "ética",
+  "dica": "Estudo dos princípios que guiam a conduta médica",
+  "definicao": "Reflexão sobre a conduta correta; a ética médica envolve autonomia, beneficência, não maleficência e justiça.",
+  "area": "outros"
+ },
+ {
+  "palavra": "IDOSO",
+  "exibir": "idoso",
+  "dica": "No Brasil, pessoa com 60 anos ou mais",
+  "definicao": "Pessoa com 60 anos ou mais, segundo o Estatuto da Pessoa Idosa no Brasil; foco da geriatria.",
+  "area": "outros"
+ },
+ {
+  "palavra": "BARIO",
+  "exibir": "bário",
+  "dica": "Contraste usado em radiografias do tubo digestivo",
+  "definicao": "Elemento usado como contraste radiológico oral ou retal (sulfato de bário) em exames do trato digestivo.",
+  "area": "outros"
+ },
+ {
+  "palavra": "AXIAL",
+  "exibir": "axial",
+  "dica": "Plano de corte transversal em tomografia",
+  "definicao": "Relativo ao eixo; o plano axial (transversal) divide o corpo em partes superior e inferior, padrão na tomografia.",
+  "area": "outros"
+ },
+ {
+  "palavra": "LAUDO",
+  "exibir": "laudo",
+  "dica": "Documento com o resultado de um exame",
+  "definicao": "Documento técnico em que o médico descreve e interpreta os achados de um exame ou perícia.",
+  "area": "outros"
+ }
+]

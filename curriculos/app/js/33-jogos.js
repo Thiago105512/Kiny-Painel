@@ -10,11 +10,11 @@
    e erros vão para o caderno de erros, como na prática normal.
    ============================================================ */
 const JOGOS = [
-  { id: "relogio", nome: "Contra o relógio", arte: "relogio", cor: "#B45309", desc: "90 segundos para acertar o máximo de questões rápidas. Acertos seguidos multiplicam os pontos." },
-  { id: "vidas", nome: "Três vidas", arte: "coracao", cor: "#C0265F", desc: "As questões vão ficando mais difíceis. O jogo acaba no terceiro erro." },
-  { id: "vf", nome: "Certo ou errado?", arte: "alvo", cor: "#2340B8", desc: "Uma questão e uma resposta: é essa mesmo? Dez rodadas." },
-  { id: "ecg", nome: "Qual é o ritmo?", arte: "pulso", cor: "#0F766E", desc: "Olhe o traçado do ECG e escolha o ritmo. Dez rodadas." },
-  { id: "linha", nome: "Linha do tempo", arte: "calendario", cor: "#6D28D9", desc: "Toque nos marcos da história do mais antigo ao mais recente. Cinco rodadas." },
+  { id: "relogio", curto: "90 s, acertos seguidos valem mais", nome: "Contra o relógio", arte: "relogio", cor: "#B45309", desc: "90 segundos para acertar o máximo de questões rápidas. Acertos seguidos multiplicam os pontos." },
+  { id: "vidas", curto: "Cada vez mais difícil; 3 erros e acabou", nome: "Três vidas", arte: "coracao", cor: "#C0265F", desc: "As questões vão ficando mais difíceis. O jogo acaba no terceiro erro." },
+  { id: "vf", curto: "É a resposta certa ou não?", nome: "Certo ou errado?", arte: "alvo", cor: "#2340B8", desc: "Uma questão e uma resposta: é essa mesmo? Dez rodadas." },
+  { id: "ecg", curto: "Leia o traçado e diga o ritmo", nome: "Qual é o ritmo?", arte: "pulso", cor: "#0F766E", desc: "Olhe o traçado do ECG e escolha o ritmo. Dez rodadas." },
+  { id: "linha", curto: "Ponha a história da Medicina em ordem", nome: "Linha do tempo", arte: "calendario", cor: "#6D28D9", desc: "Toque nos marcos da história do mais antigo ao mais recente. Cinco rodadas." },
 ];
 const TEMPO_RELOGIO = 90;
 const JG = { id: null };
@@ -31,6 +31,7 @@ function marcosHistoria() {
 }
 const tracados = () => Object.entries(IMAGENS).filter(([, im]) => im.titulo);
 function jogoDisponivel(j) {
+  if (j.disponivel) return j.disponivel();
   if (j.id === "ecg") return tracados().length >= 4 && (!objetivo() || ["medicina", "residencia"].includes(objetivo()));
   if (j.id === "linha") return new Set(marcosHistoria().map(p => p.ano)).size >= 8;
   return poolJogo().length >= 20;
@@ -38,6 +39,7 @@ function jogoDisponivel(j) {
 const opcoesEmbaralhadas = q => embaralhar(q.o.map((_, i) => i));
 
 function montarRodadas(id) {
+  const jj = JOGOS.find(x => x.id === id); if (jj?.montar) return jj.montar();
   const P = poolJogo();
   if (id === "relogio") { const curtas = P.filter(q => q.q.length <= 320 && (q.dif || 2) <= 2); return embaralhar(curtas.length >= 30 ? curtas : P).slice(0, 60).map(q => ({ qid: q.id, ordem: opcoesEmbaralhadas(q) })); }
   if (id === "vidas") { const d = n => embaralhar(P.filter(q => (q.dif || 2) === n));
@@ -73,10 +75,15 @@ function terminarJogo() {
   pararRelogio(); if (JG.fim) return; JG.fim = true;
   const D = store.doc("jogos"); D.n[JG.id] = (D.n[JG.id] || 0) + 1;
   if (JG.pontos > 0 && JG.pontos > (D.rec[JG.id] || 0)) { JG.recorde = (D.rec[JG.id] || 0) > 0 ? "novo" : "primeiro"; D.rec[JG.id] = JG.pontos; }
-  store.mudou("jogos"); atualizar();
+  store.mudou("jogos");
+  const j = JOGOS.find(x => x.id === JG.id), extra = j?.aoTerminar ? j.aoTerminar() : {};
+  const cont = { vidas: { vidasMax: JG.acertos }, ecg: JG.acertos >= 10 ? { ecgPerfeito: 1 } : {}, linha: JG.acertos >= 5 ? { linhaPerfeita: 1 } : {} }[JG.id] || {};
+  jornada("jogo", { acertos: JG.acertos, cont: { ...cont, ...(extra.cont || {}) }, dia: { ...(JG.id === "relogio" ? { rel: JG.melhorSeq } : {}), ...(extra.dia || {}) } });
+  som(JG.recorde ? "festa" : "fim"); atualizar(); soltarCelebracoes();
   if (JG.recorde || JG.acertos >= 5) setTimeout(() => confete(document.querySelector("#jg-fim h2"), 26), 60);
 }
 function pontuar(ok, base = 10) {
+  som(ok ? "ok" : "erro");
   if (ok) { JG.acertos++; JG.seq++; JG.melhorSeq = Math.max(JG.melhorSeq, JG.seq); JG.pontos += base * (JG.id === "relogio" ? multiplicador() : 1); }
   else { JG.erros++; JG.seq = 0; if (JG.id === "vidas") JG.vidas--; }
 }
@@ -96,10 +103,10 @@ const placar = () => `<div class="jg-placar">
 function telaQuestao(r) {
   const q = qPorId(r.qid), respondeu = JG.resp != null;
   const alts = r.ordem.map((i, pos) => { const s = !respondeu ? "" : i === q.c ? "ok" : i === JG.resp ? "bad" : "";
-    return `<li><button class="alt" data-act="jg-alt" data-i="${i}" data-s="${s}" ${respondeu ? "disabled" : ""}><span class="bolha">${LETRAS[pos]}</span><span>${esc(q.o[i])}</span></button></li>`; }).join("");
+    return `<li><button class="alt" data-act="jg-alt" data-i="${i}" data-s="${s}" ${respondeu ? "disabled" : ""}>${formaAlt(pos)}<span>${esc(q.o[i])}</span></button></li>`; }).join("");
   const volta = respondeu && JG.id === "vidas" ? `<div class="retorno"><p class="veredito ${JG.resp === q.c ? "ok" : "bad"}">${JG.resp === q.c ? "✓ " + esc(sorteio(ELOGIOS)) : "Perdeu uma vida"}</p>${htmlExplicacao(q.e)}
     <div class="acoes"><button class="btn grande" data-act="jg-prox">${JG.vidas > 0 ? "Próxima" : "Ver resultado"}</button></div></div>` : "";
-  return `<div class="caixa"><div class="linha entre" style="margin-bottom:8px">${nivelQ(q)}</div><p class="enunciado">${esc(q.q)}</p><ol class="alts">${alts}</ol>${volta}</div>`;
+  return `<div class="caixa"><div class="linha entre" style="margin-bottom:8px">${nivelQ(q)}</div><p class="enunciado">${esc(q.q)}</p><ol class="alts alts-jogo">${alts}</ol>${volta}</div>`;
 }
 const nivelQ = q => q.dif ? pill("Nível: " + (DIFICULDADE[q.dif] || ""), ({ 1: "ok", 2: "warn", 3: "bad" })[q.dif]) : "";
 
@@ -135,7 +142,7 @@ function telaLinha(r) {
 function telaFim(j) {
   const D = store.doc("jogos"), rec = D.rec[j.id] || 0;
   const msg = JG.recorde === "novo" ? "Novo recorde!" : JG.recorde === "primeiro" ? "Primeiro recorde registrado!" : JG.acertos ? "Fim de jogo" : "Fim de jogo — bora de novo?";
-  return `<div class="caixa jg-fim" id="jg-fim" style="--h:${j.cor}"><h2 class="sec com-ilu" style="gap:10px">${ilustra(JG.recorde ? "alvo" : j.arte, j.cor, "g")}${msg}</h2>
+  return `<div class="caixa jg-fim" id="jg-fim" style="--h:${j.cor}"><h2 class="sec com-ilu" style="gap:10px">${mascote(JG.recorde ? "festa" : JG.acertos ? "feliz" : "triste", 88)}${msg}</h2>${j.resumoFim ? j.resumoFim() : ""}
     <div class="kpis"><div class="kpi"><b>${JG.pontos}</b><span>pontos</span></div><div class="kpi"><b>${JG.acertos}</b><span>acertos</span></div>
     <div class="kpi"><b>${JG.melhorSeq}</b><span>melhor sequência</span></div><div class="kpi"><b>${rec}</b><span>seu recorde</span></div></div>
     <div class="acoes"><button class="btn grande" data-act="jg-comecar" data-id="${j.id}">Jogar de novo</button>
@@ -146,21 +153,25 @@ function telaFim(j) {
 rota("/jogos", () => {
   const D = store.doc("jogos"), lista = JOGOS.filter(jogoDisponivel);
   return { secao: "jogos", titulo: "Jogos", sub: "Estudar também pode ser divertido. Tudo com questões e conteúdos do seu foco de estudo.",
-    html: `<div class="jg-lista">${lista.map(j => `<a class="jg-cartao" href="#/jogos/${j.id}" style="--h:${j.cor}">${ilustra(j.arte, j.cor, "g")}<div>
-      <b>${esc(j.nome)}</b><small>${esc(j.desc)}</small>${D.rec[j.id] ? `<span class="pill">Recorde: ${D.rec[j.id]} pontos</span>` : `<span class="pill">Ainda não jogado</span>`}</div></a>`).join("")}</div>` };
+    acoes: `<button class="btn sec mini" data-act="jg-som">${store.doc("jogos").som ? "Sons: ligados" : "Sons: desligados"}</button>`,
+    html: `${cartaoJornada()}
+      ${lista.some(j => j.diario) ? `<section><h2 class="sec">Desafios de hoje</h2><div class="jg-hoje">${lista.filter(j => j.diario).map(j => { const feito = j.diario();
+        return `<a class="jg-desafio ${feito ? "feito" : ""}" href="#/jogos/${j.id}" style="--h:${j.cor}">${ilustra(j.arte, j.cor, "g")}<b>${esc(j.nome)}</b><span class="pill ${feito ? "ok" : "warn"}">${feito ? "✓ Feito hoje" : "Novo hoje"}</span></a>`; }).join("")}</div></section>` : ""}
+      <section><h2 class="sec">Jogos rápidos</h2><div class="jg-lista">${lista.filter(j => !j.diario).map(j => `<a class="jg-cartao" href="#/jogos/${j.id}" style="--h:${j.cor}">${ilustra(j.arte, j.cor, "g")}<div>
+      <b>${esc(j.nome)}</b><small>${esc(j.curto || j.desc)}</small>${D.rec[j.id] ? `<span class="pill">Recorde: ${D.rec[j.id]} pontos</span>` : ""}</div></a>`).join("")}</div></section>` };
 });
 rota("/jogos/:id", ({ id }) => {
   const j = JOGOS.find(x => x.id === id); if (!j || !jogoDisponivel(j)) return paginaNaoEncontrada();
   const base = { secao: "jogos", crumbs: [["Jogos", "#/jogos"]], titulo: j.nome, ilu: ilustra(j.arte, j.cor, "g"), cor: j.cor };
   if (JG.id !== id || !JG.rodadas?.length) {
     const rec = store.doc("jogos").rec[id];
-    return { ...base, sub: esc(j.desc), html: `<div class="caixa jg-intro"><p class="leitura">${esc(j.desc)}</p>${rec ? `<p><b>Seu recorde:</b> ${rec} pontos</p>` : ""}
-      <button class="btn grande" data-act="jg-comecar" data-id="${id}">Começar</button></div>` };
+    return { ...base, sub: esc(j.desc), html: `<div class="caixa jg-intro">${falaMascote(esc(j.fala || "Bora jogar? Cada acerto vale XP na sua jornada."), "feliz")}${rec ? `<p><b>Seu recorde:</b> ${rec} pontos</p>` : ""}
+      ${j.intro ? j.intro() : `<button class="btn grande" data-act="jg-comecar" data-id="${id}">Começar</button>`}</div>` };
   }
   if (JG.fim) return { ...base, html: telaFim(j) };
   const r = JG.rodadas[JG.i];
-  const tela = id === "vf" ? telaVF(r) : id === "ecg" ? telaECG(r) : id === "linha" ? telaLinha(r) : telaQuestao(r);
-  return { ...base, html: placar() + tela + `<div class="acoes"><button class="btn sec mini" data-act="jg-parar">Encerrar jogo</button></div>` };
+  const tela = j.tela ? j.tela(r) : id === "vf" ? telaVF(r) : id === "ecg" ? telaECG(r) : id === "linha" ? telaLinha(r) : telaQuestao(r);
+  return { ...base, html: (j.semPlacar ? "" : placar()) + tela + `<div class="acoes"><button class="btn sec mini" data-act="jg-parar">Encerrar jogo</button></div>` };
 });
 
 /* ---------- Ações ---------- */
@@ -183,3 +194,24 @@ ACOES["jg-marco"] = el => {
   else { r.tocados.push(id); if (r.tocados.length === r.certo.length) { JG.resp = true; pontuar(true, 20); } }
   atualizar();
 };
+
+/* ---------- Formas coloridas nas alternativas (estilo Kahoot) e sons ---------- */
+const FORMAS = ["M12 3 22 20H2z", "M12 2 22 12 12 22 2 12z", "M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20z", "M3 3h18v18H3z", "M12 2l3 7 7 .6-5.3 4.7L18.3 22 12 18.2 5.7 22l1.6-7.7L2 9.6 9 9z"];
+const formaAlt = pos => `<span class="forma forma-${pos}" aria-label="${LETRAS[pos]}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${FORMAS[pos]}"/></svg><b>${LETRAS[pos]}</b></span>`;
+let _audio = null;
+function som(tipo) {
+  if (!store.doc("jogos").som) return;
+  try {
+    _audio = _audio || new (window.AudioContext || window.webkitAudioContext)();
+    const notas = { ok: [660, 880], erro: [220, 180], fim: [523, 659, 784], festa: [523, 659, 784, 1047], tecla: [440] }[tipo] || [440];
+    notas.forEach((f, k) => { const o = _audio.createOscillator(), g = _audio.createGain(), t = _audio.currentTime + k * .11;
+      o.type = tipo === "erro" ? "sawtooth" : "sine"; o.frequency.value = f; g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(tipo === "tecla" ? .04 : .12, t + .02); g.gain.exponentialRampToValueAtTime(.0001, t + .18);
+      o.connect(g).connect(_audio.destination); o.start(t); o.stop(t + .2); });
+  } catch (e) { /* sem áudio: segue em silêncio */ }
+}
+ACOES["jg-som"] = () => { const D = store.doc("jogos"); D.som = !D.som; store.mudou("jogos"); if (D.som) som("ok"); atualizar(); };
+/** Copia o resultado para colar no WhatsApp; se o navegador recusar, mostra o texto para selecionar. */
+function compartilharTexto(txt) {
+  const mostrar = () => abrirFolha(`<p>Selecione e copie:</p><textarea class="copiar" rows="5" readonly>${esc(txt)}</textarea>`, { titulo: "Compartilhar resultado" });
+  try { navigator.clipboard.writeText(txt).then(() => toast("Resultado copiado. É só colar no WhatsApp!"), mostrar); } catch (e) { mostrar(); }
+}

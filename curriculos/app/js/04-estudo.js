@@ -49,6 +49,7 @@ function registrarResposta(q, resp, ms, origem) {
   p.h.push([agora, resp, ok ? 1 : 0, Math.round(ms || 0), origem]); if (p.h.length > 12) p.h = p.h.slice(-12);
   store.mudou(docProg(q.t));
   const dia = diaDe(hoje()); dia.q++; if (ok) dia.ac++; if (q.tema && !dia.temas.includes(q.tema)) dia.temas.push(q.tema); store.mudou("dias");
+  if (typeof jornada === "function") jornada("questao", { ok });
   // Caderno de erros: todo erro gera (ou reabre) um registro com revisão em 1 dia
   const E = store.doc("erros");
   if (!ok) {
@@ -132,7 +133,7 @@ function criarCard(c) {
 function cardDeQuestao(q, origem = "questao") {
   return criarCard({ frente: q.q, verso: `${q.o[q.c]}\n\n${q.e || ""}`.trim(), tema: q.tema, subtema: q.subtema, origem, ref: q.id, dif: q.dif || 2 });
 }
-function avaliarCard(id, nota) { const c = cardPorId(id); if (!c) return; c.srs = agendar(c.srs, nota); cardMudou(id); if (c.tema) marcarTemaEstudado(c.tema); }
+function avaliarCard(id, nota) { const c = cardPorId(id); if (!c) return; c.srs = agendar(c.srs, nota); cardMudou(id); if (c.tema) marcarTemaEstudado(c.tema); if (typeof jornada === "function") jornada("card"); }
 const cards = () => blocosCards().flatMap(n => Object.values(store.doc(n).itens));
 
 /* ---------- Pendências de revisão (agenda unificada) ---------- */
