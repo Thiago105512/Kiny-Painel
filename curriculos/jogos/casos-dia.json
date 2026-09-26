@@ -479,7 +479,7 @@
       "Glomerulonefrite membranoproliferativa",
       "Nefrite lúpica"
     ],
-    "explicacao": "Síndrome nefrítica (hematúria, edema, hipertensão) 2–3 semanas após impetigo. A pista-chave é o sedimento com cilindros hemáticos após a infecção cutânea. Na nefropatia por IgA a hematúria surge junto ou 1–2 dias após a infecção e o complemento é normal.",
+    "explicacao": "Síndrome nefrítica (hematúria, edema, hipertensão) cerca de 3 a 6 semanas após impetigo (1 a 3 semanas após faringite). A pista-chave é o sedimento com cilindros hemáticos após a infecção cutânea. Na nefropatia por IgA a hematúria surge junto ou 1–2 dias após a infecção e o complemento é normal.",
     "chave": 3
   },
   {
@@ -502,7 +502,7 @@
       "Nefrite lúpica",
       "Glomerulonefrite pós-estreptocócica"
     ],
-    "explicacao": "Criança de 1 a 10 anos com síndrome nefrótica pura (sem hipertensão, hematúria ou queda do complemento). A pista-chave é o laboratório nefrótico nessa faixa etária, e a resposta ao corticoide confirma. A glomeruloesclerose segmentar e focal costuma ser corticorresistente e tem hipertensão e hematúria.",
+    "explicacao": "Criança de 1 a 10 anos com síndrome nefrótica pura (sem hipertensão, hematúria ou queda do complemento). A pista-chave é o laboratório nefrótico nessa faixa etária, e a resposta ao corticoide confirma. A glomeruloesclerose segmentar e focal é mais frequentemente corticorresistente e pode ter hipertensão e hematúria.",
     "chave": 3
   },
   {
@@ -699,7 +699,7 @@
       "Há 1 hora a esposa notou a boca torta e a fala enrolada; estava bem antes.",
       "Fraqueza no lado direito, mais em braço e face, e afasia; glicemia capilar 110 mg/dL.",
       "TC de crânio sem contraste normal, sem sangramento.",
-      "Angiotomografia com oclusão do segmento M1 da artéria média esquerda."
+      "Angiotomografia com oclusão do segmento M1 da artéria cerebral média esquerda."
     ],
     "opcoes": [
       "Ataque isquêmico transitório",
@@ -709,7 +709,7 @@
       "AVC hemorrágico",
       "Enxaqueca com aura"
     ],
-    "explicacao": "Déficit focal súbito em paciente com fonte embólica (fibrilação atrial). A pista-chave é a TC sem sangue com glicemia normal, que exclui hemorragia e hipoglicemia e permite trombólise na janela. O ataque isquêmico transitório regride em minutos, sem lesão de imagem.",
+    "explicacao": "Déficit focal súbito em paciente com fonte embólica (fibrilação atrial). A pista-chave é a TC sem sangue com glicemia normal, que exclui hemorragia e hipoglicemia e permite trombólise na janela; a oclusão de M1 também indica trombectomia mecânica. O ataque isquêmico transitório regride em minutos, sem lesão de imagem.",
     "chave": 3
   },
   {
@@ -1192,7 +1192,7 @@
       "Síndrome de Stevens-Johnson",
       "Síndrome inflamatória multissistêmica pediátrica"
     ],
-    "explicacao": "Febre por 5 dias ou mais com 4 dos 5 critérios (conjuntivite sem secreção, alterações de boca, exantema, alterações de extremidades, linfonodo cervical). A pista-chave é o conjunto das alterações de extremidades. A escarlatina tem faringite estreptocócica, exantema áspero e responde a antibiótico.",
+    "explicacao": "Febre por 5 dias ou mais com 4 dos 5 critérios (conjuntivite sem secreção, alterações de boca, exantema, alterações de extremidades, linfonodo cervical). A pista-chave é o conjunto das alterações de extremidades. A SIM-P atinge crianças maiores, com sintomas gastrointestinais, choque e ligação com covid-19. A escarlatina tem faringite estreptocócica, exantema áspero e responde a antibiótico.",
     "chave": 3
   },
   {

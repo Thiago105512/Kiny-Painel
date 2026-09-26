@@ -490,20 +490,6 @@
   "area": "anatomia"
  },
  {
-  "palavra": "VOLAR",
-  "exibir": "volar",
-  "dica": "Relativo à face palmar da mão ou do punho",
-  "definicao": "Relativo à palma da mão ou à face anterior do punho e antebraço; sinônimo de palmar.",
-  "area": "anatomia"
- },
- {
-  "palavra": "RAQUE",
-  "exibir": "raque",
-  "dica": "Nome técnico da coluna; origem de uma anestesia",
-  "definicao": "Coluna vertebral; dá nome à raquianestesia, feita com injeção de anestésico no espaço subaracnóideo.",
-  "area": "anatomia"
- },
- {
   "palavra": "PERNA",
   "exibir": "perna",
   "dica": "Segmento do membro inferior entre joelho e tornozelo",
@@ -1241,7 +1227,7 @@
  {
   "palavra": "TARJA",
   "exibir": "tarja",
-  "dica": "A preta indica medicamento com receita retida",
+  "dica": "A preta indica medicamento de controle especial",
   "definicao": "Faixa na embalagem de medicamentos; a tarja preta indica controle especial, e a vermelha, venda sob prescrição.",
   "area": "farmacologia"
  },
