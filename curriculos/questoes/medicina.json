@@ -4251,7 +4251,7 @@
  {
   "id": "med-deb2f4a0",
   "area": "Urologia",
-  "enunciado": "Homem de 35 anos chega com dor lombar esquerda súbita, em cólica, irradiada para a região inguinal, e hematúria microscópica.\n\nQual exame de imagem tem maior acurácia para confirmar litíase ureteral?",
+  "enunciado": "Plantão de sábado no hospital de Tefé (AM): um pescador de 35 anos, que passa o dia embarcado sob sol forte e bebe pouca água, chega contorcendo-se na maca por dor lombar esquerda iniciada há duas horas, em cólica, irradiada para a região inguinal, com náuseas. Está afebril, com PA de 150 × 90 mmHg e FC de 104 bpm; Giordano positivo à esquerda, abdome flácido, sem sinais de peritonite. Urina tipo 1: 30 hemácias por campo, sem leucocitúria nem nitrito. A radiografia simples de abdome, feita na admissão, não mostra imagem radiopaca no trajeto ureteral.\n\nPara confirmar a litíase e medir o cálculo, qual exame tem a maior acurácia?",
   "alternativas": [
    "Urografia excretora com contraste iodado intravenoso e filmes seriados",
    "Cintilografia renal dinâmica com DTPA marcado",
@@ -4260,7 +4260,7 @@
    "Tomografia de abdome e pelve sem contraste"
   ],
   "correta": 4,
-  "explicacao": "A tomografia sem contraste (protocolo de baixa dose) é o exame de maior sensibilidade e especificidade para cálculos urinários: detecta praticamente todos os tipos, inclusive radiotransparentes à radiografia (ácido úrico), mede tamanho e localização e mostra sinais indiretos de obstrução e diagnósticos diferenciais. A radiografia simples não detecta cálculos radiotransparentes e sobrepõe estruturas; a urografia excretora foi substituída pela tomografia; a ressonância é pouco sensível para cálculos; a cintilografia avalia função e obstrução, não a presença do cálculo. Em gestantes e crianças, a ultrassonografia é a primeira escolha.",
+  "explicacao": "A tomografia de abdome e pelve sem contraste, de preferência em protocolo de baixa dose, é o exame de maior sensibilidade e especificidade para cálculos urinários: detecta praticamente todos os tipos, inclusive os radiotransparentes à radiografia, como os de ácido úrico, mede tamanho e localização — dados que orientam a chance de eliminação espontânea — e mostra hidronefrose e diagnósticos diferenciais. A radiografia simples normal deste paciente não afasta a litíase, porque cálculos radiotransparentes, pequenos ou sobrepostos a ossos e gases passam despercebidos. A urografia excretora exige contraste iodado, tem menor acurácia e foi substituída pela tomografia. A ressonância é pouco sensível para visualizar o próprio cálculo. A cintilografia com DTPA avalia função e drenagem, mas não confirma a presença nem mede a pedra. Para lembrar: em gestantes e crianças, a ultrassonografia é a primeira escolha, para evitar radiação.",
   "tema": "litiase-urinaria",
   "subtema": "litiase-urinaria.diagnostico-por-imagem",
   "especialidade": "urologia",
@@ -24050,7 +24050,7 @@
  {
   "id": "med-b3ede5cf",
   "area": "Fisiologia",
-  "enunciado": "Na admissão da jovem com cetoacidose, o K⁺ era 5,6 mEq/L, embora o déficit corporal total de potássio fosse grande.\n\nO que explica o potássio sérico inicial elevado?",
+  "enunciado": "Trazida pela mãe ao pronto-socorro, uma adolescente de 16 anos com diabetes tipo 1 conta que parou a insulina há quatro dias, quando acabou o estoque em casa. Vomita desde ontem, bebe muita água e urina em grande volume. Está sonolenta, com respiração rápida e profunda, mucosas secas, FC de 124 bpm e PA de 100 × 60 mmHg. Exames: glicemia 520 mg/dL, pH 7,08, bicarbonato 7 mEq/L, cetonemia positiva, Na⁺ 131 mEq/L, K⁺ 5,6 mEq/L, creatinina 1,2 mg/dL e CPK normal. A equipe lembra que, nessa situação, o déficit corporal total de potássio costuma ser grande.\n\nComo conciliar esse déficit com o potássio sérico elevado da admissão?",
   "alternativas": [
    "Lise muscular maciça liberando potássio intracelular para o plasma",
    "Ingestão aumentada de potássio durante a polidipsia com sucos de frutas",
@@ -24059,7 +24059,7 @@
    "Hemoconcentração isolada pela diurese osmótica, sem saída de potássio da célula"
   ],
   "correta": 2,
-  "explicacao": "Na cetoacidose falta insulina, que é o principal estímulo à captação de potássio pela Na⁺/K⁺-ATPase. Além disso, a hiperosmolaridade puxa água das células e arrasta potássio junto (arraste por solvente), e a acidose contribui para a saída de K⁺. O resultado é potássio sérico normal ou alto apesar da grande perda urinária pela diurese osmótica. A aldosterona aumenta a excreção renal de potássio, não a retenção. Não há rabdomiólise no caso. A polidipsia é de água, sem carga de potássio. A hemoconcentração existe, mas sozinha não explica o valor.",
+  "explicacao": "Na cetoacidose falta insulina, que é o principal estímulo à captação de potássio pela Na⁺/K⁺-ATPase. Além disso, a hiperosmolaridade puxa água das células e arrasta potássio junto (arraste por solvente), e a acidose contribui para a saída de K⁺. O resultado é potássio sérico normal ou alto apesar da grande perda urinária causada pela diurese osmótica e pelos vômitos. A aldosterona aumenta a excreção renal de potássio, não a retenção. A CPK normal afasta lise muscular importante. A polidipsia relatada foi de água, sem carga de potássio. A hemoconcentração existe, mas sozinha não explica o valor. Para lembrar: com a insulina, o K⁺ entra nas células e cai rápido; por isso, se o K⁺ inicial estiver abaixo de 3,3 mEq/L, repõe-se potássio antes de iniciar a insulina.",
   "tema": "disturbios-hidroeletroliticos",
   "subtema": "disturbios-hidroeletroliticos.disturbios-do-potassio",
   "especialidade": "fisiologia",
@@ -24191,7 +24191,7 @@
  {
   "id": "med-44d20367",
   "area": "Farmacologia",
-  "enunciado": "O cirrótico com peritonite também tem encefalopatia hepática (flapping, inversão do sono) e inicia lactulose.\n\nQual é o principal mecanismo de ação da lactulose?",
+  "enunciado": "“Ele está trocando o dia pela noite e hoje não soube dizer onde estava”, conta a filha de um homem de 61 anos, cirrótico por hepatite B, internado há dois dias para tratar peritonite bacteriana espontânea. Ao exame: sonolento, mas despertável, desorientado no tempo, com asterixe (flapping) nas mãos estendidas e sem sinais focais. Glicemia capilar de 102 mg/dL e sódio de 134 mEq/L. Não recebeu benzodiazepínicos. A equipe inicia lactulose por via oral, titulada para duas a três evacuações pastosas por dia.\n\nPor qual mecanismo principal a lactulose reduz a encefalopatia hepática?",
   "alternativas": [
    "Quelar a amônia no sangue e eliminá-la pela urina como ureia",
    "Estimular o ciclo da ureia nos hepatócitos remanescentes",
@@ -24200,7 +24200,7 @@
    "Bloquear receptores GABA-A e reverter a sedação cerebral"
   ],
   "correta": 3,
-  "explicacao": "A lactulose é um dissacarídeo não absorvível que as bactérias do cólon fermentam em ácidos orgânicos. O pH mais baixo favorece a conversão de amônia (NH₃, que atravessa membranas) em amônio (NH₄⁺, pouco absorvível), que fica retido e é eliminado nas fezes; o efeito laxativo também reduz o tempo de produção de amônia. A lactulose não age sobre a glutaminase renal, nem sobre receptores GABA-A (quem os antagoniza é o flumazenil). Ela não estimula o ciclo da ureia, que é o papel teórico da L-ornitina-L-aspartato, e não quela amônia no sangue. A meta prática é de 2 a 3 evacuações pastosas por dia.",
+  "explicacao": "O quadro é de encefalopatia hepática precipitada por infecção: a glicemia normal, a ausência de sinais focais e de sedativos afastam outras causas imediatas de confusão. A lactulose é um dissacarídeo não absorvível que as bactérias do cólon fermentam em ácidos orgânicos. O pH mais baixo favorece a conversão de amônia (NH₃, que atravessa membranas) em amônio (NH₄⁺, pouco absorvível), que fica retido e é eliminado nas fezes; o efeito laxativo também reduz o tempo de produção de amônia. A lactulose não age sobre a glutaminase renal nem sobre receptores GABA-A (quem os antagoniza é o flumazenil). Ela não estimula o ciclo da ureia, que é o papel proposto para a L-ornitina-L-aspartato, e não quela amônia no sangue. Para lembrar: a meta prática é de duas a três evacuações pastosas por dia; a rifaximina entra associada para prevenir recorrência.",
   "tema": "cirrose-hepatica",
   "subtema": "cirrose-hepatica.encefalopatia-hepatica",
   "especialidade": "farmacologia",
@@ -24472,7 +24472,7 @@
  {
   "id": "med-66491066",
   "area": "Anatomia",
-  "enunciado": "No motociclista com hemotórax, o dreno foi inserido no 5º espaço intercostal, entre as linhas axilares anterior e média.\n\nPor que ele deve passar rente à borda superior da costela de baixo?",
+  "enunciado": "Colisão entre moto e carro na BR-174: o motociclista, de 28 anos, chega à sala de trauma com FR de 28 irpm, SpO₂ de 90% em ar ambiente, PA de 108 × 70 mmHg e FC de 112 bpm. O murmúrio vesicular está abolido na base direita, com macicez à percussão e traqueia centrada; o eFAST mostra líquido no hemitórax direito. Indica-se drenagem torácica no 5º espaço intercostal, entre as linhas axilares anterior e média. Durante a dissecção romba, o preceptor insiste que a pinça deve deslizar rente à borda superior da costela de baixo.\n\nQue fundamento anatômico sustenta essa orientação?",
   "alternativas": [
    "Porque o nervo frênico desce pela parede torácica junto à borda inferior das costelas",
    "Porque a pleura parietal só reveste a parede junto à borda superior de cada costela",
@@ -24481,7 +24481,7 @@
    "Porque o feixe vasculonervoso intercostal corre na borda inferior de cada costela"
   ],
   "correta": 4,
-  "explicacao": "Veia, artéria e nervo intercostais correm no sulco costal, na borda inferior de cada costela, entre os músculos intercostais interno e íntimo, nessa ordem de cima para baixo. Passar o dreno rente à borda superior da costela de baixo afasta o instrumento desse feixe e reduz o risco de sangramento e neuralgia. A pleura parietal reveste toda a face interna da parede. O diafragma não cobre as bordas das costelas nesse nível. O nervo frênico desce pelo mediastino, sobre o pericárdio. O serrátil anterior tem outra inserção e não guia a técnica. Para lembrar: a ordem no sulco costal, de cima para baixo, é VAN (veia, artéria, nervo).",
+  "explicacao": "Macicez com murmúrio abolido e líquido ao eFAST no trauma indicam hemotórax, tratado com drenagem no 5º espaço intercostal, entre as linhas axilares anterior e média (triângulo de segurança). Veia, artéria e nervo intercostais correm no sulco costal, na borda inferior de cada costela, entre os músculos intercostais interno e íntimo, nessa ordem de cima para baixo. Passar o dreno rente à borda superior da costela de baixo afasta o instrumento desse feixe e reduz o risco de sangramento e neuralgia. A pleura parietal reveste toda a face interna da parede. O diafragma não cobre as bordas das costelas nesse nível. O nervo frênico desce pelo mediastino, sobre o pericárdio. O serrátil anterior tem outra inserção e não guia a técnica. Para lembrar: a ordem no sulco costal, de cima para baixo, é VAN (veia, artéria, nervo).",
   "tema": "anatomia-do-torax",
   "subtema": "anatomia-do-torax.pleuras-e-pulmoes",
   "especialidade": "anatomia",
@@ -24755,7 +24755,7 @@
  {
   "id": "med-343b8aff",
   "area": "Neonatologia",
-  "enunciado": "A equipe explica aos pais da recém-nascida com hemólise ABO o risco de encefalopatia bilirrubínica (kernicterus).\n\nQual fração da bilirrubina é neurotóxica e onde ela se deposita?",
+  "enunciado": "Bilirrubina total de 14 mg/dL (indireta de 13,4 mg/dL) com 30 horas de vida: esse é o resultado de uma recém-nascida a termo, em aleitamento materno, cuja icterícia começou no primeiro dia. A mãe é O positivo; a bebê, A positivo, com Coombs direto positivo, reticulócitos de 9% e albumina sérica de 2,8 g/dL. Ela está ativa, mama bem e não tem hipertonia nem choro agudo. A equipe inicia fototerapia intensiva e conversa com os pais sobre o risco de kernicterus.\n\nQual fração da bilirrubina lesa o sistema nervoso e em que região ela se deposita preferencialmente?",
   "alternativas": [
    "Direta conjugada, no córtex cerebral frontal e parietal",
    "Indireta ligada à albumina, no cerebelo e no córtex occipital",
@@ -24764,7 +24764,7 @@
    "Indireta livre, somente na medula espinal e nos nervos periféricos"
   ],
   "correta": 3,
-  "explicacao": "A bilirrubina indireta (não conjugada) é lipossolúvel. A fração livre, não ligada à albumina, atravessa a barreira hematoencefálica e se deposita em núcleos específicos, principalmente globo pálido, núcleo subtalâmico, hipocampo e núcleos do tronco, como os auditivos e os oculomotores. Isso explica as sequelas: coreoatetose, surdez neurossensorial e paralisia do olhar vertical. A bilirrubina direta é hidrossolúvel e não atravessa a barreira. A fração ligada à albumina não entra no cérebro; por isso, acidose, sepse e fármacos que deslocam a bilirrubina da albumina aumentam o risco. A lesão não é cortical frontal nem apenas medular. Para lembrar: ceftriaxona e sulfonamidas deslocam a bilirrubina da albumina e devem ser evitadas no RN ictérico; no neonato, a ceftriaxona também não se dá junto com cálcio IV.",
+  "explicacao": "A icterícia no primeiro dia, com mãe O, bebê A, Coombs direto positivo e reticulocitose, indica hemólise por incompatibilidade ABO. A bilirrubina indireta (não conjugada) é lipossolúvel, e a fração livre, não ligada à albumina, atravessa a barreira hematoencefálica e se deposita em núcleos específicos, principalmente globo pálido, núcleo subtalâmico, hipocampo e núcleos do tronco, como os auditivos e os oculomotores — daí as sequelas de coreoatetose, surdez neurossensorial e paralisia do olhar vertical. A bilirrubina direta é hidrossolúvel e não atravessa a barreira. A fração ligada à albumina não entra no cérebro; por isso a albumina abaixo de 3,0 g/dL e a doença hemolítica isoimune são fatores de risco de neurotoxicidade na diretriz da AAP de 2022. A lesão não é cortical frontal nem apenas medular. Para lembrar: ceftriaxona e sulfonamidas deslocam a bilirrubina da albumina e devem ser evitadas no RN ictérico.",
   "tema": "ictericia-neonatal",
   "subtema": "ictericia-neonatal.ictericia-patologica",
   "especialidade": "neonatologia",
@@ -24897,16 +24897,16 @@
  {
   "id": "med-53357afd",
   "area": "Obstetrícia",
-  "enunciado": "A mulher de 27 anos tratada com metotrexato para ectópica tubária é O negativo, com Coombs indireto negativo.\n\nSegundo a conduta adotada no Brasil, qual medida preventiva está indicada?",
+  "enunciado": "Encaminhada da emergência ao ambulatório de ginecologia, uma mulher de 27 anos, G2P1, tem gravidez ectópica tubária íntegra de 6 semanas: β-hCG de 1.800 mUI/mL, massa anexial de 2,5 cm sem embrião com batimentos, sem líquido livre, e PA de 118 × 76 mmHg. Recebe metotrexato 50 mg/m² IM em dose única. A tipagem mostra O negativo, com Coombs indireto negativo; o parceiro é Rh positivo. O cartão de vacinas registra duas doses de tríplice viral.\n\nAlém do seguimento seriado do β-hCG, que medida preventiva a conduta adotada no Brasil indica ainda neste atendimento?",
   "alternativas": [
    "Imunoglobulina anti-D, para prevenir aloimunização Rh",
    "Coombs direto mensal até a próxima gestação",
    "Nenhuma medida, pois a gestação ectópica não sensibiliza",
-   "Vacina contra rubéola em dose única, ainda neste atendimento",
+   "Vacina contra rubéola, para proteger a próxima gestação",
    "Ácido fólico em dose alta, para prevenir hemólise fetal"
   ],
   "correta": 0,
-  "explicacao": "No Brasil, mulher Rh negativo não sensibilizada (Coombs indireto negativo) recebe imunoglobulina anti-D em eventos com possível passagem de hemácias fetais, como abortamento, gravidez ectópica, doença trofoblástica, sangramentos, procedimentos invasivos e parto de filho Rh positivo. Mesmo no primeiro trimestre, a ectópica pode sensibilizar, por isso é falso dizer que ela não sensibiliza. A imunoglobulina elimina as hemácias Rh positivas antes que a mãe produza anti-D. Há debate internacional: o ACOG (2024) sugere dispensar a profilaxia em perdas com menos de 12 semanas, e o NICE não a indica na ectópica tratada só com medicamento, enquanto outras sociedades a mantêm na ectópica. A vacina de rubéola não previne aloimunização. O Coombs direto pesquisa anticorpos ligados às hemácias do próprio paciente e não serve para rastrear a mãe. O ácido fólico não evita a sensibilização. Para lembrar: a dose habitual é 300 mcg IM em até 72 horas após o evento; perdido esse prazo, ainda vale aplicar (até cerca de 28 dias). Há também profilaxia de rotina com 28 semanas.",
+  "explicacao": "A paciente preenche os critérios para metotrexato (estável, β-hCG abaixo de 5.000 mUI/mL, massa menor que 3,5 cm, sem embrião vivo). Por ser Rh negativo e não sensibilizada (Coombs indireto negativo), com parceiro Rh positivo, deve receber imunoglobulina anti-D: no Brasil, a FEBRASGO a indica na ectópica da mulher Rh negativo qualquer que seja o tratamento, pois pode haver passagem de hemácias fetais. A imunoglobulina elimina as hemácias Rh positivas antes que a mãe produza anti-D. Há debate internacional: o ACOG (2024) sugere dispensar a profilaxia em perdas com menos de 12 semanas, e o NICE não a indica na ectópica tratada só com medicamento. Dizer que a ectópica não sensibiliza é falso. A vacina de rubéola não previne aloimunização, e a paciente já tem duas doses de tríplice viral. O Coombs direto pesquisa anticorpos ligados às hemácias do próprio paciente e não rastreia a sensibilização materna. O ácido fólico não evita a sensibilização e, durante o tratamento com metotrexato, suplementos de folato devem ser evitados. Para lembrar: a dose habitual é 300 mcg IM em até 72 horas; perdido esse prazo, ainda vale aplicar (até cerca de 28 dias).",
   "tema": "aloimunizacao-rh",
   "subtema": "aloimunizacao-rh.profilaxia-com-imunoglobulina-anti-d",
   "especialidade": "obstetricia",
@@ -24969,7 +24969,7 @@
  {
   "id": "med-ca0f24a4",
   "area": "Farmacologia",
-  "enunciado": "Na puérpera com hemorragia por atonia, a equipe dá ácido tranexâmico 1 g IV, até 3 horas após o parto.\n\nQual é o mecanismo de ação desse fármaco?",
+  "enunciado": "Vinte minutos após o parto vaginal de gêmeos, num hospital regional do Marajó, a puérpera de 31 anos perde cerca de 900 mL de sangue. O útero está amolecido e acima da cicatriz umbilical; a placenta saiu íntegra e a revisão do canal de parto não mostra lacerações. PA de 90 × 58 mmHg, FC de 118 bpm. Enquanto seguem a massagem uterina bimanual e a ocitocina IV, a equipe administra ácido tranexâmico 1 g IV em 10 minutos, lembrando que o benefício se limita às primeiras 3 horas.\n\nQual ação farmacológica justifica somar esse fármaco aos uterotônicos?",
   "alternativas": [
    "Bloqueia a ligação do plasminogênio à fibrina e inibe a fibrinólise",
    "Estimula a contração do miométrio por meio do receptor de ocitocina",
@@ -24978,7 +24978,7 @@
    "Ativa a antitrombina e reduz a geração de trombina no sítio placentário"
   ],
   "correta": 0,
-  "explicacao": "O ácido tranexâmico é um análogo sintético da lisina. Ele ocupa os sítios de ligação à lisina do plasminogênio e impede que o plasminogênio e a plasmina se liguem à fibrina, o que reduz a dissolução do coágulo. Não é uterotônico, não ativa a antitrombina (isso é a heparina) e não contém fatores de coagulação. A inibição da COX-1 reduz a agregação plaquetária, como faz o AAS. O benefício na hemorragia pós-parto é maior quanto mais cedo ele é dado, dentro de 3 horas. Para lembrar: o ácido tranexâmico foi desenvolvido no Japão por Utako e Shosuke Okamoto, e o estudo WOMAN (2017) mostrou menos mortes por sangramento pós-parto com seu uso precoce.",
+  "explicacao": "A gestação gemelar distende o útero e predispõe à atonia; placenta íntegra e canal sem lacerações afastam retenção e trauma como causa do sangramento. O ácido tranexâmico é um análogo sintético da lisina: ocupa os sítios de ligação à lisina do plasminogênio e impede que plasminogênio e plasmina se liguem à fibrina, o que reduz a dissolução do coágulo. Por isso ele complementa, e não substitui, os uterotônicos. Não contrai o miométrio, não ativa a antitrombina (isso é a heparina) e não contém fatores de coagulação, como o crioprecipitado. A inibição da COX-1 reduz, e não aumenta, a agregação plaquetária, como faz o AAS. A OMS recomenda 1 g IV em 10 minutos, dentro de 3 horas do parto, com segunda dose se o sangramento continuar após 30 minutos ou recomeçar em 24 horas. Para lembrar: o estudo WOMAN (2017) mostrou menos mortes por sangramento pós-parto com o uso precoce do ácido tranexâmico.",
   "tema": "hemorragia-pos-parto",
   "subtema": "hemorragia-pos-parto.abordagem-inicial",
   "especialidade": "farmacologia",
@@ -25039,7 +25039,7 @@
  {
   "id": "med-2d80a8ac",
   "area": "Infectologia",
-  "enunciado": "Na mesma comunidade ribeirinha, uma gestante de 24 semanas tem malária por P. vivax confirmada.\n\nQual fármaco do esquema padrão é contraindicado na gestação?",
+  "enunciado": "O agente de endemias de uma comunidade ribeirinha do Médio Solimões leva ao posto a lâmina de gota espessa de uma gestante de 24 semanas com febre, calafrios e cefaleia há cinco dias: Plasmodium vivax (++). Ela está lúcida, sem icterícia nem sangramentos, com hemoglobina de 10,8 g/dL e PA de 110 × 70 mmHg, e aceita bem a via oral; os batimentos fetais são normais. Será tratada no próprio posto.\n\nAo adaptar o esquema padrão de P. vivax à gravidez, qual fármaco precisa ser retirado?",
   "alternativas": [
    "Cloroquina",
    "Artemeter",
@@ -25048,7 +25048,7 @@
    "Primaquina"
   ],
   "correta": 4,
-  "explicacao": "A primaquina é contraindicada na gestação (e em menores de 6 meses) porque o feto pode ter deficiência de G6PD, e a droga atravessa a placenta com risco de hemólise fetal. Na gestante com P. vivax, trata-se a fase sanguínea com cloroquina, que é segura, e a prevenção de recaídas é feita com cloroquina semanal, deixando a primaquina para depois do período de restrição. Os derivados de artemisinina, como o artemeter, são usados na gestação para P. falciparum segundo as orientações vigentes. A quinina e a clindamicina também são opções na gestante com falciparum. Para lembrar: a cloroquina age na fase sanguínea, e a primaquina é a que elimina os hipnozoítos.",
+  "explicacao": "Sem sinais de gravidade, a gestante com P. vivax é tratada por via oral. O esquema padrão de vivax no Brasil associa cloroquina (fase sanguínea) a primaquina (hipnozoítos, cura radical). A primaquina, assim como a tafenoquina, é contraindicada durante toda a gestação, porque o feto pode ter deficiência de G6PD e há risco de hemólise fetal. Pelo guia do Ministério da Saúde, a gestante recebe cloroquina por três dias e depois cloroquina semanal (5 mg/kg/semana) até o fim do primeiro mês de lactação, para prevenir recaídas; a primaquina fica para depois. A cloroquina é segura na gravidez e é justamente o fármaco que se mantém. Artemeter (com lumefantrina), quinina e clindamicina são opções para P. falciparum, não fazem parte do esquema de vivax e não precisariam ser retirados. Para lembrar: sem primaquina, a gestante segue sob risco de recaída durante toda a gravidez — daí a cloroquina semanal.",
   "tema": "malaria",
   "subtema": "malaria.tratamento",
   "especialidade": "infectologia",
@@ -25250,16 +25250,16 @@
  {
   "id": "med-5fcc6e07",
   "area": "Epidemiologia",
-  "enunciado": "No município do homem com tuberculose (25.000 habitantes), foram notificados 38 casos novos no ano.\n\nQual é o coeficiente de incidência por 100.000 habitantes?",
+  "enunciado": "Trecho do relatório anual da vigilância epidemiológica de um município do Alto Rio Negro:\n\n“População estimada: 25.000 habitantes. Tuberculose: 38 casos novos notificados no ano; outros 12 pacientes, diagnosticados no ano anterior, seguiam em tratamento no início do ano.”\n\nCom esses dados, qual coeficiente de incidência de tuberculose o relatório deve apresentar, por 100.000 habitantes?",
   "alternativas": [
    "152 por 100.000 habitantes",
    "38 por 100.000 habitantes",
-   "1.520 por 100.000 habitantes",
+   "200 por 100.000 habitantes",
    "1,52 por 100.000 habitantes",
    "15,2 por 100.000 habitantes"
   ],
   "correta": 0,
-  "explicacao": "O coeficiente de incidência é o número de casos novos num período dividido pela população exposta no mesmo período, multiplicado por uma base. Aqui: 38 ÷ 25.000 = 0,00152; multiplicando por 100.000, dá 152 casos por 100.000 habitantes. Usar o número absoluto (38) ignora o tamanho da população. Os valores 1,52, 15,2 e 1.520 vêm de erros de casa decimal ao aplicar a base de 100.000. Casos antigos em tratamento entram na prevalência, não na incidência. Para lembrar: Robert Koch anunciou a descoberta do bacilo em 24 de março de 1882, data escolhida como Dia Mundial de Combate à Tuberculose.",
+  "explicacao": "O coeficiente de incidência é o número de casos novos no período dividido pela população no mesmo período, multiplicado por uma base. Aqui: 38 ÷ 25.000 = 0,00152; multiplicando por 100.000, dá 152 casos por 100.000 habitantes. Somar os 12 pacientes diagnosticados no ano anterior (50 casos, 200 por 100.000) mistura casos antigos, que entram na prevalência, com casos novos. Usar o número absoluto (38) ignora o tamanho da população. Os valores 1,52 e 15,2 vêm de erros de casa decimal ao aplicar a base de 100.000. Para lembrar: prevalência ≈ incidência × duração média da doença; por isso, doenças crônicas ou de tratamento longo, como a tuberculose, têm prevalência maior que a incidência.",
   "tema": "medidas-de-frequencia-e-indicadores",
   "subtema": "medidas-de-frequencia-e-indicadores.incidencia-e-prevalencia",
   "especialidade": "epidemiologia",
@@ -27052,7 +27052,7 @@
  {
   "id": "med-8dac8e0f",
   "area": "Dermatologia",
-  "enunciado": "Homem de 50 anos, de pele clara, tem vários nevos no dorso e faz consulta de rotina.\n\nPela regra do ABCDE, qual das lesões abaixo é a mais suspeita de melanoma e deve ser biopsiada?",
+  "enunciado": "Durante uma ação de prevenção do câncer de pele numa colônia de pescadores de Santarém (PA), um homem de 50 anos, de pele clara e olhos azuis, que trabalha ao sol desde a adolescência e já teve várias queimaduras solares com bolhas, pede que examinem “as pintas das costas”. O pai teve melanoma. Sem dermatoscópio disponível, o médico descreve cinco lesões a olho nu.\n\nAplicando a regra do ABCDE, qual lesão justifica biópsia excisional?",
   "alternativas": [
    "Mancha de 4 mm, simétrica, marrom uniforme e estável há anos",
    "Mancha de 8 mm que mudou de forma e de cor nos últimos meses",
@@ -27061,7 +27061,7 @@
    "Pápula de 3 mm, cor da pele, macia e com pelos na superfície"
   ],
   "correta": 1,
-  "explicacao": "A regra do ABCDE destaca assimetria, bordas irregulares, variação de cores, diâmetro maior que 6 mm e evolução (mudança de tamanho, forma, cor ou surgimento de sintomas); a evolução é um dos critérios mais valiosos, e a lesão de 8 mm que mudou recentemente preenche vários deles. A mancha pequena, simétrica e estável é nevo comum. A pápula cor da pele, macia e com pelos sugere nevo intradérmico. A placa “colada”, verrucosa e gordurosa é típica de ceratose seborreica. A pequena mácula vermelho-rubi é angioma rubi (senil). Para lembrar: o “sinal do patinho feio” complementa o ABCDE — desconfie da pinta diferente de todas as outras do mesmo paciente.",
+  "explicacao": "Fototipo claro, exposição solar ocupacional, queimaduras com bolhas e melanoma em parente de primeiro grau aumentam o risco, mas é o aspecto da lesão que define a biópsia. A regra do ABCDE destaca assimetria, bordas irregulares, variação de cores, diâmetro maior que 6 mm e evolução (mudança de tamanho, forma, cor ou surgimento de sintomas); a evolução é um dos critérios mais valiosos, e a lesão de 8 mm que mudou recentemente preenche vários deles. A mancha pequena, simétrica e estável é nevo comum. A pápula cor da pele, macia e com pelos sugere nevo intradérmico. A placa “colada”, verrucosa e gordurosa é típica de ceratose seborreica. A pequena mácula vermelho-rubi é angioma rubi (senil). Para lembrar: o “sinal do patinho feio” complementa o ABCDE — desconfie da pinta diferente de todas as outras do mesmo paciente.",
   "tema": "cancer-de-pele",
   "subtema": "cancer-de-pele.melanoma",
   "especialidade": "dermatologia",
@@ -27263,7 +27263,7 @@
  {
   "id": "med-2ea72128",
   "area": "Trauma",
-  "enunciado": "Paciente com TCE grave e hematoma volumoso evolui, na UTI, com PA de 210 × 100 mmHg, FC de 44 bpm e respiração irregular.\n\nComo se denomina essa tríade e o que ela indica?",
+  "enunciado": "Evolução de enfermagem na UTI, 3h da manhã: “Paciente de 34 anos, 2º dia de TCE grave por queda de andaime, com hematoma subdural agudo volumoso à esquerda, aguardando vaga no centro cirúrgico. À 1h: PA 130 × 80 mmHg, FC 88 bpm. Agora: PA 210 × 100 mmHg, FC 44 bpm, respiração irregular com pausas. Glasgow caiu de 8 para 5; pupila esquerda midriática e pouco fotorreagente. TC de coluna cervical da admissão sem lesões.”\n\nComo se denomina o conjunto de alterações vitais registrado e o que ele indica?",
   "alternativas": [
    "Choque neurogênico; lesão medular cervical acima de T6",
    "Tríade de Beck; tamponamento cardíaco por trauma torácico",
@@ -27272,7 +27272,7 @@
    "Tríade de Charcot; colangite aguda secundária ao trauma"
   ],
   "correta": 2,
-  "explicacao": "A tríade de Cushing, com hipertensão arterial (em geral com aumento da pressão de pulso), bradicardia e padrão respiratório irregular, é sinal tardio de hipertensão intracraniana grave, com compressão do tronco encefálico e herniação iminente, e exige medidas imediatas, como terapia hiperosmolar e avaliação neurocirúrgica. A tríade de Beck (hipotensão, turgência jugular e bulhas abafadas) é do tamponamento. O choque neurogênico cursa com bradicardia, mas com hipotensão. A tríade de Charcot (febre, icterícia e dor em hipocôndrio direito) é da colangite. A disreflexia autonômica ocorre em lesões medulares crônicas acima de T6. Para lembrar: medidas iniciais na HIC: cabeceira a 30°, normocapnia (PaCO₂ 35–40 mmHg) e manitol ou salina hipertônica; hiperventilação só como ponte breve na herniação.",
+  "explicacao": "Hipertensão arterial (em geral com aumento da pressão de pulso), bradicardia e respiração irregular formam a tríade de Cushing, sinal tardio de hipertensão intracraniana grave, com compressão do tronco encefálico e herniação iminente; a queda do Glasgow e a midríase do lado do hematoma reforçam herniação uncal. Exige medidas imediatas, como terapia hiperosmolar e descompressão neurocirúrgica. O choque neurogênico cursa com bradicardia, mas com hipotensão, e a disreflexia autonômica ocorre em lesões medulares crônicas acima de T6 — a coluna cervical sem lesões e a hipertensão afastam ambos. A tríade de Beck (hipotensão, turgência jugular e bulhas abafadas) é do tamponamento. A tríade de Charcot (febre, icterícia e dor em hipocôndrio direito) é da colangite. Para lembrar: medidas iniciais na HIC: cabeceira a 30°, normocapnia (PaCO₂ 35–40 mmHg) e manitol ou salina hipertônica; hiperventilação só como ponte breve na herniação.",
   "tema": "traumatismo-cranioencefalico",
   "subtema": "traumatismo-cranioencefalico.hipertensao-intracraniana",
   "especialidade": "trauma",
@@ -28616,7 +28616,7 @@
  {
   "id": "med-5795685d",
   "area": "Neonatologia",
-  "enunciado": "Na avaliação antes da alta, o teste do reflexo vermelho de um recém-nascido mostra reflexo presente no olho direito e ausente, com pupila esbranquiçada, no olho esquerdo.\n\nQual é a conduta?",
+  "enunciado": "A pediatra da maternidade apaga a luz da sala e, com o oftalmoscópio a cerca de 30 cm, examina um recém-nascido a termo de 36 horas, antes da alta. O olho direito mostra reflexo vermelho normal; o esquerdo, pupila esbranquiçada, sem reflexo. Não há secreção ocular, hiperemia conjuntival nem lacrimejamento. A mãe fez apenas duas consultas de pré-natal e conta ter tido febre com manchas vermelhas pelo corpo no 2º mês de gestação.\n\nO que fazer diante desse achado?",
   "alternativas": [
    "Encaminhar já ao oftalmologista, por suspeita de catarata ou retinoblastoma",
    "Repetir o teste aos 6 meses, pois a opacidade de meios é fisiológica ao nascer",
@@ -28625,7 +28625,7 @@
    "Tranquilizar a família, pois o teste só tem valor a partir dos 2 meses de vida"
   ],
   "correta": 0,
-  "explicacao": "O teste do reflexo vermelho (teste do olhinho) é feito com oftalmoscópio direto, a cerca de 30 cm, observando o reflexo das duas pupilas. Reflexo ausente, assimétrico ou branco (leucocoria) exige encaminhamento imediato ao oftalmologista, pois pode indicar catarata congênita, retinoblastoma, glaucoma congênito, retinopatia ou opacidade de córnea ou vítreo. A catarata congênita precisa ser operada precocemente para evitar ambliopia irreversível, e o retinoblastoma é tumor maligno, curável quando diagnosticado cedo. A leucocoria não é fisiológica, não indica conjuntivite nem obstrução lacrimal, e o teste já tem valor na maternidade. O Ministério da Saúde recomenda repeti-lo nas consultas de puericultura nos primeiros anos. Para lembrar: fotos com flash em que um olho aparece \"branco\" em vez de vermelho podem ser o primeiro sinal de retinoblastoma notado pela família.",
+  "explicacao": "Reflexo vermelho ausente ou branco (leucocoria) em um olho é teste alterado e exige encaminhamento imediato ao oftalmologista, pois pode indicar catarata congênita, retinoblastoma, glaucoma congênito ou outras opacidades. O exantema febril no primeiro trimestre, num pré-natal incompleto, levanta a hipótese de rubéola congênita, causa clássica de catarata. A catarata congênita precisa ser operada precocemente para evitar ambliopia irreversível, e o retinoblastoma é tumor maligno, curável quando diagnosticado cedo. A leucocoria não é fisiológica e o teste já tem valor na maternidade, por isso não se adia nem se tranquiliza a família. A ausência de secreção, hiperemia e lacrimejamento afasta conjuntivite neonatal e obstrução do ducto lacrimal, que, de todo modo, não causam pupila branca. Para lembrar: fotos com flash em que um olho aparece branco em vez de vermelho podem ser o primeiro sinal de retinoblastoma notado pela família.",
   "tema": "assistencia-ao-recem-nascido",
   "subtema": "assistencia-ao-recem-nascido.triagem-neonatal",
   "especialidade": "neonatologia",
@@ -29153,7 +29153,7 @@
  {
   "id": "med-b10157eb",
   "area": "Semiologia",
-  "enunciado": "Paciente com sopro holossistólico na borda esternal esquerda baixa. Durante a inspiração profunda, o sopro fica nitidamente mais intenso.\n\nQual valvopatia esse comportamento sugere?",
+  "enunciado": "Interconsulta da cardiologia para uma mulher de 42 anos, internada por dispneia progressiva, com estenose mitral reumática conhecida e sem tratamento regular. Ao exame: estalido de abertura e ruflar diastólico no ápice; turgência jugular a 45°, fígado a 4 cm do rebordo costal e edema de membros inferiores. Surgiu também um sopro holossistólico na borda esternal esquerda baixa, que se intensifica nitidamente durante a inspiração profunda. O ecocardiograma ainda não foi feito.\n\nQual alteração explica melhor esse novo sopro?",
   "alternativas": [
    "Comunicação interventricular",
    "Insuficiência mitral",
@@ -29162,12 +29162,12 @@
    "Estenose aórtica"
   ],
   "correta": 2,
-  "explicacao": "O aumento do sopro sistólico com a inspiração (sinal de Rivero-Carvallo) indica origem nas câmaras direitas: a pressão intratorácica negativa aumenta o retorno venoso ao coração direito e o volume regurgitado pela tricúspide. A insuficiência mitral e a comunicação interventricular também são holossistólicas, mas não se intensificam na inspiração, e a mitral é mais audível no ápice com irradiação para a axila. A estenose aórtica é ejetiva, no foco aórtico. O prolapso mitral dá clique mesossistólico e sopro tardio, que muda com cócoras e posição em pé. Para lembrar: macete das manobras: a inspiração aumenta os sopros do lado direito; Valsalva e posição em pé reduzem quase todos, exceto os da cardiomiopatia hipertrófica e do prolapso mitral.",
+  "explicacao": "O aumento do sopro sistólico com a inspiração (sinal de Rivero-Carvallo) indica origem nas câmaras direitas: a pressão intratorácica negativa aumenta o retorno venoso ao coração direito e o volume regurgitado pela tricúspide. Na estenose mitral de longa data, a hipertensão pulmonar dilata o ventrículo direito e causa insuficiência tricúspide funcional, o que combina com a turgência jugular, a hepatomegalia e o edema. A insuficiência mitral, plausível numa doença reumática, também é holossistólica, mas é mais audível no ápice, irradia para a axila e não aumenta na inspiração. A comunicação interventricular é congênita e também não varia com a respiração. A estenose aórtica dá sopro ejetivo no foco aórtico. O prolapso mitral dá clique mesossistólico e sopro tardio, que muda com cócoras e posição em pé. Para lembrar: a inspiração aumenta os sopros do lado direito; Valsalva e posição em pé reduzem quase todos, exceto os da cardiomiopatia hipertrófica e do prolapso mitral.",
   "tema": "valvopatias",
-  "subtema": "valvopatias.insuficiencia-mitral",
+  "subtema": "valvopatias.estenose-mitral",
   "especialidade": "semiologia",
   "disciplina": "Semiologia",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
   "prova": null,
@@ -29525,16 +29525,16 @@
  {
   "id": "med-e4498a64",
   "area": "Medicina de Família e Comunidade",
-  "enunciado": "Mulher de 70 anos com diabetes tipo 2 usa metformina 2 g/dia. Os exames atuais mostram TFG estimada de 26 mL/min/1,73 m², confirmada em nova dosagem.\n\nQual é a conduta em relação à metformina?",
+  "enunciado": "Dona Lúcia, 70 anos, com diabetes tipo 2 há 15 anos, volta à UBS com os exames de controle. Usa metformina 2 g/dia e tem HbA1c de 7,4%. Nos últimos anos a função renal caiu aos poucos: a TFG estimada, que era de 48 mL/min/1,73 m² há um ano, agora é de 26 mL/min/1,73 m², valor confirmado em nova dosagem três meses depois. Ela não tem queixas e diz que “o açúcar está bom com esse remédio”.\n\nO que deve ser feito com a metformina a partir desse resultado?",
   "alternativas": [
-   "Aumentar a dose para compensar a menor absorção",
-   "Reduzir para 1,5 g/dia",
-   "Suspender a metformina",
+   "Manter 2 g/dia, suspendendo só se o lactato sérico subir",
+   "Reduzir para 1 g/dia e repetir a creatinina em 3 meses",
+   "Suspender a metformina, contraindicada nessa faixa de TFG",
    "Manter a dose atual e repetir a TFG em 1 ano",
    "Trocar pela formulação de liberação prolongada na mesma dose"
   ],
   "correta": 2,
-  "explicacao": "A metformina é eliminada pelos rins, e seu acúmulo aumenta o risco de acidose láctica. Com TFG abaixo de 30 mL/min/1,73 m², ela está contraindicada e deve ser suspensa. Entre 30 e 45, não se inicia o fármaco, e quem já usa deve ter a dose reduzida (em geral, até 1 g/dia) e monitorização mais frequente. Manter a dose, reduzir apenas um pouco ou trocar a formulação não resolve o problema do acúmulo. Não há redução de absorção que justifique aumentar a dose.",
+  "explicacao": "A metformina é eliminada pelos rins, e seu acúmulo aumenta o risco de acidose láctica. Com TFG abaixo de 30 mL/min/1,73 m², confirmada, ela está contraindicada e deve ser suspensa, mesmo com bom controle glicêmico — o esquema deve ser reorganizado com outras classes. Reduzir para até 1 g/dia com monitorização mais frequente é a conduta para TFG entre 30 e 45, faixa que a paciente já ultrapassou. Manter a dose e esperar um ano, ou só trocar a formulação, não resolve o acúmulo. Esperar o lactato subir expõe a paciente ao risco que se quer evitar. Para lembrar: com TFG entre 30 e 45, a dose máxima é 1 g/dia e iniciar o fármaco nessa faixa geralmente não é recomendado; em quem tem função renal reduzida, a metformina deve ser suspensa temporariamente antes de contraste iodado.",
   "tema": "doenca-renal-cronica",
   "subtema": "doenca-renal-cronica.complicacoes",
   "especialidade": "medicina-de-familia",
@@ -29664,7 +29664,7 @@
  {
   "id": "med-2f3929a2",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 38 anos tem dor epigástrica em queimação que surge 2 a 3 horas após as refeições e o acorda de madrugada, com alívio ao comer ou ao usar antiácido.\n\nQual diagnóstico esse padrão sugere mais?",
+  "enunciado": "Há quatro meses, uma dor epigástrica em queimação incomoda um mototaxista de 38 anos, tabagista: começa duas a três horas depois das refeições, costuma acordá-lo por volta das 2h da madrugada e passa quando ele come um pão ou toma antiácido. Não usa anti-inflamatórios, não bebe álcool, não perdeu peso e não teve vômitos, melena ou disfagia. O exame físico mostra apenas leve dor à palpação epigástrica, com sinal de Murphy negativo.\n\nQue diagnóstico o padrão temporal da dor torna mais provável?",
   "alternativas": [
    "Úlcera gástrica",
    "Isquemia mesentérica crônica",
@@ -29673,7 +29673,7 @@
    "Pancreatite crônica"
   ],
   "correta": 2,
-  "explicacao": "Na úlcera duodenal, a dor costuma aparecer 2 a 3 horas após as refeições e à noite, quando a secreção ácida não é tamponada pelo alimento, e melhora com a ingestão de alimentos ou antiácidos. Na úlcera gástrica, a dor tende a piorar logo após comer, podendo levar a medo de comer e perda de peso. A cólica biliar é dor em hipocôndrio direito após refeições gordurosas, com duração de horas. A pancreatite crônica dá dor em faixa, que piora com a alimentação. A isquemia mesentérica crônica causa dor pós-prandial com medo de comer e emagrecimento.",
+  "explicacao": "Na úlcera duodenal, a dor em queimação costuma aparecer duas a três horas após as refeições e de madrugada, quando a secreção ácida não é tamponada pelo alimento, e melhora com a ingestão de alimentos ou antiácidos — exatamente o padrão descrito. Na úlcera gástrica, a dor tende a piorar logo após comer, podendo levar a medo de comer e perda de peso, ausentes aqui. A isquemia mesentérica crônica também causa dor pós-prandial precoce com medo de comer e emagrecimento, em geral em idosos com aterosclerose. A cólica biliar é dor em hipocôndrio direito após refeições gordurosas, com Murphy muitas vezes positivo, e não alivia com comida. A pancreatite crônica, rara sem álcool, dá dor em faixa que piora com a alimentação. Para lembrar: Helicobacter pylori e anti-inflamatórios são as duas grandes causas de úlcera péptica; o tabagismo dificulta a cicatrização.",
   "tema": "doenca-do-refluxo-e-ulcera-peptica",
   "subtema": "doenca-do-refluxo-e-ulcera-peptica.ulcera-peptica",
   "especialidade": "gastroenterologia",
@@ -30244,7 +30244,7 @@
  {
   "id": "med-17924da8",
   "area": "Pediatria Geral",
-  "enunciado": "Em um serviço sem ultrassonografia disponível, lactente de 5 semanas com suspeita de estenose hipertrófica do piloro faz radiografia contrastada do esôfago, estômago e duodeno.\n\nQual achado é típico?",
+  "enunciado": "Pela telemedicina, um médico de São Gabriel da Cachoeira (AM), onde não há ultrassonografia pediátrica, discute com o cirurgião pediátrico de Manaus o caso de um menino de 5 semanas, primogênito, com vômitos não biliosos em jato logo após as mamadas há 10 dias. Depois de vomitar, ele chora de fome e quer mamar de novo; perdeu 300 g na última semana. Gasometria venosa: pH 7,52, bicarbonato 34 mEq/L, cloro 88 mEq/L e K⁺ 3,0 mEq/L. Opta-se por radiografia contrastada de esôfago, estômago e duodeno.\n\nSe a hipótese principal estiver certa, qual achado o exame deve mostrar?",
   "alternativas": [
    "Estômago em ampulheta por úlcera na curvatura",
    "Imagem em dupla bolha, sem gás no intestino distal",
@@ -30253,7 +30253,7 @@
    "Canal pilórico afilado (sinal do cordão)"
   ],
   "correta": 4,
-  "explicacao": "Na estenose hipertrófica do piloro, o canal pilórico está alongado e estreitado, e o contraste passa por ele como um fio fino (sinal do cordão ou do barbante), às vezes em duplo trilho, com impressão do músculo hipertrofiado no antro (sinal do ombro); o esvaziamento gástrico é lento. A ultrassonografia é hoje o exame de escolha, por não usar radiação. A dupla bolha sem gás distal é típica da atresia duodenal. O duodeno em saca-rolhas, com ângulo de Treitz mal posicionado, indica má rotação com volvo. O estômago em ampulheta não é quadro do lactente. O refluxo isolado não explica a obstrução pilórica. Para lembrar: distúrbio clássico: alcalose metabólica hipoclorêmica e hipocalêmica (com acidúria paradoxal); corrija com soro e KCl antes de operar — não é cirurgia de emergência.",
+  "explicacao": "Menino primogênito de 5 semanas com vômitos não biliosos em jato, fome após vomitar e alcalose metabólica hipoclorêmica e hipocalêmica é o quadro clássico de estenose hipertrófica do piloro. Na seriografia, o canal pilórico está alongado e estreitado, e o contraste passa por ele como um fio fino (sinal do cordão ou do barbante), às vezes em duplo trilho, com impressão do músculo hipertrofiado no antro (sinal do ombro) e esvaziamento gástrico lento. A ultrassonografia é o exame de escolha quando disponível, por não usar radiação. A dupla bolha sem gás distal é típica da atresia duodenal, que se manifesta nos primeiros dias de vida e em geral com vômitos biliosos. O duodeno em saca-rolhas, com ângulo de Treitz mal posicionado, indica má rotação com volvo, que também dá vômitos biliosos. O estômago em ampulheta não é quadro do lactente, e o refluxo isolado não explica a obstrução pilórica. Para lembrar: corrija a desidratação e a alcalose com soro e KCl antes da piloromiotomia — não é cirurgia de emergência.",
   "tema": "estenose-hipertrofica-do-piloro",
   "subtema": "estenose-hipertrofica-do-piloro.diagnostico-e-tratamento",
   "especialidade": "pediatria-geral",
@@ -30592,7 +30592,7 @@
  {
   "id": "med-de0b57cb",
   "area": "Reumatologia",
-  "enunciado": "Pela classificação de Chapel Hill (2012), a doença de Kawasaki é uma vasculite que acomete predominantemente vasos de qual calibre?\n\nAssinale a alternativa correta.",
+  "enunciado": "Lábios vermelhos e fissurados, língua em framboesa e hiperemia conjuntival bilateral, sem secreção, chamam a atenção no exame de um menino de 3 anos com febre alta há seis dias, que não cede com antitérmicos. Há ainda exantema polimorfo no tronco, edema endurado de mãos e pés e um linfonodo cervical de 2 cm. Exames: PCR de 12 mg/dL, plaquetas de 520.000/mm³ e leucocitúria estéril. A amoxicilina iniciada há quatro dias não trouxe melhora.\n\nNa classificação de Chapel Hill (2012), a doença suspeitada pertence a que grupo de vasculites?",
   "alternativas": [
    "Pequeno calibre, por depósito de imunocomplexos de IgA",
    "Médio calibre, com predileção pelas coronárias",
@@ -30601,12 +30601,12 @@
    "Grande calibre, como a aorta e seus ramos principais"
   ],
   "correta": 1,
-  "explicacao": "A doença de Kawasaki é classificada, ao lado da poliarterite nodosa, entre as vasculites de vasos de médio calibre, com predileção pelas artérias coronárias, daí o risco de aneurismas. A aorta e seus grandes ramos são acometidos na arterite de Takayasu e na arterite de células gigantes. A vasculite por IgA (púrpura de Henoch-Schönlein) é de pequenos vasos, por imunocomplexos. As vasculites associadas ao ANCA, como a granulomatose com poliangiite, também são de pequenos vasos. Vênulas com trombose não caracterizam a doença.",
+  "explicacao": "Febre por cinco dias ou mais com alterações de lábios e língua, conjuntivite não exsudativa, exantema polimorfo, alterações de extremidades e linfonodo cervical (aqui, os cinco critérios) configuram doença de Kawasaki; a falta de resposta ao antibiótico e a conjuntivite sem secreção falam contra infecção bacteriana. Na classificação de Chapel Hill (2012), a doença de Kawasaki está, ao lado da poliarterite nodosa, entre as vasculites de vasos de médio calibre, com predileção pelas artérias coronárias, daí o risco de aneurismas. A aorta e seus grandes ramos são acometidos na arterite de Takayasu e na arterite de células gigantes. A vasculite por IgA (púrpura de Henoch-Schönlein) é de pequenos vasos, por imunocomplexos. As vasculites associadas ao ANCA, como a granulomatose com poliangiite, também são de pequenos vasos. Vênulas com trombose não caracterizam a doença. Para lembrar: imunoglobulina IV (2 g/kg) com AAS, idealmente nos primeiros 10 dias de febre, reduz o risco de aneurismas coronarianos.",
   "tema": "doenca-de-kawasaki",
   "subtema": "doenca-de-kawasaki.complicacoes",
   "especialidade": "reumatologia",
   "disciplina": "Reumatologia",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
   "prova": null,

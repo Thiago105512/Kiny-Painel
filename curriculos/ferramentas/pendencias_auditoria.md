@@ -6,3 +6,4 @@
 - Residência: par da varfarina agora é família (não cai junto). Temas repetidos no lote 7 (invaginação 3, pancreatite 5, diverticulite 3).
 
 - Caso do dia fácil demais: RESOLVIDO (set/2026) — teste às cegas mostrou 89/120 casos resolvidos com 2 pistas (confiança alta); pistas reescritas e revisadas por médico; reteste: 20/89 ainda altos (≈17% do total), 54 médios, 15 baixos. Pistas ≤170 caracteres.
+- Enunciados curtos (<200 car.): AUDITADO (set/2026) — 48 questões: 31 conceituais mantidas; 17 reescritas em vinhetas (8 dependiam de outra questão, ex.: 'na mesma comunidade…'), verificadas às cegas 17/17. Build agora recusa subtema fora do tema.

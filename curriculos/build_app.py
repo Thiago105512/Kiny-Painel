@@ -58,6 +58,9 @@ def validar_banco(banco, temas):
             tema = q.get("tema")
             if tema is not None and tema not in temas:
                 erros.append(f"{onde}: tema '{tema}' não existe no catálogo")
+            sub = q.get("subtema")
+            if t in ("medicina", "residencia") and sub and tema in temas and sub not in temas[tema]:
+                erros.append(f"{onde}: subtema '{sub}' não pertence ao tema '{tema}'")
             if q.get("dificuldade") not in (None, 1, 2, 3):
                 erros.append(f"{onde}: dificuldade deve ser 1, 2 ou 3")
             fam = q.get("familia")
