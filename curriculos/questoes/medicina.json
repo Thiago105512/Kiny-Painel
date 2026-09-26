@@ -157,21 +157,21 @@
  {
   "id": "med-adce296a",
   "area": "Parasitologia",
-  "enunciado": "A leishmaniose tegumentar americana, endêmica no Amazonas, acomete sobretudo pessoas que trabalham ou moram próximo a áreas de mata. Os protozoários são transmitidos ao ser humano pela picada de fêmeas de:",
+  "enunciado": "Em um município da Amazônia com casos de leishmaniose, a equipe de vigilância orienta moradores de uma área periurbana próxima à mata. Um agente comunitário sugere repetir as ações usadas contra a dengue: eliminar recipientes com água parada, pneus e caixas-d'água destampadas.\n\nPor que essa estratégia é pouco eficaz contra o vetor das leishmanioses, e o que deve ser priorizado no manejo ambiental?",
   "alternativas": [
-   "Culicídeos do gênero Anopheles",
-   "Flebotomíneos (Lutzomyia spp.)",
-   "Triatomíneos (Triatoma spp.)",
-   "Culicídeos do gênero Aedes",
-   "Simulídeos (Simulium spp.)"
+   "Larvas em solo úmido com matéria orgânica; limpar quintais e restos vegetais",
+   "Ovos em frestas de casas de pau a pique; rebocar e vedar as paredes",
+   "Larvas em rios e igarapés; drenar e aterrar as margens dos cursos d'água",
+   "Larvas em água limpa acumulada; tampar reservatórios e caixas-d'água",
+   "Larvas em ocos de árvores com água; derrubar a mata perto das casas"
   ],
-  "correta": 1,
-  "explicacao": "As leishmanioses são transmitidas pela picada de fêmeas de flebotomíneos (gênero Lutzomyia nas Américas), conhecidos como mosquito-palha, birigui ou tatuquira, que inoculam formas promastigotas metacíclicas. Anopheles transmite malária; triatomíneos, a doença de Chagas; Aedes, dengue, zika, chikungunya e febre amarela urbana; simulídeos (piuns), a oncocercose e a mansonelose. Para lembrar: nas Américas o flebotomíneo vetor é do gênero Lutzomyia; no Velho Mundo, do gênero Phlebotomus.",
+  "correta": 0,
+  "explicacao": "Os flebotomíneos (Lutzomyia), vetores das leishmanioses, têm ciclo terrestre: ovos, larvas e pupas se desenvolvem em solo úmido, sombreado e rico em matéria orgânica (folhas, frutos caídos, fezes de animais), e não em coleções de água. Por isso o manejo ambiental recomendado pelo Ministério da Saúde inclui limpeza de quintais e terrenos, poda de árvores para aumentar a insolação, destino adequado do lixo orgânico e afastamento dos abrigos de animais domésticos, somados a telas de malha fina, mosquiteiros, repelentes e, em situações definidas, borrifação residual. Rios e igarapés são criadouros do Anopheles; frestas de paredes abrigam triatomíneos; água limpa acumulada é criadouro do Aedes. Derrubar a mata não é medida recomendada e não elimina o risco, pois na leishmaniose tegumentar os reservatórios são silvestres. Para lembrar: o mosquito-palha é pequeno, voa baixo e em saltos, e atravessa mosquiteiros de malha larga.",
   "tema": "leishmaniose",
   "subtema": "leishmaniose.ciclo-biologico-e-vetor",
   "especialidade": "parasitologia",
   "disciplina": "Parasitologia",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
   "prova": null,
@@ -247,24 +247,25 @@
  {
   "id": "med-f3825734",
   "area": "Cardiologia",
-  "enunciado": "Homem de 58 anos, tabagista, chega à UPA com dor torácica opressiva há 1 hora. Recebeu dinitrato de isossorbida sublingual e, 10 minutos depois, a PA caiu de 104/66 para 78/48 mmHg. Ao exame: FC 56 bpm, jugulares túrgidas a 45°, pulmões com murmúrio vesicular sem estertores, extremidades frias. O ECG mostra supradesnivelamento do segmento ST de 3 mm em DII, DIII e aVF, infradesnivelamento em DI e aVL e, nas derivações precordiais direitas, supradesnivelamento de 1,5 mm em V4R.\n\nQual é a interpretação correta e qual conduta deve ser priorizada para a hipotensão, enquanto se providencia a reperfusão?",
+  "enunciado": "Homem de 60 anos, diabético, chega com dor torácica opressiva há 1 hora e 30 minutos. O ECG de 12 derivações mostra infradesnivelamento horizontal do segmento ST de 2 mm em V1 a V3, com ondas R amplas e ondas T positivas nessas derivações, sem supradesnivelamento de ST em outras derivações. A troponina inicial ainda é normal.\n\nQual é a conduta mais adequada para esclarecer o diagnóstico?",
   "alternativas": [
-   "IAM inferior restrito ao VE pela circunflexa; iniciar nitroglicerina IV em infusão contínua",
-   "IAM lateral pela circunflexa; iniciar furosemida IV para reduzir a congestão sistêmica",
-   "IAM inferior com extensão ao VD pela coronária direita; furosemida e nitrato IV contínuo",
-   "IAM inferior com extensão ao VD pela coronária direita; expandir volume e evitar nitratos",
-   "IAM anterior extenso pela descendente anterior; morfina e nitroglicerina IV em bolus"
+   "Registrar V3R e V4R, pois o padrão sugere infarto isolado do ventrículo direito",
+   "Tratar como angina estável e repetir o ECG só após a segunda troponina",
+   "Atribuir o achado a hipertrofia ventricular, sem investigar isquemia aguda",
+   "Registrar V7 a V9, pois o padrão sugere infarto posterior com supra de ST",
+   "Classificar como infarto sem supra e agendar cateterismo em 24 a 72 horas"
   ],
   "correta": 3,
-  "explicacao": "O supra de ST em DII, DIII e aVF, com imagem em espelho em DI/aVL, indica infarto inferior. O supra em V4R, somado à tríade hipotensão, turgência jugular e pulmões limpos, sugere extensão ao ventrículo direito, em geral por oclusão proximal da coronária direita (a bradicardia reforça, pela irrigação do nó sinusal e do nó AV). O VD infartado depende da pré-carga. Nitratos, diuréticos e morfina reduzem o retorno venoso e podem precipitar choque, como aconteceu após o nitrato. A conduta é expansão volêmica cuidadosa com cristaloide, sem nitratos, e reperfusão imediata. As opções com furosemida ou nitrato são perigosas, e as localizações lateral e anterior não correspondem ao ECG.",
+  "explicacao": "Infradesnivelamento de ST em V1 a V3, com ondas R amplas e T positivas, é a imagem em espelho de um supradesnivelamento na parede posterior (inferobasal) do ventrículo esquerdo, em geral território da circunflexa ou da coronária direita, que as derivações convencionais não registram diretamente. Devem-se registrar V7, V8 e V9 (5º espaço intercostal nas linhas axilar posterior, escapular média e paravertebral esquerdas): supra de ST de 0,5 mm ou mais confirma infarto posterior, equivalente de infarto com supra, que exige reperfusão imediata. Classificá-lo como infarto sem supra atrasaria a reperfusão. V3R e V4R avaliam o ventrículo direito, cujo infarto acompanha o inferior e dá supra em V1, e não infra. Esperar a segunda troponina perde tempo de miocárdio. A hipertrofia ventricular dá ondas R amplas em V5 e V6, com alteração de repolarização lateral. Para lembrar: infra de V1 a V3 visto 'de cabeça para baixo' é supra posterior.",
   "tema": "sindrome-coronariana-aguda",
   "subtema": "sindrome-coronariana-aguda.eletrocardiograma-e-localizacao",
   "especialidade": "cardiologia",
   "disciplina": "Cardiologia",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-20f0b586",
@@ -335,24 +336,25 @@
  {
   "id": "med-7b46be61",
   "area": "Anatomia",
-  "enunciado": "Mulher de 52 anos refere há 4 meses dormência no lábio inferior, no mento e na parte anterior da língua à direita, além de cansaço ao mastigar. Ao exame, há hipoestesia tátil e dolorosa no território descrito, atrofia do masseter e do temporal à direita, e a mandíbula desvia para a direita quando a paciente abre a boca. O reflexo corneano está preservado bilateralmente, assim como a sensibilidade da fronte e da região malar. A mímica facial e o paladar estão normais.\n\nUma lesão expansiva comprimindo o nervo em sua passagem pela base do crânio explicaria o quadro. Por qual forame esse nervo deixa o crânio?",
+  "enunciado": "Homem de 50 anos, após fratura da asa menor do esfenoide em acidente, apresenta ptose palpebral completa à direita, olho direito imóvel em todas as direções, pupila direita midriática e não reagente à luz e anestesia da fronte e da córnea à direita. A acuidade visual está preservada, e a sensibilidade da bochecha e do lábio superior é normal.\n\nPor qual estrutura passam todos os nervos acometidos?",
   "alternativas": [
-   "Forame redondo",
+   "Forame oval",
    "Fissura orbital superior",
-   "Forame estilomastóideo",
-   "Forame espinhoso",
-   "Forame oval"
+   "Canal óptico",
+   "Fissura orbital inferior",
+   "Forame redondo"
   ],
-  "correta": 4,
-  "explicacao": "O quadro combina déficit sensitivo no território mandibular (lábio inferior, mento, parte anterior da língua) com fraqueza dos músculos da mastigação. O desvio da mandíbula para o lado lesado ocorre porque o pterigóideo lateral contralateral fica sem oposição. Essa é a assinatura do nervo mandibular (V3), única divisão do trigêmeo com fibras motoras, que sai do crânio pelo forame oval. Córnea e fronte preservadas afastam V1 (fissura orbital superior), e região malar preservada afasta V2 (forame redondo). O forame estilomastóideo dá saída ao facial, e a mímica está normal. Pelo forame espinhoso passa a artéria meníngea média, não o V3.",
+  "correta": 1,
+  "explicacao": "Pela fissura orbital superior passam o oculomotor (III), o troclear (IV), os ramos do nervo oftálmico (V1: frontal, lacrimal e nasociliar) e o abducente (VI), além das veias oftálmicas e de fibras simpáticas. A lesão conjunta produz oftalmoplegia total, ptose, midríase arreativa (fibras parassimpáticas do III) e anestesia da fronte e da córnea (V1): é a síndrome da fissura orbital superior. A visão preservada afasta o canal óptico, por onde passam o nervo óptico e a artéria oftálmica; se ele também fosse atingido, haveria síndrome do ápice orbitário. A sensibilidade normal da bochecha e do lábio superior afasta o forame redondo, por onde sai o nervo maxilar (V2), e a fissura orbital inferior, que conduz o nervo infraorbital. O forame oval dá passagem ao nervo mandibular (V3). Para lembrar: fissura orbital superior com perda visual passa a ser síndrome do ápice orbitário.",
   "tema": "nervos-cranianos",
   "subtema": "nervos-cranianos.forames-da-base-do-cranio",
   "especialidade": "anatomia",
   "disciplina": "Anatomia",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-e1e0e8a7",
@@ -625,24 +627,25 @@
  {
   "id": "med-64a55a8d",
   "area": "Histologia",
-  "enunciado": "Mulher de 27 anos apresenta perda visual dolorosa no olho esquerdo há 5 dias. Há um ano teve parestesias em membro inferior direito que regrediram espontaneamente. A ressonância magnética mostra lesões ovoides na substância branca periventricular, perpendiculares ao corpo caloso, e o liquor tem bandas oligoclonais.\n\nNa doença sugerida, a célula primariamente lesada, responsável pela mielina no sistema nervoso central, é o(a):",
+  "enunciado": "Em corte histológico do ventrículo lateral, observam-se células cúbicas a colunares, com cílios e microvilosidades, revestindo a cavidade. No plexo coroide, uma variação dessas células forma um epitélio unido por junções oclusivas, apoiado sobre capilares fenestrados.\n\nQual é a célula e a principal função exercida no plexo coroide?",
   "alternativas": [
-   "Célula de Schwann",
-   "Astrócito fibroso",
-   "Micróglia",
-   "Oligodendrócito",
-   "Célula ependimária"
+   "Astrócito; pés vasculares que formam a barreira hematoencefálica",
+   "Micróglia; fagocitose de restos celulares e apresentação de antígenos",
+   "Oligodendrócito; mielina de vários axônios do sistema nervoso central",
+   "Célula ependimária; produção do líquor e barreira hematoliquórica",
+   "Célula de Schwann; mielinização e guia da regeneração dos axônios"
   ],
   "correta": 3,
-  "explicacao": "O quadro (neurite óptica, episódio prévio e lesões periventriculares disseminadas no tempo e no espaço) sugere esclerose múltipla, doença desmielinizante do SNC. No SNC, a mielina é formada pelos oligodendrócitos, e cada um mieliniza segmentos de vários axônios. A célula de Schwann faz a mielina no sistema nervoso periférico (alvo da síndrome de Guillain-Barré, por exemplo). Astrócitos dão suporte metabólico e formam a cicatriz glial; a micróglia é fagocítica; as células ependimárias revestem os ventrículos.",
+  "explicacao": "As células ependimárias revestem os ventrículos e o canal central da medula; são cúbicas ou colunares, com cílios que movimentam o líquor e microvilosidades. No plexo coroide, o epitélio coroide (ependimário modificado) recobre capilares fenestrados e, unido por junções oclusivas, forma a barreira hematoliquórica e secreta o líquor, cerca de 500 mL por dia. Os astrócitos formam pés vasculares junto ao endotélio da barreira hematoencefálica e a cicatriz glial. O oligodendrócito produz a mielina de vários axônios no sistema nervoso central. A micróglia, de origem mieloide, é o fagócito residente. A célula de Schwann mieliniza no sistema nervoso periférico e guia a regeneração axonal. Para lembrar: a barreira hematoencefálica está no endotélio de capilares contínuos; a hematoliquórica, no epitélio do plexo coroide.",
   "tema": "tecido-nervoso",
   "subtema": "tecido-nervoso.celulas-da-glia",
   "especialidade": "histologia-embriologia",
   "disciplina": "Histologia",
-  "dificuldade": 2,
+  "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-1b2cafc2",
@@ -912,16 +915,16 @@
  {
   "id": "med-7c6f0939",
   "area": "Parasitologia",
-  "enunciado": "Mulher de 26 anos, moradora de São Paulo, teve malária por Plasmodium vivax após viagem ao Amazonas e foi tratada apenas com cloroquina por 3 dias, com melhora e gota espessa negativa no controle. Três meses depois, sem nova viagem nem transfusão, volta a ter febre com calafrios em dias alternados, e a gota espessa mostra novamente P. vivax.\n\nO que explica esse novo episódio e qual medicamento teria reduzido esse risco?",
+  "enunciado": "Mulher de 45 anos, moradora de Curitiba e sem viagens nos últimos anos, apresenta febre com calafrios em dias alternados 3 semanas após receber concentrado de hemácias durante uma cirurgia. A gota espessa mostra Plasmodium vivax. A investigação identifica que um dos doadores havia morado em área endêmica da Amazônia.\n\nApós tratar a fase sanguínea com cloroquina, qual é a conduta em relação à primaquina e por quê?",
   "alternativas": [
-   "Recrudescência por resistência à cloroquina; deveria ter sido usado artesunato com mefloquina",
-   "Reinfecção autóctone em São Paulo; deveria ter sido feita profilaxia com doxiciclina após a viagem",
-   "Persistência de gametócitos no sangue; a cloroquina deveria ter sido mantida por 14 dias",
-   "Recaída por hipnozoítos hepáticos; a primaquina, esquizonticida tecidual, deveria ter sido associada",
-   "Recaída por merozoítos latentes nas hemácias; deveria ter sido associado quinino oral"
+   "Obrigatória, pois as formas do sangue do doador reinvadem o fígado da receptora",
+   "Obrigatória por 7 dias, pois todo P. vivax deixa hipnozoítos, qualquer que seja a via",
+   "Contraindicada, pois a primaquina só age sobre gametócitos do P. falciparum",
+   "Indicada em dose única, para eliminar esporozoítos presentes no sangue transfundido",
+   "Dispensável, pois a infecção por hemácias não gera formas hepáticas latentes"
   ],
-  "correta": 3,
-  "explicacao": "P. vivax (e P. ovale) forma hipnozoítos, formas latentes nos hepatócitos que podem ativar-se semanas a meses depois e causar recaídas. A cloroquina é esquizonticida sanguínea e não atinge os hipnozoítos; por isso o Ministério da Saúde associa primaquina (esquizonticida tecidual) por 7 ou 14 dias — ou, em situações específicas, tafenoquina —, com atenção à deficiência de G6PD. Recrudescência vem de formas sanguíneas não eliminadas e surgiria mais cedo; reinfecção é improvável sem nova exposição; gametócitos não causam doença clínica; merozoítos não ficam latentes em hemácias e o quinino não elimina hipnozoítos.",
+  "correta": 4,
+  "explicacao": "Na infecção natural, o Anopheles inocula esporozoítos, que invadem o hepatócito; no P. vivax e no P. ovale, parte deles fica latente como hipnozoíto e causa recaídas. Na malária transfusional, assim como na congênita ou por compartilhamento de seringas, transmitem-se formas eritrocitárias, que não reinvadem o fígado; por isso não há hipnozoítos nem recaídas, e basta tratar a fase sanguínea, sem primaquina. Esporozoítos não circulam no sangue de um doador com infecção estabelecida. A primaquina não é restrita ao P. falciparum: é usada justamente contra os hipnozoítos do P. vivax, além de agir sobre gametócitos. Nesses casos, a notificação e a investigação do doador são obrigatórias. Para lembrar: sem mosquito, sem fígado — malária adquirida pelo sangue não recai.",
   "tema": "malaria",
   "subtema": "malaria.transmissao-e-ciclo-biologico",
   "especialidade": "parasitologia",
@@ -929,7 +932,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-1b8e14c0",
@@ -1289,16 +1293,16 @@
  {
   "id": "med-dfded720",
   "area": "Infectologia",
-  "enunciado": "Homem de 38 anos, catador de recicláveis em Manaus, trabalhou em área alagada após enchente. Há 7 dias iniciou febre, cefaleia e mialgia intensa em panturrilhas; há 2 dias surgiram icterícia e redução do volume urinário. Exame: PA 104/66 mmHg, FC 104 bpm, icterícia rubínica (3+/4+), sufusão conjuntival bilateral, dor à palpação das panturrilhas.\n\nExames: creatinina 3,8 mg/dL; ureia 140 mg/dL; potássio 3,1 mEq/L; bilirrubina total 18 mg/dL (direta 15); AST 110 U/L; ALT 90 U/L; CPK 2.400 U/L; plaquetas 60.000/mm³; leucócitos 14.500/mm³ com desvio à esquerda. Urina: proteinúria leve e poucos cilindros granulosos.\n\nQual interpretação está correta?",
+  "enunciado": "Homem de 27 anos teve, há 2 semanas, febre alta, mialgia intensa de panturrilhas e sufusão conjuntival por 6 dias, após nadar em um igarapé perto de uma criação de porcos. Ficou 2 dias sem febre e voltou a ter febre moderada, cefaleia intensa e rigidez de nuca. Está lúcido e anictérico. Líquor: 180 células/mm³ com 80% de linfócitos, proteína de 75 mg/dL, glicose normal e bacterioscopia negativa. A hemocultura colhida agora é negativa.\n\nQual interpretação é a mais adequada?",
   "alternativas": [
-   "Transaminases abaixo de 5 vezes o normal com hiperbilirrubinemia direta indicam obstrução biliar; o próximo passo é ultrassonografia seguida de CPRE",
-   "O potássio baixo afasta lesão renal intrínseca e confirma LRA pré-renal; basta hidratação vigorosa e reavaliação da creatinina em 48 horas",
-   "O quadro sugere hepatite A fulminante; antibióticos não têm papel e o paciente deve ser referenciado para avaliação de transplante hepático",
-   "O conjunto — lesão renal com hipocalemia, icterícia intensa com transaminases pouco elevadas e CPK alta — sugere a forma grave da leptospirose, com indicação de antibiótico IV",
-   "O quadro sugere leptospirose, mas o antibiótico está contraindicado após o 5º dia, pois a fase imune depende apenas de resposta do hospedeiro"
+   "Encefalite herpética, pela febre com cefaleia e líquor com linfócitos",
+   "Fase imune da leptospirose, com meningite asséptica; diagnóstico por sorologia",
+   "Recidiva da fase septicêmica, com leptospiremia alta; repetir a hemocultura",
+   "Meningite tuberculosa, pelo predomínio linfocitário com proteína elevada",
+   "Meningite pneumocócica, pois a febre bifásica indica infecção bacteriana secundária"
   ],
-  "correta": 3,
-  "explicacao": "Exposição a água de enchente, mialgia em panturrilhas, sufusão conjuntival, icterícia rubínica e insuficiência renal caracterizam a síndrome de Weil. Na leptospirose, a LRA costuma ser não oligúrica e hipocalêmica (lesão tubular com perda de potássio), a hiperbilirrubinemia é desproporcional às transaminases (geralmente < 200 U/L) e a CPK sobe pela miosite; plaquetopenia é comum. Hepatites virais graves elevam muito as transaminases. A ultrassonografia pode ser útil para excluir obstrução, mas a clínica e a CPK não sugerem coledocolitíase. O Ministério da Saúde recomenda antibiótico em qualquer fase da doença; nas formas graves, penicilina cristalina, ampicilina, ceftriaxona ou cefotaxima IV, além de suporte (inclusive diálise precoce).",
+  "correta": 1,
+  "explicacao": "A leptospirose pode ter curso bifásico. Na fase precoce (septicêmica), de 3 a 7 dias, há leptospiras no sangue e no líquor. Depois de 1 a 3 dias de melhora, começa a fase imune: surgem anticorpos IgM, as leptospiras desaparecem do sangue e passam a ser eliminadas na urina, e pode ocorrer meningite asséptica, com pleocitose linfocitária, proteína discretamente elevada e glicose normal. Por isso a hemocultura é negativa nessa fase, e o diagnóstico é sorológico (ELISA-IgM e microaglutinação com soroconversão); porcos são reservatórios conhecidos. A meningite pneumocócica tem predomínio de neutrófilos e glicose baixa. A meningite tuberculosa costuma ter glicose baixa e curso arrastado, sem a fase febril anterior típica. A encefalite herpética altera consciência e comportamento e dá sinais focais, ausentes aqui. Para lembrar: na fase imune, procura-se o anticorpo no sangue, e a leptospira sai pela urina.",
   "tema": "leptospirose",
   "subtema": "leptospirose.quadro-clinico",
   "especialidade": "infectologia",
@@ -1306,7 +1310,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-b75bf021",
@@ -1889,24 +1894,25 @@
  {
   "id": "med-761de3a2",
   "area": "Pneumologia",
-  "enunciado": "Mulher de 55 anos, previamente hígida, no 5º dia pós-operatório de artroplastia total de quadril esquerdo, em deambulação limitada e com profilaxia farmacológica irregular, apresenta dispneia súbita e dor torácica pleurítica. Exame: PA 128/80 mmHg, FC 116 bpm, FR 26 irpm, SpO2 90% em ar ambiente; sem edema ou dor em panturrilhas; sem hemoptise. Não tem câncer nem tromboembolismo prévio. ECG com taquicardia sinusal; radiografia de tórax sem alterações relevantes; creatinina 0,8 mg/dL. O plantonista considera TEP o diagnóstico mais provável.\n\nPelo escore de Wells, qual a pontuação e a conduta diagnóstica mais adequada?",
+  "enunciado": "Mulher de 32 anos procura a emergência por dor torácica pleurítica leve à direita, após um dia de tosse e coriza. Não usa estrogênio, não teve cirurgia, trauma ou internação recentes nem tromboembolismo prévio, e não tem hemoptise. FC de 84 bpm, SpO2 de 98% em ar ambiente e sem edema de membros inferiores. O médico estima baixa a probabilidade clínica de tromboembolismo pulmonar (menos de 15%).\n\nQual é a conduta mais adequada em relação à investigação de tromboembolismo pulmonar?",
   "alternativas": [
-   "6 pontos, TEP improvável: dosar D-dímero e solicitar angiotomografia apenas se estiver elevado",
-   "6 pontos, TEP provável: angiotomografia de artérias pulmonares, sem necessidade de D-dímero antes",
-   "4,5 pontos, TEP provável: dosar D-dímero, pois um resultado normal exclui TEP nesse grupo",
-   "7,5 pontos, TEP provável: trombólise sistêmica imediata, sem necessidade de exame de imagem",
-   "3 pontos, TEP improvável: dispensar investigação e manter apenas a profilaxia com heparina"
+   "Solicitar angiotomografia, exame de escolha em qualquer suspeita de embolia",
+   "Não investigar, pois todos os critérios PERC são negativos com probabilidade baixa",
+   "Fazer cintilografia, pois a probabilidade baixa contraindica a angiotomografia",
+   "Dosar D-dímero, obrigatório em toda dor torácica pleurítica antes da alta",
+   "Solicitar ecocardiograma, que exclui embolia se o ventrículo direito for normal"
   ],
   "correta": 1,
-  "explicacao": "Escore de Wells: TEP como diagnóstico mais provável = 3; FC > 100 bpm = 1,5; cirurgia nas últimas 4 semanas = 1,5; não há sinais de TVP, hemoptise, câncer nem TEP/TVP prévio. Total = 6 pontos, acima de 4 (TEP provável no modelo de dois níveis). Em pacientes com probabilidade alta ou \"provável\", o D-dímero não deve ser usado para excluir TEP (um valor normal não é suficiente) e, além disso, costuma estar elevado no pós-operatório; indica-se diretamente a angiotomografia de artérias pulmonares, podendo-se iniciar anticoagulação enquanto se aguarda, se não houver contraindicação. A paciente está hemodinamicamente estável, sem indicação de trombólise sistêmica.",
+  "explicacao": "A regra PERC reúne oito critérios: idade de 50 anos ou mais, frequência cardíaca de 100 bpm ou mais, SpO2 abaixo de 95%, hemoptise, uso de estrogênio, tromboembolismo prévio, edema unilateral de perna e cirurgia ou trauma com internação nas últimas 4 semanas. Ela só se aplica quando a probabilidade clínica já é baixa; se nenhum critério estiver presente, o risco de embolia é tão baixo que não se deve pedir nem o D-dímero, evitando falsos-positivos, radiação e contraste. Se algum critério for positivo, dosa-se o D-dímero, e, se estiver alto, faz-se a angiotomografia. A angiotomografia direta é para probabilidade alta. A cintilografia é alternativa quando o contraste é contraindicado. O ecocardiograma normal não exclui embolia em paciente estável. Para lembrar: a PERC não serve para quem já tem probabilidade intermediária ou alta.",
   "tema": "tromboembolismo-venoso",
   "subtema": "tromboembolismo-venoso.tromboembolismo-pulmonar",
   "especialidade": "pneumologia",
   "disciplina": "Pneumologia",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-0de385ab",
@@ -2089,16 +2095,16 @@
  {
   "id": "med-2029826e",
   "area": "Nefrologia",
-  "enunciado": "Menino de 8 anos apresenta urina \"cor de coca-cola\", edema palpebral matinal e PA 130/88 mmHg, três semanas após impetigo em membros inferiores. Diurese discretamente reduzida. Urina: hematúria com dismorfismo eritrocitário, cilindros hemáticos e proteinúria de 0,6 g/24 h. Creatinina 0,9 mg/dL.\n\nQual achado laboratorial é esperado e reforça a principal hipótese diagnóstica?",
+  "enunciado": "Menino de 9 anos teve glomerulonefrite pós-estreptocócica há 6 meses, com edema, hipertensão e hematúria macroscópica, que se resolveram em 3 semanas. Na consulta de seguimento, está assintomático, com PA de 102/64 mmHg, creatinina de 0,5 mg/dL, C3 normal desde o 2º mês e relação proteína/creatinina urinária normal. O exame de urina mostra 15 hemácias por campo.\n\nQual é a conduta mais adequada?",
   "alternativas": [
-   "C3 sérico normal, com IgA sérica elevada",
-   "Anticorpo antimembrana basal glomerular positivo",
-   "Proteinúria maciça com albumina sérica < 2,5 g/dL",
-   "C3 sérico baixo, com normalização em até 8 semanas",
-   "ANCA positivo com padrão perinuclear (p-ANCA)"
+   "Manter seguimento clínico, pois a hematúria microscópica pode durar 1 a 2 anos",
+   "Iniciar prednisona para acelerar a resolução da inflamação glomerular",
+   "Iniciar enalapril, pois a hematúria indica progressão para doença renal",
+   "Prescrever penicilina benzatina mensal para evitar nova glomerulonefrite",
+   "Indicar biópsia renal, pois hematúria após 6 meses define doença crônica"
   ],
-  "correta": 3,
-  "explicacao": "Síndrome nefrítica (hematúria dismórfica, cilindros hemáticos, edema, hipertensão) 1 a 3 semanas após faringite ou 3 a 6 semanas após piodermite sugere glomerulonefrite pós-estreptocócica. Há ativação da via alternativa do complemento, com C3 baixo que se normaliza em 6 a 8 semanas; persistência além disso sugere outra doença, como glomerulonefrite membranoproliferativa ou lúpus. A nefropatia por IgA tem complemento normal e hematúria que acompanha a infecção (sinfaringítica); anti-MBG e ANCA indicam glomerulonefrites rapidamente progressivas de outra natureza; proteinúria maciça com hipoalbuminemia caracteriza síndrome nefrótica.",
+  "correta": 0,
+  "explicacao": "Na criança, a glomerulonefrite pós-estreptocócica tem ótimo prognóstico: edema e hipertensão cedem em 1 a 2 semanas, o C3 normaliza em 6 a 8 semanas, a proteinúria regride em meses, e a hematúria microscópica isolada pode persistir por 1 a 2 anos sem significar mau prognóstico. Com pressão, função renal, C3 e proteinúria normais, basta acompanhar periodicamente com exame de urina e aferição da pressão. A biópsia seria considerada se o C3 continuasse baixo após 8 semanas, se houvesse proteinúria persistente ou nefrótica, perda de função renal ou hematúria além do tempo esperado. O corticoide não tem papel na doença. A profilaxia antibiótica prolongada, usada na febre reumática, não é indicada, pois as recorrências de glomerulonefrite são raras. O IECA fica reservado para proteinúria ou hipertensão persistentes. Para lembrar: na glomerulonefrite pós-estreptocócica, a hematúria microscópica é a última alteração a desaparecer.",
   "tema": "sindromes-glomerulares",
   "subtema": "sindromes-glomerulares.glomerulonefrite-pos-estreptococica",
   "especialidade": "nefrologia",
@@ -2106,7 +2112,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-76bca93e",
@@ -3956,16 +3963,16 @@
  {
   "id": "med-db9e231d",
   "area": "Trauma",
-  "enunciado": "Jovem de 22 anos, vítima de facada no hemitórax esquerdo, chega com dispneia intensa, SpO2 84%, PA 78/40 mmHg, FC 138 bpm, turgência jugular, desvio da traqueia para a direita, murmúrio vesicular abolido e hipertimpanismo à esquerda.\n\nQual é a conduta imediata?",
+  "enunciado": "Jovem de 22 anos, vítima de facada no hemitórax esquerdo, chega com dispneia intensa, SpO2 de 84%, PA de 78/40 mmHg, FC de 140 bpm, jugulares distendidas, traqueia desviada para a direita, murmúrio abolido e hipertimpanismo à esquerda. Após descompressão imediata, a PA sobe para 110/70 mmHg em poucos minutos.\n\nQual mecanismo explicava o choque antes da descompressão?",
   "alternativas": [
-   "Descompressão torácica imediata no 4º ou 5º espaço intercostal esquerdo, anterior à linha axilar média",
-   "Toracotomia anterolateral esquerda de reanimação no próprio setor de emergência",
-   "Radiografia de tórax em incidência anteroposterior para confirmar o diagnóstico antes de intervir",
-   "Pericardiocentese subxifoide imediata, pela presença de hipotensão com turgência jugular",
-   "Intubação orotraqueal com ventilação em alta pressão positiva antes de qualquer drenagem"
+   "Disfunção contrátil do ventrículo esquerdo por contusão miocárdica",
+   "Perda de sangue para o espaço pleural, em volume superior a 1.500 mL",
+   "Compressão do coração pelo sangue acumulado no saco pericárdico",
+   "Queda do retorno venoso pela pressão intratorácica alta e o desvio do mediastino",
+   "Vasodilatação sistêmica por mediadores liberados pela lesão pulmonar"
   ],
-  "correta": 0,
-  "explicacao": "O quadro é de pneumotórax hipertensivo: o ar acumulado sob pressão colapsa o pulmão, desvia o mediastino, reduz o retorno venoso e causa choque obstrutivo. O diagnóstico é clínico e o tratamento é imediato, sem aguardar radiografia; o ATLS (10ª edição) recomenda, em adultos, a descompressão com agulha no 4º/5º espaço intercostal anterior à linha axilar média (alternativa: 2º espaço na linha hemiclavicular) ou toracostomia digital, seguida de drenagem torácica. O tamponamento cardíaco também causa turgência jugular e hipotensão, mas não explica o murmúrio abolido, o hipertimpanismo e o desvio da traqueia. Ventilação com pressão positiva antes da descompressão agrava o quadro.",
+  "correta": 3,
+  "explicacao": "No pneumotórax hipertensivo, um mecanismo valvular acumula ar sob pressão na pleura; a pressão intratorácica positiva e o desvio do mediastino comprimem e angulam as veias cavas, reduzindo o retorno venoso e a pré-carga. É um choque obstrutivo: por isso as jugulares ficam distendidas e a pressão se recupera logo após a descompressão. O hemotórax maciço causa choque hipovolêmico, com jugulares colabadas e macicez à percussão. O tamponamento também é obstrutivo e ingurgita as jugulares, mas não produz murmúrio abolido com hipertimpanismo nem melhora com descompressão pleural. A vasodilatação sistêmica caracteriza o choque distributivo, com jugulares vazias. A contusão miocárdica causa choque cardiogênico, sem os achados pleurais. Para lembrar: choque com jugulares cheias no trauma é obstrutivo (pneumotórax hipertensivo ou tamponamento) até prova em contrário.",
   "tema": "trauma-toracico",
   "subtema": "trauma-toracico.pneumotorax-hipertensivo",
   "especialidade": "trauma",
@@ -3973,7 +3980,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-fae98c45",
@@ -4247,16 +4255,16 @@
  {
   "id": "med-7070a7e0",
   "area": "Neonatologia",
-  "enunciado": "Recém-nascido a termo, 3.200 g, parto vaginal, apresenta icterícia visível na face e no tronco com 20 horas de vida. Mãe O Rh positivo; RN A Rh positivo. Exames do RN com 22 horas:\n• Bilirrubina total 11,8 mg/dL; bilirrubina direta 0,6 mg/dL\n• Hb 13,4 g/dL; reticulócitos 9%\n• Teste de Coombs direto fracamente positivo\n• Esfregaço de sangue periférico: microesferócitos\nMãe sem sensibilização prévia conhecida; primeira gestação, pré-natal sem intercorrências, sorologias negativas. RN em aleitamento materno exclusivo, com boa sucção e sem perda ponderal excessiva.\n\nQual é a explicação fisiopatológica mais adequada para o quadro?",
+  "enunciado": "Recém-nascido do sexo masculino, a termo, com 3.300 g, filho de pais de ascendência africana e em aleitamento materno exclusivo, apresenta icterícia intensa no 3º dia de vida, dois dias depois de a mãe guardar as roupas do enxoval com bolinhas de naftalina. Mãe O Rh positivo; RN O Rh positivo. Exames: bilirrubina total de 19,5 mg/dL (direta de 0,7 mg/dL); Hb de 11,2 g/dL; reticulócitos de 8%; Coombs direto negativo; esfregaço com policromasia, sem esferócitos.\n\nQual é a causa mais provável da hemólise?",
   "alternativas": [
-   "Defeito intrínseco de proteínas do citoesqueleto eritrocitário, típico da esferocitose hereditária",
-   "Anticorpos IgM anti-A maternos, que atravessam a placenta em grande quantidade e ativam o complemento no feto",
-   "Inibição da conjugação da bilirrubina por fatores presentes no leite materno, típica da icterícia do aleitamento",
-   "Anticorpos IgG anti-A maternos, naturalmente presentes em mães do grupo O, que atravessam a placenta e causam hemólise",
-   "Aloimunização contra o antígeno D por sensibilização em gestação anterior, com anticorpos IgG anti-D"
+   "Deficiência de glicose-6-fosfato desidrogenase, desencadeada por agente oxidante",
+   "Deficiência de piruvato quinase, com falta de ATP na glicólise da hemácia",
+   "Incompatibilidade ABO, com IgG anti-A materna atravessando a placenta",
+   "Aloimunização Rh, com anti-D formado em gestação anterior da mãe",
+   "Esferocitose hereditária, por defeito de espectrina e anquirina da membrana"
   ],
-  "correta": 3,
-  "explicacao": "Icterícia nas primeiras 24 horas é sempre patológica e, com bilirrubina indireta predominante, reticulocitose, Coombs direto positivo e microesferócitos, indica doença hemolítica. Como mãe e RN são Rh positivos, a causa é a incompatibilidade ABO: mães do grupo O possuem naturalmente anti-A e anti-B com fração IgG (principalmente IgG2), capaz de atravessar a placenta pelo receptor FcRn — por isso pode ocorrer já na primeira gestação, ao contrário da doença Rh, que exige sensibilização prévia. A hemólise costuma ser leve (poucos sítios antigênicos A no RN e neutralização por antígenos teciduais), e o Coombs direto é fracamente positivo. IgM não atravessa a placenta; na esferocitose hereditária o Coombs é negativo; a icterícia do leite materno é tardia e sem hemólise.",
+  "correta": 0,
+  "explicacao": "Hemólise aguda com Coombs direto negativo, sem esferócitos, desencadeada por exposição a um oxidante como a naftalina, em menino afrodescendente, indica deficiência de G6PD, de herança ligada ao X e frequente nessa população; o esfregaço pode mostrar hemácias 'mordidas' (bite cells) e, na coloração supravital, corpúsculos de Heinz (hemoglobina oxidada e precipitada), e a dosagem da enzima confirma o diagnóstico, de preferência fora da crise, quando a reticulocitose pode dar resultado falsamente normal. Sem G6PD, a via das pentoses não gera NADPH suficiente para manter a glutationa reduzida, e a hemácia não resiste ao estresse oxidativo. No recém-nascido, a deficiência pode causar hiperbilirrubinemia grave e kernicterus. A incompatibilidade ABO é impossível com mãe e filho do grupo O e daria Coombs positivo; a doença Rh exige mãe Rh negativa. A esferocitose teria esferócitos no esfregaço, em geral com história familiar, e não se liga a oxidantes. A deficiência de piruvato quinase causa hemólise crônica, sem corpúsculos de Heinz nem gatilho oxidante. Para lembrar: a família deve evitar naftalina, feijão-fava e fármacos oxidantes, como sulfonamidas e primaquina.",
   "tema": "ictericia-neonatal",
   "subtema": "ictericia-neonatal.doenca-hemolitica",
   "especialidade": "neonatologia",
@@ -4264,7 +4272,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-b1b04274",
@@ -4381,16 +4390,16 @@
  {
   "id": "med-839946ae",
   "area": "Obstetrícia",
-  "enunciado": "Gestante de 34 semanas com pré-eclâmpsia grave recebe sulfato de magnésio (esquema de Zuspan) há 10 horas. A diurese caiu para 15 mL/h. Ao exame: sonolenta, frequência respiratória de 10 irpm, reflexos patelares abolidos.\n\nQual é a conduta imediata?",
+  "enunciado": "Gestante de 35 semanas com pré-eclâmpsia grave recebeu dose de ataque de sulfato de magnésio (4 g IV) e está em manutenção de 1 g/h em bomba de infusão. Duas horas depois, tem nova convulsão tônico-clônica generalizada, que cede espontaneamente em 1 minuto. Os reflexos patelares estão presentes, a FR é de 18 irpm e a diurese, de 50 mL/h.\n\nQual é a conduta mais adequada para a convulsão?",
   "alternativas": [
-   "Suspender o magnésio e administrar diazepam intravenoso para prevenir crise convulsiva",
-   "Manter a infusão e dobrar a velocidade, pois a sonolência indica iminência de eclâmpsia",
-   "Administrar furosemida em bolus e manter o sulfato de magnésio na mesma dose",
-   "Substituir o magnésio por fenitoína em dose de ataque e iniciar hidralazina intravenosa",
-   "Suspender o sulfato de magnésio e administrar gluconato de cálcio 10%, 10 mL por via intravenosa lenta"
+   "Gluconato de cálcio IV, pois a convulsão indica intoxicação por magnésio",
+   "Nova dose de 2 g de sulfato de magnésio IV, mantendo a infusão de manutenção",
+   "Suspender o magnésio e iniciar fenitoína, pois houve falha do esquema",
+   "Diazepam IV como primeira escolha, substituindo em definitivo o magnésio",
+   "Aumentar a manutenção para 4 g/h, sem nova dose em bolus"
   ],
-  "correta": 4,
-  "explicacao": "Abolição dos reflexos profundos e depressão respiratória (FR <12 irpm) são sinais de intoxicação por magnésio, favorecida pela oligúria, pois o íon é eliminado pelos rins. O magnésio compete com o cálcio nos canais e na junção neuromuscular, reduzindo a liberação de acetilcolina; por isso o antídoto é o gluconato de cálcio 10% (1 g, 10 mL) intravenoso lento, com suspensão da infusão e suporte ventilatório se necessário. Aumentar a dose agravaria a toxicidade; diazepam e fenitoína são inferiores ao magnésio na prevenção da eclâmpsia e não tratam a intoxicação; diurético não é antídoto. Monitorar reflexo patelar, frequência respiratória e diurese (>25–30 mL/h) é obrigatório durante o uso.",
+  "correta": 1,
+  "explicacao": "A recorrência de convulsão durante o uso de sulfato de magnésio é tratada com bolus adicional de 2 g IV, em alguns minutos, mantendo-se a infusão de manutenção; se as crises persistirem, consideram-se outras drogas e investigação por imagem de outras causas. O magnésio é superior à fenitoína e ao diazepam tanto na prevenção quanto no tratamento das convulsões da eclâmpsia, e os benzodiazepínicos ficam para a falta de magnésio ou crise prolongada refratária. Reflexos presentes, frequência respiratória normal e boa diurese afastam intoxicação, e o gluconato de cálcio não está indicado. Manutenção de 4 g/h é excessiva (o usual é 1 a 2 g/h) e levaria à intoxicação. Após a estabilização, planeja-se a resolução da gestação. Para lembrar: o sulfato de magnésio é o anticonvulsivante de escolha para prevenir e para tratar a eclâmpsia.",
   "tema": "sindromes-hipertensivas-da-gestacao",
   "subtema": "sindromes-hipertensivas-da-gestacao.eclampsia-e-prevencao-de-convulsoes",
   "especialidade": "obstetricia",
@@ -4398,7 +4407,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-ba5d890f",
@@ -7769,24 +7779,25 @@
  {
   "id": "med-65742dc6",
   "area": "Obstetrícia",
-  "enunciado": "Primigesta de 26 anos, com pré-natal sem intercorrências até 33 semanas, quando foi diagnosticada pré-eclâmpsia sem sinais de gravidade e passou a ser acompanhada semanalmente. Agora, com 35 semanas, procura a maternidade com dor em epigástrio e hipocôndrio direito há 6 horas, náuseas e mal-estar. PA 158/104 mmHg; sem cefaleia ou alterações visuais. Feto com boa vitalidade.\n\nExames: hemoglobina 10,1 g/dL, com esquizócitos no esfregaço; plaquetas 78.000/mm³; LDH 820 U/L; bilirrubina total 1,6 mg/dL, com predomínio de indireta; AST 210 U/L; ALT 180 U/L; creatinina 0,9 mg/dL; proteinúria de fita 2+.\n\nQual é o diagnóstico e a conduta?",
+  "enunciado": "Primigesta de 34 semanas, internada por síndrome HELLP (plaquetas de 58.000/mm³, AST de 420 U/L, LDH de 950 U/L) em uso de sulfato de magnésio e aguardando a resolução da gestação, refere dor súbita e intensa no hipocôndrio direito, irradiada para o ombro direito. Evolui com PA de 80/50 mmHg, FC de 128 bpm, palidez e distensão abdominal; a Hb cai de 10,5 para 6,9 g/dL. A ultrassonografia mostra líquido livre na cavidade e coleção heterogênea sob a cápsula do lobo direito do fígado.\n\nQual é o diagnóstico mais provável e a conduta?",
   "alternativas": [
-   "Síndrome HELLP; corticoide para maturação pulmonar e manutenção da gestação até 37 semanas",
-   "Púrpura trombocitopênica trombótica; plasmaférese imediata, com expectativa obstétrica",
-   "Síndrome HELLP; sulfato de magnésio, controle da pressão arterial e resolução da gestação após estabilização",
-   "Esteatose hepática aguda da gestação; jejum, glicose intravenosa e expectativa até 37 semanas",
-   "Hepatite viral aguda; sorologias e seguimento ambulatorial, com parto espontâneo a termo"
+   "Tromboembolismo pulmonar; anticoagulação plena com heparina não fracionada",
+   "Ruptura de hematoma subcapsular hepático; reanimação e laparotomia com cesárea",
+   "Colecistite aguda; antibiótico e colecistectomia videolaparoscópica após o parto",
+   "Esteatose aguda da gestação; plasmaférese e resolução eletiva da gestação",
+   "Descolamento prematuro da placenta; amniotomia e aguardar o parto vaginal"
   ],
-  "correta": 2,
-  "explicacao": "A gestante com pré-eclâmpsia tem hemólise (esquizócitos, LDH ≥600 U/L, bilirrubina ≥1,2 mg/dL), transaminases elevadas (≥70 U/L) e plaquetas abaixo de 100.000/mm³: síndrome HELLP, forma grave de pré-eclâmpsia. A dor em epigástrio e hipocôndrio direito reflete a distensão da cápsula de Glisson e antecede complicações como hematoma e rotura hepática. A conduta é estabilizar (sulfato de magnésio para prevenir eclâmpsia e anti-hipertensivo para PA ≥160/110 mmHg ou conforme o protocolo) e interromper a gestação, pois o parto é o tratamento definitivo; a via depende de condições obstétricas. Com 35 semanas não há benefício em prolongar a gestação. A esteatose aguda cursa com hipoglicemia, insuficiência hepática e coagulopatia, sem hemólise microangiopática marcante; hepatite viral e púrpura trombocitopênica trombótica não explicam o conjunto com hipertensão e proteinúria.",
+  "correta": 1,
+  "explicacao": "Dor súbita no hipocôndrio direito irradiada para o ombro (irritação diafragmática), choque, queda da hemoglobina e hemoperitônio em gestante com HELLP indicam ruptura de hematoma subcapsular hepático, complicação rara e de alta mortalidade materna e fetal. A conduta é reanimação com transfusão de hemocomponentes (hemácias, plasma e plaquetas), laparotomia de urgência com cesárea e controle da lesão hepática (compressas, sutura ou embolização da artéria hepática), com equipe cirúrgica. Hematoma íntegro em paciente estável pode ser acompanhado com imagem. O descolamento prematuro da placenta causa dor e hipertonia uterina e sangramento, sem coleção subcapsular. A esteatose aguda da gestação traz hipoglicemia e coagulopatia, sem hematoma. O tromboembolismo não causa hemoperitônio. A colecistite cursa com febre e sinal de Murphy, sem choque hemorrágico. Para lembrar: dor no ombro direito em paciente com HELLP pode ser hematoma hepático.",
   "tema": "sindromes-hipertensivas-da-gestacao",
   "subtema": "sindromes-hipertensivas-da-gestacao.sindrome-hellp",
   "especialidade": "obstetricia",
   "disciplina": "Obstetrícia",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-e31bedc1",
@@ -9131,16 +9142,16 @@
  {
   "id": "med-0efd0047",
   "area": "Epidemiologia",
-  "enunciado": "Após uma festa de casamento com 100 convidados, 49 pessoas tiveram náuseas, vômitos intensos, cólicas e diarreia, sem febre, entre 2 e 6 horas depois; todas melhoraram em 24 horas. Os alimentos foram preparados na véspera e ficaram horas fora da refrigeração. A investigação levantou o consumo de três alimentos:\n\n• Maionese: 60 comeram (45 adoeceram); 40 não comeram (4 adoeceram).\n• Frango assado: 80 comeram (40 adoeceram); 20 não comeram (9 adoeceram).\n• Arroz: 90 comeram (44 adoeceram); 10 não comeram (5 adoeceram).\n\nCom base nas taxas de ataque, qual alimento é o provável veículo e qual é a razão entre as taxas de ataque de quem comeu e de quem não comeu esse alimento?",
+  "enunciado": "Após casos de gastroenterite entre clientes de um restaurante self-service num fim de semana, a vigilância não conseguiu listar todos os que comeram lá. Localizou 40 doentes e selecionou 80 clientes do mesmo período que não adoeceram. Entre os doentes, 30 comeram salpicão de frango; entre os que não adoeceram, 20 comeram.\n\nQual desenho de estudo foi usado e qual é a medida de associação adequada?",
   "alternativas": [
-   "Arroz; razão de 1,0",
-   "Frango assado; razão de 1,1",
-   "Maionese; razão de 7,5",
-   "Frango assado; razão de 4,4",
-   "Maionese; razão de 0,13"
+   "Estudo transversal; razão de prevalências de 3",
+   "Coorte retrospectiva; taxa de ataque de 75%",
+   "Coorte retrospectiva; risco relativo de 3",
+   "Caso-controle; razão de chances de 9",
+   "Caso-controle; risco relativo de 4,2"
   ],
-  "correta": 2,
-  "explicacao": "A taxa de ataque é a proporção de doentes entre os expostos a determinado fator durante o surto. Maionese: comeram 45/60 = 75%; não comeram 4/40 = 10%; razão 75/10 = 7,5. Frango: comeram 40/80 = 50%; não comeram 9/20 = 45%; razão ≈ 1,1. Arroz: comeram 44/90 ≈ 49%; não comeram 5/10 = 50%; razão ≈ 1,0. O provável veículo é o alimento com taxa de ataque alta entre os que comeram, baixa entre os que não comeram e maior razão entre elas, e que explica a maioria dos casos (45 dos 49): a maionese. O período de incubação curto, de poucas horas, sugere intoxicação por toxina pré-formada, como a de Staphylococcus aureus. O valor 0,13 é a razão invertida.",
+  "correta": 3,
+  "explicacao": "Sem a lista de todos os que comeram no restaurante, não se conhece a população exposta, e não é possível calcular taxas de ataque nem risco relativo. A vigilância partiu dos doentes (casos) e os comparou com não doentes (controles) quanto à exposição: é um estudo caso-controle, cuja medida de associação é a razão de chances. Casos expostos 30 e não expostos 10; controles expostos 20 e não expostos 60. Razão de chances = (30 × 60) / (10 × 20) = 9: a chance de ter comido o salpicão foi 9 vezes maior entre os doentes, o que aponta o prato como provável veículo. O risco relativo de 4,2 usa proporções que dependem do número de controles escolhido pelo pesquisador e não tem significado aqui. Os 75% são a proporção de expostos entre os casos, e não uma taxa de ataque. A razão de 3 compara proporções de exposição, não chances. Para lembrar: surto em evento com lista completa de participantes permite coorte e risco relativo; em população aberta, usa-se caso-controle e razão de chances.",
   "tema": "vigilancia-em-saude",
   "subtema": "vigilancia-em-saude.investigacao-de-surtos",
   "especialidade": "epidemiologia",
@@ -9148,7 +9159,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-28887039",
@@ -10604,16 +10616,16 @@
  {
   "id": "med-b6b40855",
   "area": "Pediatria Geral",
-  "enunciado": "Menino de 6 anos, 20 kg, picado por abelha há 10 minutos, apresenta urticária generalizada, rouquidão, sibilância e tempo de enchimento capilar de 4 segundos. A equipe dispõe de adrenalina em ampola de 1 mg/mL (1:1.000).\n\nQual é a conduta farmacológica inicial correta?",
+  "enunciado": "Menino de 8 anos, 26 kg, teve anafilaxia após picada de abelha (urticária generalizada, sibilância e hipotensão), tratada com adrenalina intramuscular, com resolução completa. Após o período de observação, está assintomático e vai receber alta. Os pais, apicultores amadores, perguntam o que fazer para evitar um novo episódio grave.\n\nAlém de orientar como reduzir a exposição, qual conduta é a mais adequada?",
   "alternativas": [
-   "Adrenalina 2 mL (2 mg) intramuscular no deltoide, em dose única, seguida de observação por 1 hora",
-   "Adrenalina 0,2 mL (0,2 mg) intramuscular na face anterolateral da coxa, repetível em 5 a 15 minutos",
-   "Adrenalina 2 mL (2 mg) intravenosa em bolus rápido, sem diluição, por se tratar de choque",
-   "Adrenalina 0,2 mL (0,2 mg) subcutânea no braço, em dose única, após o anti-histamínico venoso",
-   "Prometazina e hidrocortisona intravenosas, reservando a adrenalina para o caso de parada cardíaca"
+   "Tranquilizar, pois a criança perde a sensibilização ao veneno em semanas",
+   "Prescrever corticoide oral para uso após nova picada, no lugar da adrenalina",
+   "Prescrever adrenalina autoinjetável e encaminhar para imunoterapia com veneno",
+   "Manter anti-histamínico diário por tempo indeterminado para prevenir reações",
+   "Fazer teste de provocação com picada de abelha no consultório para confirmar"
   ],
-  "correta": 1,
-  "explicacao": "Anafilaxia (acometimento cutâneo com comprometimento respiratório e circulatório) é tratada primeiro com adrenalina intramuscular na face anterolateral da coxa (vasto lateral), na dose de 0,01 mg/kg da solução 1 mg/mL (máximo de 0,3 mg na criança pré-púbere e 0,5 mg em adolescentes e adultos): 20 kg × 0,01 = 0,2 mg = 0,2 mL, repetida a cada 5–15 minutos se necessário, com oxigênio, decúbito e expansão volêmica. A via intramuscular tem absorção mais rápida e confiável que a subcutânea. Anti-histamínicos e corticoides são adjuvantes e não substituem a adrenalina. Adrenalina intravenosa em bolus sem diluição, na dose de 2 mg, causa arritmias graves; a via venosa é reservada a casos refratários, em infusão titulada e monitorizada.",
+  "correta": 2,
+  "explicacao": "Após anafilaxia por veneno de himenópteros, o paciente deve sair com plano de ação escrito, adrenalina autoinjetável na dose adequada ao peso e treinamento da família para usá-la, e ser encaminhado ao alergista para confirmar a sensibilização (testes cutâneos ou IgE específica) e indicar imunoterapia com veneno. Essa imunoterapia reduz o risco de nova reação sistêmica grave a poucos por cento e é especialmente indicada em quem tem exposição frequente, como apicultores. Anti-histamínico diário e corticoide não previnem nem tratam o choque ou a obstrução de vias aéreas, e nunca substituem a adrenalina. A provocação com picada viva não é exame de rotina e tem risco. A sensibilização costuma persistir por anos após uma reação sistêmica. Para lembrar: a imunoterapia com veneno é um dos tratamentos mais eficazes da alergologia.",
   "tema": "hipersensibilidade",
   "subtema": "hipersensibilidade.anafilaxia",
   "especialidade": "medicina-de-urgencia",
@@ -10621,7 +10633,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-1dfadd28",
@@ -11073,16 +11086,16 @@
  {
   "id": "med-7cccad0b",
   "area": "Cardiologia",
-  "enunciado": "Homem de 55 anos, tabagista, chega a um hospital de pequeno porte, sem serviço de hemodinâmica, com dor precordial opressiva iniciada há 2 horas. PA 138/86 mmHg; FC 92 bpm; sem sinais de congestão. O eletrocardiograma mostra supradesnivelamento do segmento ST de 3 mm de V1 a V5. A central de regulação informa que a transferência para um centro com angioplastia levaria cerca de 3 horas. Não há história de AVC, sangramento ativo, cirurgia recente ou uso de anticoagulantes. Ao exame, está sudoreico e ansioso, com ausculta pulmonar limpa e sem sopros; glicemia capilar de 132 mg/dL.\n\nQual é a conduta de reperfusão mais adequada?",
+  "enunciado": "Homem de 58 anos com infarto anterior com supra de ST recebeu tenecteplase, AAS, clopidogrel e enoxaparina 40 minutos após chegar a um hospital sem hemodinâmica, com 2 horas de dor. Noventa minutos após a fibrinólise, continua com dor intensa, e o ECG mostra redução de apenas 20% da maior elevação do ST. Está com PA de 110/70 mmHg e sem sinais de congestão.\n\nQual é a conduta mais adequada?",
   "alternativas": [
-   "Aguardar o resultado da troponina, pois a reperfusão só está indicada após a confirmação laboratorial",
-   "Fibrinólise somente após ecocardiograma que confirme alteração segmentar da parede anterior",
-   "Transferência para angioplastia primária, que é sempre superior à fibrinólise, qualquer que seja o atraso",
-   "Fibrinólise em até 30 minutos (por exemplo, tenecteplase), com AAS e clopidogrel, e depois transferência",
-   "Heparina e nitrato, reservando a reperfusão para o caso de a dor persistir por mais de 12 horas"
+   "Manter observação e programar cateterismo eletivo depois de 7 dias",
+   "Trocar o clopidogrel por ticagrelor e reavaliar o ECG na manhã seguinte",
+   "Aguardar a resolução espontânea do ST até completar 24 horas da fibrinólise",
+   "Transferir já para angioplastia de resgate, pela falha da reperfusão química",
+   "Repetir a tenecteplase, pois a primeira dose pode ter sido insuficiente"
   ],
   "correta": 3,
-  "explicacao": "No IAM com supradesnivelamento do ST com menos de 12 horas de sintomas, a reperfusão é urgente e o diagnóstico é eletrocardiográfico, sem esperar troponina ou ecocardiograma. A angioplastia primária é preferida quando pode ser realizada em até 120 minutos do primeiro contato médico; se o atraso previsto for maior (aqui, cerca de 3 horas), indica-se fibrinólise, idealmente em até 30 minutos da chegada, na ausência de contraindicações, com AAS e clopidogrel (dose de ataque ajustada à idade) e anticoagulação. Em seguida, o paciente é transferido para centro com hemodinâmica, para cateterismo de rotina (estratégia fármaco-invasiva) ou angioplastia de resgate se a fibrinólise falhar.",
+  "explicacao": "Considera-se que a fibrinólise falhou quando a redução do supradesnivelamento de ST é menor que 50% na derivação de maior elevação 60 a 90 minutos após o fármaco, sobretudo com dor persistente ou instabilidade. Nesse caso, indica-se angioplastia de resgate imediata, com transferência urgente para centro com hemodinâmica, estratégia que reduz reinfarto e insuficiência cardíaca em comparação com a conduta conservadora. Repetir o fibrinolítico não traz benefício e aumenta o sangramento. Esperar 24 horas ou 7 dias deixa o miocárdio necrosar. Mesmo quando a fibrinólise funciona, recomenda-se cateterismo entre 2 e 24 horas (estratégia fármaco-invasiva). Trocar o antiplaquetário não recanaliza a artéria. Para lembrar: sinais de reperfusão são queda de mais de 50% do ST, alívio da dor, pico precoce dos marcadores e arritmias de reperfusão, como o ritmo idioventricular acelerado.",
   "tema": "sindrome-coronariana-aguda",
   "subtema": "sindrome-coronariana-aguda.iam-com-supra-de-st",
   "especialidade": "cardiologia",
@@ -11090,29 +11103,31 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-e77b5e48",
   "area": "Cardiologia",
-  "enunciado": "Paciente com dor torácica tem supradesnivelamento do segmento ST em DII, DIII e aVF, com infradesnivelamento recíproco em DI e aVL.\n\nQual é a parede acometida e a artéria mais provavelmente ocluída?",
+  "enunciado": "Homem de 68 anos, hipertenso e diabético, chega com dor torácica opressiva há 40 minutos, sudorese e dispneia. PA de 96/60 mmHg, FC de 110 bpm e estertores crepitantes em bases pulmonares. ECG: supradesnivelamento de ST de 2 mm em aVR, maior que em V1, com infradesnivelamento difuso do ST (1 mm ou mais) em oito derivações, incluindo DI, DII e V4 a V6.\n\nQual lesão coronariana esse padrão mais sugere?",
   "alternativas": [
-   "Parede anterior extensa; tronco da coronária esquerda",
-   "Parede inferior; coronária direita, na maioria dos casos",
-   "Parede septal; primeiro ramo septal da descendente",
-   "Parede anterior; artéria descendente anterior proximal",
-   "Parede lateral alta; primeiro ramo diagonal"
+   "Pericardite aguda, pelo infradesnivelamento difuso associado à dor torácica",
+   "Isquemia difusa por lesão do tronco da coronária esquerda ou triarterial grave",
+   "Oclusão isolada da coronária direita distal, com infarto restrito à parede inferior",
+   "Vasoespasmo coronariano benigno, que dispensa estratificação invasiva",
+   "Oclusão da primeira diagonal, com infarto limitado à parede lateral alta"
   ],
   "correta": 1,
-  "explicacao": "DII, DIII e aVF exploram a parede inferior do ventrículo esquerdo, irrigada na maioria das pessoas (dominância direita, cerca de 80–85%) pela artéria descendente posterior, ramo da coronária direita; na dominância esquerda, pela circunflexa. O infradesnivelamento em DI e aVL é imagem recíproca. No IAM inferior, deve-se registrar V3R/V4R para pesquisar infarto do ventrículo direito. A parede anterior (V1–V4/V5) corresponde à descendente anterior; a lateral alta (DI, aVL), à diagonal ou à circunflexa; o septo (V1–V2), aos ramos septais.",
+  "explicacao": "Supradesnivelamento de ST em aVR, com infradesnivelamento difuso em seis ou mais derivações, é o padrão de isquemia subendocárdica circunferencial, típico de obstrução crítica do tronco da coronária esquerda, da descendente anterior proximal ou de doença triarterial. Com dor persistente, hipotensão e congestão, trata-se de síndrome coronariana sem supra de muito alto risco, com indicação de cateterismo imediato (menos de 2 horas) e avaliação para revascularização. A oclusão da coronária direita dá supra em DII, DIII e aVF. A oclusão da diagonal dá supra em DI e aVL. A pericardite aguda causa supra difuso côncavo e infra de PR, com infra de ST e supra de PR em aVR, o inverso deste traçado. Vasoespasmo não explica o quadro, e dispensar investigação seria grave erro. Para lembrar: aVR 'olha' para a cavidade ventricular; supra ali com infra difuso sugere isquemia global.",
   "tema": "sindrome-coronariana-aguda",
   "subtema": "sindrome-coronariana-aguda.eletrocardiograma-e-localizacao",
   "especialidade": "cardiologia",
   "disciplina": "Cardiologia",
-  "dificuldade": 1,
+  "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-e2ffae40",
@@ -11630,16 +11645,16 @@
  {
   "id": "med-c76f74aa",
   "area": "Saúde Pública e SUS",
-  "enunciado": "Mulher de 32 anos, não gestante, convive na mesma casa com o marido, que acaba de ser diagnosticado com tuberculose pulmonar com baciloscopia positiva. Ela é avaliada como contato: está assintomática (sem tosse, febre, sudorese noturna ou perda de peso), tem exame físico normal e radiografia de tórax sem alterações. A prova tuberculínica mede 12 mm; a sorologia para HIV é negativa. Não tem diabetes nem outras comorbidades. Não tem doença hepática, não usa medicamentos e não há casos de tuberculose resistente na família. Recebeu BCG na infância.\n\nQual é a conduta mais adequada, segundo as recomendações do Ministério da Saúde?",
+  "enunciado": "Homem de 35 anos recebeu diagnóstico de infecção pelo HIV há 1 semana. Está assintomático: sem tosse, febre, emagrecimento ou sudorese noturna. CD4 de 210 células/mm³. A radiografia de tórax é normal, e a prova tuberculínica foi de 0 mm. Não sabe de contato com tuberculose. Vai iniciar a terapia antirretroviral.\n\nSegundo o Ministério da Saúde, qual é a conduta em relação à tuberculose?",
   "alternativas": [
-   "Repetir a prova tuberculínica em 8 semanas, pois o primeiro teste em contatos é sempre falso-negativo",
-   "Iniciar o esquema básico RHZE por seis meses, pois a prova tuberculínica positiva indica doença ativa",
-   "Não tratar, pois a cicatriz de BCG explica a prova tuberculínica de 12 mm em adulta vacinada",
-   "Tratar a infecção latente (por exemplo, rifapentina com isoniazida por 3 meses), após excluir doença ativa",
-   "Revacinar com BCG, que reduz o risco de adoecimento dos contatos adultos com prova positiva"
+   "Iniciar esquema RHZE por 6 meses, pela imunossupressão grave",
+   "Adiar a decisão até o CD4 subir com a TARV e então repetir a prova",
+   "Não tratar, pois não há contato conhecido com caso de tuberculose ativa",
+   "Não tratar, pois a prova tuberculínica de 0 mm afasta a infecção latente",
+   "Tratar a infecção latente, pois com CD4 ≤ 350 a indicação independe da prova"
   ],
-  "correta": 3,
-  "explicacao": "Em contatos de tuberculose pulmonar, após excluir doença ativa (clínica e radiografia), a prova tuberculínica ≥ 5 mm indica infecção latente (ILTB), independentemente do tempo de vacinação BCG, e o tratamento reduz o risco de adoecimento. O Ministério da Saúde disponibiliza esquemas como rifapentina com isoniazida semanal por 3 meses (3HP), rifampicina por 4 meses (4R) ou isoniazida por 6 ou 9 meses. A prova positiva isolada não define doença ativa e não justifica o esquema RHZE. A repetição da prova após 8 semanas é feita quando a primeira é negativa, para detectar viragem, e não quando já é positiva. A BCG não é indicada para adultos com o objetivo de proteger contatos.",
+  "correta": 4,
+  "explicacao": "Em pessoas vivendo com HIV, o rastreamento de tuberculose ativa é feito a cada consulta (tosse, febre, emagrecimento, sudorese noturna) e com radiografia. Afastada a doença ativa, o Ministério da Saúde indica tratar a infecção latente, sem necessidade de prova tuberculínica ou IGRA, quando o CD4 é de 350 células/mm³ ou menos, e também em qualquer contato de caso pulmonar ou com cicatriz radiológica de tuberculose não tratada. Com imunossupressão, a prova é frequentemente falso-negativa (anergia), e o benefício do tratamento preventivo, somado à terapia antirretroviral, inclui redução de mortalidade. Os esquemas incluem isoniazida por 6 a 9 meses ou rifapentina com isoniazida (3HP), observando as interações com a TARV. O esquema RHZE é para doença ativa, que foi afastada. Adiar deixa o paciente desprotegido justamente na fase de maior risco. Para lembrar: no HIV com CD4 baixo, prova tuberculínica negativa não afasta infecção latente.",
   "tema": "tuberculose",
   "subtema": "tuberculose.infeccao-latente-e-contatos",
   "especialidade": "saude-publica-sus",
@@ -11647,7 +11662,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-356e6643",
@@ -12674,16 +12690,16 @@
  {
   "id": "med-a35c2ef1",
   "area": "Trauma",
-  "enunciado": "Homem de 27 anos, vítima de ferimento por arma de fogo no hemitórax direito, chega com dispneia, murmúrio vesicular abolido e macicez à percussão na base direita. PA 92/60 mmHg, FC 122 bpm. É realizada drenagem torácica em selo d'água, com saída imediata de 1.600 mL de sangue.\n\nAlém da reposição com hemocomponentes, qual é a conduta indicada?",
+  "enunciado": "Homem de 27 anos, vítima de ferimento por arma branca no hemitórax direito, está com PA de 124/80 mmHg, FC de 96 bpm e SpO2 de 95%. A radiografia mostra velamento do seio costofrênico direito compatível com hemotórax moderado, sem pneumotórax importante e sem alargamento do mediastino. Com o dreno torácico, saem 450 mL de sangue; nas 4 horas seguintes, o débito é de 40, 30, 20 e 20 mL, e o pulmão reexpande.\n\nQual é a conduta mais adequada?",
   "alternativas": [
-   "Clampear o dreno para tamponar o sangramento",
-   "Realizar pericardiocentese para excluir tamponamento",
-   "Toracotomia de urgência no centro cirúrgico",
-   "Instalar um segundo dreno e repetir a radiografia",
-   "Manter o dreno e observar o débito por 24 horas"
+   "Retirar o dreno agora, pois o débito já está abaixo de 50 mL por hora",
+   "Toracotomia de urgência, pois todo hemotórax por arma branca é explorado",
+   "Clampear o dreno por 24 horas para tamponar o sangramento residual",
+   "Manter o dreno e observar, pois o sangramento pulmonar costuma parar",
+   "Embolizar as artérias intercostais para evitar sangramento tardio"
   ],
-  "correta": 2,
-  "explicacao": "Hemotórax maciço é definido pelo ATLS como drenagem imediata de 1.500 mL ou mais de sangue (cerca de um terço da volemia) ou débito contínuo acima de 200 mL/h por 2 a 4 horas, ou ainda necessidade persistente de transfusão. Nesses casos está indicada toracotomia de urgência para controle da hemorragia, sobretudo em ferimentos penetrantes. Observar o débito ou colocar outro dreno retarda o controle do sangramento, e clampear o dreno não é conduta recomendada. Macicez com murmúrio abolido explica o quadro, sem sinais de tamponamento que justifiquem pericardiocentese.",
+  "correta": 3,
+  "explicacao": "A maioria dos hemotórax traumáticos se resolve só com a drenagem torácica, pois o sangramento do parênquima pulmonar é de baixa pressão e cessa com a reexpansão do pulmão. A toracotomia é indicada por drenagem inicial de 1.500 mL ou mais, débito de cerca de 200 mL/h por 2 a 4 horas, necessidade persistente de transfusão ou instabilidade, e nada disso ocorre aqui. O dreno é retirado quando o débito diário fica baixo, sem escape de ar e com o pulmão expandido, e não depois de poucas horas. A embolização é reservada a sangramento ativo de artérias sistêmicas demonstrado em paciente estável. Clampear o dreno não trata e pode esconder um sangramento. O seguimento com radiografia serve para detectar hemotórax retido. Para lembrar: o sangue do pulmão costuma parar; o das intercostais e da mamária interna, de pressão sistêmica, tende a continuar.",
   "tema": "trauma-toracico",
   "subtema": "trauma-toracico.hemotorax",
   "especialidade": "trauma",
@@ -12691,7 +12707,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-f8baf001",
@@ -13881,16 +13898,16 @@
  {
   "id": "med-83b08b95",
   "area": "Neonatologia",
-  "enunciado": "Recém-nascido a termo, com 72 horas de vida, em aleitamento materno exclusivo, tem icterícia até as coxas. Bilirrubina total de 17 mg/dL, com bilirrubina direta de 0,6 mg/dL; Coombs direto negativo. Pelo gráfico de risco, é indicada fototerapia. Durante o tratamento, a mãe nota fezes mais amolecidas e esverdeadas e pergunta como a luz consegue \"tirar o amarelo\" da pele do bebê.\n\nQual é o principal mecanismo de ação da fototerapia?",
+  "enunciado": "Recém-nascido a termo, com 60 horas de vida, em aleitamento materno exclusivo, está em fototerapia convencional por hiperbilirrubinemia indireta, sem sinais de hemólise. Após 12 horas, a bilirrubina total caiu apenas de 17,8 para 17,4 mg/dL. A equipe verifica que o aparelho fica a cerca de 60 cm do bebê, que está vestido com macacão e fralda, e que ele sai da fototerapia por longos períodos para mamar no colo.\n\nQual ajuste aumenta de forma mais eficaz a ação da fototerapia?",
   "alternativas": [
-   "Indução da glicuroniltransferase hepática, acelerando a conjugação da bilirrubina",
-   "Oxidação da bilirrubina a biliverdina no plasma, com eliminação pela via pulmonar",
-   "Aumento da ligação da bilirrubina à albumina, sem alterar a quantidade excretada",
-   "Fotoisomerização em isômeros hidrossolúveis, como a lumirrubina, excretados sem conjugação",
-   "Inibição da hemólise por estabilização da membrana das hemácias do recém-nascido"
+   "Aproximar a fonte e expor mais pele, usando luz azul de alta irradiância",
+   "Suspender o aleitamento por 48 horas e oferecer soro glicosado oral",
+   "Manter o aparelho e acrescentar banho de sol diário junto à janela",
+   "Associar fenobarbital e manter o bebê vestido para evitar hipotermia",
+   "Trocar a luz azul por luz branca comum, de espectro mais amplo e penetrante"
   ],
-  "correta": 3,
-  "explicacao": "A luz azul-esverdeada (cerca de 460 a 490 nm) absorvida pela bilirrubina na pele e nos capilares superficiais converte-a em fotoisômeros mais hidrossolúveis: isômeros configuracionais e, principalmente, o isômero estrutural lumirrubina, que é excretado na bile e na urina sem necessidade de conjugação hepática. Por isso as fezes podem ficar amolecidas e esverdeadas. A fototerapia não induz a glicuroniltransferase (efeito atribuído ao fenobarbital), não aumenta a ligação à albumina e não atua sobre a hemólise; a fotoxidação a produtos polares é mecanismo secundário, e não há eliminação pulmonar. Por atuar na pele, a eficácia depende da irradiância e da superfície corporal exposta.",
+  "correta": 0,
+  "explicacao": "A eficácia da fototerapia depende da dose de luz que chega à pele: irradiância espectral na faixa azul (cerca de 460 a 490 nm), que aumenta quando a fonte fica mais próxima (dentro do limite do fabricante) e com aparelhos de alta intensidade, como LED azul ou fototerapia dupla, e superfície corporal exposta, que deve ser máxima, com o bebê só de fralda e olhos protegidos. Pausas curtas para mamar são aceitáveis, mas pausas longas reduzem a dose recebida. A luz branca comum entrega menos energia na faixa útil. Suspender o aleitamento e dar soro glicosado não é indicado: o leite materno deve ser mantido, e a água ou o soro glicosado não aumentam a excreção de bilirrubina. O banho de sol não é tratamento, pela dose imprevisível e pelo risco de queimadura e de alteração térmica. O fenobarbital demora dias para induzir a conjugação e não é usado na hiperbilirrubinemia comum do recém-nascido. Para lembrar: dose de fototerapia = irradiância × superfície exposta × tempo.",
   "tema": "ictericia-neonatal",
   "subtema": "ictericia-neonatal.fototerapia",
   "especialidade": "neonatologia",
@@ -18460,16 +18477,16 @@
  {
   "id": "med-c0fe73e3",
   "area": "Infectologia",
-  "enunciado": "Homem de 40 anos, gari, é internado no 9º dia de doença febril iniciada após limpar galerias pluviais. Apresenta icterícia intensa, oligúria e creatinina de 4,1 mg/dL; SpO2 de 95% em ar ambiente, sem sangramentos. A hipótese é leptospirose grave, e a sorologia já foi colhida.\n\nQual é a conduta antimicrobiana mais adequada?",
+  "enunciado": "Homem de 30 anos procura a UPA no 4º dia de febre, cefaleia e mialgia intensa em panturrilhas, iniciadas 10 dias após limpar a casa alagada por uma enchente. Está lúcido, hidratado e anictérico, com PA 118/76 mmHg e FR 18 irpm; plaquetas de 145.000/mm³ e creatinina de 1,0 mg/dL. O médico prescreve doxiciclina e vai orientar o retorno.\n\nQual achado, se surgir, é sinal de alerta que indica internação imediata?",
   "alternativas": [
-   "Iniciar penicilina cristalina IV, pois o antibiótico é indicado mesmo após o 7º dia",
-   "Iniciar amicacina IV, por sua melhor concentração no parênquima renal",
-   "Não iniciar antibiótico, pois após o 7º dia apenas o suporte clínico traz benefício",
-   "Aguardar o resultado da sorologia IgM para então decidir sobre o antibiótico",
-   "Prescrever doxiciclina oral e dar alta, com retorno após a diálise ambulatorial"
+   "Febre de 38,5 °C que cede com antitérmico",
+   "Persistência da dor nas panturrilhas no 5º dia",
+   "Olhos avermelhados, sem secreção purulenta",
+   "Cefaleia frontal leve que melhora com dipirona",
+   "Tosse com escarro sanguinolento ou falta de ar"
   ],
-  "correta": 0,
-  "explicacao": "Segundo o Guia de Vigilância em Saúde do Ministério da Saúde, a antibioticoterapia está indicada em qualquer fase da leptospirose, embora seja mais eficaz na primeira semana; nas formas moderadas e graves usa-se via intravenosa, com penicilina G cristalina (1,5 milhão UI a cada 6 horas), ampicilina, ceftriaxona ou cefotaxima, por pelo menos 7 dias, junto com suporte (hidratação criteriosa e diálise precoce quando indicada). Deixar de tratar por estar após o 7º dia é erro, assim como adiar o antibiótico à espera da sorologia, que pode ser negativa no início e não deve atrasar a conduta. Aminoglicosídeos são nefrotóxicos e inadequados em quem já tem lesão renal aguda; e doxiciclina oral com alta é o tratamento das formas leves, não de um paciente ictérico e oligúrico.",
+  "correta": 4,
+  "explicacao": "Na leptospirose, o Ministério da Saúde define sinais de alerta que indicam internação e antibiótico venoso: dispneia, tosse e taquipneia; alterações urinárias, em geral oligúria; fenômenos hemorrágicos, incluindo hemoptise e escarros hemoptoicos; hipotensão; alteração do nível de consciência; vômitos frequentes; arritmias; e icterícia. Tosse com sangue e falta de ar podem anunciar a síndrome de hemorragia pulmonar, hoje a principal causa de morte da doença, que pode evoluir em horas. A mialgia de panturrilhas, a febre que responde a antitérmico, a sufusão conjuntival (olhos avermelhados sem secreção, achado característico mas não de gravidade) e a cefaleia leve fazem parte da fase precoce e são compatíveis com tratamento ambulatorial com reavaliação. Para lembrar: na leptospirose, tosse com sangue é emergência, mesmo em paciente que parecia bem.",
   "tema": "leptospirose",
   "subtema": "leptospirose.forma-grave-sindrome-de-weil",
   "especialidade": "infectologia",
@@ -18477,7 +18494,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-6561dc58",
@@ -18504,16 +18522,16 @@
  {
   "id": "med-67f50517",
   "area": "Farmacologia",
-  "enunciado": "Homem de 28 anos, garimpeiro, tem malária por Plasmodium vivax e inicia cloroquina por 3 dias associada a primaquina por 7 dias. No 3º dia, apresenta urina escura, icterícia, palidez e queda da hemoglobina de 13 para 8,5 g/dL, com reticulocitose e LDH elevada. A gota espessa de controle mostra parasitemia em queda.\n\nQual é o mecanismo mais provável dessa complicação?",
+  "enunciado": "Homem de 28 anos com malária por Plasmodium vivax inicia cloroquina. Um estudante pergunta como o fármaco mata os parasitos dentro das hemácias, se não age sobre os hipnozoítos do fígado.\n\nQual é o mecanismo de ação da cloroquina?",
   "alternativas": [
-   "Coagulação intravascular disseminada desencadeada pela lise dos parasitos",
-   "Hepatite medicamentosa colestática causada pela cloroquina em dose plena",
-   "Hemólise oxidativa induzida pela primaquina em portador de deficiência de G6PD",
-   "Falha terapêutica com hiperparasitemia por resistência do P. vivax à cloroquina",
-   "Hemólise imune por anticorpos dirigidos contra a cloroquina ligada à hemácia"
+   "Inibe a síntese proteica do apicoplasto, com ação lenta sobre o parasito",
+   "Inibe a di-hidrofolato redutase do parasito, bloqueando a síntese de DNA",
+   "Colapsa o potencial mitocondrial ao bloquear o complexo citocromo bc1",
+   "Impede a polimerização do heme em hemozoína, e o heme livre é tóxico",
+   "Gera radicais livres pela ponte endoperóxido, ativada pelo ferro do heme"
   ],
-  "correta": 2,
-  "explicacao": "A primaquina (uma 8-aminoquinolina) gera estresse oxidativo nas hemácias; na deficiência de glicose-6-fosfato desidrogenase há pouco NADPH para regenerar a glutationa reduzida, e a hemoglobina oxidada precipita (corpúsculos de Heinz), causando hemólise intravascular — urina escura, anemia, reticulocitose, LDH alta. A deficiência é ligada ao X e mais expressiva em homens, por isso se recomenda avaliar a G6PD antes das 8-aminoquinolinas quando o teste estiver disponível. A parasitemia em queda afasta falha terapêutica; a hemólise imune pela cloroquina não é o efeito esperado desse fármaco; hepatite colestática não explicaria reticulocitose e LDH alta; e CIVD não é complicação típica do P. vivax. Para lembrar: o favismo, hemólise após ingestão de fava, é a mesma doença enzimática, e as \"células mordidas\" no esfregaço denunciam a retirada dos corpúsculos de Heinz pelo baço.",
+  "correta": 3,
+  "explicacao": "No vacúolo digestivo, ácido, o plasmódio digere a hemoglobina e libera heme (ferriprotoporfirina IX), que é tóxico; para se proteger, o parasito o polimeriza em hemozoína, o pigmento malárico. A cloroquina, base fraca, concentra-se no vacúolo e bloqueia essa polimerização; o heme livre lesa as membranas e mata o parasito. Por isso ela age nas formas sanguíneas (esquizonticida sanguíneo), mas não nos hipnozoítos, que não digerem hemoglobina e exigem primaquina ou tafenoquina. A resistência do P. falciparum decorre sobretudo de mutações no transportador PfCRT. Inibir a di-hidrofolato redutase é o mecanismo da pirimetamina; a ponte endoperóxido ativada pelo ferro é própria dos derivados da artemisinina; a inibição lenta da síntese proteica do apicoplasto é da doxiciclina e da clindamicina; o bloqueio do citocromo bc1 é da atovaquona.",
   "tema": "malaria",
   "subtema": "malaria.tratamento",
   "especialidade": "farmacologia",
@@ -18521,21 +18539,22 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-bc990cf0",
   "area": "Infectologia",
-  "enunciado": "Gestante de 24 semanas, moradora de Porto Velho (RO), tem febre a cada 48 horas e gota espessa positiva para Plasmodium vivax, sem sinais de gravidade. A equipe planeja tratar a fase sanguínea e prevenir recaídas.\n\nQual destes antimaláricos é contraindicado durante a gestação?",
+  "enunciado": "Garimpeiro de 40 anos, que voltou de área de garimpo em Roraima, tem febre há 6 dias. Chega confuso, ictérico e com PA de 92/58 mmHg. Gota espessa com Plasmodium falciparum e parasitemia estimada em 6%; Hb de 6,8 g/dL, glicemia de 58 mg/dL e creatinina de 3,1 mg/dL.\n\nQual é o tratamento antimalárico de escolha?",
   "alternativas": [
-   "Artesunato",
-   "Cloroquina",
-   "Clindamicina",
-   "Quinina",
-   "Primaquina"
+   "Artesunato parenteral, com transição para esquema oral completo",
+   "Quinina oral isolada, deixando o artesunato para gestantes",
+   "Artemeter-lumefantrina oral, com hidratação venosa vigorosa",
+   "Doxiciclina venosa isolada, pela ação sobre formas hepáticas",
+   "Cloroquina oral por 3 dias, associada a primaquina por 7 dias"
   ],
-  "correta": 4,
-  "explicacao": "A primaquina, que elimina os hipnozoítos hepáticos do P. vivax (cura radical), é contraindicada na gestação (e em lactentes menores de 6 meses) porque não é possível conhecer a atividade da G6PD do feto, que ficaria exposto a hemólise oxidativa. Por isso, na gestante com P. vivax trata-se a fase sanguínea com cloroquina e previne-se a recaída com cloroquina semanal, adiando a primaquina para depois da gestação, respeitando as restrições da amamentação. Cloroquina e quinina são usadas na gestação; a clindamicina é associada à quinina em esquemas para gestantes; e os derivados de artemisinina, como o artesunato, são empregados no 2º e no 3º trimestres, sobretudo na malária por P. falciparum e na malária grave. Para lembrar: a tafenoquina, outro fármaco de cura radical do vivax, também é contraindicada na gestação pelo mesmo motivo.",
+  "correta": 0,
+  "explicacao": "Alteração da consciência, hipotensão, icterícia, anemia grave, hipoglicemia, lesão renal e hiperparasitemia são critérios de malária grave. O tratamento de escolha é o artesunato intravenoso (ou intramuscular), que reduz a mortalidade em relação à quinina; mantém-se por pelo menos 24 horas e até o paciente tolerar a via oral, quando se completa o tratamento por via oral conforme o guia do Ministério da Saúde, junto a suporte intensivo (correção da glicemia, hidratação cuidadosa e diálise se preciso). A cloroquina não serve para P. falciparum no Brasil, pela resistência. A via oral isolada é inadequada em paciente confuso e grave, e a hidratação vigorosa pode precipitar edema pulmonar. A quinina é alternativa inferior, usada só sem acesso ao artesunato. A doxiciclina é esquizonticida sanguínea lenta e só serve como associada; além disso, o P. falciparum não forma hipnozoítos hepáticos. Para lembrar: malária grave pede artesunato parenteral, qualquer que seja a espécie.",
   "tema": "malaria",
   "subtema": "malaria.tratamento",
   "especialidade": "infectologia",
@@ -18549,24 +18568,25 @@
  {
   "id": "med-825515ce",
   "area": "Farmacologia",
-  "enunciado": "Homem de 45 anos, com úlcera cutânea de leishmaniose tegumentar confirmada, vai iniciar antimoniato de meglumina por via intramuscular. Tem hipertensão controlada e usa hidroclorotiazida.\n\nQual monitorização é essencial durante o tratamento, em razão do principal efeito tóxico grave do fármaco?",
+  "enunciado": "Homem de 45 anos, com leishmaniose cutânea localizada (úlcera única de 4 cm na perna) confirmada por pesquisa direta, completou 20 dias de antimoniato de meglumina sem intercorrências. Retorna 30 dias após o fim do tratamento: a úlcera reduziu para 1,5 cm, com bordas menos infiltradas e fundo granuloso limpo, mas ainda não epitelizou por completo. Não há lesões mucosas.\n\nSegundo o Ministério da Saúde, qual é a conduta mais adequada?",
   "alternativas": [
-   "Espirometria periódica, pelo risco de fibrose pulmonar intersticial",
-   "Contagem de linfócitos CD4, pela imunossupressão celular induzida",
-   "Fundoscopia mensal, pela retinopatia por depósito do fármaco",
-   "Audiometria seriada, pela ototoxicidade cumulativa do antimônio",
-   "Eletrocardiograma seriado, pelo prolongamento do intervalo QT e arritmias"
+   "Repetir já o esquema completo de antimonial, pois houve falha terapêutica",
+   "Manter observação, pois a cura clínica é avaliada até 3 meses após o esquema",
+   "Dar alta definitiva, pois a redução da lesão já confirma a cura parasitológica",
+   "Indicar excisão cirúrgica da úlcera residual para evitar a disseminação mucosa",
+   "Trocar já para anfotericina B, pois a úlcera deveria ter fechado no fim do esquema"
   ],
-  "correta": 4,
-  "explicacao": "Os antimoniais pentavalentes são cardiotóxicos: alteram a repolarização, com inversão de onda T e prolongamento do QT, e podem desencadear arritmias graves; por isso se faz ECG antes e durante o tratamento, e o uso de diuréticos que causam hipocalemia, como a hidroclorotiazida, aumenta o risco, exigindo também controle de potássio. Outras toxicidades a monitorar são pancreatite (amilase e lipase), hepatotoxicidade e nefrotoxicidade. Ototoxicidade é típica de aminoglicosídeos; retinopatia por depósito, da hidroxicloroquina; fibrose pulmonar, de bleomicina e amiodarona; e o antimoniato não causa depleção de CD4.",
+  "correta": 1,
+  "explicacao": "Pelo manual de vigilância da leishmaniose tegumentar do Ministério da Saúde, o critério de cura é clínico: epitelização das lesões ulceradas e regressão total da infiltração e do eritema até 3 meses após o fim do esquema. Úlcera em regressão progressiva, ainda não epitelizada 30 dias após o tratamento, não é falha: o paciente deve ser reavaliado mensalmente nos 3 primeiros meses. Só se não houver cura clínica nesse prazo, ou se houver piora ou reativação, considera-se retratamento com o mesmo antimonial ou troca por outro fármaco, como anfotericina B. Retratar ou trocar agora expõe o paciente a toxicidade desnecessária (cardiotoxicidade, pancreatite, hepatotoxicidade). A cirurgia não tem papel no tratamento. A redução da lesão não é cura, e o seguimento deve continuar por até 12 meses, pelo risco de recidiva e de acometimento mucoso. Para lembrar: na leishmaniose tegumentar a úlcera termina de fechar depois do fim do antimonial, e o prazo para julgar a cura é de 3 meses.",
   "tema": "leishmaniose",
   "subtema": "leishmaniose.leishmaniose-tegumentar",
   "especialidade": "farmacologia",
   "disciplina": "Farmacologia",
-  "dificuldade": 2,
+  "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-dc4e8995",
@@ -19392,21 +19412,21 @@
  {
   "id": "med-50dcddbf",
   "area": "Cirurgia Geral",
-  "enunciado": "Homem de 55 anos, com laparotomia prévia, está internado há 12 horas por obstrução de delgado presumidamente por bridas, em jejum e com sonda nasogástrica. Na reavaliação, a dor em cólica tornou-se contínua e intensa; FC 118 bpm, temperatura 38,3 °C, dor localizada à descompressão; leucócitos 18.600/mm³ e lactato 4,2 mmol/L.\n\nQual é a conduta mais adequada?",
+  "enunciado": "Homem de 72 anos tem há 4 dias distensão abdominal progressiva, parada de eliminação de fezes e gases e vômitos tardios; há 3 meses notou afilamento das fezes e perda de peso. Está com FC de 108 bpm, PA de 124/78 mmHg, abdome muito distendido e timpânico, com dor à palpação e defesa na fossa ilíaca direita. A tomografia mostra massa estenosante no sigmoide, cólon a montante muito dilatado, ceco com 13 cm de diâmetro e intestino delgado não distendido.\n\nQual é a interpretação e a conduta mais adequada?",
   "alternativas": [
-   "Aumentar a hidratação e iniciar procinético",
-   "Dar contraste hidrossolúvel e aguardar 24 horas",
-   "Colonoscopia descompressiva de urgência",
-   "Cirurgia de urgência por sinais de sofrimento de alça",
-   "Manter o tratamento conservador por até 72 horas"
+   "Obstrução em alça fechada com risco de perfuração do ceco; cirurgia de urgência",
+   "Obstrução parcial do delgado; sonda nasogástrica e observação por 72 horas",
+   "Obstrução colônica simples; preparo intestinal oral e colectomia em uma semana",
+   "Pseudo-obstrução colônica aguda; neostigmina venosa com monitorização cardíaca",
+   "Volvo de sigmoide; distorção por retossigmoidoscopia e cirurgia eletiva depois"
   ],
-  "correta": 3,
-  "explicacao": "O tratamento não operatório da obstrução por bridas só é aceitável sem sinais de estrangulamento. Dor que passa de cólica a contínua, febre, taquicardia, irritação peritoneal localizada, leucocitose e lactato elevado indicam isquemia de alça (obstrução em alça fechada ou estrangulada), situação em que o atraso aumenta a necessidade de ressecção e a mortalidade; a conduta é cirurgia de urgência. Manter a observação por 72 horas ou realizar o teste com contraste hidrossolúvel são estratégias apenas para os casos sem sinais de gravidade; a colonoscopia descompressiva é usada no volvo de sigmoide, não na obstrução de delgado; e procinéticos são contraindicados na obstrução mecânica.",
+  "correta": 0,
+  "explicacao": "Na obstrução do cólon com válvula ileocecal competente (intestino delgado não distendido), forma-se uma alça fechada: o gás não reflui para o íleo, e o cólon se distende progressivamente. Pela lei de Laplace, o ceco, de maior diâmetro, sofre a maior tensão de parede; diâmetro acima de 10 a 12 cm, sobretudo com dor e defesa na fossa ilíaca direita, indica isquemia iminente e risco de perfuração, e exige descompressão cirúrgica de urgência, em geral ressecção do tumor com colostomia. A pseudo-obstrução não tem lesão mecânica, e a tomografia mostra uma massa. O delgado não está dilatado, e o problema é colônico. O volvo de sigmoide dá imagem em grão de café, sem massa estenosante. O preparo intestinal oral é contraindicado na obstrução completa. Para lembrar: o câncer colorretal é a causa mais comum de obstrução do intestino grosso, e o ceco é o ponto que costuma perfurar.",
   "tema": "obstrucao-intestinal",
   "subtema": "obstrucao-intestinal.tratamento",
   "especialidade": "cirurgia-geral",
   "disciplina": "Cirurgia Geral",
-  "dificuldade": 2,
+  "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
   "prova": null,
@@ -20483,16 +20503,16 @@
  {
   "id": "med-6b4bc6d5",
   "area": "Farmacologia",
-  "enunciado": "Criança de 2 anos, 12 kg, com crupe moderado, é atendida às 23h com estridor em repouso, tiragem supraesternal e SpO2 de 96%. Recebe dexametasona oral e nebulização com adrenalina, com melhora evidente em 15 minutos, e os pais perguntam se já podem ir para casa.\n\nQual é o mecanismo da melhora rápida e a principal limitação desse tratamento?",
+  "enunciado": "Menino de 18 meses com crupe viral há 2 dias recebeu dexametasona oral há 4 horas. Nas últimas horas, a mãe nota que ele está 'mais calmo': o estridor, antes alto, agora quase não se ouve. Ao exame: sonolento, pouco reativo, pálido, com tiragem intercostal e subcostal intensas, murmúrio vesicular muito diminuído bilateralmente, FC de 178 bpm e SpO2 de 88% em ar ambiente.\n\nComo interpretar a redução do estridor?",
   "alternativas": [
-   "Ação anti-inflamatória imediata da adrenalina; causa hiperglicemia grave",
-   "Vasoconstrição alfa-adrenérgica da mucosa; o efeito prolongado permite alta imediata",
-   "Relaxamento das pregas vocais; costuma exigir intubação logo depois do efeito",
-   "Vasoconstrição alfa-adrenérgica da mucosa subglótica; o efeito dura cerca de 2 horas",
-   "Broncodilatação beta-2 dos bronquíolos; o efeito persiste por cerca de 24 horas"
+   "Sinal de gravidade: fadiga e pouco fluxo de ar, com falência respiratória iminente",
+   "Melhora da obstrução pelo efeito do corticoide, o que permite alta com orientações",
+   "Resolução do edema subglótico, com a sonolência explicada pelo cansaço do dia",
+   "Evolução para bronquiolite, pois o murmúrio diminuído indica acometimento distal",
+   "Efeito sedativo da dexametasona, que reduz o estridor sem alterar a obstrução"
   ],
-  "correta": 3,
-  "explicacao": "A adrenalina nebulizada age sobretudo em receptores alfa-adrenérgicos, contraindo os vasos da mucosa subglótica e reduzindo rapidamente o edema; o efeito começa em minutos, mas dura cerca de 1 a 2 horas, por isso a criança deve permanecer em observação por 2 a 4 horas após a dose, para detectar o retorno dos sintomas quando o efeito passar, enquanto o corticoide começa a agir. O alvo principal não são os bronquíolos (o crupe é uma obstrução alta, subglótica); a ação anti-inflamatória sustentada é do corticoide, não da adrenalina; o efeito curto impede a alta imediata; e a adrenalina não atua relaxando as pregas vocais. O corticoide (dexametasona) é indicado em todos os graus de crupe, e a adrenalina, nos casos moderados e graves.",
+  "correta": 0,
+  "explicacao": "O estridor é produzido pelo fluxo turbulento através da subglote estreitada. Quando a criança se cansa, o fluxo cai e o estridor fica mais baixo: isso não é melhora, mas sinal de obstrução crítica. Letargia, tiragem intensa, entrada de ar muito reduzida, taquicardia e hipoxemia indicam insuficiência respiratória iminente e exigem adrenalina nebulizada imediata, oxigênio, transferência para terapia intensiva e preparo para via aérea avançada, com tubo menor que o previsto para a idade e profissional experiente. O corticoide não seda e não explica uma mudança desse tipo; a bronquiolite não explica o quadro de obstrução alta; a sonolência aqui reflete hipoxemia e hipercapnia, não cansaço comum. Para lembrar: no crupe, a criança quieta e sonolenta com estridor fraco pode estar pior, e não melhor.",
   "tema": "laringotraqueobronquite-viral",
   "subtema": "laringotraqueobronquite-viral.quadro-clinico",
   "especialidade": "farmacologia",
@@ -20500,7 +20520,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-10411f98",
@@ -20617,16 +20638,16 @@
  {
   "id": "med-c3e6991b",
   "area": "Neurologia",
-  "enunciado": "Menino de 3 anos, com história de icterícia neonatal grave não tratada adequadamente, apresenta movimentos involuntários atetoides, perda auditiva neurossensorial bilateral, limitação do olhar para cima e defeitos no esmalte dos dentes decíduos.\n\nQual é a base fisiopatológica dessas sequelas?",
+  "enunciado": "Recém-nascido a termo, com 5 dias de vida, em aleitamento materno exclusivo e com perda de 12% do peso de nascimento, é trazido por sonolência e recusa das mamadas desde a véspera. Na admissão, está ictérico até as plantas, com hipertonia dos extensores do pescoço e do tronco (retrocolo e opistótono intermitentes), choro agudo e temperatura de 37,9 °C. Bilirrubina total de 31 mg/dL, com direta de 0,8 mg/dL; albumina de 3,0 g/dL. A fototerapia intensiva é iniciada imediatamente.\n\nAlém da fototerapia intensiva e da hidratação, qual é a conduta mais adequada?",
   "alternativas": [
-   "Encefalopatia hipóxico-isquêmica com lesão das áreas parassagitais",
-   "Hemorragia peri-intraventricular grave, própria da prematuridade",
-   "Depósito de bilirrubina indireta livre nos núcleos da base e do tronco encefálico",
-   "Depósito de bilirrubina direta no córtex cerebral dos lobos frontais",
-   "Hipoglicemia neonatal com lesão predominante do córtex occipital"
+   "Fenobarbital intravenoso, que induz a conjugação e controla a hipertonia em horas",
+   "Repetir a bilirrubina em 6 horas e indicar exsanguineotransfusão só se não cair",
+   "Suspender de vez o aleitamento materno e iniciar fórmula infantil à base de soja",
+   "Punção lombar e antibiótico, pois o quadro neurológico afasta causa bilirrubínica",
+   "Exsanguineotransfusão imediata, pelos sinais de encefalopatia bilirrubínica aguda"
   ],
-  "correta": 2,
-  "explicacao": "O kernicterus (encefalopatia bilirrubínica crônica) decorre da passagem da bilirrubina indireta não ligada à albumina, lipossolúvel, pela barreira hematoencefálica, com depósito e toxicidade em globo pálido, núcleo subtalâmico, hipocampo, cerebelo e núcleos do tronco (auditivos e oculomotores). A tétrade clássica é paralisia cerebral discinética (atetose), perda auditiva neurossensorial, paralisia do olhar vertical para cima e displasia do esmalte dos dentes decíduos. A bilirrubina direta é hidrossolúvel e não atravessa a barreira; hipoglicemia lesa preferencialmente o córtex occipital, com alterações visuais e epilepsia; hemorragia intraventricular é típica do prematuro; e a encefalopatia hipóxico-isquêmica tem outro padrão. Prematuridade, acidose, sepse, hipoalbuminemia e fármacos que deslocam a bilirrubina da albumina (como sulfonamidas e ceftriaxona) aumentam o risco.",
+  "correta": 4,
+  "explicacao": "Sonolência, recusa alimentar, hipertonia com retrocolo e opistótono, choro agudo e febre em recém-nascido com bilirrubina indireta muito elevada caracterizam encefalopatia bilirrubínica aguda em fase intermediária a avançada. As diretrizes atuais (Academia Americana de Pediatria, 2022) indicam exsanguineotransfusão imediata sempre que houver sinais de encefalopatia aguda, independentemente da resposta inicial à fototerapia, pois a remoção rápida da bilirrubina pode reverter parte da lesão; a desidratação e a baixa ingestão contribuíram para o quadro e devem ser corrigidas. Esperar nova dosagem atrasa o tratamento. A febre baixa pode justificar avaliação de infecção, mas o quadro neurológico não afasta a bilirrubina como causa, e o antibiótico não a remove. O aleitamento deve ser mantido ou retomado com apoio, sem troca por fórmula de soja. O fenobarbital leva dias para induzir a UGT1A1 e não trata a encefalopatia. Para lembrar: sinais neurológicos com bilirrubina indireta alta pedem exsanguineotransfusão já, mesmo com fototerapia em curso.",
   "tema": "ictericia-neonatal",
   "subtema": "ictericia-neonatal.ictericia-patologica",
   "especialidade": "neurologia",
@@ -20634,7 +20655,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-7b566ad7",
