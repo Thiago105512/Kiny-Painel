@@ -1888,5 +1888,665 @@
    "Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos – Fundação Nacional de Saúde/Ministério da Saúde (2ª edição, 2001)",
    "Guia de Vigilância em Saúde – Ministério da Saúde (6ª edição, 2023), capítulo de acidentes por animais peçonhentos"
   ]
+ },
+ {
+  "id": "caso-avc-isquemico-trombolise-trombectomia",
+  "titulo": "Homem que derrubou a xícara e parou de falar no café da manhã",
+  "tema": "Acidente vascular cerebral – AVC isquêmico agudo",
+  "temaId": "acidente-vascular-cerebral",
+  "especialidade": "Neurologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 3,
+  "identificacao": "J.A.S., 67 anos, sexo masculino, pardo, comerciante aposentado, natural de Maués (AM) e residente em Manaus (AM). Peso 78 kg.",
+  "queixaPrincipal": "\"Ele deixou cair a xícara, entortou a boca e não conseguia mais falar.\" (relato da esposa)",
+  "hda": "Esposa relata que às 08h05, durante o café da manhã, o paciente, que conversava normalmente, deixou cair a xícara da mão direita, ficou com a boca torta e passou a falar palavras sem sentido, sem conseguir entender o que ela dizia. Tentou levantar-se e caiu para o lado direito, sem bater a cabeça. Ela acionou o SAMU (192), que fez glicemia capilar no local (132 mg/dL), aplicou a escala pré-hospitalar de AVC e levou o paciente diretamente ao hospital de referência para AVC com hemodinâmica, avisando a equipe antes da chegada. Chegada à porta do hospital às 09h10 (1 hora e 5 minutos após o início dos sintomas). Não houve convulsão, vômitos ou queixa de cefaleia antes do quadro. A esposa conta que há alguns meses um agente de saúde disse que o 'pulso dele estava falhando', mas ele não procurou atendimento.",
+  "antecedentes": "Hipertensão arterial há 15 anos, em uso irregular de losartana. Nunca teve AVC, sangramentos, cirurgias recentes ou traumatismo craniano. Não usa anticoagulante, antiagregante nem outros medicamentos. Ex-tabagista (parou há 10 anos). Totalmente independente antes do quadro: dirigia, fazia compras e cuidava das finanças da casa (escala de Rankin modificada prévia 0).",
+  "exameFisico": "Regular estado geral, acordado, olha para o examinador. PA 196/104 mmHg (confirmada em segunda medida); FC 96 bpm, irregularmente irregular; FR 18 irpm; SatO2 96% em ar ambiente; Tax 36,5 °C. Ausculta cardíaca com ritmo irregular, sem sopros; pulmões limpos. Exame neurológico: acorda e mantém-se alerta; responde errado ao mês e à idade (não consegue falar de forma compreensível); cumpre apenas uma de duas ordens simples; olhar desviado para a esquerda, mas que ultrapassa a linha média com a manobra dos olhos de boneca (paresia parcial do olhar); não percebe estímulos no campo visual inferior direito (hemianopsia parcial); paralisia facial central à direita, com a metade inferior da face totalmente paralisada; braço direito cai na maca sem conseguir vencer a gravidade; perna direita faz algum esforço contra a gravidade, mas cai sobre a maca antes de 5 segundos; hipoestesia leve à direita; afasia grave (fala pouco e sem sentido, compreensão muito reduzida); disartria leve a moderada; sem ataxia desproporcional e sem negligência. NIHSS 16. Sem sinais de trauma na cabeça.",
+  "exames": "Glicemia capilar à chegada 132 mg/dL. Tomografia de crânio sem contraste (09h25): sem sangramento; artéria cerebral média esquerda espontaneamente hiperdensa (sinal da 'artéria cerebral média hiperdensa'); discreta perda da diferenciação entre substância branca e cinzenta na ínsula e no núcleo lentiforme à esquerda; ASPECTS 8. Angiotomografia de vasos cervicais e intracranianos, feita logo em seguida, sem esperar a creatinina: oclusão do segmento M1 da artéria cerebral média esquerda, com circulação colateral moderada. ECG: fibrilação atrial com resposta ventricular de 96 bpm, sem supradesnivelamento do segmento ST. Exames colhidos antes da trombólise, cujo resultado chegou depois: plaquetas 214.000/mm³; INR 1,0; TTPa normal; creatinina 1,0 mg/dL; sódio 139 mEq/L; potássio 4,1 mEq/L; troponina normal.",
+  "perguntas": [
+   {
+    "pergunta": "Qual o diagnóstico e onde está a lesão?",
+    "resposta": "AVC isquêmico agudo no território da artéria cerebral média esquerda, por oclusão de grande vaso (segmento M1), provavelmente de origem cardioembólica por fibrilação atrial não diagnosticada e não anticoagulada. A combinação de afasia (hemisfério dominante), hemiparesia e hipoestesia à direita com predomínio em face e braço, desvio do olhar para o lado da lesão (esquerda) e hemianopsia à direita localiza o problema no hemisfério esquerdo, em território da cerebral média. O início súbito com o paciente acordado, a glicemia normal e a tomografia sem sangramento sustentam o diagnóstico. NIHSS 16 indica AVC de gravidade moderada a grave."
+   },
+   {
+    "pergunta": "Ele pode receber trombólise venosa? O que precisa ser feito antes?",
+    "resposta": "Sim. O início foi presenciado às 08h05 e ele chegou em 1 hora e 5 minutos, dentro da janela de 4,5 horas; tem déficit incapacitante, a tomografia não mostra sangramento nem área extensa de infarto já estabelecido (ASPECTS 8) e não há contraindicações na história (sem AVC, trauma craniano ou cirurgia recentes, sem sangramento ativo, sem anticoagulante). Antes de trombolisar: (1) a glicemia é o único exame obrigatório antes da dose, para afastar hipoglicemia, que imita AVC; (2) não se deve esperar plaquetas, INR ou creatinina quando não há suspeita de distúrbio de coagulação nem uso de anticoagulante, porque cada minuto de atraso aumenta a perda de neurônios; (3) a pressão precisa estar abaixo de 185/110 mmHg. Aqui a PA de 196/104 mmHg deve ser reduzida com anti-hipertensivo venoso de ação rápida e fácil controle (no Brasil, os protocolos costumam usar metoprolol venoso ou nitroprussiato de sódio; labetalol e nicardipino, citados nas diretrizes americanas, têm disponibilidade limitada no país). Após atingir o alvo, administrar alteplase 0,9 mg/kg (máximo 90 mg): para 78 kg, cerca de 70 mg, sendo 10% (7 mg) em bolus em 1 minuto e o restante (63 mg) em 60 minutos. A diretriz AHA/ASA 2026 considera a tenecteplase 0,25 mg/kg (máximo 25 mg, em bolus único; neste paciente, cerca de 20 mg) tão recomendada quanto a alteplase; ela foi aprovada pela Anvisa para AVC em dezembro de 2025, mas a disponibilidade no SUS depende de incorporação, e a alteplase continua sendo o trombolítico do protocolo do SUS."
+   },
+   {
+    "pergunta": "A trombólise basta? Qual o papel da trombectomia mecânica?",
+    "resposta": "Não basta. Em oclusão proximal de grande vaso (M1), a taxa de reabertura com trombolítico venoso isolado é baixa. Ele preenche os critérios clássicos de trombectomia mecânica: oclusão de carótida interna ou M1, NIHSS de 6 ou mais, ASPECTS de 6 ou mais, independência prévia (Rankin 0 a 1) e possibilidade de iniciar o procedimento em até 6 horas. A conduta correta é trombolisar e, ao mesmo tempo, encaminhar para a sala de hemodinâmica, sem esperar para ver se ele melhora com o trombolítico. Em hospitais sem neurointervenção, a lógica é a mesma: trombolisar e transferir imediatamente para um centro com trombectomia. As diretrizes atuais também permitem trombectomia entre 6 e 24 horas em pacientes selecionados por exames de imagem, e a AHA/ASA 2026 ampliou as indicações para alguns casos com infarto já extenso; no SUS, a trombectomia foi incorporada com janela de até 24 horas, conforme critérios de imagem."
+   },
+   {
+    "pergunta": "Quais cuidados nas primeiras 24 horas e o que fazer se ele piorar durante ou após o trombolítico?",
+    "resposta": "Nas primeiras 24 horas: manter PA abaixo de 180/105 mmHg, com avaliação neurológica e da pressão frequentes (a cada 15 minutos nas primeiras 2 horas, depois com intervalos maiores, conforme protocolo); evitar redução intensa (alvo de sistólica abaixo de 140 mmHg não é recomendado, pois estudos recentes mostraram ausência de benefício após trombólise e possível dano após trombectomia); não dar antiagregante nem anticoagulante nas primeiras 24 horas após o trombolítico e só iniciá-los após nova imagem sem sangramento; manter jejum até teste de deglutição; controlar glicemia e temperatura; cabeceira e mobilização conforme protocolo. Armadilha: se aparecer cefaleia intensa, vômitos, piora súbita do déficit ou do nível de consciência, ou elevação abrupta da pressão, suspeitar de hemorragia intracraniana sintomática: interromper imediatamente a infusão de alteplase (se ainda estiver correndo), fazer tomografia de crânio urgente, colher hemograma, coagulograma, fibrinogênio e tipagem, e, se houver sangramento, repor fibrinogênio com crioprecipitado (ácido tranexâmico é alternativa), controlar a pressão e acionar a neurocirurgia. Em caso de inchaço dos lábios e da língua (angioedema, mais comum em quem usa inibidor da ECA), tratar a via aérea com prioridade."
+   }
+  ],
+  "hipoteses": [
+   "AVC isquêmico agudo em território da artéria cerebral média esquerda, NIHSS 16",
+   "Oclusão de grande vaso (segmento M1 da artéria cerebral média esquerda)",
+   "Etiologia cardioembólica por fibrilação atrial não anticoagulada",
+   "Hipertensão arterial com má adesão ao tratamento"
+  ],
+  "diferenciais": [
+   "AVC hemorrágico (afastado pela tomografia sem contraste)",
+   "Hipoglicemia (afastada pela glicemia capilar)",
+   "Crise epiléptica com paralisia pós-ictal (paralisia de Todd)",
+   "Enxaqueca com aura",
+   "Tumor ou hematoma subdural com piora súbita",
+   "Encefalopatia hipertensiva"
+  ],
+  "conduta": "Em linhas gerais: ativação do protocolo de AVC já no pré-hospitalar; glicemia capilar; tomografia de crânio sem contraste e angiotomografia imediatas; redução da PA para abaixo de 185/110 mmHg com anti-hipertensivo venoso titulável; alteplase 0,9 mg/kg (cerca de 70 mg: 7 mg em bolus e 63 mg em 60 minutos) ou, onde disponível, tenecteplase 0,25 mg/kg (cerca de 20 mg em bolus); encaminhamento direto e simultâneo para trombectomia mecânica. Depois: internação em unidade de AVC ou terapia intensiva, PA abaixo de 180/105 mmHg por 24 horas, monitorização neurológica seriada, jejum até teste de deglutição, controle de glicemia e temperatura, profilaxia de trombose venosa com compressão pneumática intermitente nas primeiras 24 horas. Tomografia de controle em 24 horas antes de iniciar antitrombóticos. Investigação etiológica (ecocardiograma, monitorização do ritmo, perfil lipídico, hemoglobina glicada). Anticoagulação oral para a fibrilação atrial, de preferência com anticoagulante oral direto, iniciada nos primeiros dias conforme o tamanho do infarto e a ausência de transformação hemorrágica importante na imagem de controle. Estatina de alta potência, controle da pressão a longo prazo, reabilitação precoce com fisioterapia e fonoaudiologia.",
+  "discussao": "O AVC isquêmico é uma emergência tempo-dependente: estima-se que cerca de 1,9 milhão de neurônios morram a cada minuto de oclusão, por isso os serviços medem o tempo porta-agulha (meta de até 60 minutos, idealmente menos) e porta-punção. Os pontos-chave deste caso são: definir com precisão a hora do início (ou a última vez em que o paciente foi visto normal), afastar hipoglicemia e sangramento, não atrasar o trombolítico à espera de exames desnecessários e identificar cedo a oclusão de grande vaso, que tem benefício muito maior com a trombectomia. A diretriz AHA/ASA 2026 trouxe a tenecteplase ao mesmo nível da alteplase, ampliou as indicações de trombectomia e reforçou que baixar demais a pressão após a reperfusão não ajuda e pode prejudicar. A fibrilação atrial é causa frequente de AVC grave e muitas vezes só é descoberta no evento; estudos recentes (como ELAN, OPTIMAS e TIMING) mostraram que iniciar o anticoagulante oral direto precocemente, em vez de esperar semanas, é seguro. No Amazonas, a distância e o transporte fluvial fazem com que muitos pacientes do interior cheguem fora da janela; a organização de redes de atendimento, a telemedicina para orientar a trombólise em hospitais regionais e a educação da população para reconhecer os sinais (boca torta, braço fraco, fala alterada: ligar 192) são decisivas.",
+  "referencias": [
+   "2026 Guideline for the Early Management of Patients With Acute Ischemic Stroke – American Heart Association/American Stroke Association (Stroke, 2026)",
+   "Protocolo Clínico e Diretrizes Terapêuticas – Trombólise no Acidente Vascular Cerebral Isquêmico Agudo (Ministério da Saúde)",
+   "Linha de Cuidado do AVC no adulto e Portaria GM/MS nº 1.996/2023 (trombectomia mecânica no SUS) – Ministério da Saúde",
+   "Early versus Later Anticoagulation for Stroke with Atrial Fibrillation (ELAN) – New England Journal of Medicine, 2023"
+  ]
+ },
+ {
+  "id": "caso-pancreatite-aguda-biliar",
+  "titulo": "Dor forte no alto da barriga, em faixa, depois de uma feijoada",
+  "tema": "Pancreatite aguda",
+  "temaId": "pancreatite-aguda",
+  "especialidade": "Gastroenterologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "identificacao": "C.S.P., 44 anos, sexo feminino, parda, merendeira escolar, natural de Itacoatiara (AM) e residente em Manaus (AM). Peso 72 kg.",
+  "queixaPrincipal": "\"Dor muito forte na boca do estômago que vai para as costas.\"",
+  "hda": "Paciente refere que há 8 horas, cerca de 2 horas após almoço farto (feijoada), iniciou dor intensa no epigástrio, contínua, que se irradia em faixa para as costas, com piora ao deitar e discreto alívio ao inclinar o tronco para frente. Apresentou 4 episódios de vômitos alimentares, sem sangue. Relata já ter tido, nos últimos 2 anos, crises de dor em cólica no lado direito do abdome após refeições gordurosas, que passavam em poucas horas. Nega icterícia, urina escura, fezes claras, calafrios ou febre antes da internação. Nega consumo de álcool, trauma abdominal ou uso de medicamentos novos.",
+  "antecedentes": "Obesidade. Três gestações, sem intercorrências. Ultrassonografia de 1 ano atrás, feita na UBS, mostrou 'pedras na vesícula'; foi encaminhada ao cirurgião, mas ainda aguardava consulta. Nega diabetes, dislipidemia conhecida ou cirurgias prévias. Não usa medicamentos contínuos. Nega tabagismo e etilismo. Mãe operada da vesícula.",
+  "exameFisico": "Regular estado geral, com dor intensa (8 em 10), lúcida e orientada. Mucosas levemente secas, anictérica. PA 128/78 mmHg; FC 104 bpm; FR 20 irpm; SatO2 97% em ar ambiente; Tax 37,6 °C. IMC 31 kg/m². Ausculta cardíaca e pulmonar sem alterações. Abdome levemente distendido, ruídos hidroaéreos diminuídos, dor à palpação do epigástrio e hipocôndrio direito, sem defesa involuntária nem descompressão brusca dolorosa; sinal de Murphy negativo; sem equimoses nos flancos ou na região periumbilical. Débito urinário preservado.",
+  "exames": "Admissão: lipase 2.140 U/L (referência até 60 U/L, cerca de 35 vezes o limite superior); amilase 1.450 U/L. Hemograma: hemoglobina 14,2 g/dL; hematócrito 44%; leucócitos 14.200/mm³; plaquetas 268.000/mm³. Ureia 32 mg/dL (equivale a nitrogênio ureico de cerca de 15 mg/dL); creatinina 0,8 mg/dL. Glicemia 138 mg/dL. Cálcio 9,0 mg/dL. Triglicerídeos 180 mg/dL. ALT 312 U/L (cerca de 9 vezes o limite superior); AST 280 U/L; fosfatase alcalina 180 U/L; GGT 290 U/L; bilirrubina total 1,6 mg/dL (direta 1,1). PCR 48 mg/L. Beta-hCG negativo. Ultrassonografia de abdome: vesícula com múltiplos cálculos pequenos, parede fina, sem líquido ao redor; colédoco de 5 mm, sem cálculo visível; pâncreas mal visualizado por gases. Radiografia de tórax sem derrame pleural. Terceiro dia de internação: febre de 38,3 °C, leucócitos 15.800/mm³; bilirrubina total 0,9 mg/dL; ALT 140 U/L; creatinina 0,7 mg/dL; SatO2 97%; urina tipo 1 e radiografia de tórax normais; hemoculturas colhidas.",
+  "perguntas": [
+   {
+    "pergunta": "Qual o diagnóstico e qual a causa mais provável?",
+    "resposta": "Pancreatite aguda de causa biliar. O diagnóstico exige 2 de 3 critérios: dor abdominal típica (epigástrica, contínua, em faixa para as costas), lipase ou amilase acima de 3 vezes o limite superior e achados de imagem compatíveis. Ela tem os dois primeiros, portanto a tomografia não é necessária para o diagnóstico. A origem biliar é sustentada pela presença de cálculos pequenos na vesícula (os que mais migram pelo colédoco), pela história de cólica biliar e pela elevação precoce da ALT (acima de cerca de 3 vezes o normal nas primeiras 48 horas, o que tem boa correlação com causa biliar). Álcool, triglicerídeos muito elevados (em geral acima de 1.000 mg/dL), hipercalcemia e medicamentos foram afastados pela história e pelos exames."
+   },
+   {
+    "pergunta": "Como classificar a gravidade?",
+    "resposta": "Pela classificação de Atlanta revisada, a gravidade depende de falência de órgãos (respiratória, cardiovascular ou renal) e de complicações locais: leve (sem falência orgânica e sem complicações locais ou sistêmicas), moderadamente grave (falência orgânica que se resolve em até 48 horas e/ou complicações locais, como coleções ou necrose) e grave (falência orgânica que persiste por mais de 48 horas). Ela não tem falência orgânica (oxigenação, pressão e creatinina normais) e evoluiu bem, portanto é pancreatite leve. Na admissão, podemos estimar o risco com escores e marcadores simples: ela tem síndrome da resposta inflamatória sistêmica (FC acima de 90 bpm e leucócitos acima de 12.000/mm³), o que vale 1 ponto no escore BISAP (os demais itens, ureia elevada, confusão mental, idade acima de 60 anos e derrame pleural, estão ausentes), indicando baixo risco. Hematócrito, ureia e creatinina devem ser acompanhados nas primeiras 24 a 48 horas: aumento sugere hidratação insuficiente e pior prognóstico. A tomografia com contraste não deve ser feita de rotina na admissão; fica reservada para dúvida diagnóstica ou para quem não melhora após 48 a 72 horas, quando a necrose já pode ser vista."
+   },
+   {
+    "pergunta": "Qual a conduta inicial e o plano até a alta?",
+    "resposta": "Hidratação venosa moderada, e não agressiva, de preferência com Ringer lactato: como há sinais de desidratação leve, bolus de 10 mL/kg (cerca de 720 mL) e depois 1,5 mL/kg/h (cerca de 110 mL/h), reavaliando com frequência nas primeiras horas (no WATERFALL, em 3 e 12 horas) e depois diariamente, por frequência cardíaca, diurese, hematócrito e ureia (o estudo WATERFALL mostrou que hidratação agressiva causou mais sobrecarga de volume sem benefício). Analgesia eficaz, incluindo opioide se necessário. Alimentação oral precoce, com dieta leve com pouca gordura, assim que a dor e as náuseas permitirem, em geral nas primeiras 24 a 48 horas, sem necessidade de esperar a lipase normalizar. CPRE (colangiopancreatografia retrógrada endoscópica) urgente não está indicada, porque não há colangite (febre com calafrios, icterícia e dor no hipocôndrio direito) nem obstrução persistente do colédoco; a bilirrubina está caindo. Colecistectomia videolaparoscópica na mesma internação, assim que a dor melhorar e a dieta for tolerada: em pancreatite biliar leve, adiar a cirurgia para depois da alta aumenta muito o risco de nova pancreatite, cólica ou colecistite (estudo PONCHO). Como ela tem provas hepáticas alteradas, está em risco intermediário de cálculo no colédoco pela diretriz da ASGE (2019), deve-se avaliar o colédoco antes ou durante a cirurgia (colangiorressonância, ecoendoscopia ou colangiografia intraoperatória)."
+   },
+   {
+    "pergunta": "No 3º dia ela teve febre de 38,3 °C. O residente quer iniciar meropenem. Está certo?",
+    "resposta": "Não. Antibiótico profilático não é recomendado na pancreatite aguda, nem nas formas graves nem na necrose estéril, pois não reduz mortalidade ou infecção e favorece germes resistentes e fungos. Febre e leucocitose na primeira semana são, na maioria das vezes, efeito da própria inflamação (resposta inflamatória sistêmica), não de infecção. A conduta é procurar uma infecção fora do pâncreas e tratar se ela for encontrada: colangite (aqui afastada, com bilirrubina e ALT em queda), pneumonia, infecção urinária, infecção de cateter. Isso foi feito (urina tipo 1 e radiografia normais, hemoculturas colhidas); sem foco infeccioso e com a paciente estável, sem colangite e com as provas hepáticas melhorando, a conduta é observar sem antibiótico e rever se as culturas vierem positivas. O antibiótico está indicado quando há infecção documentada ou fortemente suspeita: colangite, bacteremia, infecção extrapancreática ou necrose infectada. A necrose infectada costuma surgir após 7 a 10 dias, em pacientes com necrose extensa que pioram ou não melhoram, e pode aparecer como gás na coleção à tomografia; nesses casos usam-se antibióticos que penetram na necrose (como carbapenêmicos ou quinolona associada a metronidazol) e, se necessário, drenagem em etapas (primeiro percutânea ou endoscópica), de preferência adiada até a coleção ficar encapsulada, em torno de 4 semanas."
+   }
+  ],
+  "hipoteses": [
+   "Pancreatite aguda biliar, forma leve (classificação de Atlanta revisada)",
+   "Colelitíase sintomática",
+   "Obesidade"
+  ],
+  "diferenciais": [
+   "Colecistite aguda ou coledocolitíase com colangite",
+   "Úlcera péptica perfurada (a amilase pode subir, mas há sinais de peritonite e ar livre)",
+   "Isquemia mesentérica",
+   "Síndrome coronariana aguda de parede inferior",
+   "Pancreatite por hipertrigliceridemia, álcool ou medicamentos",
+   "Obstrução intestinal alta"
+  ],
+  "conduta": "Em linhas gerais: internação em enfermaria; Ringer lactato em hidratação moderada guiada por metas (bolus de 10 mL/kg se desidratada, seguido de cerca de 1,5 mL/kg/h, reavaliado com frequência nas primeiras horas e depois diariamente); analgesia, incluindo opioide se necessário; antiemético; dieta oral leve e com pouca gordura precoce, assim que tolerar; controle de sinais vitais, diurese, hematócrito, ureia e creatinina. Não usar antibiótico profilático. Não fazer tomografia de rotina na admissão. CPRE apenas se surgir colangite ou obstrução persistente do colédoco. Colecistectomia videolaparoscópica antes da alta, com avaliação do colédoco (colangiorressonância, ecoendoscopia ou colangiografia intraoperatória). Se a pancreatite fosse necrosante, a colecistectomia seria adiada até a resolução das coleções ou por cerca de 6 semanas. Orientação sobre alimentação e controle do peso.",
+  "discussao": "Cálculos biliares e álcool são as principais causas de pancreatite aguda. A maioria dos casos é leve e se resolve em poucos dias, mas cerca de 1 em cada 5 pacientes evolui com formas moderadamente graves ou graves, nas quais a mortalidade depende sobretudo da falência de órgãos persistente e da necrose infectada. As mudanças mais importantes das diretrizes recentes (ACG 2024) vão contra velhos hábitos: hidratação moderada em vez de agressiva, preferência pelo Ringer lactato, alimentação oral precoce em vez de jejum prolongado, nada de antibiótico profilático e nada de CPRE precoce sem colangite. O maior erro na pancreatite biliar leve é dar alta sem retirar a vesícula: a paciente deste caso aguardava cirurgia havia um ano e a espera levou à pancreatite. Nas filas do SUS, garantir a colecistectomia na mesma internação é uma medida de prevenção muito eficaz.",
+  "referencias": [
+   "American College of Gastroenterology Guidelines: Management of Acute Pancreatitis (Tenner et al., American Journal of Gastroenterology, 2024)",
+   "Classification of acute pancreatitis – 2012: revision of the Atlanta classification and definitions by international consensus (Gut, 2013)",
+   "IAP/APA evidence-based guidelines for the management of acute pancreatitis (Pancreatology, 2013)",
+   "Aggressive or Moderate Fluid Resuscitation in Acute Pancreatitis – WATERFALL (New England Journal of Medicine, 2022)",
+   "ASGE guideline on the role of endoscopy in the evaluation and management of choledocholithiasis (Gastrointestinal Endoscopy, 2019)"
+  ]
+ },
+ {
+  "id": "caso-hemorragia-digestiva-ulcera-peptica",
+  "titulo": "Fezes pretas e desmaio em idoso que tomava remédio para dor no joelho",
+  "tema": "Hemorragia digestiva alta – úlcera péptica sangrante",
+  "temaId": "hemorragia-digestiva",
+  "especialidade": "Gastroenterologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "identificacao": "B.F.S., 66 anos, sexo masculino, pardo, pescador aposentado, natural e residente em Manacapuru (AM), transferido para hospital de Manaus. Peso 70 kg.",
+  "queixaPrincipal": "\"Estou com as fezes pretas há dois dias e hoje desmaiei no banheiro.\"",
+  "hda": "Paciente refere evacuações pretas, pastosas e com odor muito forte há 2 dias, cerca de 3 vezes ao dia. Hoje pela manhã, ao levantar-se para ir ao banheiro, sentiu tontura, visão escura e desmaiou por alguns segundos, com recuperação espontânea e sem movimentos anormais. Relata desconforto em queimação no epigástrio há cerca de 2 semanas. Nega vômitos com sangue ou 'borra de café', sangue vivo nas fezes, dor torácica ou falta de ar. Há 3 semanas vem tomando diclofenaco 50 mg duas a três vezes ao dia, comprado na farmácia, por dor nos joelhos.",
+  "antecedentes": "Infarto do miocárdio há 4 anos, tratado com angioplastia e stent; desde então usa ácido acetilsalicílico (AAS) 100 mg/dia e atorvastatina. Hipertensão arterial em uso de losartana 50 mg/dia. Sem insuficiência cardíaca. Artrose de joelhos. Nega doença do fígado, etilismo ou episódios prévios de sangramento. Nunca fez endoscopia. Última hemoglobina, há 6 meses: 14,1 g/dL.",
+  "exameFisico": "Regular estado geral, descorado (+++/4+), sudoreico, lúcido e orientado. Deitado: PA 96/60 mmHg; FC 112 bpm. Não foi feita a medida em pé por causa da síncope recente. FR 20 irpm; SatO2 97% em ar ambiente; Tax 36,3 °C. Enchimento capilar de 3 segundos. Ausculta cardíaca com ritmo regular e taquicárdico, sem sopros; pulmões limpos. Abdome flácido, dor leve à palpação do epigástrio, sem sinais de peritonite, sem visceromegalias, sem sinais de doença crônica do fígado (sem aranhas vasculares, ascite ou circulação colateral). Toque retal: fezes enegrecidas, pastosas, com odor característico (melena).",
+  "exames": "Hemoglobina 8,4 g/dL; hematócrito 25,5%; VCM 88 fL; leucócitos 11.200/mm³; plaquetas 248.000/mm³. INR 1,1; TTPa normal. Ureia 96 mg/dL (cerca de 16 mmol/L); creatinina 1,1 mg/dL. Sódio 138 mEq/L; potássio 4,4 mEq/L. ECG: taquicardia sinusal, área inativa em parede inferior (antiga), sem alterações agudas. Troponina normal. Tipagem sanguínea e prova cruzada solicitadas. Seis horas depois, após reposição de cristaloide: PA 112/70 mmHg, FC 98 bpm, hemoglobina 7,6 g/dL. Endoscopia digestiva alta (cerca de 14 horas após a chegada, com o paciente estável): úlcera de 1,5 cm na parede posterior do bulbo duodenal, com vaso visível não sangrante no fundo (Forrest IIa); estômago com resíduo hemático escuro, sem varizes.",
+  "perguntas": [
+   {
+    "pergunta": "Qual o diagnóstico mais provável e quais dados da história sustentam essa hipótese?",
+    "resposta": "Hemorragia digestiva alta por úlcera péptica, provavelmente duodenal, associada ao uso de anti-inflamatório não esteroide (diclofenaco) somado ao AAS. A melena indica sangramento acima do ângulo de Treitz na grande maioria dos casos (é preciso cerca de 50 a 100 mL de sangue para produzir fezes pretas). A queimação epigástrica, o uso de dois medicamentos que lesam a mucosa e a ausência de doença do fígado tornam a úlcera muito mais provável do que varizes. A ureia desproporcionalmente elevada em relação à creatinina (nitrogênio ureico de cerca de 45 mg/dL para creatinina 1,1 mg/dL, relação acima de 30) também favorece sangramento alto, pela digestão e absorção das proteínas do sangue no intestino. A infecção pelo Helicobacter pylori deve ser pesquisada, pois é a outra grande causa de úlcera."
+   },
+   {
+    "pergunta": "Como estratificar o risco antes da endoscopia?",
+    "resposta": "Pelo escore de Glasgow-Blatchford, que usa dados disponíveis na chegada: ureia de 10 a 25 mmol/L (4 pontos; atenção, o escore usa ureia em mmol/L, e 96 mg/dL equivalem a cerca de 16 mmol/L), hemoglobina abaixo de 10 g/dL em homem (6 pontos), PA sistólica entre 90 e 99 mmHg (2 pontos), FC de 100 bpm ou mais (1 ponto), melena (1 ponto) e síncope (2 pontos). Não há doença do fígado nem insuficiência cardíaca. Total: 16 pontos, indicando alto risco de precisar de transfusão, tratamento endoscópico ou cirurgia. O escore também ajuda no outro extremo: pacientes com 0 ou 1 ponto têm risco muito baixo e podem ser tratados de forma ambulatorial, com endoscopia eletiva. Após a endoscopia, o aspecto da úlcera (classificação de Forrest) define o risco de ressangramento: sangramento ativo (Forrest Ia e Ib) e vaso visível (IIa) são de alto risco; coágulo aderido (IIb) é intermediário; fundo limpo (III) e mancha plana (IIc) são de baixo risco."
+   },
+   {
+    "pergunta": "Qual a conduta antes, durante e depois da endoscopia?",
+    "resposta": "Antes: dois acessos venosos calibrosos, monitorização, reposição com cristaloide para corrigir a instabilidade sem excesso, tipagem e reserva de sangue. Transfusão restritiva: em geral transfundir quando a hemoglobina fica abaixo de 7 g/dL; como ele tem doença coronariana (estável, sem sinais de isquemia aguda), usa-se limite de 8 g/dL. Com a queda para 7,6 g/dL, transfundir 1 concentrado de hemácias e reavaliar, em vez de 'repor até normalizar' (transfusão liberal aumenta ressangramento e mortalidade). Pode-se iniciar inibidor de bomba de prótons (IBP) venoso em dose alta antes da endoscopia (por exemplo, omeprazol 80 mg), sem que isso atrase o exame. Eritromicina 250 mg por via venosa, 30 a 120 minutos antes da endoscopia, esvazia o estômago e melhora a visualização. Suspender losartana e diclofenaco. O AAS em prevenção secundária, pela ESGE (2021), idealmente não deve ser interrompido; se for suspenso na fase de instabilidade, deve ser retomado assim que a hemostasia endoscópica estiver confirmada (ACG-CAG 2022: no mesmo dia), no máximo em 3 a 5 dias. Endoscopia em até 24 horas após a chegada, depois da estabilização; antecipá-la para as primeiras 6 horas não reduziu mortalidade em estudo randomizado com pacientes de alto risco. Durante: vaso visível (Forrest IIa) exige tratamento endoscópico, de preferência combinado, com injeção de adrenalina diluída associada a método térmico ou clipes; adrenalina isolada não é suficiente. Depois: IBP em dose alta por 72 horas (bolus de 80 mg seguido de infusão de 8 mg/h, ou doses altas intermitentes ao menos duas vezes ao dia), depois IBP oral duas vezes ao dia até completar 14 dias e, em seguida, uma vez ao dia pelo tempo necessário para a cicatrização. Ácido tranexâmico não é recomendado (o estudo HALT-IT não mostrou benefício e houve mais trombose venosa)."
+   },
+   {
+    "pergunta": "Quais armadilhas e complicações devem ser previstas até a alta?",
+    "resposta": "1) Ressangramento: úlcera grande na parede posterior do bulbo pode erodir a artéria gastroduodenal. Se houver novo sangramento (nova melena ou hematêmese, instabilidade, queda da hemoglobina), repetir a endoscopia; se falhar, fazer embolização por arteriografia e, se não houver disponibilidade ou sucesso, cirurgia. Endoscopia de revisão de rotina ('second look') não é indicada. 2) AAS em prevenção secundária: suspender por longo tempo aumenta o risco de novo infarto e de morte; idealmente nem deve ser interrompido (ESGE 2021); se foi suspenso, deve ser retomado assim que a hemostasia endoscópica estiver confirmada (ACG-CAG 2022: no mesmo dia), no máximo em 3 a 5 dias, junto com o IBP contínuo. 3) Anti-inflamatório: o diclofenaco deve ser suspenso definitivamente; para a artrose, preferir paracetamol, exercícios e fisioterapia. 4) Helicobacter pylori: pesquisar com biópsia gástrica; durante o sangramento o teste pode dar falso negativo, então um resultado negativo deve ser repetido depois (teste respiratório, antígeno fecal ou nova biópsia). Se positivo, tratar conforme o consenso brasileiro vigente e confirmar a erradicação pelo menos 4 semanas após o fim do antibiótico, com o IBP suspenso por 2 semanas antes do teste."
+   }
+  ],
+  "hipoteses": [
+   "Hemorragia digestiva alta por úlcera duodenal com vaso visível (Forrest IIa)",
+   "Úlcera associada a anti-inflamatório não esteroide e AAS (investigar Helicobacter pylori)",
+   "Anemia aguda por perda sanguínea com instabilidade hemodinâmica leve",
+   "Doença arterial coronariana crônica com stent"
+  ],
+  "diferenciais": [
+   "Hemorragia por varizes esofágicas ou gástricas (hipertensão portal)",
+   "Gastropatia erosiva por anti-inflamatório",
+   "Síndrome de Mallory-Weiss",
+   "Neoplasia gástrica ou esofágica",
+   "Lesão de Dieulafoy",
+   "Sangramento do cólon direito ou do intestino delgado com trânsito lento"
+  ],
+  "conduta": "Em linhas gerais: internação com monitorização; dois acessos venosos calibrosos; cristaloide para estabilização; transfusão restritiva (limite de 8 g/dL por doença coronariana); IBP venoso em dose alta; eritromicina antes do exame; suspensão de diclofenaco e losartana; AAS de prevenção secundária idealmente mantido (se suspenso, retomado assim que confirmada a hemostasia, no máximo em 3 a 5 dias); endoscopia digestiva alta em até 24 horas com tratamento endoscópico combinado da úlcera de alto risco; IBP em dose alta por 72 horas e depois oral duas vezes ao dia até 14 dias; pesquisa e tratamento de Helicobacter pylori; suspensão definitiva do anti-inflamatório; reintrodução da losartana após estabilidade; plano para ressangramento (nova endoscopia, embolização ou cirurgia).",
+  "discussao": "A úlcera péptica é a principal causa de hemorragia digestiva alta não varicosa, e seus dois grandes fatores são o Helicobacter pylori e os anti-inflamatórios, incluindo o AAS em dose baixa. O uso de anti-inflamatório sem prescrição, muito comum, multiplica o risco em idosos que já tomam AAS. A estratificação em dois tempos é central: antes da endoscopia, o escore de Glasgow-Blatchford separa quem pode ser tratado em casa de quem precisa de internação; após a endoscopia, a classificação de Forrest define quem precisa de tratamento endoscópico e IBP em dose alta. Três mensagens contrariam condutas antigas: transfundir menos (limite de 7 g/dL, ou 8 g/dL em cardiopatas), não usar ácido tranexâmico e não suspender por muito tempo o AAS de quem tem doença cardiovascular. No interior do Amazonas, onde a endoscopia pode não estar disponível, a estratificação de risco ajuda a decidir quem precisa de transferência urgente para Manaus e a iniciar IBP e reposição volêmica antes do transporte.",
+  "referencias": [
+   "ACG Clinical Guideline: Upper Gastrointestinal and Ulcer Bleeding (Laine et al., American Journal of Gastroenterology, 2021)",
+   "Endoscopic diagnosis and management of nonvariceal upper gastrointestinal hemorrhage: European Society of Gastrointestinal Endoscopy (ESGE) Guideline – Update 2021",
+   "American College of Gastroenterology–Canadian Association of Gastroenterology Clinical Practice Guideline: Management of Anticoagulants and Antiplatelets During Acute Gastrointestinal Bleeding and the Periendoscopic Period (Abraham et al., American Journal of Gastroenterology, 2022)",
+   "Effects of a high-dose 24-h infusion of tranexamic acid on death and thromboembolic events in patients with acute gastrointestinal bleeding (HALT-IT) – The Lancet, 2020",
+   "Timing of Endoscopy for Acute Upper Gastrointestinal Bleeding (Lau et al., New England Journal of Medicine, 2020)",
+   "Consenso Brasileiro sobre Helicobacter pylori – Federação Brasileira de Gastroenterologia / Núcleo Brasileiro para Estudo do Helicobacter pylori (versão vigente)"
+  ]
+ },
+ {
+  "id": "caso-tromboembolismo-pulmonar-risco-intermediario",
+  "titulo": "Perna inchada depois de viagem de barco e falta de ar súbita",
+  "tema": "Tromboembolismo venoso – embolia pulmonar",
+  "temaId": "tromboembolismo-venoso",
+  "especialidade": "Pneumologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 3,
+  "identificacao": "A.P.L., 36 anos, sexo feminino, parda, vendedora, natural de Parintins (AM) e residente em Manaus (AM). Peso 88 kg; altura 1,63 m.",
+  "queixaPrincipal": "\"Estou com falta de ar e dor do lado do peito quando respiro fundo.\"",
+  "hda": "Paciente refere que há 7 dias retornou de Parintins para Manaus em barco de linha, viagem de cerca de 26 horas, em que permaneceu a maior parte do tempo deitada na rede. Dois dias após a chegada notou dor e inchaço na panturrilha esquerda, que atribuiu ao cansaço da viagem. Há 1 dia iniciou falta de ar de início súbito, que piora aos pequenos esforços, dor no lado direito do tórax que piora ao respirar fundo e tosse seca. Nega febre, catarro, escarro com sangue, desmaio ou dor torácica em aperto.",
+  "antecedentes": "Usa anticoncepcional oral combinado (estrogênio e progestagênio) há 2 anos. Obesidade. Duas gestações sem intercorrências; último parto há 5 anos. Nega trombose prévia, câncer, cirurgias ou internações recentes. Nega tabagismo. Nega história familiar de trombose. Nega doenças cardíacas ou pulmonares.",
+  "exameFisico": "Regular estado geral, ansiosa, taquipneica, lúcida e orientada. PA 108/68 mmHg, mantida em medidas repetidas; FC 118 bpm, rítmica; FR 28 irpm; SatO2 88% em ar ambiente (94% com cateter nasal de oxigênio a 3 L/min); Tax 37,3 °C. Estase jugular discreta a 45 graus. Ausculta cardíaca: ritmo regular, taquicárdico, segunda bulha pulmonar hiperfonética. Ausculta pulmonar: murmúrio vesicular presente bilateralmente, sem ruídos adventícios. Membro inferior esquerdo com edema com cacifo até o joelho, panturrilha 4 cm mais grossa que a direita (medida 10 cm abaixo da tuberosidade da tíbia) e dor à palpação no trajeto das veias profundas. Extremidades aquecidas, enchimento capilar de 2 segundos, diurese preservada, sem alteração do nível de consciência.",
+  "exames": "Beta-hCG negativo. Gasometria arterial em ar ambiente: pH 7,49; PaCO2 29 mmHg; PaO2 55 mmHg; bicarbonato 21,5 mEq/L (gradiente alvéolo-arterial de oxigênio de cerca de 58 mmHg, aumentado). Lactato 1,5 mmol/L. Troponina T de alta sensibilidade 68 ng/L (referência abaixo de 14 ng/L). NT-proBNP 1.850 pg/mL (elevado). Hemoglobina 13,1 g/dL; leucócitos 10.400/mm³; plaquetas 236.000/mm³. Creatinina 0,8 mg/dL. INR 1,0; TTPa normal. ECG: taquicardia sinusal, onda S em D1, onda Q e onda T invertida em D3, ondas T invertidas de V1 a V4. Radiografia de tórax sem consolidação ou derrame. Angiotomografia de tórax: falhas de enchimento nas artérias pulmonares principais direita e esquerda, estendendo-se às artérias lobares; relação entre os diâmetros do ventrículo direito e do ventrículo esquerdo de 1,2. Ecocardiograma à beira do leito: ventrículo direito dilatado e com contração reduzida (TAPSE de 14 mm), pressão sistólica estimada da artéria pulmonar de 52 mmHg, função do ventrículo esquerdo preservada, sem trombo nas cavidades. Ultrassonografia com Doppler venoso: trombose venosa profunda nas veias femoral e poplítea esquerdas.",
+  "perguntas": [
+   {
+    "pergunta": "Como estimar a probabilidade de embolia pulmonar antes dos exames e qual exame pedir?",
+    "resposta": "Pelo escore de Wells para embolia pulmonar: sinais clínicos de trombose venosa profunda (3 pontos), embolia pulmonar como o diagnóstico mais provável (3 pontos) e FC acima de 100 bpm (1,5 ponto), total de 7,5 pontos. Ela não pontua por imobilização (o critério do escore é repouso no leito por 3 dias ou mais ou cirurgia nas últimas 4 semanas), por trombose prévia, hemoptise ou câncer. Com mais de 4 pontos, a embolia é 'provável' (e, na versão em três níveis, mais de 6 pontos é alta probabilidade). Nessa situação não se deve pedir D-dímero: um resultado normal não afastaria a doença com segurança, e ele só atrasaria o diagnóstico. O exame indicado é a angiotomografia de tórax. O D-dímero, de preferência com ponto de corte ajustado para a idade após os 50 anos (idade x 10 µg/L), serve para afastar a doença em pacientes com probabilidade baixa ou intermediária. Os fatores de risco dela são o anticoncepcional com estrogênio, a obesidade e a imobilidade prolongada na viagem."
+   },
+   {
+    "pergunta": "Qual a gravidade dessa embolia pulmonar?",
+    "resposta": "A estratificação usa três perguntas em sequência. 1) Há instabilidade hemodinâmica (choque, hipotensão persistente ou parada cardíaca)? Não: PA 108/68 mmHg, lactato normal, boa perfusão. 2) Qual a gravidade clínica pelo escore? O PESI simplificado (sPESI) é 2 (FC de 110 bpm ou mais e SatO2 abaixo de 90%), e o PESI original é 76 pontos (idade 36 + FC de 110 ou mais, 20 + SatO2 abaixo de 90%, 20), classe III; ambos indicam que ela não é de baixo risco. 3) Há sofrimento do ventrículo direito? Sim, nos dois tipos de marcador: imagem (ventrículo direito dilatado e disfuncionante na tomografia e no ecocardiograma) e biomarcadores (troponina e NT-proBNP elevados). Pela diretriz europeia (ESC 2019), isso é embolia de risco intermediário-alto. Pela nova classificação da diretriz AHA/ACC 2026 (categorias A a E), ela é categoria C3: sintomática, com escore de gravidade elevado, disfunção do ventrículo direito e biomarcadores alterados, mas sem hipotensão nem sinais de má perfusão. O risco de piora nas primeiras horas e dias é real, por isso ela deve ficar internada em unidade com monitorização contínua."
+   },
+   {
+    "pergunta": "Qual o tratamento? Ela deve receber trombolítico agora?",
+    "resposta": "Anticoagulação imediata, iniciada já no momento da suspeita forte, sem esperar a tomografia, se não houver contraindicação. Para o início, a heparina de baixo peso molecular é preferida à heparina não fracionada: enoxaparina 1 mg/kg por via subcutânea a cada 12 horas (88 mg a cada 12 horas). A heparina não fracionada venosa fica para quem está instável, pode precisar de reperfusão a qualquer momento ou tem insuficiência renal grave. Oxigênio para manter a saturação adequada e monitorização em unidade intensiva ou semi-intensiva nas primeiras 48 a 72 horas. O trombolítico NÃO deve ser dado de rotina agora: no estudo PEITHO, em pacientes normotensos com disfunção do ventrículo direito e troponina elevada, a trombólise reduziu a descompensação hemodinâmica, mas aumentou sangramentos graves e AVC hemorrágico, sem reduzir a mortalidade. A diretriz AHA/ACC 2026 vai na mesma linha: trombólise sistêmica é considerada danosa nas categorias A a C1 (classe 3: dano); na C2 o benefício é incerto e, na categoria C3, a trombólise sistêmica ou as terapias por cateter podem ser consideradas em casos selecionados (classe 2b, benefício incerto). A trombólise fica reservada, na prática, para quem descompensa. Após estabilização, passar para anticoagulante oral: os anticoagulantes orais diretos (rivaroxabana, apixabana, edoxabana ou dabigatrana, estes dois últimos após pelo menos 5 dias de heparina) são preferidos à varfarina quando disponíveis. Onde se usa varfarina, como é comum no SUS, ela deve ser iniciada junto com a heparina, mantendo as duas por pelo menos 5 dias e até o INR ficar entre 2 e 3 em dois dias consecutivos. Suspender o anticoncepcional com estrogênio e orientar método eficaz sem estrogênio (por exemplo, DIU de cobre ou hormonal), pois os anticoagulantes orais, diretos ou varfarina, não devem ser usados na gestação. Duração: no mínimo 3 meses; depois disso, reavaliar. Como houve fatores transitórios que serão removidos (estrogênio e imobilidade), o risco de nova trombose é menor e muitos especialistas encerram o tratamento; a diretriz europeia admite considerar prolongar quando o fator transitório é considerado 'menor', pesando o risco de sangramento e a preferência da paciente."
+   },
+   {
+    "pergunta": "No segundo dia, ela fica pálida e confusa, com PA 82/50 mmHg por mais de 15 minutos, FC 132 bpm e lactato 4,2 mmol/L. O que mudou e o que fazer?",
+    "resposta": "Ela passou a ter embolia pulmonar de alto risco (ESC 2019), ou categoria E1 da AHA/ACC 2026 (falência cardiopulmonar com choque): o ventrículo direito entrou em falência. Agora a reperfusão está indicada: trombólise sistêmica, se não houver contraindicação, com alteplase 100 mg por via venosa em 2 horas (em situações extremas, como parada cardíaca, existe regime acelerado de 0,6 mg/kg em 15 minutos, máximo de 50 mg). Checar contraindicações: AVC hemorrágico ou de causa desconhecida em qualquer época, AVC isquêmico nos últimos 6 meses, tumor do sistema nervoso central, trauma grave, cirurgia ou traumatismo craniano nas últimas 3 semanas, distúrbio de coagulação e sangramento ativo; outras são relativas. Ela não tem contraindicação. Se houver contraindicação ou falha da trombólise, as alternativas são tratamento por cateter (trombólise local ou retirada mecânica do trombo) ou embolectomia cirúrgica, em centro com equipe experiente; oxigenação por membrana extracorpórea (ECMO) pode servir de ponte em choque refratário. Armadilhas no suporte: evitar grande volume de soro (no máximo cerca de 500 mL, pois o ventrículo direito dilatado comprime o esquerdo e piora o débito), usar noradrenalina para a pressão e, se possível, evitar intubação, porque a sedação e a ventilação com pressão positiva podem causar colapso circulatório; se inevitável, fazer com cuidado e drogas vasoativas prontas. Outro erro comum é o oposto: trombolisar pacientes estáveis apenas porque a troponina está alta ou porque o trombo é grande na tomografia."
+   }
+  ],
+  "hipoteses": [
+   "Embolia pulmonar aguda bilateral de risco intermediário-alto (ESC 2019) / categoria C3 (AHA/ACC 2026)",
+   "Trombose venosa profunda femoropoplítea esquerda",
+   "Fatores de risco: anticoncepcional oral combinado, obesidade, imobilidade prolongada em viagem"
+  ],
+  "diferenciais": [
+   "Pneumonia com pleurite",
+   "Síndrome coronariana aguda",
+   "Pericardite",
+   "Pneumotórax",
+   "Dissecção de aorta",
+   "Insuficiência cardíaca descompensada",
+   "Crise de ansiedade (diagnóstico de exclusão; hipoxemia não é compatível)"
+  ],
+  "conduta": "Em linhas gerais: internação em unidade com monitorização contínua; oxigênio suplementar; anticoagulação imediata com heparina de baixo peso molecular (enoxaparina 1 mg/kg a cada 12 horas), reservando heparina não fracionada para instabilidade, reperfusão iminente ou insuficiência renal grave; sem trombólise de rotina enquanto estável; vigilância de sinais de descompensação (hipotensão, taquicardia crescente, piora da oxigenação, lactato em elevação, confusão, redução da diurese); trombólise sistêmica (alteplase 100 mg em 2 horas) ou terapia por cateter/cirúrgica se houver descompensação; transição para anticoagulante oral direto ou varfarina com sobreposição adequada; suspensão do anticoncepcional com estrogênio e orientação de contracepção sem estrogênio; anticoagulação por no mínimo 3 meses, com reavaliação ao final; seguimento para sintomas persistentes (investigar hipertensão pulmonar tromboembólica crônica se a falta de ar persistir após 3 meses).",
+  "discussao": "A embolia pulmonar é a forma mais grave do tromboembolismo venoso e costuma se originar de trombose das veias profundas das pernas. O raciocínio segue três etapas: probabilidade clínica (Wells ou Genebra) para decidir entre D-dímero e exame de imagem; confirmação por angiotomografia; e estratificação de gravidade, que define local de tratamento e necessidade de reperfusão. A diretriz AHA/ACC 2026 abandonou os termos 'maciça' e 'submaciça' e criou categorias de A (achado incidental, sem sintomas) a E (falência cardiopulmonar), valorizando sinais precoces de descompensação, como hipotensão transitória, lactato elevado e 'choque normotenso'. O ponto mais cobrado em provas continua válido: trombólise sistêmica para quem tem choque ou parada; anticoagulação e vigilância atenta para o paciente estável com ventrículo direito sofrendo. Em mulheres jovens, o anticoncepcional com estrogênio é um fator de risco frequentemente esquecido, e viagens longas com pouca movimentação, como as de barco na Amazônia, somam-se a ele. A profilaxia inclui caminhar e se hidratar durante viagens longas e avaliar o risco antes de prescrever estrogênio.",
+  "referencias": [
+   "2026 AHA/ACC/ACCP/ACEP/CHEST/SCAI/SHM/SIR/SVM/SVN Guideline for the Evaluation and Management of Acute Pulmonary Embolism in Adults (Circulation/JACC, 2026)",
+   "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism, developed in collaboration with the European Respiratory Society (European Heart Journal, 2020)",
+   "Fibrinolysis for Patients with Intermediate-Risk Pulmonary Embolism – PEITHO (New England Journal of Medicine, 2014)",
+   "Recomendações para o manejo da tromboembolia pulmonar – Sociedade Brasileira de Pneumologia e Tisiologia (Jornal Brasileiro de Pneumologia)"
+  ]
+ },
+ {
+  "id": "caso-hiv-meningite-criptococica",
+  "titulo": "Dor de cabeça que não passa, emagrecimento e sapinho na boca em mototaxista",
+  "tema": "HIV e aids",
+  "temaId": "hiv-aids",
+  "especialidade": "Infectologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 3,
+  "identificacao": "R.S.P., 34 anos, sexo masculino, pardo, mototaxista, natural de Parintins e residente em Manaus (AM) há 10 anos.",
+  "queixaPrincipal": "\"Dor de cabeça forte há três semanas, que remédio nenhum tira.\"",
+  "hda": "Paciente refere cefaleia holocraniana há cerca de 3 semanas, inicialmente leve e progressivamente mais intensa, pior pela manhã, com náuseas e dois episódios de vômito nos últimos 2 dias. Há 1 semana notou visão embaçada 'às vezes dupla' e hoje a esposa o achou 'mais lento para responder'. Refere febre baixa vespertina não medida. Nos últimos 4 meses perdeu cerca de 9 kg sem fazer dieta e teve diarreia intermitente. Há 1 mês apareceram 'placas brancas' na boca, tratadas em farmácia com um gel, com melhora parcial. Nunca fez teste de HIV. Relata relações sexuais com parcerias diferentes, sem uso regular de preservativo, até se casar há 2 anos. Nega tosse prolongada, convulsões ou fraqueza em algum lado do corpo.",
+  "antecedentes": "Herpes-zóster no tórax há 1 ano. Nega doenças crônicas e uso de medicações contínuas. Tabagista (10 maços-ano); etilismo social. Nega uso de drogas injetáveis. Nega alergias. Esposa nunca testada para HIV.",
+  "exameFisico": "Regular estado geral, emagrecido, hipocorado (+/4+), sonolento mas desperta ao chamado, orientado no espaço, parcialmente desorientado no tempo. Glasgow 14 (O4 V4 M6). Peso 58 kg; altura 1,72 m. PA 122/78 mmHg; FC 96 bpm; FR 18 irpm; SatO2 97% em ar ambiente; Tax 37,8 °C. Placas esbranquiçadas removíveis em palato e língua (candidíase oral). Linfonodos cervicais pequenos, móveis. Rigidez de nuca discreta. Limitação da abdução do olho esquerdo (paresia do VI nervo craniano). Pupilas isocóricas e fotorreagentes. Fundo de olho: papiledema bilateral discreto. Força preservada nos quatro membros; sem outros déficits focais. Pele sem lesões ativas; cicatriz de herpes-zóster em dermátomo torácico. Ausculta cardíaca e pulmonar normais. Abdome sem visceromegalias.",
+  "exames": "Teste rápido para HIV na emergência (fluxograma com dois testes rápidos de fabricantes diferentes): TR1 reagente e TR2 reagente. Contagem de linfócitos T CD4+: 38 células/mm³. Carga viral do HIV: 285.000 cópias/mL (coletada antes de qualquer tratamento; resultado posterior). Antígeno criptocócico (CrAg) por teste de fluxo lateral no soro: reagente. Hemograma: hemoglobina 10,9 g/dL; leucócitos 3.100/mm³ (linfócitos 620/mm³); plaquetas 176.000/mm³. Sódio 131 mEq/L; potássio 3,9 mEq/L; creatinina 0,8 mg/dL; glicemia 98 mg/dL. Tomografia de crânio com contraste (feita antes da punção, pelo papiledema e pela alteração de consciência): sem lesões expansivas, sem desvio da linha média, ventrículos de tamanho normal. Punção lombar em decúbito lateral: pressão de abertura 36 cmH2O; líquor límpido; 18 células/mm³ (80% linfócitos); proteína 72 mg/dL; glicose 41 mg/dL (relação com a glicemia ≈ 0,42); tinta da China com leveduras encapsuladas; CrAg no líquor reagente; cultura para fungos em andamento. Foram retirados 25 mL de líquor, com pressão de fechamento de 18 cmH2O. Radiografia de tórax normal. Pesquisa de tuberculose: LF-LAM urinário não reagente; teste rápido molecular no escarro induzido não detectado. VDRL e teste rápido para sífilis não reagentes; HBsAg e anti-HCV não reagentes; IgG anti-Toxoplasma reagente.",
+  "perguntas": [
+   {
+    "pergunta": "Quais são os diagnósticos deste paciente e como o HIV foi confirmado?",
+    "resposta": "Infecção pelo HIV em fase avançada (aids), com diagnóstico tardio, e meningite criptocócica (meningoencefalite por Cryptococcus) com hipertensão intracraniana. Pistas de imunodeficiência avançada já estavam presentes antes: perda de peso, diarreia, candidíase oral e herpes-zóster prévio. O CD4 de 38 células/mm³ confirma imunossupressão grave (abaixo de 100, o risco de criptococose é alto). O diagnóstico do HIV no Brasil pode ser feito com dois testes rápidos reagentes de fabricantes diferentes, feitos em sequência; a carga viral complementa, mas não precisa ser esperada para iniciar o cuidado. A meningite criptocócica é confirmada pela tinta da China positiva e pelo CrAg reagente no líquor (e no soro); a cultura identificará a espécie. Diferente da meningite bacteriana, o líquor costuma ter poucas células, glicose baixa ou normal e proteína pouco elevada, e o quadro é arrastado, de semanas."
+   },
+   {
+    "pergunta": "O que torna este caso grave e como tratar a hipertensão intracraniana?",
+    "resposta": "Sinais de gravidade: alteração do nível de consciência, papiledema, paresia do VI nervo e pressão de abertura muito elevada (36 cmH2O). A hipertensão intracraniana é a principal causa de morte evitável nas primeiras semanas da meningite criptocócica e ocorre porque o fungo e sua cápsula dificultam a reabsorção do líquor, e não por massa cerebral (por isso a tomografia é normal). O tratamento é mecânico: punções lombares de alívio sempre que a pressão de abertura for igual ou maior que 25 cmH2O ou houver sintomas, retirando líquor até reduzir a pressão para menos de 20 cmH2O ou pela metade, repetindo diariamente até estabilizar; se as punções diárias não bastarem, avalia-se derivação liquórica com a neurocirurgia. Manitol, acetazolamida e corticoide não são recomendados para esse fim; a dexametasona adjuvante, testada no estudo CryptoDex, não trouxe benefício e aumentou incapacidade e eventos adversos."
+   },
+   {
+    "pergunta": "Como deve ser o tratamento antifúngico?",
+    "resposta": "Em três fases. Indução: o esquema preferencial da OMS (2022) é uma dose única de anfotericina B lipossomal 10 mg/kg por via venosa (para 58 kg, 580 mg), associada a 14 dias de flucitosina oral 100 mg/kg/dia dividida em 4 tomadas (cerca de 1.450 mg a cada 6 horas) e fluconazol 1.200 mg/dia. Alternativas aceitas quando esse esquema não está disponível: anfotericina B lipossomal 3 a 4 mg/kg/dia com flucitosina por 2 semanas, ou anfotericina B desoxicolato 1 mg/kg/dia com flucitosina por 1 semana seguida de fluconazol 1.200 mg/dia na 2ª semana. A flucitosina foi incorporada ao SUS, e o serviço deve seguir o PCDT vigente e o que tem disponível. Durante a anfotericina: hidratação com soro fisiológico antes das doses, reposição de potássio e magnésio e dosagem de creatinina e eletrólitos com frequência; com a flucitosina, hemograma para detectar leucopenia e plaquetopenia. Consolidação: fluconazol 800 mg/dia (400 a 800 mg/dia conforme o esquema e a evolução) por 8 semanas, após melhora clínica e, idealmente, cultura do líquor negativa. Manutenção: fluconazol 200 mg/dia por pelo menos 1 ano, suspenso apenas com recuperação imunológica sustentada pela TARV (pela OMS, CD4 de 200 células/mm³ ou mais, ou de 100 ou mais com carga viral indetectável)."
+   },
+   {
+    "pergunta": "Quando iniciar a terapia antirretroviral e quais outros cuidados não podem faltar?",
+    "resposta": "Esta é a armadilha do caso. Para a maioria das pessoas com HIV, inclusive com outras infecções oportunistas como pneumocistose e neurotoxoplasmose, a TARV deve começar cedo (na neurotoxoplasmose, em até 2 semanas). Na meningite criptocócica é diferente: o PCDT recomenda iniciar a TARV entre a 4ª e a 6ª semana após o início do antifúngico. No estudo COAT, o início precoce (1 a 2 semanas) aumentou a mortalidade, provavelmente pela síndrome inflamatória de reconstituição imune (SIR) no sistema nervoso central, que piora a hipertensão intracraniana. O esquema inicial preferencial no Brasil é tenofovir + lamivudina + dolutegravir, em dose diária. Outros cuidados: profilaxia com sulfametoxazol-trimetoprima 800/160 mg uma vez ao dia (CD4 abaixo de 200 protege contra pneumocistose e, com CD4 abaixo de 100 e IgG anti-Toxoplasma reagente, contra neurotoxoplasmose); tratamento da candidíase oral com fluconazol, que já é coberto pelo esquema; investigação ativa de tuberculose e tratamento preventivo quando a TB ativa estiver descartada; notificação compulsória da infecção pelo HIV e da aids; oferta de testagem e cuidado à parceria sexual. Se após o início da TARV os sintomas neurológicos voltarem com cultura negativa, pensar em SIR, e não em falha do antifúngico."
+   }
+  ],
+  "hipoteses": [
+   "Infecção pelo HIV com imunossupressão avançada (aids), diagnóstico tardio",
+   "Meningite criptocócica com hipertensão intracraniana",
+   "Candidíase oral",
+   "Emagrecimento e diarreia crônica associados ao HIV (investigar outras causas oportunistas)"
+  ],
+  "diferenciais": [
+   "Meningite tuberculosa",
+   "Neurotoxoplasmose (lesões com realce em anel na tomografia; tomografia normal fala contra)",
+   "Neurossífilis",
+   "Linfoma primário do sistema nervoso central",
+   "Leucoencefalopatia multifocal progressiva",
+   "Meningite bacteriana (curso mais agudo, líquor com muitos neutrófilos)",
+   "Histoplasmose disseminada com acometimento do sistema nervoso central"
+  ],
+  "conduta": "Internação. Punção lombar de alívio já na admissão e repetida diariamente enquanto a pressão de abertura for igual ou maior que 25 cmH2O ou houver sintomas. Indução com anfotericina B lipossomal em dose única de 10 mg/kg associada a 14 dias de flucitosina e fluconazol (esquema preferencial da OMS; alternativa: anfotericina lipossomal diária com flucitosina por 2 semanas, conforme o protocolo e a disponibilidade do serviço), com pré-hidratação, reposição de potássio e magnésio e controle laboratorial frequente. Nova punção ao fim da indução para avaliar a cultura antes da consolidação com fluconazol. Sulfametoxazol-trimetoprima profilático. Investigação e tratamento preventivo da tuberculose quando indicado. TARV com tenofovir, lamivudina e dolutegravir entre a 4ª e a 6ª semana do tratamento antifúngico. Notificação da infecção pelo HIV/aids. Aconselhamento, testagem da esposa e, conforme o resultado, oferta de profilaxia pré-exposição (PrEP) ou de tratamento. Vinculação ao serviço de atenção especializada.",
+  "discussao": "A criptococose é uma das principais causas de morte em pessoas com aids no Brasil e costuma revelar um diagnóstico tardio de HIV, como neste caso, em que houve várias oportunidades perdidas (herpes-zóster, candidíase, emagrecimento). Por isso o teste de HIV deve ser oferecido a qualquer pessoa com essas condições. O caso revisa três pontos que costumam cair em provas: a hipertensão intracraniana é tratada com punções de alívio, e não com diuréticos ou corticoide; a flucitosina associada à anfotericina reduz mortalidade em relação à anfotericina isolada; e, ao contrário da regra geral de iniciar a TARV o quanto antes, na meningite criptocócica a TARV é adiada para 4 a 6 semanas após o início do antifúngico (na meningite tuberculosa também se recomenda adiar o início, por algumas semanas). Em pessoas com CD4 abaixo de 200 sem sintomas, a pesquisa de CrAg no soro permite tratar a infecção antes que ela chegue às meninges.",
+  "referencias": [
+   "Protocolo Clínico e Diretrizes Terapêuticas para Manejo da Infecção pelo HIV em Adultos – Módulo 1: Tratamento – Ministério da Saúde (2024)",
+   "Protocolo Clínico e Diretrizes Terapêuticas para Manejo da Infecção pelo HIV em Adultos – Módulo 2: Coinfecções e Infecções Oportunistas – Ministério da Saúde (2024)",
+   "Guidelines for diagnosing, preventing and managing cryptococcal disease among adults, adolescents and children living with HIV – Organização Mundial da Saúde (2022)",
+   "Boulware DR et al. Timing of antiretroviral therapy after diagnosis of cryptococcal meningitis (COAT). New England Journal of Medicine, 2014"
+  ]
+ },
+ {
+  "id": "caso-leptospirose-sindrome-weil",
+  "titulo": "Febre, dor nas panturrilhas e pele amarelo-avermelhada depois da cheia do rio",
+  "tema": "Leptospirose",
+  "temaId": "leptospirose",
+  "especialidade": "Infectologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 3,
+  "identificacao": "J.C.M., 41 anos, sexo masculino, pardo, ajudante de pedreiro, morador de casa de palafita às margens de um igarapé em Manaus (AM).",
+  "queixaPrincipal": "\"Febre, dor nas pernas e fiquei amarelo.\"",
+  "hda": "Paciente refere que, durante a cheia do rio, a água entrou em sua casa e ele passou vários dias limpando a lama e andando descalço na água, onde viu ratos mortos. Cerca de 10 dias depois (há 8 dias) iniciou febre alta de início súbito, calafrios, cefaleia intensa e dor muscular forte, principalmente nas panturrilhas, a ponto de ter dificuldade para andar. Os olhos ficaram 'vermelhos', sem secreção. Tomou dipirona e um anti-inflamatório por conta própria. Há 3 dias notou pele e olhos amarelados, urina escura como 'coca-cola' e diminuição do apetite. Desde ontem tem falta de ar, tosse e hoje escarrou sangue duas vezes. Refere urinar menos que o habitual. Nega viagens recentes para área de garimpo, nega sangramento gengival e nega contato com pessoas doentes.",
+  "antecedentes": "Hipertensão arterial leve, sem uso regular de medicação. Etilismo social aos finais de semana. Tabagismo ausente. Nega alergias. Sem internações prévias. Vacinação para febre amarela em dia.",
+  "exameFisico": "Regular estado geral, lúcido, orientado, taquipneico, ictérico (+++/4+) com tonalidade alaranjada (icterícia rubínica), desidratado (+/4+). PA 96/58 mmHg; FC 112 bpm; FR 26 irpm; SatO2 91% em ar ambiente; Tax 38,4 °C. Peso 72 kg. Sufusão conjuntival bilateral (vermelhidão sem secreção). Petéquias em membros inferiores. Dor intensa à palpação das panturrilhas. Aparelho respiratório: estertores crepitantes em terços inferiores de ambos os hemitórax. Aparelho cardiovascular: ritmo regular, taquicárdico, sem sopros. Abdome: fígado palpável a 2 cm do rebordo costal direito, doloroso; baço não palpável. Sem sinais meníngeos. Diurese medida nas primeiras 24 horas de internação: 1.100 mL.",
+  "exames": "Hemograma: hemoglobina 11,2 g/dL; leucócitos 14.800/mm³ (82% neutrófilos); plaquetas 42.000/mm³. Ureia 168 mg/dL; creatinina 4,6 mg/dL. Sódio 132 mEq/L; potássio 3,1 mEq/L; cloro 98 mEq/L. Bilirrubina total 18,4 mg/dL (direta 15,9 mg/dL); AST 98 U/L; ALT 72 U/L; fosfatase alcalina 190 U/L. CPK 2.850 U/L. INR 1,3. Lactato 2,8 mmol/L. Gasometria arterial em ar ambiente: pH 7,31; PaCO2 32 mmHg; PaO2 62 mmHg; bicarbonato 16 mEq/L. Urina tipo 1: proteinúria (+), hemácias 12 por campo, bilirrubina positiva. Radiografia de tórax: infiltrado alveolar bilateral, mais evidente nas bases. Sorologia (ELISA IgM) para leptospirose: reagente. Gota espessa para malária: negativa. NS1 e IgM para dengue: não reagentes. Anti-HAV IgM: não reagente. Hemoculturas colhidas.",
+  "perguntas": [
+   {
+    "pergunta": "Qual o diagnóstico e quais dados da história e do exame apoiam essa hipótese?",
+    "resposta": "Leptospirose na forma grave (síndrome de Weil), com provável síndrome pulmonar hemorrágica em início. A favor: exposição a água de enchente contaminada por urina de roedores, com início dos sintomas cerca de 10 dias depois (o período de incubação vai de 1 a 30 dias, geralmente 5 a 14); febre de início súbito com cefaleia e mialgia intensa nas panturrilhas; sufusão conjuntival; e, após alguns dias, a tríade de Weil: icterícia rubínica, lesão renal aguda e fenômenos hemorrágicos (petéquias, hemoptise). O ELISA IgM reagente, colhido após a primeira semana de doença, reforça fortemente o diagnóstico; a confirmação laboratorial para a vigilância segue os critérios do Ministério da Saúde (ver a última pergunta). Os exames negativos para malária e dengue ajudam no diagnóstico diferencial, importante na Amazônia."
+   },
+   {
+    "pergunta": "Quais sinais de gravidade estão presentes e quais achados laboratoriais são típicos da leptospirose?",
+    "resposta": "Sinais de gravidade: dispneia, hemoptise, hipoxemia (SatO2 91%; relação PaO2/FiO2 de cerca de 295) e infiltrado bilateral, que sugerem hemorragia pulmonar, a principal causa de morte na leptospirose; hipotensão; lesão renal aguda (creatinina 4,6 mg/dL); icterícia intensa; plaquetopenia; e acidose metabólica (pH 7,31 com bicarbonato 16 mEq/L; a PaCO2 de 32 mmHg é a compensação respiratória esperada pela fórmula de Winter: 1,5 × 16 + 8 = 32). Esses sinais indicam internação em UTI. Achados típicos: lesão renal aguda frequentemente não oligúrica e com potássio baixo (por perda renal de potássio), ao contrário da maioria das lesões renais, em que ele sobe; bilirrubina muito alta, com predomínio da direta, com transaminases apenas discreta a moderadamente elevadas (em geral poucas centenas de U/L), o que ajuda a diferenciar de hepatite viral, em que as transaminases ficam em milhares; CPK elevada pela lesão muscular; leucocitose com neutrofilia e plaquetopenia."
+   },
+   {
+    "pergunta": "Qual a conduta terapêutica?",
+    "resposta": "Antibiótico venoso imediato, sem esperar confirmação laboratorial e mesmo após o 5º dia de doença, pois o Ministério da Saúde recomenda tratar em qualquer fase. Para adultos com forma grave: penicilina G cristalina 1,5 milhão UI a cada 6 horas, ou ampicilina 1 g a cada 6 horas, ou ceftriaxona 1 a 2 g a cada 24 horas, ou cefotaxima 1 g a cada 6 horas, por pelo menos 7 dias; azitromicina venosa é alternativa em alergia. Pode ocorrer reação de Jarisch-Herxheimer nas primeiras horas. Suporte: UTI; oxigênio e, se necessário, ventilação mecânica protetora (volume corrente baixo), com baixo limiar para intubação diante de hemoptise e piora respiratória; hidratação cuidadosa, porque o excesso de volume piora a hemorragia pulmonar; reposição de potássio; suspensão de anti-inflamatórios e de outros nefrotóxicos; diálise precoce (em estudo brasileiro, a diálise diária associou-se a menor mortalidade que em dias alternados), a ser considerada cedo, especialmente com oligúria, uremia, acidose ou congestão pulmonar, muitas vezes em sessões diárias ou contínuas; transfusão de plaquetas se houver sangramento importante com plaquetas baixas. Para comparação, a forma leve, sem sinais de alerta, é tratada ambulatorialmente com doxiciclina 100 mg a cada 12 horas ou amoxicilina 500 mg a cada 8 horas por 5 a 7 dias."
+   },
+   {
+    "pergunta": "Quais as obrigações de vigilância e como deve ser feita a confirmação laboratorial?",
+    "resposta": "A leptospirose é de notificação compulsória imediata (em até 24 horas) à Secretaria Municipal de Saúde, com preenchimento da ficha de investigação no Sinan, já na suspeita. Confirmação: na primeira semana de doença, os métodos diretos (cultura e PCR no sangue) têm melhor rendimento; a partir do 7º dia, a sorologia por ELISA IgM é o exame de triagem mais usado, e a microaglutinação (MAT), exame de referência, confirma o caso por soroconversão ou aumento de 4 vezes ou mais no título entre duas amostras pareadas (a segunda colhida cerca de 2 a 3 semanas após a primeira) ou por título igual ou maior que 800 em amostra única; PCR e cultura também confirmam, e, nos óbitos, a imuno-histoquímica. Se o primeiro ELISA vier negativo em fase precoce, deve-se colher nova amostra. A vigilância investiga a fonte e procura outros casos na comunidade atingida pela cheia. Prevenção: evitar contato com água e lama de enchente, usar botas e luvas na limpeza, limpar a casa com água sanitária diluída, acondicionar o lixo e controlar roedores."
+   }
+  ],
+  "hipoteses": [
+   "Leptospirose, forma grave (síndrome de Weil)",
+   "Síndrome pulmonar hemorrágica da leptospirose (em instalação)",
+   "Lesão renal aguda não oligúrica com hipocalemia",
+   "Plaquetopenia e acidose metabólica"
+  ],
+  "diferenciais": [
+   "Malária grave por Plasmodium falciparum",
+   "Dengue grave",
+   "Hepatites virais agudas (A, B, E) e hepatite fulminante",
+   "Febre amarela",
+   "Sepse bacteriana com colestase",
+   "Hantavirose (síndrome cardiopulmonar)",
+   "Colangite aguda"
+  ],
+  "conduta": "Internação em UTI. Oxigenoterapia com monitorização contínua e baixo limiar para intubação e ventilação protetora. Coleta de hemoculturas e sorologia, seguida de antibiótico venoso imediato (por exemplo, penicilina G cristalina 1,5 milhão UI a cada 6 horas ou ceftriaxona 1 a 2 g ao dia) por pelo menos 7 dias. Hidratação cautelosa guiada por diurese e sinais de congestão. Reposição de potássio. Suspensão de anti-inflamatórios. Avaliação da nefrologia para diálise precoce. Controle de plaquetas, coagulação, bilirrubinas, função renal e eletrólitos diariamente. Notificação imediata à vigilância epidemiológica e orientação à família sobre prevenção.",
+  "discussao": "A leptospirose é uma zoonose com surtos previsíveis após chuvas intensas e cheias, situação comum em Manaus e em outras cidades amazônicas com moradias em áreas de igarapé. A maioria dos casos é leve e parece uma 'virose', mas cerca de 10% a 15% evoluem para formas graves, com letalidade alta quando há hemorragia pulmonar. Na Amazônia, o diagnóstico diferencial com malária, dengue e hepatites é obrigatório. O caso reforça pontos clássicos: a mialgia de panturrilha e a sufusão conjuntival como pistas clínicas; a lesão renal com potássio baixo; a bilirrubina muito alta com transaminases pouco elevadas; o tratamento antibiótico em qualquer fase da doença; a diálise precoce; e o risco de usar anti-inflamatórios em pacientes febris durante epidemias. Enquanto houver dúvida entre dengue e leptospirose, o paciente não deve receber anti-inflamatório.",
+  "referencias": [
+   "Leptospirose: diagnóstico e manejo clínico – Ministério da Saúde (2014)",
+   "Guia de Vigilância em Saúde – Ministério da Saúde (6ª edição, 2023), capítulo de leptospirose",
+   "Portaria de Consolidação GM/MS nº 4/2017, Anexo 1 do Anexo V – Lista Nacional de Notificação Compulsória, com atualizações",
+   "Veronesi – Tratado de Infectologia"
+  ]
+ },
+ {
+  "id": "caso-chagas-aguda-transmissao-oral",
+  "titulo": "Febre, rosto inchado e falta de ar em família que tomou açaí na mesma festa",
+  "tema": "Doença de Chagas",
+  "temaId": "doenca-de-chagas",
+  "especialidade": "Cardiologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "identificacao": "M.F.S., 38 anos, sexo feminino, parda, agricultora, moradora de comunidade ribeirinha no médio Solimões (AM), atendida no hospital do município.",
+  "queixaPrincipal": "\"Febre todo dia há duas semanas, o rosto inchou e agora fico cansada para andar.\"",
+  "hda": "Paciente refere febre diária há 15 dias, com cefaleia, dores no corpo e cansaço. Há 10 dias notou inchaço no rosto, principalmente ao redor dos olhos, e depois nas pernas. Há 5 dias passou a sentir falta de ar ao caminhar, palpitações e dor no peito que piora ao deitar. Procurou o posto, onde foi feita gota espessa para malária: não foram vistos plasmódios, mas o microscopista identificou 'outros parasitos' e encaminhou a lâmina ao hospital. Conta que, cerca de 3 semanas antes do início da febre, a família se reuniu em um aniversário na comunidade, onde todos tomaram açaí batido na hora em uma batedeira artesanal. O marido e dois sobrinhos também estão com febre. Nega ter sido picada por 'barbeiro', nega transfusões e viagens para fora da região.",
+  "antecedentes": "Previamente hígida. G3P3, laqueadura tubária há 5 anos. Nega doenças cardíacas, hipertensão ou diabetes. Mãe natural da comunidade, sem diagnóstico conhecido de doença de Chagas. Nega alergias.",
+  "exameFisico": "Regular estado geral, lúcida, orientada, corada, anictérica, febril. Peso 60 kg. PA 100/64 mmHg; FC 118 bpm; FR 24 irpm; SatO2 95% em ar ambiente; Tax 38,2 °C. Edema bipalpebral e facial bilateral, sem vermelhidão; edema de membros inferiores (++/4+). Linfonodos cervicais pequenos e indolores. Aparelho cardiovascular: ritmo regular, taquicárdico, bulhas hipofonéticas, sem sopros; pulso paradoxal ausente; turgência jugular ausente a 45°. Aparelho respiratório: estertores finos nas bases. Abdome: fígado a 3 cm do rebordo costal direito, levemente doloroso; baço palpável no rebordo costal esquerdo. Sem sinal de Romaña ou chagoma de inoculação.",
+  "exames": "Pesquisa direta no sangue (gota espessa e esfregaço corados; confirmada por método de concentração): formas tripomastigotas de Trypanosoma cruzi. Sorologia IgM anti-T. cruzi: reagente. Hemograma: hemoglobina 11,4 g/dL; leucócitos 9.800/mm³ (linfócitos 48%); plaquetas 168.000/mm³. AST 86 U/L; ALT 104 U/L; creatinina 0,8 mg/dL; potássio 4,2 mEq/L. Troponina I ultrassensível 850 ng/L (referência do laboratório: menor que 16 ng/L). NT-proBNP 2.450 pg/mL. Proteína C reativa 48 mg/L. Beta-hCG negativo. Teste rápido para HIV não reagente. Eletrocardiograma: taquicardia sinusal a 118 bpm, baixa voltagem do QRS nas derivações periféricas e inversão difusa de ondas T. Radiografia de tórax: aumento da área cardíaca e discreta congestão pulmonar. Ecocardiograma: derrame pericárdico moderado, sem colapso de câmaras direitas (sem tamponamento); fração de ejeção do ventrículo esquerdo 48%, com hipocinesia difusa.",
+  "perguntas": [
+   {
+    "pergunta": "Qual o diagnóstico e qual a provável forma de transmissão?",
+    "resposta": "Doença de Chagas aguda com miocardite e derrame pericárdico, adquirida por transmissão oral. A favor: febre prolongada, edema de face e membros, hepatoesplenomegalia, sinais de miocardite (taquicardia, troponina elevada, alterações do ECG, disfunção ventricular) e derrame pericárdico, com tripomastigotas vistos no sangue. O surto familiar após consumo de açaí preparado artesanalmente, sem sinal de porta de entrada na pele ou no olho (chagoma, sinal de Romaña), indica transmissão oral: triatomíneos ou suas fezes são triturados junto com o fruto e o parasito é ingerido. Hoje, na Amazônia, a via oral responde pela maioria dos casos agudos notificados no Brasil. A transmissão oral costuma causar quadros agudos mais intensos, com miocardite e derrame pericárdico mais frequentes que na transmissão vetorial clássica."
+   },
+   {
+    "pergunta": "Como se confirma a doença de Chagas na fase aguda e em que isso difere da fase crônica?",
+    "resposta": "Na fase aguda, a parasitemia é alta e o diagnóstico é parasitológico direto: pesquisa a fresco, gota espessa, esfregaço e métodos de concentração (como Strout, micro-hematócrito ou creme leucocitário), repetidos se o primeiro for negativo e houver suspeita. Por isso a rede de diagnóstico da malária na Amazônia é tão importante na detecção de casos agudos. A sorologia IgM anti-T. cruzi, ou a soroconversão da IgG em amostras seriadas, apoia o diagnóstico quando a pesquisa direta é negativa. Na fase crônica, a parasitemia é baixa e intermitente, e o diagnóstico é sorológico: são necessários dois testes de IgG com princípios diferentes (por exemplo, ELISA e imunofluorescência ou quimioluminescência) concordantes."
+   },
+   {
+    "pergunta": "Qual o tratamento desta paciente?",
+    "resposta": "Todo caso agudo deve ser tratado com antiparasitário assim que confirmado, qualquer que seja a via de transmissão. Primeira escolha: benznidazol 5 mg/kg/dia por via oral, dividido em 2 ou 3 tomadas, por 60 dias; para 60 kg, 300 mg/dia (100 mg a cada 8 horas), que é também a dose diária máxima recomendada pelo PCDT. Nifurtimox é alternativa em caso de intolerância. Antes de iniciar: descartar gestação (o benznidazol é contraindicado na gravidez) e colher hemograma e provas hepáticas. Efeitos adversos a vigiar: dermatite alérgica (a mais comum, geralmente na 2ª semana), sintomas digestivos, neuropatia periférica (mais tardia) e, raramente, queda de leucócitos ou plaquetas; orienta-se evitar álcool. Dermatite extensa com febre, sinais de hipersensibilidade grave ou queda importante de leucócitos exigem suspensão. Ao mesmo tempo, tratar a miocardite: internação com monitorização cardíaca, repouso, diurético para congestão, ecocardiograma de controle do derrame e pericardiocentese se surgirem sinais de tamponamento. Anti-inflamatórios devem ser evitados na miocardite."
+   },
+   {
+    "pergunta": "Quais ações de vigilância são necessárias e como deve ser o seguimento?",
+    "resposta": "A doença de Chagas aguda é de notificação compulsória imediata (em até 24 horas), já na suspeita; a doença de Chagas crônica também é notificável, com periodicidade semanal. A vigilância deve investigar o surto: identificar todas as pessoas que consumiram o açaí da mesma origem, fazer pesquisa parasitológica e sorologia nelas (inclusive nas assintomáticas), e, junto com a vigilância sanitária, inspecionar o ponto de venda e a batedeira. A principal medida de prevenção é o branqueamento do fruto (imersão em água a 80 °C por 10 segundos, seguida de resfriamento) ou a pasteurização da polpa, além da higiene dos frutos e do local de preparo; o açaí não precisa ser proibido, e sim preparado com segurança. Seguimento: hemograma e provas hepáticas durante o tratamento; após a alta, acompanhamento clínico, eletrocardiograma e sorologia periódicos. O controle de cura é sorológico e a negativação pode levar anos; a persistência da sorologia não significa, sozinha, falha do tratamento."
+   }
+  ],
+  "hipoteses": [
+   "Doença de Chagas aguda por transmissão oral (surto familiar associado ao açaí)",
+   "Miocardite chagásica aguda com disfunção ventricular leve",
+   "Derrame pericárdico moderado sem tamponamento"
+  ],
+  "diferenciais": [
+   "Miocardite viral",
+   "Malária (afastada pela gota espessa sem plasmódios)",
+   "Febre tifoide",
+   "Leishmaniose visceral (febre prolongada com hepatoesplenomegalia)",
+   "Toxoplasmose aguda e mononucleose infecciosa",
+   "Glomerulonefrite aguda (edema facial, mas com alterações urinárias e hipertensão)",
+   "Pericardite tuberculosa"
+  ],
+  "conduta": "Internação com monitorização cardíaca. Notificação imediata. Benznidazol 300 mg/dia (100 mg a cada 8 horas) por 60 dias, com hemograma e provas hepáticas periódicos e orientação sobre reações de pele. Diurético para congestão, sem anti-inflamatórios. Ecocardiograma seriado para acompanhar o derrame pericárdico, com pericardiocentese se houver tamponamento. Busca ativa e exames em todos os que consumiram o açaí, com tratamento dos casos confirmados. Ação conjunta com a vigilância sanitária no ponto de preparo. Seguimento ambulatorial com eletrocardiograma e sorologia periódicos.",
+  "discussao": "A doença de Chagas mudou de perfil no Brasil: com o controle do Triatoma infestans nas casas, a transmissão vetorial domiciliar ficou rara, e hoje a maioria dos casos agudos notificados vem da Região Norte, principalmente do Pará, por transmissão oral ligada a alimentos como açaí, bacaba e caldo de cana. Na Amazônia os triatomíneos são silvestres (vivem em palmeiras) e são atraídos pela luz para os locais de preparo. A forma aguda oral costuma aparecer em surtos familiares, com febre prolongada, edema facial e miocardite, e pode ser fatal. O diagnóstico muitas vezes começa na lâmina de malária, o que mostra o valor da rede de microscopistas. Mesmo tratados, esses pacientes devem ser acompanhados, porque parte das pessoas infectadas pode desenvolver, anos depois, a forma crônica cardíaca (cardiomiopatia chagásica, com bloqueio de ramo direito, arritmias e insuficiência cardíaca) ou digestiva.",
+  "referencias": [
+   "Protocolo Clínico e Diretrizes Terapêuticas da Doença de Chagas – Ministério da Saúde (2018)",
+   "Guia de Vigilância em Saúde – Ministério da Saúde (6ª edição, 2023), capítulo de doença de Chagas",
+   "II Consenso Brasileiro em Doença de Chagas – Epidemiologia e Serviços de Saúde (2016)",
+   "Diretriz da Sociedade Brasileira de Cardiologia sobre Diagnóstico e Tratamento de Pacientes com Cardiomiopatia da Doença de Chagas (2023)"
+  ]
+ },
+ {
+  "id": "caso-tce-hematoma-epidural",
+  "titulo": "Marinheiro que caiu da escada do barco, ficou bem e piorou horas depois",
+  "tema": "Traumatismo cranioencefálico",
+  "temaId": "traumatismo-cranioencefalico",
+  "especialidade": "Trauma",
+  "disciplina": "Clínica Cirúrgica",
+  "dificuldade": 3,
+  "identificacao": "E.T.A., 22 anos, sexo masculino, pardo, ajudante de convés em barco de passageiros, natural de Tefé e em trânsito por Manaus (AM). Trazido pelo SAMU.",
+  "queixaPrincipal": "\"Caiu, bateu a cabeça, ficou bem e depois começou a dormir e vomitar.\" (relato do colega de trabalho)",
+  "hda": "Há cerca de 4 horas, durante o embarque de carga no porto, caiu de uma escada do barco de aproximadamente 2,5 metros de altura e bateu o lado esquerdo da cabeça no piso de ferro. Segundo o colega, 'apagou' por cerca de 1 minuto, depois acordou, conversou normalmente, reclamou de dor de cabeça e foi descansar na rede, recusando atendimento. Cerca de 3 horas após a queda, passou a queixar-se de dor de cabeça muito forte, vomitou três vezes e foi ficando cada vez mais sonolento, até não responder direito às perguntas. Não usava capacete. Nega uso de álcool ou drogas, segundo o colega.",
+  "antecedentes": "Sem doenças conhecidas. Não usa anticoagulantes ou antiagregantes. Nega alergias. Vacinação antitetânica desconhecida.",
+  "exameFisico": "Admissão na sala de emergência: x: sem sangramento externo exsanguinante. A: via aérea pérvia, roncos ocasionais, colar cervical posicionado pelo SAMU. B: FR 18 irpm, SatO2 96% com máscara de oxigênio, murmúrio vesicular presente bilateralmente. C: PA 142/84 mmHg; FC 64 bpm; pulsos cheios; sem sinais de sangramento interno ao exame e FAST negativo. D: abre os olhos à pressão (estímulo doloroso) no leito ungueal, fala palavras inapropriadas e localiza o estímulo doloroso: Glasgow 10 (O2 V3 M5). Pupilas: esquerda 4 mm com reação lenta à luz, direita 3 mm fotorreagente. Força diminuída no dimídio direito. E: hematoma subgaleal e escoriação em região temporal esquerda; sem otorragia, sem equimose retroauricular ou periorbital; glicemia capilar 132 mg/dL; Tax 36,4 °C. Reavaliação 20 minutos depois, a caminho da tomografia: não abre os olhos mesmo com estímulo doloroso, emite apenas sons incompreensíveis e faz flexão anormal (decorticação) dos membros superiores à dor: Glasgow 6 (O1 V2 M3); pupila esquerda 6 mm sem reação à luz e direita 3 mm fotorreagente; PA 168/88 mmHg; FC 54 bpm; respiração irregular.",
+  "exames": "Tomografia de crânio sem contraste: coleção hiperdensa extra-axial biconvexa (em forma de lente) na região temporoparietal esquerda, que não ultrapassa as suturas, com espessura máxima de 3 cm, maior diâmetro de 8 cm e extensão de 6 cm no eixo craniocaudal (volume estimado pelo método ABC/2: 8 × 3 × 6 ÷ 2 = 72 cm³); desvio da linha média de 9 mm para a direita; apagamento parcial das cisternas da base; fratura linear do osso temporal esquerdo cruzando o trajeto da artéria meníngea média. Tomografia de coluna cervical: sem fraturas. Hemoglobina 13,8 g/dL; plaquetas 210.000/mm³; INR 1,0; TTPa normal. Sódio 140 mEq/L. Etanol sérico não detectado. Tipagem sanguínea e reserva de concentrado de hemácias solicitadas.",
+  "perguntas": [
+   {
+    "pergunta": "Como calcular e interpretar a escala de coma de Glasgow neste paciente?",
+    "resposta": "A escala soma três respostas: abertura ocular (1 a 4), resposta verbal (1 a 5) e resposta motora (1 a 6), com total de 3 a 15. Na admissão: abertura ocular à pressão = 2; palavras inapropriadas = 3; localiza o estímulo = 5; total 10 (TCE moderado, faixa de 9 a 12). Na reavaliação: sem abertura ocular = 1; sons incompreensíveis = 2; flexão anormal = 3; total 6 (TCE grave, 8 ou menos). A versão atualizada recomenda também registrar a reatividade pupilar (Glasgow-P): subtrai-se 1 ponto quando uma pupila não reage e 2 quando nenhuma reage; aqui, 6 − 1 = 5. A queda de 4 pontos em 20 minutos, a pupila dilatada e sem reação do mesmo lado do hematoma, a fraqueza do lado oposto e a tríade de Cushing (hipertensão, bradicardia e respiração irregular) indicam hipertensão intracraniana com herniação do úncus em curso: emergência neurocirúrgica."
+   },
+   {
+    "pergunta": "Qual o diagnóstico e o que explica a evolução com intervalo lúcido?",
+    "resposta": "Hematoma epidural (extradural) agudo temporoparietal esquerdo, com efeito de massa e sinais de herniação transtentorial. Mecanismo: o impacto na região temporal, onde o osso é fino (próximo ao ptério), causa fratura que lesa a artéria meníngea média; o sangue arterial descola a dura-máter do osso e forma uma coleção biconvexa que não cruza as suturas, onde a dura é firmemente aderida. O intervalo lúcido acontece porque a perda de consciência inicial é breve (concussão) e o paciente recupera a consciência enquanto o hematoma ainda é pequeno; conforme ele cresce, os mecanismos de compensação se esgotam e a piora é rápida. O intervalo lúcido não é obrigatório (ocorre em parte dos casos) e também pode aparecer em outros hematomas. Diferença para o hematoma subdural agudo: este vem da ruptura de veias ponte, tem forma em crescente, pode cruzar as suturas e costuma se associar a lesão do cérebro, com pior prognóstico."
+   },
+   {
+    "pergunta": "Qual a conduta imediata e qual a indicação cirúrgica?",
+    "resposta": "Seguir o xABCDE sem atrasar a cirurgia. Com Glasgow 8 ou menos, intubação orotraqueal em sequência rápida com proteção da coluna cervical. Evitar os dois grandes causadores de lesão cerebral secundária: hipóxia (manter SatO2 acima de 90% e PaO2 acima de 60 mmHg) e hipotensão (as diretrizes da Brain Trauma Foundation recomendam PA sistólica de pelo menos 110 mmHg entre 15 e 49 anos). Manter normocapnia (PaCO2 35 a 45 mmHg); a hiperventilação só é aceita de forma breve, como ponte para a cirurgia diante de sinais de herniação. Cabeceira elevada a 30° com a cabeça alinhada, sedação e analgesia adequadas e terapia osmótica (manitol, por exemplo 1 g/kg em bolus, se não houver hipotensão, ou solução salina hipertônica). Contatar a neurocirurgia imediatamente. Indicação cirúrgica: pelas diretrizes de manejo cirúrgico do TCE, hematoma epidural com volume acima de 30 cm³ deve ser drenado independentemente do Glasgow, e paciente em coma (Glasgow abaixo de 9) com anisocoria deve ser operado o mais rápido possível. Este paciente tem os dois critérios (72 cm³, Glasgow 6, anisocoria), além de desvio da linha média acima de 5 mm: craniotomia de urgência para drenagem e controle do sangramento. Operado a tempo, o hematoma epidural isolado tem bom prognóstico."
+   },
+   {
+    "pergunta": "Se ele tivesse procurado atendimento logo após a queda, lúcido e com Glasgow 15, a tomografia estaria indicada? Que armadilhas o caso ensina?",
+    "resposta": "Sim. Pela Regra Canadense para TC de Crânio, aplicável a adultos com TCE leve (Glasgow 13 a 15) que tiveram perda de consciência, amnésia ou desorientação, a tomografia está indicada se houver qualquer critério de alto risco (Glasgow abaixo de 15 duas horas após o trauma, suspeita de fratura aberta ou com afundamento, sinais de fratura da base do crânio, dois ou mais episódios de vômito, idade de 65 anos ou mais) ou de médio risco (amnésia de mais de 30 minutos para eventos anteriores ao impacto ou mecanismo perigoso, como queda de mais de 0,9 metro ou de cinco degraus, atropelamento ou ejeção de veículo). Ele perdeu a consciência e caiu de 2,5 metros: tomografia indicada. Armadilhas: um paciente lúcido após o trauma não está necessariamente livre de lesão (o intervalo lúcido engana leigos e profissionais); pacientes com uso de anticoagulante ou com convulsão pós-trauma ficam fora da regra e devem fazer tomografia; a hipotensão em paciente com TCE deve levar à busca de sangramento em outro lugar antes de ser atribuída ao crânio; e, se não houver neurocirurgião no local, a transferência deve ser acionada cedo, com o paciente estabilizado, sem esperar a piora. Quem recebe alta com TCE leve deve ficar com um acompanhante e receber orientação escrita sobre sinais de alerta (sonolência, vômitos, cefaleia progressiva, confusão, fraqueza, convulsão)."
+   }
+  ],
+  "hipoteses": [
+   "Traumatismo cranioencefálico grave (Glasgow 6) após queda de altura",
+   "Hematoma epidural agudo temporoparietal esquerdo com herniação transtentorial (uncal)",
+   "Fratura linear do osso temporal esquerdo",
+   "Hipertensão intracraniana com tríade de Cushing"
+  ],
+  "diferenciais": [
+   "Hematoma subdural agudo",
+   "Contusão cerebral e hematoma intraparenquimatoso traumático",
+   "Lesão axonal difusa",
+   "Hemorragia subaracnóidea traumática",
+   "Intoxicação exógena associada (álcool, drogas) como fator de confusão",
+   "Hipoglicemia ou estado pós-convulsivo"
+  ],
+  "conduta": "Atendimento pelo xABCDE com proteção da coluna cervical. Intubação em sequência rápida. Oxigenação e ventilação com metas de SatO2 acima de 90% e PaCO2 entre 35 e 45 mmHg, com hiperventilação breve apenas como ponte diante de herniação. PA sistólica de pelo menos 110 mmHg. Cabeceira a 30°, sedação e analgesia, terapia osmótica. Tomografia de crânio sem contraste imediata e craniotomia de urgência para drenagem do hematoma epidural. Profilaxia antitetânica conforme histórico vacinal. Pós-operatório em UTI com monitorização neurológica, controle de glicemia, sódio, temperatura e convulsões, e profilaxia de crises convulsivas precoces quando indicada. Notificação de acidente de trabalho.",
+  "discussao": "O hematoma epidural é a lesão intracraniana traumática que mais depende da rapidez do atendimento: com drenagem precoce, a maioria dos pacientes se recupera bem; com atraso, a herniação pode causar morte ou sequela grave. O caso revisa a escala de Glasgow e sua atualização com a reatividade pupilar; a anatomia (ptério, artéria meníngea média, dura aderida às suturas); a tomografia (lente biconvexa contra crescente do subdural); o cálculo do volume pelo método ABC/2; e as indicações cirúrgicas. Também mostra por que as regras de decisão para tomografia existem: um paciente que 'acordou bem' após perda de consciência e queda de altura precisa de avaliação. Na Amazônia, onde muitas cidades não têm neurocirurgião e a transferência depende de barco ou avião, reconhecer cedo o risco e acionar a regulação é parte essencial do tratamento.",
+  "referencias": [
+   "Advanced Trauma Life Support (ATLS) – American College of Surgeons, 11ª edição",
+   "Guidelines for the Management of Severe Traumatic Brain Injury, 4ª edição – Brain Trauma Foundation (2016)",
+   "Bullock MR et al. Surgical management of acute epidural hematomas. Neurosurgery, 2006 (Guidelines for the Surgical Management of Traumatic Brain Injury)",
+   "Stiell IG et al. The Canadian CT Head Rule for patients with minor head injury. Lancet, 2001",
+   "Teasdale G et al. The Glasgow Coma Scale at 40 years: standing the test of time. Lancet Neurology, 2014",
+   "Brennan PM et al. Simplifying the use of prognostic information in traumatic brain injury. Part 1: The GCS-Pupils score. Journal of Neurosurgery, 2018"
+  ]
+ },
+ {
+  "id": "caso-grande-queimado-lesao-inalatoria",
+  "titulo": "Explosão de botijão na cabine do barco: queimaduras no rosto, tórax e braços, com voz rouca",
+  "tema": "Queimaduras",
+  "especialidade": "Trauma",
+  "disciplina": "Clínica Cirúrgica",
+  "dificuldade": 3,
+  "identificacao": "R.S.A., 34 anos, sexo masculino, pardo, comerciante de barco (regatão), residente em Manacapuru (AM). Peso 70 kg.",
+  "queixaPrincipal": "\"O botijão estourou na cozinha do barco e pegou fogo em mim.\"",
+  "hda": "Paciente trazido por familiares ao hospital de Manacapuru cerca de 1 hora após o acidente (ocorrido às 13h; admissão às 14h). Relata que preparava comida na cabine fechada do barco quando houve vazamento e explosão do botijão de gás, seguida de incêndio. Ficou alguns minutos preso na cabine, em meio à fumaça, até conseguir sair e se jogar no rio. Refere dor intensa no rosto, no tórax e nos braços, ardência na garganta e tosse com escarro escuro. A família notou que a voz 'ficou rouca' durante o trajeto. Nega perda de consciência, queda ou outro trauma. Não recebeu hidratação venosa antes da chegada.",
+  "antecedentes": "Previamente hígido. Nega doenças crônicas, alergias e uso de medicamentos. Tabagista (10 maços-ano). Etilismo social. Vacinação antitetânica: não sabe informar.",
+  "exameFisico": "Lúcido e orientado, agitado, com fácies de dor (Glasgow 15). Voz rouca, sem estridor no momento. PA 128/80 mmHg; FC 118 bpm; FR 26 irpm; SatO2 95% no oxímetro de pulso com máscara de oxigênio; Tax 36,2 °C. Vias aéreas: queimadura da face, sobrancelhas e vibrissas nasais chamuscadas, fuligem na orofaringe e escarro carbonáceo. Ausculta pulmonar com roncos esparsos, sem sibilos. Pele: queimaduras de 2º grau (bolhas, base rosada ou vermelha, dolorosa) na face anterior (4,5%), em toda a face anterior do tronco (18%) e na face anterior do membro superior esquerdo, incluindo o dorso da mão (4,5%). Membro superior direito com queimadura em toda a circunferência (9%): braço com 2º grau profundo e antebraço com área de 3º grau (pele branca-acinzentada, endurecida, seca e sem dor ao toque). Pulsos radiais presentes e simétricos, enchimento capilar de 2 segundos nas mãos. Eritema sem bolhas nas coxas (1º grau). Sem outras lesões ao exame secundário.",
+  "exames": "Gasometria arterial: pH 7,34; PaO2 88 mmHg (com oxigênio); PaCO2 36 mmHg; bicarbonato 19 mEq/L; lactato 2,8 mmol/L; carboxi-hemoglobina 14%. Hemoglobina 17,2 g/dL; hematócrito 51% (hemoconcentração). Sódio 139 mEq/L; potássio 4,3 mEq/L; ureia 32 mg/dL; creatinina 1,0 mg/dL; glicemia 148 mg/dL; CK 380 U/L. Radiografia de tórax inicial sem alterações. ECG: taquicardia sinusal. Diurese pela sonda vesical, após o início da hidratação: 1ª hora 40 mL; 2ª hora 75 mL; 3ª hora 80 mL.",
+  "perguntas": [
+   {
+    "pergunta": "Qual a superfície corporal queimada (SCQ) e como ela foi calculada?",
+    "resposta": "Pela regra dos nove do adulto, somando apenas as queimaduras de 2º e 3º graus (o eritema de 1º grau das coxas não entra na conta): face anterior da cabeça 4,5% + face anterior do tronco 18% + membro superior direito inteiro 9% + face anterior do membro superior esquerdo 4,5% = 36% de SCQ. Em queimaduras irregulares ou pequenas, pode-se usar a palma da mão do próprio paciente (incluindo os dedos), que corresponde a cerca de 1% da superfície corporal. Em crianças, a regra dos nove precisa ser adaptada (a cabeça é proporcionalmente maior e os membros inferiores menores), de preferência com a tabela de Lund-Browder."
+   },
+   {
+    "pergunta": "Como calcular a reposição volêmica das primeiras 24 horas e qual a meta de diurese?",
+    "resposta": "As diretrizes atuais (ATLS 10ª edição e American Burn Association, 2024) recomendam iniciar com 2 mL × peso (kg) × % SCQ de Ringer lactato em 24 horas, para evitar o excesso de líquido; a fórmula de Parkland clássica usa 4 mL, e a cartilha do Ministério da Saúde admite de 2 a 4 mL. Neste caso: 2 × 70 × 36 = 5.040 mL em 24 horas (com 4 mL seriam 10.080 mL). Metade deve correr nas primeiras 8 horas contadas a partir do momento da queimadura, e não da chegada ao hospital: como ele chegou 1 hora depois, 2.520 mL nas 7 horas restantes (360 mL/h) e os outros 2.520 mL nas 16 horas seguintes (cerca de 158 mL/h). Pela fórmula de 4 mL, seriam 5.040 mL em 7 horas (720 mL/h) e depois 315 mL/h. A lesão inalatória pode aumentar a necessidade de líquido, mas a fórmula é só uma estimativa inicial: a velocidade é ajustada a cada hora pela diurese, com meta de 0,5 mL/kg/h no adulto (cerca de 30 a 50 mL/h; aceita-se até 1 mL/kg/h). Em crianças pequenas, a meta é de cerca de 1 mL/kg/h, e no trauma elétrico com urina escura a diurese deve ser mantida mais alta. Neste caso, a diurese passou de 70 mL/h na 2ª e na 3ª hora, acima da meta, o que indica reduzir a infusão aos poucos (em geral 10% a 20% por hora) para evitar excesso de líquido."
+   },
+   {
+    "pergunta": "Por que este paciente precisa de intubação precoce, e o que a saturação de 95% esconde?",
+    "resposta": "Ele tem vários sinais de lesão inalatória: queimadura em ambiente fechado, queimadura de face, vibrissas chamuscadas, fuligem na orofaringe, escarro carbonáceo e rouquidão. O edema das vias aéreas piora nas primeiras horas, com a própria reposição volêmica, e pode fechar a via aérea durante o transporte, quando a intubação fica muito difícil. Por isso, a via aérea deve ser garantida antes da transferência, com o maior tubo possível (idealmente 8,0 mm no adulto), por quem tiver mais experiência. A saturação de 95% no oxímetro de pulso engana: o aparelho comum não diferencia a oxi-hemoglobina da carboxi-hemoglobina. A carboxi-hemoglobina de 14% confirma intoxicação por monóxido de carbono, tratada com oxigênio a 100%. Em incêndios em ambiente fechado com queima de plásticos, a acidose láctica persistente ou importante, sem outra explicação, deve lembrar também intoxicação por cianeto, tratada empiricamente com hidroxocobalamina 5 g por via venosa."
+   },
+   {
+    "pergunta": "Quais critérios indicam transferência para um centro de tratamento de queimados?",
+    "resposta": "Pela cartilha do Ministério da Saúde, ele tem vários: queimadura de 2º grau maior que 20% da SCQ em adulto; queimadura de 3º grau (em qualquer extensão); lesão de face e de mãos (áreas especiais, assim como olhos, períneo, pés e grandes articulações); lesão inalatória; e queimadura circunferencial de membro. Também são critérios: queimadura de 2º grau maior que 10% em crianças e em maiores de 50 anos, queimaduras elétricas e químicas, e doenças associadas ou outros traumas. A transferência deve ser feita após estabilização (via aérea garantida, acesso venoso, hidratação em curso, sonda vesical), com contato prévio com o serviço de referência e envio do registro de tudo o que foi feito."
+   }
+  ],
+  "hipoteses": [
+   "Grande queimado: queimadura térmica por chama com 36% de SCQ (2º grau superficial e profundo, com área de 3º grau)",
+   "Lesão inalatória",
+   "Intoxicação por monóxido de carbono",
+   "Queimadura circunferencial de membro superior direito, com risco de comprometimento circulatório"
+  ],
+  "diferenciais": [
+   "Intoxicação por cianeto associada (fumaça de plásticos em ambiente fechado)",
+   "Trauma associado à explosão (lesões por onda de choque ou por projeção), a ser afastado no exame secundário",
+   "Síndrome compartimental do membro queimado",
+   "Choque por outra causa (hemorragia por trauma associado), já que o choque do queimado se instala de forma gradual"
+  ],
+  "conduta": "Em linhas gerais: interromper a queimadura e retirar roupas e adornos; oxigênio a 100%; intubação orotraqueal precoce pela lesão inalatória (a succinilcolina pode ser usada nas primeiras horas; após 24 a 48 horas do trauma passa a haver risco de hipercalemia). Dois acessos venosos calibrosos, de preferência em pele não queimada. Ringer lactato iniciado com 2 mL × peso × % SCQ (ATLS/ABA; a cartilha do Ministério da Saúde admite de 2 a 4 mL), metade nas 8 horas iniciais contadas desde a queimadura, com ajuste horário pela diurese medida em sonda vesical (meta de 0,5 mL/kg/h, cerca de 30 a 50 mL/h no adulto), evitando tanto a falta quanto o excesso de líquido. Analgesia com opioide por via venosa, em doses tituladas. Cobrir as lesões com lençóis limpos e secos, evitar gelo e prevenir hipotermia. Profilaxia antitetânica; não usar antibiótico sistêmico profilático. Sonda gástrica no paciente intubado. Exames: gasometria, lactato, carboxi-hemoglobina, eletrólitos, função renal, CK. Vigiar a perfusão do membro superior direito (dor, enchimento capilar, pulsos, tensão), com escarotomia se houver comprometimento circulatório ou restrição respiratória por queimadura circunferencial de tórax. Transferência para o centro de referência em queimados, em Manaus, após estabilização e contato prévio.",
+  "discussao": "O grande queimado perde grande volume de líquido para o interstício nas primeiras 24 horas, pelo aumento da permeabilidade capilar. As fórmulas de reposição servem apenas como ponto de partida: o que guia o tratamento é a diurese horária. Nos últimos anos, reconheceu-se que o excesso de líquido (fenômeno chamado de 'fluid creep') é frequente e causa edema, síndrome compartimental abdominal e de membros e piora respiratória; por isso o ATLS passou a recomendar início com 2 mL/kg/% SCQ no adulto, enquanto a cartilha do Ministério da Saúde admite de 2 a 4 mL. Dois erros de cálculo são clássicos: incluir as queimaduras de 1º grau na SCQ e contar as 8 horas a partir da chegada ao hospital, e não do acidente. A lesão inalatória aumenta a mortalidade e a necessidade de líquidos, e a decisão de intubar deve ser antecipada quando o transporte é longo, realidade comum no Amazonas, onde as distâncias até o centro de referência são grandes. Explosões de botijão e incêndios em embarcações são causas conhecidas de queimaduras graves na região, o que reforça a importância da prevenção.",
+  "referencias": [
+   "Cartilha para Tratamento de Emergência das Queimaduras – Ministério da Saúde (2012)",
+   "Advanced Trauma Life Support (ATLS) – American College of Surgeons, 10ª edição, capítulo de lesões térmicas",
+   "Materiais técnicos da Sociedade Brasileira de Queimaduras sobre atendimento inicial ao queimado",
+   "American Burn Association Clinical Practice Guidelines on Burn Shock Resuscitation (Cartotto et al., Journal of Burn Care & Research, 2024)"
+  ],
+  "temaId": "queimaduras"
+ },
+ {
+  "id": "caso-diabetes-gestacional-insulina",
+  "titulo": "Gestante de 25 semanas com curva glicêmica alterada",
+  "tema": "Diabetes mellitus gestacional",
+  "especialidade": "Obstetrícia",
+  "disciplina": "Ginecologia e Obstetrícia",
+  "dificuldade": 2,
+  "identificacao": "F.C.M., 30 anos, sexo feminino, parda, merendeira escolar, residente em Itacoatiara (AM). Terceira gestação (dois partos vaginais anteriores).",
+  "queixaPrincipal": "\"Vim mostrar o exame do açúcar que fiz com o suco doce.\"",
+  "hda": "Gestante com 25 semanas e 3 dias (datação por ultrassom de primeiro trimestre) retorna à consulta de pré-natal na UBS com o resultado do teste oral de tolerância à glicose com 75 g (TOTG). Está assintomática. Nega poliúria, polidipsia, perda de peso, perda de líquido, sangramento ou contrações. Movimentação fetal presente. Alimentação com consumo frequente de farinha de mandioca, tapioca, açaí com açúcar e refrigerante. Ganho de 7 kg desde o início da gestação.",
+  "antecedentes": "Glicemia de jejum na primeira consulta (10 semanas): 86 mg/dL. Sorologias e demais exames do primeiro trimestre normais. Segundo filho nasceu com 4.100 g, sem investigação de diabetes naquela gestação. Mãe com diabetes tipo 2. Nega hipertensão, tabagismo ou uso de medicamentos, exceto ácido fólico e sulfato ferroso. IMC antes da gestação: 31 kg/m².",
+  "exameFisico": "Bom estado geral. Peso 88 kg. PA 116/72 mmHg. FC 82 bpm. Altura uterina 26 cm. Batimentos cardíacos fetais 142 bpm. Sem edema. Exame especular não realizado (sem queixas).",
+  "exames": "TOTG 75 g (25 semanas): jejum 88 mg/dL; 1 hora 189 mg/dL; 2 horas 162 mg/dL. Urina tipo 1 sem alterações; urocultura negativa. Após 2 semanas de orientação nutricional e caminhada diária, perfil glicêmico capilar com 4 medidas por dia (jejum e 1 hora após café, almoço e jantar) por 14 dias = 56 medidas: jejum entre 96 e 108 mg/dL em 10 dos 14 dias; 1 hora após as refeições acima de 140 mg/dL em 8 das 42 medidas. Ao todo, 18 de 56 medidas (32%) acima da meta. Ultrassom obstétrico com 29 semanas: peso fetal estimado e circunferência abdominal no percentil 60, líquido amniótico normal.",
+  "perguntas": [
+   {
+    "pergunta": "Como foi feito o diagnóstico de diabetes gestacional segundo o consenso brasileiro?",
+    "resposta": "No consenso brasileiro (OPAS, Ministério da Saúde, FEBRASGO e SBD), toda gestante sem diabetes prévio faz glicemia de jejum na primeira consulta: de 92 a 125 mg/dL indica diabetes gestacional, e valor igual ou maior que 126 mg/dL indica diabetes prévio à gestação (diagnosticado na gravidez). Com jejum abaixo de 92 mg/dL, como nesta paciente (86 mg/dL), faz-se o TOTG com 75 g de glicose entre 24 e 28 semanas. Os pontos de corte são: jejum ≥ 92 mg/dL, 1 hora ≥ 180 mg/dL e 2 horas ≥ 153 mg/dL; basta um valor alterado para o diagnóstico. Ela tem dois valores alterados (189 e 162 mg/dL). Onde o TOTG não está disponível, o consenso admite repetir a glicemia de jejum entre 24 e 28 semanas, com menor sensibilidade. A hemoglobina glicada não é usada para diagnosticar diabetes gestacional."
+   },
+   {
+    "pergunta": "Quais são as metas de controle glicêmico?",
+    "resposta": "Pela Sociedade Brasileira de Diabetes: glicemia de jejum menor que 95 mg/dL (evitando hipoglicemia), 1 hora após as refeições menor que 140 mg/dL ou 2 horas após as refeições menor que 120 mg/dL. O perfil é feito com glicemia capilar em jejum e após as refeições, e o tratamento inicial é sempre não farmacológico: orientação nutricional individualizada (respeitando os hábitos regionais, como o consumo de farinha, tapioca e açaí, ajustando as quantidades e retirando o açúcar e o refrigerante) e atividade física regular, se não houver contraindicação obstétrica."
+   },
+   {
+    "pergunta": "Quando iniciar insulina e como começar neste caso?",
+    "resposta": "O tratamento farmacológico é indicado quando, após até 2 semanas de dieta e atividade física, 30% ou mais das medidas ficam acima da meta, ou quando o ultrassom mostra crescimento fetal excessivo (circunferência abdominal fetal no percentil 75 ou acima, em exame entre 29 e 33 semanas). Ela tem 32% das medidas alteradas, com predomínio do jejum, que costuma responder pouco à dieta. A insulina é a primeira escolha (praticamente não atravessa a placenta). Como a alteração é principalmente de jejum, pode-se iniciar insulina NPH ao deitar (em torno de 0,1 UI/kg, aqui cerca de 9 UI), com ajustes frequentes pelo perfil glicêmico e acréscimo de insulina de ação rápida antes das refeições se as medidas pós-prandiais continuarem altas; quando há alteração em vários horários, a dose total inicial costuma ser de cerca de 0,5 UI/kg/dia. A metformina é alternativa quando a insulina não é viável (acesso, adesão) ou como adjuvante, e é contraindicada se houver restrição de crescimento fetal. A glibenclamida não é recomendada. É obrigatório orientar sobre sinais e tratamento da hipoglicemia."
+   },
+   {
+    "pergunta": "Como deve ser o acompanhamento no parto e após o parto?",
+    "resposta": "Com bom controle, a gestação pode seguir até o termo; em uso de insulina, o parto costuma ser programado entre 39 semanas e 39 semanas e 6 dias, e a via de parto segue a indicação obstétrica. O recém-nascido deve ter glicemia monitorizada nas primeiras horas (risco de hipoglicemia neonatal) e ser amamentado precocemente. Após o parto, a insulina é suspensa e a glicemia é verificada nos primeiros dias. A mulher deve ser reclassificada com TOTG com 75 g cerca de 6 semanas após o parto (as diretrizes aceitam em torno de 4 a 12 semanas), usando os critérios fora da gestação: jejum ≥ 126 mg/dL ou 2 horas ≥ 200 mg/dL indicam diabetes; jejum de 100 a 125 mg/dL ou 2 horas de 140 a 199 mg/dL indicam pré-diabetes. Depois disso, mantém rastreamento periódico por toda a vida, pois o risco de diabetes tipo 2 é muito maior. Amamentação, controle do peso, atividade física e planejamento de nova gestação (com avaliação glicêmica antes de engravidar) reduzem esse risco."
+   }
+  ],
+  "hipoteses": [
+   "Diabetes mellitus gestacional (TOTG 75 g com dois valores alterados)",
+   "Controle inadequado com medidas não farmacológicas, com indicação de insulina",
+   "Obesidade pré-gestacional"
+  ],
+  "diferenciais": [
+   "Diabetes prévio à gestação (seria diagnosticado com jejum ≥ 126 mg/dL ou 2 horas do TOTG ≥ 200 mg/dL)",
+   "Diabetes tipo 2 não diagnosticado antes da gestação (sugerido pelo filho anterior macrossômico e pela história familiar; esclarecido no pós-parto)",
+   "Hiperglicemia por uso de corticoide (não se aplica: sem uso de medicamentos)"
+  ],
+  "conduta": "Em linhas gerais: manter o pré-natal na UBS com apoio do pré-natal de alto risco. Orientação nutricional individualizada e atividade física regular. Automonitorização da glicemia capilar (jejum e após as refeições). Início de insulina NPH ao deitar, com ajustes pelo perfil e acréscimo de insulina de ação rápida se as glicemias pós-prandiais ficarem acima da meta; educação sobre aplicação, armazenamento da insulina e hipoglicemia. Ultrassom seriado para avaliar crescimento fetal e líquido amniótico, e vigilância de pré-eclâmpsia. Programar o parto em maternidade com assistência neonatal. No pós-parto, suspender a insulina, incentivar o aleitamento e fazer o TOTG 75 g cerca de 6 semanas após o parto, com seguimento periódico depois.",
+  "discussao": "O diabetes gestacional é a alteração metabólica mais comum da gravidez. Os hormônios placentários aumentam a resistência à insulina a partir do segundo trimestre, e as mulheres que não conseguem compensar com maior produção de insulina desenvolvem hiperglicemia, por isso o TOTG é feito entre 24 e 28 semanas. A glicose materna atravessa a placenta e estimula o pâncreas fetal a produzir mais insulina, que funciona como hormônio de crescimento: daí a macrossomia, a distócia de ombro, a hipoglicemia neonatal e o polidrâmnio. O tratamento reduz esses desfechos. O caso mostra fatores de risco típicos (obesidade, filho anterior com mais de 4 kg, parente de primeiro grau com diabetes), mas o rastreamento no Brasil é universal, não depende de fatores de risco. Após o parto, a glicemia costuma normalizar, porém essas mulheres têm risco muito aumentado de diabetes tipo 2 ao longo da vida, e o seguimento pós-parto é frequentemente esquecido.",
+  "referencias": [
+   "Rastreamento e diagnóstico de diabetes mellitus gestacional no Brasil – OPAS, Ministério da Saúde, FEBRASGO e SBD (2016)",
+   "Tratamento do diabetes mellitus gestacional no Brasil – OPAS, Ministério da Saúde, FEBRASGO e SBD (2019)",
+   "Diretriz da Sociedade Brasileira de Diabetes – capítulos de diabetes na gestação (edição 2025/2026)",
+   "Protocolos FEBRASGO – Diabetes mellitus gestacional"
+  ],
+  "temaId": "diabetes-gestacional"
+ },
+ {
+  "id": "caso-estado-de-mal-epileptico",
+  "titulo": "Crises convulsivas seguidas, sem recuperar a consciência, após ficar sem o remédio",
+  "tema": "Epilepsia e crises epilépticas",
+  "especialidade": "Neurologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "identificacao": "J.P.N., 32 anos, sexo masculino, pardo, pescador, residente em Manaus (AM). Peso 70 kg.",
+  "queixaPrincipal": "\"Ele começou a se debater e não parou mais\" (relato da esposa).",
+  "hda": "Esposa relata que, às 7h40, o paciente apresentou crise com perda de consciência, enrijecimento e abalos dos quatro membros, com mordedura de língua e perda de urina. Os abalos diminuíram após alguns minutos, mas retornaram sem que ele acordasse. O SAMU chegou às 7h55, com o paciente ainda em crise, e aplicou midazolam 10 mg por via intramuscular. A crise diminuiu, mas voltou durante o transporte. Chegou ao pronto-socorro às 8h10 (30 minutos após o início), em crise tônico-clônica generalizada. Há 12 dias voltou de uma festa em comunidade ribeirinha no interior, onde ficou 5 dias; lá acabou a carbamazepina, e ele não conseguiu repor o remédio na volta. Consumiu bebida alcoólica em grande quantidade durante a festa. Esposa nega febre alta, cefaleia intensa ou vômitos nos dias anteriores.",
+  "antecedentes": "Epilepsia focal com crises que evoluem para bilaterais tônico-clônicas, iniciada após traumatismo craniano aos 17 anos. Em uso de carbamazepina 400 mg de 12 em 12 horas, com boa adesão até então; última crise há 2 anos. Etilismo de fim de semana. Nega outras doenças, HIV conhecido ou uso de drogas ilícitas.",
+  "exameFisico": "Admissão (8h10): em crise tônico-clônica generalizada, sem abertura ocular ou resposta verbal. PA 158/94 mmHg; FC 128 bpm; FR 24 irpm, com respiração ruidosa e secreção em boca; SatO2 89% em ar ambiente, 96% após aspiração, cânula orofaríngea e máscara com oxigênio; Tax 37,9 °C. Glicemia capilar 104 mg/dL. Mordedura lateral de língua. Sem sinais de trauma craniano recente. Após o controle das crises (8h35): Glasgow 7 (sem abertura ocular, sem resposta verbal, localiza a dor: O1 V1 M5), pupilas isocóricas e fotorreagentes, sem rigidez de nuca. Reavaliação às 9h15: Glasgow 9 (O2 V2 M5), sem abalos visíveis, sem desvio ocular, movimenta os quatro membros.",
+  "exames": "Gasometria venosa na admissão: pH 7,21; bicarbonato 17 mEq/L; lactato 6,8 mmol/L. Após 2 horas: pH 7,36; lactato 1,9 mmol/L. Sódio 134 mEq/L; potássio 4,0 mEq/L; cálcio total 8,9 mg/dL; magnésio 1,8 mg/dL; glicemia 110 mg/dL; ureia 30 mg/dL; creatinina 1,1 mg/dL; CK 1.200 U/L. Leucócitos 14.200/mm³, sem desvio à esquerda. Nível sérico de carbamazepina: indetectável. Etanol sérico: negativo. Gota espessa para malária: negativa. Teste rápido para HIV: não reagente. Tomografia de crânio sem contraste: área de encefalomalácia antiga em lobo frontal esquerdo, sem lesão aguda, hemorragia ou efeito de massa. Eletroencefalograma (solicitado pelo coma prolongado): lentificação difusa, sem atividade epiléptica contínua.",
+  "perguntas": [
+   {
+    "pergunta": "Por que este quadro é um estado de mal epiléptico e quais os marcos de tempo?",
+    "resposta": "Pela definição da ILAE (2015), estado de mal epiléptico é a crise que se prolonga além do tempo em que os mecanismos normais de término deveriam agir, ou crises repetidas sem recuperação da consciência entre elas. Na crise tônico-clônica há dois marcos: 5 minutos (t1), a partir do qual a crise dificilmente para sozinha e o tratamento deve começar; e 30 minutos (t2), a partir do qual aumenta o risco de lesão neuronal permanente. Este paciente está em crise, com recorrências sem recuperar a consciência, há 30 minutos na chegada. Tratar cedo é essencial: quanto mais longa a crise, menor a resposta aos benzodiazepínicos."
+   },
+   {
+    "pergunta": "Qual a sequência de tratamento recomendada?",
+    "resposta": "De 0 a 5 minutos: estabilização (via aérea, oxigênio, monitorização, acesso venoso, glicemia capilar; se houver hipoglicemia ou suspeita de desnutrição ou alcoolismo, dar tiamina antes da glicose). De 5 a 20 minutos (primeira linha): benzodiazepínico em dose adequada, por exemplo midazolam 10 mg por via intramuscular em adultos com mais de 40 kg, ou diazepam por via venosa 0,15 a 0,2 mg/kg (máximo de 10 mg por dose), podendo repetir o benzodiazepínico uma vez; o lorazepam venoso, citado nas diretrizes internacionais, não é comercializado no Brasil. Aqui, o SAMU fez a primeira dose; como ele chegou ainda em crise, cabe no hospital uma segunda e última dose de benzodiazepínico (por exemplo, diazepam 10 mg por via venosa), já preparando a segunda linha. De 20 a 40 minutos (segunda linha): fenitoína 20 mg/kg por via venosa (aqui, 1.400 mg), diluída em soro fisiológico, na velocidade máxima de 50 mg/min no adulto (pelo menos 28 minutos), com monitorização cardíaca e de pressão; alternativas de eficácia semelhante, onde disponíveis, são levetiracetam 60 mg/kg (máximo de 4.500 mg) e valproato 40 mg/kg (máximo de 3.000 mg); o fenobarbital 15 a 20 mg/kg por via venosa é opção quando essas não estão disponíveis. Não se deve esperar os 20 minutos para preparar a segunda droga. Após 40 minutos, se persistir (estado de mal refratário): intubação, anestésicos em infusão contínua (midazolam, propofol ou tiopental) em terapia intensiva e eletroencefalograma contínuo."
+   },
+   {
+    "pergunta": "As crises pararam, mas ele continua em coma. O que fazer?",
+    "resposta": "Um período pós-ictal com sonolência é esperado, e os benzodiazepínicos contribuem para o rebaixamento. Mas, se o paciente não melhora progressivamente em cerca de 30 a 60 minutos, é preciso afastar estado de mal não convulsivo (crises elétricas sem abalos visíveis, frequentes após o tratamento do estado de mal convulsivo), o que só o eletroencefalograma confirma. Neste caso, o Glasgow subiu de 7 para 9 e o eletroencefalograma não mostrou atividade epiléptica contínua. Também é preciso proteger a via aérea (intubação se não houver proteção adequada ou se houver hipoventilação), evitar broncoaspiração e manter reavaliação neurológica seriada."
+   },
+   {
+    "pergunta": "Quais causas devem ser investigadas?",
+    "resposta": "Em quem já tem epilepsia, a causa mais comum é a suspensão ou o nível baixo do antiepiléptico, aqui confirmada pela carbamazepina indetectável; o álcool (intoxicação ou abstinência) e a privação de sono são desencadeantes frequentes. Mesmo assim, é preciso afastar outras causas: distúrbios metabólicos (hipoglicemia, hiponatremia, hipocalcemia, hipomagnesemia, uremia), infecções do sistema nervoso central (meningite, encefalite; punção lombar se houver febre persistente, sinais meníngeos ou coma sem explicação), lesão estrutural aguda (AVC, hemorragia, trauma, tumor, com tomografia de crânio), intoxicações e abstinência de drogas, e eclâmpsia em gestantes. Na Amazônia, em paciente febril vindo de área endêmica, deve-se pesquisar malária grave por Plasmodium falciparum (gota espessa), e em pessoas com HIV, infecções oportunistas como neurotoxoplasmose e criptococose. A febre baixa, a leucocitose, o lactato alto e a CK elevada deste paciente são explicados pelas próprias crises e devem melhorar nas horas seguintes."
+   }
+  ],
+  "hipoteses": [
+   "Estado de mal epiléptico convulsivo (tônico-clônico generalizado)",
+   "Epilepsia estrutural (sequela de traumatismo craniano) com suspensão da carbamazepina",
+   "Consumo abusivo de álcool como fator desencadeante",
+   "Acidose láctica e rabdomiólise leve secundárias às crises"
+  ],
+  "diferenciais": [
+   "Estado de mal não convulsivo após controle dos abalos",
+   "Infecção do sistema nervoso central (meningite, encefalite)",
+   "Malária grave com acometimento cerebral",
+   "Distúrbio metabólico (hipoglicemia, hiponatremia, hipocalcemia)",
+   "Lesão estrutural aguda (hemorragia, AVC, novo traumatismo)",
+   "Crise não epiléptica psicogênica (não explica a acidose láctica, a mordedura lateral de língua e a CK elevada)",
+   "Síncope convulsiva (breve, com recuperação rápida)"
+  ],
+  "conduta": "Em linhas gerais: posição lateral, aspiração, oxigênio, monitorização cardíaca e oximetria, dois acessos venosos e glicemia capilar imediata. Benzodiazepínico em dose adequada (no máximo duas doses, contando a dose pré-hospitalar), seguido, sem demora, de droga de segunda linha em dose de ataque (fenitoína 20 mg/kg por via venosa, no máximo 50 mg/min, ou levetiracetam ou valproato onde disponíveis). Se as crises persistirem após a segunda linha: intubação, anestésico em infusão contínua e terapia intensiva com eletroencefalograma contínuo. Exames: eletrólitos (incluindo cálcio e magnésio), função renal, CK, gasometria com lactato, nível sérico do antiepiléptico, triagem toxicológica, gota espessa, teste para HIV e tomografia de crânio; punção lombar se houver suspeita de infecção. Hidratação e controle de diurese pela CK elevada. Após a estabilização: reintroduzir a carbamazepina (ou manter a droga de segunda linha até que a carbamazepina atinja nível adequado), orientar a adesão, garantir o acesso contínuo ao medicamento pelo SUS, abordar o uso de álcool e encaminhar ao neurologista.",
+  "discussao": "O estado de mal epiléptico é uma emergência neurológica com mortalidade importante, e o tempo é o fator mais importante do tratamento. A crise prolongada reduz o número de receptores GABA-A na membrana dos neurônios, o que explica a perda de eficácia dos benzodiazepínicos com o passar dos minutos, e aumenta a atividade dos receptores de glutamato, que causa lesão neuronal. Os erros mais comuns são doses insuficientes de benzodiazepínico, repetição de benzodiazepínico além de duas doses e demora para iniciar a segunda linha. O estudo ESETT mostrou que fenitoína (ou fosfenitoína), levetiracetam e valproato têm eficácia semelhante como segunda linha; no Brasil, a fenitoína é a mais disponível e exige cuidado com a velocidade de infusão (risco de hipotensão e arritmias) e com a diluição (precipita em soro glicosado). O caso mostra uma causa muito frequente e evitável: a falta do medicamento, agravada pelas longas viagens ao interior e pela dificuldade de reposição. Orientar o paciente a levar remédio suficiente e a não interromper o tratamento faz parte do cuidado.",
+  "referencias": [
+   "A definition and classification of status epilepticus – Report of the ILAE Task Force on Classification of Status Epilepticus (Trinka e colaboradores, Epilepsia, 2015)",
+   "Evidence-based guideline: treatment of convulsive status epilepticus in children and adults – American Epilepsy Society (2016)",
+   "Established Status Epilepticus Treatment Trial – ESETT (Kapur e colaboradores, New England Journal of Medicine, 2019)",
+   "Protocolo Clínico e Diretrizes Terapêuticas da Epilepsia – Ministério da Saúde"
+  ],
+  "temaId": "epilepsia"
+ },
+ {
+  "id": "caso-hiponatremia-grave-siadh",
+  "titulo": "Idosa confusa, com vômitos e uma crise convulsiva, após iniciar antidepressivo",
+  "tema": "Distúrbios hidroeletrolíticos – hiponatremia",
+  "especialidade": "Nefrologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 3,
+  "identificacao": "M.A.F., 74 anos, sexo feminino, parda, aposentada, residente em Manaus (AM). Peso 50 kg.",
+  "queixaPrincipal": "\"Ela ficou confusa, vomitou e teve uma convulsão hoje cedo\" (relato da filha).",
+  "hda": "Filha relata que a paciente iniciou sertralina 50 mg/dia há 3 semanas para depressão. Desde então, e por causa do calor, passou a beber 'muita água', cerca de 4 litros por dia, e come pouco (principalmente chá com bolacha). Há 3 dias apresenta náuseas, dor de cabeça e esquecimento. Hoje pela manhã estava mais confusa, vomitou duas vezes e teve uma crise tônico-clônica generalizada de cerca de 2 minutos, com recuperação parcial. Nega febre, diarreia, uso de diuréticos, queda ou trauma.",
+  "antecedentes": "Hipertensão arterial em uso de losartana 50 mg/dia. Depressão diagnosticada há 1 mês. Nega diabetes, doença renal, cardíaca, hepática ou da tireoide. Nega tabagismo e etilismo.",
+  "exameFisico": "Regular estado geral, sonolenta, desorientada no tempo e no espaço, sem déficit focal (Glasgow 13). PA 132/78 mmHg deitada e 128/76 mmHg sentada; FC 84 bpm; FR 16 irpm; SatO2 97% em ar ambiente; Tax 36,5 °C. Mucosas úmidas, turgor normal, sem turgência jugular, sem edema, sem ascite. Ausculta cardíaca e pulmonar normais. Sem rigidez de nuca.",
+  "exames": "Sódio 116 mEq/L; potássio 3,3 mEq/L; cloro 84 mEq/L; bicarbonato 24 mEq/L; glicemia 99 mg/dL; ureia 30 mg/dL; creatinina 0,7 mg/dL; ácido úrico 2,6 mg/dL. Osmolalidade plasmática medida 244 mOsm/kg (calculada: 2 × 116 + 99/18 + 30/6 = 242,5 mOsm/kg). Triglicerídeos e proteínas totais normais. Urina: osmolalidade 410 mOsm/kg; sódio urinário 52 mEq/L. TSH 2,1 µUI/mL. Cortisol às 8h 16 µg/dL. Radiografia de tórax normal. Tomografia de crânio sem lesões agudas. Evolução do sódio: 10h (antes do tratamento) 116; 10h40 (após a 1ª dose de salina a 3%) 119; 11h20 (após a 2ª dose) 121; 16h 122; 20h 124, com diurese de 250 mL/h de urina diluída; dia seguinte, 10h: 124 mEq/L.",
+  "perguntas": [
+   {
+    "pergunta": "Como classificar essa hiponatremia?",
+    "resposta": "Primeiro, pela osmolalidade plasmática: está baixa (244 mOsm/kg, abaixo de 275), então é hiponatremia hipotônica, a forma verdadeira. Isso afasta a hiponatremia com osmolalidade normal (pseudo-hiponatremia por triglicerídeos ou proteínas muito altos) e a com osmolalidade alta (hiperglicemia ou manitol, que puxam água para fora das células). Segundo, pela osmolalidade urinária: 410 mOsm/kg (acima de 100) mostra que o hormônio antidiurético está agindo, o que afasta polidipsia primária isolada. Terceiro, pela volemia e pelo sódio urinário: a paciente está euvolêmica (sem hipotensão postural, desidratação ou edema) e tem sódio urinário acima de 30 mEq/L. Hiponatremia hipotônica, euvolêmica, com urina concentrada e sódio urinário alto, com função tireoidiana e cortisol normais e sem diuréticos, preenche os critérios de síndrome da secreção inapropriada do hormônio antidiurético (SIADH). O ácido úrico baixo reforça o diagnóstico. A causa provável é a sertralina (os inibidores seletivos da recaptação de serotonina são causa frequente em idosos), agravada pela grande ingestão de água e pela dieta pobre em sal e proteína."
+   },
+   {
+    "pergunta": "Por que está indicada salina hipertônica e como administrá-la?",
+    "resposta": "Porque a hiponatremia tem sintomas graves (crise convulsiva, sonolência, vômitos), sinais de edema cerebral. A diretriz europeia recomenda 150 mL de NaCl a 3% por via venosa em 20 minutos, com dosagem do sódio após a infusão, podendo repetir até que o sódio suba cerca de 5 mEq/L ou os sintomas melhorem (painéis norte-americanos propõem 100 mL em 10 minutos, até três vezes). No Brasil, a solução a 3% costuma ser preparada no serviço (por exemplo, 890 mL de soro fisiológico a 0,9% + 110 mL de NaCl a 20%, que contém cerca de 513 mEq de sódio por litro). A fórmula de Adrogué-Madias ajuda a prever o efeito: variação do sódio com 1 litro = (513 − 116) ÷ (água corporal total + 1). Na idosa, a água corporal é cerca de 45% do peso (0,45 × 50 = 22,5 L), então 1 litro subiria cerca de 17 mEq/L e 150 mL, cerca de 2,5 mEq/L. De fato, o sódio foi de 116 para 119 e depois para 121 mEq/L com duas doses, e os sintomas melhoraram; a salina hipertônica foi então suspensa. A correção inicial de 4 a 6 mEq/L costuma bastar para reverter os sintomas graves."
+   },
+   {
+    "pergunta": "Qual o limite de correção e por que ele é tão importante nesta paciente?",
+    "resposta": "Na hiponatremia crônica (mais de 48 horas ou de duração desconhecida), o cérebro se adaptou perdendo solutos; se o sódio sobe rápido demais, as células cerebrais perdem água e pode ocorrer a síndrome de desmielinização osmótica (antes chamada de mielinólise pontina), com disartria, disfagia, tetraparesia e até estado de 'encarceramento', que aparece dias depois e pode ser irreversível. A diretriz europeia limita a elevação a 10 mEq/L nas primeiras 24 horas e 8 mEq/L em cada 24 horas seguintes. Em pacientes de alto risco, recomenda-se não passar de 8 mEq/L em 24 horas. Ela tem fatores de alto risco: hipocalemia, desnutrição (dieta de chá com bolacha) e idade avançada; o sódio inicial muito baixo (igual ou menor que 105 mEq/L), o alcoolismo e a doença hepática são outros. Portanto, o sódio não deveria passar de 124 mEq/L (116 + 8) até as 10h do dia seguinte. Atenção: a reposição de potássio também eleva o sódio, e deve entrar no planejamento."
+   },
+   {
+    "pergunta": "Às 20h o sódio já estava em 124 mEq/L e a diurese aumentou. O que aconteceu e o que fazer?",
+    "resposta": "Com o fim dos estímulos não osmóticos ao hormônio antidiurético (náuseas, vômitos e a crise convulsiva), somado à suspensão da sertralina, ao aporte de soluto e à restrição de água, a secreção do hormônio diminuiu e os rins passaram a eliminar grande volume de urina diluída (aquarese). Isso faz o sódio subir rápido, mesmo sem nenhuma salina, e é a principal causa de correção excessiva. Como ela já atingiu o limite de 8 mEq/L com 14 horas restantes, é preciso impedir nova elevação: repor a água perdida com soro glicosado a 5% e/ou usar desmopressina (que interrompe a aquarese), sob controle de sódio a cada 2 a 4 horas e de diurese horária. Se o limite fosse ultrapassado, a conduta seria rebaixar o sódio com a mesma estratégia. Com essa conduta, o sódio ficou estável em 124 mEq/L em 24 horas. Depois, a correção continua lenta (no máximo 8 mEq/L por dia), com restrição hídrica, dieta com sal e proteína, reposição de potássio e troca do antidepressivo por outro com menor risco de hiponatremia, com acompanhamento psiquiátrico."
+   }
+  ],
+  "hipoteses": [
+   "Hiponatremia hipotônica grave e sintomática (sódio 116 mEq/L), crônica",
+   "Síndrome da secreção inapropriada do hormônio antidiurético associada à sertralina",
+   "Ingestão excessiva de água e baixa ingestão de solutos como fatores agravantes",
+   "Hipocalemia leve (vômitos)"
+  ],
+  "diferenciais": [
+   "Hiponatremia hipovolêmica (vômitos, diuréticos tiazídicos): esperaríamos hipotensão postural e sinais de desidratação",
+   "Hipotireoidismo grave e insuficiência adrenal (afastados pelo TSH e cortisol normais)",
+   "Polidipsia primária e baixa ingestão de solutos ('chá com bolacha'): urina seria diluída (osmolalidade abaixo de 100 mOsm/kg)",
+   "SIADH por outras causas: pneumonia, câncer de pulmão, doenças do sistema nervoso central, dor, náuseas, outros medicamentos (carbamazepina, antipsicóticos)",
+   "Pseudo-hiponatremia e hiponatremia hipertônica por hiperglicemia (afastadas pela osmolalidade baixa e glicemia normal)",
+   "Hiponatremia hipervolêmica (insuficiência cardíaca, cirrose, síndrome nefrótica)"
+  ],
+  "conduta": "Em linhas gerais: internação com monitorização e controles frequentes do sódio. NaCl a 3% em doses de 150 mL em 20 minutos, repetidas conforme o sódio e os sintomas, até elevação de cerca de 5 mEq/L; então suspender a salina hipertônica. Limite de elevação de 8 mEq/L em 24 horas pelo alto risco de desmielinização osmótica. Sódio a cada 2 a 4 horas nas primeiras 24 horas e diurese horária; se houver aquarese e risco de ultrapassar o limite, soro glicosado a 5% e/ou desmopressina. Suspender a sertralina. Reposição cuidadosa de potássio (lembrando que ela também eleva o sódio). Depois da fase aguda: restrição hídrica, dieta com sal e proteína adequados, reavaliação do tratamento da depressão com o psiquiatra e controle ambulatorial do sódio. Orientar a família sobre sinais de alarme.",
+  "discussao": "A hiponatremia é o distúrbio eletrolítico mais frequente em pacientes internados e em idosos. O raciocínio segue uma sequência simples: osmolalidade plasmática (confirma se é hipotônica), osmolalidade urinária (mostra se o hormônio antidiurético está agindo) e volemia com sódio urinário (sugere a causa). O tratamento depende mais dos sintomas do que do valor do sódio: sintomas graves exigem salina hipertônica imediata, porque o edema cerebral pode matar; mas, na hiponatremia crônica, a correção rápida demais pode causar desmielinização osmótica. O caso mostra as duas faces do problema: a necessidade de agir rápido no início e a vigilância para não corrigir demais depois, sobretudo quando a causa é removida e surge aquarese. Estudos recentes discutem se os limites de correção são rígidos demais, mas as diretrizes atuais mantêm a recomendação de respeitá-los, especialmente em pacientes de alto risco. Em idosos, os antidepressivos inibidores da recaptação de serotonina e os diuréticos tiazídicos estão entre as causas mais comuns, e o calor intenso de Manaus, que estimula a ingestão de muita água, pode agravar o quadro.",
+  "referencias": [
+   "Clinical practice guideline on diagnosis and treatment of hyponatraemia – European Society of Endocrinology, ESICM e ERA-EDTA (Spasovski e colaboradores, 2014)",
+   "Diagnosis, evaluation, and treatment of hyponatremia: expert panel recommendations (Verbalis e colaboradores, American Journal of Medicine, 2013)",
+   "Harrison – Medicina Interna, capítulo de distúrbios hidroeletrolíticos"
+  ],
+  "temaId": "disturbios-hidroeletroliticos"
  }
 ]
