@@ -88,7 +88,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-7e102a2d",
@@ -667,7 +668,7 @@
  {
   "id": "med-1b2cafc2",
   "area": "Histologia",
-  "enunciado": "Menino de 12 anos com hematúria microscópica persistente desde os 5 anos, perda auditiva neurossensorial bilateral e lenticone anterior tem tio materno em diálise. A microscopia eletrônica da biópsia renal mostra membrana basal glomerular com espessamento irregular, lamelação e aspecto em \"cesta de vime\".\n\nO defeito genético desse paciente afeta principalmente qual componente da lâmina basal?",
+  "enunciado": "Hematúria microscópica persistente desde os 5 anos, perda auditiva neurossensorial bilateral e lenticone anterior levam um menino de 12 anos, cujo tio materno está em diálise, ao ambulatório de nefrologia pediátrica. A microscopia eletrônica da biópsia renal mostra membrana basal glomerular com espessamento irregular, lamelação e aspecto em \"cesta de vime\".\n\nO defeito genético desse paciente afeta principalmente qual componente da lâmina basal?",
   "alternativas": [
    "Colágeno do tipo I, que forma fibras espessas",
    "Colágeno do tipo III, que forma fibras reticulares",
@@ -676,7 +677,7 @@
    "Fibrilina, das microfibrilas do tecido elástico"
   ],
   "correta": 2,
-  "explicacao": "O quadro é de síndrome de Alport (herança ligada ao X, mutação em COL4A5), com hematúria, surdez neurossensorial e alterações oculares. O colágeno do tipo IV é o principal colágeno da lâmina basal e forma uma rede em malha (não fibrilar), junto com laminina, nidogênio e perlecam; na MBG, também é o alvo dos anticorpos da síndrome de Goodpasture. O colágeno I forma fibras de tendões, ossos e derme; o III forma fibras reticulares da lâmina reticular e de órgãos linfoides; o VII forma fibrilas de ancoragem (epidermólise bolhosa distrófica); a fibrilina está alterada na síndrome de Marfan.",
+  "explicacao": "O quadro é de síndrome de Alport (herança ligada ao X, mutação em COL4A5), com hematúria, surdez neurossensorial e alterações oculares. O colágeno do tipo IV é o principal colágeno da lâmina basal e forma uma rede em malha (não fibrilar), junto com laminina, nidogênio e perlecam; na MBG, também é o alvo dos anticorpos da síndrome de Goodpasture. O colágeno I forma fibras de tendões, ossos e derme; o III forma fibras reticulares da lâmina reticular e de órgãos linfoides; o VII forma fibrilas de ancoragem (epidermólise bolhosa distrófica); a fibrilina está alterada na síndrome de Marfan. Para lembrar: no Alport, o transplante renal pode desencadear doença anti-MBG, porque o enxerto expõe um colágeno IV normal que o receptor nunca teve.",
   "tema": "tecido-epitelial",
   "subtema": "tecido-epitelial.membrana-basal",
   "especialidade": "histologia-embriologia",
@@ -684,7 +685,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-9763bc7f",
@@ -752,7 +754,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-8506a7fb",
@@ -766,7 +769,7 @@
    "Todas as filhas de Paulo serão afetadas, e o bebê de Júlia não tem risco"
   ],
   "correta": 0,
-  "explicacao": "O homem afetado passa seu único X a todas as filhas e o Y a todos os filhos. Assim, os filhos homens de Paulo não herdam a mutação (nem são afetados, nem portadores), e todas as filhas são portadoras obrigatórias. Júlia, portadora, passa o X mutado a metade dos filhos. Como o bebê já é um menino, o risco é de 50%. O valor de 25% seria o risco para um filho de sexo ainda desconhecido (1/2 de ser menino × 1/2 de herdar o X mutado). Homens não são \"portadores\" de doença ligada ao X, e as filhas de Paulo são portadoras, em geral não afetadas.",
+  "explicacao": "O homem afetado passa seu único X a todas as filhas e o Y a todos os filhos. Assim, os filhos homens de Paulo não herdam a mutação (nem são afetados, nem portadores), e todas as filhas são portadoras obrigatórias. Júlia, portadora, passa o X mutado a metade dos filhos. Como o bebê já é um menino, o risco é de 50%. O valor de 25% seria o risco para um filho de sexo ainda desconhecido (1/2 de ser menino × 1/2 de herdar o X mutado). Homens não são \"portadores\" de doença ligada ao X, e as filhas de Paulo são portadoras, em geral não afetadas. Para lembrar: a hemofilia da família real europeia, transmitida pela rainha Vitória, foi confirmada como hemofilia B por análise do DNA dos Romanov, publicada em 2009.",
   "tema": "padroes-de-heranca",
   "subtema": "padroes-de-heranca.heranca-ligada-ao-x",
   "especialidade": "genetica",
@@ -774,12 +777,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-d55de8d8",
   "area": "Imunologia",
-  "enunciado": "Menino de 9 anos, 30 kg, é levado à UBS 10 minutos após picada de abelha no braço. Já havia sido picado no verão anterior, com reação apenas local. Não tem asma nem usa medicações contínuas. Agora apresenta urticária generalizada, edema de lábios, rouquidão, sibilos difusos e vômitos. PA 78/40 mmHg, FC 142 bpm, FR 34 irpm, SpO2 89% em ar ambiente, tempo de enchimento capilar de 4 segundos. A unidade dispõe de adrenalina 1 mg/mL (1:1.000), prometazina, hidrocortisona e oxigênio.\n\nQual alternativa relaciona corretamente o mecanismo imunológico e a primeira medida terapêutica?",
+  "enunciado": "Dez minutos após uma picada de abelha no braço, um menino de 9 anos, com 30 kg, é levado à UBS pela avó. Já havia sido picado no verão anterior, com reação apenas local. Não tem asma nem usa medicações contínuas. Agora apresenta urticária generalizada, edema de lábios, rouquidão, sibilos difusos e vômitos. PA 78/40 mmHg, FC 142 bpm, FR 34 irpm, SpO2 89% em ar ambiente, tempo de enchimento capilar de 4 segundos. A unidade dispõe de adrenalina 1 mg/mL (1:1.000), prometazina, hidrocortisona e oxigênio.\n\nQual alternativa relaciona corretamente o mecanismo imunológico e a primeira medida terapêutica?",
   "alternativas": [
    "Tipo I, por IgE fixada em mastócitos após sensibilização prévia; adrenalina 1 mg/mL, 0,3 mL IV em bolus rápido",
    "Tipo III, por imunocomplexos formados com o veneno; hidrocortisona IV, pois o corticoide age em minutos na anafilaxia",
@@ -796,7 +800,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-d3fc06af",
@@ -818,7 +823,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-dd01423f",
@@ -840,7 +846,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-0e26b9ac",
@@ -1302,7 +1309,7 @@
  {
   "id": "med-5cbfc6a5",
   "area": "Infectologia",
-  "enunciado": "Mulher de 32 anos, sem comorbidades e não gestante, com diagnóstico clínico de dengue (NS1 reagente no 2º dia), volta à UPA no 5º dia de doença. A febre cessou ontem, mas surgiram dor abdominal intensa e contínua e três episódios de vômitos nas últimas 6 horas. Exame: consciente, mucosas hidratadas, PA 112/74 mmHg (deitada e sentada), FC 98 bpm, tempo de enchimento capilar 2 s, extremidades aquecidas, fígado a 2 cm do rebordo costal direito. Diurese preservada, sem sangramentos. Prova do laço não repetida. Hematócrito 38% no 2º dia e 46% hoje; plaquetas 62.000/mm³; albumina 3,4 g/dL.\n\nDe acordo com a classificação de risco do Ministério da Saúde, a conduta adequada é:",
+  "enunciado": "No 5º dia de dengue (NS1 reagente no 2º dia), um dia depois de a febre ceder, uma mulher de 32 anos, sem comorbidades e não gestante, volta à UPA com dor abdominal intensa e contínua e três episódios de vômitos nas últimas 6 horas. Exame: consciente, mucosas hidratadas, PA 112/74 mmHg (deitada e sentada), FC 98 bpm, tempo de enchimento capilar 2 s, extremidades aquecidas, fígado a 2 cm do rebordo costal direito. Diurese preservada, sem sangramentos. Hematócrito 38% no 2º dia e 46% hoje; plaquetas 62.000/mm³; albumina 3,4 g/dL.\n\nEm que grupo de risco do Ministério da Saúde ela se enquadra, e qual é a conduta?",
   "alternativas": [
    "Grupo B: hidratação oral supervisionada na unidade e alta com retorno diário para hemograma",
    "Grupo D: expansão com SF 0,9% 20 mL/kg em 20 minutos, repetível até três vezes, em leito de UTI",
@@ -1319,7 +1326,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-dfded720",
@@ -2238,7 +2246,7 @@
  {
   "id": "med-c161c398",
   "area": "Hematologia",
-  "enunciado": "Menino de 5 anos com anemia falciforme (HbSS), em acompanhamento irregular, é levado ao pronto-socorro por febre de 39,8 °C iniciada há 3 horas. Ele parou a profilaxia com penicilina há 1 ano e o calendário vacinal está incompleto. FC 146 bpm, PA 90/56 mmHg, tempo de enchimento capilar de 3 segundos, baço não palpável. Hemograma: Hb 6,9 g/dL (basal de 7,5), leucócitos 24.000/mm³ com desvio à esquerda, plaquetas 310.000/mm³. O esfregaço mostra corpúsculos de Howell-Jolly.\n\nQual é a explicação fisiopatológica do risco e a conduta imediata?",
+  "enunciado": "Febre de 39,8 °C iniciada há 3 horas traz ao pronto-socorro um menino de 5 anos com anemia falciforme (HbSS), em acompanhamento irregular. Ele parou a profilaxia com penicilina há 1 ano, e o calendário vacinal está incompleto. FC 146 bpm, PA 90/56 mmHg, tempo de enchimento capilar de 3 segundos, baço não palpável. Hemograma: Hb 6,9 g/dL (basal de 7,5), leucócitos 24.000/mm³ com desvio à esquerda, plaquetas 310.000/mm³. O esfregaço mostra corpúsculos de Howell-Jolly.\n\nQual é a explicação fisiopatológica do risco e a conduta imediata?",
   "alternativas": [
    "Asplenia funcional com risco de sepse por encapsulados; aguardar hemocultura para decidir antibiótico",
    "Crise de sequestro esplênico; transfundir concentrado de hemácias e observar a febre",
@@ -2247,7 +2255,7 @@
    "Asplenia funcional com risco de sepse por encapsulados; colher culturas e dar ceftriaxona IV já"
   ],
   "correta": 4,
-  "explicacao": "Na anemia falciforme, infartos esplênicos repetidos causam autoesplenectomia (asplenia funcional), indicada pelos corpúsculos de Howell-Jolly e pelo baço não palpável. Sem baço, a remoção de bactérias encapsuladas (pneumococo, Haemophilus influenzae tipo b, meningococo, salmonela) e a produção de anticorpos opsonizantes ficam prejudicadas. Febre alta é emergência: coletam-se culturas e inicia-se antibiótico parenteral de amplo espectro (como ceftriaxona) sem esperar resultados, pela rapidez com que a sepse evolui. O sequestro esplênico exige baço aumentado e queda importante da Hb. Não há neutropenia (há leucocitose). Febre sem foco nesse paciente não deve ser tratada só como crise vaso-oclusiva.",
+  "explicacao": "Na anemia falciforme, infartos esplênicos repetidos causam autoesplenectomia (asplenia funcional), indicada pelos corpúsculos de Howell-Jolly e pelo baço não palpável. Sem baço, a remoção de bactérias encapsuladas (pneumococo, Haemophilus influenzae tipo b, meningococo, salmonela) e a produção de anticorpos opsonizantes ficam prejudicadas. Febre alta é emergência: coletam-se culturas e inicia-se antibiótico parenteral de amplo espectro (como ceftriaxona) sem esperar resultados, pela rapidez com que a sepse evolui. O sequestro esplênico exige baço aumentado e queda importante da Hb. Não há neutropenia (há leucocitose). Febre sem foco nesse paciente não deve ser tratada só como crise vaso-oclusiva. Para lembrar: o estudo PROPS (1986) mostrou que a penicilina profilática reduz em cerca de 84% as infecções pneumocócicas em crianças com anemia falciforme.",
   "tema": "anemias",
   "subtema": "anemias.doenca-falciforme",
   "especialidade": "hematologia",
@@ -2255,12 +2263,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-a27dd801",
   "area": "Hematologia",
-  "enunciado": "Mulher de 26 anos procura o pronto-socorro por petéquias em membros inferiores há 5 dias e sangramento gengival ao escovar os dentes. Teve quadro gripal há 3 semanas. Nega uso de medicamentos, e o teste de gravidez é negativo. Ao exame: bom estado geral, PA 118/72 mmHg, petéquias difusas, sem hepatoesplenomegalia nem linfonodomegalia. Exames: Hb 13,1 g/dL, leucócitos 6.800/mm³ com diferencial normal, plaquetas 8.000/mm³, esfregaço com plaquetas grandes e sem esquizócitos ou blastos, TP e TTPa normais, LDH normal, sorologias para HIV e hepatite C negativas.\n\nQual é o diagnóstico mais provável e o tratamento de primeira linha?",
+  "enunciado": "Petéquias em membros inferiores há 5 dias e sangramento gengival ao escovar os dentes levam ao pronto-socorro uma mulher de 26 anos, que teve quadro gripal há 3 semanas. Nega uso de medicamentos, e o teste de gravidez é negativo. Ao exame: bom estado geral, PA 118/72 mmHg, petéquias difusas, sem hepatoesplenomegalia nem linfonodomegalia. Exames: Hb 13,1 g/dL, leucócitos 6.800/mm³ com diferencial normal, plaquetas 8.000/mm³, esfregaço com plaquetas grandes e sem esquizócitos ou blastos, TP e TTPa normais, LDH normal, sorologias para HIV e hepatite C negativas.\n\nQual é o diagnóstico mais provável e o tratamento de primeira linha?",
   "alternativas": [
    "Púrpura trombocitopênica trombótica; plasmaférese com reposição de plasma",
    "Púrpura trombocitopênica imune; transfusão profilática de plaquetas como base",
@@ -2277,12 +2286,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-db49576b",
   "area": "Hematologia",
-  "enunciado": "Homem de 64 anos, internado para artroplastia de quadril, recebe heparina não fracionada 5.000 UI SC de 8/8 h como profilaxia desde a admissão. No 7º dia, a contagem de plaquetas cai de 250.000 para 95.000/mm³ e surge edema doloroso da panturrilha esquerda, com trombose venosa profunda poplítea confirmada ao Doppler. Não há sangramento, sepse ou outra medicação nova. Função renal normal (creatinina 0,9 mg/dL). O hemograma não mostra esquizócitos, e o TP e o fibrinogênio são normais. O escore 4T é alto e o teste de anticorpos anti-PF4/heparina é fortemente positivo.\n\nQual é a conduta adequada?",
+  "enunciado": "No 7º dia de internação para artroplastia de quadril, a enfermagem avisa que as plaquetas de um homem de 64 anos caíram de 250.000 para 95.000/mm³; no mesmo dia, surge edema doloroso da panturrilha esquerda, e o Doppler confirma trombose venosa profunda poplítea. Ele recebe heparina não fracionada 5.000 UI SC de 8/8 h como profilaxia desde a admissão. Não há sangramento, sepse ou medicação nova. Creatinina 0,9 mg/dL; sem esquizócitos; TP e fibrinogênio normais. O escore 4T é alto, e o anti-PF4/heparina é fortemente positivo.\n\nComo manejar a anticoagulação agora?",
   "alternativas": [
    "Suspender a heparina não fracionada e iniciar enoxaparina em dose terapêutica",
    "Suspender toda heparina e iniciar anticoagulante não heparínico, como fondaparinux",
@@ -2299,7 +2309,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-5cb97d55",
@@ -2321,7 +2332,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-9606285f",
@@ -2349,7 +2361,7 @@
  {
   "id": "med-c39d28b4",
   "area": "Infectologia",
-  "enunciado": "Criança de 4 anos, moradora de área periurbana de Teresina com cães doentes na vizinhança, apresenta febre irregular há 2 meses, emagrecimento e aumento do volume abdominal. Exame: palidez intensa, baço a 10 cm do rebordo costal esquerdo, fígado a 4 cm do rebordo direito, sem linfonodomegalias significativas. Hemograma: Hb 6,8 g/dL; leucócitos 2.300/mm³; plaquetas 75.000/mm³. Albumina 2,6 g/dL e globulinas 5,4 g/dL.\n\nA principal hipótese diagnóstica é:",
+  "enunciado": "Na UBS de uma área periurbana de Teresina, com vários cães doentes na vizinhança, uma criança de 4 anos é trazida por febre irregular há 2 meses, emagrecimento e aumento do volume abdominal. Exame: palidez intensa, baço a 10 cm do rebordo costal esquerdo, fígado a 4 cm do rebordo direito, sem linfonodomegalias significativas. Hemograma: Hb 6,8 g/dL; leucócitos 2.300/mm³; plaquetas 75.000/mm³. Albumina 2,6 g/dL e globulinas 5,4 g/dL.\n\nQual é a principal hipótese diagnóstica?",
   "alternativas": [
    "Leishmaniose visceral",
    "Leucemia linfoide aguda",
@@ -2366,12 +2378,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-b162ef63",
   "area": "Infectologia",
-  "enunciado": "Homem de 34 anos, com HIV diagnosticado há 2 anos e sem uso de antirretrovirais, apresenta há 3 semanas tosse seca, febre baixa e dispneia progressiva aos esforços. Não usa profilaxia com sulfametoxazol-trimetoprima e perdeu 6 kg no período. Exame: Tax 37,8 °C, FC 108 bpm, FR 28 irpm, SpO2 87% em ar ambiente, candidíase oral, ausculta pulmonar pouco alterada. Exames: CD4 60 células/mm³; LDH 620 U/L; gasometria arterial em ar ambiente com PaO2 58 mmHg. Radiografia: infiltrado intersticial bilateral e simétrico, peri-hilar, sem derrame pleural ou cavitações. Pesquisa de BAAR no escarro induzido negativa em duas amostras.\n\nQual o agente mais provável e o tratamento inicial indicado?",
+  "enunciado": "Há 3 semanas com tosse seca, febre baixa e dispneia progressiva aos esforços, um homem de 34 anos, com HIV diagnosticado há 2 anos e sem antirretrovirais nem profilaxia com sulfametoxazol-trimetoprima, perdeu 6 kg. Exame: Tax 37,8 °C, FC 108 bpm, FR 28 irpm, SpO2 87% em ar ambiente, candidíase oral, ausculta pulmonar pouco alterada. Exames: CD4 60 células/mm³; LDH 620 U/L; PaO2 58 mmHg em ar ambiente. Radiografia: infiltrado intersticial bilateral, simétrico e peri-hilar, sem derrame ou cavitações. BAAR no escarro induzido negativo em duas amostras.\n\nQual o agente mais provável e o tratamento inicial indicado?",
   "alternativas": [
    "Pneumocystis jirovecii; sulfametoxazol-trimetoprima isolado, pois corticoide é contraindicado com CD4 < 200",
    "Mycobacterium tuberculosis; esquema RIPE e início imediato da terapia antirretroviral no mesmo dia",
@@ -2388,7 +2401,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-8c515cbb",
@@ -3142,7 +3156,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-0719086c",
@@ -3256,12 +3271,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-082a92af",
   "area": "Genética",
-  "enunciado": "Um casal saudável, ambos heterozigotos para fibrose cística, tem uma filha sem a doença. Adulta, ela quer ter filhos com um homem sabidamente portador.\n\nQual é o risco de o primeiro filho desse novo casal ter fibrose cística?",
+  "enunciado": "No aconselhamento pré-concepcional, Carla, 28 anos, conta que os pais são saudáveis, mas sabidamente heterozigotos para fibrose cística, descoberta após o nascimento de um irmão afetado. Ela não tem a doença e não fez teste genético. O marido fez o painel do gene CFTR e é portador de uma variante patogênica.\n\nQual é o risco de o primeiro filho do casal ter fibrose cística?",
   "alternativas": [
    "1/4",
    "2/3",
@@ -3270,7 +3286,7 @@
    "1/12"
   ],
   "correta": 3,
-  "explicacao": "Do cruzamento Aa × Aa nascem AA (1/4), Aa (2/4) e aa (1/4). Como a filha não tem a doença, o genótipo aa está excluído, e entre os três quartos restantes ela tem 2/3 de chance de ser portadora. O parceiro é portador (1). Se ela for portadora, cada filho tem 1/4 de risco. Risco total = 2/3 × 1 × 1/4 = 2/12 = 1/6. O valor 1/4 ignora a incerteza sobre o genótipo dela. O 2/3 é só a chance de ela ser portadora. O 1/8 resulta de usar 1/2 em vez de 2/3, e o 1/12, de multiplicar 1/3 por 1/4.",
+  "explicacao": "Do cruzamento Aa × Aa nascem AA (1/4), Aa (2/4) e aa (1/4). Como a filha não tem a doença, o genótipo aa está excluído, e entre os três quartos restantes ela tem 2/3 de chance de ser portadora. O parceiro é portador (1). Se ela for portadora, cada filho tem 1/4 de risco. Risco total = 2/3 × 1 × 1/4 = 2/12 = 1/6. O valor 1/4 ignora a incerteza sobre o genótipo dela. O 2/3 é só a chance de ela ser portadora. O 1/8 resulta de usar 1/2 em vez de 2/3, e o 1/12, de multiplicar 1/3 por 1/4. Para lembrar: o 2/3 é a pegadinha clássica: saber que a irmã não é afetada remove o genótipo aa do denominador, e não apenas a metade dos casos.",
   "tema": "padroes-de-heranca",
   "subtema": "padroes-de-heranca.heranca-autossomica",
   "especialidade": "genetica",
@@ -3278,12 +3294,13 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-f36bcdc1",
   "area": "Imunologia",
-  "enunciado": "Menina de 7 anos apresenta edema palpebral, urina escura e PA 128/84 mmHg, duas semanas após amigdalite não tratada. Exames: C3 baixo, ASLO elevada, creatinina 1,1 mg/dL. Como houve evolução atípica, realizou-se biópsia renal, que mostrou glomerulonefrite proliferativa difusa com depósitos granulares de IgG e C3 à imunofluorescência e \"corcovas\" (humps) subepiteliais à microscopia eletrônica.\n\nO mecanismo de lesão é a hipersensibilidade:",
+  "enunciado": "Edema palpebral, urina \"cor de coca-cola\" e PA de 128/84 mmHg surgem em uma menina de 7 anos duas semanas após amigdalite não tratada. Exames: C3 baixo, ASLO elevada, creatinina 1,1 mg/dL. Como a evolução foi atípica, fez-se biópsia renal: glomerulonefrite proliferativa difusa, com depósitos granulares de IgG e C3 à imunofluorescência e \"corcovas\" (humps) subepiteliais à microscopia eletrônica.\n\nQual tipo de hipersensibilidade explica a lesão glomerular?",
   "alternativas": [
    "Tipo II, por anticorpos anti-membrana basal com depósito linear",
    "Tipo I, por IgE e degranulação de mastócitos glomerulares",
@@ -3292,7 +3309,7 @@
    "Tipo II, por anticorpos contra a proteína M com reação cruzada"
   ],
   "correta": 2,
-  "explicacao": "Na glomerulonefrite pós-estreptocócica, antígenos estreptocócicos formam imunocomplexos (circulantes ou in situ) que se depositam no glomérulo, ativam o complemento (daí o C3 baixo) e atraem neutrófilos: hipersensibilidade tipo III. A imunofluorescência granular (\"céu estrelado\") e os humps subepiteliais são típicos. Depósito linear de IgG ao longo da MBG caracteriza a doença anti-MBG (Goodpasture, tipo II). O mimetismo molecular contra a proteína M, com anticorpos contra tecidos próprios, é o mecanismo da febre reumática, não da GNPE. Não há participação de IgE nem de linfócitos T citotóxicos como mecanismo principal.",
+  "explicacao": "Na glomerulonefrite pós-estreptocócica, antígenos estreptocócicos formam imunocomplexos (circulantes ou in situ) que se depositam no glomérulo, ativam o complemento (daí o C3 baixo) e atraem neutrófilos: hipersensibilidade tipo III. A imunofluorescência granular (\"céu estrelado\") e os humps subepiteliais são típicos. Depósito linear de IgG ao longo da MBG caracteriza a doença anti-MBG (Goodpasture, tipo II). O mimetismo molecular contra a proteína M, com anticorpos contra tecidos próprios, é o mecanismo da febre reumática, não da GNPE. Não há participação de IgE nem de linfócitos T citotóxicos como mecanismo principal. Para lembrar: o intervalo de 1 a 3 semanas após faringite (3 a 6 após impetigo) separa a GNPE da nefropatia por IgA, em que a hematúria surge junto com a infecção.",
   "tema": "hipersensibilidade",
   "subtema": "hipersensibilidade.tipo-iii",
   "especialidade": "imunologia",
@@ -3300,12 +3317,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-b130cbe5",
   "area": "Imunologia",
-  "enunciado": "Mulher de 30 anos desenvolve placa eritematosa, vesiculosa e pruriginosa nos lóbulos das orelhas cerca de 48 horas após usar brincos de bijuteria com níquel. O teste de contato (patch test) com sulfato de níquel é positivo na leitura de 72 horas.\n\nEsse quadro é um exemplo de hipersensibilidade:",
+  "enunciado": "Quarenta e oito horas depois de usar brincos de bijuteria, uma mulher de 30 anos nota placa eritematosa, vesiculosa e muito pruriginosa nos lóbulos das orelhas. No ambulatório de dermatologia, o teste de contato (patch test) com sulfato de níquel é positivo na leitura de 72 horas.\n\nQue mecanismo de hipersensibilidade explica o quadro e o teste?",
   "alternativas": [
    "Tipo IV, tardia, mediada por linfócitos T",
    "Tipo I, imediata, mediada por IgE",
@@ -3322,7 +3340,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-59264bd6",
@@ -3944,7 +3963,7 @@
  {
   "id": "med-0caf187b",
   "area": "Hematologia",
-  "enunciado": "Homem de 47 anos refere saciedade precoce e perda de peso. Baço palpável a 12 cm do rebordo costal. Hemograma: Hb 10,8 g/dL; leucócitos 186.000/mm³ com todo o espectro da série granulocítica (mielócitos, metamielócitos, bastões) e basofilia de 6%; plaquetas 520.000/mm³.\n\nQual alteração molecular é esperada e qual terapia a tem como alvo?",
+  "enunciado": "Saciedade precoce e perda de 6 kg em 3 meses levam um motorista de 47 anos ao clínico. O baço é palpável a 12 cm do rebordo costal esquerdo. Hemograma: Hb 10,8 g/dL; leucócitos 186.000/mm³ com todo o espectro da série granulocítica (mielócitos, metamielócitos, bastões), basofilia de 6% e poucos blastos; plaquetas 520.000/mm³.\n\nQual alteração molecular é esperada e qual terapia a tem como alvo?",
   "alternativas": [
    "Fusão BCR-ABL1 pela t(9;22), tratada com inibidor de tirosina-quinase como o imatinibe",
    "Translocação t(8;14) com hiperexpressão de MYC, tratada com imatinibe em monoterapia",
@@ -3953,7 +3972,7 @@
    "Mutação JAK2 V617F, tratada preferencialmente com rituximabe associado a quimioterapia"
   ],
   "correta": 0,
-  "explicacao": "Leucocitose extrema com desvio escalonado (todas as fases de maturação), basofilia, trombocitose e esplenomegalia volumosa caracterizam a leucemia mieloide crônica. Sua marca é o cromossomo Philadelphia, t(9;22), que gera a proteína de fusão BCR-ABL1, uma tirosina-quinase constitutivamente ativa; o imatinibe (e outros inibidores) bloqueia o sítio de ATP dessa quinase — exemplo clássico de terapia-alvo. PML-RARA é da leucemia promielocítica aguda (tratada com ATRA); JAK2 V617F caracteriza outras neoplasias mieloproliferativas (policitemia vera); t(8;14)-MYC é do linfoma de Burkitt; deleção 17p é marcador prognóstico na leucemia linfocítica crônica.",
+  "explicacao": "Leucocitose extrema com desvio escalonado (todas as fases de maturação), basofilia, trombocitose e esplenomegalia volumosa caracterizam a leucemia mieloide crônica. Sua marca é o cromossomo Philadelphia, t(9;22), que gera a proteína de fusão BCR-ABL1, uma tirosina-quinase constitutivamente ativa; o imatinibe (e outros inibidores) bloqueia o sítio de ATP dessa quinase — exemplo clássico de terapia-alvo. PML-RARA é da leucemia promielocítica aguda (tratada com ATRA); JAK2 V617F caracteriza outras neoplasias mieloproliferativas (policitemia vera); t(8;14)-MYC é do linfoma de Burkitt; deleção 17p é marcador prognóstico na leucemia linfocítica crônica. Para lembrar: basofilia e desvio escalonado sem hiato leucêmico sugerem LMC; a reação leucemoide não tem basofilia e cursa com fosfatase alcalina leucocitária alta (baixa na LMC).",
   "tema": "leucemias",
   "subtema": "leucemias.leucemias-cronicas",
   "especialidade": "hematologia",
@@ -3961,7 +3980,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-47b0ce50",
@@ -4655,7 +4675,7 @@
  {
   "id": "med-43b53e80",
   "area": "Ginecologia",
-  "enunciado": "Mulher de 24 anos apresenta ciclos menstruais a cada 45–60 dias e hirsutismo moderado. TSH, prolactina e 17-hidroxiprogesterona estão normais.\n\nPelos critérios de Rotterdam, o que é necessário para o diagnóstico de síndrome dos ovários policísticos?",
+  "enunciado": "Ciclos a cada 45–60 dias desde a menarca e hirsutismo moderado (escore de Ferriman-Gallwey de 14) levam uma estudante de 24 anos ao ginecologista. TSH, prolactina e 17-hidroxiprogesterona estão normais, e ela pergunta se ainda precisa de ultrassonografia para \"fechar\" o diagnóstico.\n\nPelos critérios de Rotterdam, o que é necessário para o diagnóstico de síndrome dos ovários policísticos?",
   "alternativas": [
    "Os três critérios presentes simultaneamente",
    "Dois de três critérios, após exclusão de outras causas",
@@ -4664,7 +4684,7 @@
    "LH/FSH maior que 2 e obesidade central"
   ],
   "correta": 1,
-  "explicacao": "Os critérios de Rotterdam exigem pelo menos dois de três achados — oligo/anovulação, hiperandrogenismo clínico ou laboratorial e morfologia ovariana policística à ultrassonografia — após exclusão de doenças que imitam o quadro (disfunção tireoidiana, hiperprolactinemia, hiperplasia adrenal congênita não clássica, tumores secretores de andrógenos). Assim, esta paciente, com oligomenorreia e hirsutismo e exames de exclusão normais, já preenche o diagnóstico, sem necessidade de ultrassonografia. A resistência insulínica é frequente e deve ser rastreada, mas não é critério; a relação LH/FSH elevada e a obesidade podem ocorrer, porém não definem a síndrome.",
+  "explicacao": "Os critérios de Rotterdam exigem pelo menos dois de três achados — oligo/anovulação, hiperandrogenismo clínico ou laboratorial e morfologia ovariana policística à ultrassonografia — após exclusão de doenças que imitam o quadro (disfunção tireoidiana, hiperprolactinemia, hiperplasia adrenal congênita não clássica, tumores secretores de andrógenos). Assim, esta paciente, com oligomenorreia e hirsutismo e exames de exclusão normais, já preenche o diagnóstico, sem necessidade de ultrassonografia. A resistência insulínica é frequente e deve ser rastreada, mas não é critério; a relação LH/FSH elevada e a obesidade podem ocorrer, porém não definem a síndrome. Para lembrar: a ultrassonografia não deve ser usada para o diagnóstico de SOP nos primeiros 8 anos após a menarca, pela alta frequência de ovários multifoliculares normais nessa fase.",
   "tema": "sindrome-dos-ovarios-policisticos",
   "subtema": "sindrome-dos-ovarios-policisticos.criterios-diagnosticos",
   "especialidade": "ginecologia",
@@ -4672,21 +4692,22 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-f7b1fe0f",
   "area": "Ginecologia",
-  "enunciado": "Mulher de 30 anos queixa-se de corrimento acinzentado, homogêneo, com odor de peixe que piora após relações sexuais, sem prurido ou dor. Exame especular: colo sem alterações. pH vaginal 5,5; teste das aminas (KOH 10%) positivo; microscopia com células-guia (clue cells) e escassez de lactobacilos.\n\nQual é o tratamento recomendado?",
+  "enunciado": "Corrimento acinzentado e homogêneo, com odor de peixe que piora após as relações sexuais, sem prurido ou dor: é a queixa de uma mulher de 30 anos, não gestante, na consulta de enfermagem da UBS, que a encaminha à médica. Exame especular: colo sem alterações. pH vaginal 5,5; teste das aminas (KOH 10%) positivo; microscopia com células-guia (clue cells) e escassez de lactobacilos.\n\nQual é o tratamento recomendado pelo PCDT de IST?",
   "alternativas": [
    "Ceftriaxona 500 mg intramuscular e azitromicina 1 g oral em dose única",
    "Metronidazol oral 2 g em dose única para a paciente e para o parceiro sexual",
-   "Metronidazol oral 500 mg de 12/12 horas por 7 dias, sem necessidade de tratar o parceiro",
+   "Metronidazol oral 500 mg de 12/12 horas por 7 dias, sem tratar o parceiro",
    "Ducha vaginal com bicarbonato de sódio e creme de nistatina por 14 dias",
    "Fluconazol oral 150 mg em dose única, com tratamento simultâneo do parceiro"
   ],
   "correta": 2,
-  "explicacao": "Corrimento homogêneo com odor de peixe, pH acima de 4,5, teste das aminas positivo e células-guia preenchem os critérios de Amsel para vaginose bacteriana, um desequilíbrio da microbiota (substituição de lactobacilos por Gardnerella e anaeróbios, cujas aminas voláteis explicam o odor). O PCDT de IST do Ministério da Saúde recomenda metronidazol 500 mg VO de 12/12 horas por 7 dias (ou gel vaginal); por não ser IST, o parceiro não precisa ser tratado. O tratamento do parceiro é necessário na tricomoníase, que também pode ser tratada com metronidazol, mas cursa com corrimento amarelo-esverdeado e colpite. Fluconazol e nistatina tratam candidíase; ceftriaxona e azitromicina tratam cervicite por gonococo e clamídia; duchas pioram a microbiota.",
+  "explicacao": "Corrimento homogêneo com odor de peixe, pH acima de 4,5, teste das aminas positivo e células-guia preenchem os critérios de Amsel para vaginose bacteriana, um desequilíbrio da microbiota (substituição de lactobacilos por Gardnerella e anaeróbios, cujas aminas voláteis explicam o odor). O PCDT de IST do Ministério da Saúde recomenda metronidazol 500 mg VO de 12/12 horas por 7 dias (ou gel vaginal); por não ser IST, o parceiro não precisa ser tratado. O tratamento do parceiro é necessário na tricomoníase, que também pode ser tratada com metronidazol, mas cursa com corrimento amarelo-esverdeado e colpite. Fluconazol e nistatina tratam candidíase; ceftriaxona e azitromicina tratam cervicite por gonococo e clamídia; duchas pioram a microbiota. Para lembrar: o odor piora após a relação porque o sêmen, alcalino, volatiliza as aminas (putrescina e cadaverina) — o mesmo princípio do teste com KOH.",
   "tema": "vulvovaginites",
   "subtema": "vulvovaginites.vaginose-bacteriana",
   "especialidade": "ginecologia",
@@ -4694,7 +4715,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-cfe3e236",
@@ -4722,16 +4744,16 @@
  {
   "id": "med-98dc2341",
   "area": "Ginecologia",
-  "enunciado": "Mulher de 27 anos, não tabagista, IMC 23 kg/m², normotensa, procura a UBS para iniciar contracepção e prefere pílula combinada. Refere crises de enxaqueca precedidas por pontos luminosos em zigue-zague no campo visual, com duração de 20 minutos, cerca de duas vezes por mês.\n\nSegundo os critérios de elegibilidade da OMS, qual é a orientação correta?",
+  "enunciado": "“Antes da dor, vejo luzes em zigue-zague por uns 20 minutos”, conta uma mulher de 27 anos que procura a UBS para iniciar contracepção e prefere pílula combinada. As crises de enxaqueca ocorrem cerca de duas vezes por mês. Não fuma, tem IMC 23 kg/m² e pressão arterial normal.\n\nSegundo os critérios de elegibilidade da OMS, qual é a orientação correta?",
   "alternativas": [
    "O combinado pode ser usado sem restrição (categoria 1), pois a paciente é jovem e não fuma",
    "Todos os métodos hormonais são contraindicados, restando apenas preservativo e DIU de cobre",
    "O DIU de cobre é contraindicado (categoria 4), pois pode desencadear novas crises de aura",
    "O combinado é permitido (categoria 2) desde que a dose de etinilestradiol seja de 20 mcg",
-   "O combinado é contraindicado (categoria 4); podem ser oferecidos DIU de cobre ou métodos só de progestogênio"
+   "O combinado é contraindicado (categoria 4); oferecer DIU de cobre ou só progestogênio"
   ],
   "correta": 4,
-  "explicacao": "A enxaqueca com aura (sintomas neurológicos focais reversíveis, como o escotoma cintilante, que precedem a cefaleia) é categoria 4 da OMS para contraceptivos hormonais combinados em qualquer idade, pois o estrogênio aumenta a produção hepática de fatores de coagulação e, somado à aura, eleva o risco de AVC isquêmico. A redução da dose de etinilestradiol não muda a categoria. Métodos só de progestogênio (pílula, injetável trimestral, implante, SIU-levonorgestrel) são categoria 2 e o DIU de cobre é categoria 1, portanto boas opções. Não há contraindicação ao DIU de cobre por enxaqueca, e não é verdade que todos os métodos hormonais estejam contraindicados.",
+  "explicacao": "A enxaqueca com aura (sintomas neurológicos focais reversíveis, como o escotoma cintilante, que precedem a cefaleia) é categoria 4 da OMS para contraceptivos hormonais combinados em qualquer idade, pois o estrogênio aumenta a produção hepática de fatores de coagulação e, somado à aura, eleva o risco de AVC isquêmico. A redução da dose de etinilestradiol não muda a categoria. Métodos só de progestogênio (pílula, injetável trimestral, implante, SIU-levonorgestrel) são categoria 1 ou 2, conforme início ou continuação, e o DIU de cobre é categoria 1, portanto boas opções. Não há contraindicação ao DIU de cobre por enxaqueca, e não é verdade que todos os métodos hormonais estejam contraindicados.",
   "tema": "planejamento-familiar-e-contracepcao",
   "subtema": "planejamento-familiar-e-contracepcao.criterios-de-elegibilidade",
   "especialidade": "ginecologia",
@@ -4739,7 +4761,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-2a45bfd0",
@@ -5018,7 +5041,7 @@
  {
   "id": "med-a5d197ac",
   "area": "Hematologia",
-  "enunciado": "Homem de 45 anos, ativo, sem cirurgias ou imobilização recentes e sem câncer, relata dor na panturrilha direita há 2 dias, iniciada após jogo de futebol. Exame: edema com cacifo restrito à perna direita (diferença de 2 cm na circunferência), dor à palpação no trajeto venoso profundo; o médico considera que um estiramento muscular é tão provável quanto trombose. Não há veias colaterais superficiais, edema de toda a perna nem história de TVP prévia; o paciente é hemodinamicamente estável, sem dispneia, dor torácica ou hemoptise. SpO2 98%, FC 76 bpm, afebril. Sem uso de hormônios e sem viagens longas recentes.\n\nQual é a conduta diagnóstica mais adequada?",
+  "enunciado": "Dor na panturrilha direita há 2 dias, iniciada após uma partida de futebol, leva ao pronto-socorro um homem de 45 anos, ativo, sem cirurgias ou imobilização recentes e sem câncer. Exame: edema com cacifo restrito à perna direita (diferença de 2 cm na circunferência) e dor à palpação no trajeto venoso profundo; o médico considera que um estiramento muscular é tão provável quanto trombose. Não há veias colaterais superficiais, edema de toda a perna nem TVP prévia; está sem dispneia, dor torácica ou hemoptise. SpO2 98%, FC 76 bpm, afebril. Não usa hormônios nem fez viagens longas.\n\nQual é a conduta diagnóstica mais adequada?",
   "alternativas": [
    "Dispensar investigação, pois o escore zero afasta a trombose independentemente de outros exames",
    "Iniciar anticoagulação plena imediatamente e solicitar ultrassonografia com Doppler em 1 semana",
@@ -5035,7 +5058,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-e266a6ea",
@@ -5131,7 +5155,7 @@
  {
   "id": "med-2b1e15b2",
   "area": "Hematologia",
-  "enunciado": "Menino de 2 anos é levado ao pronto-socorro por aumento de volume e dor no joelho direito após queda leve. A mãe relata que um irmão dela tem sangramentos prolongados desde a infância. Exames: plaquetas 260.000/mm³; tempo de protrombina normal; tempo de tromboplastina parcial ativada 72 s (controle 30 s); tempo de sangramento normal.\n\nQual é a hipótese diagnóstica mais provável?",
+  "enunciado": "“Ele só caiu sentado, e o joelho inchou desse jeito”, diz a mãe de um menino de 2 anos no pronto-socorro. O joelho direito está aumentado, quente e doloroso. Ela conta que um irmão dela tem sangramentos prolongados desde a infância. Exames: plaquetas 260.000/mm³; tempo de protrombina normal; tempo de tromboplastina parcial ativada 72 s (controle 30 s); tempo de sangramento normal.\n\nQual é a hipótese diagnóstica mais provável?",
   "alternativas": [
    "Doença de von Willebrand tipo 1, de herança autossômica dominante com plaquetas normais",
    "Deficiência do fator VII, de herança autossômica recessiva e TTPa prolongado",
@@ -5148,7 +5172,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-a8d901fe",
@@ -5170,7 +5195,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-963fd3f9",
@@ -5782,7 +5808,7 @@
  {
   "id": "med-95ff40cb",
   "area": "Infectologia",
-  "enunciado": "Gestante de 26 semanas procura a maternidade com febre de 38,9 °C, calafrios, náuseas e dor lombar direita há 1 dia. Punho-percussão lombar dolorosa à direita. PA 110/70 mmHg, FC 104 bpm. Urina tipo 1 com leucocitúria e nitrito positivo.\n\nQual é a conduta mais adequada?",
+  "enunciado": "Gestante de 26 semanas chega à maternidade com febre de 38,9 °C, calafrios, náuseas e dor lombar direita há 1 dia. Punho-percussão lombar dolorosa à direita. PA 110/70 mmHg, FC 104 bpm; útero sem contrações e batimentos fetais normais. Urina tipo 1 com leucocitúria e nitrito positivo.\n\nQual é a conduta inicial?",
   "alternativas": [
    "Prescrever fosfomicina em dose única e analgesia, com retorno em 48 horas",
    "Aguardar o resultado da urocultura para então iniciar o antibiótico",
@@ -5799,7 +5825,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-ebd55bdf",
@@ -6034,7 +6061,7 @@
  {
   "id": "med-3a35a8a4",
   "area": "Infectologia",
-  "enunciado": "Gestante de 32 semanas, previamente saudável e com sorologias do pré-natal negativas para hepatites B e C, recém-chegada de região com saneamento precário, desenvolve hepatite aguda que evolui rapidamente para insuficiência hepática.\n\nQual vírus está classicamente associado a essa maior gravidade na gestação?",
+  "enunciado": "Na maternidade, uma gestante de 32 semanas, previamente saudável, com sorologias do pré-natal negativas para hepatites B e C, recém-chegada de região com saneamento precário e água sem tratamento, desenvolve hepatite aguda que evolui em poucos dias para encefalopatia e INR de 2,8.\n\nQual vírus está classicamente associado a essa maior gravidade na gestação?",
   "alternativas": [
    "Vírus da hepatite A",
    "Vírus Epstein-Barr",
@@ -6043,7 +6070,7 @@
    "Vírus da hepatite G"
   ],
   "correta": 2,
-  "explicacao": "O vírus da hepatite E, de transmissão fecal-oral e associado a saneamento precário, causa hepatite aguda geralmente autolimitada, mas com alta letalidade em gestantes, sobretudo no terceiro trimestre, pelo risco de hepatite fulminante. A hepatite A também é fecal-oral, porém não tem essa gravidade peculiar na gestação. A hepatite C é de transmissão parenteral e raramente fulminante. O vírus Epstein-Barr causa hepatite leve na mononucleose. O vírus G (GBV-C) não causa doença hepática relevante.",
+  "explicacao": "O vírus da hepatite E, de transmissão fecal-oral e associado a saneamento precário, causa hepatite aguda geralmente autolimitada, mas com alta letalidade em gestantes, sobretudo no terceiro trimestre, pelo risco de hepatite fulminante. A hepatite A também é fecal-oral, porém não tem essa gravidade peculiar na gestação. A hepatite C é de transmissão parenteral e raramente fulminante. O vírus Epstein-Barr causa hepatite leve na mononucleose. O vírus G (GBV-C) não causa doença hepática relevante. Para lembrar: os genótipos 1 e 2 do vírus E, de transmissão pela água contaminada, causam as formas graves na gestação; o genótipo 3 é zoonótico, ligado à carne de porco mal cozida.",
   "tema": "hepatites-virais",
   "subtema": "hepatites-virais.hepatite-a-e-e",
   "especialidade": "infectologia",
@@ -6051,7 +6078,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-b0e02bdc",
@@ -6062,10 +6090,10 @@
    "Contraindicar o aleitamento materno e aplicar a vacina somente na alta hospitalar",
    "Solicitar HBsAg do recém-nascido e vacinar apenas se o resultado for negativo",
    "Somente vacina contra hepatite B, pois o tenofovir materno dispensa a imunoglobulina",
-   "Vacina contra hepatite B e imunoglobulina específica, idealmente nas primeiras 12 a 24 horas"
+   "Vacina contra hepatite B e imunoglobulina específica, de preferência nas primeiras 12 horas"
   ],
   "correta": 4,
-  "explicacao": "Filhos de mães HBsAg reagentes devem receber, logo após o nascimento, a vacina contra hepatite B e a imunoglobulina humana anti-hepatite B (IGHAHB), idealmente nas primeiras 12 a 24 horas, em locais diferentes, completando depois o esquema vacinal, segundo o Ministério da Saúde. O tenofovir materno reduz a carga viral, mas não substitui a imunoprofilaxia do recém-nascido. A vacina não deve ser adiada, nem condicionada à sorologia da criança. O aleitamento materno não é contraindicado após a imunoprofilaxia.",
+  "explicacao": "Filhos de mães HBsAg reagentes devem receber, logo após o nascimento, a vacina contra hepatite B e a imunoglobulina humana anti-hepatite B (IGHAHB), de preferência nas primeiras 12 horas de vida, em locais diferentes, completando depois o esquema vacinal; se não for possível, a imunoglobulina ainda pode ser feita até o 7º dia, segundo o Ministério da Saúde. O tenofovir materno na gestação reduz a carga viral e o risco residual de transmissão, mas não substitui a imunoprofilaxia do recém-nascido. A vacina não deve ser adiada, nem condicionada à sorologia da criança. O aleitamento materno não é contraindicado após a imunoprofilaxia. Para lembrar: a criança deve fazer HBsAg e anti-HBs após completar o esquema (entre 9 e 12 meses de idade) para confirmar a proteção.",
   "tema": "hepatites-virais",
   "subtema": "hepatites-virais.hepatite-b",
   "especialidade": "infectologia",
@@ -6073,12 +6101,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-3c3a058b",
   "area": "Infectologia",
-  "enunciado": "Homem de 50 anos, assintomático, fez teste rápido para hepatite C em campanha na UBS, com resultado reagente. Relata uso de drogas injetáveis na juventude. As transaminases estão levemente elevadas.\n\nQual é o próximo passo para confirmar a infecção ativa?",
+  "enunciado": "Campanha \"Julho Amarelo\" na UBS: um homem de 50 anos, assintomático, faz teste rápido para hepatite C, com resultado reagente. Conta que usou drogas injetáveis na juventude e nunca foi tratado para hepatite. As transaminases estão levemente elevadas.\n\nQual é o próximo passo para confirmar a infecção ativa?",
   "alternativas": [
    "Genotipar o vírus antes de qualquer outro exame confirmatório",
    "Realizar biópsia hepática, exame obrigatório para o diagnóstico",
@@ -6095,7 +6124,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-391ec1cf",
@@ -6301,12 +6331,13 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-5f5b1f20",
   "area": "Hematologia",
-  "enunciado": "Homem de 68 anos, em uso de metformina há 12 anos, procura a unidade de saúde por cansaço, formigamento em pés e mãos e desequilíbrio para andar, pior no escuro, há 4 meses. Exame: palidez, glossite, redução das sensibilidades vibratória e proprioceptiva nos membros inferiores e sinal de Romberg presente. Tem alimentação variada, com carne, não é etilista e nunca fez cirurgia gástrica. Hemograma: hemoglobina 9,4 g/dL; VCM 118 fL; leucócitos 3.800/mm³ com neutrófilos hipersegmentados; plaquetas 130.000/mm³. LDH elevada, reticulócitos baixos e ferritina normal.\n\nQual é a conduta mais adequada?",
+  "enunciado": "Na visita domiciliar, a equipe de saúde da família avalia um aposentado de 68 anos, diabético em uso de metformina há 12 anos, que há 4 meses tem cansaço, formigamento em pés e mãos e desequilíbrio para andar, pior no escuro. Exame: palidez, glossite, redução das sensibilidades vibratória e proprioceptiva nos membros inferiores e sinal de Romberg presente. Tem alimentação variada, com carne, não é etilista e nunca fez cirurgia gástrica. Hemograma: hemoglobina 9,4 g/dL; VCM 118 fL; leucócitos 3.800/mm³ com neutrófilos hipersegmentados; plaquetas 130.000/mm³. LDH elevada, reticulócitos baixos e ferritina normal.\n\nQual é o próximo passo terapêutico?",
   "alternativas": [
    "Suspender a metformina e aguardar a recuperação espontânea da anemia",
    "Iniciar sulfato ferroso, pois a anemia é a principal causa dos sintomas",
@@ -6323,12 +6354,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-8c9a31d6",
   "area": "Hematologia",
-  "enunciado": "Adolescente com anemia, icterícia intermitente e esplenomegalia, cuja mãe foi esplenectomizada, tem esferócitos no esfregaço, CHCM elevado, reticulocitose e Coombs direto negativo.\n\nQual é o diagnóstico mais provável?",
+  "enunciado": "Encaminhada pelo pediatra, uma adolescente de 14 anos tem episódios de icterícia que pioram durante infecções virais, cansaço e baço palpável a 4 cm do rebordo costal. A mãe foi esplenectomizada na juventude \"por anemia\" e teve cálculos na vesícula. Hemograma: Hb 9,8 g/dL, VCM 84 fL, CHCM 37,5 g/dL, reticulócitos 9% e esferócitos no esfregaço; bilirrubina indireta 3,0 mg/dL; Coombs direto negativo.\n\nQual é o diagnóstico mais provável?",
   "alternativas": [
    "Beta-talassemia maior",
    "Anemia falciforme",
@@ -6337,7 +6369,7 @@
    "Deficiência de glicose-6-fosfato desidrogenase"
   ],
   "correta": 3,
-  "explicacao": "A esferocitose hereditária, em geral autossômica dominante, decorre de defeitos em proteínas do citoesqueleto da hemácia (espectrina, anquirina, banda 3), que perde membrana e se torna esférica, sendo destruída no baço. Cursa com anemia hemolítica, icterícia, esplenomegalia, colelitíase, CHCM elevado e história familiar; o teste de EMA ou a fragilidade osmótica confirmam. A anemia hemolítica autoimune também tem esferócitos, mas o Coombs direto é positivo. A deficiência de G6PD cursa com crises após oxidantes e células mordidas. Talassemia e anemia falciforme não produzem esferócitos.",
+  "explicacao": "A esferocitose hereditária, em geral autossômica dominante, decorre de defeitos em proteínas do citoesqueleto da hemácia (espectrina, anquirina, banda 3), que perde membrana e se torna esférica, sendo destruída no baço. Cursa com anemia hemolítica, icterícia, esplenomegalia, colelitíase, CHCM elevado e história familiar; o teste de EMA ou a fragilidade osmótica confirmam. A anemia hemolítica autoimune também tem esferócitos, mas o Coombs direto é positivo. A deficiência de G6PD cursa com crises após oxidantes e células mordidas. Talassemia e anemia falciforme não produzem esferócitos. Para lembrar: o teste de ligação da eosina-5-maleimida (EMA) por citometria de fluxo é hoje preferido à clássica curva de fragilidade osmótica para confirmar o diagnóstico.",
   "tema": "anemias",
   "subtema": "anemias.anemias-hemoliticas",
   "especialidade": "hematologia",
@@ -6345,7 +6377,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-5f7f5d7e",
@@ -6373,7 +6406,7 @@
  {
   "id": "med-9b7273a1",
   "area": "Hematologia",
-  "enunciado": "Mulher de 35 anos apresenta equimoses extensas e sangramento gengival há 1 semana. Hemograma com pancitopenia e promielócitos anômalos repletos de grânulos e múltiplos bastonetes de Auer. Coagulação: TP e TTPa prolongados, fibrinogênio de 90 mg/dL e D-dímero muito elevado.\n\nQual alteração genética é esperada e qual medida deve ser iniciada já na suspeita?",
+  "enunciado": "Equimoses extensas e sangramento gengival há 1 semana trazem ao pronto-socorro uma mulher de 35 anos. O hemograma mostra pancitopenia, e o esfregaço, promielócitos anômalos repletos de grânulos, alguns com múltiplos bastonetes de Auer em feixes. Coagulação: TP e TTPa prolongados, fibrinogênio de 90 mg/dL e D-dímero muito elevado.\n\nQual alteração genética é esperada e qual medida deve ser iniciada já na suspeita?",
   "alternativas": [
    "inv(16) com fusão CBFB-MYH11; heparina em dose plena para a CIVD",
    "t(15;17) com fusão PML-RARA; ácido transretinoico (ATRA) imediato",
@@ -6390,12 +6423,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-0b50f485",
   "area": "Hematologia",
-  "enunciado": "Homem de 72 anos, assintomático, tem leucocitose de 38.000/mm³, com 85% de linfócitos pequenos e maduros e numerosas manchas de Gumprecht no esfregaço. Hemoglobina 13,8 g/dL; plaquetas 210.000/mm³; sem linfonodomegalias ou visceromegalias. A imunofenotipagem mostra clonalidade B com CD5 e CD23 positivos.\n\nQual é o diagnóstico e a conduta?",
+  "enunciado": "Hemograma de rotina de um aposentado de 72 anos, assintomático: leucócitos 38.000/mm³, com 85% de linfócitos pequenos e maduros e numerosas manchas de Gumprecht no esfregaço; hemoglobina 13,8 g/dL; plaquetas 210.000/mm³. Não há linfonodomegalias nem visceromegalias. A imunofenotipagem do sangue periférico mostra clonalidade B com CD5 e CD23 positivos.\n\nQual é o diagnóstico e a conduta?",
   "alternativas": [
    "Linfocitose reacional a infecção viral; repetir o hemograma em 1 semana",
    "Linfoma de células do manto leucemizado; iniciar esquema intensivo",
@@ -6412,12 +6446,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-4065238c",
   "area": "Hematologia",
-  "enunciado": "Menino de 7 anos, com leucemia linfoblástica aguda de células T, leucócitos de 180.000/mm³ e massa mediastinal volumosa, inicia quimioterapia de indução. Recebe hidratação venosa vigorosa e alopurinol desde a véspera. Após 36 horas, está oligúrico, sem cãibras, parestesias ou convulsões. Exames: potássio 6,6 mEq/L; fósforo 10,2 mg/dL; cálcio total 6,8 mg/dL; ácido úrico 14 mg/dL; creatinina 1,9 mg/dL (basal 0,5). O ECG mostra ondas T apiculadas. A equipe da oncologia pediátrica discute com a nefrologia o manejo imediato, enquanto trata a hipercalemia.\n\nSobre esse quadro, assinale a alternativa correta.",
+  "enunciado": "Trinta e seis horas após iniciar a quimioterapia de indução, um menino de 7 anos com leucemia linfoblástica aguda de células T, leucócitos de 180.000/mm³ e massa mediastinal volumosa fica oligúrico. Recebeu hidratação venosa vigorosa e alopurinol desde a véspera. Não tem cãibras, parestesias ou convulsões. Exames: potássio 6,6 mEq/L; fósforo 10,2 mg/dL; cálcio total 6,8 mg/dL; ácido úrico 14 mg/dL; creatinina 1,9 mg/dL (basal 0,5). O ECG mostra ondas T apiculadas. Enquanto trata a hipercalemia, a oncologia pediátrica discute com a nefrologia o manejo do ácido úrico.\n\nQual afirmação sobre o diagnóstico e o manejo está correta?",
   "alternativas": [
    "Síndrome de lise tumoral; a rasburicase reduz rapidamente o ácido úrico já formado",
    "Nefrotoxicidade direta da quimioterapia; suspender definitivamente a indução",
@@ -6434,7 +6469,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-bce779c8",
@@ -6485,7 +6521,7 @@
  {
   "id": "med-44c971dc",
   "area": "Hematologia",
-  "enunciado": "Mulher de 30 anos procura atendimento por linfonodos cervicais e axilares à esquerda aumentados há 2 meses. Relata febre vespertina de até 38,5 °C, sudorese noturna que a obriga a trocar a roupa de cama e emagrecimento de 72 kg para 64 kg nos últimos 5 meses, sem dieta. A biópsia confirma linfoma de Hodgkin clássico. O PET-CT mostra linfonodos hipermetabólicos cervicais e axilares esquerdos, mediastinais e também em cadeias retroperitoneais para-aórticas; baço, fígado, medula óssea e demais órgãos sem acometimento. A biópsia de medula óssea não foi necessária.\n\nQual é o estadiamento de Ann Arbor (modificação de Lugano)?",
+  "enunciado": "Linfonodos cervicais e axilares à esquerda aumentados há 2 meses levam uma mulher de 30 anos ao hematologista. Relata febre vespertina de até 38,5 °C, sudorese noturna que a obriga a trocar a roupa de cama e emagrecimento de 72 kg para 64 kg nos últimos 5 meses, sem dieta. A biópsia confirma linfoma de Hodgkin clássico. O PET-CT mostra linfonodos hipermetabólicos cervicais e axilares esquerdos, mediastinais e também em cadeias retroperitoneais para-aórticas; baço, fígado, medula óssea e demais órgãos sem acometimento, o que dispensou a biópsia de medula.\n\nQual é o estadiamento de Ann Arbor (modificação de Lugano)?",
   "alternativas": [
    "IIB: linfonodos em um só lado do diafragma, com sintomas B",
    "IVB: doença extranodal disseminada, com sintomas B",
@@ -6502,7 +6538,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-2d8fc1ae",
@@ -6530,7 +6567,7 @@
  {
   "id": "med-6af9d064",
   "area": "Hematologia",
-  "enunciado": "Mulher de 22 anos refere menstruações volumosas desde a menarca, epistaxes frequentes e sangramento prolongado após extração dentária. A mãe tem história semelhante. Exames: plaquetas 250.000/mm³; TP normal; TTPa discretamente prolongado; antígeno e atividade do fator de von Willebrand reduzidos proporcionalmente; fator VIII levemente reduzido.\n\nQual é o diagnóstico e uma opção terapêutica para procedimentos menores?",
+  "enunciado": "Encaminhada pela ginecologia por menstruações volumosas desde a menarca, uma mulher de 22 anos relata também epistaxes frequentes e sangramento prolongado após extração dentária. A mãe tem história semelhante. Exames: plaquetas 250.000/mm³; TP normal; TTPa discretamente prolongado; antígeno e atividade do fator de von Willebrand reduzidos proporcionalmente; fator VIII levemente reduzido. Ela precisará extrair outro dente no próximo mês.\n\nQual é o diagnóstico e uma opção terapêutica para esse procedimento menor?",
   "alternativas": [
    "Doença de von Willebrand tipo 3; varfarina oral",
    "Deficiência de fator VII; vitamina K por via oral",
@@ -6539,7 +6576,7 @@
    "Doença de von Willebrand tipo 1; desmopressina (DDAVP)"
   ],
   "correta": 4,
-  "explicacao": "A doença de von Willebrand é a coagulopatia hereditária mais comum e causa sangramento mucocutâneo (menorragia, epistaxe, sangramento após procedimentos). O tipo 1, autossômico dominante, é uma deficiência quantitativa parcial, com antígeno e atividade reduzidos proporcionalmente. Como o fator de von Willebrand transporta e protege o fator VIII, este pode cair e prolongar o TTPa. A desmopressina libera o fator estocado nos corpúsculos de Weibel-Palade e é eficaz no tipo 1, associada ou não a antifibrinolítico. O tipo 3 é grave e não responde à desmopressina. Hemofilia não explica o padrão de sangramento, e o fator IX trataria hemofilia B.",
+  "explicacao": "A doença de von Willebrand é a coagulopatia hereditária mais comum e causa sangramento mucocutâneo (menorragia, epistaxe, sangramento após procedimentos). O tipo 1, autossômico dominante, é uma deficiência quantitativa parcial, com antígeno e atividade reduzidos proporcionalmente. Como o fator de von Willebrand transporta e protege o fator VIII, este pode cair e prolongar o TTPa. A desmopressina libera o fator estocado nos corpúsculos de Weibel-Palade e é eficaz no tipo 1, associada ou não a antifibrinolítico. O tipo 3 é grave e não responde à desmopressina. Hemofilia não explica o padrão de sangramento, e o fator IX trataria hemofilia B. Para lembrar: antes de procedimentos, faz-se um teste de resposta à desmopressina; o ácido tranexâmico é útil como adjuvante em sangramentos mucosos e extrações dentárias.",
   "tema": "hemostasia-e-coagulopatias",
   "subtema": "hemostasia-e-coagulopatias.doenca-de-von-willebrand",
   "especialidade": "hematologia",
@@ -6547,12 +6584,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-c128f328",
   "area": "Hematologia",
-  "enunciado": "Homem de 60 anos, em choque séptico por pneumonia, passa a sangrar em locais de punção e apresenta cianose de extremidades. Exames: plaquetas 38.000/mm³ (eram 190.000/mm³ na admissão); TP e TTPa prolongados; fibrinogênio 80 mg/dL; D-dímero muito elevado; esquizócitos no esfregaço. Usa heparina profilática há 3 dias.\n\nQual é o diagnóstico e o pilar do tratamento?",
+  "enunciado": "Na UTI, no 3º dia de internação por choque séptico de foco pulmonar, um homem de 60 anos passa a sangrar em locais de punção e apresenta cianose de extremidades. Exames: plaquetas 38.000/mm³ (eram 190.000/mm³ na admissão); TP e TTPa prolongados; fibrinogênio 80 mg/dL; D-dímero muito elevado; esquizócitos no esfregaço. Usa heparina profilática desde a admissão.\n\nQual é o diagnóstico e o pilar do tratamento?",
   "alternativas": [
    "Púrpura trombocitopênica trombótica; plasmaférese com plasma",
    "Hepatopatia aguda; transfusão profilática até 100.000 plaquetas/mm³",
@@ -6569,7 +6607,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-0203e72d",
@@ -6892,7 +6931,7 @@
  {
   "id": "med-b53d0c3e",
   "area": "Infectologia",
-  "enunciado": "Mulher de 28 anos, não gestante e sem desejo de gestar no momento, recebeu diagnóstico de infecção pelo HIV em testagem de rotina na UBS, com CD4 de 480 células/mm³. Não tem tuberculose, hepatite B, doença renal nem outras condições especiais.\n\nQual é o esquema antirretroviral inicial preferencial no Brasil?",
+  "enunciado": "Diagnosticada com HIV em testagem de rotina na UBS, uma mulher de 28 anos, não gestante e sem desejo de gestar no momento, tem CD4 de 480 células/mm³. Não tem tuberculose, hepatite B, doença renal nem outras condições especiais, e quer começar o tratamento no mesmo dia.\n\nQual é o esquema antirretroviral inicial preferencial no Brasil?",
   "alternativas": [
    "Zidovudina (AZT) + lamivudina (3TC) + nevirapina (NVP)",
    "Tenofovir (TDF) + lamivudina (3TC) + dolutegravir (DTG)",
@@ -6909,7 +6948,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-60f53f12",
@@ -6931,12 +6971,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-53255f87",
   "area": "Infectologia",
-  "enunciado": "Homem de 36 anos, com diagnóstico recente de HIV e sem tratamento, apresenta há 10 dias cefaleia, febre baixa, confusão e hemiparesia direita progressiva. CD4 de 45 células/mm³; IgG antitoxoplasma reagente. A tomografia de crânio com contraste mostra três lesões hipodensas com realce anelar e edema perilesional, em núcleos da base e na junção corticossubcortical. Não há sinais clínicos de hipertensão intracraniana grave nem de herniação. Nunca usou profilaxias nem antirretrovirais. A radiografia de tórax é normal, e a pesquisa de antígeno criptocócico no sangue é negativa.\n\nQual é a conduta inicial mais adequada?",
+  "enunciado": "Hemiparesia direita progressiva há 10 dias, com cefaleia, febre baixa e confusão, leva ao pronto-socorro um homem de 36 anos com diagnóstico recente de HIV, que nunca usou antirretrovirais nem profilaxias. CD4 de 45 células/mm³; IgG antitoxoplasma reagente. A tomografia de crânio com contraste mostra três lesões hipodensas com realce anelar e edema perilesional, em núcleos da base e na junção corticossubcortical, sem sinais de herniação. A radiografia de tórax é normal, e o antígeno criptocócico no sangue é negativo.\n\nQual é a conduta inicial mais adequada?",
   "alternativas": [
    "Anfotericina B e flucitosina, por provável criptococoma cerebral múltiplo",
    "Radioterapia de crânio, por provável linfoma primário do sistema nervoso",
@@ -6945,7 +6986,7 @@
    "Biópsia cerebral estereotáxica imediata, antes de qualquer tratamento"
   ],
   "correta": 2,
-  "explicacao": "Em pessoa com HIV e CD4 < 100 células/mm³, lesões cerebrais múltiplas com realce anelar em núcleos da base e junção corticossubcortical, com IgG antitoxoplasma reagente, sugerem neurotoxoplasmose. A conduta recomendada é o tratamento empírico com sulfadiazina, pirimetamina e ácido folínico (alternativa: sulfametoxazol-trimetoprima), com reavaliação clínica e de imagem em 10 a 14 dias; a biópsia é reservada à ausência de resposta ou a achados atípicos, como lesão única com IgG negativo. O antígeno criptocócico negativo afasta criptococose, e não há dados de tuberculose. O linfoma primário costuma ser lesão única periventricular. A TARV é iniciada cerca de 2 semanas após o início do tratamento.",
+  "explicacao": "Em pessoa com HIV e CD4 < 100 células/mm³, lesões cerebrais múltiplas com realce anelar em núcleos da base e junção corticossubcortical, com IgG antitoxoplasma reagente, sugerem neurotoxoplasmose. A conduta recomendada é o tratamento empírico com sulfadiazina, pirimetamina e ácido folínico (alternativa: sulfametoxazol-trimetoprima), com reavaliação clínica e de imagem em 10 a 14 dias; a biópsia é reservada à ausência de resposta ou a achados atípicos, como lesão única com IgG negativo. O antígeno criptocócico negativo afasta criptococose, e não há dados de tuberculose. O linfoma primário costuma ser lesão única periventricular. A TARV é iniciada cerca de 2 semanas após o início do tratamento. Para lembrar: a pirimetamina é antagonista do folato; o ácido folínico (e não o ácido fólico) protege a medula do paciente sem anular o efeito sobre o parasita.",
   "tema": "hiv-aids",
   "subtema": "hiv-aids.infeccoes-oportunistas",
   "especialidade": "infectologia",
@@ -6953,12 +6994,13 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-82d6b215",
   "area": "Infectologia",
-  "enunciado": "Homem de 35 anos, sem comorbidades, está no 3º dia de febre, mialgia e dor retro-orbitária, em período de epidemia de dengue. Nega dor abdominal, vômitos, sangramento de mucosas ou tontura. Está hidratado, com PA 120/80 mmHg e boa perfusão. A prova do laço é positiva, com 25 petéquias no quadrado.\n\nComo classificar e conduzir o caso segundo o Ministério da Saúde?",
+  "enunciado": "Em plena epidemia de dengue, um pedreiro de 35 anos, sem comorbidades, chega à UBS no 3º dia de febre, mialgia e dor retro-orbitária. Nega dor abdominal, vômitos, sangramento de mucosas ou tontura. Está hidratado, com PA 120/80 mmHg sem variação postural e boa perfusão. A prova do laço é positiva, com 25 petéquias no quadrado.\n\nComo classificar e conduzir o caso segundo o Ministério da Saúde?",
   "alternativas": [
    "Grupo B: transfusão profilática de plaquetas e hidratação venosa",
    "Grupo A: sintomáticos e retorno ao fim da febre, sem exames",
@@ -6975,7 +7017,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-80bc647e",
@@ -7003,7 +7046,7 @@
  {
   "id": "med-222d0527",
   "area": "Infectologia",
-  "enunciado": "Mulher de 50 anos, sem doenças articulares prévias, teve febre alta de início súbito e poliartralgia intensa, simétrica, em mãos, punhos e tornozelos há 4 meses, durante epidemia de arbovirose. A febre cedeu, mas persistem artralgia e rigidez matinal.\n\nQual é a hipótese mais provável?",
+  "enunciado": "“Quatro meses depois daquela febre, ainda não consigo fechar a mão de manhã.” Uma costureira de 50 anos, sem doenças articulares prévias, teve febre alta de início súbito e poliartralgia intensa e simétrica em mãos, punhos e tornozelos durante uma epidemia de arbovirose no bairro. A febre cedeu em poucos dias, mas persistem artralgia e rigidez matinal de cerca de 40 minutos.\n\nQual é a hipótese mais provável?",
   "alternativas": [
    "Febre amarela em fase de toxemia",
    "Leptospirose em fase imune tardia",
@@ -7012,7 +7055,7 @@
    "Zika em fase crônica articular"
   ],
   "correta": 3,
-  "explicacao": "A chikungunya caracteriza-se por febre alta de início súbito e poliartralgia intensa, simétrica e distal, muitas vezes incapacitante. Divide-se em fase aguda (até 14 dias), subaguda (até 3 meses) e crônica (acima de 3 meses), em que persistem artralgia, rigidez e às vezes artrite, sobretudo em mulheres e pessoas acima de 45 anos. A dengue pode causar artralgia, mas não persistente por meses. A zika tem artralgia leve e transitória, com exantema pruriginoso e conjuntivite. Febre amarela e leptospirose não cursam com artropatia crônica.",
+  "explicacao": "A chikungunya caracteriza-se por febre alta de início súbito e poliartralgia intensa, simétrica e distal, muitas vezes incapacitante. Divide-se em fase aguda (até 14 dias), subaguda (até 3 meses) e crônica (acima de 3 meses), em que persistem artralgia, rigidez e às vezes artrite, sobretudo em mulheres e pessoas acima de 45 anos. A dengue pode causar artralgia, mas não persistente por meses. A zika tem artralgia leve e transitória, com exantema pruriginoso e conjuntivite. Febre amarela e leptospirose não cursam com artropatia crônica. Para lembrar: na fase subaguda da chikungunya usa-se corticoide (prednisona) por curto período; na crônica, hidroxicloroquina ou metotrexato, com analgesia e fisioterapia.",
   "tema": "dengue",
   "subtema": "dengue.chikungunya-e-zika",
   "especialidade": "infectologia",
@@ -7020,7 +7063,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-db32922b",
@@ -7071,7 +7115,7 @@
  {
   "id": "med-10e43444",
   "area": "Infectologia",
-  "enunciado": "Homem de 30 anos, não vacinado, voltou de pescaria em área de mata e, após melhora transitória de um quadro febril, apresenta febre alta, icterícia, hematêmese e oligúria. Exames: AST 4.800 U/L; ALT 3.200 U/L; bilirrubina direta 9 mg/dL; creatinina 3,0 mg/dL; leucócitos 3.100/mm³.\n\nQual dado laboratorial mais favorece febre amarela em vez de leptospirose?",
+  "enunciado": "Uma semana depois de voltar de pescaria em área de mata, um homem de 30 anos, não vacinado contra febre amarela, teve febre que melhorou por um dia e voltou mais alta, agora com icterícia, hematêmese e oligúria. Exames: AST 4.800 U/L; ALT 3.200 U/L; bilirrubina direta 9 mg/dL; creatinina 3,0 mg/dL; leucócitos 3.100/mm³.\n\nQual dado laboratorial mais favorece febre amarela em vez de leptospirose?",
   "alternativas": [
    "Elevação da creatinina acompanhada de oligúria",
    "Presença de hematêmese na fase de intoxicação",
@@ -7080,7 +7124,7 @@
    "Transaminases muito elevadas, com AST maior que a ALT"
   ],
   "correta": 4,
-  "explicacao": "Na febre amarela, a lesão hepática é necrose médio-zonal direta pelo vírus, e as transaminases atingem milhares de unidades, com AST tipicamente maior que ALT; também há leucopenia. Na leptospirose, as transaminases raramente passam de algumas centenas, enquanto a bilirrubina direta é muito elevada, a CK sobe e há leucocitose com desvio à esquerda, dado que favorece leptospirose, e não febre amarela. Icterícia com bilirrubina direta, lesão renal aguda e hemorragias ocorrem nas duas doenças e não as diferenciam. A leucopenia do caso também é mais compatível com febre amarela.",
+  "explicacao": "Na febre amarela, a lesão hepática é necrose médio-zonal direta pelo vírus, e as transaminases atingem milhares de unidades, com AST tipicamente maior que ALT; também há leucopenia. Na leptospirose, as transaminases raramente passam de algumas centenas, enquanto a bilirrubina direta é muito elevada, a CK sobe e há leucocitose com desvio à esquerda, dado que favorece leptospirose, e não febre amarela. Icterícia com bilirrubina direta, lesão renal aguda e hemorragias ocorrem nas duas doenças e não as diferenciam. A leucopenia do caso também é mais compatível com febre amarela. Para lembrar: o sinal de Faget — febre alta com frequência cardíaca relativamente baixa — é descrito classicamente na febre amarela.",
   "tema": "febre-amarela",
   "subtema": "febre-amarela.quadro-clinico",
   "especialidade": "infectologia",
@@ -7088,7 +7132,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-30c2f516",
@@ -7185,10 +7230,10 @@
  {
   "id": "med-e1cb658e",
   "area": "Infectologia",
-  "enunciado": "Homem de 25 anos, que limpou um bueiro há 8 dias, tem febre, cefaleia e mialgia intensa em panturrilhas há 3 dias. Está em bom estado geral, sem icterícia, sangramentos, oligúria ou dispneia, e não tem alergias. Plaquetas e creatinina estão normais.\n\nSegundo o Ministério da Saúde, qual é a conduta mais adequada?",
+  "enunciado": "Oito dias depois de desentupir um bueiro sem luvas nem botas, um homem de 25 anos procura a UBS com febre, cefaleia e mialgia intensa em panturrilhas há 3 dias. Está em bom estado geral, sem icterícia, sangramentos, oligúria ou dispneia, e não tem alergias. Plaquetas e creatinina estão normais.\n\nSegundo o Ministério da Saúde, qual é a conduta mais adequada?",
   "alternativas": [
    "Internar e iniciar penicilina cristalina intravenosa por 7 dias",
-   "Doxiciclina oral 100 mg a cada 12 horas por 5 a 7 dias, em tratamento ambulatorial",
+   "Doxiciclina oral 100 mg de 12/12 horas por 5 a 7 dias, ambulatorialmente",
    "Azitromicina em dose única, associada a anti-inflamatório não esteroide",
    "Aguardar a sorologia IgM para só então decidir sobre o uso de antibiótico",
    "Prescrever apenas sintomáticos, pois a doença é autolimitada"
@@ -7202,12 +7247,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-79144d1e",
   "area": "Infectologia",
-  "enunciado": "Homem de 42 anos, agricultor em área de arrozal, é internado no 4º dia de doença com febre alta, cefaleia intensa, mialgia em panturrilhas e sufusão conjuntival, sem icterícia, sangramentos ou dispneia. Exames: leucócitos 13.500/mm³ com desvio à esquerda; plaquetas 110.000/mm³; creatinina 1,6 mg/dL; CK elevada. A equipe colhe amostras para confirmação laboratorial e discute como interpretar os exames nas semanas seguintes, lembrando que a antibioticoterapia já foi iniciada. O resultado do ELISA-IgM, colhido na admissão, chega no dia seguinte, não reagente.\n\nSobre o diagnóstico laboratorial nesse caso, é correto afirmar:",
+  "enunciado": "Agricultor de arrozal, 42 anos, é internado no 4º dia de doença com febre alta, cefaleia intensa, mialgia em panturrilhas e sufusão conjuntival, sem icterícia, sangramentos ou dispneia. Exames: leucócitos 13.500/mm³ com desvio à esquerda; plaquetas 110.000/mm³; creatinina 1,6 mg/dL; CK elevada. A antibioticoterapia já foi iniciada. No dia seguinte, chega o ELISA-IgM colhido na admissão: não reagente. O residente sugere suspender o antibiótico.\n\nComo interpretar esse resultado e planejar a confirmação?",
   "alternativas": [
    "O diagnóstico só pode ser confirmado por biópsia renal com pesquisa do agente",
    "O IgM não reagente agora não exclui a doença, e deve-se colher nova amostra após o 7º dia",
@@ -7224,12 +7270,13 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-eddc1175",
   "area": "Infectologia",
-  "enunciado": "Menino de 6 anos, morador de área endêmica do Nordeste, tem febre há 6 semanas, emagrecimento, hepatoesplenomegalia volumosa e pancitopenia. O teste rápido imunocromatográfico rK39 é reagente. A equipe decide obter confirmação parasitológica.\n\nQual material é preferencial, pela segurança e pela boa sensibilidade?",
+  "enunciado": "Febre há 6 semanas, emagrecimento, hepatoesplenomegalia volumosa e pancitopenia: é o quadro de um menino de 6 anos, morador de área endêmica do Nordeste, internado no hospital regional. O teste rápido imunocromatográfico rK39 é reagente, e as plaquetas estão em 48.000/mm³. A equipe decide obter confirmação parasitológica.\n\nQual material é preferencial, pela segurança e pela boa sensibilidade?",
   "alternativas": [
    "Raspado de pele íntegra",
    "Biópsia hepática percutânea",
@@ -7238,7 +7285,7 @@
    "Líquor obtido por punção lombar"
   ],
   "correta": 2,
-  "explicacao": "Na leishmaniose visceral, o diagnóstico parasitológico é feito pela visualização de formas amastigotas em material de órgãos do sistema fagocítico mononuclear. O aspirado de medula óssea é o material preferencial na prática, pois combina boa sensibilidade com segurança, permitindo também cultura e PCR. O aspirado esplênico tem a maior sensibilidade, mas traz risco de hemorragia grave, sobretudo com plaquetopenia, e exige experiência. A biópsia hepática é menos usada pelo risco de sangramento. Pele íntegra e líquor não são materiais adequados. O teste rK39 reagente em quadro compatível já permite iniciar o tratamento.",
+  "explicacao": "Na leishmaniose visceral, o diagnóstico parasitológico é feito pela visualização de formas amastigotas em material de órgãos do sistema fagocítico mononuclear. O aspirado de medula óssea é o material preferencial na prática, pois combina boa sensibilidade com segurança, permitindo também cultura e PCR. O aspirado esplênico tem a maior sensibilidade, mas traz risco de hemorragia grave, sobretudo com plaquetopenia, e exige experiência. A biópsia hepática é menos usada pelo risco de sangramento. Pele íntegra e líquor não são materiais adequados. O teste rK39 reagente em quadro compatível já permite iniciar o tratamento. Para lembrar: no Brasil, o antimoniato de meglumina é a primeira escolha para a leishmaniose visceral, e a anfotericina B lipossomal é reservada aos grupos de risco, como menores de 1 ano, maiores de 50 anos, gestantes, imunodeprimidos e casos graves.",
   "tema": "leishmaniose",
   "subtema": "leishmaniose.diagnostico",
   "especialidade": "infectologia",
@@ -7246,7 +7293,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-b1cfd7c0",
@@ -7730,7 +7778,7 @@
  {
   "id": "med-aabb0fe3",
   "area": "Ginecologia",
-  "enunciado": "Mulher de 55 anos, assintomática, sem história familiar relevante, traz mamografia de rastreamento com nódulo de 8 mm, oval, circunscrito, sem microcalcificações, classificado como BI-RADS 3. Não havia mamografias anteriores.\n\nQual é a conduta recomendada?",
+  "enunciado": "Laudo da primeira mamografia de rastreamento de uma mulher de 55 anos, assintomática e sem história familiar de câncer: \"Nódulo de 8 mm no quadrante superolateral esquerdo, oval, circunscrito, sem microcalcificações associadas. Categoria BI-RADS 3.\" Não há exames anteriores para comparação, e o exame clínico das mamas é normal.\n\nQual conduta corresponde a essa categoria?",
   "alternativas": [
    "Repetir o exame com incidências adicionais, pois a categoria significa exame incompleto",
    "Biópsia percutânea por agulha grossa imediata, pelo risco de malignidade acima de 30%",
@@ -7747,12 +7795,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-5197a056",
   "area": "Ginecologia",
-  "enunciado": "Mulher de 58 anos percebeu nódulo endurecido na mama direita. Ao exame, há nódulo de 2,5 cm, irregular, pouco móvel, no quadrante superolateral, sem linfonodos axilares palpáveis. A mamografia mostra lesão espiculada com microcalcificações pleomórficas, classificada como BI-RADS 5.\n\nQual é o próximo passo?",
+  "enunciado": "“Senti um caroço duro no banho, doutor.” Uma mulher de 58 anos mostra, no quadrante superolateral da mama direita, nódulo de 2,5 cm, irregular e pouco móvel, sem linfonodos axilares palpáveis nem alterações da pele. A mamografia mostra lesão espiculada com microcalcificações pleomórficas, classificada como BI-RADS 5.\n\nAntes de qualquer tratamento, qual exame deve ser feito?",
   "alternativas": [
    "Nova mamografia em 6 meses para avaliar a velocidade de crescimento",
    "Mastectomia radical imediata, dispensando o exame histológico prévio",
@@ -7769,7 +7818,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-b1ce73bc",
@@ -8027,7 +8077,7 @@
  {
   "id": "med-f65b0119",
   "area": "Ginecologia",
-  "enunciado": "Mulher de 24 anos teve sangramento vaginal com 10 semanas de atraso menstrual; o β-hCG era de 250.000 mUI/mL, e a ultrassonografia mostrou imagem em flocos de neve. Fez vácuo-aspiração, e o exame histopatológico confirmou mola hidatiforme completa. Está em seguimento com dosagem semanal de β-hCG, usando anticoncepcional oral regularmente. Após queda inicial até 950 mUI/mL, os três últimos valores semanais foram 1.200, 1.800 e 2.600 mUI/mL. Não há sintomas respiratórios ou neurológicos. O exame ginecológico não mostra lesões vaginais, e a ultrassonografia pélvica não mostra gestação.\n\nQual é o diagnóstico e a conduta?",
+  "enunciado": "Seguimento pós-molar, ambulatório de doença trofoblástica: uma mulher de 24 anos teve, há alguns meses, sangramento com 10 semanas de atraso menstrual, β-hCG de 250.000 mUI/mL e imagem em \"flocos de neve\" à ultrassonografia; fez vácuo-aspiração, e a histologia confirmou mola hidatiforme completa. Usa anticoncepcional oral regularmente. Após queda inicial até 950 mUI/mL, os três últimos valores semanais de β-hCG foram 1.200, 1.800 e 2.600 mUI/mL. Não há sintomas respiratórios ou neurológicos, o exame ginecológico não mostra lesões vaginais, e a ultrassonografia pélvica não mostra gestação.\n\nComo interpretar a curva do β-hCG e o que fazer?",
   "alternativas": [
    "Nova gravidez; suspender o anticoncepcional e iniciar o pré-natal",
    "Neoplasia trofoblástica gestacional pós-molar; estadiamento e quimioterapia",
@@ -8036,7 +8086,7 @@
    "Resíduo molar benigno; nova vácuo-aspiração e manter o seguimento"
   ],
   "correta": 1,
-  "explicacao": "Pelos critérios da FIGO, a neoplasia trofoblástica gestacional pós-molar é diagnosticada por platô do β-hCG em quatro dosagens ao longo de 3 semanas, elevação de 10% ou mais em três dosagens ao longo de 2 semanas, ou diagnóstico histológico de coriocarcinoma. Aqui há elevação progressiva em três dosagens semanais, com gestação afastada (contracepção regular e ultrassonografia sem gestação). A conduta é estadiar (FIGO e escore prognóstico da OMS, com exame clínico, imagem de tórax e pelve) e tratar com quimioterapia, em geral metotrexato ou actinomicina D nos casos de baixo risco, com cura muito alta. Nova aspiração não é indicada de rotina, e a histerectomia não é a conduta obrigatória. Não se trata de variação laboratorial.",
+  "explicacao": "Pelos critérios da FIGO, a neoplasia trofoblástica gestacional pós-molar é diagnosticada por platô do β-hCG em quatro dosagens ao longo de 3 semanas, elevação de 10% ou mais em três dosagens ao longo de 2 semanas, ou diagnóstico histológico de coriocarcinoma. Aqui há elevação progressiva em três dosagens semanais, com gestação afastada (contracepção regular e ultrassonografia sem gestação). A conduta é estadiar (FIGO e escore prognóstico da OMS, com exame clínico, imagem de tórax e pelve) e tratar com quimioterapia, em geral metotrexato ou actinomicina D nos casos de baixo risco, com cura muito alta. Nova aspiração não é indicada de rotina, e a histerectomia não é a conduta obrigatória. Não se trata de variação laboratorial. Para lembrar: a mola completa costuma ser 46,XX de origem inteiramente paterna (androgenética) e evolui para neoplasia trofoblástica em cerca de 15% a 20% dos casos; a parcial, triploide, em menos de 5%.",
   "tema": "hemorragias-da-primeira-metade-da-gestacao",
   "subtema": "hemorragias-da-primeira-metade-da-gestacao.doenca-trofoblastica-gestacional",
   "especialidade": "ginecologia",
@@ -8044,7 +8094,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-fc3b1b8e",
@@ -8525,12 +8576,13 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-588cc5b0",
   "area": "Ginecologia",
-  "enunciado": "Mulher de 34 anos com síndrome dos ovários policísticos, IMC 34 kg/m², tem ciclos menstruais a cada 3 a 4 meses há vários anos, sem uso de hormônios. A ultrassonografia transvaginal mostra endométrio espessado, de 14 mm.\n\nQual é o mecanismo do maior risco de câncer de endométrio nessa paciente?",
+  "enunciado": "A ultrassonografia transvaginal, pedida por sangramento irregular, mostra endométrio espessado, de 14 mm, em uma mulher de 34 anos com síndrome dos ovários policísticos. Ela tem IMC 34 kg/m² e menstrua a cada 3 a 4 meses há vários anos, sem uso de hormônios. Prolactina e TSH são normais.\n\nQual mecanismo explica o maior risco de câncer de endométrio nessa paciente?",
   "alternativas": [
    "Deficiência de estrogênio com atrofia endometrial e metaplasia secundária",
    "Ação direta da testosterona elevada sobre o endométrio, com estímulo proliferativo",
@@ -8547,12 +8599,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-f6d33aed",
   "area": "Ginecologia",
-  "enunciado": "Mulher de 29 anos, com síndrome dos ovários policísticos e anovulação, IMC 27 kg/m², tenta engravidar há 14 meses. O parceiro tem espermograma normal e a histerossalpingografia mostra tubas pérvias.\n\nPela diretriz internacional atual, qual é o tratamento farmacológico de primeira linha para induzir ovulação?",
+  "enunciado": "Há 14 meses tentando engravidar, um casal procura o ambulatório de reprodução humana. Ela, com 29 anos, tem síndrome dos ovários policísticos com anovulação e IMC 27 kg/m²; já iniciou mudanças no estilo de vida. O parceiro tem espermograma normal, e a histerossalpingografia mostra tubas pérvias.\n\nPela diretriz internacional atual, qual é o tratamento farmacológico de primeira linha para induzir a ovulação?",
   "alternativas": [
    "Anticoncepcional combinado por 6 meses, para induzir ovulação de rebote",
    "Metformina isolada, que é mais eficaz que qualquer indutor de ovulação",
@@ -8566,10 +8619,11 @@
   "subtema": "sindrome-dos-ovarios-policisticos.tratamento",
   "especialidade": "ginecologia",
   "disciplina": "Ginecologia",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-542ac6be",
@@ -8597,7 +8651,7 @@
  {
   "id": "med-09a76aca",
   "area": "Ginecologia",
-  "enunciado": "Mulher de 26 anos, não gestante, refere prurido vulvar intenso, ardor ao urinar e corrimento branco, espesso, em grumos, sem odor, iniciados após uso de amoxicilina para sinusite. Ao exame, há eritema e edema vulvar e placas brancas aderidas às paredes vaginais. O pH vaginal é 4,0.\n\nQual é o diagnóstico e o tratamento adequado?",
+  "enunciado": "Três dias depois de terminar amoxicilina para sinusite, uma mulher de 26 anos, não gestante, passou a ter prurido vulvar intenso, ardor ao urinar e corrimento branco, espesso, em grumos, sem odor. Ao exame, há eritema e edema vulvar e placas brancas aderidas às paredes vaginais. O pH vaginal é 4,0.\n\nQual é o diagnóstico e o tratamento adequado?",
   "alternativas": [
    "Candidíase vulvovaginal; miconazol creme vaginal por 7 dias ou fluconazol oral em dose única",
    "Candidíase vulvovaginal; nistatina oral por 30 dias, com tratamento obrigatório do parceiro",
@@ -8614,12 +8668,13 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-2f57298f",
   "area": "Ginecologia",
-  "enunciado": "Mulher de 32 anos refere corrimento vaginal abundante, amarelo-esverdeado e bolhoso, com odor desagradável, disúria e dispareunia. Ao exame especular, o colo apresenta pontos avermelhados difusos. O pH vaginal é 6,0, e a microscopia a fresco mostra muitos leucócitos e protozoários flagelados móveis.\n\nQual é a conduta correta?",
+  "enunciado": "No ambulatório de IST, uma mulher de 32 anos relata corrimento abundante, amarelo-esverdeado e bolhoso, com odor desagradável, disúria e dispareunia. Ao exame especular, o colo apresenta pontos avermelhados difusos. O pH vaginal é 6,0, e a microscopia a fresco, feita na hora, mostra muitos leucócitos e protozoários flagelados móveis.\n\nQual conduta trata a paciente e interrompe a cadeia de transmissão?",
   "alternativas": [
    "Azitromicina oral em dose única para a paciente e para as parcerias sexuais",
    "Metronidazol oral e tratamento das parcerias sexuais, com oferta de testagem para outras IST",
@@ -8628,7 +8683,7 @@
    "Fluconazol oral em dose única, sem necessidade de avaliar ou tratar as parcerias sexuais"
   ],
   "correta": 1,
-  "explicacao": "Corrimento amarelo-esverdeado bolhoso, colo com aspecto em morango (colpite macular), pH acima de 4,5 e protozoários flagelados móveis ao exame a fresco confirmam tricomoníase, causada pelo Trichomonas vaginalis. É uma IST: pelo PCDT do Ministério da Saúde, trata-se com metronidazol oral (2 g em dose única ou 500 mg de 12/12 horas por 7 dias), tratando também as parcerias sexuais e oferecendo testes para HIV, sífilis e hepatites. O gel vaginal não alcança níveis terapêuticos na uretra e nas glândulas parauretrais, onde o protozoário também se aloja. Fluconazol trata candidíase, azitromicina não trata tricomoníase, e duchas vaginais não são recomendadas.",
+  "explicacao": "Corrimento amarelo-esverdeado bolhoso, colo com aspecto em morango (colpite macular), pH acima de 4,5 e protozoários flagelados móveis ao exame a fresco confirmam tricomoníase, causada pelo Trichomonas vaginalis. É uma IST: pelo PCDT do Ministério da Saúde, trata-se com metronidazol oral (2 g em dose única ou 500 mg de 12/12 horas por 7 dias), tratando também as parcerias sexuais e oferecendo testes para HIV, sífilis e hepatites. O gel vaginal não alcança níveis terapêuticos na uretra e nas glândulas parauretrais, onde o protozoário também se aloja. Fluconazol trata candidíase, azitromicina não trata tricomoníase, e duchas vaginais não são recomendadas. Para lembrar: o colo em morango (colpite macular) é visto a olho nu em pequena minoria das pacientes com tricomoníase, mas aparece com muito mais frequência à colposcopia.",
   "tema": "vulvovaginites",
   "subtema": "vulvovaginites.tricomoniase",
   "especialidade": "ginecologia",
@@ -8636,7 +8691,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-c7d061b4",
@@ -8658,7 +8714,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-eb3a0318",
@@ -8686,7 +8743,7 @@
  {
   "id": "med-253f2623",
   "area": "Ginecologia",
-  "enunciado": "Mulher de 31 anos, assintomática, imunocompetente e não gestante, com exames citopatológicos anteriores normais (o último há 3 anos), tem novo exame com lesão intraepitelial escamosa de baixo grau (LSIL).\n\nSegundo as Diretrizes para o rastreamento do câncer do colo do útero (INCA, 2016), qual é a conduta?",
+  "enunciado": "O resultado do preventivo chega à UBS: lesão intraepitelial escamosa de baixo grau (LSIL) em uma professora de 31 anos, assintomática, imunocompetente e não gestante, cujas citologias anteriores foram normais (a última há 3 anos). Na consulta de retorno, ela pergunta, assustada, se vai precisar \"tirar um pedaço do colo\".\n\nQual conduta seguir, segundo as Diretrizes do INCA (2016) para o rastreamento do câncer do colo do útero?",
   "alternativas": [
    "Fazer conização diagnóstica",
    "Repetir a citologia em 3 anos",
@@ -8695,7 +8752,7 @@
    "Repetir a citologia em 6 meses"
   ],
   "correta": 4,
-  "explicacao": "Pelas diretrizes do INCA de 2016, a mulher com 25 anos ou mais e citologia com LSIL deve repetir a citologia em 6 meses, pois a maioria dessas lesões, expressão de infecção transitória pelo HPV, regride espontaneamente. Se a repetição mostrar lesão igual ou mais grave, encaminha-se à colposcopia; se vier negativa duas vezes seguidas, a mulher volta ao rastreamento trienal. Nas mulheres com menos de 25 anos, a repetição é em 3 anos. A colposcopia imediata é conduta para HSIL e outras atipias de maior risco. Conização e histerectomia não têm indicação nessa situação.",
+  "explicacao": "Pelas diretrizes do INCA de 2016, a mulher com 25 anos ou mais e citologia com LSIL deve repetir a citologia em 6 meses, pois a maioria dessas lesões, expressão de infecção transitória pelo HPV, regride espontaneamente. Se a repetição mostrar lesão igual ou mais grave, encaminha-se à colposcopia; se vier negativa duas vezes seguidas, a mulher volta ao rastreamento trienal. Nas mulheres com menos de 25 anos, a repetição é em 3 anos. A colposcopia imediata é conduta para HSIL e outras atipias de maior risco. Conização e histerectomia não têm indicação nessa situação. Observação de atualidade: as Diretrizes Brasileiras publicadas em 2025 (Parte I) adotam o teste de DNA-HPV oncogênico como rastreamento primário, com a citologia usada como triagem das mulheres HPV-positivas; onde o rastreamento ainda é citológico, as condutas de 2016 continuam sendo a referência.",
   "tema": "cancer-de-colo-uterino",
   "subtema": "cancer-de-colo-uterino.rastreamento-citopatologico",
   "especialidade": "ginecologia",
@@ -8703,12 +8760,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-735a11e0",
   "area": "Ginecologia",
-  "enunciado": "Mulher de 34 anos, não gestante, com dois filhos e sem desejo de novas gestações no momento, imunocompetente e com rastreamentos anteriores normais há 3 anos, tem citologia com lesão intraepitelial escamosa de alto grau (HSIL). A colposcopia mostra junção escamocolunar completamente visível, zona de transformação tipo 1 e área acetobranca densa com mosaico grosseiro restrita à ectocérvice, sem vasos atípicos nem outros sinais de invasão. A vagina e a vulva não têm lesões, e o exame especular não mostra tumoração ou sangramento de contato.\n\nSegundo as Diretrizes do INCA (2016), qual é a conduta adequada?",
+  "enunciado": "No ambulatório de patologia cervical, uma mulher de 34 anos, com dois filhos, sem desejo de nova gestação no momento, imunocompetente e não gestante, é avaliada por citologia com lesão intraepitelial escamosa de alto grau (HSIL); os rastreamentos anteriores, há 3 anos, eram normais. A colposcopia mostra junção escamocolunar completamente visível, zona de transformação tipo 1 e área acetobranca densa com mosaico grosseiro restrita à ectocérvice, sem vasos atípicos nem outros sinais de invasão. Vagina e vulva sem lesões; não há tumoração nem sangramento de contato.\n\nQual procedimento as Diretrizes do INCA (2016) recomendam nesse momento?",
   "alternativas": [
    "Exérese da zona de transformação no mesmo ato, na estratégia \"ver e tratar\"",
    "Cauterização química da área acetobranca, sem necessidade de estudo histológico",
@@ -8717,7 +8775,7 @@
    "Radioterapia pélvica exclusiva, pois a colposcopia sugere carcinoma invasor"
   ],
   "correta": 0,
-  "explicacao": "Diante de citologia HSIL, a conduta é colposcopia. Quando ela mostra achados maiores (como epitélio acetobranco denso e mosaico grosseiro) em zona de transformação tipo 1 ou 2, com junção escamocolunar visível e sem suspeita de invasão ou de doença glandular, as diretrizes do INCA recomendam a estratégia \"ver e tratar\": exérese da zona de transformação (por cirurgia de alta frequência) no mesmo procedimento, que ao mesmo tempo diagnostica e trata, com o espécime enviado para estudo histológico. Métodos destrutivos sem histologia não são adequados para HSIL. Esperar 6 meses é conduta de LSIL. Histerectomia é excessiva para lesão precursora, e nada sugere carcinoma invasor.",
+  "explicacao": "Diante de citologia HSIL, a conduta é colposcopia. Quando ela mostra achados maiores (como epitélio acetobranco denso e mosaico grosseiro) em zona de transformação tipo 1 ou 2, com junção escamocolunar visível e sem suspeita de invasão ou de doença glandular, as diretrizes do INCA recomendam a estratégia \"ver e tratar\": exérese da zona de transformação (por cirurgia de alta frequência) no mesmo procedimento, que ao mesmo tempo diagnostica e trata, com o espécime enviado para estudo histológico. Métodos destrutivos sem histologia não são adequados para HSIL. Esperar 6 meses é conduta de LSIL. Histerectomia é excessiva para lesão precursora, e nada sugere carcinoma invasor. Observação de atualidade: as Diretrizes Brasileiras publicadas em 2025 (Parte I) adotam o teste de DNA-HPV oncogênico como rastreamento primário, com a citologia usada como triagem das mulheres HPV-positivas; onde o rastreamento ainda é citológico, as condutas de 2016 continuam sendo a referência.",
   "tema": "cancer-de-colo-uterino",
   "subtema": "cancer-de-colo-uterino.hpv-e-lesoes-precursoras",
   "especialidade": "ginecologia",
@@ -8725,7 +8783,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-e7fc644a",
@@ -8753,7 +8812,7 @@
  {
   "id": "med-d6d99d89",
   "area": "Ginecologia",
-  "enunciado": "Mulher de 20 anos, sem comorbidades e sem uso de método contraceptivo, teve relação sexual desprotegida há 18 horas, no meio do ciclo. Está preocupada porque ouviu que o medicamento \"provoca aborto\" e procura a unidade de saúde pedindo contracepção de emergência com levonorgestrel.\n\nQual é o principal mecanismo de ação desse método?",
+  "enunciado": "Na recepção da unidade de saúde, uma jovem de 20 anos, sem comorbidades e sem método contraceptivo, pede a \"pílula do dia seguinte\": teve relação sexual desprotegida há 18 horas, no meio do ciclo. Está receosa porque ouviu que o medicamento \"provoca aborto\" e hesita em tomá-lo.\n\nComo explicar a ela o principal mecanismo de ação do levonorgestrel nessa situação?",
   "alternativas": [
    "Tornar os espermatozoides imóveis",
    "Destruir o embrião já implantado",
@@ -8770,7 +8829,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-43e34faf",
@@ -8792,7 +8852,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-9a617cee",
@@ -8820,7 +8881,7 @@
  {
   "id": "med-cf972137",
   "area": "Ginecologia",
-  "enunciado": "Puérpera de 27 anos, com 10 semanas de pós-parto, amamenta e já oferece fórmula complementar ao bebê. Não tem comorbidades, não fuma e tem PA normal. Pede para voltar a usar a pílula combinada que tomava antes da gestação.\n\nSegundo os critérios de elegibilidade da OMS, qual é a orientação mais adequada?",
+  "enunciado": "Na consulta de puerpério, com 10 semanas de pós-parto, uma mulher de 27 anos em aleitamento materno exclusivo pede para voltar à pílula combinada que tomava antes da gestação. Não tem comorbidades, não fuma, tem PA normal e não deseja nova gravidez nos próximos anos.\n\nSegundo os critérios de elegibilidade da OMS, qual é a orientação mais adequada?",
   "alternativas": [
    "O combinado é categoria 3 nessa fase; preferir pílula só de progestagênio, implante ou DIU, que são categoria 1",
    "Todos os métodos hormonais são categoria 4 durante a amamentação; só se pode oferecer preservativo",
@@ -8837,7 +8898,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-47e3ea05",
@@ -10486,7 +10548,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-e12401f1",
@@ -10537,7 +10600,7 @@
  {
   "id": "med-5fcf00b4",
   "area": "Genética",
-  "enunciado": "Recém-nascido com tetralogia de Fallot apresenta, no segundo dia de vida, convulsões por hipocalcemia. Tem fendas palpebrais curtas, micrognatia e orelhas de implantação baixa; a radiografia de tórax não mostra a sombra tímica.\n\nA falha no desenvolvimento de quais estruturas explica o conjunto, e qual é a alteração genética mais provável?",
+  "enunciado": "Convulsões no segundo dia de vida, com cálcio sérico baixo, motivam interconsulta com a genética: o recém-nascido tem tetralogia de Fallot, fendas palpebrais curtas, micrognatia e orelhas de implantação baixa, e a radiografia de tórax não mostra a sombra tímica.\n\nA falha no desenvolvimento de quais estruturas explica o conjunto, e qual é a alteração genética mais provável?",
   "alternativas": [
    "Primeiro e segundo arcos faríngeos; deleção do braço curto do 5",
    "Segunda fenda faríngea; microdeleção 7q11.23",
@@ -10546,15 +10609,16 @@
    "Terceira e quarta bolsas faríngeas; trissomia do cromossomo 21"
   ],
   "correta": 3,
-  "explicacao": "Na síndrome da deleção 22q11.2 (DiGeorge/velocardiofacial), falha a migração da crista neural para a terceira e a quarta bolsas faríngeas: o timo (3ª bolsa) é hipoplásico ou ausente (imunodeficiência de células T) e as paratireoides (3ª e 4ª bolsas) faltam (hipocalcemia neonatal). A crista neural também forma o septo conotruncal, daí as cardiopatias conotruncais (tetralogia de Fallot, truncus arteriosus, arco aórtico interrompido) e as alterações faciais. A deleção 5p causa a síndrome do miado do gato; a trissomia do 21 associa-se a defeito do septo atrioventricular; a 7q11.23 (Williams) causa hipercalcemia e estenose aórtica supravalvar.",
+  "explicacao": "Na síndrome da deleção 22q11.2 (DiGeorge/velocardiofacial), falha a migração da crista neural para a terceira e a quarta bolsas faríngeas: o timo (3ª bolsa) é hipoplásico ou ausente (imunodeficiência de células T) e as paratireoides (3ª e 4ª bolsas) faltam (hipocalcemia neonatal). A crista neural também forma o septo conotruncal, daí as cardiopatias conotruncais (tetralogia de Fallot, truncus arteriosus, arco aórtico interrompido) e as alterações faciais. A deleção 5p causa a síndrome do miado do gato; a trissomia do 21 associa-se a defeito do septo atrioventricular; a 7q11.23 (Williams) causa hipercalcemia e estenose aórtica supravalvar. Para lembrar: o acrônimo CATCH-22 resume a síndrome — Cardiopatia, Anomalias faciais, Timo hipoplásico, fenda palatina (Cleft), Hipocalcemia, cromossomo 22.",
   "tema": "embriologia-geral",
   "subtema": "embriologia-geral.malformacoes-congenitas",
   "especialidade": "genetica",
   "disciplina": "Genética",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-ed0d39a0",
@@ -10650,7 +10714,7 @@
  {
   "id": "med-ac3e61d2",
   "area": "Genética",
-  "enunciado": "Recém-nascido pequeno para a idade gestacional apresenta occipital proeminente, micrognatia, orelhas malformadas, mãos fechadas com o 2º dedo sobre o 3º e o 5º sobre o 4º, pés em \"mata-borrão\" (calcâneo proeminente) e comunicação interventricular.\n\nQual é o diagnóstico mais provável?",
+  "enunciado": "Na sala de parto, a pediatra examina um recém-nascido de 36 semanas, pequeno para a idade gestacional, cuja ultrassonografia pré-natal mostrara polidrâmnio e artéria umbilical única. Ao exame: occipital proeminente, micrognatia, orelhas de implantação baixa e malformadas, esterno curto, mãos cerradas com o 2º dedo sobreposto ao 3º e o 5º ao 4º, e pés em \"mata-borrão\" (calcâneo proeminente). O ecocardiograma mostra comunicação interventricular.\n\nQual síndrome cromossômica explica esse conjunto de achados?",
   "alternativas": [
    "Trissomia do 18 (síndrome de Edwards)",
    "Deleção 5p (síndrome do miado do gato)",
@@ -10659,7 +10723,7 @@
    "Trissomia do 21 (síndrome de Down)"
   ],
   "correta": 0,
-  "explicacao": "A trissomia do 18 cursa com restrição de crescimento, occipital proeminente, micrognatia, mãos em punho com sobreposição do indicador sobre o médio e do mínimo sobre o anular, pés em mata-borrão, esterno curto e cardiopatias (CIV, PCA); a sobrevida é muito reduzida. A trissomia do 13 tem holoprosencefalia, fenda labiopalatina, microftalmia, polidactilia pós-axial e aplasia cútis. A síndrome de Down tem hipotonia, fendas palpebrais oblíquas e prega palmar única. Turner apresenta linfedema de mãos e pés e pescoço alado. A deleção 5p cursa com choro semelhante ao miado de gato e microcefalia.",
+  "explicacao": "A trissomia do 18 cursa com restrição de crescimento, occipital proeminente, micrognatia, mãos em punho com sobreposição do indicador sobre o médio e do mínimo sobre o anular, pés em mata-borrão, esterno curto e cardiopatias (CIV, PCA); a sobrevida é muito reduzida. A trissomia do 13 tem holoprosencefalia, fenda labiopalatina, microftalmia, polidactilia pós-axial e aplasia cútis. A síndrome de Down tem hipotonia, fendas palpebrais oblíquas e prega palmar única. Turner apresenta linfedema de mãos e pés e pescoço alado. A deleção 5p cursa com choro semelhante ao miado de gato e microcefalia. Para lembrar: mãos cerradas com dedos sobrepostos e pés em mata-borrão apontam para Edwards; holoprosencefalia, fenda labiopalatina, aplasia cútis e polidactilia, para Patau.",
   "tema": "cromossomopatias",
   "subtema": "cromossomopatias.outras-trissomias",
   "especialidade": "genetica",
@@ -10667,12 +10731,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-08d09a22",
   "area": "Genética",
-  "enunciado": "Gestante de 38 anos, G2P1, com 12 semanas e 3 dias, realiza ultrassonografia do primeiro trimestre, que mostra translucência nucal de 3,8 mm e osso nasal ausente. Na semana anterior, havia feito, em laboratório privado, um teste de DNA fetal livre no sangue materno (NIPT), com resultado de \"alto risco para trissomia do 21\". Ansiosa, pergunta se o diagnóstico já está confirmado e se é preciso fazer algo mais antes de receber aconselhamento genético.\n\nQual é a orientação correta?",
+  "enunciado": "“Doutora, o exame de sangue já mostrou que meu bebê tem Down; não preciso fazer mais nada, certo?” A pergunta é de uma gestante de 38 anos, G2P1, com 12 semanas e 3 dias, no ambulatório de medicina fetal. A ultrassonografia de hoje mostra translucência nucal de 3,8 mm e osso nasal ausente. Na semana anterior, ela havia feito, em laboratório privado, um teste de DNA fetal livre no sangue materno (NIPT), com resultado \"alto risco para trissomia do 21\".\n\nQual orientação respeita o papel de cada exame?",
   "alternativas": [
    "O cariótipo pode ser feito no sangue materno, que contém células fetais suficientes para o diagnóstico",
    "O NIPT é diagnóstico definitivo quando associado à translucência nucal aumentada, dispensando outros exames",
@@ -10681,15 +10746,16 @@
    "O NIPT é de rastreamento; a confirmação exige cariótipo fetal por biópsia de vilo corial ou amniocentese"
   ],
   "correta": 4,
-  "explicacao": "O NIPT analisa DNA livre que é, na verdade, predominantemente de origem placentária; tem alta sensibilidade e especificidade para trissomia do 21, mas pode dar falso-positivo (mosaicismo confinado à placenta, alterações maternas). Por isso é teste de rastreamento, e o resultado de alto risco — mesmo somado a marcadores ultrassonográficos — deve ser confirmado por exame invasivo: biópsia de vilo corial (em geral 10–13 semanas) ou amniocentese (a partir de cerca de 15 semanas), com cariótipo ou técnicas moleculares. A translucência nucal só é medida entre 11 e 13 semanas e 6 dias. A amniocentese não é feita antes da 10ª semana. As células fetais no sangue materno não são usadas para cariótipo diagnóstico.",
+  "explicacao": "O NIPT analisa DNA livre que é, na verdade, predominantemente de origem placentária; tem alta sensibilidade e especificidade para trissomia do 21, mas pode dar falso-positivo (mosaicismo confinado à placenta, alterações maternas). Por isso é teste de rastreamento, e o resultado de alto risco — mesmo somado a marcadores ultrassonográficos — deve ser confirmado por exame invasivo: biópsia de vilo corial (em geral 10–13 semanas) ou amniocentese (a partir de cerca de 15 semanas), com cariótipo ou técnicas moleculares. A translucência nucal só é medida entre 11 e 13 semanas e 6 dias. A amniocentese não é feita antes da 10ª semana. As células fetais no sangue materno não são usadas para cariótipo diagnóstico. Para lembrar: o NIPT exige fração fetal mínima (em geral cerca de 4%); obesidade materna reduz essa fração e aumenta os resultados inconclusivos.",
   "tema": "cromossomopatias",
   "subtema": "cromossomopatias.rastreamento-pre-natal",
   "especialidade": "genetica",
   "disciplina": "Genética",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-fb81b739",
@@ -10703,7 +10769,7 @@
    "Herança mitocondrial, pois as mitocôndrias do zigoto vêm do óvulo"
   ],
   "correta": 4,
-  "explicacao": "Na herança mitocondrial, todos os filhos de uma mulher afetada recebem o DNA mitocondrial dela, porque as mitocôndrias do espermatozoide são eliminadas após a fecundação; homens afetados não transmitem. A gravidade variável se deve à heteroplasmia (proporção de mitocôndrias mutadas em cada tecido). Na dominante ligada ao X, o pai afetado transmite a todas as filhas, o que contradiz o heredograma. Na recessiva ligada ao X, a mãe portadora afeta, em média, metade dos filhos homens. O imprinting não explica a transmissão a 100% da prole materna, e a herança ligada ao Y passaria de pai para filho.",
+  "explicacao": "Na herança mitocondrial, todos os filhos de uma mulher afetada recebem o DNA mitocondrial dela, porque as mitocôndrias do espermatozoide são eliminadas após a fecundação; homens afetados não transmitem. A gravidade variável se deve à heteroplasmia (proporção de mitocôndrias mutadas em cada tecido). Na dominante ligada ao X, o pai afetado transmite a todas as filhas, o que contradiz o heredograma. Na recessiva ligada ao X, a mãe portadora afeta, em média, metade dos filhos homens. O imprinting não explica a transmissão a 100% da prole materna, e a herança ligada ao Y passaria de pai para filho. Para lembrar: Theodor Leber descreveu a neuropatia em 1871; em 1988, o grupo de Douglas Wallace mostrou que ela decorre de mutação do DNA mitocondrial, a primeira doença humana ligada a esse genoma.",
   "tema": "padroes-de-heranca",
   "subtema": "padroes-de-heranca.heredograma",
   "especialidade": "genetica",
@@ -10711,12 +10777,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-284f2190",
   "area": "Genética",
-  "enunciado": "Homem de 45 anos com doença de Huntington confirmada (expansão de repetições CAG no gene HTT) tem uma filha de 20 anos, assintomática; a esposa não tem histórico da doença.\n\nQual é o risco de a filha ter herdado a mutação e qual fenômeno pode fazer a doença surgir mais cedo na prole?",
+  "enunciado": "No ambulatório de neurogenética, uma estudante de 20 anos, assintomática, acompanha o pai, de 45 anos, que tem doença de Huntington confirmada (expansão de repetições CAG no gene HTT). A mãe não tem casos da doença na família. Ela quer saber o próprio risco e por que o avô paterno só adoeceu aos 62 anos, enquanto o pai começou a ter coreia aos 40.\n\nQual é o risco de ela ter herdado a mutação e qual fenômeno explica o início cada vez mais precoce na família?",
   "alternativas": [
    "25%; antecipação por expansão da repetição, mais comum na transmissão materna",
    "100%, por ser dominante; a penetrância incompleta pode adiar a doença",
@@ -10725,7 +10792,7 @@
    "50%; imprinting genômico, que silencia o alelo herdado do pai afetado"
   ],
   "correta": 3,
-  "explicacao": "A doença de Huntington tem herança autossômica dominante: cada filho de um genitor heterozigoto tem 50% de risco, independentemente do sexo. A mutação é uma expansão instável de trinucleotídeos CAG; as repetições tendem a aumentar de uma geração para a outra, sobretudo na espermatogênese, o que leva a início mais precoce e maior gravidade (antecipação), com a forma juvenil tipicamente herdada do pai. O risco não é 100% porque o pai é heterozigoto, e 25% seria o risco de um casal de portadores de doença recessiva. Imprinting e mosaicismo germinativo não são os mecanismos característicos dessa doença.",
+  "explicacao": "A doença de Huntington tem herança autossômica dominante: cada filho de um genitor heterozigoto tem 50% de risco, independentemente do sexo. A mutação é uma expansão instável de trinucleotídeos CAG; as repetições tendem a aumentar de uma geração para a outra, sobretudo na espermatogênese, o que leva a início mais precoce e maior gravidade (antecipação), com a forma juvenil tipicamente herdada do pai. O risco não é 100% porque o pai é heterozigoto, e 25% seria o risco de um casal de portadores de doença recessiva. Imprinting e mosaicismo germinativo não são os mecanismos característicos dessa doença. Para lembrar: 40 ou mais repetições CAG no HTT dão penetrância completa; de 36 a 39, penetrância reduzida; de 27 a 35, alelo intermediário, que não causa doença mas pode expandir na prole.",
   "tema": "padroes-de-heranca",
   "subtema": "padroes-de-heranca.heranca-autossomica",
   "especialidade": "genetica",
@@ -10733,12 +10800,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-757a4e26",
   "area": "Imunologia",
-  "enunciado": "Mulher de 30 anos, com doença celíaca e sinusites de repetição, é submetida a cirurgia ortopédica e recebe sua primeira transfusão de concentrado de hemácias. Poucos minutos após o início da infusão, apresenta urticária generalizada, broncoespasmo e hipotensão, sem febre nem sinais de hemólise; a tipagem ABO/Rh e a prova cruzada eram compatíveis. A investigação posterior revela IgA sérica indetectável, com IgG e IgM normais, e anticorpos IgG anti-IgA. Ela recebeu adrenalina intramuscular, anti-histamínico e expansão volêmica, com boa recuperação.\n\nQual é o mecanismo da reação e como prevenir novos episódios?",
+  "enunciado": "Poucos minutos após o início de sua primeira transfusão de concentrado de hemácias, durante cirurgia ortopédica, uma mulher de 30 anos, com doença celíaca e sinusites de repetição, apresenta urticária generalizada, broncoespasmo e hipotensão, sem febre nem sinais de hemólise; a tipagem ABO/Rh e a prova cruzada eram compatíveis. Recebe adrenalina intramuscular, anti-histamínico e expansão volêmica, com boa recuperação. A investigação posterior revela IgA sérica indetectável, com IgG e IgM normais, e anticorpos IgG anti-IgA.\n\nQual é o mecanismo da reação e como prevenir novos episódios?",
   "alternativas": [
    "Anticorpos anti-IgA reagem à IgA do plasma do doador; usar hemocomponentes lavados ou de doadores sem IgA",
    "Houve contaminação bacteriana da bolsa; usar hemocomponentes coletados há menos de 24 horas",
@@ -10747,7 +10815,7 @@
    "Anticorpos anti-HLA reagem a leucócitos do doador; usar apenas hemocomponentes leucorreduzidos"
   ],
   "correta": 0,
-  "explicacao": "A deficiência seletiva de IgA é a imunodeficiência primária mais comum; pode ser assintomática ou cursar com infecções sinopulmonares e gastrintestinais e com autoimunidade (a doença celíaca é associada, e a sorologia anti-transglutaminase IgA fica falsamente negativa). Alguns pacientes produzem anticorpos anti-IgA, que reagem à IgA presente no plasma do doador e desencadeiam reação anafilática, por ativação do complemento e de mastócitos, em geral logo no início da transfusão. A prevenção usa hemácias lavadas (remoção do plasma) ou componentes de doadores deficientes em IgA. Anticorpos anti-HLA associam-se a reação febril e TRALI; hemólise ABO e contaminação bacteriana cursam com febre, hemólise ou sepse.",
+  "explicacao": "A deficiência seletiva de IgA é a imunodeficiência primária mais comum; pode ser assintomática ou cursar com infecções sinopulmonares e gastrintestinais e com autoimunidade (a doença celíaca é associada, e a sorologia anti-transglutaminase IgA fica falsamente negativa). Alguns pacientes produzem anticorpos anti-IgA, que reagem à IgA presente no plasma do doador e desencadeiam reação anafilática, por ativação do complemento e de mastócitos, em geral logo no início da transfusão. A prevenção usa hemácias lavadas (remoção do plasma) ou componentes de doadores deficientes em IgA. Anticorpos anti-HLA associam-se a reação febril e TRALI; hemólise ABO e contaminação bacteriana cursam com febre, hemólise ou sepse. Para lembrar: anafilaxia nos primeiros minutos de transfusão, sem febre nem hemólise, exige dosar a IgA do receptor e pesquisar anticorpos anti-IgA.",
   "tema": "imunoglobulinas",
   "subtema": "imunoglobulinas.classes-de-imunoglobulinas",
   "especialidade": "imunologia",
@@ -10755,7 +10823,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-540a7f4d",
@@ -10783,7 +10852,7 @@
  {
   "id": "med-49b8f222",
   "area": "Imunologia",
-  "enunciado": "Menino de 2 anos tem pneumonias bacterianas de repetição e, agora, pneumocistose. IgM sérica elevada; IgG, IgA e IgE muito baixas; número de linfócitos B normal. A citometria mostra ausência de expressão do ligante do CD40 (CD40L, CD154) nos linfócitos T CD4 ativados.\n\nQual processo está comprometido e por que a IgM está alta?",
+  "enunciado": "Pneumocistose em um menino de 2 anos, com sorologia para HIV negativa, leva à investigação de imunodeficiência: ele já teve várias pneumonias bacterianas. IgM sérica elevada; IgG, IgA e IgE muito baixas; número de linfócitos B normal. A citometria mostra ausência de expressão do ligante do CD40 (CD40L, CD154) nos linfócitos T CD4 ativados.\n\nQual processo está comprometido e por que a IgM está alta?",
   "alternativas": [
    "A hipermutação somática apenas, sem efeito sobre a troca de classe; a IgM sobe por excesso de antígeno",
    "A maturação dos linfócitos B na medula óssea, que exige o CD40L para ultrapassar a fase pré-B",
@@ -10800,7 +10869,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-1413c4a7",
@@ -10822,7 +10892,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-b6b40855",
@@ -10867,7 +10938,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-a55b8b61",
@@ -11009,7 +11081,7 @@
  {
   "id": "med-e77e44f6",
   "area": "Infectologia",
-  "enunciado": "Mulher de 68 anos, diabética, internada há seis dias por pielonefrite aguda, recebe ceftriaxona intravenosa há 72 horas, mas mantém febre de 38,8 °C, dor lombar e PA de 100/60 mmHg. A ultrassonografia não mostra obstrução nem abscesso. A urocultura e as hemoculturas isolam Klebsiella pneumoniae com o antibiograma: resistente a ampicilina, ceftriaxona, cefepima, aztreonam e ciprofloxacino; sensível a meropenem, ertapenem e amicacina. O laboratório informa que a cepa é produtora de betalactamase de espectro estendido (ESBL). A função renal está preservada.\n\nQual é a conduta antimicrobiana mais adequada?",
+  "enunciado": "Terceiro dia de ceftriaxona intravenosa, e a febre persiste: uma mulher de 68 anos, diabética, internada há seis dias por pielonefrite aguda, mantém 38,8 °C, dor lombar e PA de 100/60 mmHg. A ultrassonografia não mostra obstrução nem abscesso. A urocultura e as hemoculturas isolam Klebsiella pneumoniae resistente a ampicilina, ceftriaxona, cefepima, aztreonam e ciprofloxacino e sensível a meropenem, ertapenem e amicacina; o laboratório informa que a cepa é produtora de betalactamase de espectro estendido (ESBL). A função renal está preservada.\n\nQual é a conduta antimicrobiana mais adequada?",
   "alternativas": [
    "Substituir a ceftriaxona por cefepima em dose dobrada, que resiste à hidrólise pelas ESBL",
    "Manter a ceftriaxona, pois o antibiograma in vitro não prevê a resposta clínica nas ESBL",
@@ -11018,20 +11090,21 @@
    "Substituir a ceftriaxona por vancomicina, ativa contra bacilos gram-negativos resistentes"
   ],
   "correta": 3,
-  "explicacao": "As ESBL são betalactamases (em geral codificadas em plasmídeos) que hidrolisam penicilinas, cefalosporinas de terceira e quarta gerações e aztreonam, mas não os carbapenêmicos. Em infecções graves, com bacteremia, por enterobactérias produtoras de ESBL, o tratamento de escolha é um carbapenêmico (meropenem, ou ertapenem se não houver necessidade de cobertura para Pseudomonas). A cefepima está listada como resistente e não é confiável contra ESBL. A falha clínica com ceftriaxona é coerente com o antibiograma. A vancomicina não age em gram-negativos, porque não atravessa a membrana externa. Associar clavulanato oral a um betalactâmico que já falhou não é tratamento adequado para bacteremia.",
+  "explicacao": "As ESBL são betalactamases (em geral codificadas em plasmídeos) que hidrolisam penicilinas, cefalosporinas de terceira e quarta gerações e aztreonam, mas não os carbapenêmicos. Em infecções graves, com bacteremia, por enterobactérias produtoras de ESBL, o tratamento de escolha é um carbapenêmico (meropenem, ou ertapenem se não houver necessidade de cobertura para Pseudomonas). A cefepima está listada como resistente e não é confiável contra ESBL. A falha clínica com ceftriaxona é coerente com o antibiograma. A vancomicina não age em gram-negativos, porque não atravessa a membrana externa. Associar clavulanato oral a um betalactâmico que já falhou não é tratamento adequado para bacteremia. Para lembrar: no ensaio MERINO (2018), piperacilina-tazobactam foi inferior ao meropenem em mortalidade na bacteremia por E. coli ou Klebsiella resistentes à ceftriaxona.",
   "tema": "antimicrobianos",
   "subtema": "antimicrobianos.resistencia-bacteriana",
   "especialidade": "infectologia",
   "disciplina": "Infectologia",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-7e457c91",
   "area": "Infectologia",
-  "enunciado": "Mulher de 28 anos procura a unidade de saúde com coriza há três dias, que ficou amarelo-esverdeada hoje, obstrução nasal, dor de garganta leve, tosse seca e febre baixa apenas no primeiro dia. Está em bom estado geral, sem dor facial nem exsudato amigdaliano, e pede um antibiótico \"para não piorar\".\n\nQual é a conduta mais adequada?",
+  "enunciado": "“Quero um antibiótico para não piorar”, pede uma mulher de 28 anos na unidade de saúde. Há três dias tem coriza, que ficou amarelo-esverdeada hoje, obstrução nasal, dor de garganta leve, tosse seca e febre baixa apenas no primeiro dia. Está em bom estado geral, sem dor facial, sem exsudato amigdaliano e com ausculta pulmonar normal.\n\nQual é a conduta mais adequada?",
   "alternativas": [
    "Azitromicina por 5 dias, para prevenir a evolução para sinusite ou pneumonia bacteriana",
    "Amoxicilina-clavulanato, pois sintomas com mais de 48 horas indicam infecção bacteriana",
@@ -11040,7 +11113,7 @@
    "Amoxicilina por 10 dias, pois a secreção purulenta confirma sinusite bacteriana aguda"
   ],
   "correta": 2,
-  "explicacao": "O quadro é de resfriado comum (rinossinusite viral), autolimitado em 7–10 dias. A mudança de cor da secreção reflete a presença de neutrófilos e não diferencia infecção viral de bacteriana. Sinusite bacteriana é sugerida por sintomas persistentes por mais de 10 dias sem melhora, piora após melhora inicial (dupla piora) ou quadro grave desde o início (febre alta com secreção purulenta e dor facial por 3–4 dias). Antibiótico \"preventivo\" não evita complicações, expõe a eventos adversos e seleciona resistência. Cultura de secreção nasal não é útil. A orientação inclui lavagem nasal, analgésicos e sinais de alarme.",
+  "explicacao": "O quadro é de resfriado comum (rinossinusite viral), autolimitado em 7–10 dias. A mudança de cor da secreção reflete a presença de neutrófilos e não diferencia infecção viral de bacteriana. Sinusite bacteriana é sugerida por sintomas persistentes por mais de 10 dias sem melhora, piora após melhora inicial (dupla piora) ou quadro grave desde o início (febre alta com secreção purulenta e dor facial por 3–4 dias). Antibiótico \"preventivo\" não evita complicações, expõe a eventos adversos e seleciona resistência. Cultura de secreção nasal não é útil. A orientação inclui lavagem nasal, analgésicos e sinais de alarme. Para lembrar: a cor esverdeada da secreção vem da mieloperoxidase dos neutrófilos, enzima que contém heme — não de bactérias.",
   "tema": "antimicrobianos",
   "subtema": "antimicrobianos.uso-racional",
   "especialidade": "infectologia",
@@ -11048,7 +11121,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-a0a723f1",
@@ -11605,7 +11679,7 @@
  {
   "id": "med-071098c8",
   "area": "Hematologia",
-  "enunciado": "Homem de 28 anos tem trombose venosa profunda sem fator desencadeante; o pai teve embolia pulmonar aos 40 anos. O teste de resistência à proteína C ativada é positivo.\n\nQual é a alteração mais provável?",
+  "enunciado": "Ambulatório de hematologia: um homem de 28 anos teve trombose venosa profunda femoral sem fator desencadeante (sem cirurgia, imobilização, viagem longa ou câncer). O pai teve embolia pulmonar aos 40 anos, e uma tia paterna teve trombose na gravidez. Terminada a anticoagulação inicial, a investigação mostra teste de resistência à proteína C ativada positivo, com antitrombina e proteína C normais.\n\nQual é a alteração mais provável?",
   "alternativas": [
    "Deficiência de proteína S, que normalmente inativa sozinha o fator V e o fator VIII",
    "Deficiência de antitrombina, que impede a ativação da proteína C pela trombomodulina",
@@ -11614,7 +11688,7 @@
    "Fator V de Leiden, que torna o fator Va resistente à inativação pela proteína C ativada"
   ],
   "correta": 4,
-  "explicacao": "O fator V de Leiden (mutação R506Q, no sítio de clivagem pela proteína C ativada) é a trombofilia hereditária mais comum em populações de origem europeia: o fator Va mutado é inativado muito mais lentamente, o que causa estado pró-trombótico e o teste de resistência à proteína C ativada positivo. A mutação G20210A da protrombina aumenta, e não reduz, os níveis de protrombina. A antitrombina inibe a trombina e o fator Xa, potencializada pela heparina; quem ativa a proteína C é o complexo trombina-trombomodulina. A proteína S é cofator da proteína C ativada e não age sozinha.",
+  "explicacao": "O fator V de Leiden (mutação R506Q, no sítio de clivagem pela proteína C ativada) é a trombofilia hereditária mais comum em populações de origem europeia: o fator Va mutado é inativado muito mais lentamente, o que causa estado pró-trombótico e o teste de resistência à proteína C ativada positivo. A mutação G20210A da protrombina aumenta, e não reduz, os níveis de protrombina. A antitrombina inibe a trombina e o fator Xa, potencializada pela heparina; quem ativa a proteína C é o complexo trombina-trombomodulina. A proteína S é cofator da proteína C ativada e não age sozinha. Para lembrar: fator V de Leiden e mutação da protrombina são pesquisados por teste genético e não sofrem interferência da anticoagulação, ao contrário das dosagens de proteína C, proteína S e antitrombina.",
   "tema": "tromboembolismo-venoso",
   "subtema": "tromboembolismo-venoso.fatores-de-risco",
   "especialidade": "hematologia",
@@ -11622,7 +11696,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-7e036d04",
@@ -11972,7 +12047,7 @@
  {
   "id": "med-7945f146",
   "area": "Infectologia",
-  "enunciado": "Mulher de 36 anos tem três lesões hipocrômicas com hipoestesia térmica no tronco, sem espessamento neural palpável. A baciloscopia de raspado intradérmico é positiva.\n\nQual é a classificação operacional para fins de tratamento?",
+  "enunciado": "Encaminhada pela agente comunitária, uma mulher de 36 anos chega à UBS com três manchas hipocrômicas no tronco, com hipoestesia térmica, surgidas há 8 meses. Não há espessamento neural palpável nem alterações de força. A baciloscopia de raspado intradérmico é positiva.\n\nQual é a classificação operacional para fins de tratamento?",
   "alternativas": [
    "Multibacilar, pois a baciloscopia positiva define o caso independentemente do número de lesões",
    "Paucibacilar, pois há até cinco lesões cutâneas e nenhum nervo periférico espessado",
@@ -11981,7 +12056,7 @@
    "Multibacilar apenas se houver mais de um tronco nervoso acometido ao exame"
   ],
   "correta": 0,
-  "explicacao": "Pelo Protocolo Clínico e Diretrizes Terapêuticas da Hanseníase do Ministério da Saúde, a classificação operacional considera paucibacilar o caso com até cinco lesões de pele e baciloscopia negativa, e multibacilar o caso com mais de cinco lesões OU com baciloscopia positiva, qualquer que seja o número de lesões. Assim, três lesões com baciloscopia positiva configuram caso multibacilar. O número de nervos acometidos não é o critério operacional, e a biópsia não é necessária para classificar nem para iniciar o tratamento.",
+  "explicacao": "Pelo Protocolo Clínico e Diretrizes Terapêuticas da Hanseníase do Ministério da Saúde (2022), que segue a OMS, a classificação operacional se baseia no número de lesões de pele: até cinco lesões, paucibacilar; mais de cinco, multibacilar. A baciloscopia positiva, porém, classifica o caso como multibacilar independentemente do número de lesões, e casos com dúvida devem ser tratados como multibacilares. Assim, três lesões com baciloscopia positiva configuram caso multibacilar, que recebe 12 doses da PQT-U. Classificar como paucibacilar por contar só as lesões ignora a baciloscopia; o espessamento de nervos não é condição necessária para classificar como multibacilar; e a biópsia não é necessária para classificar nem para iniciar o tratamento. Para lembrar: na dúvida entre PB e MB, trate como MB.",
   "tema": "hanseniase",
   "subtema": "hanseniase.classificacao",
   "especialidade": "infectologia",
@@ -11989,7 +12064,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-98841e2e",
@@ -12034,7 +12110,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-5abac442",
@@ -14524,7 +14601,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-8b3ba651",
@@ -15286,7 +15364,7 @@
  {
   "id": "med-a3d36e25",
   "area": "Hematologia",
-  "enunciado": "Dois pacientes têm anemia megaloblástica com homocisteína plasmática elevada. No primeiro, que também tem parestesias e perda da sensibilidade vibratória, o ácido metilmalônico sérico está elevado; no segundo, etilista com dieta pobre em vegetais, o ácido metilmalônico é normal.\n\nQual interpretação está correta?",
+  "enunciado": "Dois pacientes do ambulatório de hematologia têm anemia megaloblástica com homocisteína plasmática elevada. O primeiro também tem parestesias e perda da sensibilidade vibratória, e seu ácido metilmalônico sérico está elevado. O segundo, etilista com dieta pobre em vegetais e sem queixas neurológicas, tem ácido metilmalônico normal.\n\nComo interpretar a diferença no ácido metilmalônico entre os dois?",
   "alternativas": [
    "O primeiro tem deficiência de B12, cofator da metilmalonil-CoA mutase; o segundo, provavelmente de folato",
    "O primeiro tem deficiência de folato, necessário para converter metilmalonil-CoA em succinil-CoA",
@@ -15303,7 +15381,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-c38944fd",
@@ -15348,7 +15427,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-bdb6c206",
@@ -15416,7 +15496,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-b9659fa9",
@@ -15438,7 +15519,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-4234063e",
@@ -15460,7 +15542,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-2d888ec2",
@@ -15642,12 +15725,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-43468b54",
   "area": "Genética",
-  "enunciado": "Recém-nascido apresenta fenda labiopalatina bilateral, microftalmia, polidactilia pós-axial, defeito do couro cabeludo no vértex (aplasia cútis) e holoprosencefalia na ultrassonografia transfontanelar.\n\nQual é o diagnóstico mais provável?",
+  "enunciado": "Plantão na UTI neonatal: nasce, de mãe de 41 anos sem pré-natal, um recém-nascido com fenda labiopalatina bilateral, microftalmia, polidactilia pós-axial nas mãos e uma área ulcerada, sem pele, no vértex do couro cabeludo (aplasia cútis). A ultrassonografia transfontanelar mostra holoprosencefalia, e o ecocardiograma, comunicação interventricular.\n\nQual alteração cromossômica é a mais provável?",
   "alternativas": [
    "Deleção 22q11.2 (DiGeorge)",
    "Trissomia do 13 (Patau)",
@@ -15656,7 +15740,7 @@
    "Trissomia do 21 (Down)"
   ],
   "correta": 1,
-  "explicacao": "A trissomia do 13 (síndrome de Patau) reúne defeitos da linha média: holoprosencefalia, fenda labiopalatina, microftalmia ou anoftalmia, aplasia cútis no couro cabeludo, polidactilia pós-axial, cardiopatias e rins policísticos; a maioria morre no primeiro ano. A trissomia do 18 caracteriza-se por occipital proeminente, mãos fechadas com dedos sobrepostos e pés em mata-borrão. A trissomia do 21 tem hipotonia, fendas palpebrais oblíquas e defeito do septo atrioventricular, sem holoprosencefalia. A síndrome de Turner cursa com linfedema e pescoço alado. A deleção 22q11.2 tem cardiopatia conotruncal, hipocalcemia e aplasia tímica. Para lembrar: Klaus Patau identificou a trissomia do 13 em 1960.",
+  "explicacao": "A trissomia do 13 (síndrome de Patau) reúne defeitos da linha média: holoprosencefalia, fenda labiopalatina, microftalmia ou anoftalmia, aplasia cútis no couro cabeludo, polidactilia pós-axial, cardiopatias e rins policísticos; a maioria morre no primeiro ano. A trissomia do 18 caracteriza-se por occipital proeminente, mãos fechadas com dedos sobrepostos e pés em mata-borrão. A trissomia do 21 tem hipotonia, fendas palpebrais oblíquas e defeito do septo atrioventricular, sem holoprosencefalia. A síndrome de Turner cursa com linfedema e pescoço alado. A deleção 22q11.2 tem cardiopatia conotruncal, hipocalcemia e aplasia tímica. Para lembrar: Patau é a trissomia dos defeitos de linha média (holoprosencefalia, fenda labiopalatina, aplasia cútis) com polidactilia pós-axial; como nas demais trissomias por não disjunção, o risco cresce com a idade materna.",
   "tema": "cromossomopatias",
   "subtema": "cromossomopatias.outras-trissomias",
   "especialidade": "genetica",
@@ -15664,12 +15748,13 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-1f375ae3",
   "area": "Genética",
-  "enunciado": "Menina de 11 anos é investigada por baixa estatura (abaixo do percentil 3) e pescoço curto. Nasceu com linfedema de mãos e pés, que regrediu nos primeiros meses. Não há sinais de puberdade, e o FSH está muito elevado. O cariótipo em sangue periférico, com contagem de 50 metáfases, mostra duas linhagens: 45,X em 70% das células e 46,XY em 30%. A genitália externa é feminina típica, sem clitoromegalia, e a ultrassonografia mostra útero infantil e gônadas em fita. A família quer saber se, além do tratamento com hormônio do crescimento e da futura indução puberal, alguma outra conduta é necessária por causa desse resultado.\n\nQual é a conduta adicional recomendada e por quê?",
+  "enunciado": "Encaminhada pela pediatra ao ambulatório de endocrinologia por baixa estatura (abaixo do percentil 3) e pescoço curto, uma menina de 11 anos nasceu com linfedema de mãos e pés, que regrediu nos primeiros meses. Não há sinais de puberdade, e o FSH está muito elevado. O cariótipo em sangue periférico, com contagem de 50 metáfases, mostra duas linhagens: 45,X em 70% das células e 46,XY em 30%. A genitália externa é feminina típica, sem clitoromegalia, e a ultrassonografia mostra útero infantil e gônadas em fita. A família quer saber se, além do hormônio do crescimento e da futura indução puberal, alguma outra conduta é necessária por causa desse resultado.\n\nQual é a conduta adicional recomendada e por quê?",
   "alternativas": [
    "Biópsia gonadal anual até os 18 anos, reservando a cirurgia para os casos com marcadores tumorais elevados",
    "Gonadectomia bilateral profilática, pelo risco de gonadoblastoma em gônadas disgenéticas com material do Y",
@@ -15678,7 +15763,7 @@
    "Mastectomia profilática na idade adulta, pelo risco aumentado de câncer de mama ligado ao cromossomo Y"
   ],
   "correta": 1,
-  "explicacao": "Cerca de 5 a 10% das pacientes com síndrome de Turner têm material do cromossomo Y, em mosaico ou em fragmentos. Em gônadas disgenéticas, a região do Y que contém o locus associado ao gonadoblastoma (incluindo o gene TSPY) confere risco considerável de gonadoblastoma, que pode evoluir para disgerminoma; por isso recomenda-se a gonadectomia bilateral profilática, já que as gônadas em fita não têm função útil. A proporção minoritária da linhagem XY não elimina o risco. A identidade de gênero e a criação são femininas, com genitália feminina típica; a reposição hormonal será com estrogênio. Biópsias seriadas não substituem a retirada de gônadas sem função, e marcadores normais não excluem neoplasia inicial. O Y não se associa a câncer de mama.",
+  "explicacao": "Cerca de 5 a 10% das pacientes com síndrome de Turner têm material do cromossomo Y, em mosaico ou em fragmentos. Em gônadas disgenéticas, a região do Y que contém o locus associado ao gonadoblastoma (incluindo o gene TSPY) confere risco considerável de gonadoblastoma, que pode evoluir para disgerminoma; por isso recomenda-se a gonadectomia bilateral profilática, já que as gônadas em fita não têm função útil. A proporção minoritária da linhagem XY não elimina o risco. A identidade de gênero e a criação são femininas, com genitália feminina típica; a reposição hormonal será com estrogênio. Biópsias seriadas não substituem a retirada de gônadas sem função, e marcadores normais não excluem neoplasia inicial. O Y não se associa a câncer de mama. Para lembrar: na síndrome de Turner, pesquisa-se material do Y (cariótipo e, se necessário, PCR ou FISH para sequências do Y) quando há virilização ou cromossomo marcador; se presente, indica-se gonadectomia.",
   "tema": "cromossomopatias",
   "subtema": "cromossomopatias.sindromes-de-turner-e-klinefelter",
   "especialidade": "genetica",
@@ -15686,7 +15771,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-9ad4f96d",
@@ -15731,12 +15817,13 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-7355ca0c",
   "area": "Genética",
-  "enunciado": "Menino de 4 anos teve hipotonia grave e dificuldade de sucção ao nascer; hoje tem fome insaciável, obesidade, baixa estatura, mãos e pés pequenos e criptorquidia. O cariótipo é normal, e a hibridização in situ (FISH) não mostra deleção na região 15q11-q13. O teste de metilação dessa região mostra apenas o padrão materno.\n\nQual é o mecanismo genético mais provável?",
+  "enunciado": "“Ele não para de pedir comida; já pegou restos do lixo”, relata a mãe de um menino de 4 anos no ambulatório de genética. Ao nascer, ele teve hipotonia grave e dificuldade de sucção, precisando de sonda; hoje tem obesidade, baixa estatura, mãos e pés pequenos e criptorquidia. O cariótipo é normal, e a hibridização in situ (FISH) não mostra deleção na região 15q11-q13. O teste de metilação dessa região mostra apenas o padrão materno.\n\nQual é o mecanismo genético mais provável?",
   "alternativas": [
    "Dissomia uniparental paterna do cromossomo 15, com excesso de expressão paterna",
    "Deleção da região 15q11-q13 no cromossomo 15 herdado da mãe, não detectada pelo FISH",
@@ -15745,7 +15832,7 @@
    "Dissomia uniparental materna do cromossomo 15, sem cópia paterna ativa da região"
   ],
   "correta": 4,
-  "explicacao": "Na síndrome de Prader-Willi falta a expressão de genes da região 15q11-q13 que só são ativos no alelo paterno (os maternos são silenciados por imprinting). As causas são deleção paterna (cerca de 70%), dissomia uniparental materna (cerca de 25%) — as duas cópias vêm da mãe, e nenhuma paterna — e defeitos do centro de imprinting. Com FISH normal e metilação só materna, a hipótese mais provável é a dissomia materna; o defeito do centro de imprinting dá o mesmo padrão de metilação, mas é bem mais raro (1 a 3%), e a análise de microssatélites dos pais distingue as duas causas. Deleção materna e mutação do UBE3A materno causam a síndrome de Angelman (deficiência intelectual grave, ausência de fala, riso fácil, convulsões); a dissomia paterna do 15 também causa Angelman. A expansão CGG do FMR1 é a síndrome do X frágil.",
+  "explicacao": "Na síndrome de Prader-Willi falta a expressão de genes da região 15q11-q13 que só são ativos no alelo paterno (os maternos são silenciados por imprinting). As causas são deleção paterna (cerca de 70%), dissomia uniparental materna (cerca de 25%) — as duas cópias vêm da mãe, e nenhuma paterna — e defeitos do centro de imprinting. Com FISH normal e metilação só materna, a hipótese mais provável é a dissomia materna; o defeito do centro de imprinting dá o mesmo padrão de metilação, mas é bem mais raro (1 a 3%), e a análise de microssatélites dos pais distingue as duas causas. Deleção materna e mutação do UBE3A materno causam a síndrome de Angelman (deficiência intelectual grave, ausência de fala, riso fácil, convulsões); a dissomia paterna do 15 também causa Angelman. A expansão CGG do FMR1 é a síndrome do X frágil. Para lembrar: Prader-Willi é a falta do alelo Paterno (P de Pai); Angelman, a falta do Materno.",
   "tema": "padroes-de-heranca",
   "subtema": "padroes-de-heranca.heranca-autossomica",
   "especialidade": "genetica",
@@ -15753,7 +15840,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-d5e550fc",
@@ -15781,7 +15869,7 @@
  {
   "id": "med-d505b408",
   "area": "Imunologia",
-  "enunciado": "Menino de 14 meses tem, desde os 7 meses, otites, sinusites e duas pneumonias por Streptococcus pneumoniae. Nos primeiros meses de vida era saudável. Ao exame, as amígdalas são quase invisíveis e não há linfonodos palpáveis. IgG, IgA e IgM muito baixas; linfócitos B (CD19+) praticamente ausentes no sangue; linfócitos T normais.\n\nQual é o diagnóstico e por que as infecções começaram só após o sexto mês?",
+  "enunciado": "Desde os 7 meses, um menino hoje com 14 meses teve otites, sinusites e duas pneumonias por Streptococcus pneumoniae; nos primeiros meses de vida era saudável. Ao exame, as amígdalas são quase invisíveis e não há linfonodos palpáveis. IgG, IgA e IgM muito baixas; linfócitos B (CD19+) praticamente ausentes no sangue; linfócitos T normais.\n\nQual é o diagnóstico e por que as infecções começaram só após o sexto mês?",
   "alternativas": [
    "Agamaglobulinemia ligada ao X; até então a IgG materna transferida pela placenta protegia",
    "Síndrome de hiper-IgM; até então a IgM materna atravessava a placenta e protegia",
@@ -15790,7 +15878,7 @@
    "Imunodeficiência combinada grave; até então os linfócitos T maternos protegiam a criança"
   ],
   "correta": 0,
-  "explicacao": "A agamaglobulinemia ligada ao X (de Bruton) decorre de mutação na tirosina-cinase de Bruton (BTK), essencial à maturação do linfócito B na medula: não há linfócitos B maduros nem plasmócitos, as imunoglobulinas são muito baixas e os tecidos linfoides (amígdalas, linfonodos) são pequenos. A IgG materna, transferida pela placenta via FcRn, protege o lactente nos primeiros meses; à medida que é catabolizada, surgem infecções por bactérias encapsuladas, geralmente após os 6 meses. Na deficiência de IgA, IgG e IgM são normais. Na imunodeficiência combinada grave, os linfócitos T estão ausentes e as infecções começam cedo, incluindo oportunistas. Na hiper-IgM, a IgM é normal ou alta, e a IgM materna não atravessa a placenta. A hipogamaglobulinemia transitória tem linfócitos B normais. Para lembrar: Ogden Bruton descreveu o primeiro caso de agamaglobulinemia em 1952.",
+  "explicacao": "A agamaglobulinemia ligada ao X (de Bruton) decorre de mutação na tirosina-cinase de Bruton (BTK), essencial à maturação do linfócito B na medula: não há linfócitos B maduros nem plasmócitos, as imunoglobulinas são muito baixas e os tecidos linfoides (amígdalas, linfonodos) são pequenos. A IgG materna, transferida pela placenta via FcRn, protege o lactente nos primeiros meses; à medida que é catabolizada, surgem infecções por bactérias encapsuladas, geralmente após os 6 meses. Na deficiência de IgA, IgG e IgM são normais. Na imunodeficiência combinada grave, os linfócitos T estão ausentes e as infecções começam cedo, incluindo oportunistas. Na hiper-IgM, a IgM é normal ou alta, e a IgM materna não atravessa a placenta. A hipogamaglobulinemia transitória tem linfócitos B normais. Para lembrar: menino com infecções bacterianas de repetição após os 6 meses, amígdalas e linfonodos diminutos e CD19 ausente sugere Bruton; trata-se com reposição regular de imunoglobulina.",
   "tema": "imunoglobulinas",
   "subtema": "imunoglobulinas.imunidade-passiva-materna",
   "especialidade": "imunologia",
@@ -15798,7 +15886,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-352863eb",
@@ -15820,7 +15909,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-d078fa11",
@@ -15865,7 +15955,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-54b4fd67",
@@ -15909,12 +16000,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-c7d5ab63",
   "area": "Imunologia",
-  "enunciado": "Mulher de 22 anos, no terceiro dia de menstruação e usando tampão vaginal, apresenta febre de 39,5 °C, hipotensão, exantema difuso \"em queimadura de sol\", vômitos e diarreia. A cultura do tampão isola Staphylococcus aureus produtor de TSST-1, com hemoculturas negativas.\n\nQual mecanismo imunológico explica a gravidade do quadro?",
+  "enunciado": "No terceiro dia da menstruação, usando tampão vaginal, uma universitária de 22 anos chega ao pronto-socorro com febre de 39,5 °C, hipotensão, exantema difuso \"em queimadura de sol\", vômitos e diarreia. A cultura do tampão isola Staphylococcus aureus produtor de TSST-1, e as hemoculturas são negativas.\n\nQual mecanismo imunológico explica a gravidade do quadro?",
   "alternativas": [
    "A toxina é processada e apresentada em MHC II, ativando poucos clones T específicos e memória",
    "A toxina liga-se ao TLR4 dos macrófagos como o LPS, sem participação dos linfócitos T",
@@ -15931,7 +16023,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-f364004c",
@@ -15953,17 +16046,18 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-cda5e983",
   "area": "Infectologia",
-  "enunciado": "Menina de 10 anos apresenta, três semanas após uma faringoamigdalite não tratada, artrite migratória em joelhos e tornozelos, febre e sopro sistólico apical de regurgitação mitral. A antiestreptolisina O está elevada.\n\nQual mecanismo explica a lesão cardíaca?",
+  "enunciado": "Três semanas depois de uma faringoamigdalite não tratada, uma menina de 10 anos é levada ao pronto-atendimento com febre e artrite que \"pula\" dos joelhos para os tornozelos. A ausculta revela sopro sistólico apical de regurgitação mitral, e a antiestreptolisina O está elevada.\n\nQual mecanismo explica a lesão cardíaca?",
   "alternativas": [
    "Superantígeno estreptocócico que ativa linfócitos T de forma policlonal no miocárdio",
    "Invasão direta do endocárdio pelo Streptococcus pyogenes, com vegetações bacterianas",
    "Ação direta da estreptolisina O circulante sobre os miócitos e as valvas cardíacas",
-   "Mimetismo molecular: anticorpos e linfócitos T contra a proteína M reagem com proteínas cardíacas",
+   "Mimetismo molecular: anticorpos e linfócitos T anti-proteína M reagem com o coração",
    "Deposição de imunocomplexos no endocárdio, com consumo do complemento e C3 baixo"
   ],
   "correta": 3,
@@ -15975,7 +16069,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-141c81b3",
@@ -16177,7 +16272,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-f43d7686",
@@ -16248,7 +16344,7 @@
  {
   "id": "med-7fa4d972",
   "area": "Hematologia",
-  "enunciado": "Homem de 78 anos, com fibrilação atrial, chega com hemorragia digestiva alta volumosa e instabilidade hemodinâmica. Usa dabigatrana 150 mg duas vezes ao dia, com última dose há 5 horas; a função renal é normal. Na discussão do caso, os residentes revisam os agentes de reversão dos anticoagulantes.\n\nQual associação está correta?",
+  "enunciado": "Sala de emergência: um homem de 78 anos, com fibrilação atrial, chega com hemorragia digestiva alta volumosa e instabilidade hemodinâmica. Usa dabigatrana 150 mg duas vezes ao dia, com última dose há 5 horas; a função renal é normal. Enquanto a endoscopia é preparada, os residentes revisam os agentes de reversão dos anticoagulantes.\n\nQual par anticoagulante–agente de reversão está correto?",
   "alternativas": [
    "Apixabana: vitamina K oral, que acelera a eliminação hepática do fármaco",
    "Heparina não fracionada: vitamina K intravenosa, que restaura a antitrombina",
@@ -16265,7 +16361,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-f1e8ee5a",
@@ -16773,7 +16870,7 @@
  {
   "id": "med-29274752",
   "area": "Infectologia",
-  "enunciado": "Homem de 52 anos, que trabalha em fazenda de criação de cabras e ovelhas e ajuda nos partos dos animais, tem bioprótese aórtica. Há 3 meses apresenta febre baixa, perda de peso e esplenomegalia. Foram colhidas três amostras de hemocultura antes de qualquer antibiótico, todas negativas após incubação prolongada. O ecocardiograma transesofágico mostra pequena vegetação na prótese.\n\nQual agente deve ser pesquisado prioritariamente e por qual método?",
+  "enunciado": "Febre baixa, perda de peso e esplenomegalia há 3 meses levam à internação um homem de 52 anos com bioprótese aórtica, que trabalha em fazenda de criação de cabras e ovelhas e ajuda nos partos dos animais. Três amostras de hemocultura, colhidas antes de qualquer antibiótico, foram negativas após incubação prolongada. O ecocardiograma transesofágico mostra pequena vegetação na prótese.\n\nQual agente deve ser pesquisado prioritariamente e por qual método?",
   "alternativas": [
    "Candida albicans, por cultura da ponta de cateter venoso periférico",
    "Estreptococos do grupo viridans, por cultura da placa bacteriana dental",
@@ -16782,7 +16879,7 @@
    "Coxiella burnetii, por sorologia com IgG contra antígenos de fase I"
   ],
   "correta": 4,
-  "explicacao": "Endocardite com hemoculturas negativas, sem antibiótico prévio, em pessoa que lida com partos de caprinos e ovinos, aponta para Coxiella burnetii, agente da febre Q, bactéria intracelular que não cresce nos meios usuais. O diagnóstico é sorológico: IgG antifase I em título elevado é critério maior de Duke, e a PCR do tecido valvar pode confirmar. O tratamento é prolongado, com doxiciclina associada a hidroxicloroquina. Enterococo e viridans crescem bem em hemocultura, e culturas de placa dental ou de swab nasal não identificam o agente da endocardite; a colonização nasal por S. aureus não prova infecção valvar; Candida não tem relação com a exposição descrita e cresce, em geral, nas hemoculturas. Para lembrar: o \"Q\" vem de \"query\" (dúvida), nome dado por Edward Derrick em 1937 a surtos de febre de causa desconhecida em Queensland, Austrália.",
+  "explicacao": "Endocardite com hemoculturas negativas, sem antibiótico prévio, em pessoa que lida com partos de caprinos e ovinos, aponta para Coxiella burnetii, agente da febre Q, bactéria intracelular que não cresce nos meios usuais. O diagnóstico é sorológico: IgG antifase I em título elevado é critério maior de Duke, e a PCR do tecido valvar pode confirmar. O tratamento é prolongado, com doxiciclina associada a hidroxicloroquina. Enterococo e viridans crescem bem em hemocultura, e culturas de placa dental ou de swab nasal não identificam o agente da endocardite; a colonização nasal por S. aureus não prova infecção valvar; Candida não tem relação com a exposição descrita e cresce, em geral, nas hemoculturas. Para lembrar: endocardite com hemoculturas negativas sem antibiótico prévio lembra agentes de difícil cultivo, como Coxiella burnetii, Bartonella, Brucella e Tropheryma whipplei, investigados por sorologia ou PCR.",
   "tema": "endocardite-infecciosa",
   "subtema": "endocardite-infecciosa.etiologia",
   "especialidade": "infectologia",
@@ -16790,7 +16887,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-90725107",
@@ -16841,7 +16939,7 @@
  {
   "id": "med-859e1405",
   "area": "Hematologia",
-  "enunciado": "Mulher de 74 anos, internada por pneumonia, deverá permanecer acamada por pelo menos 3 dias. Não tem câncer, tromboembolismo prévio, trombofilia conhecida, cirurgia ou trauma recentes, insuficiência cardíaca, obesidade nem usa hormônios. Tem função renal normal, plaquetas de 210.000/mm³ e nenhum sangramento ativo ou alto risco hemorrágico.\n\nPelo escore de Pádua, qual é o risco de tromboembolismo venoso e a conduta?",
+  "enunciado": "Na admissão da enfermaria de clínica médica, a residente aplica o escore de Pádua a uma senhora de 74 anos internada por pneumonia, que deverá ficar acamada por pelo menos 3 dias. Ela não tem câncer, tromboembolismo prévio, trombofilia conhecida, cirurgia ou trauma recentes, insuficiência cardíaca, obesidade nem usa hormônios. Função renal normal, plaquetas 210.000/mm³, sem sangramento ativo ou alto risco hemorrágico.\n\nQual é a pontuação, o risco de tromboembolismo venoso e a conduta?",
   "alternativas": [
    "3 pontos, baixo risco; apenas estímulo à deambulação precoce",
    "2 pontos, baixo risco; meias de compressão graduada isoladas",
@@ -16858,12 +16956,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-fa4e4c64",
   "area": "Hematologia",
-  "enunciado": "Homem de 63 anos está no 8º dia pós-operatório de revascularização miocárdica e recebe heparina não fracionada profilática desde a cirurgia. As plaquetas, que haviam caído nos primeiros dias e se recuperado para 240.000/mm³ no 4º dia, estão hoje em 95.000/mm³. Surgem edema e dor na perna esquerda, e o ultrassom com Doppler confirma trombose venosa profunda femoral. Usa há anos AAS, atorvastatina e metoprolol, mantidos após a cirurgia, e tem creatinina de 1,0 mg/dL. Não há sangramento, sinais de sepse nem início de outros fármacos. O escore 4T é de 7 pontos, e o imunoensaio anti-PF4/heparina foi colhido, com resultado previsto para daqui a 2 dias.\n\nQual é a conduta adequada?",
+  "enunciado": "Oitavo dia de pós-operatório de revascularização miocárdica: um homem de 63 anos, em heparina não fracionada profilática desde a cirurgia, tem plaquetas de 95.000/mm³ — haviam caído nos primeiros dias e se recuperado para 240.000/mm³ no 4º dia. Surgem edema e dor na perna esquerda, e o Doppler confirma trombose venosa profunda femoral. Usa há anos AAS, atorvastatina e metoprolol, mantidos após a cirurgia; creatinina 1,0 mg/dL. Não há sangramento, sepse nem fármacos novos. O escore 4T é de 8 pontos, e o anti-PF4/heparina foi colhido, com resultado previsto para daqui a 2 dias.\n\nO que fazer antes do resultado do anti-PF4?",
   "alternativas": [
    "Transfundir concentrado de plaquetas e manter a heparina em dose terapêutica",
    "Trocar a heparina não fracionada por enoxaparina em dose terapêutica, de 12/12 horas",
@@ -16880,7 +16979,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-281c0962",
@@ -17770,7 +17870,7 @@
  {
   "id": "med-b51d5523",
   "area": "Infectologia",
-  "enunciado": "Mulher de 30 anos, não gestante e sem comorbidades, tem febre de 38,6 °C, calafrios, dor lombar direita e punho-percussão dolorosa há 1 dia. Tem náuseas leves, mas aceita bem a via oral; PA 118/76 mmHg, FC 96 bpm, sem sinais de sepse. Urina tipo 1 com leucocitúria e nitrito positivo. A resistência local da E. coli a fluoroquinolonas é inferior a 10%.\n\nQual é a conduta mais adequada?",
+  "enunciado": "Febre de 38,6 °C, calafrios e dor lombar direita há 1 dia levam uma mulher de 30 anos, não gestante e sem comorbidades, à UPA. Punho-percussão dolorosa à direita. Tem náuseas leves, mas aceita bem a via oral; PA 118/76 mmHg, FC 96 bpm, sem sinais de sepse. Urina tipo 1 com leucocitúria e nitrito positivo. A resistência local da E. coli a fluoroquinolonas é inferior a 10%.\n\nQual é o tratamento adequado?",
   "alternativas": [
    "Internar para meropeném intravenoso até completar 14 dias de tratamento",
    "Tratar com nitrofurantoína por 5 dias, sem necessidade de urocultura",
@@ -17787,7 +17887,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-6c048cc2",
@@ -17953,7 +18054,7 @@
  {
   "id": "med-ff81c7c1",
   "area": "Infectologia",
-  "enunciado": "Homem de 28 anos, natural da Amazônia ocidental, sabidamente portador crônico do HBsAg, apresenta piora súbita com icterícia e elevação acentuada das aminotransferases. Não usa álcool nem medicamentos.\n\nQual agente deve ser pesquisado, pela possibilidade de superinfecção?",
+  "enunciado": "Natural de Lábrea, no sul do Amazonas, um homem de 28 anos, sabidamente portador crônico do HBsAg e sem acompanhamento regular, apresenta piora súbita com icterícia e elevação acentuada das aminotransferases. Não usa álcool nem medicamentos.\n\nQual agente deve ser pesquisado, pela possibilidade de superinfecção?",
   "alternativas": [
    "Vírus da hepatite D (delta), defectivo, que usa o HBsAg como envelope",
    "Vírus da hepatite A, que cronifica com frequência em portadores do HBV",
@@ -17970,7 +18071,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-665ed6d3",
@@ -18159,7 +18261,7 @@
  {
   "id": "med-b9e428a3",
   "area": "Hematologia",
-  "enunciado": "Mulher de 34 anos, com anemia ferropriva por menorragia (Hb 9,0 g/dL; ferritina 6 ng/mL), inicia sulfato ferroso oral, com boa adesão.\n\nQual é a primeira resposta laboratorial esperada e por quanto tempo o ferro deve ser mantido?",
+  "enunciado": "Encaminhada pela ginecologia, uma bancária de 34 anos com menorragia por mioma submucoso tem Hb 9,0 g/dL, VCM 71 fL e ferritina 6 ng/mL. Inicia sulfato ferroso oral, com boa adesão, e pergunta: \"Em quanto tempo o exame melhora, e quando posso parar o remédio?\"\n\nQual é a primeira resposta laboratorial esperada e por quanto tempo o ferro deve ser mantido?",
   "alternativas": [
    "Reticulocitose em 7 a 10 dias; manter 3 meses após normalizar a Hb",
    "Normalização da Hb em 7 dias; suspender assim que a Hb normalizar",
@@ -18176,7 +18278,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-c05e31da",
@@ -18273,7 +18376,7 @@
  {
   "id": "med-f0525cdd",
   "area": "Hematologia",
-  "enunciado": "Homem de 40 anos, com diagnóstico recente de leucemia mieloide aguda com diferenciação monocítica, chega com dispneia progressiva, SpO2 de 88% em ar ambiente, confusão e borramento visual. Exames: leucócitos 180.000/mm³, com predomínio de blastos; Hb 7,2 g/dL; plaquetas 25.000/mm³; potássio e fósforo normais; temperatura de 37,6 °C, sem sangramentos ativos. A radiografia mostra infiltrado intersticial difuso bilateral; o fundo de olho mostra veias ingurgitadas e hemorragias retinianas. O plantonista sugere, como primeira medida, transfundir dois concentrados de hemácias.\n\nQual é a conduta mais adequada?",
+  "enunciado": "Dispneia progressiva, confusão e visão borrada levam ao pronto-socorro um homem de 40 anos com diagnóstico recente de leucemia mieloide aguda com diferenciação monocítica. SpO2 88% em ar ambiente; temperatura 37,6 °C; sem sangramentos ativos. Exames: leucócitos 180.000/mm³, com predomínio de blastos; Hb 7,2 g/dL; plaquetas 25.000/mm³; potássio e fósforo normais. A radiografia mostra infiltrado intersticial difuso bilateral; o fundo de olho, veias ingurgitadas e hemorragias retinianas. O plantonista sugere, como primeira medida, transfundir dois concentrados de hemácias.\n\nO que deve ser feito primeiro?",
   "alternativas": [
    "Iniciar diurético e antibiótico, pois o quadro é de congestão com pneumonia",
    "Citorredução urgente com hidroxiureia e quimioterapia, adiando a transfusão",
@@ -18290,7 +18393,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-d19416fe",
@@ -18358,12 +18462,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-24754fc7",
   "area": "Hematologia",
-  "enunciado": "Mulher de 32 anos é trazida com confusão mental flutuante, febre baixa e petéquias há 2 dias. Exames: Hb 7,8 g/dL; reticulócitos 8%; LDH 1.800 U/L; bilirrubina indireta 3,1 mg/dL; haptoglobina indetectável; esquizócitos abundantes no esfregaço; plaquetas 12.000/mm³; leucócitos normais; TP, TTPa e fibrinogênio normais; creatinina 1,3 mg/dL; Coombs direto negativo. Não usa medicamentos, nega diarreia recente e o teste de gravidez é negativo. A dosagem da ADAMTS13 foi colhida, com resultado previsto para dias depois.\n\nQual é o diagnóstico mais provável e a conduta imediata?",
+  "enunciado": "“Ela está confusa, vai e volta”, relata o marido de uma mulher de 32 anos trazida ao pronto-socorro com febre baixa e petéquias há 2 dias. Exames: Hb 7,8 g/dL; reticulócitos 8%; LDH 1.800 U/L; bilirrubina indireta 3,1 mg/dL; haptoglobina indetectável; esquizócitos abundantes no esfregaço; plaquetas 12.000/mm³; leucócitos normais; TP, TTPa e fibrinogênio normais; creatinina 1,3 mg/dL; Coombs direto negativo. Não usa medicamentos, nega diarreia recente, e o teste de gravidez é negativo. A dosagem da ADAMTS13 foi colhida, com resultado previsto para dias depois.\n\nQual é o diagnóstico mais provável e a conduta imediata?",
   "alternativas": [
    "Púrpura trombocitopênica imune; transfusão de plaquetas associada a imunoglobulina intravenosa",
    "Púrpura trombocitopênica trombótica; plasmaférese urgente com corticoide, sem transfundir plaquetas",
@@ -18380,7 +18485,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-6c3bf872",
@@ -18424,7 +18530,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-945c28b5",
@@ -18652,7 +18759,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-1359dfd7",
@@ -18680,7 +18788,7 @@
  {
   "id": "med-d13bf39c",
   "area": "Infectologia",
-  "enunciado": "Homem de 38 anos, com HIV recém-diagnosticado, CD4 de 35 células/mm³ e sem terapia antirretroviral, tem cefaleia progressiva há 3 semanas, febre baixa e vômitos. A punção lombar mostra pressão de abertura de 32 cmH2O, 20 células/mm³ com predomínio de linfócitos, proteína levemente elevada e glicose baixa; a tinta nanquim revela leveduras encapsuladas, e o antígeno criptocócico é reagente. Está com Glasgow 15, sem déficits focais, e a tomografia de crânio não mostra lesões expansivas nem hidrocefalia. Foi iniciado tratamento de indução com anfotericina B lipossomal e flucitosina, e estão programadas punções de alívio.\n\nQuando deve ser iniciada a terapia antirretroviral?",
+  "enunciado": "No pronto-socorro, a punção lombar de um homem de 38 anos com HIV recém-diagnosticado (CD4 de 35 células/mm³, sem antirretrovirais), que tem cefaleia progressiva há 3 semanas, febre baixa e vômitos, mostra pressão de abertura de 32 cmH2O, 20 células/mm³ com predomínio de linfócitos, proteína levemente elevada e glicose baixa; a tinta nanquim revela leveduras encapsuladas, e o antígeno criptocócico é reagente. Está com Glasgow 15, sem déficits focais, e a tomografia não mostra lesões expansivas nem hidrocefalia. Inicia-se indução com anfotericina B lipossomal e flucitosina, com punções de alívio programadas.\n\nQuando deve ser iniciada a terapia antirretroviral?",
   "alternativas": [
    "Somente após a negativação do antígeno criptocócico no soro e no líquor",
    "Apenas quando o CD4 ultrapassar 200 células/mm³ com o tratamento antifúngico",
@@ -18697,12 +18805,13 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-db8fd56b",
   "area": "Infectologia",
-  "enunciado": "Uma arbovirose transmitida pelo Aedes aegypti costuma causar febre baixa ou ausente, exantema maculopapular pruriginoso precoce e conjuntivite não purulenta. Na epidemia de 2015–2016 no Brasil, associou-se a microcefalia congênita e a síndrome de Guillain-Barré.\n\nQual é essa arbovirose?",
+  "enunciado": "Numa UBS do Recife, no verão de 2016, uma mulher de 25 anos, não gestante, procura atendimento por exantema maculopapular muito pruriginoso, surgido já no primeiro dia, olhos vermelhos sem secreção, temperatura de 37,8 °C e dor leve nos punhos. Está bem hidratada, com prova do laço negativa e hemograma normal. A enfermeira lembra que a mesma epidemia se associou, no estado, ao aumento de casos de microcefalia congênita e de síndrome de Guillain-Barré.\n\nQual arbovirose é a mais provável?",
   "alternativas": [
    "Dengue",
    "Febre do Nilo Ocidental",
@@ -18711,7 +18820,7 @@
    "Chikungunya"
   ],
   "correta": 2,
-  "explicacao": "O vírus Zika causa, em geral, doença leve com febre baixa, exantema pruriginoso que surge cedo, conjuntivite não purulenta e artralgia discreta; a grande preocupação é a transmissão vertical, com a síndrome congênita (microcefalia, calcificações cerebrais, alterações oculares e articulares), e a síndrome de Guillain-Barré, reconhecidas no Brasil a partir de 2015. A dengue tem febre alta, mialgia intensa e dor retro-orbitária, com risco de extravasamento plasmático. A chikungunya se destaca pela poliartralgia intensa e pela possibilidade de cronificar. A febre amarela causa hepatite grave com icterícia e hemorragias. A febre do Nilo Ocidental é transmitida principalmente por Culex e afeta sobretudo o sistema nervoso. Para lembrar: o vírus recebeu o nome da floresta Zika, em Uganda, onde foi isolado em macaco em 1947.",
+  "explicacao": "O vírus Zika causa, em geral, doença leve com febre baixa, exantema pruriginoso que surge cedo, conjuntivite não purulenta e artralgia discreta; a grande preocupação é a transmissão vertical, com a síndrome congênita (microcefalia, calcificações cerebrais, alterações oculares e articulares), e a síndrome de Guillain-Barré, reconhecidas no Brasil a partir de 2015. A dengue tem febre alta, mialgia intensa e dor retro-orbitária, com risco de extravasamento plasmático. A chikungunya se destaca pela poliartralgia intensa e pela possibilidade de cronificar. A febre amarela causa hepatite grave com icterícia e hemorragias. A febre do Nilo Ocidental é transmitida principalmente por Culex e afeta sobretudo o sistema nervoso. Para lembrar: febre baixa com exantema pruriginoso precoce e conjuntivite não purulenta sugere zika; febre alta com poliartralgia intensa, chikungunya; febre alta com mialgia e dor retro-orbitária, dengue.",
   "tema": "dengue",
   "subtema": "dengue.chikungunya-e-zika",
   "especialidade": "infectologia",
@@ -18719,7 +18828,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-d918a075",
@@ -18747,7 +18857,7 @@
  {
   "id": "med-7bd2727d",
   "area": "Infectologia",
-  "enunciado": "Paciente adulto está no 2º dia de febre alta, mialgia e dor retro-orbitária, em período de epidemia, sem sinais de alarme.\n\nQual exame é mais adequado, nesse momento, para confirmar a infecção pelo vírus da dengue?",
+  "enunciado": "No 2º dia de febre alta, mialgia e dor retro-orbitária, um motorista de aplicativo de 40 anos procura a UPA durante epidemia de dengue. Não tem sinais de alarme, a prova do laço é negativa, e o hemograma está normal. O médico quer confirmar a etiologia para a notificação e pergunta ao laboratório qual exame pedir naquele dia.\n\nQual exame é mais adequado, nesse momento, para confirmar a infecção pelo vírus da dengue?",
   "alternativas": [
    "Sorologia IgG, que confirma infecção aguda primária",
    "Sorologia IgM, que já é reagente desde o 1º dia de febre",
@@ -18764,7 +18874,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-824bff6d",
@@ -18901,7 +19012,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-67f50517",
@@ -19015,7 +19127,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-715860ee",
@@ -20799,16 +20912,16 @@
  {
   "id": "med-16060232",
   "area": "Imunologia",
-  "enunciado": "Em aula sobre vacinas, o professor lembra que crianças menores de 2 anos respondem mal às vacinas compostas apenas por polissacarídeos capsulares, como a pneumocócica 23-valente, com anticorpos de curta duração e sem efeito de reforço, mas respondem bem às vacinas pneumocócicas conjugadas.\n\nQual é a base imunológica dessa diferença?",
+  "enunciado": "No Centro de Referência para Imunobiológicos Especiais (CRIE), a mãe de um menino de 18 meses com anemia falciforme, que já completou o esquema da vacina pneumocócica conjugada, pergunta por que ele ainda não pode receber a pneumocócica 23-valente (polissacarídica pura), só indicada a partir dos 2 anos. A enfermeira explica que a resposta imune a esse tipo de vacina é diferente nessa idade.\n\nQual característica da resposta a polissacarídeos puros explica a baixa eficácia antes dos 2 anos?",
   "alternativas": [
-   "A conjugação transforma a vacina em agente vivo atenuado, que se replica no hospedeiro",
-   "A proteína carreadora recruta linfócitos T auxiliares, gerando memória e troca de classe",
-   "O polissacarídeo isolado ativa apenas linfócitos T CD8, sem produzir anticorpos",
-   "O polissacarídeo é apresentado por MHC classe I, ainda ausente no lactente",
-   "A vacina conjugada age por imunidade passiva, fornecendo anticorpos já prontos"
+   "São antígenos T-dependentes, que exigem linfócitos T CD4 ainda ausentes no sangue do lactente",
+   "São antígenos T-independentes, respondidos por linfócitos B da zona marginal, imatura antes dos 2 anos",
+   "São processados e apresentados em MHC de classe I, induzindo só linfócitos T CD8, sem anticorpos",
+   "São neutralizados pela IgA do leite materno, que bloqueia a resposta vacinal até o desmame",
+   "Induzem tolerância imunológica permanente quando aplicados antes da maturação completa do timo"
   ],
   "correta": 1,
-  "explicacao": "Polissacarídeos puros são antígenos T-independentes: ativam linfócitos B por ligação cruzada dos receptores, produzindo sobretudo IgM, com pouca memória e sem efeito de reforço; essa resposta, dependente da zona marginal do baço, é imatura antes dos 2 anos. Ao conjugar o polissacarídeo a uma proteína carreadora (como toxoide diftérico ou tetânico), o linfócito B que reconhece o polissacarídeo internaliza o conjugado e apresenta peptídeos da proteína em MHC de classe II a linfócitos T auxiliares, que promovem troca de classe para IgG, maturação de afinidade, memória e resposta de reforço, além de reduzir o estado de portador. Polissacarídeos não ativam linfócitos T CD8 nem são apresentados por MHC de classe I; a conjugação não torna a vacina viva; e vacinas induzem imunidade ativa, não passiva. Para lembrar: a primeira vacina conjugada de uso amplo foi a vacina contra Haemophilus influenzae tipo b, que fez despencar a meningite por esse agente.",
+  "explicacao": "Polissacarídeos capsulares puros são antígenos T-independentes (tipo 2): seus epítopos repetidos fazem ligação cruzada de muitos receptores do linfócito B e o ativam sem ajuda de linfócitos T. Essa resposta depende sobretudo dos linfócitos B da zona marginal do baço, que só amadurecem por volta dos 2 anos, e gera principalmente IgM de curta duração, com pouca troca de classe, sem memória e sem efeito de reforço — daí a indicação da vacina 23-valente só a partir dos 2 anos, depois do esquema conjugado. Os linfócitos T CD4 existem e funcionam no lactente; é justamente por recrutá-los, via proteína carreadora, que a vacina conjugada funciona desde os 2 meses. Polissacarídeos não são apresentados em MHC de classe I nem ativam T CD8. A IgA do leite atua nas mucosas e não bloqueia a resposta a uma vacina intramuscular, e não há indução de tolerância permanente. Na anemia falciforme, a asplenia funcional torna ainda mais importante a proteção contra encapsulados. Para lembrar: a primeira vacina conjugada de uso amplo foi a contra Haemophilus influenzae tipo b, que fez despencar a meningite por esse agente.",
   "tema": "imunizacoes",
   "subtema": "imunizacoes.tipos-de-vacinas",
   "especialidade": "imunologia",
@@ -20816,7 +20929,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-445712d6",
@@ -21096,7 +21210,7 @@
  {
   "id": "med-7b566ad7",
   "area": "Genética",
-  "enunciado": "Recém-nascido a termo, filho de pais consanguíneos, tem icterícia desde o 3º dia, com bilirrubina indireta de 24 mg/dL no 10º dia e direta de 0,5 mg/dL. Não há hemólise (hemoglobina, reticulócitos, Coombs e esfregaço normais), o TSH é normal e ele está em aleitamento com bom ganho de peso. O fenobarbital não reduziu a bilirrubina, que só cai com fototerapia intensiva.\n\nQual é o diagnóstico mais provável?",
+  "enunciado": "Na visita da UTI neonatal, a equipe discute um recém-nascido a termo, filho de pais primos em primeiro grau, com icterícia desde o 3º dia: bilirrubina indireta de 24 mg/dL no 10º dia e direta de 0,5 mg/dL. Não há hemólise (hemoglobina, reticulócitos, Coombs e esfregaço normais), o TSH é normal e ele mama bem, com bom ganho de peso. Um curso de fenobarbital não reduziu a bilirrubina, que só cai com fototerapia intensiva.\n\nQual diagnóstico explica também a falta de resposta ao fenobarbital?",
   "alternativas": [
    "Síndrome de Crigler-Najjar tipo II",
    "Síndrome de Dubin-Johnson",
@@ -21113,7 +21227,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-3d5b24e2",
@@ -21391,7 +21506,7 @@
  {
   "id": "med-e8747c3f",
   "area": "Ginecologia",
-  "enunciado": "Mulher de 62 anos procura a UBS por lesão avermelhada, descamativa e com crostas no mamilo esquerdo, com prurido, há 4 meses. Usou cremes de corticoide sem melhora. A lesão começou no mamilo e depois se estendeu para a aréola. A mama contralateral é normal, e não há nódulo palpável.\n\nQual é a principal hipótese e a conduta?",
+  "enunciado": "Há 4 meses, uma aposentada de 62 anos convive com lesão avermelhada, descamativa, com crostas e prurido no mamilo esquerdo, que começou no mamilo e depois se estendeu para a aréola. Já usou dois cremes de corticoide, sem melhora, e procura a UBS. A mama contralateral é normal, e não há nódulo palpável nem linfonodos axilares aumentados.\n\nQual é a principal hipótese e a conduta?",
   "alternativas": [
    "Adenoma do mamilo; observação clínica por 6 meses",
    "Psoríase invertida; encaminhar ao dermatologista, sem exames",
@@ -21400,7 +21515,7 @@
    "Doença de Paget do mamilo; biópsia da lesão e mamografia bilateral"
   ],
   "correta": 4,
-  "explicacao": "Lesão eczematosa unilateral que começa no mamilo, se estende à aréola e não responde a corticoide é doença de Paget até prova em contrário. Na grande maioria dos casos há carcinoma subjacente (in situ ou invasivo), e as células de Paget — grandes, de citoplasma claro — infiltram a epiderme do mamilo. A conduta é biópsia da lesão (punch ou em cunha) e mamografia bilateral, complementada por ultrassonografia ou ressonância para procurar o tumor associado. O eczema costuma começar na aréola, ser bilateral e responder ao corticoide; insistir nele atrasaria o diagnóstico. Mastite periductal cursa com dor, secreção e fístula; psoríase e adenoma do mamilo não dispensam a biópsia diante desse quadro. Para lembrar: James Paget descreveu essa \"doença da aréola que precede o câncer da mama\" em 1874.",
+  "explicacao": "Lesão eczematosa unilateral que começa no mamilo, se estende à aréola e não responde a corticoide é doença de Paget até prova em contrário. Na grande maioria dos casos há carcinoma subjacente (in situ ou invasivo), e as células de Paget — grandes, de citoplasma claro — infiltram a epiderme do mamilo. A conduta é biópsia da lesão (punch ou em cunha) e mamografia bilateral, complementada por ultrassonografia ou ressonância para procurar o tumor associado. O eczema costuma começar na aréola, ser bilateral e responder ao corticoide; insistir nele atrasaria o diagnóstico. Mastite periductal cursa com dor, secreção e fístula; psoríase e adenoma do mamilo não dispensam a biópsia diante desse quadro. Para lembrar: lesão eczematosa unilateral do mamilo que não melhora com corticoide tópico em poucas semanas deve ser biopsiada, mesmo com mamografia normal.",
   "tema": "cancer-de-mama",
   "subtema": "cancer-de-mama.diagnostico",
   "especialidade": "ginecologia",
@@ -21408,7 +21523,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-12e01c8d",
@@ -22103,10 +22219,10 @@
  {
   "id": "med-b114fbd8",
   "area": "Ginecologia",
-  "enunciado": "Mulher de 38 anos, com ciclos menstruais regulares durante toda a vida e dois filhos, procura atendimento porque, nos últimos 5 meses, passou a ter pelos grossos no rosto, no tórax e na linha média do abdome, entradas no couro cabeludo, voz mais grave e amenorreia. Ao exame: IMC 24 kg/m², hirsutismo intenso (escore de Ferriman-Gallwey de 22), clitoromegalia e aumento da massa muscular, sem estrias violáceas ou giba. Exames: testosterona total de 260 ng/dL (referência para mulheres: até cerca de 60 ng/dL); sulfato de desidroepiandrosterona normal; 17-hidroxiprogesterona normal; prolactina e TSH normais; β-hCG negativo.\n\nQual é a hipótese mais provável e o próximo passo?",
+  "enunciado": "“Minha voz engrossou e estou ficando com entradas no cabelo, como meu marido.” Uma mulher de 38 anos, com ciclos regulares durante toda a vida e dois filhos, conta que, nos últimos 5 meses, surgiram pelos grossos no rosto, no tórax e na linha média do abdome, e a menstruação parou. Exame: IMC 24 kg/m², hirsutismo intenso (Ferriman-Gallwey 22), clitoromegalia e aumento da massa muscular, sem estrias violáceas ou giba. Exames: testosterona total 260 ng/dL (referência feminina até cerca de 60 ng/dL); sulfato de desidroepiandrosterona normal; 17-hidroxiprogesterona, prolactina e TSH normais; β-hCG negativo.\n\nQual é a hipótese mais provável e o próximo passo?",
   "alternativas": [
    "Tumor adrenal produtor de androgênio; tomografia de adrenais como primeiro exame",
-   "Tumor ovariano produtor de androgênio; exame de imagem pélvica, como ultrassonografia transvaginal",
+   "Tumor ovariano produtor de androgênio; ultrassonografia transvaginal",
    "Hiperplasia adrenal congênita não clássica; teste de estímulo com ACTH",
    "Síndrome de Cushing; cortisol salivar noturno e teste de supressão com dexametasona",
    "Síndrome dos ovários policísticos; anticoncepcional combinado e reavaliação em 6 meses"
@@ -22120,7 +22236,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-0ebb17e1",
@@ -22142,7 +22259,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-96de079d",
@@ -22187,7 +22305,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-1540a103",
@@ -22209,7 +22328,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-64cc82c8",
@@ -22260,7 +22380,7 @@
  {
   "id": "med-950d91fe",
   "area": "Ginecologia",
-  "enunciado": "Mulher de 45 anos, tabagista, sem exame preventivo há 12 anos, tem sangramento após as relações sexuais e corrimento fétido há 4 meses. Ao exame especular, há lesão vegetante e friável de 4 cm no colo. Ao toque retovaginal, o paramétrio direito está espessado e endurecido na porção medial, sem atingir a parede pélvica, e a vagina não está comprometida. A biópsia confirma carcinoma de células escamosas invasivo. A ressonância magnética da pelve confirma invasão parametrial direita sem extensão à parede pélvica e sem linfonodos aumentados; a tomografia de tórax e abdome não mostra metástases, e não há hidronefrose.\n\nQual é o estádio FIGO (2018) e o tratamento indicado?",
+  "enunciado": "Sangramento após as relações sexuais e corrimento fétido há 4 meses trazem ao ambulatório de ginecologia oncológica uma mulher de 45 anos, tabagista, sem preventivo há 12 anos. Ao exame especular, há lesão vegetante e friável de 4 cm no colo. Ao toque retovaginal, o paramétrio direito está espessado e endurecido na porção medial, sem atingir a parede pélvica, e a vagina não está comprometida. A biópsia confirma carcinoma de células escamosas invasivo. A ressonância magnética da pelve confirma invasão parametrial direita sem extensão à parede pélvica e sem linfonodos aumentados; a tomografia de tórax e abdome não mostra metástases, e não há hidronefrose.\n\nQual é o estádio FIGO (2018) e o tratamento indicado?",
   "alternativas": [
    "Estádio IIA2; histerectomia simples seguida de observação",
    "Estádio IVA; exenteração pélvica total",
@@ -22277,12 +22397,13 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-31642428",
   "area": "Ginecologia",
-  "enunciado": "Mulher de 24 anos quer o método contraceptivo reversível mais eficaz possível, pois tem dificuldade de lembrar de tomar remédios.\n\nEntre os métodos abaixo, qual tem a menor taxa de falha no uso típico?",
+  "enunciado": "Técnica de enfermagem de 24 anos, que faz plantões noturnos alternados e já esqueceu várias vezes a pílula, pede o método reversível mais eficaz possível. Não tem contraindicações a hormônios nem desejo de gestar nos próximos anos.\n\nQual destes métodos tem a menor taxa de falha no uso típico?",
   "alternativas": [
    "Implante subdérmico de etonogestrel",
    "Preservativo masculino de látex",
@@ -22291,7 +22412,7 @@
    "Anel vaginal combinado mensal"
   ],
   "correta": 0,
-  "explicacao": "O implante de etonogestrel é o método reversível com menor taxa de falha no uso típico (cerca de 0,05% no primeiro ano), praticamente igual à do uso perfeito, porque não depende da usuária após a inserção; dura 3 anos e age inibindo a ovulação e espessando o muco cervical. Pílula e anel vaginal têm falhas no uso típico em torno de 7% a 9% ao ano, por esquecimentos e atrasos; o injetável trimestral, de alguns por cento, por atraso nas doses; e o preservativo masculino, mais de 10%. Por isso os métodos de longa ação (implante e DIU) são os mais indicados para quem tem dificuldade de adesão. Para lembrar: o Índice de Pearl, proposto por Raymond Pearl em 1933, expressa o número de gestações por 100 mulheres-ano de uso.",
+  "explicacao": "O implante de etonogestrel é o método reversível com menor taxa de falha no uso típico (cerca de 0,05% no primeiro ano), praticamente igual à do uso perfeito, porque não depende da usuária após a inserção; dura 3 anos e age inibindo a ovulação e espessando o muco cervical. Pílula e anel vaginal têm falhas no uso típico em torno de 7% a 9% ao ano, por esquecimentos e atrasos; o injetável trimestral, de alguns por cento, por atraso nas doses; e o preservativo masculino, mais de 10%. Por isso os métodos de longa ação (implante e DIU) são os mais indicados para quem tem dificuldade de adesão. Para lembrar: implante e DIU (métodos de longa ação) têm falha no uso típico abaixo de 1% ao ano porque independem da adesão; pílula, anel e adesivo ficam em torno de 7% a 9%.",
   "tema": "planejamento-familiar-e-contracepcao",
   "subtema": "planejamento-familiar-e-contracepcao.metodos-hormonais",
   "especialidade": "ginecologia",
@@ -22299,12 +22420,13 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-a1b85246",
   "area": "Ginecologia",
-  "enunciado": "Mulher de 30 anos, usuária de pílula combinada, inicia tratamento para tuberculose pulmonar com rifampicina, isoniazida, pirazinamida e etambutol, com previsão de 6 meses de tratamento. Não deseja engravidar durante esse período.\n\nQual é a orientação contraceptiva mais adequada?",
+  "enunciado": "Recém-diagnosticada com tuberculose pulmonar, uma mulher de 30 anos, usuária de pílula combinada há anos, vai iniciar rifampicina, isoniazida, pirazinamida e etambutol, com previsão de 6 meses de tratamento. Não deseja engravidar nesse período e pergunta se pode manter a pílula.\n\nQual é a orientação contraceptiva mais adequada?",
   "alternativas": [
    "Trocar por pílula só de progestagênio, que não sofre interferência da rifampicina",
    "Suspender qualquer método hormonal e usar apenas a tabelinha durante 6 meses",
@@ -22321,17 +22443,18 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-b2061c7e",
   "area": "Ginecologia",
-  "enunciado": "Mulher de 23 anos usa pílula combinada monofásica de 21 comprimidos, com pausa de 7 dias entre as cartelas. Após a pausa, iniciou a nova cartela corretamente no domingo, mas esqueceu os comprimidos de segunda, terça e quarta-feira, lembrando-se apenas na quinta-feira pela manhã. Teve relação sexual sem preservativo na noite de segunda-feira. Não fuma, não tem enxaqueca, tem pressão arterial normal e, no ciclo anterior, teve o sangramento habitual durante a pausa. Procura a UBS na quinta-feira à tarde, preocupada, e deseja continuar com o mesmo método.\n\nSegundo as recomendações da OMS para esquecimento de pílulas, qual é a conduta?",
+  "enunciado": "Quinta-feira à tarde, uma jovem de 23 anos chega preocupada à UBS. Usa pílula combinada monofásica de 21 comprimidos, com pausa de 7 dias, e iniciou a nova cartela corretamente no domingo, mas esqueceu os comprimidos de segunda, terça e quarta-feira, lembrando-se só na quinta pela manhã. Teve relação sexual sem preservativo na noite de segunda-feira. Não fuma, não tem enxaqueca, tem pressão arterial normal e, no ciclo anterior, teve o sangramento habitual durante a pausa. Quer continuar com o mesmo método.\n\nSegundo as recomendações da OMS para esquecimento de pílulas, o que ela deve fazer?",
   "alternativas": [
    "Tomar uma pílula esquecida, seguir a cartela e emendar a próxima sem pausa, sem contracepção de emergência",
    "Suspender a pílula, usar só preservativo até o fim do ciclo e repetir o teste de gravidez em 3 dias",
    "Descartar a cartela atual, aguardar a próxima menstruação e só então reiniciar o método com nova cartela",
-   "Tomar logo uma pílula esquecida, seguir a cartela, usar preservativo por 7 dias e considerar contracepção de emergência",
+   "Tomar uma pílula já, seguir a cartela, usar preservativo por 7 dias e considerar contracepção de emergência",
    "Tomar todas as pílulas esquecidas juntas e seguir a cartela, sem outra medida, pois a proteção se mantém"
   ],
   "correta": 3,
@@ -22343,7 +22466,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-745e071b",
