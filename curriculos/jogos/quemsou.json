@@ -358,7 +358,7 @@
    ],
    "perguntas": [
     {
-     "txt": "É microcítica?",
+     "txt": "Microcitose é o achado típico?",
      "sim": [
       "Ferropriva",
       "Talassemia beta menor"
@@ -440,7 +440,7 @@
     "Ferropriva": "Microcítica e hipocrômica, ferritina baixa. Em adulto, investigar sangramento digestivo.",
     "Deficiência de B12": "Macrocítica com sintomas neurológicos; causa clássica: anemia perniciosa.",
     "Deficiência de folato": "Macrocítica sem sintomas neurológicos; etilismo, gestação e má alimentação.",
-    "Anemia de doença crônica": "Em geral normocítica; ferro baixo com ferritina normal ou alta (hepcidina elevada).",
+    "Anemia de doença crônica": "Em geral normocítica (às vezes microcítica leve); ferro baixo com ferritina normal ou alta (hepcidina elevada).",
     "Talassemia beta menor": "Microcitose acentuada com Hb pouco baixa e HbA2 aumentada; ferritina normal.",
     "Anemia falciforme": "HbS: crises vaso-oclusivas, hemólise e asplenia funcional. Rastreada no teste do pezinho.",
     "Esferocitose hereditária": "Esferócitos, CHCM alto e esplenomegalia; Coombs negativo.",
@@ -592,14 +592,14 @@
      ]
     },
     {
-     "txt": "É bactéria Gram-positiva?",
+     "txt": "É coco Gram-positivo aeróbio ou facultativo?",
      "sim": [
       "Pneumococo",
       "Staphylococcus aureus"
      ]
     },
     {
-     "txt": "É bactéria Gram-negativa?",
+     "txt": "É bacilo/cocobacilo Gram-negativo aeróbio ou facultativo?",
      "sim": [
       "Haemophilus influenzae",
       "Klebsiella",
@@ -677,7 +677,7 @@
     "Mycoplasma": "Atípica em jovens; aglutininas frias e miringite bolhosa. Betalactâmico não age.",
     "Legionella": "Atípica grave: diarreia, hiponatremia; ar-condicionado. Antígeno urinário.",
     "Pneumocystis": "Fungo em HIV com CD4 < 200; hipoxemia e infiltrado intersticial. Trata com SMX-TMP.",
-    "Anaeróbios": "Após aspiração (etilismo, disfagia); escarro pútrido e abscesso pulmonar."
+    "Anaeróbios": "Após aspiração (etilismo, disfagia); escarro pútrido e abscesso. Flora mista, sobretudo Gram-negativos anaeróbios."
    }
   },
   {
@@ -911,7 +911,7 @@
     "Esferocitose hereditária": "Hemólise com esferócitos e história familiar; pode exigir exsanguineotransfusão.",
     "Atresia de vias biliares": "Colestase com acolia e colúria; cirurgia de Kasai antes de 60 dias de vida.",
     "Síndrome de Crigler-Najjar": "Falta genética da UGT1A1: bilirrubina indireta muito alta e risco de kernicterus.",
-    "Hipotireoidismo congênito": "Icterícia prolongada, hérnia umbilical e macroglossia; TSH alto no pezinho."
+    "Hipotireoidismo congênito": "Icterícia prolongada, hérnia umbilical e macroglossia; TSH alto no pezinho. Maioria por disgenesia (não hereditária)."
    }
   }
  ]

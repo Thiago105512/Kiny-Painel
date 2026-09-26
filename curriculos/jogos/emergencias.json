@@ -135,7 +135,7 @@
     ]
    },
    "e3": {
-    "texto": "Terceiro choque aplicado. Após 2 min, o ritmo persiste em FV.",
+    "texto": "Após o 2º choque e a adrenalina, 2 min de RCP: o ritmo persiste em FV.",
     "vitais": {
      "FC": 0,
      "PA": "0x0",
@@ -145,16 +145,16 @@
     },
     "acoes": [
      {
-      "txt": "Choque e amiodarona 300 mg IV",
+      "txt": "3º choque, RCP e amiodarona 300 mg IV",
       "vai": "e4",
-      "nota": "Certo. FV refratária: amiodarona 300 mg (2ª dose 150 mg).",
+      "nota": "Certo. FV refratária: amiodarona 300 mg após o 3º choque (2ª dose 150 mg).",
       "pontos": 10
      },
      {
-      "txt": "Choque e lidocaína IV",
+      "txt": "3º choque, RCP e lidocaína IV",
       "vai": "e4",
-      "nota": "Aceitável. Lidocaína é alternativa à amiodarona.",
-      "pontos": 5
+      "nota": "Certo. Lidocaína (1–1,5 mg/kg) é alternativa equivalente à amiodarona.",
+      "pontos": 10
      },
      {
       "txt": "Suspender a reanimação",
@@ -635,9 +635,9 @@
     },
     "acoes": [
      {
-      "txt": "Observar ≥6 h, registrar alergia e prescrever adrenalina",
+      "txt": "Observar ≥12 h, registrar alergia e prescrever adrenalina",
       "vai": "f-bom",
-      "nota": "Certo. Risco de reação bifásica; alta com plano e encaminhamento.",
+      "nota": "Certo. Reação grave/refratária (>2 doses, estridor): observar ≥12 h pelo risco bifásico; alta com autoinjetor, plano escrito e alergista.",
       "pontos": 10
      },
      {
@@ -853,12 +853,12 @@
    }
   },
   "debriefing": [
-   "Pacote da 1ª hora: lactato, hemoculturas, antibiótico, 30 mL/kg de cristaloide se hipotensão ou lactato ≥4.",
+   "Antibiótico na 1ª hora no choque; culturas antes; ≥30 mL/kg de cristaloide (preferir balanceado) nas primeiras 3 h se hipoperfusão, com reavaliação frequente.",
    "Noradrenalina é o vasopressor de 1ª escolha; alvo PAM ≥65 mmHg.",
    "Reavalie a resposta ao volume; excesso de fluido causa congestão.",
    "Controle do foco: drenar, desobstruir ou retirar a fonte o quanto antes."
   ],
-  "referencia": "Surviving Sepsis Campaign 2021 / ILAS"
+  "referencia": "Surviving Sepsis Campaign 2026 / ILAS"
  },
  {
   "id": "em-05",
@@ -2036,7 +2036,7 @@
    "Tempo de coagulação (TC) guia o diagnóstico e o controle: repetir 24 h após o soro.",
    "Reação ao soro: pausar, tratar e completar a dose. Pré-medicação não é rotina."
   ],
-  "referencia": "MS – Guia de Vigilância em Saúde (6ª ed., 2024) / Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos"
+  "referencia": "MS – PCDT Acidentes Ofídicos (Portaria SECTICS/MS nº 83/2025) / Guia de Vigilância em Saúde, 6ª ed."
  },
  {
   "id": "em-11",

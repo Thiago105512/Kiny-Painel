@@ -575,7 +575,7 @@
    "HGT": null
   },
   "cor": "laranja",
-  "discriminador": "Início abrupto (súbito)",
+  "discriminador": "Início abrupto (segundos a minutos)",
   "porque": "Cefaleia de início abrupto (segundos a minutos) é laranja mesmo se a dor fosse menor. \"A pior da vida\": pensar em hemorragia subaracnoide.",
   "fluxograma": "Cefaleia"
  },
@@ -715,15 +715,15 @@
    "HGT": null
   },
   "cor": "laranja",
-  "discriminador": "Envenenamento de alta letalidade",
-  "porque": "Picada de cobra peçonhenta é laranja mesmo com sinais vitais estáveis (a dor 9/10 também daria). Soro antibotrópico sem demora.",
+  "discriminador": "Dor intensa (8–10)",
+  "porque": "Dor 9/10 = laranja, mesmo com sinais vitais estáveis. Picada de serpente peçonhenta: soro antibotrópico sem demora.",
   "fluxograma": "Mordeduras e picadas"
  },
  {
   "id": "tr-037",
   "nome": "Priscila, 24 anos",
   "avatar": "gestante",
-  "queixa": "Grávida de 32 semanas. A barriga endurece e dói nas costas.",
+  "queixa": "Grávida de 32 semanas. A barriga endurece às vezes, dói nas costas. Sem perder líquido nem sangue.",
   "sinais": {
    "PA": "120x70",
    "FC": 90,
@@ -736,7 +736,7 @@
   },
   "cor": "amarelo",
   "discriminador": "Dor moderada (5–7)",
-  "porque": "Dor 5/10 = moderada: amarelo. Avaliar trabalho de parto prematuro.",
+  "porque": "Dor 5/10 = moderada: amarelo. Contrações regulares ou perda de líquido com < 37 sem mudariam a cor no ACCR obstétrico (trabalho de parto prematuro).",
   "fluxograma": "Gravidez"
  },
  {
@@ -856,7 +856,7 @@
   },
   "cor": "amarelo",
   "discriminador": "Hemorragia menor incontrolável",
-  "porque": "Sangramento pequeno que não para com compressão: amarelo. Se fosse em jato, vermelho.",
+  "porque": "Sangramento pequeno que não para com compressão: amarelo (hemorragia menor incontrolável). Se fosse hemorragia maior incontrolável, laranja; se exsanguinante, vermelho.",
   "fluxograma": "Feridas"
  },
  {
@@ -1616,7 +1616,7 @@
   },
   "cor": "verde",
   "discriminador": "Problema recente (< 7 dias)",
-  "porque": "Armadilha: parece grave, mas SatO2 99% e sem dor ou alteração de consciência. Crise de ansiedade: verde.",
+  "porque": "Armadilha: parece grave, mas SatO2 99% e sem dor ou alteração de consciência. Sem discriminador positivo: verde. Ansiedade é diagnóstico de exclusão: reavaliar se piorar (TEP, asma, cetoacidose).",
   "fluxograma": "Dispneia em adulto"
  },
  {

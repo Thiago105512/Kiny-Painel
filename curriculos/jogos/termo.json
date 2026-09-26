@@ -94,7 +94,7 @@
   "palavra": "PONTE",
   "exibir": "ponte",
   "dica": "Parte do tronco encefálico entre mesencéfalo e bulbo",
-  "definicao": "Segmento médio do tronco encefálico, que liga o cérebro ao cerebelo e contém núcleos de nervos cranianos, como o trigêmeo.",
+  "definicao": "Segmento médio do tronco encefálico: conecta-se ao cerebelo pelos pedúnculos cerebelares médios e contém núcleos de nervos cranianos (V a VIII).",
   "area": "anatomia"
  },
  {
@@ -1004,7 +1004,7 @@
   "palavra": "VICIO",
   "exibir": "vício",
   "dica": "Termo leigo para dependência de substância",
-  "definicao": "Termo popular para dependência: uso compulsivo de uma substância apesar dos prejuízos, com tolerância e abstinência.",
+  "definicao": "Termo popular para dependência: uso compulsivo de uma substância apesar dos prejuízos, com tolerância e abstinência. Prefira 'transtorno por uso de substância' (DSM-5-TR).",
   "area": "clínica"
  },
  {
@@ -1141,11 +1141,11 @@
   "area": "cirurgia"
  },
  {
-  "palavra": "BLOCO",
-  "exibir": "bloco",
-  "dica": "O cirúrgico reúne as salas de operação",
-  "definicao": "O bloco (centro) cirúrgico é a unidade hospitalar que reúne salas de operação, recuperação e apoio.",
-  "area": "cirurgia"
+  "palavra": "BUCAL",
+  "exibir": "bucal",
+  "dica": "Relativo à boca; nomeia a via pela mucosa da bochecha",
+  "definicao": "Relativo à boca. Na via bucal (jugal), o fármaco é absorvido pela mucosa da bochecha e escapa de parte do metabolismo de primeira passagem.",
+  "area": "farmacologia"
  },
  {
   "palavra": "LASER",
@@ -1169,11 +1169,11 @@
   "area": "cirurgia"
  },
  {
-  "palavra": "TOUCA",
-  "exibir": "touca",
-  "dica": "Item da paramentação que cobre os cabelos",
-  "definicao": "Cobertura descartável para os cabelos usada na paramentação cirúrgica para reduzir contaminação.",
-  "area": "cirurgia"
+  "palavra": "MOLAR",
+  "exibir": "molar",
+  "dica": "Dente posterior da mastigação; também unidade de concentração",
+  "definicao": "Dente posterior de coroa larga, que tritura os alimentos; em química, solução molar é a que tem 1 mol de soluto por litro (mol/L).",
+  "area": "anatomia"
  },
  {
   "palavra": "DROGA",
@@ -1394,31 +1394,31 @@
  },
  {
   "palavra": "APGAR",
-  "exibir": "apgar",
+  "exibir": "Apgar",
   "dica": "Escore do recém-nascido no 1º e no 5º minuto",
   "definicao": "Escore de 0 a 10 que avalia o recém-nascido no 1º e 5º minutos: frequência cardíaca, respiração, tônus, reflexos e cor.",
   "area": "pediatria"
  },
  {
-  "palavra": "CURVA",
-  "exibir": "curva",
-  "dica": "A de crescimento acompanha peso e altura",
-  "definicao": "Gráfico de crescimento que acompanha peso, estatura e perímetro cefálico da criança por idade, em percentis ou escores Z.",
-  "area": "pediatria"
+  "palavra": "UNCUS",
+  "exibir": "úncus",
+  "dica": "Parte do giro para-hipocampal que hernia na incisura da tenda",
+  "definicao": "Extremidade anterior e medial do giro para-hipocampal; na herniação uncal, desloca-se pela incisura da tenda do cerebelo e comprime o III nervo (midríase ipsilateral).",
+  "area": "anatomia"
  },
  {
-  "palavra": "MARCO",
-  "exibir": "marco",
-  "dica": "Os do desenvolvimento incluem sentar e andar",
-  "definicao": "Os marcos do desenvolvimento são habilidades esperadas por idade, como sustentar a cabeça, sentar, andar e falar.",
-  "area": "pediatria"
+  "palavra": "CAVUM",
+  "exibir": "cavum",
+  "dica": "Nome clínico da rinofaringe, onde fica a adenoide",
+  "definicao": "Termo clínico para a rinofaringe (nasofaringe); a radiografia de cavum avalia o tamanho da adenoide na criança que respira pela boca e ronca.",
+  "area": "anatomia"
  },
  {
-  "palavra": "BIRRA",
-  "exibir": "birra",
-  "dica": "Explosão de choro e raiva comum aos 2–3 anos",
-  "definicao": "Episódio de choro, raiva e oposição, comum entre 1 e 4 anos, parte do desenvolvimento emocional normal.",
-  "area": "pediatria"
+  "palavra": "COANA",
+  "exibir": "coana",
+  "dica": "Abertura posterior da cavidade nasal para a nasofaringe",
+  "definicao": "Cada uma das duas aberturas posteriores das fossas nasais, que as comunicam com a nasofaringe; a atresia bilateral de coanas causa desconforto respiratório no recém-nascido.",
+  "area": "anatomia"
  },
  {
   "palavra": "CHORO",
@@ -1582,11 +1582,11 @@
   "area": "saúde coletiva"
  },
  {
-  "palavra": "RENDA",
-  "exibir": "renda",
-  "dica": "Determinante social de saúde ligado ao dinheiro",
-  "definicao": "Recursos financeiros de uma pessoa ou família; é um dos principais determinantes sociais da saúde.",
-  "area": "saúde coletiva"
+  "palavra": "POLEN",
+  "exibir": "pólen",
+  "dica": "Alérgeno sazonal clássico da rinite alérgica",
+  "definicao": "Grãos produzidos pelas plantas que, inalados, desencadeiam rinite e conjuntivite alérgicas sazonais (polinose) em pessoas sensibilizadas.",
+  "area": "clínica"
  },
  {
   "palavra": "ACASO",

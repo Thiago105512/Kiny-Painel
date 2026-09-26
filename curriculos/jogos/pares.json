@@ -939,7 +939,7 @@
    ],
    [
     "XI - Acessório",
-    "Trapézio e esternocleidomastoideo"
+    "Trapézio e esternocleidomastóideo"
    ],
    [
     "XII - Hipoglosso",
@@ -1072,7 +1072,7 @@
    "Drepanócitos": "Hemácias em foice por HbS.",
    "Corpúsculos de Heinz": "Hemoglobina oxidada precipitada.",
    "Bastonetes de Auer": "Inclusões em forma de agulha nos blastos.",
-   "Neutrófilos hipersegmentados": "Seis ou mais lobos; falta de B12 ou folato.",
+   "Neutrófilos hipersegmentados": "≥ 5% dos neutrófilos com 5 lobos, ou qualquer um com ≥ 6; falta de B12 ou folato.",
    "Dacriócitos": "Hemácias em lágrima.",
    "Manchas de Gumprecht": "Linfócitos frágeis que se rompem na lâmina.",
    "Hemácias em rouleaux": "Empilhamento por excesso de proteína monoclonal.",
@@ -1090,7 +1090,7 @@
     "Câncer de próstata"
    ],
    [
-    "CA-125",
+    "CA 125",
     "Câncer epitelial de ovário"
    ],
    [
@@ -1128,7 +1128,7 @@
   ],
   "notas": {
    "PSA": "Útil no seguimento; rastreio só com decisão compartilhada.",
-   "CA-125": "Pode subir em endometriose e gestação.",
+   "CA 125": "Pode subir em endometriose e gestação.",
    "CA 19-9": "Útil no seguimento; pouco útil no rastreio.",
    "CEA": "Seguimento após cirurgia.",
    "Alfafetoproteína": "Também eleva em tumores de saco vitelino.",

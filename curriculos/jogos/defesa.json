@@ -210,7 +210,7 @@
    "aceitaveis": [
     "amoxicilina"
    ],
-   "porque": "S. pyogenes segue 100% sensível à penicilina. Benzatina IM dose única (ou amoxicilina 10 dias) previne febre reumática.",
+   "porque": "S. pyogenes segue praticamente 100% sensível à penicilina. Benzatina IM dose única (ou amoxicilina 10 dias) previne febre reumática.",
    "armadilha": "Azitromicina: só na alergia à penicilina; há resistência crescente do estreptococo a macrolídeos."
   },
   {
@@ -308,7 +308,7 @@
    "detalhe": "Manaus, febre com calafrios em dias alternados; gota espessa: P. vivax",
    "certa": "cloroquina-primaquina",
    "aceitaveis": [],
-   "porque": "Cloroquina 3 dias (esquizonticida) + primaquina 7 dias (elimina hipnozoítos e evita recaída). Guia de malária do MS.",
+   "porque": "Cloroquina 3 dias + primaquina 7 dias (elimina hipnozoítos). Testar G6PD antes da primaquina; tafenoquina dose única é opção no SUS (≥ 16 anos, G6PD normal).",
    "armadilha": "Artemeter+lumefantrina: esquema para P. falciparum; sozinho não elimina hipnozoítos do vivax."
   },
   {
@@ -421,7 +421,7 @@
    "detalhe": "Corrimento amarelo-esverdeado bolhoso, colo em framboesa",
    "certa": "metronidazol",
    "aceitaveis": [],
-   "porque": "Trichomonas vaginalis: metronidazol 2 g VO dose única ou 500 mg 12/12 h por 7 dias; tratar parceria sexual.",
+   "porque": "Trichomonas vaginalis: metronidazol 500 mg 12/12 h por 7 dias (preferido em mulheres) ou 2 g dose única; tratar parceria sexual.",
    "armadilha": "Fluconazol: antifúngico, sem ação contra protozoário."
   },
   {
@@ -470,7 +470,7 @@
     "amoxicilina-clavulanato",
     "amoxicilina"
    ],
-   "porque": "Celulite leve: tratamento oral contra estreptococo e S. aureus sensível. Cefalexina 500 mg 6/6 h por 5 a 7 dias.",
+   "porque": "Celulite leve: cefalexina 500 mg 6/6 h por 5 a 7 dias (estreptococo e S. aureus sensível). Amoxicilina serve: a não purulenta é quase sempre estreptocócica.",
    "armadilha": "Vancomicina IV: celulite leve sem risco de MRSA não precisa de ATB venoso."
   },
   {
@@ -628,7 +628,7 @@
    "detalhe": "Diarreia após clindamicina, toxina A/B positiva, leucócitos 18 mil",
    "certa": "vancomicina-oral",
    "aceitaveis": [],
-   "porque": "Vancomicina VO 125 mg 6/6 h por 10 dias (ou fidaxomicina) é 1ª linha; suspender o antibiótico causador se possível.",
+   "porque": "Fidaxomicina (preferida, IDSA/SHEA 2021) ou vancomicina VO 125 mg 6/6 h por 10 dias; suspender o antibiótico causador se possível.",
    "armadilha": "Vancomicina IV não chega à luz do cólon. Metronidazol: inferior à vancomicina oral, sobretudo na forma grave."
   },
   {
@@ -690,7 +690,7 @@
    "certa": "sem-antibiotico",
    "aceitaveis": [],
    "porque": "Epstein-Barr: suporte e evitar esporte de contato por risco de ruptura esplênica.",
-   "armadilha": "Amoxicilina: não trata EBV e causa exantema na maioria dos casos."
+   "armadilha": "Amoxicilina: não trata EBV e pode causar exantema (≈30% em séries recentes; até 80–100% nas antigas)."
   },
   {
    "id": "inv-044",
@@ -813,7 +813,13 @@
    "certa": "drenagem-cirurgia",
    "aceitaveis": [],
    "porque": "Empiema exige drenagem torácica (ou videotoracoscopia). O antibiótico acompanha, mas sem drenar não há cura.",
-   "armadilha": "Meropenem: escalar ATB não resolve coleção não drenada."
+   "armadilha": "Meropenem: escalar ATB não resolve coleção não drenada.",
+   "excluir": [
+    "meropenem",
+    "piperacilina-tazobactam",
+    "ceftriaxona",
+    "vancomicina"
+   ]
   },
   {
    "id": "inv-055",
@@ -890,7 +896,13 @@
    "certa": "drenagem-cirurgia",
    "aceitaveis": [],
    "porque": "Emergência cirúrgica: desbridamento amplo imediato define a sobrevida; ATB de amplo espectro vem junto, não no lugar.",
-   "armadilha": "Meropenem: sem desbridamento, a mortalidade continua altíssima."
+   "armadilha": "Meropenem: sem desbridamento, a mortalidade continua altíssima.",
+   "excluir": [
+    "meropenem",
+    "piperacilina-tazobactam",
+    "ceftriaxona",
+    "vancomicina"
+   ]
   },
   {
    "id": "inv-062",

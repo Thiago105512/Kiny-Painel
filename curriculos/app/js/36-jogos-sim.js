@@ -101,7 +101,7 @@ const jogoDefesa = {
   disponivel: () => soMed() && (JD().defesa?.invasores || []).length >= 20, semPlacar: true,
   intro: () => `<div class="acoes"><button class="btn grande" data-act="df-iniciar" data-v="normal">Começar</button><button class="btn grande sec" data-act="df-iniciar" data-v="calmo">Modo calmo (mais devagar)</button></div>`,
   montar() { const I = JD().defesa.invasores, f = n => embaralhar(I.filter(x => x.fase === n));
-    return [...f(1).slice(0, 8), ...f(2).slice(0, 8), ...f(3).slice(0, 24)].map(inv => { const armas = JD().defesa.armas, ok = [inv.certa, ...(inv.aceitaveis || [])];
+    return [...f(1).slice(0, 8), ...f(2).slice(0, 8), ...f(3).slice(0, 24)].map(inv => { const armas = JD().defesa.armas, ok = [inv.certa, ...(inv.aceitaveis || []), ...(inv.excluir || [])];   // "excluir": armas que nunca entram como distratores
       return { iid: inv.id, ops: embaralhar([inv.certa, ...embaralhar(armas.filter(a => !ok.includes(a.id)).map(a => a.id)).slice(0, 3)]), resp: null }; }); },
   tela(r) {
     const D = JD().defesa, inv = D.invasores.find(x => x.id === r.iid), fase = inv.fase, arma = id => D.armas.find(a => a.id === id);

@@ -85,12 +85,12 @@ CASOS.append({
                      A("Bicarbonato de sódio de rotina", "f-ruim",
                        "Sem benefício de rotina na PCR; só em situações específicas.", -10),
                  ]),
-        "e3": E("Terceiro choque aplicado. Após 2 min, o ritmo persiste em FV.",
+        "e3": E("Após o 2º choque e a adrenalina, 2 min de RCP: o ritmo persiste em FV.",
                 V(0, "0x0", 0, 0, "fv"), [
-                    A("Choque e amiodarona 300 mg IV", "e4",
-                      "Certo. FV refratária: amiodarona 300 mg (2ª dose 150 mg).", 10),
-                    A("Choque e lidocaína IV", "e4",
-                      "Aceitável. Lidocaína é alternativa à amiodarona.", 5),
+                    A("3º choque, RCP e amiodarona 300 mg IV", "e4",
+                      "Certo. FV refratária: amiodarona 300 mg após o 3º choque (2ª dose 150 mg).", 10),
+                    A("3º choque, RCP e lidocaína IV", "e4",
+                      "Certo. Lidocaína (1–1,5 mg/kg) é alternativa equivalente à amiodarona.", 10),
                     A("Suspender a reanimação", "f-ruim",
                       "Precoce. Ainda há ritmo chocável e opções de tratamento.", -10),
                 ]),
@@ -265,8 +265,8 @@ CASOS.append({
                 ]),
         "e4": E("Ana melhora: pressão normal, sem sibilos, urticária diminuindo.",
                 V(96, "112x70", 97, 18, "sinusal"), [
-                    A("Observar ≥6 h, registrar alergia e prescrever adrenalina", "f-bom",
-                      "Certo. Risco de reação bifásica; alta com plano e encaminhamento.", 10),
+                    A("Observar ≥12 h, registrar alergia e prescrever adrenalina", "f-bom",
+                      "Certo. Reação grave/refratária (>2 doses, estridor): observar ≥12 h pelo risco bifásico; alta com autoinjetor, plano escrito e alergista.", 10),
                     A("Internar em observação e registrar a alergia", "f-bom",
                       "Aceitável. Faltou prescrever adrenalina autoinjetável e orientar.", 5),
                     A("Alta em 1 hora com anti-histamínico", "f-parcial",
@@ -350,12 +350,12 @@ CASOS.append({
         "f-ruim": F("ruim", "O choque progrediu para falência de múltiplos órgãos e óbito."),
     },
     "debriefing": [
-        "Pacote da 1ª hora: lactato, hemoculturas, antibiótico, 30 mL/kg de cristaloide se hipotensão ou lactato ≥4.",
+        "Antibiótico na 1ª hora no choque; culturas antes; ≥30 mL/kg de cristaloide (preferir balanceado) nas primeiras 3 h se hipoperfusão, com reavaliação frequente.",
         "Noradrenalina é o vasopressor de 1ª escolha; alvo PAM ≥65 mmHg.",
         "Reavalie a resposta ao volume; excesso de fluido causa congestão.",
         "Controle do foco: drenar, desobstruir ou retirar a fonte o quanto antes.",
     ],
-    "referencia": "Surviving Sepsis Campaign 2021 / ILAS",
+    "referencia": "Surviving Sepsis Campaign 2026 / ILAS",
 })
 
 # ---------------------------------------------------------------- em-05 CAD
@@ -803,7 +803,7 @@ CASOS.append({
         "Tempo de coagulação (TC) guia o diagnóstico e o controle: repetir 24 h após o soro.",
         "Reação ao soro: pausar, tratar e completar a dose. Pré-medicação não é rotina.",
     ],
-    "referencia": "MS – Guia de Vigilância em Saúde (6ª ed., 2024) / Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos",
+    "referencia": "MS – PCDT Acidentes Ofídicos (Portaria SECTICS/MS nº 83/2025) / Guia de Vigilância em Saúde, 6ª ed.",
 })
 
 # ---------------------------------------------------------------- em-11 Dengue grave

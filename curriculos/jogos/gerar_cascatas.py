@@ -176,7 +176,7 @@ CASCATAS = [
     ("ACLS na fibrilação ventricular", "procedimento", 2, [
         "Confirmar PCR e iniciar RCP de alta qualidade",
         "Monitor/desfibrilador mostra FV",
-        "1º choque (bifásico 120–200 J)",
+        "1º choque (energia do fabricante; se desconhecida, a máxima)",
         "RCP imediata por 2 minutos",
         "Ritmo ainda chocável: 2º choque",
         "Adrenalina 1 mg IV/IO após o 2º choque",
@@ -203,7 +203,7 @@ CASCATAS = [
         "D: avaliação neurológica (Glasgow, pupilas)",
         "E: exposição e prevenção de hipotermia",
     ], "Só se passa à etapa seguinte após tratar o problema encontrado. "
-       "O X (torniquete, compressão) entrou no PHTLS por matar em minutos."),
+       "O X (torniquete, compressão) foi adotado pelo PHTLS e pelo ATLS 11ª ed. (2025) por matar em minutos."),
 
     ("Ciclo menstrual", "fisiologia", 1, [
         "Dia 1: menstruação, hormônios ovarianos baixos",
@@ -227,8 +227,8 @@ CASCATAS = [
        "A rotação interna leva o occipício ao púbis."),
 
     ("Períodos clínicos do parto", "clinica", 1, [
-        "Fase latente: contrações irregulares",
-        "Dilatação (fase ativa)",
+        "Período premonitório (pródromos): contrações irregulares",
+        "Dilatação (fases latente e ativa)",
         "Expulsão do feto",
         "Dequitação (saída da placenta)",
         "Greenberg: 1ª hora pós-parto",

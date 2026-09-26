@@ -56,13 +56,14 @@ ARMAS = [
     ("ivermectina", "Ivermectina", "Avermectina (anti-helmíntico)", "#A1887F"),
 ]
 
-# (fase, tipo, nome, detalhe, certa, [aceitaveis], porque, armadilha)
+# (fase, tipo, nome, detalhe, certa, [aceitaveis], porque, armadilha[, [excluir]])
+# "excluir": armas que fazem parte do tratamento (não são 1ª escolha) e nunca devem ser sorteadas como distratores
 INVASORES = [
     # ---------------- FASE 1: clássicos ----------------
     (1, "bacteria", "Faringite estreptocócica",
      "Criança de 8 anos, febre, exsudato amigdaliano, sem tosse, teste rápido positivo",
      "penicilina-g-benzatina", ["amoxicilina"],
-     "S. pyogenes segue 100% sensível à penicilina. Benzatina IM dose única (ou amoxicilina 10 dias) previne febre reumática.",
+     "S. pyogenes segue praticamente 100% sensível à penicilina. Benzatina IM dose única (ou amoxicilina 10 dias) previne febre reumática.",
      "Azitromicina: só na alergia à penicilina; há resistência crescente do estreptococo a macrolídeos."),
     (1, "virus", "Resfriado comum",
      "Adulto com coriza, espirros e tosse leve há 3 dias, afebril",
@@ -107,7 +108,7 @@ INVASORES = [
     (1, "protozoario", "Malária vivax",
      "Manaus, febre com calafrios em dias alternados; gota espessa: P. vivax",
      "cloroquina-primaquina", [],
-     "Cloroquina 3 dias (esquizonticida) + primaquina 7 dias (elimina hipnozoítos e evita recaída). Guia de malária do MS.",
+     "Cloroquina 3 dias + primaquina 7 dias (elimina hipnozoítos). Testar G6PD antes da primaquina; tafenoquina dose única é opção no SUS (≥ 16 anos, G6PD normal).",
      "Artemeter+lumefantrina: esquema para P. falciparum; sozinho não elimina hipnozoítos do vivax."),
     (1, "protozoario", "Malária falciparum não grave",
      "Garimpeiro, febre alta; gota espessa: P. falciparum, sem sinais de gravidade",
@@ -157,7 +158,7 @@ INVASORES = [
     (1, "protozoario", "Tricomoníase",
      "Corrimento amarelo-esverdeado bolhoso, colo em framboesa",
      "metronidazol", [],
-     "Trichomonas vaginalis: metronidazol 2 g VO dose única ou 500 mg 12/12 h por 7 dias; tratar parceria sexual.",
+     "Trichomonas vaginalis: metronidazol 500 mg 12/12 h por 7 dias (preferido em mulheres) ou 2 g dose única; tratar parceria sexual.",
      "Fluconazol: antifúngico, sem ação contra protozoário."),
     (1, "bacteria", "Vaginose bacteriana",
      "Corrimento acinzentado, odor de peixe, teste das aminas positivo, pH > 4,5",
@@ -177,7 +178,7 @@ INVASORES = [
     (1, "bacteria", "Celulite não purulenta",
      "Placa quente e eritematosa na perna, sem abscesso, sem sinais sistêmicos",
      "cefalexina", ["amoxicilina-clavulanato", "amoxicilina"],
-     "Celulite leve: tratamento oral contra estreptococo e S. aureus sensível. Cefalexina 500 mg 6/6 h por 5 a 7 dias.",
+     "Celulite leve: cefalexina 500 mg 6/6 h por 5 a 7 dias (estreptococo e S. aureus sensível). Amoxicilina serve: a não purulenta é quase sempre estreptocócica.",
      "Vancomicina IV: celulite leve sem risco de MRSA não precisa de ATB venoso."),
     (1, "virus", "Dengue sem sinais de alarme",
      "Febre, mialgia, dor retro-orbitária, prova do laço negativa, sem alarme",
@@ -249,7 +250,7 @@ INVASORES = [
     (2, "bacteria", "Colite por C. difficile",
      "Diarreia após clindamicina, toxina A/B positiva, leucócitos 18 mil",
      "vancomicina-oral", [],
-     "Vancomicina VO 125 mg 6/6 h por 10 dias (ou fidaxomicina) é 1ª linha; suspender o antibiótico causador se possível.",
+     "Fidaxomicina (preferida, IDSA/SHEA 2021) ou vancomicina VO 125 mg 6/6 h por 10 dias; suspender o antibiótico causador se possível.",
      "Vancomicina IV não chega à luz do cólon. Metronidazol: inferior à vancomicina oral, sobretudo na forma grave."),
     (2, "bacteria", "Uretrite por clamídia",
      "Homem com disúria e secreção mucoide; NAAT para C. trachomatis positivo",
@@ -275,7 +276,7 @@ INVASORES = [
      "Adolescente, faringite, linfonodos cervicais, esplenomegalia, linfócitos atípicos",
      "sem-antibiotico", [],
      "Epstein-Barr: suporte e evitar esporte de contato por risco de ruptura esplênica.",
-     "Amoxicilina: não trata EBV e causa exantema na maioria dos casos."),
+     "Amoxicilina: não trata EBV e pode causar exantema (≈30% em séries recentes; até 80–100% nas antigas)."),
     (2, "virus", "Varicela em criança hígida",
      "Criança de 5 anos, sem comorbidades, vesículas em estágios diferentes",
      "sem-antibiotico", [],
@@ -332,7 +333,8 @@ INVASORES = [
      "PAC com derrame loculado; toracocentese: pus, pH 6,9",
      "drenagem-cirurgia", [],
      "Empiema exige drenagem torácica (ou videotoracoscopia). O antibiótico acompanha, mas sem drenar não há cura.",
-     "Meropenem: escalar ATB não resolve coleção não drenada."),
+     "Meropenem: escalar ATB não resolve coleção não drenada.",
+     ["meropenem", "piperacilina-tazobactam", "ceftriaxona", "vancomicina"]),
     (3, "bacteria", "Sepse urinária por ESBL",
      "Pielonefrite com choque; urocultura: E. coli produtora de ESBL",
      "meropenem", [],
@@ -367,7 +369,8 @@ INVASORES = [
      "Dor desproporcional, bolhas hemorrágicas, crepitação e hipotensão",
      "drenagem-cirurgia", [],
      "Emergência cirúrgica: desbridamento amplo imediato define a sobrevida; ATB de amplo espectro vem junto, não no lugar.",
-     "Meropenem: sem desbridamento, a mortalidade continua altíssima."),
+     "Meropenem: sem desbridamento, a mortalidade continua altíssima.",
+     ["meropenem", "piperacilina-tazobactam", "ceftriaxona", "vancomicina"]),
     (3, "fungo", "Candidúria assintomática",
      "Paciente com sonda vesical, sem febre ou sintomas; urina com Candida",
      "sem-antibiotico", [],
@@ -449,7 +452,12 @@ def validar(armas, invasores):
                 erros.append(f"{iid}: aceitável inexistente {x}")
             if x == i["certa"]:
                 erros.append(f"{iid}: aceitável repete a certa")
-        if len(set_armas) - 1 - len(i["aceitaveis"]) < 3:
+        for x in i.get("excluir", []):
+            if x not in set_armas:
+                erros.append(f"{iid}: excluir inexistente {x}")
+            if x == i["certa"] or x in i["aceitaveis"]:
+                erros.append(f"{iid}: excluir repete certa/aceitável {x}")
+        if len(set_armas) - 1 - len(i["aceitaveis"]) - len(i.get("excluir", [])) < 3:
             erros.append(f"{iid}: poucas armas para sortear distratores")
         for campo, lim in (("nome", MAX_NOME), ("detalhe", MAX_DETALHE),
                            ("porque", MAX_PORQUE), ("armadilha", MAX_ARMADILHA)):
@@ -473,11 +481,13 @@ def validar(armas, invasores):
 def main():
     armas = [{"id": i, "nome": n, "classe": c, "cor": cor} for i, n, c, cor in ARMAS]
     invasores = []
-    for k, (fase, tipo, nome, detalhe, certa, aceit, porque, armadilha) in enumerate(INVASORES, 1):
+    for k, (fase, tipo, nome, detalhe, certa, aceit, porque, armadilha, *resto) in enumerate(INVASORES, 1):
         inv = {"id": f"inv-{k:03d}", "fase": fase, "tipo": tipo, "nome": nome,
                "detalhe": detalhe, "certa": certa, "aceitaveis": aceit, "porque": porque}
         if armadilha:
             inv["armadilha"] = armadilha
+        if resto and resto[0]:
+            inv["excluir"] = resto[0]   # armas que nunca entram como distratores
         invasores.append(inv)
     erros = validar(armas, invasores)
     if erros:
