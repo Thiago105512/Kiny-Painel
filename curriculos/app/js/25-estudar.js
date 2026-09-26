@@ -49,7 +49,7 @@ function cartaoPilula(p, { sessao = false } = {}) {
   const aberta = EST.aberta[p.id], v = vistasPil()[p.id], [nomeTipo] = TIPOS_PIL[p.tipo] || [p.tipo];
   const qs = p.tema ? questoes().filter(q => q.tema === p.tema).length : 0;
   return `<article class="caixa pilula" id="pil">
-    <div class="linha entre" style="margin-bottom:10px"><span class="pill azul">${esc(nomeTipo)}</span><span class="small muted">${esc(p.area)}${p.ano != null && p.tipo === "data" ? " · " + anoTxt(p.ano) : ""}</span></div>
+    <div class="linha entre" style="margin-bottom:10px"><span class="com-ilu" style="gap:8px">${iluPil(p.tipo, "p")}<span class="pill azul">${esc(nomeTipo)}</span></span><span class="small muted">${esc(p.area)}${p.ano != null && p.tipo === "data" ? " · " + anoTxt(p.ano) : ""}</span></div>
     <h2 class="pil-tit">${esc(p.titulo)}</h2>
     <p class="pil-perg">${esc(p.pergunta)}</p>
     ${aberta ? `<div class="pil-resp"><p class="pil-r">${esc(p.resposta)}</p>
@@ -71,12 +71,12 @@ rota("/estudar", () => {
   return {
     secao: "estudar", titulo: "Estudar", sub: "Pílulas de 5 minutos: tente lembrar, confira e entenda o porquê.",
     html: PILULAS.length ? `${chipsDominio()}
-      <section class="hero"><span class="lab">Sessão rápida</span><p class="hero-tit">5 pílulas misturadas</p>
+      <section class="hero com-ilu">${ilustra("lampada", "#D97706", "xg")}<div><span class="lab">Sessão rápida</span><p class="hero-tit">5 pílulas misturadas</p>
         <p class="small muted" style="margin:0">${vistas ? `${vistas} de ${pool.length} vistas${naoSabia ? ` · ${naoSabia} viraram flashcards` : ""}` : `${pool.length} pílulas para descobrir`}</p>
-        <button class="btn azul grande" data-act="pil-sessao">Começar</button></section>
-      ${dia ? `<section><h2 class="sec">Pílula do dia</h2><a class="pil-link" href="#/estudar/p/${esc(dia.id)}"><b>${esc(dia.titulo)}</b><small>${esc((TIPOS_PIL[dia.tipo] || [])[0] || "")} · ${esc(dia.area)}</small></a></section>` : ""}
-      <section><h2 class="sec">Explorar</h2><div class="atalhos">${Object.entries(TIPOS_PIL).map(([k, [nome, desc]]) => { const n = pool.filter(p => p.tipo === k).length;
-        return n ? `<a href="#/estudar/tipo/${k}"><b>${nome}</b><small>${desc} · ${n}</small></a>` : ""; }).join("")}</div></section>`
+        <button class="btn azul grande" data-act="pil-sessao">Começar</button></div></section>
+      ${dia ? `<section><h2 class="sec">Pílula do dia</h2><a class="pil-link com-ilu" href="#/estudar/p/${esc(dia.id)}">${iluPil(dia.tipo, "g")}<div><b>${esc(dia.titulo)}</b><small>${esc((TIPOS_PIL[dia.tipo] || [])[0] || "")} · ${esc(dia.area)}</small></div></a></section>` : ""}
+      <section><h2 class="sec">Explorar</h2><div class="atalhos icones">${Object.entries(TIPOS_PIL).map(([k, [nome, desc]]) => { const n = pool.filter(p => p.tipo === k).length;
+        return n ? `<a href="#/estudar/tipo/${k}">${iluPil(k)}<b>${nome}</b><small>${desc} · ${n}</small></a>` : ""; }).join("")}</div></section>`
       : vazio("As pílulas de estudo ainda estão sendo preparadas."),
   };
 });

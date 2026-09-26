@@ -46,7 +46,7 @@ rota("/", () => {
   const P = store.doc("perfil"), d = diaDe(hoje()), metas = P.metas || { questoes: 20, minutos: 60 };
   const min = Math.round((d.seg || 0) / 60), estudados = unicos(d.temas || []), seq = sequencia();
   const tarefas = tarefasDoDia(), prox = tarefas[0], sug = prox ? null : sugestaoPratica();
-  const Q = questoes(), feitas = Q.filter(q => progDe(q)?.n).length, pend = pendencias();
+  const Q = questoes().filter(doObjetivo), feitas = Q.filter(q => progDe(q)?.n).length, pend = pendencias();
   const ag = agregados(), fracas = listaPor(ag.por.disc, 3).sort((a, b) => a.p - b.p).slice(0, 3);
   const novato = ag.n < 10;
   // Primeiros passos: o que já foi feito sai da tela (não fica riscado), para não poluir o Início
@@ -57,23 +57,23 @@ rota("/", () => {
     secao: "inicio", titulo: saudacao() + (P.nome ? ", " + P.nome.split(" ")[0] : ""), sub: [P.apresentacao && P.apresentacao + (P.faculdade ? " · " + nomeInst(P.faculdade) : ""), new Date().toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" })].filter(Boolean).map(esc).join("<br>"),
     acoes: `<button class="btn sec mini" data-act="perfil-fac">Perfil</button><button class="btn sec mini" data-act="metas-editar">Metas</button>`,
     html: `${avisoBackup()}
-    <section class="hero"><span class="lab">Próximo passo</span>
+    <section class="hero com-ilu">${ilustra(prox ? (/Revisar|revis/i.test(prox.tit) ? "relogio" : /flashcard/i.test(prox.tit) ? "livro" : /Prova|Trabalho|Semin|Apresenta/i.test(prox.tit) ? "calendario" : "alvo") : "estetoscopio", "#2340B8", "xg")}<div><span class="lab">Próximo passo</span>
       ${prox ? `<p class="hero-tit">${esc(prox.tit)}</p><p class="small muted" style="margin:0">${esc(prox.det)}${tarefas.length > 1 ? ` · depois: mais ${tarefas.length - 1}` : ""}</p><a class="btn azul grande" href="${prox.href}">${prox.bt}</a>`
         : `<p class="hero-tit">${esc(sug.tit)}</p><p class="small muted" style="margin:0">Nada pendente para hoje · ${esc(sug.det)}</p><button class="btn azul grande" data-act="inicio-praticar" data-disc="${esc(sug.disc || "")}">Começar</button>`}
-    </section>
-    ${(() => { const p = pilulaDoDia(); return p ? `<a class="pil-link" href="#/estudar/p/${esc(p.id)}"><span class="lab">Pílula do dia</span><b>${esc(p.titulo)}</b><small>${esc(p.pergunta)}</small></a>` : ""; })()}
+    </div></section>
+    ${(() => { const p = pilulaDoDia(); return p ? `<a class="pil-link com-ilu" href="#/estudar/p/${esc(p.id)}">${iluPil(p.tipo, "g")}<div><span class="lab">Pílula do dia</span><b>${esc(p.titulo)}</b><small>${esc(p.pergunta)}</small></div></a>` : ""; })()}
     <section class="caixa"><div class="metas">
       <div class="meta-item"><span>Questões hoje</span><b>${d.q}<small class="muted" style="font-size:calc(13px * var(--k))"> de ${metas.questoes}</small></b>${medidor(pct(d.q, metas.questoes), "ok")}</div>
       <div class="meta-item"><span>Tempo de estudo</span><b>${min}<small class="muted" style="font-size:calc(13px * var(--k))"> de ${metas.minutos} min</small></b>${medidor(pct(min, metas.minutos), "ok")}</div>
       <div class="meta-item"><span>Acerto hoje</span><b>${d.q ? pct(d.ac, d.q) + "%" : "—"}</b></div>
-      <div class="meta-item"><span>Sequência</span><b>${seq} ${seq === 1 ? "dia" : "dias"}</b></div></div>
+      <div class="meta-item"><span>Sequência</span><b class="com-ilu" style="gap:6px">${seq ? ilustra("chama", "#D97706", "p") : ""}${seq} ${seq === 1 ? "dia" : "dias"}</b></div></div>
       ${estudados.length ? `<p class="small" style="margin:12px 0 0"><span class="muted">Estudado hoje:</span> ${estudados.slice(0, 3).map(linkTema).join(", ")}${estudados.length > 3 ? ` <span class="muted">e mais ${estudados.length - 3}</span>` : ""}</p>` : ""}
     </section>
-    <section><div class="atalhos">
-      <a href="#/questoes"><b>Questões</b><small>${Q.length} no banco · ${feitas} feitas</small></a>
-      <a href="#/simulados"><b>Simulado</b><small>${store.doc("simulados").hist.length ? store.doc("simulados").hist.length + " feitos" : "prova cronometrada"}</small></a>
-      <a href="#/flashcards"><b>Flashcards</b><small>${pend.cards.length ? pend.cards.length + " para hoje" : cards().length + " cards"}</small></a>
-      <a href="#/casos"><b>Casos clínicos</b><small>${todosCasos().length} casos</small></a>
+    <section><div class="atalhos icones">
+      <a href="#/questoes">${ilustra("alvo", "#2340B8", "m")}<b>Questões</b><small>${Q.length} no banco · ${feitas} feitas</small></a>
+      <a href="#/simulados">${ilustra("relogio", "#0F766E", "m")}<b>Simulado</b><small>${store.doc("simulados").hist.length ? store.doc("simulados").hist.length + " feitos" : "prova cronometrada"}</small></a>
+      <a href="#/flashcards">${ilustra("livro", "#A21CAF", "m")}<b>Flashcards</b><small>${pend.cards.length ? pend.cards.length + " para hoje" : cards().length + " cards"}</small></a>
+      <a href="#/casos">${ilustra("estetoscopio", "#C0265F", "m")}<b>Casos clínicos</b><small>${todosCasos().length} casos</small></a>
     </div></section>
     ${tarefas.length > 1 ? `<section><h2 class="sec">Também para hoje</h2><div class="tarefas">${tarefas.slice(1, 5).map(t => `<div class="tarefa"><div class="o">${t.link ? "Revisar " + t.link : esc(t.tit)}<small>${esc(t.det)}</small></div><a class="btn mini sec" href="${t.href}">${t.bt}</a></div>`).join("")}</div>${tarefas.length > 5 ? `<p class="small"><a href="#/revisoes">Ver todas as ${tarefas.length}</a></p>` : ""}</section>` : ""}
     ${novato && passos.length ? `<section><h2 class="sec">Primeiros passos</h2><div class="tarefas">${passos.join("")}</div></section>`

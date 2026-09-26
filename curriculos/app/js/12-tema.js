@@ -83,7 +83,7 @@ function paginaTema(id, aba) {
   else return paginaTema(id, "resumo");
   return {
     secao: med ? "medicina" : "enem", crumbs: crumbsTema(t), titulo: t.nome,
-    sub: med ? esc((t.especialidades || []).map(e => ESPECIALIDADES[e]?.nome).filter(Boolean).join(" · ")) : `ENEM · ${esc(t.areaNome)}`,
+    sub: `<span class="com-ilu">${iluTema(id, "g")}<span>${med ? esc((t.especialidades || []).map(e => ESPECIALIDADES[e]?.nome).filter(Boolean).join(" · ")) : `ENEM · ${esc(t.areaNome)}`}</span></span>`,
     html: `<div class="tabs" role="tablist">${ABAS_TEMA.map(([k, n]) => `<a role="tab" href="#/tema/${enc}/${k}" aria-selected="${k === aba}">${n}${k === "praticar" && (errsAb.length || cs.some(c => vencido(c.srs))) ? " •" : ""}</a>`).join("")}</div>${corpo}`,
     ctx: { tema: id, trilha: med ? "medicina" : "enem", ...(minha ? { grade: minha.g.id, periodo: minha.periodo, disciplina: minha.item.nome } : {}) },
   };

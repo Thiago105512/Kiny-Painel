@@ -15,7 +15,8 @@ rota("/medicina", () => {
     secao: "medicina", titulo: "Medicina",
     html: `<div class="faixa"><p>${P.faculdade ? `<b>${esc(nomeInst(P.faculdade))}</b>${P.periodo ? ` · ${P.periodo}º período` : ""}<br><span class="small muted">${g ? esc(g.versao || "matriz") : "matriz ainda não importada"}</span>` : "Escolha sua faculdade e período"}</p>
         <span class="linha">${g ? `<a class="btn mini" href="#/medicina/grade/${esc(g.id)}${P.periodo ? "/p/" + P.periodo : ""}">Meu período</a>` : ""}<button class="btn mini sec" data-act="perfil-fac">${P.faculdade ? "Alterar" : "Escolher"}</button></span></div>
-      <section><h2 class="sec">Estudar</h2><div class="links-lista">
+      <section><h2 class="sec">Estudar por área</h2><div class="mosaico">${AREAS_MED.map(a => `<a href="#/medicina/area/${esc(a.id)}" style="--h:${COR_AREA[a.id] || "#2340B8"}">${iluArea(a.id)}<span><b>${esc(a.nome)}</b><small>${(a.especialidades || []).length} especialidades</small></span></a>`).join("")}</div></section>
+      <section><h2 class="sec">Mais</h2><div class="links-lista">
         <a href="#/medicina/especialidades"><span>Por especialidade</span><small>${Object.keys(ESPECIALIDADES).length} especialidades · ${Object.values(TEMAS).filter(t => t.dominio === "medicina").length} temas</small></a>
         <a href="#/medicina/comparar"><span>Comparar grades</span><small>UFAM × UEA × outras</small></a>
         <a href="#/medicina/importar"><span>Importar matriz curricular</span><small>PDF, planilha ou texto</small></a></div></section>
@@ -380,15 +381,26 @@ MUDANCAS.cmp = el => { CMP[el.dataset.c] = el.value; atualizar(); };
 const temasDaEsp = id => Object.values(TEMAS).filter(t => (t.especialidades || []).includes(id));
 rota("/medicina/especialidades", () => ({
   secao: "medicina", crumbs: [CRUMB_MED], titulo: "Mapa por especialidades", sub: "Mesmos temas da grade, organizados pela medicina. Um tema pode aparecer em várias especialidades.",
-  html: AREAS_MED.length ? AREAS_MED.map(a => `<section><h2 class="sec">${esc(a.nome)}</h2>${tabela([{ t: "Especialidade" }, { t: "Temas", num: 1 }, { t: "Questões", num: 1 }, { t: "Acerto", num: 1 }],
-    (a.especialidades || []).map(e => { const ts = temasDaEsp(e.id).map(t => t.id), ag = agregados(q => ts.includes(q.tema) || q.esp === e.id); return [`<a href="#/medicina/esp/${esc(e.id)}">${esc(e.nome)}</a>`, ts.length, questoes().filter(q => ts.includes(q.tema) || q.esp === e.id).length, ag.n ? pct(ag.ac, ag.n) + "%" : "—"]; }))}</section>`).join("") : vazio("Catálogo de especialidades não carregado."),
+  html: AREAS_MED.length ? AREAS_MED.map(a => `<section><h2 class="sec com-ilu" style="gap:10px">${iluArea(a.id, "p")}${esc(a.nome)}</h2><div class="mosaico">${(a.especialidades || []).map(e => {
+      const ts = temasDaEsp(e.id).map(t => t.id), ag = agregados(q => ts.includes(q.tema) || q.esp === e.id), nq = questoes().filter(q => ts.includes(q.tema) || q.esp === e.id).length;
+      return `<a href="#/medicina/esp/${esc(e.id)}" style="--h:${COR_AREA[a.id] || "#2340B8"}">${iluEsp(e.id)}<span><b>${esc(e.nome)}</b><small>${ts.length} temas · ${nq} questões${ag.n ? ` · ${pct(ag.ac, ag.n)}% de acerto` : ""}</small></span></a>`; }).join("")}</div></section>`).join("") : vazio("Catálogo de especialidades não disponível."),
 }));
+/** Uma grande área: suas especialidades em mosaico ilustrado. */
+function mosaicoEsp(a) {
+  return `<div class="mosaico">${(a.especialidades || []).map(e => {
+    const ts = temasDaEsp(e.id).map(t => t.id), ag = agregados(q => ts.includes(q.tema) || q.esp === e.id), nq = questoes().filter(q => ts.includes(q.tema) || q.esp === e.id).length;
+    return `<a href="#/medicina/esp/${esc(e.id)}" style="--h:${COR_AREA[a.id] || "#2340B8"}">${iluEsp(e.id)}<span><b>${esc(e.nome)}</b><small>${ts.length} temas · ${nq} questões${ag.n ? ` · ${pct(ag.ac, ag.n)}% de acerto` : ""}</small></span></a>`; }).join("")}</div>`;
+}
+rota("/medicina/area/:id", ({ id }) => {
+  const a = AREAS_MED.find(x => x.id === id); if (!a) return paginaNaoEncontrada();
+  return { secao: "medicina", crumbs: [CRUMB_MED], titulo: a.nome, sub: `<span class="com-ilu">${iluArea(a.id, "g")}<span>${(a.especialidades || []).length} especialidades</span></span>`, html: mosaicoEsp(a) };
+});
 rota("/medicina/esp/:id", ({ id }) => {
   const e = ESPECIALIDADES[id]; if (!e) return paginaNaoEncontrada();
   const ts = ordenarPt(temasDaEsp(id), t => t.nome), R = store.doc("revisoes").temas;
   const ids = questoes().filter(q => ts.some(t => t.id === q.tema) || q.esp === id).map(q => q.id);
   return {
-    secao: "medicina", crumbs: [CRUMB_MED, ["Especialidades", "#/medicina/especialidades"], [e.areaNome, "#/medicina/especialidades"]], titulo: e.nome,
+    secao: "medicina", crumbs: [CRUMB_MED, ["Especialidades", "#/medicina/especialidades"], [e.areaNome, "#/medicina/especialidades"]], titulo: e.nome, sub: `<span class="com-ilu">${iluEsp(id, "g")}<span>${esc(e.areaNome || "")} · ${ts.length} temas</span></span>`,
     acoes: ids.length ? `<button class="btn" data-act="praticar-ids" data-ids="${ids.join(",")}" data-ctx="Especialidade ${esc(e.nome)}">Praticar ${ids.length} questões</button>` : "",
     html: tabela([{ t: "Tema" }, { t: "Questões", num: 1 }, { t: "Acerto", num: 1 }, { t: "Próxima revisão" }], ts.map(t => { const d = desempenhoTema(t.id); return [linkTema(t.id), d.total, d.n ? pct(d.ac, d.n) + "%" : "—", R[t.id] ? quando(R[t.id].prox) : "—"]; }), { vaziaMsg: "Sem temas nesta especialidade." }),
     ctx: { especialidade: id },

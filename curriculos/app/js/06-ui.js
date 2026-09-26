@@ -177,7 +177,7 @@ function ordenarSeries(ids, completar) {
 function iniciarPlayer(chave, ids, origem = "pratica", aoFim = null) {
   if (PL.chave !== chave) guardarSessao();
   ids = ordenarSeries(ids, origem === "pratica");
-  Object.assign(PL, { ativo: true, chave, ids: ids.slice(), i: 0, esc: null, resp: false, origem, res: [], aoFim, ia: "", fim: false, msgFim: "" });
+  Object.assign(PL, { festa: false, ativo: true, chave, ids: ids.slice(), i: 0, esc: null, resp: false, origem, res: [], aoFim, ia: "", fim: false, msgFim: "" });
   delete SALVOS[chave];
   prepararQuestao();
 }
@@ -190,7 +190,8 @@ function playerAtivo(chave) {
 function htmlPlayer() {
   if (PL.fim) {
     const ac = PL.res.filter(r => r.ok).length, n = PL.res.length;
-    return `<div class="caixa" id="pl-fim"><h2 class="sec">Sessão concluída</h2>
+    const bom = n && ac / n >= 0.7; if (bom && !PL.festa) { PL.festa = true; setTimeout(() => confete(document.querySelector("#pl-fim h2"), 24), 60); }
+    return `<div class="caixa" id="pl-fim"><h2 class="sec com-ilu" style="gap:10px">${ilustra(bom ? "alvo" : "livro", bom ? "#1C7C4A" : "#2340B8", "g")}${bom ? "Mandou bem! Sessão concluída" : "Sessão concluída"}</h2>
       <div class="kpis"><div class="kpi"><b>${ac}/${n}</b><span>acertos</span></div><div class="kpi"><b>${pct(ac, n)}%</b><span>aproveitamento</span></div>
       <div class="kpi"><b>${mmss(PL.res.reduce((s, r) => s + r.ms, 0) / Math.max(1, n))}</b><span>tempo médio</span></div></div>
       ${PL.msgFim ? `<p class="aviso info">${PL.msgFim}</p>` : ""}
@@ -209,8 +210,8 @@ function htmlPlayer() {
     <div class="linha entre" style="margin-bottom:12px"><b>${PL.ids.length > 1 ? `Questão ${PL.i + 1} de ${PL.ids.length}` : "Questão"}${q.serie ? `<br><span class="small muted">Caso em ${q.partes} partes · parte ${q.parte}</span>` : ""}</b>${seloNivel(q.dif)}</div>
     <p class="enunciado">${esc(q.q)}</p>
     <ol class="alts">${alts}</ol>
-    ${PL.resp ? `<div class="retorno"><p class="veredito ${ok ? "ok" : "bad"}">${ok ? "Certo" : "Errado — gabarito " + letra(q.c)}${PL.ms ? ` · ${mmss(PL.ms)}` : ""}</p><p class="leitura" style="color:var(--ink2);margin:0">${esc(q.e || "Sem explicação cadastrada.")}</p>
-      <p class="small muted" style="margin:8px 0 0">${[TRILHAS[q.t]?.curto || q.t, q.ae && nomeAreaEnem(q.ae), q.ae && q.disc].filter(Boolean).map(esc).join(" · ")}${q.tema ? " · " + linkTema(q.tema) : ""}${q.src !== "banco" ? " · " + (q.src === "ia" ? "gerada por IA" : "minha") : ""}${st.n > 1 ? ` · você já acertou ${st.ac} de ${st.n}` : ""}${q.rev ? ` · revisada em ${esc(mesAno(q.rev))}` : ""}${acertoGeral(q) ? " · " + esc(acertoGeral(q)) : ""}</p>
+    ${PL.resp ? `<div class="retorno"><p class="veredito ${ok ? "ok" : "bad"}">${ok ? `<span class="festa">✓ ${esc(PL.frase || "Certo")}</span>` : `Errado · gabarito ${letra(q.c)}`}${PL.ms ? ` · ${mmss(PL.ms)}` : ""}</p>${!ok && PL.frase ? `<p class="small muted" style="margin:0 0 6px">${esc(PL.frase)}</p>` : ""}<p class="leitura" style="color:var(--ink2);margin:0">${esc(q.e || "Sem explicação cadastrada.")}</p>
+      <p class="small muted com-ilu" style="margin:8px 0 0;gap:8px">${q.tema ? iluTema(q.tema, "p") : ""}<span>${[TRILHAS[q.t]?.curto || q.t, q.ae && nomeAreaEnem(q.ae), q.ae && q.disc].filter(Boolean).map(esc).join(" · ")}${q.tema ? " · " + linkTema(q.tema) : ""}${q.src !== "banco" ? " · " + (q.src === "ia" ? "gerada por IA" : "minha") : ""}${st.n > 1 ? ` · você já acertou ${st.ac} de ${st.n}` : ""}${q.rev ? ` · revisada em ${esc(mesAno(q.rev))}` : ""}${acertoGeral(q) ? " · " + esc(acertoGeral(q)) : ""}</span></p>
       ${!ok ? `<p class="small muted" style="margin:8px 0 0">Registrado no <a href="#/erros">caderno de erros</a> com revisão amanhã.</p>${irmaDe(q) ? `<div class="acoes"><button class="btn sec" data-act="pl-irma">Treinar este ponto de novo</button></div>` : ""}` : ""}
       ${PL.ia ? `<h3>Assistente</h3><div class="ia-txt" id="pl-ia">${esc(PL.ia)}</div>` : ""}</div>` : ""}
     <div class="acoes">
@@ -247,7 +248,8 @@ ACOES["pl-confirmar"] = () => {
   if (PL.esc === null || PL.resp) return;
   const q = qPorId(PL.ids[PL.i]); PL.ms = Date.now() - PL.t0; PL.resp = true;
   const ok = registrarResposta(q, PL.esc, PL.ms, PL.origem);
-  PL.res.push({ id: q.id, ok, ms: PL.ms, tema: q.tema }); atualizar();
+  PL.res.push({ id: q.id, ok, ms: PL.ms, tema: q.tema }); PL.frase = sorteio(ok ? ELOGIOS : ANIMO); atualizar();
+  if (ok) confete(document.querySelector("#pl .veredito"));
 };
 ACOES["pl-prox"] = () => { if (PL.i < PL.ids.length - 1) { PL.i++; prepararQuestao(); } else { PL.fim = true; PL.msgFim = PL.aoFim ? PL.aoFim(PL.res) : ""; } atualizar(); document.getElementById("pl")?.scrollIntoView({ block: "start" }); };
 ACOES["pl-pular"] = () => { if (PL.i < PL.ids.length - 1) { PL.i++; prepararQuestao(); } else { PL.fim = true; PL.msgFim = PL.aoFim ? PL.aoFim(PL.res) : ""; } atualizar(); };
