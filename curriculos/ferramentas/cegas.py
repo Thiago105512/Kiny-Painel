@@ -21,4 +21,6 @@ else:
         resp = mapa[q["id"]][x["resposta"]] if q["id"] in mapa else x["resposta"]
         if resp != q["correta"] or x.get("ambigua"):
             dif += 1; print(f"== {q['id']} gabarito={q['correta']} cego={resp} conf={x.get('confianca')} ambigua={x.get('ambigua')}\n   {x.get('justificativa','')}")
-    print(f"divergências/ambiguidades: {dif} de {len(novo)}")
+    niv = [(q["id"], q.get("dificuldade"), r[q["id"]].get("nivel")) for q in novo if q["id"] in r and r[q["id"]].get("nivel") and q.get("dificuldade") and abs(r[q["id"]]["nivel"] - q["dificuldade"]) >= 2]
+    for i, d, n in niv: print(f"   nível muito diferente: {i} declarado {d}, estimado {n}")
+    print(f"divergências/ambiguidades: {dif} de {len(novo)}" + (f" · níveis a rever: {len(niv)}" if niv else ""))

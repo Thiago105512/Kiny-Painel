@@ -12,7 +12,7 @@ for q in Q:
     if len(q.get("explicacao", "")) < 200: E.append(f"{q.get('id')}: explicação curta (<200)")
     if re.search(r"\([A-E]\)", q.get("explicacao", "")): E.append(f"{q.get('id')}: explicação cita letra")
 FAIXAS = {"enem": [(.10, .20), (.45, .60), (.25, .40)], "residencia": [(.10, .20), (.50, .65), (.20, .35)],
-          "medicina": [(.25, .40), (.40, .55), (.15, .25)], "direito": [(.25, .40), (.40, .55), (.15, .25)], "oab": [(.10, .20), (.55, .70), (.15, .25)]}
+          "medicina": [(.10, .20), (.50, .65), (.20, .30)], "direito": [(.15, .25), (.50, .65), (.15, .25)], "oab": [(.10, .20), (.55, .70), (.15, .25)]}
 cls = [0 if l < 250 else 1 if l < 600 else 2 for l in L]
 for i, nome in enumerate(["curtas (<250)", "médias (250–599)", "longas (≥600)"]):
     fr = cls.count(i) / max(1, n); lo, hi = FAIXAS[trilha][i]
