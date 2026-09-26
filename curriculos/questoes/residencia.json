@@ -8,10 +8,10 @@
    "Pré-diabetes, pois a HbA1c está abaixo de 7%",
    "É obrigatório repetir a glicemia de jejum em outro dia antes de qualquer conclusão",
    "É necessário realizar teste oral de tolerância à glicose para confirmar",
-   "Diabetes mellitus confirmado, pois dois testes diferentes estão alterados na mesma amostra"
+   "Diabetes mellitus confirmado por dois testes alterados na mesma amostra"
   ],
   "correta": 4,
-  "explicacao": "Os critérios diagnósticos de diabetes são: glicemia de jejum ≥ 126 mg/dL, glicemia de 2 horas no TOTG ≥ 200 mg/dL, HbA1c ≥ 6,5%, ou glicemia ao acaso ≥ 200 mg/dL com sintomas. Na ausência de hiperglicemia inequívoca, é necessária confirmação, que pode ser a repetição do teste ou a alteração de dois testes diferentes na mesma amostra (diretriz da SBD e da ADA). Aqui, glicemia de jejum de 132 mg/dL e HbA1c de 6,8% confirmam o diagnóstico sem nova coleta. A meta de HbA1c < 7% é alvo de tratamento, não critério diagnóstico; o TOTG não é necessário; sintomas não são obrigatórios.",
+  "explicacao": "Os critérios diagnósticos de diabetes são: glicemia de jejum ≥ 126 mg/dL, glicemia de 2 horas no TOTG ≥ 200 mg/dL, HbA1c ≥ 6,5%, ou glicemia ao acaso ≥ 200 mg/dL com sintomas. Na ausência de hiperglicemia inequívoca, é necessária confirmação, que pode ser a repetição do teste ou a alteração de dois testes diferentes na mesma amostra (diretriz da SBD e da ADA). Aqui, glicemia de jejum de 132 mg/dL e HbA1c de 6,8% confirmam o diagnóstico sem nova coleta. A meta de HbA1c < 7% é alvo de tratamento, não critério diagnóstico; o TOTG não é necessário; sintomas não são obrigatórios. Para lembrar: os cortes diagnósticos são 126 mg/dL (jejum), 200 mg/dL (TOTG de 2 horas ou acaso com sintomas) e 6,5% (HbA1c).",
   "tema": "diabetes-mellitus",
   "subtema": "diabetes-mellitus.diagnostico",
   "especialidade": "endocrinologia",
@@ -19,7 +19,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-f757fbd2",
@@ -51,11 +52,11 @@
    "Puncionar dois acessos venosos calibrosos e infundir cristaloide aquecido",
    "Realizar FAST para pesquisa de líquido livre abdominal",
    "Encaminhar à tomografia de crânio antes de qualquer procedimento",
-   "Garantir via aérea (aspiração e via aérea definitiva) mantendo a restrição da coluna cervical",
-   "Alinhar e imobilizar o fêmur esquerdo com tração"
+   "Aspirar e garantir via aérea definitiva com restrição da coluna cervical",
+   "Alinhar e imobilizar o fêmur esquerdo com tala de tração"
   ],
   "correta": 3,
-  "explicacao": "No ABCDE do ATLS, o primeiro passo corresponde à via aérea com restrição de movimento da coluna cervical, e é a primeira prioridade quando não há hemorragia externa exsanguinante. O paciente tem obstrução (gorgolejo, sangue, dentes), hipoxemia e Glasgow ≤ 8, o que indica aspiração e via aérea definitiva (intubação orotraqueal com estabilização manual da coluna). Acessos venosos e FAST fazem parte do C; a TC de crânio é da avaliação secundária/complementar e não deve ser feita em paciente com via aérea não protegida; a imobilização do fêmur também vem depois da avaliação primária.",
+  "explicacao": "No ABCDE do ATLS, o primeiro passo corresponde à via aérea com restrição de movimento da coluna cervical, e é a primeira prioridade quando não há hemorragia externa exsanguinante. O paciente tem obstrução (gorgolejo, sangue, dentes), hipoxemia e Glasgow ≤ 8, o que indica aspiração e via aérea definitiva (intubação orotraqueal com estabilização manual da coluna). Acessos venosos e FAST fazem parte do C; a TC de crânio é da avaliação secundária/complementar e não deve ser feita em paciente com via aérea não protegida; a imobilização do fêmur também vem depois da avaliação primária. Para lembrar: Glasgow ≤ 8 é indicação clássica de via aérea definitiva.",
   "tema": "atendimento-inicial-ao-politraumatizado",
   "subtema": "atendimento-inicial-ao-politraumatizado.avaliacao-primaria-abcde",
   "especialidade": "trauma",
@@ -63,7 +64,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-c570bc3a",
@@ -114,7 +116,7 @@
   "area": "Pediatria",
   "enunciado": "Na consulta de puericultura de um lactente de 2 meses, a termo e com crescimento adequado, a mãe pergunta que marco do desenvolvimento é esperado para essa idade, segundo a Caderneta da Criança.\n\nO marco esperado por volta dos 2 meses é:",
   "alternativas": [
-   "Sorriso social em resposta ao contato",
+   "Sorriso social ao ser estimulado",
    "Sentar sem apoio",
    "Transferir objetos entre as mãos",
    "Pinça polegar-indicador",
@@ -129,7 +131,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-44bd0d73",
@@ -291,13 +294,13 @@
   "enunciado": "Homem de 72 anos com insuficiência cardíaca de fração de ejeção reduzida, internado por descompensação, recebeu furosemida endovenosa em doses altas por 5 dias, com perda de 6 kg. Persiste derrame pleural bilateral, maior à direita, e é feita toracocentese diagnóstica. Está afebril, sem tosse produtiva ou emagrecimento.\n\nResultados (valores simultâneos):\n- proteína pleural 3,2 g/dL; proteína sérica 6,0 g/dL\n- LDH pleural 150 U/L; LDH sérica 250 U/L (limite superior da normalidade: 240 U/L)\n- albumina pleural 1,8 g/dL; albumina sérica 3,4 g/dL\n- NT-proBNP pleural elevado; citologia com predomínio de linfócitos e células mesoteliais, sem células neoplásicas; glicose e pH normais\n\nQual é a interpretação correta?",
   "alternativas": [
    "Exsudato, pois preenche os três critérios de Light; deve-se investigar neoplasia e tuberculose",
-   "Exsudato por um critério de Light, mas o gradiente de albumina de 1,6 g/dL indica transudato por diurético",
+   "Exsudato por um critério de Light, mas o gradiente de albumina de 1,6 g/dL indica transudato",
    "Transudato, pois nenhum critério de Light está presente",
    "Exsudato, pois a relação de LDH pleural/sérica é maior que 0,6",
    "Indeterminado; a biópsia pleural é obrigatória para definir a natureza do derrame"
   ],
   "correta": 1,
-  "explicacao": "Pelos critérios de Light: proteína pleural/sérica = 3,2/6,0 = 0,53 (> 0,5, critério presente); LDH pleural/sérica = 150/250 = 0,6 (não é maior que 0,6); LDH pleural 150 < 2/3 do limite superior sérico (160 U/L). Há, portanto, um único critério de exsudato. Os critérios de Light classificam erroneamente como exsudato cerca de 25% dos transudatos em pacientes com IC sob diurético, que concentra a proteína pleural. Nesse contexto, um gradiente de albumina soro-pleura > 1,2 g/dL (aqui 3,4 − 1,8 = 1,6) ou gradiente de proteína > 3,1 g/dL confirma transudato, reforçado pelo NT-proBNP pleural elevado. Não há indicação de biópsia nem de investigação de neoplasia/tuberculose com esses dados.",
+  "explicacao": "Pelos critérios de Light: proteína pleural/sérica = 3,2/6,0 = 0,53 (> 0,5, critério presente); LDH pleural/sérica = 150/250 = 0,6 (não é maior que 0,6); LDH pleural 150 < 2/3 do limite superior sérico (160 U/L). Há, portanto, um único critério de exsudato. Os critérios de Light classificam erroneamente como exsudato cerca de 25% dos transudatos em pacientes com IC sob diurético, que concentra a proteína pleural. Nesse contexto, um gradiente de albumina soro-pleura > 1,2 g/dL (aqui 3,4 − 1,8 = 1,6) ou gradiente de proteína > 3,1 g/dL confirma transudato, reforçado pelo NT-proBNP pleural elevado. Não há indicação de biópsia nem de investigação de neoplasia/tuberculose com esses dados. Para lembrar: Richard Light e colaboradores publicaram os critérios em 1972.",
   "tema": "derrame-pleural",
   "subtema": "derrame-pleural.criterios-de-light",
   "especialidade": "pneumologia",
@@ -305,7 +308,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-938bf64a",
@@ -642,7 +646,7 @@
   "area": "Cirurgia",
   "enunciado": "Homem de 55 anos, com colectomia esquerda há 5 anos, apresenta há 24 horas dor em cólica, vômitos biliosos que se tornaram fecaloides, distensão e parada de eliminação de gases e fezes. FC 102 bpm, PA 128/80 mmHg. Abdome distendido, cicatriz mediana, ruídos metálicos, sem hérnias; toque retal com ampola vazia. Radiografia: alças de delgado dilatadas com níveis \"em escada\", sem gás no cólon.\n\nA causa mais provável da obstrução é:",
   "alternativas": [
-   "Aderências (bridas) pós-operatórias",
+   "Bridas pós-operatórias",
    "Neoplasia de cólon direito",
    "Hérnia inguinal encarcerada",
    "Íleo biliar",
@@ -657,21 +661,22 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-b3d648ff",
   "area": "Cirurgia",
   "enunciado": "Mulher de 68 anos, com coledocolitíase diagnosticada há 1 mês e aguardando CPRE eletiva, é trazida ao pronto-socorro com febre com calafrios, icterícia e dor em hipocôndrio direito há 24 horas, evoluindo nas últimas horas com sonolência e desorientação.\n\nExame físico: Tax 39,2 °C, FC 124 bpm, PA 78/46 mmHg (sem resposta a 2.000 mL de cristaloide, sendo iniciada noradrenalina), FR 26 irpm, SpO2 95%. Ictérica 3+/4+, desorientada no tempo e no espaço.\n\nExames: leucócitos 21.000/mm³; plaquetas 88.000/mm³; bilirrubina total 6,8 mg/dL (direta 5,4); creatinina 2,4 mg/dL (basal 0,8); INR 1,4. Ultrassonografia: dilatação das vias biliares intra e extra-hepáticas, colédoco de 12 mm com cálculo distal.\n\nPelas diretrizes de Tóquio (2018), a classificação de gravidade e a conduta mais adequada são:",
   "alternativas": [
-   "Colangite grau III (grave); suporte orgânico, antibiótico e drenagem biliar de urgência, preferencialmente por CPRE",
+   "Colangite grau III (grave); suporte orgânico, antibiótico e drenagem biliar de urgência por CPRE",
    "Colangite grau II (moderada); antibiótico e colecistectomia videolaparoscópica em 72 horas",
    "Colangite grau I (leve); antibiótico e CPRE eletiva após a alta",
    "Colecistite aguda grau III; colecistostomia percutânea imediata",
    "Colangite grau III (grave); antibiótico por 7 dias e drenagem biliar somente se não houver melhora"
   ],
   "correta": 0,
-  "explicacao": "A tríade de Charcot com hipotensão e confusão (pêntade de Reynolds) caracteriza colangite aguda. Pelas diretrizes de Tóquio 2018, é grau III (grave) quando há disfunção orgânica: cardiovascular (hipotensão com necessidade de noradrenalina), neurológica (alteração de consciência), renal (creatinina > 2,0 mg/dL) ou hematológica (plaquetas < 100.000). A conduta é suporte intensivo, antibiótico EV de amplo espectro e drenagem biliar de urgência assim que houver estabilização mínima, preferencialmente endoscópica (CPRE com papilotomia/prótese), ficando a drenagem percutânea como alternativa. Adiar a drenagem aguardando resposta ao antibiótico só é aceitável no grau I. A colecistectomia é feita depois, eletivamente; o quadro não é de colecistite.",
+  "explicacao": "A tríade de Charcot com hipotensão e confusão (pêntade de Reynolds) caracteriza colangite aguda. Pelas diretrizes de Tóquio 2018, é grau III (grave) quando há disfunção orgânica: cardiovascular (hipotensão com necessidade de noradrenalina), neurológica (alteração de consciência), renal (creatinina > 2,0 mg/dL) ou hematológica (plaquetas < 100.000). A conduta é suporte intensivo, antibiótico EV de amplo espectro e drenagem biliar de urgência assim que houver estabilização mínima, preferencialmente endoscópica (CPRE com papilotomia/prótese), ficando a drenagem percutânea como alternativa. Adiar a drenagem aguardando resposta ao antibiótico só é aceitável no grau I. A colecistectomia é feita depois, eletivamente; o quadro não é de colecistite. Para lembrar: Charcot descreveu a tríade em 1877; Reynolds e Dargan acrescentaram choque e confusão mental em 1959.",
   "tema": "doencas-biliares",
   "subtema": "doencas-biliares.colangite-aguda",
   "especialidade": "cirurgia-geral",
@@ -679,7 +684,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-f7a696e7",
@@ -693,7 +699,7 @@
    "Hemotórax maciço; drenagem torácica e autotransfusão"
   ],
   "correta": 3,
-  "explicacao": "A tríade de Beck (hipotensão, turgência jugular e bulhas abafadas), com pulso paradoxal, ferimento na \"área de Ziedler\" e FAST com derrame pericárdico e colapso do ventrículo direito, define tamponamento cardíaco. Segundo o ATLS, o tratamento definitivo é cirúrgico (toracotomia anterolateral esquerda ou esternotomia, com reparo da lesão), e a pericardiocentese é apenas medida temporária quando a cirurgia não está imediatamente disponível, pois o sangue coagulado frequentemente impede a drenagem. A ausculta pulmonar simétrica afasta pneumotórax hipertensivo e hemotórax maciço; contusão miocárdica não explica o derrame pericárdico.",
+  "explicacao": "A tríade de Beck (hipotensão, turgência jugular e bulhas abafadas), com pulso paradoxal, ferimento na \"área de Ziedler\" e FAST com derrame pericárdico e colapso do ventrículo direito, define tamponamento cardíaco. Segundo o ATLS, o tratamento definitivo é cirúrgico (toracotomia anterolateral esquerda ou esternotomia, com reparo da lesão), e a pericardiocentese é apenas medida temporária quando a cirurgia não está imediatamente disponível, pois o sangue coagulado frequentemente impede a drenagem. A ausculta pulmonar simétrica afasta pneumotórax hipertensivo e hemotórax maciço; contusão miocárdica não explica o derrame pericárdico. Para lembrar: a tríade de hipotensão, turgência jugular e bulhas abafadas foi descrita por Claude Beck em 1935.",
   "tema": "trauma-toracico",
   "subtema": "trauma-toracico.tamponamento-cardiaco",
   "especialidade": "trauma",
@@ -701,7 +707,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-162b9bc1",
@@ -745,7 +752,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-7c1e8d52",
@@ -888,18 +896,19 @@
    "Alcalose respiratória primária; sedação leve e piloromiotomia imediata",
    "Alcalose metabólica hipoclorêmica; piloromiotomia imediata, antes de qualquer reposição",
    "Alcalose metabólica com acidúria paradoxal; corrigir com bicarbonato de sódio IV",
-   "Alcalose metabólica hipoclorêmica e hipocalêmica; corrigir volume e eletrólitos antes da piloromiotomia"
+   "Alcalose metabólica hipoclorêmica e hipocalêmica; repor volume e eletrólitos e depois operar"
   ],
   "correta": 4,
-  "explicacao": "Estenose hipertrófica do piloro causa perda de HCl gástrico: alcalose metabólica hipoclorêmica e hipocalêmica. A compensação respiratória esperada é pCO2 ≈ 0,7 × HCO3 + 21 = 0,7 × 38 + 21 ≈ 48 mmHg, compatível com o valor medido (distúrbio simples compensado). A hipovolemia ativa aldosterona, que retém sódio trocando por K e H+, gerando a acidúria paradoxal. A piloromiotomia não é emergência: antes, corrige-se a desidratação e os distúrbios com soro fisiológico e potássio (após diurese), pois a alcalose não corrigida aumenta o risco de apneia pós-anestésica. Bicarbonato agravaria a alcalose.",
+  "explicacao": "Estenose hipertrófica do piloro causa perda de HCl gástrico: alcalose metabólica hipoclorêmica e hipocalêmica. A compensação respiratória esperada é pCO2 ≈ 0,7 × HCO3 + 21 = 0,7 × 38 + 21 ≈ 48 mmHg, compatível com o valor medido (distúrbio simples compensado). A hipovolemia ativa aldosterona, que retém sódio trocando por K e H+, gerando a acidúria paradoxal. A piloromiotomia não é emergência: antes, corrige-se a desidratação e os distúrbios com soro fisiológico e potássio (após diurese), pois a alcalose não corrigida aumenta o risco de apneia pós-anestésica. Bicarbonato agravaria a alcalose. Para lembrar: fome logo após vomitar e \"oliva\" palpável no epigástrio são as marcas clínicas da estenose do piloro.",
   "tema": "estenose-hipertrofica-do-piloro",
   "subtema": "estenose-hipertrofica-do-piloro.disturbios-metabolicos",
   "especialidade": "pediatria-geral",
   "disciplina": "Pediatria",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-98247263",
@@ -921,7 +930,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-04a21f49",
@@ -1082,14 +1092,14 @@
   "area": "Ginecologia e Obstetrícia",
   "enunciado": "Mulher de 24 anos tem ciclos a cada 60 a 90 dias desde a menarca, aos 12 anos, e pelos em face, região periareolar e linha alba. PA 118/76 mmHg, IMC 29 kg/m², circunferência abdominal de 92 cm, Ferriman-Gallwey 14, acne e acantose nigricans, sem virilização. β-hCG negativo, TSH 2,1 mUI/L, prolactina 14 ng/mL, 17-OH-progesterona 1,1 ng/mL, testosterona total discretamente elevada, glicemia de jejum 98 mg/dL. Deseja gestar em cerca de 2 anos; o pai tem diabetes tipo 2. Pergunta se precisa de ultrassonografia para “confirmar” o diagnóstico.\n\nPelos critérios de Rotterdam, é correto afirmar que:",
   "alternativas": [
-   "O diagnóstico exige ultrassonografia com 12 ou mais folículos em cada ovário",
+   "O diagnóstico exige ultrassonografia com 20 ou mais folículos em cada ovário",
    "O diagnóstico exige resistência insulínica documentada pelo HOMA-IR",
-   "O diagnóstico de SOP já está feito: disfunção ovulatória e hiperandrogenismo, com outras causas excluídas",
+   "Já há diagnóstico de SOP: disfunção ovulatória e hiperandrogenismo, com exclusões feitas",
    "O diagnóstico está excluído, pois testosterona só discretamente elevada afasta hiperandrogenismo",
    "O diagnóstico depende de relação LH/FSH maior que 2, critério obrigatório de Rotterdam"
   ],
   "correta": 2,
-  "explicacao": "Os critérios de Rotterdam exigem 2 de 3 — oligo/anovulação, hiperandrogenismo clínico e/ou laboratorial e morfologia ovariana policística — após excluir outras causas (gestação, disfunção tireoidiana, hiperprolactinemia, hiperplasia adrenal congênita não clássica, tumores). A paciente tem oligomenorreia e hiperandrogenismo clínico e laboratorial, com exclusões adequadas; a ultrassonografia não é necessária para o diagnóstico (embora possa ser útil). Resistência insulínica e relação LH/FSH não são critérios, e o hirsutismo por si só já configura hiperandrogenismo clínico.",
+  "explicacao": "Os critérios de Rotterdam exigem 2 de 3 — oligo/anovulação, hiperandrogenismo clínico e/ou laboratorial e morfologia ovariana policística — após excluir outras causas (gestação, disfunção tireoidiana, hiperprolactinemia, hiperplasia adrenal congênita não clássica, tumores). A paciente tem oligomenorreia e hiperandrogenismo clínico e laboratorial, com exclusões adequadas; a ultrassonografia não é necessária para o diagnóstico (embora possa ser útil). Resistência insulínica e relação LH/FSH não são critérios, e o hirsutismo por si só já configura hiperandrogenismo clínico. Para lembrar: pela diretriz internacional de 2023, em adultas o hormônio antimülleriano pode substituir a ultrassonografia no critério morfológico, mas nenhum dos dois é necessário quando os outros dois critérios já estão presentes.",
   "tema": "sindrome-dos-ovarios-policisticos",
   "subtema": "sindrome-dos-ovarios-policisticos.criterios-diagnosticos",
   "especialidade": "ginecologia",
@@ -1097,7 +1107,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-31ff7aa0",
@@ -1238,12 +1249,12 @@
   "alternativas": [
    "Caso-controle; razão de chances",
    "Estudo transversal; razão de prevalências",
-   "Coorte prospectiva; risco relativo pelas incidências",
+   "Coorte prospectiva; risco relativo",
    "Estudo ecológico; coeficiente de correlação",
    "Ensaio clínico; número necessário para tratar"
   ],
   "correta": 2,
-  "explicacao": "Partir de indivíduos sem a doença, classificados pela exposição e seguidos no tempo para registrar casos novos define o estudo de coorte (prospectivo, pois o seguimento ocorre a partir do início do estudo). Por medir incidência nos expostos e nos não expostos, permite calcular diretamente o risco relativo. No caso-controle a seleção é pelo desfecho; no transversal, exposição e desfecho são medidos no mesmo momento; no ecológico, a unidade é o grupo; e no ensaio clínico a exposição é atribuída pelo pesquisador, o que não ocorre com o amianto.",
+  "explicacao": "Partir de indivíduos sem a doença, classificados pela exposição e seguidos no tempo para registrar casos novos define o estudo de coorte (prospectivo, pois o seguimento ocorre a partir do início do estudo). Por medir incidência nos expostos e nos não expostos, permite calcular diretamente o risco relativo. No caso-controle a seleção é pelo desfecho; no transversal, exposição e desfecho são medidos no mesmo momento; no ecológico, a unidade é o grupo; e no ensaio clínico a exposição é atribuída pelo pesquisador, o que não ocorre com o amianto. Para lembrar: a coorte vai da exposição ao desfecho; o caso-controle, do desfecho à exposição.",
   "tema": "estudos-epidemiologicos",
   "subtema": "estudos-epidemiologicos.estudos-de-coorte",
   "especialidade": "epidemiologia",
@@ -1251,7 +1262,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-75c991a9",
@@ -1265,7 +1277,7 @@
    "I e II, apenas"
   ],
   "correta": 0,
-  "explicacao": "A Lei 8.142/1990, art. 1º, estabelece que a Conferência de Saúde se reúne a cada quatro anos para avaliar a situação de saúde e propor diretrizes (I), convocada pelo Poder Executivo ou, extraordinariamente, por ela própria ou pelo Conselho de Saúde — não pelo Legislativo (IV errada). O Conselho de Saúde tem caráter permanente e deliberativo e atua na formulação de estratégias e no controle da execução da política, inclusive nos aspectos econômicos e financeiros (II). A representação dos usuários é paritária em relação ao conjunto dos demais segmentos, ou seja, 50% (III).",
+  "explicacao": "A Lei 8.142/1990, art. 1º, estabelece que a Conferência de Saúde se reúne a cada quatro anos para avaliar a situação de saúde e propor diretrizes (I), convocada pelo Poder Executivo ou, extraordinariamente, por ela própria ou pelo Conselho de Saúde — não pelo Legislativo (IV errada). O Conselho de Saúde tem caráter permanente e deliberativo e atua na formulação de estratégias e no controle da execução da política, inclusive nos aspectos econômicos e financeiros (II). A representação dos usuários é paritária em relação ao conjunto dos demais segmentos, ou seja, 50% (III). Para lembrar: a Lei 8.142/1990 trata da participação da comunidade e das transferências de recursos; a Lei 8.080/1990 é a Lei Orgânica da Saúde.",
   "tema": "sus-principios-e-legislacao",
   "subtema": "sus-principios-e-legislacao.lei-8-142-1990-e-controle-social",
   "especialidade": "saude-publica-sus",
@@ -1273,7 +1285,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-2d9d331f",
@@ -1463,7 +1476,7 @@
    "Naloxona endovenosa"
   ],
   "correta": 0,
-  "explicacao": "A tríade de confusão, ataxia e oftalmoplegia em etilista desnutrido caracteriza a encefalopatia de Wernicke, causada por deficiência de tiamina (vitamina B1). O tratamento é emergencial: tiamina parenteral em doses altas (por exemplo, 200 a 500 mg EV três vezes ao dia), antes de oferecer glicose, pois a glicose aumenta o consumo de tiamina e pode precipitar ou agravar o quadro. Se não tratada, evolui para síndrome de Korsakoff. Glicose isolada é inadequada (e o paciente não está hipoglicêmico); haloperidol não trata a causa; a TC não deve atrasar a tiamina; naloxona é para intoxicação por opioides.",
+  "explicacao": "A tríade de confusão, ataxia e oftalmoplegia em etilista desnutrido caracteriza a encefalopatia de Wernicke, causada por deficiência de tiamina (vitamina B1). O tratamento é emergencial: tiamina parenteral em doses altas (por exemplo, 200 a 500 mg EV três vezes ao dia), antes de oferecer glicose, pois a glicose aumenta o consumo de tiamina e pode precipitar ou agravar o quadro. Se não tratada, evolui para síndrome de Korsakoff. Glicose isolada é inadequada (e o paciente não está hipoglicêmico); haloperidol não trata a causa; a TC não deve atrasar a tiamina; naloxona é para intoxicação por opioides. Para lembrar: a tríade completa aparece em uma minoria dos pacientes, por isso basta a suspeita para dar tiamina.",
   "tema": "dependencia-quimica",
   "subtema": "dependencia-quimica.alcool",
   "especialidade": "psiquiatria",
@@ -1471,7 +1484,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-ca20e083",
@@ -1481,11 +1495,11 @@
    "Delirium tremens; naltrexona endovenosa",
    "Encefalopatia de Wernicke; glicose hipertônica",
    "Esquizofrenia de início tardio; antipsicótico atípico isolado",
-   "Delirium tremens; benzodiazepínico em doses tituladas pelos sintomas",
+   "Delirium tremens; benzodiazepínico em doses tituladas",
    "Síndrome serotoninérgica; ciproeptadina"
   ],
   "correta": 3,
-  "explicacao": "Delirium com alucinações visuais, tremor, hiperatividade autonômica e febre, surgindo 48 a 96 horas após a interrupção do álcool em etilista pesado, é o delirium tremens, forma mais grave da síndrome de abstinência alcoólica, com mortalidade relevante se não tratada. A base do tratamento são benzodiazepínicos (diazepam, lorazepam em hepatopatas graves) em doses tituladas pelos sintomas, além de tiamina antes da glicose, hidratação, correção eletrolítica e ambiente monitorado. Antipsicóticos podem ser adjuvantes, mas não isolados, pois baixam o limiar convulsivo; naltrexona é para manutenção da abstinência; o quadro não é Wernicke nem síndrome serotoninérgica.",
+  "explicacao": "Delirium com alucinações visuais, tremor, hiperatividade autonômica e febre, surgindo 48 a 96 horas após a interrupção do álcool em etilista pesado, é o delirium tremens, forma mais grave da síndrome de abstinência alcoólica, com mortalidade relevante se não tratada. A base do tratamento são benzodiazepínicos (diazepam, lorazepam em hepatopatas graves) em doses tituladas pelos sintomas, além de tiamina antes da glicose, hidratação, correção eletrolítica e ambiente monitorado. Antipsicóticos podem ser adjuvantes, mas não isolados, pois baixam o limiar convulsivo; naltrexona é para manutenção da abstinência; o quadro não é Wernicke nem síndrome serotoninérgica. Para lembrar: a alucinose alcoólica (12 a 24 horas) tem sensório claro; o delirium tremens (48 a 96 horas) tem confusão e hiperatividade autonômica.",
   "tema": "dependencia-quimica",
   "subtema": "dependencia-quimica.sindromes-de-abstinencia",
   "especialidade": "psiquiatria",
@@ -1493,7 +1507,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-219c7c92",
@@ -1545,7 +1560,7 @@
   "enunciado": "Mulher de 40 anos, sem comorbidades, recebe diagnóstico de artrite reumatoide com sinovite em 12 articulações, anti-CCP fortemente positivo e erosões iniciais nas radiografias das mãos. Função renal e hepática normais, sorologias para hepatites B e C negativas, radiografia de tórax normal. Não planeja gestação e aceita contracepção.\n\nSegundo as recomendações da Sociedade Brasileira de Reumatologia, a conduta inicial mais adequada é:",
   "alternativas": [
    "Anti-TNF em monoterapia, pela presença de fatores de mau prognóstico",
-   "Metotrexato com ácido fólico, associado a corticoide em baixa dose por curto período",
+   "Metotrexato com ácido fólico e corticoide em baixa dose por curto prazo",
    "Hidroxicloroquina isolada e reavaliação em 12 meses",
    "Prednisona em dose alta como monoterapia prolongada",
    "Anti-inflamatório não esteroide contínuo até surgirem novas erosões"
@@ -1559,7 +1574,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-6564280f",
@@ -1568,7 +1584,7 @@
   "alternativas": [
    "Anti-Sm",
    "Fator antinuclear",
-   "Anti-DNA de dupla hélice",
+   "Anti-dsDNA",
    "Anti-histona",
    "Anti-Ro/SSA"
   ],
@@ -1581,7 +1597,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-2db73de3",
@@ -1613,7 +1630,7 @@
    "C3 e C4 elevados, com anti-dsDNA negativo",
    "C3 reduzido isolado, com ASLO elevada",
    "C3 e C4 normais, com anti-histona positivo",
-   "C3 e C4 reduzidos, com anti-dsDNA em título elevado",
+   "C3 e C4 reduzidos, com anti-dsDNA elevado",
    "C3 e C4 normais, com ANCA-MPO positivo"
   ],
   "correta": 3,
@@ -1625,7 +1642,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-dd635f90",
@@ -1881,7 +1899,7 @@
    "IIIC"
   ],
   "correta": 4,
-  "explicacao": "Na classificação de Gustilo-Anderson, o tipo III engloba lesões de alta energia, feridas geralmente maiores que 10 cm, cominuição e contaminação importantes. O subtipo IIIC é definido pela lesão arterial que exige reparo para salvar o membro, independentemente do tamanho da ferida. O IIIA tem cobertura de partes moles adequada; o IIIB tem perda de partes moles com exposição óssea que exige retalho, mas sem lesão vascular que exija reparo. Os tipos I (ferida menor que 1 cm) e II (1 a 10 cm, sem lesão extensa) não se aplicam. A conduta inclui antibiótico precoce, profilaxia antitetânica, desbridamento, estabilização e revascularização.",
+  "explicacao": "Na classificação de Gustilo-Anderson, o tipo III engloba lesões de alta energia, feridas geralmente maiores que 10 cm, cominuição e contaminação importantes. O subtipo IIIC é definido pela lesão arterial que exige reparo para salvar o membro, independentemente do tamanho da ferida. O IIIA tem cobertura de partes moles adequada; o IIIB tem perda de partes moles com exposição óssea que exige retalho, mas sem lesão vascular que exija reparo. Os tipos I (ferida menor que 1 cm) e II (1 a 10 cm, sem lesão extensa) não se aplicam. A conduta inclui antibiótico precoce, profilaxia antitetânica, desbridamento, estabilização e revascularização. Para lembrar: IIIC = \"circulação\", lesão arterial que exige reparo.",
   "tema": "fraturas-e-luxacoes",
   "subtema": "fraturas-e-luxacoes.fraturas-expostas",
   "especialidade": "ortopedia",
@@ -1889,7 +1907,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-d1192c56",
@@ -2109,7 +2128,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-79e60130",
@@ -2123,15 +2143,16 @@
    "III, apenas"
   ],
   "correta": 2,
-  "explicacao": "O anti-HBc indica contato prévio com o vírus (não é gerado pela vacina); com HBsAg negativo e anti-HBs positivo, significa infecção resolvida com imunidade (I correta). HBsAg positivo com anti-HBc IgM positivo caracteriza infecção aguda (II correta). Anti-HBs isolado ≥ 10 mUI/mL, com anti-HBc negativo, é o perfil de imunidade vacinal (III correta). O anti-HBc total isolado (IV) tem várias interpretações possíveis: janela imunológica, infecção passada com queda do anti-HBs, falso positivo ou infecção oculta; exige investigação (anti-HBc IgM, HBV-DNA, repetição), não define hepatite crônica ativa nem indica tratamento por si só. Por isso a afirmativa IV está errada.",
+  "explicacao": "O anti-HBc indica contato prévio com o vírus (não é gerado pela vacina); com HBsAg negativo e anti-HBs positivo, significa infecção resolvida com imunidade (I correta). HBsAg positivo com anti-HBc IgM positivo caracteriza infecção aguda (II correta). Anti-HBs isolado ≥ 10 mUI/mL, com anti-HBc negativo, é o perfil de imunidade vacinal (III correta). O anti-HBc total isolado (IV) tem várias interpretações possíveis: janela imunológica, infecção passada com queda do anti-HBs, falso positivo ou infecção oculta; exige investigação (anti-HBc IgM, HBV-DNA, repetição), não define hepatite crônica ativa nem indica tratamento por si só. Por isso a afirmativa IV está errada. Para lembrar: o anti-HBc só surge após contato com o vírus; a vacina gera apenas anti-HBs.",
   "tema": "hepatites-virais",
   "subtema": "hepatites-virais.marcadores-sorologicos",
   "especialidade": "gastroenterologia",
   "disciplina": "Gastroenterologia",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-809ad5e9",
@@ -2197,7 +2218,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-8ea43ec2",
@@ -2248,11 +2270,11 @@
   "area": "Clínica Médica",
   "enunciado": "Homem de 62 anos com insuficiência cardíaca de fração de ejeção reduzida (FEVE 30%) de etiologia isquêmica, classe funcional II da NYHA, euvolêmico, em uso de furosemida 40 mg/dia e enalapril 10 mg 12/12 h. FC 88 bpm (ritmo sinusal), PA 118/74 mmHg, sem broncoespasmo. K+ 4,4 mEq/L, creatinina 1,1 mg/dL.\n\nEntre as opções a seguir, o acréscimo terapêutico que reduz a mortalidade é:",
   "alternativas": [
-   "Digoxina em dose baixa",
-   "Ivabradina 5 mg 12/12 h",
-   "Anlodipino 5 mg ao dia",
-   "Carvedilol, titulado até a dose-alvo",
-   "Diltiazem de liberação lenta"
+   "Digoxina 0,125 mg uma vez ao dia",
+   "Ivabradina 5 mg de 12 em 12 horas",
+   "Anlodipino 5 mg uma vez ao dia",
+   "Carvedilol titulado até a dose-alvo",
+   "Diltiazem de liberação prolongada"
   ],
   "correta": 3,
   "explicacao": "Os betabloqueadores com benefício comprovado na ICFEr (carvedilol, bisoprolol, succinato de metoprolol) reduzem mortalidade e hospitalizações e integram a terapia quádrupla recomendada pela SBC, junto com IECA/BRA/sacubitril-valsartana, antagonista mineralocorticoide e inibidor de SGLT2. Devem ser iniciados em dose baixa em paciente euvolêmico e titulados até a dose-alvo. A digoxina reduz hospitalizações, mas não mortalidade; a ivabradina é reservada a pacientes em ritmo sinusal com FC ≥ 70 bpm apesar de betabloqueador em dose máxima tolerada, e reduz hospitalização, não mortalidade total; o anlodipino é neutro; o diltiazem é contraindicado na ICFEr por efeito inotrópico negativo.",
@@ -2263,7 +2285,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-ac1021ec",
@@ -2271,13 +2294,13 @@
   "enunciado": "Mulher de 70 anos com insuficiência cardíaca crônica chega com dispneia em repouso, ortopneia, estertores pulmonares bilaterais, turgência jugular e edema de membros inferiores 3+/4+, após abandonar o diurético. Extremidades quentes, enchimento capilar de 2 segundos, PA 150/90 mmHg, FC 104 bpm, SpO2 89% em ar ambiente. Consciente, diurese preservada, creatinina 1,2 mg/dL, lactato normal.\n\nO perfil clínico-hemodinâmico e a conduta inicial são:",
   "alternativas": [
    "Frio e úmido; dobutamina e diurético de alça",
-   "Quente e úmido; diurético de alça endovenoso e vasodilatador",
+   "Quente e úmido; diurético de alça IV e vasodilatador",
    "Quente e seco; ajuste ambulatorial da medicação oral",
    "Frio e seco; reposição volêmica cautelosa",
    "Quente e úmido; reposição volêmica e noradrenalina"
   ],
   "correta": 1,
-  "explicacao": "A classificação de Stevenson avalia congestão (úmido x seco) e perfusão (quente x frio). Estertores, turgência jugular, ortopneia e edema indicam congestão; extremidades quentes, enchimento capilar normal, PA elevada, consciência e diurese preservadas indicam boa perfusão. O perfil quente e úmido é o mais comum na IC descompensada e é tratado com diurético de alça EV, vasodilatador (nitrato) se a PA permitir, oxigênio e ventilação não invasiva se necessário. Inotrópicos (dobutamina) são para o perfil frio e úmido com hipoperfusão; o perfil frio e seco pode exigir volume; noradrenalina e volume agravariam a congestão.",
+  "explicacao": "A classificação de Stevenson avalia congestão (úmido x seco) e perfusão (quente x frio). Estertores, turgência jugular, ortopneia e edema indicam congestão; extremidades quentes, enchimento capilar normal, PA elevada, consciência e diurese preservadas indicam boa perfusão. O perfil quente e úmido é o mais comum na IC descompensada e é tratado com diurético de alça EV, vasodilatador (nitrato) se a PA permitir, oxigênio e ventilação não invasiva se necessário. Inotrópicos (dobutamina) são para o perfil frio e úmido com hipoperfusão; o perfil frio e seco pode exigir volume; noradrenalina e volume agravariam a congestão. Para lembrar: \"quente ou frio\" descreve a perfusão; \"seco ou úmido\", a congestão.",
   "tema": "insuficiencia-cardiaca",
   "subtema": "insuficiencia-cardiaca.insuficiencia-cardiaca-descompensada",
   "especialidade": "cardiologia",
@@ -2285,7 +2308,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-c5d4d5db",
@@ -2362,10 +2386,10 @@
    "Aminofilina endovenosa em dose de ataque",
    "Adrenalina subcutânea",
    "Intubação orotraqueal e ventilação mecânica",
-   "β2-agonista de curta ação inalatório em doses repetidas"
+   "Salbutamol inalatório em doses repetidas"
   ],
   "correta": 4,
-  "explicacao": "A paciente tem exacerbação leve a moderada (fala frases, sem uso de musculatura acessória, PFE > 50%). O tratamento inicial é β2-agonista de curta ação inalatório (aerossol dosimetrado com espaçador ou nebulização) em doses repetidas na primeira hora, associado a corticoide sistêmico precoce e oxigênio para manter SpO2 entre 93% e 95% em adultos, conforme GINA e SBPT. O brometo de ipratrópio é adicionado nas crises graves. Magnésio EV é reservado a crises graves sem resposta inicial; aminofilina não é recomendada pelo perfil de toxicidade; intubação é para falência respiratória; adrenalina subcutânea não é rotina fora da anafilaxia.",
+  "explicacao": "A paciente tem exacerbação leve a moderada (fala frases, sem uso de musculatura acessória, PFE > 50%). O tratamento inicial é β2-agonista de curta ação inalatório (salbutamol) (aerossol dosimetrado com espaçador ou nebulização) em doses repetidas na primeira hora, associado a corticoide sistêmico precoce e oxigênio para manter SpO2 entre 93% e 95% em adultos, conforme GINA e SBPT. O brometo de ipratrópio é adicionado nas crises graves. Magnésio EV é reservado a crises graves sem resposta inicial; aminofilina não é recomendada pelo perfil de toxicidade; intubação é para falência respiratória; adrenalina subcutânea não é rotina fora da anafilaxia.",
   "tema": "asma",
   "subtema": "asma.crise-asmatica",
   "especialidade": "pneumologia",
@@ -2373,7 +2397,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-16d898d2",
@@ -2468,11 +2493,11 @@
   "area": "Clínica Médica",
   "enunciado": "Homem de 34 anos, com HIV diagnosticado há 2 anos e sem tratamento, tem tosse seca, febre baixa e dispneia progressiva há 3 semanas. Exame: Tax 37,9 °C, FC 104 bpm, FR 28 irpm, SpO2 90% em repouso, caindo para 83% ao caminhar; ausculta pulmonar pouco alterada; candidíase oral.\n\nExames: CD4 80 células/mm³; LDH 620 U/L; gasometria em ar ambiente com PaO2 62 mmHg. Radiografia de tórax com infiltrado intersticial bilateral difuso, peri-hilar, sem derrame ou cavitação. Pesquisa de BAAR no escarro induzido negativa.\n\nO tratamento indicado é:",
   "alternativas": [
-   "Sulfametoxazol-trimetoprima em dose terapêutica associado a corticoide",
-   "Esquema RIPE para tuberculose pulmonar",
-   "Anfotericina B lipossomal",
+   "Sulfametoxazol-trimetoprima em dose terapêutica e corticoide",
+   "Esquema RIPE empírico para tuberculose pulmonar",
+   "Anfotericina B lipossomal seguida de fluconazol",
    "Sulfametoxazol-trimetoprima isolado em dose profilática",
-   "Ganciclovir endovenoso"
+   "Ganciclovir endovenoso por 21 dias"
   ],
   "correta": 0,
   "explicacao": "O quadro subagudo com dispneia, dessaturação ao esforço, LDH elevada, infiltrado intersticial bilateral e CD4 < 200 em pessoa sem TARV é típico de pneumocistose (Pneumocystis jirovecii). O tratamento é sulfametoxazol-trimetoprima em dose terapêutica (15 a 20 mg/kg/dia de trimetoprima) por 21 dias; como a PaO2 é < 70 mmHg (ou gradiente alvéolo-arterial ≥ 35), associa-se prednisona por 21 dias, iniciada nas primeiras 72 horas, pois reduz a mortalidade (PCDT do Ministério da Saúde). A TARV deve ser iniciada em até 2 semanas. Dose profilática é insuficiente; RIPE, anfotericina e ganciclovir tratam tuberculose, fungos e citomegalovírus, não compatíveis com o quadro.",
@@ -2483,18 +2508,19 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-ed499061",
   "area": "Clínica Médica",
   "enunciado": "Homem de 50 anos, natural do interior da Bahia, onde morou até os 20 anos em casa de pau a pique, procura atendimento por palpitações e dispneia aos esforços moderados. Sorologia para Trypanosoma cruzi positiva por dois métodos de princípios diferentes. Exame: PA 118/74 mmHg, FC 58 bpm, ritmo regular com extrassístoles, sem edema.\n\nNa forma cardíaca crônica da doença de Chagas, o achado eletrocardiográfico mais característico é:",
   "alternativas": [
-   "Bloqueio de ramo esquerdo isolado",
-   "Padrão S1Q3T3",
+   "Bloqueio de ramo esquerdo completo associado a sobrecarga atrial esquerda",
+   "Padrão S1Q3T3 com taquicardia sinusal",
    "Onda delta com PR curto",
    "Supradesnivelamento do segmento ST difuso com infradesnível de PR",
-   "Bloqueio de ramo direito associado a bloqueio divisional anterossuperior esquerdo"
+   "Bloqueio de ramo direito com bloqueio divisional anterossuperior esquerdo"
   ],
   "correta": 4,
   "explicacao": "A cardiomiopatia chagásica crônica acomete precocemente o sistema de condução, e a associação de bloqueio de ramo direito com bloqueio divisional anterossuperior esquerdo é a alteração eletrocardiográfica mais característica. Também são comuns extrassístoles ventriculares polimórficas, bradiarritmias, bloqueios atrioventriculares e zonas eletricamente inativas (aneurisma apical). O bloqueio de ramo esquerdo isolado é mais sugestivo de outras cardiopatias; onda delta indica pré-excitação; supra de ST difuso com infra de PR, pericardite; S1Q3T3, sobrecarga aguda de ventrículo direito.",
@@ -2505,7 +2531,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-0336c9df",
@@ -2514,12 +2541,12 @@
   "alternativas": [
    "Hipercalemia com lesão renal oligúrica; doxiciclina oral ambulatorial",
    "Hipercalemia com lesão renal não oligúrica; ceftriaxona endovenosa",
-   "Hipocalemia com lesão renal não oligúrica; penicilina cristalina ou ceftriaxona endovenosa",
+   "Hipocalemia com lesão renal não oligúrica; penicilina cristalina ou ceftriaxona",
    "Hiponatremia com lesão renal pré-renal pura; amoxicilina oral",
    "Hipocalemia com lesão renal oligúrica; antibiótico apenas se a cultura for positiva"
   ],
   "correta": 2,
-  "explicacao": "A leptospirose grave (síndrome de Weil) cursa com a tríade icterícia rubínica (bilirrubina direta elevada, com transaminases pouco aumentadas), hemorragias (inclusive pulmonar) e lesão renal aguda. A lesão renal é tipicamente não oligúrica e hipocalêmica, pois a nefrite intersticial e a disfunção do túbulo proximal causam perda de sódio e potássio, diferentemente da maioria das LRA, que são hipercalêmicas. O tratamento das formas graves, conforme o guia do Ministério da Saúde, é penicilina cristalina, ampicilina, ceftriaxona ou cefotaxima EV, iniciados o mais cedo possível, sem aguardar confirmação, com suporte intensivo e diálise precoce quando indicada. Doxiciclina oral e amoxicilina são para as formas leves.",
+  "explicacao": "A leptospirose grave (síndrome de Weil) cursa com a tríade icterícia rubínica (bilirrubina direta elevada, com transaminases pouco aumentadas), hemorragias (inclusive pulmonar) e lesão renal aguda. A lesão renal é tipicamente não oligúrica e hipocalêmica, pois a nefrite intersticial e a disfunção do túbulo proximal causam perda de sódio e potássio, diferentemente da maioria das LRA, que são hipercalêmicas. O tratamento das formas graves, conforme o guia do Ministério da Saúde, é penicilina cristalina, ampicilina, ceftriaxona ou cefotaxima EV, iniciados o mais cedo possível, sem aguardar confirmação, com suporte intensivo e diálise precoce quando indicada. Doxiciclina oral e amoxicilina são para as formas leves. Para lembrar: a lesão renal da leptospirose é a exceção hipocalêmica e não oligúrica.",
   "tema": "leptospirose",
   "subtema": "leptospirose.forma-grave-sindrome-de-weil",
   "especialidade": "infectologia",
@@ -2527,7 +2554,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-f01797a3",
@@ -2579,9 +2607,9 @@
   "enunciado": "Homem de 80 anos, institucionalizado, com doença de Parkinson e constipação crônica, tem há 2 dias distensão volumosa e parada de eliminação de gases e fezes. FC 96 bpm, PA 132/78 mmHg; abdome timpânico, sem peritonite; lactato 1,4 mmol/L. Radiografia com alça em \"grão de café\" apontando para o quadrante superior direito; TC confirma torção do mesossigmoide, sem pneumatose, pneumoperitônio ou líquido livre.\n\nA conduta inicial mais adequada é:",
   "alternativas": [
    "Laparotomia de urgência com cirurgia de Hartmann",
-   "Neostigmina endovenosa como tratamento definitivo",
+   "Neostigmina endovenosa como tratamento definitivo do volvo",
    "Enema baritado com pressão para distorção do volvo",
-   "Descompressão endoscópica por retossigmoidoscopia, com sonda retal",
+   "Distorção endoscópica por retossigmoidoscopia e sonda retal",
    "Colonoscopia com cecostomia percutânea endoscópica"
   ],
   "correta": 3,
@@ -2593,7 +2621,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-95c4e270",
@@ -2667,7 +2696,7 @@
   "enunciado": "Homem de 50 anos, motorista sem cinto, bate o tórax no volante. FC 110 bpm, PA 132/80 mmHg, FR 32 irpm, SpO2 86% com O2. Há segmento da parede torácica direita com movimento paradoxal. Radiografia: fraturas do 4º ao 7º arcos costais, cada um em dois pontos, e opacidade alveolar no pulmão subjacente, sem pneumotórax ou hemotórax.\n\nSobre a insuficiência respiratória e o manejo, é correto afirmar:",
   "alternativas": [
    "A hipoxemia decorre principalmente do movimento paradoxal, e o tratamento é a fixação externa com sacos de areia",
-   "O principal responsável pela hipoxemia é a contusão pulmonar subjacente, e a analgesia adequada é parte central do tratamento",
+   "O principal responsável é a contusão pulmonar subjacente, e a analgesia adequada é central no tratamento",
    "O principal responsável é o pneumotórax oculto, e a drenagem torácica profilática está sempre indicada",
    "A hipoxemia decorre da dor, e a analgesia isolada corrige a PaO2 sem outras medidas",
    "O principal responsável é a hipovolemia, e o tratamento é reposição volêmica agressiva com cristaloide"
@@ -2681,7 +2710,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-a14883e0",
@@ -3062,7 +3092,7 @@
   "area": "Pediatria",
   "enunciado": "Lactente de 5 meses, a termo, sem comorbidades, no 3º dia de bronquiolite viral aguda. Tax 37,6 °C, FR 52 irpm, SpO2 95% em ar ambiente, tiragem subcostal leve, sibilos e estertores; ativo, hidratado, aceitando mais de 2/3 das mamadas. A mãe, que tem fácil acesso ao serviço, pergunta se ele precisa de “bombinha” ou corticoide, que ajudaram o irmão asmático.\n\nSegundo a Sociedade Brasileira de Pediatria, a conduta é:",
   "alternativas": [
-   "Tratamento domiciliar com lavagem nasal, hidratação e sinais de alerta, sem broncodilatador ou corticoide",
+   "Cuidado domiciliar de suporte e sinais de alerta, sem broncodilatador ou corticoide",
    "Internação para salbutamol inalatório a cada 4 horas e prednisolona oral por 5 dias",
    "Tratamento domiciliar com salbutamol inalatório e prednisolona oral por 3 dias",
    "Internação para nebulização com salina hipertônica e antibiótico empírico intravenoso",
@@ -3077,7 +3107,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-6ac7009b",
@@ -3372,12 +3403,12 @@
   "alternativas": [
    "Notificar semanalmente, após IgM reagente",
    "Notificar apenas se houver óbito ou internação",
-   "Notificar em até 24 horas como caso suspeito, sem aguardar exames",
+   "Notificar em até 24 horas, já na suspeita",
    "Aguardar o RT-PCR para decidir se é notificável",
    "Dispensar notificação, por não ser doença compulsória"
   ],
   "correta": 2,
-  "explicacao": "Febre e exantema maculopapular com tosse, coriza ou conjuntivite, em não vacinado com vínculo epidemiológico, é caso suspeito de sarampo (manchas de Koplik reforçam). O sarampo integra a Lista Nacional de Notificação Compulsória como agravo de notificação imediata (em até 24 horas) às três esferas, já na suspeita, sem esperar confirmação laboratorial. A notificação desencadeia investigação, coleta de sorologia e swab para RT-PCR, isolamento e bloqueio vacinal dos contatos suscetíveis em até 72 horas.",
+  "explicacao": "Febre e exantema maculopapular com tosse, coriza ou conjuntivite, em não vacinado com vínculo epidemiológico, é caso suspeito de sarampo (manchas de Koplik reforçam). O sarampo integra a Lista Nacional de Notificação Compulsória como agravo de notificação imediata (em até 24 horas) às três esferas, já na suspeita, sem esperar confirmação laboratorial. A notificação desencadeia investigação, coleta de sorologia e swab para RT-PCR, isolamento e bloqueio vacinal dos contatos suscetíveis em até 72 horas. Para lembrar: as manchas de Koplik foram descritas por Henry Koplik em 1896 e antecedem o exantema.",
   "tema": "vigilancia-em-saude",
   "subtema": "vigilancia-em-saude.notificacao-compulsoria",
   "especialidade": "saude-publica-sus",
@@ -3385,7 +3416,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-894e115e",
@@ -3685,7 +3717,7 @@
    "Dengue grave com acometimento hepático"
   ],
   "correta": 0,
-  "explicacao": "O curso bifásico (período de infecção, remissão curta e período de intoxicação), a bradicardia relativa à febre (sinal de Faget), a leucopenia e, sobretudo, aminotransferases muito elevadas (milhares, com AST > ALT), com icterícia, hemorragia, lesão renal e proteinúria intensa em não vacinado de área de mata, indicam febre amarela silvestre grave. Na síndrome de Weil as aminotransferases raramente passam de 5 vezes o normal, e há leucocitose com neutrofilia, CPK elevada, hipocalemia com diurese preservada no início, sufusão conjuntival e mialgia de panturrilhas. A malária foi afastada por duas gotas espessas negativas. A hepatite B fulminante não costuma ter febre alta bifásica, bradicardia relativa e lesão renal precoce, e a dengue grave raramente eleva as aminotransferases a esse nível.",
+  "explicacao": "O curso bifásico (período de infecção, remissão curta e período de intoxicação), a bradicardia relativa à febre (sinal de Faget), a leucopenia e, sobretudo, aminotransferases muito elevadas (milhares, com AST > ALT), com icterícia, hemorragia, lesão renal e proteinúria intensa em não vacinado de área de mata, indicam febre amarela silvestre grave. Na síndrome de Weil as aminotransferases raramente passam de 5 vezes o normal, e há leucocitose com neutrofilia, CPK elevada, hipocalemia com diurese preservada no início, sufusão conjuntival e mialgia de panturrilhas. A malária foi afastada por duas gotas espessas negativas. A hepatite B fulminante não costuma ter febre alta bifásica, bradicardia relativa e lesão renal precoce, e a dengue grave raramente eleva as aminotransferases a esse nível. Para lembrar: sinal de Faget é a bradicardia relativa à febre.",
   "tema": "febre-amarela",
   "subtema": "febre-amarela.quadro-clinico",
   "especialidade": "infectologia",
@@ -3693,7 +3725,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-b47a6ca4",
@@ -3745,10 +3778,10 @@
   "enunciado": "Mulher de 38 anos refere, há 10 dias, dor intensa na região anterior do pescoço irradiada para a mandíbula, palpitações e febre baixa, 3 semanas após quadro gripal. Exame: tireoide levemente aumentada, muito dolorosa à palpação; FC 108 bpm; sem oftalmopatia. Exames: TSH < 0,01 mUI/L, T4 livre 3,1 ng/dL (VR 0,7–1,8), VHS 82 mm/h, anticorpo anti-receptor de TSH negativo. A captação de iodo radioativo em 24 horas é de 2%.\n\nO diagnóstico e o tratamento indicados são:",
   "alternativas": [
    "Doença de Graves; metimazol e betabloqueador",
-   "Tireoidite subaguda granulomatosa; metimazol em dose alta",
+   "Tireoidite subaguda granulomatosa; metimazol e betabloqueador",
    "Bócio nodular tóxico; iodo radioativo",
    "Tireoidite subaguda granulomatosa; anti-inflamatório e betabloqueador",
-   "Tireoidite supurativa aguda; drenagem e antibiótico venoso"
+   "Tireoidite supurativa aguda; drenagem cirúrgica e antibiótico venoso"
   ],
   "correta": 3,
   "explicacao": "Dor tireoidiana após infecção viral, febre, VHS muito elevado, tireotoxicose com captação de iodo quase nula e TRAb negativo caracterizam a tireoidite subaguda granulomatosa (de De Quervain). A tireotoxicose decorre da liberação de hormônio pré-formado pela destruição folicular, e não de síntese aumentada; por isso as tionamidas (metimazol, propiltiouracil) não têm papel. O tratamento é sintomático: anti-inflamatório (ou prednisona nos casos intensos) e betabloqueador para o controle adrenérgico. Na doença de Graves e no bócio nodular tóxico a captação está aumentada. A tireoidite supurativa é rara, em geral unilateral, com flutuação e leucocitose, e a função tireoidiana costuma ser normal.",
@@ -3759,7 +3792,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-fbe25e90",
@@ -3817,15 +3851,16 @@
    "N-acetilcisteína IV no esquema de 21 horas"
   ],
   "correta": 1,
-  "explicacao": "O quadro é uma síndrome colinérgica muscarínica (sudorese, salivação, lacrimejamento, vômitos, diarreia, miose, bradicardia, broncorreia) e nicotínica (fasciculações) por inibição da acetilcolinesterase, típica de organofosforados ou carbamatos. A atropina é o antídoto dos efeitos muscarínicos e deve ser dada em doses crescentes e repetidas, titulada pela secagem das secreções brônquicas e pela melhora da ventilação, e não pela midríase ou pela frequência cardíaca isoladamente. A pralidoxima pode ser associada nos organofosforados para reativar a enzima. Flumazenil reverte benzodiazepínicos, naloxona reverte opioides (que também dão miose, mas sem secreções), e N-acetilcisteína é o antídoto do paracetamol.",
+  "explicacao": "O quadro é uma síndrome colinérgica muscarínica (sudorese, salivação, lacrimejamento, vômitos, diarreia, miose, bradicardia, broncorreia) e nicotínica (fasciculações) por inibição da acetilcolinesterase, típica de organofosforados ou carbamatos. A atropina é o antídoto dos efeitos muscarínicos e deve ser dada em doses crescentes e repetidas, titulada pela secagem das secreções brônquicas e pela melhora da ventilação, e não pela midríase ou pela frequência cardíaca isoladamente. A pralidoxima pode ser associada nos organofosforados para reativar a enzima. Flumazenil reverte benzodiazepínicos, naloxona reverte opioides (que também dão miose, mas sem secreções), e N-acetilcisteína é o antídoto do paracetamol. Para lembrar: a atropina é titulada pelo \"pulmão seco\", não pela pupila.",
   "tema": "intoxicacoes-exogenas",
   "subtema": "intoxicacoes-exogenas.organofosforados-e-carbamatos",
   "especialidade": "medicina-de-urgencia",
   "disciplina": "Urgência e Emergência",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-6125be35",
@@ -3857,11 +3892,11 @@
    "Lidocaína IV 1,5 mg/kg para tratar a taquicardia ventricular",
    "Propofol em doses altas para impedir novas convulsões",
    "Epinefrina IV em bolus de 1 mg a cada 3 minutos",
-   "Emulsão lipídica a 20% em bolus de 1,5 mL/kg, seguida de infusão contínua",
+   "Emulsão lipídica a 20% em bolus, seguido de infusão contínua",
    "Bicarbonato de sódio IV para alcalinizar o plasma"
   ],
   "correta": 3,
-  "explicacao": "A sequência de sintomas neurológicos (gosto metálico, zumbido, parestesia perioral, convulsão) seguida de instabilidade cardiovascular caracteriza intoxicação sistêmica por anestésico local, grave com a bupivacaína (150 mg, acima de 2,5 mg/kg). Além do suporte de via aérea e do controle das convulsões com benzodiazepínico, a medida específica é a emulsão lipídica a 20%: bolus de 1,5 mL/kg em cerca de 1 minuto e infusão de 0,25 mL/kg/min, conforme as recomendações da ASRA e da SBA. A lidocaína é contraindicada por ser outro anestésico local. Propofol em dose alta agrava a depressão miocárdica. Em caso de parada, a epinefrina deve ser usada em doses reduzidas (≤ 1 mcg/kg), e o bicarbonato não trata a causa.",
+  "explicacao": "A sequência de sintomas neurológicos (gosto metálico, zumbido, parestesia perioral, convulsão) seguida de instabilidade cardiovascular caracteriza intoxicação sistêmica por anestésico local, grave com a bupivacaína (150 mg, ou 2,5 mg/kg, no limite da dose máxima recomendada). Além do suporte de via aérea e do controle das convulsões com benzodiazepínico, a medida específica é a emulsão lipídica a 20%: bolus de 1,5 mL/kg em 2 a 3 minutos e infusão de 0,25 mL/kg/min, conforme as recomendações da ASRA e da SBA. A lidocaína é contraindicada por ser outro anestésico local. Propofol em dose alta agrava a depressão miocárdica. Em caso de parada, a epinefrina deve ser usada em doses reduzidas (≤ 1 mcg/kg), e o bicarbonato não trata a causa. Para lembrar: a bupivacaína é o anestésico local mais cardiotóxico.",
   "tema": "anestesia-principios",
   "subtema": "anestesia-principios.anestesicos-locais",
   "especialidade": "anestesiologia",
@@ -3869,7 +3904,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-1221f1a4",
@@ -3944,7 +3980,7 @@
   "alternativas": [
    "Amputação abdominoperineal imediata com colostomia definitiva, seguida de quimioterapia adjuvante",
    "Retossigmoidectomia imediata com excisão total do mesorreto, sem tratamento prévio",
-   "Terapia neoadjuvante (quimiorradioterapia com ou sem quimioterapia) e reavaliação para excisão total do mesorreto",
+   "Terapia neoadjuvante e reavaliação para excisão total do mesorreto",
    "Excisão local transanal da lesão com margem de 1 cm e seguimento com ressonância",
    "Quimioterapia paliativa exclusiva, pela presença de linfonodos mesorretais acometidos"
   ],
@@ -3957,7 +3993,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-be3529cb",
@@ -3967,7 +4004,7 @@
    "CPRE com papilotomia imediata, antes de qualquer outro exame",
    "Colecistectomia videolaparoscópica isolada, sem investigar a via biliar",
    "Tomografia de abdome e CPRE somente se a tomografia for normal",
-   "Colangiorressonância ou ecoendoscopia antes de definir a abordagem da via biliar",
+   "Colangiorressonância ou ecoendoscopia antes de abordar a via biliar",
    "Antibioticoterapia e alta, com ultrassonografia em 6 meses"
   ],
   "correta": 3,
@@ -3979,7 +4016,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-cfdbc9ed",
@@ -3990,7 +4028,7 @@
    "Úlcera péptica perfurada; tratamento endoscópico com clipes",
    "Isquemia mesentérica; angiotomografia e anticoagulação",
    "Colecistite aguda; antibiótico e colecistectomia eletiva",
-   "Úlcera péptica perfurada; cirurgia de urgência com rafia e epiploplastia"
+   "Úlcera péptica perfurada; rafia com epiploplastia de urgência"
   ],
   "correta": 4,
   "explicacao": "Dor epigástrica súbita e intensa em usuário de anti-inflamatório, com abdome em tábua, perda da macicez hepática (sinal de Jobert) e pneumoperitônio na radiografia, indica úlcera péptica perfurada. A conduta, após reposição volêmica, antibiótico e inibidor de bomba de prótons, é cirurgia de urgência (aberta ou laparoscópica) com rafia da úlcera e tamponamento com epíplon (Graham), além de lavagem da cavidade. Pancreatite, isquemia mesentérica e colecistite não causam pneumoperitônio. O fechamento endoscópico não é padrão em peritonite difusa.",
@@ -4001,7 +4039,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-43a9d7b3",
@@ -4031,7 +4070,7 @@
   "enunciado": "Homem de 68 anos, com hérnia inguinal direita redutível há 5 anos, refere que há 10 horas a hérnia não retorna e está muito dolorosa, com vômitos e parada de eliminação de gases. Exame: Tax 38,1 °C, FC 112 bpm; tumoração inguinoescrotal tensa, endurecida, com pele hiperemiada e dor intensa à palpação. Leucócitos 17.500/mm³ e lactato de 3,8 mmol/L.\n\nA conduta adequada é:",
   "alternativas": [
    "Redução manual sob sedação e herniorrafia eletiva em 30 dias",
-   "Cirurgia de urgência sem tentativa de redução manual, com avaliação da viabilidade da alça",
+   "Cirurgia de urgência, sem redução manual, avaliando a viabilidade da alça",
    "Sonda nasogástrica, jejum e observação por 24 horas antes de indicar cirurgia",
    "Redução manual e alta com analgesia se o conteúdo retornar à cavidade",
    "Tomografia de abdome e, se houver alça delgada, tratamento conservador"
@@ -4045,7 +4084,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-b46edfd8",
@@ -4067,7 +4107,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-e5cf04a7",
@@ -4100,18 +4141,19 @@
    "Acidente elapídico grave; soro antielapídico e neostigmina",
    "Acidente botrópico moderado; soro antibotrópico e garrote proximal",
    "Acidente crotálico grave; soro anticrotálico e restrição hídrica pela oligúria",
-   "Acidente crotálico grave; soro anticrotálico IV e hidratação vigorosa para manter a diurese"
+   "Acidente crotálico grave; soro anticrotálico e hidratação vigorosa"
   ],
   "correta": 4,
-  "explicacao": "Pouca reação local, fácies miastênica (ptose, visão turva), mialgia intensa, mioglobinúria (urina escura, CPK muito elevada), incoagulabilidade e início de lesão renal, com serpente de chocalho em área aberta, caracterizam acidente crotálico. Pelo manual do Ministério da Saúde, fácies miastênica evidente, mialgia intensa e urina escura, com oligúria ou anúria, definem a forma grave, que exige soro anticrotálico IV em dose de acidente grave, sem ajuste pelo peso (criança recebe a mesma dose do adulto), e hidratação vigorosa para manter o fluxo urinário e prevenir necrose tubular aguda por mioglobina. Restringir líquidos agravaria a lesão renal. O acidente elapídico dá quadro neurotóxico sem mioglobinúria, e o botrópico tem edema, dor e equimose locais; o garrote é contraindicado em qualquer acidente ofídico.",
+  "explicacao": "Pouca reação local, fácies miastênica (ptose, visão turva), mialgia intensa, mioglobinúria (urina escura, CPK muito elevada), incoagulabilidade e início de lesão renal, com serpente de chocalho em área aberta, caracterizam acidente crotálico. Pelo manual do Ministério da Saúde, fácies miastênica evidente, mialgia intensa e urina escura, com oligúria ou anúria, definem a forma grave, que exige soro anticrotálico IV em dose de acidente grave, sem ajuste pelo peso (criança recebe a mesma dose do adulto), e hidratação vigorosa para manter o fluxo urinário e prevenir necrose tubular aguda por mioglobina. Restringir líquidos agravaria a lesão renal. O acidente elapídico dá quadro neurotóxico sem mioglobinúria, e o botrópico tem edema, dor e equimose locais; o garrote é contraindicado em qualquer acidente ofídico. Para lembrar: no acidente ofídico não se usa garrote, e a dose de soro depende da gravidade, não do peso.",
   "tema": "intoxicacoes-exogenas",
   "subtema": null,
   "especialidade": "pediatria-geral",
   "disciplina": "Pediatria",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-e6a74363",
@@ -4155,7 +4197,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-a7b4997c",
@@ -4164,12 +4207,12 @@
   "alternativas": [
    "Prostaglandina E1 em infusão contínua",
    "Óxido nítrico inalatório",
-   "Ibuprofeno ou indometacina, inibidores da ciclo-oxigenase",
+   "Ibuprofeno ou indometacina",
    "Digoxina associada a captopril",
    "Sildenafila por sonda gástrica"
   ],
   "correta": 2,
-  "explicacao": "O canal arterial mantém-se aberto na vida fetal pela baixa tensão de oxigênio e pelas prostaglandinas circulantes. No prematuro, sua persistência com repercussão hemodinâmica (shunt esquerda-direita, pulsos amplos, precórdio hiperdinâmico, aumento do átrio esquerdo) causa hiperfluxo pulmonar e piora respiratória. O tratamento farmacológico usa inibidores da ciclo-oxigenase (ibuprofeno ou indometacina; o paracetamol é alternativa), que reduzem as prostaglandinas e favorecem o fechamento, desde que não haja contraindicações como enterocolite, sangramento, plaquetopenia ou insuficiência renal. A prostaglandina E1 faz o oposto, mantendo o canal aberto nas cardiopatias canal-dependentes. Óxido nítrico e sildenafila são vasodilatadores pulmonares e aumentariam o shunt, e digoxina com captopril não fecham o canal.",
+  "explicacao": "O canal arterial mantém-se aberto na vida fetal pela baixa tensão de oxigênio e pelas prostaglandinas circulantes. No prematuro, sua persistência com repercussão hemodinâmica (shunt esquerda-direita, pulsos amplos, precórdio hiperdinâmico, aumento do átrio esquerdo) causa hiperfluxo pulmonar e piora respiratória. Ensaios recentes (como o BeNeDuctus, de 2023) mostram que muitos prematuros podem ser conduzidos de forma expectante, mas, quando o canal tem repercussão e se opta por tratar, o tratamento farmacológico usa inibidores da ciclo-oxigenase (ibuprofeno ou indometacina; o paracetamol é alternativa), que reduzem as prostaglandinas e favorecem o fechamento, desde que não haja contraindicações como enterocolite, sangramento, plaquetopenia ou insuficiência renal. A prostaglandina E1 faz o oposto, mantendo o canal aberto nas cardiopatias canal-dependentes. Óxido nítrico e sildenafila são vasodilatadores pulmonares e aumentariam o shunt, e digoxina com captopril não fecham o canal.",
   "tema": "circulacao-fetal",
   "subtema": "circulacao-fetal.shunts-fetais",
   "especialidade": "neonatologia",
@@ -4177,7 +4220,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-ac4c253f",
@@ -4196,10 +4240,11 @@
   "subtema": "meningites.tratamento-e-quimioprofilaxia",
   "especialidade": "pediatria-geral",
   "disciplina": "Pediatria",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-b455ec03",
@@ -4251,13 +4296,13 @@
   "enunciado": "Menina de 2 anos com anemia falciforme (HbSS), diagnosticada na triagem neonatal, com Hb basal de 8 g/dL, é trazida por palidez intensa, prostração e aumento do volume abdominal há 6 horas. Não tem febre, dor, tosse ou alteração neurológica; usa ácido fólico e penicilina profilática, e a vacinação está em dia. Exame: descorada 4+/4+, FC 172 bpm, enchimento capilar de 4 s, PA 70/40 mmHg, baço palpável a 8 cm do rebordo costal esquerdo (há 1 mês não era palpável). Exames: Hb 3,6 g/dL, reticulócitos 14% (habitual de 10%), leucócitos 16.000/mm³, plaquetas 95.000/mm³ (habitual de 380.000/mm³), bilirrubina indireta semelhante à habitual. Radiografia de tórax sem infiltrados.\n\nO diagnóstico e a conduta imediata são:",
   "alternativas": [
    "Crise aplásica por parvovírus B19; transfusão e isolamento respiratório",
-   "Sequestro esplênico agudo; restaurar a volemia e transfundir concentrado de hemácias",
+   "Sequestro esplênico agudo; restaurar volemia e transfundir hemácias",
    "Crise hemolítica; hidratação venosa e ácido fólico em dose dobrada",
    "Sequestro esplênico agudo; esplenectomia de urgência",
    "Crise vaso-oclusiva abdominal; analgesia com opioide e hidratação"
   ],
   "correta": 1,
-  "explicacao": "Queda abrupta da hemoglobina (> 2 g/dL abaixo da basal), aumento rápido do baço, reticulocitose e choque hipovolêmico em lactente com HbSS caracterizam o sequestro esplênico agudo, que pode matar em horas. O manual de doença falciforme do Ministério da Saúde indica restaurar a volemia e transfundir concentrado de hemácias com cautela (o baço devolve hemácias à circulação após a transfusão, com risco de hiperviscosidade), com meta de hemoglobina moderada. A crise aplásica tem reticulócitos muito baixos e baço sem aumento agudo. A crise hemolítica isolada não explica a esplenomegalia aguda com choque. A esplenectomia é considerada depois, para prevenir recorrências, e não na fase aguda.",
+  "explicacao": "Queda abrupta da hemoglobina (> 2 g/dL abaixo da basal), aumento rápido do baço, reticulocitose e choque hipovolêmico em lactente com HbSS caracterizam o sequestro esplênico agudo, que pode matar em horas. O manual de doença falciforme do Ministério da Saúde indica restaurar a volemia e transfundir concentrado de hemácias com cautela (o baço devolve hemácias à circulação após a transfusão, com risco de hiperviscosidade), com meta de hemoglobina moderada. A crise aplásica tem reticulócitos muito baixos e baço sem aumento agudo. A crise hemolítica isolada não explica a esplenomegalia aguda com choque. A esplenectomia é considerada depois, para prevenir recorrências, e não na fase aguda. Para lembrar: no sequestro esplênico os reticulócitos sobem; na crise aplásica, despencam.",
   "tema": "anemias",
   "subtema": "anemias.doenca-falciforme",
   "especialidade": "hematologia",
@@ -4265,7 +4310,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-03865110",
@@ -4361,13 +4407,13 @@
   "enunciado": "Gestante de 24 anos, 22 semanas, moradora de Cruzeiro do Sul (AC), tem febre com calafrios a cada 48 horas há 4 dias. Está em bom estado geral, sem sinais de gravidade: consciente, sem icterícia, sem sangramentos, PA 110/70 mmHg, Hb 10,8 g/dL, plaquetas 110.000/mm³, glicemia normal. A gota espessa mostra Plasmodium vivax com parasitemia baixa. Vitalidade fetal preservada.\n\nSegundo o Guia de Tratamento da Malária no Brasil (Ministério da Saúde), o tratamento indicado é:",
   "alternativas": [
    "Cloroquina por 3 dias associada a primaquina por 7 dias",
-   "Cloroquina por 3 dias, sem primaquina, com cloroquina semanal para prevenir recaídas",
+   "Cloroquina por 3 dias e cloroquina semanal, sem primaquina",
    "Artesunato intravenoso até a melhora, seguido de primaquina após o parto",
    "Primaquina por 14 dias isolada, pois a cloroquina é teratogênica",
    "Adiar o tratamento para depois do parto, mantendo apenas antitérmicos"
   ],
   "correta": 1,
-  "explicacao": "Na malária por P. vivax não complicada, o esquema habitual é cloroquina por 3 dias e primaquina por 7 dias (0,5 mg/kg/dia) para eliminar os hipnozoítos hepáticos. A primaquina, porém, é contraindicada na gestação (e em menores de 6 meses), pelo risco de hemólise no feto, cuja atividade de G6PD é desconhecida. O Guia de Tratamento da Malária no Brasil indica tratar a gestante com cloroquina por 3 dias, segura em qualquer idade gestacional, e manter cloroquina semanal para prevenir recaídas, deixando a primaquina para depois da gestação e do período em que ela não pode ser usada. Artesunato IV é para malária grave. Adiar o tratamento expõe mãe e feto a anemia, abortamento e prematuridade.",
+  "explicacao": "Na malária por P. vivax não complicada, o esquema habitual é cloroquina por 3 dias e primaquina por 7 dias (0,5 mg/kg/dia) para eliminar os hipnozoítos hepáticos. A primaquina, porém, é contraindicada na gestação (e em menores de 6 meses), pelo risco de hemólise no feto, cuja atividade de G6PD é desconhecida. O Guia de Tratamento da Malária no Brasil indica tratar a gestante com cloroquina por 3 dias, segura em qualquer idade gestacional, e manter cloroquina semanal para prevenir recaídas até o primeiro mês de amamentação, deixando a primaquina para depois da gestação e do período em que ela não pode ser usada. Artesunato IV é para malária grave. Adiar o tratamento expõe mãe e feto a anemia, abortamento e prematuridade.",
   "tema": "malaria",
   "subtema": "malaria.tratamento",
   "especialidade": "obstetricia",
@@ -4375,7 +4421,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-e3f30a3c",
@@ -4430,10 +4477,10 @@
    "Repetir o Coombs indireto mensalmente, pois ainda não há hidropisia",
    "Interromper a gestação por cesariana imediatamente",
    "Aguardar até 34 semanas e então induzir o parto",
-   "Cordocentese para dosar a hemoglobina fetal, com transfusão intrauterina se houver anemia"
+   "Cordocentese com transfusão intrauterina se houver anemia fetal"
   ],
   "correta": 4,
-  "explicacao": "A gestante está sensibilizada (Coombs indireto positivo e crescente), por isso a imunoglobulina anti-D não tem mais utilidade: ela só previne a sensibilização. Títulos iguais ou superiores ao valor crítico (em geral 1:16) indicam investigação de anemia fetal pelo Doppler do pico de velocidade sistólica da artéria cerebral média. Valor acima de 1,5 MoM sugere anemia fetal moderada ou grave, e a conduta, conforme a FEBRASGO e o Ministério da Saúde, é a cordocentese para medir a hemoglobina fetal, com transfusão intrauterina no mesmo procedimento se a anemia for confirmada. Com 24 semanas, a prematuridade extrema torna o parto inadequado, e esperar a hidropisia ou as 34 semanas permitiria a piora da anemia e a morte fetal.",
+  "explicacao": "A gestante está sensibilizada (Coombs indireto positivo e crescente), por isso a imunoglobulina anti-D não tem mais utilidade: ela só previne a sensibilização. Títulos iguais ou superiores ao valor crítico (em geral 1:16) indicam investigação de anemia fetal pelo Doppler do pico de velocidade sistólica da artéria cerebral média. Valor acima de 1,5 MoM sugere anemia fetal moderada ou grave, e a conduta, conforme a FEBRASGO e o Ministério da Saúde, é a cordocentese para medir a hemoglobina fetal, com transfusão intrauterina no mesmo procedimento se a anemia for confirmada. Com 24 semanas, a prematuridade extrema torna o parto inadequado, e esperar a hidropisia ou as 34 semanas permitiria a piora da anemia e a morte fetal. Para lembrar: o corte de 1,5 MoM no pico sistólico da artéria cerebral média foi validado por Mari e colaboradores em 2000.",
   "tema": "aloimunizacao-rh",
   "subtema": "aloimunizacao-rh.rastreamento-com-coombs-indireto",
   "especialidade": "obstetricia",
@@ -4441,7 +4488,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-c241d127",
@@ -4494,7 +4542,7 @@
   "alternativas": [
    "Síndrome dos ovários policísticos, pois estão presentes os três critérios de Rotterdam",
    "Síndrome dos ovários policísticos associada a hiperprolactinemia leve",
-   "Hiperplasia adrenal congênita não clássica; a síndrome dos ovários policísticos não pode ser diagnosticada",
+   "Hiperplasia adrenal congênita não clássica, e não síndrome dos ovários policísticos",
    "Hipotireoidismo subclínico como causa da oligomenorreia e do hirsutismo",
    "Tumor ovariano produtor de androgênio, pela 17-hidroxiprogesterona elevada"
   ],
@@ -4507,7 +4555,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-4a618567",
@@ -4517,11 +4566,11 @@
    "Repetir a citologia em 6 meses e a colposcopia se persistir alterada",
    "Histerectomia total abdominal",
    "Conização a frio com margem ampla e internação",
-   "Excisão da zona de transformação, podendo-se adotar a estratégia ver e tratar",
+   "Excisão da zona de transformação, admitindo-se o ver e tratar",
    "Crioterapia do colo sem estudo histológico"
   ],
   "correta": 3,
-  "explicacao": "Diante de citologia HSIL com colposcopia com achados maiores, zona de transformação tipo 1 (totalmente visível e ectocervical) e sem suspeita de invasão, as Diretrizes Brasileiras (INCA) recomendam a excisão da zona de transformação por cirurgia de alta frequência, sendo aceitável o \"ver e tratar\" (excisão na mesma consulta, sem biópsia prévia), em mulheres com 25 anos ou mais e não gestantes. A conização a frio é reservada à zona de transformação tipo 3, a suspeita de invasão ou a lesões glandulares. Repetir a citologia atrasa o tratamento de uma lesão precursora de alto grau. A crioterapia não fornece peça para histologia, e a histerectomia é excessiva.",
+  "explicacao": "Diante de citologia HSIL com colposcopia com achados maiores, zona de transformação tipo 1 (totalmente visível e ectocervical) e sem suspeita de invasão, as Diretrizes Brasileiras (INCA) recomendam a excisão da zona de transformação por cirurgia de alta frequência, sendo aceitável o \"ver e tratar\" (excisão na mesma consulta, sem biópsia prévia), em mulheres com 25 anos ou mais e não gestantes. A conização a frio é reservada à zona de transformação tipo 3, a suspeita de invasão ou a lesões glandulares. Repetir a citologia atrasa o tratamento de uma lesão precursora de alto grau. A crioterapia não fornece peça para histologia, e a histerectomia é excessiva. Essa conduta consta das diretrizes do INCA de 2016, que seguem como referência para o manejo de citologias alteradas enquanto a parte das novas diretrizes (baseadas no teste de DNA-HPV) dedicada à condução dos casos positivos não é publicada em definitivo.",
   "tema": "cancer-de-colo-uterino",
   "subtema": "cancer-de-colo-uterino.hpv-e-lesoes-precursoras",
   "especialidade": "ginecologia",
@@ -4529,7 +4578,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-996962a9",
@@ -4644,13 +4694,13 @@
  {
   "id": "res-c983aa0c",
   "area": "Medicina Preventiva",
-  "enunciado": "A vigilância de um município amazônico construiu o diagrama de controle da malária com os casos mensais de 2016 a 2025 (excluídos anos epidêmicos). Para setembro, a média histórica é de 180 casos, e o limite superior (média + 1,96 desvio-padrão) é de 260 casos. Em setembro de 2026 foram registrados 240 casos; em agosto de 2026, 290 casos, com limite superior de 250 para agosto.\n\nA interpretação correta é:",
+  "enunciado": "A vigilância de um município amazônico construiu o diagrama de controle da malária com os casos mensais de 2015 a 2024 (excluídos anos epidêmicos). Para setembro, a média histórica é de 180 casos, e o limite superior (média + 1,96 desvio-padrão) é de 260 casos. Em setembro de 2025 foram registrados 240 casos; em agosto de 2025, 290 casos, com limite superior de 250 para agosto.\n\nA interpretação correta é:",
   "alternativas": [
    "Setembro caracteriza epidemia, pois está 60 casos acima da média histórica",
    "Nenhum dos meses caracteriza epidemia, pois o diagrama considera apenas a média",
    "Os dois meses caracterizam epidemia, pois ambos superam a média histórica",
    "O diagrama não se aplica à malária, que é doença de notificação semanal",
-   "Agosto ficou acima do limite superior, o que caracteriza epidemia; setembro voltou à faixa esperada"
+   "Agosto caracteriza epidemia, e setembro está dentro da faixa esperada"
   ],
   "correta": 4,
   "explicacao": "No diagrama de controle, a faixa endêmica (esperada) vai até o limite superior, calculado habitualmente como média + 1,96 desvio-padrão da série histórica sem anos epidêmicos. Casos acima do limite superior indicam epidemia (excesso em relação ao esperado), e valores entre a média e o limite superior ainda estão na faixa endêmica. Agosto (290 > 250) ultrapassou o limite e caracteriza epidemia; setembro (240 < 260) está acima da média, mas dentro da faixa esperada. A simples comparação com a média não define epidemia. O instrumento é usado rotineiramente na vigilância da malária, independentemente do prazo de notificação.",
@@ -4661,7 +4711,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "res-28d063e7",
