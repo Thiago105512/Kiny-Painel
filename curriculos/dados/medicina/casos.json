@@ -203,7 +203,8 @@
    "Diretrizes da Sociedade Brasileira de Diabetes",
    "Consenso internacional sobre crises hiperglicêmicas em adultos com diabetes (ADA/EASD)",
    "Harrison – Medicina Interna, capítulo de diabetes mellitus"
-  ]
+  ],
+  "temaId": "diabetes-mellitus"
  },
  {
   "id": "caso-pneumonia-comunidade",
@@ -299,7 +300,8 @@
    "Manual de Recomendações para o Controle da Tuberculose no Brasil – Ministério da Saúde",
    "Guia de Vigilância em Saúde – Ministério da Saúde, capítulo de tuberculose",
    "Veronesi – Tratado de Infectologia"
-  ]
+  ],
+  "temaId": "tuberculose"
  },
  {
   "id": "caso-malaria-vivax",
@@ -350,7 +352,8 @@
    "Guia de Tratamento da Malária no Brasil – Ministério da Saúde",
    "Guia de Vigilância em Saúde – Ministério da Saúde, capítulo de malária",
    "Veronesi – Tratado de Infectologia"
-  ]
+  ],
+  "temaId": "malaria"
  },
  {
   "id": "caso-dengue-sinais-alarme",
@@ -403,7 +406,8 @@
    "Dengue: diagnóstico e manejo clínico – adulto e criança – Ministério da Saúde",
    "Guia de Vigilância em Saúde – Ministério da Saúde, capítulo de arboviroses",
    "Veronesi – Tratado de Infectologia"
-  ]
+  ],
+  "temaId": "dengue"
  },
  {
   "id": "caso-apendicite-aguda",
@@ -558,7 +562,8 @@
    "Tratado de Pediatria – Sociedade Brasileira de Pediatria",
    "Diretriz de prática clínica para bronquiolite – Academia Americana de Pediatria",
    "Documentos científicos da Sociedade Brasileira de Pediatria sobre bronquiolite viral aguda"
-  ]
+  ],
+  "espId": "pediatria-geral"
  },
  {
   "id": "caso-desidratacao-diarreia-aguda",
@@ -608,6 +613,1280 @@
    "Manejo do paciente com diarreia – Ministério da Saúde (cartaz com os Planos A, B e C)",
    "AIDPI – Atenção Integrada às Doenças Prevalentes na Infância (Ministério da Saúde/OPAS)",
    "Tratado de Pediatria – Sociedade Brasileira de Pediatria"
+  ],
+  "temaId": "diarreia-aguda-e-desidratacao",
+  "espId": "pediatria-geral"
+ },
+ {
+  "id": "caso-fibrilacao-atrial-alta-resposta",
+  "titulo": "Palpitações e coração irregular em idoso hipertenso e diabético",
+  "tema": "Arritmias cardíacas",
+  "especialidade": "Cardiologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "identificacao": "J.B.A., 72 anos, sexo masculino, pardo, aposentado (ex-comerciante), natural de Parintins e residente em Manaus (AM).",
+  "queixaPrincipal": "\"O coração está disparado e batendo descompassado há dois dias.\"",
+  "hda": "Paciente relata que há cerca de 2 dias, sem horário exato de início, passou a sentir palpitações contínuas, acompanhadas de cansaço aos médios esforços e leve falta de ar ao subir a ladeira de casa. Não sabe dizer se as palpitações começaram antes disso, pois vinha se sentindo mais cansado na última semana. Nega dor torácica, síncope, pré-síncope, ortopneia, dispneia paroxística noturna e edema. Nega déficits motores, alteração da fala ou do campo visual. Nega febre, tosse, perda de peso, tremores ou intolerância ao calor. Refere ter bebido mais cerveja do que o habitual no fim de semana, em uma festa de família.",
+  "antecedentes": "Hipertensão arterial há 15 anos, em uso de losartana 50 mg duas vezes ao dia. Diabetes mellitus tipo 2 há 8 anos, em uso de metformina 850 mg duas vezes ao dia. Nega AVC, infarto ou insuficiência cardíaca conhecida. Nega sangramentos prévios. Etilismo social; nega tabagismo. Sem alergias medicamentosas. Pai faleceu de 'derrame' aos 78 anos.",
+  "exameFisico": "Bom estado geral, lúcido, orientado, eupneico em repouso, corado, hidratado. PA 132/84 mmHg. FC (ausculta apical) 138 bpm, irregularmente irregular, com déficit de pulso (pulso radial 118 bpm). FR 18 irpm. SatO2 96% em ar ambiente. Tax 36,5 °C. Peso 78 kg; IMC 28 kg/m². Ausculta cardíaca: ritmo irregular, bulhas normofonéticas, sem sopros ou B3. Ausculta pulmonar: murmúrio vesicular presente, sem crepitações. Turgência jugular ausente a 45°. Abdome sem alterações. Membros inferiores sem edema. Exame neurológico sem déficits focais. Tireoide sem nódulos palpáveis.",
+  "exames": "ECG: ausência de ondas P, linha de base com ondulações finas (ondas f), intervalos RR irregulares, QRS estreito, frequência ventricular média de 136 bpm, sem alterações isquêmicas agudas. Troponina ultrassensível abaixo do percentil 99. Hemoglobina 14,1 g/dL. Creatinina 1,1 mg/dL (clearance estimado pela fórmula de Cockcroft-Gault ≈ 65 mL/min). Potássio 4,3 mEq/L; magnésio 2,0 mg/dL. TSH 1,8 mUI/L. Glicemia 168 mg/dL; HbA1c 7,4%. Ecocardiograma transtorácico: fração de ejeção do VE 58%, átrio esquerdo aumentado (46 mm), sem valvopatia significativa (sem estenose mitral), sem trombos visíveis.",
+  "perguntas": [
+   {
+    "pergunta": "Qual o diagnóstico eletrocardiográfico e clínico?",
+    "resposta": "Fibrilação atrial com resposta ventricular elevada, hemodinamicamente estável. O ECG mostra a tríade clássica: ausência de ondas P organizadas, ondas f na linha de base e intervalos RR irregularmente irregulares. Como o paciente não sabe quando o episódio começou e já refere cansaço há uma semana, a duração deve ser considerada maior que 48 horas ou indeterminada."
+   },
+   {
+    "pergunta": "Por que não se deve fazer cardioversão elétrica ou química imediata neste paciente?",
+    "resposta": "Porque ele está estável e a duração da arritmia é indeterminada (provavelmente maior que 48 horas). Nessa situação há risco de trombo no átrio esquerdo e de embolia no momento em que o ritmo sinusal volta. Para cardioverter com segurança, é preciso anticoagular por pelo menos 3 semanas antes (e manter por pelo menos 4 semanas depois) ou realizar ecocardiograma transesofágico que exclua trombo no átrio esquerdo. A cardioversão elétrica imediata fica reservada para a fibrilação atrial com instabilidade hemodinâmica (hipotensão, choque, dor torácica isquêmica, edema agudo de pulmão ou rebaixamento de consciência)."
+   },
+   {
+    "pergunta": "Como estimar o risco de AVC e decidir sobre anticoagulação?",
+    "resposta": "Pelo escore CHA2DS2-VASc: hipertensão (1 ponto), diabetes (1 ponto) e idade entre 65 e 74 anos (1 ponto), total de 3 pontos em um homem. Isso indica anticoagulação oral. A diretriz europeia de 2024 e a diretriz brasileira de 2025 passaram a usar o CHA2DS2-VA (sem o sexo feminino como critério), que também soma 3 pontos aqui; anticoagulação é recomendada a partir de 2 pontos. Os anticoagulantes orais diretos (apixabana, rivaroxabana, edoxabana, dabigatrana) são preferidos à varfarina, exceto em estenose mitral moderada a grave ou prótese valvar mecânica. Escores de sangramento, como o HAS-BLED, servem para identificar e corrigir fatores modificáveis (pressão descontrolada, álcool, uso de anti-inflamatórios), e não para contraindicar a anticoagulação."
+   },
+   {
+    "pergunta": "Qual a estratégia inicial para controlar a frequência cardíaca?",
+    "resposta": "Com fração de ejeção preservada, podem ser usados betabloqueadores (como metoprolol) ou bloqueadores de canal de cálcio não di-hidropiridínicos (diltiazem ou verapamil). O alvo inicial é uma frequência de repouso abaixo de 110 bpm (controle leniente), ajustando conforme os sintomas. Diltiazem e verapamil devem ser evitados se houver insuficiência cardíaca com fração de ejeção reduzida. A digoxina é opção complementar, sobretudo em idosos sedentários ou com insuficiência cardíaca."
+   },
+   {
+    "pergunta": "Que fatores desencadeantes e comorbidades devem ser investigados e tratados?",
+    "resposta": "Hipertireoidismo (TSH normal aqui), distúrbios eletrolíticos, infecção, isquemia, valvopatia, apneia obstrutiva do sono, obesidade, álcool (o chamado 'coração de feriado'), hipertensão e diabetes mal controlados. As diretrizes atuais enfatizam o controle de fatores de risco e de comorbidades como parte do tratamento da fibrilação atrial, e não apenas o controle do ritmo ou da frequência."
+   }
+  ],
+  "hipoteses": [
+   "Fibrilação atrial de duração indeterminada com resposta ventricular elevada",
+   "Alto risco tromboembólico (CHA2DS2-VASc = 3)",
+   "Hipertensão arterial e diabetes mellitus tipo 2 como substrato; consumo de álcool como possível desencadeante"
+  ],
+  "diferenciais": [
+   "Flutter atrial com condução variável",
+   "Taquicardia atrial multifocal",
+   "Extrassistolia atrial frequente",
+   "Fibrilação atrial secundária a hipertireoidismo, isquemia ou distúrbio eletrolítico"
+  ],
+  "conduta": "Monitorização cardíaca e controle de frequência com betabloqueador (metoprolol), por via venosa inicialmente se necessário e depois por via oral, com alvo de FC de repouso abaixo de 110 bpm. Início de anticoagulação oral com anticoagulante oral direto, em dose ajustada à idade, ao peso e à função renal (por exemplo, apixabana 5 mg de 12/12 h, reduzida para 2,5 mg de 12/12 h apenas se houver pelo menos dois critérios: idade ≥ 80 anos, peso ≤ 60 kg ou creatinina ≥ 1,5 mg/dL). Cardioversão eletiva pode ser considerada após 3 semanas de anticoagulação eficaz ou com ecocardiograma transesofágico sem trombo, se a estratégia for controle de ritmo. Otimizar a pressão arterial e a glicemia, reduzir o consumo de álcool, estimular perda de peso e atividade física e investigar apneia do sono. Seguimento ambulatorial com cardiologia e orientações sobre sinais de AVC e de sangramento.",
+  "discussao": "A fibrilação atrial é a arritmia sustentada mais comum e sua prevalência aumenta muito com a idade. A primeira decisão à beira do leito é hemodinâmica: instável vai para cardioversão elétrica sincronizada; estável permite avaliação com calma. Em seguida, três perguntas guiam o manejo: quanto tempo de arritmia (e, portanto, risco de trombo), qual o risco de AVC e qual a estratégia de controle (frequência ou ritmo). As diretrizes recentes (ACC/AHA 2023 e ESC 2024) reforçam o manejo integrado, que inclui anticoagulação guiada por risco, controle de sintomas e tratamento agressivo das comorbidades. Estudos recentes também mostram benefício do controle precoce do ritmo em pacientes selecionados com diagnóstico recente, o que pode ser discutido no seguimento. Um erro comum é deixar de anticoagular por medo de sangramento em idosos; na maioria dos casos, o benefício na prevenção de AVC supera o risco.",
+  "referencias": [
+   "2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation",
+   "2024 ESC Guidelines for the management of atrial fibrillation (European Society of Cardiology)",
+   "Diretriz Brasileira de Fibrilação Atrial – 2025 – Sociedade Brasileira de Cardiologia (Arq Bras Cardiol, 2025)"
+  ]
+ },
+ {
+  "id": "caso-dpoc-exacerbada",
+  "titulo": "Falta de ar e catarro esverdeado em ex-fumante com fogão a lenha",
+  "tema": "Doença pulmonar obstrutiva crônica",
+  "especialidade": "Pneumologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "identificacao": "R.S.C., 67 anos, sexo feminino, parda, dona de casa, natural de Itacoatiara e residente em Manaus (AM) há 10 anos.",
+  "queixaPrincipal": "\"Estou sem fôlego e o catarro ficou verde.\"",
+  "hda": "Paciente com diagnóstico prévio de DPOC refere que há 5 dias teve quadro de coriza e dor de garganta, semelhante a gripe. Há 3 dias evoluiu com piora progressiva da falta de ar, que hoje surge ao falar e ao caminhar dentro de casa, aumento da quantidade de escarro, que passou de claro para esverdeado, e chiado no peito. Usou salbutamol spray várias vezes ao dia, com pouca melhora. Refere febre baixa não aferida. Nega dor torácica pleurítica, hemoptise, dor ou inchaço em panturrilhas. Nega ortopneia ou edema. Filha notou que ela está 'mais sonolenta' desde ontem à noite.",
+  "antecedentes": "DPOC diagnosticada há 6 anos por espirometria. Uso irregular de tiotrópio (interrompeu há 4 meses por dificuldade de retirar na farmácia) e salbutamol de resgate. Uma internação por exacerbação há 8 meses. Ex-tabagista de 40 maços-ano, parou há 5 anos. Cozinhou com fogão a lenha durante toda a infância e juventude no interior. Hipertensão arterial em uso de anlodipino. Vacina contra influenza em dia; não recebeu vacina pneumocócica.",
+  "exameFisico": "Regular estado geral, sonolenta mas despertável e orientada, dispneica, falando frases curtas, com uso de musculatura acessória e respiração com lábios semicerrados. PA 146/88 mmHg. FC 108 bpm. FR 28 irpm. SatO2 84% em ar ambiente. Tax 37,8 °C. IMC 22 kg/m². Tórax em tonel. Ausculta pulmonar: murmúrio vesicular globalmente diminuído, expiração prolongada, sibilos expiratórios difusos e roncos esparsos, sem crepitações localizadas. Ausculta cardíaca: ritmo regular, taquicárdico, sem sopros. Sem turgência jugular. Membros inferiores sem edema e sem sinais de trombose. Sem flapping.",
+  "exames": "Gasometria arterial (colhida em ar ambiente): pH 7,31; PaCO2 58 mmHg; PaO2 52 mmHg; HCO3 29 mEq/L; SatO2 84%. Hemograma: leucócitos 12.800/mm³ (78% neutrófilos), eosinófilos 350/mm³, hemoglobina 14,8 g/dL. PCR 48 mg/L. Creatinina 0,9 mg/dL; sódio 139 mEq/L; potássio 4,0 mEq/L. Radiografia de tórax: hiperinsuflação pulmonar, retificação das cúpulas diafragmáticas, sem consolidações, derrame ou pneumotórax. ECG: taquicardia sinusal, sem alterações isquêmicas. BNP 60 pg/mL. Teste rápido de antígeno para COVID-19 e influenza: não reagentes.",
+  "perguntas": [
+   {
+    "pergunta": "O que define uma exacerbação de DPOC e como classificar este caso?",
+    "resposta": "Exacerbação é uma piora aguda da dispneia e/ou tosse e escarro que se instala em menos de 14 dias, podendo vir acompanhada de taquipneia e taquicardia, geralmente associada a inflamação desencadeada por infecção ou poluição. O GOLD passou a usar critérios objetivos (proposta de Roma) para classificar a gravidade, considerando dispneia, frequência respiratória, frequência cardíaca, saturação, PCR e gasometria. Aqui há hipoxemia importante e acidose respiratória (pH 7,31 com PaCO2 58 mmHg), o que caracteriza uma exacerbação grave."
+   },
+   {
+    "pergunta": "Como interpretar a gasometria?",
+    "resposta": "O pH baixo com PaCO2 alta indica acidose respiratória. O bicarbonato de 29 mEq/L mostra compensação metabólica parcial, própria de retenção crônica de CO2, mas insuficiente para normalizar o pH. Trata-se, portanto, de acidose respiratória aguda sobre crônica, com hipoxemia. A sonolência é um sinal de alerta para hipercapnia progressiva."
+   },
+   {
+    "pergunta": "Qual a meta de oxigenação e quando indicar ventilação não invasiva?",
+    "resposta": "Oxigênio em baixo fluxo, titulado para SatO2 entre 88% e 92%, pois oxigênio em excesso pode piorar a hipercapnia. A ventilação não invasiva está indicada na acidose respiratória (pH ≤ 7,35 e PaCO2 > 45 mmHg), na dispneia grave com fadiga muscular ou na hipoxemia persistente. Ela reduz necessidade de intubação e mortalidade. Contraindicações incluem rebaixamento importante de consciência sem proteção de via aérea, vômitos, instabilidade hemodinâmica grave e trauma de face. A gasometria deve ser repetida em 1 a 2 horas."
+   },
+   {
+    "pergunta": "Quais medicamentos usar na fase aguda?",
+    "resposta": "Broncodilatadores de curta ação (beta-2 agonista, como salbutamol, associado ou não ao anticolinérgico ipratrópio), por espaçador ou nebulização. Corticoide sistêmico, como prednisona 40 mg por dia por até 5 dias, que acelera a recuperação e reduz falha terapêutica. Antibiótico por cerca de 5 dias quando há aumento da purulência do escarro associado a mais dispneia ou mais volume de escarro, ou quando há necessidade de ventilação (como aqui). A escolha considera o perfil local de resistência, por exemplo amoxicilina com clavulanato, macrolídeo ou doxiciclina."
+   },
+   {
+    "pergunta": "O que deve ser planejado na alta?",
+    "resposta": "Ela teve exacerbações no último ano, portanto pertence ao grupo E do GOLD. Com eosinófilos acima de 300/mm³, está indicada a terapia tripla (LAMA + LABA + corticoide inalatório), preferencialmente em dispositivo único. Também são essenciais: revisão da técnica inalatória, garantia de acesso ao medicamento (a interrupção do tiotrópio provavelmente contribuiu para a crise), reabilitação pulmonar, vacinação (pneumocócica, influenza, COVID-19, dTpa e VSR, conforme disponibilidade), avaliação de oxigenoterapia domiciliar após estabilização e retorno precoce em até 1 a 4 semanas."
+   }
+  ],
+  "hipoteses": [
+   "Exacerbação grave de DPOC, provavelmente desencadeada por infecção respiratória viral com sobreinfecção bacteriana",
+   "Insuficiência respiratória aguda sobre crônica com acidose respiratória hipercápnica",
+   "DPOC grupo E do GOLD com eosinofilia sanguínea"
+  ],
+  "diferenciais": [
+   "Pneumonia adquirida na comunidade",
+   "Tromboembolismo pulmonar",
+   "Insuficiência cardíaca descompensada",
+   "Pneumotórax",
+   "Asma (sobreposição asma-DPOC)"
+  ],
+  "conduta": "Internação. Cabeceira elevada, oxigênio controlado (alvo SatO2 88–92%) e ventilação não invasiva com gasometria de controle em 1 a 2 horas. Broncodilatadores de curta ação (salbutamol com ipratrópio). Prednisona 40 mg ao dia por até 5 dias (ou equivalente venoso se não houver via oral). Antibioticoterapia por cerca de 5 dias. Profilaxia de tromboembolismo venoso. Na alta, terapia tripla inalatória de manutenção (LAMA + LABA + corticoide inalatório) com checagem da técnica, encaminhamento para reabilitação pulmonar, atualização vacinal, plano de ação para crises e consulta de retorno precoce. Reforçar abstinência ao tabaco e evitar exposição à fumaça de lenha.",
+  "discussao": "A exacerbação da DPOC é um evento que muda o prognóstico: aumenta a mortalidade e acelera a perda de função pulmonar. O caso reúne fatores de risco típicos do Norte do país: tabagismo e exposição à fumaça de biomassa. A interrupção do broncodilatador de manutenção por problema de acesso mostra que o tratamento vai além da prescrição. Na urgência, os pontos-chave são oxigênio controlado e o reconhecimento precoce da acidose respiratória, que indica ventilação não invasiva. O GOLD 2026 reforça a classificação objetiva da gravidade, considera uma única exacerbação moderada ou grave suficiente para classificar o paciente como grupo E e destaca o 'pacote de alta' com seguimento próximo, já que o risco de nova exacerbação é maior nas semanas seguintes. A contagem de eosinófilos ajuda a prever quem se beneficia de corticoide inalatório.",
+  "referencias": [
+   "Global Initiative for Chronic Obstructive Lung Disease (GOLD) – Global Strategy for the Diagnosis, Management and Prevention of COPD, relatório 2026",
+   "Protocolo Clínico e Diretrizes Terapêuticas da Doença Pulmonar Obstrutiva Crônica – Ministério da Saúde (2021)",
+   "ERS/ATS guidelines: noninvasive mechanical ventilation for acute respiratory failure (2017)"
+  ]
+ },
+ {
+  "id": "caso-cirrose-descompensada-pbe",
+  "titulo": "Barriga crescendo, febre e confusão em homem com hepatite B",
+  "tema": "Cirrose hepática",
+  "especialidade": "Gastroenterologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 3,
+  "identificacao": "F.N.O., 58 anos, sexo masculino, pardo, ex-agricultor, natural de Lábrea (AM) e residente em Manaus há 3 anos.",
+  "queixaPrincipal": "\"A barriga está crescendo e ele está falando coisas sem sentido.\" (relato da esposa)",
+  "hda": "Esposa relata que há cerca de 3 semanas o paciente vem com aumento progressivo do volume abdominal e inchaço nas pernas. Há 3 dias passou a ter febre baixa, dor abdominal difusa leve e redução do apetite. Desde ontem está sonolento, com troca do dia pela noite, confuso e com fala arrastada. Nega vômitos com sangue ou fezes escuras. Evacuou pouco nos últimos 3 dias. Vinha tomando espironolactona e furosemida e, na última semana, tomou ibuprofeno por conta própria para dor nas costas.",
+  "antecedentes": "Hepatite B crônica diagnosticada há 4 anos (HBsAg reagente; não sabe informar sobre hepatite D), com seguimento irregular e sem uso regular de antiviral. Diagnóstico de cirrose há 1 ano, após episódio de ascite. Ex-etilista (parou há 1 ano). Irmão falecido por 'doença do fígado'. Nega diabetes ou cardiopatia.",
+  "exameFisico": "Regular estado geral, ictérico (++/4+), sonolento, desorientado no tempo, responde a comandos simples. Asterixis (flapping) presente. PA 104/62 mmHg. FC 102 bpm. FR 20 irpm. SatO2 95% em ar ambiente. Tax 37,9 °C. Peso 71 kg (peso seco estimado 64 kg). Aranhas vasculares no tórax, eritema palmar, ginecomastia. Abdome globoso, com circulação colateral, macicez móvel e piparote positivo, dor difusa leve à palpação, sem defesa. Baço palpável a 3 cm do rebordo costal. Edema de membros inferiores (++/4+). Toque retal: fezes marrons, sem melena.",
+  "exames": "Paracentese diagnóstica: líquido turvo; 680 células/mm³, com 480 polimorfonucleares/mm³; albumina do líquido 0,7 g/dL (albumina sérica 2,4 g/dL; gradiente soro-ascite 1,7 g/dL); proteína total no líquido 0,9 g/dL; bacterioscopia sem germes; cultura em frasco de hemocultura em andamento. Hemoglobina 11,2 g/dL; leucócitos 9.600/mm³; plaquetas 72.000/mm³. INR 1,9. Bilirrubina total 3,8 mg/dL (direta 2,4). Albumina 2,4 g/dL. Creatinina 1,6 mg/dL (há 2 meses: 0,9 mg/dL); ureia 78 mg/dL. Sódio 129 mEq/L; potássio 4,9 mEq/L. Glicemia 104 mg/dL. Hemoculturas e urocultura colhidas. Radiografia de tórax sem consolidação. Urina tipo 1 sem leucocitúria.",
+  "perguntas": [
+   {
+    "pergunta": "Qual o diagnóstico da infecção e qual o critério usado?",
+    "resposta": "Peritonite bacteriana espontânea (PBE): contagem de polimorfonucleares no líquido ascítico de 250 células/mm³ ou mais, sem foco intra-abdominal cirúrgico. A cultura muitas vezes é negativa e não deve atrasar o tratamento. Toda descompensação de cirrose com ascite (febre, dor abdominal, encefalopatia, piora renal) exige paracentese diagnóstica."
+   },
+   {
+    "pergunta": "Como interpretar o gradiente soro-ascite e a proteína do líquido?",
+    "resposta": "Gradiente de albumina soro-ascite de 1,1 g/dL ou mais indica ascite por hipertensão portal (aqui 1,7 g/dL). Proteína total baixa no líquido (menor que 1,5 g/dL) indica menor capacidade de defesa (opsonização) do líquido e maior risco de PBE. Se houvesse proteína muito alta, glicose muito baixa, múltiplos germes ou falta de resposta ao tratamento, seria preciso pensar em peritonite secundária (perfuração ou abscesso)."
+   },
+   {
+    "pergunta": "Qual o tratamento da PBE e por que usar albumina?",
+    "resposta": "Cefalosporina de terceira geração por via venosa (como ceftriaxona ou cefotaxima), ajustada ao risco de germes resistentes (infecção hospitalar, uso recente de antibiótico). Albumina 1,5 g/kg no dia do diagnóstico e 1 g/kg no terceiro dia, indicada principalmente quando há creatinina acima de 1 mg/dL, ureia elevada ou bilirrubina acima de 4 mg/dL. A albumina reduz a ocorrência de lesão renal e a mortalidade. Deve-se repetir a paracentese em 48 horas: redução de pelo menos 25% dos polimorfonucleares indica resposta."
+   },
+   {
+    "pergunta": "Quais os fatores precipitantes da encefalopatia e da piora renal neste paciente?",
+    "resposta": "Infecção (PBE), constipação, uso de diuréticos com hiponatremia e uso de anti-inflamatório (ibuprofeno), que reduz o fluxo renal em quem depende de prostaglandinas para manter a filtração. Também é preciso afastar sangramento digestivo, hipocalemia, hipoglicemia e uso de sedativos. A creatinina subiu mais de 1,5 vez em relação ao valor basal, caracterizando lesão renal aguda. Se não houver resposta após suspender diuréticos e expandir com albumina, deve-se pensar em síndrome hepatorrenal tipo lesão renal aguda (SHR-LRA), tratada com terlipressina e albumina."
+   },
+   {
+    "pergunta": "Qual a gravidade da cirrose e o que fazer após a alta?",
+    "resposta": "Pelo escore de Child-Pugh: bilirrubina acima de 3 mg/dL (3 pontos), albumina abaixo de 2,8 g/dL (3), INR entre 1,7 e 2,3 (2), ascite moderada a volumosa (3) e encefalopatia grau I–II (2) = 13 pontos, classe C. O MELD-Na também deve ser calculado. Após a alta: profilaxia secundária de PBE com antibiótico contínuo (norfloxacino ou alternativa), tratamento antiviral da hepatite B (tenofovir ou entecavir), pesquisa de hepatite D (endêmica na Amazônia Ocidental), rastreio de carcinoma hepatocelular com ultrassonografia semestral, avaliação endoscópica de varizes e encaminhamento para avaliação de transplante hepático."
+   }
+  ],
+  "hipoteses": [
+   "Peritonite bacteriana espontânea",
+   "Encefalopatia hepática grau II (critérios de West Haven), precipitada por infecção, constipação e distúrbio hidroeletrolítico",
+   "Lesão renal aguda em cirrótico (possível evolução para síndrome hepatorrenal)",
+   "Cirrose hepática Child-Pugh C por hepatite B crônica (investigar coinfecção por hepatite D)"
+  ],
+  "diferenciais": [
+   "Peritonite bacteriana secundária (perfuração de víscera, abscesso)",
+   "Hemorragia digestiva alta oculta como precipitante da encefalopatia",
+   "Carcinoma hepatocelular com trombose de veia porta",
+   "Hepatite aguda sobreposta (reativação da hepatite B ou superinfecção por hepatite D)",
+   "Outras causas de confusão mental: hipoglicemia, hiponatremia grave, meningite, intoxicação medicamentosa"
+  ],
+  "conduta": "Internação. Ceftriaxona venosa (ou cefotaxima) por 5 a 7 dias, com nova paracentese em 48 horas. Albumina 1,5 g/kg no dia 1 e 1 g/kg no dia 3. Suspender diuréticos, anti-inflamatório e qualquer nefrotóxico; não iniciar betabloqueador não seletivo enquanto houver hipotensão e lesão renal aguda. Lactulose por via oral ou sonda, titulada para 2 a 3 evacuações pastosas por dia, com rifaximina como complemento em caso de recorrência. Correção lenta do sódio. Vigilância de sangramento digestivo, com endoscopia de urgência se houver hematêmese, melena ou queda de hemoglobina. Após estabilização: profilaxia secundária de PBE, antiviral para hepatite B, pesquisa de anti-HDV, ultrassonografia com alfafetoproteína para rastrear hepatocarcinoma, endoscopia digestiva alta e encaminhamento a centro de transplante hepático.",
+  "discussao": "A PBE é a infecção mais característica do cirrótico e muitas vezes se apresenta de forma pobre: só encefalopatia ou piora renal, sem peritonite evidente. Por isso a regra prática é puncionar a ascite em toda internação de cirrótico. O caso também ilustra como uma descompensação costuma ter vários gatilhos ao mesmo tempo. A albumina tem papel central, pois previne a lesão renal, principal determinante de mortalidade na PBE. No Amazonas, a hepatite B e a coinfecção pelo vírus da hepatite D (delta) têm alta prevalência em regiões como o Vale do Purus e o Vale do Juruá, com evolução mais rápida para cirrose. Um cirrótico Child C após PBE tem prognóstico reservado, e a indicação de transplante deve ser discutida precocemente.",
+  "referencias": [
+   "EASL Clinical Practice Guidelines for the management of patients with decompensated cirrhosis (European Association for the Study of the Liver, 2018)",
+   "AASLD Practice Guidance: Diagnosis, Evaluation, and Management of Ascites, Spontaneous Bacterial Peritonitis and Hepatorenal Syndrome (2021)",
+   "Baveno VII – Renewing consensus in portal hypertension (2022)",
+   "Protocolo Clínico e Diretrizes Terapêuticas de Hepatite B e Coinfecções – Ministério da Saúde (versão vigente)"
+  ]
+ },
+ {
+  "id": "caso-lesao-renal-aguda-hipercalemia",
+  "titulo": "Diarreia, anti-inflamatório e urina escassa em idosa hipertensa",
+  "tema": "Lesão renal aguda",
+  "especialidade": "Nefrologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "identificacao": "A.M.P., 74 anos, sexo feminino, branca, aposentada (professora), natural de Belém (PA) e residente em Manaus (AM).",
+  "queixaPrincipal": "\"Fraqueza forte e quase não estou urinando.\"",
+  "hda": "Paciente refere que há 4 dias iniciou diarreia aquosa, 6 a 8 episódios por dia, sem sangue ou muco, com náuseas e pouca aceitação de líquidos. Neste período continuou tomando todos os remédios de uso contínuo. Há 10 dias vinha tomando diclofenaco 50 mg três vezes ao dia, receitado no balcão da farmácia, por dor no joelho. Desde ontem nota urina escura e em pequena quantidade, além de fraqueza nas pernas e tontura ao se levantar. Nega febre, disúria ou dor lombar.",
+  "antecedentes": "Hipertensão arterial em uso de losartana 50 mg duas vezes ao dia e hidroclorotiazida 25 mg ao dia. Diabetes mellitus tipo 2 em uso de metformina 850 mg duas vezes ao dia. Osteoartrite de joelhos. Última creatinina (há 3 meses): 1,1 mg/dL. Nega cirurgias prévias ou doença prostática/urológica.",
+  "exameFisico": "Regular estado geral, desidratada (++/4+), mucosas secas, lúcida e orientada. PA 96/58 mmHg deitada e 80/50 mmHg sentada, com tontura. FC 108 bpm. FR 20 irpm. SatO2 97% em ar ambiente. Tax 36,8 °C. Peso 62 kg (habitual 65 kg). Turgor cutâneo diminuído. Ausculta cardíaca: ritmo regular, taquicárdico, sem sopros. Ausculta pulmonar sem crepitações. Abdome com ruídos hidroaéreos aumentados, indolor, sem globo vesical palpável. Sem edema. Força muscular grau 4 em membros inferiores. Diurese de 180 mL nas últimas 12 horas após sondagem vesical.",
+  "exames": "Creatinina 3,4 mg/dL; ureia 148 mg/dL. Potássio 6,8 mEq/L; sódio 134 mEq/L; cloro 108 mEq/L. Gasometria venosa: pH 7,26; bicarbonato 15 mEq/L. Glicemia 142 mg/dL. Lactato 2,4 mmol/L. Sódio urinário 12 mEq/L; ureia urinária 800 mg/dL; creatinina urinária 88 mg/dL (fração de excreção de ureia ≈ 21%). Urina tipo 1: densidade 1,025, sem proteinúria, sem hematúria, sedimento com poucos cilindros hialinos. ECG: ritmo sinusal, ondas T apiculadas e simétricas em precordiais, sem alargamento de QRS. Ultrassonografia de rins e vias urinárias: rins de tamanho normal, sem hidronefrose.",
+  "perguntas": [
+   {
+    "pergunta": "Como definir e classificar a lesão renal aguda pelo KDIGO?",
+    "resposta": "Lesão renal aguda é o aumento da creatinina em 0,3 mg/dL ou mais em 48 horas, ou aumento para 1,5 vez ou mais o valor basal em 7 dias, ou débito urinário abaixo de 0,5 mL/kg/h por 6 horas. A creatinina passou de 1,1 para 3,4 mg/dL (mais de 3 vezes o basal), o que corresponde ao estágio 3 do KDIGO. O débito de 180 mL em 12 horas (cerca de 0,24 mL/kg/h) também indica oligúria importante."
+   },
+   {
+    "pergunta": "Qual o mecanismo provável da lesão renal?",
+    "resposta": "Lesão predominantemente pré-renal (hemodinâmica), pela combinação de hipovolemia (diarreia e diurético), bloqueio do sistema renina-angiotensina (a losartana dilata a arteríola eferente) e anti-inflamatório (o diclofenaco contrai a arteríola aferente ao inibir prostaglandinas). Juntos, esses fatores derrubam a pressão de filtração do glomérulo. Como a paciente usa diurético, a fração de excreção de sódio pode ser enganosa; a fração de excreção de ureia abaixo de 35% (aqui 21%) favorece causa pré-renal. Sedimento sem cilindros granulosos e ultrassonografia sem obstrução reforçam a hipótese. Se a hipoperfusão persistir, pode evoluir para necrose tubular aguda."
+   },
+   {
+    "pergunta": "A hipercalemia é uma emergência aqui? Como tratar?",
+    "resposta": "Sim. Potássio acima de 6,5 mEq/L com alteração no ECG exige tratamento imediato. Os passos são: (1) estabilizar a membrana do miocárdio com gluconato de cálcio 10% por via venosa, que age em minutos e pode ser repetido se o ECG não melhorar; (2) deslocar o potássio para dentro das células com insulina regular associada a glicose (para evitar hipoglicemia) e beta-2 agonista inalatório; (3) remover o potássio do organismo, restaurando a diurese com hidratação, usando quelantes intestinais e, se necessário, diálise. Também é preciso suspender tudo que eleva o potássio (losartana, anti-inflamatórios, suplementos) e controlar a glicemia capilar de hora em hora após a insulina."
+   },
+   {
+    "pergunta": "Quais as indicações de diálise de urgência?",
+    "resposta": "Um mnemônico útil é AEIOU: Acidose metabólica grave refratária; distúrbio Eletrolítico grave refratário (principalmente hipercalemia); Intoxicações por substâncias dialisáveis; sobrecarga de vOlume refratária (como edema agudo de pulmão); e Uremia sintomática (encefalopatia, pericardite, sangramento urêmico). Nesta paciente, se a hipercalemia não responder às medidas clínicas e a diurese não voltar com a reposição de volume, a diálise deve ser indicada."
+   }
+  ],
+  "hipoteses": [
+   "Lesão renal aguda KDIGO estágio 3, predominantemente pré-renal (hipovolemia + BRA + AINE + diurético)",
+   "Hipercalemia grave com alteração eletrocardiográfica",
+   "Acidose metabólica hiperclorêmica (diarreia) somada à retenção de ácidos pela lesão renal",
+   "Desidratação por gastroenterite aguda"
+  ],
+  "diferenciais": [
+   "Necrose tubular aguda isquêmica ou tóxica",
+   "Nefrite intersticial aguda por anti-inflamatório",
+   "Obstrução do trato urinário (pós-renal)",
+   "Glomerulonefrite rapidamente progressiva",
+   "Rabdomiólise"
+  ],
+  "conduta": "Monitorização cardíaca contínua. Gluconato de cálcio 10% por via venosa lenta, repetido conforme o ECG. Insulina regular com glicose por via venosa e salbutamol inalatório, com glicemia capilar seriada. Reposição volêmica com cristaloide, preferencialmente solução balanceada, em alíquotas com reavaliação clínica frequente. Suspender losartana, hidroclorotiazida, diclofenaco e metformina (risco de acidose lática). Controle rigoroso de diurese, peso e eletrólitos a cada 4 a 6 horas. Ajuste de doses de medicamentos pela função renal. Avaliação da nefrologia e diálise se houver hipercalemia refratária, acidose grave ou ausência de diurese apesar da reposição. Na alta, reintroduzir BRA e diurético apenas após recuperação da função renal e orientar a paciente a suspender esses medicamentos temporariamente em episódios de diarreia, vômitos ou febre (as chamadas 'regras de dias de doença'). Evitar anti-inflamatórios; para a osteoartrite, priorizar paracetamol, analgesia tópica e fisioterapia.",
+  "discussao": "A combinação de IECA ou BRA, diurético e anti-inflamatório é chamada de 'tríplice ameaça' (triple whammy) e é uma causa comum e evitável de lesão renal aguda em idosos, sobretudo quando surge um fator de hipovolemia como diarreia. O raciocínio clássico em pré-renal, renal e pós-renal continua útil: a ultrassonografia exclui obstrução, o sedimento urinário e os índices urinários ajudam a separar causa hemodinâmica de lesão tubular estabelecida. A hipercalemia é o distúrbio que mais mata rapidamente na lesão renal aguda, e o ECG orienta a urgência, embora um ECG normal não exclua risco. O caso reforça a importância da prescrição segura e da educação do paciente sobre automedicação com anti-inflamatórios, muito comum nas farmácias.",
+  "referencias": [
+   "KDIGO Clinical Practice Guideline for Acute Kidney Injury (Kidney Disease: Improving Global Outcomes, 2012)",
+   "UK Kidney Association – Clinical Practice Guidelines: Treatment of Acute Hyperkalaemia in Adults (2023)",
+   "Brenner and Rector's The Kidney – capítulo de lesão renal aguda"
+  ]
+ },
+ {
+  "id": "caso-anemia-ferropriva-sangramento-oculto",
+  "titulo": "Cansaço, palidez e vontade de mastigar gelo em homem de 63 anos",
+  "tema": "Anemias",
+  "especialidade": "Hematologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 1,
+  "identificacao": "E.T.R., 63 anos, sexo masculino, pardo, motorista de ônibus, natural e residente em Manaus (AM).",
+  "queixaPrincipal": "\"Ando muito cansado e sem cor.\"",
+  "hda": "Paciente refere cansaço progressivo há cerca de 4 meses, com falta de ar ao subir escadas e ao carregar peso, o que antes não acontecia. A esposa percebeu que ele está 'amarelado, sem cor'. Relata vontade frequente de mastigar gelo e unhas fracas. Emagreceu cerca de 4 kg no período sem fazer dieta. Nos últimos 2 meses nota alternância entre prisão de ventre e fezes amolecidas. Nega sangue visível nas fezes, fezes pretas, vômitos com sangue, dor abdominal intensa ou febre. Nega sangramentos em outros locais.",
+  "antecedentes": "Hipertensão arterial em uso de enalapril. Nega uso de anti-inflamatórios, AAS ou anticoagulantes. Alimentação com consumo regular de carne e peixe. Nunca realizou colonoscopia. Tabagista de 20 maços-ano. Pai falecido aos 70 anos por 'câncer de intestino'.",
+  "exameFisico": "Bom estado geral, descorado (+++/4+), anictérico, lúcido e orientado. PA 128/76 mmHg. FC 98 bpm. FR 18 irpm. SatO2 97% em ar ambiente. Tax 36,4 °C. IMC 23 kg/m². Unhas quebradiças e com leve concavidade (coiloníquia). Queilite angular discreta. Ausculta cardíaca com sopro sistólico suave em foco pulmonar (sopro de fluxo). Ausculta pulmonar normal. Abdome flácido, indolor, sem massas ou visceromegalias. Toque retal: sem massas palpáveis, fezes marrons na luva. Sem linfonodomegalias.",
+  "exames": "Hemoglobina 8,2 g/dL; VCM 68 fL; HCM 21 pg; RDW 18,5%; leucócitos 7.400/mm³; plaquetas 480.000/mm³. Reticulócitos 0,8% (índice reticulocitário baixo). Esfregaço: microcitose, hipocromia, anisocitose e poiquilocitose com células em lápis. Ferritina 9 ng/mL. Ferro sérico 22 µg/dL; transferrina/capacidade total de ligação do ferro elevada; saturação de transferrina 6%. Vitamina B12 e folato normais. Creatinina 0,9 mg/dL. TSH normal. Anticorpo antitransglutaminase IgA negativo (com IgA total normal). PCR normal.",
+  "perguntas": [
+   {
+    "pergunta": "Qual o tipo de anemia e quais achados confirmam deficiência de ferro?",
+    "resposta": "Anemia microcítica e hipocrômica, hipoproliferativa (reticulócitos baixos), com ferritina muito baixa. Ferritina abaixo de 30 ng/mL é altamente específica de deficiência de ferro em pacientes sem inflamação; a saturação de transferrina baixa, o RDW elevado e a trombocitose reativa completam o quadro. A vontade de mastigar gelo (pagofagia), a coiloníquia e a queilite angular são manifestações clínicas clássicas da ferropenia."
+   },
+   {
+    "pergunta": "Qual a principal causa a investigar em um homem de 63 anos?",
+    "resposta": "Perda crônica de sangue pelo trato gastrointestinal, especialmente neoplasia colorretal. Em homens adultos e mulheres após a menopausa, anemia ferropriva não tem explicação 'benigna' até prova em contrário. Este paciente ainda tem sinais de alarme: perda de peso, alteração do hábito intestinal e história familiar de câncer de intestino."
+   },
+   {
+    "pergunta": "Quais exames endoscópicos solicitar? A pesquisa de sangue oculto nas fezes ajuda?",
+    "resposta": "Investigação bidirecional: endoscopia digestiva alta (com biópsias duodenais se houver suspeita de doença celíaca) e colonoscopia. A pesquisa de sangue oculto nas fezes é um exame de rastreamento em pessoas sem sintomas e não substitui a investigação endoscópica em quem já tem anemia ferropriva, pois um resultado negativo não exclui lesão. Se endoscopia e colonoscopia forem normais e a anemia persistir, avalia-se o intestino delgado (por exemplo, com cápsula endoscópica)."
+   },
+   {
+    "pergunta": "Como repor o ferro e quando transfundir?",
+    "resposta": "O ferro oral é a primeira escolha (como sulfato ferroso), podendo ser administrado em dias alternados, o que melhora a absorção e a tolerância gastrointestinal. Espera-se aumento de reticulócitos em 7 a 10 dias e de cerca de 1 a 2 g/dL de hemoglobina em 3 a 4 semanas; após normalizar a hemoglobina, manter por cerca de 3 meses para repor os estoques. O ferro venoso está indicado em caso de intolerância, má absorção, perdas contínuas importantes ou necessidade de correção rápida (por exemplo, antes de cirurgia). Transfusão fica reservada para instabilidade, isquemia miocárdica ou hemoglobina muito baixa com sintomas graves; este paciente está estável e não precisa."
+   }
+  ],
+  "hipoteses": [
+   "Anemia ferropriva moderada",
+   "Perda sanguínea oculta pelo trato gastrointestinal, com suspeita de neoplasia colorretal"
+  ],
+  "diferenciais": [
+   "Anemia da doença crônica/inflamação",
+   "Talassemia menor (traço talassêmico)",
+   "Anemia sideroblástica",
+   "Má absorção de ferro (doença celíaca, gastrite atrófica, infecção por Helicobacter pylori)",
+   "Perda sanguínea por outras lesões do trato digestivo (úlcera péptica, angiodisplasia, doença inflamatória intestinal)"
+  ],
+  "conduta": "Solicitar endoscopia digestiva alta e colonoscopia com prioridade, dado o risco de câncer colorretal. Iniciar ferro oral (sulfato ferroso), com orientação sobre tomada longe das refeições com cálcio e sobre efeitos adversos esperados (fezes escuras, desconforto gastrointestinal). Controle de hemograma e reticulócitos em 2 a 4 semanas. Se a colonoscopia mostrar neoplasia, encaminhar para estadiamento e tratamento cirúrgico/oncológico, e considerar ferro venoso para otimizar a hemoglobina antes da cirurgia. Orientar cessação do tabagismo.",
+  "discussao": "A anemia ferropriva é a anemia mais comum no mundo, mas o diagnóstico só se completa quando se identifica a causa. Em crianças e mulheres em idade fértil, as principais causas são ingesta insuficiente, crescimento, gestação e perda menstrual. Já em homens e mulheres na pós-menopausa, a causa mais importante a excluir é o sangramento crônico do trato digestivo. As diretrizes da AGA e da Sociedade Britânica de Gastroenterologia recomendam investigação endoscópica alta e baixa nesses grupos. Tratar apenas com ferro, sem investigar, pode atrasar o diagnóstico de um câncer ainda curável. O caso também revisa a interpretação da ferritina, que é o melhor marcador isolado de estoque de ferro, lembrando que ela sobe em inflamação e pode mascarar a deficiência.",
+  "referencias": [
+   "AGA Clinical Practice Guidelines on the Gastrointestinal Evaluation of Iron Deficiency Anemia (American Gastroenterological Association, 2020)",
+   "British Society of Gastroenterology guidelines for the management of iron deficiency anaemia in adults (2021)",
+   "Zago – Tratado de Hematologia, capítulo de anemia ferropriva"
+  ]
+ },
+ {
+  "id": "caso-hipotireoidismo-hashimoto",
+  "titulo": "Cansaço, frio e ganho de peso em professora de 46 anos",
+  "tema": "Doenças da tireoide",
+  "especialidade": "Endocrinologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 1,
+  "identificacao": "C.R.M., 46 anos, sexo feminino, parda, professora do ensino fundamental, natural e residente em Manaus (AM).",
+  "queixaPrincipal": "\"Vivo cansada, com sono e engordando sem comer mais.\"",
+  "hda": "Paciente relata que há cerca de 8 meses sente cansaço contínuo, sonolência durante o dia e dificuldade de concentração ao preparar as aulas. Ganhou 6 kg no período. Refere sentir frio mesmo com o ar-condicionado desligado, 'coisa que em Manaus nunca aconteceu'. Nota pele ressecada, queda de cabelo, intestino preso (evacua a cada 3 ou 4 dias) e menstruações mais volumosas. Queixa-se de câimbras e de rouquidão leve. Nega palpitações, tremores, dor cervical ou dificuldade para engolir.",
+  "antecedentes": "G2P2, ciclos regulares. Nega doenças crônicas conhecidas e uso de medicamentos. Nega radioterapia cervical, cirurgia de tireoide ou uso de amiodarona ou lítio. Mãe com 'problema de tireoide' em tratamento. Irmã com vitiligo.",
+  "exameFisico": "Bom estado geral, lúcida, fala um pouco lentificada, discretamente descorada. PA 138/92 mmHg. FC 56 bpm, rítmica. FR 14 irpm. SatO2 98% em ar ambiente. Tax 35,9 °C. Peso 74 kg; IMC 29 kg/m². Pele seca e fria, com discreto edema de face e periorbital não depressível. Cabelos finos e quebradiços. Tireoide aumentada cerca de 2 vezes, de consistência firme, superfície irregular, indolor, sem nódulos dominantes. Ausculta cardíaca e pulmonar normais. Reflexos aquileus com fase de relaxamento lentificada. Sem edema depressível de membros.",
+  "exames": "TSH 42 mUI/L (referência 0,4–4,5). T4 livre 0,38 ng/dL (referência 0,9–1,7). Anti-TPO 580 UI/mL (positivo). Colesterol total 262 mg/dL; LDL 178 mg/dL; HDL 44 mg/dL; triglicerídeos 200 mg/dL. Hemoglobina 11,4 g/dL, normocítica. Sódio 136 mEq/L. CPK 280 U/L (discretamente elevada). Glicemia de jejum 92 mg/dL. Beta-hCG negativo. ECG: bradicardia sinusal, baixa voltagem discreta.",
+  "perguntas": [
+   {
+    "pergunta": "Qual o diagnóstico e a causa mais provável?",
+    "resposta": "Hipotireoidismo primário franco (TSH elevado com T4 livre baixo), causado por tireoidite crônica autoimune (tireoidite de Hashimoto), sugerida pelo bócio firme e irregular, pelo anti-TPO fortemente positivo e pela história familiar de doença tireoidiana e autoimunidade (vitiligo). Em regiões sem deficiência de iodo, como o Brasil, a tireoidite de Hashimoto é a principal causa de hipotireoidismo."
+   },
+   {
+    "pergunta": "Como diferenciar hipotireoidismo primário de central?",
+    "resposta": "No primário, a falha está na tireoide: o T4 livre cai e a hipófise responde elevando o TSH. No central (hipofisário ou hipotalâmico), o T4 livre está baixo, mas o TSH fica baixo ou inapropriadamente normal. Por isso, em suspeita de doença hipofisária, dosar só o TSH pode enganar. No hipotireoidismo central, também é preciso avaliar os outros eixos hipofisários, principalmente o cortisol, antes de iniciar levotiroxina."
+   },
+   {
+    "pergunta": "Como iniciar e monitorar a levotiroxina?",
+    "resposta": "Em adultos jovens e de meia-idade sem doença coronariana, pode-se iniciar a dose plena estimada de cerca de 1,6 µg/kg/dia (aproximadamente 100 a 125 µg/dia para esta paciente). Em idosos ou cardiopatas, começa-se com doses baixas (por exemplo, 12,5 a 25 µg/dia), aumentando aos poucos. A levotiroxina deve ser tomada em jejum, 30 a 60 minutos antes do café, longe de cálcio, ferro, antiácidos e inibidores de bomba de prótons. O TSH deve ser repetido após 6 a 8 semanas, com ajustes até ficar dentro da faixa de referência."
+   },
+   {
+    "pergunta": "As alterações do colesterol, da hemoglobina e da CPK precisam de tratamento específico agora?",
+    "resposta": "Não de imediato. O hipotireoidismo eleva o LDL (menor expressão de receptores hepáticos), pode causar anemia leve e aumento de CPK por miopatia. Essas alterações costumam melhorar com a reposição hormonal. O perfil lipídico deve ser reavaliado depois que a paciente estiver eutireoidiana, e só então se decide sobre estatina com base no risco cardiovascular global. A pressão diastólica elevada também pode melhorar com o tratamento."
+   }
+  ],
+  "hipoteses": [
+   "Hipotireoidismo primário franco",
+   "Tireoidite crônica autoimune (Hashimoto) com bócio difuso",
+   "Dislipidemia secundária ao hipotireoidismo"
+  ],
+  "diferenciais": [
+   "Hipotireoidismo central (hipofisário ou hipotalâmico)",
+   "Fase de recuperação de tireoidite subaguda ou pós-parto (TSH transitoriamente elevado)",
+   "Síndrome do eutireoidiano doente",
+   "Depressão, anemia ou apneia do sono como causa de fadiga",
+   "Síndrome nefrótica (edema e dislipidemia)"
+  ],
+  "conduta": "Iniciar levotiroxina em dose plena estimada pelo peso (cerca de 1,6 µg/kg/dia), em jejum. Orientar sobre adesão, horário da tomada e interações. Repetir TSH em 6 a 8 semanas e ajustar a dose até normalização; depois, controle a cada 6 a 12 meses. Reavaliar lipídios, hemoglobina e pressão após eutireoidismo. Orientar que, em caso de gravidez, a dose geralmente precisa ser aumentada já no início da gestação, com contato imediato com o médico. Ultrassonografia de tireoide se houver nódulo palpável ou dúvida no exame físico.",
+  "discussao": "O hipotireoidismo tem sintomas inespecíficos e de instalação lenta, que muitas vezes são atribuídos ao estresse, à idade ou ao trabalho. A combinação de fadiga, intolerância ao frio, ganho de peso, constipação, pele seca, bradicardia e relaxamento lento dos reflexos deve levantar a suspeita. O TSH é o melhor exame de rastreamento para o hipotireoidismo primário. Vale diferenciar o hipotireoidismo franco (T4 livre baixo) do subclínico (TSH alto com T4 livre normal), cuja indicação de tratamento é mais seletiva. O tratamento é simples, mas depende de orientação correta sobre a tomada, e o excesso de dose também traz riscos, como fibrilação atrial e perda de massa óssea.",
+  "referencias": [
+   "Consenso Brasileiro para o Diagnóstico e Tratamento do Hipotireoidismo – Sociedade Brasileira de Endocrinologia e Metabologia (Arq Bras Endocrinol Metab, 2013)",
+   "Guidelines for the Treatment of Hypothyroidism – American Thyroid Association (2014)",
+   "Williams Textbook of Endocrinology – capítulo de hipotireoidismo"
+  ]
+ },
+ {
+  "id": "caso-lupus-nefrite",
+  "titulo": "Mancha no rosto, dor nas juntas e urina espumosa em jovem de 24 anos",
+  "tema": "Lúpus eritematoso sistêmico",
+  "especialidade": "Reumatologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 3,
+  "identificacao": "T.C.L., 24 anos, sexo feminino, parda, estudante de pedagogia, natural de Manacapuru e residente em Manaus (AM).",
+  "queixaPrincipal": "\"As pernas incharam e a urina está fazendo muita espuma.\"",
+  "hda": "Paciente refere que há cerca de 4 meses começou a sentir dores nas mãos, punhos e joelhos, mais fortes pela manhã, com inchaço discreto. Na mesma época apareceram manchas avermelhadas no rosto, que pioram depois de pegar sol no trajeto de barco e de ônibus até a faculdade, e feridas indolores no céu da boca. Há 3 semanas notou inchaço nas pernas e ao redor dos olhos, urina com muita espuma e queda de cabelo. Refere cansaço e febre baixa intermitente. Nega dor torácica, falta de ar, convulsões ou alterações de comportamento. Nega uso recente de medicamentos.",
+  "antecedentes": "Nuligesta. Usa anticoncepcional oral combinado há 3 anos. Nega doenças prévias. Nega abortos ou tromboses. Tia materna com 'doença reumática'. Nega tabagismo e etilismo.",
+  "exameFisico": "Regular estado geral, descorada (++/4+), edemaciada. PA 152/96 mmHg. FC 94 bpm. FR 18 irpm. SatO2 98% em ar ambiente. Tax 37,6 °C. Peso 61 kg (habitual 56 kg). Eritema em asa de borboleta no dorso do nariz e nas regiões malares, poupando os sulcos nasolabiais. Úlcera indolor no palato duro. Alopecia difusa não cicatricial. Sinovite em 2ª e 3ª articulações metacarpofalangianas bilateralmente e em punhos. Ausculta cardíaca sem atrito pericárdico. Ausculta pulmonar com leve redução do murmúrio vesicular em base direita. Edema de membros inferiores (+++/4+) e periorbital. Exame neurológico normal.",
+  "exames": "Hemoglobina 9,8 g/dL; reticulócitos 4%; DHL 520 U/L; haptoglobina abaixo de 10 mg/dL; bilirrubina indireta 1,4 mg/dL; Coombs direto positivo; leucócitos 3.200/mm³ (linfócitos 800/mm³); plaquetas 110.000/mm³. Creatinina 1,4 mg/dL; ureia 62 mg/dL. Albumina 2,4 g/dL. Colesterol total 290 mg/dL. Urina tipo 1: proteína +++, hemácias 40 por campo com dismorfismo, cilindros hemáticos. Relação proteína/creatinina urinária 4,2 g/g. FAN 1:1280, padrão nuclear homogêneo. Anti-DNA dupla hélice positivo (título alto). Anti-Sm positivo. C3 48 mg/dL (referência 90–180); C4 6 mg/dL (referência 10–40). Anticoagulante lúpico, anticardiolipina e anti-beta-2-glicoproteína I negativos. Beta-hCG negativo. Radiografia de tórax: pequeno derrame pleural à direita. Biópsia renal: nefrite lúpica classe IV (proliferativa difusa), com atividade e sem cronicidade significativa.",
+  "perguntas": [
+   {
+    "pergunta": "A paciente preenche critérios de classificação para lúpus?",
+    "resposta": "Sim. Pelos critérios EULAR/ACR 2019, o critério de entrada é FAN com título de 1:80 ou mais (aqui 1:1280). Depois somam-se pontos por domínios clínicos e imunológicos, contando apenas o item de maior peso em cada domínio: nefrite lúpica classe IV na biópsia (10 pontos), articular (6), anti-dsDNA ou anti-Sm (6), consumo de C3 e C4 (4), hemólise autoimune (4), entre outros. Um total de 10 pontos ou mais, com pelo menos um critério clínico, classifica como lúpus. Ela ultrapassa com folga esse valor."
+   },
+   {
+    "pergunta": "Por que a biópsia renal é importante?",
+    "resposta": "Porque define a classe histológica da nefrite lúpica (classificação ISN/RPS), os índices de atividade e cronicidade, e isso muda o tratamento e o prognóstico. As classes III e IV (proliferativas) e a classe V (membranosa) com proteinúria significativa exigem imunossupressão. A biópsia está indicada em pacientes com lúpus e proteinúria persistente de 0,5 g/dia ou mais, sedimento ativo ou piora inexplicada da função renal."
+   },
+   {
+    "pergunta": "Qual o tratamento de indução da nefrite lúpica classe IV?",
+    "resposta": "Hidroxicloroquina para todos os pacientes com lúpus, salvo contraindicação (dose de até 5 mg/kg/dia do peso real, com rastreio oftalmológico). Pulsoterapia com metilprednisolona venosa por 3 dias, seguida de prednisona oral em redução progressiva, buscando doses baixas em poucos meses. Associar um imunossupressor: micofenolato ou ciclofosfamida venosa em baixa dose (esquema Euro-Lupus), em dose definida pela diretriz e pelo reumatologista. As diretrizes EULAR 2023 e KDIGO 2024 também admitem terapia combinada desde o início, acrescentando belimumabe ou um inibidor de calcineurina (como voclosporina). Complementam o tratamento: IECA ou BRA para reduzir proteinúria, controle rigoroso da pressão e da dislipidemia, vitamina D e cálcio e vacinação atualizada, evitando vacinas de vírus vivo durante imunossupressão intensa."
+   },
+   {
+    "pergunta": "Que cuidados reprodutivos são necessários?",
+    "resposta": "O micofenolato é teratogênico e exige contracepção eficaz. O anticoncepcional combinado com estrogênio deve ser evitado em pacientes com lúpus ativo, nefrite com hipertensão ou anticorpos antifosfolípides positivos, pelo risco de trombose. Nesta paciente, métodos como DIU (de cobre ou hormonal) ou progestagênio isolado são preferíveis. Uma gravidez deve ser planejada após pelo menos 6 meses de doença inativa e com medicação compatível com a gestação."
+   }
+  ],
+  "hipoteses": [
+   "Lúpus eritematoso sistêmico com atividade grave",
+   "Nefrite lúpica classe IV (proliferativa difusa) com síndrome nefrítico-nefrótica",
+   "Anemia hemolítica autoimune, leucopenia/linfopenia e plaquetopenia lúpicas",
+   "Serosite (derrame pleural) e artrite lúpica"
+  ],
+  "diferenciais": [
+   "Glomerulonefrite pós-infecciosa",
+   "Vasculites associadas ao ANCA",
+   "Síndrome antifosfolípide com microangiopatia trombótica",
+   "Lúpus induzido por medicamentos",
+   "Doença mista do tecido conjuntivo"
+  ],
+  "conduta": "Internação para pulsoterapia com metilprednisolona venosa por 3 dias, seguida de prednisona oral com redução programada. Iniciar hidroxicloroquina. Indução com micofenolato (ou ciclofosfamida venosa em baixa dose), considerando a associação com belimumabe ou inibidor de calcineurina conforme disponibilidade no SUS e perfil da paciente. IECA ou BRA, restrição de sal, controle da pressão arterial (alvo em torno de 130/80 mmHg), estatina se indicado. Suspender o anticoncepcional combinado e oferecer método sem estrogênio. Profilaxias: rastreio de estrongiloidíase (tratamento empírico com ivermectina é prática comum em áreas endêmicas antes de corticoide em dose alta), rastreio de tuberculose latente, hepatites e HIV. Seguimento com reumatologia e nefrologia; metas da EULAR 2023: redução da proteinúria de pelo menos 25% em 3 meses e de 50% em 6 meses, e resposta renal completa (proteinúria abaixo de 0,5–0,7 g/g) idealmente em 12 meses.",
+  "discussao": "O lúpus é uma doença autoimune multissistêmica com predomínio em mulheres jovens, e a nefrite lúpica é uma das principais causas de morbimortalidade. O caso mostra como sintomas aparentemente desconexos (artrite, fotossensibilidade, úlceras orais, alopecia, edema) se unem em um diagnóstico sistêmico. Complementos baixos e anti-dsDNA alto costumam acompanhar a atividade renal. O tratamento moderno busca controlar rapidamente a inflamação e, ao mesmo tempo, reduzir a exposição ao corticoide, que é responsável por boa parte do dano acumulado a longo prazo. Na Amazônia, antes de imunossuprimir, é importante lembrar das infecções oportunistas e endêmicas, como estrongiloidíase disseminada e tuberculose.",
+  "referencias": [
+   "2019 EULAR/ACR classification criteria for systemic lupus erythematosus",
+   "EULAR recommendations for the management of systemic lupus erythematosus: 2023 update",
+   "KDIGO 2024 Clinical Practice Guideline for the Management of Lupus Nephritis"
+  ]
+ },
+ {
+  "id": "caso-sepse-urinaria-obstrutiva",
+  "titulo": "Febre, dor lombar e pressão baixa em idosa diabética",
+  "tema": "Sepse e choque séptico",
+  "especialidade": "Medicina de Urgência",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "identificacao": "M.G.S., 69 anos, sexo feminino, parda, aposentada (agricultora), natural de Autazes e residente em Manaus (AM).",
+  "queixaPrincipal": "\"Febre alta com tremedeira e dor nas costas do lado direito.\" (relato da filha)",
+  "hda": "Filha relata que há 3 dias a mãe começou com ardência para urinar e urgência miccional. Há 2 dias surgiram febre alta com calafrios, dor lombar à direita e vômitos. Hoje está mais sonolenta, confusa e 'muito fraca', urinando pouco. Há 2 semanas teve uma crise de 'dor de pedra no rim' do mesmo lado, tratada com analgésico no pronto atendimento, sem exame de imagem. Nega tosse, diarreia ou lesões de pele.",
+  "antecedentes": "Diabetes mellitus tipo 2 há 12 anos, em uso de metformina e glibenclamida, com controle irregular. Hipertensão arterial em uso de losartana. Sem internações ou uso de antibióticos nos últimos 3 meses. Nega alergias.",
+  "exameFisico": "Mau estado geral, sonolenta, desorientada no tempo (Glasgow 14), pele fria e mosqueada em joelhos. PA 78/44 mmHg (PAM 55 mmHg). FC 124 bpm. FR 26 irpm. SatO2 94% em ar ambiente. Tax 39,2 °C. Tempo de enchimento capilar 5 segundos. Glicemia capilar 312 mg/dL. Mucosas secas. Ausculta cardíaca: taquicardia, sem sopros. Ausculta pulmonar sem ruídos adventícios. Abdome flácido, doloroso em flanco direito, sem irritação peritoneal. Punho-percussão lombar (sinal de Giordano) positiva à direita. Sem sinais meníngeos.",
+  "exames": "Lactato 4,6 mmol/L. Leucócitos 21.400/mm³ com 12% de bastões; hemoglobina 12,1 g/dL; plaquetas 98.000/mm³. Creatinina 2,1 mg/dL (basal 0,9); ureia 88 mg/dL. Bilirrubina total 1,6 mg/dL. Sódio 133 mEq/L; potássio 4,8 mEq/L. Gasometria arterial: pH 7,29; bicarbonato 15 mEq/L; PaO2 78 mmHg. PCR 280 mg/L. Urina tipo 1: leucocitúria intensa, nitrito positivo, bacteriúria. Hemoculturas (2 pares) e urocultura colhidas antes do antibiótico. Ultrassonografia à beira do leito: hidronefrose moderada à direita e cálculo de 9 mm no ureter proximal direito; veia cava inferior colabável; sem líquido livre.",
+  "perguntas": [
+   {
+    "pergunta": "A paciente tem sepse ou choque séptico? Como definir?",
+    "resposta": "Pelos critérios Sepsis-3, sepse é disfunção orgânica ameaçadora à vida causada por resposta desregulada à infecção, identificada por aumento de 2 ou mais pontos no escore SOFA. Ela tem disfunção neurológica, renal, hematológica (plaquetas), cardiovascular e hepática discreta (bilirrubina), além de hiperlactatemia, que é marcador de hipoperfusão. Choque séptico é sepse com necessidade de vasopressor para manter PAM de 65 mmHg ou mais e lactato acima de 2 mmol/L apesar de ressuscitação volêmica adequada. Se a hipotensão persistir após a reposição de volume, o quadro será de choque séptico. O qSOFA não deve ser usado isoladamente como ferramenta de triagem, pois tem baixa sensibilidade."
+   },
+   {
+    "pergunta": "Quais as medidas da primeira hora?",
+    "resposta": "Medir lactato; colher hemoculturas antes do antibiótico, sem atrasar a infusão; iniciar antibiótico de amplo espectro o mais rápido possível, idealmente na primeira hora quando há choque ou sepse de alta probabilidade; iniciar cristaloide (a Surviving Sepsis Campaign sugere 30 mL/kg nas primeiras 3 horas em hipoperfusão, guiando o volume seguinte por medidas dinâmicas de resposta a fluido); e iniciar noradrenalina se a PAM continuar baixa (a diretriz de 2026 sugere alvo inicial de 60 a 65 mmHg em pacientes com 65 anos ou mais, como esta; 65 mmHg nos demais adultos), podendo ser iniciada por acesso periférico calibroso enquanto se obtém acesso central. Soluções balanceadas (como Ringer lactato) são preferidas ao soro fisiológico em grandes volumes."
+   },
+   {
+    "pergunta": "Por que o achado da ultrassonografia muda a conduta?",
+    "resposta": "Porque se trata de pielonefrite obstrutiva: um cálculo impede a drenagem da urina infectada. Sem desobstrução, o antibiótico sozinho frequentemente falha. É necessário controle do foco com urgência, por cateter ureteral duplo J ou nefrostomia percutânea, idealmente nas primeiras 6 a 12 horas. O tratamento definitivo do cálculo fica para depois da resolução da infecção."
+   },
+   {
+    "pergunta": "Como escolher o antibiótico empírico?",
+    "resposta": "Deve cobrir enterobactérias (principalmente Escherichia coli), considerando o perfil de resistência local e os fatores de risco da paciente para germes multirresistentes (internação ou antibiótico recente, dispositivos urinários, colonização prévia). Sem esses fatores, uma cefalosporina de terceira geração pode ser adequada; em choque ou em serviços com alta prevalência de enterobactérias produtoras de ESBL, pode-se optar por piperacilina-tazobactam ou carbapenêmico. A terapia deve ser ajustada (descalonada) com o resultado das culturas."
+   },
+   {
+    "pergunta": "Quando associar corticoide?",
+    "resposta": "A Surviving Sepsis Campaign sugere hidrocortisona venosa (200 mg/dia, fracionada a cada 6 horas ou em infusão contínua) em adultos com choque séptico em uso de vasopressor; na prática, costuma ser iniciada quando há necessidade persistente ou crescente de noradrenalina (a versão de 2021 citava 0,25 µg/kg/min ou mais por pelo menos 4 horas). O corticoide acelera a reversão do choque, mas não é indicado na sepse sem choque."
+   }
+  ],
+  "hipoteses": [
+   "Sepse de foco urinário com hipoperfusão (provável choque séptico)",
+   "Pielonefrite aguda obstrutiva à direita por cálculo ureteral",
+   "Lesão renal aguda séptica e pré-renal",
+   "Hiperglicemia descompensada associada à infecção"
+  ],
+  "diferenciais": [
+   "Abscesso renal ou perinefrético",
+   "Colangite aguda",
+   "Pneumonia com sepse",
+   "Pielonefrite enfisematosa (mais comum em diabéticos)",
+   "Choque hipovolêmico por vômitos e desidratação isolados"
+  ],
+  "conduta": "Acionar o protocolo institucional de sepse. Dois acessos venosos calibrosos, monitorização contínua, oxigênio suplementar se houver hipoxemia (alvo aproximado de SatO2 entre 92% e 96%). Hemoculturas e urocultura seguidas imediatamente de antibiótico venoso de amplo espectro contra gram-negativos. Cristaloide balanceado em bolus (cerca de 30 mL/kg nas primeiras 3 horas) com reavaliação da perfusão (tempo de enchimento capilar, diurese, lactato, sinais de congestão). Noradrenalina se hipotensão persistir, com PAM alvo inicial de 60 a 65 mmHg (idosa com 65 anos ou mais, segundo a SSC 2026). Sondagem vesical para controle de diurese. Contato imediato com urologia para desobstrução (duplo J ou nefrostomia). Suspender metformina, glibenclamida e losartana; controle glicêmico com insulina (alvo 144–180 mg/dL). Repetir lactato em 2 a 4 horas. Internação em UTI. Considerar hidrocortisona se necessidade crescente de vasopressor. Profilaxia de tromboembolismo e reavaliação diária do antibiótico.",
+  "discussao": "A infecção urinária é uma das causas mais frequentes de sepse, principalmente em idosos e diabéticos. O caso reforça três lições: reconhecer a disfunção orgânica cedo (confusão, oligúria, pele mosqueada, lactato alto), agir rápido com antibiótico e volume e, sobretudo, buscar ativamente um foco que precise de drenagem. A história de cólica renal recente é uma pista que não pode passar despercebida, e a ultrassonografia à beira do leito é uma ferramenta rápida para isso. Protocolos de sepse, como os difundidos no Brasil pelo Instituto Latino-Americano de Sepse, reduzem mortalidade por padronizar essas medidas nas primeiras horas.",
+  "referencias": [
+   "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2026 (Critical Care Medicine/Intensive Care Medicine, 2026)",
+   "The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3), JAMA 2016",
+   "EAU Guidelines on Urological Infections – European Association of Urology (edição 2025)",
+   "Instituto Latino-Americano de Sepse (ILAS) – Roteiro de implementação de protocolo assistencial gerenciado de sepse"
+  ]
+ },
+ {
+  "id": "caso-colecistite-aguda-calculosa",
+  "titulo": "Dor forte embaixo das costelas à direita depois de um almoço de peixe frito",
+  "tema": "Doenças das vias biliares",
+  "especialidade": "Cirurgia Geral",
+  "disciplina": "Clínica Cirúrgica",
+  "dificuldade": 1,
+  "identificacao": "S.M.F., 42 anos, sexo feminino, parda, cozinheira de restaurante, natural e residente em Manaus (AM).",
+  "queixaPrincipal": "\"Dor forte na boca do estômago que foi para o lado direito e não passa.\"",
+  "hda": "Paciente refere que há cerca de 30 horas, após almoço de jaraqui frito com farofa, iniciou dor em epigástrio que migrou para o quadrante superior direito, contínua, de forte intensidade, com irradiação para a escápula direita. Diferente das crises anteriores, que duravam no máximo 2 horas e melhoravam com escopolamina, desta vez a dor não cedeu. Apresentou náuseas, dois episódios de vômitos e febre de 38 °C em casa. Nega icterícia, colúria, acolia fecal ou alteração do hábito intestinal.",
+  "antecedentes": "G4P4. Obesidade. Relata 'crises de dor no fígado' há cerca de 1 ano, após refeições gordurosas. Ultrassonografia realizada há 8 meses em UBS mostrou 'pedras na vesícula'; aguardava consulta com cirurgião. Nega diabetes e cardiopatia. Usa anticoncepcional injetável trimestral.",
+  "exameFisico": "Bom estado geral, fácies de dor, corada, anictérica, hidratada. PA 134/82 mmHg. FC 102 bpm. FR 18 irpm. SatO2 98% em ar ambiente. Tax 38,2 °C. IMC 33 kg/m². Abdome globoso, ruídos hidroaéreos presentes, doloroso à palpação do hipocôndrio direito, com defesa voluntária local. Sinal de Murphy positivo (interrupção da inspiração profunda à palpação do ponto cístico). Sem massa palpável. Sem sinais de irritação peritoneal difusa. Punho-percussão lombar negativa.",
+  "exames": "Leucócitos 14.800/mm³ (82% neutrófilos, sem desvio acentuado); hemoglobina 13,2 g/dL; plaquetas 260.000/mm³. PCR 96 mg/L. Bilirrubina total 1,0 mg/dL. Fosfatase alcalina e GGT normais. AST 38 U/L; ALT 42 U/L. Lipase normal. Creatinina 0,8 mg/dL. INR 1,0. Beta-hCG negativo. Ultrassonografia de abdome: vesícula biliar distendida, parede espessada (5 mm) com aspecto em camadas, cálculo de 1,8 cm impactado no infundíbulo, pequena lâmina de líquido pericolecístico e sinal de Murphy ultrassonográfico positivo. Colédoco com 4 mm, sem cálculos visíveis. ECG normal.",
+  "perguntas": [
+   {
+    "pergunta": "Quais critérios confirmam colecistite aguda pelas Diretrizes de Tóquio (TG18)?",
+    "resposta": "O diagnóstico definitivo exige: (A) sinal inflamatório local (sinal de Murphy ou dor/massa no quadrante superior direito), (B) sinal inflamatório sistêmico (febre, leucocitose ou PCR elevada) e (C) achado de imagem compatível. A paciente preenche os três: Murphy positivo, febre com leucocitose e PCR alta, e ultrassonografia com parede espessada, cálculo impactado, líquido pericolecístico e Murphy ultrassonográfico."
+   },
+   {
+    "pergunta": "Qual o grau de gravidade e por que isso importa?",
+    "resposta": "Grau I (leve): não há disfunção orgânica (grau III) nem critérios de grau II, que seriam leucócitos acima de 18.000/mm³, massa palpável dolorosa, sintomas por mais de 72 horas ou inflamação local acentuada (gangrena, abscesso, peritonite biliar, colecistite enfisematosa). A gravidade orienta o tratamento: no grau I, em paciente de baixo risco cirúrgico, a colecistectomia laparoscópica precoce é a conduta preferida."
+   },
+   {
+    "pergunta": "Por que não se trata de coledocolitíase ou colangite?",
+    "resposta": "A bilirrubina, a fosfatase alcalina e a GGT estão normais e o colédoco não está dilatado, o que torna baixa a probabilidade de cálculo no colédoco. Colangite seria sugerida pela tríade de Charcot (febre, icterícia e dor em quadrante superior direito), e a colangite grave pela pêntade de Reynolds (acrescenta hipotensão e confusão). Se houvesse alteração dos exames canaliculares, seria necessário estratificar o risco de coledocolitíase e, conforme o caso, fazer colangiorressonância ou colangiopancreatografia endoscópica."
+   },
+   {
+    "pergunta": "Qual o momento ideal da colecistectomia?",
+    "resposta": "Colecistectomia videolaparoscópica precoce, na mesma internação, idealmente nas primeiras 72 horas e, de forma geral, em até 7 dias do início dos sintomas. Comparada à cirurgia tardia (após 6 semanas), a precoce reduz tempo de internação, custos e recorrência, sem aumentar complicações. Adiar a cirurgia expõe a paciente a novas crises, pancreatite biliar e coledocolitíase."
+   }
+  ],
+  "hipoteses": [
+   "Colecistite aguda calculosa, grau I (leve) pelas Diretrizes de Tóquio 2018",
+   "Colelitíase sintomática prévia"
+  ],
+  "diferenciais": [
+   "Cólica biliar simples",
+   "Coledocolitíase e colangite aguda",
+   "Pancreatite aguda biliar",
+   "Úlcera péptica perfurada",
+   "Hepatite aguda",
+   "Pielonefrite aguda à direita",
+   "Apendicite aguda retrocecal/subepática",
+   "Infarto agudo do miocárdio de parede inferior"
+  ],
+  "conduta": "Internação, jejum inicial, hidratação venosa, analgesia (dipirona e anti-inflamatório não esteroidal, se não houver contraindicação, com opioide se necessário) e antiemético. Antibioticoterapia contra enterobactérias e anaeróbios, conforme protocolo local (por exemplo, cefalosporina associada a metronidazol). Colecistectomia videolaparoscópica precoce na mesma internação, com avaliação pré-anestésica. Após a cirurgia, o antibiótico pode ser suspenso em 24 horas nos graus I e II se o foco foi controlado. Em pacientes de alto risco cirúrgico que não melhoram, a colecistostomia percutânea é alternativa temporária.",
+  "discussao": "A colecistite aguda resulta, em mais de 90% dos casos, da obstrução persistente do ducto cístico ou do infundíbulo por cálculo, levando a distensão, inflamação química e, em parte dos casos, infecção secundária. A principal diferença clínica em relação à cólica biliar é a duração: dor por mais de 6 horas, com febre e Murphy positivo, sugere colecistite. O caso também chama atenção para o acesso ao cuidado: a paciente já tinha colelitíase sintomática e aguardava cirurgia eletiva, situação comum no SUS. A colecistectomia eletiva em pacientes sintomáticos evita complicações como esta. Nos pacientes com pedras mas sem sintomas, em geral não há indicação de cirurgia, salvo exceções.",
+  "referencias": [
+   "Tokyo Guidelines 2018 (TG18): diagnostic criteria and severity grading of acute cholecystitis; flowchart for the management of acute cholecystitis",
+   "WSES guidelines on acute calculous cholecystitis – World Society of Emergency Surgery (2020 update)",
+   "Sabiston – Tratado de Cirurgia, capítulo de vias biliares"
+  ]
+ },
+ {
+  "id": "caso-obstrucao-intestinal-bridas",
+  "titulo": "Barriga inchada, vômitos e sem soltar gases após antiga facada",
+  "tema": "Obstrução intestinal",
+  "especialidade": "Cirurgia Geral",
+  "disciplina": "Clínica Cirúrgica",
+  "dificuldade": 2,
+  "identificacao": "P.A.S., 56 anos, sexo masculino, pardo, feirante, natural de Coari e residente em Manaus (AM).",
+  "queixaPrincipal": "\"Barriga inchada, vomitando tudo e sem soltar gases há dois dias.\"",
+  "hda": "Paciente refere que há 2 dias iniciou dor abdominal em cólica, periumbilical, que vem em ondas a cada poucos minutos, seguida de distensão progressiva. Teve vários episódios de vômitos, inicialmente com restos alimentares e depois esverdeados. Não elimina gases nem fezes há cerca de 36 horas. Nega febre, sangue nas fezes ou emagrecimento prévio. Nega episódios semelhantes, mas relata 'barriga estufada' ocasional que melhorava sozinha.",
+  "antecedentes": "Laparotomia exploradora há 12 anos por ferimento de arma branca no abdome, com sutura de alça de intestino delgado. Hipertensão arterial em uso de hidroclorotiazida. Nega hérnias conhecidas. Etilismo social; nega tabagismo.",
+  "exameFisico": "Regular estado geral, desidratado (++/4+), com fácies de dor. PA 118/76 mmHg. FC 104 bpm. FR 20 irpm. SatO2 97% em ar ambiente. Tax 37,2 °C. Abdome distendido, com cicatriz mediana xifopúbica, timpânico à percussão; ruídos hidroaéreos aumentados com timbre metálico, alternando com períodos de silêncio; dor difusa leve à palpação, sem defesa, sem descompressão brusca dolorosa, sem massas. Orifícios herniários (inguinais, femorais, umbilical e incisional) livres. Toque retal: ampola retal vazia, sem massas, sem sangue.",
+  "exames": "Leucócitos 11.200/mm³; hemoglobina 15,6 g/dL (hemoconcentração). Sódio 136 mEq/L; potássio 3,1 mEq/L; cloro 94 mEq/L. Gasometria venosa: pH 7,49; bicarbonato 31 mEq/L. Creatinina 1,5 mg/dL; ureia 70 mg/dL. Lactato 1,4 mmol/L. PCR 30 mg/L. Amilase normal. Radiografia de abdome (em pé e deitado): alças de delgado dilatadas e centrais, com pregas coniventes visíveis (aspecto de 'empilhamento de moedas'), múltiplos níveis hidroaéreos em degraus e pouco gás no cólon; sem pneumoperitônio. Tomografia de abdome com contraste venoso: dilatação de alças de delgado até ponto de transição em íleo distal, sem massa, sem pneumatose, com parede das alças realçando normalmente, sem líquido livre significativo e sem sinais de volvo.",
+  "perguntas": [
+   {
+    "pergunta": "Qual o diagnóstico mais provável e sua causa?",
+    "resposta": "Obstrução mecânica do intestino delgado por aderências (bridas), a causa mais comum de obstrução de delgado em pacientes com cirurgia abdominal prévia. A dor em cólica, os vômitos biliosos, a parada de eliminação de gases e fezes, a distensão e os ruídos metálicos são típicos. As hérnias, segunda causa mais frequente, foram excluídas pelo exame físico."
+   },
+   {
+    "pergunta": "Quais sinais indicariam estrangulamento (sofrimento de alça)?",
+    "resposta": "Clínicos: dor contínua e desproporcional ao exame, febre, taquicardia persistente apesar da hidratação, sinais de peritonite. Laboratoriais: leucocitose importante, acidose metabólica e lactato elevado (embora um lactato normal não exclua isquemia). Tomográficos: redução ou ausência de realce da parede, espessamento de parede, líquido livre, edema de mesentério, pneumatose, gás no sistema porta e sinais de alça fechada ou volvo. Na presença desses sinais, a cirurgia é imediata."
+   },
+   {
+    "pergunta": "Como interpretar os distúrbios hidroeletrolíticos?",
+    "resposta": "Vômitos de conteúdo gástrico e biliar causam perda de ácido clorídrico, sódio, potássio e água, gerando alcalose metabólica hipoclorêmica e hipocalêmica, além de lesão renal pré-renal por hipovolemia. O diurético tiazídico piora a perda de potássio. A correção da volemia e do potássio é parte essencial do tratamento e também melhora a motilidade intestinal."
+   },
+   {
+    "pergunta": "Qual a conduta inicial na obstrução por bridas sem sinais de sofrimento?",
+    "resposta": "Tratamento conservador: jejum, sonda nasogástrica aberta para descompressão, hidratação venosa com reposição de potássio, analgesia e controle rigoroso de diurese, com reavaliações clínicas seriadas pelo mesmo cirurgião. As diretrizes de Bologna recomendam administrar contraste hidrossolúvel (tipo gastrografina) pela sonda e repetir a radiografia após algumas horas (em geral 8 a 24 horas): se o contraste chegar ao cólon, a resolução sem cirurgia é muito provável; ele também pode ter efeito terapêutico. Se não houver melhora em até 72 horas, ou se surgirem sinais de estrangulamento, indica-se cirurgia (laparoscópica em casos selecionados ou laparotomia)."
+   }
+  ],
+  "hipoteses": [
+   "Obstrução intestinal mecânica de delgado por bridas, sem sinais de estrangulamento",
+   "Alcalose metabólica hipoclorêmica e hipocalemia por vômitos",
+   "Lesão renal aguda pré-renal por desidratação"
+  ],
+  "diferenciais": [
+   "Hérnia interna ou incisional encarcerada",
+   "Obstrução por neoplasia de delgado ou de cólon",
+   "Íleo paralítico (por distúrbio eletrolítico, medicamentos ou infecção)",
+   "Volvo de intestino delgado",
+   "Íleo biliar",
+   "Obstrução por bolo de áscaris (considerar em áreas endêmicas, principalmente em crianças)"
+  ],
+  "conduta": "Internação em enfermaria cirúrgica. Jejum, sonda nasogástrica aberta, hidratação venosa com cristaloide e reposição de potássio, suspensão do tiazídico, sondagem vesical ou controle de diurese. Analgesia sem mascarar a evolução do exame. Administração de contraste hidrossolúvel pela sonda com radiografia seriada. Reavaliação clínica frequente e exames seriados (lactato, leucócitos, eletrólitos). Se o contraste atingir o cólon e o paciente eliminar gases, reintroduzir dieta de forma gradual. Se não houver resolução em até 72 horas ou se surgirem sinais de sofrimento de alça, indicar abordagem cirúrgica com lise de bridas e avaliação da viabilidade intestinal. Profilaxia de tromboembolismo venoso.",
+  "discussao": "As aderências pós-operatórias surgem em grande parte dos pacientes submetidos a laparotomia e são a principal causa de obstrução de intestino delgado. O ponto crítico do manejo é separar a obstrução simples, que costuma resolver com tratamento conservador, da obstrução complicada (estrangulada ou em alça fechada), que é uma emergência cirúrgica. A tomografia com contraste venoso tornou-se o exame de escolha para localizar o ponto de transição e buscar sinais de isquemia. O teste com contraste hidrossolúvel é diagnóstico e terapêutico e reduz a necessidade de cirurgia. A vigilância clínica seriada continua insubstituível: nenhum exame isolado exclui estrangulamento com segurança.",
+  "referencias": [
+   "Bologna guidelines for diagnosis and management of adhesive small bowel obstruction (ASBO): 2017 update of the evidence-based guidelines from the World Society of Emergency Surgery ASBO working group",
+   "Sabiston – Tratado de Cirurgia, capítulo de obstrução intestinal",
+   "Schwartz – Princípios de Cirurgia, capítulo de intestino delgado"
+  ]
+ },
+ {
+  "id": "caso-politrauma-choque-hemorragico",
+  "titulo": "Motociclista com dor abdominal, pele fria e pressão baixa após colisão",
+  "tema": "Atendimento inicial ao politraumatizado",
+  "especialidade": "Trauma",
+  "disciplina": "Clínica Cirúrgica",
+  "dificuldade": 3,
+  "identificacao": "D.L.N., 23 anos, sexo masculino, pardo, entregador por aplicativo, natural e residente em Manaus (AM).",
+  "queixaPrincipal": "\"Dor muito forte na barriga do lado esquerdo e na coxa.\" (vítima trazida pelo SAMU)",
+  "hda": "Vítima de colisão entre motocicleta e carro em avenida de Manaus, há cerca de 40 minutos, com velocidade estimada de 60 km/h. Usava capacete, que estava íntegro. Foi projetado ao solo e bateu o lado esquerdo do corpo no meio-fio. A equipe do SAMU encontrou o paciente consciente, com deformidade na coxa direita, sem sangramento externo ativo. Foi imobilizado em prancha com colar cervical, recebeu oxigênio e um acesso venoso periférico. Durante o transporte ficou mais pálido e sonolento.",
+  "antecedentes": "Previamente hígido. Nega alergias e uso de medicamentos. Última refeição há 3 horas. Nega uso de álcool ou drogas nesse dia. Vacinação antitetânica desconhecida.",
+  "exameFisico": "x (hemorragia exsanguinante externa): ausente. A: via aérea pérvia, fala com frases curtas, colar cervical em posição. B: FR 28 irpm, SatO2 93% com máscara de oxigênio, expansibilidade simétrica, murmúrio vesicular presente bilateralmente, escoriações e dor à palpação em arcos costais inferiores esquerdos, sem crepitação ou enfisema subcutâneo, traqueia centrada. C: PA 80/50 mmHg, FC 136 bpm, pulsos radiais finos, pele fria e pálida, tempo de enchimento capilar de 4 segundos; abdome com escoriações em flanco e hipocôndrio esquerdos, doloroso, com defesa; pelve estável à compressão suave única; deformidade com encurtamento e rotação externa da coxa direita, sem ferida aberta. D: Glasgow 14 (O3 V5 M6), pupilas isocóricas e fotorreagentes, move os quatro membros. E: Tax 35,8 °C; sem outras lesões visíveis após exposição e rolamento em bloco; toque retal sem sangue.",
+  "exames": "FAST (ultrassonografia direcionada ao trauma): líquido livre no espaço esplenorrenal e no espaço hepatorrenal (Morrison); pericárdio sem derrame. Radiografia de tórax na sala: sem pneumotórax ou hemotórax evidentes; fraturas de 9º e 10º arcos costais à esquerda. Radiografia de bacia sem fraturas. Radiografia de fêmur direito: fratura diafisária cominutiva. Gasometria arterial: pH 7,24; bicarbonato 16 mEq/L; excesso de base −8 mEq/L; lactato 5,2 mmol/L. Hemoglobina 9,8 g/dL. Plaquetas 190.000/mm³. INR 1,4. Fibrinogênio 160 mg/dL. Tipagem sanguínea em andamento. Glicemia 168 mg/dL. Etanol não detectado.",
+  "perguntas": [
+   {
+    "pergunta": "O que mudou na avaliação primária com o ATLS 11ª edição?",
+    "resposta": "A sequência passou a ser xABCDE: o 'x' indica controle imediato de hemorragia externa exsanguinante (com compressão direta, torniquete ou agentes hemostáticos) antes mesmo da via aérea. Depois seguem A (via aérea com proteção da coluna cervical), B (ventilação), C (circulação e controle de hemorragia), D (estado neurológico) e E (exposição com prevenção de hipotermia). A nova edição também reforça a ressuscitação balanceada precoce com hemocomponentes."
+   },
+   {
+    "pergunta": "Qual o tipo e a gravidade do choque?",
+    "resposta": "Choque hemorrágico, a causa mais comum de choque no trauma. Pela classificação do ATLS, a taquicardia acima de 120 bpm, a hipotensão, a taquipneia, a alteração discreta do nível de consciência e o excesso de base entre −6 e −10 sugerem hemorragia classe III (perda estimada de 31% a 40% da volemia). As fontes prováveis são o abdome (lesão de baço sugerida pelas fraturas de costelas inferiores esquerdas e FAST positivo) e a fratura de fêmur, que pode perder mais de 1 litro de sangue. A hemoglobina inicial pode estar pouco alterada e não deve ser usada para estimar a perda na fase aguda."
+   },
+   {
+    "pergunta": "Como deve ser feita a reposição volêmica?",
+    "resposta": "Dois acessos venosos calibrosos (ou intraósseo), com cristaloide aquecido em volume limitado (no máximo cerca de 1 litro em adultos), seguido precocemente de hemocomponentes em proporção balanceada (plasma, plaquetas e hemácias, próximo de 1:1:1), com ativação do protocolo de transfusão maciça. Enquanto o sangramento não é controlado, aceita-se hipotensão permissiva, com meta de pressão sistólica em torno de 80 a 90 mmHg, desde que não haja trauma cranioencefálico grave. Grandes volumes de cristaloide pioram a coagulopatia, a hipotermia e a acidose (a chamada tríade letal)."
+   },
+   {
+    "pergunta": "Qual o papel do ácido tranexâmico?",
+    "resposta": "No trauma com sangramento significativo ou risco de sangramento, o ácido tranexâmico reduz mortalidade por hemorragia quando administrado dentro de 3 horas após o trauma: 1 g por via venosa em 10 minutos, seguido de 1 g em infusão por 8 horas (esquema do estudo CRASH-2). Após 3 horas, o benefício desaparece e pode haver dano."
+   },
+   {
+    "pergunta": "O paciente deve ir para a tomografia?",
+    "resposta": "Não. Paciente com instabilidade hemodinâmica que não responde à reposição inicial e FAST positivo para líquido livre deve ir diretamente para laparotomia exploradora (cirurgia de controle de danos). A tomografia fica reservada para pacientes estáveis ou que respondem de forma sustentada à ressuscitação. A fratura de fêmur deve ser alinhada e imobilizada com tração para reduzir o sangramento e a dor; a fixação definitiva vem depois da estabilização."
+   }
+  ],
+  "hipoteses": [
+   "Choque hemorrágico classe III",
+   "Trauma abdominal fechado com hemoperitônio, provável lesão esplênica",
+   "Fratura diafisária fechada de fêmur direito",
+   "Fraturas de arcos costais inferiores à esquerda",
+   "Coagulopatia induzida pelo trauma em instalação (INR elevado, fibrinogênio baixo, hipotermia e acidose)"
+  ],
+  "diferenciais": [
+   "Choque obstrutivo por pneumotórax hipertensivo ou tamponamento cardíaco (afastados clinicamente e pelo FAST/radiografia)",
+   "Choque neurogênico por lesão medular (bradicardia e pele quente seriam esperadas)",
+   "Hemorragia retroperitoneal ou por fratura pélvica",
+   "Lesão hepática ou de víscera oca associada",
+   "Trauma cranioencefálico com piora neurológica"
+  ],
+  "conduta": "Acionar equipe de trauma e cirurgia. Manter oxigênio, colar cervical e restrição de movimento da coluna. Dois acessos calibrosos com coleta de tipagem e prova cruzada. Cristaloide aquecido limitado e início imediato de concentrado de hemácias (O negativo ou O positivo em homem enquanto se aguarda tipagem), com protocolo de transfusão maciça e proporção balanceada de plasma e plaquetas; reposição de fibrinogênio (crioprecipitado ou concentrado) guiada por exames ou testes viscoelásticos. Ácido tranexâmico 1 g em 10 minutos e 1 g em 8 horas. Hipotensão permissiva até o controle do sangramento. Aquecimento ativo do paciente e dos fluidos. Tração/imobilização do fêmur. Sondagem vesical se não houver sinais de lesão uretral. Profilaxia antitetânica. Encaminhamento imediato ao centro cirúrgico para laparotomia de controle de danos, seguida de UTI. Avaliação secundária completa quando estável e fixação ortopédica posterior.",
+  "discussao": "O trauma é a principal causa de morte em jovens no Brasil, e os acidentes com motocicleta têm grande peso nas capitais, incluindo Manaus, onde entregadores por aplicativo estão muito expostos. A hemorragia é a principal causa evitável de morte precoce no trauma. O caso ilustra a sequência sistemática xABCDE, que evita que lesões graves passem despercebidas, e a decisão central: paciente instável com fonte abdominal identificada vai direto para o centro cirúrgico. A ressuscitação de controle de danos, com hipotensão permissiva, hemocomponentes precoces, ácido tranexâmico e prevenção da hipotermia, substituiu a antiga prática de infundir grandes volumes de cristaloide. Lembrar sempre de buscar outras fontes de sangramento: tórax, abdome, pelve, ossos longos e sangramento externo ('sangue no chão e mais quatro').",
+  "referencias": [
+   "ATLS – Advanced Trauma Life Support, 11ª edição (American College of Surgeons, 2025)",
+   "The European guideline on management of major bleeding and coagulopathy following trauma: sixth edition (2023)",
+   "CRASH-2 trial collaborators – Effects of tranexamic acid on death, vascular occlusive events, and blood transfusion in trauma patients (Lancet, 2010)"
+  ]
+ },
+ {
+  "id": "caso-hernia-inguinal-estrangulada",
+  "titulo": "Caroço na virilha que não volta mais, com dor e vômitos em pescador",
+  "tema": "Hérnias da parede abdominal",
+  "especialidade": "Cirurgia Geral",
+  "disciplina": "Clínica Cirúrgica",
+  "dificuldade": 1,
+  "identificacao": "O.B.C., 64 anos, sexo masculino, pardo, pescador, natural e residente em comunidade ribeirinha de Manacapuru (AM).",
+  "queixaPrincipal": "\"A bola da virilha endureceu, não volta mais e está doendo muito.\"",
+  "hda": "Paciente refere tumoração na região inguinal direita há cerca de 5 anos, que aumentava ao carregar peso e ao tossir e voltava sozinha ou com a mão ao deitar. Há cerca de 14 horas, depois de puxar uma rede de pesca pesada, a tumoração aumentou, ficou dolorosa e não voltou mais. Desde então teve cólicas abdominais, vômitos e não eliminou fezes. Viajou cerca de 4 horas de barco até o hospital. Nega febre medida em casa.",
+  "antecedentes": "Tabagista de 30 maços-ano. Tosse crônica com catarro pela manhã. Hipertensão arterial sem tratamento regular. Nega cirurgias prévias. Nega uso de anticoagulantes.",
+  "exameFisico": "Regular estado geral, fácies de dor, desidratado (+/4+). PA 132/80 mmHg. FC 112 bpm. FR 20 irpm. SatO2 95% em ar ambiente. Tax 37,9 °C. Abdome levemente distendido, ruídos hidroaéreos aumentados, doloroso difusamente à palpação profunda, sem sinais de peritonite generalizada. Região inguinal direita: tumoração de cerca de 8 cm, estendendo-se ao escroto, endurecida, tensa, muito dolorosa, irredutível, com hiperemia e calor da pele sobrejacente. Testículos palpáveis. Região inguinal esquerda sem abaulamentos.",
+  "exames": "Leucócitos 16.500/mm³ com 8% de bastões; hemoglobina 15,2 g/dL. Lactato 2,8 mmol/L. Creatinina 1,3 mg/dL; potássio 3,6 mEq/L; sódio 138 mEq/L. PCR 110 mg/L. Coagulograma normal. ECG: taquicardia sinusal. Radiografia de abdome: distensão de alças de delgado com níveis hidroaéreos. Ultrassonografia da região inguinal: alça intestinal no saco herniário, com parede espessada, líquido no saco e fluxo ao Doppler reduzido.",
+  "perguntas": [
+   {
+    "pergunta": "Qual a diferença entre hérnia encarcerada e estrangulada?",
+    "resposta": "Na hérnia encarcerada, o conteúdo não retorna à cavidade abdominal, mas a irrigação sanguínea está preservada. Na estrangulada, a constrição no colo do saco compromete a circulação do conteúdo, levando a isquemia e, se não tratada, necrose e perfuração. Dor intensa e contínua, pele hiperemiada e quente sobre a hérnia, febre, taquicardia, leucocitose e lactato elevado indicam estrangulamento, como neste paciente."
+   },
+   {
+    "pergunta": "Deve-se tentar reduzir a hérnia manualmente?",
+    "resposta": "Não. A redução manual (manobra de taxe) só pode ser tentada, com cuidado e analgesia, em hérnias encarceradas recentes sem sinais de estrangulamento. Com sinais de sofrimento, a redução é contraindicada, pois pode devolver à cavidade uma alça necrosada ou reduzir o conjunto ainda preso pelo anel (a chamada 'redução em massa'), mascarando a gravidade. A indicação é cirurgia de urgência."
+   },
+   {
+    "pergunta": "Como deve ser o tratamento cirúrgico?",
+    "resposta": "Correção de urgência com exploração do conteúdo herniário para avaliar viabilidade da alça (cor, brilho, peristalse, pulsação das arcadas e sangramento ao corte). Se a alça não for viável, faz-se ressecção com anastomose. A tela (malha) pode ser usada em campos limpos e limpo-contaminados, segundo diretrizes internacionais, reduzindo recidiva; em campos contaminados (perfuração, peritonite), a decisão é individualizada. A abordagem pode ser por via inguinal aberta ou laparoscópica, conforme experiência da equipe e condição do paciente."
+   },
+   {
+    "pergunta": "Quais fatores do paciente contribuíram para a hérnia e o que orientar após a recuperação?",
+    "resposta": "Aumento da pressão intra-abdominal por esforço físico repetitivo (trabalho braçal com redes), tosse crônica pelo tabagismo (provável DPOC) e envelhecimento dos tecidos. Após a alta, orientar cessação do tabagismo, investigação e tratamento da tosse crônica, controle da hipertensão e retorno gradual aos esforços. Hérnias inguinais sintomáticas devem ser operadas de forma eletiva, antes de complicarem; a dificuldade de acesso ao cirurgião em áreas ribeirinhas aumenta o risco de apresentações graves como esta."
+   }
+  ],
+  "hipoteses": [
+   "Hérnia inguinoescrotal direita estrangulada",
+   "Obstrução intestinal secundária à hérnia",
+   "Possível isquemia de alça de delgado"
+  ],
+  "diferenciais": [
+   "Hérnia encarcerada sem estrangulamento",
+   "Hérnia femoral estrangulada",
+   "Hidrocele aguda ou hidrocele de cordão",
+   "Torção testicular",
+   "Orquiepididimite",
+   "Linfadenite inguinal supurada"
+  ],
+  "conduta": "Jejum, sonda nasogástrica, hidratação venosa, analgesia e correção de distúrbios hidroeletrolíticos. Antibioticoterapia profilática/terapêutica conforme achados. Cirurgia de urgência sem tentativa de redução manual: inguinotomia (ou laparoscopia em serviço experiente), inspeção do conteúdo e ressecção intestinal com anastomose se houver necrose. Herniorrafia com tela se o campo permitir. Atualizar a vacinação antitetânica se estiver em atraso. Profilaxia de tromboembolismo venoso. Após a alta, cessação do tabagismo, avaliação de DPOC e controle da hipertensão.",
+  "discussao": "As hérnias da região inguinal são muito frequentes em homens, e a maioria é indireta. O risco de estrangulamento é maior nas primeiras fases após o surgimento e nas hérnias femorais, mais comuns em mulheres idosas. A decisão de urgência é clínica: sinais locais de inflamação, dor contínua e sinais sistêmicos indicam sofrimento de alça e cirurgia imediata. O tempo até a cirurgia é o principal determinante de ressecção intestinal e mortalidade. No contexto amazônico, a distância e o transporte fluvial atrasam o atendimento, o que reforça a importância de operar eletivamente hérnias sintomáticas e de orientar a população sobre sinais de alarme.",
+  "referencias": [
+   "International guidelines for groin hernia management – The HerniaSurge Group (Hernia, 2018)",
+   "2017 update of the WSES guidelines for emergency repair of complicated abdominal wall hernias (World Journal of Emergency Surgery)",
+   "Sabiston – Tratado de Cirurgia, capítulo de hérnias"
+  ]
+ },
+ {
+  "id": "caso-crise-asma-crianca",
+  "titulo": "Chiado e falta de ar em menino que só usa a bombinha nas crises",
+  "tema": "Asma",
+  "especialidade": "Pediatria Geral",
+  "disciplina": "Pediatria",
+  "dificuldade": 2,
+  "identificacao": "L.G.S., 7 anos, sexo masculino, pardo, estudante do 2º ano, natural e residente em Manaus (AM). Acompanhado pela mãe.",
+  "queixaPrincipal": "\"Ele está com muito cansaço e chiado desde a madrugada, e a bombinha não está resolvendo.\"",
+  "hda": "Mãe relata que há 3 dias o filho apresenta coriza, obstrução nasal e tosse seca, com febre baixa no primeiro dia. Desde a madrugada de hoje evoluiu com chiado no peito, falta de ar progressiva e tosse intensa. Usou salbutamol spray (sem espaçador) 'umas 8 vezes' desde a madrugada, com melhora curta. Agora tem dificuldade para falar frases inteiras e não quis tomar café. No último mês, acordou à noite com tosse e chiado cerca de duas vezes por semana e deixou de jogar bola na escola por cansaço.",
+  "antecedentes": "Diagnóstico de asma aos 4 anos. Usa apenas salbutamol quando tem crise; nunca usou medicação de manutenção de forma regular. Duas idas ao pronto atendimento no último ano, com uso de corticoide oral. Rinite alérgica. Dermatite atópica na primeira infância. Pai asmático. Mora em casa com mofo nas paredes; tio fumante no domicílio. Vacinação em dia pela caderneta, incluindo influenza deste ano.",
+  "exameFisico": "Regular estado geral, sentado inclinado para frente, ansioso, falando frases curtas, sem cianose. Peso 23 kg. FC 128 bpm. FR 36 irpm. SatO2 90% em ar ambiente. Tax 37,4 °C. PA 100/62 mmHg. Tiragem subcostal e intercostal, retração de fúrcula e batimento de asa de nariz. Ausculta pulmonar: murmúrio vesicular diminuído globalmente, sibilos expiratórios e inspiratórios difusos, expiração prolongada. Ausculta cardíaca: taquicardia, sem sopros. Orofaringe levemente hiperemiada. Sem sinais de desidratação. Tempo de enchimento capilar 2 segundos.",
+  "exames": "Nenhum exame é necessário para iniciar o tratamento. Após 1 hora de tratamento: SatO2 95% em ar ambiente, FC 118 bpm, FR 26 irpm, falando frases completas, sibilos esparsos, sem tiragem. Radiografia de tórax (solicitada pela febre e pela pouca resposta inicial): hiperinsuflação discreta, sem consolidação ou pneumotórax. Pico de fluxo expiratório (após melhora): 62% do previsto para a estatura.",
+  "perguntas": [
+   {
+    "pergunta": "Como classificar a gravidade da crise?",
+    "resposta": "Pelos critérios do GINA para crianças de 6 a 11 anos, a crise tem características de gravidade: fala frases curtas/entrecortadas, fica sentado inclinado para frente, está agitado, FR acima de 30 irpm, uso de musculatura acessória, FC acima de 120 bpm e saturação próxima de 90%. Sinais de risco de vida seriam sonolência, confusão, tórax silencioso ou cianose, que indicariam UTI. A classificação correta orienta a intensidade do tratamento e o local de atendimento."
+   },
+   {
+    "pergunta": "Qual o tratamento inicial no pronto atendimento?",
+    "resposta": "Oxigênio para manter SatO2 entre 94% e 98%. Beta-2 agonista de curta ação (salbutamol) por inalador dosimetrado com espaçador, em doses repetidas a cada 20 minutos na primeira hora; o espaçador é tão eficaz quanto a nebulização. Na crise grave, associar brometo de ipratrópio nas primeiras horas. Corticoide sistêmico precoce, preferencialmente oral (como prednisolona, cerca de 1 a 2 mg/kg/dia, com dose máxima de 40 mg, por 3 a 5 dias). Se não houver resposta, considerar sulfato de magnésio venoso e encaminhamento para terapia intensiva. Antibiótico não é indicado de rotina."
+   },
+   {
+    "pergunta": "Por que esta criança teve uma crise tão grave? O que estava errado no tratamento?",
+    "resposta": "A asma estava não controlada: sintomas noturnos frequentes, limitação de atividades, uso frequente de broncodilatador de resgate e crises com corticoide oral no último ano. Tratar apenas com beta-2 agonista de curta ação, sem corticoide inalatório, aumenta o risco de crises graves e de morte. Somam-se fatores ambientais (mofo, tabagismo passivo), a infecção viral como gatilho e a técnica inadequada (spray sem espaçador)."
+   },
+   {
+    "pergunta": "Como deve ser o plano de alta?",
+    "resposta": "Iniciar tratamento de manutenção com corticoide inalatório. Para crianças de 6 a 11 anos, o GINA admite corticoide inalatório diário em dose baixa a média com beta-2 agonista de resgate, ou esquema com budesonida-formoterol em dose muito baixa como manutenção e resgate (MART, a partir do degrau 3). Completar o corticoide oral, ensinar a técnica com espaçador, entregar plano de ação escrito, tratar a rinite, orientar controle ambiental (retirar mofo, casa livre de fumaça) e agendar retorno em 2 a 7 dias. Reforçar a vacinação anual contra influenza e o seguimento regular na UBS."
+   }
+  ],
+  "hipoteses": [
+   "Crise de asma grave desencadeada por infecção viral de vias aéreas superiores",
+   "Asma não controlada, sem tratamento de manutenção",
+   "Rinite alérgica associada"
+  ],
+  "diferenciais": [
+   "Pneumonia com broncoespasmo",
+   "Aspiração de corpo estranho",
+   "Anafilaxia com broncoespasmo",
+   "Pneumotórax (complicação da crise)",
+   "Disfunção de cordas vocais"
+  ],
+  "conduta": "Oxigênio para SatO2 94–98%. Salbutamol com espaçador a cada 20 minutos na primeira hora, associado a ipratrópio. Prednisolona oral na primeira hora, completando 3 a 5 dias. Reavaliação clínica após cada ciclo; se falha, sulfato de magnésio venoso e vaga de UTI pediátrica. Com boa resposta sustentada por algumas horas (SatO2 ≥ 94% em ar ambiente, sem esforço respiratório), alta com corticoide inalatório de manutenção, espaçador, plano de ação escrito, tratamento da rinite, controle ambiental, orientação sobre tabagismo passivo e retorno em até 1 semana na UBS ou no ambulatório de pediatria.",
+  "discussao": "A asma é a doença crônica mais comum da infância e uma causa frequente de idas ao pronto-socorro. O caso ilustra o padrão clássico de asma não controlada tratada apenas com broncodilatador de resgate, situação que o GINA desaconselha por aumentar o risco de crises graves. Na urgência, os pilares são broncodilatador repetido, oxigênio controlado e corticoide sistêmico precoce. O momento da alta é uma oportunidade de ouro: ajustar o tratamento de manutenção, corrigir a técnica inalatória, remover gatilhos domiciliares e garantir seguimento. Em Manaus, a umidade elevada favorece mofo e ácaros, e as infecções virais sazonais são desencadeantes frequentes.",
+  "referencias": [
+   "Global Initiative for Asthma (GINA) – Global Strategy for Asthma Management and Prevention, atualização 2025",
+   "Recomendações para o manejo da asma da Sociedade Brasileira de Pneumologia e Tisiologia (J Bras Pneumol, 2020)",
+   "Tratado de Pediatria da Sociedade Brasileira de Pediatria – capítulo de asma na infância"
+  ]
+ },
+ {
+  "id": "caso-ictericia-neonatal-aborh",
+  "titulo": "Recém-nascido amarelado no primeiro dia de vida",
+  "tema": "Icterícia neonatal",
+  "especialidade": "Neonatologia",
+  "disciplina": "Pediatria",
+  "dificuldade": 2,
+  "identificacao": "RN de J.P.A., 30 horas de vida, sexo feminino, nascido a termo em maternidade pública de Manaus (AM). Mãe de 26 anos, secundigesta.",
+  "queixaPrincipal": "\"A bebê ficou amarelinha desde ontem à noite.\" (relato da mãe no alojamento conjunto)",
+  "hda": "Recém-nascida de parto vaginal com 38 semanas e 4 dias, sem intercorrências, Apgar 8 e 9, peso ao nascer de 3.250 g. Iniciou aleitamento materno exclusivo na primeira hora de vida. A mãe e a equipe de enfermagem notaram icterícia em face com cerca de 18 horas de vida, que agora se estende até o abdome. A bebê mama a cada 2 a 3 horas, com boa pega, e apresentou 3 diureses e 2 evacuações meconiais nas últimas 24 horas. Não houve febre, letargia, recusa alimentar, vômitos ou choro agudo.",
+  "antecedentes": "Mãe: tipo sanguíneo O positivo, pré-natal com 8 consultas, sorologias negativas (sífilis, HIV, hepatite B, toxoplasmose), sem uso de medicamentos. Primeiro filho teve 'amarelão' e fez fototerapia por 3 dias. Bolsa rota há 4 horas no parto, sem febre materna. Não há história familiar de anemia hereditária conhecida.",
+  "exameFisico": "Bom estado geral, ativa, reativa ao manuseio, choro forte, sucção vigorosa. Peso 3.150 g (perda de 3%). FC 142 bpm. FR 44 irpm. PA 66/40 mmHg. Tax 36,8 °C. SatO2 98% em ar ambiente. Tempo de enchimento capilar 2 segundos. Icterícia em face, tronco e abdome, abaixo da cicatriz umbilical até a raiz das coxas (zona 3 de Kramer). Mucosas levemente descoradas. Fontanela anterior normotensa. Sem céfalo-hematoma ou equimoses extensas. Ausculta cardíaca e pulmonar normais. Fígado a 2 cm do rebordo costal direito; baço não palpável. Reflexos primitivos presentes e simétricos, tônus normal.",
+  "exames": "Bilirrubina total 13,2 mg/dL; bilirrubina direta 0,5 mg/dL (com 30 horas de vida). Tipo sanguíneo do RN: A positivo. Coombs direto positivo. Hemoglobina 13,4 g/dL; hematócrito 40%; reticulócitos 9%. Esfregaço: esferócitos. Albumina 3,2 g/dL. Triagem para deficiência de G6PD em andamento. Glicemia 64 mg/dL.",
+  "perguntas": [
+   {
+    "pergunta": "Por que esta icterícia é considerada patológica?",
+    "resposta": "Porque surgiu nas primeiras 24 horas de vida. A icterícia fisiológica aparece em geral após 24 horas, com pico entre o 3º e o 5º dia em RN a termo. Outros sinais de icterícia patológica são: aumento rápido da bilirrubina, bilirrubina direta elevada, icterícia prolongada e sinais de hemólise ou de doença (letargia, recusa alimentar, instabilidade térmica)."
+   },
+   {
+    "pergunta": "Qual a causa mais provável?",
+    "resposta": "Doença hemolítica por incompatibilidade ABO: mãe O, RN A, Coombs direto positivo, reticulocitose, esferócitos e anemia discreta. Anticorpos maternos anti-A do tipo IgG atravessam a placenta e hemolisam as hemácias do bebê. Diferente da incompatibilidade Rh, pode ocorrer já na primeira gestação e costuma ser mais leve. O irmão com icterícia tratada reforça a hipótese."
+   },
+   {
+    "pergunta": "Como decidir sobre fototerapia?",
+    "resposta": "A decisão depende da bilirrubina total, da idade em horas, da idade gestacional e da presença de fatores de risco para neurotoxicidade. A doença hemolítica isoimune é um desses fatores e reduz o limiar de tratamento. Ao plotar 13,2 mg/dL com 30 horas nas curvas da diretriz da Academia Americana de Pediatria (2022) para 38 semanas com fator de risco, o valor está acima do limiar de fototerapia e abaixo do limiar de escalada do cuidado. Está indicada fototerapia intensiva. A inspeção visual (zonas de Kramer) é útil para triagem, mas não substitui a dosagem de bilirrubina."
+   },
+   {
+    "pergunta": "Como monitorar e quando pensar em imunoglobulina ou exsanguineotransfusão?",
+    "resposta": "Repetir a bilirrubina em poucas horas após início da fototerapia (na hemólise, em geral dentro de 4 a 12 horas), além de hemoglobina e reticulócitos. Manter aleitamento materno frequente. Se a bilirrubina subir apesar da fototerapia e atingir o limiar de escalada (2 mg/dL abaixo do limiar de exsanguineotransfusão), deve-se acionar a UTI neonatal, preparar a exsanguineotransfusão e considerar imunoglobulina venosa em doença hemolítica isoimune. Sinais de encefalopatia bilirrubínica aguda (hipertonia, opistótono, choro agudo, febre, letargia) indicam exsanguineotransfusão imediata."
+   }
+  ],
+  "hipoteses": [
+   "Icterícia neonatal patológica (início nas primeiras 24 horas) por hiperbilirrubinemia indireta",
+   "Doença hemolítica do recém-nascido por incompatibilidade ABO"
+  ],
+  "diferenciais": [
+   "Deficiência de glicose-6-fosfato desidrogenase (G6PD)",
+   "Esferocitose hereditária",
+   "Doença hemolítica por incompatibilidade Rh ou por outros antígenos (Kell, c, E)",
+   "Sepse neonatal",
+   "Icterícia do aleitamento materno (início mais tardio)",
+   "Colestase neonatal (seria de bilirrubina direta)"
+  ],
+  "conduta": "Fototerapia intensiva contínua, com proteção ocular e exposição da maior área de pele possível. Manter aleitamento materno sob livre demanda, com apoio à amamentação; suplementação apenas se houver perda de peso excessiva ou desidratação. Bilirrubina de controle em poucas horas e depois seriada, com hemoglobina e reticulócitos. Avaliar necessidade de imunoglobulina venosa e exsanguineotransfusão conforme os limiares da diretriz. Suspender a fototerapia quando a bilirrubina estiver pelo menos 2 mg/dL abaixo do limiar de fototerapia da hora em que foi iniciada (AAP 2022) e checar rebote. Na alta, garantir retorno precoce para dosagem de bilirrubina e controle de hemoglobina nas semanas seguintes, pois a hemólise pode causar anemia tardia. Verificar o resultado da triagem de G6PD.",
+  "discussao": "A hiperbilirrubinemia é muito comum em recém-nascidos, mas a maioria dos casos é fisiológica. O desafio é reconhecer quem tem risco de encefalopatia bilirrubínica e kernicterus, lesões graves e evitáveis. A diretriz da AAP de 2022 elevou discretamente os limiares de fototerapia em relação à versão anterior, mas reforçou a importância dos fatores de risco para neurotoxicidade, como doença hemolítica, prematuridade, sepse e hipoalbuminemia. No Norte do Brasil, a deficiência de G6PD também é relevante, inclusive pela sua importância no uso de primaquina para malária, e deve entrar no diagnóstico diferencial de icterícia precoce.",
+  "referencias": [
+   "Clinical Practice Guideline Revision: Management of Hyperbilirubinemia in the Newborn Infant 35 or More Weeks of Gestation – American Academy of Pediatrics (Pediatrics, 2022)",
+   "Atenção à Saúde do Recém-Nascido: Guia para os Profissionais de Saúde, volume 2 – Ministério da Saúde (2ª edição, 2014)",
+   "Tratado de Pediatria da Sociedade Brasileira de Pediatria – capítulo de icterícia neonatal"
+  ]
+ },
+ {
+  "id": "caso-desnutricao-grave-diarreia-persistente",
+  "titulo": "Criança muito magra com diarreia há três semanas vinda do interior",
+  "tema": "Puericultura, crescimento e desenvolvimento",
+  "especialidade": "Pediatria Geral",
+  "disciplina": "Pediatria",
+  "dificuldade": 3,
+  "identificacao": "K.S.M., 16 meses, sexo feminino, indígena (etnia não informada), residente em comunidade ribeirinha no município de Tefé (AM), transferida por UTI aérea para Manaus. Acompanhada pela mãe.",
+  "queixaPrincipal": "\"Ela está com diarreia há muito tempo, não quer comer e está só o osso.\"",
+  "hda": "Mãe relata que há cerca de 3 semanas a filha iniciou diarreia com fezes líquidas, 5 a 7 vezes por dia, às vezes com muco, sem sangue. Houve febre nos primeiros dias. Desde então a criança perdeu muito peso, está apática, chora pouco e aceita mal a alimentação. Foi atendida no polo base de saúde e recebeu soro de reidratação oral, com melhora parcial. A família consome água do rio sem tratamento. Nas últimas 24 horas a criança ficou mais sonolenta e 'fria'.",
+  "antecedentes": "Nascida a termo com 2.900 g. Aleitamento materno até 6 meses, depois alimentação com mingau de farinha de mandioca, peixe e frutas, em pequena quantidade. Cartão de vacinas incompleto (faltam doses do reforço de 15 meses). Irmão mais velho com tuberculose tratada no ano passado. Não recebeu vitamina A no último semestre. Mãe com teste rápido de HIV negativo no pré-natal.",
+  "exameFisico": "Mau estado geral, apática, choro fraco, hipoativa. Peso 6,2 kg; comprimento 74 cm (peso para comprimento abaixo de −3 escores z nas curvas da OMS). Perímetro braquial 10,5 cm. Sem edema de membros ou face. Tax 34,8 °C (axilar). FC 150 bpm. FR 40 irpm. PA 80/50 mmHg. SatO2 96% em ar ambiente. Tempo de enchimento capilar 3 segundos, extremidades frias. Glicemia capilar 50 mg/dL. Consumo acentuado de massa muscular e de tecido subcutâneo ('pele sobrando' em nádegas e coxas), costelas visíveis, face de aspecto envelhecido. Olhos fundos, mucosas secas; bebe água com avidez quando oferecida. Cabelos finos e secos. Sem manchas de Bitot ou lesões de córnea. Ausculta cardíaca e pulmonar sem alterações. Abdome discretamente distendido, fígado a 2 cm do rebordo costal. Dermatite de fraldas extensa.",
+  "exames": "Hemoglobina 8,4 g/dL; VCM 70 fL; leucócitos 13.200/mm³; plaquetas 380.000/mm³. Sódio 131 mEq/L; potássio 2,6 mEq/L; magnésio 1,4 mg/dL; fósforo 3,0 mg/dL; cálcio 8,4 mg/dL. Glicemia 50 mg/dL. Albumina 2,8 g/dL. Creatinina 0,3 mg/dL. Urina tipo 1 sem alterações. Parasitológico de fezes: cistos de Giardia lamblia e ovos de Ascaris lumbricoides. Gota espessa para malária negativa. Teste rápido de HIV negativo. Radiografia de tórax sem alterações. Hemoculturas colhidas.",
+  "perguntas": [
+   {
+    "pergunta": "Como diagnosticar desnutrição aguda grave e diarreia persistente?",
+    "resposta": "Pela OMS, em crianças de 6 a 59 meses, a desnutrição aguda grave é definida por peso para estatura abaixo de −3 escores z, perímetro braquial abaixo de 11,5 cm ou edema bilateral de origem nutricional. A criança preenche os dois primeiros critérios, com aspecto de marasmo (sem edema). Diarreia persistente é a que começa de forma aguda e dura 14 dias ou mais. As duas condições formam um ciclo vicioso: a diarreia piora a desnutrição, e a desnutrição prejudica a mucosa intestinal e a imunidade, prolongando a diarreia."
+   },
+   {
+    "pergunta": "Quais complicações imediatas precisam ser tratadas nas primeiras horas?",
+    "resposta": "Hipoglicemia (glicemia abaixo de 54 mg/dL), hipotermia (temperatura axilar abaixo de 35 °C ou retal abaixo de 35,5 °C), desidratação, distúrbios eletrolíticos (hipocalemia, hipomagnesemia) e infecção. Na criança desnutrida grave, hipoglicemia e hipotermia costumam indicar infecção grave e aumentam muito a mortalidade. Aqui, glicemia de 50 mg/dL, temperatura axilar de 34,8 °C e sonolência exigem ação imediata: glicose (oral/sonda ou venosa), aquecimento (contato pele a pele com a mãe, roupas e cobertores) e antibiótico."
+   },
+   {
+    "pergunta": "Por que a reidratação é diferente na criança com desnutrição grave?",
+    "resposta": "Os sinais de desidratação são pouco confiáveis (olhos fundos e pele sem elasticidade existem pela própria desnutrição), e o coração tem pouca reserva, com risco de insuficiência cardíaca por excesso de volume. Além disso, o organismo tem excesso de sódio e déficit de potássio. Por isso, a OMS e o Ministério da Saúde recomendam reidratação preferencialmente oral ou por sonda, mais lenta, com solução de baixo sódio e mais potássio (ReSoMal), com monitorização frequente de pulso, respiração e diurese. A hidratação venosa fica reservada para choque, com volumes menores e reavaliação constante."
+   },
+   {
+    "pergunta": "Como deve ser a realimentação e o que é síndrome de realimentação?",
+    "resposta": "Na fase de estabilização, usa-se dieta com baixo teor de proteína e sódio (como a fórmula F-75), em pequenos volumes e alta frequência (a cada 2 a 3 horas, inclusive à noite). Depois, na fase de reabilitação, passa-se de forma gradual para dieta mais calórica e proteica (como a F-100), buscando ganho de peso rápido. A síndrome de realimentação ocorre quando se oferece muita energia rapidamente: o fósforo, o potássio e o magnésio entram nas células e caem no sangue, podendo causar arritmias, insuficiência cardíaca, fraqueza e morte. Por isso, eletrólitos (principalmente fósforo) devem ser monitorados nos primeiros dias."
+   },
+   {
+    "pergunta": "Que outras medidas fazem parte dos 10 passos do tratamento?",
+    "resposta": "Os 10 passos da OMS, adotados pelo Ministério da Saúde, incluem: tratar/prevenir hipoglicemia, hipotermia e desidratação; corrigir distúrbios eletrolíticos; tratar infecções (antibiótico de rotina, mesmo sem sinais evidentes); corrigir deficiências de micronutrientes (vitamina A, zinco, ácido fólico, cobre; a OMS 2013 dispensa a megadose de vitamina A quando a dieta terapêutica já a contém, salvo sinais oculares ou sarampo recente; o ferro só deve ser iniciado na fase de reabilitação, quando a criança já está ganhando peso); iniciar alimentação cautelosa; promover crescimento de recuperação; oferecer estimulação afetiva e sensorial; e preparar o seguimento após a alta. Neste caso, também se deve tratar a giardíase e a ascaridíase e investigar tuberculose, dado o contato domiciliar."
+   }
+  ],
+  "hipoteses": [
+   "Desnutrição aguda grave do tipo marasmo, complicada",
+   "Diarreia persistente, com giardíase e ascaridíase",
+   "Hipoglicemia, hipotermia e desidratação associadas à desnutrição, com suspeita de infecção grave",
+   "Hipocalemia, hiponatremia e hipomagnesemia",
+   "Anemia provavelmente carencial (ferropriva)"
+  ],
+  "diferenciais": [
+   "Tuberculose (contato domiciliar recente)",
+   "Infecção pelo HIV (teste negativo, mas deve ser considerada em desnutrição grave sem resposta)",
+   "Doença celíaca ou outras causas de má absorção",
+   "Intolerância secundária à lactose",
+   "Malária (afastada pela gota espessa)",
+   "Sepse de outro foco (urinário, pulmonar)"
+  ],
+  "conduta": "Internação. Correção imediata da hipoglicemia (glicose a 10% por via oral, sonda ou venosa, conforme o nível de consciência) e início precoce da alimentação. Aquecimento com contato pele a pele, roupas e cobertores, com temperatura aferida frequentemente. Reidratação oral ou por sonda nasogástrica com ReSoMal, de forma lenta e monitorizada; hidratação venosa apenas se houver choque. Reposição de potássio e magnésio. Antibioticoterapia venosa conforme protocolo para desnutrição complicada (a OMS usa ampicilina associada a gentamicina), ajustada às culturas. Vitamina A conforme protocolo, zinco e ácido fólico; ferro somente na fase de reabilitação. Dieta F-75 em pequenos volumes frequentes na estabilização, com transição gradual para F-100 e alimentação da família. Monitorizar fósforo, potássio e magnésio nos primeiros dias. Tratamento da giardíase e da ascaridíase. Investigação de tuberculose. Estimulação psicomotora e acolhimento da mãe. Planejar alta com vínculo à equipe de saúde indígena (DSEI) e à atenção básica, seguimento nutricional e atualização vacinal. Registrar e acompanhar o estado nutricional no Sistema de Vigilância Alimentar e Nutricional (SISVAN Indígena).",
+  "discussao": "A desnutrição aguda grave ainda é realidade em populações vulneráveis da Amazônia, especialmente em comunidades indígenas e ribeirinhas com pouco acesso a água tratada e saneamento. A mortalidade de crianças internadas com desnutrição grave pode ser alta, e muitas mortes ocorrem nos primeiros dias por hipoglicemia, hipotermia, infecção, excesso de volume ou síndrome de realimentação. Seguir protocolos padronizados, como os 10 passos da OMS, reduz a letalidade. A diarreia persistente, por sua vez, costuma resultar de lesão da mucosa intestinal, infecções por parasitos e deficiência de micronutrientes, especialmente zinco. O caso também mostra que desnutrição grave é um problema social, que exige ação intersetorial e acompanhamento após a alta.",
+  "referencias": [
+   "Manual de atendimento da criança com desnutrição grave em nível hospitalar – Ministério da Saúde (2005)",
+   "WHO guideline on the prevention and management of wasting and nutritional oedema (acute malnutrition) in infants and children under 5 years (Organização Mundial da Saúde, 2023)",
+   "Guideline: updates on the management of severe acute malnutrition in infants and children (Organização Mundial da Saúde, 2013)"
+  ]
+ },
+ {
+  "id": "caso-meningite-meningococica",
+  "titulo": "Febre alta, vômitos e manchinhas roxas em criança de 3 anos",
+  "tema": "Meningites",
+  "especialidade": "Pediatria Geral",
+  "disciplina": "Pediatria",
+  "dificuldade": 3,
+  "identificacao": "V.H.R., 3 anos, sexo masculino, pardo, frequenta creche municipal, natural e residente em Manaus (AM). Acompanhado pelos pais.",
+  "queixaPrincipal": "\"Febre alta desde ontem, vomitando e agora apareceram umas manchinhas roxas.\"",
+  "hda": "Pais relatam que há cerca de 18 horas a criança iniciou febre alta (até 39,8 °C), com pouca resposta a antitérmico, seguida de vômitos repetidos, irritabilidade e choro ao ser pego no colo. Nas últimas horas está mais sonolento, reclama de dor de cabeça e 'não quer mexer o pescoço'. Há cerca de 2 horas a mãe notou pequenas manchas vermelho-arroxeadas nas pernas e na barriga, que não somem ao apertar. Nega convulsões, diarreia ou tosse. Um colega da creche foi internado há uma semana, mas os pais não sabem o motivo.",
+  "antecedentes": "Nascido a termo, sem intercorrências. Desenvolvimento adequado. Cartão de vacinas com esquema primário completo, mas sem os reforços dos 12 meses (meningocócica e pneumocócica). Sem doenças prévias. Sem alergias.",
+  "exameFisico": "Mau estado geral, sonolento, desperta ao estímulo e chora, irritado. Glasgow 13. Peso 14 kg. FC 150 bpm. FR 30 irpm. PA 88/54 mmHg. SatO2 97% em ar ambiente. Tax 39,4 °C. Tempo de enchimento capilar 3 segundos; extremidades frias. Petéquias e algumas lesões purpúricas em membros inferiores e tronco, que não desaparecem à digitopressão. Rigidez de nuca presente; sinais de Kernig e Brudzinski positivos. Pupilas isocóricas e fotorreagentes; sem déficits focais; fundo de olho sem papiledema. Ausculta cardíaca e pulmonar normais. Abdome sem visceromegalias.",
+  "exames": "Hemograma: leucócitos 22.600/mm³ (bastões 14%); hemoglobina 11,6 g/dL; plaquetas 118.000/mm³. PCR 210 mg/L. Lactato 3,1 mmol/L. INR 1,4. Glicemia 110 mg/dL. Sódio 133 mEq/L; creatinina 0,4 mg/dL. Hemoculturas colhidas. Líquido cefalorraquidiano (punção lombar realizada após estabilização inicial, sem sinais de hipertensão intracraniana e sem coagulopatia grave): aspecto turvo; 1.850 células/mm³ (90% neutrófilos); proteína 180 mg/dL; glicose 18 mg/dL (relação com glicemia ≈ 0,16); bacterioscopia pelo Gram com diplococos gram-negativos; cultura e PCR para meningococo, pneumococo e Haemophilus em andamento.",
+  "perguntas": [
+   {
+    "pergunta": "Qual o diagnóstico mais provável?",
+    "resposta": "Doença meningocócica na forma de meningite com meningococcemia: febre alta, sinais meníngeos, rebaixamento de consciência e lesões petequiais e purpúricas, com LCR bacteriano (turvo, pleocitose neutrofílica, glicose muito baixa e proteína alta) e diplococos gram-negativos no Gram, típicos da Neisseria meningitidis. A exposição na creche e a vacinação incompleta aumentam a suspeita."
+   },
+   {
+    "pergunta": "A punção lombar deve atrasar o antibiótico?",
+    "resposta": "Não. Diante da suspeita de meningite bacteriana ou doença meningocócica, o antibiótico deve ser iniciado imediatamente, de preferência após colher hemoculturas, e não deve ser adiado pela punção lombar ou por exame de imagem. A punção deve ser postergada se houver instabilidade hemodinâmica, sinais de hipertensão intracraniana (papiledema, déficit focal, Glasgow muito baixo ou em queda, convulsões prolongadas), coagulopatia grave ou infecção no local da punção. O Gram e a cultura ainda ajudam mesmo poucas horas após o antibiótico, e a PCR mantém sensibilidade por mais tempo."
+   },
+   {
+    "pergunta": "Qual o tratamento antimicrobiano e qual o papel da dexametasona?",
+    "resposta": "Cefalosporina de terceira geração por via venosa: ceftriaxona 100 mg/kg/dia (máximo de 4 g/dia), em uma ou duas doses, cobrindo meningococo, pneumococo e Haemophilus. Para meningococo, o tratamento costuma durar cerca de 7 dias. A dexametasona reduz sequelas neurológicas, principalmente perda auditiva, na meningite por Haemophilus e por pneumococo; deve ser iniciada antes ou junto com a primeira dose do antibiótico quando indicada. Na doença meningocócica confirmada o benefício não foi demonstrado, e várias diretrizes orientam não mantê-la; ela não é indicada na meningococcemia sem meningite."
+   },
+   {
+    "pergunta": "Quais medidas de vigilância e de proteção dos contatos são necessárias?",
+    "resposta": "Notificação compulsória imediata (em até 24 horas) à vigilância epidemiológica. Isolamento com precauções para gotículas até completar 24 horas de antibiótico eficaz. Quimioprofilaxia para contatos próximos (moradores do domicílio, contatos de creche/escola conforme avaliação da vigilância e profissionais de saúde expostos a secreções sem proteção), idealmente nas primeiras 24 horas, com rifampicina por 2 dias (em crianças 10 mg/kg a cada 12 horas, máximo de 600 mg por dose); ceftriaxona em dose única e ciprofloxacino em dose única para adultos são alternativas. O paciente tratado com ceftriaxona não precisa de quimioprofilaxia adicional. Atualizar a vacinação dos contatos conforme orientação da vigilância."
+   }
+  ],
+  "hipoteses": [
+   "Doença meningocócica: meningite bacteriana com meningococcemia",
+   "Sepse com sinais de hipoperfusão (choque compensado)",
+   "Vacinação incompleta para meningococo C e pneumococo"
+  ],
+  "diferenciais": [
+   "Meningite pneumocócica",
+   "Meningite por Haemophilus influenzae tipo b",
+   "Meningite viral (LCR com predomínio linfocitário e glicose normal)",
+   "Meningite tuberculosa (curso mais arrastado, glicose baixa com linfócitos)",
+   "Dengue grave ou febre maculosa com manifestações hemorrágicas",
+   "Púrpura de Henoch-Schönlein (sem febre alta e sem toxemia)"
+  ],
+  "conduta": "Estabilização (ABC), oxigênio, acesso venoso e monitorização contínua em sala de emergência. Hemoculturas e início imediato de ceftriaxona venosa em dose para meningite. Dexametasona conforme protocolo institucional, antes ou junto da primeira dose do antibiótico, reavaliando sua manutenção após identificação do agente. Bolus de cristaloide de 10 a 20 mL/kg com reavaliação após cada bolus e início de vasopressor se choque refratário ao volume. Controle de glicemia, eletrólitos, convulsões e da temperatura. Internação em UTI pediátrica. Isolamento por gotículas nas primeiras 24 horas de antibiótico. Notificação imediata e quimioprofilaxia dos contatos próximos. Na alta, avaliação audiológica e seguimento do desenvolvimento neurológico, além de completar o calendário vacinal (incluindo a ACWY de resgate).",
+  "discussao": "A doença meningocócica pode evoluir em poucas horas de uma febre inespecífica para choque e morte, e as petéquias e púrpuras em criança febril devem ser tratadas como sinal de alerta máximo. O antibiótico precoce é a intervenção que mais muda o prognóstico. O caso também revisa a análise do LCR: padrão bacteriano com muitos neutrófilos, proteína alta e glicose baixa, diferente do padrão viral (linfócitos, glicose normal). A vacinação é a principal forma de prevenção: o calendário do Programa Nacional de Imunizações inclui meningocócica C aos 3 e 5 meses, reforço com meningocócica ACWY aos 12 meses (desde julho de 2025, com resgate até 4 anos, 11 meses e 29 dias), ACWY para adolescentes, além das vacinas contra pneumococo e Haemophilus. Casos em creches exigem ação rápida da vigilância epidemiológica.",
+  "referencias": [
+   "Guia de Vigilância em Saúde – Ministério da Saúde (6ª edição, 2023), capítulo de meningites e doença meningocócica",
+   "NICE guideline NG240: Meningitis (bacterial) and meningococcal disease: recognition, diagnosis and management (2024)",
+   "Tratado de Pediatria da Sociedade Brasileira de Pediatria – capítulo de meningites bacterianas"
+  ]
+ },
+ {
+  "id": "caso-hemorragia-pos-parto-atonia",
+  "titulo": "Sangramento intenso logo após o parto de um bebê grande",
+  "tema": "Hemorragia pós-parto",
+  "especialidade": "Obstetrícia",
+  "disciplina": "Ginecologia e Obstetrícia",
+  "dificuldade": 2,
+  "identificacao": "I.F.C., 29 anos, sexo feminino, parda, autônoma (vendedora), natural de Maués e residente em Manaus (AM). G3P3 (três partos vaginais).",
+  "queixaPrincipal": "\"Estou sentindo muito sangue saindo e fiquei tonta.\" (20 minutos após o parto)",
+  "hda": "Puérpera de parto vaginal há 25 minutos, com 40 semanas, após trabalho de parto prolongado (cerca de 16 horas) com uso de ocitocina para condução. Recém-nascido com 4.150 g. Recebeu ocitocina 10 UI por via intramuscular logo após o nascimento. Dequitação espontânea após 12 minutos, com placenta e membranas aparentemente íntegras. Cerca de 10 minutos depois, a equipe observou sangramento vaginal contínuo, vermelho vivo. A perda medida no coletor calibrado posicionado sob as nádegas é de 900 mL. A paciente refere tontura e sede.",
+  "antecedentes": "Pré-natal com 7 consultas, sem hipertensão ou diabetes gestacional. Hemoglobina no 3º trimestre 11,0 g/dL. Tipo sanguíneo O positivo. Dois partos vaginais anteriores sem complicações. Nega distúrbios de coagulação ou uso de anticoagulantes. Nega cesáreas ou cirurgias uterinas.",
+  "exameFisico": "Pálida (++/4+), ansiosa, lúcida. PA 92/58 mmHg. FC 118 bpm (índice de choque = 118/92 ≈ 1,3). FR 22 irpm. SatO2 97% em ar ambiente. Tax 36,6 °C. Extremidades frias, tempo de enchimento capilar 3 segundos. Útero amolecido, pouco contraído, com fundo 2 cm acima da cicatriz umbilical, que se contrai temporariamente à massagem, com saída de coágulos. Inspeção do canal de parto: laceração perineal de 1º grau sem sangramento ativo; colo sem lacerações visíveis. Bexiga distendida.",
+  "exames": "Colhidos na emergência: hemoglobina 9,4 g/dL (a queda ainda não reflete toda a perda na fase aguda); plaquetas 180.000/mm³; fibrinogênio 290 mg/dL; TP e TTPa normais. Tipagem e prova cruzada solicitadas. Teste de coagulação à beira do leito (tubo seco): coágulo formado em menos de 8 minutos e estável. Revisão da placenta: sem falhas de cotilédones.",
+  "perguntas": [
+   {
+    "pergunta": "Como diagnosticar hemorragia pós-parto segundo as recomendações mais recentes?",
+    "resposta": "As diretrizes consolidadas da OMS, FIGO e ICM de 2025 recomendam medir objetivamente a perda sanguínea (com coletor calibrado) e diagnosticar hemorragia pós-parto quando a perda chega a 300 mL com qualquer sinal hemodinâmico anormal ou a 500 mL, o que ocorrer primeiro, nas primeiras 24 horas. A definição clássica (500 mL no parto vaginal ou 1.000 mL na cesárea) tende a atrasar o tratamento, pois a estimativa visual subestima a perda. Esta paciente perdeu 900 mL e tem taquicardia e hipotensão: hemorragia pós-parto com repercussão hemodinâmica."
+   },
+   {
+    "pergunta": "Qual a causa mais provável e como pensar nas outras?",
+    "resposta": "Atonia uterina, a causa mais comum (cerca de 70% dos casos), favorecida por trabalho de parto prolongado, uso prolongado de ocitocina, feto macrossômico e multiparidade. O mnemônico dos 4 Ts ajuda a buscar as demais: Tônus (atonia), Trauma (lacerações, hematomas, rotura ou inversão uterina), Tecido (restos placentários, acretismo) e Trombina (coagulopatias). O útero amolecido que responde à massagem, a placenta íntegra, a ausência de lacerações sangrantes e o teste de coagulação normal apontam para atonia."
+   },
+   {
+    "pergunta": "Qual o tratamento inicial?",
+    "resposta": "Pedir ajuda e agir de forma simultânea, em equipe (pacote MOTIVE: Massagem uterina, Ocitócicos, Tranexâmico, fluidos IntraVenosos, Exame do trato genital e Escalonamento). Na prática: massagem uterina bimanual; ocitocina em infusão venosa; ácido tranexâmico 1 g por via venosa em 10 minutos, o mais cedo possível e dentro de 3 horas do parto, com segunda dose de 1 g se o sangramento continuar após 30 minutos ou recomeçar em 24 horas; dois acessos venosos calibrosos com cristaloide aquecido; esvaziamento da bexiga; exame do canal de parto e revisão da placenta. Se a atonia persistir, usar outros uterotônicos: metilergometrina intramuscular (contraindicada em hipertensão) e/ou misoprostol."
+   },
+   {
+    "pergunta": "O que fazer se o sangramento não parar com os medicamentos?",
+    "resposta": "Escalonar sem demora: balão de tamponamento intrauterino como medida temporária, compressão aórtica externa ou traje antichoque não pneumático para ganhar tempo em transporte ou enquanto se prepara o centro cirúrgico, e abordagem cirúrgica (suturas compressivas como B-Lynch, ligaduras vasculares, embolização quando disponível e, em último caso, histerectomia). O índice de choque ajuda a antecipar a necessidade de transfusão: valores de 0,9 ou mais indicam gravidade, e de 1,4 ou mais indicam necessidade de transfusão urgente e ação imediata."
+   }
+  ],
+  "hipoteses": [
+   "Hemorragia pós-parto por atonia uterina",
+   "Choque hipovolêmico em evolução (índice de choque ≈ 1,3)",
+   "Fatores de risco: trabalho de parto prolongado, uso prolongado de ocitocina, macrossomia fetal e multiparidade"
+  ],
+  "diferenciais": [
+   "Laceração de colo ou de vagina não identificada",
+   "Retenção de restos placentários ou acretismo placentário",
+   "Rotura uterina",
+   "Inversão uterina",
+   "Coagulopatia (coagulação intravascular disseminada, doença de von Willebrand)"
+  ],
+  "conduta": "Chamar a equipe e registrar o horário. Massagem uterina bimanual, ocitocina venosa, ácido tranexâmico 1 g em 10 minutos, dois acessos calibrosos com cristaloide aquecido, oxigênio, sondagem vesical com controle de diurese, aquecimento da paciente. Revisar trajeto do parto e placenta. Se persistir a atonia: metilergometrina (sem hipertensão) e/ou misoprostol; seguir para balão de tamponamento e, se necessário, abordagem cirúrgica. Reserva e transfusão de hemocomponentes conforme gravidade, índice de choque e exames. Monitorização rigorosa nas 24 horas seguintes. Após estabilização, reposição de ferro (venoso se anemia importante) e orientação sobre sinais de alerta no puerpério. Para futuras gestações, registrar o episódio como fator de risco.",
+  "discussao": "A hemorragia pós-parto é uma das principais causas de morte materna no Brasil e no mundo, e grande parte desses óbitos é evitável. As chaves são prevenção (uterotônico para todas as mulheres logo após o nascimento, sendo a ocitocina a primeira escolha), diagnóstico precoce com medida objetiva da perda e tratamento em pacote, com várias ações ao mesmo tempo. O ensaio E-MOTIVE (2023) mostrou que a combinação de medida objetiva da perda com um pacote de tratamento aplicado imediatamente reduz desfechos graves, o que fundamentou as diretrizes de 2025. O ácido tranexâmico reduz a morte por sangramento quando dado cedo (estudo WOMAN). O índice de choque é uma ferramenta simples, destacada pela OPAS, que ajuda a reconhecer a gravidade antes da queda franca da pressão.",
+  "referencias": [
+   "WHO/FIGO/ICM – Consolidated guidelines for the prevention, diagnosis and treatment of postpartum haemorrhage (2025)",
+   "Organização Pan-Americana da Saúde – Recomendações assistenciais para prevenção, diagnóstico e tratamento da hemorragia obstétrica (2018)",
+   "Gallos I. et al. – Randomized trial of early detection and treatment of postpartum hemorrhage (E-MOTIVE), N Engl J Med 2023",
+   "WOMAN Trial Collaborators – Effect of early tranexamic acid administration on mortality, hysterectomy, and other morbidities in women with post-partum haemorrhage (Lancet, 2017)"
+  ]
+ },
+ {
+  "id": "caso-gravidez-ectopica-metotrexato",
+  "titulo": "Atraso menstrual, sangramento escuro e dor leve no pé da barriga",
+  "tema": "Hemorragias da primeira metade da gestação",
+  "especialidade": "Obstetrícia",
+  "disciplina": "Ginecologia e Obstetrícia",
+  "dificuldade": 2,
+  "identificacao": "N.A.R., 27 anos, sexo feminino, parda, técnica de enfermagem, natural e residente em Manaus (AM). G2P1 (um parto vaginal).",
+  "queixaPrincipal": "\"Minha menstruação atrasou, fiz o teste de farmácia positivo e estou com um sangramento escuro e dor do lado esquerdo.\"",
+  "hda": "Paciente com data da última menstruação há 7 semanas refere teste de gravidez urinário positivo há 1 semana. Há 3 dias iniciou sangramento vaginal escuro, em pequena quantidade, e dor leve em cólica na fossa ilíaca esquerda, que melhora com repouso. Nega tontura, desmaio, dor no ombro ou piora súbita da dor. Nega febre ou corrimento com odor.",
+  "antecedentes": "Doença inflamatória pélvica aos 20 anos, tratada ambulatorialmente. Parto vaginal há 4 anos, sem complicações. Usava anticoncepcional oral de forma irregular. Tabagista de 5 cigarros por dia. Tipo sanguíneo O negativo. Nega doença hepática, renal, pulmonar ou alterações hematológicas. Não amamenta.",
+  "exameFisico": "Bom estado geral, corada, hidratada, lúcida. PA 118/74 mmHg. FC 84 bpm. FR 16 irpm. SatO2 99% em ar ambiente. Tax 36,5 °C. Peso 60 kg; altura 1,60 m (superfície corporal ≈ 1,62 m²). Abdome flácido, dor leve à palpação profunda da fossa ilíaca esquerda, sem defesa ou descompressão brusca dolorosa. Exame especular: pequena quantidade de sangue escuro saindo pelo orifício externo do colo, sem lesões. Toque vaginal: colo impérvio, útero discretamente aumentado, dor leve à mobilização do colo, anexo esquerdo discretamente doloroso e empastado.",
+  "exames": "Beta-hCG quantitativo: 2.100 mUI/mL; após 48 horas, 2.300 mUI/mL (aumento de cerca de 10%). Ultrassonografia transvaginal: útero sem saco gestacional intrauterino, endométrio de 8 mm; massa anexial esquerda de 2,6 cm, separada do ovário, com aspecto de anel hiperecogênico ('sinal do anel tubário'), sem embrião e sem batimentos cardíacos; pequena quantidade de líquido anecoico no fundo de saco posterior. Hemoglobina 12,4 g/dL; plaquetas 240.000/mm³; leucócitos 7.600/mm³. Creatinina 0,7 mg/dL; AST 20 U/L; ALT 18 U/L. Tipo sanguíneo O negativo; pesquisa de anticorpos irregulares negativa.",
+  "perguntas": [
+   {
+    "pergunta": "Qual o diagnóstico mais provável e quais os fatores de risco da paciente?",
+    "resposta": "Gravidez ectópica tubária íntegra à esquerda. Não há gestação intrauterina à ultrassonografia transvaginal com beta-hCG acima da zona discriminatória (valores acima de cerca de 1.500 a 3.500 mUI/mL, conforme o serviço), há massa anexial típica e o beta-hCG subiu de forma insuficiente em 48 horas. Fatores de risco: doença inflamatória pélvica prévia (lesão tubária) e tabagismo. Outros fatores importantes são ectópica anterior, cirurgia tubária, uso de DIU no momento da concepção e reprodução assistida."
+   },
+   {
+    "pergunta": "Ela é candidata ao tratamento com metotrexato? Por quê?",
+    "resposta": "Sim. Os critérios para tratamento clínico são: estabilidade hemodinâmica, ausência de sinais de rotura, massa anexial pequena (em geral menor que 3,5 a 4 cm), ausência de batimento cardíaco embrionário, beta-hCG baixo (os melhores resultados ocorrem abaixo de 5.000 mUI/mL; várias diretrizes usam esse corte), possibilidade de seguimento e ausência de contraindicações (amamentação, alterações hepáticas, renais ou hematológicas, doença pulmonar ativa, úlcera péptica, imunodeficiência, gestação intrauterina coexistente). A paciente preenche todos. O protocolo de dose única usa 50 mg/m² por via intramuscular."
+   },
+   {
+    "pergunta": "Como fazer o seguimento após o metotrexato?",
+    "resposta": "Dosar beta-hCG no 4º e no 7º dia após a injeção. É comum o valor subir entre o dia 1 e o dia 4. Uma queda de pelo menos 15% entre o 4º e o 7º dia indica boa resposta; depois, o beta-hCG é dosado semanalmente até ficar negativo. Se a queda for menor que 15%, pode-se repetir a dose ou indicar cirurgia. Qualquer dor forte, tontura, desmaio ou sinais de choque sugerem rotura e exigem avaliação imediata."
+   },
+   {
+    "pergunta": "Que outras orientações e cuidados são necessários?",
+    "resposta": "Como a paciente é Rh negativo e não sensibilizada, o protocolo do Ministério da Saúde indica imunoglobulina anti-D (as diretrizes internacionais divergem: a NICE não a oferece quando o tratamento é exclusivamente clínico, e o ACOG revisou em 2024 a profilaxia em perdas antes de 12 semanas; seguir o protocolo local). Durante o tratamento, evitar álcool, anti-inflamatórios, suplementos com ácido fólico (antagonizam o metotrexato), exposição solar intensa e relações sexuais até a negativação. Recomenda-se evitar nova gestação por alguns meses após o metotrexato (em geral, cerca de 3 meses), com contracepção eficaz. Também é importante orientar sobre o risco aumentado de nova ectópica e a necessidade de ultrassonografia precoce em uma próxima gravidez."
+   }
+  ],
+  "hipoteses": [
+   "Gravidez ectópica tubária esquerda íntegra",
+   "Gestante Rh negativo não sensibilizada"
+  ],
+  "diferenciais": [
+   "Gestação intrauterina inicial (ainda não visível) ou gestação de localização desconhecida",
+   "Abortamento completo ou incompleto",
+   "Cisto de corpo lúteo roto",
+   "Torção anexial",
+   "Doença inflamatória pélvica/abscesso tubo-ovariano",
+   "Apendicite aguda"
+  ],
+  "conduta": "Tratamento clínico com metotrexato em dose única de 50 mg/m² por via intramuscular (cerca de 80 mg para esta paciente), após checar hemograma, função hepática e renal. Imunoglobulina anti-D conforme protocolo do Ministério da Saúde. Beta-hCG no 4º e no 7º dia e depois semanalmente até negativar. Orientações por escrito sobre sinais de rotura, com acesso fácil ao serviço de urgência. Contracepção após o tratamento. Se houver instabilidade, rotura, falha do tratamento clínico ou impossibilidade de seguimento, indicar cirurgia, preferencialmente por videolaparoscopia (salpingectomia na maioria dos casos, ou salpingostomia em situações selecionadas).",
+  "discussao": "A gravidez ectópica é a principal causa de morte materna no primeiro trimestre, geralmente por hemorragia após rotura tubária. O diagnóstico precoce, com beta-hCG quantitativo seriado e ultrassonografia transvaginal, permite tratamentos menos invasivos e preserva a fertilidade. Em uma gestação intrauterina viável inicial, o beta-hCG costuma subir pelo menos cerca de 35% a 50% em 48 horas; aumentos menores ou platôs sugerem gestação não viável ou ectópica. O metotrexato é eficaz em pacientes bem selecionadas, mas exige adesão ao seguimento. Existem ainda a conduta expectante, para casos com beta-hCG muito baixo e em queda, e a cirurgia, obrigatória na rotura com instabilidade.",
+  "referencias": [
+   "ACOG Practice Bulletin No. 193: Tubal Ectopic Pregnancy (American College of Obstetricians and Gynecologists, 2018)",
+   "NICE guideline NG126: Ectopic pregnancy and miscarriage: diagnosis and initial management (2019, atualizada em 2023)",
+   "Manual de Gestação de Alto Risco – Ministério da Saúde (2022)"
+  ]
+ },
+ {
+  "id": "caso-sifilis-gestacao",
+  "titulo": "Teste rápido reagente na primeira consulta de pré-natal",
+  "tema": "Sífilis",
+  "especialidade": "Obstetrícia",
+  "disciplina": "Ginecologia e Obstetrícia",
+  "dificuldade": 1,
+  "identificacao": "B.S.L., 22 anos, sexo feminino, parda, atendente de loja, natural e residente em Manaus (AM), zona leste. G2P1 (um parto vaginal).",
+  "queixaPrincipal": "\"Vim começar o pré-natal e o teste de sífilis deu positivo.\"",
+  "hda": "Gestante com 14 semanas pela data da última menstruação comparece à UBS para a primeira consulta de pré-natal. Os testes rápidos realizados na acolhida mostraram teste treponêmico para sífilis reagente; testes para HIV, hepatite B e hepatite C não reagentes. Ela está assintomática. Nega feridas genitais, manchas na pele, queda de cabelo, dor de garganta ou ínguas nos últimos meses, mas não se lembra bem de possíveis lesões no passado. Nunca foi tratada para sífilis. Tem parceiro fixo há 2 anos, que não fez exames recentemente.",
+  "antecedentes": "Parto vaginal há 3 anos; o filho nasceu bem, e ela não se lembra de ter feito teste de sífilis naquela gestação. Nega alergia a penicilina ou a outros medicamentos. Nega doenças crônicas. Uso irregular de preservativo.",
+  "exameFisico": "Bom estado geral, corada, hidratada. PA 110/70 mmHg. FC 80 bpm. FR 16 irpm. SatO2 99% em ar ambiente. Tax 36,4 °C. Peso 58 kg; IMC 22 kg/m². Pele e mucosas sem lesões, sem exantema palmoplantar, sem alopecia. Sem linfonodomegalias. Altura uterina compatível com a idade gestacional; batimentos cardíacos fetais de 150 bpm ao sonar Doppler. Exame especular: colo e paredes vaginais sem úlceras ou lesões condilomatosas.",
+  "exames": "Teste rápido treponêmico: reagente. VDRL (teste não treponêmico): reagente 1:32. Teste rápido para HIV: não reagente. HBsAg (teste rápido): não reagente. Anti-HCV (teste rápido): não reagente. Hemoglobina 11,6 g/dL. Tipo sanguíneo A positivo. Glicemia de jejum 82 mg/dL. Urocultura negativa. Toxoplasmose: IgG reagente, IgM não reagente.",
+  "perguntas": [
+   {
+    "pergunta": "Como interpretar os testes e classificar a sífilis?",
+    "resposta": "O teste treponêmico reagente com VDRL reagente em título alto, em gestante nunca tratada, confirma sífilis ativa. Como não há lesões nem sintomas, trata-se de sífilis latente. Sem saber quando a infecção começou, ela deve ser classificada como sífilis latente de duração ignorada, que é tratada como sífilis latente tardia. Na gestação, um único teste reagente (treponêmico ou não treponêmico) já justifica o início do tratamento, sem esperar o segundo exame, pelo risco de transmissão vertical."
+   },
+   {
+    "pergunta": "Qual o tratamento recomendado?",
+    "resposta": "Benzilpenicilina benzatina 2,4 milhões de UI por via intramuscular (1,2 milhão em cada glúteo), uma vez por semana, por 3 semanas (total de 7,2 milhões de UI). O intervalo ideal entre as doses é de 7 dias; a Nota Técnica nº 14/2023 do Ministério da Saúde aceita intervalo de até 9 dias em gestantes. Se o intervalo ultrapassar esse limite, o esquema deve ser reiniciado. A penicilina é o único medicamento com eficácia comprovada para prevenir a sífilis congênita; em caso de alergia confirmada, a gestante deve ser encaminhada para dessensibilização."
+   },
+   {
+    "pergunta": "O que fazer com o parceiro?",
+    "resposta": "O parceiro deve ser convocado para testagem e tratamento. Parcerias sexuais dos últimos 90 dias devem receber tratamento presuntivo com uma dose de benzilpenicilina benzatina 2,4 milhões de UI mesmo com teste negativo, e, se o teste for reagente, tratamento completo conforme o estágio da infecção. O tratamento do parceiro é fundamental para evitar a reinfecção da gestante; enquanto isso, orientar uso de preservativo."
+   },
+   {
+    "pergunta": "Como deve ser o seguimento na gestação e o cuidado com o recém-nascido?",
+    "resposta": "VDRL mensal até o parto, para avaliar resposta ao tratamento e detectar reinfecção. Espera-se queda dos títulos ao longo dos meses. Aumento de pelo menos duas diluições (por exemplo, de 1:8 para 1:32) indica reinfecção ou falha e exige retratamento e nova investigação. Explicar a possibilidade de reação de Jarisch-Herxheimer (febre, mal-estar, contrações) nas primeiras horas após a primeira dose, que não contraindica as doses seguintes. Notificar o caso de sífilis em gestante. No parto, todo recém-nascido de mãe com sífilis deve ser avaliado com exame físico e VDRL de sangue periférico, comparando o título com o da mãe, e o seguimento da criança segue o protocolo do Ministério da Saúde."
+   }
+  ],
+  "hipoteses": [
+   "Sífilis latente de duração ignorada na gestação (sífilis em gestante)",
+   "Risco de sífilis congênita"
+  ],
+  "diferenciais": [
+   "Cicatriz sorológica de sífilis tratada no passado (afastada: nunca houve tratamento e o título é alto)",
+   "Reação falso-positiva no teste não treponêmico (lúpus, gestação, outras infecções), afastada pela positividade do teste treponêmico",
+   "Sífilis secundária com lesões discretas não percebidas"
+  ],
+  "conduta": "Iniciar imediatamente benzilpenicilina benzatina 2,4 milhões de UI por via intramuscular na própria UBS, com as doses seguintes em 7 dias (máximo de 9 dias de intervalo), total de 3 doses. Convocar e tratar o parceiro. Notificação compulsória de sífilis em gestante. Aconselhamento sobre IST e uso de preservativo. VDRL mensal até o parto. Oferecer vacinação para hepatite B se não imune. Registrar tratamento e títulos na caderneta da gestante e comunicar a maternidade de referência para avaliação do recém-nascido.",
+  "discussao": "A sífilis congênita continua sendo um grande problema de saúde pública no Brasil, com taxas elevadas também no Amazonas. Ela pode causar abortamento, natimortalidade, prematuridade e sequelas graves na criança. Por isso, o Ministério da Saúde recomenda testagem na primeira consulta, no 3º trimestre, no momento do parto e em situações de exposição de risco. A abordagem é simples, barata e eficaz: diagnóstico rápido na UBS, tratamento imediato com penicilina benzatina e tratamento das parcerias. As falhas mais comuns são o atraso no início do tratamento, a perda do intervalo entre doses e a ausência de tratamento do parceiro, levando à reinfecção. O caso também lembra a importância de interpretar corretamente os testes treponêmicos e não treponêmicos.",
+  "referencias": [
+   "Protocolo Clínico e Diretrizes Terapêuticas para Atenção Integral às Pessoas com Infecções Sexualmente Transmissíveis (IST) – Ministério da Saúde (2022)",
+   "Nota Técnica nº 14/2023-DATHI/SVSA/MS – Atualização do intervalo entre doses de benzilpenicilina benzatina para sífilis em gestantes",
+   "Guia de Vigilância em Saúde – Ministério da Saúde (6ª edição, 2023), capítulo de sífilis adquirida, em gestante e congênita"
+  ]
+ },
+ {
+  "id": "caso-descolamento-prematuro-placenta",
+  "titulo": "Dor forte na barriga, útero duro e sangramento escuro com 33 semanas",
+  "tema": "Hemorragias da segunda metade da gestação",
+  "especialidade": "Obstetrícia",
+  "disciplina": "Ginecologia e Obstetrícia",
+  "dificuldade": 3,
+  "identificacao": "E.C.P., 34 anos, sexo feminino, preta, agente comunitária de saúde, natural e residente em Manaus (AM). G3P2 (dois partos vaginais).",
+  "queixaPrincipal": "\"Deu uma dor muito forte e de repente na barriga, que ficou dura como pedra, e começou a sair sangue escuro.\"",
+  "hda": "Gestante com 33 semanas (confirmadas por ultrassonografia de 1º trimestre) refere que há cerca de 1 hora iniciou dor abdominal súbita, intensa e contínua, sem intervalos de alívio, seguida de sangramento vaginal escuro em quantidade moderada. Refere que o bebê 'parou de mexer' há meia hora. Nega trauma abdominal, perda de líquido, cefaleia ou alterações visuais. Nega uso de drogas.",
+  "antecedentes": "Hipertensão arterial crônica, com uso irregular de metildopa durante a gestação. Pré-natal com 5 consultas. Ultrassonografia morfológica de 2º trimestre com placenta de inserção corporal posterior, sem sinais de placenta prévia. Tabagista de 10 cigarros por dia. Tipo sanguíneo B positivo. Partos anteriores sem complicações.",
+  "exameFisico": "Regular estado geral, fácies de dor, descorada (+/4+), ansiosa. PA 158/102 mmHg. FC 112 bpm. FR 22 irpm. SatO2 98% em ar ambiente. Tax 36,7 °C. Útero hipertônico, de consistência lenhosa, doloroso à palpação difusamente, sem relaxamento entre as contrações; altura uterina de 34 cm. Batimentos cardíacos fetais 96 bpm (bradicardia sustentada). Exame especular: sangue escuro com coágulos saindo pelo colo. Toque vaginal (realizado após confirmar ausência de placenta prévia): colo com 3 cm de dilatação, bolsa íntegra e tensa, apresentação cefálica.",
+  "exames": "Hemoglobina 9,6 g/dL; plaquetas 118.000/mm³; fibrinogênio 180 mg/dL; TP e TTPa discretamente prolongados. Creatinina 0,9 mg/dL; AST e ALT normais; relação proteína/creatinina urinária 0,2. Teste de coagulação à beira do leito (tubo seco): coágulo formado, porém friável. Cardiotocografia: bradicardia fetal sustentada com variabilidade reduzida. Ultrassonografia rápida à beira do leito: feto vivo, placenta posterior sem inserção baixa, área hipoecogênica retroplacentária sugestiva de hematoma.",
+  "perguntas": [
+   {
+    "pergunta": "Qual o diagnóstico e como ele é feito?",
+    "resposta": "Descolamento prematuro de placenta (DPP) com sofrimento fetal. O diagnóstico é essencialmente clínico: dor abdominal súbita e intensa, hipertonia uterina, sangramento escuro (que pode ser pequeno ou até ausente, quando o sangue fica retido atrás da placenta) e alteração da vitalidade fetal. A ultrassonografia tem baixa sensibilidade para DPP e não deve atrasar a conduta; um exame normal não exclui o diagnóstico. Aqui ela foi útil para afastar placenta prévia."
+   },
+   {
+    "pergunta": "Como diferenciar DPP de placenta prévia?",
+    "resposta": "Na placenta prévia, o sangramento é vermelho vivo, indolor, de início súbito, muitas vezes recorrente e sem causa aparente, com útero relaxado e vitalidade fetal geralmente preservada no início. No DPP, há dor, hipertonia, sangue escuro e sofrimento fetal precoce. Na suspeita de placenta prévia, o toque vaginal é proibido até a ultrassonografia confirmar a localização da placenta, pois pode desencadear hemorragia grave."
+   },
+   {
+    "pergunta": "Quais os fatores de risco da paciente?",
+    "resposta": "Hipertensão arterial crônica mal controlada (o principal fator de risco), tabagismo e multiparidade. Outros fatores são pré-eclâmpsia, uso de cocaína, trauma abdominal, rotura prematura de membranas, descompressão uterina súbita (após saída de líquido em polidrâmnio ou do primeiro gemelar), trombofilias e DPP em gestação anterior."
+   },
+   {
+    "pergunta": "Qual a conduta obstétrica?",
+    "resposta": "Com feto vivo e viável e sofrimento fetal, a via de parto deve ser a mais rápida: se o parto vaginal não for iminente, indica-se cesárea de urgência. A amniotomia é recomendada precocemente por reduzir a pressão intrauterina e a passagem de tromboplastina para a circulação materna. Paralelamente, é preciso estabilizar a mãe: acessos calibrosos, reposição volêmica, reserva de sangue e hemocomponentes, com atenção especial ao fibrinogênio. Se o feto já estiver morto e a mãe estável, o parto vaginal costuma ser preferido."
+   },
+   {
+    "pergunta": "Quais complicações maternas esperar?",
+    "resposta": "Choque hemorrágico, coagulação intravascular disseminada (o fibrinogênio abaixo de 200 mg/dL já indica consumo e prediz hemorragia pós-parto grave), útero de Couvelaire (infiltração de sangue no miométrio, que pode causar atonia), hemorragia pós-parto, lesão renal aguda e síndrome de Sheehan. A monitorização no pós-parto deve ser rigorosa, com uterotônicos e ácido tranexâmico preparados."
+   }
+  ],
+  "hipoteses": [
+   "Descolamento prematuro de placenta com feto vivo e sofrimento fetal agudo",
+   "Coagulopatia de consumo em instalação (fibrinogênio 180 mg/dL, plaquetopenia)",
+   "Hipertensão arterial crônica descompensada na gestação"
+  ],
+  "diferenciais": [
+   "Placenta prévia (afastada pela ultrassonografia)",
+   "Rotura uterina",
+   "Rotura de vasa prévia",
+   "Trabalho de parto prematuro com sangramento do colo",
+   "Pré-eclâmpsia sobreposta à hipertensão crônica (proteinúria ausente no momento)"
+  ],
+  "conduta": "Acionar equipe obstétrica, anestesia e neonatologia. Dois acessos venosos calibrosos, coleta de exames e reserva de hemocomponentes, sondagem vesical com controle de diurese. Reposição volêmica criteriosa e transfusão conforme necessidade, com reposição de fibrinogênio (crioprecipitado ou concentrado) e plaquetas guiada por exames. Amniotomia e cesárea de urgência, dado o sofrimento fetal com parto vaginal não iminente. Controle da pressão arterial com anti-hipertensivo venoso se PA ≥ 160/110 mmHg. Preparar uterotônicos e ácido tranexâmico para o pós-parto e manter vigilância de hemorragia pós-parto e CIVD em unidade de cuidados intensivos ou semi-intensivos. Neonatologia presente na sala de parto para reanimação de prematuro de 33 semanas. Após a alta, controle adequado da hipertensão e abordagem do tabagismo.",
+  "discussao": "O DPP é a separação da placenta normalmente inserida antes do nascimento, após 20 semanas. É uma emergência obstétrica que ameaça a vida da mãe e do feto, e a hipertensão é o principal fator associado. O raciocínio clínico mais importante é distinguir as duas grandes causas de sangramento da segunda metade da gestação: DPP (dor, hipertonia, sofrimento fetal) e placenta prévia (sangramento indolor, útero relaxado). A conduta depende da vitalidade fetal e da estabilidade materna, e o tempo entre o diagnóstico e o nascimento influencia o prognóstico do bebê. O controle da hipertensão no pré-natal e a cessação do tabagismo são medidas de prevenção.",
+  "referencias": [
+   "Manual de Gestação de Alto Risco – Ministério da Saúde (2022)",
+   "Organização Pan-Americana da Saúde – Recomendações assistenciais para prevenção, diagnóstico e tratamento da hemorragia obstétrica (2018)",
+   "Zugaib – Obstetrícia, capítulo de descolamento prematuro de placenta"
+  ]
+ },
+ {
+  "id": "caso-leishmaniose-tegumentar",
+  "titulo": "Ferida na perna que não cicatriza em trabalhador de ramal",
+  "tema": "Leishmanioses",
+  "especialidade": "Dermatologia",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "identificacao": "W.S.M., 35 anos, sexo masculino, pardo, agricultor e trabalhador de desmatamento em ramal da rodovia AM-010, residente em Rio Preto da Eva (AM).",
+  "queixaPrincipal": "\"Uma ferida na perna que não fecha de jeito nenhum.\"",
+  "hda": "Paciente refere que há cerca de 7 semanas surgiu uma 'bolinha' vermelha na perna esquerda, semelhante a picada de inseto, que aumentou e se abriu, formando uma ferida. A lesão é pouco dolorosa. Usou pomadas com antibiótico e 'remédio caseiro' com folhas, sem melhora. Há 2 semanas notou 'caroços' em fila subindo pela perna e uma íngua na virilha esquerda. Trabalha abrindo roçado na mata, com frequência ao entardecer. Colegas de trabalho tiveram 'ferida brava' no passado. Nega febre, perda de peso, obstrução nasal, sangramento pelo nariz ou feridas na boca.",
+  "antecedentes": "Previamente hígido. Nega diabetes, hipertensão, doença cardíaca, renal ou hepática. Nega tratamentos anteriores para leishmaniose. Etilismo social. Nega tabagismo. Teste rápido de HIV negativo há 1 ano.",
+  "exameFisico": "Bom estado geral, corado, afebril. PA 124/78 mmHg. FC 76 bpm. FR 16 irpm. SatO2 98% em ar ambiente. Tax 36,6 °C. Peso 70 kg. Em face anterior da perna esquerda: úlcera arredondada de 3 × 2,5 cm, com bordas elevadas, endurecidas e bem delimitadas ('em moldura'), fundo granuloso avermelhado, com pouca secreção serosa, indolor à palpação. Três nódulos subcutâneos, alinhados ao longo do trajeto linfático da perna (padrão esporotricoide). Linfonodo inguinal esquerdo de 2 cm, móvel, pouco doloroso. Exame da mucosa nasal e oral (rinoscopia anterior e oroscopia): sem lesões. Demais sistemas sem alterações.",
+  "exames": "Pesquisa direta de Leishmania em material da borda da úlcera (escarificação e imprint, corado pelo Giemsa): formas amastigotas presentes. PCR do material da lesão: Leishmania (Viannia) guyanensis. Hemograma normal. Glicemia 88 mg/dL. Creatinina 0,9 mg/dL. AST 26 U/L; ALT 30 U/L. Amilase e lipase normais. ECG: ritmo sinusal, QTc 410 ms. Teste rápido de HIV negativo.",
+  "perguntas": [
+   {
+    "pergunta": "Qual o diagnóstico e o que sugere a espécie encontrada?",
+    "resposta": "Leishmaniose tegumentar americana na forma cutânea localizada, com disseminação linfática (nódulos em trajeto linfático e linfadenopatia regional), causada por Leishmania (Viannia) guyanensis. Essa espécie predomina na Amazônia ao norte do rio Amazonas, incluindo a região de Manaus, e está associada à exposição em áreas de mata e desmatamento, com transmissão por flebotomíneos (mosquito-palha, 'tatuquira'). A úlcera indolor com bordas elevadas em moldura e fundo granuloso é a lesão típica."
+   },
+   {
+    "pergunta": "Como confirmar o diagnóstico?",
+    "resposta": "Pela demonstração do parasito ou de seu DNA: pesquisa direta em material da borda da lesão (escarificação, imprint ou aspirado), histopatologia de biópsia da borda, cultura e PCR, que também permite identificar a espécie. Exames imunológicos, como a intradermorreação de Montenegro, indicam apenas exposição e hoje têm disponibilidade limitada. O diagnóstico deve ser buscado antes do tratamento, pois o diferencial de úlceras crônicas é amplo."
+   },
+   {
+    "pergunta": "Qual o tratamento para esta espécie no Amazonas?",
+    "resposta": "Para lesões causadas por L. guyanensis, o isetionato de pentamidina é considerado o tratamento de primeira escolha no estado do Amazonas, em poucas aplicações intramusculares, conforme o esquema do Ministério da Saúde e do centro de referência (Fundação de Medicina Tropical Dr. Heitor Vieira Dourado). O antimoniato de meglumina é a opção clássica para outras espécies. As diretrizes da OPAS (2022) recomendam a miltefosina (recomendação forte) e a pentamidina (recomendação condicional, apenas para L. guyanensis) no tratamento sistêmico. A miltefosina oral foi incorporada ao SUS para a forma cutânea e é contraindicada na gestação, exigindo contracepção eficaz em mulheres em idade fértil. A anfotericina B lipossomal fica para casos especiais (gestantes, formas graves, falha terapêutica ou contraindicação aos demais)."
+   },
+   {
+    "pergunta": "Quais cuidados antes e durante o uso da pentamidina?",
+    "resposta": "Avaliar glicemia, função renal, enzimas pancreáticas e ECG antes do tratamento, pois a pentamidina pode causar hipoglicemia, hiperglicemia tardia (por lesão pancreática), pancreatite, nefrotoxicidade, hipotensão e arritmias (prolongamento do QT). Recomenda-se aplicar após o paciente se alimentar e mantê-lo em repouso e observação por algum tempo após a injeção. Também é necessário notificar o caso e acompanhar a cicatrização: considera-se cura clínica a epitelização completa da lesão e o desaparecimento da infiltração, em geral avaliados até 90 dias após o fim do tratamento, com seguimento posterior para detectar recidiva ou lesão mucosa."
+   }
+  ],
+  "hipoteses": [
+   "Leishmaniose tegumentar americana, forma cutânea localizada com disseminação linfática",
+   "Infecção por Leishmania (Viannia) guyanensis"
+  ],
+  "diferenciais": [
+   "Esporotricose (lesões em trajeto linfático)",
+   "Paracoccidioidomicose",
+   "Úlcera por pioderma/ectima",
+   "Carcinoma espinocelular",
+   "Tuberculose cutânea e micobacterioses atípicas",
+   "Úlcera sifilítica (cancro ou goma)",
+   "Úlcera venosa ou traumática"
+  ],
+  "conduta": "Notificação compulsória. Tratamento com isetionato de pentamidina no esquema preconizado para L. guyanensis, após exames de base (glicemia, função renal e hepática, amilase/lipase, ECG), aplicado com o paciente alimentado, seguido de observação. Cuidados locais da úlcera com limpeza com água e sabão. Orientar retorno para avaliação da cicatrização mensalmente e seguimento por pelo menos alguns meses após a cura clínica, com exame das mucosas nasal e oral a cada consulta. Orientar medidas de proteção individual (roupas compridas e repelente ao entardecer, mosquiteiro) e investigar colegas com lesões semelhantes.",
+  "discussao": "A leishmaniose tegumentar é endêmica em todo o Brasil, e a Região Norte concentra grande parte dos casos. Ela está ligada ao trabalho em áreas de floresta, desmatamento, abertura de estradas e ramais e atividades de garimpo e extrativismo. As espécies do subgênero Viannia, como L. braziliensis e L. guyanensis, podem causar lesões mucosas tardias, por isso o exame de nariz e boca deve fazer parte de toda consulta. No Amazonas, a predominância de L. guyanensis orienta a escolha da pentamidina como primeira opção. O caso também ilustra uma apresentação comum: úlcera crônica indolor tratada inicialmente com pomadas, o que atrasa o diagnóstico.",
+  "referencias": [
+   "Manual de Vigilância da Leishmaniose Tegumentar – Ministério da Saúde (2017)",
+   "Diretrizes para o tratamento das leishmanioses na Região das Américas, 2ª edição – Organização Pan-Americana da Saúde (2022)",
+   "Guia de Vigilância em Saúde – Ministério da Saúde (6ª edição, 2023), capítulo de leishmaniose tegumentar"
+  ]
+ },
+ {
+  "id": "caso-hanseniase-multibacilar",
+  "titulo": "Manchas dormentes na pele e formigamento na mão em moradora de Manacapuru",
+  "tema": "Hanseníase",
+  "especialidade": "Saúde Pública e SUS",
+  "disciplina": "Medicina Preventiva e Social",
+  "dificuldade": 2,
+  "identificacao": "G.F.S., 41 anos, sexo feminino, parda, merendeira escolar, natural e residente em Manacapuru (AM). Mora com o marido, três filhos e a sogra.",
+  "queixaPrincipal": "\"Umas manchas que apareceram no corpo e a mão direita formigando.\"",
+  "hda": "Paciente refere que há cerca de 1 ano surgiram manchas claras e avermelhadas nos braços, no tronco e na coxa, que aumentaram de tamanho e número. Percebeu que 'não sente o quente' nas manchas quando se queimou no fogão sem perceber. Há 4 meses sente formigamento e dormência no 4º e 5º dedos da mão direita e tem deixado cair objetos. Também nota os pés 'dormentes' ao andar descalça. Nega febre, dor nas articulações ou nódulos dolorosos na pele. Procurou a UBS após campanha de busca ativa na escola onde trabalha.",
+  "antecedentes": "Hipertensão arterial controlada com losartana. G3P3. Usa anticoncepcional injetável trimestral. Sogra teve 'hanseníase' há cerca de 10 anos e fez tratamento completo. Não sabe informar sobre cicatriz de BCG. Nega diabetes e etilismo.",
+  "exameFisico": "Bom estado geral. PA 128/80 mmHg. FC 74 bpm. FR 16 irpm. SatO2 98% em ar ambiente. Tax 36,5 °C. Peso 64 kg. Pele: sete lesões (manchas e placas) hipocrômicas e eritematosas, de bordas imprecisas, distribuídas em ambos os braços, tronco e coxa esquerda, com alopecia local e redução do suor; teste com tubos de água quente e fria mostra perda da sensibilidade térmica nas lesões; sensibilidade dolorosa reduzida em quatro delas. Sem nódulos, infiltração difusa ou madarose. Avaliação neurológica simplificada: nervo ulnar direito espessado e doloroso à palpação no cotovelo; nervo fibular comum esquerdo espessado; força de abdução do 5º dedo direito grau 4. Monofilamentos de Semmes-Weinstein: não sente o monofilamento de 2 g em território ulnar da mão direita e em três pontos da planta do pé esquerdo. Sem garras, feridas ou reabsorções. Olhos sem alterações.",
+  "exames": "Baciloscopia de raspado intradérmico (lóbulos das orelhas e cotovelos): índice baciloscópico 2+. Biópsia de pele (borda de lesão): infiltrado granulomatoso com envolvimento de filetes nervosos e bacilos álcool-ácido resistentes. Hemograma: hemoglobina 12,8 g/dL, sem alterações. AST, ALT e creatinina normais. Glicose-6-fosfato desidrogenase (G6PD) com atividade normal. Beta-hCG negativo.",
+  "perguntas": [
+   {
+    "pergunta": "Quais os sinais cardinais que confirmam hanseníase?",
+    "resposta": "Pelo Ministério da Saúde, o diagnóstico é clínico e se confirma com pelo menos um dos sinais cardinais: (1) lesão ou área da pele com alteração de sensibilidade térmica, dolorosa e/ou tátil; (2) espessamento de nervo periférico associado a alteração sensitiva, motora ou autonômica; (3) presença de bacilos na baciloscopia de raspado intradérmico ou na biópsia de pele. A paciente apresenta os três."
+   },
+   {
+    "pergunta": "Como classificar a doença para fins de tratamento?",
+    "resposta": "Pelo PCDT de 2022, a classificação operacional é paucibacilar quando há até 5 lesões de pele com baciloscopia negativa, e multibacilar quando há mais de 5 lesões e/ou baciloscopia positiva. Esta paciente tem 7 lesões e baciloscopia positiva: hanseníase multibacilar. O acometimento de dois troncos nervosos reforça a forma dimorfa, mas não é critério da classificação operacional."
+   },
+   {
+    "pergunta": "Qual o tratamento?",
+    "resposta": "Poliquimioterapia única (PQT-U), adotada pelo Ministério da Saúde para todos os casos: dose mensal supervisionada de rifampicina 600 mg, clofazimina 300 mg e dapsona 100 mg, e doses diárias autoadministradas de clofazimina 50 mg e dapsona 100 mg. No caso multibacilar, são 12 cartelas (doses mensais), a serem concluídas em até 18 meses; no paucibacilar, 6 cartelas. Orientar que a clofazimina pode escurecer a pele temporariamente e que a rifampicina deixa a urina avermelhada e reduz a eficácia de alguns anticoncepcionais hormonais (o injetável trimestral de progestagênio isolado sofre menor interferência, mas é prudente discutir método adicional). A dapsona pode causar anemia hemolítica, meta-hemoglobinemia e reações de hipersensibilidade."
+   },
+   {
+    "pergunta": "Qual o grau de incapacidade física e por que ele importa?",
+    "resposta": "O grau de incapacidade física avalia olhos, mãos e pés: grau 0 sem alterações; grau 1 com diminuição de força ou perda de sensibilidade sem deformidades visíveis (nas mãos e nos pés, não sente o monofilamento de 2 g, lilás, ou o toque da caneta); grau 2 com deformidades visíveis (garras, reabsorção, feridas, lagoftalmo). Esta paciente tem grau 1 (perda sensitiva e diminuição de força, sem deformidades). O grau no diagnóstico indica atraso diagnóstico e orienta prevenção de incapacidades (autocuidado, proteção das mãos e pés, fisioterapia). A avaliação neurológica deve ser repetida durante e ao fim do tratamento."
+   },
+   {
+    "pergunta": "O que fazer com os contatos e com as reações hansênicas?",
+    "resposta": "Todos os contatos domiciliares e sociais próximos (de preferência dos últimos 5 anos) devem passar por exame dermatoneurológico e receber a vacina BCG conforme a cicatriz vacinal e a orientação do Ministério da Saúde; o PCDT também prevê testes de apoio à investigação de contatos, como o teste rápido para anticorpos anti-M. leprae. A quimioprofilaxia com rifampicina em dose única (SDR-PEP), recomendada pela OMS desde 2018, foi excluída do SUS pela Conitec em 2020 e não faz parte da rotina do PCDT de 2022. Sobre as reações: a reação tipo 1 (reversa) causa piora das lesões e neurite e é tratada com prednisona; a reação tipo 2 (eritema nodoso hansênico) causa nódulos dolorosos, febre e artralgia, e é tratada com talidomida ou corticoide. A talidomida é teratogênica e seu uso em mulheres em idade fértil exige regras rigorosas de contracepção, conforme a legislação brasileira. A neurite com perda de força, como a do ulnar desta paciente, exige corticoide e acompanhamento próximo para evitar sequelas."
+   }
+  ],
+  "hipoteses": [
+   "Hanseníase multibacilar (forma dimorfa provável)",
+   "Neurite do nervo ulnar direito e comprometimento do nervo fibular esquerdo",
+   "Grau 1 de incapacidade física"
+  ],
+  "diferenciais": [
+   "Pitiríase versicolor",
+   "Vitiligo",
+   "Pitiríase alba",
+   "Eczemátide",
+   "Micoses superficiais (tinhas)",
+   "Neuropatias periféricas por diabetes, álcool ou compressão (síndrome do túnel ulnar)",
+   "Leishmaniose cutânea difusa (nas formas infiltradas)"
+  ],
+  "conduta": "Notificação compulsória. Início da PQT-U multibacilar (12 doses supervisionadas mensais com doses diárias autoadministradas). Avaliação neurológica simplificada e grau de incapacidade no início, a cada 3 meses e na alta. Prednisona para a neurite do ulnar com perda de força, com acompanhamento clínico e fisioterápico. Orientações de autocuidado com mãos e pés. Revisar o método contraceptivo, com orientação sobre interação com a rifampicina. Exame de todos os contatos domiciliares e sociais e vacinação BCG conforme indicação. Educação em saúde para reduzir o estigma, reforçando que o paciente em tratamento não precisa ser afastado do convívio familiar nem do trabalho. Vigilância pós-alta para reações e recidiva.",
+  "discussao": "O Brasil está entre os países com mais casos novos de hanseníase no mundo, e a doença é endêmica na Amazônia. Ela é causada pelo Mycobacterium leprae, que tem predileção por pele e nervos periféricos; a transmissão ocorre por vias respiratórias, pelo convívio próximo e prolongado com doentes multibacilares não tratados. O diagnóstico é clínico e pode ser feito na atenção primária com instrumentos simples. O maior desafio é o atraso diagnóstico, que leva a incapacidades físicas permanentes e a estigma. A detecção precoce, o tratamento completo, a prevenção de incapacidades e o exame de contatos são os pilares do controle. A Lei nº 9.010/1995 proíbe o uso do termo 'lepra' em documentos oficiais, como forma de combater o preconceito.",
+  "referencias": [
+   "Protocolo Clínico e Diretrizes Terapêuticas da Hanseníase – Ministério da Saúde (2022)",
+   "Guia de Vigilância em Saúde – Ministério da Saúde (6ª edição, 2023), capítulo de hanseníase",
+   "Guidelines for the diagnosis, treatment and prevention of leprosy – Organização Mundial da Saúde (2018)"
+  ]
+ },
+ {
+  "id": "caso-depressao-risco-suicida",
+  "titulo": "Tristeza profunda, insônia e plano de tirar a própria vida",
+  "tema": "Transtornos do humor",
+  "especialidade": "Psiquiatria",
+  "disciplina": "Saúde Mental",
+  "dificuldade": 2,
+  "identificacao": "R.T.A., 38 anos, sexo masculino, pardo, mototaxista, natural de Humaitá e residente em Manaus (AM). Trazido à UPA pela irmã.",
+  "queixaPrincipal": "\"Não vejo mais sentido em nada. Estava pensando em acabar com tudo.\"",
+  "hda": "Irmã relata que o paciente está 'diferente' há cerca de 2 meses, desde a separação da esposa e a perda da moto por dívida, que era seu instrumento de trabalho. Ele confirma tristeza na maior parte do dia, quase todos os dias, perda de interesse pelas coisas que gostava (futebol, pescaria), cansaço, dificuldade de concentração e sentimento de culpa ('sou um fracasso, estraguei a vida dos meus filhos'). Acorda às 3 horas da manhã e não consegue voltar a dormir. Perdeu cerca de 6 kg sem dieta. Aumentou o consumo de bebida alcoólica, bebendo quase todos os dias. Há uma semana começou a pensar em se matar e ontem comprou uma corda; escreveu mensagens de despedida para os filhos, que a irmã encontrou no celular. Diz que 'não tem certeza' se faria. Nega alucinações. Nega períodos de euforia, gastos excessivos ou redução da necessidade de sono no passado.",
+  "antecedentes": "Tentativa de suicídio aos 20 anos, com ingestão de medicamentos, sem acompanhamento posterior. Nega doenças clínicas. Nega uso de medicamentos contínuos. Uso de álcool desde a adolescência, em aumento recente. Nega outras drogas. Pai com alcoolismo; tio materno morreu por suicídio.",
+  "exameFisico": "Regular estado geral, emagrecido, higiene descuidada. PA 132/84 mmHg. FC 92 bpm. FR 16 irpm. SatO2 98% em ar ambiente. Tax 36,4 °C. Sem sinais de intoxicação alcoólica aguda ou de abstinência (sem tremores, sudorese ou agitação). Sem lesões autoprovocadas visíveis. Exame psíquico: vígil, orientado, cooperativo, contato visual pobre. Psicomotricidade lentificada. Discurso em baixo volume, com latência aumentada. Humor deprimido, afeto congruente e restrito. Pensamento com conteúdo de desesperança, ruína e culpa, com ideação suicida estruturada (plano, método e atos preparatórios). Sem alterações de sensopercepção. Juízo crítico parcialmente preservado.",
+  "exames": "Escala PHQ-9: 23 pontos (depressão grave), com resposta positiva no item de pensamentos de morte. Avaliação com a escala de Columbia (C-SSRS): ideação suicida ativa com plano e intenção parcial, e comportamento preparatório recente. Hemograma normal. Glicemia 90 mg/dL. TSH 2,1 mUI/L. Sódio 139 mEq/L. AST 48 U/L; ALT 40 U/L; GGT 110 U/L. Etanol sérico não detectado. Teste rápido de HIV e sífilis não reagentes. AUDIT: 21 pontos (provável dependência de álcool).",
+  "perguntas": [
+   {
+    "pergunta": "Qual o diagnóstico e por que o risco de suicídio é considerado alto?",
+    "resposta": "Episódio depressivo maior grave, sem sintomas psicóticos, com uso nocivo/provável dependência de álcool. O risco de suicídio é alto porque há ideação com plano e método definidos, atos preparatórios (compra da corda, mensagens de despedida), tentativa prévia, sexo masculino, abuso de álcool, perdas recentes (separação, trabalho, renda), desesperança e história familiar de suicídio. Perguntar diretamente sobre ideação suicida não aumenta o risco; ao contrário, abre espaço para cuidado."
+   },
+   {
+    "pergunta": "Qual a conduta imediata na UPA?",
+    "resposta": "Garantir a segurança: não deixar o paciente sozinho, retirar objetos que possam ser usados para autolesão, acolher com escuta sem julgamento e envolver a família. Diante de risco alto, indicar internação (em leito de saúde mental de hospital geral ou serviço de referência) ou observação intensiva, conforme a rede local. Se o paciente recusar, a internação involuntária é prevista pela Lei nº 10.216/2001 quando há risco para si, a pedido de terceiro e com laudo médico circunstanciado, devendo ser comunicada ao Ministério Público em até 72 horas."
+   },
+   {
+    "pergunta": "Como iniciar o tratamento farmacológico e quais cuidados tomar?",
+    "resposta": "Iniciar um antidepressivo de primeira linha, como um inibidor seletivo da recaptação de serotonina (por exemplo, sertralina ou escitalopram), explicando que o efeito começa em 2 a 4 semanas e que o tratamento deve ser mantido por pelo menos 6 a 12 meses após a remissão. Em crianças, adolescentes e adultos jovens (até cerca de 25 anos) há aumento de pensamentos suicidas no início do tratamento; em qualquer idade, as primeiras semanas exigem monitorização próxima. Prescrever quantidades pequenas, com a família guardando os medicamentos, pois a overdose é um risco. Nunca prescrever benzodiazepínicos sem critério em quem usa álcool. Tratar a dependência de álcool em paralelo (inclusive prevenir abstinência na internação com tiamina e, se necessário, benzodiazepínico por curto prazo)."
+   },
+   {
+    "pergunta": "O que deve ser feito após a alta?",
+    "resposta": "Elaborar com o paciente um plano de segurança (sinais de alerta, estratégias de enfrentamento, pessoas e serviços de contato, restrição de meios letais). Garantir consulta no CAPS ou com a equipe de saúde mental em até 7 dias após a alta, pois o período logo após a alta é de altíssimo risco. Oferecer psicoterapia (como terapia cognitivo-comportamental), acompanhamento pela UBS, apoio social e orientação sobre o CVV (ligação gratuita pelo número 188). Em caso de tentativa de suicídio, a notificação de violência autoprovocada é compulsória e imediata (em até 24 horas) à vigilância municipal."
+   }
+  ],
+  "hipoteses": [
+   "Episódio depressivo maior grave, sem sintomas psicóticos",
+   "Risco alto de suicídio (ideação com plano, intenção parcial e atos preparatórios)",
+   "Transtorno por uso de álcool (provável dependência)"
+  ],
+  "diferenciais": [
+   "Transtorno bipolar em fase depressiva (investigar episódios de mania ou hipomania)",
+   "Transtorno depressivo induzido por álcool",
+   "Transtorno de adaptação/luto complicado",
+   "Hipotireoidismo e outras causas orgânicas de depressão",
+   "Transtorno de estresse pós-traumático"
+  ],
+  "conduta": "Acolhimento e avaliação de risco com perguntas diretas. Medidas de segurança imediatas (vigilância contínua, retirada de meios). Internação em leito de saúde mental ou observação intensiva, com consentimento sempre que possível; internação involuntária se necessário, seguindo a Lei nº 10.216/2001. Iniciar ISRS em dose baixa com titulação, prescrevendo quantidades limitadas. Tiamina e manejo da abstinência alcoólica. Envolvimento da família e da rede de apoio. Plano de segurança por escrito. Encaminhamento ao CAPS (preferencialmente CAPS AD, dado o uso de álcool) com consulta em até 7 dias após a alta, psicoterapia e acompanhamento pela atenção primária. Orientar o contato do CVV (188) e do SAMU (192).",
+  "discussao": "O suicídio é uma causa importante de morte evitável entre adultos jovens no Brasil, e a maioria das pessoas que morrem por suicídio tem um transtorno mental, principalmente depressão e uso de álcool. Muitos pacientes procuram um serviço de saúde nas semanas anteriores à morte, o que torna essencial perguntar ativamente sobre ideação suicida. A avaliação de risco combina fatores de risco, fatores de proteção e sinais de alerta, e deve resultar em um plano de cuidado proporcional ao risco, e não apenas em uma classificação. Homens, sobretudo com perdas econômicas e uso de álcool, têm maior letalidade nas tentativas. A Política Nacional de Prevenção da Automutilação e do Suicídio (Lei nº 13.819/2019) reforça a notificação, a articulação da rede e o cuidado continuado.",
+  "referencias": [
+   "NICE guideline NG222: Depression in adults: treatment and management (2022)",
+   "WHO mhGAP Intervention Guide for mental, neurological and substance use disorders in non-specialized health settings, versão 2.0 (Organização Mundial da Saúde, 2016)",
+   "Lei nº 13.819/2019 – Política Nacional de Prevenção da Automutilação e do Suicídio",
+   "Suicídio: informando para prevenir – Associação Brasileira de Psiquiatria e Conselho Federal de Medicina (2014)"
+  ]
+ },
+ {
+  "id": "caso-acidente-ofidico-botropico",
+  "titulo": "Picada de cobra no pé durante a capina, com inchaço e sangramento na gengiva",
+  "tema": "Intoxicações exógenas e antídotos",
+  "especialidade": "Medicina de Urgência",
+  "disciplina": "Clínica Médica",
+  "dificuldade": 2,
+  "identificacao": "A.C.P., 19 anos, sexo masculino, pardo, agricultor, residente em comunidade rural do município de Careiro (AM).",
+  "queixaPrincipal": "\"Fui picado por uma jararaca no pé e a perna está inchando muito.\"",
+  "hda": "Paciente refere que há cerca de 4 horas, enquanto capinava o roçado de mandioca de chinelo, foi picado no dorso do pé direito por uma cobra marrom com desenhos em forma de 'V' invertido, que os moradores identificaram como jararaca. Logo após, sentiu dor intensa no local. Um vizinho amarrou um pano apertado na perna (garrote), fez um corte no local 'para tirar o veneno' e passou uma mistura de ervas. Viajou cerca de 3 horas de rabeta e carro até o hospital. Refere piora da dor, inchaço que subiu até o joelho e sangramento pela gengiva ao escovar os dentes nesta tarde. Nega visão turva, pálpebras caídas, dificuldade para engolir, urina escura, diarreia ou vômitos.",
+  "antecedentes": "Previamente hígido. Nega alergias. Nunca recebeu soro heterólogo. Vacinação antitetânica: última dose há mais de 10 anos. Nega uso de medicamentos.",
+  "exameFisico": "Regular estado geral, fácies de dor, lúcido e orientado. PA 124/78 mmHg. FC 98 bpm. FR 18 irpm. SatO2 98% em ar ambiente. Tax 36,9 °C. Garrote em terço distal da coxa direita (retirado na admissão). Pé direito com dois pontos de picada no dorso, com sangramento discreto persistente e incisão feita por leigo; edema tenso do pé até o joelho (dois segmentos: pé e perna), com equimose e dor à palpação; sem bolhas ou áreas de necrose; pulsos pediosos presentes; sem dor à extensão passiva dos dedos. Gengivorragia discreta. Sem ptose palpebral, sem fácies miastênica. Ausculta cardíaca e pulmonar normais. Diurese clara.",
+  "exames": "Tempo de coagulação (método de Lee-White, à beira do leito): sangue incoagulável após 30 minutos. Fibrinogênio indetectável. TP e TTPa incoaguláveis. Hemoglobina 14,2 g/dL; plaquetas 140.000/mm³; leucócitos 13.100/mm³. Creatinina 1,0 mg/dL; ureia 32 mg/dL. CK 420 U/L. Urina tipo 1 sem hematúria ou mioglobinúria. Sódio e potássio normais.",
+  "perguntas": [
+   {
+    "pergunta": "Qual o tipo de acidente e como reconhecê-lo?",
+    "resposta": "Acidente botrópico (gênero Bothrops; na Amazônia, principalmente Bothrops atrox, a jararaca), o tipo mais comum de acidente ofídico no Brasil. O veneno tem três ações principais: proteolítica (inflamatória local, com dor, edema, equimose, bolhas e necrose), coagulante (consome fibrinogênio e causa sangue incoagulável) e hemorrágica (lesão vascular, com sangramentos locais e sistêmicos, como a gengivorragia). O tempo de coagulação alterado confirma o envenenamento sistêmico."
+   },
+   {
+    "pergunta": "Como classificar a gravidade e qual o tratamento específico?",
+    "resposta": "A gravidade é classificada pelas manifestações locais e sistêmicas. O PCDT divide o membro em três segmentos: leve é dor e edema em até um segmento; moderado, em dois segmentos (neste caso, pé e perna), com sangramento discreto ou ausente; grave, em três segmentos ou com complicações (hemorragia importante, choque, lesão renal aguda). A coagulopatia pode estar presente em qualquer grau e não define a gravidade sozinha. O tratamento específico é o soro antibotrópico (ou antibotrópico-laquético, se houver dúvida com acidente por surucucu), por via venosa, em dose (número de ampolas) definida pela gravidade, segundo o Protocolo Clínico e Diretrizes Terapêuticas dos Acidentes Ofídicos do Ministério da Saúde. A dose é a mesma para crianças e adultos, porque depende da quantidade de veneno, e não do peso. O soro deve ser administrado o mais cedo possível, em ambiente preparado para tratar reações."
+   },
+   {
+    "pergunta": "Quais práticas de primeiros socorros foram prejudiciais e o que deve ser orientado?",
+    "resposta": "O garrote, a incisão no local da picada, a sucção e a aplicação de ervas ou outras substâncias são contraindicados: aumentam a lesão local, a necrose, o sangramento e o risco de infecção, sem retirar o veneno. O correto é lavar o local com água e sabão, manter a vítima em repouso, com o membro elevado quando possível, retirar anéis e objetos apertados e levá-la rapidamente ao serviço de saúde mais próximo com soro. Tentar capturar ou matar a cobra atrasa o atendimento e não é necessário."
+   },
+   {
+    "pergunta": "Que complicações devem ser monitoradas e como acompanhar a resposta ao soro?",
+    "resposta": "Complicações locais: abscesso (infecção secundária, mais comum após incisão ou garrote), necrose e síndrome compartimental (dor desproporcional, dor à extensão passiva, parestesias, tensão importante; pulsos podem estar presentes). Complicações sistêmicas: lesão renal aguda, choque e hemorragias graves. Durante e após a soroterapia, observar reações precoces (urticária, broncoespasmo, hipotensão, anafilaxia), que devem ser tratadas prontamente, e reações tardias (doença do soro). O tempo de coagulação deve ser repetido cerca de 24 horas após o soro; se continuar alterado, pode ser necessária dose complementar. Hidratação adequada e controle de diurese ajudam a prevenir lesão renal. Atualizar a vacinação antitetânica."
+   }
+  ],
+  "hipoteses": [
+   "Acidente botrópico moderado",
+   "Coagulopatia de consumo induzida pelo veneno (sangue incoagulável)",
+   "Risco de infecção local e síndrome compartimental (garrote e incisão)"
+  ],
+  "diferenciais": [
+   "Acidente laquético (surucucu, Lachesis muta): quadro local semelhante, com manifestações vagais (bradicardia, hipotensão, diarreia, cólicas)",
+   "Acidente crotálico (cascavel): pouca reação local, fácies miastênica, mialgia e urina escura",
+   "Acidente elapídico (coral-verdadeira): pouca reação local, ptose palpebral e paralisia progressiva",
+   "Picada por serpente não peçonhenta",
+   "Celulite ou erisipela sem envenenamento"
+  ],
+  "conduta": "Retirar o garrote, lavar o local, elevar o membro e manter repouso. Acesso venoso calibroso e hidratação. Soroterapia antibotrópica venosa em dose de acidente moderado conforme o PCDT dos Acidentes Ofídicos, com o paciente monitorizado e com material de reanimação e adrenalina à disposição; a pré-medicação de rotina não é recomendada. Analgesia (evitar injeções intramusculares enquanto houver coagulopatia). Profilaxia antitetânica. Antibiótico apenas se houver sinais de infecção. Controle de diurese e de função renal. Repetir o tempo de coagulação cerca de 24 horas após o soro. Vigilância de síndrome compartimental com avaliação cirúrgica se houver suspeita. Observação por pelo menos 24 horas após a soroterapia e notificação compulsória do acidente por animal peçonhento. Orientar prevenção: uso de botas e luvas no roçado e atenção ao capinar.",
+  "discussao": "Os acidentes ofídicos são um problema importante de saúde pública na Região Norte, que tem as maiores taxas de incidência e de letalidade do país, especialmente entre trabalhadores rurais, indígenas e ribeirinhos. A demora no acesso ao soro, agravada pelas grandes distâncias fluviais, é o principal fator de complicações e morte. Por isso, iniciativas recentes discutem a descentralização do soro para unidades de saúde mais próximas das comunidades. O tempo de coagulação é um exame simples, feito à beira do leito, que confirma envenenamento e orienta a resposta ao tratamento. O caso também mostra como práticas populares (garrote, incisão, ervas) ainda são frequentes e pioram o desfecho, o que reforça o papel da educação em saúde.",
+  "referencias": [
+   "Protocolo Clínico e Diretrizes Terapêuticas dos Acidentes Ofídicos – Ministério da Saúde/Conitec (aprovado em 2025)",
+   "Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos – Fundação Nacional de Saúde/Ministério da Saúde (2ª edição, 2001)",
+   "Guia de Vigilância em Saúde – Ministério da Saúde (6ª edição, 2023), capítulo de acidentes por animais peçonhentos"
   ]
  }
 ]
