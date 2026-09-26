@@ -14,7 +14,12 @@ const TIPO_AVAL = { prova: "Prova", pratica: "Prova prática", trabalho: "Trabal
 const OBJETIVOS = { medicina: "Medicina — graduação", residencia: "Residência médica", enem: "ENEM e vestibulares", direito: "Direito — graduação", oab: "OAB" };
 const objetivo = () => store.doc("perfil").objetivo || null;
 /** Trilha rápida de questões correspondente ao objetivo ("med" junta Medicina e Residência). */
-const trilhaDoObjetivo = () => ({ medicina: "med", residencia: "med", enem: "enem", direito: "direito", oab: "oab" })[objetivo()] || "";
+const trilhaDoObjetivo = () => ({ residencia: "residencia", oab: "oab" })[objetivo()] || "";   // o resto já vem filtrado pelo objetivo
+/** Trilhas e domínios de conteúdo do objetivo (sem objetivo: tudo). */
+const trilhasDoObjetivo = () => ({ medicina: ["medicina", "residencia"], residencia: ["medicina", "residencia"], enem: ["enem"], direito: ["direito", "oab"], oab: ["direito", "oab"] })[objetivo()] || Object.keys(TRILHAS);
+const pilDoObjetivo = p => { const o = objetivo(); return !o || p.dominio === (o === "residencia" ? "medicina" : o === "oab" ? "direito" : o); };
+/** Tema (médico ou do ENEM) dentro do objetivo. */
+const temaDoObjetivo = t => { const o = objetivo(); return !o || (["medicina", "residencia"].includes(o) ? t.dominio !== "enem" : o === "enem" ? t.dominio === "enem" : false); };
 const doObjetivo = q => { const o = objetivo(); if (!o) return true; return o === "medicina" || o === "residencia" ? TRILHAS[q.t]?.dominio === "medicina" : o === "enem" ? q.t === "enem" : o === "oab" ? q.t === "oab" || q.t === "direito" : q.t === "direito" || q.t === "oab"; };
 
 const minhaGrade = () => { const P = store.doc("perfil"); return P.gradeId ? gradePorId(P.gradeId) : null; };

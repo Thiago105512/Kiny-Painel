@@ -76,6 +76,7 @@ function evolucaoSim(t) {
 }
 
 rota("/simulados", () => {
+  if (!trilhasDoObjetivo().includes(SIM.t)) { SIM.t = trilhasDoObjetivo().includes(objetivo()) ? objetivo() : trilhasDoObjetivo()[0]; guardarSim(); }
   const f = FORMATO[SIM.t] || {};
   if (SIM.fase === "prova") {
     const id = SIM.ids[SIM.i], q = qPorId(id), ord = SIM.ordens[id], marc = SIM.resp[id], rest = restante(), brancos = SIM.ids.filter(x => SIM.resp[x] === undefined).length;
@@ -110,7 +111,7 @@ rota("/simulados", () => {
     secao: "simulados", titulo: "Simulados",
     html: `${abas([["prova", "Formato de prova"], ["personalizado", "Personalizado"]], SIM.modo, "sim-modo")}
     <section class="caixa pilha">
-      ${SIM.modo === "prova" ? `<div><span class="lab">Prova</span>${chips(Object.entries(TRILHAS).map(([k, v]) => [k, v.curto]), SIM.t, "sim-t")}<p class="small muted" style="margin:6px 0 0">Prova real: ${esc(f.real || "")}. Questões distribuídas pelo peso de cada área, priorizando as que você não respondeu.</p></div>`
+      ${SIM.modo === "prova" ? `<div><span class="lab">Prova</span>${chips(Object.entries(TRILHAS).filter(([k]) => trilhasDoObjetivo().includes(k)).map(([k, v]) => [k, v.curto]), SIM.t, "sim-t")}<p class="small muted" style="margin:6px 0 0">Prova real: ${esc(f.real || "")}. Questões distribuídas pelo peso de cada área, priorizando as que você não respondeu.</p></div>`
         : `<div>${formFiltros(FS, "fs")}<label class="check"><input type="checkbox" data-chg="fs-erradas" ${FS.erradasAntes ? "checked" : ""}><span>Somente questões que já errei alguma vez</span></label></div>`}
       <div><span class="lab">Número de questões (${disp} disponíveis)</span>${chips(TAMANHOS.map(x => [x, x]), SIM.n, "sim-n")}</div>
       <label class="check"><input type="checkbox" data-chg="sim-cron" ${SIM.cron ? "checked" : ""}><span>Cronometrar (${minQ} min por questão → ${mmss(n * minQ * 60000)})</span></label>

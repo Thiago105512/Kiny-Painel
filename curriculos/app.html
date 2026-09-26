@@ -2113,6 +2113,7 @@ function temasDaInstituicao(instId, periodo) {
 function filtrarQuestoes(F) {
   const temasInst = F.inst ? temasDaInstituicao(F.inst, F.periodo) : null, txt = norm(F.texto);
   return questoes().filter(q => {
+    if (!doObjetivo(q)) return false;   // tudo segue o objetivo do perfil
     if (F.trilha && (F.trilha === "med" ? TRILHAS[q.t]?.dominio !== "medicina" : q.t !== F.trilha)) return false;
     if (temasInst && !temasInst.has(q.tema)) return false;
     if (F.area && q.ae !== F.area) return false;
@@ -2137,7 +2138,7 @@ function formFiltros(F, prefixo = "fq", { rapidos = false } = {}) {
   const anos = unicos(base.map(q => q.ano)).sort(), provas = unicos(base.map(q => q.prova)), fontes = unicos(base.map(q => q.fonte || q.src));
   const sel = (c, lab, itens, vazioTxt = "Todas") => `<label class="campo"><span class="lab">${lab}</span><select data-chg="${prefixo}" data-c="${c}">${opcoes(itens, F[c], vazioTxt)}</select></label>`;
   return `<div class="campos">
-    ${rapidos ? "" : sel("trilha", "Trilha", [["med", "Medicina (graduação + residência)"], ...Object.entries(TRILHAS).map(([k, v]) => [k, v.nome])])}
+    ${rapidos ? "" : sel("trilha", "Trilha", [...(objetivo() ? [] : [["med", "Medicina (graduação + residência)"]]), ...Object.entries(TRILHAS).filter(([k]) => trilhasDoObjetivo().includes(k)).map(([k, v]) => [k, v.nome])])}
     ${sel("inst", "Instituição (via grade)", instituicoes().map(i => [i.id, i.sigla]))}
     ${sel("periodo", "Período", Array.from({ length: 12 }, (_, i) => [i + 1, i + 1 + "º"]), "Todos")}
     ${areasL.length ? sel("area", "Área do conhecimento (ENEM)", areasL.map(a => [a.id, a.nome])) : ""}
@@ -2159,6 +2160,8 @@ ACOES["fq-limpar"] = () => { Object.assign(FQ, { trilha: "", area: "", inst: "",
 
 let QPAG = 20;
 const TRILHAS_RAPIDAS = [["", "Todas"], ["med", "Medicina"], ["enem", "ENEM"], ["direito", "Direito"], ["oab", "OAB"]];
+/** Chips de trilha só com o que é do objetivo do perfil. */
+const trilhasRapidas = () => ({ medicina: [["", "Todas"], ["medicina", "Graduação"], ["residencia", "Residência"]], residencia: [["", "Todas"], ["residencia", "Residência"], ["medicina", "Graduação"]], enem: [], direito: [["", "Todas"], ["direito", "Direito"], ["oab", "OAB"]], oab: [["", "Todas"], ["oab", "OAB"], ["direito", "Direito"]] })[objetivo()] || TRILHAS_RAPIDAS;
 const STATUS_RAPIDOS = [["nao", "Não respondidas"], ["incorreta", "Erradas"], ["marcada", "Marcadas"], ["revisar", "Revisar"]];
 let FQ_OBJ = null;   // aplica a trilha do objetivo do perfil na primeira abertura (e quando o objetivo muda)
 rota("/questoes", () => {
@@ -2169,7 +2172,7 @@ rota("/questoes", () => {
     secao: "questoes", titulo: "Questões", sub: `${qs.length} de ${questoes().length}`,
     html: `${abas([["banco", "Banco"], ["erros", "Caderno de erros"]], "banco", "ir-aba-q")}
       <div class="pilha">
-        ${chips(TRILHAS_RAPIDAS, FQ.trilha, "fq-trilha")}
+        ${trilhasRapidas().length > 1 ? chips(trilhasRapidas(), FQ.trilha, "fq-trilha") : ""}
         ${FQ.trilha === "enem" ? chipsEnem() : ""}
         ${chipsNivel()}
         <details class="filtros" ${extras || FQ.status.length || FQ.texto ? "open" : ""} style="margin:0"><summary>Mais filtros${extras + FQ.status.length ? ` (${extras + FQ.status.length})` : ""}</summary><div style="margin-top:10px">
@@ -2604,6 +2607,7 @@ function evolucaoSim(t) {
 }
 
 rota("/simulados", () => {
+  if (!trilhasDoObjetivo().includes(SIM.t)) { SIM.t = trilhasDoObjetivo().includes(objetivo()) ? objetivo() : trilhasDoObjetivo()[0]; guardarSim(); }
   const f = FORMATO[SIM.t] || {};
   if (SIM.fase === "prova") {
     const id = SIM.ids[SIM.i], q = qPorId(id), ord = SIM.ordens[id], marc = SIM.resp[id], rest = restante(), brancos = SIM.ids.filter(x => SIM.resp[x] === undefined).length;
@@ -2638,7 +2642,7 @@ rota("/simulados", () => {
     secao: "simulados", titulo: "Simulados",
     html: `${abas([["prova", "Formato de prova"], ["personalizado", "Personalizado"]], SIM.modo, "sim-modo")}
     <section class="caixa pilha">
-      ${SIM.modo === "prova" ? `<div><span class="lab">Prova</span>${chips(Object.entries(TRILHAS).map(([k, v]) => [k, v.curto]), SIM.t, "sim-t")}<p class="small muted" style="margin:6px 0 0">Prova real: ${esc(f.real || "")}. Questões distribuídas pelo peso de cada área, priorizando as que você não respondeu.</p></div>`
+      ${SIM.modo === "prova" ? `<div><span class="lab">Prova</span>${chips(Object.entries(TRILHAS).filter(([k]) => trilhasDoObjetivo().includes(k)).map(([k, v]) => [k, v.curto]), SIM.t, "sim-t")}<p class="small muted" style="margin:6px 0 0">Prova real: ${esc(f.real || "")}. Questões distribuídas pelo peso de cada área, priorizando as que você não respondeu.</p></div>`
         : `<div>${formFiltros(FS, "fs")}<label class="check"><input type="checkbox" data-chg="fs-erradas" ${FS.erradasAntes ? "checked" : ""}><span>Somente questões que já errei alguma vez</span></label></div>`}
       <div><span class="lab">Número de questões (${disp} disponíveis)</span>${chips(TAMANHOS.map(x => [x, x]), SIM.n, "sim-n")}</div>
       <label class="check"><input type="checkbox" data-chg="sim-cron" ${SIM.cron ? "checked" : ""}><span>Cronometrar (${minQ} min por questão → ${mmss(n * minQ * 60000)})</span></label>
@@ -2998,18 +3002,18 @@ ACOES["red-ia"] = async el => {
 FORMS.busca = () => { const q = $("#busca-global").value.trim(); if (q) ir("#/busca/" + encodeURIComponent(q)); };
 rota("/busca/:q", ({ q }) => {
   const n = norm(q), tem = s => norm(s).includes(n);
-  const temas = Object.values(TEMAS).filter(t => tem(t.nome) || (t.sinonimos || []).some(tem) || (t.subtemas || []).some(s => tem(s.nome)))
+  const temas = Object.values(TEMAS).filter(temaDoObjetivo).filter(t => tem(t.nome) || (t.sinonimos || []).some(tem) || (t.subtemas || []).some(s => tem(s.nome)))
     .sort((a, b) => (norm(b.nome).startsWith(n) - norm(a.nome).startsWith(n)) || a.nome.localeCompare(b.nome, "pt"));
-  const esps = Object.values(ESPECIALIDADES).filter(e => tem(e.nome));
+  const esps = ["enem", "direito", "oab"].includes(objetivo()) ? [] : Object.values(ESPECIALIDADES).filter(e => tem(e.nome));
   const itens = grades().flatMap(g => itensGrade(g).filter(it => tem(it.nome) || (it.unidades || []).some(u => tem(u.nome))).map(it => ({ g, it })));
-  const discRef = unicos(Object.values(TEMAS).flatMap(t => t.disciplinas || []).filter(tem));
-  const qs = questoes().filter(x => tem(x.q) || tem(x.o.join(" ")));
+  const discRef = unicos(Object.values(TEMAS).filter(temaDoObjetivo).flatMap(t => t.disciplinas || []).filter(tem));
+  const qs = questoes().filter(x => doObjetivo(x) && (tem(x.q) || tem(x.o.join(" "))));
   const cs = cards().filter(c => tem(c.frente) || tem(c.verso));
   const casos = todosCasos().filter(c => tem(c.titulo) || tem(c.tema || "") || tem(c.hda || ""));
   const notas = Object.entries(store.doc("notas").temas).filter(([, v]) => tem(v.texto || ""));
   const mats = Object.values(store.doc("materiais").itens).filter(m => tem(m.titulo) || tem(m.texto || ""));
   const reps = (REDACAO.repertorios || []).filter(r => tem(r.titulo) || tem(r.ideia));
-  const pils = PILULAS.filter(p => tem(p.titulo) || tem(p.pergunta) || tem(p.texto) || tem(p.pessoa || ""));
+  const pils = PILULAS.filter(p => pilDoObjetivo(p)).filter(p => tem(p.titulo) || tem(p.pergunta) || tem(p.texto) || tem(p.pessoa || ""));
   const total = temas.length + esps.length + itens.length + qs.length + cs.length + casos.length + notas.length + mats.length + reps.length + discRef.length + pils.length;
   const sec = (titulo, n, html) => n ? `<section><h2 class="sec">${titulo} <span class="small muted">${n}</span></h2>${html}</section>` : "";
   return {
@@ -3120,7 +3124,8 @@ const TIPOS_PIL = {
 const DOM_PIL = [["", "Tudo"], ["medicina", "Medicina"], ["enem", "ENEM"], ["direito", "Direito"]];
 const EST = { dom: "", sessao: null, aberta: {} };
 const vistasPil = () => store.doc("pilulas").v;
-const doDominio = p => !EST.dom || p.dominio === EST.dom;
+const doDominio = p => pilDoObjetivo(p) && (!EST.dom || p.dominio === EST.dom);
+const chipsDominio = () => objetivo() ? "" : chips(DOM_PIL, EST.dom, "pil-dom");   // com objetivo definido, só aparece o conteúdo dele
 const anoTxt = a => a == null ? "" : a < 0 ? `${-a} a.C.` : String(a);
 
 /** Pílula do dia: a mesma o dia todo, mudando a cada dia; prefere as ainda não vistas. */
@@ -3170,7 +3175,7 @@ rota("/estudar", () => {
   const vistas = pool.filter(p => v[p.id]).length, naoSabia = pool.filter(p => v[p.id] && !v[p.id][1]).length;
   return {
     secao: "estudar", titulo: "Estudar", sub: "Pílulas de 5 minutos: tente lembrar, confira e entenda o porquê.",
-    html: PILULAS.length ? `${chips(DOM_PIL, EST.dom, "pil-dom")}
+    html: PILULAS.length ? `${chipsDominio()}
       <section class="hero"><span class="lab">Sessão rápida</span><p class="hero-tit">5 pílulas misturadas</p>
         <p class="small muted" style="margin:0">${vistas ? `${vistas} de ${pool.length} vistas${naoSabia ? ` · ${naoSabia} viraram flashcards` : ""}` : `${pool.length} pílulas para descobrir`}</p>
         <button class="btn azul grande" data-act="pil-sessao">Começar</button></section>
@@ -3197,7 +3202,7 @@ rota("/estudar/tipo/:tipo", ({ tipo }) => {
   return {
     secao: "estudar", crumbs: [["Estudar", "#/estudar"]], titulo: info[0], sub: `${info[1]} · ${lista.length}`,
     acoes: lista.length ? `<button class="btn sec mini" data-act="pil-sessao" data-tipo="${tipo}">Sessão com 5</button>` : "",
-    html: `${chips(DOM_PIL, EST.dom, "pil-dom")}${lista.length ? corpo : vazio("Nada aqui ainda para esta área.")}`,
+    html: `${chipsDominio()}${lista.length ? corpo : vazio("Nada aqui ainda para esta área.")}`,
   };
 });
 
@@ -3297,7 +3302,12 @@ const TIPO_AVAL = { prova: "Prova", pratica: "Prova prática", trabalho: "Trabal
 const OBJETIVOS = { medicina: "Medicina — graduação", residencia: "Residência médica", enem: "ENEM e vestibulares", direito: "Direito — graduação", oab: "OAB" };
 const objetivo = () => store.doc("perfil").objetivo || null;
 /** Trilha rápida de questões correspondente ao objetivo ("med" junta Medicina e Residência). */
-const trilhaDoObjetivo = () => ({ medicina: "med", residencia: "med", enem: "enem", direito: "direito", oab: "oab" })[objetivo()] || "";
+const trilhaDoObjetivo = () => ({ residencia: "residencia", oab: "oab" })[objetivo()] || "";   // o resto já vem filtrado pelo objetivo
+/** Trilhas e domínios de conteúdo do objetivo (sem objetivo: tudo). */
+const trilhasDoObjetivo = () => ({ medicina: ["medicina", "residencia"], residencia: ["medicina", "residencia"], enem: ["enem"], direito: ["direito", "oab"], oab: ["direito", "oab"] })[objetivo()] || Object.keys(TRILHAS);
+const pilDoObjetivo = p => { const o = objetivo(); return !o || p.dominio === (o === "residencia" ? "medicina" : o === "oab" ? "direito" : o); };
+/** Tema (médico ou do ENEM) dentro do objetivo. */
+const temaDoObjetivo = t => { const o = objetivo(); return !o || (["medicina", "residencia"].includes(o) ? t.dominio !== "enem" : o === "enem" ? t.dominio === "enem" : false); };
 const doObjetivo = q => { const o = objetivo(); if (!o) return true; return o === "medicina" || o === "residencia" ? TRILHAS[q.t]?.dominio === "medicina" : o === "enem" ? q.t === "enem" : o === "oab" ? q.t === "oab" || q.t === "direito" : q.t === "direito" || q.t === "oab"; };
 
 const minhaGrade = () => { const P = store.doc("perfil"); return P.gradeId ? gradePorId(P.gradeId) : null; };

@@ -16,7 +16,9 @@ let falhas = 0; const ok = (c, m) => { console.log((c ? '  ✓ ' : '  ✗ ') + m
   await p.selectOption('#cv-per', '3'); await p.click('form[data-form="convite"] button'); await p.waitForTimeout(300);
   const nav = await p.evaluate(() => [...document.querySelectorAll('#nav-inferior a span')].map(s => s.textContent));
   ok(nav.includes('Curso') && !nav.includes('ENEM'), 'menu inferior focado em Medicina: ' + nav.join(', '));
-  await go('#/questoes'); ok(await p.evaluate(() => FQ.trilha) === 'med', 'questões abrem filtradas em Medicina');
+  await go('#/questoes'); ok(await p.evaluate(() => filtrarQuestoes(FQ).every(q => ['medicina', 'residencia'].includes(q.t))), 'questões só de Medicina e Residência');
+  ok(await p.evaluate(() => PILULAS.filter(doDominio).every(x => x.dominio === 'medicina') && !document.querySelector('[data-act="pil-dom"]')), 'pílulas só de Medicina, sem chips de outras áreas');
+  await go('#/busca/lei'); ok(await p.evaluate(() => !/Direito|ENEM ·/.test(document.querySelector('main').innerText)), 'busca não mostra conteúdo de outras áreas');
   console.log('2) Meu curso');
   await go('#/curso'); let t = await txt();
   ok(/disciplinas concluídas/.test(t) && /Cursando agora/.test(t), 'painel do curso aparece');

@@ -19,7 +19,8 @@ const TIPOS_PIL = {
 const DOM_PIL = [["", "Tudo"], ["medicina", "Medicina"], ["enem", "ENEM"], ["direito", "Direito"]];
 const EST = { dom: "", sessao: null, aberta: {} };
 const vistasPil = () => store.doc("pilulas").v;
-const doDominio = p => !EST.dom || p.dominio === EST.dom;
+const doDominio = p => pilDoObjetivo(p) && (!EST.dom || p.dominio === EST.dom);
+const chipsDominio = () => objetivo() ? "" : chips(DOM_PIL, EST.dom, "pil-dom");   // com objetivo definido, só aparece o conteúdo dele
 const anoTxt = a => a == null ? "" : a < 0 ? `${-a} a.C.` : String(a);
 
 /** Pílula do dia: a mesma o dia todo, mudando a cada dia; prefere as ainda não vistas. */
@@ -69,7 +70,7 @@ rota("/estudar", () => {
   const vistas = pool.filter(p => v[p.id]).length, naoSabia = pool.filter(p => v[p.id] && !v[p.id][1]).length;
   return {
     secao: "estudar", titulo: "Estudar", sub: "Pílulas de 5 minutos: tente lembrar, confira e entenda o porquê.",
-    html: PILULAS.length ? `${chips(DOM_PIL, EST.dom, "pil-dom")}
+    html: PILULAS.length ? `${chipsDominio()}
       <section class="hero"><span class="lab">Sessão rápida</span><p class="hero-tit">5 pílulas misturadas</p>
         <p class="small muted" style="margin:0">${vistas ? `${vistas} de ${pool.length} vistas${naoSabia ? ` · ${naoSabia} viraram flashcards` : ""}` : `${pool.length} pílulas para descobrir`}</p>
         <button class="btn azul grande" data-act="pil-sessao">Começar</button></section>
@@ -96,7 +97,7 @@ rota("/estudar/tipo/:tipo", ({ tipo }) => {
   return {
     secao: "estudar", crumbs: [["Estudar", "#/estudar"]], titulo: info[0], sub: `${info[1]} · ${lista.length}`,
     acoes: lista.length ? `<button class="btn sec mini" data-act="pil-sessao" data-tipo="${tipo}">Sessão com 5</button>` : "",
-    html: `${chips(DOM_PIL, EST.dom, "pil-dom")}${lista.length ? corpo : vazio("Nada aqui ainda para esta área.")}`,
+    html: `${chipsDominio()}${lista.length ? corpo : vazio("Nada aqui ainda para esta área.")}`,
   };
 });
 

@@ -14,6 +14,7 @@ function temasDaInstituicao(instId, periodo) {
 function filtrarQuestoes(F) {
   const temasInst = F.inst ? temasDaInstituicao(F.inst, F.periodo) : null, txt = norm(F.texto);
   return questoes().filter(q => {
+    if (!doObjetivo(q)) return false;   // tudo segue o objetivo do perfil
     if (F.trilha && (F.trilha === "med" ? TRILHAS[q.t]?.dominio !== "medicina" : q.t !== F.trilha)) return false;
     if (temasInst && !temasInst.has(q.tema)) return false;
     if (F.area && q.ae !== F.area) return false;
@@ -38,7 +39,7 @@ function formFiltros(F, prefixo = "fq", { rapidos = false } = {}) {
   const anos = unicos(base.map(q => q.ano)).sort(), provas = unicos(base.map(q => q.prova)), fontes = unicos(base.map(q => q.fonte || q.src));
   const sel = (c, lab, itens, vazioTxt = "Todas") => `<label class="campo"><span class="lab">${lab}</span><select data-chg="${prefixo}" data-c="${c}">${opcoes(itens, F[c], vazioTxt)}</select></label>`;
   return `<div class="campos">
-    ${rapidos ? "" : sel("trilha", "Trilha", [["med", "Medicina (graduação + residência)"], ...Object.entries(TRILHAS).map(([k, v]) => [k, v.nome])])}
+    ${rapidos ? "" : sel("trilha", "Trilha", [...(objetivo() ? [] : [["med", "Medicina (graduação + residência)"]]), ...Object.entries(TRILHAS).filter(([k]) => trilhasDoObjetivo().includes(k)).map(([k, v]) => [k, v.nome])])}
     ${sel("inst", "Instituição (via grade)", instituicoes().map(i => [i.id, i.sigla]))}
     ${sel("periodo", "Período", Array.from({ length: 12 }, (_, i) => [i + 1, i + 1 + "º"]), "Todos")}
     ${areasL.length ? sel("area", "Área do conhecimento (ENEM)", areasL.map(a => [a.id, a.nome])) : ""}
@@ -60,6 +61,8 @@ ACOES["fq-limpar"] = () => { Object.assign(FQ, { trilha: "", area: "", inst: "",
 
 let QPAG = 20;
 const TRILHAS_RAPIDAS = [["", "Todas"], ["med", "Medicina"], ["enem", "ENEM"], ["direito", "Direito"], ["oab", "OAB"]];
+/** Chips de trilha só com o que é do objetivo do perfil. */
+const trilhasRapidas = () => ({ medicina: [["", "Todas"], ["medicina", "Graduação"], ["residencia", "Residência"]], residencia: [["", "Todas"], ["residencia", "Residência"], ["medicina", "Graduação"]], enem: [], direito: [["", "Todas"], ["direito", "Direito"], ["oab", "OAB"]], oab: [["", "Todas"], ["oab", "OAB"], ["direito", "Direito"]] })[objetivo()] || TRILHAS_RAPIDAS;
 const STATUS_RAPIDOS = [["nao", "Não respondidas"], ["incorreta", "Erradas"], ["marcada", "Marcadas"], ["revisar", "Revisar"]];
 let FQ_OBJ = null;   // aplica a trilha do objetivo do perfil na primeira abertura (e quando o objetivo muda)
 rota("/questoes", () => {
@@ -70,7 +73,7 @@ rota("/questoes", () => {
     secao: "questoes", titulo: "Questões", sub: `${qs.length} de ${questoes().length}`,
     html: `${abas([["banco", "Banco"], ["erros", "Caderno de erros"]], "banco", "ir-aba-q")}
       <div class="pilha">
-        ${chips(TRILHAS_RAPIDAS, FQ.trilha, "fq-trilha")}
+        ${trilhasRapidas().length > 1 ? chips(trilhasRapidas(), FQ.trilha, "fq-trilha") : ""}
         ${FQ.trilha === "enem" ? chipsEnem() : ""}
         ${chipsNivel()}
         <details class="filtros" ${extras || FQ.status.length || FQ.texto ? "open" : ""} style="margin:0"><summary>Mais filtros${extras + FQ.status.length ? ` (${extras + FQ.status.length})` : ""}</summary><div style="margin-top:10px">

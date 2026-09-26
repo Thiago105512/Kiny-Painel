@@ -5,18 +5,18 @@
 FORMS.busca = () => { const q = $("#busca-global").value.trim(); if (q) ir("#/busca/" + encodeURIComponent(q)); };
 rota("/busca/:q", ({ q }) => {
   const n = norm(q), tem = s => norm(s).includes(n);
-  const temas = Object.values(TEMAS).filter(t => tem(t.nome) || (t.sinonimos || []).some(tem) || (t.subtemas || []).some(s => tem(s.nome)))
+  const temas = Object.values(TEMAS).filter(temaDoObjetivo).filter(t => tem(t.nome) || (t.sinonimos || []).some(tem) || (t.subtemas || []).some(s => tem(s.nome)))
     .sort((a, b) => (norm(b.nome).startsWith(n) - norm(a.nome).startsWith(n)) || a.nome.localeCompare(b.nome, "pt"));
-  const esps = Object.values(ESPECIALIDADES).filter(e => tem(e.nome));
+  const esps = ["enem", "direito", "oab"].includes(objetivo()) ? [] : Object.values(ESPECIALIDADES).filter(e => tem(e.nome));
   const itens = grades().flatMap(g => itensGrade(g).filter(it => tem(it.nome) || (it.unidades || []).some(u => tem(u.nome))).map(it => ({ g, it })));
-  const discRef = unicos(Object.values(TEMAS).flatMap(t => t.disciplinas || []).filter(tem));
-  const qs = questoes().filter(x => tem(x.q) || tem(x.o.join(" ")));
+  const discRef = unicos(Object.values(TEMAS).filter(temaDoObjetivo).flatMap(t => t.disciplinas || []).filter(tem));
+  const qs = questoes().filter(x => doObjetivo(x) && (tem(x.q) || tem(x.o.join(" "))));
   const cs = cards().filter(c => tem(c.frente) || tem(c.verso));
   const casos = todosCasos().filter(c => tem(c.titulo) || tem(c.tema || "") || tem(c.hda || ""));
   const notas = Object.entries(store.doc("notas").temas).filter(([, v]) => tem(v.texto || ""));
   const mats = Object.values(store.doc("materiais").itens).filter(m => tem(m.titulo) || tem(m.texto || ""));
   const reps = (REDACAO.repertorios || []).filter(r => tem(r.titulo) || tem(r.ideia));
-  const pils = PILULAS.filter(p => tem(p.titulo) || tem(p.pergunta) || tem(p.texto) || tem(p.pessoa || ""));
+  const pils = PILULAS.filter(p => pilDoObjetivo(p)).filter(p => tem(p.titulo) || tem(p.pergunta) || tem(p.texto) || tem(p.pessoa || ""));
   const total = temas.length + esps.length + itens.length + qs.length + cs.length + casos.length + notas.length + mats.length + reps.length + discRef.length + pils.length;
   const sec = (titulo, n, html) => n ? `<section><h2 class="sec">${titulo} <span class="small muted">${n}</span></h2>${html}</section>` : "";
   return {
