@@ -266,7 +266,7 @@ CASOS.append({
         "e4": E("Ana melhora: pressão normal, sem sibilos, urticária diminuindo.",
                 V(96, "112x70", 97, 18, "sinusal"), [
                     A("Observar ≥12 h, registrar alergia e prescrever adrenalina", "f-bom",
-                      "Certo. Reação grave/refratária (>2 doses, estridor): observar ≥12 h pelo risco bifásico; alta com autoinjetor, plano escrito e alergista.", 10),
+                      "Certo. Anafilaxia com choque: observar pelo risco bifásico (≥12 h se >2 doses, infusão ou estridor). Alta com autoinjetor, plano escrito e alergista.", 10),
                     A("Internar em observação e registrar a alergia", "f-bom",
                       "Aceitável. Faltou prescrever adrenalina autoinjetável e orientar.", 5),
                     A("Alta em 1 hora com anti-histamínico", "f-parcial",

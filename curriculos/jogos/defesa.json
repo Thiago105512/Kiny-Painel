@@ -308,7 +308,7 @@
    "detalhe": "Manaus, febre com calafrios em dias alternados; gota espessa: P. vivax",
    "certa": "cloroquina-primaquina",
    "aceitaveis": [],
-   "porque": "Cloroquina 3 dias + primaquina 7 dias (elimina hipnozoítos). Testar G6PD antes da primaquina; tafenoquina dose única é opção no SUS (≥ 16 anos, G6PD normal).",
+   "porque": "Cloroquina 3 dias + primaquina 7 dias (elimina hipnozoítos). Testar G6PD antes da primaquina; tafenoquina dose única é opção no SUS (> 10 kg, G6PD normal no teste quantitativo).",
    "armadilha": "Artemeter+lumefantrina: esquema para P. falciparum; sozinho não elimina hipnozoítos do vivax."
   },
   {
@@ -818,7 +818,9 @@
     "meropenem",
     "piperacilina-tazobactam",
     "ceftriaxona",
-    "vancomicina"
+    "vancomicina",
+    "amoxicilina-clavulanato",
+    "metronidazol"
    ]
   },
   {
@@ -901,7 +903,9 @@
     "meropenem",
     "piperacilina-tazobactam",
     "ceftriaxona",
-    "vancomicina"
+    "vancomicina",
+    "amoxicilina-clavulanato",
+    "metronidazol"
    ]
   },
   {
