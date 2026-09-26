@@ -1531,16 +1531,16 @@
  {
   "id": "med-f11c2770",
   "area": "Ética Médica",
-  "enunciado": "Um médico sem residência nem título de especialista, que atende casos de pele em sua clínica, publica em rede social: \"Dr. Fulano — Dermatologista\". Segundo o Código de Ética Médica, essa conduta:",
+  "enunciado": "Médico formado há 4 anos, sem residência médica e sem título de especialista, registrado no CRM apenas como médico, concluiu uma pós-graduação lato sensu em dermatologia e atende, em sua clínica, sobretudo casos de pele. Em sua rede social, publica: \"Dr. Fulano — Dermatologista. Agende sua consulta\". O CRM recebe denúncia de uma sociedade de especialidade.\n\nÀ luz do Código de Ética Médica, a conduta do médico é:",
   "alternativas": [
-   "É vedada, pois anuncia especialidade para a qual não tem registro no CRM",
-   "É permitida, pois o diploma autoriza exercer qualquer área da medicina",
-   "É permitida, desde que ele informe também o número do seu CRM",
-   "É vedada apenas se ele cobrar consultas como especialista",
-   "É permitida, pois a publicidade médica em rede social é livre"
+   "Permitida, pois a pós-graduação lato sensu autoriza anunciar a especialidade",
+   "Vedada, pois médico sem título de especialista não pode atender casos de pele",
+   "Permitida, pois o registro no CRM habilita o anúncio de qualquer especialidade",
+   "Vedada, pois anuncia especialidade sem ter registro de especialista no CRM",
+   "Permitida, desde que o anúncio informe o número do CRM e o endereço da clínica"
   ],
-  "correta": 0,
-  "explicacao": "O Código de Ética Médica veda ao médico anunciar títulos científicos que não possa comprovar e especialidade ou área de atuação para a qual não esteja qualificado e registrado no Conselho Regional de Medicina (RQE). O diploma permite ao médico exercer a medicina em qualquer área, mas não autoriza apresentar-se como especialista sem registro. Informar o CRM não supre a falta de título registrado; a vedação independe da cobrança; e a publicidade médica em qualquer meio, inclusive redes sociais, segue as normas éticas e as resoluções do CFM.",
+  "correta": 3,
+  "explicacao": "O Código de Ética Médica proíbe anunciar títulos científicos que o médico não possa comprovar e especialidade ou área de atuação para a qual não esteja qualificado e registrado no CRM (artigo 115). Para se apresentar como especialista, é preciso ter título obtido por residência médica credenciada pela CNRM ou pela sociedade de especialidade, registrado no CRM (Registro de Qualificação de Especialista, RQE). Cursos de pós-graduação lato sensu não conferem título de especialista; pela Resolução CFM nº 2.336/2023, o médico pode divulgar essa pós-graduação apenas como formação, seguida obrigatoriamente da expressão \"NÃO ESPECIALISTA\", em letras maiúsculas, e nunca como \"Dermatologista\". Por outro lado, o registro no CRM permite ao médico exercer a medicina em qualquer área, de modo que atender casos de pele não é, por si, infração — o problema está em anunciar a especialidade. Informar o CRM no anúncio é obrigatório, mas não supre a falta do RQE. No anúncio de especialidade, devem constar nome, CRM e RQE.",
   "tema": "codigo-de-etica-medica",
   "subtema": "codigo-de-etica-medica.publicidade-e-responsabilidade",
   "especialidade": "etica-medica",
@@ -1548,7 +1548,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-0822577e",
@@ -2481,24 +2482,25 @@
  {
   "id": "med-4be05a55",
   "area": "Reumatologia",
-  "enunciado": "Na diferenciação entre artrite reumatoide e osteoartrite das mãos, qual achado favorece a artrite reumatoide?",
+  "enunciado": "Mulher de 52 anos refere dor nas mãos há 4 meses. Considere as seguintes características que poderiam estar presentes no quadro:\n\nI. Rigidez matinal que dura mais de 1 hora.\nII. Nódulos endurecidos nas interfalângicas distais.\nIII. Edema simétrico de metacarpofalângicas e punhos.\nIV. Dor que piora ao fim do dia, após o uso das mãos.\n\nQuais achados favorecem artrite reumatoide em vez de osteoartrite?",
   "alternativas": [
-   "Nódulos de Heberden nas interfalângicas distais e dor que piora ao longo do dia com o uso",
-   "Rigidez matinal inferior a 30 minutos e crepitação à mobilização das interfalângicas",
-   "Acometimento da base do polegar (rizartrose) com osteófitos à radiografia",
-   "Nódulos de Bouchard nas interfalângicas proximais, sem sinais inflamatórios",
-   "Rigidez matinal acima de 1 hora e sinovite em metacarpofalângicas, poupando interfalângicas distais"
+   "I, III e IV, apenas",
+   "I e III, apenas",
+   "I e II, apenas",
+   "II e IV, apenas",
+   "III e IV, apenas"
   ],
-  "correta": 4,
-  "explicacao": "A artrite reumatoide é poliartrite inflamatória, simétrica, que acomete metacarpofalângicas, interfalângicas proximais e punhos, com rigidez matinal prolongada (em geral > 1 hora), edema sinovial e melhora com o movimento; costuma poupar as interfalângicas distais. A osteoartrite causa dor mecânica que piora com o uso, rigidez matinal breve (< 30 minutos), crepitação, nódulos de Heberden (IFD) e de Bouchard (IFP), rizartrose e osteófitos.",
+  "correta": 1,
+  "explicacao": "A artrite reumatoide é uma sinovite inflamatória: causa rigidez matinal prolongada (em geral mais de 1 hora), dor que melhora com o movimento e acometimento simétrico de pequenas articulações — metacarpofalângicas, interfalângicas proximais e punhos —, poupando tipicamente as interfalângicas distais. A osteoartrite das mãos é degenerativa: rigidez matinal curta (menos de 30 minutos), dor mecânica que piora com o uso e ao fim do dia, e acometimento das interfalângicas distais (nódulos de Heberden), das proximais (nódulos de Bouchard) e da base do polegar (rizartrose), com aumento articular de consistência óssea. Portanto, I e III favorecem artrite reumatoide; II e IV favorecem osteoartrite. Para lembrar: Heberden nas distais, Bouchard nas proximais — ambos da osteoartrite.",
   "tema": "artrite-reumatoide",
   "subtema": "artrite-reumatoide.quadro-clinico",
   "especialidade": "reumatologia",
   "disciplina": "Reumatologia",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-1cef2834",
@@ -3481,24 +3483,25 @@
  {
   "id": "med-26c224c9",
   "area": "Patologia",
-  "enunciado": "Homem de 62 anos morre de choque cardiogênico 48 horas após infarto agudo extenso da parede anterior. Qual achado é esperado à microscopia da área infartada do ventrículo esquerdo nessa fase?",
+  "enunciado": "Homem de 62 anos, hipertenso e tabagista, deu entrada com dor torácica de 3 horas e supradesnivelamento do segmento ST de V1 a V6. Por indisponibilidade de hemodinâmica, recebeu fibrinolítico sem critérios de reperfusão. Evoluiu com choque cardiogênico, troponina acima de 100 vezes o limite superior e morreu 48 horas após o início da dor. Na necropsia, a parede anterior do ventrículo esquerdo estava amolecida e pálida, sem sinais de ruptura.\n\nQual achado é esperado à microscopia da área infartada nessa fase?",
   "alternativas": [
-   "Necrose liquefativa com cavitação e macrófagos espumosos",
-   "Macrófagos removendo os miócitos necróticos, com início de tecido de granulação",
-   "Necrose coagulativa com perda de núcleos e intenso infiltrado de neutrófilos",
-   "Tecido de granulação maduro, com neovasos e deposição de colágeno",
-   "Miocárdio de aspecto normal, pois as alterações surgem só após 72 horas"
+   "Tecido de granulação bem formado, com neovasos e colágeno recente",
+   "Macrófagos repletos de restos celulares fagocitados e início de desintegração",
+   "Miócitos ondulados na borda, sem necrose nem infiltrado inflamatório",
+   "Cicatriz colágena densa e pouco celular substituindo o miocárdio",
+   "Necrose coagulativa com perda de núcleos e denso infiltrado de neutrófilos"
   ],
-  "correta": 2,
-  "explicacao": "Após o infarto, a necrose coagulativa começa a ser visível entre 4 e 12 horas (fibras eosinofílicas, ondulação, bandas de contração); entre 1 e 3 dias, predominam a necrose coagulativa com picnose e perda de núcleos e o infiltrado neutrofílico intenso. De 3 a 7 dias, os macrófagos removem as fibras mortas (período de maior amolecimento e risco de ruptura); de 7 a 10 dias, surge o tecido de granulação, que amadurece e é substituído por cicatriz colágena em cerca de 2 meses. A necrose do miocárdio é coagulativa, não liquefativa, e as alterações já são visíveis ao microscópio óptico após algumas horas.",
+  "correta": 4,
+  "explicacao": "A morfologia do infarto segue uma cronologia. Nas primeiras horas (0,5–4 h) há, no máximo, fibras onduladas na borda; entre 12 e 24 horas começam a necrose coagulativa e a marginação de neutrófilos; entre 1 e 3 dias predomina a necrose coagulativa, com perda de núcleos e estrias, e intenso infiltrado de neutrófilos intersticiais — o quadro de 48 horas. De 3 a 7 dias surgem macrófagos que fagocitam as fibras mortas (fase de maior risco de ruptura); de 7 a 10 dias em diante forma-se o tecido de granulação, maduro por volta de 2 semanas; a cicatriz colágena densa só se completa após cerca de 2 meses. Para lembrar: neutrófilos no 1º–3º dia, macrófagos no 3º–7º, granulação a partir do 7º–10º e cicatriz depois de 2 meses.",
   "tema": "lesao-celular",
   "subtema": "lesao-celular.tipos-de-necrose",
   "especialidade": "patologia",
   "disciplina": "Patologia",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-3a60691a",
@@ -4103,16 +4106,16 @@
  {
   "id": "med-11a5a4fd",
   "area": "Pediatria Geral",
-  "enunciado": "Na consulta de puericultura, a mãe pergunta quando o bebê deve começar a sorrir em resposta ao rosto e à voz das pessoas.\n\nEm que idade esse marco (sorriso social) costuma estar presente?",
+  "enunciado": "Na consulta de 1 mês, a mãe conta que o bebê, nascido a termo, \"sorri dormindo\", mas ainda não sorri quando ela conversa com ele, e pergunta se isso é normal.\n\nEm que idade costuma surgir o sorriso social?",
   "alternativas": [
-   "Apenas após os 12 meses",
-   "Logo na primeira semana de vida",
    "Por volta dos 2 meses",
+   "Somente após 1 ano",
    "Por volta dos 6 meses",
+   "Logo na 1ª semana de vida",
    "Por volta dos 9 meses"
   ],
-  "correta": 2,
-  "explicacao": "O sorriso social, em resposta ao contato face a face, surge por volta de 6 a 8 semanas e é esperado aos 2 meses; é um dos primeiros marcos do desenvolvimento social avaliados na Caderneta da Criança. No recém-nascido ocorre apenas o sorriso reflexo, não dirigido a pessoas. Aos 6 meses espera-se sentar com apoio e rolar; aos 9 meses, estranhamento, sentar sem apoio e pinça; após os 12 meses, marcha e primeiras palavras. A ausência do sorriso social aos 2–3 meses é sinal de alerta para déficit visual ou transtornos do desenvolvimento.",
+  "correta": 0,
+  "explicacao": "O sorriso que aparece durante o sono nas primeiras semanas é reflexo (endógeno), sem intenção comunicativa. O sorriso social — em resposta ao rosto e à voz das pessoas — surge por volta das 6 a 8 semanas e está presente, em geral, aos 2 meses; sua ausência aos 2 meses deve ser observada, e aos 3 meses já é sinal de alerta para déficit visual, auditivo ou transtornos do neurodesenvolvimento, como o espectro autista. Aos 6 meses espera-se que o bebê ria alto e reaja a pessoas conhecidas; por volta dos 8 a 9 meses surge o estranhamento de desconhecidos. Aos 1 mês, portanto, a ausência de sorriso social é normal. O sorriso social é considerado o primeiro marco do desenvolvimento socioafetivo.",
   "tema": "puericultura",
   "subtema": "puericultura.desenvolvimento-neuropsicomotor",
   "especialidade": "pediatria-geral",
@@ -4120,21 +4123,22 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-635d6be4",
   "area": "Pediatria Geral",
-  "enunciado": "Puérpera saudável pergunta se pode amamentar. Qual das situações maternas a seguir contraindica o aleitamento materno, segundo o Ministério da Saúde?",
+  "enunciado": "Em reunião de grupo de gestantes de uma UBS, a equipe discute cinco puérperas que desejam amamentar e que tiveram os seguintes achados no pré-natal ou no puerpério.\n\nSegundo o Ministério da Saúde, qual delas deve ser orientada a NÃO amamentar, recebendo inibição da lactação e fórmula infantil para o bebê?",
   "alternativas": [
-   "Tabagismo de 10 cigarros por dia",
-   "Hepatite B com HBsAg positivo",
-   "Tuberculose pulmonar tratada há 3 semanas",
-   "Infecção pelo vírus HTLV-1 ou HTLV-2",
-   "Mastite puerperal em tratamento"
+   "Puérpera com mastite puerperal em uso de cefalexina há 2 dias",
+   "Puérpera com anti-HCV reagente, carga viral detectável e mamilos íntegros",
+   "Puérpera com HBsAg reagente, cujo filho recebeu vacina e imunoglobulina",
+   "Puérpera com sorologia reagente para HTLV-1, confirmada por Western blot",
+   "Puérpera com tuberculose pulmonar em tratamento regular há 3 semanas"
   ],
   "correta": 3,
-  "explicacao": "No Brasil, o Ministério da Saúde contraindica a amamentação em mães infectadas pelo HIV e pelo HTLV-1/2 (transmissão pelo leite, por linfócitos infectados), em uso de alguns fármacos (antineoplásicos, radiofármacos) e em crianças com galactosemia. Na hepatite B, o RN recebe vacina e imunoglobulina nas primeiras 12 horas e pode mamar. Na mastite, a amamentação deve continuar para esvaziar a mama. Na tuberculose tratada há mais de 2 semanas a mãe pode amamentar (com máscara se ainda bacilífera). O tabagismo não é contraindicação: orienta-se reduzir o consumo e não fumar perto da criança.",
+  "explicacao": "O HTLV-1/2 é transmitido principalmente pelo aleitamento materno, e a infecção na infância aumenta o risco de leucemia/linfoma de células T do adulto e de mielopatia associada ao HTLV; por isso o Ministério da Saúde contraindica a amamentação e o aleitamento cruzado, com inibição da lactação e oferta de fórmula. Na hepatite B, a vacina e a imunoglobulina ao nascer protegem o bebê, e a amamentação é permitida. Na hepatite C, a amamentação é mantida, suspendendo-a apenas se houver fissuras com sangramento. Na tuberculose pulmonar, a mãe amamenta usando máscara, e o bebê recebe a conduta de contato (quimioprofilaxia ou investigação). Na mastite, a mama deve continuar sendo esvaziada, e a cefalexina é compatível com a amamentação.",
   "tema": "aleitamento-materno",
   "subtema": "aleitamento-materno.contraindicacoes",
   "especialidade": "pediatria-geral",
@@ -4142,29 +4146,31 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-e6600a7f",
   "area": "Saúde Pública e SUS",
-  "enunciado": "Gestante de 22 semanas, saudável, vai à UBS atualizar a caderneta de vacinação.\n\nQual vacina está indicada nessa fase da gestação, segundo o Programa Nacional de Imunizações?",
+  "enunciado": "Gestante de 30 semanas, 27 anos, saudável, vai à UBS atualizar a caderneta de vacinação. Recebeu uma dose de dTpa com 21 semanas nesta gestação e tem registro de três doses de hepatite B e duas doses de tríplice viral na infância. Nunca recebeu vacina contra HPV nem contra varicela. Não há viagem programada nem surto de febre amarela na região.\n\nAlém das vacinas sazonais e de campanha, qual vacina está indicada neste momento, segundo o Programa Nacional de Imunizações?",
   "alternativas": [
-   "HPV quadrivalente recombinante",
-   "Febre amarela (vírus vivo atenuado)",
-   "Varicela (vírus vivo atenuado)",
-   "Tríplice viral (sarampo, caxumba e rubéola)",
-   "dTpa (tríplice bacteriana acelular do adulto)"
+   "HPV quadrivalente, em esquema de dose única",
+   "Nova dose de dTpa, pois o reforço deve ser feito após 28 semanas",
+   "Vírus sincicial respiratório, em dose única nesta gestação",
+   "Varicela, em dose única, com vírus atenuado",
+   "Tríplice viral (sarampo, caxumba e rubéola)"
   ],
-  "correta": 4,
-  "explicacao": "O PNI recomenda a dTpa a cada gestação a partir da 20ª semana: os anticorpos IgG maternos atravessam a placenta (via receptor FcRn) e protegem o lactente contra coqueluche nos primeiros meses, antes de completar o próprio esquema. Vacinas de vírus vivos atenuados — tríplice viral, varicela e, como regra, febre amarela — são contraindicadas na gestação pelo risco teórico de infecção fetal (a de febre amarela só é considerada em situações de risco epidemiológico elevado). A vacina de HPV não é recomendada durante a gestação; o esquema é adiado para depois do parto.",
+  "correta": 2,
+  "explicacao": "Desde dezembro de 2025, o Programa Nacional de Imunizações oferece às gestantes a vacina contra o vírus sincicial respiratório (VSR), de proteína F na conformação de pré-fusão, em dose única a partir da 28ª semana, em toda gestação, sem restrição de idade materna e ao longo de todo o ano. Os anticorpos maternos passam pela placenta e protegem o bebê contra bronquiolite grave nos primeiros meses de vida. A dTpa, indicada a partir da 20ª semana em cada gestação, já foi aplicada nesta gestação e não precisa ser repetida nem feita obrigatoriamente depois de 28 semanas. Tríplice viral e varicela são vacinas de vírus vivos atenuados, contraindicadas na gestação, e devem ser feitas no puerpério. A vacina contra HPV não é recomendada na gravidez e fica para depois do parto. Para lembrar: na gestação, dTpa a partir de 20 semanas e VSR a partir de 28 semanas, ambas a cada gestação, além da influenza e da hepatite B conforme a situação vacinal.",
   "tema": "imunizacoes",
   "subtema": "imunizacoes.contraindicacoes-e-eventos-adversos",
   "especialidade": "saude-publica-sus",
   "disciplina": "Saúde Pública e SUS",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-df2a23a9",
@@ -4614,24 +4620,25 @@
  {
   "id": "med-2a45bfd0",
   "area": "Saúde Pública e SUS",
-  "enunciado": "A Lei nº 8.142/1990 dispõe sobre a participação da comunidade no SUS por meio de conferências e conselhos de saúde.\n\nComo deve ser a representação dos usuários nesses colegiados?",
+  "enunciado": "Um município cria, por lei municipal, seu Conselho Municipal de Saúde com 24 membros titulares: 8 representantes de usuários (associações de moradores, sindicatos e entidades de pessoas com deficiência), 8 de trabalhadores da saúde e 8 de gestores e prestadores de serviços. O Ministério Público recebe representação questionando a composição.\n\nÀ luz da Lei nº 8.142/1990, a composição do conselho está:",
   "alternativas": [
-   "Paritária em relação ao conjunto dos demais segmentos",
-   "Minoritária, limitada a um terço das vagas totais",
-   "Indicada pelo gestor entre servidores da saúde",
-   "Consultiva, sem direito a voto nas deliberações",
-   "Restrita às conferências, sem assento nos conselhos"
+   "Regular, pois a lei exige apenas número igual de membros nos três segmentos",
+   "Irregular, pois os usuários deveriam ser 16, isto é, dois terços dos membros",
+   "Irregular, pois os usuários deveriam ser 12, paritários aos demais segmentos",
+   "Irregular, pois gestores e prestadores deveriam ocupar metade das vagas",
+   "Regular, pois a paridade dos usuários só é exigida nas conferências de saúde"
   ],
-  "correta": 0,
-  "explicacao": "A Lei 8.142/1990 institui, em cada esfera de governo, a Conferência de Saúde (reunida a cada 4 anos para avaliar a situação de saúde e propor diretrizes) e o Conselho de Saúde (permanente e deliberativo, composto por governo, prestadores, profissionais e usuários, que atua na formulação de estratégias e no controle da execução da política). O § 4º do art. 1º determina que a representação dos usuários seja paritária em relação ao conjunto dos demais segmentos, ou seja, 50% das vagas. Os usuários, portanto, têm voto, não são indicados pelo gestor e participam tanto das conferências quanto dos conselhos.",
+  "correta": 2,
+  "explicacao": "A Lei nº 8.142/1990 determina que a representação dos usuários nos conselhos e nas conferências de saúde seja paritária em relação ao conjunto dos demais segmentos. Assim, os usuários devem ocupar 50% das vagas: em um conselho de 24 membros, 12 usuários e 12 dos demais. A Resolução nº 453/2012 do Conselho Nacional de Saúde detalha a distribuição: 50% de usuários, 25% de trabalhadores da saúde e 25% de gestores e prestadores. A divisão em terços iguais, como no caso, sub-representa os usuários e descumpre a lei. A paridade vale tanto para os conselhos quanto para as conferências. A mesma lei trata das transferências do Fundo Nacional de Saúde e exige que os municípios tenham conselho, fundo e plano de saúde, entre outros requisitos, para receber os recursos. Para lembrar: \"metade usuários, um quarto trabalhadores, um quarto gestores e prestadores\".",
   "tema": "sus-principios-e-legislacao",
   "subtema": "sus-principios-e-legislacao.lei-8-142-1990-e-controle-social",
   "especialidade": "saude-publica-sus",
   "disciplina": "Saúde Pública e SUS",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-c0c4c5b1",
@@ -6435,16 +6442,16 @@
  {
   "id": "med-226ca3f4",
   "area": "Reumatologia",
-  "enunciado": "Na investigação de artrite reumatoide inicial, qual autoanticorpo tem maior especificidade para o diagnóstico e também se associa a pior prognóstico erosivo?",
+  "enunciado": "Mulher de 38 anos, tabagista, tem há 8 semanas dor e edema simétricos em punhos, metacarpofalângicas e interfalângicas proximais, com rigidez matinal de 2 horas. VHS 48 mm/h e PCR 2,8 mg/dL. A radiografia das mãos mostra apenas osteopenia periarticular. O reumatologista solicita autoanticorpos para apoiar o diagnóstico e estimar o prognóstico.\n\nQual autoanticorpo tem maior especificidade para artrite reumatoide e se associa a doença mais erosiva?",
   "alternativas": [
-   "Antipeptídeo citrulinado cíclico (anti-CCP)",
-   "Fator antinuclear (FAN)",
+   "Anti-Ro/SSA",
    "Fator reumatoide da classe IgM",
-   "Anticitoplasma de neutrófilo (ANCA)",
-   "Anti-DNA de dupla hélice"
+   "Antipeptídeo citrulinado cíclico (anti-CCP)",
+   "Anti-DNA de dupla hélice",
+   "Fator antinuclear (FAN) em alto título"
   ],
-  "correta": 0,
-  "explicacao": "O anti-CCP tem especificidade de cerca de 95% para artrite reumatoide, pode surgir anos antes dos sintomas e associa-se a doença mais erosiva. O fator reumatoide tem sensibilidade semelhante, mas é menos específico, pois aparece em outras doenças autoimunes, infecções crônicas (como hepatite C e endocardite) e em idosos saudáveis. Ambos pontuam nos critérios ACR/EULAR 2010. O FAN é inespecífico e é o rastreamento do lúpus; o anti-DNA de dupla hélice é específico do lúpus, e o ANCA relaciona-se às vasculites de pequenos vasos.",
+  "correta": 2,
+  "explicacao": "O anti-CCP tem especificidade de cerca de 95% para artrite reumatoide, com sensibilidade semelhante à do fator reumatoide (60–70%); pode surgir anos antes da doença clínica e, assim como o fator reumatoide em título alto, associa-se a doença mais agressiva e erosiva. O tabagismo, presente no caso, favorece a citrulinação de proteínas e aumenta o risco de artrite reumatoide anti-CCP positiva. O fator reumatoide é menos específico: aparece em outras doenças autoimunes (como a síndrome de Sjögren), em infecções crônicas (hepatite C, endocardite) e em idosos saudáveis. FAN, anti-Ro e anti-DNA de dupla hélice não são marcadores de artrite reumatoide — o anti-DNA é específico de lúpus. Nos critérios ACR/EULAR 2010, a positividade em título alto de fator reumatoide ou anti-CCP soma 3 pontos. O fator reumatoide é um anticorpo contra a porção Fc da IgG.",
   "tema": "artrite-reumatoide",
   "subtema": "artrite-reumatoide.diagnostico",
   "especialidade": "reumatologia",
@@ -6452,7 +6459,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-96b28177",
@@ -6567,38 +6575,39 @@
  {
   "id": "med-5583e974",
   "area": "Reumatologia",
-  "enunciado": "Gestante de 20 semanas, com LES em remissão e anticorpo anti-Ro/SSA positivo, pergunta sobre riscos específicos para o bebê.\n\nQual complicação fetal está mais associada a esse anticorpo?",
+  "enunciado": "Mulher de 29 anos, primigesta, sem doenças conhecidas e sem uso de medicamentos, com sorologias do pré-natal não reagentes, faz ultrassonografia obstétrica de rotina com 23 semanas, que mostra frequência cardíaca fetal de 58 bpm, regular. O ecocardiograma fetal revela dissociação atrioventricular, com frequência atrial de 140 bpm, sem malformação estrutural e sem hidropsia. A gestante refere, há 2 anos, olhos arenosos, boca seca que a obriga a beber água para engolir alimentos secos, e episódios de lesões anulares descamativas em áreas expostas ao sol, sem diagnóstico definido. Nega perdas gestacionais ou tromboses.\n\nQual autoanticorpo materno é o mais provavelmente envolvido?",
   "alternativas": [
-   "Bloqueio atrioventricular congênito",
-   "Hérnia diafragmática congênita",
-   "Hidropsia por aloimunização Rh",
-   "Defeito de fechamento do tubo neural",
-   "Microcefalia com calcificações"
+   "Anti-Ro/SSA",
+   "Anti-DNA de dupla hélice",
+   "Anti-Sm",
+   "Anticardiolipina",
+   "Anticentrômero"
   ],
   "correta": 0,
-  "explicacao": "Os anticorpos anti-Ro/SSA (e anti-La/SSB) da classe IgG atravessam a placenta e podem lesar o sistema de condução cardíaco fetal, causando bloqueio atrioventricular congênito, geralmente entre 16 e 26 semanas, o que justifica vigilância com ecocardiografia fetal nesse período. Fazem parte do lúpus neonatal, que também inclui lesões cutâneas e citopenias transitórias; o bloqueio completo é irreversível. Microcefalia com calcificações sugere infecção congênita, a hidropsia por aloimunização Rh depende de anticorpos anti-D, e os defeitos estruturais citados não têm relação com o anti-Ro.",
+  "explicacao": "Bradicardia fetal com dissociação atrioventricular em coração estruturalmente normal indica bloqueio atrioventricular total congênito, cuja principal causa é a passagem transplacentária de anticorpos maternos anti-Ro/SSA (com ou sem anti-La/SSB), que lesam o sistema de condução fetal, em geral entre 16 e 26 semanas. A mãe pode ser assintomática ou ter síndrome de Sjögren (olhos e boca secos) ou lúpus cutâneo subagudo (lesões anulares fotossensíveis), quadros associados ao anti-Ro. O bloqueio completo costuma ser irreversível, e muitas crianças precisam de marca-passo. A anticardiolipina associa-se a perdas gestacionais, pré-eclâmpsia e restrição de crescimento, e não a bloqueio cardíaco; anti-DNA e anti-Sm são específicos de lúpus, sem essa relação; o anticentrômero é da esclerose sistêmica cutânea limitada. Em gestantes anti-Ro positivas, a hidroxicloroquina reduz o risco de bloqueio, sobretudo quando já houve filho afetado.",
   "tema": "lupus-eritematoso-sistemico",
   "subtema": "lupus-eritematoso-sistemico.autoanticorpos",
   "especialidade": "reumatologia",
   "disciplina": "Reumatologia",
-  "dificuldade": 2,
+  "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-18475364",
   "area": "Reumatologia",
-  "enunciado": "Mulher de 23 anos tem eritema malar que poupa os sulcos nasolabiais, artrite de mãos, úlceras orais indolores e dor torácica pleurítica.\n\nQual exame é o melhor rastreamento inicial?",
+  "enunciado": "Mulher de 23 anos tem há 2 meses eritema malar que poupa os sulcos nasolabiais e piora com o sol, artrite de mãos, úlceras orais indolores no palato e dor torácica pleurítica. Hemograma: leucócitos 3.100/mm³ e linfócitos 800/mm³. Urina tipo I sem alterações. A médica da UBS quer solicitar o melhor exame inicial para a investigação laboratorial.\n\nQual é o exame de rastreamento inicial mais adequado?",
   "alternativas": [
-   "Anticorpo antipeptídeo citrulinado cíclico",
-   "Fator reumatoide pela técnica de nefelometria",
-   "Fator antinuclear (FAN) por imunofluorescência",
-   "Biópsia renal percutânea diagnóstica",
-   "Anticorpo anti-Sm como exame isolado"
+   "Anti-Ro/SSA por ensaio imunoenzimático",
+   "FAN por imunofluorescência em células HEp-2",
+   "Frações C3 e C4 do complemento sérico",
+   "Anti-DNA de dupla hélice por Crithidia luciliae",
+   "Anti-Sm por ensaio imunoenzimático (ELISA)"
   ],
-  "correta": 2,
-  "explicacao": "O quadro (eritema malar, artrite, úlceras orais e serosite) sugere lúpus eritematoso sistêmico. O FAN por imunofluorescência em células HEp-2 tem sensibilidade de cerca de 95% a 98% e é o melhor exame de rastreamento; nos critérios EULAR/ACR 2019, título ≥ 1:80 é critério de entrada. O anti-Sm é muito específico, mas pouco sensível, e não serve como rastreamento isolado. O fator reumatoide e o anti-CCP investigam artrite reumatoide. A biópsia renal é indicada diante de sinais de nefrite, e não como rastreamento.",
+  "correta": 1,
+  "explicacao": "O quadro sugere fortemente lúpus eritematoso sistêmico: manifestações cutâneas, mucosas, articulares, serosite e leucopenia com linfopenia. O fator antinuclear por imunofluorescência indireta em células HEp-2 é o melhor exame de rastreamento, pois é positivo em mais de 95% dos pacientes; um resultado negativo torna o diagnóstico muito improvável. Nos critérios EULAR/ACR 2019, o FAN com título de pelo menos 1:80 é critério de entrada obrigatório. Por ser pouco específico (ocorre em outras doenças autoimunes e em pessoas saudáveis), o FAN positivo é seguido de anticorpos específicos: anti-DNA de dupla hélice e anti-Sm, muito específicos mas menos sensíveis, e complemento, útil para avaliar atividade. O anti-Ro associa-se ao lúpus cutâneo subagudo, à síndrome de Sjögren e ao lúpus neonatal. Para lembrar: FAN rastreia (sensível); anti-Sm e anti-DNA confirmam (específicos).",
   "tema": "lupus-eritematoso-sistemico",
   "subtema": "lupus-eritematoso-sistemico.manifestacoes-clinicas",
   "especialidade": "reumatologia",
@@ -6606,7 +6615,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-ccca98ef",
@@ -6945,16 +6955,16 @@
  {
   "id": "med-02b59d96",
   "area": "Saúde Pública e SUS",
-  "enunciado": "Na vigilância da febre amarela, por que a morte ou o adoecimento de macacos em uma área deve ser notificado imediatamente?",
+  "enunciado": "Em fevereiro, agentes de endemias de um município do interior de São Paulo encontram três bugios mortos em um fragmento de mata próximo a um bairro rural, onde vivem cerca de 800 pessoas, parte delas sem registro de vacina contra febre amarela. Ainda não há casos humanos suspeitos na região. O coordenador da vigilância reúne a equipe para decidir as ações.\n\nQual é a interpretação e a resposta corretas?",
   "alternativas": [
-   "Os macacos mortos contaminam a água e causam surtos por via oral",
-   "Os macacos são os principais reservatórios do ciclo urbano da doença",
-   "Indica circulação viral e costuma anteceder casos humanos, orientando a vacinação",
-   "Os macacos transmitem o vírus diretamente ao ser humano pela mordedura",
-   "Indica que o Aedes aegypti urbano já está infectado na área afetada"
+   "Evento sem valor epidemiológico enquanto não houver caso humano confirmado na área",
+   "Sinal de ciclo urbano por Aedes aegypti; notificar e priorizar nebulização com inseticida",
+   "Macacos são os transmissores diretos ao homem; notificar e remover os animais da mata",
+   "Epizootia sentinela de circulação viral; notificar em 24 h e intensificar a vacinação",
+   "Epizootia sentinela de circulação viral; aguardar exame dos animais para vacinar"
   ],
-  "correta": 2,
-  "explicacao": "No ciclo silvestre, o vírus circula entre primatas não humanos e mosquitos Haemagogus e Sabethes; os macacos são hospedeiros amplificadores e vítimas da doença, e não transmissores diretos. A epizootia em primatas é um evento sentinela: indica circulação viral na área e costuma anteceder os casos humanos, por isso sua notificação imediata permite intensificar a vacinação e a vigilância. Matar macacos é prejudicial, pois elimina o sinal de alerta. O ciclo urbano envolve humanos e Aedes aegypti, e não macacos. Não há transmissão por água nem pela mordedura.",
+  "correta": 3,
+  "explicacao": "No ciclo silvestre da febre amarela, o vírus circula entre primatas não humanos e mosquitos dos gêneros Haemagogus e Sabethes; o homem não vacinado se infecta ao entrar na área. Os primatas — especialmente os bugios, muito suscetíveis — adoecem e morrem antes ou junto com os primeiros casos humanos, funcionando como sentinelas. Por isso, a morte ou o adoecimento de primatas é de notificação compulsória imediata (em até 24 horas) e deve desencadear investigação e intensificação da vacinação na área, sem esperar a confirmação laboratorial. Os macacos não transmitem o vírus ao homem — são vítimas, e matá-los ou removê-los prejudica a vigilância. Não há ciclo urbano registrado no Brasil desde 1942, e a nebulização não é a resposta à epizootia silvestre. A vigilância de epizootias em primatas é a principal ferramenta de alerta precoce da febre amarela silvestre no Brasil.",
   "tema": "febre-amarela",
   "subtema": "febre-amarela.ciclos-de-transmissao",
   "especialidade": "saude-publica-sus",
@@ -6962,7 +6972,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-6dba7e38",
@@ -7279,24 +7290,25 @@
  {
   "id": "med-5aec9d5c",
   "area": "Pediatria Geral",
-  "enunciado": "Gestante não imunizada contrai rubéola na 8ª semana de gestação.\n\nQual conjunto de alterações caracteriza a síndrome da rubéola congênita no recém-nascido?",
+  "enunciado": "Gestante de 24 anos, imigrante recém-chegada, sem vacinação documentada, teve na 8ª semana de gestação febre baixa, exantema maculopapular róseo que começou no rosto, desceu para o tronco e durou 3 dias, e linfonodos dolorosos retroauriculares e occipitais, sem tosse, coriza intensa ou conjuntivite importante. Não fez sorologia na época e não teve contato com gatos nem lesões genitais; o VDRL do 3º trimestre foi não reagente. O recém-nascido, a termo, é pequeno para a idade gestacional, tem sopro contínuo em \"maquinaria\" no foco pulmonar e reflexo vermelho ausente bilateralmente, e falha no teste da orelhinha.\n\nQual infecção congênita e qual conjunto de alterações o quadro representa?",
   "alternativas": [
-   "Hidrocefalia, calcificações cerebrais difusas e coriorretinite",
-   "Catarata, surdez neurossensorial e cardiopatia congênita",
-   "Rinite serossanguinolenta, pênfigo palmoplantar e osteocondrite",
-   "Microcefalia grave, artrogripose e calcificações subcorticais",
-   "Cicatrizes cutâneas em dermátomo e hipoplasia de membros"
+   "Citomegalovírus: microcefalia, calcificações periventriculares e hepatomegalia",
+   "Rubéola: catarata, surdez neurossensorial e cardiopatia congênita",
+   "Sífilis: rinite serossanguinolenta, pênfigo palmoplantar e osteocondrite",
+   "Toxoplasmose: coriorretinite, hidrocefalia e calcificações difusas",
+   "Varicela: cicatrizes cutâneas, hipoplasia de membros e atrofia cortical"
   ],
   "correta": 1,
-  "explicacao": "A tríade clássica da síndrome da rubéola congênita (tríade de Gregg) é catarata (ou outras alterações oculares, como glaucoma e retinopatia), surdez neurossensorial e cardiopatia congênita, sobretudo persistência do canal arterial e estenose de ramos da artéria pulmonar. O risco é máximo quando a infecção ocorre no primeiro trimestre. Hidrocefalia, calcificações difusas e coriorretinite lembram toxoplasmose congênita; microcefalia grave com artrogripose e calcificações subcorticais lembra a síndrome congênita do Zika; cicatrizes em dermátomo e hipoplasia de membros são da varicela congênita; rinite serossanguinolenta, pênfigo palmoplantar e osteocondrite são da sífilis congênita precoce.",
+  "explicacao": "Exantema de 3 dias com linfadenopatia retroauricular e occipital no primeiro trimestre, em gestante não vacinada, é rubéola; a infecção nas primeiras 12 semanas tem o maior risco de síndrome da rubéola congênita. A tríade clássica é catarata (reflexo vermelho ausente), surdez neurossensorial (a manifestação isolada mais comum) e cardiopatia congênita, principalmente persistência do canal arterial (sopro contínuo em maquinaria) e estenose de ramos pulmonares; podem ocorrer ainda restrição de crescimento, microcefalia, púrpura e hepatoesplenomegalia. A toxoplasmose tem calcificações difusas e hidrocefalia; o citomegalovírus, calcificações periventriculares e microcefalia; a sífilis congênita precoce, rinite, lesões bolhosas palmoplantares e osteocondrite; a varicela congênita, cicatrizes em zigue-zague e hipoplasia de membros. Para lembrar: o oftalmologista australiano Norman Gregg associou a catarata congênita à rubéola materna em 1941.",
   "tema": "doencas-exantematicas",
   "subtema": "doencas-exantematicas.rubeola",
   "especialidade": "pediatria-geral",
   "disciplina": "Pediatria Geral",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-72df44da",
@@ -7368,24 +7380,25 @@
  {
   "id": "med-2c9af66c",
   "area": "Pediatria Geral",
-  "enunciado": "Na doença de Kawasaki, qual complicação é a mais temida, justifica a realização de ecocardiogramas seriados e é a principal causa de morbimortalidade a longo prazo?",
+  "enunciado": "Menino de 2 anos, descendente de japoneses, com vacinação em dia, tem febre alta há 6 dias, sem resposta a antitérmicos nem a amoxicilina prescrita para suposta amigdalite, com hiperemia conjuntival bilateral sem secreção, lábios vermelhos e fissurados, língua em framboesa, exantema polimorfo no tronco, edema endurado de mãos e pés e linfonodo cervical de 2 cm. PCR 12 mg/dL, VHS 90 mm/h e albumina 2,9 g/dL. Recebe imunoglobulina intravenosa e ácido acetilsalicílico. A equipe programa ecocardiogramas ao diagnóstico, com 1 a 2 semanas e com 4 a 6 semanas.\n\nQual complicação justifica esse seguimento e é a principal causa de morbimortalidade a longo prazo?",
   "alternativas": [
    "Aneurismas das artérias coronárias",
-   "Hipertensão arterial pulmonar primária",
-   "Dissecção da aorta abdominal",
-   "Insuficiência renal por glomerulonefrite",
-   "Estenose da valva mitral reumática"
+   "Cardiomiopatia hipertrófica obstrutiva",
+   "Coarctação da aorta torácica",
+   "Pericardite constritiva calcificada",
+   "Estenose valvar mitral por fibrose"
   ],
   "correta": 0,
-  "explicacao": "A doença de Kawasaki é uma vasculite de vasos de médio calibre com predileção pelas artérias coronárias. Sem tratamento, cerca de 25% das crianças desenvolvem aneurismas coronarianos, que podem levar a trombose, infarto e morte súbita; com a imunoglobulina intravenosa nos primeiros 10 dias, esse risco cai para cerca de 4%. Por isso o ecocardiograma é feito no diagnóstico e repetido nas semanas seguintes. É a principal causa de cardiopatia adquirida na infância em países desenvolvidos. Estenose mitral é sequela de febre reumática; dissecção aórtica, glomerulonefrite e hipertensão pulmonar primária não são complicações típicas.",
+  "explicacao": "Febre por 5 dias ou mais com 4 dos 5 critérios principais (conjuntivite não exsudativa, alterações de lábios e mucosa oral, exantema polimorfo, alterações de extremidades e linfadenopatia cervical ≥ 1,5 cm) define a doença de Kawasaki, vasculite de médios vasos da infância. A complicação mais temida é o aneurisma de artéria coronária, que ocorre em cerca de 20–25% dos não tratados e cai para menos de 5% com imunoglobulina nos primeiros 10 dias; pode levar a trombose, infarto e morte súbita, sendo a principal causa de cardiopatia adquirida na infância em países desenvolvidos. Por isso o ecocardiograma é repetido nas primeiras semanas. Na fase aguda podem ocorrer miocardite e derrame pericárdico, mas não pericardite constritiva, estenose mitral, cardiomiopatia hipertrófica ou coarctação. Para lembrar: Tomisaku Kawasaki descreveu a doença no Japão, em 1967.",
   "tema": "doenca-de-kawasaki",
   "subtema": "doenca-de-kawasaki.complicacoes",
   "especialidade": "pediatria-geral",
   "disciplina": "Pediatria Geral",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-53d91486",
@@ -7457,24 +7470,25 @@
  {
   "id": "med-bb2c7f67",
   "area": "Pediatria Geral",
-  "enunciado": "Lactente de 5 semanas tem vômitos em jato, não biliosos, após as mamadas, e a oliva pilórica não foi palpada com segurança.\n\nQual exame é o de escolha para confirmar a hipótese?",
+  "enunciado": "Lactente de 5 semanas, sexo masculino, primeiro filho, tem vômitos em jato após as mamadas há 1 semana, sem bile, cada vez mais frequentes; logo depois de vomitar, chora de fome e quer mamar de novo. Perdeu 250 g no período. Está desidratado, com fontanela deprimida e diurese reduzida; o abdome é plano, e às vezes se veem ondas peristálticas no epigástrio. O examinador não palpa com segurança a \"oliva\" pilórica. Exames: Na⁺ 132 mEq/L, K⁺ 2,9 mEq/L, Cl⁻ 86 mEq/L, pH 7,52 e HCO₃⁻ 34 mEq/L. A equipe decide confirmar o diagnóstico antes de acionar a cirurgia pediátrica.\n\nQual é o exame de escolha e qual achado o confirma?",
   "alternativas": [
-   "Manometria esofágica, que mostra relaxamento incompleto do esfíncter inferior",
-   "Endoscopia digestiva alta, que mostra úlcera pilórica com estenose cicatricial",
-   "Tomografia de abdome com contraste, que mostra estreitamento duodenal extrínseco",
-   "Radiografia simples de abdome, que mostra o sinal da dupla bolha com ar distal",
-   "Ultrassonografia abdominal, que mostra músculo pilórico espesso e canal alongado"
+   "Ultrassonografia: músculo pilórico de 3 mm ou mais e canal de 15 mm ou mais",
+   "Endoscopia digestiva: esofagite erosiva e hérnia de hiato por deslizamento",
+   "Tomografia com contraste: parede pilórica espessada acima de 10 mm",
+   "Radiografia simples: sinal da dupla bolha com ausência de gás distal",
+   "Seriografia contrastada: sinal do saca-rolhas no duodeno e no jejuno"
   ],
-  "correta": 4,
-  "explicacao": "A ultrassonografia é o exame de escolha: é rápida, não usa radiação e demonstra diretamente o músculo pilórico espessado e o canal pilórico alongado, com passagem reduzida do conteúdo gástrico. O estudo contrastado do trato gastrointestinal alto (sinal do cordão ou do duplo trilho) fica como alternativa quando a ultrassonografia não é conclusiva. A dupla bolha na radiografia é da atresia duodenal, e nela não há ar distal. Tomografia expõe à radiação sem vantagem; endoscopia e manometria não fazem parte da investigação.",
+  "correta": 0,
+  "explicacao": "O quadro (menino de 5 semanas, vômitos em jato não biliosos, alcalose metabólica hipoclorêmica e hipocalêmica pela perda de ácido gástrico) é típico de estenose hipertrófica do piloro. Quando a oliva não é palpada, o exame de escolha é a ultrassonografia, que mostra espessura do músculo pilórico de 3 mm ou mais e comprimento do canal de 15 mm ou mais, sem radiação. A seriografia é alternativa quando não há ultrassonografia (sinais do cordão e do duplo trilho); o sinal do saca-rolhas é da má rotação com volvo. A dupla bolha é da atresia duodenal. Endoscopia e tomografia não têm papel. Importante: a piloromiotomia não é urgência — antes dela se corrigem a desidratação e os distúrbios eletrolíticos, pelo risco de apneia pós-operatória com alcalose. Para lembrar: a piloromiotomia extramucosa é conhecida como operação de Ramstedt, descrita em 1912.",
   "tema": "estenose-hipertrofica-do-piloro",
   "subtema": "estenose-hipertrofica-do-piloro.diagnostico-e-tratamento",
   "especialidade": "pediatria-geral",
   "disciplina": "Pediatria Geral",
-  "dificuldade": 1,
+  "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-2eebe222",
@@ -8750,16 +8764,16 @@
  {
   "id": "med-5330aa22",
   "area": "Saúde Pública e SUS",
-  "enunciado": "Segundo a Portaria nº 4.279/2010, que estabelece diretrizes para as Redes de Atenção à Saúde no SUS, como essas redes devem ser organizadas?",
+  "enunciado": "O secretário de saúde de um município de médio porte propõe reorganizar os serviços como uma pirâmide: as UBS na base, recebendo apenas casos simples e encaminhando os demais sem acompanhá-los; ambulatórios especializados no meio; e o hospital no topo, com fluxo em um só sentido, sem contrarreferência e sem compartilhamento de informações entre os níveis. O conselho municipal questiona o modelo com base nas diretrizes das Redes de Atenção à Saúde, instituídas pela Portaria nº 4.279/2010 (hoje consolidadas na Portaria de Consolidação nº 3/2017).\n\nSegundo essas diretrizes, como as redes devem ser organizadas?",
   "alternativas": [
-   "Em serviços isolados e autônomos, cada um responsável por definir sozinho os seus próprios fluxos de acesso",
-   "Em estrutura poliárquica, com pontos de atenção interligados e a atenção primária como centro de comunicação",
-   "Em rede organizada pelos serviços de urgência, que coordenam o cuidado das condições crônicas da população",
-   "Em pirâmide rígida, com o hospital de maior complexidade no topo como ordenador de todo o cuidado da população",
-   "Em rede centrada nos ambulatórios de especialidades, que funcionam como porta de entrada preferencial do sistema"
+   "Hierárquicas, com a regulação estadual substituindo a coordenação pela atenção primária",
+   "Poliárquicas, com o ambulatório especializado como centro de comunicação da rede",
+   "Hierárquicas e piramidais, com o hospital como centro de comunicação e coordenação",
+   "Piramidais, com a atenção primária responsável só pelos casos de baixa complexidade",
+   "Poliárquicas, com pontos interligados e a atenção primária como centro de comunicação"
   ],
-  "correta": 1,
-  "explicacao": "A Portaria nº 4.279/2010 descreve as Redes de Atenção à Saúde como arranjos organizativos de ações e serviços de diferentes densidades tecnológicas, integrados por sistemas de apoio, logístico e de gestão, buscando garantir a integralidade. Supera-se o modelo piramidal e hierárquico por uma rede poliárquica, horizontal, em que os pontos de atenção se relacionam sem hierarquia de importância, e a atenção primária ocupa o centro de comunicação, coordenando o cuidado e ordenando os fluxos. Hospitais, ambulatórios especializados e serviços de urgência são pontos de atenção da rede, mas não seus ordenadores.",
+  "correta": 4,
+  "explicacao": "As diretrizes das Redes de Atenção à Saúde superam o modelo hierárquico e piramidal, em que os níveis de complexidade se organizam em fluxo único e fragmentado. As redes são poliárquicas: os pontos de atenção se relacionam horizontalmente, sem hierarquia entre eles, pois todos são igualmente importantes para os objetivos da rede, diferenciando-se apenas pelas densidades tecnológicas. A atenção primária ocupa o centro de comunicação, ordenando os fluxos e contrafluxos e coordenando o cuidado. Os atributos da atenção primária — primeiro contato, longitudinalidade, integralidade e coordenação — sustentam esse papel, que vai além de resolver \"casos simples\", já que a atenção primária resolve a maior parte dos problemas de saúde da população. Os elementos constitutivos da RAS são população, estrutura operacional e modelo de atenção; a Portaria nº 4.279 foi publicada em 30 de dezembro de 2010.",
   "tema": "atencao-primaria-a-saude",
   "subtema": "atencao-primaria-a-saude.redes-de-atencao",
   "especialidade": "saude-publica-sus",
@@ -8767,7 +8781,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-fd8f7204",
@@ -9083,24 +9098,25 @@
  {
   "id": "med-7ed5a405",
   "area": "Saúde Pública e SUS",
-  "enunciado": "Médico de pronto-socorro atende adolescente com febre, cefaleia intensa, rigidez de nuca e petéquias. Colhe líquor e hemoculturas e inicia antibiótico.\n\nComo deve proceder quanto à notificação?",
+  "enunciado": "Na madrugada de sábado, médico de pronto-socorro atende adolescente de 15 anos com febre alta há 12 horas, cefaleia intensa, vômitos, rigidez de nuca e petéquias em tronco e membros inferiores. Colhe hemoculturas e líquor, que sai turvo, e inicia ceftriaxona imediatamente. O resultado da bacterioscopia e da cultura só estará disponível na segunda-feira, e o hospital tem núcleo de vigilância epidemiológica em regime de plantão.\n\nComo o médico deve proceder quanto à notificação?",
   "alternativas": [
-   "Deixar a notificação a cargo do laboratório que fizer a identificação",
    "Notificar imediatamente, em até 24 horas, ainda como caso suspeito",
-   "Notificar só após o resultado da cultura do líquor confirmar o agente",
-   "Notificar semanalmente, pois meningite não é agravo de notificação imediata",
-   "Notificar apenas se houver outros casos no mesmo bairro ou escola"
+   "Notificar somente após a cultura do líquor confirmar o meningococo",
+   "Notificar somente se o paciente evoluir para óbito ou para sequela",
+   "Notificar semanalmente, pois meningite é de notificação não imediata",
+   "Notificar após a bacterioscopia mostrar diplococos Gram-negativos"
   ],
-  "correta": 1,
-  "explicacao": "Pela lista nacional de notificação compulsória, a doença meningocócica e as outras meningites são de notificação imediata (em até 24 horas) às autoridades de saúde. A notificação é feita a partir da suspeita clínica, sem esperar confirmação laboratorial, porque as medidas de controle (investigação e quimioprofilaxia dos contatos próximos, por exemplo com rifampicina na doença meningocócica) precisam ser rápidas. A obrigação é do médico e dos demais profissionais de saúde que atendem o caso, além dos responsáveis pelos serviços; o laboratório também notifica, mas isso não dispensa o profissional. Não é preciso haver outros casos para notificar.",
+  "correta": 0,
+  "explicacao": "Meningites e doença meningocócica são de notificação compulsória imediata, em até 24 horas, à autoridade sanitária, e a notificação deve ser feita diante da suspeita, sem aguardar confirmação laboratorial. A urgência se justifica porque a vigilância precisa identificar os contatos próximos (domiciliares e outros de convívio íntimo) e indicar quimioprofilaxia, em geral com rifampicina, o mais cedo possível, além de detectar surtos. Esperar cultura ou bacterioscopia atrasaria essas medidas; o óbito ou a sequela não são critério para notificar. A notificação é obrigação de todo médico e profissional de saúde, e o fim de semana não altera o prazo. Na doença meningocócica, o risco de casos secundários entre contatos próximos é maior nos primeiros dias, por isso a quimioprofilaxia deve começar o mais cedo possível.",
   "tema": "vigilancia-em-saude",
   "subtema": "vigilancia-em-saude.notificacao-compulsoria",
   "especialidade": "saude-publica-sus",
   "disciplina": "Saúde Pública e SUS",
-  "dificuldade": 2,
+  "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-0efd0047",
@@ -9215,16 +9231,16 @@
  {
   "id": "med-222ba9ae",
   "area": "Psiquiatria",
-  "enunciado": "Mulher de 30 anos tem medo intenso de voar de avião há anos e evita viagens, mesmo prejudicando o trabalho. Reconhece que o medo é exagerado.\n\nQual é o tratamento de escolha?",
+  "enunciado": "Mulher de 30 anos, analista de vendas, tem há anos medo intenso de voar de avião. Só de pensar em uma viagem sente palpitações, sudorese e falta de ar, e recusou duas promoções que exigiam viagens aéreas. Reconhece que o medo é exagerado e não tem crises de pânico em outras situações nem outros sintomas psiquiátricos. Pede ajuda para \"conseguir viajar a trabalho no ano que vem\".\n\nQual é o tratamento de escolha?",
   "alternativas": [
-   "Benzodiazepínico diário por tempo indefinido",
-   "Antipsicótico atípico em dose baixa contínua",
-   "Terapia cognitivo-comportamental com exposição",
-   "Evitar viagens como estratégia permanente",
-   "Psicoterapia de apoio sem exposição ao estímulo"
+   "Inibidor seletivo da recaptação de serotonina como monoterapia",
+   "Benzodiazepínico diário de uso contínuo por tempo indeterminado",
+   "Antipsicótico atípico em dose baixa, antes de cada voo",
+   "Terapia cognitivo-comportamental com exposição gradual",
+   "Psicoterapia psicodinâmica de longa duração, sem exposição"
   ],
-  "correta": 2,
-  "explicacao": "A fobia específica é o medo intenso e desproporcional de um objeto ou situação (aqui, voar de avião), com evitação e prejuízo. O tratamento de escolha é a terapia cognitivo-comportamental baseada em exposição gradual e sistemática ao estímulo temido (inclusive por realidade virtual), que promove a extinção da resposta de medo e tem altas taxas de sucesso. Benzodiazepínicos podem ser usados pontualmente, mas não tratam a fobia e podem até atrapalhar a exposição. Antipsicóticos não têm papel, a psicoterapia sem exposição é menos eficaz, e a evitação mantém e reforça o medo.",
+  "correta": 3,
+  "explicacao": "Medo intenso, desproporcional e persistente de uma situação específica, com evitação e prejuízo funcional, é fobia específica (subtipo situacional). O tratamento de escolha é a terapia cognitivo-comportamental baseada em exposição, gradual e sistemática (ao vivo, imaginária ou em realidade virtual), que tem altas taxas de resposta e efeito duradouro. Os medicamentos têm papel limitado: um benzodiazepínico pode ser usado pontualmente em uma situação inevitável, mas o uso contínuo não trata a fobia, causa dependência e pode atrapalhar a exposição. Os ISRS são a base farmacológica do transtorno de pânico e da ansiedade generalizada, não da fobia específica isolada. Antipsicóticos não estão indicados. A terapia psicodinâmica sem exposição não tem a mesma evidência de eficácia. A dessensibilização sistemática foi desenvolvida pelo psiquiatra Joseph Wolpe na década de 1950.",
   "tema": "transtornos-de-ansiedade",
   "subtema": "transtornos-de-ansiedade.fobias",
   "especialidade": "psiquiatria",
@@ -9232,7 +9248,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-2ec6ff83",
@@ -9259,16 +9276,16 @@
  {
   "id": "med-e49cea81",
   "area": "Psiquiatria",
-  "enunciado": "Em um paciente com esquizofrenia, qual dos achados abaixo é um sintoma negativo?",
+  "enunciado": "Homem de 24 anos é levado ao CAPS pela família. Há 2 anos abandonou a faculdade, isolou-se no quarto e passou a descuidar da higiene. Relata ouvir vozes que comentam suas ações e acredita que vizinhos colocaram câmeras para vigiá-lo. Na entrevista, responde com poucas palavras, mantém expressão facial fixa, sem modulação afetiva, e diz não sentir vontade de fazer nada. Não há uso de substâncias.\n\nEntre os achados abaixo, qual é um sintoma negativo da esquizofrenia?",
   "alternativas": [
-   "Comportamento bizarro e agitação motora",
-   "Discurso desorganizado com neologismos",
-   "Alucinações auditivas em terceira pessoa",
-   "Delírio de perseguição pelos vizinhos",
-   "Embotamento afetivo com pobreza do discurso"
+   "Discurso desorganizado com afrouxamento associativo",
+   "Embotamento afetivo com pobreza do discurso",
+   "Delírio persecutório de ser vigiado por câmeras",
+   "Alucinações auditivas que comentam as ações",
+   "Agitação psicomotora com comportamento bizarro"
   ],
-  "correta": 4,
-  "explicacao": "Sintomas negativos representam perda ou diminuição de funções normais: embotamento ou achatamento afetivo, alogia (pobreza do discurso), avolição, anedonia e retraimento social. Eles tendem a ser persistentes, respondem pouco aos antipsicóticos e são importantes determinantes do prejuízo funcional. Alucinações, delírios, discurso desorganizado e comportamento bizarro ou agitado são sintomas positivos (produtivos), que representam excesso ou distorção de funções normais e costumam responder melhor ao bloqueio dopaminérgico na via mesolímbica.",
+  "correta": 1,
+  "explicacao": "Os sintomas negativos representam a perda ou redução de funções normais: embotamento ou aplanamento afetivo, alogia (pobreza do discurso), avolição, anedonia e retraimento social — vários deles presentes no caso. Os sintomas positivos são acréscimos à experiência normal: alucinações (como vozes que comentam as ações, sintoma de primeira ordem de Schneider) e delírios (como o persecutório). Discurso desorganizado e comportamento bizarro ou agitação formam a dimensão de desorganização, agrupada tradicionalmente com os sintomas positivos. A distinção tem importância prática: os sintomas negativos respondem pouco aos antipsicóticos, determinam boa parte do prejuízo funcional e se beneficiam de reabilitação psicossocial. Deve-se ainda diferenciá-los de depressão e de efeitos extrapiramidais dos antipsicóticos, que podem imitá-los. Para lembrar: os \"5 As\" dos sintomas negativos — afeto embotado, alogia, avolição, anedonia e associalidade.",
   "tema": "esquizofrenia-e-psicoses",
   "subtema": "esquizofrenia-e-psicoses.sintomas-positivos-e-negativos",
   "especialidade": "psiquiatria",
@@ -9276,7 +9293,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-abd3a17f",
@@ -11398,16 +11416,16 @@
  {
   "id": "med-b551a55c",
   "area": "Pneumologia",
-  "enunciado": "Adolescente de 16 anos chega ao pronto-socorro em crise asmática moderada: fala frases curtas, FR de 28 irpm, sibilos difusos e SpO2 de 92%.\n\nQual é a primeira medida broncodilatadora?",
+  "enunciado": "Adolescente de 16 anos, com asma desde a infância e uso irregular de corticoide inalatório, chega ao pronto-socorro após 2 dias de piora com resfriado. Fala frases curtas, está sentado e agitado, com FR 28 irpm, FC 112 bpm, sibilos difusos, uso de musculatura acessória discreto e SpO₂ 92% em ar ambiente. Pico de fluxo de 55% do melhor valor pessoal.\n\nQual é a primeira medida broncodilatadora indicada?",
   "alternativas": [
-   "Sulfato de magnésio intravenoso antes de qualquer β2-agonista inalatório",
-   "Aminofilina intravenosa em bolus, como broncodilatador de primeira linha",
-   "Formoterol inalatório em dose única, com alta hospitalar imediata",
-   "Salbutamol inalatório, com espaçador, a cada 20 minutos na primeira hora",
-   "Adrenalina subcutânea, como broncodilatador inicial de escolha na crise"
+   "Adrenalina subcutânea, repetida a cada 20 minutos até melhora",
+   "Brometo de ipratrópio inalatório isolado, sem beta-2 agonista",
+   "Aminofilina intravenosa em dose de ataque, seguida de infusão contínua",
+   "Sulfato de magnésio intravenoso em dose única, antes de qualquer inalação",
+   "Salbutamol inalatório com espaçador, a cada 20 minutos na primeira hora"
   ],
-  "correta": 3,
-  "explicacao": "O tratamento inicial da crise asmática é o β2-agonista de curta ação inalatório (salbutamol por aerossol dosimetrado com espaçador, 4–10 jatos, ou nebulização), repetido a cada 20 minutos na primeira hora, associado a oxigênio para SpO2 de 93–95% em adolescentes e adultos e corticoide sistêmico precoce; o ipratrópio é adicionado nas crises moderadas a graves. A aminofilina tem pouca eficácia adicional e mais efeitos adversos. O sulfato de magnésio intravenoso é reservado a crises graves sem resposta inicial. A adrenalina fica para anafilaxia ou angioedema. Não se dá alta sem reavaliação da resposta.",
+  "correta": 4,
+  "explicacao": "A crise é moderada (fala frases, FR elevada, SpO₂ entre 90 e 95%, pico de fluxo acima de 50%), e o tratamento inicial é o beta-2 agonista de curta ação inalatório — salbutamol por aerossol dosimetrado com espaçador, tão eficaz quanto a nebulização —, repetido a cada 20 minutos na primeira hora, junto com oxigênio para SpO₂ de 93–95% e corticoide sistêmico precoce. O ipratrópio é adjuvante nas crises moderadas a graves, associado ao salbutamol, e não substituto dele. O sulfato de magnésio intravenoso é reservado para crises graves que não respondem ao tratamento inicial. A aminofilina tem pouca eficácia adicional e muitos efeitos adversos. A adrenalina fica para anafilaxia ou angioedema associados. Na alta, é fundamental ajustar o tratamento de manutenção com corticoide inalatório.",
   "tema": "asma",
   "subtema": "asma.crise-asmatica",
   "especialidade": "pneumologia",
@@ -11415,7 +11433,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-571c785f",
@@ -11531,24 +11550,25 @@
  {
   "id": "med-355e70d4",
   "area": "Pneumologia",
-  "enunciado": "Homem de 32 anos, previamente hígido e sem uso recente de antibióticos, tem pneumonia adquirida na comunidade com CURB-65 de zero e boa aceitação oral.\n\nQual é o tratamento empírico adequado?",
+  "enunciado": "Homem de 32 anos, professor, previamente hígido, não tabagista, sem etilismo, sem alergias e sem uso de antibióticos nos últimos 3 meses nem internações recentes, tem febre, tosse produtiva e dor ventilatória à direita há 3 dias. Está lúcido e orientado, com FR 22 irpm, FC 98 bpm, PA 124 x 78 mmHg, SpO₂ 95% em ar ambiente e estertores crepitantes na base direita. Ureia 28 mg/dL. A radiografia mostra consolidação no lobo inferior direito. Aceita bem a dieta, mora com a esposa, tem fácil acesso ao serviço e pode retornar em 48 horas.\n\nCalculado o CURB-65, qual é o tratamento empírico adequado?",
   "alternativas": [
-   "Amoxicilina ou um macrolídeo, por via oral, em regime ambulatorial",
-   "Meropenem intravenoso, para cobrir bacilos gram-negativos",
-   "Levofloxacino intravenoso, pelo risco de pneumococo resistente",
-   "Vancomicina oral, para cobertura de Staphylococcus aureus",
-   "Ceftriaxona intravenosa associada à azitromicina, em internação"
+   "Internação em UTI com piperacilina-tazobactam e vancomicina",
+   "Levofloxacino por via oral, em regime ambulatorial, por 14 dias",
+   "Amoxicilina-clavulanato associada a azitromicina, por via oral",
+   "Internação em enfermaria com ceftriaxona e azitromicina intravenosas",
+   "Amoxicilina ou um macrolídeo, por via oral, em regime ambulatorial"
   ],
-  "correta": 0,
-  "explicacao": "Em adultos hígidos, sem comorbidades nem uso recente de antibióticos, com pneumonia de baixa gravidade, as diretrizes brasileiras recomendam tratamento ambulatorial com betalactâmico oral (amoxicilina) ou macrolídeo (azitromicina, claritromicina), cobrindo sobretudo Streptococcus pneumoniae e atípicos. Quinolonas respiratórias ficam para pacientes com comorbidades ou uso recente de antibiótico, e seu uso indiscriminado favorece resistência e tuberculose mascarada. Ceftriaxona com macrolídeo é esquema para internados. Meropenem não é indicado na comunidade sem fatores de risco. Vancomicina oral não tem absorção sistêmica.",
+  "correta": 4,
+  "explicacao": "O CURB-65 soma 1 ponto para cada item: confusão mental, ureia acima de 50 mg/dL, FR de 30 irpm ou mais, PAS abaixo de 90 ou PAD de 60 mmHg ou menos, e idade de 65 anos ou mais. Esse paciente pontua zero, o que indica baixo risco e tratamento ambulatorial. Para adultos previamente hígidos, sem uso recente de antibiótico e sem comorbidades, as diretrizes brasileiras (SBPT) recomendam monoterapia oral com amoxicilina ou um macrolídeo (azitromicina ou claritromicina). A associação de betalactâmico com macrolídeo, ou a quinolona respiratória em monoterapia, fica para pacientes com comorbidades ou uso recente de antibiótico; o uso indiscriminado de quinolonas favorece resistência e eventos adversos. Internação é indicada com CURB-65 de 2 ou mais, hipoxemia ou fatores sociais; cobertura para Pseudomonas e MRSA só com fatores de risco específicos. Para lembrar: CURB-65 de 0 a 1 trata em casa; 2 considera internação; 3 ou mais avalia UTI.",
   "tema": "pneumonia",
   "subtema": "pneumonia.tratamento",
   "especialidade": "pneumologia",
   "disciplina": "Pneumologia",
-  "dificuldade": 1,
+  "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-2821e269",
@@ -11664,24 +11684,25 @@
  {
   "id": "med-8627bb6c",
   "area": "Pneumologia",
-  "enunciado": "O derrame pleural é classificado em transudato ou exsudato, conforme o mecanismo de formação.\n\nQual das condições abaixo produz, caracteristicamente, um transudato?",
+  "enunciado": "Mulher de 71 anos, hipertensa e com infarto prévio, sem uso de diuréticos, tem dispneia progressiva há 3 semanas, ortopneia e edema de membros inferiores. Está afebril, com turgência jugular a 45°, estertores em bases e derrame pleural bilateral, maior à direita, na radiografia; o NT-proBNP é 4.800 pg/mL. A toracocentese diagnóstica mostra líquido citrino. Exames simultâneos: proteína pleural 2,1 g/dL e sérica 7,0 g/dL; DHL pleural 90 U/L e sérica 300 U/L (limite superior da normalidade sérica: 250 U/L); glicose pleural 105 mg/dL; 600 células/mm³, com predomínio de mononucleares.\n\nPelos critérios de Light, qual é a classificação do derrame e sua causa mais provável?",
   "alternativas": [
-   "Pneumonia bacteriana",
-   "Tuberculose pleural",
-   "Neoplasia metastática para a pleura",
-   "Artrite reumatoide",
-   "Insuficiência cardíaca congestiva"
+   "Exsudato; tuberculose pleural",
+   "Transudato; carcinomatose pleural",
+   "Exsudato; derrame parapneumônico não complicado",
+   "Exsudato; artrite reumatoide",
+   "Transudato; insuficiência cardíaca congestiva"
   ],
   "correta": 4,
-  "explicacao": "Transudatos resultam de desequilíbrio das forças de Starling (aumento da pressão hidrostática ou redução da oncótica), com pleura íntegra: insuficiência cardíaca (causa mais comum de derrame pleural), cirrose com ascite (hidrotórax hepático), síndrome nefrótica, hipoalbuminemia e diálise peritoneal. Exsudatos decorrem de inflamação ou alteração da permeabilidade pleural ou da drenagem linfática: pneumonia (parapneumônico), tuberculose, neoplasias, doenças autoimunes (como artrite reumatoide, com glicose muito baixa), pancreatite e, na maioria das vezes, tromboembolismo pulmonar.",
+  "explicacao": "Pelos critérios de Light, o derrame é exsudato se preencher pelo menos um: proteína pleural/sérica acima de 0,5; DHL pleural/sérica acima de 0,6; DHL pleural acima de 2/3 do limite superior do DHL sérico. Aqui, 2,1/7,0 = 0,30; 90/300 = 0,30; e 2/3 de 250 = 167 U/L, acima dos 90 U/L do líquido. Nenhum critério é preenchido: é transudato, formado por aumento da pressão hidrostática ou queda da oncótica, sem lesão pleural. A causa mais comum de transudato é a insuficiência cardíaca, compatível com ortopneia, edema e derrame bilateral maior à direita. Parapneumônico, tuberculose, câncer e artrite reumatoide produzem exsudatos. Se a paciente estivesse em uso de diurético, um exsudato \"limítrofe\" poderia ser, na verdade, transudato — nesse caso, o gradiente de albumina soro–pleura acima de 1,2 g/dL confirmaria a origem transudativa. Para lembrar: Richard Light publicou esses critérios em 1972.",
   "tema": "derrame-pleural",
   "subtema": "derrame-pleural.causas-de-transudato-e-exsudato",
   "especialidade": "pneumologia",
   "disciplina": "Pneumologia",
-  "dificuldade": 1,
+  "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-7945f146",
@@ -12216,24 +12237,25 @@
  {
   "id": "med-d0bf0133",
   "area": "Pediatria Geral",
-  "enunciado": "Menina de 8 anos tem dor em fossa ilíaca direita há 1 dia, com quadro clínico duvidoso para apendicite aguda.\n\nQual é o exame de imagem inicial preferencial?",
+  "enunciado": "Menina de 8 anos é trazida ao pronto-socorro com dor abdominal há 20 horas, que começou em torno do umbigo e migrou para a fossa ilíaca direita, com anorexia e um episódio de vômito. Temperatura axilar 37,8 °C. Dor à palpação da fossa ilíaca direita, com descompressão brusca duvidosa; sem massa palpável. Leucócitos 12.300/mm³, com 76% de neutrófilos; urina tipo I normal. O cirurgião considera a probabilidade clínica de apendicite intermediária.\n\nQual é o próximo passo mais adequado?",
   "alternativas": [
-   "Radiografia simples de abdome",
-   "Tomografia de abdome com contraste",
-   "Enema opaco com bário",
-   "Ultrassonografia de abdome",
-   "Ressonância magnética com gadolínio"
+   "Alta com analgésico e retorno somente se surgir febre acima de 38,5 °C",
+   "Radiografia simples de abdome em pé e deitado para buscar fecalito",
+   "Apendicectomia videolaparoscópica imediata, sem exames de imagem",
+   "Tomografia de abdome com contraste intravenoso como exame inicial",
+   "Ultrassonografia de abdome, com foco na fossa ilíaca direita"
   ],
-  "correta": 3,
-  "explicacao": "Em crianças (e também em gestantes), a ultrassonografia é o exame inicial preferido na suspeita de apendicite: não usa radiação ionizante, é disponível e tem boa acurácia quando identifica o apêndice (diâmetro acima de 6 mm, não compressível, com sinais inflamatórios periapendiculares). Se inconclusiva e a dúvida persistir, pode-se repetir o exame, observar clinicamente ou recorrer à tomografia (ou à ressonância, sobretudo na gestante). A radiografia simples tem baixa sensibilidade, e o enema baritado não tem papel no diagnóstico atual.",
+  "correta": 4,
+  "explicacao": "Com probabilidade clínica intermediária (dor migratória, anorexia, febre baixa e leucocitose, mas sem peritonite franca), está indicado exame de imagem antes de decidir pela cirurgia. Em crianças, a ultrassonografia é o exame inicial preferido: não usa radiação ionizante, tem boa acurácia em mãos experientes (apêndice não compressível, diâmetro acima de 6 mm, líquido e alterações da gordura) e avalia diagnósticos diferenciais. A tomografia fica reservada para ultrassonografia inconclusiva ou suspeita de complicação; a ressonância é alternativa sem radiação onde disponível. Operar sem imagem é aceitável apenas na alta probabilidade clínica; a radiografia simples tem baixo rendimento; dar alta com probabilidade intermediária expõe ao risco de perfuração. Em escores como o de Alvarado ou o pediátrico (PAS), risco baixo observa, intermediário faz imagem e alto opera.",
   "tema": "apendicite-aguda",
   "subtema": "apendicite-aguda.diagnostico",
   "especialidade": "pediatria-geral",
   "disciplina": "Pediatria Geral",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-e082f465",
@@ -12550,16 +12572,16 @@
  {
   "id": "med-c3d7b48c",
   "area": "Trauma",
-  "enunciado": "Na avaliação primária de um motociclista vítima de colisão, o médico pergunta o nome do paciente, que responde de forma clara e adequada.\n\nO que essa resposta indica neste momento?",
+  "enunciado": "Motociclista de 35 anos, vítima de colisão contra automóvel, chega à sala de emergência com colar cervical e prancha. Tem escoriações no tórax e deformidade na perna direita. Ao se aproximar, o médico, que inicia a avaliação primária, pergunta: \"Qual é o seu nome e o que aconteceu?\". O paciente responde de forma clara, com frases completas e sem rouquidão: \"Carlos, bati a moto\".\n\nO que essa resposta indica neste momento?",
   "alternativas": [
-   "Ausência de choque hemorrágico, dispensando acesso venoso",
    "Via aérea pérvia, ventilação suficiente e perfusão cerebral adequada",
-   "Ausência de lesão da coluna cervical, dispensando sua proteção",
-   "Ausência de lesão torácica, dispensando a radiografia de tórax",
-   "Glasgow 15 definitivo, dispensando novas reavaliações neurológicas"
+   "Ausência de choque hemorrágico, dispensando o acesso venoso",
+   "Ausência de lesão torácica grave, dispensando a radiografia de tórax",
+   "Nível de consciência normal que dispensa reavaliações neurológicas",
+   "Ausência de lesão de coluna cervical, liberando a retirada do colar"
   ],
-  "correta": 1,
-  "explicacao": "Segundo o ATLS, a resposta verbal clara e adequada a uma pergunta simples indica, naquele momento, via aérea pérvia, ventilação suficiente para produzir fala e perfusão cerebral adequada. Essa checagem rápida não substitui a avaliação completa: a coluna cervical deve continuar com restrição de movimento até ser liberada clínica ou radiologicamente, o paciente pode estar em choque compensado, o nível de consciência pode piorar (reavaliações seriadas são obrigatórias) e lesões torácicas podem existir mesmo com fala normal.",
+  "correta": 0,
+  "explicacao": "Pelo ATLS, perguntar o nome e o que aconteceu é uma avaliação inicial rápida e útil: uma resposta verbal clara e apropriada indica que, naquele momento, a via aérea está pérvia, há ventilação suficiente para falar e a perfusão cerebral é adequada para manter a consciência. A resposta, porém, não exclui lesões: a coluna cervical só é liberada por critérios clínicos (como NEXUS ou a regra canadense) ou por imagem; um paciente lúcido pode estar em choque compensado; o tórax deve ser examinado e investigado; e o nível de consciência precisa ser reavaliado periodicamente, pois pode piorar, como no hematoma epidural. A avaliação primária segue a sequência ABCDE, com reavaliações frequentes.",
   "tema": "atendimento-inicial-ao-politraumatizado",
   "subtema": "atendimento-inicial-ao-politraumatizado.avaliacao-primaria-abcde",
   "especialidade": "trauma",
@@ -12567,7 +12589,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-5eb8f255",
@@ -12594,24 +12617,25 @@
  {
   "id": "med-962596c7",
   "area": "Trauma",
-  "enunciado": "Na avaliação de um homem com fratura de pelve após atropelamento, qual achado contraindica a passagem de sonda vesical antes da investigação da uretra?",
+  "enunciado": "Homem de 28 anos é trazido após atropelamento. Na avaliação primária, recebeu cinta pélvica por fratura de pelve em \"livro aberto\", e a estabilidade hemodinâmica foi obtida com reposição volêmica. Na avaliação secundária, o residente se prepara para passar sonda vesical de demora para monitorar a diurese. Ao exame, há os achados listados abaixo.\n\nQual deles, pelo ATLS, contraindica a sondagem vesical antes da investigação da uretra?",
   "alternativas": [
-   "Hematúria microscópica em exame prévio",
-   "Pressão sistólica abaixo de 90 mmHg",
-   "Dor à palpação do hipogástrio",
+   "Ausência de diurese espontânea na primeira hora",
+   "Dor à palpação da sínfise púbica",
    "Sangue no meato uretral externo",
-   "Débito urinário de 0,4 mL/kg/h"
+   "Hematúria microscópica em amostra colhida por jato",
+   "FAST negativo para líquido livre intraperitoneal"
   ],
-  "correta": 3,
-  "explicacao": "Sangue no meato uretral, hematoma perineal ou escrotal e próstata elevada ou não palpável ao toque retal sugerem lesão de uretra, comum nas fraturas pélvicas em homens. Nesses casos, o ATLS orienta não passar a sonda vesical às cegas antes de uma uretrografia retrógrada, pois a sondagem pode converter uma lesão parcial em completa. Se houver lesão, a drenagem pode ser feita por cistostomia suprapúbica. Oligúria e hipotensão reforçam a necessidade de monitorar a diurese, mas não contraindicam a sonda; hematúria e dor hipogástrica sugerem lesão de bexiga, investigada por cistografia.",
+  "correta": 2,
+  "explicacao": "Fratura de pelve, especialmente com diástase da sínfise, pode lesar a uretra posterior (membranosa), e a passagem às cegas de uma sonda pode transformar uma lesão parcial em completa ou criar falso trajeto. Pelo ATLS, sangue no meato uretral é o principal sinal de alerta: antes de qualquer sondagem, deve-se fazer uretrografia retrógrada, e, se houver lesão, a drenagem vesical é feita por cistostomia suprapúbica. Hematoma perineal ou escrotal também sugere lesão uretral. A ausência de diurese na primeira hora pode refletir hipovolemia e não contraindica a sonda; a dor na sínfise decorre da própria fratura; FAST negativo não diz nada sobre a uretra; hematúria microscópica é frequente no trauma e não impede a sondagem. Na décima edição do ATLS, o toque retal deixou de ser rotina para buscar próstata alta, pela baixa acurácia.",
   "tema": "atendimento-inicial-ao-politraumatizado",
   "subtema": "atendimento-inicial-ao-politraumatizado.avaliacao-secundaria",
   "especialidade": "trauma",
   "disciplina": "Trauma",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-84ca9dba",
@@ -12771,16 +12795,16 @@
  {
   "id": "med-ef77526c",
   "area": "Trauma",
-  "enunciado": "Criança sofre escaldadura no antebraço. A lesão é muito dolorosa, com bolhas íntegras e leito rosado, úmido, com enchimento capilar preservado.\n\nQual é a classificação quanto à profundidade?",
+  "enunciado": "Menino de 4 anos puxou uma panela com água fervente há 1 hora e sofreu escaldadura no antebraço direito, em área de cerca de 2% da superfície corporal. A lesão é muito dolorosa ao toque e ao ar, com bolhas íntegras e, onde elas se romperam, leito rosado, úmido e brilhante, que empalidece à compressão e volta a ficar rosado rapidamente; os pelos estão firmes.\n\nQual é a classificação quanto à profundidade?",
   "alternativas": [
-   "Terceiro grau (espessura total)",
-   "Quarto grau (atinge músculo)",
-   "Primeiro grau (epidérmica)",
+   "Terceiro grau",
+   "Primeiro grau",
    "Segundo grau profundo",
-   "Segundo grau superficial"
+   "Segundo grau superficial",
+   "Quarto grau"
   ],
-  "correta": 4,
-  "explicacao": "A queimadura de segundo grau superficial (espessura parcial superficial) atinge a epiderme e a derme papilar: forma bolhas, o leito é rosado, úmido, muito doloroso e com enchimento capilar preservado, e costuma cicatrizar em até 2–3 semanas sem enxerto. O primeiro grau acomete só a epiderme, com eritema doloroso e sem bolhas. O segundo grau profundo atinge a derme reticular, com leito mais pálido ou mosqueado, menos doloroso e com enchimento lentificado. O terceiro grau é indolor, com aspecto branco nacarado ou coriáceo; o quarto grau atinge estruturas profundas, como músculo e osso.",
+  "correta": 3,
+  "explicacao": "Bolhas, dor intensa e leito rosado, úmido, com enchimento capilar rápido e pelos firmes indicam queimadura de segundo grau superficial (espessura parcial superficial), que atinge a epiderme e a derme papilar e costuma cicatrizar em até 2–3 semanas, sem enxerto e com pouca cicatriz. A de primeiro grau acomete só a epiderme: eritema doloroso, sem bolhas, como na queimadura solar. A de segundo grau profundo atinge a derme reticular: leito mais pálido ou mosqueado, menos doloroso, enchimento capilar lento e pelos que se desprendem com facilidade; cicatriza lentamente e pode precisar de enxerto. A de terceiro grau é indolor, branca ou carbonizada, de aspecto de couro; a de quarto grau atinge músculo, tendão ou osso. Para lembrar: a dor é sinal de terminações nervosas preservadas — quanto mais profunda a queimadura, menos dói.",
   "tema": "queimaduras",
   "subtema": "queimaduras.classificacao-e-profundidade",
   "especialidade": "trauma",
@@ -12788,7 +12812,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-d49913e2",
@@ -12950,16 +12975,16 @@
  {
   "id": "med-f09a3f23",
   "area": "Urologia",
-  "enunciado": "Homem de 32 anos, sem comorbidades e com função renal normal, chega ao pronto-socorro com cólica renal típica e intensa.\n\nQual é a classe de analgésico de primeira escolha?",
+  "enunciado": "Homem de 32 anos, sem comorbidades, sem alergias e com creatinina de 0,9 mg/dL, chega ao pronto-socorro com dor lombar esquerda súbita há 2 horas, em cólica, irradiada para a região inguinal, com náuseas e agitação; não consegue ficar parado. Está afebril. A urina tipo I mostra hematúria microscópica, sem leucocitúria. A dor é 9 em 10.\n\nQual é a classe de analgésico de primeira escolha para esse paciente?",
   "alternativas": [
-   "Corticoide sistêmico em dose alta",
-   "Paracetamol por via oral em dose baixa",
-   "Antiespasmódico isolado, como escopolamina",
-   "Opioide forte em monoterapia",
-   "Anti-inflamatório não esteroide parenteral"
+   "Opioide forte, como a morfina, por via intravenosa",
+   "Anti-inflamatório não esteroide por via parenteral",
+   "Hidratação venosa vigorosa, sem analgésico",
+   "Corticoide sistêmico em dose anti-inflamatória",
+   "Antiespasmódico, como a escopolamina, isolado"
   ],
-  "correta": 4,
-  "explicacao": "Na cólica renal, os anti-inflamatórios não esteroides (por exemplo, diclofenaco, cetorolaco ou ibuprofeno) são a primeira escolha segundo a diretriz da European Association of Urology: reduzem a síntese de prostaglandinas, diminuindo a pressão intrapiélica e o edema ureteral, e são tão ou mais eficazes que os opioides, com menos vômitos e menor necessidade de analgesia de resgate. Devem ser evitados na insuficiência renal, que o paciente não tem. Opioides ficam como segunda linha ou resgate; antiespasmódicos isolados não têm benefício comprovado; corticoide não tem papel, e paracetamol em dose baixa é insuficiente.",
+  "correta": 1,
+  "explicacao": "Na cólica renal típica, com função renal normal e sem contraindicação, os anti-inflamatórios não esteroides (como diclofenaco ou cetorolaco parenterais) são a primeira escolha segundo as diretrizes da Associação Europeia de Urologia: aliviam a dor com eficácia igual ou superior à dos opioides, reduzem a pressão intrapiélica ao diminuir a filtração glomerular e a síntese de prostaglandinas, e causam menos vômitos e menor necessidade de analgesia adicional. Os opioides ficam como resgate quando os AINE não são suficientes ou estão contraindicados. Os antiespasmódicos isolados não acrescentam benefício consistente. A hidratação vigorosa não acelera a eliminação do cálculo e pode aumentar a dor por distensão. O corticoide não é analgésico da cólica. Evitar AINE em insuficiência renal, gestação e sangramento digestivo ativo — nesses casos, paracetamol ou opioide.",
   "tema": "litiase-urinaria",
   "subtema": "litiase-urinaria.colica-renal",
   "especialidade": "urologia",
@@ -12967,7 +12992,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-1ee17d93",
@@ -13038,24 +13064,25 @@
  {
   "id": "med-aec90a4e",
   "area": "Urologia",
-  "enunciado": "Homem de 66 anos relata sintomas do trato urinário inferior.\n\nQual dos sintomas abaixo é classificado como sintoma de esvaziamento (obstrutivo)?",
+  "enunciado": "Homem de 66 anos procura a UBS por queixas urinárias há 2 anos. Durante a aplicação do escore internacional de sintomas prostáticos (IPSS), relata os seguintes sintomas:\n\nI. Jato urinário fraco, que precisa de força abdominal.\nII. Acordar três vezes por noite para urinar.\nIII. Demora para iniciar a micção, mesmo com a bexiga cheia.\nIV. Desejo súbito e forte de urinar, difícil de adiar.\n\nQuais são classificados como sintomas de esvaziamento (obstrutivos)?",
   "alternativas": [
-   "Acordar à noite duas ou mais vezes para urinar",
-   "Perda de urina precedida de urgência súbita",
-   "Urinar em intervalos menores que 2 horas",
-   "Jato urinário fraco, com necessidade de fazer força",
-   "Urgência para urinar, de difícil adiamento"
+   "III e IV, apenas",
+   "I e II, apenas",
+   "I, III e IV, apenas",
+   "I e III, apenas",
+   "II e IV, apenas"
   ],
   "correta": 3,
-  "explicacao": "Os sintomas do trato urinário inferior dividem-se em sintomas de armazenamento (irritativos: aumento da frequência, noctúria, urgência e incontinência de urgência), de esvaziamento (obstrutivos: jato fraco, hesitação, intermitência, esforço para urinar e esvaziamento incompleto) e pós-miccionais (gotejamento terminal e sensação de resíduo). Jato fraco com necessidade de fazer força é sintoma de esvaziamento, típico da obstrução infravesical por hiperplasia prostática. Todos os demais listados são sintomas de armazenamento, que podem decorrer da hiperatividade detrusora secundária à obstrução ou de outras causas.",
+  "explicacao": "Os sintomas do trato urinário inferior dividem-se em sintomas de armazenamento (irritativos) — aumento da frequência diurna, noctúria, urgência e incontinência de urgência — e de esvaziamento (obstrutivos) — jato fraco, hesitação, intermitência, esforço miccional e gotejamento terminal —, além dos pós-miccionais, como sensação de esvaziamento incompleto e gotejamento pós-miccional. No caso, jato fraco com esforço (I) e hesitação (III) são de esvaziamento; noctúria (II) e urgência (IV) são de armazenamento. A distinção orienta o tratamento: sintomas de esvaziamento por hiperplasia prostática respondem aos alfabloqueadores e inibidores da 5-alfarredutase, enquanto os de armazenamento predominantes podem exigir antimuscarínicos ou beta-3 agonistas, após excluir resíduo pós-miccional elevado. O IPSS tem 7 perguntas de sintomas (0 a 35 pontos) — até 7 é leve, 8 a 19 moderado e 20 ou mais grave.",
   "tema": "doencas-da-prostata",
   "subtema": "doencas-da-prostata.sintomas-do-trato-urinario-inferior",
   "especialidade": "urologia",
   "disciplina": "Urologia",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-89c8ef39",
@@ -13283,16 +13310,16 @@
  {
   "id": "med-9362ce44",
   "area": "Pediatria Geral",
-  "enunciado": "Na consulta de puericultura de 12 meses, qual dos achados abaixo representa atraso do desenvolvimento motor e exige avaliação, e não apenas acompanhamento?",
+  "enunciado": "Durante um mutirão de puericultura, cinco crianças de 12 meses, todas nascidas a termo e sem intercorrências, são avaliadas pelos internos. Os achados relatados pelas mães e observados no exame são os seguintes.\n\nQual delas apresenta atraso do desenvolvimento motor que exige avaliação, e não apenas acompanhamento?",
   "alternativas": [
-   "Não consegue sentar sem apoio",
-   "Não empilha seis cubos",
-   "Não sobe escadas alternando os pés",
-   "Não fala frases de duas palavras",
-   "Ainda não anda sozinho, só com apoio"
+   "Ainda não empilha cubos, mas faz pinça com polegar e indicador",
+   "Não consegue sentar sem apoio e cai ao ser colocada sentada",
+   "Ainda não corre, mas dá alguns passos segurando a mão da mãe",
+   "Ainda não anda sozinha, mas anda com apoio nos móveis",
+   "Ainda não sobe escadas, mas fica em pé com apoio"
   ],
-  "correta": 0,
-  "explicacao": "Pela Caderneta da Criança, sentar sem apoio é marco esperado entre 6 e 9 meses; uma criança de 12 meses que não senta sem apoio tem atraso motor e precisa de avaliação. Andar sem apoio pode ocorrer até cerca de 15–18 meses, por isso ainda não andar aos 12 meses não é, isoladamente, sinal de alarme. Frases de duas palavras surgem por volta dos 2 anos; subir escadas alternando os pés, por volta dos 3 anos; e empilhar seis cubos, por volta de 2 anos. Esses três marcos, portanto, não são esperados aos 12 meses.",
+  "correta": 1,
+  "explicacao": "Sentar sem apoio é marco adquirido por volta dos 6 a 8 meses, e não sentar sem apoio aos 9 meses já é sinal de alerta na Caderneta da Criança; aos 12 meses, é atraso motor evidente que exige investigação (paralisia cerebral, doenças neuromusculares, síndromes genéticas, privação de estímulo). A marcha independente tem ampla faixa de normalidade, entre 9 e 18 meses; aos 12 meses, andar apenas com apoio nos móveis é esperado. Subir escadas, empilhar cubos e correr são aquisições do segundo ano de vida. A pinça superior com polegar e indicador, esperada por volta de 9 a 12 meses, está presente. Para lembrar: a regra aproximada da motricidade grossa é sustentar a cabeça aos 3 meses, sentar sem apoio aos 6 a 8, ficar em pé com apoio aos 9 e andar por volta de 12 a 15 meses.",
   "tema": "puericultura",
   "subtema": "puericultura.desenvolvimento-neuropsicomotor",
   "especialidade": "pediatria-geral",
@@ -13300,7 +13327,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-974d7cf6",
@@ -13327,16 +13355,16 @@
  {
   "id": "med-457ac371",
   "area": "Pediatria Geral",
-  "enunciado": "Segundo o Ministério da Saúde e a OMS, até que idade a criança deve receber aleitamento materno exclusivo e até quando se recomenda manter a amamentação?",
+  "enunciado": "Mãe de lactente de 4 meses, em aleitamento materno exclusivo e com crescimento adequado, voltará ao trabalho em 2 semanas. A sogra sugere dar chá e água nos dias quentes e começar papinhas \"para ele se acostumar\"; uma vizinha diz que o leite materno \"perde a força\" depois do primeiro ano. A mãe pretende ordenhar e armazenar leite.\n\nSegundo o Ministério da Saúde e a OMS, qual orientação sobre a duração da amamentação é correta?",
   "alternativas": [
-   "Exclusivo até 1 ano; complementado até 2 anos",
-   "Exclusivo até 6 meses; suspender aos 12 meses",
-   "Exclusivo até 6 meses; complementado até 2 anos ou mais",
-   "Exclusivo até 4 meses; complementado até 1 ano",
-   "Exclusivo até 3 meses; complementado até 6 meses"
+   "Exclusiva até 12 meses; depois, complementada até 2 anos ou mais",
+   "Exclusiva até 4 meses; depois, complementada até 1 ano de idade",
+   "Exclusiva até 6 meses; depois, complementada até 2 anos ou mais",
+   "Exclusiva até 6 meses, com água e chás; complementada até 1 ano",
+   "Exclusiva até 6 meses; depois, complementada somente até 18 meses"
   ],
   "correta": 2,
-  "explicacao": "O Ministério da Saúde e a OMS recomendam aleitamento materno exclusivo (sem água, chás, sucos ou outros leites) até os 6 meses de vida e, a partir daí, a introdução da alimentação complementar adequada, mantendo a amamentação até os 2 anos ou mais. Antes dos 6 meses, outros alimentos não trazem vantagem e aumentam o risco de infecções e de desmame precoce; depois dos 6 meses, só o leite materno não supre as necessidades de energia, ferro e zinco. Não há motivo para interromper a amamentação aos 12 meses.",
+  "explicacao": "O Ministério da Saúde e a OMS recomendam aleitamento materno exclusivo até os 6 meses — sem água, chás, sucos ou outros alimentos, pois o leite materno supre inclusive a necessidade hídrica, mesmo em dias quentes — e, a partir daí, introdução da alimentação complementar com manutenção da amamentação até 2 anos ou mais. Antecipar a alimentação complementar para 4 meses aumenta o risco de infecções e de desmame precoce, sem benefício. Retardá-la até 12 meses gera deficiências de ferro, zinco e energia. O leite materno continua nutritiva e imunologicamente valioso após o primeiro ano. Para a volta ao trabalho, a ordenha e o armazenamento (até 12 horas na geladeira e 15 dias no congelador) permitem manter o aleitamento exclusivo. Para lembrar: a regra é \"6 e 2\" — exclusivo até 6 meses e amamentação até 2 anos ou mais.",
   "tema": "aleitamento-materno",
   "subtema": "aleitamento-materno.recomendacoes",
   "especialidade": "pediatria-geral",
@@ -13344,7 +13372,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-ffec23a7",
@@ -13504,16 +13533,16 @@
  {
   "id": "med-8de47d25",
   "area": "Pediatria Geral",
-  "enunciado": "Lactente de 3 meses, no outono, tem coriza há 3 dias, seguida de tosse, taquipneia e sibilos difusos; é o primeiro episódio de sibilância.\n\nQual é o agente etiológico mais comum desse quadro?",
+  "enunciado": "Lactente de 3 meses, nascido a termo, é levado à UBS em maio com coriza há 3 dias, seguida de tosse, respiração rápida e \"chiado\". Temperatura 37,6 °C, FR 56 irpm, tiragem subcostal leve, sibilos e crepitações finos difusos, SpO₂ 95% em ar ambiente; mama bem. É o primeiro episódio de sibilância. O irmão de 4 anos, que frequenta creche, está resfriado.\n\nQual é o agente etiológico mais provável?",
   "alternativas": [
-   "Adenovírus",
-   "Vírus influenza B",
-   "Mycoplasma pneumoniae",
+   "Bordetella pertussis",
    "Vírus sincicial respiratório",
-   "Vírus parainfluenza tipo 1"
+   "Metapneumovírus humano",
+   "Mycoplasma pneumoniae",
+   "Rinovírus humano"
   ],
-  "correta": 3,
-  "explicacao": "O quadro é de bronquiolite viral aguda: primeiro episódio de sibilância em menor de 2 anos, precedido de sintomas de via aérea superior. O vírus sincicial respiratório é o principal agente, responsável pela maioria dos casos e pelos quadros mais graves, com sazonalidade no outono e inverno em grande parte do Brasil; rinovírus, metapneumovírus, adenovírus, influenza e parainfluenza são causas menos frequentes. O parainfluenza tipo 1 é o principal agente do crupe viral. Mycoplasma pneumoniae é causa de pneumonia atípica em crianças maiores e adolescentes.",
+  "correta": 1,
+  "explicacao": "Primeiro episódio de sibilância em menor de 2 anos, após pródromo de vias aéreas superiores, com taquipneia, sibilos e crepitações difusos, no outono, é bronquiolite viral aguda. O vírus sincicial respiratório é o principal agente, responsável pela maioria dos casos e das internações, com sazonalidade no outono e inverno na maior parte do Brasil; o contágio costuma vir de irmãos mais velhos. Rinovírus e metapneumovírus também causam bronquiolite, porém com menor frequência. Mycoplasma é típico de escolares e adolescentes. A coqueluche causa tosse paroxística com guincho e cianose, sem sibilância difusa. O nirsevimabe, anticorpo monoclonal de dose única, e a vacina materna contra o VSR são as novas estratégias de prevenção.",
   "tema": "bronquiolite-viral-aguda",
   "subtema": "bronquiolite-viral-aguda.etiologia",
   "especialidade": "pediatria-geral",
@@ -13521,7 +13550,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-fe473dff",
@@ -13592,16 +13622,16 @@
  {
   "id": "med-c6329cba",
   "area": "Pediatria Geral",
-  "enunciado": "Menino de 2 anos tem coriza e febre baixa há 1 dia e, à noite, inicia tosse ladrante, rouquidão e estridor inspiratório.\n\nQual é o agente etiológico mais frequente desse quadro?",
+  "enunciado": "Menino de 2 anos, em outubro, tem coriza e febre baixa há 1 dia. À noite, acorda com tosse metálica \"de cachorro\", rouquidão e estridor inspiratório que piora ao chorar. Está sem toxemia, sem salivação excessiva, SpO₂ 97%, com tiragem supraesternal leve em repouso. Recebe dexametasona oral e melhora.\n\nQual é o agente etiológico mais frequente desse quadro?",
   "alternativas": [
-   "Streptococcus pyogenes",
-   "Corynebacterium diphtheriae",
-   "Staphylococcus aureus",
-   "Haemophilus influenzae tipo b",
-   "Vírus parainfluenza, sobretudo o tipo 1"
+   "Haemophilus influenzae tipo b, não vacinal",
+   "Vírus sincicial respiratório, principalmente o tipo A",
+   "Staphylococcus aureus, produtor de toxinas",
+   "Vírus parainfluenza, principalmente o tipo 1",
+   "Adenovírus, principalmente os tipos 40 e 41"
   ],
-  "correta": 4,
-  "explicacao": "Tosse ladrante (de cachorro), rouquidão e estridor inspiratório após pródromo catarral, em criança de 6 meses a 3 anos, caracterizam a laringotraqueobronquite viral (crupe). O principal agente é o vírus parainfluenza, especialmente o tipo 1, seguido por outros vírus respiratórios, como influenza, vírus sincicial respiratório, adenovírus e SARS-CoV-2. O Haemophilus influenzae tipo b era o principal agente da epiglotite, o Staphylococcus aureus é o principal causador da traqueíte bacteriana, e o Corynebacterium diphtheriae causa a difteria laríngea, hoje rara em vacinados.",
+  "correta": 3,
+  "explicacao": "Tosse ladrante, rouquidão e estridor inspiratório de início noturno, após pródromo catarral, em criança de 6 meses a 3 anos, caracterizam a laringotraqueobronquite viral (crupe). O principal agente é o vírus parainfluenza, sobretudo o tipo 1, associado a surtos no outono; VSR, influenza, adenovírus e metapneumovírus são causas menos frequentes. O Haemophilus influenzae tipo b causa epiglotite, de início abrupto, com toxemia, salivação e posição em tripé, hoje rara pela vacinação. O Staphylococcus aureus é o principal agente da traqueíte bacteriana, que complica um crupe com febre alta e toxemia. Os adenovírus 40 e 41 são entéricos e causam diarreia. O corticoide em dose única (dexametasona) está indicado em todos os graus de crupe, e a nebulização com adrenalina, nos moderados e graves.",
   "tema": "laringotraqueobronquite-viral",
   "subtema": "laringotraqueobronquite-viral.etiologia",
   "especialidade": "pediatria-geral",
@@ -13609,7 +13639,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-b92a07c4",
@@ -13724,38 +13755,39 @@
  {
   "id": "med-b67b9c25",
   "area": "Pediatria Geral",
-  "enunciado": "Criança de 3 anos tem febre alta, cólicas, tenesmo e várias evacuações de pequeno volume com sangue e muco há 1 dia.\n\nQual é o agente bacteriano mais associado a esse quadro e qual é a conduta?",
+  "enunciado": "Criança de 3 anos, que frequenta creche onde outras duas crianças tiveram quadro semelhante na mesma semana, tem, há 1 dia, febre de 39,5 °C, cólicas, tenesmo e cerca de 12 evacuações de pequeno volume com sangue e muco. Hoje teve uma crise convulsiva generalizada de 2 minutos, com recuperação completa da consciência e exame neurológico normal logo depois. Está hidratada, aceitando líquidos. Hemograma: leucócitos 14.000/mm³ com desvio à esquerda; plaquetas e creatinina normais. Não há história de consumo de carne malpassada, de viagens recentes nem de uso de antibióticos.\n\nQual é o agente bacteriano mais provável e a conduta indicada?",
   "alternativas": [
-   "Shigella; antibiótico, como ciprofloxacino",
-   "Rotavírus; apenas hidratação oral",
-   "Escherichia coli enterotoxigênica; loperamida",
-   "Vibrio cholerae; doxiciclina em dose única",
-   "Giardia lamblia; metronidazol por 5 dias"
+   "Entamoeba histolytica; metronidazol como tratamento inicial",
+   "Salmonella não tifoide; nenhum antibiótico, só hidratação",
+   "Shigella; antibiótico, como ciprofloxacino, e hidratação oral",
+   "E. coli êntero-hemorrágica; ciprofloxacino e hidratação oral",
+   "Rotavírus; apenas hidratação oral e manutenção da alimentação"
   ],
-  "correta": 0,
-  "explicacao": "Evacuações frequentes e de pequeno volume, com sangue e muco, febre, cólicas e tenesmo caracterizam disenteria, cuja principal causa bacteriana em crianças é a Shigella. O Ministério da Saúde recomenda antibiótico nos casos de disenteria, com ciprofloxacino por 3 dias como primeira escolha e alternativas como ceftriaxona ou azitromicina, além de hidratação e manutenção da alimentação. Rotavírus, cólera e E. coli enterotoxigênica causam diarreia aquosa, sem sangue. A giardíase causa diarreia prolongada, gordurosa, sem disenteria. Loperamida é contraindicada em crianças, especialmente com diarreia invasiva.",
+  "correta": 2,
+  "explicacao": "Disenteria (sangue e muco, tenesmo, evacuações pequenas e frequentes) com febre alta em pré-escolar sugere shigelose; a convulsão, associada a febre alta e a efeitos da toxina, é complicação extraintestinal clássica da Shigella. O Ministério da Saúde e a OMS recomendam antibiótico nas diarreias com sangue em crianças, com ciprofloxacino como primeira escolha (ceftriaxona nos casos graves), além de hidratação e alimentação. Rotavírus não causa disenteria. Na E. coli êntero-hemorrágica, a febre costuma ser baixa ou ausente e o antibiótico é evitado, pois pode aumentar o risco de síndrome hemolítico-urêmica. A amebíase é causa rara de disenteria em pré-escolares, e o metronidazol é reservado para falha da terapia contra Shigella ou trofozoítos hematófagos identificados. Salmonella causa mais comumente diarreia aquosa, e sua disenteria não se acompanha tipicamente de convulsão. Para lembrar: Kiyoshi Shiga isolou o bacilo da disenteria no Japão, em 1897.",
   "tema": "diarreia-aguda-e-desidratacao",
   "subtema": "diarreia-aguda-e-desidratacao.etiologia",
   "especialidade": "pediatria-geral",
   "disciplina": "Pediatria Geral",
-  "dificuldade": 2,
+  "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-bb0598eb",
   "area": "Pediatria Geral",
-  "enunciado": "Lactente de 10 meses, não vacinado, tem febre e vômitos seguidos de diarreia aquosa volumosa, sem sangue, durante o inverno.\n\nQual é o agente etiológico mais provável?",
+  "enunciado": "Lactente de 10 meses, que frequenta creche e não recebeu nenhuma dose da vacina oral de rotavírus, apresenta em julho febre de 38,5 °C e vômitos por 1 dia, seguidos de diarreia aquosa, volumosa, sem sangue ou muco, com 8 evacuações por dia, fezes ácidas e hiperemia perianal. Outras três crianças da mesma turma tiveram quadro semelhante. Está irritado, com olhos fundos e sede intensa.\n\nQual é o agente etiológico mais provável?",
   "alternativas": [
-   "Entamoeba histolytica",
-   "Campylobacter jejuni",
-   "Clostridioides difficile",
-   "Shigella",
-   "Rotavírus"
+   "Escherichia coli enterotoxigênica",
+   "Adenovírus entérico",
+   "Rotavírus",
+   "Norovírus",
+   "Shigella flexneri"
   ],
-  "correta": 4,
-  "explicacao": "O rotavírus é uma das principais causas de gastroenterite grave em lactentes e crianças pequenas não vacinadas, com pico nos meses mais frios: tipicamente começa com febre e vômitos, seguidos de diarreia aquosa volumosa, sem sangue, com risco de desidratação. A vacina oral de rotavírus, do calendário do Programa Nacional de Imunizações, reduziu muito as hospitalizações. Shigella, Entamoeba histolytica e Campylobacter causam com frequência diarreia com sangue (disenteria). O Clostridioides difficile associa-se a uso prévio de antibióticos e a ambiente hospitalar.",
+  "correta": 2,
+  "explicacao": "Febre e vômitos que precedem diarreia aquosa volumosa, sem sangue, com fezes ácidas por intolerância transitória à lactose, em lactente de 6 a 24 meses não vacinado, em creche e nos meses frios e secos, é o quadro clássico da gastroenterite por rotavírus, que costuma causar desidratação mais intensa que os outros vírus. O norovírus acomete todas as idades, causa surtos com predomínio de vômitos e curso mais curto, e hoje é o principal agente onde a vacinação contra rotavírus é alta. O adenovírus entérico dá diarreia mais prolongada e com menos febre. Shigella causa disenteria com sangue e muco. E. coli enterotoxigênica é típica da diarreia do viajante e de áreas sem saneamento. A vacina oral de rotavírus do calendário tem idade máxima para cada dose, por risco de invaginação intestinal.",
   "tema": "diarreia-aguda-e-desidratacao",
   "subtema": "diarreia-aguda-e-desidratacao.etiologia",
   "especialidade": "pediatria-geral",
@@ -13763,7 +13795,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-645c8598",
@@ -16590,16 +16623,16 @@
  {
   "id": "med-2b20aad2",
   "area": "Pneumologia",
-  "enunciado": "Tabagista de 40 maços-ano, com enfisema, faz radiografia de tórax em PA e perfil.\n\nQual conjunto de achados indica hiperinsuflação pulmonar?",
+  "enunciado": "Homem de 64 anos, tabagista de 40 maços-ano, tem dispneia progressiva há 5 anos, hoje aos pequenos esforços, pouca tosse e emagrecimento. Ao exame: tórax em tonel, hipersonoridade à percussão, murmúrio vesicular difusamente reduzido e expiração prolongada. Espirometria: VEF₁/CVF pós-broncodilatador de 0,48. A radiografia de tórax em PA e perfil é solicitada.\n\nQual conjunto de achados radiográficos indica hiperinsuflação pulmonar?",
   "alternativas": [
-   "Linhas B de Kerley e pequeno derrame pleural bilateral",
-   "Cardiomegalia global com redistribuição da trama vascular para os ápices",
-   "Elevação das cúpulas diafragmáticas e redução dos espaços intercostais",
-   "Retificação das cúpulas diafragmáticas e aumento do espaço retroesternal",
-   "Opacidades reticulares em bases com redução dos volumes pulmonares"
+   "Opacidades reticulares basais com redução dos volumes pulmonares",
+   "Aumento da área cardíaca, com índice cardiotorácico acima de 0,5",
+   "Elevação da cúpula diafragmática direita com atelectasias laminares",
+   "Cefalização da trama vascular e linhas B de Kerley nas bases pulmonares",
+   "Retificação das cúpulas diafragmáticas e aumento do espaço retroesternal"
   ],
-  "correta": 3,
-  "explicacao": "Na hiperinsuflação, o aumento do volume residual rebaixa e retifica o diafragma, alarga os espaços intercostais, horizontaliza as costelas, aumenta o espaço aéreo retroesternal no perfil e deixa o coração verticalizado e estreito (\"em gota\"). A elevação das cúpulas com espaços reduzidos sugere volumes pulmonares pequenos, como em doenças restritivas ou atelectasias. Cardiomegalia com redistribuição vascular, linhas B de Kerley e derrame bilateral são sinais de congestão por insuficiência cardíaca. Opacidades reticulares basais com volumes reduzidos sugerem fibrose pulmonar. A radiografia não faz o diagnóstico de DPOC, que exige espirometria com VEF1/CVF pós-broncodilatador menor que 0,70, mas ajuda a excluir diagnósticos alternativos.",
+  "correta": 4,
+  "explicacao": "O quadro é de DPOC com fenótipo enfisematoso, e a hiperinsuflação aparece na radiografia como rebaixamento e retificação das cúpulas diafragmáticas (mais de 10 arcos costais posteriores acima do diafragma no PA), aumento do espaço aéreo retroesternal no perfil, hipertransparência, redução da trama vascular periférica e coração verticalizado e \"em gota\". A radiografia não diagnostica DPOC — a espirometria com VEF₁/CVF abaixo de 0,70 após broncodilatador é que confirma a obstrução —, mas ajuda a excluir diagnósticos alternativos. Cefalização e linhas B de Kerley indicam congestão por insuficiência cardíaca; opacidades reticulares com volumes reduzidos sugerem fibrose pulmonar, que é doença restritiva; elevação diafragmática com atelectasias sugere processo abdominal ou paralisia frênica; cardiomegalia não é marcador de hiperinsuflação — ao contrário, o coração tende a parecer pequeno.",
   "tema": "dpoc",
   "subtema": "dpoc.diagnostico-e-espirometria",
   "especialidade": "pneumologia",
@@ -16607,7 +16640,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-c31b50df",
@@ -17168,24 +17202,25 @@
  {
   "id": "med-b28dba56",
   "area": "Patologia",
-  "enunciado": "Na doença de lesões mínimas, a microscopia óptica e a imunofluorescência são normais ou quase normais.\n\nQual achado da microscopia eletrônica caracteriza a doença?",
+  "enunciado": "Menino de 4 anos apresenta, há 10 dias, edema palpebral matinal que evoluiu para edema de membros inferiores e escroto, iniciado 1 semana após um resfriado. PA 96 x 58 mmHg. Urina tipo I: proteína 4+, sem hemácias. Relação proteína/creatinina urinária 6,2 mg/mg; albumina sérica 1,7 g/dL; colesterol total 380 mg/dL; creatinina 0,3 mg/dL; C3 e C4 normais. Recebeu prednisolona e, na 3ª semana, a proteinúria desapareceu.\n\nSe tivesse sido biopsiado, qual achado da microscopia eletrônica caracterizaria a doença mais provável?",
   "alternativas": [
-   "Membrana basal lamelada em \"cesta de vime\"",
-   "Depósitos elétron-densos mesangiais de IgA",
-   "Depósitos subepiteliais em \"corcovas\" (humps)",
-   "Apagamento difuso dos processos podocitários",
-   "Espessamento da membrana basal com espículas"
+   "Depósitos subendoteliais com duplo contorno da membrana basal",
+   "Depósitos subepiteliais grandes, em forma de corcova (gibas)",
+   "Membrana basal espessada e lamelada, em aspecto de cesta",
+   "Apagamento difuso dos processos podocitários, sem depósitos",
+   "Depósitos subepiteliais regulares separados por espículas"
   ],
   "correta": 3,
-  "explicacao": "A doença de lesões mínimas, principal causa de síndrome nefrótica na criança, tem glomérulos normais à microscopia óptica, e a lesão só aparece na microscopia eletrônica: fusão ou apagamento difuso dos processos podocitários, que se reverte com a remissão induzida pelo corticoide. As \"corcovas\" subepiteliais são típicas da glomerulonefrite pós-estreptocócica; as espículas da membrana basal, da nefropatia membranosa; os depósitos mesangiais de IgA, da nefropatia por IgA; e a membrana basal lamelada em \"cesta de vime\", da síndrome de Alport. Para lembrar: o nome \"lesões mínimas\" vem justamente de a microscopia óptica quase não mostrar alterações.",
+  "explicacao": "Síndrome nefrótica pura (proteinúria maciça, hipoalbuminemia, dislipidemia e edema), sem hematúria, hipertensão, disfunção renal ou consumo de complemento, em criança pequena e com resposta rápida ao corticoide, corresponde à doença de lesões mínimas. Nela, a microscopia óptica e a imunofluorescência são normais ou quase normais; a lesão só aparece na microscopia eletrônica, como apagamento (fusão) difuso dos processos podocitários, sem depósitos imunes. As gibas subepiteliais são da glomerulonefrite pós-infecciosa (síndrome nefrítica, C3 baixo); a membrana lamelada em cesta é da síndrome de Alport; depósitos subendoteliais com duplo contorno são da glomerulonefrite membranoproliferativa; depósitos subepiteliais com espículas caracterizam a nefropatia membranosa, mais comum em adultos. Para lembrar: na criança com nefrose típica trata-se com corticoide sem biópsia; a biópsia fica para corticorresistência ou apresentação atípica.",
   "tema": "sindromes-glomerulares",
   "subtema": "sindromes-glomerulares.doenca-de-lesoes-minimas",
   "especialidade": "patologia",
   "disciplina": "Patologia",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-8fef94aa",
@@ -17278,24 +17313,25 @@
  {
   "id": "med-e3dcb352",
   "area": "Pneumologia",
-  "enunciado": "Homem de 68 anos com DPOC grave, clinicamente estável e sem mudanças recentes nos sintomas, tem gasometria arterial: pH 7,36; PaCO2 60 mmHg; HCO3⁻ 32 mEq/L.\n\nComo se interpreta esse exame?",
+  "enunciado": "Homem de 68 anos, ex-tabagista de 60 maços-ano, com DPOC grave (VEF₁ 32% do previsto), em uso regular de broncodilatadores de longa ação, clinicamente estável há 4 meses, sem mudança recente de dispneia, tosse ou escarro, sem vômitos e sem febre. Hematócrito 54%. Faz gasometria arterial ambulatorial em ar ambiente, em repouso, para avaliar indicação de oxigenoterapia domiciliar prolongada: pH 7,36; PaCO₂ 60 mmHg; HCO₃⁻ 32 mEq/L; PaO₂ 54 mmHg. Não usa diuréticos nem corticoide sistêmico.\n\nConsiderando as fórmulas de compensação esperada, como se interpreta o distúrbio ácido-base?",
   "alternativas": [
-   "Alcalose metabólica primária com hipoventilação compensatória",
+   "Acidose respiratória crônica agudizada por nova hipoventilação",
    "Acidose respiratória crônica com compensação renal adequada",
-   "Distúrbio misto de acidose respiratória e acidose metabólica",
-   "Acidose respiratória associada a alcalose metabólica primária",
-   "Acidose respiratória aguda, ainda sem compensação renal"
+   "Acidose respiratória crônica associada a alcalose metabólica",
+   "Alcalose metabólica primária com hipoventilação compensatória",
+   "Acidose respiratória aguda com compensação renal adequada"
   ],
   "correta": 1,
-  "explicacao": "O pH levemente ácido com PaCO2 elevada indica acidose respiratória primária. Na forma crônica, os rins retêm bicarbonato em cerca de 3,5 a 4 mEq/L para cada 10 mmHg de aumento da PaCO2: com elevação de 20 mmHg, espera-se bicarbonato de 31 a 32 mEq/L, exatamente o observado, e o pH fica próximo do normal. Na forma aguda, o bicarbonato subiria apenas 1 mEq/L por 10 mmHg (cerca de 26), e o pH estaria em torno de 7,24. Na alcalose metabólica primária o pH seria alcalino. Uma alcalose metabólica associada levaria o bicarbonato acima do esperado, e uma acidose metabólica associada o deixaria abaixo. Para lembrar: aguda, 1 por 10; crônica, 3,5 a 4 por 10 — a diferença é o tempo que o rim leva para compensar (dias).",
+  "explicacao": "O pH abaixo de 7,40 com PaCO₂ elevada indica acidose respiratória primária. Na forma aguda, o HCO₃⁻ sobe cerca de 1 mEq/L para cada 10 mmHg de PaCO₂ (esperado aqui: 24 + 2 = 26); na crônica, a compensação renal eleva o HCO₃⁻ em cerca de 3,5 a 4 mEq/L por 10 mmHg (esperado: 24 + 7 a 8 = 31 a 32). O HCO₃⁻ de 32 coincide com o esperado para a forma crônica, e o pH quase normal confirma: é acidose respiratória crônica compensada, esperada em DPOC grave retentor de CO₂. Um HCO₃⁻ bem acima de 32 sugeriria alcalose metabólica associada (por exemplo, por diurético); um pH mais baixo que o esperado, com HCO₃⁻ intermediário, sugeriria agudização. Na alcalose metabólica primária, o pH seria acima de 7,40. A PaO₂ de 54 mmHg, em repouso e estável, indica oxigenoterapia domiciliar prolongada. Para lembrar: na acidose respiratória, \"1 para 10\" na aguda e \"4 para 10\" na crônica.",
   "tema": "disturbios-acido-base",
   "subtema": "disturbios-acido-base.disturbios-respiratorios",
   "especialidade": "pneumologia",
   "disciplina": "Pneumologia",
-  "dificuldade": 2,
+  "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-37d38c1c",
@@ -17654,24 +17690,25 @@
  {
   "id": "med-458a2b2c",
   "area": "Semiologia",
-  "enunciado": "Paciente com pancreatite aguda necro-hemorrágica apresenta, no 3º dia, equimose nos flancos.\n\nComo se denomina esse sinal e o que ele indica?",
+  "enunciado": "Mulher de 58 anos está internada por pancreatite aguda biliar. No 3º dia, evolui com piora da dor, hipotensão responsiva a volume e queda da hemoglobina de 13 para 9,5 g/dL. O plantonista observa equimose violácea nos flancos, sem história de trauma ou de punções nesses locais. A tomografia mostra necrose de cerca de 40% do pâncreas e líquido hemorrágico no retroperitônio.\n\nSobre o sinal cutâneo observado, é correto afirmar que se trata do sinal de:",
   "alternativas": [
-   "Sinal de Blumberg; irritação peritoneal difusa",
-   "Sinal de Kehr; ruptura esplênica com sangramento",
-   "Sinal de Grey Turner; hemorragia retroperitoneal",
-   "Sinal de Cullen; hemorragia retroperitoneal",
-   "Sinal de Murphy; colecistite aguda associada"
+   "Cullen, que indica hemoperitônio livre e aparece apenas na gravidez ectópica",
+   "Grey Turner, que é patognomônico de pancreatite e surge nas primeiras horas",
+   "Grey Turner, que indica hemorragia retroperitoneal e não é exclusivo da pancreatite",
+   "Cullen, que indica hemorragia retroperitoneal e é patognomônico de pancreatite",
+   "Grey Turner, que indica peritonite bacteriana e dispensa exame de imagem"
   ],
   "correta": 2,
-  "explicacao": "A equimose nos flancos é o sinal de Grey Turner; a periumbilical é o sinal de Cullen. Ambos resultam da dissecção de sangue do retroperitônio pelos planos fasciais e sugerem pancreatite hemorrágica grave, embora sejam pouco frequentes e tardios; também aparecem em outras hemorragias retroperitoneais, como ruptura de aneurisma de aorta. O sinal de Murphy é a interrupção da inspiração à palpação do hipocôndrio direito, na colecistite; o de Blumberg é a dor à descompressão brusca, na peritonite; o de Kehr é a dor referida ao ombro esquerdo por irritação diafragmática. Para lembrar: Thomas Cullen descreveu a equimose periumbilical em 1918, numa gravidez ectópica rota, e George Grey Turner, a dos flancos, em 1920, na pancreatite — Cullen fica no Centro, Turner vira para os lados.",
+  "explicacao": "A equimose nos flancos é o sinal de Grey Turner; a periumbilical, o de Cullen. Ambos refletem hemorragia retroperitoneal que se infiltra pelos planos fasciais até o subcutâneo, em geral 24 a 72 horas após o início do sangramento — por isso aparecem tardiamente, como no 3º dia deste caso. Na pancreatite, indicam forma necro-hemorrágica e se associam a pior prognóstico, mas são pouco sensíveis e não patognomônicos: ocorrem também na ruptura de aneurisma de aorta abdominal, na gravidez ectópica rota, em traumas e em sangramentos de anticoagulados. Não indicam peritonite bacteriana, e a gravidade do quadro exige exame de imagem, como a tomografia realizada, para avaliar necrose e complicações. Para lembrar: o cirurgião inglês George Grey Turner descreveu o sinal em 1920.",
   "tema": "pancreatite-aguda",
   "subtema": "pancreatite-aguda.diagnostico-e-classificacao",
   "especialidade": "semiologia",
   "disciplina": "Semiologia",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-0f55bc24",
@@ -17853,24 +17890,25 @@
  {
   "id": "med-d19416fe",
   "area": "Patologia",
-  "enunciado": "O linfoma folicular, linfoma indolente de células B do centro germinativo, tem uma translocação característica.\n\nQual é ela e qual é sua consequência molecular?",
+  "enunciado": "Mulher de 58 anos procura o ambulatório por \"caroços\" no pescoço, nas axilas e nas virilhas há cerca de 2 anos, indolores, que às vezes diminuem e depois voltam a crescer. Nega febre, sudorese noturna ou perda de peso. A biópsia excisional de linfonodo inguinal mostra folículos coalescentes, de tamanho uniforme, sem zona do manto nítida e sem macrófagos com corpos tingíveis, compostos principalmente por centrócitos e raros centroblastos (grau 1-2). O LDH é normal. A imuno-histoquímica é positiva para CD20, CD10 e BCL6, e as células dos folículos expressam BCL2 fortemente.\n\nQual alteração genética é esperada e qual sua consequência molecular?",
   "alternativas": [
-   "t(14;18), com superexpressão de BCL2, que inibe a apoptose",
-   "t(8;14), com ativação do MYC e proliferação acelerada",
-   "t(15;17), com fusão PML-RARA e bloqueio da maturação",
-   "t(11;14), com superexpressão da ciclina D1",
-   "t(9;22), com fusão BCR-ABL1 e ativação de tirosina-quinase"
+   "t(2;5), com fusão NPM-ALK, que gera tirosina-quinase ativa",
+   "t(11;18), com fusão API2-MALT1, que ativa a via do NF-κB",
+   "t(8;14), com hiperexpressão de MYC, que acelera a proliferação",
+   "t(11;14), com hiperexpressão de ciclina D1, que acelera o ciclo",
+   "t(14;18), com hiperexpressão de BCL2, que inibe a apoptose"
   ],
-  "correta": 0,
-  "explicacao": "No linfoma folicular, a t(14;18) coloca o gene BCL2 sob o controle do promotor da cadeia pesada de imunoglobulina, levando à superexpressão da proteína BCL2, que bloqueia a apoptose; as células se acumulam mais por sobreviverem do que por proliferarem, o que explica o curso indolente, e o tumor pode transformar-se em linfoma difuso de grandes células B. A t(8;14) com MYC caracteriza o linfoma de Burkitt; a t(11;14) com ciclina D1, o linfoma de células do manto; a t(9;22), a leucemia mieloide crônica; e a t(15;17), a leucemia promielocítica aguda. Para lembrar: BCL2 foi um dos primeiros oncogenes descritos cuja função é impedir a morte celular, e não estimular a divisão.",
+  "correta": 4,
+  "explicacao": "Linfonodomegalia generalizada, indolente e flutuante, com folículos neoplásicos de centrócitos e centroblastos que expressam marcadores de centro germinativo (CD10, BCL6), é o linfoma folicular. A t(14;18) coloca o gene BCL2 sob o promotor da cadeia pesada da imunoglobulina, levando à hiperexpressão de BCL2, proteína antiapoptótica; por isso os folículos neoplásicos são BCL2 positivos, ao contrário dos centros germinativos reativos, que são BCL2 negativos. A t(8;14) com MYC caracteriza o linfoma de Burkitt; a t(11;14) com ciclina D1, o linfoma de células do manto; a t(11;18) com API2-MALT1, o linfoma MALT gástrico resistente à erradicação do H. pylori; a t(2;5) com NPM-ALK, o linfoma anaplásico de grandes células ALK positivo. Para lembrar: o linfoma folicular cresce por \"não morrer\", e não por proliferar rápido — daí o curso indolente.",
   "tema": "linfomas",
   "subtema": "linfomas.linfomas-nao-hodgkin",
   "especialidade": "patologia",
   "disciplina": "Patologia",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-9339332d",
@@ -18073,24 +18111,25 @@
  {
   "id": "med-69ab2fa4",
   "area": "Reumatologia",
-  "enunciado": "Paciente com lúpus eritematoso sistêmico usa hidroxicloroquina há vários anos.\n\nQual acompanhamento específico esse fármaco exige?",
+  "enunciado": "Mulher de 41 anos, com lúpus eritematoso sistêmico há 7 anos (manifestações cutâneas, articulares e serosite, sem nefrite), em remissão, usa hidroxicloroquina 400 mg/dia desde o diagnóstico, além de protetor solar; suspendeu a prednisona há 5 anos. Pesa 60 kg, tem função renal e hepática normais, hemograma normal, e nunca fez nenhum exame além dos de sangue e urina de rotina. Não tem queixas visuais nem auditivas, e a acuidade visual medida na UBS é normal. Na consulta de rotina, pergunta se o medicamento exige algum acompanhamento específico além dos exames de sangue.\n\nQual acompanhamento deve ser feito e por quê?",
   "alternativas": [
-   "Densitometria óssea semestral, pela osteoporose induzida",
-   "Avaliação oftalmológica periódica, pelo risco de retinopatia",
-   "Audiometria mensal, pela ototoxicidade frequente do fármaco",
-   "Espirometria anual, pelo risco de fibrose pulmonar induzida",
-   "Transaminases a cada mês, pelo risco de hepatite fulminante"
+   "Enzimas hepáticas mensais, pelo risco de hepatite medicamentosa",
+   "Densitometria óssea anual, pelo risco de osteoporose induzida",
+   "Exame oftalmológico com OCT e campo visual, pelo risco de retinopatia",
+   "Hemograma mensal, pelo risco de agranulocitose idiossincrásica",
+   "Audiometria semestral, pelo risco de perda auditiva ototóxica"
   ],
-  "correta": 1,
-  "explicacao": "A hidroxicloroquina é recomendada para praticamente todos os pacientes com lúpus, pois reduz atividade e surtos, tem efeito antitrombótico e melhora a sobrevida; seu principal efeito adverso de longo prazo é a retinopatia (maculopatia em \"olho de boi\"), relacionada à dose diária por peso e ao tempo de uso, que pode ser irreversível. Por isso, faz-se avaliação oftalmológica no início e rastreamento anual após alguns anos de uso (mais cedo em quem tem fatores de risco, como doença renal), com exames como tomografia de coerência óptica e campo visual. Hepatotoxicidade grave, fibrose pulmonar, osteoporose e ototoxicidade não são efeitos característicos do fármaco; a osteoporose se associa aos corticoides. Para lembrar: a hidroxicloroquina é o antimalárico que \"protege o lúpus\", mas precisa de olho no olho.",
+  "correta": 2,
+  "explicacao": "A hidroxicloroquina é a base do tratamento do lúpus (reduz surtos, trombose e mortalidade), mas pode causar retinopatia tóxica irreversível, que começa assintomática. Recomenda-se exame oftalmológico no início do tratamento e, a partir de 5 anos de uso, rastreamento anual com tomografia de coerência óptica (OCT) e campo visual automatizado, antes que o paciente perceba perda visual. Essa paciente já passou dos 5 anos de uso e toma 400 mg para 60 kg, isto é, cerca de 6,7 mg/kg/dia, acima do limite de 5 mg/kg/dia do peso real recomendado pela Academia Americana de Oftalmologia — outro fator de risco, assim como doença renal e maculopatia prévia; por isso, além do rastreamento, a dose deve ser reduzida para no máximo 5 mg/kg/dia (300 mg/dia para 60 kg). Agranulocitose, ototoxicidade e hepatotoxicidade são raras e não exigem monitoramento rotineiro; a osteoporose é efeito do corticoide, não da hidroxicloroquina. A lesão avançada tem aspecto em \"olho de boi\" (bull's eye) na mácula.",
   "tema": "lupus-eritematoso-sistemico",
   "subtema": "lupus-eritematoso-sistemico.manifestacoes-clinicas",
   "especialidade": "reumatologia",
   "disciplina": "Reumatologia",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-0409c228",
@@ -18317,16 +18356,16 @@
  {
   "id": "med-824bff6d",
   "area": "Saúde Pública e SUS",
-  "enunciado": "No ciclo urbano da febre amarela, o vírus passa de pessoa a pessoa por um mosquito domiciliar.\n\nQual é esse vetor e qual é a situação desse ciclo no Brasil?",
+  "enunciado": "Em 2018, durante a grande epidemia de febre amarela silvestre no Sudeste, houve casos humanos em moradores de áreas periurbanas de cidades como São Paulo e Rio de Janeiro, onde há alta infestação domiciliar por um mosquito também transmissor de dengue, zika e chikungunya. A imprensa perguntou se a doença estava \"voltando às cidades\".\n\nQual é o vetor do ciclo urbano da febre amarela e qual é a situação desse ciclo no Brasil?",
   "alternativas": [
-   "Sabethes chloropterus; o ciclo urbano é endêmico nas capitais",
-   "Haemagogus janthinomys; houve transmissão urbana no país em 2008",
-   "Culex quinquefasciatus; ocorrem surtos urbanos anuais no Sudeste",
-   "Aedes aegypti; não há casos urbanos registrados no país desde 1942",
-   "Anopheles darlingi; último caso urbano registrado no país em 1999"
+   "Aedes aegypti; ciclo urbano restabelecido no Sudeste do país em 2018",
+   "Culex quinquefasciatus; sem casos urbanos registrados no país desde 1942",
+   "Sabethes chloropterus; sem casos urbanos registrados no país desde 1942",
+   "Haemagogus janthinomys; ciclo urbano restabelecido no país em 2018",
+   "Aedes aegypti; sem casos urbanos registrados no país desde 1942"
   ],
-  "correta": 3,
-  "explicacao": "No ciclo urbano, o vírus é transmitido de pessoa a pessoa pelo Aedes aegypti; no Brasil, não há registro de transmissão urbana desde 1942 (Acre), e os casos humanos recentes, inclusive os grandes surtos de 2016 a 2018 no Sudeste, foram de transmissão silvestre, por Haemagogus e Sabethes, que vivem na copa das árvores e se infectam em primatas não humanos. A presença do Aedes aegypti nas cidades mantém o risco de reurbanização, o que reforça a importância da vacinação e da vigilância de epizootias. Culex e Anopheles não são vetores da febre amarela; o Anopheles transmite malária. Para lembrar: Oswaldo Cruz liderou, no início do século XX, a campanha de combate ao mosquito que reduziu drasticamente a febre amarela no Rio de Janeiro.",
+  "correta": 4,
+  "explicacao": "No ciclo urbano, o vírus da febre amarela passa de pessoa a pessoa pelo Aedes aegypti, mosquito domiciliar que também transmite dengue, zika e chikungunya. No Brasil, os últimos casos de transmissão urbana ocorreram em 1942, em Sena Madureira, no Acre. Os casos de 2017–2018, mesmo próximos a grandes cidades, foram de transmissão silvestre, por Haemagogus e Sabethes, em áreas de mata periurbana — as investigações não demonstraram transmissão pelo Aedes aegypti. O risco de reurbanização, porém, existe, dada a ampla infestação pelo Aedes e a presença de pessoas não vacinadas, o que justifica a vacinação ampla. O Culex quinquefasciatus é o pernilongo comum, vetor de filariose e da febre do Nilo Ocidental, e não da febre amarela. Oswaldo Cruz liderou, no início do século XX, a campanha que eliminou a febre amarela urbana do Rio de Janeiro.",
   "tema": "febre-amarela",
   "subtema": "febre-amarela.ciclos-de-transmissao",
   "especialidade": "saude-publica-sus",
@@ -18334,7 +18373,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-3bdd18e6",
@@ -18361,16 +18401,16 @@
  {
   "id": "med-79ccc7e0",
   "area": "Patologia",
-  "enunciado": "Na necropsia de um paciente que morreu de febre amarela, o exame histológico do fígado mostra, caracteristicamente:",
+  "enunciado": "Homem de 34 anos, trabalhador rural do interior de Minas Gerais, sem registro de vacinação, apresentou febre alta, cefaleia, mialgia e bradicardia relativa. Após melhora de 2 dias, voltou a ter febre, com icterícia, hematêmese, oligúria e sonolência. Exames: AST 8.600 U/L, ALT 6.100 U/L, bilirrubina direta 9,2 mg/dL, INR 4,1 e creatinina 4,8 mg/dL. Morreu no 7º dia de doença, e o serviço de verificação de óbitos colheu fragmentos hepáticos. Na mesma semana, técnicos da vigilância haviam encontrado bugios mortos em mata próxima.\n\nQual achado histológico hepático é o mais característico dessa doença?",
   "alternativas": [
-   "Necrose mediozonal com corpúsculos de Councilman",
    "Necrose periportal em saca-bocado com plasmócitos",
+   "Necrose mediozonal com corpúsculos de Councilman",
    "Necrose centrolobular por congestão passiva crônica",
-   "Esteatose macrovesicular com corpúsculos de Mallory-Denk",
-   "Granulomas epitelioides com necrose caseosa central"
+   "Granulomas epitelioides com necrose caseosa central",
+   "Esteatose macrovesicular com corpúsculos de Mallory-Denk"
   ],
-  "correta": 0,
-  "explicacao": "A lesão hepática típica da febre amarela é a necrose da zona intermediária (zona 2) do ácino, a mediozonal, com relativa preservação das áreas periportais e centrolobulares, esteatose microvesicular e corpúsculos de Councilman: hepatócitos apoptóticos, retraídos e intensamente eosinofílicos. A inflamação costuma ser discreta para a extensão da necrose. A necrose centrolobular por congestão ocorre na insuficiência cardíaca direita; esteatose macrovesicular com corpúsculos de Mallory-Denk sugere doença hepática alcoólica; necrose periportal em saca-bocado com plasmócitos é típica da hepatite autoimune e de hepatites crônicas; granulomas caseosos indicam tuberculose. Para lembrar: William Councilman descreveu esses corpúsculos em 1890, estudando a febre amarela; hoje o termo é usado para os corpos apoptóticos de várias hepatites virais.",
+  "correta": 1,
+  "explicacao": "O quadro bifásico (fase de infecção, remissão e fase toxêmica com icterícia, hemorragia e insuficiência renal), em morador de área rural não vacinado e com epizootia em primatas, é típico de febre amarela grave. A lesão hepática característica é a necrose da zona intermediária do ácino (zona 2, mediozonal), com relativa preservação das áreas periportais e centrolobulares, esteatose microvesicular e corpúsculos de Councilman — hepatócitos apoptóticos, retraídos e intensamente eosinofílicos —, com pouca inflamação para a extensão da necrose. Necrose centrolobular por congestão ocorre na insuficiência cardíaca direita; esteatose macrovesicular com Mallory-Denk sugere doença hepática alcoólica; necrose periportal em saca-bocado com plasmócitos é típica da hepatite autoimune e das hepatites crônicas; granulomas caseosos indicam tuberculose. Para lembrar: William Councilman descreveu esses corpúsculos em 1890, estudando a febre amarela.",
   "tema": "febre-amarela",
   "subtema": "febre-amarela.quadro-clinico",
   "especialidade": "patologia",
@@ -18378,7 +18418,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-ed2de241",
@@ -19116,16 +19157,16 @@
  {
   "id": "med-21b1190c",
   "area": "Semiologia",
-  "enunciado": "Homem de 50 anos, etilista, com dor epigástrica intensa em faixa há 2 dias, apresenta equimose periumbilical e equimoses nos flancos.\n\nComo se denominam esses sinais e o que sugerem?",
+  "enunciado": "Homem de 50 anos, etilista pesado, chega ao pronto-socorro com dor epigástrica intensa em faixa, irradiada para o dorso, há 2 dias, com vômitos. Está taquicárdico (FC 118 bpm), com PA 98 x 60 mmHg, abdome distendido e doloroso. Há equimose azulada ao redor do umbigo e equimoses nos flancos. Lipase sérica 2.400 U/L (referência até 60 U/L); hemoglobina 10,8 g/dL, antes 14 g/dL.\n\nQual mecanismo explica o aparecimento dessas equimoses?",
   "alternativas": [
-   "Rovsing e Lenander; apendicite aguda em posição retrocecal",
-   "Kehr e Jobert; rotura esplênica com pneumoperitônio associado",
-   "Cullen e Grey Turner; hemorragia retroperitoneal por pancreatite grave",
-   "Murphy e Blumberg; peritonite difusa por perfuração de úlcera péptica",
-   "Cullen e Grey Turner; hipertensão portal com circulação colateral"
+   "Coagulação intravascular disseminada com consumo de plaquetas e fatores",
+   "Sangue retroperitoneal que disseca planos fasciais até o subcutâneo",
+   "Plaquetopenia por hiperesplenismo da hipertensão portal alcoólica",
+   "Vasculite cutânea por imunocomplexos liberados pelo pâncreas",
+   "Trauma abdominal fechado não relatado, com contusão da parede"
   ],
-  "correta": 2,
-  "explicacao": "A equimose periumbilical é o sinal de Cullen, e a dos flancos, o sinal de Grey Turner: ambos indicam sangue retroperitoneal que se infiltra pelos planos fasciais até o subcutâneo, como na pancreatite aguda necro-hemorrágica, e são marcadores de gravidade (também aparecem em hemorragia retroperitoneal de outras causas). Murphy e Blumberg são sinais de colecistite e de irritação peritoneal; Kehr é a dor referida no ombro esquerdo e Jobert, o desaparecimento da macicez hepática no pneumoperitônio; Rovsing e Lenander se relacionam à apendicite; e a circulação colateral da hipertensão portal forma veias dilatadas (cabeça de medusa), não equimoses. Para lembrar: Thomas Cullen descreveu seu sinal numa gravidez ectópica rota, e George Grey Turner, na pancreatite aguda.",
+  "correta": 1,
+  "explicacao": "Dor epigástrica em faixa irradiada para o dorso em etilista, com lipase acima de 3 vezes o limite superior, é pancreatite aguda; hipotensão, taquicardia e queda da hemoglobina indicam forma grave, necro-hemorrágica. A equimose periumbilical (sinal de Cullen) e a dos flancos (sinal de Grey Turner) resultam do sangue e do exsudato pancreático retroperitoneal que dissecam os planos fasciais — pelo espaço pararrenal posterior até os flancos e pelo ligamento falciforme e redondo até o umbigo — e chegam ao subcutâneo, em geral 24 a 72 horas após o sangramento. Não são exclusivos da pancreatite: ocorrem também na ruptura de aneurisma de aorta e na gravidez ectópica rota. A coagulação intravascular disseminada causa petéquias e sangramentos difusos, não equimoses localizadas nesses pontos; a plaquetopenia do hiperesplenismo também não se distribui assim; a vasculite por imunocomplexos dá púrpura palpável em membros inferiores; e o trauma deixaria equimose no local do impacto, não num padrão de dissecção retroperitoneal. Para lembrar: Cullen no umbigo, Grey Turner nos flancos — ambos sangue retroperitoneal que chegou à pele.",
   "tema": "abdome-agudo",
   "subtema": "abdome-agudo.abdome-agudo-inflamatorio",
   "especialidade": "semiologia",
@@ -19133,7 +19174,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-124b8efa",
@@ -19847,24 +19889,25 @@
  {
   "id": "med-b7c3938a",
   "area": "Urologia",
-  "enunciado": "Mulher de 55 anos com infecções urinárias de repetição por Proteus mirabilis tem cálculo coraliforme no rim esquerdo, e o pH urinário é 8,0.\n\nQual é a composição mais provável do cálculo?",
+  "enunciado": "Mulher de 55 anos tem infecções urinárias de repetição por Proteus mirabilis há 2 anos. A tomografia mostra cálculo que ocupa a pelve e todos os cálices do rim esquerdo, em aspecto de chifre de veado. Urina tipo I: pH 8,0, leucocitúria e cristais prismáticos em forma de \"tampa de caixão\". Função renal normal. A urologista planeja nefrolitotripsia percutânea.\n\nQual mecanismo explica a formação desse cálculo?",
   "alternativas": [
-   "Fosfato de amônio e magnésio (estruvita)",
-   "Ácido úrico",
-   "Oxalato de cálcio mono-hidratado",
-   "Xantina",
-   "Cistina"
+   "Urease bacteriana que converte ureia em amônia e alcaliniza a urina",
+   "Hipercalciúria por hiperparatireoidismo, com precipitação de oxalato",
+   "Defeito tubular hereditário na reabsorção de aminoácidos dibásicos",
+   "Urina persistentemente ácida, que favorece a precipitação de urato",
+   "Acidose tubular renal distal com hipocitratúria e fosfato de cálcio"
   ],
   "correta": 0,
-  "explicacao": "Bactérias produtoras de urease, como Proteus, Klebsiella e Pseudomonas, hidrolisam a ureia em amônia, alcalinizando a urina e favorecendo a precipitação de fosfato de amônio e magnésio (estruvita, com carbonato-apatita), que cresce rapidamente e molda a pelve e os cálices, formando cálculos coraliformes; o cálculo abriga bactérias e perpetua a infecção, e o tratamento exige remoção completa (em geral por nefrolitotripsia percutânea) além do antibiótico. O oxalato de cálcio é o cálculo mais comum e não depende de infecção; ácido úrico e cistina se formam em urina ácida; e a xantina é rara, ligada a deficiência enzimática ou ao uso de alopurinol.",
+  "explicacao": "Bactérias produtoras de urease, como Proteus mirabilis, Klebsiella e Pseudomonas, hidrolisam a ureia em amônia e gás carbônico; a amônia alcaliniza a urina (pH geralmente acima de 7) e forma amônio, que, com o magnésio e o fosfato, precipita como fosfato de amônio e magnésio (estruvita), muitas vezes com carbonato de cálcio. Os cristais prismáticos em \"tampa de caixão\" são típicos da estruvita. Esses cálculos crescem rápido, moldam-se ao sistema coletor (coraliformes) e abrigam bactérias em seu interior, o que perpetua a infecção — por isso a remoção completa, como na nefrolitotripsia percutânea planejada, é essencial. O hiperparatireoidismo causa cálculos de cálcio sem relação com infecção; o defeito tubular de aminoácidos dibásicos é a cistinúria, com cristais hexagonais; a urina ácida favorece o ácido úrico, radiotransparente; a acidose tubular distal forma cálculos e nefrocalcinose de fosfato de cálcio, sem urease. Para lembrar: a estruvita é o \"cálculo infeccioso\" — sem urease, não há estruvita.",
   "tema": "litiase-urinaria",
   "subtema": null,
   "especialidade": "urologia",
   "disciplina": "Urologia",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-b23b4bcf",
@@ -19913,24 +19956,25 @@
  {
   "id": "med-09dc2f37",
   "area": "Urologia",
-  "enunciado": "A hiperplasia prostática benigna e o adenocarcinoma de próstata se originam, predominantemente, em quais zonas da glândula, respectivamente?",
+  "enunciado": "No ambulatório de urologia, dois pacientes são atendidos na mesma manhã. O primeiro, de 70 anos, tem jato fraco e noctúria há 3 anos; ao toque retal, a próstata está aumentada, fibroelástica e lisa, e o PSA é 3,2 ng/mL. O segundo, de 64 anos, está assintomático, mas o toque mostra nódulo endurecido no lobo esquerdo, e a biópsia confirma adenocarcinoma.\n\nEm quais zonas da próstata essas doenças se originam, predominantemente, e respectivamente?",
   "alternativas": [
+   "Estroma fibromuscular anterior e zona central",
    "Zona central e zona de transição",
-   "Zona periférica e zona central",
    "Zona periférica e zona de transição",
-   "Estroma anterior e zona central",
-   "Zona de transição e zona periférica"
+   "Zona de transição e zona periférica",
+   "Zona de transição e zona central"
   ],
-  "correta": 4,
-  "explicacao": "A hiperplasia prostática benigna nasce na zona de transição, que envolve a uretra prostática, por isso causa sintomas obstrutivos mesmo quando a glândula não é muito volumosa. Cerca de 70% dos adenocarcinomas surgem na zona periférica, posterolateral, que é a região palpável ao toque retal e por isso costuma ser pouco sintomática na fase inicial. A zona central, ao redor dos ductos ejaculatórios, origina poucos tumores, e o estroma fibromuscular anterior não é sede habitual de nenhuma das duas doenças. Para lembrar: a divisão da próstata em zonas foi proposta pelo patologista John McNeal, e explica por que o toque retal detecta o câncer e o jato fraco denuncia a hiperplasia.",
+  "correta": 3,
+  "explicacao": "A hiperplasia prostática benigna origina-se na zona de transição, que circunda a uretra prostática; por isso, mesmo aumentos moderados comprimem a uretra e causam sintomas do trato urinário inferior. O adenocarcinoma de próstata surge em cerca de 70% dos casos na zona periférica, posterolateral, a porção palpável ao toque retal — o que explica o nódulo endurecido e o fato de o câncer inicial costumar ser assintomático, já que está longe da uretra. A zona central, ao redor dos ductos ejaculatórios, dá origem a uma minoria dos cânceres; o estroma fibromuscular anterior não contém glândulas. Para lembrar: a divisão da próstata em zonas foi descrita pelo patologista John McNeal, e a regra é \"HPB no centro (transição), câncer na periferia\".",
   "tema": "doencas-da-prostata",
   "subtema": null,
   "especialidade": "urologia",
   "disciplina": "Urologia",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-47659217",
@@ -20112,38 +20156,39 @@
  {
   "id": "med-b2d68b50",
   "area": "Pediatria Geral",
-  "enunciado": "Lactente nasceu a termo com 3.200 g e vem crescendo de forma adequada, em aleitamento materno.\n\nQual peso aproximado se espera aos 12 meses de idade?",
+  "enunciado": "Lactente nascido a termo com 3.200 g e 50 cm, em aleitamento materno e com alimentação complementar adequada desde os 6 meses, comparece à consulta de 12 meses. Registros da caderneta: aos 5 meses, 6,4 kg; aos 9 meses, 8,7 kg. Hoje pesa 9,6 kg e mede 74 cm, com perímetro cefálico de 46 cm; o desenvolvimento é adequado, a alimentação é variada e ele está ativo, sem doenças no período. A mãe está preocupada porque, nos primeiros meses, ele ganhava cerca de 30 g por dia e agora ganha em torno de 10 g por dia, e pergunta se o crescimento está adequado e se deve reforçar a alimentação.\n\nQual é a interpretação correta?",
   "alternativas": [
-   "Cerca de 16 kg, o quíntuplo do peso de nascimento",
-   "Cerca de 6,4 kg, o dobro do peso de nascimento",
-   "Cerca de 8,0 kg, 2,5 vezes o peso de nascimento",
-   "Cerca de 9,6 kg, o triplo do peso de nascimento",
-   "Cerca de 12,8 kg, o quádruplo do peso de nascimento"
+   "Adequado no peso, mas o comprimento deveria ter dobrado ao longo do 1º ano",
+   "Insuficiente: o ganho de 30 g por dia deveria se manter até os 12 meses",
+   "Insuficiente: o esperado ao fim do 1º ano é quadruplicar o peso de nascimento",
+   "Excessivo: o esperado ao fim do 1º ano é apenas dobrar o peso de nascimento",
+   "Adequado: triplicou o peso e cresceu cerca de 50% no comprimento no 1º ano"
   ],
-  "correta": 3,
-  "explicacao": "Como regra prática, o lactente a termo perde até cerca de 10% do peso na primeira semana e o recupera até o 10º a 15º dia; depois, dobra o peso de nascimento por volta dos 4 a 5 meses, triplica-o com 1 ano e quadruplica-o por volta dos 2 anos. Assim, de 3.200 g espera-se cerca de 9,6 kg aos 12 meses, valor próximo da mediana das curvas da OMS para essa idade. O dobro (6,4 kg) é o esperado aos 4 a 5 meses, e o quádruplo, aos 2 anos. Essas regras servem de estimativa; o acompanhamento deve ser feito pelas curvas de crescimento, observando a trajetória ao longo do tempo.",
+  "correta": 4,
+  "explicacao": "Como regra prática, o lactente dobra o peso de nascimento por volta dos 4–5 meses e o triplica aos 12 meses (3,2 kg x 3 = 9,6 kg), e o comprimento aumenta cerca de 25 cm (cerca de 50%) no primeiro ano — de 50 para cerca de 75 cm. A velocidade de ganho de peso cai fisiologicamente ao longo do ano: cerca de 25–30 g/dia no primeiro trimestre e 10–15 g/dia no último, de modo que a desaceleração relatada é esperada. Os índices entre os escores z −1 e +1 nas curvas da OMS confirmam o crescimento adequado. O peso quadruplica apenas por volta dos 2 anos e meio, e o comprimento dobra por volta dos 4 anos. Para lembrar: peso dobra aos 5 meses, triplica aos 12 e quadruplica aos 24–30 meses.",
   "tema": "puericultura",
   "subtema": "puericultura.crescimento",
   "especialidade": "pediatria-geral",
   "disciplina": "Pediatria Geral",
-  "dificuldade": 1,
+  "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-b80b3a09",
   "area": "Pediatria Geral",
-  "enunciado": "Na consulta de puericultura de 9 meses, qual achado do exame neurológico é anormal e indica necessidade de avaliação?",
+  "enunciado": "Na consulta de puericultura de 9 meses de um lactente nascido a termo, sem intercorrências perinatais, o médico registra os seguintes achados no exame neurológico e do desenvolvimento.\n\nQual deles é anormal para a idade e indica necessidade de avaliação?",
   "alternativas": [
-   "Presença da reação de Landau",
-   "Resposta cutâneo-plantar em extensão",
-   "Presença do reflexo de paraquedas",
-   "Persistência do reflexo de Moro",
-   "Presença do reflexo de preensão plantar"
+   "Reflexo de Moro completo, desencadeado ao se soltar a cabeça",
+   "Resposta plantar em extensão do hálux ao estímulo da planta",
+   "Reação de paraquedas presente ao ser inclinado para a frente",
+   "Transferência de objetos de uma mão para a outra",
+   "Estranhamento e choro diante de pessoas desconhecidas"
   ],
-  "correta": 3,
-  "explicacao": "O reflexo de Moro é um reflexo primitivo presente ao nascer que desaparece por volta dos 4 a 6 meses; sua persistência aos 9 meses sugere lesão do sistema nervoso central e exige avaliação. O reflexo de paraquedas é uma reação postural que surge por volta dos 8 a 9 meses e persiste por toda a vida; a resposta cutâneo-plantar em extensão é normal no lactente até cerca de 1 ano a 18 meses, pela mielinização incompleta do trato corticoespinal; a preensão plantar costuma persistir até perto dos 12 meses, quando a criança começa a andar; e a reação de Landau aparece por volta dos 3 a 4 meses e permanece até o 2º ano. Para lembrar: o reflexo recebe o nome do pediatra austríaco Ernst Moro, que o descreveu em 1918.",
+  "correta": 0,
+  "explicacao": "O reflexo de Moro é um reflexo primitivo presente ao nascimento que deve desaparecer entre 4 e 6 meses; sua persistência aos 9 meses indica falha na maturação do controle cortical e é sinal de alerta para lesão do sistema nervoso central, como a paralisia cerebral. Os demais achados são esperados: a resposta plantar em extensão (sinal de Babinski) pode ser normal até cerca de 12 a 18 meses, enquanto a mielinização da via corticoespinal se completa; a reação de paraquedas é um reflexo de proteção que surge por volta de 8 a 9 meses e persiste por toda a vida; o estranhamento aparece em torno de 8 meses e reflete o reconhecimento da figura de apego; a transferência de objetos entre as mãos surge por volta de 6 a 7 meses. Para lembrar: o Moro foi descrito pelo pediatra austríaco Ernst Moro em 1918.",
   "tema": "puericultura",
   "subtema": "puericultura.desenvolvimento-neuropsicomotor",
   "especialidade": "pediatria-geral",
@@ -20151,7 +20196,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-94e64c97",
@@ -20200,24 +20246,25 @@
  {
   "id": "med-64f282d0",
   "area": "Pediatria Geral",
-  "enunciado": "A mãe de um recém-nascido pergunta por que deve deixar o bebê esvaziar bem uma mama antes de oferecer a outra.\n\nQual é a justificativa correta?",
+  "enunciado": "Recém-nascido de 20 dias, a termo, nasceu com 3.300 g e hoje pesa 3.380 g. Mama em livre demanda, muitas vezes ao dia, e as fezes são líquidas, esverdeadas e explosivas; está ativo e bem hidratado. A mãe conta que, por orientação da avó, troca o bebê de mama a cada 5 minutos \"para as duas mamas produzirem igual\". A observação da mamada mostra pega e posição adequadas.\n\nQual orientação e justificativa são corretas?",
   "alternativas": [
-   "O leite do fim da mamada concentra mais anticorpos IgM",
-   "O esvaziamento completo reduz a secreção de prolactina",
-   "Trocar logo de mama causa hipoglicemia no recém-nascido",
-   "O leite do início da mamada é o mais rico em gordura",
-   "O leite do fim da mamada é mais rico em gordura e calorias"
+   "Complementar com fórmula após as mamadas, pois o leite materno está insuficiente",
+   "Esvaziar bem uma mama antes da outra, pois o leite final concentra mais lactose",
+   "Esvaziar bem uma mama antes da outra, pois o leite final é mais rico em gordura",
+   "Manter a troca a cada 5 minutos, pois o estímulo alternado aumenta o volume de leite",
+   "Esvaziar bem uma mama antes da outra, pois o leite inicial concentra mais gordura"
   ],
-  "correta": 4,
-  "explicacao": "A composição do leite muda ao longo da mamada: o leite anterior, do início, é mais rico em água e lactose e mata a sede; o posterior, do fim, tem teor de gordura bem maior, é mais calórico e promove saciedade e ganho de peso. Trocar de mama antes de esvaziá-la pode fazer o bebê receber mais leite anterior, com menor ganho de peso e mais cólicas. Além disso, o esvaziamento estimula a produção, porque o leite acumulado contém um fator inibidor local da lactação; ele não reduz a prolactina. O principal anticorpo do leite é a IgA secretora, não a IgM, e a troca precoce de mama não causa hipoglicemia. A orientação é deixar o bebê mamar na primeira mama até soltá-la espontaneamente e depois oferecer a outra.",
+  "correta": 2,
+  "explicacao": "O ganho ponderal está baixo: o bebê recuperou pouco além do peso de nascimento em 20 dias, quando o esperado é recuperá-lo até cerca de 10–15 dias e depois ganhar 20–30 g/dia. Trocar de mama a cada poucos minutos faz a criança receber sobretudo o leite anterior, mais aquoso e rico em lactose, e pouco do leite posterior, mais rico em gordura e calorias; o resultado é saciedade curta, mamadas muito frequentes, fezes explosivas pela sobrecarga de lactose e ganho de peso insuficiente. A conduta é deixar o bebê esvaziar bem uma mama antes de oferecer a outra, sem tempo fixo. Complementar com fórmula não se justifica com pega adequada e causa corrigível. A lactose é mais abundante no leite anterior, e não no final. Para lembrar: o leite do início \"mata a sede\" e o do fim \"mata a fome\".",
   "tema": "aleitamento-materno",
   "subtema": "aleitamento-materno.tecnica-e-manejo",
   "especialidade": "pediatria-geral",
   "disciplina": "Pediatria Geral",
-  "dificuldade": 2,
+  "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-5d630c3e",
@@ -20266,24 +20313,25 @@
  {
   "id": "med-70534060",
   "area": "Saúde Pública e SUS",
-  "enunciado": "Na sala de vacinação de uma UBS, o registro de temperatura mostra que a câmara refrigerada chegou a valores negativos durante a noite.\n\nQual grupo de vacinas é mais danificado pelo congelamento?",
+  "enunciado": "Na segunda-feira de manhã, a técnica de enfermagem da sala de vacinação de uma UBS verifica no registrador de temperatura que a câmara refrigerada, programada para manter +2 °C a +8 °C, ficou entre −3 °C e −1 °C durante 6 horas no fim de semana, por falha do termostato. Havia no equipamento vacinas de vários tipos, e a equipe separa os frascos para avaliação com a coordenação de imunizações.\n\nQual grupo de vacinas é o mais danificado pelo congelamento?",
   "alternativas": [
-   "Diluentes das vacinas liofilizadas",
-   "Vacina oral contra poliomielite",
-   "Vacinas inativadas adsorvidas em sais de alumínio",
-   "Vacinas virais vivas liofilizadas",
-   "Nenhuma, pois todas toleram congelamento"
+   "Inativadas adsorvidas em alumínio, como hepatite B e pentavalente",
+   "Bacteriana atenuada liofilizada, como a BCG intradérmica",
+   "Apenas os frascos multidose já abertos, qualquer que seja o tipo",
+   "Virais atenuadas liofilizadas, como tríplice viral e febre amarela",
+   "Apenas os diluentes, que devem ser descartados e substituídos"
   ],
-  "correta": 2,
-  "explicacao": "Na sala de vacinação, os imunobiológicos devem ser mantidos entre +2 °C e +8 °C. As vacinas com adjuvante de alumínio (como pentavalente, DTP, dT, dTpa, hepatite B, pneumocócica conjugada e HPV) perdem potência de forma irreversível se congeladas: o adjuvante se aglomera e precipita, e a vacina pode causar mais reações locais; por isso, qualquer exposição a temperatura negativa exige comunicar a coordenação e não usar o lote até avaliação. As vacinas virais vivas liofilizadas e a vacina oral contra poliomielite toleram congelamento (a VOP chega a ser armazenada congelada nas instâncias centrais), e os diluentes não são o problema principal; a afirmação de que todas toleram congelamento é falsa.",
+  "correta": 0,
+  "explicacao": "As vacinas inativadas que contêm adjuvante de sais de alumínio — hepatite B, pentavalente, DTP, dT, dTpa, HPV e várias conjugadas, entre outras — são as mais sensíveis ao congelamento: o gel de alumínio se desestrutura, o antígeno se separa do adjuvante e forma aglomerados, com perda irreversível da potência e maior risco de reações locais. Vacinas virais atenuadas liofilizadas, como tríplice viral e febre amarela, toleram temperaturas negativas e são mais sensíveis ao calor e à luz. A BCG liofilizada também é mais vulnerável ao calor e à luz. Qualquer desvio de temperatura deve ser registrado e comunicado à coordenação, e as vacinas ficam suspensas até a avaliação da instância responsável, e não descartadas por conta própria. Para lembrar: o \"teste da agitação\" (shake test) ajuda a identificar vacinas adsorvidas congeladas, que sedimentam mais rápido que um frasco controle.",
   "tema": "imunizacoes",
   "subtema": "imunizacoes.tipos-de-vacinas",
   "especialidade": "saude-publica-sus",
   "disciplina": "Saúde Pública e SUS",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-16060232",
@@ -20399,24 +20447,25 @@
  {
   "id": "med-5d060f8f",
   "area": "Pediatria Geral",
-  "enunciado": "Na radiografia cervical em incidência anteroposterior de criança com crupe viral, observa-se estreitamento subglótico afilado da coluna aérea traqueal.\n\nComo se chama esse sinal?",
+  "enunciado": "Menina de 18 meses, com vacinação completa para a idade, é levada ao pronto-socorro com estridor inspiratório. A mãe relata coriza há 2 dias e tosse ladrante que começou na noite anterior, sem engasgo prévio com alimentos ou objetos. A criança está febril (38,2 °C), sem salivação, aceita líquidos e prefere ficar no colo; não há sinais de toxemia. O residente pede radiografia cervical, que mostra, na incidência anteroposterior, estreitamento afilado e progressivo da coluna aérea logo abaixo das cordas vocais; na incidência lateral, a epiglote tem espessura normal.\n\nQual é o nome do sinal descrito e qual diagnóstico ele favorece?",
   "alternativas": [
-   "Sinal do polegar",
-   "Sinal da vela de barco",
-   "Sinal do crescente aéreo",
-   "Sinal da silhueta",
-   "Sinal da torre de igreja"
+   "Sinal do polegar, que favorece epiglotite por H. influenzae b",
+   "Sinal da torre de igreja, que favorece laringotraqueobronquite viral",
+   "Sinal do polegar, que favorece laringotraqueobronquite viral",
+   "Sinal da vela de barco, que favorece abscesso retrofaríngeo",
+   "Sinal da torre de igreja, que favorece epiglotite por H. influenzae b"
   ],
-  "correta": 4,
-  "explicacao": "No crupe, o edema da região subglótica afila a coluna aérea logo abaixo das pregas vocais, dando o aspecto de torre de igreja ou de ponta de lápis na incidência anteroposterior; a radiografia, porém, não é necessária de rotina, pois o diagnóstico é clínico, e serve para afastar outras causas em casos atípicos. O sinal do polegar é a epiglote edemaciada na incidência lateral, típico da epiglotite; o sinal da vela de barco é a imagem normal do timo no lactente; o crescente aéreo aparece em cavidades pulmonares com bola fúngica; e o sinal da silhueta é o apagamento de contornos por consolidação adjacente. Para lembrar: o estreitamento ocorre na subglote porque ali está a cartilagem cricoide, único anel cartilaginoso completo da via aérea, que não se expande com o edema.",
+  "correta": 1,
+  "explicacao": "O estreitamento subglótico em forma afilada, em \"V\" invertido, visto na incidência anteroposterior, é o sinal da torre de igreja (ou da ponta de lápis), típico do crupe viral, cuja inflamação atinge a região subglótica. O sinal do polegar é a epiglote edemaciada vista na radiografia lateral, característico da epiglotite — aqui a epiglote é normal. O sinal da vela de barco é a sombra normal do timo em lactentes na radiografia de tórax, sem relação com abscesso retrofaríngeo, que se mostra como alargamento do espaço pré-vertebral na incidência lateral. Vale lembrar que o diagnóstico de crupe é clínico, e a radiografia só se justifica quando há dúvida diagnóstica; na suspeita de epiglotite, não se deve deixar a criança sozinha na radiologia nem manipular a orofaringe.",
   "tema": "laringotraqueobronquite-viral",
   "subtema": "laringotraqueobronquite-viral.diagnostico-diferencial",
   "especialidade": "pediatria-geral",
   "disciplina": "Pediatria Geral",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-6b4bc6d5",
@@ -20798,24 +20847,25 @@
  {
   "id": "med-e4352c0f",
   "area": "Pediatria Geral",
-  "enunciado": "Durante uma aula sobre vômitos no lactente, o professor pede aos alunos o perfil epidemiológico mais típico da estenose hipertrófica do piloro.\n\nQual é esse perfil?",
+  "enunciado": "No pronto-socorro pediátrico, cinco lactentes são avaliados por vômitos. Todos nasceram a termo e não têm distensão abdominal importante.\n\nQual deles tem o quadro mais típico de estenose hipertrófica do piloro?",
   "alternativas": [
-   "Menino com síndrome de Down, com vômitos biliosos logo ao nascer",
-   "Lactente de 6 a 12 meses, com início após a introdução alimentar",
-   "Menina prematura, com vômitos desde as primeiras 24 horas de vida",
-   "Menino, muitas vezes primogênito, com início entre 3 e 6 semanas de vida",
-   "Criança de qualquer sexo, com início típico após os 4 meses de idade"
+   "Menino primogênito de 4 semanas, vômitos em jato não biliosos e fome logo após",
+   "Menina de 2 meses, regurgitações sem esforço após mamadas, feliz e ganhando peso bem",
+   "Menina de 3 dias, vômitos biliosos desde as primeiras mamadas e sem eliminar mecônio",
+   "Menino de 10 dias, vômitos biliosos súbitos, antes com boa aceitação e evacuações normais",
+   "Menino de 8 meses, vômitos, choro intermitente com palidez e fezes em geleia de framboesa"
   ],
-  "correta": 3,
-  "explicacao": "A estenose hipertrófica do piloro é cerca de quatro vezes mais comum em meninos, frequentemente primogênitos, e costuma começar entre 3 e 6 semanas de vida (raramente antes de 2 semanas ou depois de 3 meses), com vômitos em jato, não biliosos, e fome logo após vomitar. Há agregação familiar e associação com uso precoce de macrolídeos. Vômitos desde o primeiro dia não combinam com a hipertrofia progressiva do músculo pilórico. Início após a introdução alimentar ou após os 4 meses sugere outras causas. Vômitos biliosos ao nascer em criança com síndrome de Down lembram atresia duodenal (sinal da dupla bolha). Para lembrar: Harald Hirschsprung, o mesmo do megacólon, publicou em 1888 uma descrição clássica da estenose pilórica congênita.",
+  "correta": 0,
+  "explicacao": "A estenose hipertrófica do piloro predomina no sexo masculino (cerca de 4 meninos para cada menina), é mais frequente em primogênitos e se manifesta tipicamente entre a 3ª e a 6ª semana de vida, com vômitos em jato, progressivos e não biliosos (a obstrução é proximal à papila duodenal), e um lactente faminto logo após vomitar; o uso de macrolídeos nas primeiras semanas aumenta o risco. Vômitos biliosos nos primeiros dias com retardo na eliminação de mecônio sugerem obstrução intestinal congênita, como atresia ou doença de Hirschsprung. Vômitos com cólica e fezes em geleia de framboesa aos 8 meses são invaginação intestinal. Regurgitação sem esforço em lactente que ganha peso é refluxo fisiológico. Vômito bilioso súbito em neonato antes saudável é má rotação com volvo até prova em contrário, uma emergência cirúrgica.",
   "tema": "estenose-hipertrofica-do-piloro",
   "subtema": "estenose-hipertrofica-do-piloro.quadro-clinico",
   "especialidade": "pediatria-geral",
   "disciplina": "Pediatria Geral",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-9bc86e19",
