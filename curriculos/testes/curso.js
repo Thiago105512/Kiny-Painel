@@ -28,9 +28,9 @@ let falhas = 0; const ok = (c, m) => { console.log((c ? '  ✓ ' : '  ✗ ') + m
   await p.fill('#nn-nome', 'P2'); await p.fill('#nn-valor', '6'); await p.fill('#nn-peso', '2'); await p.click('form[data-form="nota-nova"] button'); await p.waitForTimeout(150);
   ok(await p.evaluate(() => mediaDe('ibf074')) === 6.83, 'média ponderada (8,5×1 + 6×2)/3 = 6,83');
   await p.click('[data-act="falta"][data-n="1"]'); await p.click('[data-act="falta"][data-n="1"]'); await p.waitForTimeout(100);
-  ok(await p.evaluate(() => acad().disc.ibf074.faltas) === 2, 'faltas contadas');
+  ok(await p.evaluate(() => discDe('ibf074').faltas) === 2, 'faltas contadas');
   await go('#/curso/disciplinas'); await p.selectOption('select[data-i="ibm624"]', 'reprovada'); await p.waitForTimeout(150);
-  ok(await p.evaluate(() => acad().disc.ibm624.sit) === 'reprovada', 'situação escolhida é salva');
+  ok(await p.evaluate(() => discDe('ibm624').sit) === 'reprovada', 'situação escolhida é salva');
   console.log('3) Prova com revisão automática');
   await go('#/curso/d/ibp603'); await p.click('[data-act="aval-nova"]'); await p.waitForTimeout(150);
   const data = await p.evaluate(() => somaDias(hoje(), 6)); await p.fill('#av-data', data); await p.fill('#av-tit', '1ª prova de micro');
@@ -51,7 +51,7 @@ let falhas = 0; const ok = (c, m) => { console.log((c ? '  ✓ ' : '  ✗ ') + m
   const hl = await p.evaluate(() => HIST.linhas.map(l => [l.codigo, l.media, l.sit, l.sem]));
   ok(JSON.stringify(hl) === JSON.stringify([['DPM001', 8.7, 'concluida', '2024/1'], ['IBF060', null, 'dispensada', '2024/2'], ['IBM067', 4.2, 'reprovada', '2024/2']]), 'histórico interpretado: ' + JSON.stringify(hl));
   await p.click('[data-act="hist-aplicar"]'); await p.waitForTimeout(150);
-  ok(await p.evaluate(() => acad().disc.ibm067.sit === 'reprovada' && mediaDe('dpm001') === 8.7), 'histórico aplicado');
+  ok(await p.evaluate(() => discDe('ibm067').sit === 'reprovada' && mediaDe('dpm001') === 8.7), 'histórico aplicado');
   console.log('5) Ajuda sem IA');
   await go('#/curso/ajuda'); ok(/assistente de IA/.test(await txt()), 'sem IA, a página explica que precisa do link do Claude');
   await p.screenshot({ path: process.env.SHOT || '/tmp/curso.png', fullPage: false });

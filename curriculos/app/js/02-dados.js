@@ -43,6 +43,8 @@ const temaPorNome = (() => {
   return nome => idx[norm(nome)] || null;
 })();
 const nomeTema = id => TEMAS[id]?.nome || id || "—";
+/** Id do subtema. Aceita o nome (questões antigas, criadas pela IA ou importadas) e devolve o id do catálogo. */
+const idSubtema = (tid, s) => { if (!s) return null; const subs = TEMAS[tid]?.subtemas || []; return subs.some(x => x.id === s) ? s : subs.find(x => norm(x.nome) === norm(s))?.id || s; };
 const nomeSubtema = (tid, sid) => (TEMAS[tid]?.subtemas || []).find(s => s.id === sid)?.nome || null;
 const espPorNome = nome => Object.values(ESPECIALIDADES).find(e => norm(e.nome) === norm(nome))?.id || null;
 
@@ -54,7 +56,7 @@ const nomeAreaEnem = id => AREA_CURTA[id] || ENEM_AREAS.find(a => a.id === id)?.
 const areaEnemDe = q => TEMAS[q.tema]?.area || Object.values(ENEM_DISC).find(d => norm(d.nome) === norm(q.disciplina ?? q.disc ?? q.area ?? ""))?.area || null;
 const normQuestao = (q, t, src = "banco") => ({
   id: q.id, t, a: q.area || q.a || "Geral", q: q.enunciado ?? q.q, o: q.alternativas ?? q.o, c: q.correta ?? q.c, e: q.explicacao ?? q.e ?? "",
-  tema: q.tema ?? null, subtema: q.subtema ?? null, esp: q.especialidade ?? q.esp ?? null,
+  tema: q.tema ?? null, subtema: idSubtema(q.tema, q.subtema ?? null), esp: q.especialidade ?? q.esp ?? null,
   disc: q.disciplina ?? q.disc ?? q.area ?? q.a ?? null, dif: q.dificuldade ?? q.dif ?? null,
   fonte: q.fonte ?? (src === "banco" ? "autoral" : src), ano: q.ano ?? null, prova: q.prova ?? null, src,
   ae: q.areaEnem ?? q.ae ?? (t === "enem" ? areaEnemDe(q) : null),

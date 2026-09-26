@@ -7,3 +7,4 @@
 
 - Caso do dia fácil demais: RESOLVIDO (set/2026) — teste às cegas mostrou 89/120 casos resolvidos com 2 pistas (confiança alta); pistas reescritas e revisadas por médico; reteste: 20/89 ainda altos (≈17% do total), 54 médios, 15 baixos. Pistas ≤170 caracteres.
 - Enunciados curtos (<200 car.): AUDITADO (set/2026) — 48 questões: 31 conceituais mantidas; 17 reescritas em vinhetas (8 dependiam de outra questão, ex.: 'na mesma comunidade…'), verificadas às cegas 17/17. Build agora recusa subtema fora do tema.
+- Revisão completa (set/2026, aluna+professor+administrador): corrigidos G1–G3, M1–M14 e leves; ver commits de 26/09. Pendentes: M15 (Direito/OAB sem catálogo de temas e primeiros passos), M16 (OAB/Direito/ENEM com a correta mais longa em 31–47% — rebalancear como foi feito em Medicina), validar_base.py/cobertura.py ainda esperam nome de subtema no ENEM, internato UFAM com período incerto (a aluna marca), hifenização conferir no Android real.

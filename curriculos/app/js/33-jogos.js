@@ -63,7 +63,7 @@ function montarRodadas(id) {
 }
 
 function iniciarJogo(id) {
-  pararRelogio();
+  pararRelogio(); document.querySelectorAll(".toast").forEach(t => t.remove());   // aviso da partida anterior não passa para a nova
   Object.assign(JG, { id, rodadas: montarRodadas(id), i: 0, pontos: 0, acertos: 0, erros: 0, seq: 0, melhorSeq: 0, vidas: 3, resp: null, fim: false, recorde: false, t0: Date.now(), tq: Date.now(), errados: [] });
   if (id === "relogio") { JG.ate = Date.now() + TEMPO_RELOGIO * 1000; _jgTimer = setInterval(tiqueRelogio, 250); }
   atualizar();
@@ -75,8 +75,20 @@ function tiqueRelogio() {
   if (el) { el.textContent = resta + " s"; el.classList.toggle("pouco", resta <= 10); }
   if (resta <= 0) terminarJogo();
 }
+/** A partida teve jogada de verdade? (resposta, acerto, erro, pista pedida, tentativa, passo…) */
+function jogouAlgo() {
+  if (JG.acertos + JG.erros > 0 || JG.pontos > 0 || JG.resp != null || JG.errados?.length) return true;
+  return (JG.rodadas || []).some(r => r && (r.resp != null || r.fim || r.ok || r.errados?.length || r.tent?.length || r.hist?.length || r.feitos?.length
+    || r.tocados?.length || r.feitas?.length || r.palpites?.length || r.achadas?.length || r.erros > 0));
+}
 function terminarJogo() {
-  pararRelogio(); if (JG.fim) return; JG.fim = true;
+  pararRelogio(); if (JG.fim) return;
+  // "Encerrar jogo" sem jogar nada não conta partida, XP, missão nem conquista: volta para a abertura do jogo.
+  if (!jogouAlgo()) {
+    if (typeof DEF !== "undefined") clearTimeout(DEF.timer);
+    JG.id = null; JG.rodadas = []; toast("Partida encerrada sem jogadas: não vale pontos nem XP."); atualizar(); return;
+  }
+  JG.fim = true;
   const D = store.doc("jogos"); D.n[JG.id] = (D.n[JG.id] || 0) + 1;
   if (JG.pontos > 0 && JG.pontos > (D.rec[JG.id] || 0)) { JG.recorde = (D.rec[JG.id] || 0) > 0 ? "novo" : "primeiro"; D.rec[JG.id] = JG.pontos; }
   store.mudou("jogos");
@@ -99,7 +111,7 @@ function proximaRodada() {
 
 /* ---------- Telas ---------- */
 const placar = () => `<div class="jg-placar">
-  <span><b>${JG.pontos}</b> pontos</span>
+  <span><b>${JG.pontos}</b> ${JG.pontos === 1 ? "ponto" : "pontos"}</span>
   ${JG.id === "relogio" ? `<span id="jg-tempo" class="jg-tempo">${Math.max(0, Math.ceil((JG.ate - Date.now()) / 1000))} s</span>` : `<span>${Math.min(JG.i + 1, JG.rodadas.length)} de ${JG.rodadas.length}</span>`}
   ${JG.id === "vidas" ? `<span class="jg-vidas" aria-label="${JG.vidas} vidas">${[0, 1, 2].map(k => ilustra("coracao", k < JG.vidas ? "#C0265F" : "#9AA0A8", "p")).join("")}</span>` : ""}
   ${JG.seq >= 3 ? `<span class="jg-seq">${JG.seq} seguidos${JG.id === "relogio" ? ` · x${multiplicador()}` : ""}</span>` : ""}</div>`;
@@ -147,10 +159,10 @@ function telaFim(j) {
   const D = store.doc("jogos"), rec = D.rec[j.id] || 0;
   const msg = JG.recorde === "novo" ? "Novo recorde!" : JG.recorde === "primeiro" ? "Primeiro recorde registrado!" : JG.acertos ? "Fim de jogo" : "Fim de jogo — bora de novo?";
   return `<div class="caixa jg-fim" id="jg-fim" style="--h:${j.cor}"><h2 class="sec com-ilu" style="gap:10px">${mascote(JG.recorde ? "festa" : JG.acertos ? "feliz" : "triste", 88)}${msg}</h2>${j.resumoFim ? j.resumoFim() : ""}
-    <div class="kpis"><div class="kpi"><b>${JG.pontos}</b><span>pontos</span></div><div class="kpi"><b>${JG.acertos}</b><span>acertos</span></div>
+    <div class="kpis"><div class="kpi"><b>${JG.pontos}</b><span>${JG.pontos === 1 ? "ponto" : "pontos"}</span></div><div class="kpi"><b>${JG.acertos}</b><span>${JG.acertos === 1 ? "acerto" : "acertos"}</span></div>
     <div class="kpi"><b>${JG.melhorSeq}</b><span>melhor sequência</span></div><div class="kpi"><b>${rec}</b><span>seu recorde</span></div></div>
     <div class="acoes"><button class="btn grande" data-act="jg-comecar" data-id="${j.id}">Jogar de novo</button>
-    ${JG.errados.length ? `<button class="btn sec" data-act="praticar-ids" data-ids="${JG.errados.join(",")}" data-ctx="erros do jogo">Rever as ${JG.errados.length} que errei</button>` : ""}
+    ${JG.errados.length ? `<button class="btn sec" data-act="praticar-ids" data-ids="${JG.errados.join(",")}" data-ctx="erros do jogo">${JG.errados.length === 1 ? "Rever a que errei" : `Rever as ${JG.errados.length} que errei`}</button>` : ""}
     <a class="btn sec" href="#/jogos">Outros jogos</a></div></div>`;
 }
 
@@ -162,14 +174,14 @@ rota("/jogos", () => {
       ${lista.some(j => j.diario) ? `<section><h2 class="sec">Desafios de hoje</h2><div class="jg-hoje">${lista.filter(j => j.diario).map(j => { const feito = j.diario();
         return `<a class="jg-desafio ${feito ? "feito" : ""}" href="#/jogos/${j.id}" style="--h:${j.cor}">${ilustra(j.arte, j.cor, "g")}<b>${esc(j.nome)}</b><span class="pill ${feito ? "ok" : "warn"}">${feito ? "✓ Feito hoje" : "Novo hoje"}</span></a>`; }).join("")}</div></section>` : ""}
       ${GRUPOS_JOGOS.map(([g, tit, sub]) => { const js = lista.filter(j => !j.diario && (GRUPO_JOGO[j.id] || "rapidos") === g); return js.length ? `<section><h2 class="sec">${tit}</h2><p class="muted" style="margin:-4px 0 10px">${sub}</p><div class="jg-lista">${js.map(j => `<a class="jg-cartao" href="#/jogos/${j.id}" style="--h:${j.cor}">${ilustra(j.arte, j.cor, "g")}<div>
-      <b>${esc(j.nome)}</b><small>${esc(j.curto || j.desc)}</small>${D.rec[j.id] ? `<span class="pill">Recorde: ${D.rec[j.id]} pontos</span>` : ""}</div></a>`).join("")}</div></section>` : ""; }).join("")}` };
+      <b>${esc(j.nome)}</b><small>${esc(j.curto || j.desc)}</small>${D.rec[j.id] ? `<span class="pill">Recorde: ${plural(D.rec[j.id], "ponto", "pontos")}</span>` : ""}</div></a>`).join("")}</div></section>` : ""; }).join("")}` };
 });
 rota("/jogos/:id", ({ id }) => {
   const j = JOGOS.find(x => x.id === id); if (!j || !jogoDisponivel(j)) return paginaNaoEncontrada();
   const base = { secao: "jogos", crumbs: [["Jogos", "#/jogos"]], titulo: j.nome, ilu: ilustra(j.arte, j.cor, "g"), cor: j.cor };
   if (JG.id !== id || !JG.rodadas?.length) {
     const rec = store.doc("jogos").rec[id];
-    return { ...base, sub: esc(j.desc), html: `<div class="caixa jg-intro">${falaMascote(esc(j.fala || "Bora jogar? Cada acerto vale XP na sua jornada."), "feliz")}${rec ? `<p><b>Seu recorde:</b> ${rec} pontos</p>` : ""}
+    return { ...base, sub: esc(j.desc), html: `<div class="caixa jg-intro">${falaMascote(esc(j.fala || "Bora jogar? Cada acerto vale XP na sua jornada."), "feliz")}${rec ? `<p><b>Seu recorde:</b> ${plural(rec, "ponto", "pontos")}</p>` : ""}
       ${j.intro ? j.intro() : `<button class="btn grande" data-act="jg-comecar" data-id="${id}">Começar</button>`}</div>` };
   }
   if (JG.fim) return { ...base, html: telaFim(j) };
@@ -179,9 +191,11 @@ rota("/jogos/:id", ({ id }) => {
 });
 
 /* ---------- Ações ---------- */
-ACOES["jg-comecar"] = el => { iniciarJogo(el.dataset.id); if (!location.hash.startsWith("#/jogos/" + el.dataset.id)) ir("#/jogos/" + el.dataset.id); };
+/** Depois de mostrar uma rodada nova, o jogo pode ajustar a tela (ex.: Termo rola até a grade e o teclado). */
+const aoMostrarJogo = () => { const j = JOGOS.find(x => x.id === JG.id); if (j?.aoMostrar && !JG.fim) setTimeout(j.aoMostrar, 0); };
+ACOES["jg-comecar"] = el => { iniciarJogo(el.dataset.id); if (!location.hash.startsWith("#/jogos/" + el.dataset.id)) ir("#/jogos/" + el.dataset.id); aoMostrarJogo(); };
 ACOES["jg-parar"] = () => terminarJogo();
-ACOES["jg-prox"] = () => proximaRodada();
+ACOES["jg-prox"] = () => { proximaRodada(); aoMostrarJogo(); };
 ACOES["jg-alt"] = el => {
   if (JG.resp != null || JG.fim) return;
   const r = JG.rodadas[JG.i], q = qPorId(r.qid), i = +el.dataset.i, ok = i === q.c;

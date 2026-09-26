@@ -957,7 +957,7 @@
   {
    "numero": 9,
    "nome": "Internato — estágios obrigatórios",
-   "obs": "O documento lista os estágios sem indicar o período de cada um.",
+   "obs": "O documento lista os estágios do internato sem indicar o período de cada um (o agrupamento aqui é só para organizar; não é o período real).",
    "itens": [
     {
      "id": "ecm001",
@@ -971,7 +971,8 @@
      "chExtensao": 90,
      "prerequisitos": [],
      "temas": [],
-     "unidades": []
+     "unidades": [],
+     "periodoIncerto": true
     },
     {
      "id": "ecm002",
@@ -985,7 +986,8 @@
      "chExtensao": 90,
      "prerequisitos": [],
      "temas": [],
-     "unidades": []
+     "unidades": [],
+     "periodoIncerto": true
     },
     {
      "id": "ecm003",
@@ -999,7 +1001,8 @@
      "chExtensao": 90,
      "prerequisitos": [],
      "temas": [],
-     "unidades": []
+     "unidades": [],
+     "periodoIncerto": true
     },
     {
      "id": "ecm004",
@@ -1013,7 +1016,8 @@
      "chExtensao": 90,
      "prerequisitos": [],
      "temas": [],
-     "unidades": []
+     "unidades": [],
+     "periodoIncerto": true
     },
     {
      "id": "ecm005",
@@ -1027,7 +1031,8 @@
      "chExtensao": 90,
      "prerequisitos": [],
      "temas": [],
-     "unidades": []
+     "unidades": [],
+     "periodoIncerto": true
     },
     {
      "id": "ecm006",
@@ -1041,7 +1046,8 @@
      "chExtensao": 30,
      "prerequisitos": [],
      "temas": [],
-     "unidades": []
+     "unidades": [],
+     "periodoIncerto": true
     },
     {
      "id": "ecm007",
@@ -1055,7 +1061,8 @@
      "chExtensao": 30,
      "prerequisitos": [],
      "temas": [],
-     "unidades": []
+     "unidades": [],
+     "periodoIncerto": true
     },
     {
      "id": "ecm008",
@@ -1069,7 +1076,8 @@
      "chExtensao": 30,
      "prerequisitos": [],
      "temas": [],
-     "unidades": []
+     "unidades": [],
+     "periodoIncerto": true
     },
     {
      "id": "ecm009",
@@ -1083,7 +1091,8 @@
      "chExtensao": 30,
      "prerequisitos": [],
      "temas": [],
-     "unidades": []
+     "unidades": [],
+     "periodoIncerto": true
     },
     {
      "id": "ecm010",
@@ -1097,7 +1106,8 @@
      "chExtensao": 90,
      "prerequisitos": [],
      "temas": [],
-     "unidades": []
+     "unidades": [],
+     "periodoIncerto": true
     },
     {
      "id": "ecm011",
@@ -1111,7 +1121,8 @@
      "chExtensao": 15,
      "prerequisitos": [],
      "temas": [],
-     "unidades": []
+     "unidades": [],
+     "periodoIncerto": true
     },
     {
      "id": "ecm012",
@@ -1125,9 +1136,11 @@
      "chExtensao": 75,
      "prerequisitos": [],
      "temas": [],
-     "unidades": []
+     "unidades": [],
+     "periodoIncerto": true
     }
-   ]
+   ],
+   "periodoIncerto": true
   },
   {
    "numero": 0,

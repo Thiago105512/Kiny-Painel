@@ -57,6 +57,41 @@ let falhas = 0; const ok = (c, m) => { console.log((c ? '  ✓ ' : '  ✗ ') + m
   console.log('6) XP pelos jogos');
   r = await p.evaluate(() => { const antes = docJornada().xp; terminarJogo(); return docJornada().xp - antes; });
   ok(r >= 8, 'fim de jogo dá XP (' + r + ')');
+  console.log('7) Encerrar sem jogar não vale nada (M9)');
+  for (const id of ['vf', 'triagem', 'milhao']) {
+    await p.goto(URL + '#/jogos/' + id); await p.waitForTimeout(250); await p.evaluate(() => document.querySelectorAll('.folha').forEach(() => fecharFolha()));
+    const antes = await p.evaluate(id => { const J = docJornada(), D = store.doc('jogos'); return { xp: J.xp, dia: J.dia.jogos, cont: J.cont.jogos || 0, n: D.n[id] || 0, conq: Object.keys(J.conq).length }; }, id);
+    await p.click('[data-act="jg-comecar"]'); await p.waitForTimeout(150);
+    await p.click(id === 'milhao' ? '[data-act="ml-parar"]' : '[data-act="jg-parar"]'); await p.waitForTimeout(150);
+    const depois = await p.evaluate(id => { const J = docJornada(), D = store.doc('jogos'); return { xp: J.xp, dia: J.dia.jogos, cont: J.cont.jogos || 0, n: D.n[id] || 0, conq: Object.keys(J.conq).length, jg: JG.id, intro: !!document.querySelector('[data-act="jg-comecar"]') }; }, id);
+    ok(JSON.stringify({ ...antes }) === JSON.stringify({ xp: depois.xp, dia: depois.dia, cont: depois.cont, n: depois.n, conq: depois.conq }) && depois.jg === null && depois.intro,
+      `${id}: encerrar logo depois de começar não dá XP, partida, missão nem conquista e volta à abertura`);
+  }
+  r = await p.evaluate(() => { iniciarJogo('vf'); const q = JG.rodadas[0]; JG.resp = true; pontuar(q.verdade); const J = docJornada(), a = J.dia.jogos; terminarJogo(); return docJornada().dia.jogos - a; });
+  ok(r === 1, 'com uma jogada, encerrar conta a partida');
+  r = await p.evaluate(() => { const J = docJornada(), orig = missoesDoDia; J.missoes = { d: J.dia.d, ok: [] };
+    missoesDoDia = () => ['t1', 't2', 't3'].map(id => ({ id, txt: id, meta: 1, v: () => 1 }));
+    const a = J.dia.xp; try { conferirMissoes(J); } finally { missoesDoDia = orig; } return J.dia.xp - a; });
+  ok(r === 150, 'XP das missões (3 × 40) e o bônus (+30) contam no XP de hoje: ' + r);
+  console.log('8) Termo no celular e Onde fica? pelo teclado');
+  const ctx2 = await b.newContext({ viewport: { width: 360, height: 740 }, hasTouch: true, isMobile: true }); const p2 = await ctx2.newPage(); p2.on('pageerror', e => errs.push(e.message));
+  await p2.goto(URL + '#/jogos/termo'); await p2.waitForTimeout(600); await p2.evaluate(() => document.querySelectorAll('.folha').forEach(() => fecharFolha()));
+  await p2.click('[data-act="jg-modo"][data-m="treino"]'); await p2.waitForTimeout(200);
+  for (const l of 'ABCDE') await p2.click(`[data-act="tm-letra"][data-l="${l}"]`); await p2.click('[data-act="tm-enter"]'); await p2.waitForTimeout(250);
+  r = await p2.evaluate(() => { const topo = document.querySelector('.topo').getBoundingClientRect().bottom, base = document.querySelector('.inferior').getBoundingClientRect().top;
+    const env = document.querySelectorAll('.termo-linha')[0].getBoundingClientRect(), tec = document.querySelector('.teclado').getBoundingClientRect(), ts = [...document.querySelectorAll('.tecla')].map(t => t.getBoundingClientRect());
+    return { visivel: env.top >= topo && env.bottom <= base && tec.top >= topo && tec.bottom <= base + 1, h: Math.min(...ts.map(t => t.height)), w: Math.min(...ts.map(t => t.width)), foco: document.activeElement?.classList.contains('tecla') }; });
+  ok(r.visivel, 'Termo (360×740): tentativa enviada e teclado inteiros na tela, entre as barras');
+  ok(r.h >= 40 && r.w >= 30, `teclas com alvo de toque: ${Math.round(r.w)}×${Math.round(r.h)} px (mín. 30×40)`);
+  ok(!r.foco, 'toque na tecla da tela não prende o foco (Enter do teclado físico continua enviando)');
+  await p2.goto(URL + '#/jogos/anatomia'); await p2.waitForTimeout(300); await p2.click('[data-act="jg-comecar"]'); await p2.waitForTimeout(200);
+  r = await p2.evaluate(() => { const ps = [...document.querySelectorAll('.orgao')], nomes = Object.values(ORGAOS).map(n => n.toLowerCase());
+    return { focaveis: ps.every(x => x.getAttribute('tabindex') === '0' && x.getAttribute('role') === 'button'), semResposta: ps.every(x => !nomes.some(n => (x.getAttribute('aria-label') + x.textContent).toLowerCase().includes(n))) }; });
+  ok(r.focaveis && r.semResposta, 'Onde fica?: órgãos focáveis (Tab) e com rótulo de posição, sem o nome (não entrega a resposta)');
+  await p2.focus('.orgao'); await p2.keyboard.press('Enter'); await p2.waitForTimeout(150);
+  r = await p2.evaluate(() => ({ resp: JG.rodadas[0].resp != null, foco: document.activeElement?.dataset?.act }));
+  ok(r.resp && r.foco === 'jg-prox', 'Enter no órgão focado responde e leva o foco para "Próxima"');
+  await ctx2.close();
   ok(!errs.length, errs.length ? 'erros de JS: ' + errs.join(' | ') : 'Sem erros de JS');
   await b.close(); console.log(falhas ? `${falhas} FALHA(S)` : 'JORNADA E JOGOS NOVOS OK'); process.exit(falhas ? 1 : 0);
 })();

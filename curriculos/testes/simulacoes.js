@@ -66,7 +66,8 @@ let falhas = 0; const ok = (c, m) => { console.log((c ? '  ✓ ' : '  ✗ ') + m
   ok(await p.evaluate(() => JG.rodadas[0].fora.length >= 1 && !JG.rodadas[0].fora.includes(qPorId(JG.rodadas[0].qid).c)), 'cartas tiram só alternativas erradas');
   for (let k = 0; k < 3; k++) { await p.evaluate(() => { const q = qPorId(JG.rodadas[JG.i].qid); document.querySelector(`[data-act="ml-resp"][data-i="${q.c}"]`).click(); }); await p.waitForTimeout(60); await p.click('[data-act="jg-prox"]'); await p.waitForTimeout(60); }
   await p.evaluate(() => { const q = qPorId(JG.rodadas[JG.i].qid); document.querySelector(`[data-act="ml-resp"][data-i="${(q.c + 1) % q.o.length}"]`).click(); }); await p.waitForTimeout(60);
-  ok(await p.evaluate(() => JG.premio === 1), 'errar a 4ª valendo 4 mil (com 3 mil acumulados) leva a metade: 1 mil');
+  ok(await p.evaluate(() => JG.premio === 1.5 && /R\$ 1,5 mil/.test(document.querySelector('#view .veredito').textContent)), 'errar a 4ª valendo 4 mil (com 3 mil acumulados) leva a metade: R$ 1,5 mil');
+  ok(await p.evaluate(() => premioAoErrar(1) === 0.5 && fmtPremio(0.5) === 'R$ 500' && premioAoErrar(15) === 0 && /metade/.test(jogoMilhao.desc)), 'com R$ 1 mil, errar leva R$ 500; na do milhão, errar zera (regra no texto do jogo)');
   console.log('7) Caça-palavras');
   await abrir('caca');
   r = await p.evaluate(() => { const r = JG.rodadas[0]; for (const pz of r.pos) { const [a, b] = pz.cel[0], [c, d] = pz.cel.at(-1); document.querySelector(`[data-act="cp-letra"][data-l="${c}"][data-c="${d}"]`).click(); document.querySelector(`[data-act="cp-letra"][data-l="${a}"][data-c="${b}"]`).click(); } return [r.achadas.length, r.ps.length, r.fim]; });

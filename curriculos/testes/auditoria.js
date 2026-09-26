@@ -1,6 +1,7 @@
 // Teste de navegador (Playwright) das correções da auditoria de código: sincronização que
 // mescla item a item, aparelho novo sem sobrescrever o perfil, sessões preservadas por chave,
-// lote de erros que só começa por toque, filtros que não fecham ao digitar, cards em blocos.
+// lote de erros que só começa por toque, filtros que não fecham ao digitar, cards em blocos,
+// base da mescla guardada no aparelho, duas abas abertas e dados com formato errado.
 // Rode na raiz do repositório:   python3 -m http.server 8765 &   e   node curriculos/testes/auditoria.js
 const { chromium } = require('playwright');
 const URL=process.env.APP_URL||'http://localhost:8765/curriculos/app.html';
@@ -86,6 +87,43 @@ await p.goto(URL);await p.waitForTimeout(7500);
 r=await p.evaluate(()=>{const k=[...window.__db.keys()].find(k=>k.startsWith('calibracao/'));return {k,doc:k&&window.__db.get(k),txt:acertoGeral(qPorId('med-cc68d69f'))};});
 ok(r.k&&r.doc.q['med-cc68d69f']===1&&!('_ts' in r.doc),'1ª tentativa enviada de forma anônima ('+r.k+')');
 ok(r.txt==='acertam 65% na 1ª tentativa (40)','mostra o acerto geral da questão: '+r.txt);
+await ctx.close();
+
+console.log('5) Armazenamento: base guardada, duas abas e dados estranhos');
+// M2: reabrir com uma exclusão pendente (feita fora do ar) não traz o item de volta da conta
+ctx=await b.newContext();p=await ctx.newPage();p.on('pageerror',e=>errs.push(e.message));
+await p.addInitScript(({agora,antes})=>{ if(sessionStorage.getItem('iniciado'))return; sessionStorage.setItem('iniciado','1');
+  const card=id=>({id,frente:id,verso:'v',tema:null,origem:'manual',criado:antes,srs:{etapa:-1,ease:2.2,int:0,prox:'2026-01-01',hist:[]}});
+  localStorage.setItem('gab2:lista',JSON.stringify(['perfil','cards']));localStorage.setItem('gab2:perfil',JSON.stringify({_ts:0}));
+  localStorage.setItem('gab2:cards',JSON.stringify({itens:{y:card('y')},_ts:agora,_sync:antes}));           // x apagado aqui, ainda sem enviar
+  localStorage.setItem('gab2:base:cards',JSON.stringify({itens:{x:card('x'),y:card('y')},_ts:antes}));     // última versão comum com a conta
+  window.__cardsConta={itens:{x:card('x'),y:card('y')},_ts:antes};},{agora,antes});
+await p.addInitScript(dbMock({}));
+await p.addInitScript(()=>{const t=setInterval(()=>{if(window.__db&&window.__cardsConta){window.__db.set('data/users/u_teste/cards',window.__cardsConta);clearInterval(t);}},0);});
+await p.goto(URL);await p.waitForTimeout(2200);
+r=await p.evaluate(()=>({local:Object.keys(store.doc('cards').itens).sort().join(),conta:Object.keys(window.__db.get('data/users/u_teste/cards').itens).sort().join()}));
+ok(r.local==='y'&&r.conta==='y','exclusão feita fora do ar não volta da conta ao reabrir (local '+r.local+', conta '+r.conta+')');
+await ctx.close();
+// M3: duas abas no mesmo aparelho, sem conta: as respostas das duas ficam
+ctx=await b.newContext();const pa=await ctx.newPage(),pb=await ctx.newPage();[pa,pb].forEach(x=>x.on('pageerror',e=>errs.push(e.message)));
+await pa.goto(URL+'#/jogos');await pb.goto(URL+'#/jogos');await pa.waitForTimeout(700);await pb.waitForTimeout(300);
+const [qa,qb]=await pa.evaluate(()=>QUESTOES_BASE.filter(q=>q.t==='medicina').slice(40,42).map(q=>q.id));
+await pa.evaluate(id=>{const q=qPorId(id);registrarResposta(q,q.c,1,'pratica');},qa);await pa.waitForTimeout(200);
+await pb.evaluate(id=>{const q=qPorId(id);registrarResposta(q,q.c,1,'pratica');},qb);await pb.waitForTimeout(400);
+r=await pa.evaluate(([a,b])=>{const m=store.doc('prog-medicina').q,l=JSON.parse(localStorage.getItem('gab2:prog-medicina')).q;return {mem:!!(m[a]&&m[b]),ls:!!(l[a]&&l[b])};},[qa,qb]);
+ok(r.mem&&r.ls,'duas abas abertas: a resposta de cada aba continua salva (memória '+r.mem+', aparelho '+r.ls+')');
+await ctx.close();
+// L1 e L2: backup com "__proto__"/"constructor" e armazenamento com formato errado não derrubam o app
+ctx=await b.newContext();p=await ctx.newPage();p.on('pageerror',e=>errs.push(e.message));
+await p.addInitScript(()=>{ if(sessionStorage.getItem('iniciado'))return; sessionStorage.setItem('iniciado','1');
+  localStorage.setItem('gab2:lista','"isto não é uma lista"');localStorage.setItem('gab2:erros','[1,2,3]');localStorage.setItem('gab2:rascunho',JSON.stringify({texto:null,tema:5}));});
+await p.goto(URL+'#/redacao/escrever');await p.waitForTimeout(700);
+r=await p.evaluate(()=>{const e=store.doc('erros');let salvou=true;try{store.mudou('erros');}catch(x){salvou=false;}
+  return {erros:typeof e.itens==='object'&&!Array.isArray(e.itens),salvou,red:!!document.querySelector('#rd-txt'),lista:JSON.parse(localStorage.getItem('gab2:lista'))};});
+ok(r.erros&&r.salvou&&r.red&&Array.isArray(r.lista),'formato errado no armazenamento vira o padrão (erros, lista, rascunho da redação)');
+r=await p.evaluate(()=>{try{store.importar(JSON.parse('{"formato":"gabarito-am","versao":2,"docs":{"__proto__":{"x":1},"constructor":{"y":1},"perfil":{"nome":"Ana"}}}'));}catch(e){return 'erro: '+e.message;}
+  return {ctor:store.nomes().includes('constructor'),nome:store.doc('perfil').nome};});
+ok(r.ctor===false&&r.nome==='Ana','backup com "__proto__" e "constructor" é restaurado sem criar documentos estranhos');
 await ctx.close();
 
 ok(!errs.length,errs.length?'erros de JS: '+errs.join(' | '):'Sem erros de JS');

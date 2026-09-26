@@ -16,8 +16,9 @@ const soMed = () => !objetivo() || ["medicina", "residencia"].includes(objetivo(
 
 /* ================= Plantão no PS (triagem) ================= */
 const CORES_MAN = [
-  ["vermelho", "Vermelho", "Emergência · imediato", "#DC2626"], ["laranja", "Laranja", "Muito urgente · 10 min", "#EA580C"],
-  ["amarelo", "Amarelo", "Urgente · 60 min", "#CA8A04"], ["verde", "Verde", "Pouco urgente · 120 min", "#16A34A"], ["azul", "Azul", "Não urgente · 240 min", "#2563EB"]];
+  // tons escolhidos para letra branca com contraste ≥ 4,5:1 (o amarelo usa letra escura, ver estilo.css)
+  ["vermelho", "Vermelho", "Emergência · imediato", "#B91C1C"], ["laranja", "Laranja", "Muito urgente · 10 min", "#C2410C"],
+  ["amarelo", "Amarelo", "Urgente · 60 min", "#EAB308"], ["verde", "Verde", "Pouco urgente · 120 min", "#15803D"], ["azul", "Azul", "Não urgente · 240 min", "#1D4ED8"]];
 const idxCor = c => CORES_MAN.findIndex(x => x[0] === c);
 const jogoTriagem = {
   id: "triagem", nome: "Plantão no PS", arte: "ambulancia", cor: "#DC2626", curto: "Classifique os pacientes que chegam (Manchester)",
@@ -31,7 +32,7 @@ const jogoTriagem = {
     const fila = JG.rodadas.slice(JG.i + 1, JG.i + 6).map(x => { const q = JD().triagem.find(y => y.id === x.pid); return avatar(q.avatar, 34, x.sem); }).join("");
     const chips = [["PA", s.PA], ["FC", s.FC], ["FR", s.FR], ["SatO₂", s.SatO2 != null ? s.SatO2 + "%" : null], ["Tax", s.Tax != null ? String(s.Tax).replace(".", ",") + " °C" : null], ["Dor", s.dor != null ? s.dor + "/10" : null], ["Glasgow", s.glasgow], ["HGT", s.HGT]].filter(([, v]) => v != null && v !== "");
     const dif = r.resp == null ? 0 : idxCor(r.resp) - idxCor(p.cor);
-    return `<div class="ps-topo"><span class="ps-relogio">${String(hora).padStart(2, "0")}:${JG.i % 2 ? "30" : "00"}</span><span><b>${JG.pontos}</b> pontos</span><span>Paciente ${JG.i + 1} de ${JG.rodadas.length}</span></div>
+    return `<div class="ps-topo"><span class="ps-relogio">${String(hora).padStart(2, "0")}:${JG.i % 2 ? "30" : "00"}</span><span><b>${JG.pontos}</b> ${JG.pontos === 1 ? "ponto" : "pontos"}</span><span>Paciente ${JG.i + 1} de ${JG.rodadas.length}</span></div>
       <div class="ps-fila" aria-label="Sala de espera">${fila ? `<span class="small muted">Na espera:</span>${fila}` : `<span class="small muted">Último paciente do plantão</span>`}</div>
       <div class="caixa ps-paciente"><div class="ps-quem">${avatar(p.avatar, 84, r.sem)}<div><b class="ps-nome">${esc(p.nome)}</b><p class="balao ps-fala">“${esc(p.queixa)}”</p></div></div>
       <div class="vitais ps-vitais">${chips.map(([a, b]) => `<span class="vital"><b>${a}</b> ${esc(String(b))}</span>`).join("")}</div>
@@ -70,7 +71,7 @@ const jogoEmerg = {
         <p class="leitura"><b>Diagnóstico:</b> ${esc(c.diagnostico)}</p><h3>Debriefing</h3><ul class="pares-notas">${c.debriefing.map(x => `<li>${esc(x)}</li>`).join("")}</ul>
         <p class="small muted">Referência: ${esc(c.referencia || "")}</p><div class="acoes"><button class="btn grande" data-act="jg-prox">Ver resultado</button></div></div>`; }
     const e = c.etapas[r.etapa];
-    return `<div class="em-tela"><div class="linha entre"><span class="lab">${esc(c.paciente)} · ${esc(c.titulo)}</span><span><b>${JG.pontos}</b> pts</span></div>
+    return `<div class="em-tela"><div class="linha entre"><span class="lab">${esc(c.paciente)} · ${esc(c.titulo)}</span><span><b>${JG.pontos}</b> ${JG.pontos === 1 ? "ponto" : "pts"}</span></div>
       ${monitor(r.vitais)}
       ${r.nota ? `<div class="em-nota ${r.nota.pontos > 0 ? "boa" : r.nota.pontos < 0 ? "ruim" : ""}">${r.nota.pontos > 0 ? "✓" : r.nota.pontos < 0 ? "✗" : "•"} ${esc(r.nota.nota)}</div>` : ""}
       <div class="caixa"><div class="ps-quem">${avatar(c.avatar, 64, c.id.length)}<p class="leitura" style="margin:0">${esc(r.hist.length ? e.texto : c.cenario + " " + e.texto)}</p></div>
@@ -94,6 +95,13 @@ ACOES["em-acao"] = el => {
 /* ================= Defesa antimicrobiana ================= */
 const ICONE_INV = { bacteria: "bacteria", virus: "virus", fungo: "celula", protozoario: "mosquito", helminto: "fita" };
 const DEF = { timer: null };
+/** Cor de fundo da arma escurecida até a letra branca ter contraste ≥ 4,5:1 (as cores vêm de jogos/defesa.json). */
+function fundoComBranco(hex) {
+  let c = String(hex || "#7C3AED").replace("#", "").match(/../g)?.map(x => parseInt(x, 16)) || [124, 58, 237];
+  const lum = v => { const f = x => { x /= 255; return x <= .04045 ? x / 12.92 : ((x + .055) / 1.055) ** 2.4; }; return .2126 * f(v[0]) + .7152 * f(v[1]) + .0722 * f(v[2]); };
+  for (let i = 0; i < 30 && 1.05 / (lum(c) + .05) < 4.6; i++) c = c.map(x => Math.round(x * .92));
+  return "#" + c.map(x => x.toString(16).padStart(2, "0")).join("");
+}
 const jogoDefesa = {
   id: "defesa", nome: "Defesa antimicrobiana", arte: "escudo", cor: "#7C3AED", curto: "Invasores descem: dispare o tratamento certo",
   desc: "Infecções descem em direção à sua linha de defesa. Toque no tratamento certo antes que cheguem. Você tem 3 vidas; a cada 8 invasores, a fase fica mais difícil.",
@@ -109,12 +117,12 @@ const jogoDefesa = {
     const ult = JG.ultimo, chave = JG.t0 + ":" + JG.i;
     if (r.resp == null && !JG.pausa && DEF.chave !== chave) setTimeout(armarDefesa, 0);   // arma o cronômetro deste invasor (também no "Jogar de novo")
     const passou = DEF.chave === chave ? (Date.now() - DEF.inicio) / 1000 : 0;
-    return `<div class="df-topo"><span><b>${JG.pontos}</b> pontos</span><span>Fase ${fase}</span><span class="jg-vidas">${[0, 1, 2].map(k => ilustra("escudo", k < JG.vidas ? "#7C3AED" : "#9AA0A8", "p")).join("")}</span></div>
+    return `<div class="df-topo"><span><b>${JG.pontos}</b> ${JG.pontos === 1 ? "ponto" : "pontos"}</span><span>Fase ${fase}</span><span class="jg-vidas">${[0, 1, 2].map(k => ilustra("escudo", k < JG.vidas ? "#7C3AED" : "#9AA0A8", "p")).join("")}</span></div>
       <div class="df-campo" id="df-campo">
         ${r.resp == null ? `<div class="df-invasor ${JG.pausa ? "pausado" : ""}" id="df-inv" style="animation-duration:${dur}s;animation-delay:-${passou.toFixed(2)}s">${ilustra(ICONE_INV[inv.tipo] || "bacteria", fase === 3 ? "#B42318" : "#7C3AED", "g")}<div><b>${esc(inv.nome)}</b><small>${esc(inv.detalhe)}</small></div></div>` : ""}
         <div class="df-linha">linha de defesa</div></div>
       ${ult ? `<div class="em-nota ${ult.ok ? "boa" : "ruim"}">${ult.ok ? "✓" : "✗"} <b>${esc(ult.nome)}</b>: ${esc(ult.porque)}</div>` : ""}
-      <div class="df-armas">${r.ops.map(id => { const a = arma(id); return `<button class="df-arma" data-act="df-disparar" data-id="${id}" style="--c:${a.cor || "#7C3AED"}"><b>${esc(a.nome)}</b><small>${esc(a.classe || "")}</small></button>`; }).join("")}</div>
+      <div class="df-armas">${r.ops.map(id => { const a = arma(id); return `<button class="df-arma" data-act="df-disparar" data-id="${id}" style="--c:${fundoComBranco(a.cor)}"><b>${esc(a.nome)}</b><small>${esc(a.classe || "")}</small></button>`; }).join("")}</div>
       <div class="acoes"><button class="btn sec mini" data-act="df-pausa">${JG.pausa ? "Continuar" : "Pausar"}</button></div>`;
   },
   resumoFim() { const erros = JG.revisar || [];
@@ -149,7 +157,7 @@ const jogoCascata = {
   montar: () => embaralhar(JD().cascatas).slice(0, 5).map(c => ({ cid: c.id, ordem: embaralhar(c.passos.map((_, i) => i)), feitos: [], erros: 0, erro: null, fim: false })),
   tela(r) {
     const c = JD().cascatas.find(x => x.id === r.cid);
-    return `<div class="caixa"><div class="linha entre"><span class="lab">${esc(c.area)} · ${JG.i + 1} de ${JG.rodadas.length}</span><span><b>${JG.pontos}</b> pontos</span></div>
+    return `<div class="caixa"><div class="linha entre"><span class="lab">${esc(c.area)} · ${JG.i + 1} de ${JG.rodadas.length}</span><span><b>${JG.pontos}</b> ${JG.pontos === 1 ? "ponto" : "pontos"}</span></div>
       <h2 class="sec" style="margin-top:6px">${esc(c.titulo)}</h2>
       ${r.feitos.length ? `<ol class="cascata-feita">${r.feitos.map(i => `<li>${esc(c.passos[i])}</li>`).join("")}</ol>` : `<p class="muted">Toque no primeiro passo.</p>`}
       ${r.fim ? `<div class="retorno">${falaMascote(r.erros ? `Montado, com ${r.erros} erro${r.erros > 1 ? "s" : ""} no caminho.` : "Sequência perfeita!", r.erros ? "feliz" : "festa", 70)}<p class="leitura">${esc(c.explicacao)}</p>
@@ -176,7 +184,7 @@ const jogoQuem = {
     const g = JD().quemsou.grupos.find(x => x.id === r.gid), resp = (pq, d) => pq.sim.includes(d);
     const viva = d => r.feitas.every(k => resp(g.perguntas[k], d) === resp(g.perguntas[k], r.alvo)) && !r.palpites.includes(d);
     const vivas = g.doencas.filter(viva);
-    return `<div class="caixa quem"><div class="linha entre"><span class="lab">${esc(g.titulo)} · ${JG.i + 1} de ${JG.rodadas.length}</span><span><b>${JG.pontos}</b> pontos</span></div>
+    return `<div class="caixa quem"><div class="linha entre"><span class="lab">${esc(g.titulo)} · ${JG.i + 1} de ${JG.rodadas.length}</span><span><b>${JG.pontos}</b> ${JG.pontos === 1 ? "ponto" : "pontos"}</span></div>
       ${falaMascote(r.fim ? (r.ok ? `Acertou! Eu era <b>${esc(r.alvo)}</b>.` : `Eu era <b>${esc(r.alvo)}</b>!`) : `${vivas.length} possibilidade${vivas.length > 1 ? "s" : ""}. ${r.feitas.length} pergunta${r.feitas.length === 1 ? "" : "s"} feita${r.feitas.length === 1 ? "" : "s"}.`, r.fim ? (r.ok ? "festa" : "triste") : "pensando", 70)}
       <div class="quem-cartas">${g.doencas.map(d => `<button class="quem-carta ${viva(d) ? "" : "riscada"} ${r.fim && d === r.alvo ? "alvo" : ""}" data-act="qs-palpite" data-d="${esc(d)}" ${r.fim || !viva(d) ? "disabled" : ""}>${esc(d)}</button>`).join("")}</div>
       ${r.fim ? `<p class="leitura">${esc(g.notas?.[r.alvo] || "")}</p><div class="acoes"><button class="btn grande" data-act="jg-prox">${JG.i + 1 < JG.rodadas.length ? "Próxima rodada" : "Ver resultado"}</button></div>`
@@ -195,10 +203,13 @@ ACOES["qs-palpite"] = el => {
 
 /* ================= Rumo ao Milhão ================= */
 const PREMIOS = [1, 2, 3, 4, 5, 10, 20, 30, 40, 50, 100, 200, 300, 400, 500, 1000];   // em mil reais de mentirinha
-const fmtPremio = k => k >= 1000 ? "R$ 1 milhão" : k ? `R$ ${k} mil` : "R$ 0";
+/** Prêmio em mil reais → texto (metades viram "R$ 1,5 mil", "R$ 500"). */
+const fmtPremio = k => k >= 1000 ? "R$ 1 milhão" : k >= 1 ? `R$ ${k.toLocaleString("pt-BR", { maximumFractionDigits: 1 })} mil` : k > 0 ? `R$ ${Math.round(k * 1000)}` : "R$ 0";
+/** Regra clássica: parar leva o que já ganhou; errar leva a metade disso; na pergunta do milhão, errar zera. */
+const premioAoErrar = k => k === 15 ? 0 : (k ? PREMIOS[k - 1] : 0) / 2;
 const jogoMilhao = {
   id: "milhao", nome: "Rumo ao Milhão", arte: "alvo", cor: "#CA8A04", curto: "16 perguntas, ajudas e um milhão (de mentirinha)",
-  desc: "Programa de perguntas: 16 degraus até o milhão (de mentirinha). Pode parar e levar o que tem. Errou, leva a metade. Ajudas: cartas, colegas, placas e 3 pulos.",
+  desc: "Programa de perguntas: 16 degraus até o milhão (de mentirinha). Pode parar e levar o que já ganhou. Errou, leva a metade do que já tinha; na pergunta do milhão, errar zera tudo. Ajudas: cartas, colegas, placas e 3 pulos.",
   fala: "Está valendo! Vai parar ou vai continuar?", semPlacar: true,
   montar() {
     const P = poolJogo().filter(q => q.q.length <= 420), d = n => embaralhar(P.filter(q => (q.dif || 2) === n));
@@ -208,7 +219,7 @@ const jogoMilhao = {
       return { qid: q.id, ordem: opcoesEmbaralhadas(q), resp: null, fora: [], ajuda: null }; });
   },
   tela(r) {
-    const q = qPorId(r.qid), k = JG.i, ac = k ? PREMIOS[k - 1] : 0, errar = k === 15 ? 0 : Math.floor(ac / 2), A = JG.ajudas;
+    const q = qPorId(r.qid), k = JG.i, ac = k ? PREMIOS[k - 1] : 0, errar = premioAoErrar(k), A = JG.ajudas;
     const escada = PREMIOS.map((p, i) => `<li class="${i === k ? "atual" : i < k ? "feito" : ""}">${fmtPremio(p)}</li>`).reverse().join("");
     const alts = r.ordem.map((i, pos) => { const s = r.resp == null ? (r.fora.includes(i) ? "fora" : "") : i === q.c ? "ok" : i === r.resp ? "bad" : "";
       return `<li><button class="alt" data-act="ml-resp" data-i="${i}" data-s="${s}" ${r.resp != null || r.fora.includes(i) ? "disabled" : ""}>${formaAlt(pos)}<span>${esc(q.o[i])}</span></button></li>`; }).join("");
@@ -232,7 +243,7 @@ ACOES["ml-resp"] = el => {
   const r = JG.rodadas[JG.i], q = qPorId(r.qid), i = +el.dataset.i; if (r.resp != null) return;
   r.resp = i; registrarResposta(q, i, Date.now() - JG.tq, "jogo");
   if (i === q.c) { JG.acertos++; JG.degrau = JG.i + 1; JG.pontos = PREMIOS[JG.i]; JG.premio = PREMIOS[JG.i]; som(JG.i === 15 ? "festa" : "ok"); }
-  else { JG.premio = JG.i === 15 ? 0 : Math.floor((JG.i ? PREMIOS[JG.i - 1] : 0) / 2); JG.pontos = JG.premio; JG.errados.push(q.id); som("erro"); }
+  else { JG.premio = premioAoErrar(JG.i); JG.pontos = Math.floor(JG.premio); JG.errados.push(q.id); som("erro"); }   // pontos = mil reais inteiros
   atualizar();
 };
 ACOES["ml-fim"] = () => terminarJogo();
@@ -251,7 +262,7 @@ ACOES["ml-ajuda"] = el => {
 };
 
 /* ================= Caça-palavras ================= */
-const TAM_GRADE = 9;
+const TAM_GRADE = 7;   // 7×7: cabe no celular com letras de ~44 px (seis palavras de 5 letras sempre encaixam)
 function montarGrade(palavras) {
   for (let tentativa = 0; tentativa < 50; tentativa++) {
     const g = Array.from({ length: TAM_GRADE }, () => Array(TAM_GRADE).fill("")), pos = [];
@@ -272,7 +283,7 @@ const jogoCaca = {
   tela(r) {
     const achada = (l, c) => r.pos.some(p => r.achadas.includes(p.w) && p.cel.some(([a, b]) => a === l && b === c));
     const info = w => palavrasTermo().find(p => p.palavra === w);
-    return `<div class="caixa caca"><div class="linha entre"><span class="lab">Tema: ${esc(r.area)} · ${JG.i + 1} de ${JG.rodadas.length}</span><span><b>${JG.pontos}</b> pontos</span></div>
+    return `<div class="caixa caca"><div class="linha entre"><span class="lab">Tema: ${esc(r.area)} · ${JG.i + 1} de ${JG.rodadas.length}</span><span><b>${JG.pontos}</b> ${JG.pontos === 1 ? "ponto" : "pontos"}</span></div>
       <div class="caca-grade" style="--n:${TAM_GRADE}">${r.g.map((lin, l) => lin.map((x, c) => `<button class="caca-l ${achada(l, c) ? "ok" : ""} ${r.sel && r.sel[0] === l && r.sel[1] === c ? "sel" : ""}" data-act="cp-letra" data-l="${l}" data-c="${c}" ${r.fim ? "disabled" : ""}>${x}</button>`).join("")).join("")}</div>
       <ul class="caca-lista">${r.ps.map(w => { const p = info(w), a = r.achadas.includes(w), d = r.dicas.includes(w);
         return `<li class="${a ? "ok" : ""}">${a ? `<b>${esc(p.exibir)}</b> — ${esc(p.definicao)}` : d ? `<span>${esc(p.dica)}</span> <small class="muted">(${w.length} letras)</small>` : `<button class="btn sec mini" data-act="cp-dica" data-w="${w}">Dica</button> <span class="muted">${w.length} letras, começa com ${w[0]}</span>`}</li>`; }).join("")}</ul>
@@ -286,7 +297,7 @@ ACOES["cp-letra"] = el => {
   const [l0, c0] = r.sel; r.sel = null;
   const p = r.pos.find(p => !r.achadas.includes(p.w) && ((p.cel[0][0] === l0 && p.cel[0][1] === c0 && p.cel.at(-1)[0] === l && p.cel.at(-1)[1] === c) || (p.cel[0][0] === l && p.cel[0][1] === c && p.cel.at(-1)[0] === l0 && p.cel.at(-1)[1] === c0)));
   if (p) { r.achadas.push(p.w); JG.acertos++; JG.pontos += r.dicas.includes(p.w) ? 5 : 10; som("ok"); if (r.achadas.length === r.ps.length) { r.fim = true; JG.pontos += Math.max(0, 30 - Math.round((Date.now() - r.t0) / 10000)); } }
-  else { som("erro"); toast("Não é uma das palavras. Toque na primeira e na última letra."); }
+  else { som("erro"); toast("Não é uma das palavras. Toque na primeira e na última letra.", 1800); }
   atualizar();
 };
 

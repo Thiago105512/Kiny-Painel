@@ -4,9 +4,11 @@
    ============================================================ */
 const CRUMB_RED = [["ENEM", "#/enem"]];
 const NIVEIS = [0, 40, 80, 120, 160, 200];
-let RD = ls.get("gab2:rascunho") || { proposta: "", tema: "", texto: "" };
+/** Rascunho salvo neste aparelho; qualquer formato estranho no armazenamento vira texto (nunca quebra a aba). */
+const rascunhoValido = x => { const o = x && typeof x === "object" && !Array.isArray(x) ? x : {}; return { proposta: String(o.proposta ?? ""), tema: String(o.tema ?? ""), texto: String(o.texto ?? "") }; };
+let RD = rascunhoValido(ls.get("gab2:rascunho"));
 const guardarRD = () => ls.set("gab2:rascunho", RD);
-const totalNotas = a => a?.notas ? a.notas.reduce((s, x) => s + (+x || 0), 0) : null;
+const totalNotas = a => Array.isArray(a?.notas) ? a.notas.reduce((s, x) => s + (+x || 0), 0) : null;
 const linhasEstimadas = t => String(t).split("\n").reduce((s, l) => s + Math.max(1, Math.ceil(l.length / 68)), 0) - (t.trim() ? 0 : 1);
 const redacoes = () => Object.values(store.doc("redacoes").itens).sort((a, b) => b.ts - a.ts);
 const ABAS_RED = [["propostas", "Propostas"], ["escrever", "Escrever"], ["historico", "Histórico"], ["guia", "Competências e estrutura"], ["repertorios", "Repertórios"]];
@@ -24,7 +26,7 @@ function paginaRedacao(aba) {
     corpo = `<section class="caixa pilha">
       <label class="campo"><span class="lab">Tema</span><input type="text" id="rd-tema" value="${esc(prop?.tema || RD.tema)}" data-inp="rd-tema" placeholder="Escolha uma proposta ou escreva o tema"></label>
       <label class="campo"><span class="lab">Texto (rascunho salvo automaticamente neste aparelho)</span><textarea id="rd-txt" rows="18" data-inp="rd-txt" style="font:400 calc(17px * var(--k))/1.7 var(--read)">${esc(RD.texto)}</textarea></label>
-      <p class="small muted" id="rd-cont">${pal} palavras · ≈ ${l} linhas de folha (mín. 7 para não zerar; máx. 30)</p>
+      <p class="small muted" id="rd-cont">${plural(pal, "palavra", "palavras")} · ≈ ${l} linhas de folha (mín. 7 para não zerar; máx. 30)</p>
       <div class="linha"><button class="btn" data-act="red-salvar">Salvar e avaliar</button><button class="btn sec" data-act="red-limpar">Limpar rascunho</button></div></section>
       <details class="filtros" style="margin-top:12px"><summary>Lembrete da estrutura</summary>${Object.entries(REDACAO.estrutura || {}).map(([k, v]) => `<h3>${esc(k)}</h3><ul class="small">${(v || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul>`).join("")}</details>`;
   } else if (aba === "historico") {
@@ -46,7 +48,7 @@ function paginaRedacao(aba) {
 }
 ACOES["red-usar"] = el => { RD.proposta = el.dataset.id; RD.tema = REDACAO.propostas.find(p => p.id === el.dataset.id)?.tema || ""; guardarRD(); ir("#/redacao/escrever"); };
 ENTRADAS["rd-tema"] = el => { RD.tema = el.value; RD.proposta = ""; guardarRD(); };
-ENTRADAS["rd-txt"] = el => { RD.texto = el.value; guardarRD(); const c = $("#rd-cont"); if (c) { const pal = el.value.trim() ? el.value.trim().split(/\s+/).length : 0; c.textContent = `${pal} palavras · ≈ ${linhasEstimadas(el.value)} linhas de folha (mín. 7 para não zerar; máx. 30)`; } };
+ENTRADAS["rd-txt"] = el => { RD.texto = el.value; guardarRD(); const c = $("#rd-cont"); if (c) { const pal = el.value.trim() ? el.value.trim().split(/\s+/).length : 0; c.textContent = `${plural(pal, "palavra", "palavras")} · ≈ ${linhasEstimadas(el.value)} linhas de folha (mín. 7 para não zerar; máx. 30)`; } };
 ACOES["red-limpar"] = () => { RD = { proposta: "", tema: "", texto: "" }; guardarRD(); atualizar(); };
 ACOES["red-salvar"] = () => {
   RD.texto = $("#rd-txt").value; RD.tema = $("#rd-tema").value.trim();
@@ -60,7 +62,7 @@ ENTRADAS["fr-q"] = el => { FR.q = el.value; atualizar(); const i = document.quer
 rota("/redacao/r/:id", ({ id }) => {
   const r = store.doc("redacoes").itens[id]; if (!r) return paginaNaoEncontrada();
   const comp = REDACAO.competencias.length ? REDACAO.competencias : [1, 2, 3, 4, 5].map(n => ({ n, nome: "Competência " + n }));
-  const blocoNotas = (a, rotulo) => a ? `<h3>${rotulo}: ${totalNotas(a)} / 1000</h3>${tabela([{ t: "Competência" }, { t: "Nota", num: 1 }, { t: "Comentário" }], comp.map((c, i) => [`C${c.n} — ${esc(c.nome)}`, a.notas[i], esc(a.comentarios?.[i] || "")]))}${a.geral ? `<p class="leitura">${esc(a.geral)}</p>` : ""}` : "";
+  const blocoNotas = (a, rotulo) => a ? `<h3>${rotulo}: ${totalNotas(a)} / 1000</h3>${tabela([{ t: "Competência" }, { t: "Nota", num: 1 }, { t: "Comentário" }], comp.map((c, i) => [`C${esc(c.n)} — ${esc(c.nome)}`, esc(Array.isArray(a.notas) ? a.notas[i] ?? "—" : "—"), esc(a.comentarios?.[i] || "")]))}${a.geral ? `<p class="leitura">${esc(a.geral)}</p>` : ""}` : "";
   return {
     secao: "enem", crumbs: [...CRUMB_RED, ["Redação", "#/redacao/historico"]], titulo: r.tema || "Redação", sub: new Date(r.ts).toLocaleString("pt-BR"),
     html: `<article class="caixa"><p class="leitura">${esc(r.texto)}</p></article>
@@ -70,7 +72,7 @@ rota("/redacao/r/:id", ({ id }) => {
         <button class="btn sec">Salvar autoavaliação</button></form>
         ${IA.disponivel() ? `<div class="acoes"><button class="btn" data-act="red-ia" data-id="${esc(id)}">Avaliar com IA</button><span class="small muted" id="red-ia-st"></span></div>` : ""}</section>
       <div class="acoes"><button class="btn perigo mini" data-act="red-excluir" data-id="${esc(id)}">Excluir redação</button></div>`,
-    ctx: { texto: `Redação do aluno sobre "${r.tema}". Texto:\n${r.texto.slice(0, 4000)}` },
+    ctx: { texto: `Redação do aluno sobre "${r.tema}". Texto:\n${String(r.texto ?? "").slice(0, 4000)}` },
   };
 });
 FORMS["red-auto"] = f => { const R = store.doc("redacoes"), r = R.itens[f.dataset.id]; r.auto = { notas: [0, 1, 2, 3, 4].map(i => +$("#ra-" + i).value), fonte: "auto" }; store.mudou("redacoes"); toast("Autoavaliação salva"); atualizar(); };

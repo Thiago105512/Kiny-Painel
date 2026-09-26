@@ -76,7 +76,7 @@ function avaliarTermo(tent, alvo) {
 }
 const jogoTermo = {
   id: "termo", nome: "Termo médico", arte: "livro", cor: "#15803D", diario: () => !!diario().termo,
-  desc: "Descubra a palavra médica de 5 letras em 6 tentativas. Verde: letra no lugar certo. Amarelo: a letra existe em outro lugar.",
+  desc: "Descubra a palavra médica de 5 letras em 6 tentativas. Verde com ✓: letra no lugar certo. Amarelo com •: a letra existe, em outro lugar. Cinza: não existe.",
   fala: "Uma palavra da Medicina, cinco letras. Acentos não contam!",
   disponivel: () => palavrasTermo().length > 0, semPlacar: true,
   intro: () => { const d = diario(); return modoIntro("termo", "Palavra de hoje", d.termo && (d.termo.ok ? `acertou em ${d.termo.n} tentativa${d.termo.n > 1 ? "s" : ""}` : "não acertou"), "Treinar com 3 palavras"); },
@@ -93,22 +93,33 @@ const jogoTermo = {
       linhas.push(`<div class="termo-linha ${i === r.tent.length && !r.fim ? "atual" : ""}">${[0, 1, 2, 3, 4].map(k => `<span class="termo-casa ${av ? av[k] : ""}" ${av ? `aria-label="${txt[k]}: ${marca[av[k]]}"` : ""}>${txt[k] || ""}</span>`).join("")}</div>`);
     }
     const est = {}; r.tent.forEach(t => avaliarTermo(t, r.w).forEach((s, k) => { const l = t[k]; if (est[l] !== "c") est[l] = s === "c" ? "c" : est[l] === "p" ? "p" : s; }));
-    const tecla = l => `<button class="tecla ${est[l] || ""}" data-act="tm-letra" data-l="${l}" ${r.fim ? "disabled" : ""}>${l}</button>`;
-    return `<div class="caixa termo">
-      <div class="linha entre"><span class="lab">${JG.modo === "dia" ? `Palavra de ${diaCurto()}` : `Palavra ${JG.i + 1} de ${JG.rodadas.length}`}</span><span><b>${JG.pontos}</b> pontos</span></div>
+    const tecla = l => `<button class="tecla ${est[l] || ""}" data-act="tm-letra" data-l="${l}" data-i="${l}" aria-label="${l}${est[l] ? ": " + marca[est[l]] : ""}" ${r.fim ? "disabled" : ""}>${l}</button>`;
+    // Grade e teclado cabem juntos na tela do celular (tamanho das casas pela altura da tela, em estilo.css);
+    // a dica aberta fica acima da grade e o botão "Ver dica", abaixo do teclado, para não empurrar o teclado.
+    return `<div class="caixa termo" id="termo">
+      <div class="linha entre"><span class="lab">${JG.modo === "dia" ? `Palavra de ${diaCurto()}` : `Palavra ${JG.i + 1} de ${JG.rodadas.length}`}</span><span><b>${JG.pontos}</b> ${JG.pontos === 1 ? "ponto" : "pontos"}</span></div>
+      ${r.dica || r.fim ? `<p class="aviso info" style="margin:8px 0">Dica: ${esc(p.dica)} <small>(${esc(p.area)})</small></p>` : ""}
       <div class="termo-grade" aria-live="polite">${linhas.join("")}</div>
-      ${r.dica || r.fim ? `<p class="aviso info" style="margin:8px 0">Dica: ${esc(p.dica)} <small>(${esc(p.area)})</small></p>` : !r.fim ? `<button class="btn sec mini" data-act="tm-dica">Ver dica (vale menos pontos)</button>` : ""}
       ${r.fim ? `<div class="retorno">${falaMascote(r.ok ? `${esc(sorteio(ELOGIOS))} Era <b>${esc(p.exibir)}</b>.` : `Era <b>${esc(p.exibir)}</b>. Na próxima vai!`, r.ok ? "festa" : "triste", 76)}
         <div class="explica"><h3>${ilustra("livro", "#2340B8", "p")}${esc(p.exibir)}</h3><p class="leitura">${esc(p.definicao)}</p></div>
         <div class="acoes">${JG.modo === "dia" ? `<button class="btn sec" data-act="tm-compartilhar">Copiar resultado</button>` : ""}<button class="btn grande" data-act="jg-prox">${JG.i + 1 < JG.rodadas.length ? "Próxima palavra" : "Ver resultado"}</button></div></div>`
-      : `<div class="teclado">${TECLADO.map((l, i) => `<div>${i === 2 ? `<button class="tecla larga" data-act="tm-enter">Enviar</button>` : ""}${[...l].map(tecla).join("")}${i === 2 ? `<button class="tecla larga" data-act="tm-apagar" aria-label="Apagar">⌫</button>` : ""}</div>`).join("")}</div>`}</div>`;
+      : `<div class="teclado">${TECLADO.map(l => `<div>${[...l].map(tecla).join("")}</div>`).join("")}
+          <div class="teclado-acoes"><button class="tecla larga" data-act="tm-apagar" aria-label="Apagar a última letra">⌫ Apagar</button><button class="tecla larga enviar" data-act="tm-enter">Enviar</button></div></div>
+        ${r.dica ? "" : `<button class="btn sec mini" data-act="tm-dica" style="margin-top:10px">Ver dica (vale menos pontos)</button>`}`}</div>`;
   },
+  aoMostrar: () => rolarTermo(),
   aoTerminar() {
     const r0 = JG.rodadas[0], cont = { termo2: JG.rodadas.filter(r => r.ok && r.tent.length <= 2).length };
     if (JG.modo === "dia") { diario().termo = { ok: r0.ok, n: r0.tent.length, grade: r0.tent.map(t => avaliarTermo(t, r0.w).join("")) }; store.mudou("jogos"); }
     return { cont, dia: JG.modo === "dia" ? { termo: 1 } : {} };
   },
 };
+/** Deixa a grade e o teclado (ou o resultado) à vista, logo abaixo da barra do topo. */
+function rolarTermo() {
+  requestAnimationFrame(() => { const cx = document.getElementById("termo"); if (!cx) return;
+    const topo = document.querySelector(".topo")?.getBoundingClientRect().bottom || 0, y = cx.getBoundingClientRect().top;
+    if (y < topo || y > topo + 12) window.scrollBy({ top: y - topo - 8 }); });
+}
 function termoTecla(k) {
   const r = JG.id === "termo" && !JG.fim && JG.rodadas?.[JG.i]; if (!r || r.fim) return;
   if (k === "ENTER") {
@@ -117,18 +128,23 @@ function termoTecla(k) {
     const ok = r.tent[r.tent.length - 1] === r.w;
     if (ok || r.tent.length >= 6) { r.fim = true; r.ok = ok; if (ok) { JG.acertos++; JG.seq++; JG.melhorSeq = Math.max(JG.melhorSeq, JG.seq); JG.pontos += Math.max(10, (7 - r.tent.length) * 10 - (r.dica ? 10 : 0)); } else { JG.seq = 0; JG.erros++; } som(ok ? "festa" : "erro"); }
     else som("tecla");
+    atualizar(); rolarTermo(); return;   // a tentativa enviada fica à vista, com o teclado
   } else if (k === "APAGAR") r.atual = r.atual.slice(0, -1);
   else if (/^[A-Z]$/.test(k) && r.atual.length < 5) { r.atual += k; som("tecla"); }
   atualizar();
 }
-ACOES["tm-letra"] = el => termoTecla(el.dataset.l);
-ACOES["tm-enter"] = () => termoTecla("ENTER");
-ACOES["tm-apagar"] = () => termoTecla("APAGAR");
+// Toque/clique numa tecla da tela não deixa o foco preso nela (o Enter do teclado físico continua enviando);
+// pelo teclado (Tab + Enter/Espaço, e.detail === 0) o foco volta para a mesma tecla.
+const soltarFoco = e => { if (e?.detail > 0 && document.activeElement?.classList?.contains("tecla")) document.activeElement.blur(); };
+ACOES["tm-letra"] = (el, e) => { termoTecla(el.dataset.l); soltarFoco(e); };
+ACOES["tm-enter"] = (el, e) => { termoTecla("ENTER"); soltarFoco(e); };
+ACOES["tm-apagar"] = (el, e) => { termoTecla("APAGAR"); soltarFoco(e); };
 ACOES["tm-dica"] = () => { const r = JG.rodadas[JG.i]; r.dica = true; atualizar(); };
 ACOES["tm-compartilhar"] = () => { const r = JG.rodadas[0];
   compartilharTexto(`Gabarito AM · Termo médico ${diaCurto()} · ${r.ok ? r.tent.length : "X"}/6\n${r.tent.map(t => avaliarTermo(t, r.w).map(s => ({ c: "🟩", p: "🟨", n: "⬛" })[s]).join("")).join("\n")}`); };
 document.addEventListener("keydown", e => {
   if (!location.hash.startsWith("#/jogos/termo") || e.ctrlKey || e.metaKey || e.altKey || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
+  if (e.key === "Enter" && /^(BUTTON|A|SUMMARY)$/.test(e.target.tagName)) return;   // Enter num botão/link focado aciona o próprio elemento (teclado e leitor de tela)
   const k = e.key === "Enter" ? "ENTER" : e.key === "Backspace" ? "APAGAR" : semAcento(e.key);
   if (k === "ENTER" || k === "APAGAR" || /^[A-Z]$/.test(k)) { e.preventDefault(); termoTecla(k); }
 });
@@ -136,7 +152,7 @@ document.addEventListener("keydown", e => {
 /* ================= Pares ================= */
 const jogoPares = {
   id: "pares", curto: "Ligue sinal a doença, antídoto a veneno…", nome: "Pares", arte: "chave", cor: "#0369A1",
-  desc: "Toque num item da esquerda e depois no par dele à direita. Rápido e sem errar vale mais. Dois conjuntos por partida.",
+  desc: "Toque num item do primeiro grupo e depois no par dele, no segundo grupo. Rápido e sem errar vale mais. Dois conjuntos por partida.",
   fala: "Memória e raciocínio: ligue cada item ao seu par!",
   disponivel: () => conjuntosPares().length > 0, semPlacar: true,
   montar: () => embaralhar(conjuntosPares()).slice(0, 2).map(c => { const ps = embaralhar(c.pares).slice(0, 6);
@@ -144,10 +160,10 @@ const jogoPares = {
   tela(r) {
     const c = conjuntosPares().find(x => x.id === r.cid), feitoE = e => r.feitos.includes(e), feitoD = d => r.pares.some(p => p[1] === d && feitoE(p[0]));
     return `<div class="caixa pares">
-      <div class="linha entre"><span class="lab">${esc(c.titulo)} · ${JG.i + 1} de ${JG.rodadas.length}</span><span><b>${JG.pontos}</b> pontos · ${r.erros} erro${r.erros === 1 ? "" : "s"}</span></div>
+      <div class="linha entre"><span class="lab">${esc(c.titulo)} · ${JG.i + 1} de ${JG.rodadas.length}</span><span><b>${JG.pontos}</b> ${JG.pontos === 1 ? "ponto" : "pontos"} · ${r.erros} erro${r.erros === 1 ? "" : "s"}</span></div>
       <p class="muted" style="margin:4px 0 10px">${esc(c.instrucao)}</p>
-      <div class="pares-grade"><div>${r.pares.map(([e]) => `<button class="par-item" data-act="pr-esq" data-v="${esc(e)}" data-s="${feitoE(e) ? "ok" : r.sel === e ? "sel" : ""}" ${feitoE(e) || r.fim ? "disabled" : ""}>${esc(e)}</button>`).join("")}</div>
-      <div>${r.dir.map(d => `<button class="par-item" data-act="pr-dir" data-v="${esc(d)}" data-s="${feitoD(d) ? "ok" : r.erro === d ? "bad" : ""}" ${feitoD(d) || r.fim ? "disabled" : ""}>${esc(d)}</button>`).join("")}</div></div>
+      <div class="pares-grade"><div><span class="lab">1. Escolha um item</span>${r.pares.map(([e]) => `<button class="par-item" data-act="pr-esq" data-v="${esc(e)}" data-s="${feitoE(e) ? "ok" : r.sel === e ? "sel" : ""}" ${feitoE(e) || r.fim ? "disabled" : ""}>${esc(e)}</button>`).join("")}</div>
+      <div><span class="lab">2. Toque no par dele</span>${r.dir.map(d => `<button class="par-item" data-act="pr-dir" data-v="${esc(d)}" data-s="${feitoD(d) ? "ok" : r.erro === d ? "bad" : ""}" ${feitoD(d) || r.fim ? "disabled" : ""}>${esc(d)}</button>`).join("")}</div></div>
       ${r.fim ? `<div class="retorno">${falaMascote(r.erros ? `Feito em ${r.seg} s, com ${r.erros} erro${r.erros > 1 ? "s" : ""}.` : `Perfeito, em ${r.seg} s!`, r.erros ? "feliz" : "festa", 72)}
         <h3>Para fixar</h3><ul class="pares-notas">${r.pares.map(([e, d]) => `<li><b>${esc(e)} → ${esc(d)}</b>${c.notas?.[e] ? `<br><span class="muted">${esc(c.notas[e])}</span>` : ""}</li>`).join("")}</ul>
         <div class="acoes"><button class="btn grande" data-act="jg-prox">${JG.i + 1 < JG.rodadas.length ? "Próximo conjunto" : "Ver resultado"}</button></div></div>` : ""}</div>`;
@@ -156,7 +172,7 @@ const jogoPares = {
 };
 ACOES["pr-esq"] = el => { const r = JG.rodadas[JG.i]; r.sel = el.dataset.v; r.erro = null; som("tecla"); atualizar(); };
 ACOES["pr-dir"] = el => {
-  const r = JG.rodadas[JG.i]; if (!r.sel) { toast("Primeiro toque num item da esquerda"); return; }
+  const r = JG.rodadas[JG.i]; if (!r.sel) { toast("Primeiro escolha um item do 1º grupo"); return; }
   const par = r.pares.find(p => p[0] === r.sel);
   if (par[1] === el.dataset.v) { r.feitos.push(r.sel); r.sel = null; r.erro = null; JG.acertos++; som("ok");
     if (r.feitos.length === r.pares.length) { r.fim = true; r.seg = Math.round((Date.now() - r.t0) / 1000); JG.pontos += Math.max(20, 120 - r.seg - 10 * r.erros); JG.melhorSeq = Math.max(JG.melhorSeq, r.pares.length); } }
@@ -204,10 +220,31 @@ const PERGUNTAS_ANAT = [
   ["Pneumonia com macicez e estertores crepitantes: qual órgão?", "pulmao", "A consolidação alveolar dá macicez, frêmito aumentado e crepitantes."],
   ["Cálculo coraliforme se forma em qual órgão?", "rim", "O cálculo coraliforme ocupa a pelve e os cálices renais, em geral de estruvita, associado a infecção."],
 ];
+/* Teclado e leitor de tela: cada órgão é um botão focável (Tab) e acionável com Enter ou Espaço.
+   Antes da resposta o rótulo descreve só a POSIÇÃO no desenho (vista anterior), nunca o nome do órgão,
+   para não entregar a resposta; depois da resposta aparece o nome. */
+const POSICAO_ORGAO = {
+  cerebro: "Dentro da cabeça", tireoide: "Na frente do pescoço",
+  "pulmao-0": "Tórax, grande, do lado direito do paciente", "pulmao-1": "Tórax, grande, do lado esquerdo do paciente",
+  coracao: "Centro do tórax, entre os dois órgãos grandes, desviado para a esquerda do paciente",
+  figado: "Abdome superior, grande, do lado direito do paciente, logo abaixo do tórax",
+  vesicula: "Pequeno, logo abaixo da borda do órgão grande do abdome superior direito",
+  estomago: "Abdome superior, do lado esquerdo do paciente, abaixo do tórax",
+  baco: "Pequeno, na lateral esquerda do abdome superior do paciente",
+  pancreas: "Faixa horizontal no meio do abdome superior, atrás de outros órgãos",
+  "rim-0": "Tracejado, atrás, na altura da cintura, do lado direito do paciente", "rim-1": "Tracejado, atrás, na altura da cintura, do lado esquerdo do paciente",
+  grosso: "Moldura em volta do abdome inferior", delgado: "Centro do abdome inferior, dentro da moldura",
+  apendice: "Pequeno, no canto inferior do abdome, do lado direito do paciente", bexiga: "Na pelve, embaixo e no centro",
+};
 function mapaCorpo(r) {
   const s = org => r.resp == null ? "" : org === r.certo ? "ok" : org === r.resp ? "bad" : "";
-  const o = (org, d, extra = "") => `<path class="orgao ${s(org)}" data-act="an-toque" data-org="${org}" d="${d}" ${extra}><title>${r.resp != null ? ORGAOS[org] : "órgão"}</title></path>`;
-  return `<svg class="mapa-corpo" viewBox="0 0 200 300" role="group" aria-label="Mapa do corpo: toque num órgão">
+  const vistos = {};
+  const o = (org, d, extra = "") => {
+    const k = vistos[org] = (vistos[org] ?? -1) + 1, pos = POSICAO_ORGAO[org] || POSICAO_ORGAO[org + "-" + k] || "Órgão";
+    const rot = r.resp != null ? `${ORGAOS[org]}${org === r.certo ? " (resposta certa)" : org === r.resp ? " (sua resposta)" : ""}` : pos;
+    return `<path class="orgao ${s(org)}" data-act="an-toque" data-org="${org}" d="${d}" ${extra} ${r.resp == null ? `tabindex="0" role="button" aria-label="${esc(rot)}"` : `aria-label="${esc(rot)}"`}><title>${esc(rot)}</title></path>`;
+  };
+  return `<svg class="mapa-corpo" viewBox="0 0 200 300" role="group" aria-label="Mapa do corpo em vista anterior: toque num órgão, ou use Tab e Enter">
     <path class="silhueta" d="M100 4c14 0 24 11 24 25s-10 25-24 25-24-11-24-25 10-25 24-25zM88 54h24v10c20 2 40 8 46 22 4 10 4 40 2 60-2 24-4 60-8 84-4 24-20 40-54 40s-50-16-54-40c-4-24-6-60-8-84-2-20-2-50 2-60 6-14 26-20 46-22z"/>
     ${o("cerebro", "M84 22c0-10 7-15 16-15s16 5 16 15c0 8-7 12-16 12s-16-4-16-12z")}
     ${o("tireoide", "M92 62c3-3 6-3 8 0 2-3 5-3 8 0 1 4-2 8-8 8s-9-4-8-8z")}
@@ -241,7 +278,11 @@ const jogoAnatomia = {
   },
   aoTerminar: () => ({ cont: JG.acertos >= 10 ? { anatPerfeito: 1 } : {} }),
 };
-ACOES["an-toque"] = el => { const r = JG.rodadas[JG.i]; if (r.resp != null) return; r.resp = el.dataset.org; pontuar(r.resp === r.certo); atualizar(); };
+ACOES["an-toque"] = (el, e) => { const r = JG.rodadas[JG.i]; if (r.resp != null) return; r.resp = el.dataset.org; pontuar(r.resp === r.certo); atualizar();
+  if (e?.type === "keydown") document.querySelector('#view [data-act="jg-prox"]')?.focus(); };   // pelo teclado, o foco vai para "Próxima"
+document.addEventListener("keydown", e => {
+  if ((e.key === "Enter" || e.key === " ") && e.target?.dataset?.act === "an-toque" && location.hash.startsWith("#/jogos/anatomia")) { e.preventDefault(); ACOES["an-toque"](e.target, e); }
+});
 
 JOGOS.unshift(jogoCaso, jogoTermo);
 JOGOS.push(jogoPares, jogoAnatomia);

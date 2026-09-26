@@ -79,9 +79,9 @@ function monitor(v = {}, { rotulo = false } = {}) {
   const dur = Math.min(8, Math.max(1.2, 2 * batidas * 60 / (v.FC || 60)));
   const alerta = (k, val) => ({ FC: val < 50 || val > 120, SatO2: val < 92, FR: val < 10 || val > 24 })[k] ? " alerta" : "";
   const pa = !v.PA || /^0\s*x\s*0$/i.test(String(v.PA)) ? "—" : String(v.PA), pas = parseInt(pa, 10);
-  return `<div class="monitor" role="img" aria-label="Monitor: FC ${v.FC ?? "—"}, PA ${pa}, SatO2 ${v.SatO2 ?? "—"}%, FR ${v.FR ?? "—"}, ritmo ${ritmo}">
+  return `<div class="monitor" role="img" aria-label="${esc(`Monitor: FC ${v.FC ?? "—"}, PA ${pa}, SatO2 ${v.SatO2 ?? "—"}%, FR ${v.FR ?? "—"}, ritmo ${NOME_RITMO[ritmo] || ritmo}`)}">
     <div class="mon-tracado"><svg viewBox="0 0 400 50" preserveAspectRatio="none" style="animation-duration:${dur.toFixed(2)}s"><g class="mon-onda ${ritmo === "assistolia" ? "parada" : ""}">${rep}</g></svg>${rotulo ? `<span class="mon-ritmo">${esc(NOME_RITMO[ritmo] || ritmo)}</span>` : ""}</div>
-    <div class="mon-num"><span class="m-fc${alerta("FC", v.FC)}"><small>FC</small><b>${v.FC ?? "—"}</b></span><span class="m-sat${alerta("SatO2", v.SatO2)}"><small>SpO₂</small><b>${v.SatO2 ?? "—"}</b></span>
-    <span class="m-pa${pas && pas < 90 ? " alerta" : ""}"><small>PA</small><b>${esc(pa)}</b></span><span class="m-fr${alerta("FR", v.FR)}"><small>FR</small><b>${v.FR ?? "—"}</b></span></div></div>`;
+    <div class="mon-num"><span class="m-fc${alerta("FC", v.FC)}"><small>FC</small><b>${esc(v.FC ?? "—")}</b></span><span class="m-sat${alerta("SatO2", v.SatO2)}"><small>SpO₂</small><b>${esc(v.SatO2 ?? "—")}</b></span>
+    <span class="m-pa${pas && pas < 90 ? " alerta" : ""}"><small>PA</small><b>${esc(pa)}</b></span><span class="m-fr${alerta("FR", v.FR)}"><small>FR</small><b>${esc(v.FR ?? "—")}</b></span></div></div>`;
 }
 const NOME_RITMO = { sinusal: "Ritmo sinusal", "taqui-sinusal": "Taquicardia sinusal", fa: "Fibrilação atrial", flutter: "Flutter atrial", tv: "Taquicardia ventricular", fv: "Fibrilação ventricular", assistolia: "Assistolia", bradi: "Bradicardia", bav3: "BAV total", aesp: "AESP (sem pulso)" };

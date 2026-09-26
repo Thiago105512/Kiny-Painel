@@ -24,22 +24,40 @@ const doObjetivo = q => { const o = objetivo(); if (!o) return true; return o ==
 
 const minhaGrade = () => { const P = store.doc("perfil"); return P.gradeId ? gradePorId(P.gradeId) : null; };
 const acad = () => store.doc("academico");
-/** Situação: a escolhida pela pessoa ou, sem escolha, a presumida pelo período atual. */
+/* Notas, faltas e situação ficam em academico.disc["<matriz>|<item>"]: ids de item se repetem entre matrizes
+   (ex.: "anatomia-humana-i"), e trocar de matriz não pode trazer as notas da anterior.
+   Migração: chaves antigas (só o id do item) passam para a matriz atual quando o item existe nela. */
+const chaveDisc = (itId, g = minhaGrade()) => g ? g.id + "|" + itId : String(itId);
+const _migradas = new Set();
+function migrarChavesAcad(g) {
+  if (!g || _migradas.has(g.id)) return; _migradas.add(g.id);
+  const A = acad(), ids = new Set(itensGrade(g).map(x => x.id)); let n = 0;
+  Object.keys(A.disc).forEach(k => { if (!k.includes("|") && ids.has(k)) { const nova = g.id + "|" + k; if (!A.disc[nova]) A.disc[nova] = A.disc[k]; delete A.disc[k]; n++; } });
+  if (n) store.mudou("academico");
+}
+/** Registro da disciplina na matriz atual (ou undefined). */
+function discDe(itId) { const g = minhaGrade(); migrarChavesAcad(g); return acad().disc[chaveDisc(itId, g)]; }
+/** Optativa/eletiva: marcada na matriz ou no grupo "período 0" (Optativas) do importador. */
+const ehOptativa = it => !!it.optativa || it.periodo === 0;
+/** Situação: a escolhida pela pessoa ou, sem escolha, a presumida pelo período atual.
+    Itens sem período definido no documento oficial (ex.: estágios do internato, "periodoIncerto") não são presumidos. */
 function sitDe(it) {
-  const d = acad().disc[it.id]; if (d?.sit) return d.sit;
+  const d = discDe(it.id); if (d?.sit) return d.sit;
   const per = store.doc("perfil").periodo;
-  if (!per || !it.periodo || it.optativa) return "acursar";
+  if (!per || !it.periodo || ehOptativa(it) || it.periodoIncerto) return "acursar";
   return it.periodo < per ? "concluida" : it.periodo === per ? "cursando" : "acursar";
 }
-const presumida = it => !acad().disc[it.id]?.sit;
+const presumida = it => !discDe(it.id)?.sit;
+const lerPeso = v => { const n = parseFloat(String(v ?? "").replace(",", ".")); return n > 0 ? Math.min(100, n) : 1; };   // peso zero, negativo ou inválido vale 1
 /** Média ponderada das notas lançadas (0–10) ou a média final informada. */
 function mediaDe(itId) {
-  const d = acad().disc[itId]; if (!d) return null;
+  const d = discDe(itId); if (!d) return null;
   if (typeof d.final === "number") return d.final;
   const ns = (d.notas || []).filter(n => typeof n.valor === "number");
   if (!ns.length) return null;
-  const p = ns.reduce((s, n) => s + (+n.peso || 1), 0);
-  return Math.round(ns.reduce((s, n) => s + n.valor * (+n.peso || 1), 0) / p * 100) / 100;
+  const p = ns.reduce((s, n) => s + lerPeso(n.peso), 0);
+  if (!(p > 0)) return null;
+  return Math.round(ns.reduce((s, n) => s + n.valor * lerPeso(n.peso), 0) / p * 100) / 100;
 }
 /** Coeficiente: média das médias ponderada pela carga horária (só disciplinas com média). */
 function coeficiente(g) {
@@ -54,7 +72,7 @@ const proximasAvals = (dias = 60) => avals().filter(a => !a.feito && a.data && a
 const nomeItem = (g, id) => (g && itensGrade(g).find(x => x.id === id)?.nome) || null;
 const semGrade = () => ({ secao: "curso", titulo: "Meu curso", html: vazio("Escolha a matriz curricular no seu perfil primeiro.", `<a class="btn" href="#/curso">Voltar</a>`) });
 function mudouAcad() { store.mudou("academico"); }
-function discOuNovo(id) { const A = acad(); return A.disc[id] = A.disc[id] || { notas: [], faltas: 0 }; }
+function discOuNovo(id) { const A = acad(), g = minhaGrade(); migrarChavesAcad(g); const k = chaveDisc(id, g); return A.disc[k] = A.disc[k] || { notas: [], faltas: 0 }; }
 
 /* ---------- Painel ---------- */
 rota("/curso", () => {
@@ -62,10 +80,10 @@ rota("/curso", () => {
   if (!g || !itensGrade(g).length) return { secao: "curso", titulo: "Meu curso",
     html: vazio(P.faculdade ? "A matriz da sua faculdade ainda não foi escolhida ou importada. Escolha a matriz no perfil (ou importe o documento oficial) para acompanhar disciplinas, notas e provas."
       : "Escolha sua faculdade, a matriz curricular e o período para acompanhar disciplinas, notas, faltas e provas.", `<button class="btn" data-act="perfil-fac">Meu perfil</button>${P.faculdade ? `<a class="btn sec" href="#/medicina/inst/${esc(P.faculdade)}">Importar matriz</a>` : ""}`) };
-  const it = itensGrade(g).filter(x => !x.optativa || acad().disc[x.id]?.sit), obrig = it.filter(x => !x.optativa);
+  const it = itensGrade(g).filter(x => !ehOptativa(x) || discDe(x.id)?.sit), obrig = it.filter(x => !ehOptativa(x));
   const conc = obrig.filter(x => ["concluida", "dispensada"].includes(sitDe(x))), chConc = conc.reduce((s, x) => s + (x.ch || 0), 0), chTot = obrig.reduce((s, x) => s + (x.ch || 0), 0);
   const cursando = it.filter(x => sitDe(x) === "cursando"), cr = coeficiente(g), prox = proximasAvals(30).slice(0, 5);
-  const linhaDisc = x => { const m = mediaDe(x.id), d = acad().disc[x.id], lim = x.ch ? Math.floor(x.ch * 0.25) : null, f = d?.faltas || 0;
+  const linhaDisc = x => { const m = mediaDe(x.id), d = discDe(x.id), lim = x.ch ? Math.floor(x.ch * 0.25) : null, f = d?.faltas || 0;
     return `<a href="#/curso/d/${esc(x.id)}"><span>${esc(x.nome)}</span><small>${[m !== null && "média " + fmtNota(m), f ? `${f} h de falta${lim ? ` (limite ~${lim} h)` : ""}` : "", avals().filter(a => a.disc === x.id && !a.feito && a.data >= hoje()).length && "avaliação marcada"].filter(Boolean).join(" · ")}</small></a>`; };
   return {
     secao: "curso", titulo: "Meu curso", sub: `${esc(nomeInst(g.instituicao))} · ${esc(CURSOS[g.curso] || g.curso)} ${esc(g.versao || "")}${P.periodo ? ` · ${P.periodo}º período` : ""}`,
@@ -82,7 +100,8 @@ rota("/curso", () => {
         <a href="#/curso/historico"><span>Importar histórico escolar</span><small>preenche situação e médias pelo código da disciplina</small></a>
         <a href="#/curso/ajuda"><span>Correção e ajuda</span><small>envie prova, trabalho ou pedido de ajuda</small></a>
         <a href="#/medicina/grade/${esc(g.id)}"><span>Matriz curricular</span><small>${esc(statusGrade(g).nome)}</small></a></div></section>
-      ${obrig.some(presumida) ? `<p class="small muted">Situações sem marcação foram presumidas pelo seu período atual. Ajuste em "Todas as disciplinas" ou importe o histórico.</p>` : ""}`,
+      ${obrig.some(presumida) ? `<p class="small muted">Situações sem marcação foram presumidas pelo seu período atual. Ajuste em "Todas as disciplinas" ou importe o histórico.</p>` : ""}
+      ${obrig.some(x => x.periodoIncerto && presumida(x)) ? `<p class="small muted">O documento oficial não informa em que período fica cada estágio do internato. Eles contam como "a cursar" até você marcar a situação em "Todas as disciplinas".</p>` : ""}`,
     ctx: { grade: g.id, periodo: P.periodo },
   };
 });
@@ -99,7 +118,7 @@ rota("/curso/disciplinas", () => {
     sub: "Escolha a situação de cada uma. As não marcadas são presumidas pelo seu período atual.",
     html: (g.periodos || []).map(p => `<section><h2 class="sec">${esc(p.nome || p.numero + "º período")} <button class="btn mini sec" data-act="disc-per" data-p="${p.numero}" data-s="concluida">Tudo concluído</button></h2>
       <div class="tarefas">${(p.itens || []).map(it0 => { const it = { ...it0, periodo: p.numero }, m = mediaDe(it.id);
-        return `<div class="tarefa"><div class="o"><a href="#/curso/d/${esc(it.id)}">${esc(it.nome)}</a><small>${[it.codigo, it.ch && it.ch + " h", m !== null && "média " + fmtNota(m), presumida(it) && "presumida"].filter(Boolean).map(esc).join(" · ")}</small></div>${sel(it)}</div>`; }).join("")}</div></section>`).join(""),
+        return `<div class="tarefa"><div class="o"><a href="#/curso/d/${esc(it.id)}">${esc(it.nome)}</a><small>${[it.codigo, it.ch && it.ch + " h", ehOptativa(it) && "optativa", it.periodoIncerto && "período não informado no documento", m !== null && "média " + fmtNota(m), presumida(it) && "presumida"].filter(Boolean).map(esc).join(" · ")}</small></div>${sel(it)}</div>`; }).join("")}</div></section>`).join(""),
     ctx: { grade: g.id } };
 });
 MUDANCAS["disc-sit"] = el => { discOuNovo(el.dataset.i).sit = el.value; mudouAcad(); toast("Situação salva"); atualizar(); };
@@ -108,15 +127,15 @@ ACOES["disc-per"] = el => { const g = minhaGrade(), p = g.periodos.find(x => Str
 /* ---------- Disciplina ---------- */
 rota("/curso/d/:i", ({ i }) => {
   const g = minhaGrade(); const it = g && itensGrade(g).find(x => x.id === i); if (!it) return paginaNaoEncontrada();
-  const d = acad().disc[i] || { notas: [], faltas: 0 }, m = mediaDe(i), lim = it.ch ? Math.floor(it.ch * 0.25) : null, f = d.faltas || 0;
+  const d = discDe(i) || { notas: [], faltas: 0 }, m = mediaDe(i), lim = it.ch ? Math.floor(it.ch * 0.25) : null, f = d.faltas || 0;
   const temas = temasDoItem(it), qs = questoes().filter(q => temas.includes(q.tema)), av = avals().filter(a => a.disc === i);
   return {
     secao: "curso", crumbs: [["Meu curso", "#/curso"], ["Disciplinas", "#/curso/disciplinas"]], titulo: it.nome,
     sub: `${pill(SIT[sitDe(it)][0], SIT[sitDe(it)][1])} ${[it.codigo, it.periodoNome, it.ch && it.ch + " h"].filter(Boolean).map(esc).join(" · ")}`,
-    acoes: `${qs.length ? `<button class="btn" data-act="praticar-ids" data-ids="${qs.map(q => q.id).join(",")}" data-ctx="Disciplina ${esc(it.nome)}">Praticar ${qs.length} questões</button>` : ""}<button class="btn sec" data-act="aval-nova" data-d="${esc(i)}">+ Prova ou trabalho</button>`,
+    acoes: `${qs.length ? `<button class="btn" data-act="praticar-ids" data-ids="${qs.map(q => q.id).join(",")}" data-ctx="Disciplina ${esc(it.nome)}">Praticar ${plural(qs.length, "questão", "questões")}</button>` : ""}<button class="btn sec" data-act="aval-nova" data-d="${esc(i)}">+ Prova ou trabalho</button>`,
     html: `<section class="caixa"><h2 class="sec">Situação</h2><select data-chg="disc-sit" data-i="${esc(i)}" aria-label="Situação">${opcoes(Object.entries(SIT).map(([k, [t]]) => [k, t]), sitDe(it))}</select></section>
       <section class="caixa"><h2 class="sec">Notas <span class="small muted">média ${fmtNota(m)}</span></h2>
-        ${(d.notas || []).length ? `<div class="tarefas">${d.notas.map(n => `<div class="tarefa"><div class="o">${esc(n.nome)}<small>nota ${fmtNota(n.valor)}${(+n.peso || 1) !== 1 ? " · peso " + fmtNota(n.peso) : ""}</small></div><button class="btn mini sec" data-act="nota-del" data-i="${esc(i)}" data-n="${esc(n.id)}" aria-label="Apagar nota ${esc(n.nome)}">Apagar</button></div>`).join("")}</div>` : `<p class="muted">Nenhuma nota lançada.</p>`}
+        ${(d.notas || []).length ? `<div class="tarefas">${d.notas.map(n => `<div class="tarefa"><div class="o">${esc(n.nome)}<small>nota ${fmtNota(n.valor)}${lerPeso(n.peso) !== 1 ? " · peso " + fmtNota(lerPeso(n.peso)) : ""}</small></div><button class="btn mini sec" data-act="nota-del" data-i="${esc(i)}" data-n="${esc(n.id)}" aria-label="Apagar nota ${esc(n.nome)}">Apagar</button></div>`).join("")}</div>` : `<p class="muted">Nenhuma nota lançada.</p>`}
         <form class="campos" data-form="nota-nova" data-i="${esc(i)}" style="margin-top:10px">
           <label class="campo"><span class="lab">Avaliação</span><input type="text" id="nn-nome" required maxlength="60" placeholder="Ex.: 1ª prova"></label>
           <label class="campo"><span class="lab">Nota (0 a 10)</span><input type="text" inputmode="decimal" id="nn-valor" required></label>
@@ -127,12 +146,12 @@ rota("/curso/d/:i", ({ i }) => {
         <div class="linha" style="align-items:center"><button class="btn sec" data-act="falta" data-i="${esc(i)}" data-n="-1" aria-label="Menos uma hora de falta">−</button><b style="font-size:calc(24px * var(--k));min-width:3ch;text-align:center">${f}</b><button class="btn sec" data-act="falta" data-i="${esc(i)}" data-n="1" aria-label="Mais uma hora de falta">+</button><span>horas-aula</span></div>
         ${lim ? `${medidor(pct(f, lim), f >= lim ? "bad" : f >= lim * 0.75 ? "warn" : "ok")}<p class="small muted">Limite estimado: ${lim} h (25% de ${it.ch} h, regra comum de 75% de frequência). Confira no regimento da sua faculdade.</p>` : ""}</section>
       <section><h2 class="sec">Provas e trabalhos</h2>${av.length ? `<div class="tarefas">${av.map(linhaAval).join("")}</div>` : `<p class="muted">Nenhuma cadastrada.</p>`}</section>
-      <section><h2 class="sec">Temas</h2>${temas.length ? `<div class="links-lista">${temas.map(t => `<a href="#/tema/${esc(t)}"><span>${esc(nomeTema(t))}</span><small>${questoes().filter(q => q.tema === t).length} questões</small></a>`).join("")}</div>` : `<p class="muted">Nenhum tema vinculado. <a href="#/medicina/grade/${esc(g.id)}/item/${esc(i)}">Vincular temas</a></p>`}</section>`,
+      <section><h2 class="sec">Temas</h2>${temas.length ? `<div class="links-lista">${temas.map(t => `<a href="#/tema/${esc(t)}"><span>${esc(nomeTema(t))}</span><small>${plural(questoes().filter(q => q.tema === t).length, "questão", "questões")}</small></a>`).join("")}</div>` : `<p class="muted">Nenhum tema vinculado. <a href="#/medicina/grade/${esc(g.id)}/item/${esc(i)}">Vincular temas</a></p>`}</section>`,
     ctx: { grade: g.id, periodo: it.periodo, disciplina: it.nome },
   };
 });
 FORMS["nota-nova"] = f => { const v = lerNota($("#nn-valor").value); if (v === null) { toast("Nota inválida"); return; }
-  const d = discOuNovo(f.dataset.i); d.notas = d.notas || []; d.notas.push({ id: "n" + Date.now().toString(36), nome: $("#nn-nome").value.trim(), valor: v, peso: parseFloat(String($("#nn-peso").value).replace(",", ".")) || 1 }); mudouAcad(); toast("Nota lançada"); atualizar(); };
+  const d = discOuNovo(f.dataset.i); d.notas = d.notas || []; d.notas.push({ id: "n" + Date.now().toString(36), nome: $("#nn-nome").value.trim(), valor: v, peso: lerPeso($("#nn-peso").value) }); mudouAcad(); toast("Nota lançada"); atualizar(); };
 FORMS["nota-final"] = f => { const d = discOuNovo(f.dataset.i), v = $("#nf-valor").value.trim(); d.final = v === "" ? null : lerNota(v); mudouAcad(); toast("Média salva"); atualizar(); };
 ACOES["nota-del"] = el => { const d = discOuNovo(el.dataset.i); d.notas = (d.notas || []).filter(n => n.id !== el.dataset.n); mudouAcad(); atualizar(); };
 ACOES["falta"] = el => { const d = discOuNovo(el.dataset.i); d.faltas = Math.max(0, (d.faltas || 0) + +el.dataset.n); mudouAcad(); atualizar(); };
@@ -164,10 +183,12 @@ FORMS["aval-salvar"] = f => {
   const A = acad(), id = f.dataset.id || "av" + Date.now().toString(36), velho = A.aval[id] || {};
   const disc = $("#av-disc").value || null, g = minhaGrade(), it = g && disc ? itensGrade(g).find(x => x.id === disc) : null;
   const a = A.aval[id] = { ...velho, id, tipo: $("#av-tipo").value, disc, titulo: $("#av-tit").value.trim(), data: $("#av-data").value, hora: $("#av-hora").value,
-    peso: parseFloat(String($("#av-peso").value).replace(",", ".")) || 1, conteudo: $("#av-cont").value.trim(), temas: velho.temas || (it ? temasDoItem(it) : []) };
+    peso: lerPeso($("#av-peso").value), conteudo: $("#av-cont").value.trim(),
+    // trocou a disciplina (ou a avaliação nasceu sem temas): os temas passam a ser os da disciplina escolhida
+    temas: disc !== (velho.disc ?? null) || !velho.temas?.length ? (it ? temasDoItem(it) : []) : velho.temas };
   mudouAcad();
   const n = !f.dataset.id && $("#av-rev")?.checked ? montarRevisao(a) : 0;
-  fecharFolha(); toast(n ? `Salvo · ${n} sessões de revisão no Planejamento` : "Salvo"); atualizar();
+  fecharFolha(); toast(n ? `Salvo · ${plural(n, "sessão", "sessões")} de revisão no Planejamento` : "Salvo"); atualizar();
 };
 /** Distribui os temas entre amanhã e a véspera (até 14 dias), com um simulado misto na véspera. */
 function montarRevisao(a) {
@@ -192,10 +213,10 @@ rota("/curso/aval/:id", ({ id }) => {
   const a = acad().aval[id]; if (!a) return paginaNaoEncontrada();
   const g = minhaGrade(), rev = Object.values(store.doc("plano").itens).filter(p => p.aval === id).sort((x, y) => x.data.localeCompare(y.data));
   return { secao: "curso", crumbs: [["Meu curso", "#/curso"], ["Provas e trabalhos", "#/curso/agenda"]], titulo: `${TIPO_AVAL[a.tipo] || "Avaliação"}${a.titulo ? ": " + a.titulo : ""}`,
-    sub: [a.data && `${dataBR(a.data)}${a.hora ? " " + a.hora : ""} (${quando(a.data)})`, nomeItem(g, a.disc), (+a.peso || 1) !== 1 && "peso " + fmtNota(a.peso)].filter(Boolean).map(esc).join(" · "),
+    sub: [a.data && `${dataBR(a.data)}${a.hora ? " " + a.hora : ""} (${quando(a.data)})`, nomeItem(g, a.disc), lerPeso(a.peso) !== 1 && "peso " + fmtNota(lerPeso(a.peso))].filter(Boolean).map(esc).join(" · "),
     acoes: `<button class="btn sec mini" data-act="aval-editar" data-id="${esc(id)}">Editar</button><button class="btn sec mini perigo" data-act="aval-del" data-id="${esc(id)}">Apagar</button>`,
     html: `${a.conteudo ? `<section class="caixa"><h2 class="sec">Conteúdo</h2><p class="leitura">${esc(a.conteudo)}</p></section>` : ""}
-      <section class="caixa"><h2 class="sec">Revisão até a data</h2>${rev.length ? `<div class="tarefas">${rev.map(p => `<div class="tarefa"><div class="o" style="${p.feito ? "text-decoration:line-through;color:var(--muted)" : ""}">${esc(p.titulo)}<small>${dataBR(p.data)} · ${p.nq} questões</small></div></div>`).join("")}</div>` : `<p class="muted">Sem sessões de revisão${(a.temas || []).length ? "" : " (a disciplina não tem temas vinculados)"}.</p>`}
+      <section class="caixa"><h2 class="sec">Revisão até a data</h2>${rev.length ? `<div class="tarefas">${rev.map(p => `<div class="tarefa"><div class="o" style="${p.feito ? "text-decoration:line-through;color:var(--muted)" : ""}">${esc(p.titulo)}<small>${dataBR(p.data)} · ${plural(p.nq, "questão", "questões")}</small></div></div>`).join("")}</div>` : `<p class="muted">Sem sessões de revisão${(a.temas || []).length ? "" : " (a disciplina não tem temas vinculados)"}.</p>`}
         ${(a.temas || []).length && a.data >= hoje() ? `<div class="acoes"><button class="btn sec mini" data-act="aval-rev" data-id="${esc(id)}">${rev.length ? "Refazer revisão" : "Montar revisão"}</button>${IA.disponivel() ? `<a class="btn sec mini" href="#/curso/ajuda/nova/revisao/${esc(id)}">Pedir resumo à IA</a>` : ""}</div>` : ""}</section>
       <section class="caixa"><h2 class="sec">Depois da avaliação</h2>
         <form class="campos" data-form="aval-nota" data-id="${esc(id)}"><label class="campo"><span class="lab">Nota (0 a 10)</span><input type="text" inputmode="decimal" id="an-nota" value="${a.nota != null ? fmtNota(a.nota) : ""}"></label>
@@ -203,17 +224,17 @@ rota("/curso/aval/:id", ({ id }) => {
         <p class="small muted">Recebeu a prova corrigida? Envie em <a href="#/curso/ajuda">Correção e ajuda</a> para entender cada erro.</p></section>` };
 });
 ACOES["aval-editar"] = el => formAval(acad().aval[el.dataset.id]);
-ACOES["aval-rev"] = el => { const n = montarRevisao(acad().aval[el.dataset.id]); toast(`${n} sessões de revisão no Planejamento`); atualizar(); };
+ACOES["aval-rev"] = el => { const n = montarRevisao(acad().aval[el.dataset.id]); toast(`${plural(n, "sessão", "sessões")} de revisão no Planejamento`); atualizar(); };
 ACOES["aval-del"] = el => abrirFolha(`<h2 class="sec">Apagar esta avaliação?</h2><p>As sessões de revisão ainda não feitas também saem do Planejamento.</p><button class="btn perigo" data-act="aval-del-ok" data-id="${esc(el.dataset.id)}">Apagar</button>`);
 ACOES["aval-del-ok"] = el => { const A = acad(), P = store.doc("plano"), id = el.dataset.id;
   Object.keys(P.itens).forEach(k => { if (P.itens[k].aval === id && !P.itens[k].feito) delete P.itens[k]; }); store.mudou("plano");
-  const nId = A.aval[id]?.notaId, d = A.aval[id]?.disc && A.disc[A.aval[id].disc]; if (d && nId) d.notas = (d.notas || []).filter(n => n.id !== nId);
+  const nId = A.aval[id]?.notaId, d = A.aval[id]?.disc && discDe(A.aval[id].disc); if (d && nId) d.notas = (d.notas || []).filter(n => n.id !== nId);
   delete A.aval[id]; mudouAcad(); fecharFolha(); ir("#/curso/agenda"); };
 FORMS["aval-nota"] = f => {
   const A = acad(), a = A.aval[f.dataset.id], v = $("#an-nota").value.trim(), nota = v === "" ? null : lerNota(v);
   a.nota = nota; a.feito = nota !== null || a.feito;
   if (a.disc && nota !== null) { const d = discOuNovo(a.disc); d.notas = d.notas || []; const nid = a.notaId || "n" + a.id, ex = d.notas.find(n => n.id === nid), g = minhaGrade();
-    const reg = { id: nid, nome: a.titulo || `${TIPO_AVAL[a.tipo]} de ${dataBR(a.data)}`, valor: nota, peso: a.peso || 1 };
+    const reg = { id: nid, nome: a.titulo || `${TIPO_AVAL[a.tipo]} de ${dataBR(a.data)}`, valor: nota, peso: lerPeso(a.peso) };
     if (ex) Object.assign(ex, reg); else d.notas.push(reg); a.notaId = nid; }
   mudouAcad(); toast("Nota salva"); atualizar();
 };
@@ -227,7 +248,7 @@ rota("/curso/historico", () => {
     html: `<section class="caixa"><div class="linha"><label class="btn">Escolher arquivo<input type="file" accept=".pdf,.txt,.csv,.xlsx,.docx" data-chg="hist-arq" hidden></label></div>
       <label class="campo" style="margin-top:10px"><span class="lab">Ou cole o texto do histórico</span><textarea id="hist-txt" rows="5"></textarea></label>
       <div class="acoes"><button class="btn sec" data-act="hist-ler">Ler texto colado</button></div>${HIST.msg ? `<p class="aviso info">${esc(HIST.msg)}</p>` : ""}</section>
-      ${HIST.linhas.length ? `<section><h2 class="sec">Revise (${HIST.linhas.length} disciplinas encontradas)</h2>
+      ${HIST.linhas.length ? `<section><h2 class="sec">Revise (${plural(HIST.linhas.length, "disciplina encontrada", "disciplinas encontradas")})</h2>
         ${tabela([{ t: "" }, { t: "Disciplina" }, { t: "Média", num: 1 }, { t: "Situação" }], HIST.linhas.map((l, k) => [`<input type="checkbox" data-chg="hist-marca" data-k="${k}" ${l.usar ? "checked" : ""} aria-label="Usar ${esc(l.nome)}" style="width:calc(20px * var(--k));height:calc(20px * var(--k))">`, `${esc(l.nome)} <span class="small muted">${esc(l.codigo)}${l.sem ? " · " + esc(l.sem) : ""}</span>`, fmtNota(l.media), pill(SIT[l.sit][0], SIT[l.sit][1])]), { resp: false })}
         <div class="acoes"><button class="btn azul grande" data-act="hist-aplicar">Salvar marcadas</button></div></section>` : ""}`,
     ctx: { grade: g.id } };
@@ -260,4 +281,4 @@ ACOES["hist-ler"] = () => { const t = $("#hist-txt").value; if (t.trim()) proces
 MUDANCAS["hist-marca"] = el => { HIST.linhas[+el.dataset.k].usar = el.checked; };
 ACOES["hist-aplicar"] = () => { let n = 0;
   HIST.linhas.filter(l => l.usar).forEach(l => { const d = discOuNovo(l.id); d.sit = l.sit; if (l.media !== null) d.final = l.media; if (l.sem) d.sem = l.sem; n++; });
-  mudouAcad(); HIST.linhas = []; HIST.msg = ""; toast(`${n} disciplinas atualizadas`); ir("#/curso"); };
+  mudouAcad(); HIST.linhas = []; HIST.msg = ""; toast(`${plural(n, "disciplina atualizada", "disciplinas atualizadas")}`); ir("#/curso"); };

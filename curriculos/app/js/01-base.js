@@ -6,6 +6,8 @@ const ACOES = {}, MUDANCAS = {}, ENTRADAS = {}, FORMS = {};
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const LETRAS = "ABCDE";
+// Idioma do documento: leitor de tela com voz em português e hifenização correta (mesmo se o app for embutido).
+try { document.documentElement.lang = "pt-BR"; } catch (e) { }
 const DIA = 86400000;
 
 /** Texto normalizado para busca: minúsculo e sem acentos. */
@@ -17,7 +19,8 @@ const novoId = (p = "x") => p + Date.now().toString(36) + Math.random().toString
 const diaISO = (d = new Date()) => { const x = new Date(d); return x.getFullYear() + "-" + String(x.getMonth() + 1).padStart(2, "0") + "-" + String(x.getDate()).padStart(2, "0"); };
 const hoje = () => diaISO();
 const somaDias = (iso, n) => { const [a, m, d] = iso.split("-").map(Number); return diaISO(new Date(a, m - 1, d + n)); };
-const dataBR = iso => { if (!iso) return "—"; const [a, m, d] = String(iso).slice(0, 10).split("-"); return `${d}/${m}/${a}`; };
+/** Data AAAA-MM-DD → DD/MM/AAAA, já escapada (o valor pode vir de backup ou da conta). */
+const dataBR = iso => { if (!iso) return "—"; const [a, m, d] = String(iso).slice(0, 10).split("-"); return esc(`${d}/${m}/${a}`); };
 const dataCurta = ts => new Date(ts).toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" });
 const diasAte = iso => Math.round((new Date(iso + "T00:00:00") - new Date(hoje() + "T00:00:00")) / DIA);
 const quando = iso => { const n = diasAte(iso); return n < -1 ? `atrasada ${-n} dias` : n === -1 ? "ontem" : n === 0 ? "hoje" : n === 1 ? "amanhã" : `em ${n} dias`; };

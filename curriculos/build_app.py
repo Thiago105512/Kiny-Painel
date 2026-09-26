@@ -8,7 +8,7 @@
   curriculos.py                                   (guia de referência)
 Valida tudo antes de gravar. Uso:  python3 build_app.py
 """
-import json, pathlib, re, sys
+import json, pathlib, re, sys, unicodedata
 from curriculos import SECOES
 
 AQUI = pathlib.Path(__file__).parent
@@ -29,14 +29,21 @@ def ler(caminho, padrao=None):
         return padrao
 
 
+def slug(s):
+    """Igual ao slug() de app/js/01-base.js: minúsculo, sem acento, hífens, até 48 caracteres."""
+    s = "".join(c for c in unicodedata.normalize("NFD", str(s or "")) if not "\u0300" <= c <= "\u036f").lower()
+    return re.sub(r"^-|-$", "", re.sub(r"[^a-z0-9]+", "-", s))[:48] or "item"
+
+
 def catalogo_temas(mapa, enem):
+    """tema -> ids de subtema. No ENEM o id é o que o app gera (02-dados.js): <assunto>.<slug do subassunto>."""
     temas = {}
     for t in (mapa or {}).get("temas", []):
         temas[t["id"]] = {s["id"] for s in t.get("subtemas", [])}
     for a in (enem or {}).get("areas", []):
         for d in a.get("disciplinas", []):
             for s in d.get("assuntos", []):
-                temas[s["id"]] = set(s.get("subassuntos", []))
+                temas[s["id"]] = {s["id"] + "." + slug(n) for n in s.get("subassuntos", [])}
     return temas
 
 
@@ -59,8 +66,9 @@ def validar_banco(banco, temas):
             if tema is not None and tema not in temas:
                 erros.append(f"{onde}: tema '{tema}' não existe no catálogo")
             sub = q.get("subtema")
-            if t in ("medicina", "residencia") and sub and tema in temas and sub not in temas[tema]:
-                erros.append(f"{onde}: subtema '{sub}' não pertence ao tema '{tema}'")
+            if sub and tema in temas and sub not in temas[tema]:
+                dica = f" (use o id '{tema}.{slug(sub)}')" if f"{tema}.{slug(sub)}" in temas[tema] else ""
+                erros.append(f"{onde}: subtema '{sub}' não pertence ao tema '{tema}'{dica}")
             if q.get("dificuldade") not in (None, 1, 2, 3):
                 erros.append(f"{onde}: dificuldade deve ser 1, 2 ou 3")
             fam = q.get("familia")
@@ -110,7 +118,9 @@ if __name__ == "__main__":
     mapa = ler("dados/medicina/mapa.json", {})
     enem = ler("dados/enem/matriz.json", {})
     dados = {
-        "guia": {k: v[1] for k, v in SECOES.items()},
+        # "Semiologia/Propedêutica": ponto de quebra (espaço de largura zero) depois da barra, para a linha
+        # poder quebrar ali em tela estreita, e não no meio da palavra (as chaves do checklist não mudam)
+        "guia": {k: {sub: [re.sub(r"(?<=\w)/(?=\w)", "/\u200b", x) if isinstance(x, str) else x for x in itens] for sub, itens in v[1].items()} for k, v in SECOES.items()},
         "banco": banco,
         "mapa": mapa,
         "enem": enem,
@@ -130,6 +140,10 @@ if __name__ == "__main__":
     dados["jogos"] = {"casos": _jogo("casos-dia.json"), "termo": _jogo("termo.json"), "pares": _jogo("pares.json"),
                       "triagem": _jogo("triagem.json"), "emergencias": _jogo("emergencias.json"), "cascatas": _jogo("cascatas.json"),
                       "defesa": _jogo("defesa.json") or {}, "quemsou": _jogo("quemsou.json") or {}}
+    # Defesa: "Cloroquina+primaquina", "Drenagem/cirurgia" podem quebrar depois do + ou da / (não no meio da palavra)
+    for a in dados["jogos"]["defesa"].get("armas", []):
+        for campo in ("nome", "classe"):
+            if isinstance(a.get(campo), str): a[campo] = re.sub(r"(?<=\w)([+/])(?=\w)", "\\1\u200b", a[campo])
     for c in dados["jogos"]["emergencias"]:   # todo "vai" precisa apontar para uma etapa ou um final
         alvos = set(c.get("etapas", {})) | set(c.get("finais", {}))
         if c.get("inicio") not in c.get("etapas", {}) or any(a.get("vai") not in alvos for e in c["etapas"].values() for a in e.get("acoes", [])):
@@ -182,8 +196,13 @@ if __name__ == "__main__":
         with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False, encoding="utf-8") as tmp: tmp.write(js)
         r = subprocess.run(["node", "--check", tmp.name], capture_output=True, text=True)
         if r.returncode: print("Build interrompido: erro de sintaxe no JavaScript\n" + r.stderr[:1500]); sys.exit(1)
-    dados_js = "const DADOS = " + json.dumps(dados, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + ";"
+    # DADOS vai num <script type="application/json"> e é lido com JSON.parse: o navegador analisa JSON
+    # bem mais rápido do que um literal JS do mesmo tamanho (cerca de 3x na primeira abertura).
+    # "</" e "<!--" são escapados (\/ e \u0021 são escapes válidos em JSON) para não fechar o <script>.
+    dados_js = json.dumps(dados, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/").replace("<!--", "<\\u0021--")
     html = (app / "shell.html").read_text(encoding="utf-8")
+    for marca in ("<!doctype html>", '<html lang="pt-BR">', "/*ESTILO*/", '<script type="application/json" id="dados-app">/*DADOS*/</script>', "/*CODIGO*/"):
+        if marca not in html: print(f"Build interrompido: app/shell.html precisa conter {marca}"); sys.exit(1)
     html = html.replace("/*ESTILO*/", (app / "estilo.css").read_text(encoding="utf-8"), 1)
     html = html.replace("/*DADOS*/", dados_js, 1)
     html = html.replace("/*CODIGO*/", js.replace("</script", "<\\/script"), 1)

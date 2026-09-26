@@ -99,10 +99,15 @@ function jornada(tipo, info = {}) {
 }
 function conferirMissoes(J) {
   const ms = missoesDoDia(); J.missoes = J.missoes?.d === J.dia.d ? J.missoes : { d: J.dia.d, ok: [] };
-  for (const m of ms) if (!J.missoes.ok.includes(m.id) && progressoMissao(m, J) >= m.meta) {
-    J.missoes.ok.push(m.id); J.xp += 40; J.dia.xp += 40; toast(`Missão cumprida: ${m.txt} · +40 XP`);
-    if (J.missoes.ok.length === ms.length) { J.cont.diasMissao = (J.cont.diasMissao || 0) + 1; J.xp += 30; setTimeout(() => celebrar("As 3 missões de hoje estão feitas! +30 XP de bônus."), 400); }
-    store.mudou("jornada");
+  // O XP de missão passa por ganharXP (conta no "XP de hoje" e celebra subida de nível); repete a conferência
+  // porque o XP de uma missão pode completar a missão de XP do dia.
+  for (let mudou = true; mudou;) {
+    mudou = false;
+    for (const m of ms) if (!J.missoes.ok.includes(m.id) && progressoMissao(m, J) >= m.meta) {
+      J.missoes.ok.push(m.id); mudou = true; ganharXP(40); toast(`Missão cumprida: ${m.txt} · +40 XP`);
+      if (J.missoes.ok.length === ms.length) { J.cont.diasMissao = (J.cont.diasMissao || 0) + 1; ganharXP(30); setTimeout(() => celebrar("As 3 missões de hoje estão feitas! +30 XP de bônus."), 400); }
+      store.mudou("jornada");
+    }
   }
 }
 function conferirConquistas(J) {
@@ -110,7 +115,7 @@ function conferirConquistas(J) {
 }
 /** Comemoração: folha com o mascote em festa e confete. */
 const FILA_CELEBRA = [];
-const emAndamento = () => (typeof JG !== "undefined" && JG.id && !JG.fim && JG.rodadas?.length && location.hash.startsWith("#/jogos/")) || (PL.ativo && !PL.fim);
+const emAndamento = () => (typeof JG !== "undefined" && JG.id && !JG.fim && JG.rodadas?.length && location.hash.startsWith("#/jogos/")) || (PL.ativo && !PL.fim && !!document.getElementById("pl"));   // saiu do player pela navegação: não segura a fila
 /** Comemoração: cartão flutuante com o mascote (ou a medalha) e confete. Some sozinho e não bloqueia a tela. */
 function celebrar(msg, conq = null) {
   if (emAndamento()) { FILA_CELEBRA.push([msg, conq]); return; }   // não interrompe jogo nem sessão: comemora no fim

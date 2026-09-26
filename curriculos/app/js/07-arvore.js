@@ -5,7 +5,7 @@
    ============================================================ */
 function noHTML(no, nivel) {
   const f = (no.filhos || []).filter(Boolean);
-  const rot = `<span class="no ${no.cls || ""}">${no.href ? `<a href="${no.href}">${esc(no.t)}</a>` : esc(no.t)}${no.sub ? ` <small>${esc(no.sub)}</small>` : ""}</span>`;
+  const rot = `<span class="no ${no.cls || ""}">${no.href ? `<a href="${esc(no.href)}">${esc(no.t)}</a>` : esc(no.t)}${no.sub ? ` <small>${esc(no.sub)}</small>` : ""}</span>`;
   if (!f.length) return `<li>${rot}</li>`;
   return `<li><details ${nivel < 2 ? "open" : ""}><summary>${rot} <small class="muted">${f.length}</small></summary><ul>${f.map(x => noHTML(x, nivel + 1)).join("")}</ul></details></li>`;
 }

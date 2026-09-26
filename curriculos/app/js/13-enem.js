@@ -27,7 +27,7 @@ rota("/enem/:area/:disc", ({ area, disc }) => {
   const r = resumoDisc(disc), R = store.doc("revisoes").temas;
   return {
     secao: "enem", crumbs: [CRUMB_ENEM, [a.nome, "#/enem/" + area]], titulo: d.nome,
-    acoes: r.ids.length ? `<button class="btn" data-act="praticar-ids" data-ids="${r.ids.join(",")}" data-ctx="ENEM ${esc(d.nome)}">Praticar ${r.ids.length} questões</button><a class="btn sec" href="#/simulados?disc=${encodeURIComponent(d.nome)}" data-act="sim-disc" data-v="${esc(d.nome)}">Simulado de ${esc(d.nome)}</a>` : "",
+    acoes: r.ids.length ? `<button class="btn" data-act="praticar-ids" data-ids="${r.ids.join(",")}" data-ctx="ENEM ${esc(d.nome)}">Praticar ${plural(r.ids.length, "questão", "questões")}</button><a class="btn sec" href="#/simulados?disc=${encodeURIComponent(d.nome)}" data-act="sim-disc" data-v="${esc(d.nome)}">Simulado de ${esc(d.nome)}</a>` : "",
     html: tabela([{ t: "Assunto" }, { t: "Subassuntos" }, { t: "Questões", num: 1 }, { t: "Acerto", num: 1 }, { t: "Revisão" }],
       temasEnemDe(disc).map(t => { const dt = desempenhoTema(t.id); return [linkTema(t.id), `<span class="small">${(t.subtemas || []).map(s => esc(s.nome)).join(" · ")}</span>`, dt.total, dt.n ? pct(dt.ac, dt.n) + "%" : "—", R[t.id] ? quando(R[t.id].prox) : "—"]; }), { vaziaMsg: "Sem assuntos cadastrados." }),
     ctx: { disciplina: d.nome, texto: "Área do ENEM: " + a.nome },
