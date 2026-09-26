@@ -23,7 +23,8 @@ const DOC_PADRAO = {
   guia:         () => ({ g: {} }),       // checklist do guia de referência
   pilulas:      () => ({ v: {} }),       // v[id] = [ts, sabia 0/1] — pílulas de estudo vistas
   academico:    () => ({ disc: {}, aval: {} }),   // disc[itemId] = situação/notas/faltas; aval[id] = provas e trabalhos
-  ajudas:       () => ({ itens: {} }),   // pedidos de correção/ajuda à IA e respostas
+  ajudas:       () => ({ itens: {} }),
+  reportes:     () => ({ itens: {} }),   // problemas apontados em questões (cópia local; também vão para a coleção compartilhada "reportes")   // pedidos de correção/ajuda à IA e respostas
   backups:      () => ({ itens: [] }),   // registro dos backups automáticos (não entra no próprio backup)
 };
 // Progresso das questões, fragmentado por trilha para cada doc ficar pequeno:
@@ -236,5 +237,7 @@ const store = (() => {
   function zerar(nomes) { nomes.forEach(n => { docs[n] = padrao(n); mudou(n); }); }
   const nomes = () => Object.keys(docs);
 
-  return { doc, mudou, conectar, exportar, importar, zerar, nomes, aoRemoto: f => { aoMudarRemoto = f; }, get naConta() { return !!db; }, _mesclar: mesclar };
+  /** Grava um documento compartilhado (fora da área privada do usuário), ex.: reportes de problema em questões. */
+  async function publicar(caminho, corpo) { if (!db) return false; try { await db.doc(caminho).set(corpo); return true; } catch (e) { return false; } }
+  return { doc, mudou, conectar, publicar, exportar, importar, zerar, nomes, aoRemoto: f => { aoMudarRemoto = f; }, get naConta() { return !!db; }, _mesclar: mesclar };
 })();

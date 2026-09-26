@@ -163,8 +163,20 @@ const PL = { ativo: false, chave: null, ids: [], i: 0, ordem: [], esc: null, res
    (pela busca, por exemplo) não descarta a sessão de 20 questões que estava pela metade. */
 const SALVOS = {};
 const guardarSessao = () => { if (PL.ativo && !PL.fim && PL.ids.length > 1) SALVOS[PL.chave] = { ...PL }; };
+/** Casos em sequência: as partes de um mesmo caso ficam juntas e em ordem; na prática livre, entram as partes que faltam. */
+function ordenarSeries(ids, completar) {
+  const Q = questoes(), porSerie = {};
+  Q.forEach(q => { if (q.serie) (porSerie[q.serie] = porSerie[q.serie] || []).push(q); });
+  const saida = [], vistas = new Set(), dentro = new Set(ids);
+  ids.forEach(id => { const q = qPorId(id);
+    if (!q?.serie) { saida.push(id); return; }
+    if (vistas.has(q.serie)) return; vistas.add(q.serie);
+    (porSerie[q.serie] || []).sort((a, b) => a.parte - b.parte).forEach(x => { if (completar || dentro.has(x.id)) saida.push(x.id); }); });
+  return saida;
+}
 function iniciarPlayer(chave, ids, origem = "pratica", aoFim = null) {
   if (PL.chave !== chave) guardarSessao();
+  ids = ordenarSeries(ids, origem === "pratica");
   Object.assign(PL, { ativo: true, chave, ids: ids.slice(), i: 0, esc: null, resp: false, origem, res: [], aoFim, ia: "", fim: false, msgFim: "" });
   delete SALVOS[chave];
   prepararQuestao();
@@ -194,21 +206,42 @@ function htmlPlayer() {
   const letra = i => LETRAS[PL.ordem.indexOf(i)];
   const ok = PL.esc === q.c;
   return `<article class="caixa questao" id="pl">
-    <div class="linha entre" style="margin-bottom:12px"><b>${PL.ids.length > 1 ? `Questão ${PL.i + 1} de ${PL.ids.length}` : "Questão"}</b>${seloNivel(q.dif)}</div>
+    <div class="linha entre" style="margin-bottom:12px"><b>${PL.ids.length > 1 ? `Questão ${PL.i + 1} de ${PL.ids.length}` : "Questão"}${q.serie ? `<br><span class="small muted">Caso em ${q.partes} partes · parte ${q.parte}</span>` : ""}</b>${seloNivel(q.dif)}</div>
     <p class="enunciado">${esc(q.q)}</p>
     <ol class="alts">${alts}</ol>
     ${PL.resp ? `<div class="retorno"><p class="veredito ${ok ? "ok" : "bad"}">${ok ? "Certo" : "Errado — gabarito " + letra(q.c)}${PL.ms ? ` · ${mmss(PL.ms)}` : ""}</p><p class="leitura" style="color:var(--ink2);margin:0">${esc(q.e || "Sem explicação cadastrada.")}</p>
-      <p class="small muted" style="margin:8px 0 0">${[TRILHAS[q.t]?.curto || q.t, q.ae && nomeAreaEnem(q.ae), q.ae && q.disc].filter(Boolean).map(esc).join(" · ")}${q.tema ? " · " + linkTema(q.tema) : ""}${q.src !== "banco" ? " · " + (q.src === "ia" ? "gerada por IA" : "minha") : ""}${st.n > 1 ? ` · você já acertou ${st.ac} de ${st.n}` : ""}</p>
-      ${!ok ? `<p class="small muted" style="margin:8px 0 0">Registrado no <a href="#/erros">caderno de erros</a> com revisão amanhã.</p>` : ""}
+      <p class="small muted" style="margin:8px 0 0">${[TRILHAS[q.t]?.curto || q.t, q.ae && nomeAreaEnem(q.ae), q.ae && q.disc].filter(Boolean).map(esc).join(" · ")}${q.tema ? " · " + linkTema(q.tema) : ""}${q.src !== "banco" ? " · " + (q.src === "ia" ? "gerada por IA" : "minha") : ""}${st.n > 1 ? ` · você já acertou ${st.ac} de ${st.n}` : ""}${q.rev ? ` · revisada em ${esc(mesAno(q.rev))}` : ""}</p>
+      ${!ok ? `<p class="small muted" style="margin:8px 0 0">Registrado no <a href="#/erros">caderno de erros</a> com revisão amanhã.</p>${irmaDe(q) ? `<div class="acoes"><button class="btn sec" data-act="pl-irma">Treinar este ponto de novo</button></div>` : ""}` : ""}
       ${PL.ia ? `<h3>Assistente</h3><div class="ia-txt" id="pl-ia">${esc(PL.ia)}</div>` : ""}</div>` : ""}
     <div class="acoes">
       ${PL.resp ? `<button class="btn" data-act="pl-prox">${PL.i < PL.ids.length - 1 ? "Próxima" : "Concluir"}</button>` : `<button class="btn" data-act="pl-confirmar" ${PL.esc === null ? "disabled" : ""}>Confirmar</button><button class="btn sec" data-act="pl-pular">Pular</button>`}
       ${PL.resp ? `<button class="btn sec mini" data-act="pl-flag" data-f="m" aria-pressed="${st.marcada}">${st.marcada ? "★ Marcada" : "☆ Marcar"}</button>
       <button class="btn sec mini" data-act="pl-flag" data-f="r" aria-pressed="${st.revisar}">${st.revisar ? "↻ Revisar" : "Revisar depois"}</button>` : ""}
-      ${PL.resp ? `<button class="btn sec mini" data-act="pl-card">+ Flashcard</button>${IA.disponivel() ? `<button class="btn sec mini" data-act="pl-ia">Explicar com IA</button>` : ""}` : ""}
+      ${PL.resp ? `<button class="btn sec mini" data-act="pl-card">+ Flashcard</button>${IA.disponivel() ? `<button class="btn sec mini" data-act="pl-ia">Explicar com IA</button>` : ""}<button class="btn sec mini" data-act="reportar" data-q="${esc(q.id)}">Reportar problema</button>` : ""}
       ${PL.ids.length > 1 ? `<button class="btn sec mini dir" data-act="pl-encerrar">Encerrar sessão</button>` : ""}
     </div></article><p class="small muted so-teclado">Atalhos: A–E escolhem · Enter confirma/avança</p>`;
 }
+const mesAno = s => { const [a, m] = String(s).split("-"); return m ? new Date(+a, +m - 1, 15).toLocaleDateString("pt-BR", { month: "short", year: "numeric" }) : s; };
+/** Questão irmã: mesmo subtema (ou tema), fora da sessão, de preferência ainda não respondida. */
+function irmaDe(q) {
+  if (!q.tema) return null;
+  const c = questoes().filter(x => x.id !== q.id && !PL.ids.includes(x.id) && x.tema === q.tema && (!q.serie || x.serie !== q.serie));
+  const mesmo = c.filter(x => q.subtema && x.subtema === q.subtema), base = mesmo.length ? mesmo : c;
+  return base.find(x => statusQ(x).chave === "nao") || base[0] || null;
+}
+ACOES["pl-irma"] = () => { const q = qPorId(PL.ids[PL.i]), x = irmaDe(q); if (!x) return; PL.ids.splice(PL.i + 1, 0, x.id); toast("Uma questão do mesmo ponto entra a seguir"); ACOES["pl-prox"](); };
+const MOTIVOS_REP = [["gabarito", "O gabarito parece errado"], ["ambigua", "Mais de uma resposta possível"], ["desatualizada", "Conteúdo desatualizado"], ["explicacao", "Explicação confusa ou incompleta"], ["texto", "Erro de digitação ou de português"], ["outro", "Outro"]];
+ACOES["reportar"] = el => abrirFolha(`<form class="pilha" data-form="reportar" data-q="${esc(el.dataset.q)}"><p class="small muted" style="margin:0">Questão ${esc(el.dataset.q)}. O aviso entra no próximo ciclo de revisão.</p>
+  <div class="pilha">${MOTIVOS_REP.map(([k, t], i) => `<label class="check"><input type="radio" name="rep-m" value="${k}" ${i ? "" : "checked"}><span>${t}</span></label>`).join("")}</div>
+  <label class="campo"><span class="lab">Detalhe (opcional)</span><textarea id="rep-txt" rows="3" maxlength="600"></textarea></label>
+  <button class="btn azul grande">Enviar</button></form>`, { titulo: "Reportar problema" });
+FORMS["reportar"] = async f => {
+  const qid = f.dataset.q, motivo = f.querySelector('input[name="rep-m"]:checked')?.value || "outro", texto = $("#rep-txt").value.trim().slice(0, 600);
+  const id = "r" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6), corpo = { qid, motivo, texto, ts: Date.now() };
+  const R = store.doc("reportes"); R.itens[id] = { id, ...corpo }; store.mudou("reportes");
+  const foi = await store.publicar("reportes/" + id, corpo);
+  fecharFolha(); toast(foi ? "Obrigado! Problema enviado para revisão" : "Problema anotado neste aparelho");
+};
 ACOES["pl-alt"] = el => { if (PL.resp) return; PL.esc = +el.dataset.i; atualizar(); };
 ACOES["pl-confirmar"] = () => {
   if (PL.esc === null || PL.resp) return;

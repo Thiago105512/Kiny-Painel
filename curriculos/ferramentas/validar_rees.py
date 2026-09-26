@@ -26,7 +26,7 @@ for q in novo:
     if re.search(r"todas as anteriores|nenhuma das anteriores|todas as alternativas", " ".join(a), re.I): E.append(f"{onde}: 'todas/nenhuma das anteriores'")
     if q.get("dificuldade") not in (1, 2, 3): E.append(f"{onde}: dificuldade 1-3")
     for k in q:
-        if k not in ("id","area","enunciado","alternativas","correta","explicacao","tema","subtema","especialidade","disciplina","areaEnem","dificuldade","fonte","ano","prova"): E.append(f"{onde}: campo desconhecido {k}")
+        if k not in ("id","area","enunciado","alternativas","correta","explicacao","tema","subtema","especialidade","disciplina","areaEnem","dificuldade","fonte","ano","prova","revisado","serie","parte","partes"): E.append(f"{onde}: campo desconhecido {k}")
 n = len(novo); dif = collections.Counter(q.get("dificuldade") for q in novo); pos = collections.Counter(q.get("correta") for q in novo)
 print(f"{n} questões · enunciado: mín {min(L) if L else 0}, médio {sum(L)//max(1,len(L))}, máx {max(L) if L else 0} · dificuldade {dict(sorted(dif.items()))} · posição da correta {dict(sorted(pos.items()))}")
 for d, lo, hi in [(1, .20, .35), (2, .35, .55), (3, .20, .35)]:
