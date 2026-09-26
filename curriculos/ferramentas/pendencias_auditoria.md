@@ -1,5 +1,5 @@
 # Pendências da auditoria (para o ciclo contínuo)
-- Pista de tamanho: nos lotes auditados a correta é a mais longa em ~40% das questões, mas com folga >15% só em ~1%. Rodar um balanceamento (encurtar a correta ou alongar distratores) com verificação às cegas.
+- Pista de tamanho: RESOLVIDO (set/2026) — 560 questões rebalanceadas em 2 passadas e verificadas às cegas; posição da correta por tamanho = 20% em cada uma das 5 posições.
 - Possível par repetido: med-527a22e5 × med-d0cd1596 (úlcera péptica perfurada) — mudar o ângulo de uma delas.
 - Estruturas de abertura novas que se repetiram após reescrita ("X traz ao pronto-socorro…", "Exame: valor. É o resultado…") — contar padrões no banco e variar.
 - 'Para lembrar' padronizado: RESOLVIDO (set/2026) — 246 ganchos históricos trocados por pontos clínicos e revisados.
