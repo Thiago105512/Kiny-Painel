@@ -131,5 +131,6 @@ node curriculos/testes/fumaca.js     # 41 rotas em 390/768/1280 px: erros de JS 
 node curriculos/testes/fluxos.js     # os 5 fluxos de estudo de ponta a ponta
 node curriculos/testes/migracao.js   # migração do formato antigo e sincronização com a conta
 node curriculos/testes/curso.js      # Meu curso: objetivo, situação, notas, faltas, provas com revisão, histórico
+node curriculos/testes/humor.js      # Pausa para rir: cartão, sem repetição, foco no objetivo, esconder/religar
 node curriculos/testes/etapa2.js     # mapa mental, erros em lote, backup semanal, conferência da matriz
 ```

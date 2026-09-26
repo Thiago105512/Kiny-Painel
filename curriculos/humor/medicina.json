@@ -1,0 +1,902 @@
+[
+ {
+  "id": "hm-001",
+  "texto": "A mitocôndria é a usina de força da célula. O café é a usina de força do interno.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-002",
+  "texto": "Neurônio de estudante na véspera da prova: muito potencial de ação, nenhuma ação.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-003",
+  "texto": "Minha memória entra em período refratário absoluto depois das 23h.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-004",
+  "texto": "A hipófise é a gerente perfeita: manda em todo mundo, mas vive dando satisfação pro hipotálamo.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-005",
+  "texto": "O pâncreas é aquele colega que faz dois trabalhos, endócrino e exócrino, e ninguém lembra dele até dar problema.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-006",
+  "texto": "Farmacologia tem meia-vida curtíssima: some da memória logo depois da prova.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-007",
+  "texto": "Minha motivação tem farmacocinética de adrenalina: pico rápido e efeito que dura minutos.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-008",
+  "texto": "Meu café tem biodisponibilidade de 100%. Meu sono, de quase zero.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-009",
+  "texto": "Eu e a prova de farmaco temos uma relação de antagonismo competitivo. Ela sempre ocupa o receptor primeiro.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-010",
+  "texto": "Estudar pra prova foi um agonista parcial: fez efeito, mas nunca chegou ao máximo.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-011",
+  "texto": "Qual o cúmulo do nefrologista? Filtrar as amizades e ainda reabsorver as boas.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-012",
+  "texto": "Anatomia: você decora o nome de um forame só pra ele fugir da sua memória pelo próprio forame.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-013",
+  "texto": "Criei um mnemônico pros pares cranianos. Agora sei o mnemônico e continuo sem saber os nervos.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-014",
+  "texto": "O plexo braquial foi claramente desenhado por alguém com raiva de estudante.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-015",
+  "texto": "O ciclo de Krebs faz jus ao nome: eu estudo, esqueço, estudo de novo. Um ciclo.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-016",
+  "texto": "O coração bate cerca de 100 mil vezes por dia. O meu bate isso em dez minutos quando vou apresentar caso pro chefe.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-017",
+  "texto": "O intestino delgado tem uns 6 metros. A minha lista de pendências do plantão tem uns 12.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-018",
+  "texto": "Por que o esqueleto não foi ao plantão de sexta? Não teve estômago.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-019",
+  "texto": "Oftalmologistas nunca brigam de verdade. Só têm pontos de vista diferentes.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-020",
+  "texto": "O dermatologista é o único profissional que julga pela aparência e ainda acerta.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-021",
+  "texto": "O ortopedista terminou o namoro dizendo que precisava de um tempo pra consolidar.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-022",
+  "texto": "Minha autoestima se comporta como pressão em hipotensão ortostática: cai toda vez que eu levanto pra apresentar o caso.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-023",
+  "texto": "Meu cérebro às 3h da manhã funciona em metabolismo anaeróbio: produz pouco e acumula lactato de arrependimento.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-024",
+  "texto": "O fígado é o órgão mais discreto: aguenta tudo calado e só reclama quando já está em outro capítulo do livro.",
+  "tipo": "trocadilho",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-025",
+  "texto": "O paciente não leu o livro. O Harrison ficou profundamente ofendido.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-026",
+  "texto": "Caso de prova: febre, emagrecimento e viagem recente pra região endêmica. Caso real: 'doutor, dói tudo, desde sempre'.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-027",
+  "texto": "Letra de médico: o único sistema de criptografia que nem o próprio autor consegue quebrar no dia seguinte.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-028",
+  "texto": "Farmacêutico que decifra receita manuscrita merece título de especialista em arqueologia.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-029",
+  "texto": "Seis anos de faculdade, dois de residência, pra ouvir: 'mas no Google diz outra coisa'.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-030",
+  "texto": "'É só uma dúvida rápida' — disse ninguém, imediatamente antes de uma dúvida rápida.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-031",
+  "texto": "Fim de semana do estudante de Medicina: metade culpa por não estudar, metade culpa por estar estudando.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-032",
+  "texto": "Férias do estudante de Medicina: quando você estuda no sofá em vez de na biblioteca.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-033",
+  "texto": "Churrasco de família: você vai pra comer e sai tendo avaliado a pinta da tia, o joelho do tio e o exame do vizinho.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-034",
+  "texto": "'Você vai ficar rico', dizem pro estudante de Medicina que está dividindo um pão de queijo em três refeições.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-035",
+  "texto": "Grupo de estudos: 5 minutos de estudo e 55 de 'gente, vocês viram a nota da última prova?'.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-036",
+  "texto": "Anki: o aplicativo que todo dia te lembra, com carinho, das 847 coisas que você esqueceu.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-037",
+  "texto": "Meu cronograma de estudos é baseado em evidência: evidência robusta de que eu não vou cumprir.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-038",
+  "texto": "Gabarito comentado: o lugar onde descubro que minha alternativa era 'uma pegadinha clássica'.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-039",
+  "texto": "Sai diretriz nova toda semana. Meu resumo continua firme e forte na edição de 2019.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-040",
+  "texto": "Estudei tanto a síndrome rara que ela nunca caiu. Caiu a 'óbvia', que eu pulei por ser óbvia.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-041",
+  "texto": "O livro diz 'condição rara'. A prova de residência diz 'caiu três anos seguidos'.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-042",
+  "texto": "Fiz uma revisão sistemática da minha vida: alto risco de viés e amostra insuficiente de horas de sono.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-043",
+  "texto": "Meu 'vou dormir cedo hoje' tem nível de evidência 5: opinião de especialista. E o especialista sou eu, mentindo.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-044",
+  "texto": "O p-valor da minha promessa de acordar às 5h foi maior que 0,05. Resultado não significativo.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-045",
+  "texto": "O prontuário eletrônico veio pra economizar tempo. Uso o tempo economizado esperando ele carregar.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-046",
+  "texto": "O sistema do hospital caiu. Agora, finalmente, todo mundo vai conhecer a letra de todo mundo.",
+  "tipo": "ironia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-047",
+  "texto": "Olheira de estudante de Medicina não é cansaço: é estágio curricular obrigatório.",
+  "tipo": "acido",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-048",
+  "texto": "No primeiro ano eu queria salvar vidas. No quinto, quero salvar 15 minutos de almoço.",
+  "tipo": "acido",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-049",
+  "texto": "Meu relógio biológico pediu demissão. Disse que não trabalha em escala 24 por 'o que o chefe quiser'.",
+  "tipo": "acido",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-050",
+  "texto": "Autocuidado no internato: tomar o café com açúcar, e não sem.",
+  "tipo": "acido",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-051",
+  "texto": "Não tenho vida social. Tenho vida sociodemográfica: sei idade, sexo e procedência de todo mundo da enfermaria.",
+  "tipo": "acido",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-052",
+  "texto": "Minha família acha que sou médico. O hospital acha que sou estagiário. O banco sabe exatamente o que eu sou.",
+  "tipo": "acido",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-053",
+  "texto": "Tenho um relacionamento estável e de longa duração. Com o cansaço.",
+  "tipo": "acido",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-054",
+  "texto": "Bolsa de residência: o único valor de referência que ninguém considera dentro da normalidade.",
+  "tipo": "acido",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-055",
+  "texto": "Burocracia hospitalar: preencher três formulários pra conseguir pedir um formulário.",
+  "tipo": "acido",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-056",
+  "texto": "Pra conseguir uma tomografia no domingo você precisa de indicação, assinatura do chefe e alinhamento dos planetas.",
+  "tipo": "acido",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-057",
+  "texto": "Estudante de Medicina não tem hobbies. Tem 'atividades complementares com certificado'.",
+  "tipo": "acido",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-058",
+  "texto": "Eu costumava ter sonhos. Agora tenho escalas.",
+  "tipo": "acido",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-059",
+  "texto": "Minha dieta é baseada em evidências: evidências de que a cantina fecha às 14h.",
+  "tipo": "acido",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-060",
+  "texto": "Seis anos estudando fisiologia e ainda não entendi como eu sobrevivo com quatro horas de sono.",
+  "tipo": "acido",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-061",
+  "texto": "Meu plano de previdência se chama 'passar na residência'.",
+  "tipo": "acido",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-062",
+  "texto": "Minha coluna já está pedindo consulta na geriatria. Eu tenho 26 anos.",
+  "tipo": "acido",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-063",
+  "texto": "O estudante de Medicina médio tem três estados de humor: com sono, com fome e com prova.",
+  "tipo": "acido",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-064",
+  "texto": "Minha conta bancária no internato está igual reserva de glicogênio no jejum prolongado: acabou no primeiro dia.",
+  "tipo": "acido",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-065",
+  "texto": "Aprendi a dormir sentado, em pé, na escada e na fila do bandejão. Só esqueci como é dormir numa cama.",
+  "tipo": "acido",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-066",
+  "texto": "Minha dose diária de café já saiu da faixa terapêutica. Ainda não chegou na tóxica, mas é questão de mais um plantão.",
+  "tipo": "acido",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-067",
+  "texto": "A palavra proibida no plantão começa com 't' e termina com 'ranquilo'.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-068",
+  "texto": "Todo plantão 'tranquilo' termina às 3h da manhã com três ambulâncias chegando juntas.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-069",
+  "texto": "Plantão de 12 horas: 2 de atendimento e 10 de 'só mais esse paciente e eu como'.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-070",
+  "texto": "O paciente mais grave do plantão sempre chega exatamente quando o miojo fica pronto.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-071",
+  "texto": "No plantão, o café esfria em 3 minutos e a madrugada dura 3 semanas.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-072",
+  "texto": "Plantonista não tem fome. Tem janela terapêutica pra comer um salgado.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-073",
+  "texto": "Passagem de plantão: a arte de dizer 'tá tudo sob controle' segurando três pendências.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-074",
+  "texto": "Meu recorde pessoal: um pão de queijo em 11 segundos, entre uma sutura e uma evolução.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-075",
+  "texto": "Plantão noturno: quando 'cochilar 20 minutos' vira conceito puramente teórico.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-076",
+  "texto": "O telefone do plantão só toca em dois momentos: quando você senta e quando você deita.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-077",
+  "texto": "Quer saber o que está acontecendo no hospital? Pergunte à técnica de enfermagem mais antiga. Ela soube antes de acontecer.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-078",
+  "texto": "Regra de ouro do plantão: seja gentil com a enfermagem. Eles sabem onde está o café bom.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-079",
+  "texto": "Pós-plantão: estado alterado de consciência em que você ri olhando o boleto.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-080",
+  "texto": "Saí do plantão, cheguei em casa e fui evoluir o gato.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-081",
+  "texto": "Dormi pós-plantão às 8h e acordei às 16h sem saber o dia, o mês nem meu nome. Glasgow de sábado à tarde.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-082",
+  "texto": "O café da sala dos médicos é tão forte que já veio prescrito pelo plantonista anterior.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-083",
+  "texto": "Réveillon de plantão: você vê os fogos pelo reflexo da tela do monitor.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-084",
+  "texto": "'Doutor, é rapidinho.' A frase que antecede 45 minutos de anamnese e três pedidos de exame.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-085",
+  "texto": "O relógio do pronto-socorro tem um mecanismo secreto: às 18h55 chega o caso mais complexo do dia.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-086",
+  "texto": "Plantão de sábado com jogo decisivo: silêncio total até o apito final. Depois, uma fila de tornozelos torcidos.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-087",
+  "texto": "Troca de plantão: a única negociação em que você implora pra trabalhar no sábado e chama isso de vitória.",
+  "tipo": "plantao",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-088",
+  "texto": "Você sabe que é R1 quando chama de 'folga' as seis horas entre dois plantões.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-089",
+  "texto": "Você sabe que é R1 quando o contato mais frequente do seu celular é 'Enfermaria 3º andar'.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-090",
+  "texto": "Você sabe que é R1 quando comemora uma alta como se fosse final de Copa.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-091",
+  "texto": "Você sabe que é R1 quando tem pesadelo com a pergunta 'e a creatinina?'.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-092",
+  "texto": "Você sabe que é R1 quando sonha evoluindo paciente e acorda pra evoluir paciente.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-093",
+  "texto": "Você sabe que é R3 quando a frase 'pede pro R1' virou reflexo medular.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-094",
+  "texto": "R1 faz tudo, R2 sabe fazer, R3 manda fazer, e o preceptor pergunta por que ainda não foi feito.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-095",
+  "texto": "O R1 pergunta 'o que eu faço?'. O R3 pergunta 'quem vai fazer?'.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-096",
+  "texto": "O R3 não tem mais dúvidas. Tem 'rotinas do serviço'.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-097",
+  "texto": "Prova de residência: 100 questões, 5 horas e a certeza de que a questão 37 foi escrita por um inimigo pessoal.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-098",
+  "texto": "Estudar pra residência é ler o capítulo de hepatites pela quinta vez e continuar com a certeza de que não sabe.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-099",
+  "texto": "Os três estados físicos do candidato à residência: estudando, culpado por não estar estudando e relendo o edital.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-100",
+  "texto": "Nota de corte da residência: o número que só sobe. Igual à minha frequência cardíaca quando abro o edital.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-101",
+  "texto": "Passei na residência! Agora posso trabalhar 60 horas por semana de forma oficial e documentada.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-102",
+  "texto": "A faculdade te ensina Medicina. A primeira semana de R1 te ensina onde fica a impressora que funciona.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-103",
+  "texto": "Você sabe que é interno quando 'acompanhar a cirurgia' significa segurar um afastador por quatro horas sem ver nada.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-104",
+  "texto": "Internato: médico demais pra ficar em casa, estudante demais pra ter opinião.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-105",
+  "texto": "Você sabe que é interno quando carrega esteto, crachá, folhas de evolução e a culpa de toda pendência do andar.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-106",
+  "texto": "Chefe da residência: 'alguma dúvida?'. Tradução simultânea: 'por favor, não tenha dúvidas'.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-107",
+  "texto": "Você sabe que é R2 quando olha o R1 correndo pelo corredor e sente saudade de ter tanta energia.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-108",
+  "texto": "Primeira semana de R1: você compra um estetoscópio caro. Terceira semana: ele já conhece a rotina melhor que você.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-109",
+  "texto": "Você sabe que é interno quando o almoço acontece em pé, na copa, em quatro mordidas, entre dois 'doutor, o leito 8'.",
+  "tipo": "residencia",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-110",
+  "texto": "O clínico sabe tudo e não faz nada. O cirurgião faz tudo e não sabe nada. O patologista sabe tudo e faz tudo, mas um pouco tarde.",
+  "tipo": "especialidades",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-111",
+  "texto": "Anestesista: o único médico que diz 'relaxa, você não vai sentir nada' e está falando sério.",
+  "tipo": "especialidades",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-112",
+  "texto": "O clínico discute diferencial por 40 minutos. O cirurgião só quer saber: 'mas é cirúrgico?'",
+  "tipo": "especialidades",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-113",
+  "texto": "O ortopedista descreve o raio-x numa palavra: 'quebrou'. O radiologista precisa de três parágrafos pra dizer o mesmo.",
+  "tipo": "especialidades",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-114",
+  "texto": "O radiologista vê seu interior inteiro, em cortes de 1 mm, e ainda escreve 'correlacionar com a clínica'.",
+  "tipo": "especialidades",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-115",
+  "texto": "Pediatra é o único médico que consulta dois pacientes ao mesmo tempo: a criança e a mãe preocupada.",
+  "tipo": "especialidades",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-116",
+  "texto": "Pediatra: calcula dose por quilo com precisão de engenheiro enquanto o paciente tenta comer o estetoscópio.",
+  "tipo": "especialidades",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-117",
+  "texto": "O cirurgião jura que o anestesista está fazendo palavra-cruzada. O anestesista está mantendo o paciente vivo enquanto o cirurgião reclama da playlist.",
+  "tipo": "especialidades",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-118",
+  "texto": "Neurologista: examina reflexos por 40 minutos, coça o queixo e conclui: 'interessante'.",
+  "tipo": "especialidades",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-119",
+  "texto": "O infectologista olha certas prescrições de antibiótico como quem vê alguém usando bazuca pra matar mosquito.",
+  "tipo": "especialidades",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-120",
+  "texto": "Discussão de sódio com o nefrologista é tipo novela: todo dia um capítulo novo e ninguém entende o final.",
+  "tipo": "especialidades",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-121",
+  "texto": "Médico de família é o único especialista que conhece o paciente, a avó, o cachorro e a fofoca da rua.",
+  "tipo": "especialidades",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-122",
+  "texto": "Geriatra é o único médico cuja maior alegria é tirar remédio da prescrição.",
+  "tipo": "especialidades",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-123",
+  "texto": "Intensivista fala de 'balanço hídrico' com o mesmo carinho que as pessoas falam dos filhos.",
+  "tipo": "especialidades",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-124",
+  "texto": "Otorrino cuida de ouvido, nariz e garganta. Basicamente, a parte da cabeça que o neurologista deixou sobrar.",
+  "tipo": "especialidades",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-125",
+  "texto": "Emergencista: sabe um pouco de tudo, rápido, às 4h da manhã e sem café. Isso não é especialidade, é superpoder.",
+  "tipo": "especialidades",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-126",
+  "texto": "Clínico pede parecer da cirurgia. Cirurgia responde 'sem indicação cirúrgica no momento'. O clínico lê como declaração de amor.",
+  "tipo": "especialidades",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-127",
+  "texto": "Cardiologista vê um ECG normal e fica desconfiado. 'Normal demais. Repete.'",
+  "tipo": "especialidades",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-128",
+  "texto": "Parecer da psiquiatria às 23h58: 'paciente ansioso'. O psiquiatra de plantão também.",
+  "tipo": "especialidades",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-129",
+  "texto": "O dermatologista resolve metade dos casos em 10 segundos olhando da porta. A outra metade, pede biópsia.",
+  "tipo": "especialidades",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-130",
+  "texto": "Preceptor: 'Qual a conduta?' Interno: 'Depende.' Preceptor: 'Depende de quê?' Interno: 'De qual resposta o senhor quer.'",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-131",
+  "texto": "Preceptor: 'Você examinou o paciente?' Interno: 'Examinei o prontuário dele com muita atenção.'",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-132",
+  "texto": "Preceptor: 'Diagnósticos diferenciais?' Interno: 'Todos, professor.' Preceptor: 'Escolhe um.' Interno: 'O senhor primeiro.'",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-133",
+  "texto": "Preceptor: 'E o que mais pode ser?' Interno, pela quarta vez: 'Lúpus?' Preceptor: 'Para de dizer lúpus.'",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-134",
+  "texto": "Interno: 'Professor, o paciente está estável.' Preceptor: 'Estável como?' Interno: 'Bem estável. Na maca.'",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-135",
+  "texto": "Preceptor: 'Pode fazer o procedimento.' Interno: 'Sozinho?' Preceptor: 'Tô aqui do lado.' Interno: 'Do lado de dentro da sala, né?'",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-136",
+  "texto": "Preceptor: 'Leu o artigo que eu mandei?' Interno: 'Li o resumo.' Preceptor: 'E?' Interno: 'E o título, que é excelente.'",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-137",
+  "texto": "R3: 'Evoluiu os 12 leitos?' R1: 'Evoluí.' R3: 'E os 12 da ala B?' R1: 'Tem ala B?'",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-138",
+  "texto": "Paciente: 'Doutor, vai doer?' Interno: 'Nada!' Preceptor, baixinho: 'Nunca prometa isso.'",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-139",
+  "texto": "Mãe: 'Você já é médico?' Eu: 'Sou interno, mãe.' Mãe: 'Então dá pra olhar a unha da sua tia no domingo.'",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-140",
+  "texto": "Tia no almoço: 'Você que é quase médico, qual remédio eu tomo pra tudo?' Eu: 'Esse não existe, tia. Mas eu também queria.'",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-141",
+  "texto": "Preceptor: 'O que é mais comum?' Interno: 'O raro.' Preceptor: 'Por quê?' Interno: 'Porque foi o que eu estudei.'",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-142",
+  "texto": "Preceptor: 'Quanto de potássio tá o paciente?' Interno: 'Um pouco.' Preceptor: 'Em mEq/L.' Interno: 'Um pouco de mEq/L.'",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-143",
+  "texto": "Paciente: 'Doutor, eu li na internet.' Médico: 'E a internet leu seus exames?'",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-144",
+  "texto": "Preceptor: 'Descreva a lesão.' Interno: 'Vermelha.' Preceptor: 'Mais.' Interno: 'Bem vermelha.'",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-145",
+  "texto": "Interno: 'Posso ir almoçar?' R2: 'Pode.' R3: 'Depois da visita.' Preceptor: 'Almoçar o quê?'",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-146",
+  "texto": "Enfermeira: 'Doutor, o paciente do 12 quer saber quem é o médico dele.' Interno: 'Olha, eu também gostaria.'",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-147",
+  "texto": "Preceptor: 'Sabe por que eu te chamei?' Interno: 'Porque eu fiz alguma coisa?' Preceptor: 'Porque você não fez.'",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-148",
+  "texto": "Chefe: 'Alguém sabe a dose de cabeça?' Silêncio. Chefe: 'Alguém tem o bulário no celular?' Doze mãos levantadas.",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-149",
+  "texto": "Preceptor: 'Por que você pediu esse exame?' Interno: 'Pra descartar.' Preceptor: 'Descartar o quê?' Interno: 'A dúvida de ter que pedir depois.'",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ },
+ {
+  "id": "hm-150",
+  "texto": "Paciente: 'Doutor, o senhor é muito novo pra ser médico.' Interno: 'Obrigado. Hoje eu tô me sentindo com uns 70.'",
+  "tipo": "dialogo",
+  "dominio": "medicina"
+ }
+]

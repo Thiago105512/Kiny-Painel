@@ -24,7 +24,8 @@ const DOC_PADRAO = {
   pilulas:      () => ({ v: {} }),       // v[id] = [ts, sabia 0/1] — pílulas de estudo vistas
   academico:    () => ({ disc: {}, aval: {} }),   // disc[itemId] = situação/notas/faltas; aval[id] = provas e trabalhos
   ajudas:       () => ({ itens: {} }),
-  reportes:     () => ({ itens: {} }),   // problemas apontados em questões (cópia local; também vão para a coleção compartilhada "reportes")   // pedidos de correção/ajuda à IA e respostas
+  reportes:     () => ({ itens: {} }),
+  humor:        () => ({ v: {} }),       // v[id] = [ts, reação 1 ri / 0 passou] — piadas já vistas   // problemas apontados em questões (cópia local; também vão para a coleção compartilhada "reportes")   // pedidos de correção/ajuda à IA e respostas
   backups:      () => ({ itens: [] }),   // registro dos backups automáticos (não entra no próprio backup)
 };
 // Progresso das questões, fragmentado por trilha para cada doc ficar pequeno:

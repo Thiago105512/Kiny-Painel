@@ -334,6 +334,8 @@ details.mais>summary{cursor:pointer;color:var(--pen);font-weight:600;font-size:c
 .mosaico small{display:block;font-size:calc(13px * var(--k));color:var(--muted)}
 .atalhos.icones a{grid-template-columns:auto 1fr;column-gap:10px;align-items:center}
 .atalhos.icones a .ilu{grid-row:span 2}
+.atalhos b,.atalhos small{min-width:0;overflow-wrap:anywhere}
+@media (max-width:480px){.atalhos.icones a{grid-template-columns:1fr;justify-items:start;row-gap:6px;padding:12px}.atalhos.icones a .ilu{grid-row:auto}}
 .pil-link.com-ilu{display:flex}
 .veredito.ok .festa{display:inline-block;animation:pulo .5s ease-out}
 @keyframes pulo{0%{transform:scale(.6)}60%{transform:scale(1.15)}100%{transform:scale(1)}}
@@ -349,3 +351,8 @@ details.mais>summary{cursor:pointer;color:var(--pen);font-weight:600;font-size:c
 .ecg .tr{fill:none;stroke:var(--ecg-tr);stroke-width:.38;stroke-linejoin:round}.ecg .lbl{font:3.2px var(--display);fill:var(--ecg-tr)}
 .img-zoom{overflow-x:auto;background:var(--ecg-pap);border-radius:8px}
 .img-zoom .ecg{width:auto;height:calc(260px * var(--k));min-width:0}
+
+/* ---------- Pausa para rir (discreta) ---------- */
+.humor{border:1px dashed var(--line);border-radius:12px;padding:12px 14px;background:transparent;margin:12px 0}
+.humor .lab{color:var(--warn)}
+.humor-txt{margin:0;font:500 calc(16px * var(--k))/1.45 var(--read);color:var(--ink)}

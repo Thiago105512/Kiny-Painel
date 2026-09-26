@@ -111,6 +111,11 @@ if __name__ == "__main__":
         "pilulas": [p for arq in sorted((AQUI / "pilulas").glob("*.json")) for p in json.loads(arq.read_text(encoding="utf-8"))] if (AQUI / "pilulas").exists() else [],
     }
     validar_pilulas(dados["pilulas"], catalogo_temas(mapa, enem))
+    # Humor (Pausa para rir): humor/*.json = [{id, texto, tipo, dominio}]
+    dados["humor"] = [h for arq in sorted((AQUI / "humor").glob("*.json")) for h in json.loads(arq.read_text(encoding="utf-8"))] if (AQUI / "humor").exists() else []
+    _ids_h = [h.get("id") for h in dados["humor"]]
+    if len(_ids_h) != len(set(_ids_h)) or any(not h.get("texto") or h.get("dominio") not in ("medicina", "enem", "direito") for h in dados["humor"]):
+        erros.append("humor/*.json: ids repetidos, texto vazio ou domínio inválido")
     # Imagens didáticas (SVG) com legenda e crédito: dados/imagens/imagens.json + <id>.svg
     pasta_img = AQUI / "dados" / "imagens"
     meta_img = ler("dados/imagens/imagens.json", {})
@@ -151,4 +156,4 @@ if __name__ == "__main__":
     kb = len(html.encode("utf-8")) // 1024
     print(f"app.html gerado ({kb} KB): questões {sum(map(len, banco.values()))}, temas {len(mapa.get('temas', []))}, "
           f"assuntos ENEM {sum(len(d.get('assuntos', [])) for a in enem.get('areas', []) for d in a.get('disciplinas', []))}, "
-          f"casos {len(dados['casos'])}, matrizes {len(dados['grades'])}, pílulas {len(dados['pilulas'])}, imagens {len(dados['imagens'])}")
+          f"casos {len(dados['casos'])}, matrizes {len(dados['grades'])}, pílulas {len(dados['pilulas'])}, piadas {len(dados['humor'])}, imagens {len(dados['imagens'])}")

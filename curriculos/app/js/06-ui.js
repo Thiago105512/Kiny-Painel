@@ -194,7 +194,7 @@ function htmlPlayer() {
     return `<div class="caixa" id="pl-fim"><h2 class="sec com-ilu" style="gap:10px">${ilustra(bom ? "alvo" : "livro", bom ? "#1C7C4A" : "#2340B8", "g")}${bom ? "Mandou bem! Sessão concluída" : "Sessão concluída"}</h2>
       <div class="kpis"><div class="kpi"><b>${ac}/${n}</b><span>acertos</span></div><div class="kpi"><b>${pct(ac, n)}%</b><span>aproveitamento</span></div>
       <div class="kpi"><b>${mmss(PL.res.reduce((s, r) => s + r.ms, 0) / Math.max(1, n))}</b><span>tempo médio</span></div></div>
-      ${PL.msgFim ? `<p class="aviso info">${PL.msgFim}</p>` : ""}
+      ${PL.msgFim ? `<p class="aviso info">${PL.msgFim}</p>` : ""}${n >= 5 ? cardHumor() : ""}
       <div class="acoes"><button class="btn sec" data-act="pl-sair">Fechar</button>${PL.res.some(r => !r.ok) ? `<a class="btn" href="#/erros">Ver caderno de erros</a>` : ""}</div></div>`;
   }
   const q = qPorId(PL.ids[PL.i]);
