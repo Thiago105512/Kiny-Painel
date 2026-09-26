@@ -111,6 +111,14 @@ if __name__ == "__main__":
         "pilulas": [p for arq in sorted((AQUI / "pilulas").glob("*.json")) for p in json.loads(arq.read_text(encoding="utf-8"))] if (AQUI / "pilulas").exists() else [],
     }
     validar_pilulas(dados["pilulas"], catalogo_temas(mapa, enem))
+    # Imagens didáticas (SVG) com legenda e crédito: dados/imagens/imagens.json + <id>.svg
+    pasta_img = AQUI / "dados" / "imagens"
+    meta_img = ler("dados/imagens/imagens.json", {})
+    dados["imagens"] = {k: {**v, "svg": (pasta_img / f"{k}.svg").read_text(encoding="utf-8")} for k, v in meta_img.items() if (pasta_img / f"{k}.svg").exists()}
+    for t, itens in banco.items():
+        for q in itens:
+            if q.get("imagem") and q["imagem"] not in dados["imagens"]:
+                erros.append(f"questoes/{t}.json ({q.get('id')}): imagem '{q['imagem']}' não existe em dados/imagens")
     insts = {i["id"] for i in dados["instituicoes"]}
     for arq in sorted((AQUI / "dados" / "grades").glob("*.json")) if (AQUI / "dados" / "grades").exists() else []:
         g = json.loads(arq.read_text(encoding="utf-8"))
@@ -128,6 +136,12 @@ if __name__ == "__main__":
 
     app = AQUI / "app"
     js = "\n".join(f"/* ---- {p.name} ---- */\n" + p.read_text(encoding="utf-8") for p in sorted((app / "js").glob("*.js")))
+    # Confere a sintaxe do JavaScript antes de gerar (um erro de digitação derruba o app inteiro)
+    import shutil, subprocess, tempfile
+    if shutil.which("node"):
+        with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False, encoding="utf-8") as tmp: tmp.write(js)
+        r = subprocess.run(["node", "--check", tmp.name], capture_output=True, text=True)
+        if r.returncode: print("Build interrompido: erro de sintaxe no JavaScript\n" + r.stderr[:1500]); sys.exit(1)
     dados_js = "const DADOS = " + json.dumps(dados, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + ";"
     html = (app / "shell.html").read_text(encoding="utf-8")
     html = html.replace("/*ESTILO*/", (app / "estilo.css").read_text(encoding="utf-8"), 1)
@@ -137,4 +151,4 @@ if __name__ == "__main__":
     kb = len(html.encode("utf-8")) // 1024
     print(f"app.html gerado ({kb} KB): questões {sum(map(len, banco.values()))}, temas {len(mapa.get('temas', []))}, "
           f"assuntos ENEM {sum(len(d.get('assuntos', [])) for a in enem.get('areas', []) for d in a.get('disciplinas', []))}, "
-          f"casos {len(dados['casos'])}, matrizes {len(dados['grades'])}, pílulas {len(dados['pilulas'])}")
+          f"casos {len(dados['casos'])}, matrizes {len(dados['grades'])}, pílulas {len(dados['pilulas'])}, imagens {len(dados['imagens'])}")

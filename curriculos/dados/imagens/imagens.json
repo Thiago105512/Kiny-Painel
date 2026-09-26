@@ -1,0 +1,98 @@
+{
+ "ecg-sinusal": {
+  "titulo": "Ritmo sinusal normal",
+  "legenda": "Ondas P positivas antes de cada QRS, PR constante de 0,16 s, QRS estreito e RR regular de 0,80 s (FC 75 bpm).",
+  "tipo": "ecg",
+  "credito": "Traçado didático simulado (Gabarito AM), 25 mm/s, 10 mm/mV"
+ },
+ "ecg-taqui-sinusal": {
+  "titulo": "Taquicardia sinusal",
+  "legenda": "Ritmo regular com P sinusal antes de cada QRS e FC de cerca de 125 bpm (RR 0,48 s).",
+  "tipo": "ecg",
+  "credito": "Traçado didático simulado (Gabarito AM), 25 mm/s, 10 mm/mV"
+ },
+ "ecg-bradi-sinusal": {
+  "titulo": "Bradicardia sinusal",
+  "legenda": "Ritmo regular com P sinusal antes de cada QRS, PR normal e FC de cerca de 45 bpm (RR 1,33 s).",
+  "tipo": "ecg",
+  "credito": "Traçado didático simulado (Gabarito AM), 25 mm/s, 10 mm/mV"
+ },
+ "ecg-fa": {
+  "titulo": "Fibrilação atrial",
+  "legenda": "Ausência de ondas P, linha de base com ondas fibrilatórias finas e intervalos RR irregularmente irregulares; QRS estreito.",
+  "tipo": "ecg",
+  "credito": "Traçado didático simulado (Gabarito AM), 25 mm/s, 10 mm/mV"
+ },
+ "ecg-flutter": {
+  "titulo": "Flutter atrial com condução 4:1",
+  "legenda": "Ondas F em 'dente de serrote' a cerca de 300/min, com um QRS a cada quatro ondas F (FC ventricular 75 bpm).",
+  "tipo": "ecg",
+  "credito": "Traçado didático simulado (Gabarito AM), 25 mm/s, 10 mm/mV"
+ },
+ "ecg-bav1": {
+  "titulo": "Bloqueio atrioventricular de 1º grau",
+  "legenda": "Toda P é seguida de QRS, mas o intervalo PR está fixo e prolongado (0,32 s, acima de 0,20 s).",
+  "tipo": "ecg",
+  "credito": "Traçado didático simulado (Gabarito AM), 25 mm/s, 10 mm/mV"
+ },
+ "ecg-wenckebach": {
+  "titulo": "BAV de 2º grau Mobitz I (Wenckebach)",
+  "legenda": "O PR aumenta progressivamente (0,16 → 0,26 → 0,34 s) até que uma onda P não conduz (QRS ausente); depois o ciclo recomeça.",
+  "tipo": "ecg",
+  "credito": "Traçado didático simulado (Gabarito AM), 25 mm/s, 10 mm/mV"
+ },
+ "ecg-mobitz2": {
+  "titulo": "BAV de 2º grau Mobitz II",
+  "legenda": "PR constante nos batimentos conduzidos e ondas P bloqueadas de repente, sem alongamento prévio do PR; QRS largo sugere bloqueio infra-hissiano.",
+  "tipo": "ecg",
+  "credito": "Traçado didático simulado (Gabarito AM), 25 mm/s, 10 mm/mV"
+ },
+ "ecg-bavt": {
+  "titulo": "Bloqueio atrioventricular total (3º grau)",
+  "legenda": "Ondas P regulares (~90/min) e QRS largos regulares (~40/min) sem relação entre si: dissociação atrioventricular com escape ventricular.",
+  "tipo": "ecg",
+  "credito": "Traçado didático simulado (Gabarito AM), 25 mm/s, 10 mm/mV"
+ },
+ "ecg-tv": {
+  "titulo": "Taquicardia ventricular monomórfica",
+  "legenda": "Taquicardia regular de QRS largo (> 0,12 s) a cerca de 170 bpm, com complexos iguais entre si e sem ondas P relacionadas.",
+  "tipo": "ecg",
+  "credito": "Traçado didático simulado (Gabarito AM), 25 mm/s, 10 mm/mV"
+ },
+ "ecg-fv": {
+  "titulo": "Fibrilação ventricular",
+  "legenda": "Ondulações caóticas de amplitude e frequência variáveis, sem QRS, ondas P ou T identificáveis.",
+  "tipo": "ecg",
+  "credito": "Traçado didático simulado (Gabarito AM), 25 mm/s, 10 mm/mV"
+ },
+ "ecg-torsades": {
+  "titulo": "Torsades de pointes",
+  "legenda": "Taquicardia ventricular polimórfica com QRS que 'giram' em torno da linha de base, amplitude crescente e decrescente em fusos.",
+  "tipo": "ecg",
+  "credito": "Traçado didático simulado (Gabarito AM), 25 mm/s, 10 mm/mV"
+ },
+ "ecg-wpw": {
+  "titulo": "Pré-excitação ventricular (Wolff-Parkinson-White)",
+  "legenda": "PR curto (0,10 s), onda delta (empastamento inicial do QRS) e QRS alargado (0,12 s), com ritmo sinusal.",
+  "tipo": "ecg",
+  "credito": "Traçado didático simulado (Gabarito AM), 25 mm/s, 10 mm/mV"
+ },
+ "ecg-hipercalemia": {
+  "titulo": "Hipercalemia",
+  "legenda": "Ondas T altas, estreitas e pontiagudas ('em tenda'), P achatada e QRS alargado, sinais progressivos de potássio elevado.",
+  "tipo": "ecg",
+  "credito": "Traçado didático simulado (Gabarito AM), 25 mm/s, 10 mm/mV"
+ },
+ "ecg-bigeminismo": {
+  "titulo": "Extrassístoles ventriculares em bigeminismo",
+  "legenda": "Alternância de um batimento sinusal normal com uma extrassístole ventricular precoce, de QRS largo e bizarro, sem P precedente e com pausa compensatória.",
+  "tipo": "ecg",
+  "credito": "Traçado didático simulado (Gabarito AM), 25 mm/s, 10 mm/mV"
+ },
+ "ecg-supra-st": {
+  "titulo": "Supradesnivelamento do segmento ST",
+  "legenda": "Elevação do ponto J e do segmento ST de cerca de 3 mm (0,3 mV), convexa para cima e contínua com a onda T, em ritmo sinusal.",
+  "tipo": "ecg",
+  "credito": "Traçado didático simulado (Gabarito AM), 25 mm/s, 10 mm/mV"
+ }
+}

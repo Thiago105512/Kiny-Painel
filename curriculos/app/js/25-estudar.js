@@ -75,7 +75,7 @@ rota("/estudar", () => {
         <p class="small muted" style="margin:0">${vistas ? `${vistas} de ${pool.length} vistas${naoSabia ? ` · ${naoSabia} viraram flashcards` : ""}` : `${pool.length} pílulas para descobrir`}</p>
         <button class="btn azul grande" data-act="pil-sessao">Começar</button></div></section>
       ${dia ? `<section><h2 class="sec">Pílula do dia</h2><a class="pil-link com-ilu" href="#/estudar/p/${esc(dia.id)}">${iluPil(dia.tipo, "g")}<div><b>${esc(dia.titulo)}</b><small>${esc((TIPOS_PIL[dia.tipo] || [])[0] || "")} · ${esc(dia.area)}</small></div></a></section>` : ""}
-      <section><h2 class="sec">Explorar</h2><div class="atalhos icones">${Object.entries(TIPOS_PIL).map(([k, [nome, desc]]) => { const n = pool.filter(p => p.tipo === k).length;
+      <section><h2 class="sec">Explorar</h2><div class="atalhos icones">${Object.keys(IMAGENS).length && ["medicina", "residencia", null].includes(objetivo()) ? `<a href="#/estudar/atlas">${ilustra("pulso", "#C0265F")}<b>Atlas de ECG</b><small>${Object.keys(IMAGENS).length} traçados para interpretar</small></a>` : ""}${Object.entries(TIPOS_PIL).map(([k, [nome, desc]]) => { const n = pool.filter(p => p.tipo === k).length;
         return n ? `<a href="#/estudar/tipo/${k}">${iluPil(k)}<b>${nome}</b><small>${desc} · ${n}</small></a>` : ""; }).join("")}</div></section>`
       : vazio("As pílulas de estudo ainda estão sendo preparadas."),
   };
