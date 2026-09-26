@@ -87,7 +87,8 @@ h3{font:700 calc(13px * var(--k)) var(--mono);text-transform:uppercase;letter-sp
 .caixa+.caixa{margin-top:12px}
 .aviso{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-left:3px solid var(--warn);background:var(--warn-soft);border-radius:6px;padding:10px 12px;font-size:calc(13px * var(--k));color:var(--ink);margin-bottom:12px}
 .aviso.info{border-left-color:var(--pen);background:var(--pen-soft)}
-.vazio{border:1px dashed var(--line);border-radius:10px;padding:18px;color:var(--ink2);display:grid;gap:10px;justify-items:start}
+.vazio{border:1px dashed var(--line);border-radius:10px;padding:14px 16px;color:var(--ink2);display:flex;gap:12px;align-items:center}
+.vazio>div{display:grid;gap:10px;justify-items:start;min-width:0}
 .vazio p{margin:0;font:400 calc(15px * var(--k))/1.5 var(--read)}
 .grid{display:grid;gap:12px}
 .grid>*{min-width:0}

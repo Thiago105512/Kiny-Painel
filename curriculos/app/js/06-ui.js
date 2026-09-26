@@ -101,7 +101,7 @@ const atualizar = () => render();
 function paginaNaoEncontrada() { return { titulo: "Página não encontrada", html: vazio("Este endereço não existe mais.", `<a class="btn" href="#/">Ir para o início</a>`) }; }
 
 /* ---------- Componentes ---------- */
-const vazio = (txt, botoes = "") => `<div class="vazio"><p>${txt}</p>${botoes ? `<div class="linha">${botoes}</div>` : ""}</div>`;
+const vazio = (txt, botoes = "") => `<div class="vazio">${mascote("pensando", 64, "")}<div><p>${txt}</p>${botoes ? `<div class="linha">${botoes}</div>` : ""}</div></div>`;
 /** Tamanho da letra (só neste aparelho): Grande é o padrão. */
 const TAM_LETRA = [[1.25, "Grande"], [1.45, "Muito grande"], [1.7, "Enorme"], [1, "Normal"]];
 function medirTopo() { const t = document.querySelector(".topo"); if (t) document.documentElement.style.setProperty("--topo-h", t.offsetHeight + "px"); }
