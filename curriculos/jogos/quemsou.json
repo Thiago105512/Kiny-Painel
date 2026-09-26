@@ -102,9 +102,8 @@
      ]
     },
     {
-     "txt": "Febre com bradicardia relativa (Faget)?",
+     "txt": "Febre prolongada com roséolas no tronco?",
      "sim": [
-      "Febre amarela",
       "Febre tifoide"
      ]
     },
@@ -256,7 +255,7 @@
    ],
    "perguntas": [
     {
-     "txt": "Tem origem cardíaca?",
+     "txt": "Origem no coração ou no pericárdio?",
      "sim": [
       "Infarto agudo do miocárdio",
       "Angina estável",
@@ -328,15 +327,6 @@
      "sim": [
       "Pneumonia"
      ]
-    },
-    {
-     "txt": "Dor pleurítica (piora ao inspirar)?",
-     "sim": [
-      "Tromboembolismo pulmonar",
-      "Pneumotórax",
-      "Pericardite aguda",
-      "Pneumonia"
-     ]
     }
    ],
    "notas": {
@@ -375,7 +365,7 @@
      ]
     },
     {
-     "txt": "É macrocítica?",
+     "txt": "É megaloblástica (macrocítica)?",
      "sim": [
       "Deficiência de B12",
       "Deficiência de folato"
@@ -394,7 +384,7 @@
      ]
     },
     {
-     "txt": "Causa sintomas neurológicos?",
+     "txt": "Causa neuropatia e degeneração medular?",
      "sim": [
       "Deficiência de B12"
      ]
@@ -450,9 +440,9 @@
     "Ferropriva": "Microcítica e hipocrômica, ferritina baixa. Em adulto, investigar sangramento digestivo.",
     "Deficiência de B12": "Macrocítica com sintomas neurológicos; causa clássica: anemia perniciosa.",
     "Deficiência de folato": "Macrocítica sem sintomas neurológicos; etilismo, gestação e má alimentação.",
-    "Anemia de doença crônica": "Normocítica, ferro baixo com ferritina normal ou alta (hepcidina elevada).",
+    "Anemia de doença crônica": "Em geral normocítica; ferro baixo com ferritina normal ou alta (hepcidina elevada).",
     "Talassemia beta menor": "Microcitose acentuada com Hb pouco baixa e HbA2 aumentada; ferritina normal.",
-    "Anemia falciforme": "HbS: crises vaso-oclusivas, hemólise e asplenia funcional. Triada no teste do pezinho.",
+    "Anemia falciforme": "HbS: crises vaso-oclusivas, hemólise e asplenia funcional. Rastreada no teste do pezinho.",
     "Esferocitose hereditária": "Esferócitos, CHCM alto e esplenomegalia; Coombs negativo.",
     "Deficiência de G6PD": "Hemólise após oxidantes (primaquina, sulfas, fava); corpúsculos de Heinz.",
     "Anemia aplásica": "Pancitopenia com medula hipocelular na biópsia; reticulócitos baixos.",
@@ -492,7 +482,7 @@
      ]
     },
     {
-     "txt": "Transmissão sexual ou parenteral?",
+     "txt": "Transmissão sobretudo parenteral ou sexual?",
      "sim": [
       "Hepatite B",
       "Hepatite C",
@@ -537,7 +527,7 @@
      ]
     },
     {
-     "txt": "AST/ALT maior que 2?",
+     "txt": "AST/ALT > 2 em etilista pesado?",
      "sim": [
       "Hepatite alcoólica"
      ]
@@ -642,7 +632,7 @@
      ]
     },
     {
-     "txt": "Típica em fibrose cística e hospitalar?",
+     "txt": "Produz pigmento verde (piocianina)?",
      "sim": [
       "Pseudomonas"
      ]
@@ -706,7 +696,7 @@
    ],
    "perguntas": [
     {
-     "txt": "Pode causar tireotoxicose?",
+     "txt": "Tireotoxicose faz parte do quadro típico?",
      "sim": [
       "Doença de Graves",
       "Tireoidite subaguda",
@@ -827,7 +817,7 @@
    ],
    "perguntas": [
     {
-     "txt": "Surge nas primeiras 24 h de vida?",
+     "txt": "Hemólise por anticorpo materno (aloimune)?",
      "sim": [
       "Isoimunização Rh",
       "Incompatibilidade ABO"
