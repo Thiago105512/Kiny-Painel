@@ -45,6 +45,7 @@ function registrarResposta(q, resp, ms, origem) {
   const ok = resp === q.c, agora = Date.now();
   const d = store.doc(docProg(q.t)); const p = d.q[q.id] = d.q[q.id] || { n: 0, ac: 0, h: [], m: 0, r: 0 };
   p.n++; if (ok) p.ac++;
+  if (p.n === 1) p.f = ok ? 1 : 0;   // 1ª tentativa: é ela que mede a dificuldade real da questão
   p.h.push([agora, resp, ok ? 1 : 0, Math.round(ms || 0), origem]); if (p.h.length > 12) p.h = p.h.slice(-12);
   store.mudou(docProg(q.t));
   const dia = diaDe(hoje()); dia.q++; if (ok) dia.ac++; if (q.tema && !dia.temas.includes(q.tema)) dia.temas.push(q.tema); store.mudou("dias");

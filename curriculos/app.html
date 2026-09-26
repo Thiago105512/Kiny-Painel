@@ -726,7 +726,9 @@ const store = (() => {
 
   /** Grava um documento compartilhado (fora da área privada do usuário), ex.: reportes de problema em questões. */
   async function publicar(caminho, corpo) { if (!db) return false; try { await db.doc(caminho).set(corpo); return true; } catch (e) { return false; } }
-  return { doc, mudou, conectar, publicar, exportar, importar, zerar, nomes, aoRemoto: f => { aoMudarRemoto = f; }, get naConta() { return !!db; }, _mesclar: mesclar };
+  /** Lê um documento compartilhado (ou null). */
+  async function lerCompartilhado(caminho) { if (!db) return null; try { const s = await db.doc(caminho).get(); return s.exists ? s.data() : null; } catch (e) { return null; } }
+  return { doc, mudou, conectar, publicar, lerCompartilhado, exportar, importar, zerar, nomes, aoRemoto: f => { aoMudarRemoto = f; }, get naConta() { return !!db; }, _mesclar: mesclar };
 })();
 
 /* ---- 04-estudo.js ---- */
@@ -777,6 +779,7 @@ function registrarResposta(q, resp, ms, origem) {
   const ok = resp === q.c, agora = Date.now();
   const d = store.doc(docProg(q.t)); const p = d.q[q.id] = d.q[q.id] || { n: 0, ac: 0, h: [], m: 0, r: 0 };
   p.n++; if (ok) p.ac++;
+  if (p.n === 1) p.f = ok ? 1 : 0;   // 1ª tentativa: é ela que mede a dificuldade real da questão
   p.h.push([agora, resp, ok ? 1 : 0, Math.round(ms || 0), origem]); if (p.h.length > 12) p.h = p.h.slice(-12);
   store.mudou(docProg(q.t));
   const dia = diaDe(hoje()); dia.q++; if (ok) dia.ac++; if (q.tema && !dia.temas.includes(q.tema)) dia.temas.push(q.tema); store.mudou("dias");
@@ -1325,7 +1328,7 @@ function htmlPlayer() {
     <p class="enunciado">${esc(q.q)}</p>
     <ol class="alts">${alts}</ol>
     ${PL.resp ? `<div class="retorno"><p class="veredito ${ok ? "ok" : "bad"}">${ok ? "Certo" : "Errado — gabarito " + letra(q.c)}${PL.ms ? ` · ${mmss(PL.ms)}` : ""}</p><p class="leitura" style="color:var(--ink2);margin:0">${esc(q.e || "Sem explicação cadastrada.")}</p>
-      <p class="small muted" style="margin:8px 0 0">${[TRILHAS[q.t]?.curto || q.t, q.ae && nomeAreaEnem(q.ae), q.ae && q.disc].filter(Boolean).map(esc).join(" · ")}${q.tema ? " · " + linkTema(q.tema) : ""}${q.src !== "banco" ? " · " + (q.src === "ia" ? "gerada por IA" : "minha") : ""}${st.n > 1 ? ` · você já acertou ${st.ac} de ${st.n}` : ""}${q.rev ? ` · revisada em ${esc(mesAno(q.rev))}` : ""}</p>
+      <p class="small muted" style="margin:8px 0 0">${[TRILHAS[q.t]?.curto || q.t, q.ae && nomeAreaEnem(q.ae), q.ae && q.disc].filter(Boolean).map(esc).join(" · ")}${q.tema ? " · " + linkTema(q.tema) : ""}${q.src !== "banco" ? " · " + (q.src === "ia" ? "gerada por IA" : "minha") : ""}${st.n > 1 ? ` · você já acertou ${st.ac} de ${st.n}` : ""}${q.rev ? ` · revisada em ${esc(mesAno(q.rev))}` : ""}${acertoGeral(q) ? " · " + esc(acertoGeral(q)) : ""}</p>
       ${!ok ? `<p class="small muted" style="margin:8px 0 0">Registrado no <a href="#/erros">caderno de erros</a> com revisão amanhã.</p>${irmaDe(q) ? `<div class="acoes"><button class="btn sec" data-act="pl-irma">Treinar este ponto de novo</button></div>` : ""}` : ""}
       ${PL.ia ? `<h3>Assistente</h3><div class="ia-txt" id="pl-ia">${esc(PL.ia)}</div>` : ""}</div>` : ""}
     <div class="acoes">
@@ -3632,6 +3635,44 @@ ACOES["aj-baixar"] = async el => { const h = store.doc("ajudas").itens[el.datase
   try { await DOWNLOADS.save({ filename: `ajuda-${diaISO(new Date(h.ts))}.txt`, data: `${h.titulo}\n\nPEDIDO\n${h.pedido || ""}\n\nRESPOSTA\n${h.resposta}` }); }
   catch (e) { if (!["cancelled", "declined"].includes(e?.code)) toast("Não foi possível baixar"); } };
 
+/* ---- 29-calibracao.js ---- */
+/* ============================================================
+   29-calibracao — nível das questões calibrado pelo uso.
+   Cada aparelho envia, no máximo 1×/dia, só o resultado da 1ª tentativa
+   de cada questão (acertou/errou), sob um identificador anônimo:
+     compartilhado  calibracao/<anon> = {q: {qid: 0|1}, ts}
+   O ciclo de revisão soma tudo em calibracao_total/geral = {q: {qid: [n, acertos]}, ts}
+   e ajusta a dificuldade das questões no banco quando há respostas suficientes.
+   O app mostra "acertam X% de quem respondeu" a partir de 10 primeiras respostas.
+   ============================================================ */
+const CALIB = { total: null, lido: false };
+const MIN_CALIB = 10;
+function primeirasTentativas() {
+  const out = {};
+  Object.keys(TRILHAS).forEach(t => Object.entries(store.doc(docProg(t)).q).forEach(([id, p]) => {
+    if (p.f === 0 || p.f === 1) out[id] = p.f;
+    else if (p.n && p.h?.length === p.n) out[id] = p.h[0][2] ? 1 : 0;   // progresso antigo, histórico completo
+  }));
+  return out;
+}
+async function enviarCalibracao() {
+  if (!store.naConta) return;
+  const P = store.doc("perfil");
+  if (!P.anon) { P.anon = "a" + Math.random().toString(36).slice(2, 12); store.mudou("perfil"); }
+  if (Date.now() - (P.calibEnviada || 0) < DIA) return;
+  const q = primeirasTentativas(); if (!Object.keys(q).length) return;
+  if (await store.publicar("calibracao/" + P.anon, { q, ts: Date.now() })) { P.calibEnviada = Date.now(); store.mudou("perfil"); }
+}
+async function lerCalibracao() {
+  if (CALIB.lido) return; CALIB.lido = true;
+  CALIB.total = (await store.lerCompartilhado("calibracao_total/geral"))?.q || null;
+}
+/** Texto curto para depois de responder: "acertam 62% de quem respondeu (48)". */
+function acertoGeral(q) {
+  const x = CALIB.total?.[q.id]; if (!x || x[0] < MIN_CALIB) return "";
+  return `acertam ${Math.round(x[1] / x[0] * 100)}% na 1ª tentativa (${x[0]})`;
+}
+
 /* ---- 99-main.js ---- */
 /* ============================================================
    99-main — inicialização: dados locais primeiro (tela imediata),
@@ -3650,6 +3691,8 @@ ACOES["aj-baixar"] = async el => { const h = store.doc("ajudas").itens[el.datase
   const arquivos = iniciarArquivos().then(() => { if (/biblioteca/.test(caminhoAtual())) render(); });
   // Backup semanal: só depois de carregar a conta e o armazenamento de arquivos
   Promise.all([conta, arquivos]).then(() => setTimeout(backupAutomatico, 4000));
+  // Calibração do nível pelo uso (anônima): envia a 1ª tentativa de cada questão e lê o total agregado
+  conta.then(() => setTimeout(() => { enviarCalibracao(); lerCalibracao(); }, 6000));
 
   // Tempo de estudo: conta blocos de 15 s com a página visível e interação nos últimos 3 min.
   let ultimaAcao = Date.now(), acumulado = 0;

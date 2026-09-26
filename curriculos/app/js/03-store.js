@@ -239,5 +239,7 @@ const store = (() => {
 
   /** Grava um documento compartilhado (fora da área privada do usuário), ex.: reportes de problema em questões. */
   async function publicar(caminho, corpo) { if (!db) return false; try { await db.doc(caminho).set(corpo); return true; } catch (e) { return false; } }
-  return { doc, mudou, conectar, publicar, exportar, importar, zerar, nomes, aoRemoto: f => { aoMudarRemoto = f; }, get naConta() { return !!db; }, _mesclar: mesclar };
+  /** Lê um documento compartilhado (ou null). */
+  async function lerCompartilhado(caminho) { if (!db) return null; try { const s = await db.doc(caminho).get(); return s.exists ? s.data() : null; } catch (e) { return null; } }
+  return { doc, mudou, conectar, publicar, lerCompartilhado, exportar, importar, zerar, nomes, aoRemoto: f => { aoMudarRemoto = f; }, get naConta() { return !!db; }, _mesclar: mesclar };
 })();

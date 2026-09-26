@@ -79,5 +79,14 @@ r=await p.evaluate(()=>{const id=criarCard({frente:'p',verso:'r',origem:'pilula'
 ok(r,'card de pílula "não sabia" agendado para amanhã');
 await ctx.close();
 
+console.log('4) Calibração do nível pelo uso (anônima)');
+ctx=await b.newContext();p=await ctx.newPage();p.on('pageerror',e=>errs.push(e.message));
+await p.addInitScript(dbMock({'data/users/u_teste/perfil':{faculdade:'ufam',_ts:antes},'data/users/u_teste/prog-medicina':{q:{'med-cc68d69f':{n:1,ac:1,h:[[antes,0,1,5000,'pratica']],f:1}},_ts:antes},'calibracao_total/geral':{q:{'med-cc68d69f':[40,26]}}}));
+await p.goto(URL);await p.waitForTimeout(7500);
+r=await p.evaluate(()=>{const k=[...window.__db.keys()].find(k=>k.startsWith('calibracao/'));return {k,doc:k&&window.__db.get(k),txt:acertoGeral(qPorId('med-cc68d69f'))};});
+ok(r.k&&r.doc.q['med-cc68d69f']===1&&!('_ts' in r.doc),'1ª tentativa enviada de forma anônima ('+r.k+')');
+ok(r.txt==='acertam 65% na 1ª tentativa (40)','mostra o acerto geral da questão: '+r.txt);
+await ctx.close();
+
 ok(!errs.length,errs.length?'erros de JS: '+errs.join(' | '):'Sem erros de JS');
 await b.close();console.log(falhas?`${falhas} FALHA(S)`:'AUDITORIA OK');process.exit(falhas?1:0);})();
