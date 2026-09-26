@@ -170,8 +170,10 @@ const guardarSessao = () => { if (PL.ativo && !PL.fim && PL.ids.length > 1) SALV
 function ordenarSeries(ids, completar) {
   const Q = questoes(), porSerie = {};
   Q.forEach(q => { if (q.serie) (porSerie[q.serie] = porSerie[q.serie] || []).push(q); });
-  const saida = [], vistas = new Set(), dentro = new Set(ids);
+  const saida = [], vistas = new Set(), dentro = new Set(ids), familias = new Set();
   ids.forEach(id => { const q = qPorId(id);
+    /* Questões da mesma "família" (mesmo quadro visto por outro ângulo) não caem juntas: uma entregaria a outra. */
+    if (q?.familia && ids.length > 1) { if (familias.has(q.familia)) return; familias.add(q.familia); }
     if (!q?.serie) { saida.push(id); return; }
     if (vistas.has(q.serie)) return; vistas.add(q.serie);
     (porSerie[q.serie] || []).sort((a, b) => a.parte - b.parte).forEach(x => { if (completar || dentro.has(x.id)) saida.push(x.id); }); });

@@ -41,7 +41,7 @@ def catalogo_temas(mapa, enem):
 
 
 def validar_banco(banco, temas):
-    ids = set()
+    ids, familias = set(), {}
     for t, itens in banco.items():
         for n, q in enumerate(itens):
             onde = f"questoes/{t}.json#{n} ({q.get('id')})"
@@ -60,6 +60,13 @@ def validar_banco(banco, temas):
                 erros.append(f"{onde}: tema '{tema}' não existe no catálogo")
             if q.get("dificuldade") not in (None, 1, 2, 3):
                 erros.append(f"{onde}: dificuldade deve ser 1, 2 ou 3")
+            fam = q.get("familia")
+            if fam is not None and (not isinstance(fam, str) or not fam.startswith("fam-")):
+                erros.append(f"{onde}: 'familia' deve ser texto começando com 'fam-'")
+            if fam: familias.setdefault(fam, []).append(q.get("id"))
+    for fam, membros in familias.items():
+        if len(membros) < 2:
+            erros.append(f"família '{fam}' tem só uma questão ({membros[0]})")
 
 
 def validar_grade(g, arq, insts):

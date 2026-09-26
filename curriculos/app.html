@@ -1660,8 +1660,10 @@ const guardarSessao = () => { if (PL.ativo && !PL.fim && PL.ids.length > 1) SALV
 function ordenarSeries(ids, completar) {
   const Q = questoes(), porSerie = {};
   Q.forEach(q => { if (q.serie) (porSerie[q.serie] = porSerie[q.serie] || []).push(q); });
-  const saida = [], vistas = new Set(), dentro = new Set(ids);
+  const saida = [], vistas = new Set(), dentro = new Set(ids), familias = new Set();
   ids.forEach(id => { const q = qPorId(id);
+    /* Questões da mesma "família" (mesmo quadro visto por outro ângulo) não caem juntas: uma entregaria a outra. */
+    if (q?.familia && ids.length > 1) { if (familias.has(q.familia)) return; familias.add(q.familia); }
     if (!q?.serie) { saida.push(id); return; }
     if (vistas.has(q.serie)) return; vistas.add(q.serie);
     (porSerie[q.serie] || []).sort((a, b) => a.parte - b.parte).forEach(x => { if (completar || dentro.has(x.id)) saida.push(x.id); }); });
@@ -3222,8 +3224,13 @@ function montarProporcional(t, pool, n) {
   let falta = n - cota.reduce((s, o) => s + o.k, 0);
   const porResto = cota.slice().sort((a, b) => (b.x % 1) - (a.x % 1));
   while (falta > 0) { let andou = false; for (const o of porResto) if (falta && o.k < porG[o.g].length) { o.k++; falta--; andou = true; } if (!andou) break; }
-  const escolhe = g => { const qs = embaralhar(porG[g]); return qs.filter(q => !progDe(q)?.n).concat(qs.filter(q => progDe(q)?.n)); };
-  return cota.flatMap(o => embaralhar(escolhe(o.g).slice(0, o.k)));
+  const familias = new Set(), livre = q => !q.familia || !familias.has(q.familia);
+  const escolhe = (g, k) => { const qs = embaralhar(porG[g]), out = [];
+    for (const q of qs.filter(q => !progDe(q)?.n).concat(qs.filter(q => progDe(q)?.n))) { if (out.length >= k) break; if (livre(q)) { out.push(q); if (q.familia) familias.add(q.familia); } }
+    return out; };
+  const saida = cota.flatMap(o => embaralhar(escolhe(o.g, o.k))), ja = new Set(saida);
+  for (const q of embaralhar(pool)) { if (saida.length >= n) break; if (!ja.has(q) && livre(q)) { saida.push(q); if (q.familia) familias.add(q.familia); } }
+  return saida;
 }
 
 const FS = { trilha: "", inst: "", periodo: "", disc: "", esp: "", tema: "", subtema: "", dif: "", fonte: "", ano: "", prova: "", status: [], texto: "", erradasAntes: false };
