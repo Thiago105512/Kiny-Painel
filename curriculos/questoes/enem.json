@@ -121,7 +121,7 @@
    "25"
   ],
   "correta": 3,
-  "explicacao": "No cruzamento Aa × Aa, os gametas A e a se combinam gerando 1/4 AA, 2/4 Aa e 1/4 aa. Como há dominância completa, AA e Aa têm flores púrpuras (3/4) e apenas aa tem flores brancas (1/4). Assim, espera-se 1/4 de 400 = 100 plantas brancas. O valor 300 corresponde às púrpuras; 200 corresponde aos heterozigotos (Aa); 0 seria esperado apenas se um dos pais fosse AA; 25 não corresponde a nenhuma proporção do cruzamento.",
+  "explicacao": "No cruzamento Aa × Aa, os gametas A e a se combinam gerando 1/4 AA, 2/4 Aa e 1/4 aa. Como há dominância completa, AA e Aa têm flores púrpuras (3/4) e apenas aa tem flores brancas (1/4). Assim, espera-se 1/4 de 400 = 100 plantas brancas. O valor 300 corresponde às púrpuras; 200 corresponde aos heterozigotos (Aa); 0 seria esperado apenas se um dos pais fosse AA; 25 não corresponde a nenhuma proporção do cruzamento. Para lembrar: no cruzamento de dois heterozigotos com dominância completa, a proporção fenotípica é 3:1 e a genotípica, 1:2:1.",
   "tema": "enem-bio-genetica",
   "subtema": "Primeira Lei de Mendel",
   "disciplina": "Biologia",
@@ -129,7 +129,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "ene-066d5a17",
@@ -312,14 +313,14 @@
   "area": "Geografia",
   "enunciado": "Um climograma hipotético de uma cidade da Amazônia Central mostra médias mensais entre 26 °C e 28 °C o ano todo e chuvas acima de 2.000 mm anuais, sem estação fria.\n\nEsse padrão caracteriza o clima",
   "alternativas": [
-   "equatorial úmido, quente e chuvoso, influenciado pela baixa latitude e pela massa Equatorial continental.",
+   "equatorial, quente e úmido o ano todo, com pequena amplitude térmica e chuvas abundantes.",
    "semiárido, com chuvas escassas e irregulares concentradas em poucos meses do ano.",
    "subtropical, com as quatro estações bem definidas e invernos com possibilidade de geadas.",
    "tropical de altitude, com temperaturas amenas por causa da elevação do relevo.",
    "tropical típico, com inverno seco e prolongado e verão chuvoso bem marcado."
   ],
   "correta": 0,
-  "explicacao": "O clima equatorial úmido predomina na Amazônia: temperaturas elevadas e estáveis (baixa amplitude térmica anual, pela proximidade do Equador), chuvas abundantes e alta umidade, com atuação da massa Equatorial continental. O semiárido tem chuvas escassas, típico do Sertão nordestino. O subtropical apresenta estações definidas e invernos frios, no Sul. O tropical de altitude tem médias mais baixas pela altitude, em áreas serranas do Sudeste. O tropical típico, do Brasil Central, apresenta inverno seco bem marcado, o que não corresponde ao climograma.",
+  "explicacao": "O clima equatorial predomina na Amazônia: temperaturas elevadas e estáveis (pequena amplitude térmica anual, pela baixa latitude), chuvas abundantes e alta umidade, com atuação da massa Equatorial continental — exatamente o que o climograma mostra. O semiárido tem chuvas escassas e irregulares, típico do Sertão nordestino. O subtropical apresenta estações definidas e invernos frios, no Sul. O tropical de altitude tem médias mais baixas pela altitude, em áreas serranas do Sudeste. O tropical típico, do Brasil Central, apresenta inverno seco bem marcado, o que não corresponde ao climograma.",
   "tema": "enem-geo-clima",
   "subtema": "Climas do Brasil",
   "disciplina": "Geografia",
@@ -327,7 +328,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "ene-4dd1f9aa",
@@ -1196,10 +1198,10 @@
    "da Constituição de 1988, que restabeleceu as eleições diretas e as liberdades de imprensa e de reunião.",
    "do movimento Diretas Já, que mobilizou multidões em defesa das eleições diretas para presidente.",
    "da Lei Áurea, que extinguiu a escravidão e alterou a composição do Congresso imperial.",
-   "do Ato Institucional nº 5, que ampliou os poderes do Executivo e suspendeu garantias como o habeas corpus em crimes políticos."
+   "do Ato Institucional nº 5, que fortaleceu o Executivo e suspendeu o habeas corpus em crimes políticos."
   ],
   "correta": 4,
-  "explicacao": "O AI-5, decretado em 13 de dezembro de 1968 pelo governo Costa e Silva, autorizou o presidente a decretar o recesso do Congresso, cassar mandatos, suspender direitos políticos e suspendeu a garantia de habeas corpus nos casos de crimes políticos contra a segurança nacional, abrindo caminho para a intensificação da repressão e da censura. É o marco do endurecimento da ditadura. A Lei da Anistia (1979) e as Diretas Já (1983–1984) pertencem à abertura política, com sentido oposto. A Constituição de 1988 restabeleceu liberdades. E a Lei Áurea é de 1888, sem relação com o contexto.",
+  "explicacao": "O AI-5, decretado em 13 de dezembro de 1968 pelo governo Costa e Silva, autorizou o presidente a decretar o recesso do Congresso, cassar mandatos, suspender direitos políticos e suspendeu a garantia de habeas corpus nos casos de crimes políticos contra a segurança nacional, abrindo caminho para a intensificação da repressão e da censura. É o marco do endurecimento da ditadura. A Lei da Anistia (1979) e as Diretas Já (1983–1984) pertencem à abertura política, com sentido oposto. A Constituição de 1988 restabeleceu liberdades. E a Lei Áurea é de 1888, sem relação com o contexto. Para lembrar: AI-5, 13 de dezembro de 1968, governo Costa e Silva — o \"golpe dentro do golpe\".",
   "tema": "enem-hist-ditadura-militar",
   "subtema": "Atos Institucionais",
   "disciplina": "História",
@@ -1207,7 +1209,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "ene-68818d6c",
@@ -1485,7 +1488,7 @@
    "patrimonial."
   ],
   "correta": 1,
-  "explicacao": "Weber distinguiu três tipos puros de dominação legítima. A racional-legal baseia-se na crença na validade de regras impessoais e estatuídas; obedece-se ao cargo, e não à pessoa, como na burocracia moderna, o caso do servidor. A carismática baseia-se nas qualidades extraordinárias atribuídas a um líder. A tradicional apoia-se na santidade dos costumes; patriarcalismo e patrimonialismo são formas de dominação tradicional, em que o poder é exercido como assunto pessoal do senhor.",
+  "explicacao": "Weber distinguiu três tipos puros de dominação legítima. A racional-legal baseia-se na crença na validade de regras impessoais e estatuídas; obedece-se ao cargo, e não à pessoa, como na burocracia moderna, o caso do servidor. A carismática baseia-se nas qualidades extraordinárias atribuídas a um líder. A tradicional apoia-se na santidade dos costumes; patriarcalismo e patrimonialismo são formas de dominação tradicional, em que o poder é exercido como assunto pessoal do senhor. Para lembrar: nos três tipos puros de Weber, obedece-se à lei (racional-legal), ao costume (tradicional) ou ao líder extraordinário (carismática).",
   "tema": "enem-socio-weber",
   "subtema": "Tipos de dominação legítima",
   "disciplina": "Sociologia",
@@ -1493,7 +1496,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "ene-508ff7af",
@@ -1991,7 +1995,7 @@
    "I, II e III."
   ],
   "correta": 3,
-  "explicacao": "A afirmação I está correta: o tombamento, previsto desde o Decreto-Lei nº 25/1937, protege bens materiais, como o conjunto arquitetônico de Ouro Preto. A II está correta: desde o Decreto nº 3.551/2000, bens imateriais (saberes, celebrações, formas de expressão e lugares) são protegidos por registro em livros próprios; o ofício das paneleiras de Goiabeiras e o samba de roda do Recôncavo foram registrados como patrimônio imaterial. A III está incorreta: o Círio de Nazaré é uma celebração, registrada como patrimônio imaterial; o fato de ocorrer em espaços urbanos não o transforma em bem material. O critério é a natureza do bem (prática viva ou objeto/edificação), e não o local em que acontece.",
+  "explicacao": "A afirmação I está correta: o tombamento, previsto desde o Decreto-Lei nº 25/1937, protege bens materiais, como o conjunto arquitetônico de Ouro Preto. A II está correta: desde o Decreto nº 3.551/2000, bens imateriais (saberes, celebrações, formas de expressão e lugares) são protegidos por registro em livros próprios; o ofício das paneleiras de Goiabeiras e o samba de roda do Recôncavo foram registrados como patrimônio imaterial. A III está incorreta: o Círio de Nazaré é uma celebração, registrada como patrimônio imaterial; o fato de ocorrer em espaços urbanos não o transforma em bem material. O critério é a natureza do bem (prática viva ou objeto/edificação), e não o local em que acontece. Para lembrar: bem material se tomba (Decreto-Lei 25/1937); bem imaterial se registra (Decreto 3.551/2000).",
   "tema": "enem-artes-patrimonio-cultural",
   "subtema": "Patrimônio material e imaterial",
   "disciplina": "Artes",
@@ -1999,7 +2003,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "ene-2ce3cee1",
@@ -2007,7 +2012,7 @@
   "enunciado": "Ana, de 35 anos e sem restrições médicas, registrou sua rotina semanal de exercícios:\n\n- caminhada rápida (intensidade moderada): 30 minutos, 3 vezes por semana;\n- corrida (intensidade vigorosa): 20 minutos, 2 vezes por semana;\n- exercícios de fortalecimento muscular: nenhum.\n\nAs diretrizes de 2020 da Organização Mundial da Saúde recomendam que adultos pratiquem, por semana, de 150 a 300 minutos de atividade aeróbica moderada ou de 75 a 150 minutos de atividade vigorosa, ou uma combinação equivalente (1 minuto vigoroso equivale a cerca de 2 minutos moderados), além de atividades de fortalecimento muscular em 2 ou mais dias da semana.\n\nSituação elaborada para fins didáticos.\n\nCom base nas diretrizes, a rotina de Ana",
   "alternativas": [
    "não atinge a recomendação aeróbica, pois soma apenas 130 minutos de atividade física por semana.",
-   "atinge a recomendação aeróbica, com o equivalente a 170 minutos moderados, mas precisa incluir fortalecimento muscular.",
+   "atinge a meta aeróbica, com cerca de 170 minutos moderados equivalentes, mas não a de fortalecimento.",
    "cumpre integralmente as diretrizes, pois a corrida vigorosa substitui o fortalecimento muscular.",
    "ultrapassa o limite de 300 minutos semanais, o que a expõe a riscos e exige redução do volume.",
    "atinge a recomendação aeróbica apenas com a corrida, que sozinha soma 75 minutos vigorosos."
@@ -2021,7 +2026,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "ene-426e4e45",
@@ -2299,15 +2305,16 @@
    "anglicana, calvinista e luterana."
   ],
   "correta": 0,
-  "explicacao": "O Fiel 1 expressa pontos centrais de Lutero: justificação somente pela fé, crítica às indulgências e primazia da Bíblia (livre acesso às Escrituras, traduzidas para o vernáculo). O Fiel 2 expressa a predestinação, marca do calvinismo, associada a uma ética de trabalho disciplinado e vida austera. O Fiel 3 corresponde às posições reafirmadas pela Igreja Católica no Concílio de Trento (1545–1563), durante a Contrarreforma: salvação pela fé e pelas obras, manutenção dos sete sacramentos, valor da tradição e interpretação das Escrituras pela Igreja. O anglicanismo, fundado a partir da ruptura de Henrique VIII com Roma, não é caracterizado por nenhuma das três falas.",
+  "explicacao": "O Fiel 1 expressa pontos centrais de Lutero: justificação somente pela fé, crítica às indulgências e primazia da Bíblia (livre acesso às Escrituras, traduzidas para o vernáculo). O Fiel 2 expressa a predestinação, marca do calvinismo, associada a uma ética de trabalho disciplinado e vida austera. O Fiel 3 corresponde às posições reafirmadas pela Igreja Católica no Concílio de Trento (1545–1563), durante a Contrarreforma: salvação pela fé e pelas obras, manutenção dos sete sacramentos, valor da tradição e interpretação das Escrituras pela Igreja. O anglicanismo, fundado a partir da ruptura de Henrique VIII com Roma, não é caracterizado por nenhuma das três falas. Para lembrar: Lutero — sola fide e sola scriptura; Calvino — predestinação; Trento — fé e obras, sete sacramentos e tradição.",
   "tema": "enem-hist-idade-moderna",
   "subtema": "Reformas religiosas",
   "disciplina": "História",
   "areaEnem": "humanas",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "ene-8daa724d",
@@ -2490,7 +2497,7 @@
   "area": "Geografia",
   "enunciado": "Ao viajar de carro do Piauí em direção ao Maranhão, um estudante percebe que a vegetação de caatinga, com arbustos espinhosos, vai cedendo lugar a extensos babaçuais, entremeados por manchas de cerrado e, mais a oeste, por trechos de floresta cada vez mais densa. O professor explica que essa paisagem não se encaixa perfeitamente em nenhum dos grandes domínios vizinhos, pois combina elementos de vários deles.\n\nTexto elaborado para fins didáticos.\n\nNa classificação dos domínios morfoclimáticos brasileiros proposta por Aziz Ab'Sáber, áreas como a descrita são denominadas",
   "alternativas": [
-   "faixas de transição, que misturam características de domínios vizinhos e não pertencem integralmente a nenhum deles.",
+   "faixas de transição, que mesclam traços de domínios vizinhos sem pertencer a nenhum deles.",
    "domínios de mares de morros, marcados por relevo mamelonar e cobertura original de Mata Atlântica.",
    "núcleos de domínio, onde clima, relevo, solo e vegetação apresentam máxima homogeneidade.",
    "domínios de pradarias, com coxilhas cobertas por gramíneas no extremo sul do país.",
@@ -2505,7 +2512,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "ene-bfb11733",
@@ -2842,14 +2850,14 @@
   "area": "Sociologia",
   "enunciado": "Uma pesquisa hipotética com casais em que ambos trabalham fora 40 horas semanais obteve as seguintes médias de tempo dedicado a afazeres domésticos e cuidados com filhos ou parentes: mulheres, 22 horas por semana; homens, 11 horas por semana.\n\nDados elaborados para fins didáticos.\n\nA partir dos dados, considerando um ano de 52 semanas, conclui-se que",
   "alternativas": [
-   "as mulheres dedicam o dobro do tempo, cerca de 570 horas a mais por ano, o que evidencia a dupla jornada e a divisão sexual do trabalho.",
+   "as mulheres dedicam o dobro, cerca de 570 horas a mais por ano, o que revela a divisão sexual do trabalho.",
    "as mulheres dedicam 50% a mais de tempo, cerca de 290 horas anuais, o que indica divisão equilibrada das tarefas.",
    "a diferença semanal é de 11 horas, o que corresponde a cerca de 110 horas anuais, valor pouco significativo.",
    "os homens dedicam o dobro de horas ao trabalho remunerado, o que compensa a diferença no trabalho doméstico.",
    "as mulheres dedicam o triplo do tempo, cerca de 1.140 horas a mais por ano, por escolha individual."
   ],
   "correta": 0,
-  "explicacao": "A diferença semanal é de 22 − 11 = 11 horas; em 52 semanas, 11 × 52 = 572 horas a mais para as mulheres, e 22 é o dobro de 11. Como ambos trabalham fora o mesmo número de horas, os dados evidenciam a dupla jornada feminina e a divisão sexual do trabalho, que atribui às mulheres a maior parte do trabalho doméstico e de cuidado, não remunerado. A diferença não é de 50% nem de 290 horas. O valor anual não é 110 horas. O enunciado informa que ambos trabalham 40 horas fora, o que afasta a ideia de compensação. E a razão é 2, não 3; além disso, atribuir o fenômeno a escolhas individuais ignora seu caráter social.",
+  "explicacao": "A diferença semanal é de 22 − 11 = 11 horas; em 52 semanas, 11 × 52 = 572 horas a mais para as mulheres, e 22 é o dobro de 11. Como ambos trabalham fora o mesmo número de horas, os dados evidenciam a dupla jornada feminina e a divisão sexual do trabalho, que atribui às mulheres a maior parte do trabalho doméstico e de cuidado, não remunerado. A diferença não é de 50% nem de 290 horas. O valor anual não é 110 horas. O enunciado informa que ambos trabalham 40 horas fora, o que afasta a ideia de compensação. E a razão é 2, não 3; além disso, atribuir o fenômeno a escolhas individuais ignora seu caráter social. Para lembrar: \"dupla jornada\" é a soma do trabalho remunerado com o trabalho doméstico e de cuidado, não remunerado.",
   "tema": "enem-socio-desigualdade",
   "subtema": "Desigualdade de gênero",
   "disciplina": "Sociologia",
@@ -2857,7 +2865,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "ene-c61462d0",
@@ -3751,7 +3760,7 @@
    "100 vezes"
   ],
   "correta": 1,
-  "explicacao": "Subtraindo as expressões: 85 − 55 = 10 · log(I₁/I₀) − 10 · log(I₂/I₀) = 10 · log(I₁/I₂). Assim, 30 = 10 · log(I₁/I₂) ⇒ log(I₁/I₂) = 3 ⇒ I₁/I₂ = 10³ = 1.000. Como a escala é logarítmica, a diferença de 30 dB não significa intensidade 30 vezes maior; cada 10 dB a mais multiplica a intensidade por 10. O valor 3 é o logaritmo, e não a razão; 300 e 100 resultam de multiplicações indevidas ou de considerar apenas 20 dB.",
+  "explicacao": "Subtraindo as expressões: 85 − 55 = 10 · log(I₁/I₀) − 10 · log(I₂/I₀) = 10 · log(I₁/I₂). Assim, 30 = 10 · log(I₁/I₂) ⇒ log(I₁/I₂) = 3 ⇒ I₁/I₂ = 10³ = 1.000. Como a escala é logarítmica, a diferença de 30 dB não significa intensidade 30 vezes maior; cada 10 dB a mais multiplica a intensidade por 10. O valor 3 é o logaritmo, e não a razão; 300 e 100 resultam de multiplicações indevidas ou de considerar apenas 20 dB. Para lembrar: na escala de decibéis, cada +10 dB multiplica a intensidade por 10.",
   "tema": "enem-mat-funcoes",
   "subtema": "Função logarítmica",
   "disciplina": "Matemática",
@@ -3759,7 +3768,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "ene-68da166b",
@@ -3869,7 +3879,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "ene-1de6c5de",
@@ -4345,7 +4356,7 @@
    "I, II, III e IV"
   ],
   "correta": 3,
-  "explicacao": "Em G1, cada um dos 46 cromossomos tem uma única molécula de DNA (I correta). No período S, o DNA se duplica; na metáfase, os 46 cromossomos estão duplicados, com 2 cromátides cada, somando 92 cromátides (II correta). Na anáfase, as cromátides-irmãs se separam e cada uma passa a ser um cromossomo simples, de modo que a célula tem temporariamente 92 cromossomos (III correta). A mitose é equacional: as células-filhas são 2n = 46, iguais à mãe; a redução para 23 ocorre na meiose, por isso IV está errada e as opções que a incluem ou que excluem III são incorretas.",
+  "explicacao": "Em G1, cada um dos 46 cromossomos tem uma única molécula de DNA (I correta). No período S, o DNA se duplica; na metáfase, os 46 cromossomos estão duplicados, com 2 cromátides cada, somando 92 cromátides (II correta). Na anáfase, as cromátides-irmãs se separam e cada uma passa a ser um cromossomo simples, de modo que a célula tem temporariamente 92 cromossomos (III correta). A mitose é equacional: as células-filhas são 2n = 46, iguais à mãe; a redução para 23 ocorre na meiose, por isso IV está errada e as opções que a incluem ou que excluem III são incorretas. Para lembrar: mitose mantém o número de cromossomos (2n → 2n); meiose o reduz à metade (2n → n).",
   "tema": "enem-bio-citologia",
   "subtema": "Divisão celular (mitose e meiose)",
   "disciplina": "Biologia",
@@ -4353,7 +4364,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "ene-c6af3665",
@@ -5142,10 +5154,11 @@
   "subtema": "Busca da arché",
   "disciplina": "Filosofia",
   "areaEnem": "humanas",
-  "dificuldade": 2,
+  "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "ene-16c30e42",
@@ -5208,10 +5221,11 @@
   "subtema": "Ação social",
   "disciplina": "Sociologia",
   "areaEnem": "humanas",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "ene-97469b20",
@@ -6079,11 +6093,11 @@
    "«cabe às secretarias estaduais de Educação»",
    "«equipadas com coletes salva-vidas e acompanhadas por monitores»",
    "«a fim de garantir a frequência dos estudantes»",
-   "«por meio de lanchas adaptadas e rotas planejadas»",
+   "«por meio de lanchas adaptadas e rotas planejadas de acordo com o período de cheia e de vazante»",
    "«ampliar o transporte escolar fluvial»"
   ],
   "correta": 1,
-  "explicacao": "Na avaliação da proposta de intervenção, costumam-se considerar cinco elementos: agente (quem executa: “as secretarias estaduais de Educação”), ação (o que fazer: “ampliar o transporte escolar fluvial”), modo ou meio (como: “por meio de lanchas adaptadas e rotas planejadas...”), finalidade ou efeito (para quê: “a fim de garantir a frequência dos estudantes”) e detalhamento, que é uma informação adicional sobre algum desses elementos. O último período acrescenta características das embarcações (o meio), especificando que seriam equipadas com coletes e acompanhadas por monitores, o que tornaria o trajeto mais seguro: é o detalhamento. Os demais trechos correspondem aos outros quatro elementos, e não a acréscimos sobre eles.",
+  "explicacao": "Na avaliação da proposta de intervenção, costumam-se considerar cinco elementos: agente (quem executa: “as secretarias estaduais de Educação”), ação (o que fazer: “ampliar o transporte escolar fluvial”), modo ou meio (como: “por meio de lanchas adaptadas e rotas planejadas...”), finalidade ou efeito (para quê: “a fim de garantir a frequência dos estudantes”) e detalhamento, que é uma informação adicional sobre algum desses elementos. O último período acrescenta características das embarcações (o meio), especificando que seriam equipadas com coletes e acompanhadas por monitores, o que tornaria o trajeto mais seguro: é o detalhamento. Os demais trechos correspondem aos outros quatro elementos, e não a acréscimos sobre eles. Para lembrar: os cinco elementos da proposta — agente, ação, meio/modo, finalidade/efeito e detalhamento.",
   "tema": "enem-redacao-proposta-de-intervencao",
   "subtema": "Detalhamento",
   "disciplina": "Redação",
@@ -6091,7 +6105,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "ene-4621d707",

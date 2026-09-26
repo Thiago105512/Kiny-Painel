@@ -107,23 +107,24 @@
  {
   "id": "dir-743b9371",
   "area": "Penal",
-  "enunciado": "Alguns institutos afastam a punição por excluírem a culpabilidade, e não a antijuridicidade.\n\nNÃO é causa excludente de ilicitude prevista no art. 23 do Código Penal:",
+  "enunciado": "Na madrugada de 12/05/2026, dois homens armados invadiram a casa de Sérgio, gerente de uma agência bancária, e renderam sua esposa e seus dois filhos. Um deles levou Sérgio até a agência e exigiu que abrisse o cofre, avisando que o comparsa, que permanecera na casa, mataria a família se o gerente se recusasse ou acionasse o alarme. Sérgio abriu o cofre e entregou R$ 300.000,00. Os criminosos foram presos dias depois, e ficou comprovado que Sérgio não os conhecia e jamais teria colaborado sem a ameaça. O Ministério Público analisa a situação jurídica do gerente.\n\nÀ luz do Código Penal, é correto afirmar que Sérgio:",
   "alternativas": [
-   "O estado de necessidade",
-   "A legítima defesa",
-   "O estrito cumprimento de dever legal",
-   "A coação moral irresistível",
-   "O exercício regular de direito"
+   "não é punível, pois agiu em estado de necessidade, causa de exclusão da ilicitude prevista no art. 23",
+   "responde pelo crime em concurso com os assaltantes, pois a coação moral não afasta o dolo nem a pena",
+   "responde pelo crime com pena atenuada, pois a coação moral irresistível é mera circunstância atenuante",
+   "não é punível, pois agiu em legítima defesa de terceiros, causa de exclusão da ilicitude do art. 23",
+   "não é punível, pois agiu sob coação moral irresistível, que exclui a culpabilidade; responde só o coator"
   ],
-  "correta": 3,
-  "explicacao": "O art. 23 do CP estabelece que não há crime quando o agente pratica o fato em estado de necessidade, em legítima defesa ou em estrito cumprimento de dever legal ou no exercício regular de direito. A coação moral irresistível está prevista no art. 22 do CP e exclui a culpabilidade, por inexigibilidade de conduta diversa, respondendo apenas o autor da coação. Assim, embora também afaste a punição do coagido, ela não é causa de exclusão da ilicitude, diferentemente das outras quatro figuras citadas.",
+  "correta": 4,
+  "explicacao": "Pelo art. 22 do CP, se o fato é cometido sob coação irresistível, só é punível o autor da coação. A coação moral irresistível (grave ameaça à família) torna inexigível conduta diversa e, por isso, exclui a culpabilidade do coagido — não a ilicitude do fato, que continua contrário ao direito. O art. 23 (estado de necessidade, legítima defesa, estrito cumprimento de dever legal e exercício regular de direito) trata das excludentes de ilicitude: não houve reação contra agressor, o que afasta a legítima defesa, e a hipótese de ameaça imposta por terceiro para obrigar alguém a praticar o crime é disciplinada especificamente pelo art. 22. A coação apenas resistível é que gera atenuante (art. 65, III, c), e o coator ainda tem pena agravada (art. 62, II). Para lembrar: coação moral irresistível exclui a culpabilidade; coação física irresistível exclui a própria conduta.",
   "disciplina": "Penal",
   "tema": null,
   "subtema": null,
-  "dificuldade": 1,
+  "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-ec5bff20",
@@ -263,35 +264,37 @@
    "II e III, apenas"
   ],
   "correta": 4,
-  "explicacao": "O art. 1º, caput, da LINDB fixa a vacatio legis de 45 dias no país, salvo disposição em contrário, e o § 1º estabelece três meses nos Estados estrangeiros (II correta). Contudo, pelo § 3º, se antes de entrar a lei em vigor ocorrer nova publicação de seu texto destinada a correção, o prazo começa a correr da nova publicação; logo, a Lei X teve a vacatio recontada a partir de 2 de abril, e a afirmativa I está errada. O § 4º dispõe que as correções a texto de lei já em vigor consideram-se lei nova, o que confirma a III. Portanto, apenas II e III estão corretas.",
+  "explicacao": "O art. 1º, caput, da LINDB fixa a vacatio legis de 45 dias no país, salvo disposição em contrário, e o § 1º estabelece três meses nos Estados estrangeiros (II correta). Contudo, pelo § 3º, se antes de entrar a lei em vigor ocorrer nova publicação de seu texto destinada a correção, o prazo começa a correr da nova publicação; logo, a Lei X teve a vacatio recontada a partir de 2 de abril, e a afirmativa I está errada. O § 4º dispõe que as correções a texto de lei já em vigor consideram-se lei nova, o que confirma a III. Portanto, apenas II e III estão corretas. Para lembrar: republicação antes da vigência reinicia a vacatio (§ 3º); correção depois da vigência é lei nova (§ 4º).",
   "disciplina": "Introdução ao Direito",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-fc45fbed",
   "area": "Introdução ao Direito",
-  "enunciado": "Ao julgar uma ação entre vizinhos, a juíza constata que não há lei disciplinando a situação.\n\nSegundo a LINDB, quando a lei for omissa, o juiz decidirá o caso de acordo com:",
+  "enunciado": "Em ação entre dois vizinhos, a juíza constata que nenhuma lei disciplina a situação concreta discutida.\n\nSegundo a LINDB, diante da omissão da lei, a juíza decidirá o caso de acordo com:",
   "alternativas": [
-   "A equidade, exclusivamente, por ser o único meio de integração",
-   "A analogia, os costumes e os princípios gerais de direito",
-   "A doutrina majoritária e as súmulas dos tribunais superiores",
-   "O direito estrangeiro, aplicado subsidiariamente ao caso",
-   "A extinção do feito sem resolução do mérito, por falta de lei"
+   "a analogia, os costumes e os princípios gerais de direito",
+   "a equidade, exclusivamente, por ser o único meio de integração",
+   "o direito estrangeiro, aplicado subsidiariamente ao caso",
+   "a doutrina majoritária e as súmulas dos tribunais superiores",
+   "a extinção do feito sem resolução do mérito, por falta de lei"
   ],
-  "correta": 1,
-  "explicacao": "O art. 4º da LINDB determina que, quando a lei for omissa, o juiz decidirá o caso de acordo com a analogia, os costumes e os princípios gerais de direito. O ordenamento veda o non liquet (o art. 140 do CPC também afirma que o juiz não se exime de decidir sob alegação de lacuna), razão pela qual a extinção do processo é incorreta. A equidade só é usada nos casos previstos em lei (art. 140, parágrafo único, do CPC), e doutrina, súmulas ou direito estrangeiro não figuram como meios de integração no art. 4º.",
+  "correta": 0,
+  "explicacao": "O art. 4º da LINDB determina que, quando a lei for omissa, o juiz decidirá o caso de acordo com a analogia, os costumes e os princípios gerais de direito. O ordenamento veda o non liquet: o art. 140 do CPC afirma que o juiz não se exime de decidir sob a alegação de lacuna ou obscuridade do ordenamento jurídico, o que afasta a extinção do processo. A equidade só é usada nos casos previstos em lei (art. 140, parágrafo único, do CPC), e doutrina, súmulas ou direito estrangeiro não figuram entre os meios de integração do art. 4º.",
   "disciplina": "Introdução ao Direito",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-6927439f",
@@ -338,23 +341,24 @@
  {
   "id": "dir-6389dd49",
   "area": "Constitucional",
-  "enunciado": "Um brasileiro naturalizado, jurista renomado, é cogitado para diversos cargos públicos.\n\nPelo art. 12, § 3º, da CF/88, ele NÃO poderá ocupar o cargo de:",
+  "enunciado": "Ricardo nasceu na Argentina, naturalizou-se brasileiro há quinze anos e tornou-se jurista renomado. Seu nome passou a ser lembrado para diferentes funções públicas:\n\nI. Ministro do Superior Tribunal de Justiça.\nII. Ministro do Supremo Tribunal Federal.\nIII. Ministro de Estado da Justiça e Segurança Pública.\nIV. Ministro de Estado da Defesa.\n\nPelo art. 12, § 3º, da CF/88, Ricardo pode ocupar apenas os cargos indicados em:",
   "alternativas": [
-   "Ministro do Superior Tribunal de Justiça",
-   "Ministro do Supremo Tribunal Federal",
-   "Senador da República",
-   "Ministro de Estado da Justiça",
-   "Deputado Federal"
+   "I, III e IV",
+   "I, II e III",
+   "I e III",
+   "II e IV",
+   "III e IV"
   ],
-  "correta": 1,
-  "explicacao": "O art. 12, § 3º, da CF/88 reserva a brasileiros natos os cargos de Presidente e Vice-Presidente da República, Presidente da Câmara dos Deputados, Presidente do Senado Federal, Ministro do Supremo Tribunal Federal, carreira diplomática, oficial das Forças Armadas e Ministro de Estado da Defesa. O naturalizado pode ser Ministro do STJ, Senador, Deputado Federal (desde que não presida a respectiva Casa) e Ministro de Estado da Justiça — apenas o Ministro da Defesa está na lista.",
+  "correta": 2,
+  "explicacao": "O art. 12, § 3º, da CF/88 reserva a brasileiros natos os cargos de Presidente e Vice-Presidente da República, Presidente da Câmara dos Deputados, Presidente do Senado Federal, Ministro do Supremo Tribunal Federal, carreira diplomática, oficial das Forças Armadas e Ministro de Estado da Defesa. Assim, Ricardo, naturalizado, não pode ser Ministro do STF (II) nem Ministro da Defesa (IV). Pode ser Ministro do STJ (I), pois a lista não inclui os demais tribunais superiores, e Ministro da Justiça (III), já que, entre os Ministros de Estado, só o da Defesa exige nacionalidade originária. Para lembrar: a lista do § 3º segue a linha sucessória da Presidência (Presidente, Vice, Presidentes da Câmara, do Senado e do STF) mais diplomacia, oficialato e Defesa.",
   "disciplina": "Constitucional",
   "tema": null,
   "subtema": null,
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-7a958ab6",
@@ -368,14 +372,15 @@
    "II e III, apenas"
   ],
   "correta": 4,
-  "explicacao": "O art. 5º, XI, da CF/88 declara a casa asilo inviolável, permitindo o ingresso sem consentimento do morador em caso de flagrante delito ou desastre, ou para prestar socorro (a qualquer hora), ou, durante o dia, por determinação judicial. Na situação 1, o mandado só poderia ser cumprido contra a vontade do morador durante o dia — às 21h30 é noite sob qualquer critério —, logo a I está errada. Na situação 2, havia flagrante delito e necessidade de socorro, o que autoriza o ingresso inclusive de madrugada (II correta). A III reproduz a tese do STF no Tema 280 (RE 603.616): a entrada forçada sem mandado é lícita quando amparada em fundadas razões, devidamente justificadas a posteriori, que indiquem situação de flagrante delito.",
+  "explicacao": "O art. 5º, XI, da CF/88 declara a casa asilo inviolável, permitindo o ingresso sem consentimento do morador em caso de flagrante delito ou desastre, ou para prestar socorro (a qualquer hora), ou, durante o dia, por determinação judicial. Na situação 1, o mandado só poderia ser cumprido contra a vontade do morador durante o dia — às 21h30 é noite sob qualquer critério —, logo a I está errada. Na situação 2, havia flagrante delito e necessidade de socorro, o que autoriza o ingresso inclusive de madrugada (II correta). A III reproduz a tese do STF no Tema 280 (RE 603.616): a entrada forçada sem mandado é lícita quando amparada em fundadas razões, devidamente justificadas a posteriori, que indiquem situação de flagrante delito. Para lembrar: a Lei 13.869/2019 (abuso de autoridade, art. 22, § 1º, III) tipifica o cumprimento de mandado de busca domiciliar após as 21h ou antes das 5h.",
   "disciplina": "Constitucional",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-442f20da",
@@ -527,23 +532,24 @@
  {
   "id": "dir-5c3098e1",
   "area": "Civil",
-  "enunciado": "Tiago mora com a família em Manaus, onde pretende permanecer, mas passa dois meses por ano em Belém fazendo um curso.\n\nPelo art. 70 do Código Civil, o domicílio da pessoa natural é, em regra:",
+  "enunciado": "Tiago mora em Manaus com a esposa e os filhos, em casa própria, e ali pretende permanecer. Duas vezes por ano, passa cerca de duas semanas em Belém, hospedado em hotel, para cursar os módulos presenciais de uma pós-graduação. Ele nasceu em Santarém, onde mantém o título de eleitor. Um credor precisa identificar o domicílio civil de Tiago.\n\nPelo Código Civil, o domicílio de Tiago é:",
   "alternativas": [
-   "O lugar onde ela se encontra no momento da citação",
-   "O lugar de seu nascimento, registrado na certidão",
-   "O último lugar em que ela votou nas eleições",
-   "O lugar onde ela estabelece a sua residência com ânimo definitivo",
-   "O lugar em que ela passa temporadas de estudo"
+   "Belém, onde passa temporadas regulares de estudo a cada ano",
+   "Manaus, onde estabeleceu residência com ânimo definitivo",
+   "Manaus e Belém, pois ele tem domicílio plural nas duas cidades",
+   "o lugar em que for encontrado, por não ter residência única",
+   "Santarém, lugar de seu nascimento e de seu domicílio eleitoral"
   ],
-  "correta": 3,
-  "explicacao": "O art. 70 do Código Civil define o domicílio da pessoa natural como o lugar onde ela estabelece a sua residência com ânimo definitivo — no caso, Manaus. O local de nascimento e o domicílio eleitoral não definem o domicílio civil. A estada temporária em Belém, para curso, não revela ânimo definitivo. O lugar onde a pessoa for encontrada só é considerado domicílio de quem não tenha residência habitual (art. 73).",
+  "correta": 1,
+  "explicacao": "O art. 70 do Código Civil define o domicílio da pessoa natural como o lugar onde ela estabelece a sua residência com ânimo definitivo — no caso, Manaus. As estadas curtas em hotel, para curso, não configuram residência, de modo que não há a pluralidade de residências onde a pessoa viva alternadamente, exigida pelo art. 71 para o domicílio plural. O local de nascimento e o domicílio eleitoral não definem o domicílio civil, e o lugar onde a pessoa for encontrada só é considerado domicílio de quem não tenha residência habitual (art. 73).",
   "disciplina": "Civil",
   "tema": null,
   "subtema": null,
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-f0111918",
@@ -928,21 +934,22 @@
   "area": "Administrativo",
   "enunciado": "Em 12/04/2022, uma viatura da Polícia Militar do Estado, conduzida pelo soldado Túlio em serviço, avançou o sinal vermelho e colidiu com o carro de Helena, que sofreu fraturas e prejuízo material de R$ 38.000,00. Helena, que é professora e tem dois filhos, ajuizou em 2025 ação de indenização exclusivamente contra o soldado Túlio, por entender que ele foi o culpado direto. Em contestação, Túlio alegou ilegitimidade passiva.\n\nÀ luz do art. 37, § 6º, da CF/88 e da tese fixada pelo STF no Tema 940 de repercussão geral, é correto afirmar que:",
   "alternativas": [
-   "Túlio é parte legítima, pois a vítima pode escolher livremente entre acionar o agente, o Estado ou ambos em litisconsórcio",
-   "Túlio é parte ilegítima; a ação deve ser proposta contra o Estado, que responde objetivamente e tem regresso contra o agente em caso de dolo ou culpa",
-   "Túlio é parte legítima, mas sua responsabilidade é objetiva, dispensando a prova de culpa na condução da viatura",
-   "O Estado só responderia se Helena provasse a culpa do serviço, pois se trata de omissão administrativa genérica",
-   "A pretensão de Helena está prescrita, pois a reparação civil prescreve em três anos também contra a Fazenda"
+   "Túlio é parte legítima, pois a vítima pode escolher entre acionar o agente, o Estado ou ambos em litisconsórcio",
+   "Túlio é parte ilegítima; a ação cabe contra o Estado, que responde objetivamente e tem regresso contra o agente culpado",
+   "Túlio é parte legítima, mas sua responsabilidade é objetiva, o que dispensa a prova de culpa na condução da viatura",
+   "O Estado só responderia se Helena provasse a culpa do serviço, por se tratar de omissão administrativa genérica",
+   "A pretensão de Helena está prescrita, pois a reparação civil prescreve em três anos também contra a Fazenda Pública"
   ],
   "correta": 1,
-  "explicacao": "O art. 37, § 6º, da CF/88 consagra a responsabilidade objetiva das pessoas jurídicas de direito público pelos danos que seus agentes, nessa qualidade, causarem a terceiros, assegurado o direito de regresso contra o responsável nos casos de dolo ou culpa. No Tema 940, o STF fixou que a ação deve ser ajuizada contra o Estado (ou a pessoa jurídica de direito privado prestadora de serviço público), sendo parte ilegítima o autor do ato — é a chamada dupla garantia. Não há escolha livre do lesado. A conduta foi comissiva (colisão), não omissiva. Quanto ao prazo, prevalece contra a Fazenda o prazo quinquenal do Decreto 20.910/1932 (entendimento do STJ em recurso repetitivo), de modo que a pretensão, ajuizada em 2025, não está prescrita.",
+  "explicacao": "O art. 37, § 6º, da CF/88 consagra a responsabilidade objetiva das pessoas jurídicas de direito público pelos danos que seus agentes, nessa qualidade, causarem a terceiros, assegurado o direito de regresso contra o responsável nos casos de dolo ou culpa. No Tema 940, o STF fixou que a ação deve ser ajuizada contra o Estado (ou a pessoa jurídica de direito privado prestadora de serviço público), sendo parte ilegítima o autor do ato — é a chamada dupla garantia. Não há escolha livre do lesado. A conduta foi comissiva (colisão), não omissiva. Quanto ao prazo, prevalece contra a Fazenda o prazo quinquenal do Decreto 20.910/1932 (entendimento do STJ em recurso repetitivo), de modo que a pretensão, ajuizada em 2025, não está prescrita. Para lembrar: Tema 940 do STF — \"dupla garantia\": a vítima aciona o Estado; o Estado aciona o agente em regresso.",
   "disciplina": "Administrativo",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-9407f768",
@@ -951,19 +958,20 @@
   "alternativas": [
    "A tomada de preços continua admitida para obras de valor intermediário, e o convite, para compras de pequeno valor",
    "É lícita a modalidade híbrida proposta, desde que justificada no estudo técnico preliminar",
-   "A tomada de preços não é modalidade prevista na nova lei, que também veda criar outras modalidades ou combinar as existentes",
+   "A tomada de preços não existe na nova lei, que também veda criar outras modalidades ou combinar as existentes",
    "O diálogo competitivo não é modalidade de licitação, mas procedimento auxiliar ao pregão",
    "O pregão foi extinto, sendo substituído pelo leilão para bens e serviços comuns"
   ],
   "correta": 2,
-  "explicacao": "O art. 28 da Lei 14.133/2021 prevê cinco modalidades: pregão, concorrência, concurso, leilão e diálogo competitivo. A tomada de preços e o convite, previstos na antiga Lei 8.666/1993, não existem no novo regime. O § 2º do art. 28 veda expressamente a criação de outras modalidades ou a combinação das previstas, o que afasta a proposta de modalidade híbrida. O diálogo competitivo é modalidade (não procedimento auxiliar), e o pregão continua existindo, sendo obrigatório para bens e serviços comuns; o leilão destina-se à alienação de bens.",
+  "explicacao": "O art. 28 da Lei 14.133/2021 prevê cinco modalidades: pregão, concorrência, concurso, leilão e diálogo competitivo. A tomada de preços e o convite, previstos na antiga Lei 8.666/1993, não existem no novo regime. O § 2º do art. 28 veda expressamente a criação de outras modalidades ou a combinação das previstas, o que afasta a proposta de modalidade híbrida. O diálogo competitivo é modalidade (não procedimento auxiliar), e o pregão continua existindo, sendo obrigatório para bens e serviços comuns; o leilão destina-se à alienação de bens. Para lembrar: as cinco modalidades da Lei 14.133/2021 — pregão, concorrência, concurso, leilão e diálogo competitivo.",
   "disciplina": "Administrativo",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-23e0b61b",
@@ -989,23 +997,24 @@
  {
   "id": "dir-9d9d0a1a",
   "area": "Tributário",
-  "enunciado": "Um aluno afirma que a multa de trânsito é tributo, por ser prestação pecuniária compulsória cobrada pelo Estado.\n\nSegundo o conceito de tributo do art. 3º do CTN, o tributo:",
+  "enunciado": "Em sala de aula, Lucas sustenta que a multa de trânsito é tributo, pois é prestação pecuniária compulsória, prevista em lei e cobrada pelo Estado. Bianca discorda. O professor pede que identifiquem, na definição do art. 3º do CTN, o elemento do conceito de tributo que afasta a tese de Lucas.\n\nEsse elemento é o de que o tributo:",
   "alternativas": [
-   "Pode ser pago em bens ou serviços",
-   "Pode ser cobrado por ato discricionário",
-   "Pode ser instituído por decreto do Executivo",
-   "Não constitui sanção de ato ilícito",
-   "Tem natureza voluntária, como os contratos"
+   "decorre da vontade do contribuinte",
+   "pode ser pago em bens ou em serviços",
+   "é cobrado por atividade discricionária",
+   "pode ser instituído por decreto",
+   "não constitui sanção de ato ilícito"
   ],
-  "correta": 3,
-  "explicacao": "O art. 3º do CTN define tributo como toda prestação pecuniária compulsória, em moeda ou cujo valor nela se possa exprimir, que não constitua sanção de ato ilícito, instituída em lei e cobrada mediante atividade administrativa plenamente vinculada. A multa de trânsito é sanção por infração e, por isso, não é tributo. O tributo exige lei (e não decreto), é cobrado por atividade vinculada (e não discricionária), é compulsório (não voluntário) e é pago em moeda, não em serviços.",
+  "correta": 4,
+  "explicacao": "O art. 3º do CTN define tributo como toda prestação pecuniária compulsória, em moeda ou cujo valor nela se possa exprimir, que não constitua sanção de ato ilícito, instituída em lei e cobrada mediante atividade administrativa plenamente vinculada. A multa de trânsito é sanção por infração e, por isso, não é tributo, ainda que seja compulsória e prevista em lei. As demais afirmações contrariam o próprio conceito: o tributo exige lei (e não decreto), é cobrado por atividade vinculada (e não discricionária), é compulsório (não decorre da vontade do contribuinte) e é pago em moeda ou valor nela exprimível, nunca em serviços (a dação em pagamento de bens imóveis, do art. 156, XI, do CTN, é exceção legal e não altera o conceito). Para lembrar: tributo não é castigo — multa é sanção; tributo nasce de fato lícito.",
   "disciplina": "Tributário",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-c448982c",
@@ -1115,13 +1124,13 @@
  {
   "id": "dir-c67cc917",
   "area": "Ambiental",
-  "enunciado": "A Madeireira Rio Verde Ltda., por deliberação de seu conselho de administração e em benefício da empresa, desmatou ilegalmente área de floresta protegida no Amazonas, obtendo lucro estimado em R$ 2 milhões. Durante a investigação, não foi possível individualizar qual dos conselheiros votou pela medida, pois a ata foi destruída; o gerente da unidade morreu em acidente antes da denúncia. O Ministério Público ofereceu denúncia apenas contra a pessoa jurídica. A defesa sustenta que a pessoa jurídica não pode ser processada isoladamente.\n\nÀ luz do art. 225, § 3º, da CF/88, do art. 3º da Lei 9.605/1998 e da jurisprudência do STF e do STJ, a denúncia:",
+  "enunciado": "A Madeireira Rio Verde Ltda., por deliberação colegiada de sua diretoria e em benefício da empresa, desmatou ilegalmente área de floresta protegida no Amazonas, obtendo lucro estimado em R$ 2 milhões. Durante a investigação, não foi possível individualizar qual dos diretores votou pela medida, pois a ata foi destruída; o gerente da unidade morreu em acidente antes da denúncia. O Ministério Público ofereceu denúncia apenas contra a pessoa jurídica. A defesa sustenta que a pessoa jurídica não pode ser processada isoladamente.\n\nÀ luz do art. 225, § 3º, da CF/88, do art. 3º da Lei 9.605/1998 e da jurisprudência do STF e do STJ, a denúncia:",
   "alternativas": [
    "Deve ser rejeitada, pois a pessoa jurídica só responde se uma pessoa física for denunciada em conjunto",
    "Deve ser rejeitada, pois a pessoa jurídica responde apenas nas esferas civil e administrativa",
-   "Pode ser recebida, pois a responsabilidade penal da pessoa jurídica não depende da imputação simultânea a uma pessoa física",
+   "Pode ser recebida, pois a pessoa jurídica pode ser processada sem imputação simultânea a pessoa física",
    "Pode ser recebida, mas a pessoa jurídica só pode ser condenada à pena de multa, sem outras sanções",
-   "Deve ser rejeitada, pois a morte do gerente extingue a punibilidade de todos os envolvidos"
+   "Deve ser rejeitada, pois a morte do gerente extingue a punibilidade de todos os envolvidos no fato"
   ],
   "correta": 2,
   "explicacao": "O art. 225, § 3º, da CF/88 sujeita as pessoas jurídicas a sanções penais por condutas lesivas ao meio ambiente, e o art. 3º da Lei 9.605/1998 exige que a infração seja cometida por decisão de seu representante legal ou contratual, ou de seu órgão colegiado, no interesse ou benefício da entidade — requisitos presentes. O STF (RE 548.181) afastou a teoria da dupla imputação, entendimento seguido pelo STJ: a pessoa jurídica pode ser processada ainda que não se identifique ou não se denuncie a pessoa física. As penas aplicáveis à pessoa jurídica incluem multa, restritivas de direitos e prestação de serviços à comunidade (art. 21), não só multa. A morte do gerente extingue apenas a punibilidade dele (art. 107, I, do CP), pois a extinção é pessoal.",
@@ -1131,7 +1140,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-5a6259c1",
@@ -1159,21 +1169,22 @@
   "area": "Empresarial",
   "enunciado": "A Delta Comércio Ltda. tem capital social de R$ 300.000,00, dividido entre Ana (quotas de R$ 100.000,00, integralmente pagas) e Beto (quotas de R$ 200.000,00, das quais pagou apenas R$ 50.000,00). O contrato social não prevê prazo para a integralização em aberto. A sociedade teve seu patrimônio esgotado e um fornecedor, credor de R$ 400.000,00, pretende cobrar dos sócios o saldo não satisfeito. Não há abuso da personalidade jurídica nem outra hipótese legal de responsabilidade pessoal.\n\nConsiderando o art. 1.052 do Código Civil, é correto afirmar que:",
   "alternativas": [
-   "Ana e Beto respondem solidariamente até R$ 150.000,00, valor não integralizado, e Ana, se pagar, tem regresso contra Beto",
+   "Ana e Beto respondem solidariamente até R$ 150.000,00, e Ana, se pagar, tem regresso contra Beto",
    "Apenas Beto responde, até R$ 150.000,00, pois Ana já integralizou todas as suas quotas",
    "Ana responde até R$ 100.000,00 e Beto até R$ 200.000,00, conforme o valor de suas quotas",
-   "Ana e Beto respondem ilimitadamente pelo saldo de R$ 400.000,00, pois o patrimônio social se esgotou",
-   "Nenhum dos sócios responde, pois na limitada o credor só pode cobrar da sociedade"
+   "Ana e Beto respondem ilimitadamente pelo saldo de R$ 400.000,00, pois o patrimônio se esgotou",
+   "Nenhum dos sócios responde, pois na limitada o credor só pode cobrar da própria sociedade"
   ],
   "correta": 0,
-  "explicacao": "Pelo art. 1.052 do CC, na sociedade limitada a responsabilidade de cada sócio é restrita ao valor de suas quotas, mas todos respondem solidariamente pela integralização do capital social. Enquanto o capital não estiver totalmente integralizado, qualquer sócio — inclusive o que já pagou suas quotas — pode ser chamado a responder pelo montante faltante: 300.000 − 150.000 integralizados = R$ 150.000,00. Ana, se pagar, tem direito de regresso contra Beto, sócio remisso. A responsabilidade não é ilimitada (salvo hipóteses como desconsideração da personalidade jurídica, afastada no caso), nem restrita ao valor subscrito por sócio individualmente.",
+  "explicacao": "Pelo art. 1.052 do CC, na sociedade limitada a responsabilidade de cada sócio é restrita ao valor de suas quotas, mas todos respondem solidariamente pela integralização do capital social. Enquanto o capital não estiver totalmente integralizado, qualquer sócio — inclusive o que já pagou suas quotas — pode ser chamado a responder pelo montante faltante: 300.000 − 150.000 integralizados = R$ 150.000,00. Ana, se pagar, tem direito de regresso contra Beto, sócio remisso. A responsabilidade não é ilimitada (salvo hipóteses como desconsideração da personalidade jurídica, afastada no caso), nem restrita ao valor subscrito por sócio individualmente. Para lembrar: na limitada, cada sócio responde pelo valor de suas quotas, mas todos respondem solidariamente pelo que falta integralizar.",
   "disciplina": "Empresarial",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-81649a82",
@@ -1199,23 +1210,24 @@
  {
   "id": "dir-c14d1569",
   "area": "Introdução ao Direito",
-  "enunciado": "Autuado por descumprir lei municipal publicada três meses antes, Joaquim alega que, por morar na zona rural, não sabia da existência da norma.\n\nSegundo a LINDB, essa alegação:",
+  "enunciado": "Lei do Município de Serra Alta, publicada em 2 de março de 2026 sem cláusula sobre o início de sua vigência, proibiu queimadas de restos de colheita e previu multa para os infratores. Em 20 de junho de 2026, Joaquim foi autuado por fazer uma queimada em seu sítio e alegou que, morando longe da cidade e sem acesso a jornais, desconhecia a lei.\n\nSegundo a LINDB, é correto afirmar que:",
   "alternativas": [
-   "Isenta-o, pois a lei só obriga quem teve ciência pessoal de seu conteúdo",
-   "Não o isenta, pois ninguém se escusa de cumprir a lei alegando que não a conhece",
-   "Isenta-o, pois leis municipais exigem notificação prévia de cada destinatário",
-   "Não o isenta apenas se a lei municipal estiver em vigor há mais de um ano",
-   "Isenta-o parcialmente, reduzindo a multa pela metade por boa-fé presumida"
+   "a lei estava em vigor, mas o desconhecimento isenta quem não teve ciência pessoal da norma",
+   "a lei já estava em vigor, mas a boa-fé presumida de Joaquim reduz a multa pela metade",
+   "a lei ainda não estava em vigor, pois a vacatio legis sem cláusula expressa é de seis meses",
+   "a lei já estava em vigor, e a alegação de desconhecimento não exime Joaquim de cumpri-la",
+   "a lei estava em vigor, mas leis municipais exigem notificação prévia de cada destinatário"
   ],
-  "correta": 1,
-  "explicacao": "O art. 3º da LINDB estabelece que ninguém se escusa de cumprir a lei, alegando que não a conhece. A obrigatoriedade da lei decorre de sua publicação e vigência, e não da ciência pessoal de cada destinatário, o que afasta as teses de exigência de notificação individual ou de conhecimento efetivo. Não há na LINDB prazo de um ano para que a lei passe a obrigar, nem redução automática de sanção por boa-fé. O fato de a lei ser recente e de o autuado morar em zona rural é irrelevante para a regra.",
+  "correta": 3,
+  "explicacao": "Sem cláusula de vigência, a lei começa a vigorar em todo o país 45 dias depois de oficialmente publicada (art. 1º da LINDB); publicada em 2 de março de 2026, e contando-se a data da publicação e o último dia (art. 8º, § 1º, da LC 95/1998), o prazo se consumou em 15 de abril e a lei entrou em vigor em 16 de abril de 2026, bem antes de 20 de junho. O art. 3º da LINDB estabelece que ninguém se escusa de cumprir a lei alegando que não a conhece: a obrigatoriedade decorre da publicação e da vigência, e não da ciência pessoal de cada destinatário, o que afasta as teses de conhecimento efetivo ou de notificação individual. A LINDB não prevê vacatio de seis meses nem redução automática de sanção por boa-fé. Para lembrar: vacatio legis padrão — 45 dias no Brasil, três meses no exterior.",
   "disciplina": "Introdução ao Direito",
   "tema": null,
   "subtema": null,
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-4ffff2bc",
@@ -1283,23 +1295,24 @@
  {
   "id": "dir-1550ebd4",
   "area": "Constitucional",
-  "enunciado": "Uma associação de moradores passou a desagradar ao governo local.\n\nSegundo o art. 5º, XIX, da CF/88, a dissolução compulsória dessa associação e a suspensão de suas atividades exigem, respectivamente:",
+  "enunciado": "A Associação de Moradores do Jardim Esperança passou a organizar protestos pacíficos contra obras da prefeitura. O prefeito editou decreto suspendendo as atividades da entidade por 90 dias e anunciou que buscará sua dissolução definitiva. A diretoria da associação procura assessoria jurídica.\n\nSegundo o art. 5º, XIX, da CF/88, a dissolução compulsória da associação e a suspensão de suas atividades exigem, respectivamente:",
   "alternativas": [
-   "Decisão judicial; decisão judicial transitada em julgado",
-   "Decisão administrativa motivada; decisão judicial",
-   "Decisão judicial transitada em julgado; ato do Executivo",
-   "Decisão judicial transitada em julgado; decisão judicial",
-   "Lei específica; decisão judicial transitada em julgado"
+   "decisão judicial transitada em julgado; decisão judicial",
+   "decisão judicial transitada em julgado; ato do Executivo",
+   "lei específica; decisão judicial transitada em julgado",
+   "decisão judicial; decisão judicial transitada em julgado",
+   "decisão administrativa motivada; decisão judicial"
   ],
-  "correta": 3,
-  "explicacao": "O art. 5º, XIX, da CF/88 dispõe que as associações só poderão ser compulsoriamente dissolvidas ou ter suas atividades suspensas por decisão judicial, exigindo-se, no primeiro caso, o trânsito em julgado. Assim, a dissolução exige decisão judicial transitada em julgado, enquanto a suspensão das atividades pode ser determinada por decisão judicial ainda não definitiva. Não cabe ao Executivo, nem a lei específica, dissolver ou suspender associação, e é vedada a interferência estatal em seu funcionamento (art. 5º, XVIII).",
+  "correta": 0,
+  "explicacao": "O art. 5º, XIX, da CF/88 dispõe que as associações só poderão ser compulsoriamente dissolvidas ou ter suas atividades suspensas por decisão judicial, exigindo-se, no primeiro caso, o trânsito em julgado. Assim, a dissolução exige decisão judicial transitada em julgado, e a suspensão pode ser determinada por decisão judicial ainda não definitiva. O decreto do prefeito é inconstitucional: não cabe ao Executivo, nem a lei específica, dissolver ou suspender associação, e é vedada a interferência estatal em seu funcionamento (art. 5º, XVIII).",
   "disciplina": "Constitucional",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-fe02e29e",
@@ -1346,23 +1359,24 @@
  {
   "id": "dir-14558452",
   "area": "Constitucional",
-  "enunciado": "Um cidadão foi flagrado ofendendo e impedindo o acesso de pessoas a um estabelecimento em razão de sua raça.\n\nSegundo o art. 5º, XLII, da CF/88, a prática do racismo constitui crime:",
+  "enunciado": "Renato, dono de um bar, impediu a entrada de um casal em seu estabelecimento em razão da cor da pele de ambos, afirmando em voz alta que eles não seriam atendidos ali. A cena foi filmada por outros clientes, e o Ministério Público ofereceu denúncia com base na Lei 7.716/1989.\n\nSegundo o art. 5º, XLII, da CF/88, a prática do racismo constitui crime:",
   "alternativas": [
-   "Inafiançável e insuscetível de graça ou anistia",
-   "Afiançável e imprescritível, sujeito à pena de detenção",
-   "Inafiançável e imprescritível, sujeito à pena de reclusão",
-   "Imprescritível, mas afiançável conforme a pena prevista",
-   "Inafiançável, mas prescritível nos prazos do Código Penal"
+   "inafiançável e imprescritível, sujeito à pena de reclusão",
+   "inafiançável e insuscetível de graça ou anistia",
+   "afiançável e imprescritível, sujeito à pena de detenção",
+   "inafiançável, mas prescritível nos prazos do Código Penal",
+   "imprescritível, mas afiançável conforme a pena prevista"
   ],
-  "correta": 2,
-  "explicacao": "O art. 5º, XLII, da CF/88 dispõe que a prática do racismo constitui crime inafiançável e imprescritível, sujeito à pena de reclusão, nos termos da lei (Lei 7.716/1989). A fórmula 'inafiançável e insuscetível de graça ou anistia' pertence ao inciso XLIII (tortura, tráfico, terrorismo e hediondos). Além do racismo, só a ação de grupos armados contra a ordem constitucional e o Estado Democrático é imprescritível (XLIV).",
+  "correta": 0,
+  "explicacao": "O art. 5º, XLII, da CF/88 dispõe que a prática do racismo constitui crime inafiançável e imprescritível, sujeito à pena de reclusão, nos termos da lei — no caso, a Lei 7.716/1989, cujo art. 8º pune quem impede o acesso ou recusa atendimento em restaurantes, bares ou locais semelhantes abertos ao público. A fórmula \"inafiançável e insuscetível de graça ou anistia\" pertence ao inciso XLIII (tortura, tráfico, terrorismo e crimes hediondos). Além do racismo, a Constituição só declara imprescritível a ação de grupos armados contra a ordem constitucional e o Estado Democrático (inciso XLIV). Para lembrar: imprescritíveis na CF são só dois — racismo e ação de grupos armados contra a ordem constitucional.",
   "disciplina": "Constitucional",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-2c0960ef",
@@ -1370,20 +1384,21 @@
   "enunciado": "Um projeto de lei aprovado pelo Congresso Nacional foi enviado ao Presidente da República, que não o sancionou nem o vetou no prazo constitucional. Em seguida, também deixou de promulgar a lei no prazo de 48 horas. O Presidente do Senado, pressionado por aliados do governo, pondera se deve agir.\n\nConsiderando o art. 66 da CF/88, é correto afirmar que:",
   "alternativas": [
    "Houve veto tácito após quinze dias úteis, e o projeto retorna ao Congresso para apreciação em sessão conjunta",
-   "Houve sanção tácita após quinze dias úteis, e cabe ao Presidente da Câmara promulgar a lei; se não o fizer, ao Presidente do STF",
+   "Houve sanção tácita após quinze dias úteis; promulga o Presidente da Câmara e, se ele se omitir, o Presidente do STF",
    "Houve sanção tácita após trinta dias corridos, e a lei é promulgada automaticamente com a publicação no Diário Oficial",
-   "Houve sanção tácita após quinze dias úteis, mas a lei só pode ser promulgada pelo Presidente da República",
-   "Houve sanção tácita após quinze dias úteis, e cabe ao Presidente do Senado promulgar a lei; se não o fizer em igual prazo, caberá ao Vice-Presidente do Senado"
+   "Houve sanção tácita após quinze dias úteis, mas a lei só pode ser promulgada pelo próprio Presidente da República",
+   "Houve sanção tácita após quinze dias úteis; promulga o Presidente do Senado e, se ele se omitir, o Vice-Presidente do Senado"
   ],
   "correta": 4,
-  "explicacao": "Pelo art. 66, § 1º, o Presidente tem quinze dias úteis para vetar; decorrido esse prazo, o silêncio importa sanção (§ 3º) — no Brasil não existe veto tácito. Pelo § 7º, se a lei não for promulgada dentro de quarenta e oito horas pelo Presidente da República, nos casos dos §§ 3º e 5º, o Presidente do Senado a promulgará e, se este não o fizer em igual prazo, caberá ao Vice-Presidente do Senado fazê-lo. O Presidente da Câmara e o do STF não participam dessa sequência, e não há promulgação automática.",
+  "explicacao": "Pelo art. 66, § 1º, o Presidente tem quinze dias úteis para vetar; decorrido esse prazo, o silêncio importa sanção (§ 3º) — no Brasil não existe veto tácito. Pelo § 7º, se a lei não for promulgada dentro de quarenta e oito horas pelo Presidente da República, nos casos dos §§ 3º e 5º, o Presidente do Senado a promulgará e, se este não o fizer em igual prazo, caberá ao Vice-Presidente do Senado fazê-lo. O Presidente da Câmara e o do STF não participam dessa sequência, e não há promulgação automática. Para lembrar: no Brasil o silêncio do Presidente é sanção tácita; veto é sempre expresso e motivado.",
   "disciplina": "Constitucional",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-2ecd7862",
@@ -1409,44 +1424,46 @@
  {
   "id": "dir-65dcbaa8",
   "area": "Civil",
-  "enunciado": "Os pais de Ana, de 16 anos completos, de comum acordo, desejam emancipá-la.\n\nPelo art. 5º, parágrafo único, I, do Código Civil, essa emancipação voluntária se dá:",
+  "enunciado": "Ana completou 16 anos e vai estudar e morar sozinha em outra cidade. Seus pais, divorciados e ambos no pleno exercício do poder familiar, estão de comum acordo em emancipá-la e procuram um advogado para saber como formalizar o ato da forma mais simples admitida em lei. Ana não está sob tutela.\n\nPelo art. 5º, parágrafo único, I, do Código Civil, a emancipação voluntária se dá:",
   "alternativas": [
-   "Por sentença judicial, ouvido o Ministério Público",
-   "Por instrumento particular com firma reconhecida",
-   "Por instrumento público, com homologação do juiz",
-   "Por instrumento público, independentemente de homologação judicial",
-   "Por declaração verbal ao oficial do registro civil"
+   "por declaração verbal dos pais ao oficial do registro civil",
+   "por instrumento público, que só produz efeito após homologação judicial",
+   "por instrumento particular com firma reconhecida de ambos os pais",
+   "por instrumento público, independentemente de homologação judicial",
+   "por sentença judicial, após pedido conjunto dos pais e oitiva do MP"
   ],
   "correta": 3,
-  "explicacao": "Pelo art. 5º, parágrafo único, I, do CC, cessa a incapacidade pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, independentemente de homologação judicial, se o menor tiver 16 anos completos. A sentença judicial é exigida apenas quando o menor está sob tutela (emancipação judicial, ouvido o tutor). Instrumento particular ou declaração verbal não bastam, e o instrumento público deve ser registrado no registro civil (art. 9º, II).",
-  "disciplina": "Civil",
-  "tema": null,
-  "subtema": null,
-  "dificuldade": 1,
-  "fonte": "autoral",
-  "ano": null,
-  "prova": null
- },
- {
-  "id": "dir-0220b45a",
-  "area": "Civil",
-  "enunciado": "Em 10/01/2021, Bruno assinou contrato de venda de suas quotas em uma empresa sob ameaça de que a filha seria demitida do emprego no grupo econômico do comprador e de que 'algo pior' poderia acontecer à família. As ameaças persistiram até 15/08/2022, quando o comprador se mudou para o exterior. Bruno ajuizou ação anulatória em 01/03/2026.\n\nConsiderando o art. 178 do Código Civil, a pretensão anulatória de Bruno:",
-  "alternativas": [
-   "Foi exercida no prazo, pois o prazo decadencial de quatro anos conta-se da cessação da coação e vai até 15/08/2026",
-   "Decaiu, pois o prazo de quatro anos conta-se da celebração do negócio e terminou em 10/01/2025",
-   "Decaiu, pois o prazo para anular negócio por coação é de dois anos, contados da cessação",
-   "Foi exercida no prazo, pois negócio celebrado sob coação é nulo e não se sujeita a prazo",
-   "Foi exercida no prazo, pois se aplica o prazo prescricional geral de dez anos do art. 205"
-  ],
-  "correta": 0,
-  "explicacao": "O negócio jurídico celebrado sob coação é anulável (art. 171, II), e o art. 178, I, fixa em quatro anos o prazo decadencial para pleitear a anulação, contado, no caso de coação, do dia em que ela cessar. Cessada em 15/08/2022, o prazo vai até 15/08/2026, de modo que a ação de 01/03/2026 é tempestiva. A contagem a partir da celebração vale para erro, dolo, fraude contra credores, estado de perigo e lesão (art. 178, II), não para coação. O prazo de dois anos do art. 179 é supletivo, para anulabilidades sem prazo específico. Coação gera anulabilidade, não nulidade.",
+  "explicacao": "Pelo art. 5º, parágrafo único, I, do CC, cessa a incapacidade pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, independentemente de homologação judicial, se o menor tiver 16 anos completos. O instrumento deve ser registrado no Registro Civil das Pessoas Naturais (art. 9º, II, do CC). A sentença judicial é exigida apenas para o menor sob tutela (emancipação judicial, ouvido o tutor), o que não é o caso de Ana. Instrumento particular, ainda que com firma reconhecida, e declaração verbal não atendem à forma legal, e o instrumento público não depende de homologação do juiz.",
   "disciplina": "Civil",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
+ },
+ {
+  "id": "dir-0220b45a",
+  "area": "Civil",
+  "enunciado": "Em 10/01/2021, Bruno assinou contrato de venda de suas quotas em uma empresa sob ameaça de que a filha seria demitida do emprego no grupo econômico do comprador e de que 'algo pior' poderia acontecer à família. As ameaças persistiram até 15/08/2022, quando o comprador se mudou para o exterior. Bruno ajuizou ação anulatória em 01/03/2026.\n\nConsiderando o art. 178 do Código Civil, a pretensão anulatória de Bruno:",
+  "alternativas": [
+   "Foi exercida no prazo, pois os quatro anos contam-se da cessação da coação e vão até 15/08/2026",
+   "Decaiu, pois o prazo de quatro anos conta-se da celebração do negócio e terminou em 10/01/2025",
+   "Decaiu, pois o prazo para anular negócio por coação é de dois anos, contados da cessação",
+   "Foi exercida no prazo, pois negócio celebrado sob coação é nulo e não se sujeita a prazo",
+   "Foi exercida no prazo, pois se aplica o prazo prescricional geral de dez anos do art. 205"
+  ],
+  "correta": 0,
+  "explicacao": "O negócio jurídico celebrado sob coação é anulável (art. 171, II), e o art. 178, I, fixa em quatro anos o prazo decadencial para pleitear a anulação, contado, no caso de coação, do dia em que ela cessar. Cessada em 15/08/2022, o prazo vai até 15/08/2026, de modo que a ação de 01/03/2026 é tempestiva. A contagem a partir da celebração vale para erro, dolo, fraude contra credores, estado de perigo e lesão (art. 178, II), não para coação. O prazo de dois anos do art. 179 é supletivo, para anulabilidades sem prazo específico. Coação gera anulabilidade, não nulidade. Para lembrar: coação — quatro anos contados do dia em que cessar; erro, dolo, estado de perigo, lesão e fraude — do dia da celebração.",
+  "disciplina": "Civil",
+  "tema": null,
+  "subtema": null,
+  "dificuldade": 2,
+  "fonte": "autoral",
+  "ano": null,
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-0037cd3d",
@@ -1493,23 +1510,24 @@
  {
   "id": "dir-b9bdeb06",
   "area": "Civil",
-  "enunciado": "Desde março de 2015, Marta possui, sem interrupção nem oposição e como se fosse dona, um terreno urbano de 400 m² em Manaus, onde construiu sua casa e mora com os filhos. Ela não tem justo título nem boa-fé quanto à origem da posse, pois sabia que o terreno pertencia a uma construtora falida. Marta é proprietária de uma sala comercial em outro bairro, que aluga para complementar a renda. Em setembro de 2025, ajuizou ação de usucapião.\n\nConsiderando os arts. 1.238, 1.240 e 1.242 do Código Civil e o art. 183 da CF/88, é correto afirmar que Marta:",
+  "enunciado": "Desde março de 2015, Marta possui, sem interrupção nem oposição e como se fosse dona, um terreno urbano de 400 m² em Manaus, onde construiu sua casa e mora com os filhos. Ela não tem justo título nem boa-fé quanto à origem da posse, pois sabia que o terreno pertencia a uma construtora que o abandonara. Marta é proprietária de uma sala comercial em outro bairro, que aluga para complementar a renda. Em setembro de 2025, ajuizou ação de usucapião.\n\nConsiderando os arts. 1.238, 1.240 e 1.242 do Código Civil e o art. 183 da CF/88, é correto afirmar que Marta:",
   "alternativas": [
-   "Pode usucapir pela modalidade especial urbana, pois possui o imóvel há mais de cinco anos com moradia",
+   "Pode usucapir pela modalidade especial urbana, pois possui o imóvel há mais de cinco anos e nele mora",
    "Pode usucapir pela modalidade ordinária, cujo prazo de dez anos independe de justo título",
-   "Pode usucapir pela modalidade extraordinária, cujo prazo é reduzido a dez anos por ter fixado ali sua moradia habitual",
-   "Não pode usucapir, pois a usucapião extraordinária exige quinze anos em qualquer caso",
+   "Pode usucapir pela modalidade extraordinária, com prazo reduzido a dez anos pela moradia habitual",
+   "Não pode usucapir, pois a usucapião extraordinária exige quinze anos de posse em qualquer caso",
    "Não pode usucapir, pois a propriedade de outro imóvel impede qualquer modalidade de usucapião"
   ],
   "correta": 2,
-  "explicacao": "A usucapião extraordinária exige posse de quinze anos, sem interrupção nem oposição, independentemente de título e boa-fé (art. 1.238); o parágrafo único reduz o prazo para dez anos se o possuidor houver estabelecido no imóvel sua moradia habitual ou realizado obras ou serviços de caráter produtivo. De março de 2015 a setembro de 2025 passaram-se mais de dez anos, com moradia — requisito atendido. A especial urbana (art. 1.240; art. 183 da CF) exige área de até 250 m² e que o possuidor não seja proprietário de outro imóvel — ambos desatendidos. A ordinária exige justo título e boa-fé (art. 1.242). Ser proprietário de outro imóvel só impede as modalidades especiais, não a extraordinária.",
+  "explicacao": "A usucapião extraordinária exige posse de quinze anos, sem interrupção nem oposição, independentemente de título e boa-fé (art. 1.238); o parágrafo único reduz o prazo para dez anos se o possuidor houver estabelecido no imóvel sua moradia habitual ou realizado obras ou serviços de caráter produtivo. De março de 2015 a setembro de 2025 passaram-se mais de dez anos, com moradia — requisito atendido. A especial urbana (art. 1.240; art. 183 da CF) exige área de até 250 m² e que o possuidor não seja proprietário de outro imóvel — ambos desatendidos. A ordinária exige justo título e boa-fé (art. 1.242). Ser proprietário de outro imóvel só impede as modalidades especiais, não a extraordinária. Para lembrar: extraordinária — 15 anos, ou 10 com moradia ou obras produtivas; especial urbana — 5 anos, até 250 m² e sem outro imóvel.",
   "disciplina": "Civil",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-2a959a95",
@@ -1691,35 +1709,37 @@
    "I e II são falsas"
   ],
   "correta": 0,
-  "explicacao": "A asserção I é verdadeira: pelo art. 17 do CP, não se pune a tentativa quando, por ineficácia absoluta do meio ou por absoluta impropriedade do objeto, é impossível consumar-se o crime; atirar em cadáver é caso de impropriedade absoluta do objeto. A asserção II também é verdadeira: o CP adota a teoria objetiva temperada, de modo que a impropriedade relativa do meio ou do objeto não afasta a tentativa. Contudo, II não justifica I: a impunidade no caso decorre da impropriedade absoluta, e não da punição da impropriedade relativa. Por isso as duas são verdadeiras sem relação de justificação.",
+  "explicacao": "A asserção I é verdadeira: pelo art. 17 do CP, não se pune a tentativa quando, por ineficácia absoluta do meio ou por absoluta impropriedade do objeto, é impossível consumar-se o crime; atirar em cadáver é caso de impropriedade absoluta do objeto. A asserção II também é verdadeira: o CP adota a teoria objetiva temperada, de modo que a impropriedade relativa do meio ou do objeto não afasta a tentativa. Contudo, II não justifica I: a impunidade no caso decorre da impropriedade absoluta, e não da punição da impropriedade relativa. Por isso as duas são verdadeiras sem relação de justificação. Para lembrar: crime impossível (art. 17) = ineficácia ABSOLUTA do meio ou impropriedade ABSOLUTA do objeto; se relativa, há tentativa.",
   "disciplina": "Penal",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-2c4d2180",
   "area": "Processo Civil",
-  "enunciado": "Na sentença, após ouvir as partes, o juiz reconhece que a pretensão do autor foi atingida pela prescrição e julga o processo.\n\nSegundo o CPC/2015, essa decisão:",
+  "enunciado": "Em 10/03/2021 venceu a única parcela de um contrato escrito de mútuo, de valor certo, firmado entre Heitor (mutuante) e Débora (mutuária). Não houve pagamento, protesto, notificação judicial, reconhecimento da dívida por Débora nem qualquer outra causa que impedisse, suspendesse ou interrompesse a prescrição. Heitor ajuizou ação de cobrança em 20/04/2026. Citada, Débora contestou apenas o valor dos juros e não alegou prescrição. Antes de sentenciar, o juiz intimou as partes para se manifestarem sobre a possível prescrição e, em seguida, reconheceu-a na sentença.\n\nÀ luz do Código Civil e do CPC, é correto afirmar que:",
   "alternativas": [
-   "Resolve o mérito do processo",
-   "Extingue o processo sem resolver o mérito",
-   "Não faz coisa julgada de nenhuma espécie",
-   "Equivale a indeferimento da petição inicial por inépcia",
-   "Reconhece a falta de interesse processual"
+   "a pretensão não prescreveu, pois se aplica o prazo geral de dez anos, previsto no art. 205 do CC",
+   "a pretensão prescreveu em março de 2024, e a sentença permite nova ação após o pagamento das custas",
+   "a pretensão prescreveu, mas o juiz não podia reconhecê-la porque a ré não a alegou na contestação",
+   "a pretensão prescreveu em março de 2026, e a sentença resolve o mérito, fazendo coisa julgada material",
+   "a pretensão prescreveu em março de 2026, e a sentença extingue o processo sem resolução do mérito"
   ],
-  "correta": 0,
-  "explicacao": "O art. 487, II, do CPC dispõe que haverá resolução de mérito quando o juiz decidir, de ofício ou a requerimento, sobre a ocorrência de decadência ou prescrição. Por isso a sentença faz coisa julgada material e impede a repropositura da mesma demanda. As hipóteses de extinção sem resolução de mérito estão no art. 485 (como falta de interesse ou inépcia da inicial), e a prescrição não figura entre elas. O art. 487, parágrafo único, exige que as partes sejam ouvidas antes de o juiz reconhecê-la, salvo na improcedência liminar.",
+  "correta": 3,
+  "explicacao": "Prescreve em cinco anos a pretensão de cobrança de dívidas líquidas constantes de instrumento público ou particular (art. 206, § 5º, I, do CC); o prazo geral de dez anos do art. 205 é residual. Contado do vencimento (10/03/2021), o prazo terminou em 10/03/2026, antes do ajuizamento, em 20/04/2026. O juiz pode reconhecer a prescrição de ofício, mas deve ouvir antes as partes (art. 487, II e parágrafo único, do CPC), como fez. A decisão que acolhe a prescrição resolve o mérito e forma coisa julgada material, impedindo a repropositura; a possibilidade de nova ação após o pagamento das custas (art. 486) é própria das sentenças sem resolução de mérito (art. 485). Para lembrar: prescrição e decadência estão no art. 487, II — sentença de mérito.",
   "disciplina": "Processo Civil",
   "tema": null,
   "subtema": null,
-  "dificuldade": 1,
+  "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-4e3bf82e",
@@ -1766,23 +1786,24 @@
  {
   "id": "dir-de534c59",
   "area": "Processo Civil",
-  "enunciado": "Lígia, domiciliada em Belém, quer cobrar de Otávio, domiciliado em Manaus, dívida de empréstimo pessoal. Não há foro de eleição nem regra especial aplicável.\n\nEm regra, o foro competente é o de:",
+  "enunciado": "Lígia, domiciliada em Belém, emprestou R$ 20.000,00 a Otávio, domiciliado em Manaus, por contrato escrito assinado em Belém, que não indica o lugar do pagamento nem contém cláusula de eleição de foro. Vencida a dívida sem pagamento, Lígia pretende ajuizar ação de cobrança e prefere fazê-lo em Belém, onde mora e onde o contrato foi firmado.\n\nÀ luz do CPC e do Código Civil, o foro competente para a ação é, em regra, o de:",
   "alternativas": [
-   "Belém, domicílio da autora",
-   "Brasília, capital federal",
-   "Manaus, domicílio do réu",
-   "Qualquer foro, à escolha da autora",
-   "Local onde o empréstimo foi assinado"
+   "Belém ou Manaus, à livre escolha da autora",
+   "Belém, domicílio da autora e credora da dívida",
+   "Manaus, domicílio do réu e lugar do pagamento",
+   "qualquer capital, à livre escolha da autora",
+   "Belém, lugar onde o contrato foi assinado"
   ],
   "correta": 2,
-  "explicacao": "O art. 46 do CPC estabelece que a ação fundada em direito pessoal ou em direito real sobre bens móveis será proposta, em regra, no foro de domicílio do réu. Como Otávio é domiciliado em Manaus, é esse o foro competente. O domicílio do autor só é critério em hipóteses específicas, como quando o réu não tem domicílio no Brasil (art. 46, § 3º). Não há livre escolha do foro nem regra que remeta à capital federal, e o local de assinatura do contrato não é critério geral de competência.",
+  "explicacao": "O art. 46 do CPC estabelece que a ação fundada em direito pessoal será proposta, em regra, no foro de domicílio do réu — Manaus. O art. 53, III, d, do CPC admite também o foro do lugar onde a obrigação deve ser satisfeita; como o contrato não fixou o lugar do pagamento, aplica-se o art. 327 do CC: o pagamento se faz no domicílio do devedor, que também é Manaus. O local da assinatura e o domicílio da credora não são critérios de competência para essa ação, e não há livre escolha. Por ser competência relativa, se a ação for proposta em Belém e o réu não alegar a incompetência na contestação, ela se prorroga (art. 65 do CPC). Para lembrar: na falta de ajuste, a dívida é quesível — paga-se no domicílio do devedor (art. 327 do CC).",
   "disciplina": "Processo Civil",
   "tema": null,
   "subtema": null,
-  "dificuldade": 1,
+  "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-d0679c7a",
@@ -1808,23 +1829,24 @@
  {
   "id": "dir-2a2dc2d9",
   "area": "Processo Penal",
-  "enunciado": "Concluído o inquérito sem indícios suficientes de autoria, o delegado de polícia pretende, por despacho próprio, encerrar definitivamente o caso.\n\nSegundo o CPP, a autoridade policial:",
+  "enunciado": "Instaurado inquérito para apurar o furto de uma motocicleta, a autoridade policial ouviu a vítima e duas testemunhas e requisitou imagens de câmeras próximas, mas não obteve indícios suficientes de autoria. Convencido de que nada mais há a apurar, o delegado pretende, por despacho próprio, determinar o arquivamento definitivo do caso.\n\nSegundo o CPP, a autoridade policial:",
   "alternativas": [
-   "Pode arquivar o inquérito, comunicando ao juiz",
-   "Não pode mandar arquivar os autos do inquérito",
-   "Pode arquivar, desde que ouça antes a vítima",
-   "Pode arquivar se o crime for de menor potencial",
-   "Deve arquivar e remeter os autos à Defensoria"
+   "pode arquivar o inquérito se o crime for de menor potencial",
+   "pode arquivar o inquérito, desde que comunique o juiz",
+   "não pode mandar arquivar os autos do inquérito policial",
+   "deve arquivar o inquérito e remeter cópia à Defensoria",
+   "pode arquivar o inquérito, desde que ouça antes a vítima"
   ],
-  "correta": 1,
-  "explicacao": "O art. 17 do CPP é categórico: a autoridade policial não poderá mandar arquivar autos de inquérito. O arquivamento é providência que parte do titular da ação penal, o Ministério Público (art. 28 do CPP), e não há exceção para crimes de menor potencial ofensivo nem condicionamento à oitiva da vítima. Cabe ao delegado relatar o inquérito e remetê-lo ao órgão competente, mesmo quando não tiver apurado indícios suficientes de autoria.",
+  "correta": 2,
+  "explicacao": "O art. 17 do CPP é categórico: a autoridade policial não poderá mandar arquivar autos de inquérito. Concluídas as investigações, cabe ao delegado elaborar relatório minucioso e remeter os autos (art. 10, § 1º), ainda que não tenha apurado indícios de autoria; a decisão de arquivar é do Ministério Público, titular da ação penal pública, na forma do art. 28 do CPP. Não há exceção para crimes de menor potencial ofensivo, nem o arquivamento pelo delegado se torna válido pela oitiva da vítima ou por comunicação ao juiz. Para lembrar: delegado não arquiva inquérito (art. 17 do CPP).",
   "disciplina": "Processo Penal",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-4c36df4e",
@@ -1850,23 +1872,24 @@
  {
   "id": "dir-19c12c63",
   "area": "Processo Penal",
-  "enunciado": "Durante o interrogatório judicial, o réu decide permanecer calado, e o juiz registra que \"quem cala consente\".\n\nSegundo o CPP, o silêncio do acusado:",
+  "enunciado": "Mauro responde a processo por furto qualificado. No interrogatório judicial, respondeu às perguntas sobre sua qualificação pessoal, mas, orientado por seu defensor, declarou que não responderia às perguntas sobre os fatos. Na sentença, o juiz condenou-o com base nos depoimentos de três testemunhas e acrescentou: \"o silêncio do réu reforça a convicção de culpa, pois quem nada deve nada teme\".\n\nÀ luz do CPP e da CF/88, esse trecho da fundamentação é:",
   "alternativas": [
-   "Não importa confissão e não pode ser usado em prejuízo da defesa",
-   "Importa confissão ficta dos fatos narrados na denúncia",
-   "Pode ser valorado como indício de culpa pelo juiz",
-   "Gera revelia e dispensa a presença do defensor",
-   "Só é admitido se o réu justificar o motivo da recusa"
+   "válido, pois o réu que se cala sobre os fatos renuncia ao direito de ser interrogado novamente",
+   "indevido, pois o silêncio não importa confissão e não pode ser interpretado em prejuízo da defesa",
+   "válido, pois o silêncio pode ser valorado como indício de culpa quando somado a outras provas",
+   "válido, pois o direito ao silêncio alcança só o inquérito policial, e não o interrogatório judicial",
+   "indevido apenas porque o juiz deveria ter decretado a revelia do réu antes de valorar o silêncio"
   ],
-  "correta": 0,
-  "explicacao": "O art. 186 do CPP garante ao acusado o direito de permanecer calado e de não responder às perguntas, e seu parágrafo único dispõe que o silêncio, que não importará em confissão, não poderá ser interpretado em prejuízo da defesa. A garantia decorre do art. 5º, LXIII, da CF (direito ao silêncio). Assim, o registro feito pelo juiz é incompatível com a lei: não há confissão ficta, não se pode valorar o silêncio como indício de culpa, não há revelia por esse motivo e o réu não precisa justificar a escolha.",
+  "correta": 1,
+  "explicacao": "O art. 186 do CPP assegura ao acusado o direito de permanecer calado e de não responder às perguntas formuladas, e seu parágrafo único dispõe que o silêncio, que não importará em confissão, não poderá ser interpretado em prejuízo da defesa; a garantia decorre do art. 5º, LXIII, da CF/88. Por isso, a frase do juiz é indevida, ainda que a condenação possa subsistir se as demais provas bastarem. O direito ao silêncio vale tanto no inquérito quanto em juízo; o silêncio não gera revelia (que decorre da ausência injustificada aos atos do processo, não da recusa em responder); e o art. 196 do CPP permite novo interrogatório a qualquer tempo. Para lembrar: nemo tenetur se detegere — ninguém é obrigado a produzir prova contra si mesmo.",
   "disciplina": "Processo Penal",
   "tema": null,
   "subtema": null,
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-1eb16832",
@@ -1876,18 +1899,19 @@
    "Manaus, lugar em que o crime deveria se consumar",
    "Manacapuru, domicílio dos réus",
    "Brasília, sede da instituição financeira lesada",
-   "Iranduba, lugar em que foi praticado o último ato de execução",
+   "Iranduba, lugar do último ato de execução",
    "Manaus ou Iranduba, à escolha do Ministério Público"
   ],
   "correta": 3,
-  "explicacao": "O art. 70 do CPP determina que a competência será, de regra, determinada pelo lugar em que se consumar a infração, ou, no caso de tentativa, pelo lugar em que for praticado o último ato de execução. Como o furto não se consumou e o último ato executório ocorreu em Iranduba, este é o foro competente. O domicílio do réu é critério subsidiário, aplicável quando não conhecido o lugar da infração (art. 72). A sede da instituição financeira e o local planejado para a divisão do dinheiro são irrelevantes, e não há escolha livre do foro pelo MP.",
+  "explicacao": "O art. 70 do CPP determina que a competência será, de regra, fixada pelo lugar em que se consumar a infração, ou, no caso de tentativa, pelo lugar em que for praticado o último ato de execução. Como o furto não se consumou e o último ato executório (o arrombamento interrompido) ocorreu em Iranduba, este é o foro competente. O lugar onde o crime deveria se consumar ou onde o dinheiro seria dividido (Manaus) é irrelevante na tentativa. O domicílio do réu é critério subsidiário, aplicável quando não conhecido o lugar da infração (art. 72). A sede da instituição financeira não fixa competência, e não há escolha livre do foro pelo MP. Para lembrar: CPP adota a teoria do resultado (art. 70): consumação ou, na tentativa, último ato de execução.",
   "disciplina": "Processo Penal",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-d3e800ac",
@@ -1913,23 +1937,24 @@
  {
   "id": "dir-501aef32",
   "area": "Administrativo",
-  "enunciado": "Concluído um processo administrativo disciplinar contra servidor federal, a autoridade julgadora deve escolher a sanção cabível.\n\nNÃO é penalidade disciplinar prevista no art. 127 da Lei 8.112/1990:",
+  "enunciado": "Ao final de processo administrativo disciplinar, a comissão concluiu que Fernanda, servidora pública federal ocupante de cargo efetivo, cometeu faltas funcionais, e remeteu os autos à autoridade julgadora, que deverá escolher a sanção cabível entre as previstas em lei.\n\nNÃO é penalidade disciplinar prevista no art. 127 da Lei 8.112/1990:",
   "alternativas": [
-   "Advertência",
-   "Suspensão",
-   "Cassação de aposentadoria ou disponibilidade",
-   "Prisão administrativa",
-   "Destituição de função comissionada"
+   "cassação de aposentadoria ou disponibilidade",
+   "advertência",
+   "prisão administrativa",
+   "suspensão",
+   "destituição de função comissionada"
   ],
-  "correta": 3,
-  "explicacao": "O art. 127 da Lei 8.112/1990 prevê como penalidades disciplinares: advertência, suspensão, demissão, cassação de aposentadoria ou disponibilidade, destituição de cargo em comissão e destituição de função comissionada. A prisão administrativa não está prevista entre as sanções disciplinares; restrições à liberdade dependem de ordem judicial ou de flagrante (art. 5º, LXI, da CF/88). Advertência, suspensão, cassação de aposentadoria/disponibilidade e destituição de função comissionada constam do rol legal.",
+  "correta": 2,
+  "explicacao": "O art. 127 da Lei 8.112/1990 prevê como penalidades disciplinares: advertência, suspensão, demissão, cassação de aposentadoria ou disponibilidade, destituição de cargo em comissão e destituição de função comissionada. A prisão administrativa não integra o rol; restrições à liberdade dependem de flagrante ou de ordem escrita e fundamentada de autoridade judiciária competente (art. 5º, LXI, da CF/88), ressalvadas as hipóteses militares. As demais medidas citadas constam expressamente do art. 127. Para lembrar: as seis penalidades da Lei 8.112 — advertência, suspensão, demissão, cassação, destituição de cargo em comissão e de função comissionada.",
   "disciplina": "Administrativo",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-17c3eb85",
@@ -2018,23 +2043,24 @@
  {
   "id": "dir-03f0405c",
   "area": "Tributário",
-  "enunciado": "Um município asfalta uma avenida, e os imóveis vizinhos se valorizam em razão da obra.\n\nO tributo que pode ser cobrado dos proprietários em razão dessa valorização é a:",
+  "enunciado": "O Município de Vale Verde pavimentou uma avenida até então de terra, ao custo total de R$ 1.200.000,00. Laudo técnico apurou que os 60 imóveis lindeiros tiveram valorização somada de R$ 1.800.000,00; o terreno de Carla, em particular, valorizou R$ 15.000,00. Lei municipal instituiu o tributo correspondente à valorização decorrente da obra, e o edital de lançamento pretende cobrar de Carla R$ 20.000,00, valor obtido pela divisão do custo da obra em partes iguais entre os 60 proprietários. Carla consulta um advogado sobre a cobrança.\n\nÀ luz da CF/88 e do CTN, é correto afirmar que:",
   "alternativas": [
-   "Taxa de serviço",
-   "Taxa de polícia",
-   "Contribuição social",
-   "Contribuição de iluminação pública",
-   "Contribuição de melhoria"
+   "o tributo é contribuição de melhoria, e a cobrança de Carla não pode exceder R$ 15.000,00",
+   "o tributo é taxa de serviço público, e pode ser cobrado de Carla o valor de R$ 20.000,00 do edital",
+   "o tributo é contribuição de melhoria, e a cobrança de Carla pode chegar a R$ 30.000,00",
+   "o tributo é contribuição de melhoria, e a cobrança de R$ 20.000,00 é válida por respeitar o custo total",
+   "o tributo é imposto sobre a valorização imobiliária, sem limite individual de cobrança"
   ],
-  "correta": 4,
-  "explicacao": "O art. 145, III, da CF e o art. 81 do CTN autorizam a instituição de contribuição de melhoria para fazer face ao custo de obras públicas de que decorra valorização imobiliária, tendo como limite total a despesa realizada e como limite individual o acréscimo de valor de cada imóvel. A taxa exige serviço público específico e divisível ou exercício do poder de polícia (art. 77 do CTN). A contribuição social destina-se à seguridade e a outras finalidades da União, e a contribuição de iluminação pública (art. 149-A da CF) custeia esse serviço, não a valorização por obra.",
+  "correta": 0,
+  "explicacao": "O art. 145, III, da CF/88 e o art. 81 do CTN autorizam a contribuição de melhoria para custear obra pública de que decorra valorização imobiliária, com dois tetos: o limite total é a despesa realizada (R$ 1.200.000,00) e o limite individual é o acréscimo de valor de cada imóvel. Como o terreno de Carla valorizou R$ 15.000,00, não se pode cobrar dela R$ 20.000,00; o rateio igualitário do custo ignora o limite individual, e R$ 30.000,00 (1.800.000 ÷ 60) ultrapassaria os dois limites. Não se trata de taxa, que exige serviço público específico e divisível ou poder de polícia (art. 77 do CTN), nem de imposto, tributo não vinculado a atividade estatal e sem previsão de imposto municipal sobre valorização decorrente de obra. Para lembrar: contribuição de melhoria tem dois tetos — custo total da obra e valorização de cada imóvel.",
   "disciplina": "Tributário",
   "tema": null,
   "subtema": null,
-  "dificuldade": 1,
+  "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-49106d50",
@@ -2167,21 +2193,22 @@
   "area": "Consumidor",
   "enunciado": "Paulo fez um tratamento de canal com o dentista Dr. Lúcio, profissional liberal que atende em consultório próprio. Semanas depois, desenvolveu grave infecção e alega erro no procedimento. Na ação de indenização, a defesa sustenta que o CDC não se aplica a profissionais liberais e que, de todo modo, Paulo teria de provar tudo sozinho.\n\nConsiderando o art. 14, § 4º, e o art. 6º, VIII, do CDC, a responsabilidade pessoal de Dr. Lúcio:",
   "alternativas": [
-   "É subjetiva, apurada mediante verificação de culpa, sem afastar a possibilidade de inversão do ônus da prova",
+   "É subjetiva, dependente de culpa, sem afastar a possibilidade de inversão do ônus da prova",
    "É objetiva, como a de todo fornecedor de serviços, bastando provar dano e nexo causal",
    "Não é regida pelo CDC, pois os profissionais liberais estão excluídos do conceito de fornecedor",
-   "É subjetiva, e a inversão do ônus da prova é vedada em relação a profissionais liberais",
+   "É subjetiva, e a inversão do ônus da prova é vedada em relação aos profissionais liberais",
    "É objetiva, mas limitada ao valor pago pelo tratamento, salvo dolo comprovado"
   ],
   "correta": 0,
-  "explicacao": "O CDC aplica-se aos profissionais liberais, que são fornecedores de serviços; mas o art. 14, § 4º, excepciona a regra da responsabilidade objetiva: a responsabilidade pessoal dos profissionais liberais será apurada mediante a verificação de culpa. Isso não impede a inversão do ônus da prova em favor do consumidor, quando o juiz verificar a verossimilhança da alegação ou a hipossuficiência (art. 6º, VIII), pois a inversão é regra processual, distinta do fundamento da responsabilidade. Também não há limitação da indenização ao valor pago, pois a reparação dos danos é efetiva e integral (art. 6º, VI).",
+  "explicacao": "O CDC aplica-se aos profissionais liberais, que são fornecedores de serviços; mas o art. 14, § 4º, excepciona a regra da responsabilidade objetiva: a responsabilidade pessoal dos profissionais liberais será apurada mediante a verificação de culpa. Isso não impede a inversão do ônus da prova em favor do consumidor, quando o juiz verificar a verossimilhança da alegação ou a hipossuficiência (art. 6º, VIII), pois a inversão é regra processual, distinta do fundamento da responsabilidade. Também não há limitação da indenização ao valor pago, pois a reparação dos danos é efetiva e integral (art. 6º, VI). Para lembrar: art. 14, § 4º, do CDC — profissional liberal responde com culpa; o hospital ou clínica, pelos serviços próprios, responde objetivamente.",
   "disciplina": "Consumidor",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-a5c8f358",
@@ -2207,44 +2234,46 @@
  {
   "id": "dir-cd3ce117",
   "area": "Ambiental",
-  "enunciado": "Uma metalúrgica foi condenada por crime de poluição, e o juiz passa à escolha da pena.\n\nNÃO é pena aplicável à pessoa jurídica pela Lei de Crimes Ambientais (Lei 9.605/1998):",
+  "enunciado": "A Metalúrgica Ferro Forte S.A. foi condenada por crime de poluição (art. 54 da Lei 9.605/1998), na mesma ação penal em que também foi condenado seu diretor industrial, que autorizou o despejo de efluentes sem tratamento em um rio. Na dosimetria, o juiz passa a definir as penas de cada um dos réus.\n\nNÃO é pena aplicável à pessoa jurídica pela Lei de Crimes Ambientais:",
   "alternativas": [
-   "Multa",
-   "Pena privativa de liberdade",
-   "Suspensão parcial ou total de atividades",
-   "Prestação de serviços à comunidade",
-   "Proibição de contratar com o Poder Público"
+   "multa",
+   "proibição de contratar com o Poder Público",
+   "prestação de serviços à comunidade",
+   "suspensão parcial ou total de atividades",
+   "pena privativa de liberdade"
   ],
-  "correta": 1,
-  "explicacao": "O art. 21 da Lei 9.605/1998 prevê, para a pessoa jurídica, as penas de multa, restritivas de direitos e prestação de serviços à comunidade. As restritivas de direitos incluem suspensão parcial ou total de atividades, interdição temporária de estabelecimento e proibição de contratar com o Poder Público (art. 22). A pena privativa de liberdade é, por natureza, incompatível com a pessoa jurídica, aplicando-se apenas às pessoas físicas envolvidas. O art. 24 prevê ainda a liquidação forçada da pessoa jurídica constituída ou utilizada preponderantemente para permitir, facilitar ou ocultar crime ambiental.",
+  "correta": 4,
+  "explicacao": "O art. 21 da Lei 9.605/1998 prevê, para a pessoa jurídica, as penas de multa, restritivas de direitos e prestação de serviços à comunidade. As restritivas de direitos incluem suspensão parcial ou total de atividades, interdição temporária de estabelecimento, obra ou atividade e proibição de contratar com o Poder Público (art. 22). A pena privativa de liberdade é incompatível com a pessoa jurídica e só se aplica às pessoas físicas envolvidas, como o diretor. O art. 24 prevê ainda a liquidação forçada da pessoa jurídica constituída ou utilizada preponderantemente para permitir, facilitar ou ocultar crime ambiental.",
   "disciplina": "Ambiental",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-3952cc04",
   "area": "Direitos Humanos",
-  "enunciado": "O incidente de deslocamento de competência para a Justiça Federal, previsto no art. 109, § 5º, da CF/88 para hipóteses de grave violação de direitos humanos, é suscitado:",
+  "enunciado": "Em 2023, cinco trabalhadores rurais foram mortos em uma emboscada ligada a conflito agrário em um município do interior. Passados mais de dois anos, o inquérito conduzido pela Polícia Civil estadual está paralisado: houve ameaças a testemunhas, há suspeita de envolvimento de policiais locais e ocorreram sucessivas trocas de delegados, sem nenhuma diligência relevante. Uma organização não governamental de direitos humanos que acompanha o caso estuda como levar a investigação para a esfera federal, lembrando que o Brasil pode ser responsabilizado internacionalmente pela omissão.\n\nSobre o incidente de deslocamento de competência previsto no art. 109, § 5º, da CF/88, é correto afirmar que ele:",
   "alternativas": [
-   "Pelo Procurador-Geral da República, perante o STF, somente após o recebimento da denúncia",
-   "Por qualquer legitimado à ADI, perante o STF, em qualquer fase do inquérito ou do processo",
-   "Pela vítima ou seus familiares, perante o STJ, somente antes do oferecimento da denúncia",
-   "Pelo Procurador-Geral da República, perante o STJ, em qualquer fase do inquérito ou do processo",
-   "Pelo Ministro da Justiça, perante o STJ, somente durante a fase de inquérito policial"
+   "pode ser suscitado pelo Ministro da Justiça, perante o STJ, somente enquanto durar a fase de inquérito policial",
+   "pode ser suscitado pelo Procurador-Geral da República, perante o STJ, em qualquer fase do inquérito ou do processo",
+   "pode ser suscitado pela própria organização, perante o STF, desde que ainda não tenha sido oferecida a denúncia",
+   "pode ser suscitado pelo Procurador-Geral da República, perante o STF, somente após o recebimento da denúncia",
+   "pode ser suscitado por qualquer legitimado à ADI, perante o STF, em qualquer fase do inquérito ou do processo"
   ],
-  "correta": 3,
-  "explicacao": "Pelo art. 109, § 5º, da CF/88 (EC 45/2004), nas hipóteses de grave violação de direitos humanos, o Procurador-Geral da República, com a finalidade de assegurar o cumprimento de obrigações decorrentes de tratados internacionais de direitos humanos dos quais o Brasil seja parte, poderá suscitar, perante o Superior Tribunal de Justiça, em qualquer fase do inquérito ou processo, incidente de deslocamento de competência para a Justiça Federal. O STJ exige ainda a demonstração de incapacidade ou inércia das autoridades locais. A legitimidade é exclusiva do PGR — não da vítima, do Ministro da Justiça nem dos legitimados à ADI —, o tribunal é o STJ (não o STF) e não há restrição de fase.",
+  "correta": 1,
+  "explicacao": "Pelo art. 109, § 5º, da CF/88 (EC 45/2004), nas hipóteses de grave violação de direitos humanos, o Procurador-Geral da República, para assegurar o cumprimento de obrigações decorrentes de tratados internacionais de direitos humanos de que o Brasil seja parte, poderá suscitar, perante o Superior Tribunal de Justiça, em qualquer fase do inquérito ou processo, incidente de deslocamento de competência para a Justiça Federal. O STJ exige ainda a demonstração de incapacidade, inércia ou falta de condições das autoridades locais para conduzir o caso — o que o enunciado descreve. A legitimidade é exclusiva do PGR: a organização, a vítima ou o Ministro da Justiça podem apenas representar a ele; o tribunal é o STJ, e não o STF; e não há restrição de fase. Para lembrar: IDC — PGR suscita, STJ decide, em qualquer fase.",
   "disciplina": "Direitos Humanos",
   "tema": null,
   "subtema": null,
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-1004533c",
@@ -2480,23 +2509,24 @@
  {
   "id": "dir-6a907c48",
   "area": "Consumidor",
-  "enunciado": "O Banco Delta só libera empréstimo pessoal ao cliente que contratar, no mesmo ato, um seguro de vida oferecido pela seguradora do grupo.\n\nPelo CDC, essa conduta é:",
+  "enunciado": "Paulo, aposentado, procurou o Banco Delta para contratar empréstimo pessoal de R$ 8.000,00. O gerente informou que o crédito só seria liberado se, no mesmo ato, Paulo aderisse a um seguro de vida da seguradora do grupo econômico do banco, com prêmio mensal de R$ 29,90, valor compatível com o de mercado. Paulo assinou os dois contratos e, dias depois, procurou o Procon.\n\nÀ luz do Código de Defesa do Consumidor, a conduta do banco caracteriza:",
   "alternativas": [
-   "lícita se o seguro tiver preço justo",
-   "lícita, por ser serviço bancário",
-   "publicidade enganosa por omissão",
-   "cláusula de eleição de foro nula",
-   "prática abusiva de venda casada"
+   "publicidade enganosa por omissão, pois o seguro não constava do anúncio do empréstimo",
+   "conduta lícita, pois Paulo assinou os dois contratos e manifestou livremente a sua vontade",
+   "venda casada, prática abusiva ainda que o preço do seguro seja compatível com o de mercado",
+   "conduta lícita, pois o seguro protege o próprio consumidor e os beneficiários que ele indicar",
+   "conduta lícita, pois as operações bancárias não se submetem ao Código de Defesa do Consumidor"
   ],
-  "correta": 4,
-  "explicacao": "O art. 39, I, do CDC veda ao fornecedor condicionar o fornecimento de produto ou serviço ao fornecimento de outro produto ou serviço, prática conhecida como venda casada. Os bancos se submetem ao CDC (Súmula 297 do STJ), e o fato de o preço do seguro ser razoável não afasta a abusividade, pois o vício está na imposição ao consumidor. Não se trata de publicidade enganosa (art. 37), nem de cláusula de foro, que é outro problema contratual.",
+  "correta": 2,
+  "explicacao": "O art. 39, I, do CDC veda ao fornecedor condicionar o fornecimento de produto ou serviço ao fornecimento de outro produto ou serviço — a venda casada. As instituições financeiras se submetem ao CDC (Súmula 297 do STJ), e o STJ, no Tema 972 dos repetitivos, afirmou que o consumidor não pode ser compelido a contratar seguro com a instituição financeira ou com seguradora por ela indicada. O preço razoável não afasta a abusividade, pois o vício está na imposição, e a assinatura de Paulo não revela escolha livre, já que o crédito dependia da adesão. Não se trata de publicidade enganosa (art. 37), porque o problema não está no anúncio. Para lembrar: venda casada = art. 39, I, do CDC.",
   "disciplina": "Consumidor",
   "tema": null,
   "subtema": null,
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-412f6c33",
@@ -2522,23 +2552,24 @@
  {
   "id": "dir-f4cf6325",
   "area": "Empresarial",
-  "enunciado": "Rosana quer abrir sozinha um pequeno negócio de confeitaria, com responsabilidade limitada, sem ter sócios.\n\nSegundo o Código Civil, ela pode constituir:",
+  "enunciado": "Rosana, confeiteira, vai abrir sozinha uma loja de bolos e doces. Não quer sócios, mas deseja separar seu patrimônio pessoal (a casa em que mora e suas economias) das dívidas do negócio, respondendo apenas pelo capital que investir. O contador lhe explicou que a antiga EIRELI já não existe como opção.\n\nSegundo o Código Civil vigente, atende ao objetivo de Rosana a constituição de:",
   "alternativas": [
-   "sociedade limitada unipessoal",
-   "sociedade em nome coletivo",
    "sociedade em comandita simples",
    "sociedade em conta de participação",
+   "sociedade em nome coletivo",
+   "sociedade limitada unipessoal",
    "sociedade anônima de capital fechado"
   ],
-  "correta": 0,
-  "explicacao": "O art. 1.052, § 1º, do Código Civil (incluído pela Lei 13.874/2019) permite que a sociedade limitada seja constituída por uma ou mais pessoas, admitindo a sociedade limitada unipessoal, com responsabilidade restrita ao valor das quotas. A sociedade em nome coletivo e a comandita simples exigem pluralidade de sócios e têm sócios de responsabilidade ilimitada; a conta de participação é sociedade não personificada com sócio ostensivo e participante; e a sociedade anônima, em regra, exige pelo menos dois acionistas (art. 80, I, da Lei 6.404/1976), salvo a subsidiária integral.",
+  "correta": 3,
+  "explicacao": "O art. 1.052, § 1º, do Código Civil, incluído pela Lei 13.874/2019, permite que a sociedade limitada seja constituída por uma ou mais pessoas; na limitada unipessoal, a responsabilidade da sócia fica restrita ao valor de suas quotas. As EIRELIs foram transformadas em sociedades limitadas unipessoais pela Lei 14.195/2021. A sociedade em nome coletivo e a comandita simples exigem pluralidade de sócios e têm sócios de responsabilidade ilimitada; a conta de participação é sociedade não personificada, com sócio ostensivo e participante; e a sociedade anônima exige, em regra, ao menos dois acionistas (art. 80, I, da Lei 6.404/1976), salvo a subsidiária integral.",
   "disciplina": "Empresarial",
   "tema": null,
   "subtema": null,
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-34732b72",
@@ -2606,23 +2637,24 @@
  {
   "id": "dir-94f8f997",
   "area": "Empresarial",
-  "enunciado": "Acionistas fundam uma sociedade anônima de alimentos e discutem o nome empresarial.\n\nSegundo o Código Civil e a Lei 6.404/1976, é nome válido para a companhia:",
+  "enunciado": "Na assembleia de constituição de uma sociedade anônima de capital fechado que atuará no ramo de alimentos, os fundadores analisaram cinco sugestões de nome empresarial apresentadas pela agência de publicidade contratada. Antes da votação, o advogado da futura companhia alertou que apenas uma delas atende ao Código Civil e à Lei 6.404/1976.\n\nÉ nome empresarial válido para a companhia:",
   "alternativas": [
-   "Aurora Alimentos Ltda.",
-   "Aurora Alimentos Companhia",
+   "Aurora Indústria de Alimentos",
    "Companhia Aurora de Alimentos",
    "Silva, Souza & Cia. Alimentos",
-   "Aurora Indústria de Alimentos"
+   "Aurora Alimentos Ltda.",
+   "Aurora Alimentos Companhia"
   ],
-  "correta": 2,
-  "explicacao": "A sociedade anônima opera sob denominação, integrada pelas expressões \"sociedade anônima\" ou \"companhia\", por extenso ou abreviadamente (art. 1.160 do Código Civil). O art. 3º da Lei 6.404/1976 veda o uso da palavra \"companhia\" ao final da denominação, o que invalida \"Aurora Alimentos Companhia\". \"Ltda.\" identifica a sociedade limitada; \"Silva, Souza & Cia.\" é firma (razão social), espécie de nome vedada à S.A.; e o nome sem a indicação do tipo societário não atende à exigência legal.",
+  "correta": 1,
+  "explicacao": "A sociedade anônima opera sob denominação, integrada pelas expressões \"sociedade anônima\" ou \"companhia\", por extenso ou abreviadamente (art. 1.160 do Código Civil). O art. 3º da Lei 6.404/1976 veda o uso da palavra \"companhia\" ao final da denominação, o que invalida \"Aurora Alimentos Companhia\". \"Ltda.\" identifica a sociedade limitada; \"Silva, Souza & Cia.\" é firma (razão social), espécie de nome vedada à S.A.; e a denominação sem indicação do tipo societário não atende à exigência legal. Para lembrar: \"Companhia\" pode vir no início ou no meio, nunca no fim; \"S.A.\" pode vir em qualquer posição.",
   "disciplina": "Empresarial",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-a6171843",
@@ -2753,23 +2785,24 @@
  {
   "id": "dir-06c3288d",
   "area": "Introdução ao Direito",
-  "enunciado": "Uma lei brasileira nada dispôs sobre sua vigência. O consulado quer saber quando ela passa a ser obrigatória no exterior, onde é admitida.\n\nSegundo a LINDB, nos Estados estrangeiros, isso ocorre:",
+  "enunciado": "Uma lei federal foi publicada no Diário Oficial da União sem nenhuma disposição sobre o início de sua vigência. O consulado do Brasil em um país estrangeiro, onde a obrigatoriedade da lei brasileira é admitida, consulta a assessoria jurídica para saber a partir de quando ela passa a obrigar no território nacional e no exterior.\n\nSegundo a LINDB, a lei passa a vigorar, respectivamente, no Brasil e no exterior:",
   "alternativas": [
-   "na data da publicação no Diário Oficial",
-   "quarenta e cinco dias depois de publicada",
-   "três meses depois de oficialmente publicada",
-   "noventa dias após a comunicação ao consulado",
-   "seis meses depois de oficialmente publicada"
+   "três meses e seis meses depois de oficialmente publicada",
+   "45 dias e três meses depois de oficialmente publicada",
+   "na data da publicação e 45 dias depois de publicada",
+   "45 dias e seis meses depois de oficialmente publicada",
+   "45 dias depois de publicada e 90 dias após a comunicação ao consulado"
   ],
-  "correta": 2,
-  "explicacao": "O art. 1º da LINDB estabelece que, salvo disposição em contrário, a lei começa a vigorar em todo o país 45 dias depois de oficialmente publicada. O § 1º dispõe que, nos Estados estrangeiros, a obrigatoriedade da lei brasileira, quando admitida, se inicia três meses depois de oficialmente publicada. Não há regra de vigência imediata na ausência de cláusula expressa, nem prazo contado da comunicação ao consulado, e três meses não equivalem necessariamente a noventa dias, pois o prazo é contado em meses.",
+  "correta": 1,
+  "explicacao": "O art. 1º da LINDB estabelece que, salvo disposição em contrário, a lei começa a vigorar em todo o país 45 dias depois de oficialmente publicada, e o § 1º dispõe que, nos Estados estrangeiros, a obrigatoriedade da lei brasileira, quando admitida, se inicia três meses depois de oficialmente publicada. Não há vigência imediata na ausência de cláusula expressa, e os prazos são contados da publicação oficial, e não de comunicação ao consulado. Se o texto fosse republicado para correção antes de entrar em vigor, os prazos recomeçariam da nova publicação (§ 3º).",
   "disciplina": "Introdução ao Direito",
   "tema": null,
   "subtema": null,
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-f951c766",
@@ -2816,23 +2849,24 @@
  {
   "id": "dir-f33e4e81",
   "area": "Introdução ao Direito",
-  "enunciado": "Um juiz anula contrato administrativo invocando apenas a \"moralidade\" e a \"dignidade\", sem avaliar os efeitos concretos da anulação.\n\nSegundo o art. 20 da LINDB, incluído em 2018, a decisão:",
+  "enunciado": "Em ação popular, a juíza da Vara da Fazenda Pública anulou o contrato de concessão do transporte coletivo de um município, serviço que atende cerca de 200 mil passageiros por dia. A sentença limitou-se a afirmar que o contrato \"afronta a moralidade administrativa e a dignidade dos usuários\", sem apontar vício concreto, sem examinar o que ocorreria com o serviço após a anulação e sem cogitar de alternativas, como um regime de transição. Em apelação, o município sustenta que a sentença viola a Lei de Introdução às Normas do Direito Brasileiro.\n\nÀ luz dos arts. 20 e 21 da LINDB, incluídos pela Lei 13.655/2018, é correto afirmar que a sentença:",
   "alternativas": [
-   "deveria ser substituída pela aplicação da analogia, dos costumes e dos princípios gerais",
-   "é válida, pois princípios constitucionais dispensam motivação quanto aos efeitos da decisão",
-   "é nula apenas se proferida por autoridade administrativa, e não pelo Poder Judiciário",
-   "não poderia se basear em valores jurídicos abstratos sem considerar as consequências práticas",
-   "só poderia ser proferida após consulta pública obrigatória prevista para decisões judiciais"
+   "deveria ter sido precedida de consulta pública, exigida pela LINDB antes de decisões judiciais que invalidam contratos",
+   "é válida, pois os arts. 20 e 21 da LINDB alcançam apenas as decisões das esferas administrativa e controladora",
+   "deveria ter aplicado a analogia, os costumes e os princípios gerais de direito, já que a moralidade não tem previsão legal",
+   "é válida, pois a invocação de princípios constitucionais dispensa a motivação sobre os efeitos concretos da decisão",
+   "deveria ter considerado as consequências práticas e indicado as consequências jurídicas e administrativas da invalidação"
   ],
-  "correta": 3,
-  "explicacao": "O art. 20 da LINDB, incluído pela Lei 13.655/2018, determina que, nas esferas administrativa, controladora e judicial, não se decidirá com base em valores jurídicos abstratos sem que sejam consideradas as consequências práticas da decisão; o parágrafo único exige que a motivação demonstre a necessidade e a adequação da medida, inclusive diante de possíveis alternativas. A regra alcança expressamente o Judiciário. A consulta pública prevista no art. 29 refere-se à edição de atos normativos administrativos, e a integração do art. 4º pressupõe lacuna, que não é o caso.",
+  "correta": 4,
+  "explicacao": "O art. 20 da LINDB determina que, nas esferas administrativa, controladora e judicial, não se decidirá com base em valores jurídicos abstratos sem que sejam consideradas as consequências práticas da decisão, e seu parágrafo único exige que a motivação demonstre a necessidade e a adequação da medida, inclusive diante de possíveis alternativas. O art. 21 acrescenta que a decisão que decretar a invalidação de contrato deverá indicar de modo expresso suas consequências jurídicas e administrativas. As regras alcançam expressamente o Judiciário. A consulta pública do art. 29 refere-se à edição de atos normativos pela autoridade administrativa, e a integração do art. 4º pressupõe lacuna — a moralidade, aliás, está expressa no art. 37 da CF/88.",
   "disciplina": "Introdução ao Direito",
   "tema": null,
   "subtema": null,
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-86e7cf93",
@@ -2879,23 +2913,24 @@
  {
   "id": "dir-7b5eaace",
   "area": "Tributário",
-  "enunciado": "Um Estado quer cobrar ICMS na venda de leitores de livros eletrônicos (e-readers) dedicados exclusivamente à leitura.\n\nSegundo o STF, essa cobrança é:",
+  "enunciado": "A Leitura Digital Importadora Ltda. comercializa, no mercado interno, dois produtos importados: (1) um leitor de livros eletrônicos com tela de tinta eletrônica, iluminação embutida e dicionário integrado, que não navega na internet nem executa aplicativos de outra natureza; e (2) um tablet multifuncional, usado para vídeos, jogos, redes sociais e e-mails, no qual também é possível instalar aplicativos de leitura de livros digitais. O Estado exigiu ICMS sobre a venda dos dois aparelhos. A empresa, que não é editora, sustenta que ambos estão protegidos pela imunidade dos livros, porque os dois servem à leitura de e-books.\n\nConsiderando a CF/88 e a jurisprudência do STF, é correto afirmar que o ICMS:",
   "alternativas": [
-   "vedada, pois a imunidade dos livros alcança os e-books e os e-readers",
-   "válida, pois a imunidade abrange apenas livros impressos em papel",
-   "válida, pois equipamentos eletrônicos nunca são alcançados por imunidade",
-   "vedada apenas se o fabricante for editora de livros sem fins lucrativos",
-   "vedada, pois todos os bens culturais são imunes a qualquer imposto"
+   "não incide sobre o leitor de livros eletrônicos, ainda que tenha funções acessórias, mas incide sobre o tablet",
+   "incide sobre o leitor, pois a iluminação e o dicionário embutidos afastam o uso exclusivo para leitura",
+   "incide sobre os dois aparelhos, pois a imunidade é subjetiva e só beneficia editoras e livrarias",
+   "incide sobre os dois aparelhos, pois a imunidade dos livros abrange apenas os exemplares impressos em papel",
+   "não incide sobre nenhum dos dois aparelhos, pois ambos permitem a leitura de livros em formato digital"
   ],
   "correta": 0,
-  "explicacao": "A Súmula Vinculante 57 dispõe que a imunidade tributária do art. 150, VI, d, da CF aplica-se à importação e comercialização, no mercado interno, do livro eletrônico (e-book) e dos suportes exclusivamente utilizados para fixá-lo, como os leitores de livros eletrônicos (e-readers), ainda que possuam funcionalidades acessórias. A imunidade é objetiva, ligada ao bem, e não depende da natureza do fabricante. Não há imunidade geral de todos os bens culturais, e a interpretação restrita ao papel foi superada pelo STF.",
+  "explicacao": "A Súmula Vinculante 57 estabelece que a imunidade do art. 150, VI, d, da CF/88 aplica-se à importação e à comercialização, no mercado interno, do livro eletrônico (e-book) e dos suportes exclusivamente utilizados para fixá-lo, como os leitores de livros eletrônicos (e-readers), ainda que possuam funcionalidades acessórias. Iluminação e dicionário são funções acessórias que não desnaturam o aparelho; já o tablet é equipamento multifuncional, cuja finalidade não é exclusivamente a leitura, e por isso não é imune. A leitura restrita ao papel foi superada pelo STF, e a imunidade dos livros é objetiva (recai sobre o bem), não dependendo de o vendedor ser editora. Para lembrar: SV 57 — e-book e e-reader entram na imunidade do livro; tablet multifuncional, não.",
   "disciplina": "Tributário",
   "tema": null,
   "subtema": null,
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-83fc2b0c",
@@ -3089,23 +3124,24 @@
  {
   "id": "dir-8e806ca7",
   "area": "Processo Penal",
-  "enunciado": "Rui está em prisão preventiva há quatro meses, e o juiz nunca voltou a examinar a necessidade da medida.\n\nSegundo o art. 316, parágrafo único, do CPP, a necessidade da preventiva deve ser revista:",
+  "enunciado": "Rui foi preso preventivamente por decisão do juiz da 2ª Vara Criminal, proferida em 3 de fevereiro de 2026, para garantia da ordem pública, em processo por roubo majorado ainda em fase de instrução. Desde então, o juízo não voltou a examinar a necessidade da prisão. Em 22 de junho de 2026, a defesa impetrou habeas corpus sustentando que, esgotado o prazo legal de revisão, a prisão tornou-se ilegal e Rui deveria ser solto automaticamente, independentemente de nova análise dos fundamentos da custódia.\n\nÀ luz do art. 316, parágrafo único, do CPP e da jurisprudência do STF, é correto afirmar que:",
   "alternativas": [
-   "a cada 90 dias, de ofício, por decisão fundamentada",
-   "a cada 30 dias, mediante requerimento da defesa",
-   "a cada 180 dias, mediante requerimento do MP",
-   "somente ao final da instrução criminal do processo",
-   "a cada 60 dias, após parecer do Ministério Público"
+   "o prazo de 180 dias para a revisão ainda não venceu, pois só termina no início de agosto de 2026, de modo que não há irregularidade alguma",
+   "não há prazo para revisão, pois a necessidade da preventiva só é reexaminada a pedido da defesa ou ao final da instrução criminal",
+   "o prazo de 90 dias para a revisão de ofício venceu no início de maio, e a omissão impõe a revogação automática da prisão, sem nova análise",
+   "o prazo de 60 dias para a revisão venceu no início de abril, mas a revisão dependia de prévio requerimento do Ministério Público",
+   "o prazo de 90 dias para a revisão de ofício venceu no início de maio, mas isso não gera soltura automática; o juízo deve ser instado a reavaliar a prisão"
   ],
-  "correta": 0,
-  "explicacao": "O art. 316, parágrafo único, do CPP (incluído pela Lei 13.964/2019) determina que, decretada a prisão preventiva, o órgão emissor da decisão revise a necessidade de sua manutenção a cada 90 dias, mediante decisão fundamentada, de ofício, sob pena de tornar a prisão ilegal. A revisão independe de requerimento da defesa ou do MP. O STF (SL 1.395) entendeu que a inobservância do prazo não implica revogação automática, devendo o juízo competente ser instado a reavaliar a legalidade e a atualidade dos fundamentos.",
+  "correta": 4,
+  "explicacao": "O art. 316, parágrafo único, do CPP (Lei 13.964/2019) determina que, decretada a preventiva, o órgão emissor da decisão revise a necessidade de sua manutenção a cada 90 dias, mediante decisão fundamentada, de ofício, sob pena de tornar a prisão ilegal. Contados de 3 de fevereiro de 2026, os 90 dias venceram em 4 de maio. O STF, no julgamento da SL 1.395 e das ADIs 6.581 e 6.582, fixou que a inobservância do prazo não implica revogação automática da prisão, devendo o juízo competente ser instado a reavaliar a legalidade e a atualidade de seus fundamentos. A revisão independe de requerimento da defesa ou do MP, e a lei não prevê prazos de 60 ou 180 dias. Para lembrar: Pacote Anticrime — preventiva revista de ofício a cada 90 dias.",
   "disciplina": "Processo Penal",
   "tema": null,
   "subtema": null,
-  "dificuldade": 1,
+  "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-ed22ac9d",
@@ -3140,14 +3176,15 @@
    "I, II e III"
   ],
   "correta": 3,
-  "explicacao": "O Tribunal do Júri julga os crimes dolosos contra a vida (art. 5º, XXXVIII, d, da CF). O latrocínio é crime contra o patrimônio, e a Súmula 603 do STF atribui seu julgamento ao juiz singular, e não ao Júri (I não). No concurso entre a competência do Júri e a de outro órgão da jurisdição comum, prevalece a do Júri (art. 78, I, do CPP), que julgará o homicídio e a ocultação de cadáver conexa (II sim). A Súmula Vinculante 45 estabelece que a competência constitucional do Júri prevalece sobre o foro por prerrogativa de função estabelecido exclusivamente pela Constituição estadual (III sim).",
+  "explicacao": "O Tribunal do Júri julga os crimes dolosos contra a vida (art. 5º, XXXVIII, d, da CF). O latrocínio é crime contra o patrimônio, e a Súmula 603 do STF atribui seu julgamento ao juiz singular, e não ao Júri (I não). No concurso entre a competência do Júri e a de outro órgão da jurisdição comum, prevalece a do Júri (art. 78, I, do CPP), que julgará o homicídio e a ocultação de cadáver conexa (II sim). A Súmula Vinculante 45 estabelece que a competência constitucional do Júri prevalece sobre o foro por prerrogativa de função estabelecido exclusivamente pela Constituição estadual (III sim). Para lembrar: Súmula 603 do STF — latrocínio é julgado pelo juiz singular, e não pelo Júri.",
   "disciplina": "Processo Penal",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-ac96afa2",
@@ -3173,23 +3210,24 @@
  {
   "id": "dir-ee8e06b1",
   "area": "Administrativo",
-  "enunciado": "Uma prefeitura percebe que concedeu, por engano, licença em desacordo com a lei e quer desfazê-la, sem ação judicial.\n\nSegundo a Súmula 473 do STF, a Administração deve:",
+  "enunciado": "Em fevereiro de 2026, a Prefeitura de Rio Claro do Norte concedeu a Márcio licença para construir um galpão. Em agosto, auditoria interna constatou que o projeto licenciado violava o recuo mínimo exigido pela lei municipal de uso do solo, vício que não admite correção. O prefeito quer desfazer o ato sem recorrer ao Poder Judiciário.\n\nÀ luz da Súmula 473 do STF, a Administração deve:",
   "alternativas": [
-   "anular o ato ilegal, ressalvada a apreciação judicial",
-   "revogar o ato ilegal, respeitando os direitos adquiridos",
-   "aguardar decisão judicial para invalidar o ato ilegal",
-   "convalidar o ato, pois licenças geram direito adquirido",
-   "anular o ato apenas se o particular concordar com isso"
+   "anular a licença apenas se Márcio concordar, pois o ato ampliativo depende de anuência do beneficiário",
+   "anular a licença por autotutela, assegurado o contraditório a Márcio, ressalvada a apreciação judicial",
+   "ajuizar ação anulatória, pois a Administração não pode invalidar sozinha ato que favorece o particular",
+   "convalidar a licença, pois o ato vinculado já concedido gera direito adquirido ao seu titular",
+   "revogar a licença por conveniência e oportunidade, respeitando os direitos adquiridos por Márcio"
   ],
-  "correta": 0,
-  "explicacao": "A Súmula 473 do STF dispõe que a Administração pode anular seus próprios atos quando eivados de vícios que os tornam ilegais, porque deles não se originam direitos, ou revogá-los por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos, ressalvada, em todos os casos, a apreciação judicial. É a autotutela, que dispensa ordem judicial e concordância do interessado. A revogação é instrumento para atos válidos, e não para atos ilegais; e ato ilegal com vício insanável não se convalida.",
+  "correta": 1,
+  "explicacao": "A Súmula 473 do STF dispõe que a Administração pode anular seus próprios atos, quando eivados de vícios que os tornam ilegais, porque deles não se originam direitos, ou revogá-los por conveniência ou oportunidade, respeitados os direitos adquiridos e ressalvada, em todos os casos, a apreciação judicial. É a autotutela, que dispensa ordem judicial e concordância do interessado; como o desfazimento atinge a esfera jurídica de Márcio, deve haver processo com contraditório e ampla defesa (art. 5º, LV, da CF/88). A revogação é para atos válidos, e a licença, ato vinculado, em regra não é revogável (a revogação da licença para construir só é admitida, excepcionalmente, antes do início da obra e com indenização) — além disso, aqui o problema é de legalidade; ato com vício insanável não se convalida. Para lembrar: anula-se o ato ilegal (efeitos, em regra, retroativos); revoga-se o ato válido, mas inconveniente (efeitos prospectivos).",
   "disciplina": "Administrativo",
   "tema": null,
   "subtema": null,
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-e3066298",
@@ -3252,7 +3290,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "dir-1cd002b2",

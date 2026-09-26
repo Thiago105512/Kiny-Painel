@@ -3134,20 +3134,21 @@
   "enunciado": "Em ação de cobrança, o juiz, em uma mesma decisão interlocutória, rejeitou a alegação de incompetência relativa suscitada pelo réu em contestação e indeferiu seu pedido de produção de prova pericial. O advogado do réu considera que aguardar a apelação tornará inútil a discussão sobre a competência, pois todo o processo terá tramitado perante o juízo que reputa incompetente.\n\nConsiderando o CPC e a jurisprudência do STJ, assinale a afirmativa correta.",
   "alternativas": [
    "Ambas as questões podem ser impugnadas por agravo de instrumento, pois o rol legal de cabimento desse recurso é meramente exemplificativo.",
-   "A rejeição da incompetência pode ser impugnada por agravo de instrumento, pela taxatividade mitigada, e o indeferimento da perícia pode ser suscitado em preliminar de apelação.",
+   "A rejeição da incompetência admite agravo de instrumento, pela taxatividade mitigada; o indeferimento da perícia, preliminar de apelação.",
    "A rejeição da incompetência só pode ser discutida em preliminar de apelação, e o indeferimento da perícia comporta agravo de instrumento.",
-   "Nenhuma das questões pode ser impugnada por agravo de instrumento, e ambas ficam acobertadas pela preclusão se não houver protesto imediato nos autos.",
+   "Nenhuma das questões admite agravo de instrumento, e ambas ficam acobertadas pela preclusão se não houver protesto imediato nos autos.",
    "A rejeição da incompetência pode ser impugnada por mandado de segurança, e o indeferimento da perícia é irrecorrível em qualquer momento."
   ],
   "correta": 1,
-  "explicacao": "No Tema 988 dos recursos repetitivos, o STJ fixou que o rol do art. 1.015 do CPC é de taxatividade mitigada: admite-se agravo de instrumento quando verificada urgência decorrente da inutilidade do julgamento da questão no recurso de apelação — hipótese que o próprio STJ reconheceu para as decisões sobre competência. O rol não é meramente exemplificativo. O indeferimento de prova pericial não consta do art. 1.015; as questões não agraváveis não são cobertas pela preclusão e devem ser suscitadas em preliminar de apelação ou nas contrarrazões (art. 1.009, § 1º), sem necessidade de protesto. O mandado de segurança não é o meio próprio para isso.",
+  "explicacao": "No Tema 988 dos recursos repetitivos, o STJ fixou que o rol do art. 1.015 do CPC é de taxatividade mitigada: admite-se agravo de instrumento quando verificada urgência decorrente da inutilidade do julgamento da questão no recurso de apelação — hipótese que o próprio STJ reconheceu para as decisões sobre competência. O rol não é meramente exemplificativo. O indeferimento de prova pericial não consta do art. 1.015; as questões não agraváveis não são cobertas pela preclusão e devem ser suscitadas em preliminar de apelação ou nas contrarrazões (art. 1.009, § 1º), sem necessidade de protesto. O mandado de segurança não é o meio próprio para isso. Para lembrar: Tema 988 do STJ — taxatividade mitigada: agravo fora do rol do art. 1.015 só com urgência pela inutilidade do julgamento na apelação.",
   "disciplina": "Processo Civil",
   "tema": null,
   "subtema": null,
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "oab-ff111c5a",
