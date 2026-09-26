@@ -28,9 +28,9 @@
   "especialidade": "cardiologia",
   "nivel": 2,
   "pistas": [
-   "Homem de 28 anos, sem doenças prévias, teve quadro gripal há duas semanas.",
-   "Dor no peito em pontada, que piora ao deitar e ao respirar fundo e melhora ao sentar inclinado para a frente.",
-   "Ausculta com ruído áspero, como couro raspando, na borda esternal esquerda.",
+   "Homem de 28 anos, sem doenças prévias, procura o pronto-socorro com dor no peito.",
+   "Teve quadro gripal há duas semanas. A dor é em pontada e piora ao respirar fundo.",
+   "A dor piora ao deitar e melhora ao sentar inclinado para a frente. Ausculta com ruído áspero, como couro raspando, na borda esternal esquerda.",
    "ECG: elevação difusa do ST com concavidade para cima e infradesnivelamento do segmento PR.",
    "Ecocardiograma com pequeno derrame ao redor do coração; troponina normal."
   ],
@@ -51,9 +51,9 @@
   "especialidade": "cardiologia",
   "nivel": 2,
   "pistas": [
-   "Homem de 76 anos, hipertenso e dislipidêmico, levado ao cardiologista pela filha.",
-   "Cansaço aos esforços, dor no peito ao subir ladeira e um desmaio enquanto caminhava.",
-   "Pulso carotídeo de subida lenta e baixa amplitude (parvus et tardus).",
+   "Homem de 76 anos, hipertenso e dislipidêmico, levado ao cardiologista pela filha por cansaço.",
+   "O cansaço vem aos esforços, e ele sente dor no peito ao subir ladeira.",
+   "Também teve um desmaio enquanto caminhava. Pulso carotídeo de subida lenta e baixa amplitude (parvus et tardus).",
    "Sopro sistólico em crescendo-decrescendo no 2º espaço intercostal direito, irradiando para as carótidas.",
    "Ecocardiograma: valva calcificada, área valvar de 0,8 cm² e gradiente médio de 45 mmHg."
   ],
@@ -74,9 +74,9 @@
   "especialidade": "cardiologia",
   "nivel": 2,
   "pistas": [
-   "Mulher de 55 anos, nascida no interior da Bahia, passou a infância em casa de pau a pique.",
-   "Falta de ar progressiva, inchaço nas pernas e palpitações há 1 ano.",
-   "Veias do pescoço distendidas, fígado aumentado e ritmo irregular com muitas extrassístoles.",
+   "Mulher de 55 anos com falta de ar progressiva há 1 ano, pior aos esforços.",
+   "Surgiram inchaço nas pernas e palpitações. Veias do pescoço distendidas e fígado aumentado.",
+   "Nasceu no interior da Bahia e passou a infância em casa de pau a pique. Ritmo irregular, com muitas extrassístoles.",
    "ECG: bloqueio de ramo direito associado a bloqueio divisional anterossuperior esquerdo.",
    "Eco com aneurisma na ponta do ventrículo esquerdo; sorologia IgG positiva por dois métodos diferentes."
   ],
@@ -120,11 +120,11 @@
   "especialidade": "pneumologia",
   "nivel": 1,
   "pistas": [
-   "Menina de 12 anos com rinite alérgica e dermatite atópica desde pequena.",
-   "Crises de chiado, tosse à noite e aperto no peito, piores com poeira e mudança de tempo.",
-   "Na crise: sibilos expiratórios difusos e tempo expiratório prolongado.",
-   "Espirometria: padrão obstrutivo, com VEF1 que aumenta mais de 12% e 200 mL após broncodilatador.",
-   "Fração exalada de óxido nítrico elevada; entre as crises fica totalmente sem sintomas."
+   "Menina de 12 anos levada à consulta por tosse que vai e volta.",
+   "A tosse piora à noite e às vezes vem com chiado e aperto no peito.",
+   "Tem rinite alérgica e dermatite atópica desde pequena. As crises pioram com poeira e mudança de tempo; entre elas, fica totalmente sem sintomas.",
+   "Na crise: sibilos expiratórios difusos e tempo expiratório prolongado. Fração exalada de óxido nítrico elevada.",
+   "Espirometria: padrão obstrutivo, com VEF1 que aumenta mais de 12% e 200 mL após broncodilatador."
   ],
   "opcoes": [
    "Bronquiolite obliterante",
@@ -143,10 +143,10 @@
   "especialidade": "pneumologia",
   "nivel": 1,
   "pistas": [
-   "Homem de 66 anos, fumante de 45 maços-ano, trabalhou em olaria.",
-   "Tosse com catarro todas as manhãs há anos e falta de ar que piora aos poucos.",
-   "Tórax em tonel, murmúrio vesicular diminuído e expiração prolongada com lábios semicerrados.",
-   "Raio X: hiperinsuflação, cúpulas diafragmáticas retificadas e aumento do espaço retroesternal.",
+   "Homem de 66 anos, trabalhou em olaria, com falta de ar que piora aos poucos.",
+   "Tem tosse com catarro todas as manhãs há anos.",
+   "É fumante de 45 maços-ano. Tórax em tonel e expiração prolongada com lábios semicerrados.",
+   "Murmúrio vesicular diminuído. Raio X: hiperinsuflação, cúpulas diafragmáticas retificadas e aumento do espaço retroesternal.",
    "Espirometria: relação VEF1/CVF pós-broncodilatador de 0,58, sem normalização."
   ],
   "opcoes": [
@@ -166,10 +166,10 @@
   "especialidade": "pneumologia",
   "nivel": 2,
   "pistas": [
-   "Mulher de 34 anos, usa anticoncepcional combinado, no 5º dia após cirurgia de fratura de fêmur.",
-   "Falta de ar de início súbito, dor no peito ao respirar e escarro com raias de sangue.",
-   "FC 118 bpm, FR 28 irpm, SpO2 89% e panturrilha direita inchada e dolorosa.",
-   "Gasometria com hipoxemia e hipocapnia; D-dímero elevado; ECG com taquicardia sinusal e padrão S1Q3T3.",
+   "Mulher de 34 anos, internada, passa a sentir falta de ar de início súbito.",
+   "Dor no peito que piora ao respirar. FC 118 bpm, FR 28 irpm e SpO2 89%.",
+   "Está no 5º dia após cirurgia de fratura de fêmur e usa anticoncepcional combinado. Escarro com raias de sangue.",
+   "Panturrilha direita inchada e dolorosa. Gasometria com hipoxemia e hipocapnia; D-dímero elevado; ECG com taquicardia sinusal e padrão S1Q3T3.",
    "Angiotomografia de tórax com falha de enchimento nos ramos arteriais dos lobos inferiores."
   ],
   "opcoes": [
@@ -189,11 +189,11 @@
   "especialidade": "pneumologia",
   "nivel": 2,
   "pistas": [
-   "Homem de 20 anos, alto e magro, fumante, sem doenças prévias.",
-   "Dor súbita em pontada no lado direito do peito, em repouso, seguida de falta de ar.",
+   "Homem de 20 anos, sem doenças prévias, chega ao pronto-socorro com dor no peito e falta de ar.",
+   "A dor é em pontada, no lado direito do peito, e começou em repouso.",
+   "A dor começou de forma súbita, seguida da falta de ar. Ele é alto, magro e fumante.",
    "Hemitórax direito com murmúrio vesicular abolido, hipertimpanismo e frêmito diminuído.",
-   "Raio X: linha pleural visceral visível e ausência de trama vascular na periferia.",
-   "TC de tórax com pequenas bolhas subpleurais nos ápices."
+   "Raio X: linha pleural visceral visível e ausência de trama vascular na periferia. TC de tórax com pequenas bolhas subpleurais nos ápices."
   ],
   "opcoes": [
    "Pericardite aguda",
@@ -213,10 +213,10 @@
   "nivel": 3,
   "pistas": [
    "Mulher de 35 anos, não fumante, com tosse seca há 3 meses.",
-   "Nódulos vermelhos e dolorosos nas pernas, febre baixa e dor nos tornozelos.",
-   "Olhos vermelhos com fotofobia; ausculta pulmonar sem alterações.",
-   "Raio X: aumento bilateral e simétrico dos linfonodos hilares; cálcio sérico e ECA elevados.",
-   "Biópsia transbrônquica: granulomas epitelioides não caseosos; PPD não reator."
+   "Tem febre baixa; a ausculta pulmonar é normal.",
+   "Nódulos vermelhos e dolorosos nas pernas, dor nos tornozelos e olhos vermelhos com fotofobia.",
+   "Raio X: aumento bilateral e simétrico dos linfonodos hilares. Cálcio sérico e ECA elevados.",
+   "Biópsia transbrônquica: granulomas epitelioides não caseosos. PPD não reator."
   ],
   "opcoes": [
    "Linfoma de Hodgkin",
@@ -258,11 +258,11 @@
   "especialidade": "infectologia",
   "nivel": 2,
   "pistas": [
-   "Homem de 40 anos, mora em área alagada de Manaus e limpou a casa descalço após a cheia do rio.",
-   "Febre alta súbita, dor de cabeça e dor intensa nas panturrilhas há 6 dias.",
-   "Olhos com sufusão conjuntival bilateral, icterícia de tom alaranjado e urina escassa.",
-   "Creatinina 4,2 mg/dL com potássio normal ou baixo, CPK elevada, bilirrubina direta alta e plaquetopenia.",
-   "Tosse com sangue e infiltrado alveolar difuso por hemorragia nos pulmões."
+   "Homem de 40 anos, morador de Manaus, com febre alta de início súbito e dor de cabeça há 6 dias.",
+   "Surgiram olhos amarelados e diminuição da urina.",
+   "Mora em área alagada e limpou a casa descalço após a cheia do rio. Tem dor intensa nas panturrilhas.",
+   "Olhos com sufusão conjuntival bilateral e icterícia de tom alaranjado. Tosse com sangue e infiltrado alveolar difuso por hemorragia nos pulmões.",
+   "Creatinina 4,2 mg/dL com potássio normal ou baixo, CPK elevada, bilirrubina direta alta e plaquetopenia."
   ],
   "opcoes": [
    "Febre amarela",
@@ -281,10 +281,10 @@
   "especialidade": "infectologia",
   "nivel": 3,
   "pistas": [
-   "Família de 5 pessoas do interior do Pará adoece junta, dias após tomar açaí batido de forma artesanal.",
-   "Febre prolongada há 3 semanas, inchaço no rosto e nas pernas e cansaço.",
-   "Fígado e baço discretamente aumentados, taquicardia desproporcional à febre e bulhas abafadas.",
-   "ECG com baixa voltagem e alterações de repolarização; eco com derrame pericárdico.",
+   "Paciente do interior do Pará procura atendimento com febre prolongada há 3 semanas e cansaço.",
+   "Tem inchaço no rosto e nas pernas. Fígado e baço discretamente aumentados.",
+   "A família toda (5 pessoas) adoeceu junta, dias após tomar açaí batido de forma artesanal.",
+   "Taquicardia desproporcional à febre e bulhas abafadas. ECG com baixa voltagem e alterações de repolarização; eco com derrame pericárdico.",
    "Exame a fresco e gota espessa do sangue com tripomastigotas flagelados circulantes."
   ],
   "opcoes": [
@@ -304,10 +304,10 @@
   "especialidade": "infectologia",
   "nivel": 1,
   "pistas": [
-   "Homem de 45 anos, privado de liberdade em unidade prisional de Manaus.",
-   "Tosse com catarro há 5 semanas, febre no fim da tarde, suor noturno e perda de 8 kg.",
-   "Emagrecido, com estertores no ápice do pulmão direito.",
-   "Raio X: consolidação com cavidade no lobo superior direito.",
+   "Homem de 45 anos, em Manaus, com tosse com catarro e febre.",
+   "A tosse já dura 5 semanas, e ele perdeu 8 kg.",
+   "Vive em unidade prisional. A febre vem no fim da tarde, com suor noturno.",
+   "Emagrecido, com estertores no ápice do pulmão direito. Raio X: consolidação com cavidade no lobo superior direito.",
    "Baciloscopia do escarro com bacilos álcool-ácido resistentes; teste molecular sem resistência à rifampicina."
   ],
   "opcoes": [
@@ -373,10 +373,10 @@
   "especialidade": "gastroenterologia",
   "nivel": 2,
   "pistas": [
-   "Mulher de 26 anos com anemia por falta de ferro que não melhora com sulfato ferroso oral.",
-   "Diarreia crônica com fezes volumosas e gordurosas, barriga estufada e perda de peso.",
-   "Bolhas pequenas e muito pruriginosas nos cotovelos e joelhos.",
-   "Anticorpo antitransglutaminase tecidual IgA muito elevado, com IgA total normal.",
+   "Mulher de 26 anos com diarreia crônica e barriga estufada.",
+   "As fezes são volumosas e gordurosas, e ela vem perdendo peso.",
+   "Tem anemia por falta de ferro que não melhora com sulfato ferroso oral.",
+   "Bolhas pequenas e muito pruriginosas nos cotovelos e joelhos. Antitransglutaminase tecidual IgA muito elevado, com IgA total normal.",
    "Biópsia duodenal: atrofia das vilosidades, hiperplasia de criptas e aumento de linfócitos intraepiteliais."
   ],
   "opcoes": [
@@ -396,9 +396,9 @@
   "especialidade": "gastroenterologia",
   "nivel": 1,
   "pistas": [
-   "Mulher de 48 anos, obesa, com episódios anteriores de cólica após comida gordurosa.",
-   "Dor forte no epigástrio, em faixa, irradiando para as costas, com vômitos, após uma feijoada.",
-   "Abdome doloroso no andar superior, com leve mancha arroxeada ao redor do umbigo.",
+   "Mulher de 48 anos, obesa, chega ao pronto-socorro com dor forte no andar superior do abdome e vômitos.",
+   "A dor começou após uma feijoada. Já teve episódios de cólica após comida gordurosa.",
+   "A dor é no epigástrio, em faixa, e irradia para as costas. Há leve mancha arroxeada ao redor do umbigo.",
    "Lipase 5 vezes acima do limite superior; ALT acima de 150 U/L.",
    "USG: vesícula com vários cálculos e colédoco levemente dilatado."
   ],
@@ -442,11 +442,11 @@
   "especialidade": "gastroenterologia",
   "nivel": 2,
   "pistas": [
-   "Homem de 58 anos com cirrose por álcool, já internado antes por ascite.",
-   "Febre baixa, dor difusa na barriga e sonolência nos últimos 2 dias.",
-   "Abdome distendido com macicez móvel, levemente doloroso, sem defesa abdominal.",
+   "Homem de 58 anos com cirrose por álcool, trazido pela família por sonolência há 2 dias.",
+   "Já foi internado antes por ascite. Agora tem febre baixa e dor difusa na barriga.",
+   "Abdome distendido, com macicez móvel, levemente doloroso e sem defesa abdominal.",
    "Paracentese: 480 polimorfonucleares/mm³, GASA 1,6 g/dL e proteína total 0,8 g/dL.",
-   "Cultura do líquido com um único germe (E. coli); TC sem perfuração ou abscesso."
+   "Cultura do líquido com um único germe (E. coli). TC sem perfuração ou abscesso."
   ],
   "opcoes": [
    "Peritonite bacteriana espontânea",
@@ -465,9 +465,9 @@
   "especialidade": "nefrologia",
   "nivel": 1,
   "pistas": [
-   "Menino de 8 anos, teve feridas com crostas nas pernas (impetigo) há 3 semanas.",
-   "Urina cor de coca-cola e inchaço nas pálpebras pela manhã.",
-   "PA 140x95 mmHg, edema de pálpebras e de pernas.",
+   "Menino de 8 anos trazido porque acorda com inchaço nas pálpebras.",
+   "A urina está cor de coca-cola. PA 140x95 mmHg e edema também nas pernas.",
+   "Há 3 semanas teve feridas com crostas nas pernas (impetigo).",
    "Urina com hematúria dismórfica e cilindros hemáticos; proteinúria abaixo da faixa nefrótica.",
    "Anti-DNase B elevado e C3 baixo, que volta ao normal em até 8 semanas."
   ],
@@ -488,9 +488,9 @@
   "especialidade": "nefrologia",
   "nivel": 2,
   "pistas": [
-   "Menino de 4 anos, previamente saudável, teve resfriado há 1 semana.",
-   "Inchaço que começou nos olhos e se espalhou pelo corpo; urina com espuma.",
-   "PA normal, edema generalizado com ascite e sem sangue visível na urina.",
+   "Menino de 4 anos, previamente saudável, com inchaço que começou ao redor dos olhos.",
+   "Teve resfriado há 1 semana. O inchaço se espalhou pelo corpo.",
+   "Urina com espuma e sem sangue visível. PA normal; edema generalizado com ascite.",
    "Proteinúria de 60 mg/kg/dia, albumina 1,8 g/dL e colesterol muito elevado.",
    "Remissão completa após 4 semanas de prednisolona, sem precisar de biópsia."
   ],
@@ -511,10 +511,10 @@
   "especialidade": "nefrologia",
   "nivel": 3,
   "pistas": [
-   "Homem de 22 anos, recruta do Exército, após marcha longa sob calor intenso na selva.",
-   "Dor muscular forte nas coxas, fraqueza e urina escura.",
-   "Músculos dolorosos à palpação, desidratado e urinando pouco.",
-   "Fita urinária positiva para sangue, mas sem hemácias na microscopia.",
+   "Homem de 22 anos, recruta do Exército, com fraqueza.",
+   "Voltou de uma marcha longa na selva. Está desidratado e urinando pouco.",
+   "A marcha foi sob calor intenso. Tem dor muscular forte nas coxas e urina escura.",
+   "Músculos dolorosos à palpação. Fita urinária positiva para sangue, mas sem hemácias na microscopia.",
    "CPK 85.000 U/L, creatinina 3,1 mg/dL, potássio 6,2 mEq/L, fósforo alto e cálcio baixo."
   ],
   "opcoes": [
@@ -534,10 +534,10 @@
   "especialidade": "nefrologia",
   "nivel": 2,
   "pistas": [
-   "Homem de 40 anos; o pai fazia hemodiálise e uma tia morreu de sangramento cerebral.",
-   "Dor lombar crônica, episódios de sangue na urina e pressão alta de difícil controle.",
-   "Massas palpáveis e irregulares nos dois flancos.",
-   "Creatinina 1,9 mg/dL; urina com hematúria sem dismorfismo.",
+   "Homem de 40 anos com pressão alta de difícil controle.",
+   "Tem dor lombar crônica e episódios de sangue na urina.",
+   "O pai fazia hemodiálise e uma tia morreu de sangramento cerebral.",
+   "Massas palpáveis e irregulares nos dois flancos. Creatinina 1,9 mg/dL; urina com hematúria sem dismorfismo.",
    "USG: rins aumentados com múltiplos cistos bilaterais e cistos também no fígado."
   ],
   "opcoes": [
@@ -557,10 +557,10 @@
   "especialidade": "nefrologia",
   "nivel": 1,
   "pistas": [
-   "Homem de 35 anos, trabalha ao ar livre em Manaus e bebe pouca água.",
-   "Dor em cólica muito forte na lombar esquerda, que irradia para a virilha e o testículo.",
-   "Inquieto, sem posição que alivie; punho-percussão lombar dolorosa à esquerda; sem febre.",
-   "Urina com hematúria microscópica e sem leucocitúria importante.",
+   "Homem de 35 anos, de Manaus, chega ao pronto-socorro com dor muito forte no lado esquerdo.",
+   "A dor fica na lombar esquerda e irradia para a virilha. Não tem febre.",
+   "É uma dor em cólica, que chega ao testículo esquerdo; está inquieto, sem posição que alivie. Trabalha ao ar livre e bebe pouca água.",
+   "Punho-percussão lombar dolorosa à esquerda. Urina com hematúria microscópica e sem leucocitúria importante.",
    "TC sem contraste: imagem hiperdensa de 5 mm perto da junção com a bexiga à esquerda, com leve hidronefrose."
   ],
   "opcoes": [
@@ -580,11 +580,11 @@
   "especialidade": "endocrinologia",
   "nivel": 1,
   "pistas": [
-   "Adolescente de 14 anos, sem doenças conhecidas, perdeu 5 kg no último mês.",
-   "Muita sede, urina em excesso, dor na barriga e vômitos há 2 dias.",
-   "Desidratado, respiração profunda e rápida, com hálito de fruta.",
-   "Glicemia 480 mg/dL, pH 7,08, bicarbonato 8 mEq/L e ânion gap de 24.",
-   "Beta-hidroxibutirato sérico elevado."
+   "Adolescente de 14 anos, sem doenças conhecidas, com dor na barriga e vômitos há 2 dias.",
+   "Está desidratado, com respiração profunda e rápida.",
+   "Perdeu 5 kg no último mês. Tem muita sede e urina em excesso.",
+   "Hálito de fruta. Glicemia de 480 mg/dL.",
+   "Gasometria: pH 7,08, bicarbonato 8 mEq/L e ânion gap de 24. Beta-hidroxibutirato sérico elevado."
   ],
   "opcoes": [
    "Intoxicação por salicilatos",
@@ -603,10 +603,10 @@
   "especialidade": "endocrinologia",
   "nivel": 1,
   "pistas": [
-   "Mulher de 45 anos, com mãe e irmã portadoras de doenças autoimunes.",
-   "Cansaço, ganho de peso, intestino preso, muito frio e menstruação aumentada.",
-   "Pele seca, reflexos lentos e bócio difuso, indolor e de consistência firme.",
-   "TSH 18 mUI/L e T4 livre baixo.",
+   "Mulher de 45 anos com cansaço.",
+   "Ganho de peso, intestino preso, muito frio e menstruação aumentada.",
+   "Mãe e irmã têm doenças autoimunes. Pele seca e reflexos lentos.",
+   "Bócio difuso, indolor e de consistência firme. TSH 18 mUI/L e T4 livre baixo.",
    "Anticorpo antitireoperoxidase (anti-TPO) em título alto."
   ],
   "opcoes": [
@@ -649,9 +649,9 @@
   "especialidade": "endocrinologia",
   "nivel": 2,
   "pistas": [
-   "Mulher de 38 anos com vitiligo e hipotireoidismo autoimune.",
-   "Cansaço intenso, perda de peso, náuseas, tontura ao levantar e vontade de comer sal.",
-   "Pele escurecida nas dobras das mãos, cicatrizes e gengivas; PA 90x60 mmHg.",
+   "Mulher de 38 anos procura atendimento por cansaço intenso e perda de peso.",
+   "Tem náuseas e tontura ao levantar. PA 90x60 mmHg.",
+   "Tem vitiligo e hipotireoidismo autoimune e sente vontade de comer sal. Pele escurecida nas dobras das mãos, cicatrizes e gengivas.",
    "Sódio 128 mEq/L, potássio 5,9 mEq/L e glicemia de jejum 62 mg/dL.",
    "Cortisol basal baixo com ACTH muito elevado; sem resposta ao estímulo com cosintropina."
   ],
@@ -718,10 +718,10 @@
   "especialidade": "neurologia",
   "nivel": 2,
   "pistas": [
-   "Mulher de 50 anos, fumante e hipertensa.",
-   "Dor de cabeça súbita e explosiva durante esforço, 'a pior da vida', com vômitos.",
-   "Rigidez de nuca, sem febre; perdeu a consciência por pouco tempo no início.",
-   "TC de crânio sem contraste: sangue nas cisternas da base e nas fissuras laterais.",
+   "Mulher de 50 anos, fumante e hipertensa, com dor de cabeça forte e vômitos.",
+   "Perdeu a consciência por pouco tempo no início. Está sem febre.",
+   "A dor começou de forma súbita e explosiva, durante esforço: 'a pior da vida'.",
+   "Rigidez de nuca. TC de crânio sem contraste: sangue nas cisternas da base e nas fissuras laterais.",
    "Angiotomografia: aneurisma sacular na artéria comunicante anterior."
   ],
   "opcoes": [
@@ -741,11 +741,11 @@
   "especialidade": "neurologia",
   "nivel": 2,
   "pistas": [
-   "Homem de 30 anos que teve diarreia há 2 semanas.",
-   "Formigamento nos pés e fraqueza que sobe para pernas e braços em 5 dias.",
+   "Homem de 30 anos procura o pronto-socorro por fraqueza nas pernas.",
+   "Em 5 dias, a fraqueza se espalhou para os braços.",
+   "Tudo começou com formigamento nos pés. Duas semanas antes, teve diarreia.",
    "Fraqueza flácida e simétrica nos quatro membros, sem reflexos, com pouca alteração de sensibilidade.",
-   "Líquor: proteína 180 mg/dL com 3 células/mm³.",
-   "Eletroneuromiografia: polirradiculoneuropatia desmielinizante aguda."
+   "Líquor: proteína 180 mg/dL com 3 células/mm³. Eletroneuromiografia: polirradiculoneuropatia desmielinizante aguda."
   ],
   "opcoes": [
    "Síndrome de Guillain-Barré",
@@ -764,11 +764,11 @@
   "especialidade": "neurologia",
   "nivel": 2,
   "pistas": [
-   "Mulher de 28 anos, sem doenças prévias.",
-   "Visão dupla e pálpebras caídas que pioram no fim do dia.",
-   "Cansaço para mastigar e falar por muito tempo; reflexos e sensibilidade normais.",
-   "Teste do gelo positivo na ptose; anticorpo antirreceptor de acetilcolina positivo.",
-   "TC de tórax com massa no mediastino anterior."
+   "Mulher de 28 anos, sem doenças prévias, procura atendimento por visão dupla.",
+   "Também notou as pálpebras caídas.",
+   "Os sintomas pioram no fim do dia. Cansa ao mastigar e ao falar por muito tempo.",
+   "Reflexos e sensibilidade normais. Teste do gelo positivo na ptose.",
+   "Anticorpo antirreceptor de acetilcolina positivo. TC de tórax com massa no mediastino anterior."
   ],
   "opcoes": [
    "Síndrome de Guillain-Barré",
@@ -810,10 +810,10 @@
   "especialidade": "hematologia",
   "nivel": 1,
   "pistas": [
-   "Menino de 6 anos, negro, com teste do pezinho alterado ao nascer.",
-   "Dor forte nos ossos das pernas e nas costas após uma gripe, igual a crises anteriores.",
-   "Palidez e icterícia leve; baço não palpável (já foi grande quando menor).",
-   "Hb 7,2 g/dL, reticulócitos 12%, bilirrubina indireta e LDH elevadas.",
+   "Menino de 6 anos com dor forte nos ossos das pernas e nas costas, após uma gripe.",
+   "Está pálido e com icterícia leve.",
+   "Menino negro, com teste do pezinho alterado ao nascer. Já teve crises de dor iguais a esta.",
+   "Baço não palpável (já foi grande quando menor). Hb 7,2 g/dL, reticulócitos 12%, bilirrubina indireta e LDH elevadas.",
    "Eletroforese de hemoglobina: HbS 90%, HbF 8% e ausência de HbA."
   ],
   "opcoes": [
@@ -833,10 +833,10 @@
   "especialidade": "hematologia",
   "nivel": 1,
   "pistas": [
-   "Mulher de 32 anos com menstruação muito volumosa por miomas.",
-   "Cansaço, queda de cabelo e vontade de comer gelo.",
-   "Palidez, unhas em forma de colher e língua lisa e ardida.",
-   "Hb 8,5 g/dL, VCM 68 fL, RDW 19% e plaquetas levemente aumentadas.",
+   "Mulher de 32 anos com cansaço e queda de cabelo.",
+   "Está pálida. Hemograma: Hb 8,5 g/dL e VCM 68 fL.",
+   "Tem menstruação muito volumosa por miomas e sente vontade de comer gelo.",
+   "Unhas em forma de colher e língua lisa e ardida. RDW 19% e plaquetas levemente aumentadas.",
    "Ferritina 6 ng/mL e saturação de transferrina 7%."
   ],
   "opcoes": [
@@ -856,9 +856,9 @@
   "especialidade": "hematologia",
   "nivel": 2,
   "pistas": [
-   "Criança de 4 anos, saudável, teve virose há 3 semanas.",
-   "Manchas roxas e pontinhos vermelhos na pele, e sangramento pelo nariz.",
-   "Bom estado geral, sem febre e sem aumento de baço, fígado ou gânglios.",
+   "Criança de 4 anos, saudável, levada ao pronto-socorro por manchas roxas na pele.",
+   "Também tem pontinhos vermelhos na pele e sangramento pelo nariz.",
+   "Teve virose há 3 semanas. Está em bom estado geral, sem febre e sem aumento de baço, fígado ou gânglios.",
    "Plaquetas 8.000/mm³, com hemoglobina e leucócitos normais.",
    "Esfregaço com plaquetas grandes, sem blastos e sem esquizócitos."
   ],
@@ -925,11 +925,11 @@
   "especialidade": "reumatologia",
   "nivel": 1,
   "pistas": [
-   "Mulher de 25 anos, piorou depois de um dia de sol na praia da Ponta Negra, em Manaus.",
-   "Dor e inchaço nas mãos, queda de cabelo e aftas indolores na boca.",
-   "Mancha vermelha nas bochechas e no dorso do nariz, que poupa os sulcos nasolabiais.",
-   "Leucopenia e plaquetopenia; urina com proteinúria e cilindros hemáticos.",
-   "FAN 1:640 homogêneo, anti-DNA de dupla hélice e anti-Sm positivos; complemento baixo."
+   "Mulher de 25 anos com dor e inchaço nas mãos.",
+   "Também notou queda de cabelo.",
+   "Piorou depois de um dia de sol na praia da Ponta Negra, em Manaus. Tem aftas indolores na boca.",
+   "Mancha vermelha nas bochechas e no dorso do nariz, que poupa os sulcos nasolabiais. Leucopenia e plaquetopenia.",
+   "Urina com proteinúria e cilindros hemáticos. FAN 1:640 homogêneo, anti-DNA de dupla hélice e anti-Sm positivos; complemento baixo."
   ],
   "opcoes": [
    "Artrite reumatoide",
@@ -948,9 +948,9 @@
   "especialidade": "reumatologia",
   "nivel": 1,
   "pistas": [
-   "Mulher de 45 anos, fumante.",
-   "Dor e inchaço nas mãos e punhos há 4 meses, com rigidez matinal por mais de 1 hora.",
-   "Sinovite simétrica nas metacarpofalangianas e interfalangianas proximais, poupando as distais.",
+   "Mulher de 45 anos, fumante, com dor nas mãos.",
+   "Dor e inchaço nas mãos e punhos há 4 meses.",
+   "Rigidez matinal por mais de 1 hora. Sinovite simétrica nas metacarpofalangianas e interfalangianas proximais, poupando as distais.",
    "VHS e PCR elevados; FR (anticorpo IgM contra IgG) positivo.",
    "Anti-CCP em título alto; raio X com erosões marginais e osteopenia periarticular."
   ],
@@ -971,9 +971,9 @@
   "especialidade": "reumatologia",
   "nivel": 2,
   "pistas": [
-   "Homem de 52 anos, obeso, hipertenso em uso de hidroclorotiazida, bebe cerveja nos fins de semana.",
-   "Acordou de madrugada com dor intensa no dedão do pé direito; não suporta nem o lençol.",
-   "Primeira metatarsofalangiana quente, vermelha e muito inchada; febre baixa.",
+   "Homem de 52 anos, obeso, procura o pronto-socorro com dor intensa no pé direito.",
+   "A dor começou de madrugada e é tão forte que ele não suporta nem o lençol. Tem febre baixa.",
+   "É hipertenso, usa hidroclorotiazida e bebe cerveja nos fins de semana. A primeira metatarsofalangiana está quente, vermelha e muito inchada.",
    "Ácido úrico sérico normal durante a crise; PCR elevada.",
    "Líquido sinovial com cristais em agulha, de birrefringência negativa forte à luz polarizada."
   ],
@@ -995,9 +995,9 @@
   "nivel": 3,
   "pistas": [
    "Homem de 26 anos com dor lombar há 1 ano.",
-   "Dor que acorda de madrugada, melhora com exercício e piora com repouso; rigidez matinal longa.",
-   "Teste de Schober reduzido e dor nas sacroilíacas; já teve um olho vermelho e doloroso.",
-   "PCR elevada, HLA-B27 positivo e fator reumatoide negativo.",
+   "Já teve um olho vermelho e doloroso.",
+   "A dor acorda de madrugada, melhora com exercício e piora com repouso. Rigidez matinal longa.",
+   "Teste de Schober reduzido e dor nas sacroilíacas. PCR elevada, HLA-B27 positivo e fator reumatoide negativo.",
    "RM com edema ósseo nas sacroilíacas; raio X com sindesmófitos na coluna."
   ],
   "opcoes": [
@@ -1017,10 +1017,10 @@
   "especialidade": "reumatologia",
   "nivel": 3,
   "pistas": [
-   "Mulher de 74 anos com dor e rigidez nos ombros e quadris pela manhã.",
-   "Dor de cabeça nova na têmpora direita e dor na mandíbula ao mastigar.",
-   "Artéria temporal espessada, dolorosa e com pulso diminuído.",
-   "VHS 98 mm/h e PCR elevada; anemia normocítica.",
+   "Mulher de 74 anos com dor de cabeça nova na têmpora direita.",
+   "Também tem dor e rigidez nos ombros e quadris pela manhã.",
+   "Sente dor na mandíbula ao mastigar.",
+   "Artéria temporal espessada, dolorosa e com pulso diminuído. VHS 98 mm/h e PCR elevada; anemia normocítica.",
    "Biópsia: infiltrado granulomatoso na parede do vaso, macrófagos multinucleados e lâmina elástica rota."
   ],
   "opcoes": [
@@ -1040,10 +1040,10 @@
   "especialidade": "dermatologia",
   "nivel": 2,
   "pistas": [
-   "Homem de 40 anos, do interior do Amazonas; um irmão fez tratamento longo para doença de pele.",
-   "Várias manchas avermelhadas no tronco e braços, sem coceira, há 1 ano.",
-   "Manchas sem sensibilidade ao calor e à dor; nervo ulnar grosso e doloroso.",
-   "Mais de 5 lesões de pele e mais de um tronco nervoso acometido.",
+   "Homem de 40 anos procura o posto de saúde por manchas na pele.",
+   "São várias manchas avermelhadas no tronco e nos braços, sem coceira, há 1 ano.",
+   "Mora no interior do Amazonas; um irmão fez tratamento longo para doença de pele. As manchas não têm sensibilidade ao calor nem à dor.",
+   "Nervo ulnar grosso e doloroso. Mais de 5 lesões de pele e mais de um tronco nervoso acometido.",
    "Baciloscopia do raspado intradérmico com bacilos álcool-ácido resistentes agrupados em globias."
   ],
   "opcoes": [
@@ -1063,11 +1063,11 @@
   "especialidade": "dermatologia",
   "nivel": 1,
   "pistas": [
-   "Homem de 28 anos, trabalha em desmatamento em ramal perto de Manaus.",
-   "Picada de inseto na perna há 2 meses, que virou uma ferida que não cicatriza.",
-   "Úlcera única, indolor, redonda, com bordas elevadas em moldura e fundo granuloso.",
-   "Esfregaço da borda da úlcera com formas amastigotas dentro de macrófagos.",
-   "Transmissão por flebotomíneo (mosquito-palha); tratamento com antimonial ou pentamidina."
+   "Homem de 28 anos com uma ferida na perna que não cicatriza há 2 meses.",
+   "A úlcera é única e indolor.",
+   "Trabalha em desmatamento em ramal perto de Manaus. A ferida começou após uma picada de inseto.",
+   "Úlcera redonda, com bordas elevadas em moldura e fundo granuloso.",
+   "Esfregaço da borda da úlcera com formas amastigotas dentro de macrófagos."
   ],
   "opcoes": [
    "Leishmaniose tegumentar americana",
@@ -1086,10 +1086,10 @@
   "especialidade": "dermatologia",
   "nivel": 2,
   "pistas": [
-   "Homem de 60 anos, pele clara e olhos azuis, trabalhou 30 anos ao sol sem proteção.",
-   "Pinta nas costas que cresceu e mudou de cor nos últimos 6 meses.",
-   "Lesão de 9 mm, assimétrica, com bordas irregulares e várias cores (marrom, preto e azul).",
-   "Dermatoscopia com rede pigmentar atípica e véu azul-esbranquiçado.",
+   "Homem de 60 anos procura o dermatologista por uma pinta nas costas.",
+   "Tem pele clara e olhos azuis e trabalhou 30 anos ao sol sem proteção.",
+   "A pinta cresceu e mudou de cor nos últimos 6 meses. Tem 9 mm, é assimétrica e tem bordas irregulares.",
+   "A lesão tem várias cores (marrom, preto e azul). Dermatoscopia com rede pigmentar atípica e véu azul-esbranquiçado.",
    "Biópsia excisional: melanócitos atípicos invadindo a derme, espessura de Breslow 1,8 mm."
   ],
   "opcoes": [
@@ -1109,9 +1109,9 @@
   "especialidade": "dermatologia",
   "nivel": 1,
   "pistas": [
-   "Homem de 35 anos, obeso e fumante; piora em fases de estresse.",
-   "Lesões vermelhas e descamativas em cotovelos, joelhos e couro cabeludo há anos.",
-   "Escamas prateadas bem delimitadas; unhas com pequenas depressões puntiformes.",
+   "Homem de 35 anos, obeso e fumante, com lesões vermelhas e descamativas na pele.",
+   "As lesões existem há anos e pioram em fases de estresse. Algumas ficam no couro cabeludo.",
+   "Também há lesões em cotovelos e joelhos, com escamas prateadas bem delimitadas. Unhas com pequenas depressões puntiformes.",
    "Curetagem metódica: sinal da vela, membrana final e orvalho sangrante.",
    "Biópsia: acantose, paraqueratose e microabscessos de Munro."
   ],
@@ -1132,10 +1132,10 @@
   "especialidade": "dermatologia",
   "nivel": 3,
   "pistas": [
-   "Mulher de 22 anos, lavradora, mora perto de rios em área rural, com casos parecidos na vizinhança.",
-   "Bolhas que estouram fácil e deixam áreas em carne viva com ardor 'como fogo', no rosto e tronco.",
-   "Crostas em áreas seborreicas; boca sem lesões; descolamento da pele ao atrito (Nikolsky).",
-   "Biópsia com clivagem intraepidérmica subcórnea e acantólise.",
+   "Mulher de 22 anos com bolhas que estouram fácil, no rosto e no tronco.",
+   "As bolhas deixam áreas em carne viva. A boca está sem lesões.",
+   "Lavradora, mora perto de rios em área rural, com casos parecidos na vizinhança. Sente ardor 'como fogo'.",
+   "Crostas em áreas seborreicas; a pele descola ao atrito (Nikolsky). Biópsia: clivagem intraepidérmica subcórnea e acantólise.",
    "Imunofluorescência direta com IgG intercelular; anticorpos contra desmogleína 1."
   ],
   "opcoes": [
@@ -1155,10 +1155,10 @@
   "especialidade": "pediatria",
   "nivel": 1,
   "pistas": [
-   "Lactente de 4 meses, nascido a termo, em abril (época de chuva em Manaus); irmão está resfriado.",
-   "Coriza e tosse há 3 dias, depois cansaço e dificuldade para mamar.",
-   "FR 62 irpm, tiragem subcostal, sibilos e estertores finos difusos; SpO2 93%.",
-   "Primeiro episódio de chiado; raio X com hiperinsuflação e pequenas atelectasias.",
+   "Lactente de 4 meses, nascido a termo, com cansaço e dificuldade para mamar.",
+   "FR 62 irpm, tiragem subcostal e SpO2 93%.",
+   "Começou com coriza e tosse há 3 dias; o irmão está resfriado. É abril, época de chuva em Manaus.",
+   "Sibilos e estertores finos difusos. É o primeiro episódio de chiado; raio X com hiperinsuflação e pequenas atelectasias.",
    "Pesquisa de antígenos na secreção nasal positiva para vírus sincicial respiratório."
   ],
   "opcoes": [
@@ -1224,10 +1224,10 @@
   "especialidade": "pediatria",
   "nivel": 2,
   "pistas": [
-   "Lactente de 4 semanas, menino, primeiro filho.",
-   "Vômitos sem bile, em jato, logo após as mamadas, e continua com fome.",
-   "Desidratado; 'oliva' palpável no epigástrio e ondas peristálticas visíveis.",
-   "Gasometria com alcalose metabólica, cloro baixo e potássio baixo.",
+   "Lactente de 4 semanas, menino, levado ao pronto-socorro por vômitos.",
+   "Os vômitos são sem bile e aparecem logo após as mamadas.",
+   "Os vômitos são em jato e, logo depois de vomitar, ele quer mamar de novo. É o primeiro filho. Está desidratado.",
+   "'Oliva' palpável no epigástrio e ondas peristálticas visíveis. Gasometria com alcalose metabólica, cloro baixo e potássio baixo.",
    "USG: músculo de 5 mm de espessura e canal de 18 mm de comprimento na saída do estômago."
   ],
   "opcoes": [
@@ -1247,10 +1247,10 @@
   "especialidade": "pediatria",
   "nivel": 2,
   "pistas": [
-   "Lactente de 2 meses, ainda sem vacinas; a mãe não tomou dTpa na gestação.",
-   "Coriza leve há 1 semana, depois tosse em acessos.",
-   "Acessos de tosse seguidos, com rosto arroxeado, guincho ao inspirar e vômito depois.",
-   "Hemograma: 38.000 leucócitos/mm³ com 75% de linfócitos.",
+   "Lactente de 2 meses com tosse.",
+   "Começou com coriza leve há 1 semana; depois veio a tosse.",
+   "Ainda sem vacinas; a mãe não tomou dTpa na gestação. A tosse vem em acessos.",
+   "Acessos seguidos, com rosto arroxeado, guincho ao inspirar e vômito depois. Hemograma: 38.000 leucócitos/mm³ com 75% de linfócitos.",
    "PCR de swab de nasofaringe positiva para Bordetella pertussis."
   ],
   "opcoes": [
@@ -1293,10 +1293,10 @@
   "especialidade": "ginecologia-obstetricia",
   "nivel": 1,
   "pistas": [
-   "Mulher de 27 anos, já teve doença inflamatória pélvica; menstruação atrasada há 7 semanas.",
-   "Dor súbita e forte no baixo ventre à esquerda, com sangramento vaginal escuro e tontura.",
-   "PA 80x50 mmHg, FC 124 bpm, descompressão abdominal dolorosa e dor no ombro.",
-   "Beta-hCG 3.500 mUI/mL.",
+   "Mulher de 27 anos com dor súbita e forte no baixo ventre à esquerda.",
+   "Sente tontura. PA 80x50 mmHg e FC 124 bpm.",
+   "Menstruação atrasada há 7 semanas e sangramento vaginal escuro. Já teve doença inflamatória pélvica.",
+   "Descompressão abdominal dolorosa e dor no ombro. Beta-hCG 3.500 mUI/mL.",
    "USG transvaginal: útero vazio, massa anexial esquerda e muito líquido livre na pelve."
   ],
   "opcoes": [
@@ -1316,10 +1316,10 @@
   "especialidade": "ginecologia-obstetricia",
   "nivel": 3,
   "pistas": [
-   "Gestante de 32 anos, com 35 semanas, hipertensa e usuária de cocaína.",
-   "Dor abdominal súbita e forte, com sangramento vaginal escuro.",
-   "Útero endurecido e doloroso, que não relaxa entre as contrações.",
-   "Cardiotocografia com desacelerações tardias e bradicardia fetal.",
+   "Gestante de 32 anos, com 35 semanas, chega à maternidade com sangramento vaginal.",
+   "Sente dor abdominal forte, que começou de forma súbita.",
+   "É hipertensa e usuária de cocaína. O sangramento é escuro.",
+   "Útero endurecido e doloroso, que não relaxa entre as contrações. Cardiotocografia com desacelerações tardias e bradicardia fetal.",
    "Fibrinogênio baixo; na cesárea, parede uterina infiltrada de sangue (útero de Couvelaire)."
   ],
   "opcoes": [
@@ -1339,9 +1339,9 @@
   "especialidade": "ginecologia-obstetricia",
   "nivel": 2,
   "pistas": [
-   "Mulher de 23 anos, com sobrepeso.",
-   "Menstruação a cada 2 a 3 meses desde a menarca e dificuldade para engravidar.",
-   "Pelos em excesso no rosto e na barriga, acne e manchas escuras no pescoço.",
+   "Mulher de 23 anos, com sobrepeso e dificuldade para engravidar.",
+   "Tem pelos em excesso no rosto e na barriga, e acne.",
+   "Menstruação a cada 2 a 3 meses desde a menarca. Manchas escuras no pescoço.",
    "Testosterona discretamente elevada; TSH, prolactina e 17-OH-progesterona normais.",
    "USG transvaginal: 22 folículos de 2 a 9 mm em cada gônada, na periferia."
   ],
@@ -1385,10 +1385,10 @@
   "especialidade": "cirurgia",
   "nivel": 1,
   "pistas": [
-   "Homem de 19 anos, sem cirurgias prévias.",
-   "Dor que começou ao redor do umbigo e em 12 horas foi para a fossa ilíaca direita; perdeu o apetite.",
-   "Febre de 38 °C, descompressão dolorosa no ponto de McBurney e sinal de Rovsing positivo.",
-   "Leucocitose de 15.000/mm³ com desvio à esquerda; escore de Alvarado 9.",
+   "Homem de 19 anos, sem cirurgias prévias, com dor abdominal há 12 horas.",
+   "Agora a dor está na fossa ilíaca direita.",
+   "A dor começou ao redor do umbigo e depois foi para a direita; perdeu o apetite. Febre de 38 °C.",
+   "Descompressão dolorosa no ponto de McBurney e sinal de Rovsing positivo. Leucocitose de 15.000/mm³ com desvio à esquerda; escore de Alvarado 9.",
    "TC: estrutura tubular de 11 mm na fossa ilíaca direita, com parede espessada e fecalito."
   ],
   "opcoes": [
@@ -1408,9 +1408,9 @@
   "especialidade": "cirurgia",
   "nivel": 2,
   "pistas": [
-   "Mulher de 45 anos, obesa, com 3 filhos.",
-   "Dor no lado direito, abaixo das costelas, há 20 horas, sem melhora, após comida gordurosa; vômitos.",
-   "Febre de 38,3 °C; interrompe a inspiração quando o médico palpa fundo o hipocôndrio direito.",
+   "Mulher de 45 anos, obesa, com 3 filhos, chega ao pronto-socorro com dor abdominal e vômitos.",
+   "A dor é no lado direito, abaixo das costelas, e começou após comida gordurosa.",
+   "A dor dura 20 horas, sem melhora. Febre de 38,3 °C; ela interrompe a inspiração quando o médico palpa fundo o hipocôndrio direito.",
    "Leucocitose de 14.000/mm³; bilirrubinas e amilase normais.",
    "USG: parede da vesícula de 5 mm, cálculo impactado no infundíbulo e líquido ao redor."
   ],
@@ -1431,10 +1431,10 @@
   "especialidade": "cirurgia",
   "nivel": 2,
   "pistas": [
-   "Homem de 60 anos, operado de apendicite por laparotomia há 15 anos.",
-   "Dor em cólica difusa, vômitos fecaloides e sem eliminar gases ou fezes há 2 dias.",
-   "Abdome distendido e timpânico, ruídos aumentados de timbre metálico e cicatriz mediana.",
-   "Raio X: alças de delgado dilatadas com níveis hidroaéreos em escada e pouco gás no cólon.",
+   "Homem de 60 anos com dor em cólica difusa na barriga.",
+   "Tem vômitos e não elimina gases nem fezes há 2 dias.",
+   "Os vômitos são fecaloides. Foi operado de apendicite por laparotomia há 15 anos.",
+   "Abdome distendido e timpânico, ruídos de timbre metálico e cicatriz mediana. Raio X: alças de delgado dilatadas, níveis hidroaéreos em escada e pouco gás no cólon.",
    "TC: ponto de transição abrupto no íleo, sem tumor, hérnia ou cálculo no local."
   ],
   "opcoes": [
@@ -1546,11 +1546,11 @@
   "especialidade": "psiquiatria",
   "nivel": 2,
   "pistas": [
-   "Homem de 21 anos, universitário, afastado dos amigos há 1 ano.",
-   "Ouve vozes que comentam o que ele faz e acredita que a TV transmite seus pensamentos.",
-   "Discurso desorganizado, afeto embotado e descuido com a higiene.",
+   "Homem de 21 anos, universitário, cada vez mais afastado dos amigos.",
+   "Ouve vozes que comentam o que ele faz.",
+   "Acredita que a TV transmite seus pensamentos. Discurso desorganizado, afeto embotado e descuido com a higiene.",
    "Sem uso de drogas; exames de sangue e RM de crânio normais.",
-   "Sintomas contínuos há mais de 6 meses, com piora do funcionamento."
+   "O afastamento começou há 1 ano. Sintomas contínuos há mais de 6 meses, com piora do funcionamento."
   ],
   "opcoes": [
    "Transtorno esquizofreniforme",
@@ -1592,9 +1592,9 @@
   "especialidade": "psiquiatria",
   "nivel": 2,
   "pistas": [
-   "Mulher de 26 anos, foi 4 vezes ao pronto-socorro no último mês.",
-   "Crises súbitas de palpitação, falta de ar, formigamento e medo de morrer, com pico em 10 minutos.",
-   "Entre as crises, medo constante de ter outra; evita ônibus e shopping.",
+   "Mulher de 26 anos foi 4 vezes ao pronto-socorro no último mês por crises de palpitação.",
+   "Nas crises também sente falta de ar e formigamento. Elas começam de repente.",
+   "Tem medo de morrer nas crises, que atingem o pico em 10 minutos. Entre elas, teme ter outra e evita ônibus e shopping.",
    "ECG, troponina, TSH e glicemia normais.",
    "Crises inesperadas, sem gatilho, há mais de 1 mês, sem uso de substâncias."
   ],
@@ -1615,10 +1615,10 @@
   "especialidade": "medicina-preventiva",
   "nivel": 1,
   "pistas": [
-   "Homem de 25 anos, várias parcerias sexuais e não usa preservativo.",
-   "Ferida indolor no pênis há 2 meses, que sumiu sozinha.",
-   "Manchas avermelhadas no tronco, palmas e plantas, sem coceira; queda de cabelo em clareiras.",
-   "Gânglios aumentados em várias regiões e placas esbranquiçadas na boca.",
+   "Homem de 25 anos com manchas avermelhadas no tronco, sem coceira.",
+   "Tem gânglios aumentados em várias regiões.",
+   "Várias parcerias sexuais, sem preservativo. Teve uma ferida indolor no pênis há 2 meses, que sumiu sozinha.",
+   "As manchas também estão nas palmas e plantas. Queda de cabelo em clareiras e placas esbranquiçadas na boca.",
    "VDRL 1:128 e teste treponêmico reagente."
   ],
   "opcoes": [
@@ -1638,11 +1638,11 @@
   "especialidade": "medicina-preventiva",
   "nivel": 3,
   "pistas": [
-   "Enfermeira de 30 anos, contato próximo de paciente bacilífero no hospital.",
-   "Sem tosse, febre ou perda de peso.",
-   "Exame físico normal; HIV negativo.",
-   "Prova tuberculínica de 12 mm (antes era não reatora) e raio X de tórax normal.",
-   "IGRA positivo; indicado tratamento com rifapentina + isoniazida (3HP) ou rifampicina por 4 meses."
+   "Enfermeira de 30 anos passa por avaliação no serviço de saúde do trabalhador.",
+   "Prova tuberculínica de 12 mm.",
+   "Antes era não reatora à prova. Foi contato próximo de paciente bacilífero no hospital.",
+   "Sem tosse, febre ou perda de peso. Exame físico normal; HIV negativo.",
+   "Raio X de tórax normal e IGRA positivo; indicado tratamento com rifapentina + isoniazida (3HP) ou rifampicina por 4 meses."
   ],
   "opcoes": [
    "Tuberculose extrapulmonar",
@@ -1661,11 +1661,11 @@
   "especialidade": "medicina-preventiva",
   "nivel": 3,
   "pistas": [
-   "Homem de 50 anos, trabalhou 20 anos com jateamento de areia e corte de pedras.",
-   "Falta de ar progressiva e tosse seca há 3 anos; nunca fumou.",
-   "Estertores finos nas bases; sem baqueteamento digital.",
-   "Raio X: pequenos nódulos nos lobos superiores e linfonodos hilares com calcificação em 'casca de ovo'.",
-   "Doença de notificação compulsória ligada ao trabalho, com risco aumentado de tuberculose."
+   "Homem de 50 anos com falta de ar progressiva e tosse seca há 3 anos.",
+   "Nunca fumou. Estertores finos nas bases; sem baqueteamento digital.",
+   "Trabalhou 20 anos com jateamento de areia e corte de pedras.",
+   "Raio X: pequenos nódulos nos lobos superiores.",
+   "O raio X também mostra linfonodos hilares com calcificação em 'casca de ovo'. É doença de notificação compulsória ligada ao trabalho, com risco aumentado de tuberculose."
   ],
   "opcoes": [
    "Histoplasmose pulmonar",
@@ -1684,10 +1684,10 @@
   "especialidade": "medicina-preventiva",
   "nivel": 3,
   "pistas": [
-   "Ribeirinho de 40 anos, na bacia do Tapajós, come peixe carnívoro todos os dias; região de garimpo.",
-   "Formigamento nas mãos e ao redor da boca, e dificuldade para enxergar dos lados.",
-   "Tremor fino, marcha instável e esquecimento.",
-   "Exame neurológico com ataxia e redução do campo visual nos dois olhos.",
+   "Homem de 40 anos com formigamento nas mãos e esquecimento.",
+   "Tem tremor fino e marcha instável.",
+   "Ribeirinho da bacia do Tapajós, região de garimpo. Come peixe carnívoro todos os dias.",
+   "Formigamento também ao redor da boca e dificuldade para enxergar dos lados. Exame: ataxia e redução do campo visual nos dois olhos.",
    "Concentração do metal no cabelo acima de 10 µg/g."
   ],
   "opcoes": [
@@ -1707,11 +1707,11 @@
   "especialidade": "medicina-preventiva",
   "nivel": 2,
   "pistas": [
-   "Homem de 35 anos, sem vacina, trabalhou em área de mata no interior; houve macacos mortos na região.",
-   "Calafrios e temperatura alta de início súbito, dor no corpo e de cabeça; melhorou 1 dia e piorou.",
-   "Icterícia, sangramento na gengiva e vômitos com sangue escuro.",
-   "Pulso lento apesar da temperatura alta (sinal de Faget); AST 4.000 U/L, maior que ALT; creatinina alta.",
-   "RT-PCR positivo para flavivírus silvestre transmitido por Haemagogus."
+   "Homem de 35 anos com calafrios e temperatura alta de início súbito, dor no corpo e de cabeça.",
+   "Surgiram icterícia e sangramento na gengiva.",
+   "Não é vacinado e trabalhou em área de mata no interior, onde houve macacos mortos. Melhorou por 1 dia e depois piorou.",
+   "Vômitos com sangue escuro. Pulso lento apesar da temperatura alta (sinal de Faget).",
+   "AST 4.000 U/L, maior que ALT; creatinina alta. RT-PCR positivo para flavivírus silvestre transmitido por Haemagogus."
   ],
   "opcoes": [
    "Malária grave",
@@ -1730,10 +1730,10 @@
   "especialidade": "emergencia",
   "nivel": 3,
   "pistas": [
-   "Agricultor de 38 anos, picado no pé ao capinar a roça em comunidade rural perto de Manaus.",
-   "Dor forte e inchaço que subiu até o joelho em 3 horas.",
-   "Manchas roxas e bolhas no local e sangramento na gengiva; sem diarreia, bradicardia ou ptose.",
-   "Sangue incoagulável no tempo de coagulação; creatinina normal.",
+   "Agricultor de 38 anos, de comunidade rural perto de Manaus, sentiu uma picada no pé enquanto capinava a roça.",
+   "Em 3 horas, surgiram dor forte e inchaço que subiu até o joelho.",
+   "Manchas roxas e bolhas no local; sangramento na gengiva.",
+   "Sem diarreia, bradicardia ou ptose. Sangue incoagulável no tempo de coagulação; creatinina normal.",
    "Serpente trazida: cabeça triangular, fosseta loreal, cauda lisa, sem guizo e sem escamas arrepiadas."
   ],
   "opcoes": [
@@ -1776,11 +1776,11 @@
   "especialidade": "emergencia",
   "nivel": 2,
   "pistas": [
-   "Trabalhador rural de 40 anos encontrado confuso no sítio após pulverizar a plantação.",
-   "Vômitos, diarreia, salivação, lacrimejamento e urina involuntária.",
-   "Pupilas puntiformes, bradicardia, sibilos com muita secreção e fasciculações.",
-   "Colinesterase eritrocitária muito reduzida.",
-   "Melhora das secreções com atropina em doses repetidas; pralidoxima no início."
+   "Trabalhador rural de 40 anos, encontrado confuso no sítio.",
+   "Tem pupilas puntiformes.",
+   "Tinha acabado de pulverizar a plantação. Vômitos, diarreia, salivação, lacrimejamento e urina involuntária.",
+   "Bradicardia, sibilos com muita secreção e fasciculações.",
+   "Colinesterase eritrocitária muito reduzida. As secreções melhoram com atropina em doses repetidas; pralidoxima no início."
   ],
   "opcoes": [
    "AVC de tronco (ponte)",
@@ -1822,10 +1822,10 @@
   "especialidade": "emergencia",
   "nivel": 3,
   "pistas": [
-   "Jovem de 18 anos bateu a lateral da cabeça ao cair de moto, sem capacete.",
-   "Desmaiou por alguns minutos, acordou e conversou normalmente por 2 horas.",
-   "Depois: dor de cabeça forte, vômitos, sonolência progressiva e pupila direita dilatada.",
-   "Glasgow caiu de 15 para 9; fraqueza à esquerda; fratura do osso temporal.",
+   "Jovem de 18 anos caiu de moto, sem capacete, e bateu a cabeça.",
+   "Chega com dor de cabeça forte, vômitos e sonolência progressiva.",
+   "Desmaiou por alguns minutos após a queda, acordou e conversou normalmente por 2 horas; só depois piorou.",
+   "A batida foi na lateral da cabeça, com fratura do osso temporal. Glasgow caiu de 15 para 9; pupila direita dilatada e fraqueza à esquerda.",
    "TC de crânio: coleção hiperdensa biconvexa (em lente), que não cruza as suturas."
   ],
   "opcoes": [
@@ -1846,9 +1846,9 @@
   "nivel": 2,
   "pistas": [
    "Homem de 48 anos, com febre baixa, cansaço e perda de 6 kg nas últimas cinco semanas.",
-   "Tem sopro desde uma febre reumática na infância; extraiu um dente há dois meses, sem antibiótico antes.",
-   "Sopro sistólico regurgitativo no foco mitral, baço palpável e pequenas hemorragias em lasca sob as unhas.",
-   "Nódulos dolorosos na polpa dos dedos e manchas indolores nas palmas; fundo de olho com manchas de centro claro.",
+   "Tem sopro desde uma febre reumática na infância.",
+   "Extraiu um dente há dois meses, sem antibiótico antes. Sopro sistólico regurgitativo no foco mitral e baço palpável.",
+   "Hemorragias em lasca sob as unhas, nódulos dolorosos na polpa dos dedos e manchas indolores nas palmas. Fundo de olho com manchas de centro claro.",
    "Três hemoculturas com estreptococo do grupo viridans; eco transesofágico com massa móvel no folheto mitral."
   ],
   "opcoes": [
@@ -1868,11 +1868,11 @@
   "especialidade": "cardiologia",
   "nivel": 2,
   "pistas": [
-   "Homem de 58 anos, hipertenso sem tratamento regular, chega ao pronto-socorro agitado, pálido e suado.",
-   "\"Parece que algo rasgou dentro do peito e foi para as costas.\" A dor começou de repente, já no máximo.",
-   "PA de 180x100 mmHg no braço direito e 130x80 mmHg no esquerdo; pulso radial esquerdo mais fraco.",
-   "Sopro diastólico novo no foco aórtico; ECG sem supra de ST; radiografia com mediastino alargado.",
-   "Angiotomografia: membrana intimal separando duas luzes, começando no segmento ascendente, logo acima da valva."
+   "Homem de 58 anos, hipertenso sem tratamento regular, chega ao pronto-socorro com dor no peito, agitado, pálido e suado.",
+   "A dor começou de repente e vai para as costas. ECG sem supra de ST.",
+   "\"Parece que algo rasgou dentro do peito.\" A dor já começou no máximo.",
+   "PA de 180x100 mmHg no braço direito e 130x80 mmHg no esquerdo; pulso radial esquerdo mais fraco. Sopro diastólico novo no foco aórtico.",
+   "Radiografia com mediastino alargado. Angiotomografia: membrana intimal separando duas luzes, começando no segmento ascendente, logo acima da valva."
   ],
   "opcoes": [
    "Ruptura espontânea do esôfago",
@@ -1915,8 +1915,8 @@
   "nivel": 1,
   "pistas": [
    "Motorista de ônibus de 52 anos, em Manaus, quase bateu por cochilar parado no sinal vermelho.",
-   "A esposa conta que ele ronca alto e às vezes para de respirar à noite, voltando com um engasgo.",
-   "IMC de 36 kg/m², pescoço com 45 cm de circunferência e hipertensão que não controla com três remédios.",
+   "IMC de 36 kg/m² e hipertensão que não controla com três remédios.",
+   "A esposa conta que ele ronca alto e às vezes para de respirar à noite, voltando com um engasgo. Pescoço com 45 cm de circunferência.",
    "Escala de Epworth de 17 pontos; TSH normal; gasometria acordado com PaCO2 de 40 mmHg.",
    "Polissonografia: 38 eventos respiratórios por hora, com esforço torácico mantido e dessaturação até 78%."
   ],
@@ -1960,10 +1960,10 @@
   "especialidade": "pneumologia",
   "nivel": 3,
   "pistas": [
-   "Lavrador de 55 anos, fumante, trabalha há 30 anos abrindo mata e plantando café em Rondônia.",
-   "Tosse com catarro e falta de ar lenta há um ano; emagreceu e sente a boca arder ao comer.",
-   "Úlceras na gengiva e no palato com fundo granuloso e pontinhos vermelhos, como uma amora; rouquidão.",
-   "Radiografia: infiltrado bilateral e simétrico nos campos médios, poupando os ápices; baciloscopias negativas.",
+   "Homem de 55 anos, fumante, com tosse com catarro e falta de ar lenta há um ano.",
+   "Emagreceu nesse período. É lavrador em Rondônia.",
+   "Há 30 anos abre mata e planta café. Está rouco. Radiografia: infiltrado bilateral e simétrico nos campos médios, poupando os ápices.",
+   "Sente a boca arder ao comer. Úlceras na gengiva e no palato, com fundo granuloso e pontinhos vermelhos, como uma amora. Baciloscopias negativas.",
    "Exame direto do escarro: leveduras grandes com vários brotamentos ao redor, em roda de leme."
   ],
   "opcoes": [
@@ -1983,11 +1983,11 @@
   "especialidade": "infectologia",
   "nivel": 1,
   "pistas": [
-   "Mulher de 27 anos, em Manaus, no período chuvoso, com febre alta, dor atrás dos olhos e no corpo há 4 dias.",
+   "Mulher de 27 anos, em Manaus, no período chuvoso, com febre alta e dor no corpo há 4 dias.",
+   "Também tem dor atrás dos olhos. PA 110x70 mmHg, sem queda ao levantar.",
    "No 5º dia a febre sumiu, mas surgiu dor forte e contínua na barriga, e ela vomitou seis vezes.",
-   "Gengiva sangra ao escovar; fígado palpável a 3 cm do rebordo; PA 110x70 mmHg, sem queda ao levantar.",
-   "Prova do laço positiva; hematócrito subiu de 38% para 46% e plaquetas caíram para 45 mil.",
-   "NS1 reagente no primeiro atendimento; US com pouco líquido livre na pelve e parede da vesícula espessada."
+   "Gengiva sangra ao escovar; fígado palpável a 3 cm do rebordo. US: pouco líquido livre na pelve e parede da vesícula espessada.",
+   "Prova do laço positiva; hematócrito subiu de 38% para 46% e plaquetas caíram para 45 mil. NS1 reagente no primeiro atendimento."
   ],
   "opcoes": [
    "Febre amarela",
@@ -2006,10 +2006,10 @@
   "especialidade": "infectologia",
   "nivel": 2,
   "pistas": [
-   "Agricultor de 34 anos, de Coari (AM), com 39,5 °C de início súbito, dor de cabeça forte e dor atrás dos olhos.",
-   "Conta que no sítio tem muito maruim, um mosquitinho minúsculo que pica ao entardecer perto do bananal.",
-   "Melhorou em 4 dias, mas uma semana depois o quadro febril, a dor de cabeça e as dores musculares voltaram.",
+   "Agricultor de 34 anos, de Coari (AM), com 39,5 °C de início súbito.",
+   "Tem dor de cabeça forte, dor atrás dos olhos e dores musculares.",
    "Gota espessa negativa duas vezes; plaquetas 160 mil; sem sangramento, sem artrite e sem conjuntivite.",
+   "Melhorou em 4 dias, mas uma semana depois a febre, a dor de cabeça e as dores musculares voltaram. No sítio há muito maruim, mosquitinho que pica ao entardecer.",
    "RT-PCR do LACEN: negativo para dengue, Zika e chikungunya, positivo para um ortobunyavírus."
   ],
   "opcoes": [
@@ -2029,10 +2029,10 @@
   "especialidade": "infectologia",
   "nivel": 3,
   "pistas": [
-   "Homem de 32 anos, de Manaus, abandonou o tratamento do HIV há 2 anos; CD4 de 28 células/mm³.",
-   "Febre há um mês, perda de 10 kg e diarreia; ajudou a limpar um galinheiro e um forro cheio de morcegos.",
-   "Pápulas umbilicadas no rosto e no tronco, úlcera no palato e fígado e baço aumentados.",
-   "Pancitopenia, LDH de 1.800 U/L e ferritina muito alta; radiografia com infiltrado micronodular difuso.",
+   "Homem de 32 anos, de Manaus, abandonou o tratamento do HIV há 2 anos.",
+   "Febre há um mês, perda de 10 kg e diarreia. CD4 de 28 células/mm³.",
+   "Ajudou a limpar um galinheiro e um forro cheio de morcegos. Tem pápulas umbilicadas no rosto e no tronco.",
+   "Úlcera no palato; fígado e baço aumentados. Pancitopenia, LDH de 1.800 U/L e ferritina muito alta; radiografia com infiltrado micronodular difuso.",
    "Mielograma com leveduras pequenas dentro de macrófagos, coradas pela prata; antígeno urinário positivo."
   ],
   "opcoes": [
@@ -2075,10 +2075,10 @@
   "especialidade": "gastroenterologia",
   "nivel": 2,
   "pistas": [
-   "Estudante de 22 anos, fumante, com diarreia sem sangue e cólicas há 4 meses; perdeu 8 kg.",
-   "A dor fica na parte baixa e direita da barriga, onde às vezes se palpa uma massa endurecida.",
-   "Tem uma fístula com secreção ao lado do ânus e aftas na boca que vão e voltam.",
-   "Colonoscopia: íleo terminal com úlceras longitudinais e aspecto de pedra de calçamento, com trechos normais entre elas.",
+   "Estudante de 22 anos com diarreia e cólicas há 4 meses.",
+   "A diarreia é sem sangue, e ele perdeu 8 kg.",
+   "É fumante. A dor fica na parte baixa e direita da barriga, onde às vezes se palpa uma massa endurecida. Tem aftas na boca que vão e voltam.",
+   "Fístula com secreção ao lado do ânus. Colonoscopia: úlceras longitudinais no íleo terminal, em pedra de calçamento, com trechos normais entre elas.",
    "Biópsia: inflamação transmural com granulomas não caseosos; PCR para micobactéria negativa."
   ],
   "opcoes": [
@@ -2098,11 +2098,11 @@
   "especialidade": "nefrologia",
   "nivel": 1,
   "pistas": [
-   "Mulher de 26 anos, sexualmente ativa, com ardor ao urinar e vontade frequente de urinar há 3 dias.",
-   "Hoje veio com febre de 39 °C, calafrios, náuseas e dor nas costas do lado direito.",
-   "Punho-percussão lombar direita muito dolorosa; abdome flácido, sem dor em fossa ilíaca direita.",
-   "Teste de gravidez negativo; urina com muitos leucócitos, nitrito positivo e cilindros leucocitários.",
-   "Urocultura com mais de 100 mil UFC/mL de Escherichia coli; US renal sem dilatação nem cálculo."
+   "Mulher de 26 anos, sexualmente ativa, com náuseas e dor nas costas do lado direito.",
+   "Hoje veio com febre de 39 °C e calafrios.",
+   "Há 3 dias tem ardor ao urinar e vontade frequente de urinar. Punho-percussão lombar direita muito dolorosa.",
+   "Abdome flácido, sem dor em fossa ilíaca direita. Teste de gravidez negativo; urina com muitos leucócitos e nitrito positivo.",
+   "Cilindros leucocitários na urina; urocultura com mais de 100 mil UFC/mL de Escherichia coli; US renal sem dilatação nem cálculo."
   ],
   "opcoes": [
    "Pielonefrite aguda",
@@ -2122,9 +2122,9 @@
   "nivel": 2,
   "pistas": [
    "Homem de 24 anos, sem doenças prévias, assustado porque a urina ficou cor de refrigerante de cola.",
+   "PA 128x82 mmHg, sem edema; creatinina 1,0 mg/dL.",
    "A urina escureceu no 2º dia de uma dor de garganta; isso já tinha acontecido no ano passado.",
-   "PA 128x82 mmHg, sem edema; creatinina 1,0 mg/dL; proteinúria de 600 mg em 24 horas.",
-   "Complemento C3 e C4 normais; ASLO normal; FAN e ANCA negativos; sem manchas na pele.",
+   "Proteinúria de 600 mg em 24 horas. Complemento C3 e C4 normais; ASLO normal; FAN e ANCA negativos; sem manchas na pele.",
    "Biópsia renal: depósitos no mesângio da mesma imunoglobulina que predomina na vasculite de Henoch-Schönlein."
   ],
   "opcoes": [
@@ -2144,11 +2144,11 @@
   "especialidade": "endocrinologia",
   "nivel": 2,
   "pistas": [
-   "Mulher de 41 anos, com crises de dor de cabeça latejante, suor intenso e coração disparado.",
-   "As crises duram 20 minutos, surgem até ao se abaixar ou evacuar, e ela fica pálida, não vermelha.",
-   "PA de 230x130 mmHg na crise e de 150x95 mmHg entre elas; glicemia de jejum de 128 mg/dL.",
-   "Metanefrinas livres no plasma quatro vezes acima do limite superior; TSH normal.",
-   "TC: massa adrenal direita de 5 cm, heterogênea, com 38 UH sem contraste."
+   "Mulher de 41 anos com crises de coração disparado e suor intenso.",
+   "As crises duram 20 minutos, e ela fica pálida, não vermelha.",
+   "Nas crises tem dor de cabeça latejante. Elas surgem até ao se abaixar ou evacuar.",
+   "PA de 230x130 mmHg na crise e de 150x95 mmHg entre elas. Glicemia de jejum de 128 mg/dL; TSH normal.",
+   "Metanefrinas livres no plasma quatro vezes acima do limite superior. TC: massa adrenal direita de 5 cm, heterogênea, com 38 UH sem contraste."
   ],
   "opcoes": [
    "Hipoglicemia por insulinoma",
@@ -2190,10 +2190,10 @@
   "especialidade": "neurologia",
   "nivel": 1,
   "pistas": [
-   "Aposentado de 67 anos; a esposa notou que ele anda mais devagar e quase não balança o braço direito.",
-   "Há anos perdeu o olfato e tem intestino preso; a letra fica cada vez menor no fim da linha.",
-   "Tremor na mão direita em repouso, como quem conta moedas, que some quando ele pega um copo.",
+   "Aposentado de 67 anos; a esposa notou que ele anda mais devagar.",
    "Rigidez em roda denteada no punho direito; ao abrir e fechar a mão, os movimentos ficam cada vez menores.",
+   "Quase não balança o braço direito. Há anos perdeu o olfato e tem intestino preso.",
+   "A letra fica cada vez menor no fim da linha. Tremor na mão direita em repouso, como quem conta moedas, que some quando ele pega um copo.",
    "Não usa remédio para enjoo ou tontura; melhora nítida com levodopa; movimento vertical dos olhos normal."
   ],
   "opcoes": [
@@ -2237,9 +2237,9 @@
   "nivel": 3,
   "pistas": [
    "Marceneiro de 58 anos deixa cair parafusos e não consegue mais abotoar a camisa com a mão direita.",
-   "Tem cãibras frequentes e \"tremidinhas\" sob a pele dos braços; não sente dormência nem formigamento.",
-   "Músculos da mão direita afinados, com fasciculações; reflexos vivos nos quatro membros e Babinski bilateral.",
-   "Fala anasalada há 2 meses e fasciculações na língua; sem alteração urinária nem de sensibilidade.",
+   "Não sente dormência nem formigamento e não tem alteração urinária.",
+   "Tem cãibras frequentes e \"tremidinhas\" sob a pele dos braços. Músculos da mão direita afinados, com fasciculações.",
+   "Reflexos vivos nos quatro membros e Babinski bilateral; sensibilidade normal. Fala anasalada há 2 meses e fasciculações na língua.",
    "ENMG: desnervação ativa e crônica nos segmentos bulbar, cervical e lombar; condução sensitiva normal."
   ],
   "opcoes": [
@@ -2259,10 +2259,10 @@
   "especialidade": "hematologia",
   "nivel": 1,
   "pistas": [
-   "Diabético de 64 anos, usa metformina há 12 anos e omeprazol todos os dias há 5 anos.",
-   "Cansaço, formigamento nos pés e desequilíbrio no escuro; a língua está lisa, vermelha e ardida.",
-   "Perda da sensibilidade vibratória nos pés e Romberg positivo; sem sinais de sangramento.",
-   "Hb 8,1 g/dL, VCM 118 fL, neutrófilos hipersegmentados, LDH alta e reticulócitos baixos.",
+   "Diabético de 64 anos, com cansaço e formigamento nos pés.",
+   "Tem desequilíbrio no escuro. Exame: perda da sensibilidade vibratória nos pés e Romberg positivo.",
+   "Usa metformina há 12 anos e omeprazol todos os dias há 5 anos. A língua está lisa, vermelha e ardida.",
+   "Sem sinais de sangramento. Hb 8,1 g/dL, VCM 118 fL, neutrófilos hipersegmentados, LDH alta e reticulócitos baixos.",
    "Ácido metilmalônico e homocisteína elevados; folato sérico normal; TSH normal."
   ],
   "opcoes": [
@@ -2282,10 +2282,10 @@
   "especialidade": "hematologia",
   "nivel": 2,
   "pistas": [
-   "Homem de 68 anos, com dor nas costas há 3 meses que não melhora com repouso e piora à noite.",
-   "Tem sede, confusão leve e intestino preso; teve duas pneumonias neste ano.",
-   "Hb 8,5 g/dL normocítica com hemácias empilhadas; cálcio 12,8 mg/dL; creatinina 2,4 mg/dL.",
-   "Radiografia de crânio com lesões líticas em saca-bocado, sem esclerose ao redor; PTH baixo.",
+   "Homem de 68 anos com dor nas costas há 3 meses, que não melhora com repouso e piora à noite.",
+   "Tem sede, confusão leve e intestino preso.",
+   "Teve duas pneumonias neste ano. Hb 8,5 g/dL normocítica, com hemácias empilhadas.",
+   "Cálcio 12,8 mg/dL; creatinina 2,4 mg/dL. Radiografia de crânio com lesões líticas em saca-bocado, sem esclerose ao redor; PTH baixo.",
    "Eletroforese de proteínas com pico estreito na fração gama; medula com 35% de plasmócitos clonais."
   ],
   "opcoes": [
@@ -2306,9 +2306,9 @@
   "nivel": 2,
   "pistas": [
    "Mulher de 42 anos conta que os dedos ficam brancos, depois roxos e vermelhos no ar-condicionado.",
+   "Tem azia e engasga com alimentos sólidos.",
    "A pele das mãos, dos antebraços e agora dos braços e do tórax foi ficando dura e brilhante; ela já não fecha bem a mão.",
-   "Boca pequena com sulcos ao redor, feridas nas pontas dos dedos e azia com engasgo para sólidos.",
-   "Capilaroscopia com capilares gigantes e áreas sem capilares; TC de tórax com vidro fosco nas bases.",
+   "Boca pequena com sulcos ao redor e feridas nas pontas dos dedos. Capilaroscopia com capilares gigantes e áreas sem capilares; TC de tórax com vidro fosco nas bases.",
    "FAN positivo com anti-Scl-70 (antitopoisomerase I) em título alto; anticentrômero negativo."
   ],
   "opcoes": [
@@ -2329,10 +2329,10 @@
   "nivel": 3,
   "pistas": [
    "Mulher de 52 anos, com dificuldade para pentear o cabelo e para levantar da cadeira há 2 meses.",
-   "Pálpebras superiores inchadas e arroxeadas; mancha vermelha no decote e nos ombros, pior ao sol.",
-   "Pápulas violáceas e descamativas sobre as articulações dos dedos das mãos; cutículas irregulares.",
-   "CK de 4.800 U/L e aldolase alta; ENMG com padrão miopático; não usa estatina.",
-   "Anti-Mi-2 positivo; biópsia muscular com atrofia perifascicular; iniciada busca de câncer oculto."
+   "Não usa estatina. CK de 4.800 U/L e aldolase alta.",
+   "Mancha vermelha no decote e nos ombros, pior ao sol. Pálpebras superiores inchadas e arroxeadas.",
+   "Pápulas violáceas e descamativas sobre as articulações dos dedos das mãos; cutículas irregulares. ENMG com padrão miopático.",
+   "Anti-Mi-2 positivo; biópsia muscular com atrofia perifascicular. Iniciada busca de câncer oculto."
   ],
   "opcoes": [
    "Dermatomiosite",
@@ -2351,10 +2351,10 @@
   "especialidade": "dermatologia",
   "nivel": 1,
   "pistas": [
-   "Menino de 8 anos, de comunidade ribeirinha no interior do Amazonas, anda descalço no quintal de terra.",
-   "A família cria porcos embaixo da casa; ele reclama de coceira e dor ao andar há uma semana.",
-   "Lesões de 5 a 8 mm em volta das unhas dos pés; numa área, várias juntas lembram um favo de mel.",
-   "Cada lesão é uma pápula branco-amarelada com um ponto preto no centro; os irmãos têm o mesmo.",
+   "Menino de 8 anos, de comunidade ribeirinha no interior do Amazonas, com coceira e dor ao andar há uma semana.",
+   "Tem lesões nos pés, em volta das unhas.",
+   "Anda descalço no quintal de terra, e a família cria porcos embaixo da casa. Os irmãos têm o mesmo.",
+   "Lesões de 5 a 8 mm; numa área, várias juntas lembram um favo de mel. Cada uma é uma pápula branco-amarelada com um ponto preto no centro.",
    "Retirada com agulha estéril: sai um corpo arredondado cheio de ovos; não há trajeto em serpentina."
   ],
   "opcoes": [
@@ -2374,9 +2374,9 @@
   "especialidade": "dermatologia",
   "nivel": 3,
   "pistas": [
-   "Homem de 63 anos, ex-seringueiro no Acre, procura o posto por \"caroços\" na orelha que crescem há 15 anos.",
-   "As lesões não doem, às vezes coçam; ele se sente bem e nunca teve febre nem emagreceu.",
-   "Nódulos lisos, brilhantes e endurecidos, parecidos com queloide, no pavilhão auricular e no antebraço.",
+   "Homem de 63 anos procura o posto por \"caroços\" na orelha que crescem há 15 anos.",
+   "As lesões não doem, às vezes coçam. Ele se sente bem e nunca teve febre nem emagreceu.",
+   "Foi seringueiro no Acre. Os nódulos são lisos, brilhantes e endurecidos, parecidos com queloide, no pavilhão auricular e no antebraço.",
    "Sensibilidade térmica e dolorosa preservada nas lesões; baciloscopia de raspado negativa; boca normal.",
    "Biópsia: muitas leveduras do mesmo tamanho, em cadeia, unidas por pontes; a cultura não cresce."
   ],
@@ -2397,10 +2397,10 @@
   "especialidade": "dermatologia",
   "nivel": 2,
   "pistas": [
-   "Mulher de 45 anos cuida de gatos de rua no bairro; o gato mais novo tem feridas no focinho.",
-   "Há 3 semanas foi arranhada no dorso da mão; surgiu um nódulo que depois virou úlcera.",
+   "Mulher de 45 anos. Há 3 semanas surgiu um nódulo no dorso da mão, que depois virou úlcera.",
    "Agora há nódulos em fila subindo pelo antebraço, seguindo o trajeto de um vaso linfático.",
-   "Sem febre; sem um único linfonodo grande; não teve contato com aquário nem com peixes.",
+   "Sem febre e sem um único linfonodo grande. Não teve contato com aquário nem com peixes.",
+   "Cuida de gatos de rua no bairro e foi arranhada no dorso da mão antes de surgir o nódulo. O gato mais novo tem feridas no focinho.",
    "Cultura em ágar Sabouraud a 25 °C: fungo filamentoso que se transforma em levedura a 37 °C."
   ],
   "opcoes": [
@@ -2420,10 +2420,10 @@
   "especialidade": "pediatria",
   "nivel": 1,
   "pistas": [
-   "Menina de 3 anos, sem vacinas registradas, chegou a Manaus há 2 semanas vinda da Venezuela.",
-   "Febre alta há 4 dias, tosse seca, nariz escorrendo e olhos vermelhos, lacrimejando e sensíveis à luz.",
-   "Na mucosa das bochechas, perto dos molares, pontos branco-azulados sobre base avermelhada.",
+   "Menina de 3 anos com febre alta há 4 dias.",
    "Manchas vermelhas que começaram atrás das orelhas e no rosto e desceram para o tronco e os membros.",
+   "Sem vacinas registradas; chegou a Manaus há 2 semanas vinda da Venezuela. Tem tosse seca, nariz escorrendo e olhos vermelhos, lacrimejando e sensíveis à luz.",
+   "Na mucosa das bochechas, perto dos molares, pontos branco-azulados sobre base avermelhada.",
    "IgM específica reagente no LACEN; a vigilância vacina os contatos suscetíveis em até 72 horas."
   ],
   "opcoes": [
@@ -2443,11 +2443,11 @@
   "especialidade": "pediatria",
   "nivel": 2,
   "pistas": [
-   "Bebê de 9 meses, saudável, começou de repente a chorar forte e encolher as pernas sobre a barriga.",
-   "As crises duram minutos; entre elas fica quieto, pálido e sonolento. Vomitou duas vezes.",
+   "Bebê de 9 meses, saudável, começou de repente a chorar forte.",
+   "Vomitou duas vezes e está pálido.",
+   "O choro vem em crises de minutos, com as pernas encolhidas sobre a barriga; entre elas, fica quieto e sonolento.",
    "Palpa-se massa alongada, em forma de salsicha, no quadrante superior direito; fossa ilíaca direita vazia.",
-   "Após 12 horas eliminou fezes com muco e sangue, com aspecto de geleia de framboesa.",
-   "US de abdome: imagem em alvo no corte transversal e em pseudorrim no longitudinal."
+   "Após 12 horas, eliminou fezes com muco e sangue, em geleia de framboesa. US: imagem em alvo no corte transversal e em pseudorrim no longitudinal."
   ],
   "opcoes": [
    "Invaginação intestinal",
@@ -2466,10 +2466,10 @@
   "especialidade": "ginecologia-obstetricia",
   "nivel": 1,
   "pistas": [
-   "Gestante de 32 semanas, com duas cesáreas anteriores, acordou com a cama molhada de sangue.",
-   "O sangue é vermelho vivo, começou do nada e não dói; ela nega contrações ou trauma.",
-   "Útero macio e indolor; feto em apresentação pélvica; batimentos cardíacos fetais de 140 bpm.",
-   "PA 110x70 mmHg; o plantonista proíbe o toque vaginal até sair o exame de imagem.",
+   "Gestante de 32 semanas acordou com a cama molhada de sangue.",
+   "Tem duas cesáreas anteriores. PA 110x70 mmHg.",
+   "O sangue é vermelho vivo, começou do nada e não dói. Ela nega contrações ou trauma.",
+   "Útero macio e indolor; feto em apresentação pélvica, com batimentos de 140 bpm. O plantonista proíbe o toque vaginal até sair o exame de imagem.",
    "US transvaginal: o tecido de implantação ocupa o segmento inferior e cobre todo o orifício interno do colo."
   ],
   "opcoes": [
@@ -2490,8 +2490,8 @@
   "nivel": 2,
   "pistas": [
    "Mulher de 31 anos tenta engravidar há 2 anos sem sucesso; o espermograma do parceiro é normal.",
-   "Cólica menstrual que piora a cada ano e não passa com anti-inflamatório; dói fundo na relação sexual.",
-   "Durante a menstruação sente dor para evacuar e às vezes nota sangue nas fezes.",
+   "Cólica menstrual que piora a cada ano e não passa com anti-inflamatório.",
+   "Dói fundo na relação sexual. Durante a menstruação, sente dor para evacuar e às vezes nota sangue nas fezes.",
    "Toque vaginal: útero fixo em retroversão e nódulo doloroso nos ligamentos uterossacros.",
    "US transvaginal com preparo intestinal: cisto ovariano em vidro fosco e nódulo na parede do retossigmoide."
   ],
@@ -2581,9 +2581,9 @@
   "especialidade": "cirurgia",
   "nivel": 3,
   "pistas": [
-   "Mulher de 78 anos, com fibrilação atrial, parou por conta própria o anticoagulante há um mês.",
-   "Dor abdominal súbita e fortíssima há 4 horas; vomitou e evacuou uma vez logo após o início.",
-   "Ela grita de dor, mas o abdome está flácido, pouco doloroso à palpação e sem sinais de peritonite.",
+   "Mulher de 78 anos com dor abdominal súbita e fortíssima há 4 horas.",
+   "Vomitou e evacuou uma vez logo após o início da dor.",
+   "Tem fibrilação atrial e parou por conta própria o anticoagulante há um mês. Grita de dor, mas o abdome está flácido, pouco doloroso à palpação e sem sinais de peritonite.",
    "Lactato de 6,2 mmol/L, bicarbonato de 14 mEq/L, leucócitos 25 mil; amilase pouco aumentada.",
    "AngioTC: falha de enchimento abrupta no principal vaso do intestino delgado, poucos cm após a origem."
   ],
@@ -2605,10 +2605,10 @@
   "nivel": 1,
   "pistas": [
    "Estudante de 20 anos chega atrasada a todas as aulas e diz que isso a deixa muito envergonhada.",
-   "Tem pensamentos intrusivos de que vai contaminar a família com germes; sabe que é exagero, mas não consegue parar.",
+   "Tem as mãos rachadas e sangrando. Gasta mais de 3 horas por dia num hábito que a faz sofrer.",
    "Lava as mãos 40 vezes por dia, sempre numa sequência fixa; se erra a ordem, recomeça do zero.",
-   "Mãos rachadas e sangrando; gasta mais de 3 horas por dia nisso e sofre com o próprio hábito.",
-   "Sem alucinações nem delírios; crítica preservada; escala de Yale-Brown com 28 pontos."
+   "Tem pensamentos intrusivos de que vai contaminar a família com germes. Sabe que é exagero, mas não consegue parar.",
+   "Sem alucinações nem delírios; crítica preservada. Escala de Yale-Brown com 28 pontos."
   ],
   "opcoes": [
    "Transtorno obsessivo-compulsivo",
@@ -2628,10 +2628,10 @@
   "nivel": 2,
   "pistas": [
    "Adolescente de 16 anos, atleta de corrida, trazida pela mãe porque \"quase não come mais\".",
-   "Diz que precisa perder mais 3 kg e se acha barriguda, embora pese 39 kg com 1,62 m.",
-   "Sem menstruar há 5 meses; corre 2 horas por dia e conta as calorias de cada alimento.",
-   "FC 44 bpm, PA 86x54 mmHg, pelos finos no rosto e nos braços, pele seca e mãos frias.",
-   "Nega vômitos provocados e episódios de comer muito; TSH normal; teste de gravidez negativo."
+   "Pesa 39 kg com 1,62 m e está sem menstruar há 5 meses.",
+   "Corre 2 horas por dia e conta as calorias de cada alimento. FC 44 bpm e PA 86x54 mmHg.",
+   "Pelos finos no rosto e nos braços, pele seca e mãos frias. Nega vômitos provocados e episódios de comer muito; TSH normal; teste de gravidez negativo.",
+   "Diz que precisa perder mais 3 kg e se acha barriguda."
   ],
   "opcoes": [
    "Doença celíaca",
@@ -2650,10 +2650,10 @@
   "especialidade": "medicina-preventiva",
   "nivel": 2,
   "pistas": [
-   "Operador de prensa de 45 anos, trabalha há 18 anos numa fábrica do Polo Industrial de Manaus.",
-   "Diz que \"escuta, mas não entende\" em lugares cheios e tem um zumbido agudo nos dois ouvidos.",
-   "O setor tem 94 dB(A) na jornada de 8 horas; ele tirava o protetor auricular porque incomodava.",
-   "Otoscopia normal; Rinne positivo dos dois lados e Weber sem lateralização.",
+   "Homem de 45 anos, de Manaus, diz que \"escuta, mas não entende\" em lugares cheios.",
+   "Tem zumbido agudo nos dois ouvidos. Otoscopia normal.",
+   "É operador de prensa há 18 anos numa fábrica do Polo Industrial. O setor tem 94 dB(A) na jornada de 8 horas; ele tirava o protetor auricular porque incomodava.",
+   "Rinne positivo dos dois lados e Weber sem lateralização.",
    "Audiometria: queda sensorioneural simétrica em 4 kHz, com recuperação em 8 kHz, em forma de gota."
   ],
   "opcoes": [
@@ -2674,10 +2674,10 @@
   "nivel": 3,
   "pistas": [
    "Pescador de 38 anos, de comunidade ribeirinha no Marajó (PA), com febre e dor de cabeça há 3 dias.",
-   "Há 2 meses acordou com o pé sangrando após uma \"mordidinha\" durante a noite; não procurou o posto.",
-   "Sente formigamento e queimação exatamente no local da antiga ferida, no pé direito.",
-   "Fica agitado e tem espasmos na garganta ao tentar beber água ou quando sopra vento no rosto.",
-   "Saliva escorrendo, alterna agitação e confusão; na comunidade outras pessoas foram mordidas por morcegos."
+   "Alterna agitação e confusão, com saliva escorrendo.",
+   "Há 2 meses acordou com o pé sangrando após uma \"mordidinha\" durante a noite. Não procurou o posto.",
+   "Sente formigamento e queimação exatamente no local da antiga ferida, no pé direito. Outras pessoas da comunidade foram mordidas por morcegos.",
+   "Fica agitado e tem espasmos na garganta ao tentar beber água ou quando sopra vento no rosto."
   ],
   "opcoes": [
    "Delirium tremens",
@@ -2696,10 +2696,10 @@
   "especialidade": "emergencia",
   "nivel": 1,
   "pistas": [
-   "Rapaz de 17 anos tomava banho no raso de uma praia de rio perto de Manaus, na época da seca.",
-   "Sentiu uma fisgada no tornozelo ao pisar em algo escondido na areia; diz que é a pior dor que já sentiu.",
+   "Rapaz de 17 anos, perto de Manaus, chega com dor fortíssima no tornozelo; diz que é a pior dor que já sentiu.",
    "Corte de 3 cm, sangrando, com pele em volta pálida e depois arroxeada; a dor sobe para toda a perna.",
    "Gengivas sem sangramento e coagulação normal; sem queda das pálpebras nem visão dupla.",
+   "Tomava banho no raso de uma praia de rio, na época da seca, e sentiu uma fisgada ao pisar em algo escondido na areia.",
    "Da ferida sai um fragmento de ferrão serrilhado; um pescador viu um peixe achatado, em disco, fugir."
   ],
   "opcoes": [
@@ -2720,9 +2720,9 @@
   "nivel": 3,
   "pistas": [
    "Agricultor de 40 anos, da zona rural de Santarém (PA), foi picado na mão ao pegar lenha à noite.",
-   "Dor local forte, com pouco inchaço; 1 hora depois passou a sentir \"choques elétricos\" pelo corpo todo.",
-   "Fala enrolada, andar cambaleante, erra ao tocar o nariz com o dedo e tem abalos musculares rápidos.",
-   "Sem queda das pálpebras nem visão dupla; sem sangramento; PA 140x90 mmHg; coagulação normal.",
+   "Dor local forte, com pouco inchaço.",
+   "Uma hora depois, passou a sentir \"choques elétricos\" pelo corpo todo. Fala enrolada e andar cambaleante.",
+   "Erra ao tocar o nariz com o dedo e tem abalos musculares rápidos. Sem queda das pálpebras nem visão dupla; sem sangramento; PA 140x90 mmHg; coagulação normal.",
    "O animal, trazido num pote, é todo preto, com pinças finas e cauda segmentada terminando em ferrão."
   ],
   "opcoes": [
@@ -2742,11 +2742,11 @@
   "especialidade": "emergencia",
   "nivel": 2,
   "pistas": [
-   "Mulher de 35 anos, de Curitiba (PR), vestiu uma calça guardada havia meses no fundo do armário.",
-   "Sentiu só uma leve picada na coxa; 6 horas depois começou uma dor em queimação que foi piorando.",
-   "No local, área central pálida com manchas roxas e halo vermelho, com aspecto de mármore.",
-   "No 3º dia surgiram bolhas e o centro escureceu, formando uma crosta seca que evolui para necrose.",
-   "Urina clara, Hb estável e sem icterícia; a aranha achada na calça tinha um desenho de violino no dorso."
+   "Mulher de 35 anos, de Curitiba (PR), com dor em queimação na coxa que foi piorando.",
+   "Antes da dor, sentiu só uma leve picada no local; a dor começou 6 horas depois.",
+   "A picada foi ao vestir uma calça guardada havia meses no fundo do armário. No local, área central pálida com manchas roxas e halo vermelho, como mármore.",
+   "No 3º dia surgiram bolhas, e o centro escureceu, formando crosta seca que evolui para necrose. Urina clara, Hb estável e sem icterícia.",
+   "A aranha achada na calça tinha um desenho de violino no dorso."
   ],
   "opcoes": [
    "Celulite bacteriana",
