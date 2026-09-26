@@ -61,7 +61,9 @@ ACOES["fq-limpar"] = () => { Object.assign(FQ, { trilha: "", area: "", inst: "",
 let QPAG = 20;
 const TRILHAS_RAPIDAS = [["", "Todas"], ["med", "Medicina"], ["enem", "ENEM"], ["direito", "Direito"], ["oab", "OAB"]];
 const STATUS_RAPIDOS = [["nao", "Não respondidas"], ["incorreta", "Erradas"], ["marcada", "Marcadas"], ["revisar", "Revisar"]];
+let FQ_OBJ = null;   // aplica a trilha do objetivo do perfil na primeira abertura (e quando o objetivo muda)
 rota("/questoes", () => {
+  if (FQ_OBJ !== objetivo()) { FQ_OBJ = objetivo(); if (!PL.ativo) FQ.trilha = trilhaDoObjetivo(); }
   if (playerAtivo("banco")) return { secao: "questoes", crumbs: [["Questões", "#/questoes"]], titulo: PL.rotulo || "Praticando", html: htmlPlayer(), ctx: { questao: PL.ids[PL.i], tema: qPorId(PL.ids[PL.i])?.tema } };
   const qs = filtrarQuestoes(FQ), extras = Object.entries(FQ).filter(([k, v]) => !["trilha", "status", "texto", "dif", ...(FQ.trilha === "enem" ? ["area", "disc"] : [])].includes(k) && v).length;
   return {

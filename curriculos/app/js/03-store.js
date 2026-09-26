@@ -6,7 +6,7 @@
    ao vivo as mudanças de outros aparelhos. Escritas são agrupadas (1 por doc por vez).
    ============================================================ */
 const DOC_PADRAO = {
-  perfil:       () => ({ nome: null, apresentacao: null, faculdade: null, gradeId: null, periodo: null, metas: { questoes: 20, minutos: 60 } }),
+  perfil:       () => ({ nome: null, apresentacao: null, objetivo: null, faculdade: null, gradeId: null, periodo: null, metas: { questoes: 20, minutos: 60 } }),
   dias:         () => ({ d: {} }),       // d[AAAA-MM-DD] = {q, ac, seg, temas:[]}  → StudySession diária
   erros:        () => ({ itens: {} }),   // itens[qid] = {qid, tema, ts, resp, motivo, coment, card, srs, status}
   cards:        () => ({ itens: {} }),   // itens[id]  = {id, frente, verso, tema, subtema, origem, dif, criado, srs}
@@ -22,6 +22,8 @@ const DOC_PADRAO = {
   instituicoes: () => ({ itens: {} }),   // instituições adicionadas pelo usuário
   guia:         () => ({ g: {} }),       // checklist do guia de referência
   pilulas:      () => ({ v: {} }),       // v[id] = [ts, sabia 0/1] — pílulas de estudo vistas
+  academico:    () => ({ disc: {}, aval: {} }),   // disc[itemId] = situação/notas/faltas; aval[id] = provas e trabalhos
+  ajudas:       () => ({ itens: {} }),   // pedidos de correção/ajuda à IA e respostas
   backups:      () => ({ itens: [] }),   // registro dos backups automáticos (não entra no próprio backup)
 };
 // Progresso das questões, fragmentado por trilha para cada doc ficar pequeno:
@@ -62,7 +64,7 @@ const store = (() => {
      Mapas de itens (questões, cards, erros, dias…) são mesclados chave a chave: o que só um lado
      mudou prevalece; o que um lado apagou sem que o outro tenha mexido some; se os dois mudaram
      o mesmo item, fica o que tem mais tentativas/revisões ou, no empate, o lado mais recente. */
-  const MAPAS = ["q", "itens", "temas", "d", "v", "g"];
+  const MAPAS = ["q", "itens", "temas", "d", "v", "g", "disc", "aval"];
   const eMapa = (k, x) => MAPAS.includes(k) && x && typeof x === "object" && !Array.isArray(x);
   function preferir(l, r, localVence) {
     if (l && r && typeof l === "object" && typeof r === "object") {

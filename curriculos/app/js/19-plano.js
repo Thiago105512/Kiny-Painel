@@ -10,7 +10,7 @@ function linhaPlano(p) {
     <label class="check" style="padding:0;flex:1;min-width:0"><input type="checkbox" data-chg="plano-feito" data-id="${esc(p.id)}" ${p.feito ? "checked" : ""}>
       <span style="${p.feito ? "text-decoration:line-through;color:var(--muted)" : ""}">${esc(p.titulo || nomeTema(p.tema) || p.disciplina || "Estudo")}${p.tema && p.titulo ? " · " + linkTema(p.tema) : ""}
       <span class="small muted">${[p.disciplina, p.min && p.min + " min", p.nq && p.nq + " questões", p.rev && "com revisão"].filter(Boolean).map(esc).join(" · ")}</span></span></label>
-    <span class="linha" style="flex-wrap:nowrap">${p.tema && !p.feito ? `<button class="btn mini" data-act="plano-comecar" data-id="${esc(p.id)}">Começar</button>` : ""}<button class="btn mini sec" data-act="plano-del" data-id="${esc(p.id)}" aria-label="Remover">×</button></span></div>`;
+    <span class="linha" style="flex-wrap:nowrap">${(p.tema || p.temas?.length) && !p.feito ? `<button class="btn mini" data-act="plano-comecar" data-id="${esc(p.id)}">Começar</button>` : ""}<button class="btn mini sec" data-act="plano-del" data-id="${esc(p.id)}" aria-label="Remover">×</button></span></div>`;
 }
 rota("/plano", () => {
   if (!PV.escolhida) PV.data = hoje();   // acompanha o dia atual até a pessoa navegar
@@ -46,7 +46,8 @@ ACOES["plano-dia"] = el => { PV.escolhida = true; PV.data = el.dataset.d; PV.vis
 ACOES["plano-del"] = el => { const P = store.doc("plano"); delete P.itens[el.dataset.id]; store.mudou("plano"); atualizar(); };
 ACOES["plano-comecar"] = el => {
   const p = store.doc("plano").itens[el.dataset.id];
-  if (p.nq && p.tema) { const ids = embaralhar(questoes().filter(q => q.tema === p.tema)).slice(0, p.nq).map(q => q.id); if (ids.length) return praticar(ids, "Plano: " + (p.titulo || nomeTema(p.tema))); }
+  const ts = p.temas?.length ? p.temas : p.tema ? [p.tema] : [];
+  if (p.nq && ts.length) { const ids = embaralhar(questoes().filter(q => ts.includes(q.tema))).slice(0, p.nq).map(q => q.id); if (ids.length) return praticar(ids, "Plano: " + (p.titulo || nomeTema(p.tema))); }
   ir("#/tema/" + encodeURIComponent(p.tema));
 };
 function disciplinasSugeridas() {

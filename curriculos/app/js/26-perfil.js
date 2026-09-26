@@ -15,6 +15,7 @@ function paginaConvite({ nome, fac, apres }) {
       <div class="campos">
         <label class="campo"><span class="lab">Nome</span><input type="text" id="cv-nome" maxlength="60" value="${esc(nome)}" required></label>
         <label class="campo"><span class="lab">Apresentação</span><input type="text" id="cv-apres" maxlength="60" value="${esc(apres || "")}"></label>
+        <label class="campo"><span class="lab">Objetivo de estudo</span><select id="cv-obj">${opcoes(Object.entries(OBJETIVOS), P.objetivo || (gs.length ? gs[0].curso : null), "Tudo (sem foco)")}</select></label>
         <label class="campo"><span class="lab">Faculdade</span><select id="pf-inst" data-chg="pf-inst">${opcoes(instituicoes().map(i => [i.id, i.sigla]), inst ? fac : P.faculdade, "Selecione")}</select></label>
         <label class="campo"><span class="lab">Matriz (versão)</span><select id="pf-grade">${opcoes(gs.map(g => [g.id, g.versao || g.id]), gs[0]?.id, gs.length ? "Selecione" : "Nenhuma cadastrada")}</select></label>
         <label class="campo"><span class="lab">Período atual</span><select id="cv-per">${opcoes(Array.from({ length: 12 }, (_, i) => [i + 1, i + 1 + "º período"]), P.periodo, "Escolha")}</select></label>
@@ -28,7 +29,7 @@ rota("/convite/:nome/:fac", p => paginaConvite(p));
 rota("/convite/:nome/:fac/:apres", p => paginaConvite(p));
 FORMS["convite"] = () => {
   const P = store.doc("perfil"), n = parseInt($("#cv-per").value, 10);
-  P.nome = $("#cv-nome").value.trim() || null; P.apresentacao = $("#cv-apres").value.trim() || null;
+  P.nome = $("#cv-nome").value.trim() || null; P.apresentacao = $("#cv-apres").value.trim() || null; P.objetivo = $("#cv-obj").value || null;
   P.faculdade = $("#pf-inst").value || null; P.gradeId = $("#pf-grade").value || null; P.periodo = n >= 1 && n <= 12 ? n : null;
   store.mudou("perfil"); toast("Perfil salvo"); ir("#/");
 };

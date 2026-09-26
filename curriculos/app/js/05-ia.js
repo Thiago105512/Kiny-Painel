@@ -160,5 +160,13 @@ const IA = (() => {
   ACOES["ia-salvar-caso"] = () => { if (!IA._caso) return; const C = store.doc("casos"); C.itens[IA._caso.id] = IA._caso; store.mudou("casos"); const id = IA._caso.id; IA._caso = null; toast("Caso salvo"); saida(""); fecharFolha(); ir("#/casos/" + id); };
   ACOES["ia-salvar-plano"] = () => { const P = store.doc("plano"); (IA._plano || []).forEach(x => { const id = novoId("p"); P.itens[id] = { id, ...x, tema: null, disciplina: null, rev: false, feito: false }; }); store.mudou("plano"); toast("Plano adicionado"); saida(""); fecharFolha(); ir("#/plano"); };
 
-  return { iniciar, disponivel, contexto, explicarQuestao, texto, json, mensagemErro, abrir };
+  /** Pedido livre (sem o contexto da página), com imagens opcionais — usado em Correção e ajuda. */
+  async function livre(pedido, onText, opts = {}) {
+    if (!sample) throw { code: "not_granted" };
+    ctrl = new AbortController();
+    const r = await sample(`${SISTEMA}\n\n${pedido}`, { onText: ({ text }) => onText && onText(text), signal: ctrl.signal, cache: false, ...(opts.images ? { images: opts.images } : {}) });
+    return r.text;
+  }
+  const limites = async () => { try { return sample ? await sample.limits() : null; } catch (e) { return null; } };
+  return { iniciar, disponivel, contexto, explicarQuestao, texto, json, livre, limites, mensagemErro, abrir };
 })();

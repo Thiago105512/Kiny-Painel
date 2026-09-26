@@ -78,6 +78,8 @@ Um tema como *Hipertensão arterial* existe **uma vez só**. As disciplinas e os
 | `notas`, `materiais` | anotações e materiais por tema; PDFs no armazenamento do app |
 | `questoes`, `casos` | questões e casos criados por você ou pela IA |
 | `grades`, `instituicoes` | matrizes importadas ou editadas (cada item com `conferido`) e faculdades adicionadas |
+| `academico` | Meu curso: situação de cada disciplina da matriz, notas, média final, faltas e as provas/trabalhos (com a revisão montada no `plano`) |
+| `ajudas` | pedidos de correção/ajuda à IA (prova, trabalho, apresentação, pesquisa, resumo) e as respostas |
 | `backups` | registro dos backups automáticos (não entra no próprio backup) |
 
 **Revisão espaçada:** etapas de 1 → 7 → 30 → 90 dias; depois disso, o intervalo × a facilidade.
@@ -128,5 +130,6 @@ python3 -m http.server 8765 &
 node curriculos/testes/fumaca.js     # 41 rotas em 390/768/1280 px: erros de JS e rolagem horizontal
 node curriculos/testes/fluxos.js     # os 5 fluxos de estudo de ponta a ponta
 node curriculos/testes/migracao.js   # migração do formato antigo e sincronização com a conta
+node curriculos/testes/curso.js      # Meu curso: objetivo, situação, notas, faltas, provas com revisão, histórico
 node curriculos/testes/etapa2.js     # mapa mental, erros em lote, backup semanal, conferência da matriz
 ```

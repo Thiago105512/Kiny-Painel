@@ -18,12 +18,15 @@ function linhaFaculdade() {
   if (!g || !itensGrade(g).length) return `<div class="faixa"><p><b>${sig}</b> · <span class="muted">matriz ainda não importada</span></p><a class="btn sec mini" href="#/medicina/inst/${esc(P.faculdade)}">Importar</a></div>`;
   const per = P.periodo || 1, itens = itensGrade(g).filter(i => i.periodo === per), vistos = temasEstudados();
   const prox = itens.flatMap(it => temasDoItem(it).filter(t => !vistos.has(t)).map(t => ({ t, it })))[0];
-  return `<div class="faixa"><p><b>${sig} · ${per}º período</b><br><span class="small muted">${prox ? `Próximo: ${linkTema(prox.t)} (${esc(prox.it.nome)})` : `${itens.length} disciplinas/módulos${itens.some(i => !temasDoItem(i).length) ? " · vincule temas para receber sugestões" : ""}`}</span></p><a class="btn sec mini" href="#/medicina/grade/${esc(g.id)}/p/${per}">Abrir período</a></div>`;
+  return `<div class="faixa"><p><b>${sig} · ${per}º período</b><br><span class="small muted">${prox ? `Próximo: ${linkTema(prox.t)} (${esc(prox.it.nome)})` : `${itens.length} disciplinas/módulos${itens.some(i => !temasDoItem(i).length) ? " · vincule temas para receber sugestões" : ""}`}</span></p><a class="btn sec mini" href="#/curso">Meu curso</a></div>`;
 }
 
 /** Lista de pendências em ordem de prioridade: revisões vencidas, erros, flashcards, plano. */
 function tarefasDoDia() {
   const pend = pendencias(), T = [];
+  // Provas e trabalhos nos próximos 3 dias vêm primeiro
+  proximasAvals(3).forEach(a => { const g = minhaGrade(), n = diasAte(a.data);
+    T.push({ tit: `${TIPO_AVAL[a.tipo] || "Avaliação"}${a.titulo ? ": " + a.titulo : nomeItem(g, a.disc) ? " de " + nomeItem(g, a.disc) : ""} ${n === 0 ? "hoje" : n === 1 ? "amanhã" : `em ${n} dias`}`, det: a.data ? dataBR(a.data) + (a.hora ? " " + a.hora : "") : "", href: `#/curso/aval/${encodeURIComponent(a.id)}`, bt: "Ver" }); });
   pend.temas.sort((a, b) => a.srs.prox.localeCompare(b.srs.prox)).forEach(t => T.push({ tit: `Revisar ${nomeTema(t.id)}`, det: `revisão ${quando(t.srs.prox)} · ~15 min`, href: `#/revisoes/tema/${encodeURIComponent(t.id)}`, bt: "Revisar", link: linkTema(t.id) }));
   if (pend.erros.length) T.push({ tit: `Refazer ${pend.erros.length} questão(ões) que você errou`, det: "caderno de erros", href: "#/revisoes/erros", bt: "Refazer" });
   if (pend.cards.length) T.push({ tit: `Estudar ${pend.cards.length} flashcard(s)`, det: `~${Math.max(2, Math.round(pend.cards.length / 3))} min`, href: "#/flashcards/estudar", bt: "Estudar" });
@@ -33,9 +36,9 @@ function tarefasDoDia() {
 /** Sugestão quando não há pendências: questões novas do ponto mais fraco (ou do banco todo). */
 function sugestaoPratica() {
   const fraca = listaPor(agregados().por.disc, 3).sort((a, b) => a.p - b.p)[0];
-  const novas = questoes().filter(q => statusQ(q).chave === "nao" && (!fraca || q.disc === fraca.k));
+  const novas = questoes().filter(q => doObjetivo(q) && statusQ(q).chave === "nao" && (!fraca || q.disc === fraca.k));
   return fraca && novas.length >= 5 ? { tit: `Praticar ${fraca.k}`, det: `seu ponto mais fraco (${Math.round(fraca.p * 100)}%) · ${novas.length} questões novas`, disc: fraca.k }
-    : { tit: "Praticar 10 questões novas", det: `${questoes().filter(q => statusQ(q).chave === "nao").length} ainda não respondidas no banco` };
+    : { tit: "Praticar 10 questões novas", det: `${questoes().filter(q => doObjetivo(q) && statusQ(q).chave === "nao").length} ainda não respondidas${objetivo() ? " em " + OBJETIVOS[objetivo()] : " no banco"}` };
 }
 const saudacao = () => { const h = new Date().getHours(); return h < 12 ? "Bom dia" : h < 18 ? "Boa tarde" : "Boa noite"; };
 
@@ -80,7 +83,7 @@ rota("/", () => {
   };
 });
 ACOES["inicio-praticar"] = el => {
-  const disc = el.dataset.disc, qs = questoes().filter(q => statusQ(q).chave === "nao" && (!disc || q.disc === disc));
+  const disc = el.dataset.disc, qs = questoes().filter(q => doObjetivo(q) && statusQ(q).chave === "nao" && (!disc || q.disc === disc));
   praticar(embaralhar(qs.length ? qs : questoes()).slice(0, 10).map(q => q.id), disc ? "Praticando " + disc : "10 questões novas");
 };
 ACOES["metas-editar"] = () => { const m = store.doc("perfil").metas || { questoes: 20, minutos: 60 };

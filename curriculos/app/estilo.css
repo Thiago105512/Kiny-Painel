@@ -49,6 +49,7 @@ main{flex:1;min-width:0;padding-inline:16px;padding-block:14px 90px}
   .inferior a,.inferior button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:var(--bar-h);background:none;border:0;color:var(--muted);text-decoration:none;font:600 calc(13px * var(--k)) var(--display);cursor:pointer;position:relative}
   .inferior [aria-current="page"]{color:var(--pen)}
   .inferior svg{width:22px;height:22px}
+  .inferior span{max-width:100%;padding:0 3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .inferior .n{position:absolute;top:6px;right:calc(50% - 20px);font:600 calc(13px * var(--k)) var(--mono);background:var(--bad);color:var(--sheet);border-radius:999px;padding:0 5px}
   .busca-topo input{max-width:none}
   main{padding-block-end:calc(var(--bar-h) + 96px + env(safe-area-inset-bottom,0px))}

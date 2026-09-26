@@ -57,6 +57,7 @@ main{flex:1;min-width:0;padding-inline:16px;padding-block:14px 90px}
   .inferior a,.inferior button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:var(--bar-h);background:none;border:0;color:var(--muted);text-decoration:none;font:600 calc(13px * var(--k)) var(--display);cursor:pointer;position:relative}
   .inferior [aria-current="page"]{color:var(--pen)}
   .inferior svg{width:22px;height:22px}
+  .inferior span{max-width:100%;padding:0 3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .inferior .n{position:absolute;top:6px;right:calc(50% - 20px);font:600 calc(13px * var(--k)) var(--mono);background:var(--bad);color:var(--sheet);border-radius:999px;padding:0 5px}
   .busca-topo input{max-width:none}
   main{padding-block-end:calc(var(--bar-h) + 96px + env(safe-area-inset-bottom,0px))}
@@ -491,7 +492,7 @@ const REDACAO = DADOS.redacao || { competencias: [], zeram: [], estrutura: {}, p
    ao vivo as mudanças de outros aparelhos. Escritas são agrupadas (1 por doc por vez).
    ============================================================ */
 const DOC_PADRAO = {
-  perfil:       () => ({ nome: null, apresentacao: null, faculdade: null, gradeId: null, periodo: null, metas: { questoes: 20, minutos: 60 } }),
+  perfil:       () => ({ nome: null, apresentacao: null, objetivo: null, faculdade: null, gradeId: null, periodo: null, metas: { questoes: 20, minutos: 60 } }),
   dias:         () => ({ d: {} }),       // d[AAAA-MM-DD] = {q, ac, seg, temas:[]}  → StudySession diária
   erros:        () => ({ itens: {} }),   // itens[qid] = {qid, tema, ts, resp, motivo, coment, card, srs, status}
   cards:        () => ({ itens: {} }),   // itens[id]  = {id, frente, verso, tema, subtema, origem, dif, criado, srs}
@@ -507,6 +508,8 @@ const DOC_PADRAO = {
   instituicoes: () => ({ itens: {} }),   // instituições adicionadas pelo usuário
   guia:         () => ({ g: {} }),       // checklist do guia de referência
   pilulas:      () => ({ v: {} }),       // v[id] = [ts, sabia 0/1] — pílulas de estudo vistas
+  academico:    () => ({ disc: {}, aval: {} }),   // disc[itemId] = situação/notas/faltas; aval[id] = provas e trabalhos
+  ajudas:       () => ({ itens: {} }),   // pedidos de correção/ajuda à IA e respostas
   backups:      () => ({ itens: [] }),   // registro dos backups automáticos (não entra no próprio backup)
 };
 // Progresso das questões, fragmentado por trilha para cada doc ficar pequeno:
@@ -547,7 +550,7 @@ const store = (() => {
      Mapas de itens (questões, cards, erros, dias…) são mesclados chave a chave: o que só um lado
      mudou prevalece; o que um lado apagou sem que o outro tenha mexido some; se os dois mudaram
      o mesmo item, fica o que tem mais tentativas/revisões ou, no empate, o lado mais recente. */
-  const MAPAS = ["q", "itens", "temas", "d", "v", "g"];
+  const MAPAS = ["q", "itens", "temas", "d", "v", "g", "disc", "aval"];
   const eMapa = (k, x) => MAPAS.includes(k) && x && typeof x === "object" && !Array.isArray(x);
   function preferir(l, r, localVence) {
     if (l && r && typeof l === "object" && typeof r === "object") {
@@ -1094,7 +1097,15 @@ const IA = (() => {
   ACOES["ia-salvar-caso"] = () => { if (!IA._caso) return; const C = store.doc("casos"); C.itens[IA._caso.id] = IA._caso; store.mudou("casos"); const id = IA._caso.id; IA._caso = null; toast("Caso salvo"); saida(""); fecharFolha(); ir("#/casos/" + id); };
   ACOES["ia-salvar-plano"] = () => { const P = store.doc("plano"); (IA._plano || []).forEach(x => { const id = novoId("p"); P.itens[id] = { id, ...x, tema: null, disciplina: null, rev: false, feito: false }; }); store.mudou("plano"); toast("Plano adicionado"); saida(""); fecharFolha(); ir("#/plano"); };
 
-  return { iniciar, disponivel, contexto, explicarQuestao, texto, json, mensagemErro, abrir };
+  /** Pedido livre (sem o contexto da página), com imagens opcionais — usado em Correção e ajuda. */
+  async function livre(pedido, onText, opts = {}) {
+    if (!sample) throw { code: "not_granted" };
+    ctrl = new AbortController();
+    const r = await sample(`${SISTEMA}\n\n${pedido}`, { onText: ({ text }) => onText && onText(text), signal: ctrl.signal, cache: false, ...(opts.images ? { images: opts.images } : {}) });
+    return r.text;
+  }
+  const limites = async () => { try { return sample ? await sample.limits() : null; } catch (e) { return null; } };
+  return { iniciar, disponivel, contexto, explicarQuestao, texto, json, livre, limites, mensagemErro, abrir };
 })();
 
 /* ---- 06-ui.js ---- */
@@ -1136,22 +1147,34 @@ const IC = {
   ia: "M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4zM18 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z",
   estudar: "M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z",
   busca: "M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM21 21l-5-5",
+  curso: "M2 9l10-5 10 5-10 5zM6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5M22 9v6",
 };
 const icone = n => `<svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="${IC[n] || ""}"/></svg>`;
 
 /* Navegação em grupos: o que estudar, praticar, revisar e organizar */
-const GRUPOS_NAV = [
-  ["", [["inicio", "#/", "Início"]]],
+const GRUPOS_NAV_BASE = [
+  ["", [["inicio", "#/", "Início"], ["curso", "#/curso", "Meu curso"]]],
   ["Estudar", [["estudar", "#/estudar", "Pílulas de estudo"], ["medicina", "#/medicina", "Medicina"], ["enem", "#/enem", "ENEM e vestibulares"]]],
   ["Praticar", [["questoes", "#/questoes", "Questões"], ["simulados", "#/simulados", "Simulados"], ["casos", "#/casos", "Casos clínicos"]]],
   ["Revisar", [["revisoes", "#/revisoes", "Revisões"], ["flashcards", "#/flashcards", "Flashcards"]]],
   ["Organizar", [["plano", "#/plano", "Planejamento"], ["desempenho", "#/desempenho", "Desempenho"], ["biblioteca", "#/biblioteca", "Biblioteca"]]],
 ];
-const NAV = GRUPOS_NAV.flatMap(g => g[1]);
-const INFERIOR = ["inicio", "medicina", "enem", "revisoes"];
-const CURTO = { enem: "ENEM" };
+/** O menu segue o objetivo do perfil: o que não é do objetivo vai para "Outras áreas". */
+const FORA_DO_OBJETIVO = { medicina: ["enem"], residencia: ["enem", "curso"], enem: ["medicina", "casos", "curso"], direito: ["medicina", "enem", "casos"], oab: ["medicina", "enem", "casos", "curso"] };
+function gruposNav() {
+  const fora = FORA_DO_OBJETIVO[store.doc("perfil").objetivo] || [];
+  const g = GRUPOS_NAV_BASE.map(([n, it]) => [n, it.filter(x => !fora.includes(x[0]))]).filter(([n, it]) => it.length);
+  const outras = GRUPOS_NAV_BASE.flatMap(x => x[1]).filter(x => fora.includes(x[0]));
+  return outras.length ? g.concat([["Outras áreas", outras]]) : g;
+}
+let GRUPOS_NAV = GRUPOS_NAV_BASE;
+const NAV = GRUPOS_NAV_BASE.flatMap(g => g[1]);
+const INFERIOR_POR_OBJ = { medicina: ["inicio", "curso", "medicina", "revisoes"], residencia: ["inicio", "questoes", "simulados", "revisoes"], enem: ["inicio", "enem", "questoes", "revisoes"], direito: ["inicio", "curso", "questoes", "revisoes"], oab: ["inicio", "questoes", "simulados", "revisoes"] };
+let INFERIOR = ["inicio", "medicina", "enem", "revisoes"];
+const CURTO = { enem: "ENEM", curso: "Curso" };
 
 function desenharNav(secao) {
+  GRUPOS_NAV = gruposNav(); INFERIOR = INFERIOR_POR_OBJ[store.doc("perfil").objetivo] || ["inicio", "medicina", "enem", "revisoes"];
   const n = pendencias().total;
   const badge = k => k === "revisoes" && n ? `<span class="n" aria-label="${n} pendentes">${n}</span>` : "";
   $("#nav-lateral").innerHTML = GRUPOS_NAV.map(([g, itens]) => (g ? `<div class="grupo">${g}</div>` : "") +
@@ -1160,9 +1183,10 @@ function desenharNav(secao) {
     return `<a href="${h}" ${k === secao ? 'aria-current="page"' : ""}>${icone(k)}<span>${CURTO[k] || t}</span>${badge(k)}</a>`; }).join("")
     + `<button data-act="menu-mais" ${INFERIOR.includes(secao) ? "" : 'aria-current="page"'}>${icone("mais")}<span>Mais</span></button>`;
 }
-ACOES["menu-mais"] = () => abrirFolha(GRUPOS_NAV.filter(([g]) => g).map(([g, itens]) => {
-  const extra = g === "Estudar" ? [["enem", "#/redacao", "Redação"]] : g === "Revisar" ? [["questoes", "#/erros", "Caderno de erros"]] : [];
-  return `<div class="menu-grupo"><h3>${g}</h3><div class="links-lista">${itens.concat(extra).filter(([k, h]) => !INFERIOR.includes(k) || extra.some(x => x[1] === h)).map(([k, h, t]) => `<a href="${h}" data-act="fechar-folha"><span class="linha" style="flex-wrap:nowrap">${icone(k)}${t}</span></a>`).join("")}</div></div>`;
+ACOES["menu-mais"] = () => abrirFolha(GRUPOS_NAV.map(([g, itens]) => {
+  const extra = g === "Estudar" && !(FORA_DO_OBJETIVO[store.doc("perfil").objetivo] || []).includes("enem") ? [["enem", "#/redacao", "Redação"]] : g === "Revisar" ? [["questoes", "#/erros", "Caderno de erros"]] : [];
+  const lista = itens.concat(extra).filter(([k, h]) => !INFERIOR.includes(k) || extra.some(x => x[1] === h));
+  return lista.length ? `<div class="menu-grupo"><h3>${g || "Principal"}</h3><div class="links-lista">${lista.map(([k, h, t]) => `<a href="${h}" data-act="fechar-folha"><span class="linha" style="flex-wrap:nowrap">${icone(k)}${t}</span></a>`).join("")}</div></div>` : "";
 }).join(""), { titulo: "Menu" });
 
 /* ---------- Render ---------- */
@@ -1373,12 +1397,15 @@ function linhaFaculdade() {
   if (!g || !itensGrade(g).length) return `<div class="faixa"><p><b>${sig}</b> · <span class="muted">matriz ainda não importada</span></p><a class="btn sec mini" href="#/medicina/inst/${esc(P.faculdade)}">Importar</a></div>`;
   const per = P.periodo || 1, itens = itensGrade(g).filter(i => i.periodo === per), vistos = temasEstudados();
   const prox = itens.flatMap(it => temasDoItem(it).filter(t => !vistos.has(t)).map(t => ({ t, it })))[0];
-  return `<div class="faixa"><p><b>${sig} · ${per}º período</b><br><span class="small muted">${prox ? `Próximo: ${linkTema(prox.t)} (${esc(prox.it.nome)})` : `${itens.length} disciplinas/módulos${itens.some(i => !temasDoItem(i).length) ? " · vincule temas para receber sugestões" : ""}`}</span></p><a class="btn sec mini" href="#/medicina/grade/${esc(g.id)}/p/${per}">Abrir período</a></div>`;
+  return `<div class="faixa"><p><b>${sig} · ${per}º período</b><br><span class="small muted">${prox ? `Próximo: ${linkTema(prox.t)} (${esc(prox.it.nome)})` : `${itens.length} disciplinas/módulos${itens.some(i => !temasDoItem(i).length) ? " · vincule temas para receber sugestões" : ""}`}</span></p><a class="btn sec mini" href="#/curso">Meu curso</a></div>`;
 }
 
 /** Lista de pendências em ordem de prioridade: revisões vencidas, erros, flashcards, plano. */
 function tarefasDoDia() {
   const pend = pendencias(), T = [];
+  // Provas e trabalhos nos próximos 3 dias vêm primeiro
+  proximasAvals(3).forEach(a => { const g = minhaGrade(), n = diasAte(a.data);
+    T.push({ tit: `${TIPO_AVAL[a.tipo] || "Avaliação"}${a.titulo ? ": " + a.titulo : nomeItem(g, a.disc) ? " de " + nomeItem(g, a.disc) : ""} ${n === 0 ? "hoje" : n === 1 ? "amanhã" : `em ${n} dias`}`, det: a.data ? dataBR(a.data) + (a.hora ? " " + a.hora : "") : "", href: `#/curso/aval/${encodeURIComponent(a.id)}`, bt: "Ver" }); });
   pend.temas.sort((a, b) => a.srs.prox.localeCompare(b.srs.prox)).forEach(t => T.push({ tit: `Revisar ${nomeTema(t.id)}`, det: `revisão ${quando(t.srs.prox)} · ~15 min`, href: `#/revisoes/tema/${encodeURIComponent(t.id)}`, bt: "Revisar", link: linkTema(t.id) }));
   if (pend.erros.length) T.push({ tit: `Refazer ${pend.erros.length} questão(ões) que você errou`, det: "caderno de erros", href: "#/revisoes/erros", bt: "Refazer" });
   if (pend.cards.length) T.push({ tit: `Estudar ${pend.cards.length} flashcard(s)`, det: `~${Math.max(2, Math.round(pend.cards.length / 3))} min`, href: "#/flashcards/estudar", bt: "Estudar" });
@@ -1388,9 +1415,9 @@ function tarefasDoDia() {
 /** Sugestão quando não há pendências: questões novas do ponto mais fraco (ou do banco todo). */
 function sugestaoPratica() {
   const fraca = listaPor(agregados().por.disc, 3).sort((a, b) => a.p - b.p)[0];
-  const novas = questoes().filter(q => statusQ(q).chave === "nao" && (!fraca || q.disc === fraca.k));
+  const novas = questoes().filter(q => doObjetivo(q) && statusQ(q).chave === "nao" && (!fraca || q.disc === fraca.k));
   return fraca && novas.length >= 5 ? { tit: `Praticar ${fraca.k}`, det: `seu ponto mais fraco (${Math.round(fraca.p * 100)}%) · ${novas.length} questões novas`, disc: fraca.k }
-    : { tit: "Praticar 10 questões novas", det: `${questoes().filter(q => statusQ(q).chave === "nao").length} ainda não respondidas no banco` };
+    : { tit: "Praticar 10 questões novas", det: `${questoes().filter(q => doObjetivo(q) && statusQ(q).chave === "nao").length} ainda não respondidas${objetivo() ? " em " + OBJETIVOS[objetivo()] : " no banco"}` };
 }
 const saudacao = () => { const h = new Date().getHours(); return h < 12 ? "Bom dia" : h < 18 ? "Boa tarde" : "Boa noite"; };
 
@@ -1435,7 +1462,7 @@ rota("/", () => {
   };
 });
 ACOES["inicio-praticar"] = el => {
-  const disc = el.dataset.disc, qs = questoes().filter(q => statusQ(q).chave === "nao" && (!disc || q.disc === disc));
+  const disc = el.dataset.disc, qs = questoes().filter(q => doObjetivo(q) && statusQ(q).chave === "nao" && (!disc || q.disc === disc));
   praticar(embaralhar(qs.length ? qs : questoes()).slice(0, 10).map(q => q.id), disc ? "Praticando " + disc : "10 questões novas");
 };
 ACOES["metas-editar"] = () => { const m = store.doc("perfil").metas || { questoes: 20, minutos: 60 };
@@ -1481,6 +1508,7 @@ ACOES["perfil-fac"] = () => {
   abrirFolha(`<form class="pilha" data-form="perfil-fac"><div class="campos">
     <label class="campo"><span class="lab">Nome</span><input type="text" id="pf-nome" maxlength="60" value="${esc(P.nome || "")}" autocomplete="name"></label>
     <label class="campo"><span class="lab">Apresentação</span><input type="text" id="pf-apres" maxlength="60" value="${esc(P.apresentacao || "")}" placeholder="Ex.: Acadêmica de Medicina"></label>
+    <label class="campo"><span class="lab">Objetivo de estudo</span><select id="pf-obj">${opcoes(Object.entries(OBJETIVOS), P.objetivo, "Tudo (sem foco)")}</select></label>
     <label class="campo"><span class="lab">Instituição</span><select id="pf-inst" data-chg="pf-inst">${opcoes(insts.map(i => [i.id, i.sigla]), P.faculdade, "Selecione")}</select></label>
     <label class="campo"><span class="lab">Matriz (versão)</span><select id="pf-grade">${opcoes(gradesP.map(g => [g.id, g.versao || g.id]), P.gradeId, gradesP.length ? "Selecione" : "Nenhuma cadastrada")}</select></label>
     <label class="campo"><span class="lab">Período atual</span><input type="number" id="pf-per" min="1" max="12" value="${P.periodo || ""}"></label></div>
@@ -1488,7 +1516,7 @@ ACOES["perfil-fac"] = () => {
 };
 MUDANCAS["pf-inst"] = el => { const gs = gradesDe(el.value); $("#pf-grade").innerHTML = opcoes(gs.map(g => [g.id, g.versao || g.id]), gs[0]?.id, gs.length ? "Selecione" : "Nenhuma cadastrada"); };
 FORMS["perfil-fac"] = () => {
-  const P = store.doc("perfil"); P.nome = $("#pf-nome").value.trim() || null; P.apresentacao = $("#pf-apres").value.trim() || null;
+  const P = store.doc("perfil"); P.nome = $("#pf-nome").value.trim() || null; P.apresentacao = $("#pf-apres").value.trim() || null; P.objetivo = $("#pf-obj").value || null;
   P.faculdade = $("#pf-inst").value || null; P.gradeId = $("#pf-grade").value || null;
   const n = parseInt($("#pf-per").value, 10); P.periodo = n >= 1 && n <= 12 ? n : null; store.mudou("perfil"); fecharFolha(); toast("Perfil salvo"); atualizar();
 };
@@ -2093,7 +2121,9 @@ ACOES["fq-limpar"] = () => { Object.assign(FQ, { trilha: "", area: "", inst: "",
 let QPAG = 20;
 const TRILHAS_RAPIDAS = [["", "Todas"], ["med", "Medicina"], ["enem", "ENEM"], ["direito", "Direito"], ["oab", "OAB"]];
 const STATUS_RAPIDOS = [["nao", "Não respondidas"], ["incorreta", "Erradas"], ["marcada", "Marcadas"], ["revisar", "Revisar"]];
+let FQ_OBJ = null;   // aplica a trilha do objetivo do perfil na primeira abertura (e quando o objetivo muda)
 rota("/questoes", () => {
+  if (FQ_OBJ !== objetivo()) { FQ_OBJ = objetivo(); if (!PL.ativo) FQ.trilha = trilhaDoObjetivo(); }
   if (playerAtivo("banco")) return { secao: "questoes", crumbs: [["Questões", "#/questoes"]], titulo: PL.rotulo || "Praticando", html: htmlPlayer(), ctx: { questao: PL.ids[PL.i], tema: qPorId(PL.ids[PL.i])?.tema } };
   const qs = filtrarQuestoes(FQ), extras = Object.entries(FQ).filter(([k, v]) => !["trilha", "status", "texto", "dif", ...(FQ.trilha === "enem" ? ["area", "disc"] : [])].includes(k) && v).length;
   return {
@@ -2618,7 +2648,7 @@ function linhaPlano(p) {
     <label class="check" style="padding:0;flex:1;min-width:0"><input type="checkbox" data-chg="plano-feito" data-id="${esc(p.id)}" ${p.feito ? "checked" : ""}>
       <span style="${p.feito ? "text-decoration:line-through;color:var(--muted)" : ""}">${esc(p.titulo || nomeTema(p.tema) || p.disciplina || "Estudo")}${p.tema && p.titulo ? " · " + linkTema(p.tema) : ""}
       <span class="small muted">${[p.disciplina, p.min && p.min + " min", p.nq && p.nq + " questões", p.rev && "com revisão"].filter(Boolean).map(esc).join(" · ")}</span></span></label>
-    <span class="linha" style="flex-wrap:nowrap">${p.tema && !p.feito ? `<button class="btn mini" data-act="plano-comecar" data-id="${esc(p.id)}">Começar</button>` : ""}<button class="btn mini sec" data-act="plano-del" data-id="${esc(p.id)}" aria-label="Remover">×</button></span></div>`;
+    <span class="linha" style="flex-wrap:nowrap">${(p.tema || p.temas?.length) && !p.feito ? `<button class="btn mini" data-act="plano-comecar" data-id="${esc(p.id)}">Começar</button>` : ""}<button class="btn mini sec" data-act="plano-del" data-id="${esc(p.id)}" aria-label="Remover">×</button></span></div>`;
 }
 rota("/plano", () => {
   if (!PV.escolhida) PV.data = hoje();   // acompanha o dia atual até a pessoa navegar
@@ -2654,7 +2684,8 @@ ACOES["plano-dia"] = el => { PV.escolhida = true; PV.data = el.dataset.d; PV.vis
 ACOES["plano-del"] = el => { const P = store.doc("plano"); delete P.itens[el.dataset.id]; store.mudou("plano"); atualizar(); };
 ACOES["plano-comecar"] = el => {
   const p = store.doc("plano").itens[el.dataset.id];
-  if (p.nq && p.tema) { const ids = embaralhar(questoes().filter(q => q.tema === p.tema)).slice(0, p.nq).map(q => q.id); if (ids.length) return praticar(ids, "Plano: " + (p.titulo || nomeTema(p.tema))); }
+  const ts = p.temas?.length ? p.temas : p.tema ? [p.tema] : [];
+  if (p.nq && ts.length) { const ids = embaralhar(questoes().filter(q => ts.includes(q.tema))).slice(0, p.nq).map(q => q.id); if (ids.length) return praticar(ids, "Plano: " + (p.titulo || nomeTema(p.tema))); }
   ir("#/tema/" + encodeURIComponent(p.tema));
 };
 function disciplinasSugeridas() {
@@ -3191,6 +3222,7 @@ function paginaConvite({ nome, fac, apres }) {
       <div class="campos">
         <label class="campo"><span class="lab">Nome</span><input type="text" id="cv-nome" maxlength="60" value="${esc(nome)}" required></label>
         <label class="campo"><span class="lab">Apresentação</span><input type="text" id="cv-apres" maxlength="60" value="${esc(apres || "")}"></label>
+        <label class="campo"><span class="lab">Objetivo de estudo</span><select id="cv-obj">${opcoes(Object.entries(OBJETIVOS), P.objetivo || (gs.length ? gs[0].curso : null), "Tudo (sem foco)")}</select></label>
         <label class="campo"><span class="lab">Faculdade</span><select id="pf-inst" data-chg="pf-inst">${opcoes(instituicoes().map(i => [i.id, i.sigla]), inst ? fac : P.faculdade, "Selecione")}</select></label>
         <label class="campo"><span class="lab">Matriz (versão)</span><select id="pf-grade">${opcoes(gs.map(g => [g.id, g.versao || g.id]), gs[0]?.id, gs.length ? "Selecione" : "Nenhuma cadastrada")}</select></label>
         <label class="campo"><span class="lab">Período atual</span><select id="cv-per">${opcoes(Array.from({ length: 12 }, (_, i) => [i + 1, i + 1 + "º período"]), P.periodo, "Escolha")}</select></label>
@@ -3204,10 +3236,364 @@ rota("/convite/:nome/:fac", p => paginaConvite(p));
 rota("/convite/:nome/:fac/:apres", p => paginaConvite(p));
 FORMS["convite"] = () => {
   const P = store.doc("perfil"), n = parseInt($("#cv-per").value, 10);
-  P.nome = $("#cv-nome").value.trim() || null; P.apresentacao = $("#cv-apres").value.trim() || null;
+  P.nome = $("#cv-nome").value.trim() || null; P.apresentacao = $("#cv-apres").value.trim() || null; P.objetivo = $("#cv-obj").value || null;
   P.faculdade = $("#pf-inst").value || null; P.gradeId = $("#pf-grade").value || null; P.periodo = n >= 1 && n <= 12 ? n : null;
   store.mudou("perfil"); toast("Perfil salvo"); ir("#/");
 };
+
+/* ---- 27-curso.js ---- */
+/* ============================================================
+   27-curso — "Meu curso": a grade do perfil vira o painel do semestre.
+   Situação de cada disciplina, notas por avaliação, média, faltas,
+   agenda de provas/trabalhos com revisão automática até a data e
+   importação do histórico escolar (por código da disciplina).
+   Documento "academico": disc[itemId] = {sit, notas:[{id,nome,valor,peso}], final, faltas, sem}
+                          aval[id]     = {id, tipo, titulo, disc, data, hora, conteudo, temas[], peso, nota, feito}
+   ============================================================ */
+const SIT = {
+  cursando: ["Cursando", "azul"], concluida: ["Concluída", "ok"], acursar: ["A cursar", ""],
+  reprovada: ["Reprovada", "bad"], dispensada: ["Dispensada", "ok"], trancada: ["Trancada", ""],
+};
+const TIPO_AVAL = { prova: "Prova", pratica: "Prova prática", trabalho: "Trabalho", seminario: "Seminário", apresentacao: "Apresentação", exercicio: "Lista de exercícios", outro: "Outro" };
+const OBJETIVOS = { medicina: "Medicina — graduação", residencia: "Residência médica", enem: "ENEM e vestibulares", direito: "Direito — graduação", oab: "OAB" };
+const objetivo = () => store.doc("perfil").objetivo || null;
+/** Trilha rápida de questões correspondente ao objetivo ("med" junta Medicina e Residência). */
+const trilhaDoObjetivo = () => ({ medicina: "med", residencia: "med", enem: "enem", direito: "direito", oab: "oab" })[objetivo()] || "";
+const doObjetivo = q => { const o = objetivo(); if (!o) return true; return o === "medicina" || o === "residencia" ? TRILHAS[q.t]?.dominio === "medicina" : o === "enem" ? q.t === "enem" : o === "oab" ? q.t === "oab" || q.t === "direito" : q.t === "direito" || q.t === "oab"; };
+
+const minhaGrade = () => { const P = store.doc("perfil"); return P.gradeId ? gradePorId(P.gradeId) : null; };
+const acad = () => store.doc("academico");
+/** Situação: a escolhida pela pessoa ou, sem escolha, a presumida pelo período atual. */
+function sitDe(it) {
+  const d = acad().disc[it.id]; if (d?.sit) return d.sit;
+  const per = store.doc("perfil").periodo;
+  if (!per || !it.periodo || it.optativa) return "acursar";
+  return it.periodo < per ? "concluida" : it.periodo === per ? "cursando" : "acursar";
+}
+const presumida = it => !acad().disc[it.id]?.sit;
+/** Média ponderada das notas lançadas (0–10) ou a média final informada. */
+function mediaDe(itId) {
+  const d = acad().disc[itId]; if (!d) return null;
+  if (typeof d.final === "number") return d.final;
+  const ns = (d.notas || []).filter(n => typeof n.valor === "number");
+  if (!ns.length) return null;
+  const p = ns.reduce((s, n) => s + (+n.peso || 1), 0);
+  return Math.round(ns.reduce((s, n) => s + n.valor * (+n.peso || 1), 0) / p * 100) / 100;
+}
+/** Coeficiente: média das médias ponderada pela carga horária (só disciplinas com média). */
+function coeficiente(g) {
+  let s = 0, ch = 0;
+  itensGrade(g).forEach(it => { const m = mediaDe(it.id), sit = sitDe(it); if (m === null || !["concluida", "reprovada"].includes(sit)) return; const h = it.ch || 1; s += m * h; ch += h; });
+  return ch ? Math.round(s / ch * 100) / 100 : null;
+}
+const fmtNota = n => n === null || n === undefined ? "—" : String(n).replace(".", ",");
+const lerNota = v => { const n = parseFloat(String(v).replace(",", ".")); return isNaN(n) ? null : Math.max(0, Math.min(10, n)); };
+const avals = () => Object.values(acad().aval).sort((a, b) => (a.data || "9").localeCompare(b.data || "9") || (a.hora || "").localeCompare(b.hora || ""));
+const proximasAvals = (dias = 60) => avals().filter(a => !a.feito && a.data && a.data >= hoje() && diasAte(a.data) <= dias);
+const nomeItem = (g, id) => (g && itensGrade(g).find(x => x.id === id)?.nome) || null;
+const semGrade = () => ({ secao: "curso", titulo: "Meu curso", html: vazio("Escolha a matriz curricular no seu perfil primeiro.", `<a class="btn" href="#/curso">Voltar</a>`) });
+function mudouAcad() { store.mudou("academico"); }
+function discOuNovo(id) { const A = acad(); return A.disc[id] = A.disc[id] || { notas: [], faltas: 0 }; }
+
+/* ---------- Painel ---------- */
+rota("/curso", () => {
+  const P = store.doc("perfil"), g = minhaGrade();
+  if (!g || !itensGrade(g).length) return { secao: "curso", titulo: "Meu curso",
+    html: vazio(P.faculdade ? "A matriz da sua faculdade ainda não foi escolhida ou importada. Escolha a matriz no perfil (ou importe o documento oficial) para acompanhar disciplinas, notas e provas."
+      : "Escolha sua faculdade, a matriz curricular e o período para acompanhar disciplinas, notas, faltas e provas.", `<button class="btn" data-act="perfil-fac">Meu perfil</button>${P.faculdade ? `<a class="btn sec" href="#/medicina/inst/${esc(P.faculdade)}">Importar matriz</a>` : ""}`) };
+  const it = itensGrade(g).filter(x => !x.optativa || acad().disc[x.id]?.sit), obrig = it.filter(x => !x.optativa);
+  const conc = obrig.filter(x => ["concluida", "dispensada"].includes(sitDe(x))), chConc = conc.reduce((s, x) => s + (x.ch || 0), 0), chTot = obrig.reduce((s, x) => s + (x.ch || 0), 0);
+  const cursando = it.filter(x => sitDe(x) === "cursando"), cr = coeficiente(g), prox = proximasAvals(30).slice(0, 5);
+  const linhaDisc = x => { const m = mediaDe(x.id), d = acad().disc[x.id], lim = x.ch ? Math.floor(x.ch * 0.25) : null, f = d?.faltas || 0;
+    return `<a href="#/curso/d/${esc(x.id)}"><span>${esc(x.nome)}</span><small>${[m !== null && "média " + fmtNota(m), f ? `${f} h de falta${lim ? ` (limite ~${lim} h)` : ""}` : "", avals().filter(a => a.disc === x.id && !a.feito && a.data >= hoje()).length && "avaliação marcada"].filter(Boolean).join(" · ")}</small></a>`; };
+  return {
+    secao: "curso", titulo: "Meu curso", sub: `${esc(nomeInst(g.instituicao))} · ${esc(CURSOS[g.curso] || g.curso)} ${esc(g.versao || "")}${P.periodo ? ` · ${P.periodo}º período` : ""}`,
+    acoes: `<button class="btn mini" data-act="aval-nova">+ Prova ou trabalho</button><button class="btn sec mini" data-act="perfil-fac">Perfil</button>`,
+    html: `<div class="kpis">
+        <div class="kpi"><b>${conc.length}/${obrig.length}</b><span>disciplinas concluídas</span>${medidor(pct(chConc, chTot), "ok")}</div>
+        <div class="kpi"><b>${chTot ? pct(chConc, chTot) + "%" : "—"}</b><span>da carga horária obrigatória</span></div>
+        <div class="kpi"><b>${cr !== null ? fmtNota(cr) : "—"}</b><span>média geral (por CH)</span></div></div>
+      <section><h2 class="sec">Próximas provas e trabalhos</h2>${prox.length ? `<div class="tarefas">${prox.map(linhaAval).join("")}</div>` : `<p class="muted">Nada marcado. Cadastre provas, trabalhos e apresentações para o app montar a revisão até a data.</p>`}
+        <div class="acoes"><a class="btn sec mini" href="#/curso/agenda">Agenda completa</a></div></section>
+      <section><h2 class="sec">Cursando agora</h2>${cursando.length ? `<div class="links-lista">${cursando.map(linhaDisc).join("")}</div>` : `<p class="muted">Nenhuma disciplina marcada como "cursando".</p>`}</section>
+      <section><h2 class="sec">Mais</h2><div class="links-lista">
+        <a href="#/curso/disciplinas"><span>Todas as disciplinas</span><small>marque concluídas, cursando, reprovadas…</small></a>
+        <a href="#/curso/historico"><span>Importar histórico escolar</span><small>preenche situação e médias pelo código da disciplina</small></a>
+        <a href="#/curso/ajuda"><span>Correção e ajuda</span><small>envie prova, trabalho ou pedido de ajuda</small></a>
+        <a href="#/medicina/grade/${esc(g.id)}"><span>Matriz curricular</span><small>${esc(statusGrade(g).nome)}</small></a></div></section>
+      ${obrig.some(presumida) ? `<p class="small muted">Situações sem marcação foram presumidas pelo seu período atual. Ajuste em "Todas as disciplinas" ou importe o histórico.</p>` : ""}`,
+    ctx: { grade: g.id, periodo: P.periodo },
+  };
+});
+function linhaAval(a) {
+  const g = minhaGrade(), n = a.data ? diasAte(a.data) : null;
+  return `<div class="tarefa"><div class="o"><a href="#/curso/aval/${esc(a.id)}">${esc(TIPO_AVAL[a.tipo] || "Avaliação")}: ${esc(a.titulo || nomeItem(g, a.disc) || "")}</a><small>${[a.data && `${dataBR(a.data)}${a.hora ? " " + esc(a.hora) : ""} (${quando(a.data)})`, nomeItem(g, a.disc)].filter(Boolean).map(esc).join(" · ")}</small></div>${n !== null && n <= 3 && !a.feito ? pill(n <= 0 ? "hoje" : n === 1 ? "amanhã" : `${n} dias`, "bad") : ""}</div>`;
+}
+
+/* ---------- Todas as disciplinas ---------- */
+rota("/curso/disciplinas", () => {
+  const g = minhaGrade(); if (!g) return semGrade();
+  const sel = it => `<select data-chg="disc-sit" data-i="${esc(it.id)}" aria-label="Situação de ${esc(it.nome)}">${opcoes(Object.entries(SIT).map(([k, [t]]) => [k, t]), sitDe(it))}</select>`;
+  return { secao: "curso", crumbs: [["Meu curso", "#/curso"]], titulo: "Disciplinas",
+    sub: "Escolha a situação de cada uma. As não marcadas são presumidas pelo seu período atual.",
+    html: (g.periodos || []).map(p => `<section><h2 class="sec">${esc(p.nome || p.numero + "º período")} <button class="btn mini sec" data-act="disc-per" data-p="${p.numero}" data-s="concluida">Tudo concluído</button></h2>
+      <div class="tarefas">${(p.itens || []).map(it0 => { const it = { ...it0, periodo: p.numero }, m = mediaDe(it.id);
+        return `<div class="tarefa"><div class="o"><a href="#/curso/d/${esc(it.id)}">${esc(it.nome)}</a><small>${[it.codigo, it.ch && it.ch + " h", m !== null && "média " + fmtNota(m), presumida(it) && "presumida"].filter(Boolean).map(esc).join(" · ")}</small></div>${sel(it)}</div>`; }).join("")}</div></section>`).join(""),
+    ctx: { grade: g.id } };
+});
+MUDANCAS["disc-sit"] = el => { discOuNovo(el.dataset.i).sit = el.value; mudouAcad(); toast("Situação salva"); atualizar(); };
+ACOES["disc-per"] = el => { const g = minhaGrade(), p = g.periodos.find(x => String(x.numero) === el.dataset.p); (p.itens || []).forEach(it => { discOuNovo(it.id).sit = el.dataset.s; }); mudouAcad(); toast("Período marcado como concluído"); atualizar(); };
+
+/* ---------- Disciplina ---------- */
+rota("/curso/d/:i", ({ i }) => {
+  const g = minhaGrade(); const it = g && itensGrade(g).find(x => x.id === i); if (!it) return paginaNaoEncontrada();
+  const d = acad().disc[i] || { notas: [], faltas: 0 }, m = mediaDe(i), lim = it.ch ? Math.floor(it.ch * 0.25) : null, f = d.faltas || 0;
+  const temas = temasDoItem(it), qs = questoes().filter(q => temas.includes(q.tema)), av = avals().filter(a => a.disc === i);
+  return {
+    secao: "curso", crumbs: [["Meu curso", "#/curso"], ["Disciplinas", "#/curso/disciplinas"]], titulo: it.nome,
+    sub: `${pill(SIT[sitDe(it)][0], SIT[sitDe(it)][1])} ${[it.codigo, it.periodoNome, it.ch && it.ch + " h"].filter(Boolean).map(esc).join(" · ")}`,
+    acoes: `${qs.length ? `<button class="btn" data-act="praticar-ids" data-ids="${qs.map(q => q.id).join(",")}" data-ctx="Disciplina ${esc(it.nome)}">Praticar ${qs.length} questões</button>` : ""}<button class="btn sec" data-act="aval-nova" data-d="${esc(i)}">+ Prova ou trabalho</button>`,
+    html: `<section class="caixa"><h2 class="sec">Situação</h2><select data-chg="disc-sit" data-i="${esc(i)}" aria-label="Situação">${opcoes(Object.entries(SIT).map(([k, [t]]) => [k, t]), sitDe(it))}</select></section>
+      <section class="caixa"><h2 class="sec">Notas <span class="small muted">média ${fmtNota(m)}</span></h2>
+        ${(d.notas || []).length ? `<div class="tarefas">${d.notas.map(n => `<div class="tarefa"><div class="o">${esc(n.nome)}<small>nota ${fmtNota(n.valor)}${(+n.peso || 1) !== 1 ? " · peso " + fmtNota(n.peso) : ""}</small></div><button class="btn mini sec" data-act="nota-del" data-i="${esc(i)}" data-n="${esc(n.id)}" aria-label="Apagar nota ${esc(n.nome)}">Apagar</button></div>`).join("")}</div>` : `<p class="muted">Nenhuma nota lançada.</p>`}
+        <form class="campos" data-form="nota-nova" data-i="${esc(i)}" style="margin-top:10px">
+          <label class="campo"><span class="lab">Avaliação</span><input type="text" id="nn-nome" required maxlength="60" placeholder="Ex.: 1ª prova"></label>
+          <label class="campo"><span class="lab">Nota (0 a 10)</span><input type="text" inputmode="decimal" id="nn-valor" required></label>
+          <label class="campo"><span class="lab">Peso</span><input type="text" inputmode="decimal" id="nn-peso" value="1"></label>
+          <button class="btn sec" style="align-self:end">Lançar nota</button></form>
+        <form class="campos" data-form="nota-final" data-i="${esc(i)}" style="margin-top:10px"><label class="campo"><span class="lab">Média final (se já souber)</span><input type="text" inputmode="decimal" id="nf-valor" value="${typeof d.final === "number" ? fmtNota(d.final) : ""}"></label><button class="btn sec" style="align-self:end">Salvar média</button></form></section>
+      <section class="caixa"><h2 class="sec">Faltas</h2>
+        <div class="linha" style="align-items:center"><button class="btn sec" data-act="falta" data-i="${esc(i)}" data-n="-1" aria-label="Menos uma hora de falta">−</button><b style="font-size:calc(24px * var(--k));min-width:3ch;text-align:center">${f}</b><button class="btn sec" data-act="falta" data-i="${esc(i)}" data-n="1" aria-label="Mais uma hora de falta">+</button><span>horas-aula</span></div>
+        ${lim ? `${medidor(pct(f, lim), f >= lim ? "bad" : f >= lim * 0.75 ? "warn" : "ok")}<p class="small muted">Limite estimado: ${lim} h (25% de ${it.ch} h, regra comum de 75% de frequência). Confira no regimento da sua faculdade.</p>` : ""}</section>
+      <section><h2 class="sec">Provas e trabalhos</h2>${av.length ? `<div class="tarefas">${av.map(linhaAval).join("")}</div>` : `<p class="muted">Nenhuma cadastrada.</p>`}</section>
+      <section><h2 class="sec">Temas</h2>${temas.length ? `<div class="links-lista">${temas.map(t => `<a href="#/tema/${esc(t)}"><span>${esc(nomeTema(t))}</span><small>${questoes().filter(q => q.tema === t).length} questões</small></a>`).join("")}</div>` : `<p class="muted">Nenhum tema vinculado. <a href="#/medicina/grade/${esc(g.id)}/item/${esc(i)}">Vincular temas</a></p>`}</section>`,
+    ctx: { grade: g.id, periodo: it.periodo, disciplina: it.nome },
+  };
+});
+FORMS["nota-nova"] = f => { const v = lerNota($("#nn-valor").value); if (v === null) { toast("Nota inválida"); return; }
+  const d = discOuNovo(f.dataset.i); d.notas = d.notas || []; d.notas.push({ id: "n" + Date.now().toString(36), nome: $("#nn-nome").value.trim(), valor: v, peso: parseFloat(String($("#nn-peso").value).replace(",", ".")) || 1 }); mudouAcad(); toast("Nota lançada"); atualizar(); };
+FORMS["nota-final"] = f => { const d = discOuNovo(f.dataset.i), v = $("#nf-valor").value.trim(); d.final = v === "" ? null : lerNota(v); mudouAcad(); toast("Média salva"); atualizar(); };
+ACOES["nota-del"] = el => { const d = discOuNovo(el.dataset.i); d.notas = (d.notas || []).filter(n => n.id !== el.dataset.n); mudouAcad(); atualizar(); };
+ACOES["falta"] = el => { const d = discOuNovo(el.dataset.i); d.faltas = Math.max(0, (d.faltas || 0) + +el.dataset.n); mudouAcad(); atualizar(); };
+
+/* ---------- Agenda de avaliações + revisão automática ---------- */
+rota("/curso/agenda", () => {
+  const futuras = avals().filter(a => !a.feito && (!a.data || a.data >= hoje())), passadas = avals().filter(a => a.feito || (a.data && a.data < hoje())).reverse();
+  return { secao: "curso", crumbs: [["Meu curso", "#/curso"]], titulo: "Provas e trabalhos", acoes: `<button class="btn mini" data-act="aval-nova">+ Adicionar</button>`,
+    html: `<section><h2 class="sec">Próximas</h2>${futuras.length ? `<div class="tarefas">${futuras.map(linhaAval).join("")}</div>` : `<p class="muted">Nada marcado.</p>`}</section>
+      ${passadas.length ? `<section><h2 class="sec">Anteriores</h2><div class="tarefas">${passadas.slice(0, 40).map(linhaAval).join("")}</div></section>` : ""}` };
+});
+ACOES["aval-nova"] = el => formAval({ disc: el.dataset.d || "" });
+function formAval(a) {
+  const g = minhaGrade(), its = g ? itensGrade(g).filter(x => sitDe(x) === "cursando" || x.id === a.disc) : [];
+  const outras = g ? itensGrade(g).filter(x => !its.includes(x)) : [];
+  abrirFolha(`<form class="pilha" data-form="aval-salvar" data-id="${esc(a.id || "")}">
+    <div class="campos">
+      <label class="campo"><span class="lab">Tipo</span><select id="av-tipo">${opcoes(Object.entries(TIPO_AVAL), a.tipo || "prova")}</select></label>
+      <label class="campo"><span class="lab">Disciplina</span><select id="av-disc"><option value="">—</option>${its.length ? `<optgroup label="Cursando">${opcoes(its.map(x => [x.id, x.nome]), a.disc)}</optgroup>` : ""}${outras.length ? `<optgroup label="Outras">${opcoes(outras.map(x => [x.id, x.nome]), a.disc)}</optgroup>` : ""}</select></label>
+      <label class="campo"><span class="lab">Título (opcional)</span><input type="text" id="av-tit" maxlength="80" value="${esc(a.titulo || "")}" placeholder="Ex.: 2ª prova — sistema digestório"></label>
+      <label class="campo"><span class="lab">Data</span><input type="date" id="av-data" value="${esc(a.data || "")}" required></label>
+      <label class="campo"><span class="lab">Hora</span><input type="time" id="av-hora" value="${esc(a.hora || "")}"></label>
+      <label class="campo"><span class="lab">Peso</span><input type="text" inputmode="decimal" id="av-peso" value="${esc(a.peso ?? 1)}"></label></div>
+    <label class="campo"><span class="lab">Conteúdo / observações</span><textarea id="av-cont" rows="3" maxlength="2000">${esc(a.conteudo || "")}</textarea></label>
+    ${a.id ? "" : `<label class="check"><input type="checkbox" id="av-rev" checked><span>Montar revisão no Planejamento até a data (temas da disciplina, questões e um simulado na véspera)</span></label>`}
+    <button class="btn azul grande">Salvar</button></form>`, { titulo: a.id ? "Editar avaliação" : "Nova prova ou trabalho" });
+}
+FORMS["aval-salvar"] = f => {
+  const A = acad(), id = f.dataset.id || "av" + Date.now().toString(36), velho = A.aval[id] || {};
+  const disc = $("#av-disc").value || null, g = minhaGrade(), it = g && disc ? itensGrade(g).find(x => x.id === disc) : null;
+  const a = A.aval[id] = { ...velho, id, tipo: $("#av-tipo").value, disc, titulo: $("#av-tit").value.trim(), data: $("#av-data").value, hora: $("#av-hora").value,
+    peso: parseFloat(String($("#av-peso").value).replace(",", ".")) || 1, conteudo: $("#av-cont").value.trim(), temas: velho.temas || (it ? temasDoItem(it) : []) };
+  mudouAcad();
+  const n = !f.dataset.id && $("#av-rev")?.checked ? montarRevisao(a) : 0;
+  fecharFolha(); toast(n ? `Salvo · ${n} sessões de revisão no Planejamento` : "Salvo"); atualizar();
+};
+/** Distribui os temas entre amanhã e a véspera (até 14 dias), com um simulado misto na véspera. */
+function montarRevisao(a) {
+  const P = store.doc("plano"), g = minhaGrade(), nome = a.titulo || nomeItem(g, a.disc) || TIPO_AVAL[a.tipo];
+  Object.keys(P.itens).forEach(k => { if (P.itens[k].aval === a.id && !P.itens[k].feito) delete P.itens[k]; });
+  if (!a.data) return 0;
+  const ate = diasAte(a.data), temas = (a.temas || []).filter(t => questoes().some(q => q.tema === t));
+  const disc = nomeItem(g, a.disc) || "", novo = (data, extra) => { const id = "pa" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6); P.itens[id] = { id, data, disciplina: disc, min: 30, nq: 10, rev: true, feito: false, aval: a.id, ...extra }; };
+  let n = 0;
+  if (ate >= 2 && temas.length) {
+    const dias = Math.min(14, ate - 1), ini = somaDias(a.data, -dias);   // de (data − dias) até a antevéspera
+    const slots = Array.from({ length: Math.max(1, dias - 1) }, (_, k) => somaDias(ini, k));
+    // uma sessão por dia; com mais temas que dias, cada sessão junta alguns temas
+    slots.forEach((d, k) => { const ts = temas.filter((_, j) => j % slots.length === k); if (!ts.length) return;
+      const nomes = ts.map(nomeTema), tit = nomes.length > 2 ? `${nomes.slice(0, 2).join(", ")} e mais ${nomes.length - 2}` : nomes.join(" e ");
+      novo(d, { titulo: `Revisão para ${nome}: ${tit}`, tema: ts[0], temas: ts, nq: Math.min(20, 8 + 2 * ts.length), min: Math.min(60, 20 + 10 * ts.length) }); n++; });
+  }
+  if (ate >= 1 && temas.length) { novo(somaDias(a.data, -1), { titulo: `Simulado para ${nome}`, temas, nq: 20, min: 45 }); n++; }
+  store.mudou("plano"); return n;
+}
+rota("/curso/aval/:id", ({ id }) => {
+  const a = acad().aval[id]; if (!a) return paginaNaoEncontrada();
+  const g = minhaGrade(), rev = Object.values(store.doc("plano").itens).filter(p => p.aval === id).sort((x, y) => x.data.localeCompare(y.data));
+  return { secao: "curso", crumbs: [["Meu curso", "#/curso"], ["Provas e trabalhos", "#/curso/agenda"]], titulo: `${TIPO_AVAL[a.tipo] || "Avaliação"}${a.titulo ? ": " + a.titulo : ""}`,
+    sub: [a.data && `${dataBR(a.data)}${a.hora ? " " + a.hora : ""} (${quando(a.data)})`, nomeItem(g, a.disc), (+a.peso || 1) !== 1 && "peso " + fmtNota(a.peso)].filter(Boolean).map(esc).join(" · "),
+    acoes: `<button class="btn sec mini" data-act="aval-editar" data-id="${esc(id)}">Editar</button><button class="btn sec mini perigo" data-act="aval-del" data-id="${esc(id)}">Apagar</button>`,
+    html: `${a.conteudo ? `<section class="caixa"><h2 class="sec">Conteúdo</h2><p class="leitura">${esc(a.conteudo)}</p></section>` : ""}
+      <section class="caixa"><h2 class="sec">Revisão até a data</h2>${rev.length ? `<div class="tarefas">${rev.map(p => `<div class="tarefa"><div class="o" style="${p.feito ? "text-decoration:line-through;color:var(--muted)" : ""}">${esc(p.titulo)}<small>${dataBR(p.data)} · ${p.nq} questões</small></div></div>`).join("")}</div>` : `<p class="muted">Sem sessões de revisão${(a.temas || []).length ? "" : " (a disciplina não tem temas vinculados)"}.</p>`}
+        ${(a.temas || []).length && a.data >= hoje() ? `<div class="acoes"><button class="btn sec mini" data-act="aval-rev" data-id="${esc(id)}">${rev.length ? "Refazer revisão" : "Montar revisão"}</button>${IA.disponivel() ? `<a class="btn sec mini" href="#/curso/ajuda/nova/revisao/${esc(id)}">Pedir resumo à IA</a>` : ""}</div>` : ""}</section>
+      <section class="caixa"><h2 class="sec">Depois da avaliação</h2>
+        <form class="campos" data-form="aval-nota" data-id="${esc(id)}"><label class="campo"><span class="lab">Nota (0 a 10)</span><input type="text" inputmode="decimal" id="an-nota" value="${a.nota != null ? fmtNota(a.nota) : ""}"></label>
+        <button class="btn sec" style="align-self:end">${a.disc ? "Salvar e lançar na disciplina" : "Salvar"}</button></form>
+        <p class="small muted">Recebeu a prova corrigida? Envie em <a href="#/curso/ajuda">Correção e ajuda</a> para entender cada erro.</p></section>` };
+});
+ACOES["aval-editar"] = el => formAval(acad().aval[el.dataset.id]);
+ACOES["aval-rev"] = el => { const n = montarRevisao(acad().aval[el.dataset.id]); toast(`${n} sessões de revisão no Planejamento`); atualizar(); };
+ACOES["aval-del"] = el => abrirFolha(`<h2 class="sec">Apagar esta avaliação?</h2><p>As sessões de revisão ainda não feitas também saem do Planejamento.</p><button class="btn perigo" data-act="aval-del-ok" data-id="${esc(el.dataset.id)}">Apagar</button>`);
+ACOES["aval-del-ok"] = el => { const A = acad(), P = store.doc("plano"), id = el.dataset.id;
+  Object.keys(P.itens).forEach(k => { if (P.itens[k].aval === id && !P.itens[k].feito) delete P.itens[k]; }); store.mudou("plano");
+  const nId = A.aval[id]?.notaId, d = A.aval[id]?.disc && A.disc[A.aval[id].disc]; if (d && nId) d.notas = (d.notas || []).filter(n => n.id !== nId);
+  delete A.aval[id]; mudouAcad(); fecharFolha(); ir("#/curso/agenda"); };
+FORMS["aval-nota"] = f => {
+  const A = acad(), a = A.aval[f.dataset.id], v = $("#an-nota").value.trim(), nota = v === "" ? null : lerNota(v);
+  a.nota = nota; a.feito = nota !== null || a.feito;
+  if (a.disc && nota !== null) { const d = discOuNovo(a.disc); d.notas = d.notas || []; const nid = a.notaId || "n" + a.id, ex = d.notas.find(n => n.id === nid), g = minhaGrade();
+    const reg = { id: nid, nome: a.titulo || `${TIPO_AVAL[a.tipo]} de ${dataBR(a.data)}`, valor: nota, peso: a.peso || 1 };
+    if (ex) Object.assign(ex, reg); else d.notas.push(reg); a.notaId = nid; }
+  mudouAcad(); toast("Nota salva"); atualizar();
+};
+
+/* ---------- Histórico escolar ---------- */
+const HIST = { linhas: [], msg: "", ocupado: false };
+rota("/curso/historico", () => {
+  const g = minhaGrade(); if (!g) return semGrade();
+  return { secao: "curso", crumbs: [["Meu curso", "#/curso"]], titulo: "Importar histórico escolar",
+    sub: "Envie o PDF do histórico (ou cole o texto). O app procura o código de cada disciplina da sua matriz, a média e a situação. Nada é salvo sem sua revisão.",
+    html: `<section class="caixa"><div class="linha"><label class="btn">Escolher arquivo<input type="file" accept=".pdf,.txt,.csv,.xlsx,.docx" data-chg="hist-arq" hidden></label></div>
+      <label class="campo" style="margin-top:10px"><span class="lab">Ou cole o texto do histórico</span><textarea id="hist-txt" rows="5"></textarea></label>
+      <div class="acoes"><button class="btn sec" data-act="hist-ler">Ler texto colado</button></div>${HIST.msg ? `<p class="aviso info">${esc(HIST.msg)}</p>` : ""}</section>
+      ${HIST.linhas.length ? `<section><h2 class="sec">Revise (${HIST.linhas.length} disciplinas encontradas)</h2>
+        ${tabela([{ t: "" }, { t: "Disciplina" }, { t: "Média", num: 1 }, { t: "Situação" }], HIST.linhas.map((l, k) => [`<input type="checkbox" data-chg="hist-marca" data-k="${k}" ${l.usar ? "checked" : ""} aria-label="Usar ${esc(l.nome)}" style="width:calc(20px * var(--k));height:calc(20px * var(--k))">`, `${esc(l.nome)} <span class="small muted">${esc(l.codigo)}${l.sem ? " · " + esc(l.sem) : ""}</span>`, fmtNota(l.media), pill(SIT[l.sit][0], SIT[l.sit][1])]), { resp: false })}
+        <div class="acoes"><button class="btn azul grande" data-act="hist-aplicar">Salvar marcadas</button></div></section>` : ""}`,
+    ctx: { grade: g.id } };
+});
+/** Interpretação por código: linha com o código da disciplina → média (0–10) e situação por palavras-chave. */
+function lerHistorico(txt, g) {
+  const L = String(txt).split(/\r?\n/), res = [];
+  itensGrade(g).filter(it => it.codigo).forEach(it => {
+    const re = new RegExp("\\b" + it.codigo.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\b", "i");
+    const idx = L.findIndex(l => re.test(l)); if (idx < 0) return;
+    const cont = L[idx + 1] && !/\b[A-Z]{2,5}\d{2,3}\b/i.test(L[idx + 1]) ? L[idx + 1] : "", linha = (L[idx] + " " + cont).toUpperCase();   // a linha seguinte só conta se for continuação
+    const num = re2 => (L[idx].match(re2) || []).map(x => parseFloat(x.replace(",", "."))).filter(n => n >= 0 && n <= 10);
+    const dec = num(/(?<![\d/])\d{1,2}[.,]\d{1,2}(?![\d/])/g), ints = num(/(?<![\d/.,])(?:10|\d)(?![\d/.,])/g), nums = dec.length ? dec : ints;
+    const sit = /REPROV|RF\b|RN\b/.test(linha) ? "reprovada" : /DISPENS|APROVEIT|EQUIVAL/.test(linha) ? "dispensada" : /TRANC|CANCEL/.test(linha) ? "trancada" : /MATRIC|CURSANDO|EM CURSO/.test(linha) ? "cursando" : /APROV|\bAP\b|CUMPRI/.test(linha) ? "concluida" : null;
+    const sem = (L[idx].match(/\b(20\d\d)[./-]?([12])\b/) || []).slice(1).join("/") || null;
+    const media = nums.length ? nums[nums.length - 1] : null;
+    res.push({ id: it.id, codigo: it.codigo, nome: it.nome, media: sit === "cursando" ? null : media, sit: sit || (media !== null ? (media >= 5 ? "concluida" : "reprovada") : "concluida"), sem, usar: true });
+  });
+  return res;
+}
+async function processarHistorico(txt) {
+  const g = minhaGrade(); HIST.linhas = lerHistorico(txt, g);
+  HIST.msg = HIST.linhas.length ? `Encontrei ${HIST.linhas.length} de ${itensGrade(g).filter(x => x.codigo).length} disciplinas da matriz. Confira média e situação de cada uma antes de salvar (o critério de aprovação é o da sua faculdade).`
+    : "Não encontrei códigos de disciplina da sua matriz neste texto. Confira se o histórico é do mesmo curso/matriz.";
+  atualizar();
+}
+MUDANCAS["hist-arq"] = async el => { const f = el.files[0]; if (!f) return; HIST.msg = "Lendo o arquivo…"; atualizar();
+  try { await processarHistorico(await textoDoArquivo(f)); } catch (e) { HIST.msg = "Não foi possível ler o arquivo. Tente colar o texto."; atualizar(); } };
+ACOES["hist-ler"] = () => { const t = $("#hist-txt").value; if (t.trim()) processarHistorico(t); };
+MUDANCAS["hist-marca"] = el => { HIST.linhas[+el.dataset.k].usar = el.checked; };
+ACOES["hist-aplicar"] = () => { let n = 0;
+  HIST.linhas.filter(l => l.usar).forEach(l => { const d = discOuNovo(l.id); d.sit = l.sit; if (l.media !== null) d.final = l.media; if (l.sem) d.sem = l.sem; n++; });
+  mudouAcad(); HIST.linhas = []; HIST.msg = ""; toast(`${n} disciplinas atualizadas`); ir("#/curso"); };
+
+/* ---- 28-ajuda.js ---- */
+/* ============================================================
+   28-ajuda — correção e ajuda com a IA: provas e exercícios feitos,
+   trabalhos escritos, apresentações, pesquisas e resumos para prova.
+   Aceita texto, PDF/DOCX/TXT (lidos no aparelho) e fotos (quando a
+   visualização permite imagens). O objetivo é aprender: a IA explica,
+   aponta erros e orienta; o trabalho entregue continua sendo da pessoa.
+   Documento "ajudas": itens[id] = {id, tipo, disc, titulo, pedido, arquivo, resposta, ts}
+   ============================================================ */
+const TIPOS_AJUDA = {
+  corrigir: ["Corrigir prova ou exercício", "Envie a prova/lista já feita (foto, PDF ou texto) com suas respostas e, se tiver, o gabarito.",
+    "Corrija a prova/exercício enviado. Para CADA questão: diga se a resposta do aluno está certa, parcialmente certa ou errada; explique o raciocínio correto de forma didática; aponte o conceito a revisar. Se não houver gabarito, resolva você e deixe claro o grau de certeza. No fim: lista curta dos 3 a 5 assuntos para revisar e uma estimativa de nota se for possível (deixe claro que é estimativa)."],
+  trabalho: ["Revisar trabalho escrito", "Envie o texto do trabalho (PDF, DOCX ou colado) e diga o que o professor pediu.",
+    "Revise o trabalho enviado como um professor orientador: 1) pontos fortes; 2) problemas de conteúdo (erros conceituais, afirmações sem base); 3) estrutura e argumentação; 4) clareza, gramática e estilo acadêmico; 5) citações e referências (formato ABNT; aponte referências incompletas ou suspeitas). Dê sugestões concretas com trechos de exemplo curtos, mas NÃO reescreva o trabalho inteiro."],
+  fazer: ["Ajuda para fazer um trabalho", "Conte o tema, o que o professor pediu, o tamanho e o prazo.",
+    "Ajude o aluno a FAZER o próprio trabalho: proponha um roteiro (seções e o que entra em cada uma), perguntas-guia para cada parte, conceitos que precisam ser explicados, tipos de fonte a buscar e um cronograma até o prazo. Não escreva o trabalho pronto."],
+  apresentacao: ["Montar apresentação ou seminário", "Diga o tema, o tempo de fala e o público (turma, banca, congresso).",
+    "Monte o roteiro de uma apresentação: lista de slides (título + 3 a 5 tópicos curtos cada + sugestão de figura/tabela) e notas do apresentador para cada slide, respeitando o tempo informado (cerca de 1 slide por minuto). Inclua abertura, mensagem principal, fechamento e 3 perguntas prováveis da plateia com respostas curtas."],
+  pesquisa: ["Pesquisa / revisão de literatura", "Diga a pergunta de pesquisa ou o tema.",
+    "Ajude a planejar a pesquisa: refine a pergunta (PICO quando for clínica), sugira descritores DeCS/MeSH e sinônimos, monte strings de busca para SciELO, LILACS/BVS e PubMed, critérios de inclusão/exclusão e como organizar a leitura. NUNCA invente referências: se citar autores ou diretrizes, diga que o aluno deve localizar e conferir a fonte original."],
+  revisao: ["Resumo para prova", "Diga o conteúdo da prova (ou escolha uma prova cadastrada em Meu curso).",
+    "Faça um resumo de revisão para a prova: tópicos principais em ordem lógica, o que mais costuma cair, pegadinhas, 5 perguntas de autoteste com respostas curtas no final. Linguagem objetiva, até 600 palavras."],
+};
+const AJ = { tipo: "corrigir", aval: null, arquivos: [], texto: "", saida: "", ocupado: false, imgs: false };
+const ajudas = () => Object.values(store.doc("ajudas").itens).sort((a, b) => b.ts - a.ts);
+rota("/curso/ajuda", () => paginaAjuda());
+rota("/curso/ajuda/nova/:tipo", ({ tipo }) => { if (TIPOS_AJUDA[tipo] && AJ.tipo !== tipo) Object.assign(AJ, { tipo, aval: null, saida: "" }); return paginaAjuda(); });
+rota("/curso/ajuda/nova/:tipo/:aval", ({ tipo, aval }) => { if (AJ.aval !== aval) Object.assign(AJ, { tipo: TIPOS_AJUDA[tipo] ? tipo : "revisao", aval, saida: "" }); return paginaAjuda(); });
+function paginaAjuda() {
+  const g = minhaGrade(), its = g ? itensGrade(g).filter(x => sitDe(x) === "cursando") : [], a = AJ.aval && acad().aval[AJ.aval], dica = TIPOS_AJUDA[AJ.tipo][1];
+  const disc = a?.disc || "", hist = ajudas();
+  verImagens();
+  const form = IA.disponivel() ? `${chips(Object.entries(TIPOS_AJUDA).map(([k, v]) => [k, v[0]]), AJ.tipo, "aj-tipo")}
+      <form class="pilha caixa" data-form="aj-enviar" style="margin-top:10px">
+        <p class="small muted" style="margin:0">${esc(dica)}</p>
+        <div class="campos">
+          <label class="campo"><span class="lab">Disciplina</span><select id="aj-disc"><option value="">—</option>${opcoes(its.map(x => [x.id, x.nome]), disc)}</select></label>
+          <label class="campo"><span class="lab">Título</span><input type="text" id="aj-tit" maxlength="80" value="${esc(a ? (a.titulo || TIPO_AVAL[a.tipo]) : "")}"></label></div>
+        <label class="campo"><span class="lab">Pedido e texto</span><textarea id="aj-txt" rows="6" maxlength="40000" placeholder="Explique o que precisa. Pode colar o enunciado, suas respostas ou o texto do trabalho.">${esc(a ? [a.conteudo && "Conteúdo: " + a.conteudo, a.data && "Data da avaliação: " + dataBR(a.data)].filter(Boolean).join("\n") : "")}</textarea></label>
+        <div class="linha"><label class="btn sec">Anexar arquivo${AJ.imgs ? " ou foto" : ""}<input type="file" multiple accept=".pdf,.docx,.txt${AJ.imgs ? ",image/*" : ""}" data-chg="aj-arq" hidden></label>
+          <span class="small muted">${AJ.arquivos.length ? AJ.arquivos.map(x => esc(x.name)).join(", ") + ` <button type="button" class="btn mini sec" data-act="aj-limpar-arq">Remover</button>` : "PDF, DOCX ou TXT" + (AJ.imgs ? ", ou fotos" : "")}</span></div>
+        <button class="btn azul grande" ${AJ.ocupado ? "disabled" : ""}>${AJ.ocupado ? "Gerando…" : "Enviar"}</button></form>
+      <div id="aj-saida">${AJ.saida}</div>`
+    : `<div class="aviso">A correção e a ajuda usam o assistente de IA, disponível quando o app é aberto pelo link do Claude.</div>`;
+  return {
+    secao: "curso", crumbs: [["Meu curso", "#/curso"]], titulo: "Correção e ajuda",
+    sub: "A IA explica, corrige e orienta para você aprender. O trabalho entregue continua sendo seu: confira fontes e informações.",
+    html: form + (hist.length ? `<section><h2 class="sec">Pedidos anteriores</h2><div class="links-lista">${hist.slice(0, 30).map(h => `<a href="#/curso/ajuda/r/${esc(h.id)}"><span>${esc(h.titulo || TIPOS_AJUDA[h.tipo]?.[0] || "Pedido")}</span><small>${esc(TIPOS_AJUDA[h.tipo]?.[0] || "")} · ${new Date(h.ts).toLocaleDateString("pt-BR")}</small></a>`).join("")}</div></section>` : ""),
+    ctx: { grade: g?.id, disciplina: nomeItem(g, disc) || undefined },
+  };
+}
+async function verImagens() { if (AJ._lim) return; AJ._lim = true; const l = await IA.limites(); if (l?.images) { AJ.imgs = true; if (/curso\/ajuda/.test(caminhoAtual())) atualizar(); } }
+ACOES["aj-tipo"] = el => { AJ.tipo = el.dataset.v; AJ.aval = null; AJ.saida = ""; ir("#/curso/ajuda/nova/" + AJ.tipo); };
+MUDANCAS["aj-arq"] = el => { AJ.arquivos = [...el.files].slice(0, 8); atualizar(); };
+ACOES["aj-limpar-arq"] = () => { AJ.arquivos = []; atualizar(); };
+FORMS["aj-enviar"] = async () => {
+  if (AJ.ocupado) return;
+  const txt = $("#aj-txt").value.trim(), disc = $("#aj-disc").value, titulo = $("#aj-tit").value.trim(), g = minhaGrade();
+  if (!txt && !AJ.arquivos.length) { toast("Escreva o pedido ou anexe um arquivo"); return; }
+  AJ.ocupado = true; AJ.saida = `<div class="caixa"><div class="ia-txt" id="aj-out">Lendo os anexos…</div><div class="acoes"><button class="btn sec mini" data-act="ia-cancelar">Cancelar</button></div></div>`; atualizar();
+  try {
+    const imgs = AJ.arquivos.filter(f => /^image\//.test(f.type)), docs = AJ.arquivos.filter(f => !/^image\//.test(f.type));
+    const anexos = [];
+    for (const f of docs) { try { anexos.push(`--- ANEXO: ${f.name} ---\n${(await textoDoArquivo(f)).slice(0, 60000)}`); } catch (e) { anexos.push(`--- ANEXO ${f.name}: não foi possível ler ---`); } }
+    const a = AJ.aval && acad().aval[AJ.aval], it = g && disc ? itensGrade(g).find(x => x.id === disc) : null;
+    const pedido = `${TIPOS_AJUDA[AJ.tipo][2]}
+Contexto acadêmico: ${[g && nomeInst(g.instituicao), g && (CURSOS[g.curso] || g.curso), store.doc("perfil").periodo && store.doc("perfil").periodo + "º período", it && "disciplina " + it.nome, a && `${TIPO_AVAL[a.tipo]} em ${dataBR(a.data)}`].filter(Boolean).join(", ") || "não informado"}.
+${it && temasDoItem(it).length ? "Temas da disciplina no app: " + temasDoItem(it).map(nomeTema).join("; ") + ".\n" : ""}Escreva em português do Brasil, com títulos curtos e parágrafos curtos (a pessoa tem baixa visão: nada de tabelas largas). ${imgs.length ? `Há ${imgs.length} foto(s) anexada(s) — leia com atenção; se algo estiver ilegível, diga.` : ""}
+
+PEDIDO DO ALUNO:
+${txt || "(ver anexos)"}
+${anexos.join("\n\n")}`;
+    const el = () => document.getElementById("aj-out");
+    const r = await IA.livre(pedido, s => { const e = el(); if (e) e.textContent = s; }, { images: imgs.length ? imgs : undefined });
+    const id = "aj" + Date.now().toString(36), H = store.doc("ajudas");
+    H.itens[id] = { id, tipo: AJ.tipo, disc: disc || null, titulo: titulo || TIPOS_AJUDA[AJ.tipo][0], pedido: txt.slice(0, 4000), arquivo: AJ.arquivos.map(f => f.name).join(", ") || null, resposta: r.slice(0, 30000), ts: Date.now() };
+    store.mudou("ajudas"); AJ.arquivos = []; AJ.saida = ""; AJ.ocupado = false; ir("#/curso/ajuda/r/" + id);
+  } catch (e) { AJ.ocupado = false; AJ.saida = `<div class="aviso">${IA.mensagemErro(e)}</div>`; atualizar(); }
+};
+rota("/curso/ajuda/r/:id", ({ id }) => {
+  const h = store.doc("ajudas").itens[id]; if (!h) return paginaNaoEncontrada();
+  return { secao: "curso", crumbs: [["Meu curso", "#/curso"], ["Correção e ajuda", "#/curso/ajuda"]], titulo: h.titulo || "Pedido",
+    sub: [TIPOS_AJUDA[h.tipo]?.[0], nomeItem(minhaGrade(), h.disc), new Date(h.ts).toLocaleString("pt-BR"), h.arquivo && "anexos: " + h.arquivo].filter(Boolean).map(esc).join(" · "),
+    acoes: `${DOWNLOADS ? `<button class="btn sec mini" data-act="aj-baixar" data-id="${esc(id)}">Baixar</button>` : ""}<button class="btn sec mini perigo" data-act="aj-del" data-id="${esc(id)}">Apagar</button>`,
+    html: `${h.pedido ? `<details class="caixa"><summary>Seu pedido</summary><p class="leitura">${esc(h.pedido)}</p></details>` : ""}
+      <article class="caixa"><div class="ia-txt leitura">${esc(h.resposta)}</div></article>
+      <p class="small muted">Gerado por IA para estudo: confira com a bibliografia e com seu professor.</p>`,
+    ctx: { texto: "Resposta anterior da IA ao pedido do aluno:\n" + h.resposta.slice(0, 6000) } };
+});
+ACOES["aj-del"] = el => { const H = store.doc("ajudas"); delete H.itens[el.dataset.id]; store.mudou("ajudas"); toast("Apagado"); ir("#/curso/ajuda"); };
+ACOES["aj-baixar"] = async el => { const h = store.doc("ajudas").itens[el.dataset.id];
+  try { await DOWNLOADS.save({ filename: `ajuda-${diaISO(new Date(h.ts))}.txt`, data: `${h.titulo}\n\nPEDIDO\n${h.pedido || ""}\n\nRESPOSTA\n${h.resposta}` }); }
+  catch (e) { if (!["cancelled", "declined"].includes(e?.code)) toast("Não foi possível baixar"); } };
 
 /* ---- 99-main.js ---- */
 /* ============================================================

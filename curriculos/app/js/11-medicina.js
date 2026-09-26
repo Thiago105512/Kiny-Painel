@@ -29,6 +29,7 @@ ACOES["perfil-fac"] = () => {
   abrirFolha(`<form class="pilha" data-form="perfil-fac"><div class="campos">
     <label class="campo"><span class="lab">Nome</span><input type="text" id="pf-nome" maxlength="60" value="${esc(P.nome || "")}" autocomplete="name"></label>
     <label class="campo"><span class="lab">Apresentação</span><input type="text" id="pf-apres" maxlength="60" value="${esc(P.apresentacao || "")}" placeholder="Ex.: Acadêmica de Medicina"></label>
+    <label class="campo"><span class="lab">Objetivo de estudo</span><select id="pf-obj">${opcoes(Object.entries(OBJETIVOS), P.objetivo, "Tudo (sem foco)")}</select></label>
     <label class="campo"><span class="lab">Instituição</span><select id="pf-inst" data-chg="pf-inst">${opcoes(insts.map(i => [i.id, i.sigla]), P.faculdade, "Selecione")}</select></label>
     <label class="campo"><span class="lab">Matriz (versão)</span><select id="pf-grade">${opcoes(gradesP.map(g => [g.id, g.versao || g.id]), P.gradeId, gradesP.length ? "Selecione" : "Nenhuma cadastrada")}</select></label>
     <label class="campo"><span class="lab">Período atual</span><input type="number" id="pf-per" min="1" max="12" value="${P.periodo || ""}"></label></div>
@@ -36,7 +37,7 @@ ACOES["perfil-fac"] = () => {
 };
 MUDANCAS["pf-inst"] = el => { const gs = gradesDe(el.value); $("#pf-grade").innerHTML = opcoes(gs.map(g => [g.id, g.versao || g.id]), gs[0]?.id, gs.length ? "Selecione" : "Nenhuma cadastrada"); };
 FORMS["perfil-fac"] = () => {
-  const P = store.doc("perfil"); P.nome = $("#pf-nome").value.trim() || null; P.apresentacao = $("#pf-apres").value.trim() || null;
+  const P = store.doc("perfil"); P.nome = $("#pf-nome").value.trim() || null; P.apresentacao = $("#pf-apres").value.trim() || null; P.objetivo = $("#pf-obj").value || null;
   P.faculdade = $("#pf-inst").value || null; P.gradeId = $("#pf-grade").value || null;
   const n = parseInt($("#pf-per").value, 10); P.periodo = n >= 1 && n <= 12 ? n : null; store.mudou("perfil"); fecharFolha(); toast("Perfil salvo"); atualizar();
 };

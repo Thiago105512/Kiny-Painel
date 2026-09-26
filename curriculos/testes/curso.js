@@ -1,0 +1,58 @@
+// Teste de navegador (Playwright) de "Meu curso": objetivo no perfil, situação das disciplinas,
+// notas e média, faltas, avaliação com revisão automática no Planejamento, histórico e ajuda sem IA.
+// Rode na raiz:   python3 -m http.server 8765 &   e   node curriculos/testes/curso.js
+const { chromium } = require('playwright');
+const URL = process.env.APP_URL || 'http://localhost:8765/curriculos/app.html';
+let falhas = 0; const ok = (c, m) => { console.log((c ? '  ✓ ' : '  ✗ ') + m); if (!c) falhas++; };
+(async () => {
+  const b = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM } : {}); const errs = [];
+  const p = await b.newPage({ viewport: { width: 390, height: 840 } }); p.on('pageerror', e => errs.push(e.message));
+  await p.goto(URL); await p.waitForTimeout(700);
+  const go = async h => { await p.evaluate(h => location.hash = h, h); await p.waitForTimeout(200); };
+  const txt = async () => (await p.innerText('main')).replace(/\s+/g, ' ');
+  console.log('1) Perfil com objetivo');
+  await go('#/convite/Manuela%20Queiroz/ufam/Acad%C3%AAmica%20de%20Medicina');
+  ok(await p.$eval('#cv-obj', e => e.value) === 'medicina', 'convite já sugere o objetivo Medicina');
+  await p.selectOption('#cv-per', '3'); await p.click('form[data-form="convite"] button'); await p.waitForTimeout(300);
+  const nav = await p.evaluate(() => [...document.querySelectorAll('#nav-inferior a span')].map(s => s.textContent));
+  ok(nav.includes('Curso') && !nav.includes('ENEM'), 'menu inferior focado em Medicina: ' + nav.join(', '));
+  await go('#/questoes'); ok(await p.evaluate(() => FQ.trilha) === 'med', 'questões abrem filtradas em Medicina');
+  console.log('2) Meu curso');
+  await go('#/curso'); let t = await txt();
+  ok(/disciplinas concluídas/.test(t) && /Cursando agora/.test(t), 'painel do curso aparece');
+  ok(await p.evaluate(() => sitDe(itensGrade(minhaGrade()).find(x => x.codigo === 'IBM624')) === 'concluida' && sitDe(itensGrade(minhaGrade()).find(x => x.codigo === 'IBF074')) === 'cursando'), 'situação presumida pelo período (1º concluído, 3º cursando)');
+  await go('#/curso/d/ibf074');
+  await p.fill('#nn-nome', 'P1'); await p.fill('#nn-valor', '8,5'); await p.click('form[data-form="nota-nova"] button'); await p.waitForTimeout(150);
+  await p.fill('#nn-nome', 'P2'); await p.fill('#nn-valor', '6'); await p.fill('#nn-peso', '2'); await p.click('form[data-form="nota-nova"] button'); await p.waitForTimeout(150);
+  ok(await p.evaluate(() => mediaDe('ibf074')) === 6.83, 'média ponderada (8,5×1 + 6×2)/3 = 6,83');
+  await p.click('[data-act="falta"][data-n="1"]'); await p.click('[data-act="falta"][data-n="1"]'); await p.waitForTimeout(100);
+  ok(await p.evaluate(() => acad().disc.ibf074.faltas) === 2, 'faltas contadas');
+  await go('#/curso/disciplinas'); await p.selectOption('select[data-i="ibm624"]', 'reprovada'); await p.waitForTimeout(150);
+  ok(await p.evaluate(() => acad().disc.ibm624.sit) === 'reprovada', 'situação escolhida é salva');
+  console.log('3) Prova com revisão automática');
+  await go('#/curso/d/ibp603'); await p.click('[data-act="aval-nova"]'); await p.waitForTimeout(150);
+  const data = await p.evaluate(() => somaDias(hoje(), 6)); await p.fill('#av-data', data); await p.fill('#av-tit', '1ª prova de micro');
+  await p.click('form[data-form="aval-salvar"] button'); await p.waitForTimeout(200);
+  const r = await p.evaluate(() => { const pl = Object.values(store.doc('plano').itens).filter(x => x.aval);
+    return { n: pl.length, antes: pl.every(x => x.data > hoje() && x.data < somaDias(hoje(), 6)), sim: pl.some(x => x.temas?.length && x.data === somaDias(hoje(), 5)) }; });
+  ok(r.n >= 2 && r.antes, `revisão distribuída antes da prova (${r.n} sessões)`);
+  ok(r.sim, 'simulado misto na véspera');
+  await p.evaluate(() => { const a = Object.values(acad().aval)[0]; a.data = somaDias(hoje(), 1); store.mudou('academico'); });
+  await go('#/'); t = await txt(); ok(/amanhã/.test(t) && /1ª prova de micro/.test(t), 'Início avisa a prova de amanhã');
+  const aid = await p.evaluate(() => Object.keys(acad().aval)[0]); await go('#/curso/aval/' + aid);
+  await p.fill('#an-nota', '9'); await p.click('form[data-form="aval-nota"] button'); await p.waitForTimeout(150);
+  ok(await p.evaluate(() => mediaDe('ibp603')) === 9, 'nota da prova lançada na disciplina');
+  console.log('4) Histórico');
+  await go('#/curso/historico');
+  await p.fill('#hist-txt', 'DPM001 METODOLOGIA DO TRABALHO CIENTIFICO 2024/1 60 8,7 APROVADO\nIBM067 HISTOLOGIA 2024/2 60 4,2 REPROVADO POR NOTA\nIBF060 BIOQUIMICA 2024/2 90 DISPENSADO');
+  await p.click('[data-act="hist-ler"]'); await p.waitForTimeout(200);
+  const hl = await p.evaluate(() => HIST.linhas.map(l => [l.codigo, l.media, l.sit, l.sem]));
+  ok(JSON.stringify(hl) === JSON.stringify([['DPM001', 8.7, 'concluida', '2024/1'], ['IBF060', null, 'dispensada', '2024/2'], ['IBM067', 4.2, 'reprovada', '2024/2']]), 'histórico interpretado: ' + JSON.stringify(hl));
+  await p.click('[data-act="hist-aplicar"]'); await p.waitForTimeout(150);
+  ok(await p.evaluate(() => acad().disc.ibm067.sit === 'reprovada' && mediaDe('dpm001') === 8.7), 'histórico aplicado');
+  console.log('5) Ajuda sem IA');
+  await go('#/curso/ajuda'); ok(/assistente de IA/.test(await txt()), 'sem IA, a página explica que precisa do link do Claude');
+  await p.screenshot({ path: process.env.SHOT || '/tmp/curso.png', fullPage: false });
+  ok(!errs.length, errs.length ? 'erros de JS: ' + errs.join(' | ') : 'Sem erros de JS');
+  await b.close(); console.log(falhas ? `${falhas} FALHA(S)` : 'MEU CURSO OK'); process.exit(falhas ? 1 : 0);
+})();

@@ -36,22 +36,34 @@ const IC = {
   ia: "M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4zM18 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z",
   estudar: "M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z",
   busca: "M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM21 21l-5-5",
+  curso: "M2 9l10-5 10 5-10 5zM6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5M22 9v6",
 };
 const icone = n => `<svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="${IC[n] || ""}"/></svg>`;
 
 /* Navegação em grupos: o que estudar, praticar, revisar e organizar */
-const GRUPOS_NAV = [
-  ["", [["inicio", "#/", "Início"]]],
+const GRUPOS_NAV_BASE = [
+  ["", [["inicio", "#/", "Início"], ["curso", "#/curso", "Meu curso"]]],
   ["Estudar", [["estudar", "#/estudar", "Pílulas de estudo"], ["medicina", "#/medicina", "Medicina"], ["enem", "#/enem", "ENEM e vestibulares"]]],
   ["Praticar", [["questoes", "#/questoes", "Questões"], ["simulados", "#/simulados", "Simulados"], ["casos", "#/casos", "Casos clínicos"]]],
   ["Revisar", [["revisoes", "#/revisoes", "Revisões"], ["flashcards", "#/flashcards", "Flashcards"]]],
   ["Organizar", [["plano", "#/plano", "Planejamento"], ["desempenho", "#/desempenho", "Desempenho"], ["biblioteca", "#/biblioteca", "Biblioteca"]]],
 ];
-const NAV = GRUPOS_NAV.flatMap(g => g[1]);
-const INFERIOR = ["inicio", "medicina", "enem", "revisoes"];
-const CURTO = { enem: "ENEM" };
+/** O menu segue o objetivo do perfil: o que não é do objetivo vai para "Outras áreas". */
+const FORA_DO_OBJETIVO = { medicina: ["enem"], residencia: ["enem", "curso"], enem: ["medicina", "casos", "curso"], direito: ["medicina", "enem", "casos"], oab: ["medicina", "enem", "casos", "curso"] };
+function gruposNav() {
+  const fora = FORA_DO_OBJETIVO[store.doc("perfil").objetivo] || [];
+  const g = GRUPOS_NAV_BASE.map(([n, it]) => [n, it.filter(x => !fora.includes(x[0]))]).filter(([n, it]) => it.length);
+  const outras = GRUPOS_NAV_BASE.flatMap(x => x[1]).filter(x => fora.includes(x[0]));
+  return outras.length ? g.concat([["Outras áreas", outras]]) : g;
+}
+let GRUPOS_NAV = GRUPOS_NAV_BASE;
+const NAV = GRUPOS_NAV_BASE.flatMap(g => g[1]);
+const INFERIOR_POR_OBJ = { medicina: ["inicio", "curso", "medicina", "revisoes"], residencia: ["inicio", "questoes", "simulados", "revisoes"], enem: ["inicio", "enem", "questoes", "revisoes"], direito: ["inicio", "curso", "questoes", "revisoes"], oab: ["inicio", "questoes", "simulados", "revisoes"] };
+let INFERIOR = ["inicio", "medicina", "enem", "revisoes"];
+const CURTO = { enem: "ENEM", curso: "Curso" };
 
 function desenharNav(secao) {
+  GRUPOS_NAV = gruposNav(); INFERIOR = INFERIOR_POR_OBJ[store.doc("perfil").objetivo] || ["inicio", "medicina", "enem", "revisoes"];
   const n = pendencias().total;
   const badge = k => k === "revisoes" && n ? `<span class="n" aria-label="${n} pendentes">${n}</span>` : "";
   $("#nav-lateral").innerHTML = GRUPOS_NAV.map(([g, itens]) => (g ? `<div class="grupo">${g}</div>` : "") +
@@ -60,9 +72,10 @@ function desenharNav(secao) {
     return `<a href="${h}" ${k === secao ? 'aria-current="page"' : ""}>${icone(k)}<span>${CURTO[k] || t}</span>${badge(k)}</a>`; }).join("")
     + `<button data-act="menu-mais" ${INFERIOR.includes(secao) ? "" : 'aria-current="page"'}>${icone("mais")}<span>Mais</span></button>`;
 }
-ACOES["menu-mais"] = () => abrirFolha(GRUPOS_NAV.filter(([g]) => g).map(([g, itens]) => {
-  const extra = g === "Estudar" ? [["enem", "#/redacao", "Redação"]] : g === "Revisar" ? [["questoes", "#/erros", "Caderno de erros"]] : [];
-  return `<div class="menu-grupo"><h3>${g}</h3><div class="links-lista">${itens.concat(extra).filter(([k, h]) => !INFERIOR.includes(k) || extra.some(x => x[1] === h)).map(([k, h, t]) => `<a href="${h}" data-act="fechar-folha"><span class="linha" style="flex-wrap:nowrap">${icone(k)}${t}</span></a>`).join("")}</div></div>`;
+ACOES["menu-mais"] = () => abrirFolha(GRUPOS_NAV.map(([g, itens]) => {
+  const extra = g === "Estudar" && !(FORA_DO_OBJETIVO[store.doc("perfil").objetivo] || []).includes("enem") ? [["enem", "#/redacao", "Redação"]] : g === "Revisar" ? [["questoes", "#/erros", "Caderno de erros"]] : [];
+  const lista = itens.concat(extra).filter(([k, h]) => !INFERIOR.includes(k) || extra.some(x => x[1] === h));
+  return lista.length ? `<div class="menu-grupo"><h3>${g || "Principal"}</h3><div class="links-lista">${lista.map(([k, h, t]) => `<a href="${h}" data-act="fechar-folha"><span class="linha" style="flex-wrap:nowrap">${icone(k)}${t}</span></a>`).join("")}</div></div>` : "";
 }).join(""), { titulo: "Menu" });
 
 /* ---------- Render ---------- */
