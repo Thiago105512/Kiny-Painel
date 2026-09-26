@@ -2180,16 +2180,16 @@
  {
   "id": "oab-db1a27a3",
   "area": "Consumidor",
-  "enunciado": "Sofia comprou, no Supermercado Bom Preço, um pacote de biscoitos vendido a granel, embalado pelo próprio estabelecimento sem qualquer indicação do fabricante. Após consumi-los, sofreu grave intoxicação alimentar causada por contaminação do produto. Ao ser procurado, o supermercado afirmou que apenas revende mercadorias e que a responsabilidade seria exclusivamente do fabricante.\n\nSegundo o Código de Defesa do Consumidor, assinale a afirmativa correta.",
+  "enunciado": "A loja Casa Forte anunciou em seu site, sem qualquer ressalva de prazo ou estoque, um fogão de cinco bocas por R$ 1.800,00, \"com instalação gratuita em até 48 horas\". Marta comprou o produto pelo site e pagou à vista. Entregue o fogão, a loja recusou-se a instalá-lo, alegando que a instalação gratuita era apenas um chamariz publicitário e que cobraria R$ 250,00 pelo serviço.\n\nSegundo o Código de Defesa do Consumidor, assinale a afirmativa correta.",
   "alternativas": [
-   "O supermercado responde apenas se Sofia provar que ele agiu com culpa no armazenamento.",
-   "O supermercado responde apenas subsidiariamente, após frustrada a busca pelo fabricante.",
-   "O supermercado responde por vício do produto, devendo apenas substituir o pacote vendido.",
-   "O supermercado responde pelo fato do produto, pois o fabricante não pode ser identificado.",
-   "O supermercado não responde, pois o comerciante nunca é responsável pelo fato do produto."
+   "Marta pode apenas rescindir o contrato, pois o fornecedor não pode ser compelido a cumprir a oferta.",
+   "Marta tem direito somente a perdas e danos, pois o anúncio publicitário é mero convite a contratar.",
+   "Marta pode exigir o cumprimento forçado da oferta, aceitar prestação equivalente ou rescindir o contrato.",
+   "Marta só poderá exigir a instalação gratuita se provar que a loja agiu com dolo ao anunciá-la.",
+   "Marta deve aguardar 30 dias para que a loja sane a falha, como ocorre no vício do produto."
   ],
-  "correta": 3,
-  "explicacao": "Art. 13 do CDC: o comerciante é igualmente responsável pelo fato do produto quando o fabricante, o construtor, o produtor ou o importador não puderem ser identificados (inciso I), quando o produto for fornecido sem identificação clara do fabricante (inciso II) ou quando não conservar adequadamente os produtos perecíveis (inciso III). A responsabilidade é objetiva (art. 12), sem necessidade de provar culpa. Trata-se de fato do produto (acidente de consumo que atingiu a saúde da consumidora), e não de mero vício, e a lei não condiciona a responsabilidade do comerciante a prévia busca frustrada. Para lembrar: o comerciante responde pelo fato do produto só em três casos do art. 13 — fabricante não identificado, produto sem identificação clara ou perecível mal conservado; fora deles, a responsabilidade é de fabricante, produtor, construtor e importador.",
+  "correta": 2,
+  "explicacao": "Pelo art. 30 do CDC, toda informação ou publicidade suficientemente precisa, veiculada por qualquer meio, obriga o fornecedor que a fizer veicular e integra o contrato que vier a ser celebrado; o anúncio da instalação gratuita em até 48 horas, sem ressalvas, vinculou a loja. Recusado o cumprimento, o art. 35 permite ao consumidor, alternativamente e à sua livre escolha: exigir o cumprimento forçado da obrigação nos termos da oferta; aceitar outro produto ou prestação de serviço equivalente; ou rescindir o contrato, com restituição da quantia paga, monetariamente atualizada, e perdas e danos. A ideia de oferta como mero convite a contratar não se aplica às relações de consumo, a vinculação independe de dolo ou culpa, e o prazo de 30 dias para sanar a falha é regra do vício do produto (art. 18, § 1º), e não da recusa em cumprir a oferta. Para lembrar: no art. 35, a escolha entre as três opções é sempre do consumidor.",
   "disciplina": "Consumidor",
   "tema": null,
   "subtema": null,

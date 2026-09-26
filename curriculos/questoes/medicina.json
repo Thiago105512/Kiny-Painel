@@ -357,16 +357,16 @@
  {
   "id": "med-e1e0e8a7",
   "area": "Anatomia",
-  "enunciado": "Mulher de 46 anos, com miomatose uterina sintomática, é submetida a histerectomia total abdominal. A cirurgia é descrita como trabalhosa, com sangramento na altura do istmo uterino, controlado com ligaduras em massa próximas ao colo. No 4º dia pós-operatório, refere dor lombar esquerda contínua e febre baixa. Creatinina subiu de 0,8 para 1,6 mg/dL, e a ultrassonografia mostra hidronefrose moderada à esquerda, com rim direito normal.\n\nConsiderando a anatomia da pelve feminina, qual estrutura foi mais provavelmente lesada e qual relação anatômica explica esse risco?",
+  "enunciado": "Mulher de 52 anos é submetida a anexectomia esquerda laparoscópica por cisto ovariano complexo. Para controlar o pedículo vascular do ovário, o cirurgião coagula e secciona o ligamento suspensor do ovário (infundibulopélvico) rente à borda da pelve, sem identificar as estruturas retroperitoneais. No 5º dia pós-operatório, refere dor em flanco esquerdo e febre baixa; a tomografia mostra hidronefrose esquerda e extravasamento de contraste no ureter, na altura da bifurcação da artéria ilíaca comum.\n\nQual relação anatômica explica o risco nesse ponto da cirurgia?",
   "alternativas": [
-   "Ureter, que passa superiormente à artéria uterina junto ao fundo do útero",
-   "Artéria ilíaca interna, que cruza anteriormente o ligamento largo junto ao colo",
-   "Nervo obturatório, que acompanha a artéria uterina na base do ligamento largo",
-   "Ureter, que passa inferiormente à artéria uterina cerca de 2 cm lateral ao colo",
-   "Veia ovárica esquerda, que drena na veia renal e cruza o istmo uterino"
+   "No paramétrio, o ureter passa sob a artéria uterina, cerca de 2 cm lateral ao colo, dentro do ligamento suspensor",
+   "O ureter corre dentro do ligamento redondo, acompanhando a artéria ovárica até o anel inguinal profundo",
+   "O ureter cruza anteriormente a artéria ovárica no hilo do ovário, no interior do mesovário, longe da borda pélvica",
+   "O ureter segue lateral à artéria ilíaca externa, junto ao nervo genitofemoral, na parede lateral da pelve",
+   "Na borda da pelve, o ureter cruza a bifurcação da ilíaca comum logo abaixo dos vasos ováricos do ligamento suspensor"
   ],
-  "correta": 3,
-  "explicacao": "Dor lombar, hidronefrose unilateral e piora da creatinina após histerectomia com ligaduras próximas ao colo sugerem ligadura ou lesão do ureter. Na base do ligamento largo, o ureter passa por baixo da artéria uterina (\"a água passa por baixo da ponte\"), a cerca de 2 cm do colo, e é justamente aí que fica em risco. A artéria passa acima do ureter, e não o contrário; a relação não ocorre no fundo uterino. O nervo obturatório segue pela parede lateral da pelve e sua lesão causaria déficit de adução da coxa, sem hidronefrose. A veia ovárica corre no ligamento suspensor do ovário, longe do istmo, e sua ligadura não obstruiria o trato urinário.",
+  "correta": 4,
+  "explicacao": "O ureter entra na pelve cruzando a bifurcação da artéria ilíaca comum (ou o início da ilíaca externa), na borda pélvica. Nesse ponto, os vasos ováricos, que descem no ligamento suspensor (infundibulopélvico), passam imediatamente anteriores e laterais a ele; coagular ou ligar o ligamento rente à borda da pelve sem identificar o ureter pode incluí-lo na pinça, causando fístula ou obstrução. O cruzamento sob a artéria uterina, a cerca de 2 cm do colo, é o outro ponto clássico de risco, mas fica no paramétrio, não no ligamento suspensor. O ligamento redondo segue para o canal inguinal e não contém o ureter. O mesovário leva ramos vasculares ao hilo ovariano, e o ureter é retroperitoneal. O ureter fica medial, e não lateral, aos vasos ilíacos externos. Para lembrar: na cirurgia ginecológica, o ureter corre risco em dois pontos — na borda pélvica, junto ao infundibulopélvico, e no paramétrio, sob a artéria uterina.",
   "tema": "anatomia-da-pelve",
   "subtema": "anatomia-da-pelve.ureter-pelvico",
   "especialidade": "anatomia",
@@ -374,7 +374,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-8aac1302",
@@ -601,24 +602,25 @@
  {
   "id": "med-be4568f9",
   "area": "Histologia",
-  "enunciado": "Mulher de 58 anos, com hipotireoidismo por tireoidite de Hashimoto, procura atendimento por fadiga progressiva, parestesias em pés e marcha instável há 4 meses. Exame físico: PA 118/72 mmHg, FC 96 bpm, palidez cutânea (++/4+), glossite atrófica e redução da sensibilidade vibratória em membros inferiores.\n\nExames: Hb 8,9 g/dL; VCM 118 fL; reticulócitos 0,4%; vitamina B12 sérica 110 pg/mL (VR > 200); gastrina sérica 780 pg/mL (VR < 100); anticorpo anticélula parietal positivo. A endoscopia com biópsia mostra atrofia da mucosa do corpo e do fundo gástricos, com mucosa antral preservada.\n\nQual alternativa explica corretamente, em conjunto, a anemia e a hipergastrinemia dessa paciente?",
+  "enunciado": "Estudante de 22 anos, saudável e sem uso de medicamentos, participa de um experimento: o pH da urina é de 5,8 em jejum e de 7,1 cerca de 1 hora após uma refeição, e o bicarbonato plasmático sobe levemente no mesmo período. O professor relaciona o achado às células parietais do corpo gástrico, estimuladas pela refeição por gastrina, histamina e acetilcolina.\n\nQual processo celular explica a elevação do pH urinário após a refeição?",
   "alternativas": [
-   "Perda das células principais do corpo gástrico: falta pepsinogênio para liberar a B12 dos alimentos, e o pH ácido estimula as células G do antro",
-   "Perda das células parietais do corpo gástrico: falta fator intrínseco para absorver B12 no íleo, e a acloridria retira a inibição sobre as células G antrais",
-   "Hiperplasia primária das células G do antro: o excesso de gastrina lesa a mucosa do corpo e reduz a absorção duodenal de ferro e de folato",
-   "Perda das células enterocromafim-símiles: sem histamina não há secreção de fator intrínseco, e a gastrina sobe por falta de feedback da somatostatina",
-   "Perda das células parietais do corpo gástrico: o excesso de ácido residual inativa o fator intrínseco, e as células G são estimuladas pela hipercloridria"
+   "A célula principal secreta pepsinogênio e libera H⁺ no sangue, que o rim elimina deixando a urina alcalina",
+   "A célula parietal secreta HCO₃⁻ no lúmen gástrico, e o H⁺ que sobra é tamponado pela hemoglobina no sangue",
+   "A célula G libera gastrina, que age direto no túbulo renal e inibe a secreção distal de H⁺ na urina",
+   "A célula parietal secreta H⁺ no lúmen e libera HCO₃⁻ no sangue, em troca de Cl⁻ na membrana basolateral",
+   "A célula enterocromafim-símile libera histamina, que dilata a arteríola aferente e filtra mais HCO₃⁻"
   ],
-  "correta": 1,
-  "explicacao": "Na gastrite atrófica autoimune, anticorpos e linfócitos T destroem as células parietais (oxínticas) do corpo e do fundo, que produzem HCl e fator intrínseco. Sem fator intrínseco, a vitamina B12 não é absorvida no íleo terminal, gerando anemia megaloblástica e lesão de cordões posteriores. Sem ácido, o pH antral sobe, as células D reduzem a somatostatina e as células G do antro (preservadas) secretam gastrina em excesso. As células principais produzem pepsinogênio, não fator intrínseco; hiperplasia primária de células G (ou gastrinoma) cursaria com hipercloridria, não com acloridria; as células enterocromafim-símiles liberam histamina, que estimula a célula parietal, mas não produzem fator intrínseco; e não há hipercloridria em mucosa oxíntica atrófica.",
+  "correta": 3,
+  "explicacao": "Na célula parietal, a anidrase carbônica forma ácido carbônico a partir de CO₂ e água; o H⁺ é bombeado para o lúmen pela H⁺/K⁺-ATPase apical, e o HCO₃⁻ sai para o sangue pelo trocador Cl⁻/HCO₃⁻ da membrana basolateral, enquanto o Cl⁻ segue para o lúmen por canais apicais. Após a refeição, a secreção ácida intensa lança bicarbonato na circulação (a maré alcalina pós-prandial), e o rim elimina o excesso, alcalinizando a urina; depois, a secreção pancreática de bicarbonato devolve o equilíbrio. A célula principal produz pepsinogênio e não libera H⁺ no sangue. A célula parietal secreta ácido, não bicarbonato, no lúmen. A gastrina age sobre as células gástricas, não no túbulo renal, e a histamina das células enterocromafim-símiles estimula a célula parietal pelo receptor H2, sem papel no pH urinário.",
   "tema": "fisiologia-gastrointestinal",
   "subtema": "fisiologia-gastrointestinal.secrecao-gastrica",
   "especialidade": "histologia-embriologia",
   "disciplina": "Histologia",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-64a55a8d",
@@ -1909,16 +1911,16 @@
  {
   "id": "med-0de385ab",
   "area": "Pneumologia",
-  "enunciado": "Homem de 72 anos, com insuficiência cardíaca de fração de ejeção reduzida, internado por descompensação, recebe furosemida IV em dose alta há 5 dias. Persiste com derrame pleural bilateral, maior à direita, e realiza toracocentese diagnóstica:\n\n• Proteína: pleural 3,4 g/dL; sérica 6,5 g/dL.\n• LDH: pleural 130 U/L; sérica 290 U/L; limite superior normal da LDH sérica 240 U/L.\n• Albumina: pleural 1,8 g/dL; sérica 3,4 g/dL.\n• Líquido citrino; pH 7,45; glicose 110 mg/dL; 600 células/mm³, com predomínio de mononucleares; Gram e cultura negativos.\n\nQual a interpretação correta?",
+  "enunciado": "Homem de 62 anos, ex-tabagista, com artrite reumatoide soropositiva há 15 anos e nódulos subcutâneos nos cotovelos, tem derrame pleural esquerdo moderado, de evolução lenta, com dispneia leve e sem febre. Toracocentese: líquido turvo, amarelo-esverdeado; proteína 5,0 g/dL (sérica 7,0 g/dL); LDH 1.400 U/L (limite superior sérico 240 U/L); glicose 12 mg/dL (glicemia 98 mg/dL); pH 7,08; 1.800 células/mm³, com predomínio de linfócitos; Gram, cultura e pesquisa de BAAR negativos; adenosina desaminase de 30 U/L; citologia oncótica negativa.\n\nQual é a causa mais provável do derrame?",
   "alternativas": [
-   "Os critérios de Light indicam exsudato pela razão de proteínas, mas o gradiente de albumina de 1,6 g/dL sugere transudato da IC modificado pelo diurético",
-   "Os critérios de Light indicam transudato, pois duas das três razões ficaram abaixo dos pontos de corte, e o gradiente de albumina é dispensável",
-   "Os critérios de Light indicam exsudato pelas razões de proteínas e de LDH, e o gradiente de albumina de 1,6 g/dL confirma derrame parapneumônico",
-   "Os critérios de Light indicam exsudato pela razão de proteínas, e o gradiente de albumina acima de 1,2 g/dL reforça causa neoplásica",
-   "Os critérios de Light são inválidos em derrame bilateral; o diagnóstico depende só da citologia oncótica e da adenosina deaminase"
+   "Empiema bacteriano, pela glicose e pelo pH baixos, com indicação de antibiótico e drenagem",
+   "Tuberculose pleural, pelo predomínio de linfócitos e pela proteína elevada no líquido",
+   "Derrame reumatoide, exsudato com glicose muito baixa por menor transporte de glicose à pleura",
+   "Transudato por hipoalbuminemia, com critérios de Light alterados pelo uso de diurético",
+   "Derrame lúpico induzido por fármacos, com glicose normal e anticorpo anti-histona positivo"
   ],
-  "correta": 0,
-  "explicacao": "Critérios de Light (exsudato se ao menos um for positivo): proteína pleural/sérica > 0,5 → 3,4/6,5 ≈ 0,52 (positivo); LDH pleural/sérica > 0,6 → 130/290 ≈ 0,45 (negativo); LDH pleural > 2/3 do limite superior sérico → 2/3 × 240 = 160; 130 < 160 (negativo). Assim, Light classifica como exsudato, mas os critérios classificam erroneamente como exsudato cerca de 25% dos transudatos, sobretudo após diurético, que concentra proteínas no líquido. Nesse caso, gradiente de albumina soro − líquido > 1,2 g/dL (3,4 − 1,8 = 1,6) — ou de proteínas > 3,1 g/dL — indica transudato, coerente com IC. Apenas a razão de LDH não foi positiva; derrame bilateral não invalida os critérios; um gradiente alto aponta para transudato, não para neoplasia ou infecção.",
+  "correta": 2,
+  "explicacao": "O líquido é exsudato pelos critérios de Light (proteína 5,0/7,0 ≈ 0,71; LDH pleural muito acima de 2/3 do limite sérico). A combinação de glicose muito baixa (em geral abaixo de 30 mg/dL), pH abaixo de 7,20 e LDH acima de 700 U/L, em homem com artrite reumatoide soropositiva e nódulos, sem febre e com microbiologia negativa, é típica do derrame reumatoide; a glicose cai pelo bloqueio do transporte através da pleura espessada e pelo consumo local, e derrames crônicos podem virar pseudoquilotórax. O empiema cursaria com febre, pus, neutrófilos e Gram ou cultura positivos. Na tuberculose pleural, a adenosina desaminase costuma passar de 40 U/L e a glicose raramente é tão baixa. Um transudato não teria LDH e proteína tão altas. A serosite lúpica tem glicose normal, o que não se aplica aqui. Para lembrar: glicose pleural abaixo de 30 mg/dL sugere artrite reumatoide ou empiema.",
   "tema": "derrame-pleural",
   "subtema": "derrame-pleural.causas-de-transudato-e-exsudato",
   "especialidade": "pneumologia",
@@ -1926,7 +1928,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-a9f9c3d9",
@@ -2729,16 +2732,16 @@
  {
   "id": "med-cc08915b",
   "area": "Anatomia",
-  "enunciado": "Homem de 64 anos, com derrame pleural direito volumoso de causa a esclarecer, é submetido a toracocentese diagnóstica sentado, no 8º espaço intercostal, na linha axilar posterior. O interno introduz a agulha rente à borda inferior da 8ª costela. Duas horas depois, o paciente tem dor em faixa no trajeto do espaço intercostal, FC de 112 bpm e PA de 96 × 60 mmHg; nova punção obtém sangue que não coagula, e a hemoglobina cai de 13,1 para 10,4 g/dL.\n\nQual relação anatômica explica a complicação e fundamenta a técnica correta?",
+  "enunciado": "Homem de 63 anos, tabagista de 50 maços-ano, refere há 4 meses dor intensa no ombro direito que irradia pela face medial do braço e do antebraço até o 4º e o 5º dedos, com fraqueza dos músculos intrínsecos da mão. Ao exame, há ptose palpebral discreta, miose e anidrose na hemiface direita. A radiografia mostra opacidade no ápice do pulmão direito, com destruição do arco posterior da 1ª costela.\n\nQual relação anatômica do ápice pulmonar explica o conjunto de sinais?",
   "alternativas": [
-   "A pleura visceral adere à borda inferior da costela; punciona-se exatamente no meio do espaço",
-   "O feixe intercostal corre na borda superior da costela; punciona-se rente à borda inferior da costela de cima",
-   "A artéria torácica interna corre na borda inferior da costela; punciona-se na linha hemiclavicular",
-   "O nervo frênico cruza os espaços intercostais na linha axilar; punciona-se mais anteriormente",
-   "O feixe intercostal corre no sulco da borda inferior da costela; punciona-se rente à borda superior da costela de baixo"
+   "A cúpula pleural fica junto ao nervo frênico e ao nervo vago, responsáveis pela inervação da pálpebra e da pupila",
+   "A cúpula pleural fica junto ao tronco inferior do plexo braquial (C8–T1) e ao tronco simpático cervicotorácico",
+   "O ápice pulmonar é cruzado pelo tronco superior do plexo braquial (C5–C6), que inerva os músculos da mão",
+   "O ápice pulmonar se relaciona com o nervo torácico longo e com o gânglio ciliar, que controla a pupila",
+   "A cúpula pleural fica abaixo da clavícula, junto ao nervo axilar e à porção lombar da cadeia simpática"
   ],
-  "correta": 4,
-  "explicacao": "A veia, a artéria e o nervo intercostais (de cima para baixo: V-A-N) correm no sulco costal, na borda inferior de cada costela, entre os músculos intercostais interno e íntimo. A punção rente à borda inferior da costela de cima lesou esse feixe, causando hemotórax (sangue incoagulável, queda de hemoglobina, taquicardia) e dor neurálgica em faixa. Por isso se introduz a agulha rente à borda superior da costela de baixo. A torácica interna corre paraesternal, e o frênico desce sobre o pericárdio, sem cruzar espaços intercostais; a pleura visceral reveste o pulmão e não adere às costelas. Para lembrar: V-A-N, de cima para baixo, no sulco da costela de cima.",
+  "correta": 1,
+  "explicacao": "O quadro é de tumor do sulco superior (tumor de Pancoast). A cúpula pleural e o ápice do pulmão sobem acima da 1ª costela, 2 a 3 cm acima do terço medial da clavícula, e se relacionam com os vasos subclávios, o tronco inferior do plexo braquial (raízes C8 e T1) e o tronco simpático com o gânglio cervicotorácico (estrelado). A invasão de C8–T1 dá dor no ombro e na face medial do braço e do antebraço, com fraqueza dos intrínsecos da mão; a do simpático, síndrome de Horner (ptose, miose e anidrose). O frênico inerva o diafragma e o vago não controla pupila nem pálpebra. O tronco superior (C5–C6) inerva ombro e braço, não a mão. O gânglio ciliar fica na órbita e é parassimpático, e o torácico longo inerva o serrátil anterior. O nervo axilar e a cadeia lombar estão longe do ápice. Para lembrar: Pancoast = dor em território C8–T1 + Horner.",
   "tema": "anatomia-do-torax",
   "subtema": "anatomia-do-torax.pleuras-e-pulmoes",
   "especialidade": "anatomia",
@@ -3818,16 +3821,16 @@
  {
   "id": "med-86dad551",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 55 anos, com cirrose alcoólica e ascite volumosa, apresenta dor abdominal difusa, febre de 38,2 °C e confusão leve. PA 108/68 mmHg, FC 102 bpm. Paracentese diagnóstica: 1.600 leucócitos/mm³, sendo 60% polimorfonucleares; albumina no líquido 0,9 g/dL (albumina sérica 2,5 g/dL); proteínas totais 0,8 g/dL. Creatinina sérica 1,6 mg/dL (basal de 1,0 mg/dL há 2 meses); bilirrubina 3,2 mg/dL; INR 1,6. Glicose no líquido de 90 mg/dL e DHL abaixo do limite sérico; cultura do líquido em andamento. Não usa profilaxia antibiótica nem teve episódios prévios de peritonite.\n\nQual é a conduta mais adequada?",
+  "enunciado": "Homem de 60 anos, com cirrose alcoólica e abstinente há 8 meses, tem ascite moderada controlada com espironolactona e furosemida. Nunca teve peritonite bacteriana espontânea nem hemorragia digestiva. Paracentese diagnóstica ambulatorial: 90 células/mm³ (20% de polimorfonucleares), proteínas totais 0,9 g/dL, cultura negativa. Exames: creatinina 1,4 mg/dL; sódio 128 mEq/L; bilirrubina 2,1 mg/dL; albumina 2,8 g/dL; INR 1,5.\n\nQual é a conduta mais adequada em relação à infecção do líquido ascítico?",
   "alternativas": [
-   "Paracentese de alívio de grande volume com reposição de albumina e diurético em dose plena",
-   "Aguardar o resultado da cultura do líquido ascítico antes de iniciar qualquer antibioticoterapia",
-   "Laparotomia exploradora de urgência, pois a contagem celular indica peritonite bacteriana secundária",
-   "Norfloxacino oral isoladamente, em dose profilática, e reavaliação ambulatorial em uma semana",
-   "Cefalosporina de 3ª geração intravenosa associada a albumina intravenosa no 1º e no 3º dias"
+   "Ceftriaxona IV por 5 dias com albumina, pois o líquido já preenche o critério de peritonite",
+   "Nenhuma profilaxia, pois ela só está indicada depois do primeiro episódio de peritonite",
+   "Profilaxia primária contínua com norfloxacino, pela proteína baixa com creatinina e sódio alterados",
+   "Profilaxia só durante internações, pois o uso contínuo seleciona bactérias resistentes",
+   "Paracenteses mensais para detectar peritonite assintomática, sem uso de antibiótico"
   ],
-  "correta": 4,
-  "explicacao": "Polimorfonucleares no líquido ascítico = 1.600 × 0,60 = 960/mm³, acima de 250/mm³, o que define peritonite bacteriana espontânea e autoriza tratamento empírico imediato, sem aguardar a cultura, com cefalosporina de 3ª geração (ceftriaxona ou cefotaxima). Como a creatinina está acima de 1 mg/dL (critério que, assim como ureia elevada ou bilirrubina acima de 4 mg/dL, indica alto risco de disfunção renal), associa-se albumina 1,5 g/kg no 1º dia e 1 g/kg no 3º, reduzindo síndrome hepatorrenal e mortalidade. O gradiente soro-ascite (2,5 − 0,9 = 1,6 g/dL, ≥1,1) confirma hipertensão portal. Peritonite secundária sugere-se por critérios de Runyon (glicose baixa, proteína >1 g/dL, DHL alta, flora polimicrobiana), ausentes aqui. Norfloxacino é profilaxia, não tratamento; paracentese de alívio isolada não trata a infecção.",
+  "correta": 2,
+  "explicacao": "Os polimorfonucleares no líquido são 90 × 0,20 = 18/mm³, bem abaixo de 250/mm³, portanto não há peritonite bacteriana espontânea a tratar. Resta decidir a profilaxia. Ela é indicada em três situações: hemorragia digestiva no cirrótico (ceftriaxona por até 7 dias), após o primeiro episódio de peritonite (profilaxia secundária, contínua) e como profilaxia primária quando a proteína do líquido é menor que 1,5 g/dL e há disfunção renal (creatinina ≥ 1,2 mg/dL, ureia ≥ 25 mg/dL ou sódio ≤ 130 mEq/L) ou insuficiência hepática (Child-Pugh ≥ 9 com bilirrubina ≥ 3 mg/dL). Este paciente tem proteína de 0,9 g/dL, creatinina de 1,4 mg/dL e sódio de 128 mEq/L, e por isso deve receber norfloxacino diário (ou ciprofloxacino), que reduz a peritonite e a síndrome hepatorrenal. Paracenteses seriadas não previnem a infecção, e restringir a profilaxia às internações vale para a hemorragia digestiva, não para esse cenário.",
   "tema": "cirrose-hepatica",
   "subtema": "cirrose-hepatica.ascite-e-peritonite-bacteriana-espontanea",
   "especialidade": "gastroenterologia",
@@ -3835,7 +3838,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-0caf187b",
@@ -4220,24 +4224,25 @@
  {
   "id": "med-59943d3d",
   "area": "Pediatria Geral",
-  "enunciado": "Criança de 18 meses, 10 kg, com diarreia líquida há 2 dias, sem sangue. Está irritada, com olhos fundos, bebe água avidamente e o sinal da prega cutânea desaparece lentamente. Pulso cheio, enchimento capilar de 3 s, sem letargia.\n\nSegundo o manejo do Ministério da Saúde, qual é a classificação e a conduta?",
+  "enunciado": "Lactente de 5 meses, 6 kg (pesava 6,5 kg há 1 semana), tem diarreia aquosa há 3 dias. A avó vinha preparando soro caseiro com várias colheres de sal e oferecendo leite em pó reconstituído mais concentrado \"para fortalecer\". Está muito irritado, com choro agudo ao ser manuseado, sede intensa e pele de consistência pastosa, \"de massa de pão\"; olhos discretamente fundos, pulso cheio e enchimento capilar de 2 segundos. Sódio sérico de 162 mEq/L.\n\nComo interpretar a avaliação clínica do estado de hidratação?",
   "alternativas": [
-   "Sem desidratação; plano A associado a antibiótico oral e antiemético",
-   "Desidratação grave; plano C com expansão venosa de soro fisiológico a 20 mL/kg",
-   "Desidratação (algum grau); plano B com solução de reidratação oral na unidade de saúde",
-   "Desidratação grave; plano B com hidratação oral por sonda nasogástrica em casa",
-   "Sem desidratação; plano A com aumento da oferta de líquidos em domicílio"
+   "Desidratação hipernatrêmica: os sinais de hipovolemia subestimam a perda, pois a água sai das células",
+   "Desidratação leve: a perda de peso e o pulso cheio indicam só manutenção em casa (Plano A)",
+   "Desidratação hiponatrêmica: a pele pastosa indica edema intersticial por excesso de água livre",
+   "Desidratação isonatrêmica grave: a irritabilidade e a sede indicam choque e expansão rápida",
+   "Sem desidratação: o sódio alto reflete só a ingestão de sal, sem perda real de volume corporal"
   ],
-  "correta": 2,
-  "explicacao": "O Ministério da Saúde classifica como desidratação a presença de dois ou mais sinais entre: irritabilidade/inquietação, olhos fundos, sede intensa (bebe avidamente) e prega que desaparece lentamente, com pulso palpável e enchimento capilar de até 5 s. A conduta é o plano B: soro de reidratação oral na unidade de saúde, em torno de 50–100 mL/kg em 4–6 horas, reavaliando periodicamente. Desidratação grave exige letargia/coma, incapacidade de beber, prega que desaparece muito lentamente, pulso fraco ou enchimento capilar prolongado, com plano C (hidratação venosa). Antibióticos são reservados a disenteria com comprometimento do estado geral ou cólera; antieméticos não são rotina.",
+  "correta": 0,
+  "explicacao": "A perda de 0,5 kg em 6,5 kg (cerca de 8%) e o sódio de 162 mEq/L indicam desidratação hipernatrêmica, favorecida por soro caseiro com excesso de sal e leite em pó reconstituído concentrado demais. Na hipernatremia, a água sai das células para o extracelular, o que preserva o volume intravascular por mais tempo: pulso, enchimento capilar e olhos parecem melhores do que a perda real, e a gravidade tende a ser subestimada. São típicos a irritabilidade, o choro agudo, a sede intensa, a hipertonia e a pele pastosa. Há risco de convulsões e de hemorragia intracraniana, e a correção deve ser lenta, reduzindo o sódio no máximo 10 a 12 mEq/L por dia, pelo risco de edema cerebral. Manter em casa ignora a perda de 8%. A pele pastosa não é edema, e a hiponatremia deixaria os sinais de hipovolemia mais evidentes. Não há choque, e o sódio alto não exclui perda de volume.",
   "tema": "diarreia-aguda-e-desidratacao",
   "subtema": "diarreia-aguda-e-desidratacao.avaliacao-do-estado-de-hidratacao",
   "especialidade": "pediatria-geral",
   "disciplina": "Pediatria Geral",
-  "dificuldade": 2,
+  "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-7070a7e0",
@@ -5110,16 +5115,16 @@
  {
   "id": "med-92e3296e",
   "area": "Endocrinologia",
-  "enunciado": "Jovem de 20 anos, com diabetes tipo 1, chega ao pronto-socorro com vômitos, dor abdominal e respiração de Kussmaul após suspender a insulina há 3 dias. PA 100/60 mmHg, FC 120 bpm, mucosas secas. Exames: glicemia 486 mg/dL; pH 7,12; bicarbonato 8 mEq/L; cetonemia elevada; Na 132 mEq/L; K 3,0 mEq/L; creatinina 1,4 mg/dL. ECG sem alterações agudas. O plantonista já infundiu 1.000 mL de soro fisiológico 0,9% na primeira hora, e o paciente apresenta diurese. Ele discute com o interno o próximo passo, lembrando que a insulina é peça central do tratamento da cetoacidose.\n\nQual é a conduta correta neste momento?",
+  "enunciado": "Mulher de 52 anos, com diabetes tipo 2 em uso de metformina e dapagliflozina, foi submetida a colecistectomia há 2 dias e está com ingestão oral muito reduzida por náuseas. Evolui com mal-estar, dor abdominal e taquipneia. PA 112/70 mmHg, FC 108 bpm. Exames: glicemia 188 mg/dL; pH 7,14; bicarbonato 9 mEq/L; Na 138 mEq/L; Cl 104 mEq/L; beta-hidroxibutirato 5,8 mmol/L; lactato 1,4 mmol/L; K 4,6 mEq/L; creatinina 1,0 mg/dL.\n\nQual é o diagnóstico e a conduta?",
   "alternativas": [
-   "Iniciar insulina regular IV contínua e repor potássio só se cair abaixo de 2,5",
-   "Manter a hidratação e repor potássio IV, adiando a insulina até K ≥ 3,5 mEq/L",
-   "Administrar bicarbonato de sódio IV, pois o pH está abaixo de 7,2 e há choque",
-   "Trocar o soro por solução glicosada a 5% e iniciar insulina regular IV",
-   "Iniciar insulina e potássio juntos, pois a acidose eleva o potássio sérico"
+   "Acidose lática pela metformina; suspender o fármaco e indicar hemodiálise de urgência",
+   "Cetose de jejum pós-operatória; só reintroduzir a dieta, sem insulina, pois a glicemia é baixa",
+   "Estado hiperglicêmico hiperosmolar; soro fisiológico e insulina, mantendo a dapagliflozina",
+   "Cetoacidose euglicêmica pelo iSGLT2; suspender o fármaco e tratar com insulina, glicose e hidratação",
+   "Acidose hiperclorêmica pós-operatória; bicarbonato IV até normalizar o pH arterial"
   ],
-  "correta": 1,
-  "explicacao": "Na cetoacidose diabética, a insulina desloca o potássio para o intracelular; se iniciada com potássio baixo, pode causar hipocalemia grave, arritmia e fraqueza respiratória. Por isso, as diretrizes (ADA, SBD) orientam manter a hidratação, repor potássio e só iniciar a insulina quando o K atingir 3,5 mEq/L (limite do consenso internacional de crises hiperglicêmicas de 2024; diretrizes anteriores usavam 3,3 mEq/L — com K de 3,0, a conduta é a mesma pelos dois critérios). Iniciar insulina simultaneamente ignora esse risco, mesmo que a acidose tenda a elevar o potássio sérico. O bicarbonato fica reservado para pH < 6,9. A solução glicosada é acrescentada quando a glicemia cai para cerca de 200–250 mg/dL, e não no início.",
+  "correta": 3,
+  "explicacao": "Há acidose metabólica grave (pH 7,14; bicarbonato 9) com ânion gap elevado (138 − 104 − 9 = 25) e cetonemia alta, mas glicemia abaixo de 250 mg/dL: é a cetoacidose euglicêmica associada aos inibidores do SGLT2. Esses fármacos provocam glicosúria, reduzem a insulina e elevam o glucagon, favorecendo a cetogênese, sobretudo com jejum, cirurgia, infecção ou redução da insulina. O tratamento segue o da cetoacidose: hidratação, insulina em infusão e reposição de potássio, mas com solução glicosada desde cedo, para manter a insulina sem causar hipoglicemia; o iSGLT2 é suspenso (e deveria ter sido interrompido 3 a 4 dias antes da cirurgia). O lactato normal afasta acidose lática. A cetose de jejum não chega a bicarbonato tão baixo. A osmolalidade estimada (cerca de 286 mOsm/kg) afasta o estado hiperosmolar, e o ânion gap elevado afasta a acidose hiperclorêmica. Para lembrar: glicemia normal não exclui cetoacidose em quem usa iSGLT2.",
   "tema": "diabetes-mellitus",
   "subtema": "diabetes-mellitus.complicacoes-agudas",
   "especialidade": "endocrinologia",
@@ -5488,24 +5493,25 @@
  {
   "id": "med-b510cf5c",
   "area": "Nefrologia",
-  "enunciado": "Mulher de 45 anos, etilista, internada por diarreia, tem potássio de 2,8 mEq/L. Recebeu reposição de cloreto de potássio por 48 horas, mas o potássio permanece em 2,9 mEq/L. O ECG mostra achatamento da onda T e onda U proeminente.\n\nQual medida é fundamental para permitir a correção da hipocalemia?",
+  "enunciado": "Homem de 64 anos, assintomático, em acompanhamento hematológico por trombocitemia essencial, tem potássio sérico de 6,6 mEq/L nos exames de rotina, confirmado em nova amostra colhida sem garrote prolongado e sem hemólise. Função renal normal; não usa IECA, BRA, espironolactona, AINE nem suplementos. ECG normal. Plaquetas de 1.350.000/mm³. O potássio dosado no plasma (tubo com heparina), processado imediatamente, é de 4,3 mEq/L.\n\nQual é a explicação e a conduta?",
   "alternativas": [
-   "Associar furosemida para aumentar a oferta distal de sódio",
-   "Associar insulina regular para deslocar o potássio para as células",
-   "Dosar e repor magnésio, cuja falta mantém a perda renal de potássio",
-   "Administrar gluconato de cálcio para estabilizar a membrana",
-   "Suspender o cloreto de potássio e usar só bicarbonato de sódio IV"
+   "Hipercalemia por hipoaldosteronismo; iniciar fludrocortisona e restringir o potássio",
+   "Pseudo-hipercalemia pela saída de potássio das plaquetas na coagulação; não tratar",
+   "Hipercalemia por lise celular; gluconato de cálcio, insulina e glicose imediatamente",
+   "Hipercalemia por redistribuição na acidose; bicarbonato IV e repetir em 6 horas",
+   "Erro por hemólise in vitro; repetir a coleta em soro até obter um valor normal"
   ],
-  "correta": 2,
-  "explicacao": "A hipomagnesemia é comum em etilistas e em perdas intestinais e torna a hipocalemia refratária: a falta de magnésio intracelular libera os canais ROMK do néfron distal, aumentando a secreção renal de potássio. Por isso, deve-se dosar e repor magnésio junto com o potássio. Insulina, bicarbonato e furosemida pioram a hipocalemia, pois deslocam o potássio para dentro das células ou aumentam sua excreção urinária. Gluconato de cálcio é usado para estabilizar o miocárdio na hipercalemia, e não na hipocalemia.",
+  "correta": 1,
+  "explicacao": "Quando o sangue coagula no tubo de soro, as plaquetas liberam potássio; com trombocitose acentuada (ou leucocitose extrema), o potássio sérico sobe artificialmente, enquanto o potássio do plasma, colhido com anticoagulante e sem coagulação, reflete o valor real. A diferença entre soro (6,6) e plasma (4,3), num paciente assintomático, com ECG e função renal normais, confirma a pseudo-hipercalemia, e tratá-la seria perigoso, podendo causar hipocalemia real. Não há dado de hipoaldosteronismo, e a lise celular in vivo elevaria também o potássio plasmático. Não há acidose descrita que justifique bicarbonato. A hemólise foi excluída, e repetir em soro reproduziria o mesmo erro. Para lembrar: potássio alto no soro e normal no plasma indica pseudo-hipercalemia — pense em trombocitose, leucocitose, hemólise ou punho cerrado na coleta.",
   "tema": "disturbios-hidroeletroliticos",
   "subtema": "disturbios-hidroeletroliticos.disturbios-do-potassio",
   "especialidade": "nefrologia",
   "disciplina": "Nefrologia",
-  "dificuldade": 2,
+  "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-ece01593",
@@ -7962,21 +7968,21 @@
  {
   "id": "med-70c64327",
   "area": "Obstetrícia",
-  "enunciado": "Puérpera de 35 anos, com parto vaginal há 30 minutos após trabalho de parto de 18 horas conduzido com ocitocina, recém-nascido de 4.100 g, apresenta sangramento vaginal abundante, estimado em 800 mL. A placenta saiu completa, com membranas íntegras. Ao exame, o útero está amolecido, palpável acima da cicatriz umbilical, e endurece temporariamente com a massagem; a revisão do canal de parto não mostra lacerações. Coagulograma colhido na admissão, normal.\n\nQual causa explica o sangramento?",
+  "enunciado": "Puérpera de 30 anos teve parto vaginal de natimorto com 36 semanas, após diagnóstico de descolamento prematuro de placenta extenso. Uma hora depois, mantém sangramento vaginal de sangue que não forma coágulos e sangra também nos locais de punção venosa. O útero está contraído, abaixo da cicatriz umbilical; a placenta saiu completa, e a revisão do canal de parto não mostra lacerações. PA 90/55 mmHg, FC 122 bpm. Fibrinogênio 90 mg/dL; plaquetas 68.000/mm³; TP e TTPa prolongados.\n\nQual dos 4 Ts explica o sangramento e qual é a prioridade na reposição?",
   "alternativas": [
-   "Inversão uterina",
-   "Coagulopatia de consumo",
-   "Laceração do trajeto",
-   "Retenção de restos placentários",
-   "Atonia uterina"
+   "Trombina, por coagulopatia de consumo; repor fibrinogênio com crioprecipitado ou concentrado",
+   "Tônus, por atonia uterina; metilergometrina intramuscular e massagem uterina bimanual",
+   "Trauma, por laceração oculta do colo; nova revisão do canal com sutura sob anestesia",
+   "Tecido, por restos placentários; curetagem uterina imediata para esvaziar a cavidade",
+   "Trombina, por coagulopatia dilucional; só cristaloide, evitando repor hemoderivados"
   ],
-  "correta": 4,
-  "explicacao": "A atonia uterina (tônus) é a causa mais frequente de hemorragia pós-parto, respondendo pela maioria dos casos entre os \"4 Ts\" (tônus, trauma, tecido e trombina). O útero amolecido, aumentado, que endurece com a massagem, após trabalho de parto prolongado com ocitocina e feto macrossômico (sobredistensão), é o quadro clássico. A placenta completa afasta retenção de tecido; a revisão sem lacerações afasta trauma do trajeto; o coagulograma normal e a ausência de fatores de risco tornam a coagulopatia improvável; e na inversão uterina o fundo não é palpável no abdome e há massa na vagina com choque desproporcional. A conduta inclui massagem uterina bimanual, uterotônicos e ácido tranexâmico.",
+  "correta": 0,
+  "explicacao": "O descolamento prematuro de placenta extenso, sobretudo com óbito fetal, libera tromboplastina tecidual na circulação materna e é causa clássica de coagulação intravascular disseminada. Útero contraído, placenta completa e canal íntegro afastam tônus, tecido e trauma; o sangue que não coagula, o sangramento nos locais de punção e o fibrinogênio de 90 mg/dL, com plaquetopenia e TP e TTPa prolongados, indicam trombina (coagulopatia de consumo). Fibrinogênio abaixo de 200 mg/dL na hemorragia pós-parto prediz sangramento grave, e a prioridade é repô-lo com crioprecipitado ou concentrado de fibrinogênio, além de plasma, plaquetas se necessário, concentrado de hemácias e ácido tranexâmico. Metilergometrina não trata coagulopatia. A coagulopatia aqui é de consumo, e repor só cristaloide diluiria ainda mais os fatores. Para lembrar: na hemorragia pós-parto, fibrinogênio abaixo de 200 mg/dL é sinal de alerta.",
   "tema": "hemorragia-pos-parto",
   "subtema": "hemorragia-pos-parto.causas-4-ts",
   "especialidade": "obstetricia",
   "disciplina": "Obstetrícia",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
   "prova": null,
@@ -8007,16 +8013,16 @@
  {
   "id": "med-17681460",
   "area": "Farmacologia",
-  "enunciado": "Puérpera com pré-eclâmpsia grave, em uso de sulfato de magnésio, apresenta hemorragia pós-parto por atonia uterina que não cede com massagem e ocitocina.\n\nQual uterotônico deve ser evitado nessa paciente, e por quê?",
+  "enunciado": "Puérpera de 28 anos teve hemorragia pós-parto por atonia, controlada com ocitocina. Para manter o útero contraído, recebeu nas 16 horas seguintes infusão de ocitocina em dose alta, diluída em grande volume de soro glicosado a 5%. Evolui com cefaleia, náuseas, confusão e uma crise convulsiva. PA 118/72 mmHg, sem proteinúria; glicemia 104 mg/dL; sódio sérico 119 mEq/L (132 mEq/L antes do parto).\n\nQual mecanismo explica o quadro?",
   "alternativas": [
-   "Carbetocina, porque interage com o sulfato de magnésio causando parada cardíaca",
-   "Ocitocina, porque aumenta a pressão arterial e piora a pré-eclâmpsia",
-   "Misoprostol, porque é contraindicado em qualquer puérpera com hipertensão",
-   "Metilergometrina, porque causa vasoconstrição e pode agravar a hipertensão",
-   "Ácido tranexâmico, porque causa crise hipertensiva por liberação de catecolaminas"
+   "Eclâmpsia pós-parto, pois a ocitocina eleva a pressão arterial e causa vasoespasmo cerebral",
+   "Efeito antidiurético da ocitocina em receptores V2, somado à água livre do soro glicosado",
+   "Perda renal de sódio induzida pela ocitocina, por inibição do cotransportador da alça de Henle",
+   "Hiperglicemia pelo soro glicosado, com pseudo-hiponatremia por deslocamento osmótico de água",
+   "Insuficiência adrenal aguda por necrose hipofisária pós-parto, com perda de sal pelo rim"
   ],
-  "correta": 3,
-  "explicacao": "A metilergometrina é um alcaloide do ergot que contrai o útero e também a musculatura lisa vascular; por isso é contraindicada em hipertensas, incluindo pré-eclâmpsia, pelo risco de crise hipertensiva, acidente vascular cerebral e convulsão. Nessa paciente, após ocitocina, as opções são misoprostol (análogo de prostaglandina E1, por via retal ou sublingual), ácido tranexâmico e medidas mecânicas, como balão de tamponamento intrauterino. A ocitocina não eleva a pressão (em bolus rápido pode até causar hipotensão), a carbetocina não tem essa interação, e o ácido tranexâmico não é uterotônico nem causa crise hipertensiva.",
+  "correta": 1,
+  "explicacao": "A ocitocina e o hormônio antidiurético são nonapeptídeos que diferem em apenas dois aminoácidos. Em doses altas e prolongadas, a ocitocina ativa receptores V2 do ducto coletor e retém água livre; se é diluída em soro glicosado, cuja glicose é metabolizada e deixa só água, surge hiponatremia dilucional, com cefaleia, confusão e convulsões (intoxicação hídrica). A prevenção é diluí-la em solução isotônica, limitar o volume infundido e dosar o sódio em infusões prolongadas; a correção segue as regras da hiponatremia sintomática. Não há hipertensão nem proteinúria, e a ocitocina não eleva a pressão (em bolus rápido pode até baixá-la). Ela não inibe o cotransportador da alça. A glicemia normal afasta pseudo-hiponatremia. A síndrome de Sheehan costuma se manifestar por agalactia e falha hormonal em dias ou semanas, e não explica a queda do sódio nesse contexto de infusão. Para lembrar: ocitocina em dose alta com soro glicosado pode causar intoxicação hídrica.",
   "tema": "hemorragia-pos-parto",
   "subtema": "hemorragia-pos-parto.abordagem-inicial",
   "especialidade": "farmacologia",
@@ -8024,7 +8030,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-8c253a2d",
@@ -8120,16 +8127,16 @@
  {
   "id": "med-a862a469",
   "area": "Obstetrícia",
-  "enunciado": "Mulher de 25 anos, primigesta, estável hemodinamicamente, com tipagem O Rh negativo e Coombs indireto negativo, é submetida a aspiração manual intrauterina por abortamento incompleto com 10 semanas. O parceiro é Rh positivo.\n\nQual conduta, além do cuidado habitual, está indicada?",
+  "enunciado": "Puérpera de 23 anos, O Rh negativo, com Coombs indireto negativo no pré-natal e na internação para o parto, teve parto vaginal de recém-nascido A Rh positivo, com Coombs direto negativo. Por falha no fluxo da maternidade, recebeu alta sem a imunoglobulina anti-D. Volta à unidade no 6º dia pós-parto, assintomática; o Coombs indireto colhido hoje continua negativo.\n\nQual é a conduta adequada?",
   "alternativas": [
-   "Imunoglobulina anti-D apenas se o parceiro for homozigoto para D",
-   "Imunoglobulina anti-D somente na próxima gestação, com 28 semanas",
-   "Nenhuma, pois no primeiro trimestre não há hemácias fetais Rh positivo",
-   "Imunoglobulina anti-D em até 72 horas após o procedimento",
-   "Coombs indireto mensal por 6 meses, sem imunoglobulina"
+   "Não aplicar, pois depois de 72 horas a imunoglobulina anti-D não tem mais nenhum efeito",
+   "Não aplicar agora; repetir o Coombs indireto em 6 meses e decidir conforme o resultado",
+   "Aplicar a imunoglobulina anti-D agora, pois ela ainda pode proteger se dada em até 28 dias",
+   "Aplicar apenas na próxima gestação, com 28 semanas, em dose dobrada pelo atraso",
+   "Aplicar a imunoglobulina anti-D no recém-nascido, que é quem tem hemácias Rh positivo"
   ],
-  "correta": 3,
-  "explicacao": "Abortamento, gravidez ectópica, mola hidatiforme, procedimentos invasivos e trauma abdominal podem causar passagem de hemácias fetais para a circulação materna. As hemácias fetais expressam o antígeno D desde o início da gestação, e o volume necessário para sensibilizar é pequeno. Por isso a mulher Rh negativo não sensibilizada (Coombs indireto negativo) deve receber imunoglobulina anti-D em até 72 horas após o evento, especialmente quando há esvaziamento uterino. Adiar para a próxima gestação é tarde demais, pois a sensibilização já teria ocorrido. Não é preciso saber se o parceiro é homozigoto ou heterozigoto: basta ele ser Rh positivo ou desconhecido.",
+  "correta": 2,
+  "explicacao": "A imunoglobulina anti-D deve ser aplicada idealmente em até 72 horas após o parto de filho Rh positivo, prazo baseado nos estudos originais. Quando esse prazo é perdido, as diretrizes orientam aplicá-la o quanto antes, pois ainda pode oferecer alguma proteção: o ACOG aceita até 28 dias, e a sociedade britânica de hematologia cita até 10 dias. O Coombs indireto negativo mostra que a mulher ainda não foi sensibilizada, e não há motivo para desistir da profilaxia. Esperar 6 meses ou até a próxima gestação permite que a sensibilização se complete, e então a imunoglobulina já não serve. O recém-nascido não recebe anti-D: o objetivo é eliminar as hemácias fetais que passaram para a circulação materna. Para lembrar: 72 horas é o prazo ideal, não o limite para a imunoglobulina anti-D.",
   "tema": "aloimunizacao-rh",
   "subtema": "aloimunizacao-rh.profilaxia-com-imunoglobulina-anti-d",
   "especialidade": "obstetricia",
@@ -8137,7 +8144,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-5633c732",
@@ -9948,16 +9956,16 @@
  {
   "id": "med-1a17e455",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 35 anos com doença de Crohn foi submetido à ressecção de 120 cm do íleo terminal. Meses depois, apresenta diarreia com fezes volumosas e gordurosas e anemia macrocítica. Não usa medicamentos de forma contínua e não tem sintomas de atividade inflamatória.\n\nQual mecanismo explica, em conjunto, os dois achados?",
+  "enunciado": "Mulher de 38 anos fez gastroplastia com derivação em Y de Roux há 4 anos, com boa perda de peso. Não usa suplementos regularmente e apresenta fadiga e queda de cabelo. Exames: Hb 9,4 g/dL; VCM 72 fL; ferritina 6 ng/mL; vitamina B12 e folato normais. As menstruações são regulares e de volume habitual; pesquisa de sangue oculto nas fezes e endoscopia não mostram sangramento.\n\nQual alteração da fisiologia digestiva explica principalmente a anemia?",
   "alternativas": [
-   "Perda do local de absorção de ferro e de ácido fólico, ambos absorvidos no íleo terminal",
-   "Falta de lipase e de fator intrínseco, que são produzidos pelas células do íleo terminal",
-   "Perda das células parietais do íleo, responsáveis pela produção do fator intrínseco",
-   "Perda do local de reabsorção dos sais biliares e do complexo fator intrínseco–vitamina B12",
-   "Excesso de secretina liberada pelo íleo remanescente, que inibe a lipase e o folato"
+   "Perda do íleo terminal, onde o ferro é absorvido junto com o complexo B12–fator intrínseco",
+   "Falta de fator intrínseco no pequeno reservatório gástrico, necessário para absorver o ferro",
+   "Excesso de hepcidina produzida pelo intestino remanescente, que bloqueia a ferroportina",
+   "Supercrescimento bacteriano na alça excluída, com consumo do ferro dietético pelas bactérias",
+   "Exclusão do duodeno e menor acidez gástrica, que reduzem a absorção de ferro pelo DMT1"
   ],
-  "correta": 3,
-  "explicacao": "O íleo terminal é o local de reabsorção ativa dos sais biliares (circulação êntero-hepática) e de absorção do complexo vitamina B12–fator intrínseco (receptor cubilina). Em ressecções extensas (em geral > 100 cm), a perda de sais biliares supera a capacidade de síntese hepática, a formação de micelas falha e surge esteatorreia; em ressecções menores predomina a diarreia colerética, por sais biliares no cólon. A falta de B12 causa anemia megaloblástica. Ferro e folato são absorvidos no duodeno e no jejuno proximal. Lipase é pancreática; fator intrínseco é produzido pelas células parietais do estômago.",
+  "correta": 4,
+  "explicacao": "O ferro não heme da dieta está sobretudo na forma férrica (Fe³⁺); o ácido gástrico o mantém solúvel e a redutase duodenal (citocromo b duodenal) o converte em Fe²⁺, absorvido pelo transportador DMT1 no duodeno e no jejuno proximal. A derivação em Y de Roux exclui exatamente esse segmento do trânsito alimentar e reduz a secreção ácida do pequeno reservatório gástrico, por isso a deficiência de ferro é a carência mais comum depois da cirurgia e muitas vezes exige ferro intravenoso. O íleo terminal absorve B12 e sais biliares, não ferro. O fator intrínseco serve à absorção da B12. A hepcidina é produzida pelo fígado e sobe na inflamação, o que não explica a ferritina de 6 ng/mL. O supercrescimento bacteriano consome sobretudo B12, que aqui está normal.",
   "tema": "fisiologia-gastrointestinal",
   "subtema": "fisiologia-gastrointestinal.digestao-e-absorcao",
   "especialidade": "gastroenterologia",
@@ -9965,7 +9973,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-d65ebe83",
@@ -10662,24 +10671,25 @@
  {
   "id": "med-ebb7765f",
   "area": "Microbiologia",
-  "enunciado": "Oito convidados de uma festa têm vômitos intensos, cólicas e diarreia de 2 a 4 horas após comerem salgados recheados com frango e maionese, deixados horas fora da geladeira. Não há febre, e todos melhoram em 24 horas.\n\nQual é o mecanismo mais provável?",
+  "enunciado": "Adolescente de 16 anos, jogador de futebol, tem furúnculos recorrentes nas coxas e nas nádegas há 6 meses; dois colegas do time tiveram lesões semelhantes. Agora apresenta abscesso de 5 cm, com centro necrótico. A cultura cresce Staphylococcus aureus resistente à oxacilina, sensível a sulfametoxazol-trimetoprima e clindamicina, com perfil de cepa comunitária. O laboratório detecta o gene de uma toxina que forma poros na membrana de neutrófilos e macrófagos e se associa também à pneumonia necrosante.\n\nQual é essa toxina?",
   "alternativas": [
-   "Toxina botulínica pré-formada, com bloqueio da liberação de acetilcolina",
-   "Colonização intestinal por Staphylococcus aureus resistente à meticilina",
-   "Toxina Shiga produzida no cólon por Escherichia coli O157:H7",
-   "Invasão da mucosa do íleo por Salmonella, com bacteremia transitória",
-   "Enterotoxina estafilocócica termoestável, já presente no alimento"
+   "Leucocidina de Panton-Valentine",
+   "Toxina da síndrome do choque tóxico",
+   "Toxina esfoliativa do tipo A",
+   "Enterotoxina estafilocócica B",
+   "Proteína A da parede bacteriana"
   ],
-  "correta": 4,
-  "explicacao": "Início muito rápido (1–6 horas), predomínio de vômitos, ausência de febre e resolução em 24 horas indicam intoxicação por toxina pré-formada. Staphylococcus aureus contaminante (em geral das mãos de manipuladores) multiplica-se em alimentos ricos em proteína mantidos em temperatura ambiente e produz enterotoxinas termoestáveis, que resistem ao reaquecimento e agem sobre o sistema nervoso entérico e o centro do vômito. A Salmonella tem incubação de 6–72 horas, com febre. A toxina botulínica causa paralisia descendente. E. coli O157:H7 causa diarreia sanguinolenta após dias. Não há colonização intestinal nem necessidade de antibiótico.",
+  "correta": 0,
+  "explicacao": "A leucocidina de Panton-Valentine é uma toxina de dois componentes que forma poros na membrana de neutrófilos e macrófagos, causando sua lise e necrose tecidual. Está presente em muitas cepas de Staphylococcus aureus resistente à meticilina de origem comunitária e se associa a furunculose recorrente, abscessos em pessoas com contato próximo (atletas, militares, familiares) e pneumonia necrosante, às vezes após influenza. A toxina da síndrome do choque tóxico e a enterotoxina B são superantígenos que ativam linfócitos T de forma inespecífica; a enterotoxina também causa a intoxicação alimentar. As toxinas esfoliativas clivam a desmogleína 1 e causam a síndrome da pele escaldada. A proteína A liga-se à porção Fc da IgG e atrapalha a opsonização, sem formar poros. O tratamento dos abscessos se baseia na drenagem, com antibiótico conforme a extensão.",
   "tema": "estafilococos-e-estreptococos",
   "subtema": "estafilococos-e-estreptococos.staphylococcus-aureus",
   "especialidade": "microbiologia",
   "disciplina": "Microbiologia",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-65333457",
@@ -10751,16 +10761,16 @@
  {
   "id": "med-10720f14",
   "area": "Farmacologia",
-  "enunciado": "Homem de 58 anos com abscesso hepático polimicrobiano, com cultura positiva para Escherichia coli e Bacteroides fragilis, recebeu inicialmente um aminoglicosídeo isolado, sem melhora do componente anaeróbio. Na discussão, o professor lembra que certas classes precisam de transporte dependente de oxigênio para entrar na bactéria e pede aos alunos que revisem os mecanismos de ação dos antibacterianos.\n\nQual associação entre fármaco e mecanismo está correta?",
+  "enunciado": "Mulher de 34 anos com cistite não complicada recebe sulfametoxazol-trimetoprima por 3 dias. Na aula de farmacologia, o professor destaca que a associação é mais eficaz do que cada componente isolado e que, embora atue na síntese de folato, tem pouca toxicidade para as células humanas nas doses habituais.\n\nQual explicação é correta?",
   "alternativas": [
-   "Azitromicina: inibe a DNA girase e a topoisomerase IV das bactérias",
-   "Doxiciclina: liga-se às PBPs e inibe a síntese do peptidoglicano da parede",
-   "Sulfametoxazol: liga-se ao D-Ala-D-Ala e impede a transpeptidação da parede",
-   "Gentamicina: liga-se à subunidade 30S e causa leitura errada do RNA mensageiro",
-   "Ciprofloxacino: liga-se à subunidade 50S e bloqueia a translocação ribossômica"
+   "Bloqueio sequencial: o sulfametoxazol inibe a di-hidrofolato redutase, e a trimetoprima, a timidilato sintase humana",
+   "Bloqueio sequencial: o sulfametoxazol inibe a di-hidropteroato sintase, e a trimetoprima, a di-hidrofolato redutase bacteriana",
+   "Ação na parede: o sulfametoxazol inibe as PBPs, e a trimetoprima impede a exportação dos precursores do peptidoglicano",
+   "Ação ribossômica: o sulfametoxazol liga-se à subunidade 30S, e a trimetoprima, à 50S, somando os efeitos",
+   "Ação no DNA: os dois inibem a DNA girase em sítios diferentes da enzima, sem agir nas topoisomerases humanas"
   ],
-  "correta": 3,
-  "explicacao": "Os aminoglicosídeos (gentamicina, amicacina) ligam-se à subunidade 30S, causam leitura errada do RNA mensageiro e são bactericidas; como sua entrada depende de transporte ativo dependente de oxigênio, são inativos contra anaeróbios como o Bacteroides, o que explica a falha. As tetraciclinas (doxiciclina) também agem na 30S, bloqueando a ligação do aminoacil-tRNA, e não nas PBPs. Os macrolídeos (azitromicina) ligam-se à 50S e bloqueiam a translocação; as fluoroquinolonas (ciprofloxacino) inibem a DNA girase e a topoisomerase IV; as sulfonamidas inibem a di-hidropteroato sintase, na síntese de folato. Para lembrar: aminoglicosídeos e tetraciclinas atuam na 30S; macrolídeos, clindamicina, cloranfenicol e linezolida, na 50S.",
+  "correta": 1,
+  "explicacao": "As bactérias precisam sintetizar o próprio folato a partir do ácido para-aminobenzoico (PABA). O sulfametoxazol, análogo do PABA, inibe a di-hidropteroato sintase, e a trimetoprima inibe a di-hidrofolato redutase, etapa seguinte da mesma via: é o bloqueio sequencial, sinérgico e, em geral, bactericida. A seletividade vem de dois fatos: as células humanas não têm di-hidropteroato sintase, pois obtêm folato pronto da dieta, e a trimetoprima tem afinidade milhares de vezes maior pela redutase bacteriana do que pela humana. Inibir as PBPs é mecanismo dos betalactâmicos; ligar-se às subunidades 30S e 50S, de aminoglicosídeos, tetraciclinas e macrolídeos; e inibir a DNA girase, das fluoroquinolonas. A opção que inverte as enzimas e cita a timidilato sintase humana está errada. Para lembrar: a trimetoprima também bloqueia o canal ENaC do néfron distal e pode causar hipercalemia.",
   "tema": "antimicrobianos",
   "subtema": "antimicrobianos.mecanismos-de-acao",
   "especialidade": "farmacologia",
@@ -14647,24 +14657,25 @@
  {
   "id": "med-2e764096",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 28 anos, de volta de uma região com surto de cólera, apresenta há 12 horas diarreia aquosa volumosa, sem sangue, com aspecto de \"água de arroz\", vômitos ocasionais e cãibras. Está taquicárdico, com mucosas secas e turgor da pele diminuído, mas consciente e capaz de beber. O médico explica aos alunos que a toxina colérica ativa de forma permanente a adenilato ciclase do enterócito, aumentando o AMPc, o que abre os canais de cloreto CFTR e leva à secreção de Cl⁻, com sódio e água acompanhando. A mucosa intestinal, porém, permanece histologicamente íntegra. Além da hidratação venosa inicial, prescreve solução de reidratação oral com glicose e sódio.\n\nPor que a solução de reidratação oral funciona mesmo com a diarreia secretora intensa?",
+  "enunciado": "Mulher de 24 anos tem distensão abdominal, flatulência e diarreia aquosa que surgem 1 a 2 horas após tomar leite ou comer sorvete e cessam com o jejum. Exame das fezes: sódio 30 mEq/L, potássio 25 mEq/L, pH 5,2, sem sangue, leucócitos ou gordura. Considere a osmolalidade fecal de 290 mOsm/kg.\n\nQual interpretação é correta?",
   "alternativas": [
-   "A glicose é absorvida pelo GLUT5 da borda em escova, que arrasta sódio e água para o sangue",
-   "O sódio da solução bloqueia o canal CFTR na membrana apical e interrompe a saída de cloreto",
-   "O cotransporte Na⁺-glicose do enterócito (SGLT1) continua funcionando e arrasta água por osmose",
-   "A solução é hipertônica e puxa água do lúmen intestinal para o plasma por gradiente osmótico",
-   "A glicose inibe a adenilato ciclase ativada pela toxina e interrompe a secreção intestinal de Cl⁻"
+   "Diarreia secretora (gap fecal de 180), por ativação do CFTR pela lactose no enterócito",
+   "Diarreia osmótica (gap fecal de 55), por excesso de sódio e potássio retidos no lúmen",
+   "Diarreia secretora (gap fecal de 55), por toxina que eleva o AMPc do enterócito",
+   "Diarreia osmótica (gap fecal de 180), por lactose não absorvida e fermentada no cólon",
+   "Diarreia inflamatória (gap fecal de 180), por lesão da mucosa com perda de proteínas"
   ],
-  "correta": 2,
-  "explicacao": "Na cólera, a toxina mantém a adenilato ciclase ativada, e o AMPc abre o CFTR, levando à secreção maciça de cloreto, com sódio e água, sem destruir o epitélio. O cotransportador SGLT1 da borda em escova não depende do AMPc e continua absorvendo sódio junto com glicose (2 Na⁺ para 1 glicose); o sódio e a glicose absorvidos criam gradiente osmótico que leva a água de volta ao organismo. A glicose não inibe a adenilato ciclase, e o sódio não bloqueia o CFTR. A solução recomendada pela OMS tem osmolaridade reduzida (cerca de 245 mOsm/L), não é hipertônica — soluções hipertônicas puxariam água para o lúmen. O GLUT5 transporta frutose por difusão facilitada, sem acoplamento ao sódio. Para lembrar: a descoberta do cotransporte sódio-glicose permitiu a reidratação oral, uma das intervenções que mais reduziram a mortalidade por diarreia no mundo.",
+  "correta": 3,
+  "explicacao": "O gap osmótico fecal é 290 − 2 × (Na + K) = 290 − 2 × (30 + 25) = 180 mOsm/kg. Acima de cerca de 125 indica diarreia osmótica, em que um soluto não absorvido retém água na luz; abaixo de 50 indica diarreia secretora, na qual os eletrólitos respondem por quase toda a osmolalidade. Na deficiência de lactase, a lactose não digerida chega ao cólon e é fermentada pelas bactérias, gerando ácidos graxos de cadeia curta (pH fecal baixo), hidrogênio e gases, com distensão e flatulência; a diarreia cessa com o jejum, o que não ocorre na secretora. A lactose não ativa o CFTR; quem faz isso é a toxina colérica, via AMPc. A ausência de sangue e leucócitos afasta a diarreia inflamatória. O teste do hidrogênio expirado confirma o diagnóstico. Para lembrar: diarreia que para com o jejum sugere causa osmótica.",
   "tema": "fisiologia-gastrointestinal",
   "subtema": "fisiologia-gastrointestinal.digestao-e-absorcao",
   "especialidade": "gastroenterologia",
   "disciplina": "Gastroenterologia",
-  "dificuldade": 2,
+  "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-e44dbbe5",
@@ -17137,16 +17148,16 @@
  {
   "id": "med-3f198cd1",
   "area": "Medicina de Família e Comunidade",
-  "enunciado": "Homem de 56 anos, hipertenso há 15 anos e diabético tipo 2 há 10 anos, faz acompanhamento na UBS. Os exames de rotina, repetidos e confirmados após 3 meses, mostram: creatinina de 1,6 mg/dL, taxa de filtração glomerular estimada (CKD-EPI) de 48 mL/min/1,73 m² e relação albumina/creatinina urinária de 250 mg/g. Usa losartana e metformina, e a PA no consultório é de 136 × 84 mmHg. Urina tipo I sem hematúria; ultrassonografia com rins de tamanho normal, sem cistos ou obstrução.\n\nQual é a classificação KDIGO desse paciente e qual afirmação sobre as causas e o rastreamento da doença renal crônica na atenção primária está correta?",
+  "enunciado": "Homem de 61 anos, sem acompanhamento há anos, é atendido na UBS com exames recentes: creatinina 3,4 mg/dL, taxa de filtração glomerular estimada de 19 mL/min/1,73 m², semelhante à de 6 meses atrás, relação albumina/creatinina urinária de 1.200 mg/g, sem hematúria, e glicemia de jejum de 210 mg/dL. Nunca recebeu diagnóstico de diabetes. A ultrassonografia mostra rins de 12,5 e 12,8 cm, com ecogenicidade aumentada, sem cistos nem hidronefrose.\n\nQual causa de doença renal crônica é mais compatível com os rins desse tamanho?",
   "alternativas": [
-   "G2 A2; hipertensão e diabetes são as principais causas, mas só se rastreia com creatinina",
-   "G3b A3; glomerulonefrites primárias são as principais causas e justificam rastreamento anual",
-   "G3a A3; litíase e infecção urinária são as principais causas e justificam o rastreamento",
-   "G3a A2; doença policística é a principal causa, e o rastreamento se restringe à família",
-   "G3a A2; hipertensão e diabetes são as principais causas e justificam rastreamento anual"
+   "Nefropatia diabética, que mantém rins de tamanho normal ou aumentado mesmo em fase avançada",
+   "Nefroesclerose hipertensiva, que aumenta os rins pela hipertrofia glomerular compensatória",
+   "Glomerulonefrite crônica, em que a fibrose deixa os rins aumentados, lisos e simétricos",
+   "Pielonefrite crônica por refluxo, com rins aumentados e contornos lisos e simétricos",
+   "Estenose bilateral de artéria renal, que causa aumento renal por congestão venosa"
   ],
-  "correta": 4,
-  "explicacao": "Pela KDIGO, TFGe entre 45 e 59 mL/min/1,73 m² corresponde a G3a, e relação albumina/creatinina entre 30 e 300 mg/g a A2 (moderadamente aumentada); a persistência por mais de 3 meses confirma a DRC. Hipertensão e diabetes são, por sua alta prevalência, as principais causas de DRC e de entrada em diálise no Brasil, e por isso pessoas com essas condições devem ser rastreadas anualmente na atenção primária com creatinina (para estimar a TFG) e albuminúria — a albuminúria detecta lesão precoce mesmo com TFG normal. Glomerulonefrites, litíase, infecções e doença policística são causas menos frequentes. Para lembrar: DRC se estadia com duas letras — G pela filtração, A pela albuminúria.",
+  "correta": 0,
+  "explicacao": "Na maioria das doenças renais crônicas avançadas, a fibrose e a perda de néfrons deixam os rins pequenos, em geral com menos de 9 a 10 cm, como na nefroesclerose hipertensiva e na glomerulonefrite crônica. Algumas causas, porém, mantêm os rins de tamanho normal ou aumentado mesmo com filtração muito baixa: nefropatia diabética, amiloidose, doença renal policística, nefropatia associada ao HIV e mieloma. Neste paciente, a glicemia de jejum de 210 mg/dL, a albuminúria muito aumentada (A3) sem hematúria e os rins grandes apontam para nefropatia diabética não diagnosticada; o diagnóstico de diabetes deve ser confirmado e ele deve ser encaminhado ao nefrologista, pois está em G4. A pielonefrite crônica deixa rins assimétricos, com cicatrizes e contornos irregulares, e a estenose de artéria renal causa rim pequeno por isquemia. Para lembrar: DRC com rins grandes — diabetes, amiloidose, policística, HIV e mieloma.",
   "tema": "doenca-renal-cronica",
   "subtema": "doenca-renal-cronica.causas",
   "especialidade": "medicina-de-familia",
@@ -19824,21 +19835,21 @@
  {
   "id": "med-68b04f16",
   "area": "Patologia",
-  "enunciado": "Rapaz de 19 anos, cujo pai morreu de câncer colorretal aos 38 anos, faz colonoscopia que mostra centenas de pólipos adenomatosos distribuídos por todo o cólon. O teste genético identifica mutação germinativa em um gene supressor de tumor. O patologista explica que, na via da instabilidade cromossômica — a mesma que responde pela maioria dos cânceres colorretais esporádicos —, a perda de função desse gene é o evento inicial, já presente em adenomas pequenos, seguida por outras alterações até a transformação maligna.\n\nQual gene está alterado?",
+  "enunciado": "Homem de 46 anos faz colonoscopia por anemia ferropriva e tem cerca de 40 adenomas distribuídos pelo cólon, além de um adenocarcinoma no sigmoide. Os pais, com mais de 75 anos, nunca tiveram câncer nem pólipos; um irmão de 50 anos tem quadro semelhante. O painel genético não mostra variante no APC, mas encontra duas variantes patogênicas, uma em cada alelo, de um gene de reparo por excisão de bases, que remove adeninas pareadas erroneamente com a 8-oxoguanina, lesão oxidativa do DNA.\n\nQual é o diagnóstico e o padrão de herança?",
   "alternativas": [
-   "KRAS",
-   "TP53",
-   "MLH1",
-   "APC",
-   "SMAD4"
+   "Síndrome de Lynch por MLH1, de herança autossômica dominante",
+   "Polipose adenomatosa familiar atenuada, de herança dominante",
+   "Síndrome de Peutz-Jeghers por STK11, de herança dominante",
+   "Polipose juvenil por SMAD4, de herança autossômica dominante",
+   "Polipose associada ao MUTYH, de herança autossômica recessiva"
   ],
-  "correta": 3,
-  "explicacao": "O gene APC é supressor de tumor e regula negativamente a via Wnt/β-catenina. Na sequência adenoma-carcinoma da via da instabilidade cromossômica (modelo de Vogelstein), a perda de APC é o evento inicial, presente já nos pequenos adenomas; seguem-se mutação ativadora de KRAS (crescimento do adenoma), perda de SMAD4/18q e, tardiamente, perda de TP53, associada à transformação maligna. A mutação germinativa de APC causa a polipose adenomatosa familiar, com centenas a milhares de adenomas e risco de câncer próximo de 100% sem colectomia. MLH1 é gene de reparo de pareamento (mismatch repair), ligado à síndrome de Lynch e à via da instabilidade de microssatélites.",
+  "correta": 4,
+  "explicacao": "O gene MUTYH codifica uma glicosilase do reparo por excisão de bases que retira a adenina pareada erroneamente com a 8-oxoguanina. Com as duas cópias inativadas, acumulam-se transversões G:C→T:A em genes como APC e KRAS, e surgem dezenas a centenas de adenomas, em geral após os 40 anos, com alto risco de câncer colorretal. A herança autossômica recessiva explica pais sem doença (portadores heterozigotos) e irmão afetado; os irmãos devem ser testados e o seguimento inclui colonoscopias frequentes ou colectomia. A polipose adenomatosa familiar, inclusive a atenuada, é dominante e ligada ao APC, sem variante aqui. A síndrome de Lynch, também dominante, decorre de genes de reparo de pareamento (MLH1, MSH2, MSH6, PMS2) e cursa com poucos pólipos. Peutz-Jeghers e polipose juvenil produzem pólipos hamartomatosos, não adenomas múltiplos.",
   "tema": "cancer-colorretal",
   "subtema": "cancer-colorretal.fatores-de-risco",
   "especialidade": "patologia",
   "disciplina": "Patologia",
-  "dificuldade": 2,
+  "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
   "prova": null,
@@ -20894,21 +20905,21 @@
  {
   "id": "med-24f84314",
   "area": "Pediatria Geral",
-  "enunciado": "Lactente de 6 semanas com estenose hipertrófica do piloro tem pH 7,55 e bicarbonato de 38 mEq/L. O cirurgião adia a piloromiotomia.\n\nI. A cirurgia deve aguardar a correção da alcalose metabólica.\nPORQUE\nII. A alcalose metabólica deprime o estímulo respiratório central, aumentando o risco de apneia após a anestesia.\n\nAssinale a alternativa correta.",
+  "enunciado": "Lactente de 5 semanas, sexo masculino, com vômitos em jato não biliosos há 10 dias, tem estenose hipertrófica do piloro confirmada por ultrassonografia. Além da alcalose metabólica hipoclorêmica, está ictérico: bilirrubina total 12 mg/dL, com direta de 0,6 mg/dL; aminotransferases, GGT e hemograma normais, sem sinais de hemólise; fezes de cor normal. Após a correção hidroeletrolítica, a piloromiotomia e a volta da alimentação, a icterícia desaparece em poucos dias.\n\nQual mecanismo explica a hiperbilirrubinemia desse lactente?",
   "alternativas": [
-   "A I é verdadeira, e a II é falsa",
-   "As duas asserções são falsas",
-   "A I é falsa, e a II é verdadeira",
-   "As duas são verdadeiras, mas a II não justifica a I",
-   "As duas asserções são verdadeiras, e a II justifica a I"
+   "Obstrução do colédoco pela musculatura pilórica hipertrofiada, com colestase extra-hepática",
+   "Hemólise pela alcalose, que torna as hemácias mais frágeis e eleva a bilirrubina indireta",
+   "Menor atividade da glicuronil-transferase hepática, agravada pelo jejum e pela desidratação",
+   "Deficiência congênita completa de glicuronil-transferase, como no Crigler-Najjar tipo I",
+   "Hepatite neonatal pela hipocalemia, com lesão hepatocelular e aumento da bilirrubina direta"
   ],
-  "correta": 4,
-  "explicacao": "A estenose do piloro não é emergência cirúrgica; a urgência é hidroeletrolítica. A perda de suco gástrico causa alcalose metabólica hipoclorêmica e hipocalêmica, e a resposta compensatória é a hipoventilação, porque a menor concentração de H+ reduz o estímulo dos quimiorreceptores. Somada ao efeito de anestésicos e opioides, essa depressão do drive respiratório aumenta o risco de apneia no pós-operatório. Por isso a cirurgia só é feita após reidratação com solução salina e reposição de potássio, quando o bicarbonato e o cloro se aproximam do normal. As duas asserções são verdadeiras, e a segunda explica diretamente a primeira; as combinações que negam uma delas ou a relação causal estão erradas. Para lembrar: no piloro, primeiro o soro e o potássio; depois o bisturi.",
+  "correta": 2,
+  "explicacao": "Uma parte dos lactentes com estenose hipertrófica do piloro tem icterícia com predomínio de bilirrubina indireta (síndrome ictero-pilórica). O mecanismo é a redução da atividade da UDP-glicuronil-transferase hepática, muitas vezes em lactentes com variantes do gene UGT1A1 do tipo Gilbert, agravada pela baixa oferta calórica e pela desidratação, que também aumentam a circulação êntero-hepática da bilirrubina. Com a cirurgia e a volta da alimentação, a conjugação se normaliza e a icterícia some. Obstrução do colédoco elevaria a bilirrubina direta e deixaria as fezes claras. Não há hemólise no hemograma. A deficiência completa do Crigler-Najjar tipo I causa icterícia grave e persistente, que não desaparece com a alimentação. Hepatite elevaria aminotransferases e bilirrubina direta.",
   "tema": "estenose-hipertrofica-do-piloro",
   "subtema": "estenose-hipertrofica-do-piloro.disturbios-metabolicos",
   "especialidade": "pediatria-geral",
   "disciplina": "Pediatria Geral",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
   "prova": null,
