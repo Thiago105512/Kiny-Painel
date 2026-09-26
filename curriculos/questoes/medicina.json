@@ -94,7 +94,7 @@
  {
   "id": "med-7e102a2d",
   "area": "Imunologia",
-  "enunciado": "No primeiro dia de vida, dosa-se a IgG sérica de dois recém-nascidos filhos de mães saudáveis com níveis semelhantes de IgG: 250 mg/dL em um prematuro de 28 semanas e 1.000 mg/dL em um recém-nascido a termo, valor próximo ao materno. Ambos têm IgM e IgA muito baixas.\n\nQual mecanismo explica a diferença entre os dois?",
+  "enunciado": "No primeiro dia de vida, dosa-se a IgG sérica de dois recém-nascidos filhos de mães saudáveis com níveis semelhantes de IgG: 250 mg/dL em um prematuro de 28 semanas e 1.000 mg/dL em um recém-nascido a termo, valor igual ou até um pouco superior ao materno. Ambos têm IgM e IgA muito baixas.\n\nQual mecanismo explica a diferença entre os dois?",
   "alternativas": [
    "Transporte ativo de IgG materna pelo FcRn, concentrado no 3º trimestre",
    "Passagem de IgA secretora pelo líquido amniótico deglutido",
@@ -103,7 +103,7 @@
    "Síntese fetal de IgG, que só amadurece e atinge níveis adultos após a 32ª semana"
   ],
   "correta": 0,
-  "explicacao": "A IgG é a única imunoglobulina transportada ativamente pela placenta, via receptor Fc neonatal (FcRn) do sinciciotrofoblasto, e a maior parte da transferência ocorre no terceiro trimestre; por isso o recém-nascido a termo tem IgG semelhante à materna, e o prematuro extremo, bem menos. Esses anticorpos conferem imunidade passiva nos primeiros meses e caem gradualmente, enquanto a síntese própria aumenta. A IgM, pentamérica, não atravessa a placenta — IgM específica no recém-nascido indica infecção congênita. A síntese fetal de IgG é mínima e não explica o nível do recém-nascido a termo. A IgA secretora protege o lactente pelo leite, e o pIgR transporta IgA e IgM para as secreções, não IgG pela placenta.",
+  "explicacao": "A IgG é a única imunoglobulina transportada ativamente pela placenta, via receptor Fc neonatal (FcRn) do sinciciotrofoblasto, e a maior parte da transferência ocorre no terceiro trimestre; por isso o recém-nascido a termo tem IgG igual ou até maior que a materna — sinal de transporte ativo, e não de difusão, e o prematuro extremo, bem menos. Esses anticorpos conferem imunidade passiva nos primeiros meses e caem gradualmente, enquanto a síntese própria aumenta. A IgM, pentamérica, não atravessa a placenta — IgM específica no recém-nascido indica infecção congênita. A síntese fetal de IgG é mínima e não explica o nível do recém-nascido a termo. A IgA secretora protege o lactente pelo leite, e o pIgR transporta IgA e IgM para as secreções, não IgG pela placenta.",
   "tema": "imunoglobulinas",
   "subtema": "imunoglobulinas.imunidade-passiva-materna",
   "especialidade": "imunologia",
@@ -2577,7 +2577,7 @@
  {
   "id": "med-2890595c",
   "area": "Dermatologia",
-  "enunciado": "Pescador de 65 anos, de pele clara, trabalha ao sol sem proteção desde a adolescência. Tem várias lesões ásperas, eritematosas e descamativas na face e no dorso das mãos, que \"voltam depois de arrancar a casquinha\". Há 5 meses surgiu no lábio inferior uma lesão ulcerada, infiltrada e endurecida, de 1,5 cm, que sangra com facilidade. Palpa-se linfonodo submandibular de 1,5 cm, endurecido.\n\nQuais são, respectivamente, as lesões precursoras na face e nas mãos e a hipótese para a lesão labial?",
+  "enunciado": "Pescador de 65 anos, de pele clara, trabalha ao sol sem proteção desde a adolescência. Tem várias lesões ásperas, eritematosas e descamativas na face e no dorso das mãos, que \"voltam depois de arrancar a casquinha\". Há 5 meses surgiu no lábio inferior uma lesão ulcerada, infiltrada e endurecida, de 1,5 cm, que sangra com facilidade. Palpa-se linfonodo submandibular de 1,5 cm, endurecido.\n\nComo se denominam as lesões da face e das mãos e qual é a hipótese para a lesão do lábio?",
   "alternativas": [
    "Queratoses seborreicas; carcinoma basocelular",
    "Queratoses actínicas; carcinoma espinocelular",
@@ -3087,7 +3087,7 @@
  {
   "id": "med-feee0d3f",
   "area": "Bioquímica",
-  "enunciado": "Após 18 horas sem conseguir comer por causa de uma gastroenterite, um menino de 3 anos chega ao pronto-socorro sonolento e vomitando. Já tinha história de fraqueza muscular e cansaço fácil. Exames: glicemia 28 mg/dL, cetonemia praticamente ausente, amônia discretamente elevada, CK de 900 U/L; o ecocardiograma mostra cardiomiopatia dilatada. A carnitina plasmática total está muito baixa, e o quadro melhora com glicose intravenosa e L-carnitina oral.\n\nQual etapa metabólica está comprometida e por que não há cetose?",
+  "enunciado": "A cardiologia pediátrica encaminha ao ambulatório de erros inatos um menino de 3 anos com cardiomiopatia dilatada e fraqueza muscular proximal. No último ano, ele teve dois episódios de sonolência com vômitos após jejum prolongado; no mais recente, a glicemia era de 28 mg/dL, sem cetonemia, com amônia discretamente elevada e CK de 900 U/L, e ele melhorou rapidamente com glicose intravenosa. A carnitina plasmática total está muito baixa; a suplementação oral de L-carnitina é iniciada, e a função ventricular melhora nos meses seguintes.\n\nQual etapa metabólica está comprometida e por que não há cetose?",
   "alternativas": [
    "Entrada de ácidos graxos longos na mitocôndria, limitando a β-oxidação e a cetogênese",
    "Síntese de ácidos graxos no citosol, que impede a formação de triglicerídeos de reserva no fígado",
@@ -3096,7 +3096,7 @@
    "Glicogenólise hepática, que desvia acetil-CoA para a síntese de colesterol e de esteroides"
   ],
   "correta": 0,
-  "explicacao": "A carnitina carrega os ácidos graxos de cadeia longa através da membrana mitocondrial interna (sistema CPT I–translocase–CPT II). Sem ela, a β-oxidação no jejum fica limitada. Falta acetil-CoA para a cetogênese hepática, e não há energia e cofatores (acetil-CoA, NADH) para sustentar a gliconeogênese. O resultado é hipoglicemia hipocetótica, além de miopatia e cardiomiopatia, pois músculo e coração dependem de ácidos graxos. A síntese de ácidos graxos ocorre no estado alimentado. O transporte de corpos cetônicos não depende de carnitina, e se o problema fosse esse haveria cetose. A oxidação peroxissomal não depende da carnitina da mesma forma. A glicogenólise não explica a falta de cetonas.",
+  "explicacao": "A carnitina carrega os ácidos graxos de cadeia longa através da membrana mitocondrial interna (sistema CPT I–translocase–CPT II). Sem ela — como na deficiência primária de carnitina, por defeito do transportador que a recupera nos rins —, a β-oxidação no jejum fica limitada. Falta acetil-CoA para a cetogênese hepática, e faltam ATP e o estímulo do acetil-CoA à piruvato carboxilase para sustentar a gliconeogênese. O resultado é hipoglicemia hipocetótica, além de miopatia e cardiomiopatia, pois músculo esquelético e coração dependem de ácidos graxos como combustível; a resposta à reposição de carnitina confirma o mecanismo. A síntese de ácidos graxos ocorre no estado alimentado e seu defeito não causaria hipoglicemia no jejum. Um problema no uso periférico de corpos cetônicos cursaria com cetose intensa, não com cetonemia ausente. Os defeitos peroxissomais, como a adrenoleucodistrofia, acumulam ácidos graxos de cadeia muito longa e se manifestam com doença neurológica e adrenal, não com hipoglicemia hipocetótica corrigida pela carnitina. A glicogenólise não produz acetil-CoA para esteroides nem explica a ausência de cetonas. Para lembrar: hipoglicemia sem cetose e sem insulina alta aponta para defeito na oxidação dos ácidos graxos.",
   "tema": "metabolismo-dos-lipidios",
   "subtema": "metabolismo-dos-lipidios.beta-oxidacao-e-corpos-cetonicos",
   "especialidade": "bioquimica",
@@ -4852,7 +4852,7 @@
    "O combinado é contraindicado (categoria 4); oferecer DIU de cobre ou só progestogênio"
   ],
   "correta": 4,
-  "explicacao": "A enxaqueca com aura (sintomas neurológicos focais reversíveis, como o escotoma cintilante, que precedem a cefaleia) é categoria 4 da OMS para contraceptivos hormonais combinados em qualquer idade, pois o estrogênio aumenta a produção hepática de fatores de coagulação e, somado à aura, eleva o risco de AVC isquêmico. A redução da dose de etinilestradiol não muda a categoria. Métodos só de progestogênio (pílula, injetável trimestral, implante, SIU-levonorgestrel) são categoria 1 ou 2, conforme início ou continuação, e o DIU de cobre é categoria 1, portanto boas opções. Não há contraindicação ao DIU de cobre por enxaqueca, e não é verdade que todos os métodos hormonais estejam contraindicados.",
+  "explicacao": "A enxaqueca com aura (sintomas neurológicos focais e totalmente reversíveis, como o escotoma cintilante em zigue-zague, que precedem a cefaleia) é categoria 4 dos critérios de elegibilidade da OMS para contraceptivos hormonais combinados em qualquer idade: a aura já se associa a maior risco de AVC isquêmico, e o estrogênio, que aumenta a síntese hepática de fatores pró-coagulantes, soma-se a esse risco. Baixar o etinilestradiol para 20 mcg não muda a categoria, e ser jovem e não fumante não torna o método elegível — idade e tabagismo só modulam a categoria na enxaqueca sem aura. Já os métodos só de progestogênio (pílula, injetável trimestral, implante e SIU de levonorgestrel) são categoria 1 na enxaqueca com aura, tanto no início quanto na continuação, e o DIU de cobre também é categoria 1; portanto, não é verdade que todos os métodos hormonais estejam proibidos, e a enxaqueca não restringe o DIU de cobre. Para lembrar: na enxaqueca sem aura, iniciar o combinado é categoria 2 antes dos 35 anos e 3 a partir dessa idade; com aura, é categoria 4 em qualquer idade.",
   "tema": "planejamento-familiar-e-contracepcao",
   "subtema": "planejamento-familiar-e-contracepcao.criterios-de-elegibilidade",
   "especialidade": "ginecologia",
@@ -5366,7 +5366,7 @@
  {
   "id": "med-a4655269",
   "area": "Endocrinologia",
-  "enunciado": "Encaminhado pela cardiologia após internação por insuficiência cardíaca há 6 meses (ecocardiograma com fração de ejeção de 30%), um homem de 62 anos com diabetes tipo 2 há 8 anos usa metformina 1 g duas vezes ao dia, além de sacubitril-valsartana, carvedilol e espironolactona. TFG estimada de 58 mL/min/1,73 m²; HbA1c de 7,8%.\n\nQue classe deve ser associada à metformina, pelo benefício cardiorrenal além do glicêmico?",
+  "enunciado": "Encaminhado pela cardiologia após internação por insuficiência cardíaca há 6 meses (ecocardiograma com fração de ejeção de 30%), um homem de 62 anos com diabetes tipo 2 há 8 anos usa metformina 1 g duas vezes ao dia, além de sacubitril-valsartana, carvedilol e espironolactona. TFG estimada de 58 mL/min/1,73 m²; HbA1c de 7,8%.\n\nQue medicamento deve ser associado à metformina neste paciente?",
   "alternativas": [
    "Saxagliptina, pelo baixo risco de hipoglicemia",
    "Inibidor do SGLT2, como dapagliflozina ou empagliflozina",
@@ -5375,7 +5375,7 @@
    "Pioglitazona, pela potente ação sensibilizadora de insulina"
   ],
   "correta": 1,
-  "explicacao": "Nas diretrizes da SBD e da ADA, pacientes com diabetes tipo 2 e insuficiência cardíaca ou doença renal crônica devem receber inibidor do SGLT2, que reduz hospitalização por insuficiência cardíaca, mortalidade cardiovascular e progressão da doença renal, independentemente da HbA1c. A pioglitazona causa retenção hídrica e é contraindicada na insuficiência cardíaca. A saxagliptina associou-se a aumento de internação por insuficiência cardíaca. A glibenclamida traz risco de hipoglicemia e não tem benefício cardiovascular, e a acarbose tem efeito glicêmico modesto sem proteção cardiorrenal. Para lembrar: Efeitos adversos cobrados dos iSGLT2: infecção genital micótica e cetoacidose euglicêmica (glicemia quase normal) — suspenda-os alguns dias antes de cirurgias e em doença aguda grave.",
+  "explicacao": "Nas diretrizes da SBD e da ADA, pacientes com diabetes tipo 2 e insuficiência cardíaca ou doença renal crônica devem receber inibidor do SGLT2, que reduz hospitalização por insuficiência cardíaca, mortalidade cardiovascular e progressão da doença renal, independentemente da HbA1c; com fração de ejeção de 30%, ele já seria indicado mesmo sem diabetes, como quarto pilar do tratamento da insuficiência cardíaca. A pioglitazona causa retenção hídrica e é contraindicada na insuficiência cardíaca sintomática. A saxagliptina associou-se a aumento de internação por insuficiência cardíaca. A glibenclamida traz risco de hipoglicemia e não tem benefício cardiovascular, e a acarbose tem efeito glicêmico modesto, sem proteção cardiorrenal. Para lembrar: efeitos adversos cobrados dos iSGLT2 são infecção genital micótica e cetoacidose euglicêmica (glicemia quase normal) — suspenda-os alguns dias antes de cirurgias e em doença aguda grave.",
   "tema": "diabetes-mellitus",
   "subtema": "diabetes-mellitus.tratamento",
   "especialidade": "endocrinologia",
@@ -6484,7 +6484,7 @@
  {
   "id": "med-5f5b1f20",
   "area": "Hematologia",
-  "enunciado": "Na visita domiciliar, a equipe de saúde da família avalia um aposentado de 68 anos, diabético em uso de metformina há 12 anos, que há 4 meses tem cansaço, formigamento em pés e mãos e desequilíbrio para andar, pior no escuro. Exame: palidez, glossite, redução das sensibilidades vibratória e proprioceptiva nos membros inferiores e sinal de Romberg presente. Tem alimentação variada, com carne, não é etilista e nunca fez cirurgia gástrica. Hemograma: hemoglobina 9,4 g/dL; VCM 118 fL; leucócitos 3.800/mm³ com neutrófilos hipersegmentados; plaquetas 130.000/mm³. LDH elevada, reticulócitos baixos e ferritina normal.\n\nQual é o próximo passo terapêutico?",
+  "enunciado": "Na visita domiciliar, a equipe de saúde da família avalia um aposentado de 68 anos, diabético em uso de metformina há 12 anos, que há 4 meses tem cansaço, formigamento em pés e mãos e desequilíbrio para andar, pior no escuro. Exame: palidez, glossite, redução das sensibilidades vibratória e proprioceptiva nos membros inferiores e sinal de Romberg presente. Tem alimentação variada, com carne, não é etilista e nunca fez cirurgia gástrica. Hemograma: hemoglobina 9,4 g/dL; VCM 118 fL; leucócitos 3.800/mm³ com neutrófilos hipersegmentados; plaquetas 130.000/mm³. LDH elevada, reticulócitos baixos e ferritina normal.\n\nComo conduzir a anemia e o quadro neurológico?",
   "alternativas": [
    "Suspender a metformina e aguardar a recuperação espontânea da anemia",
    "Iniciar sulfato ferroso, pois a anemia é a principal causa dos sintomas",
@@ -6493,7 +6493,7 @@
    "Dosar vitamina B12 e repor cianocobalamina, sem usar ácido fólico isolado"
   ],
   "correta": 4,
-  "explicacao": "Anemia macrocítica com neutrófilos hipersegmentados, pancitopenia leve, LDH elevada (eritropoese ineficaz) e comprometimento dos cordões posteriores (degeneração combinada subaguda da medula) indica deficiência de vitamina B12; o uso prolongado de metformina reduz sua absorção no íleo. Deve-se dosar a B12 e repô-la (intramuscular ou oral em dose alta). O ácido fólico isolado pode corrigir parcialmente a anemia, mas não trata e pode mascarar a progressão neurológica. A metformina não precisa ser suspensa, e sim acompanhada de monitorização da B12. Transfusão só se houver instabilidade, e ferro não trata anemia macrocítica.",
+  "explicacao": "Anemia macrocítica com neutrófilos hipersegmentados, pancitopenia leve, LDH elevada (eritropoese ineficaz) e comprometimento dos cordões posteriores (degeneração combinada subaguda da medula) indica deficiência de vitamina B12; o uso prolongado de metformina reduz sua absorção no íleo. Deve-se colher a dosagem de B12 e iniciar a reposição; com manifestações neurológicas, prefere-se começar pela via intramuscular, em doses frequentes, e só depois considerar a manutenção oral em dose alta. O ácido fólico isolado pode corrigir parcialmente a anemia, mas não trata e pode mascarar a progressão neurológica. A metformina não precisa ser suspensa, e sim acompanhada de monitorização da B12. Transfusão só se houver instabilidade, e ferro não trata anemia macrocítica.",
   "tema": "anemias",
   "subtema": "anemias.anemias-megaloblasticas",
   "especialidade": "hematologia",
@@ -8022,7 +8022,7 @@
    "Deve usar inibidor de aromatase isolado, pois a paciente provavelmente está na pós-menopausa"
   ],
   "correta": 0,
-  "explicacao": "O tumor é HER2 positivo (escore 3+) e com receptores hormonais negativos. A superexpressão de HER2 confere comportamento mais agressivo, mas é alvo de terapia específica: o trastuzumabe, anticorpo monoclonal contra o domínio extracelular do HER2, associado à quimioterapia, reduz significativamente recidiva e mortalidade. Seu principal efeito adverso é a cardiotoxicidade, em geral reversível, com queda da fração de ejeção; por isso ela é medida antes e periodicamente durante o tratamento (ecocardiograma ou ventriculografia). Tamoxifeno e inibidores de aromatase dependem de receptores hormonais positivos, ausentes aqui. A indicação do trastuzumabe depende do HER2, não dos receptores hormonais.",
+  "explicacao": "O tumor é HER2 positivo (escore 3+ na imuno-histoquímica) e com receptores hormonais negativos. A superexpressão de HER2 confere comportamento mais agressivo, mas é alvo de terapia específica: o trastuzumabe, anticorpo monoclonal contra o domínio extracelular do HER2, associado à quimioterapia, reduz de forma significativa a recidiva e a mortalidade. Em tumores HER2 positivos a partir de 2 cm, como este, o tratamento sistêmico é preferencialmente neoadjuvante (em geral com duplo bloqueio, trastuzumabe e pertuzumabe), o que permite avaliar a resposta e, se restar doença na peça, trocar para trastuzumabe entansina. O principal efeito adverso do trastuzumabe é a cardiotoxicidade, em geral reversível, com queda da fração de ejeção; por isso ela é medida antes e periodicamente durante o tratamento. Dispensar a terapia sistêmica seria um erro: o HER2 positivo sem tratamento tem prognóstico pior, não melhor. A resposta ao trastuzumabe depende do HER2, não dos receptores hormonais, que não o contraindicam. Tamoxifeno e inibidores de aromatase exigem receptores hormonais positivos, ausentes aqui, e o HER2 não prevê resposta hormonal. Para lembrar: HER2 3+ dispensa confirmação; escore 2+ exige hibridização in situ.",
   "tema": "cancer-de-mama",
   "subtema": "cancer-de-mama.tratamento",
   "especialidade": "oncologia",
@@ -9567,7 +9567,7 @@
    "Fiscalização do armazenamento de medicamentos em uma farmácia"
   ],
   "correta": 0,
-  "explicacao": "A Lei nº 8.080/1990 define vigilância epidemiológica como o conjunto de ações que proporcionam o conhecimento, a detecção ou a prevenção de qualquer mudança nos fatores determinantes e condicionantes da saúde individual ou coletiva, com a finalidade de recomendar e adotar medidas de prevenção e controle das doenças ou agravos. Investigar contatos e analisar a tendência dos casos se encaixa nessa definição. A vigilância sanitária é o conjunto de ações capazes de eliminar, diminuir ou prevenir riscos decorrentes do meio ambiente, da produção e circulação de bens e da prestação de serviços de interesse da saúde, como restaurantes, farmácias e consultórios. A avaliação do ambiente de trabalho é típica da vigilância em saúde do trabalhador. Para lembrar: a Lei nº 8.080/1990 define as vigilâncias pelo objeto — a epidemiológica olha para doenças e seus determinantes; a sanitária, para produtos, serviços e ambientes que geram risco.",
+  "explicacao": "A Lei nº 8.080/1990 define vigilância epidemiológica como o conjunto de ações que proporcionam o conhecimento, a detecção ou a prevenção de qualquer mudança nos fatores determinantes e condicionantes da saúde individual ou coletiva, com a finalidade de recomendar e adotar medidas de prevenção e controle das doenças ou agravos. Investigar contatos e analisar a tendência dos casos se encaixa nessa definição. A vigilância sanitária é o conjunto de ações capazes de eliminar, diminuir ou prevenir riscos decorrentes do meio ambiente, da produção e circulação de bens e da prestação de serviços de interesse da saúde, como restaurantes, farmácias e consultórios. A avaliação do ambiente de trabalho é típica da vigilância em saúde do trabalhador. Para lembrar: a mesma Lei nº 8.080/1990 define a saúde do trabalhador como campo próprio, que abrange a vigilância dos ambientes e processos de trabalho — é ali que entra a medição de ruído na fábrica.",
   "tema": "vigilancia-em-saude",
   "subtema": "vigilancia-em-saude.vigilancia-epidemiologica",
   "especialidade": "saude-publica-sus",
@@ -9813,7 +9813,7 @@
  {
   "id": "med-6df35fbc",
   "area": "Psiquiatria",
-  "enunciado": "Homem de 35 anos, com esquizofrenia, foi internado por agitação e recebeu haloperidol intramuscular em doses repetidas nos últimos 2 dias. Evolui com confusão mental, febre de 39,8 °C, rigidez muscular generalizada \"em cano de chumbo\", sudorese profusa, PA oscilando entre 170/100 e 100/60 mmHg e FC 128 bpm. Não há clônus nem hiper-reflexia, e as pupilas são normais. Não tinha história de reações semelhantes. Exames: creatinofosfoquinase 18.000 U/L; leucócitos 15.000/mm³; creatinina 1,9 mg/dL; urina escura. Não recebeu anestésicos inalatórios nem antidepressivos, e o líquor é normal.\n\nQual é o diagnóstico e a conduta?",
+  "enunciado": "Dois dias depois de internado por agitação psicótica e de receber haloperidol intramuscular em doses repetidas, um homem de 35 anos com esquizofrenia fica confuso, com febre de 39,8 °C, rigidez muscular generalizada \"em cano de chumbo\", sudorese profusa, PA oscilando entre 170/100 e 100/60 mmHg e FC 128 bpm. Não há clônus nem hiper-reflexia, e as pupilas são normais. Não tinha história de reações semelhantes. Exames: creatinofosfoquinase 18.000 U/L; leucócitos 15.000/mm³; creatinina 1,9 mg/dL; urina escura. Não recebeu anestésicos inalatórios nem antidepressivos, e o líquor é normal.\n\nQual hipótese explica o quadro e o que deve ser feito de imediato?",
   "alternativas": [
    "Distonia aguda; biperideno intramuscular e manutenção do antipsicótico na mesma dose, com alta hospitalar precoce",
    "Síndrome neuroléptica maligna; suspender o antipsicótico, suporte intensivo e considerar dantroleno ou bromocriptina",
@@ -14125,7 +14125,7 @@
    "Manter a amamentação com máscara, adiar a BCG e iniciar quimioprofilaxia no bebê"
   ],
   "correta": 4,
-  "explicacao": "A tuberculose materna não contraindica a amamentação: o bacilo não é transmitido pelo leite, e sim pelas vias aéreas, por isso a mãe bacilífera deve usar máscara cirúrgica ao amamentar e cuidar do bebê. Pelo Manual de Recomendações para o Controle da Tuberculose do Ministério da Saúde, o recém-nascido coabitante de caso bacilífero não deve receber a BCG ao nascer; faz quimioprofilaxia primária por 3 meses e depois prova tuberculínica: se não reatora, suspende-se a profilaxia e aplica-se a BCG; se reatora, completa-se o tratamento da infecção latente, após excluir doença ativa. Aplicar a BCG junto com a profilaxia é inadequado, pois o fármaco inativa o bacilo vacinal.",
+  "explicacao": "A tuberculose materna não contraindica a amamentação: o bacilo não é transmitido pelo leite, e sim pelas vias aéreas. Por isso a mãe bacilífera mantém o aleitamento e os cuidados com o bebê usando máscara cirúrgica enquanto puder transmitir a doença. O recém-nascido coabitante de caso bacilífero não recebe a BCG ao nascer: precisa de proteção imediata contra a infecção, e os fármacos da profilaxia inativariam o bacilo vacinal. Pela Nota Informativa nº 6/2024 do Ministério da Saúde, faz-se quimioprofilaxia primária com rifampicina por 4 meses (esquema 4R) e, ao término, aplica-se a BCG sem prova tuberculínica; se a rifampicina não estiver disponível, usa-se isoniazida por 3 meses, seguida de prova tuberculínica, com BCG se o bebê não for reator ou continuidade do tratamento se for reator, após excluir doença ativa. Suspender a amamentação, temporária ou definitivamente, tira do bebê os benefícios do leite sem reduzir o risco, que vem do contato respiratório. Amamentar sem máscara e vacinar de imediato deixa o bebê exposto e sem proteção, e vacinar junto com o início da profilaxia anula a vacina. Para lembrar: no recém-nascido que convive com um bacilífero, primeiro a profilaxia, depois a BCG — nunca as duas ao mesmo tempo.",
   "tema": "aleitamento-materno",
   "subtema": "aleitamento-materno.contraindicacoes",
   "especialidade": "neonatologia",
@@ -14777,13 +14777,13 @@
   "enunciado": "Na enfermaria de neurologia, o residente examina um homem de 67 anos internado há dois dias por AVC isquêmico lacunar na cápsula interna direita, com hemiparesia esquerda. Ao pedir que ele mostre os dentes, a comissura labial esquerda não se eleva. Porém, ao olhar para cima, a testa enruga de forma simétrica, e ele fecha os olhos com a mesma força dos dois lados. Um estudante pergunta por que a parte superior da face foi poupada.\n\nQual é a explicação anatômica?",
   "alternativas": [
    "A lesão capsular atinge apenas o ramo mandibular do nervo facial, que desce pela cápsula interna",
-   "O núcleo facial da parte superior da face recebe fibras corticonucleares bilaterais",
+   "O núcleo do facial que move a testa e as pálpebras recebe fibras corticonucleares dos dois hemisférios",
    "O ramo temporal do nervo facial sai do crânio por um forame próprio, sendo poupado nas lesões encefálicas",
-   "A musculatura da testa e das pálpebras é inervada pelo nervo oculomotor, e não pelo facial",
-   "O músculo frontal é inervado pelo nervo trigêmeo, que tem representação cortical bilateral"
+   "A musculatura da testa e das pálpebras é inervada pelo nervo oculomotor, que não passa pela cápsula interna",
+   "O músculo frontal é inervado pelo nervo trigêmeo, cujo componente motor tem representação cortical bilateral"
   ],
   "correta": 1,
-  "explicacao": "Na paralisia facial central (lesão do neurônio motor superior, como no AVC capsular), só a metade inferior da face contralateral fica fraca. A parte do núcleo do facial que comanda os músculos da testa e o orbicular do olho recebe projeções corticonucleares dos dois hemisférios, enquanto a porção da face inferior recebe sobretudo fibras do córtex contralateral. Já na paralisia periférica (como a de Bell), toda a hemiface ipsilateral é acometida, testa inclusive. Todos os ramos do facial saem juntos pelo forame estilomastóideo e se dividem na parótida; não há ramo que passe pela cápsula interna. O frontal é inervado pelo facial; o trigêmeo é sensitivo na face e motor apenas na mastigação. O oculomotor inerva o levantador da pálpebra, não o frontal nem o orbicular. Para lembrar: Na paralisia de Bell, corticoide nas primeiras 72 horas melhora a recuperação, e antiviral isolado não é recomendado; proteja a córnea com lubrificante e oclusão noturna.",
+  "explicacao": "Na paralisia facial central (lesão do neurônio motor superior, como no AVC capsular), só a metade inferior da face contralateral fica fraca. A parte do núcleo do facial que comanda os músculos da testa e o orbicular do olho recebe projeções corticonucleares dos dois hemisférios, enquanto a porção da face inferior recebe sobretudo fibras do córtex contralateral. Já na paralisia periférica (como a de Bell), toda a hemiface ipsilateral é acometida, testa inclusive. Todos os ramos do facial saem juntos pelo forame estilomastóideo e se dividem na parótida; não há ramo que passe pela cápsula interna. O frontal é inervado pelo facial; o trigêmeo é sensitivo na face e motor apenas na mastigação. O oculomotor inerva o levantador da pálpebra, não o frontal nem o orbicular. Para lembrar: testa poupada indica lesão central, acima do núcleo do facial e do lado oposto à paralisia; testa acometida indica lesão do núcleo ou do próprio nervo, do mesmo lado.",
   "tema": "nervos-cranianos",
   "subtema": "nervos-cranianos.exame-dos-nervos-cranianos",
   "especialidade": "neurologia",
@@ -16055,7 +16055,7 @@
    "Mosaicismo por não disjunção pós-zigótica; cariótipo de fibroblastos da criança"
   ],
   "correta": 2,
-  "explicacao": "Cerca de 4% dos casos de síndrome de Down resultam de translocação robertsoniana, geralmente entre o 21 e o 14 (ou outro acrocêntrico): o cariótipo tem 46 cromossomos, mas três cópias do braço longo do 21. Em parte desses casos, um dos pais é portador equilibrado (45 cromossomos, fenotipicamente normal), o que eleva o risco de recorrência bem acima do da idade materna — por isso o cariótipo dos pais é obrigatório. Se um dos pais tiver translocação 21;21, toda gestação viável terá síndrome de Down. A não disjunção meiótica gera trissomia livre, com 47 cromossomos. O mosaicismo mostraria duas linhagens celulares. A translocação recíproca troca segmentos sem fusão cêntrica. A dissomia uniparental não aumenta o número de cópias. Para lembrar: Down com 46 cromossomos = pensar em translocação e investigar os pais.",
+  "explicacao": "Cerca de 4% dos casos de síndrome de Down resultam de translocação robertsoniana, geralmente entre o 21 e o 14 (ou outro acrocêntrico): o cariótipo tem 46 cromossomos, mas três cópias do braço longo do 21. Em parte desses casos, um dos pais é portador equilibrado (45 cromossomos, fenotipicamente normal), o que eleva o risco de recorrência bem acima do da idade materna — por isso o cariótipo dos pais está indicado: se a mãe for portadora, o risco de recorrência fica em torno de 10% a 15%; se for o pai, em torno de 2% a 5%. Se um dos pais tiver translocação 21;21, toda gestação viável terá síndrome de Down. A não disjunção meiótica gera trissomia livre, com 47 cromossomos. O mosaicismo mostraria duas linhagens celulares. A translocação recíproca troca segmentos sem fusão cêntrica. A dissomia uniparental não aumenta o número de cópias. Para lembrar: Down com 46 cromossomos = pensar em translocação e investigar os pais.",
   "tema": "cromossomopatias",
   "subtema": "cromossomopatias.sindrome-de-down",
   "especialidade": "genetica",
@@ -17460,7 +17460,7 @@
  {
   "id": "med-2b20aad2",
   "area": "Pneumologia",
-  "enunciado": "Homem de 64 anos, tabagista de 40 maços-ano, tem dispneia progressiva há 5 anos, hoje aos pequenos esforços, pouca tosse e emagrecimento. Ao exame: tórax em tonel, hipersonoridade à percussão, murmúrio vesicular difusamente reduzido e expiração prolongada. Espirometria: VEF₁/CVF pós-broncodilatador de 0,48. A radiografia de tórax em PA e perfil é solicitada.\n\nQual conjunto de achados radiográficos indica hiperinsuflação pulmonar?",
+  "enunciado": "Trocar de roupa e tomar banho já deixam sem fôlego um motorista aposentado de 64 anos, tabagista de 40 maços-ano, cuja dispneia progride há 5 anos, com pouca tosse e emagrecimento. Ao exame: tórax em tonel, hipersonoridade à percussão, murmúrio vesicular difusamente reduzido e expiração prolongada. Espirometria: VEF₁/CVF pós-broncodilatador de 0,48. O pneumologista solicita radiografia de tórax em PA e perfil.\n\nQuais achados radiográficos traduzem a hiperinsuflação pulmonar?",
   "alternativas": [
    "Opacidades reticulares basais com redução dos volumes pulmonares",
    "Aumento da área cardíaca, com índice cardiotorácico acima de 0,5",
@@ -17585,7 +17585,7 @@
    "Complexo de Ghon, ou complexo primário"
   ],
   "correta": 4,
-  "explicacao": "O foco de Ghon (lesão parenquimatosa com granulomas caseosos) somado à linfadenite hilar ou mediastinal forma o complexo de Ghon ou complexo primário; quando cicatriza e calcifica, é chamado complexo de Ranke. Na maioria dos imunocompetentes a imunidade celular contém a infecção nessa fase. Os focos de Simon são implantes apicais formados na disseminação hematogênica da primoinfecção e servem de ponto de partida da reativação. O aneurisma de Rasmussen é dilatação de ramo da artéria pulmonar na parede de cavidade tuberculosa, causa de hemoptise maciça. O padrão miliar reflete disseminação hematogênica maciça, e a cavitação apical caracteriza a tuberculose pós-primária. Para lembrar: Na ILTB, PT ≥ 5 mm ou IGRA positivo em contatos indica tratamento após excluir TB ativa; no SUS, o 3HP (rifapentina + isoniazida semanal, 12 doses) é o preferencial; alternativas: 4R, 6H ou 9H.",
+  "explicacao": "O foco de Ghon (lesão parenquimatosa com granulomas caseosos) somado à linfadenite hilar ou mediastinal forma o complexo de Ghon ou complexo primário; quando cicatriza e calcifica, é chamado complexo de Ranke. Na maioria dos imunocompetentes a imunidade celular contém a infecção nessa fase. Os focos de Simon são implantes apicais formados na disseminação hematogênica da primoinfecção e servem de ponto de partida da reativação. O aneurisma de Rasmussen é dilatação de ramo da artéria pulmonar na parede de cavidade tuberculosa, causa de hemoptise maciça. O padrão miliar reflete disseminação hematogênica maciça, e a cavitação apical caracteriza a tuberculose pós-primária. Para lembrar: complexo de Ghon é o foco parenquimatoso somado ao linfonodo de drenagem; complexo de Ranke é esse mesmo conjunto já cicatrizado e calcificado, visto na radiografia anos depois.",
   "tema": "tuberculose",
   "subtema": "tuberculose.patologia-e-granuloma",
   "especialidade": "patologia",
@@ -18399,7 +18399,7 @@
    "Síndrome de Boerhaave; tomografia com contraste oral e cirurgia torácica de urgência"
   ],
   "correta": 3,
-  "explicacao": "Hematêmese após vômitos repetidos, com laceração longitudinal da mucosa na junção esofagogástrica, caracteriza a síndrome de Mallory-Weiss. Na maioria dos casos o sangramento cessa espontaneamente, e o tratamento é de suporte, com antiemético e IBP; terapia endoscópica (clipes, adrenalina) só se houver sangramento ativo. A síndrome de Boerhaave é a ruptura transmural do esôfago, com dor torácica intensa, enfisema subcutâneo e mediastinite, e exige tratamento cirúrgico ou endoscópico urgente. Não há varizes nem úlcera à endoscopia, e a fundoplicatura não trata laceração aguda. Para lembrar: Na HDA, faça EDA em até 24 horas após estabilização; Glasgow-Blatchford de 0–1 permite manejo ambulatorial, e o alvo transfusional usual é Hb de 7 g/dL (8 no coronariopata).",
+  "explicacao": "Hematêmese após vômitos repetidos, com laceração longitudinal da mucosa na junção esofagogástrica, caracteriza a síndrome de Mallory-Weiss. Na maioria dos casos o sangramento cessa espontaneamente, e o tratamento é de suporte, com antiemético e IBP; terapia endoscópica (clipes, adrenalina) só se houver sangramento ativo. A síndrome de Boerhaave é a ruptura transmural do esôfago, com dor torácica intensa, enfisema subcutâneo e mediastinite, e exige tratamento cirúrgico ou endoscópico urgente. Não há varizes nem úlcera à endoscopia, e a fundoplicatura não trata laceração aguda. Para lembrar: Mallory-Weiss rasga só a mucosa e sangra; Boerhaave rompe toda a parede do esôfago e vaza — dor torácica, enfisema subcutâneo e mediastinite.",
   "tema": "hemorragia-digestiva",
   "subtema": "hemorragia-digestiva.hemorragia-digestiva-alta",
   "especialidade": "gastroenterologia",
@@ -19160,16 +19160,16 @@
  {
   "id": "med-1359dfd7",
   "area": "Saúde Pública e SUS",
-  "enunciado": "\"Quero começar a PrEP hoje mesmo\", pede um homem de 26 anos que faz sexo com homens, tem múltiplas parcerias, uso inconsistente de preservativo e teve sífilis há 2 meses. Há 10 dias teve febre, dor de garganta e manchas no corpo, que passaram sozinhas. Deseja iniciar profilaxia pré-exposição oral com tenofovir e entricitabina na UBS.\n\nQual exame é indispensável antes de iniciar a PrEP?",
+  "enunciado": "\"Quero começar a PrEP hoje mesmo\", pede um homem de 26 anos que faz sexo com homens, tem múltiplas parcerias, uso inconsistente de preservativo e teve sífilis há 2 meses. Há 10 dias teve febre, dor de garganta e manchas no corpo, que passaram sozinhas. O teste rápido para HIV feito agora na UBS é não reagente, e ele deseja sair com a profilaxia oral de tenofovir e entricitabina.\n\nSegundo o PCDT de PrEP do Ministério da Saúde, como responder ao pedido?",
   "alternativas": [
-   "Densitometria óssea, pelo risco de osteoporose com o tenofovir",
-   "Genotipagem do HIV, para escolher os antirretrovirais mais eficazes",
-   "Contagem de linfócitos CD4, para definir a dose do esquema",
-   "Prova tuberculínica, obrigatória antes de qualquer antirretroviral",
-   "Teste para HIV, para excluir infecção antes de iniciar a profilaxia"
+   "Iniciar hoje, pois o teste rápido não reagente exclui a infecção pelo HIV",
+   "Adiar o início e solicitar carga viral do HIV, pela suspeita de infecção aguda",
+   "Iniciar hoje e pedir genotipagem do HIV para escolher o esquema mais eficaz",
+   "Pedir antes a contagem de linfócitos CD4, para definir a dose do esquema",
+   "Indicar PEP por 28 dias, já que houve exposições de risco nas últimas semanas"
   ],
-  "correta": 4,
-  "explicacao": "A PrEP com tenofovir e entricitabina contém apenas dois antirretrovirais; se a pessoa já tiver HIV, esse esquema é insuficiente para tratar e favorece a seleção de vírus resistentes. Por isso, o teste para HIV (em geral teste rápido) é obrigatório antes de iniciar e periodicamente durante o uso, com atenção a sintomas de infecção aguda. A avaliação inicial também inclui função renal (creatinina), sorologia para hepatite B, que pode reativar ao suspender o esquema, e rastreio de outras infecções sexualmente transmissíveis, como a sífilis. CD4 e genotipagem se aplicam a quem já vive com HIV. Densitometria e prova tuberculínica não são exigências rotineiras para iniciar a PrEP. Para lembrar: a PrEP previne o HIV, mas não outras infecções sexualmente transmissíveis — daí o seguimento com testagens regulares.",
+  "correta": 1,
+  "explicacao": "Febre, dor de garganta e exantema autolimitados há 10 dias, em quem teve exposições sexuais de risco recentes, sugerem síndrome retroviral aguda, que costuma surgir 2 a 4 semanas após a infecção — fase em que os testes rápidos, baseados em anticorpos, ainda podem ser não reagentes (janela imunológica). Por isso o PCDT de PrEP orienta, diante de suspeita de infecção aguda, adiar o início da profilaxia e solicitar a carga viral do HIV (RNA), que detecta a infecção mais cedo. O cuidado se explica porque tenofovir com entricitabina são apenas dois antirretrovirais: se a pessoa já tiver HIV, o esquema é insuficiente e seleciona vírus resistentes, sobretudo à entricitabina. Afastada a infecção, a PrEP começa com a avaliação habitual — creatinina, sorologia para hepatite B (que pode se exacerbar ao suspender o tenofovir) e rastreio de outras IST. Genotipagem e CD4 pertencem ao cuidado de quem vive com HIV e não entram na decisão de iniciar a PrEP, e a PEP só é indicada até 72 horas após uma exposição. Para lembrar: sintomas de infecção aguda nas últimas semanas são o principal motivo para não iniciar a PrEP no mesmo dia.",
   "tema": "hiv-aids",
   "subtema": "hiv-aids.transmissao-e-prevencao",
   "especialidade": "saude-publica-sus",
@@ -19368,7 +19368,7 @@
  {
   "id": "med-c0fe73e3",
   "area": "Infectologia",
-  "enunciado": "Homem de 30 anos procura a UPA no 4º dia de febre, cefaleia e mialgia intensa em panturrilhas, iniciadas 10 dias após limpar a casa alagada por uma enchente. Está lúcido, hidratado e anictérico, com PA 118/76 mmHg e FR 18 irpm; plaquetas de 145.000/mm³ e creatinina de 1,0 mg/dL. O médico prescreve doxiciclina e vai orientar o retorno.\n\nQual achado, se surgir, é sinal de alerta que indica internação imediata?",
+  "enunciado": "Dez dias depois de ajudar a limpar a casa alagada pela enchente, um pedreiro de 30 anos começou com febre, cefaleia e mialgia intensa nas panturrilhas. No 4º dia de sintomas, procura a UPA: está lúcido, hidratado e anictérico, com PA 118/76 mmHg e FR 18 irpm; plaquetas de 145.000/mm³ e creatinina de 1,0 mg/dL. O médico prescreve doxiciclina e vai orientar o retorno.\n\nQual achado, se surgir, é sinal de alerta que indica internação imediata?",
   "alternativas": [
    "Febre de 38,5 °C que cede com antitérmico",
    "Persistência da dor nas panturrilhas no 5º dia",
@@ -19996,16 +19996,16 @@
  {
   "id": "med-b0bbe63a",
   "area": "Neurologia",
-  "enunciado": "No ambulatório de planejamento reprodutivo, uma mulher de 28 anos, não tabagista e normotensa, conta que tem crises de cefaleia unilateral pulsátil com náuseas, precedidas por cerca de 20 minutos de linhas brilhantes em zigue-zague que se expandem no campo visual e desaparecem por completo. Deseja iniciar contracepção e pergunta qual método \"faz mal para a enxaqueca\".\n\nQual método deve ser evitado e por quê?",
+  "enunciado": "\"Começou com um pontinho brilhante perto do centro da visão, que foi crescendo para a direita em forma de ferradura, com a borda em zigue-zague, e sumiu depois de uns 25 minutos; logo em seguida veio a dor latejante do lado esquerdo, com enjoo\", descreve uma professora de 29 anos no pronto-atendimento. Episódios parecidos ocorrem desde a adolescência, três ou quatro vezes por ano. Não fuma, não usa anticoncepcional, e a PA é de 118/74 mmHg. O exame neurológico, já sem sintomas visuais, é normal.\n\nQual característica do episódio mais favorece aura migranosa, e não ataque isquêmico transitório?",
   "alternativas": [
-   "Implante de etonogestrel, pela piora e prolongamento da aura visual típica da migrânea",
-   "DIU de cobre, pelo aumento da frequência das crises de migrânea",
-   "Pílula só de progestagênio, pelo risco de trombose venosa cerebral",
-   "Método com estrogênio, pelo aumento do risco de AVC isquêmico",
-   "DIU com levonorgestrel, pelo risco de hipertensão intracraniana"
+   "Início abrupto, com o déficit visual já máximo no primeiro instante",
+   "Escurecimento de um olho só, descrito como uma cortina que desce",
+   "Sintoma visual positivo que se expande aos poucos, em vários minutos",
+   "Duração do sintoma visual superior a uma hora antes da cefaleia",
+   "Sintoma visual isolado, sem nenhuma cefaleia nas horas seguintes"
   ],
-  "correta": 3,
-  "explicacao": "A paciente tem migrânea com aura típica (sintoma visual positivo, que se expande gradualmente, dura de 5 a 60 minutos e é totalmente reversível). A migrânea com aura aumenta o risco de AVC isquêmico, e o estrogênio dos métodos combinados (pílula, adesivo, anel) potencializa esse risco; pelos critérios de elegibilidade da OMS, é categoria 4 (contraindicação absoluta) em qualquer idade. Métodos só de progestagênio (pílula, implante, injetável trimestral e DIU com levonorgestrel) e o DIU de cobre podem ser usados, pois não elevam significativamente o risco de AVC nem pioram a aura.",
+  "correta": 2,
+  "explicacao": "Pela Classificação Internacional das Cefaleias (ICHD-3), a aura típica é formada por sintomas visuais, sensitivos ou de fala totalmente reversíveis e reúne pelo menos três destas características: ao menos um sintoma se espalha gradualmente em 5 minutos ou mais; dois ou mais sintomas surgem em sucessão; cada um dura de 5 a 60 minutos; ao menos um é unilateral; ao menos um é positivo (cintilações, linhas em zigue-zague do espectro de fortificação, formigamento); e a cefaleia acompanha a aura ou vem em até 60 minutos. A isquemia faz o oposto: começa de repente, com déficit máximo desde o início, e produz sintomas negativos (perda de visão, dormência, fraqueza). O escurecimento monocular 'em cortina' é a amaurose fugaz, típica de êmbolo carotídeo para a circulação retiniana — a aura visual é binocular (hemianópica), ainda que o paciente a atribua a um olho. Aura que dura mais de uma hora foge da aura típica e obriga a investigar outra causa, e a aura isolada, sem cefaleia, sobretudo após os 40 anos, é justamente a situação que mais se confunde com AIT. Para lembrar: a aura 'marcha' e cintila; a isquemia chega de uma vez e apaga.",
   "tema": "cefaleias",
   "subtema": "cefaleias.cefaleias-primarias",
   "especialidade": "neurologia",
@@ -20867,7 +20867,7 @@
    "Estádio IV; quimioterapia paliativa associada a bevacizumabe"
   ],
   "correta": 2,
-  "explicacao": "No câncer de cólon, o acometimento de linfonodos regionais (qualquer T, N1 ou N2, M0) define o estádio III, independentemente da profundidade do tumor; a quimioterapia adjuvante com fluoropirimidina associada a oxaliplatina (esquemas como CAPOX ou FOLFOX) reduz a recorrência e aumenta a sobrevida nesse grupo. O estádio II corresponde a T3 ou T4 sem linfonodos, e o IV exige metástase a distância, ausente aqui; o estádio I é tumor restrito à submucosa ou à muscular própria sem linfonodos. A radioterapia adjuvante tem papel no câncer de reto, não no de cólon. O seguimento inclui CEA, imagem e colonoscopia periódicos. Para lembrar: recomenda-se examinar pelo menos 12 linfonodos na peça para estadiar com segurança o câncer de cólon.",
+  "explicacao": "No câncer de cólon, o acometimento de linfonodos regionais (qualquer T, N1 ou N2, M0) define o estádio III, independentemente da profundidade do tumor; a quimioterapia adjuvante com fluoropirimidina associada a oxaliplatina (esquemas como CAPOX ou FOLFOX) reduz a recorrência e aumenta a sobrevida nesse grupo. O estádio II corresponde a T3 ou T4 sem linfonodos, e o IV exige metástase a distância, ausente aqui; o estádio I é tumor restrito à submucosa ou à muscular própria sem linfonodos. A radioterapia adjuvante tem papel no câncer de reto, não no de cólon. Nos tumores de baixo risco do estádio III (T1 a T3 com N1, como este), 3 meses de CAPOX praticamente equivalem a 6 meses, com muito menos neuropatia pela oxaliplatina (análise IDEA); nos de alto risco (T4 ou N2), prefere-se 6 meses. O seguimento inclui CEA, imagem e colonoscopia periódicos. Para lembrar: recomenda-se examinar pelo menos 12 linfonodos na peça para estadiar com segurança o câncer de cólon.",
   "tema": "cancer-colorretal",
   "subtema": "cancer-colorretal.diagnostico-e-estadiamento",
   "especialidade": "oncologia",
@@ -20952,7 +20952,7 @@
  {
   "id": "med-09dc2f37",
   "area": "Urologia",
-  "enunciado": "No ambulatório de urologia, dois pacientes são atendidos na mesma manhã. O primeiro, de 70 anos, tem jato fraco e noctúria há 3 anos; ao toque retal, a próstata está aumentada, fibroelástica e lisa, e o PSA é 3,2 ng/mL. O segundo, de 64 anos, está assintomático, mas o toque mostra nódulo endurecido no lobo esquerdo, e a biópsia confirma adenocarcinoma.\n\nEm quais zonas da próstata essas doenças se originam, predominantemente, e respectivamente?",
+  "enunciado": "No ambulatório de urologia, dois pacientes são atendidos na mesma manhã. O primeiro, de 70 anos, tem jato fraco e noctúria há 3 anos; ao toque retal, a próstata está aumentada, fibroelástica e lisa, e o PSA é 3,2 ng/mL. O segundo, de 64 anos, está assintomático, mas o toque mostra nódulo endurecido no lobo esquerdo, e a biópsia confirma adenocarcinoma.\n\nEm que zona da próstata se origina predominantemente a doença de cada um, respectivamente?",
   "alternativas": [
    "Estroma fibromuscular anterior e zona central",
    "Zona central e zona de transição",
@@ -20961,7 +20961,7 @@
    "Zona de transição e zona central"
   ],
   "correta": 3,
-  "explicacao": "A hiperplasia prostática benigna origina-se na zona de transição, que circunda a uretra prostática; por isso, mesmo aumentos moderados comprimem a uretra e causam sintomas do trato urinário inferior. O adenocarcinoma de próstata surge em cerca de 70% dos casos na zona periférica, posterolateral, a porção palpável ao toque retal — o que explica o nódulo endurecido e o fato de o câncer inicial costumar ser assintomático, já que está longe da uretra. A zona central, ao redor dos ductos ejaculatórios, dá origem a uma minoria dos cânceres; o estroma fibromuscular anterior não contém glândulas. Para lembrar: a divisão da próstata em zonas foi descrita pelo patologista John McNeal, e a regra é \"HPB no centro (transição), câncer na periferia\".",
+  "explicacao": "A hiperplasia prostática benigna origina-se na zona de transição, que circunda a uretra prostática; por isso, mesmo aumentos moderados comprimem a uretra e causam sintomas do trato urinário inferior. O adenocarcinoma de próstata surge em cerca de 70% dos casos na zona periférica, posterolateral, a porção palpável ao toque retal — o que explica o nódulo endurecido e o fato de o câncer inicial costumar ser assintomático, já que está longe da uretra. A zona central, ao redor dos ductos ejaculatórios, dá origem a uma minoria dos cânceres; o estroma fibromuscular anterior não contém glândulas. Para lembrar: a divisão da próstata em zonas foi descrita pelo patologista John McNeal, e a regra é \"HPB na zona de transição, em volta da uretra; câncer na zona periférica, junto ao reto\".",
   "tema": "doencas-da-prostata",
   "subtema": null,
   "especialidade": "urologia",
@@ -23608,7 +23608,7 @@
  {
   "id": "med-fc54b64b",
   "area": "Psiquiatria",
-  "enunciado": "O marido acompanha à consulta uma mulher de 35 anos que, há 1 ano, deixou de usar ônibus e metrô, evita shoppings e filas e só sai de casa com ele. \"Tenho medo de passar mal e não ter como sair nem quem me ajude\", explica. Nunca teve crises súbitas e inesperadas de medo intenso, e não teme ser avaliada pelos outros. Os sintomas já lhe custaram o emprego.\n\nPelo DSM-5, qual é o diagnóstico?",
+  "enunciado": "O marido acompanha à consulta uma mulher de 35 anos que, há 1 ano, deixou de usar ônibus e metrô, evita shoppings e filas e só sai de casa com ele. \"Tenho medo de passar mal e não ter como sair nem quem me ajude\", explica. Nunca teve crises súbitas e inesperadas de medo intenso, e não teme ser avaliada pelos outros. Os sintomas já lhe custaram o emprego.\n\nPelo DSM-5-TR, qual é o diagnóstico?",
   "alternativas": [
    "Transtorno de pânico",
    "Transtorno de ansiedade generalizada",
@@ -24849,7 +24849,7 @@
  {
   "id": "med-9d67e37e",
   "area": "Ginecologia",
-  "enunciado": "Mulher de 27 anos, G2P1, com atraso menstrual de 7 semanas, procura a emergência por dor em baixo ventre à esquerda há 2 dias e sangramento vaginal escuro, em pequena quantidade. Teve doença inflamatória pélvica tratada há 3 anos. Tipo sanguíneo O negativo.\n\nExame: corada; PA 118/72 mmHg; FC 84 bpm; abdome doloroso em fossa ilíaca esquerda, sem sinais de irritação peritoneal; colo impérvio; dor à mobilização do anexo esquerdo.\n\nExames: β-hCG sérico 2.400 mUI/mL. Ultrassonografia transvaginal (descrita): cavidade uterina vazia, com endométrio de 11 mm; massa anexial esquerda heterogênea de 3 cm, separada do ovário, sem saco gestacional com embrião nem batimentos cardíacos; pequena quantidade de líquido livre no fundo de saco posterior.\n\nQual é o diagnóstico mais provável?",
+  "enunciado": "\"Achei que era só atraso, mas a dor não passa\", diz uma mulher de 27 anos, G2P1, que procura a emergência com atraso menstrual de 7 semanas, dor em baixo ventre à esquerda há 2 dias e sangramento vaginal escuro, em pequena quantidade. Teve doença inflamatória pélvica tratada há 3 anos. Tipo sanguíneo O negativo.\n\nExame: corada; PA 118/72 mmHg; FC 84 bpm; abdome doloroso em fossa ilíaca esquerda, sem sinais de irritação peritoneal; colo impérvio; dor à mobilização do anexo esquerdo.\n\nExames: β-hCG sérico 2.400 mUI/mL. Ultrassonografia transvaginal (descrita): cavidade uterina vazia, com endométrio de 11 mm; massa anexial esquerda heterogênea de 3 cm, separada do ovário, sem saco gestacional com embrião nem batimentos cardíacos; pequena quantidade de líquido livre no fundo de saco posterior.\n\nQual hipótese explica, ao mesmo tempo, o útero vazio e a massa anexial?",
   "alternativas": [
    "Gestação tópica inicial, ainda abaixo da idade para ser vista na ultrassonografia",
    "Gravidez ectópica tubária íntegra à esquerda",
@@ -24858,7 +24858,7 @@
    "Cisto hemorrágico de corpo lúteo, sem relação com a gestação"
   ],
   "correta": 1,
-  "explicacao": "Com β-hCG acima da zona discriminatória da ultrassonografia transvaginal (em geral entre 1.500 e 3.500 mUI/mL), uma gestação tópica deveria mostrar saco gestacional intrauterino. Útero vazio com massa anexial separada do ovário, em mulher com doença inflamatória pélvica prévia (fator de risco por lesão tubária), indica gravidez ectópica tubária. A paciente está estável, sem irritação peritoneal e com pouco líquido livre, o que fala contra ruptura. Gestação tópica muito inicial seria pouco provável com esse β-hCG e essa massa. No abortamento completo não haveria massa anexial, e só uma dosagem de β-hCG não mostra queda. Ectópica rota traria instabilidade e hemoperitônio volumoso. O cisto de corpo lúteo fica dentro do ovário e não explica o útero vazio.",
+  "explicacao": "Com β-hCG acima da zona discriminatória da ultrassonografia transvaginal (em geral entre 1.500 e 3.500 mUI/mL), uma gestação tópica deveria mostrar saco gestacional intrauterino. Útero vazio com massa anexial separada do ovário, em mulher com doença inflamatória pélvica prévia (fator de risco por lesão tubária), indica gravidez ectópica tubária. A paciente está estável, sem irritação peritoneal e com pouco líquido livre, o que fala contra ruptura. Gestação tópica muito inicial seria pouco provável com esse β-hCG e não explicaria a massa. No abortamento completo não haveria massa anexial, e uma única dosagem de β-hCG não mostra queda. A ectópica rota traria instabilidade e hemoperitônio volumoso. O cisto de corpo lúteo fica dentro do ovário e não explica o útero vazio. Por ser Rh negativo, ela deve receber imunoglobulina anti-D qualquer que seja o tratamento escolhido. Para lembrar: β-hCG acima da zona discriminatória + útero vazio = ectópica até prova em contrário.",
   "tema": "hemorragias-da-primeira-metade-da-gestacao",
   "subtema": "hemorragias-da-primeira-metade-da-gestacao.gravidez-ectopica",
   "especialidade": "ginecologia",
@@ -25202,7 +25202,7 @@
  {
   "id": "med-001bbe82",
   "area": "Infectologia",
-  "enunciado": "Homem de 45 anos, morador de comunidade ribeirinha atendida por uma equipe de Saúde da Família fluvial, tem tosse produtiva há 5 semanas, febre vespertina, sudorese noturna e perda de 6 kg. Mora com a esposa e três filhos (2, 9 e 16 anos) em casa de dois cômodos. Teste rápido para HIV não reagente. Sem diabetes.\n\nO teste rápido molecular para tuberculose (TRM-TB) no escarro detectou Mycobacterium tuberculosis, sem resistência à rifampicina. Radiografia: cavidade no lobo superior direito.\n\nQual é o esquema básico de tratamento indicado para esse adulto?",
+  "enunciado": "Na passagem mensal da equipe de Saúde da Família fluvial por uma comunidade ribeirinha, o enfermeiro apresenta ao médico um pescador de 45 anos com tosse produtiva há 5 semanas, febre vespertina, sudorese noturna e perda de 6 kg. Ele mora com a esposa e três filhos (2, 9 e 16 anos) numa casa de dois cômodos. Teste rápido para HIV não reagente; não tem diabetes.\n\nO teste rápido molecular para tuberculose (TRM-TB) no escarro detectou Mycobacterium tuberculosis, sem resistência à rifampicina. Radiografia: cavidade no lobo superior direito.\n\nQual é o esquema básico de tratamento indicado para esse adulto?",
   "alternativas": [
    "2 meses de RHZE seguidos de 10 meses de RH",
    "2 meses de RH seguidos de 4 meses de RHZE",
@@ -25211,7 +25211,7 @@
    "4 meses de RHZE seguidos de 2 meses de RH"
   ],
   "correta": 3,
-  "explicacao": "Para tuberculose pulmonar sensível em adultos, o esquema básico brasileiro é a fase intensiva de 2 meses com rifampicina, isoniazida, pirazinamida e etambutol (RHZE), seguida da fase de manutenção de 4 meses com rifampicina e isoniazida (RH), total de 6 meses. O esquema de 12 meses (2 RHZE + 10 RH) é para a forma meningoencefálica e osteoarticular. A isoniazida isolada é tratamento de infecção latente, e usá-la em doença ativa seleciona resistência. Inverter as fases ou prolongar a intensiva não é o padrão.",
+  "explicacao": "Para tuberculose pulmonar sensível em adultos, o esquema básico brasileiro é a fase intensiva de 2 meses com rifampicina, isoniazida, pirazinamida e etambutol (RHZE), seguida da fase de manutenção de 4 meses com rifampicina e isoniazida (RH), total de 6 meses, em comprimidos de dose fixa combinada ajustados ao peso. O esquema de 12 meses (2 RHZE + 10 RH) é reservado às formas meningoencefálica e osteoarticular. A isoniazida isolada trata infecção latente; usá-la na doença ativa seleciona resistência. Inverter as fases ou prolongar a intensiva não tem respaldo e aumenta a toxicidade. A OMS recomenda também, como alternativa para maiores de 12 anos com tuberculose pulmonar sensível, um esquema de 4 meses com isoniazida, rifapentina, moxifloxacino e pirazinamida (2HPMZ/2HPM), de uso ainda restrito no Brasil e que não está entre as alternativas; o esquema básico segue sendo o padrão no SUS. Os contatos domiciliares devem ser avaliados: excluída a doença ativa, indica-se tratamento da infecção latente conforme a prova tuberculínica ou o IGRA, com prioridade para a criança de 2 anos, que tem maior risco de formas graves. Para lembrar: 2RHZE/4RH é a regra; 2RHZE/10RH, para meninge e osso.",
   "tema": "tuberculose",
   "subtema": "tuberculose.tratamento",
   "especialidade": "infectologia",
@@ -25905,7 +25905,7 @@
  {
   "id": "med-76108fc6",
   "area": "Bioquímica",
-  "enunciado": "Homem de 22 anos tem cálculos renais recorrentes desde os 13 anos. O sedimento urinário mostra cristais hexagonais, planos e incolores, e o teste do cianeto-nitroprussiato na urina é positivo. A dosagem urinária de aminoácidos revela excreção aumentada de cistina, ornitina, lisina e arginina.\n\nQual é o defeito de base?",
+  "enunciado": "Cristais hexagonais, planos e incolores no sedimento urinário e teste do cianeto-nitroprussiato positivo chamam a atenção do nefrologista que acompanha um jovem de 22 anos com cálculos renais recorrentes desde os 13 anos. A dosagem urinária de aminoácidos revela excreção aumentada de cistina, ornitina, lisina e arginina.\n\nQual é o defeito de base?",
   "alternativas": [
    "Defeito da cistinosina, que exporta cistina dos lisossomos para o citosol",
    "Deficiência da alanina-glioxilato aminotransferase, com excesso de oxalato",
@@ -27565,7 +27565,7 @@
  {
   "id": "med-2dc60b6f",
   "area": "Ortopedia e Traumatologia",
-  "enunciado": "Mulher de 68 anos, com osteoporose, cai sobre a mão espalmada com o punho em extensão. O punho fica com deformidade “em dorso de garfo”, e a radiografia mostra fratura da extremidade distal do rádio, cerca de 2 cm acima da articulação, com o fragmento distal desviado dorsalmente.\n\nQual é o nome dessa fratura?",
+  "enunciado": "Ao escorregar no piso molhado da cozinha, uma aposentada de 68 anos com osteoporose apoiou-se na mão espalmada, com o punho em extensão. No pronto-socorro, o punho tem deformidade \"em dorso de garfo\", e a radiografia mostra fratura extra-articular da extremidade distal do rádio, cerca de 2 cm acima da articulação, com o fragmento distal desviado dorsalmente.\n\nQual é o nome dessa fratura?",
   "alternativas": [
    "Fratura de Galeazzi",
    "Fratura de Colles",
@@ -27574,7 +27574,7 @@
    "Fratura de Monteggia"
   ],
   "correta": 1,
-  "explicacao": "A fratura de Colles é a fratura extra-articular da extremidade distal do rádio com desvio dorsal do fragmento distal, típica de idosas osteoporóticas após queda sobre a mão espalmada em extensão, produzindo a deformidade em dorso de garfo. A fratura de Smith é o inverso, com desvio volar, geralmente por queda com o punho fletido. A de Barton é intra-articular, com luxação do carpo acompanhando um fragmento marginal do rádio. A de Monteggia associa fratura da ulna proximal com luxação da cabeça do rádio, e a de Galeazzi, fratura da diáfise do rádio com luxação da articulação radioulnar distal. Para lembrar: complicação tardia clássica da fratura de Colles: ruptura do tendão do extensor longo do polegar; também vale lembrar da compressão aguda do mediano no túnel do carpo.",
+  "explicacao": "A fratura de Colles é a fratura extra-articular da extremidade distal do rádio com desvio dorsal do fragmento distal, típica de idosas osteoporóticas após queda sobre a mão espalmada em extensão, produzindo a deformidade em dorso de garfo. A fratura de Smith é o inverso, com desvio volar, geralmente por queda com o punho fletido. A de Barton é intra-articular, com luxação do carpo acompanhando um fragmento marginal do rádio. A de Monteggia associa fratura da ulna proximal com luxação da cabeça do rádio, e a de Galeazzi, fratura da diáfise do rádio com luxação da articulação radioulnar distal. Para lembrar: a complicação tardia clássica da fratura de Colles é a ruptura do tendão do extensor longo do polegar, e a aguda que não pode passar despercebida é a compressão do nervo mediano no túnel do carpo.",
   "tema": "fraturas-e-luxacoes",
   "subtema": "fraturas-e-luxacoes.principios-de-classificacao",
   "especialidade": "ortopedia",
@@ -29292,7 +29292,7 @@
  {
   "id": "med-99fc1077",
   "area": "Pneumologia",
-  "enunciado": "Homem de 71 anos, ex-tabagista de 50 maços-ano, com DPOC (VEF1 pós-broncodilatador de 45% do previsto), usa tiotrópio associado a olodaterol, com técnica inalatória e adesão corretas, e faz reabilitação pulmonar. No último ano, teve duas exacerbações tratadas com corticoide oral e uma internação por exacerbação. Não tem história de asma. O hemograma, fora de exacerbação, mostra eosinófilos de 380 células/µL. Tem escarro matinal discreto, sem bronquiectasias na tomografia, e está vacinado contra influenza, pneumococo e covid-19. A pressão arterial e a função renal são normais.\n\nQual é o ajuste mais adequado do tratamento de manutenção?",
+  "enunciado": "Na consulta de retorno da pneumologia, um ex-tabagista de 71 anos (50 maços-ano) com DPOC — VEF1 pós-broncodilatador de 45% do previsto — mostra que usa corretamente o inalador de tiotrópio com olodaterol, confirmado pela contagem de doses, e segue na reabilitação pulmonar. Mesmo assim, no último ano teve duas exacerbações tratadas com corticoide oral e uma internação. Não tem história de asma. Hemograma fora de exacerbação: eosinófilos de 380 células/µL. Tem escarro matinal discreto, sem bronquiectasias na tomografia, e está vacinado contra influenza, pneumococo e covid-19.\n\nQual é o ajuste mais adequado do tratamento de manutenção?",
   "alternativas": [
    "Associar azitromicina contínua, mantendo a broncodilatação dupla",
    "Trocar a dupla broncodilatação por corticoide inalatório com LABA",
@@ -29301,7 +29301,7 @@
    "Associar corticoide inalatório, passando à terapia tripla inalatória"
   ],
   "correta": 4,
-  "explicacao": "Na DPOC que continua exacerbando apesar de LAMA com LABA, a contagem de eosinófilos orienta o próximo passo: com 300 células/µL ou mais, o GOLD 2026 indica acrescentar corticoide inalatório (terapia tripla) já a partir de uma exacerbação moderada ou grave; com 100 a 299, a tripla também pode ser considerada se as exacerbações forem frequentes. A azitromicina e o roflumilaste são opções quando os eosinófilos são baixos (abaixo de 100) ou quando as exacerbações persistem mesmo com a tripla; o roflumilaste exige também VEF1 abaixo de 50% e bronquite crônica marcante. Trocar para corticoide com LABA retira o LAMA, pilar da broncodilatação, e só é aceitável em quem tem asma associada. Corticoide oral contínuo não é recomendado, pelos efeitos adversos sem benefício. Para lembrar: na DPOC, o eosinófilo funciona como “termômetro” do corticoide inalatório — quanto mais alto, maior o ganho.",
+  "explicacao": "No seguimento da DPOC, quem continua exacerbando apesar de LAMA com LABA, com técnica e adesão verificadas, tem o próximo passo orientado pelos eosinófilos: com 100 células/µL ou mais, o GOLD 2026 recomenda acrescentar corticoide inalatório e passar à terapia tripla, e o benefício é tanto maior quanto mais altos os eosinófilos — aqui, 380. A azitromicina contínua e o roflumilaste são as opções quando os eosinófilos estão abaixo de 100 ou quando as exacerbações persistem mesmo com a tripla; o roflumilaste exige, além disso, VEF1 abaixo de 50% e bronquite crônica. Trocar a dupla broncodilatação por corticoide com LABA retira o LAMA, pilar do tratamento, e só se discute quando há asma associada. Teofilina tem margem terapêutica estreita e efeito modesto, e prednisona oral contínua não é recomendada, pelos efeitos adversos sem benefício. Se as exacerbações persistirem na tripla com eosinófilos de 300 ou mais, o passo seguinte é um biológico (dupilumabe, em quem tem bronquite crônica, ou mepolizumabe). Para lembrar: na DPOC, o eosinófilo funciona como 'termômetro' do corticoide inalatório — abaixo de 100, pouco ganho; acima de 300, ganho máximo.",
   "tema": "dpoc",
   "subtema": "dpoc.tratamento-estavel",
   "especialidade": "pneumologia",
@@ -30555,7 +30555,7 @@
    "Nenhum exame agora; audiometria tonal aos 3 anos"
   ],
   "correta": 3,
-  "explicacao": "Pelas Diretrizes de Atenção da Triagem Auditiva Neonatal do Ministério da Saúde, recém-nascidos sem indicador de risco para deficiência auditiva fazem a triagem com emissões otoacústicas evocadas; os que têm indicador de risco, como internação em UTI neonatal por mais de 5 dias, uso de aminoglicosídeos, infecções ou hiperbilirrubinemia importante, devem fazer o potencial evocado auditivo de tronco encefálico (PEATE), de preferência na forma automática. Isso porque as emissões otoacústicas avaliam apenas a cóclea e não detectam a neuropatia auditiva e as lesões retrococleares, mais frequentes nesse grupo. Adiar a avaliação para a idade escolar perde a janela de intervenção precoce, que idealmente começa até os 6 meses. O reflexo cocleopalpebral é pouco sensível e não substitui a triagem. A tomografia não é exame de triagem. Para lembrar: a meta “1-3-6” — triagem até 1 mês, diagnóstico até 3 meses e intervenção até 6 meses.",
+  "explicacao": "Pelas Diretrizes de Atenção da Triagem Auditiva Neonatal do Ministério da Saúde, recém-nascidos sem indicador de risco para deficiência auditiva fazem a triagem com emissões otoacústicas evocadas; os que têm indicador de risco, como internação em UTI neonatal por mais de 5 dias, uso de aminoglicosídeos, infecções congênitas ou hiperbilirrubinemia em níveis de exsanguineotransfusão (a fototerapia isolada, como neste caso, não é indicador), devem fazer o potencial evocado auditivo de tronco encefálico (PEATE), de preferência na forma automática. Isso porque as emissões otoacústicas avaliam apenas a cóclea e não detectam a neuropatia auditiva e as lesões retrococleares, mais frequentes nesse grupo. Adiar a avaliação para os 3 anos perde a janela de intervenção precoce, que idealmente começa até os 6 meses. O reflexo cocleopalpebral é pouco sensível e não substitui a triagem. A tomografia não é exame de triagem. Para lembrar: a meta “1-3-6” — triagem até 1 mês, diagnóstico até 3 meses e intervenção até 6 meses.",
   "tema": "assistencia-ao-recem-nascido",
   "subtema": "assistencia-ao-recem-nascido.triagem-neonatal",
   "especialidade": "neonatologia",
@@ -31126,7 +31126,7 @@
  {
   "id": "med-8f80c371",
   "area": "Ética Médica",
-  "enunciado": "Médico plantonista de um pronto-socorro termina seu turno às 7h. O colega que deveria rendê-lo avisa que vai se atrasar cerca de 3 horas por um problema pessoal. Há quatro pacientes em observação, um deles em uso de droga vasoativa, e o plantonista tem consulta marcada em seu consultório às 8h.\n\nSegundo o Código de Ética Médica, qual é a conduta adequada?",
+  "enunciado": "Médico plantonista de um pronto-socorro termina seu turno às 7h. O colega que deveria rendê-lo avisa que vai se atrasar cerca de 3 horas por um problema pessoal. Há quatro pacientes em observação, um deles em uso de droga vasoativa, e o plantonista tem consulta marcada em seu consultório às 8h.\n\nDiante do atraso do colega, o que o Código de Ética Médica exige do plantonista?",
   "alternativas": [
    "Sair às 7h deixando a enfermagem responsável pelos pacientes",
    "Permanecer no plantão até a chegada de substituto e comunicar o fato à direção técnica",
@@ -32108,7 +32108,7 @@
  {
   "id": "med-b1a378bc",
   "area": "Urologia",
-  "enunciado": "Mulher de 52 anos tem o terceiro episódio de cólica renal em 2 anos, com eliminação de cálculo de oxalato de cálcio. Relata constipação e cansaço, e a densitometria mostrou osteoporose, mais acentuada no terço distal do rádio. Exames:\n\n- Cálcio total: 11,4 mg/dL (albumina 4,0 g/dL)\n- Fósforo: 2,3 mg/dL\n- PTH: 128 pg/mL (referência 15–65)\n- 25-hidroxivitamina D: 32 ng/mL\n- Creatinina: 0,8 mg/dL\n- Cálcio na urina de 24 h: 340 mg\n\nNão usa diuréticos, lítio nem suplementos de cálcio ou vitamina D, e não há história familiar de cálculos renais ou de hipercalcemia.\n\nQual é o diagnóstico e a conduta mais adequada?",
+  "enunciado": "O terceiro episódio de cólica renal em 2 anos, com eliminação de cálculo de oxalato de cálcio, traz uma bancária de 52 anos ao ambulatório de urologia. Ela relata constipação e cansaço, e a densitometria mostrou osteoporose, mais acentuada no terço distal do rádio. Exames:\n\n- Cálcio total: 11,4 mg/dL (albumina 4,0 g/dL)\n- Fósforo: 2,3 mg/dL\n- PTH: 128 pg/mL (referência 15–65)\n- 25-hidroxivitamina D: 32 ng/mL\n- Creatinina: 0,8 mg/dL\n- Cálcio na urina de 24 h: 340 mg\n\nNão usa diuréticos, lítio nem suplementos de cálcio ou vitamina D, e não há história familiar de cálculos renais ou de hipercalcemia.\n\nQual doença explica os cálculos e qual tratamento evita novos episódios?",
   "alternativas": [
    "Hiperparatireoidismo primário; exames de localização e paratireoidectomia",
    "Hipercalciúria absortiva; dieta com restrição rigorosa de cálcio",
@@ -32122,7 +32122,7 @@
   "subtema": "litiase-urinaria.tratamento",
   "especialidade": "urologia",
   "disciplina": "Urologia",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
   "prova": null,
