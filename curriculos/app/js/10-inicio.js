@@ -49,7 +49,10 @@ rota("/", () => {
   const Q = questoes(), feitas = Q.filter(q => progDe(q)?.n).length, pend = pendencias();
   const ag = agregados(), fracas = listaPor(ag.por.disc, 3).sort((a, b) => a.p - b.p).slice(0, 3);
   const novato = ag.n < 10;
-  const passo = (ok, txt, href, bt) => `<div class="tarefa"><div class="o" style="${ok ? "color:var(--muted);text-decoration:line-through" : ""}">${ok ? "✓ " : ""}${txt}</div>${ok ? "" : `<a class="btn mini sec" href="${href}">${bt}</a>`}</div>`;
+  // Primeiros passos: o que já foi feito sai da tela (não fica riscado), para não poluir o Início
+  const passos = [[!!P.faculdade, "Escolher sua faculdade e período", "#/medicina", "Escolher"], [ag.n >= 10, "Responder 10 questões", "#/questoes", "Praticar"],
+    [Object.keys(store.doc("revisoes").temas).length > 0, "Marcar um tema como estudado (programa as revisões)", "#/medicina/especialidades", "Ver temas"], [cards().length > 0, "Criar seus primeiros flashcards", "#/flashcards", "Criar"]]
+    .filter(([ok]) => !ok).map(([, txt, href, bt]) => `<div class="tarefa"><div class="o">${txt}</div><a class="btn mini sec" href="${href}">${bt}</a></div>`);
   return {
     secao: "inicio", titulo: saudacao() + (P.nome ? ", " + P.nome.split(" ")[0] : ""), sub: [P.apresentacao && P.apresentacao + (P.faculdade ? " · " + nomeInst(P.faculdade) : ""), new Date().toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" })].filter(Boolean).map(esc).join("<br>"),
     acoes: `<button class="btn sec mini" data-act="perfil-fac">Perfil</button><button class="btn sec mini" data-act="metas-editar">Metas</button>`,
@@ -73,11 +76,7 @@ rota("/", () => {
       <a href="#/casos"><b>Casos clínicos</b><small>${todosCasos().length} casos</small></a>
     </div></section>
     ${tarefas.length > 1 ? `<section><h2 class="sec">Também para hoje</h2><div class="tarefas">${tarefas.slice(1, 5).map(t => `<div class="tarefa"><div class="o">${t.link ? "Revisar " + t.link : esc(t.tit)}<small>${esc(t.det)}</small></div><a class="btn mini sec" href="${t.href}">${t.bt}</a></div>`).join("")}</div>${tarefas.length > 5 ? `<p class="small"><a href="#/revisoes">Ver todas as ${tarefas.length}</a></p>` : ""}</section>` : ""}
-    ${novato ? `<section><h2 class="sec">Primeiros passos</h2><div class="tarefas">
-        ${passo(!!P.faculdade, "Escolher sua faculdade e período", "#/medicina", "Escolher")}
-        ${passo(ag.n >= 10, "Responder 10 questões", "#/questoes", "Praticar")}
-        ${passo(Object.keys(store.doc("revisoes").temas).length > 0, "Marcar um tema como estudado (programa as revisões)", "#/medicina/especialidades", "Ver temas")}
-        ${passo(cards().length > 0, "Criar seus primeiros flashcards", "#/flashcards", "Criar")}</div></section>`
+    ${novato && passos.length ? `<section><h2 class="sec">Primeiros passos</h2><div class="tarefas">${passos.join("")}</div></section>`
       : `<section><h2 class="sec">Sua faculdade</h2>${linhaFaculdade()}</section>
         ${fracas.length ? `<section><h2 class="sec">Onde focar <a class="small" href="#/desempenho">ver desempenho</a></h2><div class="barras">${fracas.map(x => barra(esc(x.k), x.ac, x.n)).join("")}</div></section>` : ""}`}`,
   };

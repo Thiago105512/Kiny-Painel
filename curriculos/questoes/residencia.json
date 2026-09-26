@@ -5126,15 +5126,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-c2f8b0",
-  "parte": 1,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-912e8c26",
   "area": "Clínica Médica",
-  "enunciado": "(Continuação) Idosa com bloqueio atrioventricular total e escape ventricular de QRS largo está na sala de emergência. Evolui sonolenta, com PA 72/40 mmHg, FC 32 bpm, extremidades frias e pegajosas. Com acesso venoso e monitorização, recebeu atropina 1 mg IV há 5 minutos, sem qualquer mudança na frequência.\n\nA conduta mais adequada agora é:",
+  "enunciado": "Idosa com bloqueio atrioventricular total e escape ventricular de QRS largo está na sala de emergência. Evolui sonolenta, com PA 72/40 mmHg, FC 32 bpm, extremidades frias e pegajosas. Com acesso venoso e monitorização, recebeu atropina 1 mg IV há 5 minutos, sem qualquer mudança na frequência.\n\nA conduta mais adequada agora é:",
   "alternativas": [
    "Sulfato de magnésio 2 g IV em bolus, seguido de nova dose de atropina",
    "Repetir atropina a cada 3 minutos até 3 mg antes de qualquer outra medida",
@@ -5152,15 +5149,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-c2f8b0",
-  "parte": 2,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-14b15eda",
   "area": "Clínica Médica",
-  "enunciado": "(Continuação) Idosa com BAV total sintomático foi estabilizada com marcapasso transvenoso provisório e mantém-se lúcida, com PA 132/70 mmHg. Após 72 horas, excluídas causas reversíveis (distúrbios eletrolíticos, fármacos e isquemia), o BAV total persiste.\n\nA conduta definitiva é:",
+  "enunciado": "Idosa com BAV total sintomático foi estabilizada com marcapasso transvenoso provisório e mantém-se lúcida, com PA 132/70 mmHg. Após 72 horas, excluídas causas reversíveis (distúrbios eletrolíticos, fármacos e isquemia), o BAV total persiste.\n\nA conduta definitiva é:",
   "alternativas": [
    "Ablação do nó atrioventricular por cateter",
    "Implante de marcapasso cardíaco definitivo",
@@ -5178,9 +5172,6 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-c2f8b0",
-  "parte": 3,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
@@ -5204,15 +5195,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-d29b0b",
-  "parte": 1,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-9d727c8a",
   "area": "Clínica Médica",
-  "enunciado": "(Continuação) Homem de 32 anos com derrame pleural direito e quadro subagudo de febre e emagrecimento é puncionado. Líquido amarelo-citrino.\n\nLíquido pleural: proteínas 5,2 g/dL; LDH 420 U/L; glicose 70 mg/dL; pH 7,35; 2.800 células/mm³, com 85% de linfócitos e raras células mesoteliais; adenosina deaminase (ADA) 72 U/L; pesquisa de BAAR negativa.\nSangue: proteínas 7,0 g/dL; LDH 210 U/L (limite superior normal: 240 U/L).\n\nA interpretação correta é:",
+  "enunciado": "Homem de 32 anos com derrame pleural direito e quadro subagudo de febre e emagrecimento é puncionado. Líquido amarelo-citrino.\n\nLíquido pleural: proteínas 5,2 g/dL; LDH 420 U/L; glicose 70 mg/dL; pH 7,35; 2.800 células/mm³, com 85% de linfócitos e raras células mesoteliais; adenosina deaminase (ADA) 72 U/L; pesquisa de BAAR negativa.\nSangue: proteínas 7,0 g/dL; LDH 210 U/L (limite superior normal: 240 U/L).\n\nA interpretação correta é:",
   "alternativas": [
    "Derrame parapneumônico complicado, pelo LDH pleural acima de 400 U/L",
    "Empiema, pois há mais de 1.000 células/mm³ no líquido pleural",
@@ -5230,15 +5218,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-d29b0b",
-  "parte": 2,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-1b2bf405",
   "area": "Clínica Médica",
-  "enunciado": "(Continuação) Homem de 32 anos, 70 kg, HIV negativo, sem tratamento prévio, tem diagnóstico de tuberculose pleural (exsudato linfocítico, ADA 72 U/L). Está estável, com SpO2 95% em ar ambiente e derrame ocupando um terço do hemitórax; a cultura do líquido pleural ainda está em andamento.\n\nA conduta é:",
+  "enunciado": "Homem de 32 anos, 70 kg, HIV negativo, sem tratamento prévio, tem diagnóstico de tuberculose pleural (exsudato linfocítico, ADA 72 U/L). Está estável, com SpO2 95% em ar ambiente e derrame ocupando um terço do hemitórax; a cultura do líquido pleural ainda está em andamento.\n\nA conduta é:",
   "alternativas": [
    "Corticoide sistêmico isolado até a regressão completa do derrame",
    "RHZE por 2 meses e RH por 10 meses, por ser forma extrapulmonar",
@@ -5256,9 +5241,6 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-d29b0b",
-  "parte": 3,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
@@ -5282,15 +5264,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-b8d820",
-  "parte": 1,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-c87681d9",
   "area": "Clínica Médica",
-  "enunciado": "(Continuação) Homem de 67 anos com endocardite de valva aórtica por Streptococcus gallolyticus iniciou antibioticoterapia intravenosa.\n\nPela associação clássica desse agente, o exame que deve ser solicitado é:",
+  "enunciado": "Homem de 67 anos com endocardite de valva aórtica por Streptococcus gallolyticus iniciou antibioticoterapia intravenosa.\n\nPela associação clássica desse agente, o exame que deve ser solicitado é:",
   "alternativas": [
    "Endoscopia digestiva alta com biópsia gástrica",
    "Colonoscopia completa",
@@ -5308,15 +5287,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-b8d820",
-  "parte": 2,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-ed6f76cb",
   "area": "Clínica Médica",
-  "enunciado": "(Continuação) Homem de 67 anos com endocardite aórtica por S. gallolyticus está no 8º dia de ceftriaxona IV, afebril. Há 24 horas desenvolveu dispneia em repouso e ortopneia. Exame: PA 104/38 mmHg, FC 118 bpm, B3, estertores até o terço médio de ambos os pulmões, SpO2 88%. Novo ecocardiograma: insuficiência aórtica grave, com vegetação de 11 mm e fechamento precoce da valva mitral.\n\nA conduta mais adequada é:",
+  "enunciado": "Homem de 67 anos com endocardite aórtica por S. gallolyticus está no 8º dia de ceftriaxona IV, afebril. Há 24 horas desenvolveu dispneia em repouso e ortopneia. Exame: PA 104/38 mmHg, FC 118 bpm, B3, estertores até o terço médio de ambos os pulmões, SpO2 88%. Novo ecocardiograma: insuficiência aórtica grave, com vegetação de 11 mm e fechamento precoce da valva mitral.\n\nA conduta mais adequada é:",
   "alternativas": [
    "Completar 6 semanas de antibiótico e só então indicar a cirurgia",
    "Trocar a ceftriaxona por vancomicina e gentamicina",
@@ -5334,9 +5310,6 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-b8d820",
-  "parte": 3,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
@@ -5360,15 +5333,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-aa279c",
-  "parte": 1,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-eb18680d",
   "area": "Clínica Médica",
-  "enunciado": "(Continuação) Homem de 66 anos, tabagista, com hiponatremia euvolêmica por SIADH (Na⁺ 118 mEq/L), apresenta, ainda no pronto-socorro, crise tônico-clônica generalizada de 2 minutos. Nova dosagem: Na⁺ 117 mEq/L.\n\nA conduta mais adequada para a hiponatremia é:",
+  "enunciado": "Homem de 66 anos, tabagista, com hiponatremia euvolêmica por SIADH (Na⁺ 118 mEq/L), apresenta, ainda no pronto-socorro, crise tônico-clônica generalizada de 2 minutos. Nova dosagem: Na⁺ 117 mEq/L.\n\nA conduta mais adequada para a hiponatremia é:",
   "alternativas": [
    "NaCl 3% em bolus de 100–150 mL, visando subir o sódio 4 a 6 mEq/L",
    "Tolvaptana oral como primeira medida, pelo mecanismo da doença",
@@ -5386,15 +5356,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-aa279c",
-  "parte": 2,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-a5daae1a",
   "area": "Clínica Médica",
-  "enunciado": "(Continuação) Homem de 66 anos, tabagista de 50 maços-ano, com SIADH controlada, faz tomografia de tórax com contraste (descrição): massa central de 5 cm no hilo pulmonar direito, com volumosos linfonodos mediastinais conglomerados que envolvem e comprimem a veia cava superior; sem cavitação; parênquima periférico sem nódulos; cálcio sérico normal.\n\nO tipo histológico mais provável é:",
+  "enunciado": "Homem de 66 anos, tabagista de 50 maços-ano, com SIADH controlada, faz tomografia de tórax com contraste (descrição): massa central de 5 cm no hilo pulmonar direito, com volumosos linfonodos mediastinais conglomerados que envolvem e comprimem a veia cava superior; sem cavitação; parênquima periférico sem nódulos; cálcio sérico normal.\n\nO tipo histológico mais provável é:",
   "alternativas": [
    "Tumor carcinoide típico",
    "Carcinoma de pequenas células",
@@ -5412,9 +5379,6 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-aa279c",
-  "parte": 3,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
@@ -5438,15 +5402,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-926d2d",
-  "parte": 1,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-eb1b7a95",
   "area": "Clínica Médica",
-  "enunciado": "(Continuação) Mulher de 26 anos com hepatite B aguda sintomática (HBsAg, anti-HBc IgM e HBeAg reagentes). Está lúcida, sem sinais de encefalopatia, com INR de 1,1, aceitando dieta, e a bilirrubina começa a cair após 1 semana de acompanhamento ambulatorial.\n\nA conduta indicada é:",
+  "enunciado": "Mulher de 26 anos com hepatite B aguda sintomática (HBsAg, anti-HBc IgM e HBeAg reagentes). Está lúcida, sem sinais de encefalopatia, com INR de 1,1, aceitando dieta, e a bilirrubina começa a cair após 1 semana de acompanhamento ambulatorial.\n\nA conduta indicada é:",
   "alternativas": [
    "Alfapeginterferona por 48 semanas, pelo HBeAg reagente",
    "Imunoglobulina anti-hepatite B para a própria paciente",
@@ -5464,15 +5425,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-926d2d",
-  "parte": 2,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-fb34363e",
   "area": "Clínica Médica",
-  "enunciado": "(Continuação) Mulher com hepatite B aguda (HBsAg e HBeAg reagentes). O parceiro, de 30 anos, procura a UBS 5 dias após a última relação sexual sem preservativo com ela. Não tem comprovante de vacinação contra hepatite B, e o teste rápido para HBsAg é não reagente.\n\nPara a hepatite B, a conduta para o parceiro é:",
+  "enunciado": "Mulher com hepatite B aguda (HBsAg e HBeAg reagentes). O parceiro, de 30 anos, procura a UBS 5 dias após a última relação sexual sem preservativo com ela. Não tem comprovante de vacinação contra hepatite B, e o teste rápido para HBsAg é não reagente.\n\nPara a hepatite B, a conduta para o parceiro é:",
   "alternativas": [
    "Tenofovir por 28 dias como profilaxia pós-exposição",
    "Apenas a vacina, pois já se passaram mais de 72 horas da exposição",
@@ -5490,9 +5448,6 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-926d2d",
-  "parte": 3,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
@@ -5516,15 +5471,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-4e46c4",
-  "parte": 1,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-7d30dd37",
   "area": "Cirurgia",
-  "enunciado": "(Continuação) Homem de 62 anos com diverticulite do sigmoide e abscesso pericólico de 5 cm na tomografia. Está estável hemodinamicamente (PA 130/80 mmHg, FC 98 bpm), febril, sem peritonite difusa, e a coleção tem janela segura para punção percutânea.\n\nA conduta mais adequada é:",
+  "enunciado": "Homem de 62 anos com diverticulite do sigmoide e abscesso pericólico de 5 cm na tomografia. Está estável hemodinamicamente (PA 130/80 mmHg, FC 98 bpm), febril, sem peritonite difusa, e a coleção tem janela segura para punção percutânea.\n\nA conduta mais adequada é:",
   "alternativas": [
    "Antibiótico intravenoso e drenagem percutânea guiada por imagem",
    "Antibiótico oral e seguimento ambulatorial em 7 dias, sem drenagem",
@@ -5542,15 +5494,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-4e46c4",
-  "parte": 2,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-8077822d",
   "area": "Cirurgia",
-  "enunciado": "(Continuação) Homem de 62 anos tratado com antibiótico e drenagem percutânea de abscesso diverticular do sigmoide recebe alta assintomático. Nunca fez exame do cólon.\n\nNo seguimento, está indicado:",
+  "enunciado": "Homem de 62 anos tratado com antibiótico e drenagem percutânea de abscesso diverticular do sigmoide recebe alta assintomático. Nunca fez exame do cólon.\n\nNo seguimento, está indicado:",
   "alternativas": [
    "Enema opaco anual por 5 anos",
    "Colectomia total profilática eletiva",
@@ -5568,9 +5517,6 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-4e46c4",
-  "parte": 3,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
@@ -5594,15 +5540,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-c29fd5",
-  "parte": 1,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-f0c3a2fe",
   "area": "Cirurgia",
-  "enunciado": "(Continuação) Mulher de 45 anos com pancreatite aguda biliar recebeu hidratação com Ringer lactato e analgesia. Após 48 horas, não apresentou falência de órgãos, não há sinais de complicações locais, a dor melhorou bastante e ela pede para comer.\n\nA classificação de Atlanta revisada e a conduta nutricional são:",
+  "enunciado": "Mulher de 45 anos com pancreatite aguda biliar recebeu hidratação com Ringer lactato e analgesia. Após 48 horas, não apresentou falência de órgãos, não há sinais de complicações locais, a dor melhorou bastante e ela pede para comer.\n\nA classificação de Atlanta revisada e a conduta nutricional são:",
   "alternativas": [
    "Leve; jejum absoluto por 7 dias e depois dieta líquida",
    "Grave; sonda nasojejunal e antibiótico profilático",
@@ -5620,15 +5563,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-c29fd5",
-  "parte": 2,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-8ad7bb57",
   "area": "Cirurgia",
-  "enunciado": "(Continuação) Mulher de 45 anos com pancreatite aguda biliar leve está sem dor no 4º dia, aceitando dieta, afebril, com enzimas em queda, sem coleções e com bilirrubina normal; a ultrassonografia de controle mostra colédoco de 6 mm. Para prevenir recorrência, recomenda-se:",
+  "enunciado": "Mulher de 45 anos com pancreatite aguda biliar leve está sem dor no 4º dia, aceitando dieta, afebril, com enzimas em queda, sem coleções e com bilirrubina normal; a ultrassonografia de controle mostra colédoco de 6 mm. Para prevenir recorrência, recomenda-se:",
   "alternativas": [
    "Colecistectomia somente se houver novo episódio",
    "Ácido ursodesoxicólico contínuo, sem cirurgia",
@@ -5646,9 +5586,6 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-c29fd5",
-  "parte": 3,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
@@ -5672,15 +5609,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-1cd200",
-  "parte": 1,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-54a9eb03",
   "area": "Cirurgia",
-  "enunciado": "(Continuação) Motociclista de 24 anos, estável após reposição inicial, com FAST positivo no espaço esplenorrenal, faz tomografia com contraste (descrição): laceração esplênica de 4 cm de profundidade no parênquima, hematoma subcapsular de cerca de 30% da superfície e foco de extravasamento ativo de contraste (blush) dentro do baço; hemoperitônio moderado; sem lesão de vísceras ocas, rins ou pâncreas. Segue com PA 120/76 mmHg e FC 92 bpm.\n\nA conduta mais adequada, em hospital com radiologia intervencionista, é:",
+  "enunciado": "Motociclista de 24 anos, estável após reposição inicial, com FAST positivo no espaço esplenorrenal, faz tomografia com contraste (descrição): laceração esplênica de 4 cm de profundidade no parênquima, hematoma subcapsular de cerca de 30% da superfície e foco de extravasamento ativo de contraste (blush) dentro do baço; hemoperitônio moderado; sem lesão de vísceras ocas, rins ou pâncreas. Segue com PA 120/76 mmHg e FC 92 bpm.\n\nA conduta mais adequada, em hospital com radiologia intervencionista, é:",
   "alternativas": [
    "Nova infusão de 2 litros de cristaloide e tomografia em 24 horas",
    "Tratamento não operatório só com observação, sem angiografia",
@@ -5698,15 +5632,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-1cd200",
-  "parte": 2,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-c0334bfe",
   "area": "Cirurgia",
-  "enunciado": "(Continuação) Motociclista de 24 anos submetido a angioembolização esplênica evolui com instabilidade após 36 horas e é esplenectomizado. Antes da alta, deve receber vacinas contra:",
+  "enunciado": "Motociclista de 24 anos submetido a angioembolização esplênica evolui com instabilidade após 36 horas e é esplenectomizado. Antes da alta, deve receber vacinas contra:",
   "alternativas": [
    "Apenas influenza, na próxima campanha anual",
    "Pneumococo, meningococo e Haemophilus influenzae tipo b",
@@ -5724,9 +5655,6 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-1cd200",
-  "parte": 3,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
@@ -5750,15 +5678,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-8127a4",
-  "parte": 1,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-ce11c26b",
   "area": "Cirurgia",
-  "enunciado": "(Continuação) Lactente de 8 meses com suspeita de invaginação intestinal, estável, sem sinais de peritonite; radiografia de abdome sem pneumoperitônio.\n\nUltrassonografia (descrição): no quadrante superior direito, imagem em alvo, com anéis concêntricos, de 3,5 cm no corte transversal e aspecto de pseudorrim no longitudinal; fluxo presente ao Doppler; sem líquido livre significativo.\n\nA conduta indicada é:",
+  "enunciado": "Lactente de 8 meses com suspeita de invaginação intestinal, estável, sem sinais de peritonite; radiografia de abdome sem pneumoperitônio.\n\nUltrassonografia (descrição): no quadrante superior direito, imagem em alvo, com anéis concêntricos, de 3,5 cm no corte transversal e aspecto de pseudorrim no longitudinal; fluxo presente ao Doppler; sem líquido livre significativo.\n\nA conduta indicada é:",
   "alternativas": [
    "Colonoscopia para identificar e reduzir a cabeça da invaginação",
    "Sonda nasogástrica e observação por 24 horas, aguardando redução",
@@ -5776,15 +5701,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-8127a4",
-  "parte": 2,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-811ae792",
   "area": "Cirurgia",
-  "enunciado": "(Continuação) Lactente de 8 meses com invaginação ileocólica à ultrassonografia será avaliado para redução por enema.\n\nQual achado contraindica a tentativa de redução e indica cirurgia?",
+  "enunciado": "Lactente de 8 meses com invaginação ileocólica à ultrassonografia será avaliado para redução por enema.\n\nQual achado contraindica a tentativa de redução e indica cirurgia?",
   "alternativas": [
    "Sintomas com mais de 24 horas de evolução",
    "Pneumoperitônio na radiografia de abdome",
@@ -5802,9 +5724,6 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-8127a4",
-  "parte": 3,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
@@ -5828,15 +5747,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-7b06d7",
-  "parte": 1,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-93c6b099",
   "area": "Pediatria",
-  "enunciado": "(Continuação) Menina de 4 anos com pneumonia e derrame pleural à esquerda, internada com antibiótico intravenoso. A toracocentese obtém líquido turvo, com pH 6,9, glicose 25 mg/dL, LDH 1.800 U/L e Gram com cocos gram-positivos aos pares.\n\nA conduta mais adequada é:",
+  "enunciado": "Menina de 4 anos com pneumonia e derrame pleural à esquerda, internada com antibiótico intravenoso. A toracocentese obtém líquido turvo, com pH 6,9, glicose 25 mg/dL, LDH 1.800 U/L e Gram com cocos gram-positivos aos pares.\n\nA conduta mais adequada é:",
   "alternativas": [
    "Drenagem pleural com dreno tubular, mantendo o antibiótico",
    "Manter só o antibiótico, pois o pneumococo é sensível",
@@ -5854,15 +5770,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-7b06d7",
-  "parte": 2,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-02e19578",
   "area": "Pediatria",
-  "enunciado": "(Continuação) Menina de 4 anos com empiema drenado; a cultura do líquido pleural isola Streptococcus pneumoniae sensível à penicilina. Com base no antibiograma, o antibiótico de escolha é:",
+  "enunciado": "Menina de 4 anos com empiema drenado; a cultura do líquido pleural isola Streptococcus pneumoniae sensível à penicilina. Com base no antibiograma, o antibiótico de escolha é:",
   "alternativas": [
    "Oxacilina intravenosa",
    "Vancomicina associada a ceftriaxona intravenosa",
@@ -5880,9 +5793,6 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-7b06d7",
-  "parte": 3,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
@@ -5906,15 +5816,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-a6e37e",
-  "parte": 1,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-7287e06d",
   "area": "Pediatria",
-  "enunciado": "(Continuação) Lactente de 10 meses com meningite pneumocócica confirmada, em tratamento com ceftriaxona. A mãe pergunta sobre o irmão de 3 anos e as crianças da creche que o lactente frequenta.\n\nQuanto à quimioprofilaxia dos contatos, a orientação correta é:",
+  "enunciado": "Lactente de 10 meses com meningite pneumocócica confirmada, em tratamento com ceftriaxona. A mãe pergunta sobre o irmão de 3 anos e as crianças da creche que o lactente frequenta.\n\nQuanto à quimioprofilaxia dos contatos, a orientação correta é:",
   "alternativas": [
    "Ceftriaxona em dose única para as crianças da creche",
    "Rifampicina por 4 dias para todos, inclusive a equipe",
@@ -5932,15 +5839,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-a6e37e",
-  "parte": 2,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-592f8527",
   "area": "Pediatria",
-  "enunciado": "(Continuação) Lactente de 10 meses tratado por meningite pneumocócica recebe alta em bom estado. A sequela mais frequente, que deve ser rastreada precocemente, e o exame indicado são:",
+  "enunciado": "Lactente de 10 meses tratado por meningite pneumocócica recebe alta em bom estado. A sequela mais frequente, que deve ser rastreada precocemente, e o exame indicado são:",
   "alternativas": [
    "Perda auditiva neurossensorial; avaliação auditiva com PEATE",
    "Cegueira cortical; fundoscopia seriada semanal por 3 meses",
@@ -5958,9 +5862,6 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-a6e37e",
-  "parte": 3,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
@@ -5984,15 +5885,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-dc2c6b",
-  "parte": 1,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-7570e9b8",
   "area": "Pediatria",
-  "enunciado": "(Continuação) Menina de 14 meses, 10 kg, com diarreia e desidratação grave, vai iniciar a fase rápida (expansão) do plano C, segundo o Manejo do Paciente com Diarreia do Ministério da Saúde. O acesso venoso periférico foi obtido.\n\nA solução e o volume corretos são:",
+  "enunciado": "Menina de 14 meses, 10 kg, com diarreia e desidratação grave, vai iniciar a fase rápida (expansão) do plano C, segundo o Manejo do Paciente com Diarreia do Ministério da Saúde. O acesso venoso periférico foi obtido.\n\nA solução e o volume corretos são:",
   "alternativas": [
    "Soro fisiológico 0,9%: 20 mL em 30 minutos, repetidos até hidratar",
    "Soro fisiológico 0,9%: 3.000 mL em 24 horas, sem fase rápida",
@@ -6010,15 +5908,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-dc2c6b",
-  "parte": 2,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-9ad5f886",
   "area": "Pediatria",
-  "enunciado": "(Continuação) Menina de 14 meses reidratada após diarreia aguda aquosa, sem sangue nas fezes, recebe alta com orientações de alimentação e soro de reidratação oral. Além disso, está indicado:",
+  "enunciado": "Menina de 14 meses reidratada após diarreia aguda aquosa, sem sangue nas fezes, recebe alta com orientações de alimentação e soro de reidratação oral. Além disso, está indicado:",
   "alternativas": [
    "Zinco 20 mg/dia por 10 a 14 dias",
    "Fórmula sem lactose por 30 dias após a alta",
@@ -6036,9 +5931,6 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-dc2c6b",
-  "parte": 3,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
@@ -6062,15 +5954,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-8cc752",
-  "parte": 1,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-54137a61",
   "area": "Ginecologia e Obstetrícia",
-  "enunciado": "(Continuação) Mulher de 44 anos com carcinoma de mama HER2 positivo e receptores hormonais negativos, de 3 cm, sem metástases, vai iniciar quimioterapia associada a anticorpo monoclonal anti-HER2 (trastuzumabe).\n\nDurante o uso do anti-HER2, deve-se monitorar periodicamente:",
+  "enunciado": "Mulher de 44 anos com carcinoma de mama HER2 positivo e receptores hormonais negativos, de 3 cm, sem metástases, vai iniciar quimioterapia associada a anticorpo monoclonal anti-HER2 (trastuzumabe).\n\nDurante o uso do anti-HER2, deve-se monitorar periodicamente:",
   "alternativas": [
    "A função pulmonar, pelo risco de fibrose por bleomicina",
    "O sedimento urinário, pelo risco de cistite hemorrágica",
@@ -6088,15 +5977,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-8cc752",
-  "parte": 2,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-2d9567dd",
   "area": "Ginecologia e Obstetrícia",
-  "enunciado": "(Continuação) Mulher de 44 anos com carcinoma de mama HER2 positivo de 3 cm, com axila clinicamente negativa e ultrassonografia axilar normal. Na cirurgia da mama, a abordagem axilar indicada é:",
+  "enunciado": "Mulher de 44 anos com carcinoma de mama HER2 positivo de 3 cm, com axila clinicamente negativa e ultrassonografia axilar normal. Na cirurgia da mama, a abordagem axilar indicada é:",
   "alternativas": [
    "Linfadenectomia axilar só do nível I",
    "Linfadenectomia axilar níveis I a III",
@@ -6114,9 +6000,6 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-8cc752",
-  "parte": 3,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
@@ -6140,15 +6023,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-58934a",
-  "parte": 1,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-2bee1feb",
   "area": "Ginecologia e Obstetrícia",
-  "enunciado": "(Continuação) Gestante diabética, feto macrossômico, apresenta distocia de ombro após o desprendimento da cabeça. A equipe foi chamada, a parturiente foi orientada a parar de fazer força e o tempo desde o desprendimento da cabeça está sendo registrado.\n\nA primeira manobra recomendada é:",
+  "enunciado": "Gestante diabética, feto macrossômico, apresenta distocia de ombro após o desprendimento da cabeça. A equipe foi chamada, a parturiente foi orientada a parar de fazer força e o tempo desde o desprendimento da cabeça está sendo registrado.\n\nA primeira manobra recomendada é:",
   "alternativas": [
    "Recolocação da cabeça no útero (manobra de Zavanelli)",
    "Tração firme da cabeça fetal para baixo e para fora",
@@ -6166,15 +6046,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-58934a",
-  "parte": 2,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-264b183c",
   "area": "Pediatria",
-  "enunciado": "(Continuação) Recém-nascido de 4.300 g, nascido após distocia de ombro, é examinado com 6 horas de vida: o membro superior direito fica aduzido e rodado internamente, com cotovelo estendido, antebraço pronado e punho fletido. O reflexo de Moro está ausente à direita, e a preensão palmar está preservada.\n\nA lesão mais provável é:",
+  "enunciado": "Recém-nascido de 4.300 g, nascido após distocia de ombro, é examinado com 6 horas de vida: o membro superior direito fica aduzido e rodado internamente, com cotovelo estendido, antebraço pronado e punho fletido. O reflexo de Moro está ausente à direita, e a preensão palmar está preservada.\n\nA lesão mais provável é:",
   "alternativas": [
    "Paralisia de Klumpke, das raízes C8 e T1",
    "Paralisia completa do plexo, de C5 a T1",
@@ -6192,9 +6069,6 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-58934a",
-  "parte": 3,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
@@ -6218,15 +6092,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-53227e",
-  "parte": 1,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-cf452f7e",
   "area": "Ginecologia e Obstetrícia",
-  "enunciado": "(Continuação) Gestante de 30 semanas em trabalho de parto prematuro, em uso de nifedipina após a primeira dose de betametasona. Doze horas depois, ocorre rotura das membranas, e ela evolui com Tax 38,5 °C, FC 112 bpm, útero doloroso à palpação, líquido amniótico com odor fétido e FCF basal de 175 bpm.\n\nA conduta correta é:",
+  "enunciado": "Gestante de 30 semanas em trabalho de parto prematuro, em uso de nifedipina após a primeira dose de betametasona. Doze horas depois, ocorre rotura das membranas, e ela evolui com Tax 38,5 °C, FC 112 bpm, útero doloroso à palpação, líquido amniótico com odor fétido e FCF basal de 175 bpm.\n\nA conduta correta é:",
   "alternativas": [
    "Suspender a tocólise, iniciar antibiótico e conduzir ao parto",
    "Antitérmico e observação, pela febre da betametasona",
@@ -6244,15 +6115,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-53227e",
-  "parte": 2,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-ab2430ef",
   "area": "Ginecologia e Obstetrícia",
-  "enunciado": "(Continuação) Gestante que recebeu betametasona antenatal com 30 semanas pergunta qual é o benefício comprovado dessa medicação para o bebê prematuro. A resposta correta é:",
+  "enunciado": "Gestante que recebeu betametasona antenatal com 30 semanas pergunta qual é o benefício comprovado dessa medicação para o bebê prematuro. A resposta correta é:",
   "alternativas": [
    "Menor risco de sepse neonatal precoce por estreptococo do grupo B",
    "Maior peso ao nascer, por estímulo ao crescimento fetal tardio",
@@ -6270,9 +6138,6 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-53227e",
-  "parte": 3,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
@@ -6296,15 +6161,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-304453",
-  "parte": 1,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-bb3e7c14",
   "area": "Medicina Preventiva",
-  "enunciado": "(Continuação) Técnica de enfermagem com acidente perfurocortante profundo com sangue há 1 hora. O teste rápido anti-HIV da fonte é reagente (dois testes de fabricantes diferentes); o da profissional é não reagente. Ela não está gestante e não usa outros medicamentos.\n\nA profilaxia pós-exposição ao HIV indicada é:",
+  "enunciado": "Técnica de enfermagem com acidente perfurocortante profundo com sangue há 1 hora. O teste rápido anti-HIV da fonte é reagente (dois testes de fabricantes diferentes); o da profissional é não reagente. Ela não está gestante e não usa outros medicamentos.\n\nA profilaxia pós-exposição ao HIV indicada é:",
   "alternativas": [
    "Zidovudina isolada por 28 dias, iniciada de imediato",
    "Nenhuma, pois o risco por agulha é menor que 1%",
@@ -6322,15 +6184,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-304453",
-  "parte": 2,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-1dfb3148",
   "area": "Medicina Preventiva",
-  "enunciado": "(Continuação) Técnica de enfermagem vacinada contra hepatite B (3 doses, anti-HBs de 120 mUI/mL documentado após o esquema) teve acidente percutâneo com fonte que, além de HIV reagente, apresentou HBsAg reagente.\n\nQuanto à hepatite B, a conduta para a profissional é:",
+  "enunciado": "Técnica de enfermagem vacinada contra hepatite B (3 doses, anti-HBs de 120 mUI/mL documentado após o esquema) teve acidente percutâneo com fonte que, além de HIV reagente, apresentou HBsAg reagente.\n\nQuanto à hepatite B, a conduta para a profissional é:",
   "alternativas": [
    "Duas doses de imunoglobulina com intervalo de 1 mês, sem vacina",
    "Tenofovir por 28 dias como profilaxia específica da hepatite B",
@@ -6348,9 +6207,6 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-304453",
-  "parte": 3,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
@@ -6374,15 +6230,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-dc26f6",
-  "parte": 1,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-afcdfb86",
   "area": "Medicina Preventiva",
-  "enunciado": "(Continuação) No estudo caso-controle sobre fenda labiopalatina e um analgésico, 24 das 60 mães de casos e 16 das 120 mães de controles relataram uso do medicamento no primeiro trimestre. Considere que não houve perdas nem dados faltantes.\n\nA razão de chances (odds ratio) é de aproximadamente:",
+  "enunciado": "No estudo caso-controle sobre fenda labiopalatina e um analgésico, 24 das 60 mães de casos e 16 das 120 mães de controles relataram uso do medicamento no primeiro trimestre. Considere que não houve perdas nem dados faltantes.\n\nA razão de chances (odds ratio) é de aproximadamente:",
   "alternativas": [
    "3,0",
    "4,3",
@@ -6400,15 +6253,12 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-dc26f6",
-  "parte": 2,
-  "partes": 3,
   "revisado": "2026-09"
  },
  {
   "id": "res-59135050",
   "area": "Medicina Preventiva",
-  "enunciado": "(Continuação) No estudo caso-controle sobre fenda labiopalatina, a exposição foi obtida por entrevista meses após o parto. Um revisor aponta que mães de bebês malformados tendem a vasculhar a memória em busca de causas e a lembrar melhor os medicamentos usados.\n\nO revisor descreve:",
+  "enunciado": "No estudo caso-controle sobre fenda labiopalatina, a exposição foi obtida por entrevista meses após o parto. Um revisor aponta que mães de bebês malformados tendem a vasculhar a memória em busca de causas e a lembrar melhor os medicamentos usados.\n\nO revisor descreve:",
   "alternativas": [
    "Viés de tempo de antecipação, próprio do rastreamento",
    "Confundimento pela idade materna, corrigido por estratificação",
@@ -6426,9 +6276,6 @@
   "fonte": "autoral",
   "ano": null,
   "prova": null,
-  "serie": "s-dc26f6",
-  "parte": 3,
-  "partes": 3,
   "revisado": "2026-09"
  }
 ]

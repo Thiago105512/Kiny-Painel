@@ -14,7 +14,10 @@ Revise cada questão como professor(a) da área e corrija o que for preciso:
 Validador: `SEM_DISTRIBUICAO=1 python3 validar_rees.py <LOTE>` → "OK — sem erros".
 Grave também <LOTE>.mudancas.json: [{"id", "o_que_mudou": "gabarito|alternativas|enunciado|explicacao|dificuldade", "motivo": "..."}] só das questões alteradas (com "gabarito" quando a resposta correta mudou de conteúdo).
 
-## Modo S — CASOS EM SEQUÊNCIA (lotes "-serie")
+## Modo S — CASOS EM SEQUÊNCIA — DESCONTINUADO
+A dona do app pediu para NÃO criar questões em sequência (set/2026). As 111 existentes viraram questões avulsas. Não use este modo.
+
+(histórico)
 Questões NOVAS (siga também INSTRUCOES_NOVAS.md para formato, ids e validação com validar_novas.py). Cada caso vira 2 ou 3 questões encadeadas, como no Teste de Progresso e na residência:
 - Campo extra em cada questão: "serie": "s-<6 hex>" (igual nas partes do mesmo caso), "parte": 1..N, "partes": N.
 - Parte 1: caso completo (identificação, queixa, história, exame físico, exames iniciais) → pergunta de diagnóstico ou raciocínio inicial.
