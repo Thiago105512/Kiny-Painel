@@ -19,6 +19,7 @@ O banco abusa de aberturas "Homem de 58 anos…/Mulher de 45 anos…" e de fecho
 - **Aberturas variadas**: cenário primeiro ("Na UBS ribeirinha…", "Durante o plantão no PS…", "Na visita domiciliar…", "No ambulatório de pré-natal…"), queixa primeiro ("Há três dias, …"), dado de exame primeiro, fala do paciente entre aspas, acompanhante que relata, encaminhamento/interconsulta, texto-base (trecho de diretriz, tabela, resultado de exame). Nomes fictícios ocasionais. Para ciências básicas, enunciados conceituais bem construídos também valem.
 - **Fechos específicos** ligados ao raciocínio pedido: "Qual exame confirma o diagnóstico?", "Qual mecanismo explica a hipercalemia?", "O próximo passo, antes da alta, é…", "Qual achado torna a hipótese X improvável?", "A melhor explicação para a piora é…". Evite repetir o mesmo fecho dentro do lote (no máximo 3 vezes o mesmo).
 - Tipos de raciocínio variados: diagnóstico, exame, conduta, mecanismo, complicação, prognóstico, prevenção, interpretação de exame, farmacologia, ética/saúde coletiva.
+- Não troque um padrão por outro: nenhuma estrutura de abertura pode se repetir no lote (ex.: vários "X traz ao pronto-socorro um paciente…" ou "Exame Y: valor. É o resultado que…" também são mecânicos). Leia o lote inteiro no fim e quebre repetições.
 - Nada de "Assinale a alternativa correta" solto nem pergunta que se responde sem ler o caso.
 
 ### 3. Tamanho e profundidade

@@ -33,7 +33,7 @@
    "Repolarização, que depende da bomba Na⁺/K⁺-ATPase"
   ],
   "correta": 3,
-  "explicacao": "A tetrodotoxina bloqueia os canais de Na⁺ dependentes de voltagem dos nervos. A fase de despolarização rápida do potencial de ação neuronal depende da abertura desses canais e da entrada de Na⁺. Sem ela, o potencial de ação não acontece. A repolarização depende da saída de K⁺, e a hiperpolarização pós-potencial, da condutância ao K⁺ ainda aumentada. O Ca²⁺ responde pela despolarização em células do nó sinusal e pelo platô cardíaco, não pelo potencial do axônio. A bomba Na⁺/K⁺ mantém os gradientes a longo prazo, mas não gera a repolarização.",
+  "explicacao": "A tetrodotoxina bloqueia os canais de Na⁺ dependentes de voltagem dos nervos. A fase de despolarização rápida do potencial de ação neuronal depende da abertura desses canais e da entrada de Na⁺. Sem ela, o potencial de ação não acontece. A repolarização depende da saída de K⁺, e a hiperpolarização pós-potencial, da condutância ao K⁺ ainda aumentada. O Ca²⁺ responde pela despolarização em células do nó sinusal e pelo platô cardíaco, não pelo potencial do axônio. A bomba Na⁺/K⁺ mantém os gradientes a longo prazo, mas não gera a repolarização. Para lembrar: a tetrodotoxina do baiacu não é fabricada pelo peixe, e sim por bactérias simbiontes que ele acumula — por isso o fugu criado em cativeiro pode não ser tóxico.",
   "tema": "potencial-de-acao",
   "subtema": "potencial-de-acao.fases-do-potencial-de-acao",
   "especialidade": "fisiologia",
@@ -41,7 +41,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-942f20fc",
@@ -220,7 +221,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-b115c2eb",
@@ -404,7 +406,7 @@
  {
   "id": "med-10337e37",
   "area": "Fisiologia",
-  "enunciado": "Mulher de 45 anos, internada na UTI com choque séptico de foco urinário, é monitorada com ecocardiograma à beira do leito. Com PA 84/48 mmHg e veia cava inferior colabada, recebe 500 mL de cristaloide em 15 minutos, e o volume sistólico estimado sobe de 48 para 60 mL. Depois de um segundo bolus de 500 mL, o volume sistólico passa de 60 para 61 mL, e surgem linhas B na ultrassonografia pulmonar.\n\nÀ luz da lei de Frank-Starling, qual é a interpretação correta?",
+  "enunciado": "Na UTI, uma paciente de 45 anos em choque séptico de foco urinário é monitorada com ecocardiograma à beira do leito. Com PA 84/48 mmHg e veia cava inferior colabada, recebe 500 mL de cristaloide em 15 minutos, e o volume sistólico estimado sobe de 48 para 60 mL. Depois de um segundo bolus de 500 mL, o volume sistólico passa de 60 para 61 mL, e surgem linhas B na ultrassonografia pulmonar.\n\nÀ luz da lei de Frank-Starling, qual é a interpretação correta?",
   "alternativas": [
    "O primeiro bolus reduziu a pré-carga; o segundo aumentou a contratilidade",
    "Os dois bolus atuaram na parte ascendente da curva, com ganho semelhante",
@@ -413,7 +415,7 @@
    "O primeiro bolus atuou na parte ascendente da curva; o segundo, perto do platô"
   ],
   "correta": 4,
-  "explicacao": "A lei de Frank-Starling diz que, dentro de certos limites, mais volume diastólico final (pré-carga) estica mais os sarcômeros e aumenta a força de contração e o volume sistólico. Na parte ascendente da curva, o volume aumenta muito o débito, como no primeiro bolus (ganho de 25%). Perto do platô, mais volume quase não aumenta o volume sistólico e só eleva as pressões de enchimento, como no segundo bolus, com congestão pulmonar (linhas B). Cristaloide aumenta a pré-carga, não a reduz. A contratilidade (inotropismo) e a pós-carga não foram o alvo da intervenção. A ordem entre ascensão e platô está invertida em uma das opções.",
+  "explicacao": "A lei de Frank-Starling diz que, dentro de certos limites, mais volume diastólico final (pré-carga) estica mais os sarcômeros e aumenta a força de contração e o volume sistólico. Na parte ascendente da curva, o volume aumenta muito o débito, como no primeiro bolus (ganho de 25%). Perto do platô, mais volume quase não aumenta o volume sistólico e só eleva as pressões de enchimento, como no segundo bolus, com congestão pulmonar (linhas B). Cristaloide aumenta a pré-carga, não a reduz. A contratilidade (inotropismo) e a pós-carga não foram o alvo da intervenção. O ganho não foi semelhante (12 mL contra 1 mL), e o platô só foi atingido no segundo bolus, não no primeiro. Para lembrar: a lei une os nomes de Otto Frank, que estudou o coração de rã no fim do século XIX, e Ernest Starling, que a formulou no coração de mamífero na década de 1910.",
   "tema": "fisiologia-cardiovascular",
   "subtema": "fisiologia-cardiovascular.debito-cardiaco-e-lei-de-frank-starling",
   "especialidade": "fisiologia",
@@ -421,12 +423,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-5f97d882",
   "area": "Fisiologia",
-  "enunciado": "Mulher de 48 anos, com transtorno bipolar em uso de carbonato de lítio há 12 anos, refere urinar cerca de 6 litros por dia e acordar várias vezes à noite para urinar e beber água. PA 118/76 mmHg, mucosas levemente secas. Exames: Na⁺ 146 mEq/L, glicemia 92 mg/dL, cálcio 9,4 mg/dL, osmolalidade urinária 110 mOsm/kg. No teste de restrição hídrica, após 8 horas, a osmolalidade urinária chega a 150 mOsm/kg com Na⁺ de 149 mEq/L. Depois de desmopressina subcutânea, a osmolalidade urinária vai apenas de 150 para 165 mOsm/kg.\n\nQual é o diagnóstico e o local/mecanismo do defeito?",
+  "enunciado": "\"Urino uns seis litros por dia e acordo várias vezes à noite para urinar e beber água\", relata uma mulher de 48 anos com transtorno bipolar, em uso de carbonato de lítio há 12 anos. PA 118/76 mmHg, mucosas levemente secas. Exames: Na⁺ 146 mEq/L, glicemia 92 mg/dL, cálcio 9,4 mg/dL, osmolalidade urinária 110 mOsm/kg. No teste de restrição hídrica, após 8 horas, a osmolalidade urinária chega a 150 mOsm/kg com Na⁺ de 149 mEq/L. Depois de desmopressina subcutânea, a osmolalidade urinária vai apenas de 150 para 165 mOsm/kg.\n\nQual é o diagnóstico e o local/mecanismo do defeito?",
   "alternativas": [
    "Diabetes insípido central; neuro-hipófise sem liberação de ADH após lesão pelo lítio",
    "Polidipsia primária; perda do gradiente medular por ingestão excessiva de água",
@@ -435,7 +438,7 @@
    "Síndrome da secreção inapropriada de ADH; excesso de aquaporinas no ducto coletor"
   ],
   "correta": 2,
-  "explicacao": "Poliúria com urina muito diluída, sódio alto, incapacidade de concentrar a urina na restrição hídrica e resposta mínima (cerca de 10%) à desmopressina indicam diabetes insípido nefrogênico. No central, a urina se concentraria bastante após a desmopressina. O lítio entra nas células principais do ducto coletor pelos canais ENaC e prejudica a sinalização do receptor V2 e a expressão e inserção da aquaporina-2 na membrana apical, o passo que o ADH normalmente promove. Na polidipsia primária, o sódio tende a ficar baixo e a urina se concentra na restrição. O ramo ascendente espesso é impermeável à água e não depende de aquaporina-2. A SIADH cursa com hiponatremia e urina concentrada.",
+  "explicacao": "Poliúria com urina muito diluída, sódio alto, incapacidade de concentrar a urina na restrição hídrica e resposta mínima (cerca de 10%) à desmopressina indicam diabetes insípido nefrogênico. No central, a urina se concentraria bastante após a desmopressina. O lítio entra nas células principais do ducto coletor pelos canais ENaC e prejudica a sinalização do receptor V2 e a expressão e inserção da aquaporina-2 na membrana apical, o passo que o ADH normalmente promove. Na polidipsia primária, o sódio tende a ficar baixo e a urina se concentra na restrição. O ramo ascendente espesso é impermeável à água e não depende de aquaporina-2. A SIADH cursa com hiponatremia e urina concentrada. Para lembrar: a amilorida, que bloqueia o ENaC e reduz a entrada de lítio na célula principal, é usada no diabetes insípido nefrogênico pelo lítio.",
   "tema": "fisiologia-renal",
   "subtema": "fisiologia-renal.concentracao-urinaria-e-adh",
   "especialidade": "fisiologia",
@@ -443,7 +446,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-7ce66bb7",
@@ -465,7 +469,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-67c55cc1",
@@ -1049,7 +1054,7 @@
  {
   "id": "med-8739ae62",
   "area": "Farmacologia",
-  "enunciado": "Mulher de 60 anos, hipertensa, começou captopril 25 mg 2×/dia há 3 meses. Desde então, tem tosse seca e irritativa, pior à noite, sem febre, dispneia ou chiado. Não fuma, a ausculta pulmonar é normal e a radiografia de tórax não mostra alterações. PA 132/84 mmHg.\n\nQual é o mecanismo mais provável da tosse e a conduta adequada?",
+  "enunciado": "\"Doutor, essa tosse seca não me deixa dormir\", queixa-se uma mulher de 60 anos, hipertensa, que começou captopril 25 mg duas vezes ao dia há 3 meses. A tosse é irritativa, pior à noite, sem febre, dispneia ou chiado. Não fuma, a ausculta pulmonar é normal e a radiografia de tórax não mostra alterações. PA 132/84 mmHg.\n\nQual é o mecanismo mais provável da tosse e a conduta adequada?",
   "alternativas": [
    "Acúmulo de bradicinina por inibição da ECA; trocar por bloqueador do receptor AT1",
    "Acúmulo de angiotensina II nos brônquios; trocar por outro inibidor da ECA",
@@ -1058,7 +1063,7 @@
    "Excesso de aldosterona nas vias aéreas; associar espironolactona ao captopril"
   ],
   "correta": 0,
-  "explicacao": "A ECA (cininase II) também degrada a bradicinina e a substância P. Inibida, esses peptídeos se acumulam nas vias aéreas e sensibilizam os receptores da tosse, o que provoca a tosse seca típica dos IECA. Como é efeito de classe, trocar por outro IECA (enalapril ou qualquer outro) não resolve. Os bloqueadores do receptor AT1 (losartana, por exemplo) não inibem a degradação da bradicinina e raramente causam tosse, sendo a troca indicada. Os IECA reduzem a angiotensina II e não bloqueiam receptores β2. A aldosterona não causa tosse.",
+  "explicacao": "A ECA (cininase II) também degrada a bradicinina e a substância P. Inibida, esses peptídeos se acumulam nas vias aéreas e sensibilizam os receptores da tosse, o que provoca a tosse seca típica dos IECA. Como é efeito de classe, trocar por outro IECA (enalapril ou qualquer outro) não resolve. Os bloqueadores do receptor AT1 (losartana, por exemplo) não inibem a degradação da bradicinina e raramente causam tosse, sendo a troca indicada. Os IECA reduzem a angiotensina II e não bloqueiam receptores β2. A aldosterona não causa tosse. Para lembrar: o captopril nasceu de peptídeos do veneno da jararaca (Bothrops jararaca), estudados pelo brasileiro Sérgio Ferreira na década de 1960.",
   "tema": "hipertensao-arterial",
   "subtema": "hipertensao-arterial.tratamento-farmacologico",
   "especialidade": "farmacologia",
@@ -1066,12 +1071,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-add4d965",
   "area": "Farmacologia",
-  "enunciado": "Homem de 63 anos, com infarto prévio, usa ácido acetilsalicílico 100 mg/dia e vai fazer uma cirurgia com alto risco de sangramento, em que a equipe decide suspender a antiagregação. Ele pergunta por que precisa parar o AAS cerca de 7 dias antes, se o próprio remédio sai do sangue em poucas horas, enquanto o ibuprofeno que às vezes toma para dor deixa de agir em cerca de um dia.\n\nQual é a explicação farmacológica correta?",
+  "enunciado": "\"Se o AAS sai do sangue em poucas horas, por que tenho de parar uma semana antes?\", pergunta, na consulta pré-operatória, um homem de 63 anos com infarto prévio, que usa ácido acetilsalicílico 100 mg/dia. Ele fará uma cirurgia com alto risco de sangramento, e a equipe decidiu suspender a antiagregação. Lembra ainda que o ibuprofeno que às vezes toma para dor deixa de agir em cerca de um dia.\n\nQual é a explicação farmacológica para a diferença?",
   "alternativas": [
    "O AAS inibe de modo reversível a COX-1, mas tem meia-vida plasmática de vários dias",
    "O AAS acetila de modo irreversível a COX-2 endotelial, bloqueando a prostaciclina",
@@ -1080,7 +1086,7 @@
    "O AAS inibe a síntese hepática de fatores de coagulação por cerca de uma semana"
   ],
   "correta": 3,
-  "explicacao": "O AAS transfere seu grupo acetil para uma serina do sítio ativo da COX-1 e a inativa de forma permanente, bloqueando a produção de tromboxano A₂. Como a plaqueta não tem núcleo, não produz nova enzima, e o efeito dura a vida da plaqueta (7 a 10 dias). A função se recupera à medida que plaquetas novas são produzidas, embora o AAS tenha meia-vida curta. O ibuprofeno inibe a COX de forma reversível, e o efeito some quando o fármaco é eliminado. Bloqueio do P2Y12 é o mecanismo do clopidogrel. Inibir a síntese de fatores de coagulação é o efeito da varfarina. A COX endotelial pode ser ressintetizada, e sua inibição não explica o efeito antiagregante.",
+  "explicacao": "O AAS transfere seu grupo acetil para uma serina do sítio ativo da COX-1 e a inativa de forma permanente, bloqueando a produção de tromboxano A₂. Como a plaqueta não tem núcleo, não produz nova enzima, e o efeito dura a vida da plaqueta (7 a 10 dias). A função se recupera à medida que plaquetas novas são produzidas, embora o AAS tenha meia-vida curta. O ibuprofeno inibe a COX de forma reversível, e o efeito some quando o fármaco é eliminado. Bloqueio do P2Y12 é o mecanismo do clopidogrel. Inibir a síntese de fatores de coagulação é o efeito da varfarina. A COX endotelial pode ser ressintetizada, e sua inibição não explica o efeito antiagregante. Para lembrar: John Vane recebeu o Nobel de 1982 por mostrar que o AAS age inibindo a síntese de prostaglandinas.",
   "tema": "antiagregantes-e-anticoagulantes",
   "subtema": "antiagregantes-e-anticoagulantes.acido-acetilsalicilico",
   "especialidade": "farmacologia",
@@ -1088,7 +1094,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-2109d92b",
@@ -1110,7 +1117,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-f6f86b34",
@@ -1378,7 +1386,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-6cbb53a6",
@@ -1392,7 +1401,7 @@
    "Coorte; risco relativo igual a 1,5"
   ],
   "correta": 0,
-  "explicacao": "Os participantes foram escolhidos pela exposição, sem a doença, e acompanhados no tempo para observar casos novos: é um estudo de coorte, que permite calcular incidências e risco relativo. Incidência nos expostos: 45/1.500 = 3%. Nos não expostos: 30/3.000 = 1%. RR = 3% / 1% = 3. O valor 2 é a diferença de riscos (risco atribuível de 2 pontos percentuais), não o RR. O valor 1,5 vem de dividir os números absolutos de casos (45/30) sem considerar o tamanho dos grupos. O caso-controle parte dos doentes, e o transversal mede exposição e doença num único momento.",
+  "explicacao": "Os participantes foram escolhidos pela exposição, sem a doença, e acompanhados no tempo para observar casos novos: é um estudo de coorte, que permite calcular incidências e risco relativo. Incidência nos expostos: 45/1.500 = 3%. Nos não expostos: 30/3.000 = 1%. RR = 3% / 1% = 3. O valor 2 é a diferença de riscos (risco atribuível de 2 pontos percentuais), não o RR. O valor 1,5 vem de dividir os números absolutos de casos (45/30) sem considerar o tamanho dos grupos. O caso-controle parte dos doentes, e o transversal mede exposição e doença num único momento. Para lembrar: \"coorte\" vem do latim cohors, unidade do exército romano que marchava junta — como o grupo seguido no tempo.",
   "tema": "estudos-epidemiologicos",
   "subtema": "estudos-epidemiologicos.estudos-de-coorte",
   "especialidade": "epidemiologia",
@@ -1400,7 +1409,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-cef46338",
@@ -1962,7 +1972,7 @@
  {
   "id": "med-fa92eb9f",
   "area": "Endocrinologia",
-  "enunciado": "Mulher de 29 anos relata perda de 7 kg em 3 meses apesar do apetite aumentado, palpitações, tremor, insônia e intolerância ao calor. Ao exame: FC 116 bpm, PA 138/64 mmHg, pele quente e úmida, bócio difuso de consistência elástica com sopro à ausculta, exoftalmia bilateral e retração palpebral. Exames: TSH < 0,01 mUI/L e T4 livre 4,2 ng/dL (referência 0,9–1,7).\n\nQual é o mecanismo da doença e o padrão esperado na cintilografia de tireoide?",
+  "enunciado": "Há três meses, uma mulher de 29 anos vem perdendo peso (7 kg) apesar de comer mais que o habitual; queixa-se também de palpitações, tremor, insônia e intolerância ao calor. Ao exame: FC 116 bpm, PA 138/64 mmHg, pele quente e úmida, bócio difuso de consistência elástica com sopro à ausculta, exoftalmia bilateral e retração palpebral. Exames: TSH < 0,01 mUI/L e T4 livre 4,2 ng/dL (referência 0,9–1,7).\n\nQual é o mecanismo da doença e o padrão esperado na cintilografia de tireoide?",
   "alternativas": [
    "Destruição autoimune com liberação de hormônio pré-formado; captação baixa",
    "Anticorpos que estimulam o receptor de TSH; captação difusa e aumentada",
@@ -1971,7 +1981,7 @@
    "Adenoma hipofisário secretor de TSH; captação difusa e aumentada"
   ],
   "correta": 1,
-  "explicacao": "Bócio difuso com sopro, oftalmopatia e hipertireoidismo com TSH suprimido caracterizam a doença de Graves. Nela, anticorpos (TRAb) agem como agonistas do receptor de TSH e estimulam a síntese e o crescimento da glândula. Por isso a cintilografia mostra captação difusa e aumentada. Nas tireoidites, o hormônio pré-formado vaza e a captação é baixa. O nódulo autônomo (Plummer) dá captação focal. Anticorpos bloqueadores causam hipotireoidismo. Um adenoma secretor de TSH cursaria com TSH normal ou alto, não suprimido.",
+  "explicacao": "Bócio difuso com sopro, oftalmopatia e hipertireoidismo com TSH suprimido caracterizam a doença de Graves. Nela, anticorpos (TRAb) agem como agonistas do receptor de TSH e estimulam a síntese e o crescimento da glândula. Por isso a cintilografia mostra captação difusa e aumentada. Nas tireoidites, o hormônio pré-formado vaza e a captação é baixa. O nódulo autônomo (Plummer) dá captação focal. Anticorpos bloqueadores causam hipotireoidismo. Um adenoma secretor de TSH cursaria com TSH normal ou alto, não suprimido. Para lembrar: a doença leva o nome de Robert Graves (Irlanda, 1835) e de Carl von Basedow (Alemanha, 1840), que a descreveram de forma independente.",
   "tema": "doencas-da-tireoide",
   "subtema": "doencas-da-tireoide.hipertireoidismo",
   "especialidade": "endocrinologia",
@@ -1979,12 +1989,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-72a0300b",
   "area": "Endocrinologia",
-  "enunciado": "Mulher de 45 anos com fadiga, ganho de peso, intolerância ao frio e bócio firme e indolor tem TSH de 18 mUI/L e T4 livre baixo.\n\nQual autoanticorpo tem maior sensibilidade para confirmar a causa mais comum desse quadro?",
+  "enunciado": "Há um ano, uma auxiliar administrativa de 45 anos nota cansaço, ganho de 6 kg, intolerância ao frio e intestino preso. Ao exame: FC 58 bpm, pele seca e tireoide aumentada de forma difusa, firme, indolor e sem nódulos. Exames: TSH 18 mUI/L e T4 livre 0,5 ng/dL (referência 0,9–1,7).\n\nQual autoanticorpo é o marcador mais sensível da causa mais provável desse quadro?",
   "alternativas": [
    "Anticorpo antirreceptor de TSH (TRAb)",
    "Anticorpo antinuclear (FAN)",
@@ -1993,7 +2004,7 @@
    "Antitireoperoxidase (anti-TPO)"
   ],
   "correta": 4,
-  "explicacao": "Hipotireoidismo primário (TSH alto, T4 livre baixo) com bócio firme em mulher de meia-idade sugere tireoidite de Hashimoto, causa mais comum de hipotireoidismo em regiões sem carência de iodo. O anti-TPO está presente em mais de 90% dos casos e é o marcador mais sensível; o antitireoglobulina é menos sensível. O TRAb estimulador é o marcador da doença de Graves. FAN, anti-LKM1 e ANCA se associam, respectivamente, a colagenoses, hepatite autoimune tipo 2 e vasculites.",
+  "explicacao": "Hipotireoidismo primário (TSH alto, T4 livre baixo) com bócio firme em mulher de meia-idade sugere tireoidite de Hashimoto, causa mais comum de hipotireoidismo em regiões sem carência de iodo. O anti-TPO está presente em mais de 90% dos casos e é o marcador mais sensível; o antitireoglobulina é menos sensível. O TRAb estimulador é o marcador da doença de Graves. FAN, anti-LKM1 e ANCA se associam, respectivamente, a colagenoses, hepatite autoimune tipo 2 e vasculites. Para lembrar: Hakaru Hashimoto descreveu a \"struma lymphomatosa\" em 1912, na Alemanha, décadas antes de se reconhecer sua natureza autoimune.",
   "tema": "doencas-da-tireoide",
   "subtema": "doencas-da-tireoide.hipotireoidismo",
   "especialidade": "endocrinologia",
@@ -2001,12 +2012,13 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-9f1d5079",
   "area": "Endocrinologia",
-  "enunciado": "Homem de 54 anos, com diabetes tipo 2 há 6 anos (HbA1c 7,4%) e hipertensão, vem à consulta de rotina sem queixas. PA 132/82 mmHg. Exames: creatinina 1,0 mg/dL (TFG estimada 84 mL/min/1,73 m²), urina tipo 1 sem hematúria nem leucocitúria, relação albumina/creatinina em amostra isolada de urina de 86 mg/g. Nega febre, exercício intenso ou infecção urinária nos dias anteriores ao exame.\n\nComo interpretar esse resultado e qual é o próximo passo?",
+  "enunciado": "Na consulta de rotina, um homem de 54 anos, com diabetes tipo 2 há 6 anos (HbA1c 7,4%) e hipertensão, sem queixas, traz uma relação albumina/creatinina em amostra isolada de urina de 86 mg/g. PA 132/82 mmHg; creatinina 1,0 mg/dL (TFG estimada 84 mL/min/1,73 m²); urina tipo 1 sem hematúria nem leucocitúria. Ele nega febre, exercício intenso ou infecção urinária nos dias anteriores à coleta.\n\nComo classificar esse achado e o que fazer antes de firmar o diagnóstico?",
   "alternativas": [
    "Resultado normal, pois está abaixo de 300 mg/g; repetir apenas em 1 ano",
    "Albuminúria gravemente aumentada; encaminhar para biópsia renal imediata",
@@ -2023,7 +2035,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-a8ee5b95",
@@ -2118,10 +2131,10 @@
  {
   "id": "med-76bca93e",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 40 anos teve úlcera duodenal com pesquisa de Helicobacter pylori positiva na biópsia. Fez tratamento por 14 dias com omeprazol, amoxicilina e claritromicina, que terminou há 10 dias, e continua usando omeprazol 20 mg/dia por conta própria, sem sintomas. Na consulta de retorno, pergunta se precisa repetir a endoscopia para saber se a bactéria foi eliminada. Não há sinais de alarme, e a úlcera era pequena e sem complicações.\n\nQual é a forma mais adequada de confirmar a erradicação?",
+  "enunciado": "\"Preciso repetir a endoscopia para saber se a bactéria morreu?\", pergunta, na consulta de retorno, um homem de 40 anos que teve úlcera duodenal pequena, sem complicações, com pesquisa de Helicobacter pylori positiva na biópsia. Fez tratamento por 14 dias com omeprazol, amoxicilina e claritromicina, que terminou há 10 dias, e continua usando omeprazol 20 mg/dia por conta própria, sem sintomas. Não há sinais de alarme.\n\nQual é a forma mais adequada de confirmar a erradicação?",
   "alternativas": [
    "Sorologia IgG para H. pylori agora, mantendo o omeprazol até o resultado",
-   "Teste respiratório com ureia marcada, ≥ 4 semanas após os antibióticos e 2 semanas sem IBP",
+   "Teste respiratório com ureia marcada, 4 semanas após os antibióticos e 2 sem IBP",
    "Teste respiratório com ureia marcada agora, mantendo o omeprazol em uso",
    "Sorologia IgG para H. pylori 4 semanas após os antibióticos, com o IBP suspenso",
    "Antígeno fecal na semana que vem, mantendo o omeprazol e sem outros cuidados"
@@ -2135,12 +2148,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-a68df11c",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 30 anos procura atendimento por icterícia, colúria e fadiga há 2 semanas. Relata relação sexual desprotegida com nova parceria há cerca de 4 meses e nunca foi vacinado contra hepatite B. Ao exame: ictérico, fígado doloroso a 2 cm do rebordo costal. Nega uso de álcool, medicamentos ou chás. Exames: ALT 1.450 U/L, AST 1.100 U/L, bilirrubina total 8,2 mg/dL, INR 1,1. Sorologias: HBsAg não reagente, anti-HBc IgM reagente, anti-HBc total reagente, anti-HBs não reagente, HBeAg não reagente, anti-HBe reagente, anti-HAV IgM não reagente e anti-HCV não reagente.\n\nQual é a interpretação correta do perfil sorológico?",
+  "enunciado": "Icterícia, colúria e fadiga há 2 semanas levam à UBS um homem de 30 anos que relata relação sexual desprotegida com nova parceria há cerca de 4 meses e nunca foi vacinado contra hepatite B. Ao exame: ictérico, fígado doloroso a 2 cm do rebordo costal. Nega uso de álcool, medicamentos ou chás. Exames: ALT 1.450 U/L, AST 1.100 U/L, bilirrubina total 8,2 mg/dL, INR 1,1. Sorologias: HBsAg não reagente, anti-HBc IgM reagente, anti-HBc total reagente, anti-HBs não reagente, HBeAg não reagente, anti-HBe reagente, anti-HAV IgM não reagente e anti-HCV não reagente.\n\nQual é a interpretação correta do perfil sorológico?",
   "alternativas": [
    "Hepatite B aguda em janela imunológica, com HBsAg já negativo e anti-HBs ainda ausente",
    "Hepatite B crônica com baixa replicação, sem relação com o quadro atual",
@@ -2149,20 +2163,21 @@
    "Resultado falso-positivo, pois sem HBsAg não é possível haver infecção pelo VHB"
   ],
   "correta": 0,
-  "explicacao": "O anti-HBc IgM reagente indica infecção aguda (ou recente) pelo vírus da hepatite B, coerente com a clínica, a exposição há cerca de 4 meses e a ausência de vacina. O HBsAg já negativou, mas o anti-HBs ainda não apareceu: é a janela imunológica, em que o anti-HBc (IgM) pode ser o único marcador da infecção. O anti-HBe reagente com HBeAg negativo indica soroconversão e tendência à resolução. Na hepatite B crônica, o HBsAg fica positivo por mais de 6 meses. Na infecção passada curada, o anti-HBc é IgG com anti-HBs positivo, sem IgM. Imunidade vacinal é anti-HBs isolado, sem anti-HBc. Afastar a hepatite B só porque o HBsAg é negativo é justamente o erro que essa questão explora.",
+  "explicacao": "O anti-HBc IgM reagente indica infecção aguda (ou recente) pelo vírus da hepatite B, coerente com a clínica, a exposição há cerca de 4 meses e a ausência de vacina. O HBsAg já negativou, mas o anti-HBs ainda não apareceu: é a janela imunológica, em que o anti-HBc (IgM) pode ser o único marcador da infecção. O anti-HBe reagente com HBeAg negativo indica soroconversão e tendência à resolução. Na hepatite B crônica, o HBsAg fica positivo por mais de 6 meses. Na infecção passada curada, o anti-HBc é IgG com anti-HBs positivo, sem IgM. Imunidade vacinal é anti-HBs isolado, sem anti-HBc. Para lembrar: HBsAg negativo não afasta hepatite B aguda — na janela, o anti-HBc IgM é o único marcador, e por isso ele integra a investigação de toda hepatite aguda.",
   "tema": "hepatites-virais",
   "subtema": "hepatites-virais.marcadores-sorologicos",
   "especialidade": "gastroenterologia",
   "disciplina": "Gastroenterologia",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-5fc57a9a",
   "area": "Gastroenterologia",
-  "enunciado": "Mulher de 48 anos, obesa, com cólicas biliares prévias, apresenta dor epigástrica intensa em faixa, irradiada para o dorso, e lipase 5 vezes acima do limite superior. Não bebe álcool.\n\nQual é a causa mais provável da pancreatite?",
+  "enunciado": "Dor epigástrica intensa em faixa, irradiada para o dorso, traz ao pronto-socorro uma mulher de 48 anos, obesa, com episódios prévios de cólica biliar. Lipase 5 vezes acima do limite superior. Não bebe álcool, não iniciou medicamentos novos e tem triglicerídeos recentes de 180 mg/dL.\n\nQual é a causa mais provável da pancreatite?",
   "alternativas": [
    "Etilismo crônico",
    "Hipertrigliceridemia",
@@ -2179,7 +2194,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-c161c398",
@@ -2533,7 +2549,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-710339e6",
@@ -2570,7 +2587,7 @@
    "Eliminar o erro aleatório e dispensar o cálculo do tamanho da amostra"
   ],
   "correta": 1,
-  "explicacao": "A randomização faz com que cada participante tenha a mesma chance de ir para qualquer grupo. Assim, tanto os fatores prognósticos medidos quanto os que ninguém mediu tendem a se distribuir igualmente, o que controla o confundimento e permite atribuir a diferença de desfechos ao tratamento. Esconder o tratamento dos avaliadores é o cegamento. Os envelopes opacos são a ocultação da alocação, que protege a própria randomização de manipulação. A representatividade (validade externa) depende de como a amostra foi recrutada. Randomizar não evita perdas de seguimento nem dispensa o cálculo amostral, pois o acaso continua existindo.",
+  "explicacao": "A randomização faz com que cada participante tenha a mesma chance de ir para qualquer grupo. Assim, tanto os fatores prognósticos medidos quanto os que ninguém mediu tendem a se distribuir igualmente, o que controla o confundimento e permite atribuir a diferença de desfechos ao tratamento. Esconder o tratamento dos avaliadores é o cegamento. Os envelopes opacos são a ocultação da alocação, que protege a própria randomização de manipulação. A representatividade (validade externa) depende de como a amostra foi recrutada. Randomizar não evita perdas de seguimento nem dispensa o cálculo amostral, pois o acaso continua existindo. Para lembrar: o marco dos ensaios randomizados modernos é o estudo do Medical Research Council sobre estreptomicina na tuberculose, publicado em 1948.",
   "tema": "estudos-epidemiologicos",
   "subtema": "estudos-epidemiologicos.ensaios-clinicos",
   "especialidade": "epidemiologia",
@@ -2578,7 +2595,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-83de6709",
@@ -2801,7 +2819,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-7cf4c4d3",
@@ -2823,7 +2842,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-a5f0ab89",
@@ -2842,10 +2862,11 @@
   "subtema": "sistema-nervoso-autonomo.receptores-colinergicos",
   "especialidade": "fisiologia",
   "disciplina": "Fisiologia",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-386cb29d",
@@ -2867,7 +2888,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-3c70f844",
@@ -2889,12 +2911,13 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-a7d865e7",
   "area": "Fisiologia",
-  "enunciado": "Homem de 76 anos, com insuficiência cardíaca e hipertensão, usa enalapril 20 mg 2×/dia e hidroclorotiazida 25 mg/dia. Há 10 dias, começou diclofenaco 50 mg 3×/dia por dor no joelho, e há 3 dias tem diarreia com pouca ingestão de líquidos. Chega sonolento, com PA 98/58 mmHg, FC 104 bpm e mucosas secas. Creatinina de 1,1 mg/dL (há 1 mês) para 2,8 mg/dL, ureia 140 mg/dL, K⁺ 5,6 mEq/L, sódio urinário de 12 mEq/L e sedimento urinário sem cilindros granulosos.\n\nEm situação de baixa perfusão renal, a TFG é mantida por ajustes nas arteríolas glomerulares. Como cada um dos fármacos contribuiu para a queda da TFG?",
+  "enunciado": "Trazido pela filha por sonolência, um homem de 76 anos, com insuficiência cardíaca e hipertensão, usa enalapril 20 mg duas vezes ao dia e hidroclorotiazida 25 mg/dia. Há 10 dias começou diclofenaco 50 mg três vezes ao dia por dor no joelho, e há 3 dias tem diarreia, com pouca ingestão de líquidos. PA 98/58 mmHg, FC 104 bpm, mucosas secas. Creatinina de 1,1 mg/dL (há 1 mês) para 2,8 mg/dL, ureia 140 mg/dL, K⁺ 5,6 mEq/L, sódio urinário de 12 mEq/L e sedimento urinário sem cilindros granulosos.\n\nEm situação de baixa perfusão renal, a TFG é mantida por ajustes nas arteríolas glomerulares. Como cada um dos fármacos contribuiu para a queda da TFG?",
   "alternativas": [
    "O AINE tira a dilatação aferente por prostaglandinas; o IECA tira a constrição eferente pela angiotensina II",
    "O AINE tira a constrição eferente pela angiotensina II; o IECA tira a dilatação aferente por prostaglandinas",
@@ -2911,12 +2934,13 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-78487513",
   "area": "Fisiologia",
-  "enunciado": "Homem de 34 anos com doença de Crohn foi submetido, há 2 anos, a ressecção de 120 cm do íleo terminal, com preservação da valva ileocecal e do cólon. Hoje refere 4 a 5 evacuações líquidas por dia, que pioram depois das refeições.\n\nSobre as consequências esperadas dessa ressecção, considere:\nI. Pode haver deficiência de vitamina B12, pois o complexo B12–fator intrínseco é absorvido por receptores do íleo terminal.\nII. A perda da reabsorção ileal de sais biliares contribui para a diarreia, seja por efeito secretor no cólon, seja por esteatorreia quando o pool se esgota.\nIII. A deficiência de B12 costuma aparecer nas primeiras semanas após a cirurgia, pois o organismo não tem reservas de cobalamina.\nIV. Há maior risco de cálculos renais de oxalato de cálcio, porque a gordura mal absorvida se liga ao cálcio intestinal e deixa o oxalato livre para ser absorvido no cólon.\n\nEstá correto o que se afirma em:",
+  "enunciado": "Dois anos após a ressecção de 120 cm do íleo terminal por doença de Crohn, com preservação da valva ileocecal e do cólon, um homem de 34 anos refere 4 a 5 evacuações líquidas por dia, que pioram depois das refeições.\n\nSobre as consequências esperadas dessa ressecção, considere:\nI. Pode haver deficiência de vitamina B12, pois o complexo B12–fator intrínseco é absorvido por receptores do íleo terminal.\nII. A perda da reabsorção ileal de sais biliares contribui para a diarreia, seja por efeito secretor no cólon, seja por esteatorreia quando o pool se esgota.\nIII. A deficiência de B12 costuma aparecer nas primeiras semanas após a cirurgia, pois o organismo não tem reservas de cobalamina.\nIV. Há maior risco de cálculos renais de oxalato de cálcio, porque a gordura mal absorvida se liga ao cálcio intestinal e deixa o oxalato livre para ser absorvido no cólon.\n\nEstá correto o que se afirma em:",
   "alternativas": [
    "I, II e IV, apenas",
    "I e II, apenas",
@@ -2933,7 +2957,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-feee0d3f",
@@ -3094,7 +3119,7 @@
  {
   "id": "med-36b342fb",
   "area": "Embriologia",
-  "enunciado": "Gestante de 24 anos, na primeira gestação e sem pré-natal no primeiro trimestre, não usou nenhum suplemento antes nem no início da gravidez. Na 20ª semana, a alfafetoproteína sérica materna está elevada para a idade gestacional, e a ultrassonografia mostra falha nos arcos vertebrais lombossacros com uma bolsa contendo tecido neural, crânio com fronte achatada (\"sinal do limão\") e cerebelo curvo (\"sinal da banana\").\n\nQual é a falha embriológica e qual medida teria reduzido o risco?",
+  "enunciado": "No ambulatório de pré-natal, uma primigesta de 24 anos, que só iniciou o acompanhamento no segundo trimestre e não usou nenhum suplemento antes nem no início da gravidez, traz a ultrassonografia morfológica de 20 semanas: falha nos arcos vertebrais lombossacros com bolsa contendo tecido neural, crânio com fronte achatada (\"sinal do limão\") e cerebelo curvo (\"sinal da banana\"). A alfafetoproteína sérica materna está elevada para a idade gestacional.\n\nQual é a falha embriológica e qual medida teria reduzido o risco?",
   "alternativas": [
    "Falha no fechamento do neuroporo cranial; ácido fólico a partir do segundo trimestre",
    "Falha no fechamento do neuroporo caudal; ácido fólico desde antes da concepção",
@@ -3103,7 +3128,7 @@
    "Falha na migração da crista neural; ácido fólico desde antes da concepção"
   ],
   "correta": 1,
-  "explicacao": "A mielomeningocele lombossacra resulta da falha no fechamento do neuroporo caudal, que ocorre por volta do 26º–28º dia, quando muitas mulheres ainda nem sabem que estão grávidas. Os sinais do limão e da banana refletem a malformação de Chiari II associada, e a alfafetoproteína vaza pelo defeito aberto. A suplementação de ácido fólico desde pelo menos 30 dias antes da concepção até o fim do primeiro trimestre reduz muito o risco; começar no segundo trimestre não previne um defeito já formado. A falha do neuroporo cranial causa anencefalia. Ferro não previne defeitos do tubo neural, e vitamina A em doses altas é teratogênica. A falha da crista neural causa outros quadros, como a doença de Hirschsprung.",
+  "explicacao": "A mielomeningocele lombossacra resulta da falha no fechamento do neuroporo caudal, que ocorre por volta do 26º–28º dia, quando muitas mulheres ainda nem sabem que estão grávidas. Os sinais do limão e da banana refletem a malformação de Chiari II associada, e a alfafetoproteína vaza pelo defeito aberto. A suplementação de ácido fólico desde pelo menos 30 dias antes da concepção até o fim do primeiro trimestre reduz muito o risco; começar no segundo trimestre não previne um defeito já formado. A falha do neuroporo cranial causa anencefalia. Ferro não previne defeitos do tubo neural, e vitamina A em doses altas é teratogênica. A falha da crista neural causa outros quadros, como a doença de Hirschsprung. Para lembrar: no Brasil, a fortificação das farinhas de trigo e de milho com ácido fólico e ferro é obrigatória desde 2004 (RDC 344/2002 da Anvisa).",
   "tema": "embriologia-geral",
   "subtema": "embriologia-geral.neurulacao",
   "especialidade": "histologia-embriologia",
@@ -3111,12 +3136,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-27549e46",
   "area": "Embriologia",
-  "enunciado": "Recém-nascido prematuro de 28 semanas, em ventilação não invasiva, apresenta no 4º dia de vida sopro sistólico contínuo em região infraclavicular esquerda, pulsos periféricos amplos e piora do desconforto respiratório. O ecocardiograma confirma persistência do canal arterial com repercussão hemodinâmica, e a equipe indica ibuprofeno intravenoso.\n\nQual alternativa explica corretamente o fechamento fisiológico do canal e a ação do ibuprofeno?",
+  "enunciado": "Na UTI neonatal, um prematuro de 28 semanas em ventilação não invasiva piora do desconforto respiratório no 4º dia de vida. Ao exame, há sopro sistólico na região infraclavicular esquerda, precórdio hiperdinâmico e pulsos periféricos amplos. O ecocardiograma confirma persistência do canal arterial com repercussão hemodinâmica, e a equipe indica ibuprofeno intravenoso.\n\nO que normalmente fecha o canal após o nascimento e como o ibuprofeno atua?",
   "alternativas": [
    "A queda da PaO₂ e o aumento de prostaglandinas contraem o canal; o ibuprofeno inibe a COX",
    "O aumento da PaO₂ e a queda de prostaglandinas contraem o canal; o ibuprofeno inibe a COX",
@@ -3125,7 +3151,7 @@
    "A queda de prostaglandinas dilata o canal; o ibuprofeno age como análogo da prostaglandina E₁"
   ],
   "correta": 1,
-  "explicacao": "No feto, o canal arterial fica aberto pela PaO₂ baixa e pelas prostaglandinas (sobretudo PGE₂), que vêm da placenta e são pouco metabolizadas pelo pulmão ainda sem ventilação. Ao nascer, a PaO₂ sobe e as prostaglandinas caem (a placenta sai e o pulmão passa a metabolizá-las), e o canal se contrai. No prematuro essa resposta é imatura. Ibuprofeno e indometacina inibem a ciclo-oxigenase, reduzem a PGE₂ e favorecem o fechamento. O inverso, a infusão de PGE₁ (alprostadil), mantém o canal aberto nas cardiopatias dependentes dele. Depois do nascimento, a resistência pulmonar cai em vez de subir.",
+  "explicacao": "No feto, o canal arterial fica aberto pela PaO₂ baixa e pelas prostaglandinas (sobretudo PGE₂), que vêm da placenta e são pouco metabolizadas pelo pulmão ainda sem ventilação. Ao nascer, a PaO₂ sobe e as prostaglandinas caem (a placenta sai e o pulmão passa a metabolizá-las), e o canal se contrai. No prematuro essa resposta é imatura. Ibuprofeno e indometacina inibem a ciclo-oxigenase, reduzem a PGE₂ e favorecem o fechamento. O inverso, a infusão de PGE₁ (alprostadil), mantém o canal aberto nas cardiopatias dependentes dele. Depois do nascimento, a resistência pulmonar cai em vez de subir. Para lembrar: o fechamento farmacológico do canal com indometacina foi descrito em 1976; fechado, o canal vira o ligamento arterioso.",
   "tema": "circulacao-fetal",
   "subtema": "circulacao-fetal.adaptacao-ao-nascimento",
   "especialidade": "histologia-embriologia",
@@ -3133,7 +3159,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-80b1394b",
@@ -3629,7 +3656,7 @@
  {
   "id": "med-0aa6cf35",
   "area": "Farmacologia",
-  "enunciado": "Mulher de 45 anos, com trombose venosa profunda femoral confirmada por Doppler, recebe prescrição ambulatorial de varfarina 10 mg/dia, sem heparina associada, por um erro de orientação. No 4º dia, surgem placas dolorosas e arroxeadas em coxas e mamas, que evoluem com bolhas hemorrágicas e necrose. INR 2,1 e plaquetas de 238.000/mm³, sem queda em relação ao exame da admissão. Ela nunca usou heparina. Na história familiar, o pai e um irmão tiveram tromboses antes dos 40 anos, e um exame antigo dela mostrava atividade de proteína C de 45%.\n\nQual mecanismo explica a complicação?",
+  "enunciado": "No 4º dia de anticoagulação, surgem placas dolorosas e arroxeadas nas coxas e nas mamas, que evoluem com bolhas hemorrágicas e necrose. A paciente, de 45 anos, tem trombose venosa profunda femoral confirmada por Doppler e, por erro de orientação, recebeu varfarina 10 mg/dia no ambulatório, sem heparina associada. INR 2,1 e plaquetas de 238.000/mm³, sem queda em relação à admissão; ela nunca usou heparina. O pai e um irmão tiveram tromboses antes dos 40 anos, e um exame antigo dela mostrava atividade de proteína C de 45%.\n\nQual mecanismo explica a complicação?",
   "alternativas": [
    "A varfarina ativa a antitrombina em excesso, esgotando-a e causando trombose da pele",
    "O fator II, de meia-vida curta, cai primeiro e causa sangramento na pele",
@@ -3646,12 +3673,13 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-cdc03c3e",
   "area": "Farmacologia",
-  "enunciado": "Homem de 52 anos, em hemodiálise por cateter venoso central de longa permanência na jugular direita, apresenta febre de 39,2 °C e calafrios que começam durante as sessões. PA 104/62 mmHg, FC 110 bpm, hiperemia e secreção purulenta no óstio do cateter. Duas hemoculturas (periférica e do cateter) crescem Staphylococcus aureus. O antibiograma mostra resistência à oxacilina e à cefoxitina, com sensibilidade à vancomicina (CIM 1 µg/mL), à daptomicina e à linezolida. Ele vinha recebendo cefazolina empírica desde a véspera, sem melhora.\n\nQual é o mecanismo de resistência e a consequência terapêutica?",
+  "enunciado": "Na sessão de hemodiálise, um homem de 52 anos, dialisado por cateter venoso central de longa permanência na jugular direita, volta a ter febre de 39,2 °C e calafrios que começam logo após a conexão. PA 104/62 mmHg, FC 110 bpm, hiperemia e secreção purulenta no óstio do cateter. Duas hemoculturas (periférica e do cateter) crescem Staphylococcus aureus, resistente à oxacilina e à cefoxitina, sensível à vancomicina (CIM 1 µg/mL), à daptomicina e à linezolida. Ele vinha recebendo cefazolina empírica desde a véspera, sem melhora.\n\nQual é o mecanismo de resistência e a consequência terapêutica?",
   "alternativas": [
    "PBP2a codificada pelo gene mecA; os betalactâmicos habituais falham, e usa-se vancomicina",
    "Betalactamase plasmidial; basta trocar a cefazolina por amoxicilina com clavulanato",
@@ -3668,12 +3696,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-41c602ba",
   "area": "Farmacologia",
-  "enunciado": "Homem de 58 anos recebeu um stent farmacológico na descendente anterior e foi mantido com AAS 100 mg e clopidogrel 75 mg/dia, com boa adesão confirmada pela família. Também usa omeprazol 40 mg/dia. Duas semanas depois, é internado com trombose do stent. O teste de agregação plaquetária mostra reatividade alta sob clopidogrel, e a genotipagem revela dois alelos de perda de função do CYP2C19 (metabolizador lento).\n\nQual é a explicação farmacológica mais adequada para a falha?",
+  "enunciado": "Duas semanas após receber um stent farmacológico na artéria descendente anterior, um homem de 58 anos é internado com trombose do stent. Vinha usando AAS 100 mg e clopidogrel 75 mg/dia, com boa adesão confirmada pela família, além de omeprazol 40 mg/dia. O teste de agregação plaquetária mostra reatividade alta sob clopidogrel, e a genotipagem revela dois alelos de perda de função do CYP2C19 (metabolizador lento).\n\nQual é a explicação farmacológica mais adequada para a falha?",
   "alternativas": [
    "O clopidogrel é inativado pelo CYP2C19; o metabolizador lento acumula o fármaco inerte",
    "O clopidogrel inibe a COX-1; o CYP2C19 converte o AAS em metabólito competidor",
@@ -3690,7 +3719,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-e9f6ecac",
@@ -3806,7 +3836,7 @@
  {
   "id": "med-4106eb25",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 58 anos, em uso crônico de anti-inflamatório para lombalgia, apresenta melena e dois episódios de hematêmese. Na admissão: PA 94/60 mmHg, FC 116 bpm. Após 1.000 mL de cristaloide, PA 118/74 mmHg e FC 92 bpm. Hemoglobina 8,2 g/dL; sem doença cardiovascular conhecida. Já iniciou inibidor de bomba de prótons intravenoso.\n\nQuanto à transfusão de concentrado de hemácias, a melhor estratégia é:",
+  "enunciado": "Melena e dois episódios de hematêmese trazem ao pronto-socorro um homem de 58 anos que usa anti-inflamatório de forma crônica para lombalgia. Na admissão: PA 94/60 mmHg, FC 116 bpm. Após 1.000 mL de cristaloide, PA 118/74 mmHg e FC 92 bpm. Hemoglobina 8,2 g/dL; plaquetas e coagulograma normais; sem doença cardiovascular conhecida. Já iniciou inibidor de bomba de prótons intravenoso.\n\nQuanto à transfusão de concentrado de hemácias, a melhor estratégia é:",
   "alternativas": [
    "Transfundir uma unidade a cada 6 horas até a endoscopia, visando hemoglobina entre 12 e 14 g/dL",
    "Adiar a endoscopia por 72 horas e transfundir sempre que houver novo episódio de melena, independentemente da hemoglobina",
@@ -3823,7 +3853,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-86dad551",
@@ -4720,7 +4751,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-770542df",
@@ -5081,7 +5113,7 @@
  {
   "id": "med-a9898eb3",
   "area": "Endocrinologia",
-  "enunciado": "Homem de 45 anos, assintomático, faz exames de rotina: glicemia de jejum de 112 mg/dL e hemoglobina glicada (HbA1c) de 6,0%, resultados confirmados em nova coleta.\n\nComo se classifica essa situação glicêmica?",
+  "enunciado": "Na campanha de saúde de uma transportadora, um motorista de 45 anos, assintomático, com IMC de 29 kg/m² e pai diabético, tem glicemia de jejum de 112 mg/dL e hemoglobina glicada (HbA1c) de 6,0%, ambos confirmados em nova coleta. Ele pergunta se já \"virou diabético\".\n\nComo se classifica a situação glicêmica dele?",
   "alternativas": [
    "Intolerância à glicose, definida pela HbA1c entre 5,7% e 6,4%",
    "Diabetes mellitus tipo 2, pois há dois exames alterados e concordantes",
@@ -5098,21 +5130,22 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-a4655269",
   "area": "Endocrinologia",
-  "enunciado": "Homem de 62 anos, com diabetes tipo 2 há 8 anos, usa metformina 1 g duas vezes ao dia. Há 6 meses foi internado por insuficiência cardíaca, e o ecocardiograma mostrou fração de ejeção de 30%. TFG estimada de 58 mL/min/1,73 m². HbA1c atual de 7,8%.\n\nQual medicamento deve ser associado por reduzir desfechos cardiovasculares e renais, além de melhorar o controle glicêmico?",
+  "enunciado": "Encaminhado pela cardiologia após internação por insuficiência cardíaca há 6 meses (ecocardiograma com fração de ejeção de 30%), um homem de 62 anos com diabetes tipo 2 há 8 anos usa metformina 1 g duas vezes ao dia, além de sacubitril-valsartana, carvedilol e espironolactona. TFG estimada de 58 mL/min/1,73 m²; HbA1c de 7,8%.\n\nQue classe deve ser associada à metformina, pelo benefício cardiorrenal além do glicêmico?",
   "alternativas": [
-   "Saxagliptina, pelo baixo risco de hipoglicemia em idosos",
+   "Saxagliptina, pelo baixo risco de hipoglicemia",
    "Inibidor do SGLT2, como dapagliflozina ou empagliflozina",
    "Glibenclamida, pela rápida redução da hemoglobina glicada",
    "Acarbose, por atuar sobretudo na glicemia pós-prandial",
    "Pioglitazona, pela potente ação sensibilizadora de insulina"
   ],
   "correta": 1,
-  "explicacao": "Nas diretrizes da SBD e da ADA, pacientes com diabetes tipo 2 e insuficiência cardíaca ou doença renal crônica devem receber inibidor do SGLT2, que reduz hospitalização por insuficiência cardíaca, mortalidade cardiovascular e progressão da doença renal, independentemente da HbA1c. A pioglitazona causa retenção hídrica e é contraindicada na insuficiência cardíaca. A saxagliptina associou-se a aumento de internação por insuficiência cardíaca. A glibenclamida traz risco de hipoglicemia e não tem benefício cardiovascular, e a acarbose tem efeito glicêmico modesto sem proteção cardiorrenal.",
+  "explicacao": "Nas diretrizes da SBD e da ADA, pacientes com diabetes tipo 2 e insuficiência cardíaca ou doença renal crônica devem receber inibidor do SGLT2, que reduz hospitalização por insuficiência cardíaca, mortalidade cardiovascular e progressão da doença renal, independentemente da HbA1c. A pioglitazona causa retenção hídrica e é contraindicada na insuficiência cardíaca. A saxagliptina associou-se a aumento de internação por insuficiência cardíaca. A glibenclamida traz risco de hipoglicemia e não tem benefício cardiovascular, e a acarbose tem efeito glicêmico modesto sem proteção cardiorrenal. Para lembrar: as gliflozinas descendem da florizina, glicosídeo isolado da casca da macieira em 1835, que já causava glicosúria.",
   "tema": "diabetes-mellitus",
   "subtema": "diabetes-mellitus.tratamento",
   "especialidade": "endocrinologia",
@@ -5120,7 +5153,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-92e3296e",
@@ -5148,7 +5182,7 @@
  {
   "id": "med-88790239",
   "area": "Endocrinologia",
-  "enunciado": "Mulher de 50 anos tem nódulo tireoidiano palpável de 2,5 cm, sólido à ultrassonografia. TSH de 0,08 mUI/L (referência 0,4–4,0) e T4 livre no limite superior da normalidade. Não tem sintomas compressivos nem história de irradiação cervical.\n\nQual é o próximo passo na investigação?",
+  "enunciado": "Ao examinar o pescoço numa consulta de rotina, a médica de família palpa um nódulo tireoidiano de 2,5 cm numa mulher de 50 anos, confirmado como sólido à ultrassonografia. A paciente não tem sintomas compressivos nem história de irradiação cervical. TSH de 0,08 mUI/L (referência 0,4–4,0) e T4 livre no limite superior da normalidade.\n\nQual é o próximo passo na investigação?",
   "alternativas": [
    "Cintilografia da tireoide, para verificar se o nódulo é hipercaptante",
    "Punção aspirativa com agulha fina imediata, por ser sólido e maior que 1 cm",
@@ -5165,12 +5199,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-c65086a2",
   "area": "Endocrinologia",
-  "enunciado": "Mulher de 30 anos, com hipotireoidismo por tireoidite de Hashimoto bem controlado com levotiroxina, descobre que está grávida de 5 semanas.\n\nQual é a conduta mais adequada em relação à levotiroxina?",
+  "enunciado": "Na primeira consulta de pré-natal, com gestação de 5 semanas confirmada por beta-hCG, uma mulher de 30 anos conta que trata hipotireoidismo por tireoidite de Hashimoto com levotiroxina 100 µg/dia; o último TSH, de 2 meses atrás, era 1,8 mUI/L. Ela pergunta se deve parar o remédio \"para não fazer mal ao bebê\".\n\nQual orientação sobre a levotiroxina está correta?",
   "alternativas": [
    "Reduzir a dose, pois o hCG estimula a tireoide materna",
    "Aumentar a dose em cerca de 25–30% e dosar TSH a cada 4 semanas",
@@ -5187,12 +5222,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-148b118e",
   "area": "Endocrinologia",
-  "enunciado": "Mulher de 38 anos refere dor na região anterior do pescoço irradiada para a mandíbula, palpitações e febre baixa, iniciadas 2 semanas após um quadro gripal. A tireoide está aumentada e muito dolorosa à palpação. Exames: TSH suprimido; T4 livre elevado; VHS 85 mm/h; captação de iodo radioativo em 24 horas de 2% (baixa).\n\nQual é o tratamento mais adequado?",
+  "enunciado": "Duas semanas depois de um quadro gripal, uma mulher de 38 anos passa a ter dor na região anterior do pescoço irradiada para a mandíbula, palpitações e febre baixa. A tireoide está aumentada e muito dolorosa à palpação, sem flutuação nem hiperemia da pele. Exames: TSH suprimido; T4 livre elevado; VHS 85 mm/h; captação de iodo radioativo em 24 horas de 2% (baixa).\n\nComo tratar a tireotoxicose desse quadro?",
   "alternativas": [
    "Antibiótico intravenoso, por tireoidite supurativa bacteriana",
    "Metimazol em dose alta até a normalização do T4 livre",
@@ -5206,10 +5242,11 @@
   "subtema": "doencas-da-tireoide.hipertireoidismo",
   "especialidade": "endocrinologia",
   "disciplina": "Endocrinologia",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-f07dd582",
@@ -5772,11 +5809,11 @@
  {
   "id": "med-7f7a5b87",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 55 anos com dispepsia faz endoscopia digestiva alta, que mostra úlcera de 1,5 cm na pequena curvatura gástrica, de bordas regulares e fundo limpo. Foram colhidas biópsias das bordas da úlcera e do antro. A pesquisa de H. pylori é positiva, e as biópsias da úlcera não mostram malignidade.\n\nAlém de tratar o H. pylori e manter o inibidor de bomba de prótons, qual conduta está indicada?",
+  "enunciado": "Endoscopia digestiva alta de um homem de 55 anos com dispepsia: úlcera de 1,5 cm na pequena curvatura gástrica, de bordas regulares e fundo limpo. Foram colhidas biópsias das bordas da úlcera e do antro. A pesquisa de H. pylori é positiva, e as biópsias da úlcera não mostram malignidade.\n\nAlém de tratar o H. pylori e manter o inibidor de bomba de prótons, qual conduta está indicada?",
   "alternativas": [
    "Gastrectomia parcial eletiva, pelo risco de malignização de toda úlcera gástrica",
    "Nenhum exame adicional, pois biópsias negativas excluem neoplasia definitivamente",
-   "Nova endoscopia após o tratamento, para documentar a cicatrização e rebiopsiar se persistir",
+   "Nova endoscopia após o tratamento, com nova biópsia se a úlcera persistir",
    "Suspender o IBP após 7 dias e repetir a sorologia para H. pylori em 1 mês",
    "Tomografia de abdome para estadiamento, pela provável neoplasia gástrica"
   ],
@@ -5789,7 +5826,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-ea926663",
@@ -5803,7 +5841,7 @@
    "I, II e III, apenas"
   ],
   "correta": 4,
-  "explicacao": "A urease do H. pylori hidrolisa a ureia em amônia e CO2, criando um microambiente alcalino que permite a sobrevivência no estômago; é também a base do teste respiratório e do teste rápido da urease (I correta). A gastrite antral reduz as células D produtoras de somatostatina, elevando a gastrina e a secreção ácida, o que favorece a úlcera duodenal (II correta). A bactéria é carcinógeno do grupo 1 para adenocarcinoma gástrico e causa o linfoma MALT (III correta). A sorologia IgG persiste por meses a anos após a cura e não serve para controle; usa-se teste respiratório com ureia marcada ou antígeno fecal (IV incorreta).",
+  "explicacao": "A urease do H. pylori hidrolisa a ureia em amônia e CO2, criando um microambiente alcalino que permite a sobrevivência no estômago; é também a base do teste respiratório e do teste rápido da urease (I correta). A gastrite antral reduz as células D produtoras de somatostatina, elevando a gastrina e a secreção ácida, o que favorece a úlcera duodenal (II correta). A bactéria é carcinógeno do grupo 1 para adenocarcinoma gástrico e causa o linfoma MALT (III correta). A sorologia IgG persiste por meses a anos após a cura e não serve para controle; usa-se teste respiratório com ureia marcada ou antígeno fecal (IV incorreta). Para lembrar: Barry Marshall bebeu uma cultura de H. pylori em 1984 para provar que a bactéria causava gastrite; ele e Robin Warren receberam o Nobel de 2005.",
   "tema": "doenca-do-refluxo-e-ulcera-peptica",
   "subtema": "doenca-do-refluxo-e-ulcera-peptica.helicobacter-pylori",
   "especialidade": "gastroenterologia",
@@ -5811,12 +5849,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-8d167876",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 52 anos, etilista, com cirrose conhecida, que nunca fez endoscopia e não usa betabloqueador, dá entrada no pronto-socorro com hematêmese volumosa iniciada há 2 horas. PA 88/54 mmHg, FC 124 bpm, sonolento mas respondendo a comandos, com ascite moderada, eritema palmar e aranhas vasculares. Hemoglobina 7,4 g/dL; plaquetas 72.000/mm³; INR 1,8. Foram obtidos dois acessos venosos calibrosos, e a reposição volêmica e a transfusão já foram iniciadas. A endoscopia está disponível no hospital.\n\nAlém do suporte hemodinâmico e da proteção da via aérea, se necessária, qual conjunto de medidas está indicado?",
+  "enunciado": "Hematêmese volumosa iniciada há 2 horas traz ao pronto-socorro um homem de 52 anos, etilista, com cirrose conhecida, que nunca fez endoscopia e não usa betabloqueador. PA 88/54 mmHg, FC 124 bpm, sonolento mas respondendo a comandos, com ascite moderada, eritema palmar e aranhas vasculares. Hemoglobina 7,4 g/dL; plaquetas 72.000/mm³; INR 1,8. Foram obtidos dois acessos venosos calibrosos, e a reposição volêmica e a transfusão já foram iniciadas. A endoscopia está disponível no hospital.\n\nAlém do suporte hemodinâmico e da proteção da via aérea, se necessária, qual conjunto de medidas está indicado?",
   "alternativas": [
    "Terlipressina ou octreotide, antibioticoprofilaxia e endoscopia em até 12 h com ligadura",
    "Omeprazol IV isolado e endoscopia eletiva após hemoglobina estável acima de 10 g/dL",
@@ -5833,7 +5872,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-03ed3da9",
@@ -5884,7 +5924,7 @@
  {
   "id": "med-68fdbb50",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 64 anos, com hemorragia digestiva alta após uso de anti-inflamatório, faz endoscopia após estabilização hemodinâmica. Encontra-se úlcera de 1,2 cm na parede anterior do bulbo duodenal, sem sangramento ativo, com vaso visível não sangrante no fundo.\n\nQual é a classificação e a conduta?",
+  "enunciado": "Após estabilização hemodinâmica, um homem de 64 anos com hemorragia digestiva alta, que usava anti-inflamatório para dor no ombro, é levado à endoscopia. O exame mostra úlcera de 1,2 cm na parede anterior do bulbo duodenal, sem sangramento ativo, com vaso visível não sangrante no fundo.\n\nComo classificar a úlcera e qual é a conduta a partir desse achado?",
   "alternativas": [
    "Forrest IIb, coágulo aderido; observação sem terapia endoscópica",
    "Forrest IIa, alto risco de ressangramento; terapia endoscópica e IBP IV",
@@ -5901,7 +5941,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-3a35a8a4",
@@ -5972,7 +6013,7 @@
  {
   "id": "med-391ec1cf",
   "area": "Gastroenterologia",
-  "enunciado": "Mulher de 60 anos, com cirrose por hepatite C, é trazida pela filha por sonolência e confusão iniciadas há 2 dias. Está constipada há 5 dias. Exame: desorientada no tempo, com flapping, sem sinais focais, afebril; ascite discreta. Glicemia capilar normal.\n\nAlém de investigar fatores precipitantes, qual é o tratamento de primeira linha?",
+  "enunciado": "A filha traz ao pronto-socorro a mãe, de 60 anos, com cirrose por hepatite C, por sonolência e confusão iniciadas há 2 dias. Conta que ela está sem evacuar há 5 dias. Exame: desorientada no tempo, com flapping, sem sinais focais, afebril; ascite discreta. Glicemia capilar normal.\n\nAlém de investigar fatores precipitantes, qual é o tratamento de primeira linha?",
   "alternativas": [
    "Benzodiazepínico em dose baixa para controlar a agitação",
    "Lactulose oral, titulada para 2 a 3 evacuações pastosas por dia",
@@ -5981,7 +6022,7 @@
    "Neomicina oral contínua como tratamento de primeira escolha"
   ],
   "correta": 1,
-  "explicacao": "A encefalopatia hepática manifesta resulta do acúmulo de amônia e outras neurotoxinas; a constipação é um precipitante clássico, ao lado de infecções, sangramento digestivo, distúrbios eletrolíticos e sedativos. O tratamento de primeira linha é a lactulose, que acidifica o cólon, retém amônio e acelera o trânsito, titulada para 2 a 3 evacuações pastosas diárias; a rifaximina é associada na prevenção de recorrências. A restrição proteica não é recomendada, pois agrava a sarcopenia (alvo de 1,2 a 1,5 g/kg/dia). Benzodiazepínicos precipitam a encefalopatia. A neomicina tem toxicidade renal e auditiva e não é primeira escolha.",
+  "explicacao": "A encefalopatia hepática manifesta resulta do acúmulo de amônia e outras neurotoxinas; a constipação é um precipitante clássico, ao lado de infecções, sangramento digestivo, distúrbios eletrolíticos e sedativos. O tratamento de primeira linha é a lactulose, que acidifica o cólon, retém amônio e acelera o trânsito, titulada para 2 a 3 evacuações pastosas diárias; a rifaximina é associada na prevenção de recorrências. A restrição proteica não é recomendada, pois agrava a sarcopenia (alvo de 1,2 a 1,5 g/kg/dia). Benzodiazepínicos precipitam a encefalopatia. A neomicina tem toxicidade renal e auditiva e não é primeira escolha. Para lembrar: \"asterixis\", nome técnico do flapping, vem do grego e significa \"sem posição fixa\".",
   "tema": "cirrose-hepatica",
   "subtema": "cirrose-hepatica.encefalopatia-hepatica",
   "especialidade": "gastroenterologia",
@@ -5989,7 +6030,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-db4b6213",
@@ -6017,7 +6059,7 @@
  {
   "id": "med-cae35f31",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 58 anos apresenta aumento progressivo do volume abdominal há 2 meses. É ex-etilista, tem edema de membros inferiores, nega dispneia, febre ou dor abdominal, e um ecocardiograma recente foi normal. Exame: ascite volumosa e circulação colateral na parede abdominal, sem turgência jugular. A paracentese diagnóstica mostra líquido amarelo-citrino, com 180 células/mm³ (20% de polimorfonucleares), albumina de 1,1 g/dL e proteínas totais de 1,4 g/dL; a albumina sérica colhida no mesmo dia é de 2,9 g/dL. Cultura e citologia oncótica do líquido estão em andamento.\n\nQual é a interpretação desses dados?",
+  "enunciado": "Há 2 meses, a barriga de um ex-etilista de 58 anos vem crescendo. Ele tem edema de membros inferiores, nega dispneia, febre ou dor abdominal, e um ecocardiograma recente foi normal. Exame: ascite volumosa e circulação colateral na parede abdominal, sem turgência jugular. A paracentese diagnóstica mostra líquido amarelo-citrino, com 180 células/mm³ (20% de polimorfonucleares), albumina de 1,1 g/dL e proteínas totais de 1,4 g/dL; a albumina sérica colhida no mesmo dia é de 2,9 g/dL. Cultura e citologia oncótica do líquido estão em andamento.\n\nComo interpretar a análise do líquido ascítico?",
   "alternativas": [
    "GASA de 0,4 g/dL: ascite por carcinomatose peritoneal ou por tuberculose",
    "GASA de 1,8 g/dL e proteína alta: ascite cardíaca ou por síndrome de Budd-Chiari",
@@ -6034,12 +6076,13 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-feaf2001",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 50 anos, com diabetes recente, hiperpigmentação cutânea, artralgia de segunda e terceira metacarpofalângicas e disfunção erétil, tem hepatomegalia e sinais de cirrose. Não consome álcool. Exames: ferritina de 2.400 ng/mL e saturação de transferrina de 82%.\n\nQual é o diagnóstico mais provável e o exame para confirmá-lo?",
+  "enunciado": "Encaminhado pelo endocrinologista por hepatomegalia, um homem de 50 anos tem diabetes diagnosticado há 1 ano, pele acinzentada-bronzeada, artralgia da segunda e da terceira metacarpofalângicas e disfunção erétil. Ao exame, há sinais de cirrose. Não consome álcool. Exames: ferritina de 2.400 ng/mL e saturação de transferrina de 82%.\n\nQual é o diagnóstico mais provável e o exame para confirmá-lo?",
   "alternativas": [
    "Esteato-hepatite metabólica; elastografia hepática transitória",
    "Deficiência de alfa-1-antitripsina; fenotipagem do inibidor",
@@ -6056,12 +6099,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-9a39e648",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 50 anos, etilista, com dor epigástrica intensa em faixa, irradiada para o dorso, iniciada após libação alcoólica, e lipase 6 vezes acima do limite superior da normalidade é admitido no pronto-socorro, sem dúvida diagnóstica.\n\nSobre a tomografia de abdome na admissão, é correto afirmar:",
+  "enunciado": "No pronto-socorro, um homem de 50 anos, etilista, é admitido com dor epigástrica intensa em faixa, irradiada para o dorso, iniciada após libação alcoólica, e lipase 6 vezes acima do limite superior da normalidade. Está estável e sem dúvida diagnóstica; o residente quer pedir tomografia de abdome \"para confirmar\".\n\nSobre a tomografia de abdome na admissão, é correto afirmar:",
   "alternativas": [
    "Deve ser feita nas primeiras 6 horas para definir a gravidade",
    "É dispensável para o diagnóstico, que já está estabelecido",
@@ -6078,12 +6122,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-0999812a",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 45 anos, internado por pancreatite aguda alcoólica, evolui no segundo dia com relação PaO2/FiO2 de 250 e creatinina de 2,1 mg/dL. Após hidratação e suporte, as duas disfunções se resolvem em 36 horas. No 10º dia, a tomografia não mostra coleções nem necrose, e ele recebe alta.\n\nPela classificação de Atlanta revisada, qual é a gravidade?",
+  "enunciado": "Internado por pancreatite aguda alcoólica, um homem de 45 anos evolui no segundo dia com relação PaO2/FiO2 de 250 e creatinina de 2,1 mg/dL. Após hidratação e suporte, as duas disfunções se resolvem em 36 horas. No 10º dia, a tomografia não mostra coleções nem necrose, e ele recebe alta.\n\nPela classificação de Atlanta revisada, qual é a gravidade?",
   "alternativas": [
    "Moderadamente grave apenas se houvesse necrose pancreática",
    "Moderadamente grave, pela falência orgânica transitória (< 48 h)",
@@ -6100,12 +6145,13 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-9892e64b",
   "area": "Gastroenterologia",
-  "enunciado": "Mulher de 40 anos teve pancreatite aguda biliar há 6 semanas. Na tomografia de controle, há coleção líquida homogênea de 5 cm, com parede bem definida, adjacente ao pâncreas e sem componente sólido. Está assintomática, alimentando-se bem e afebril.\n\nQual é o diagnóstico da coleção e a conduta em relação a ela?",
+  "enunciado": "Seis semanas após um episódio de pancreatite aguda biliar, a tomografia de controle de uma mulher de 40 anos mostra coleção líquida homogênea de 5 cm, com parede bem definida, adjacente ao pâncreas e sem componente sólido. Ela está assintomática, alimentando-se bem e afebril.\n\nQual é o diagnóstico da coleção e a conduta em relação a ela?",
   "alternativas": [
    "Pseudocisto pancreático; drenagem cirúrgica obrigatória acima de 4 cm",
    "Cistadenoma seroso; pancreatectomia corpocaudal eletiva",
@@ -6122,12 +6168,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-9bbcf549",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 38 anos, obeso, com diabetes mal controlado, tem pancreatite aguda. Não bebe, a ultrassonografia não mostra cálculos biliares e o soro colhido é leitoso.\n\nQual exame provavelmente esclarece a causa?",
+  "enunciado": "Ao processar o sangue de um homem de 38 anos internado por pancreatite aguda, o laboratório avisa que o soro está leitoso. Ele é obeso, tem diabetes mal controlado, não bebe, e a ultrassonografia não mostra cálculos biliares.\n\nQual exame provavelmente esclarece a causa?",
   "alternativas": [
    "Colangiorressonância para pâncreas divisum",
    "Dosagem de cálcio iônico sérico",
@@ -6144,7 +6191,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-173b12db",
@@ -8184,7 +8232,7 @@
  {
   "id": "med-c8a29b42",
   "area": "Endocrinologia",
-  "enunciado": "Gestante de 29 semanas com diabetes gestacional seguiu plano alimentar e caminhadas por 2 semanas. O perfil glicêmico capilar mostra jejum entre 100 e 108 mg/dL e glicemias 1 hora após as refeições entre 150 e 165 mg/dL, na maioria das medidas.\n\nQual é a conduta?",
+  "enunciado": "No pré-natal de alto risco, uma gestante de 29 semanas com diabetes gestacional diagnosticado pelo TOTG volta após 2 semanas de plano alimentar orientado por nutricionista e caminhadas diárias. O diário de glicemia capilar mostra jejum entre 100 e 108 mg/dL e glicemias 1 hora após as refeições entre 150 e 165 mg/dL, na maioria das medidas. A ultrassonografia mostra feto com circunferência abdominal no percentil 80.\n\nQual é o próximo passo terapêutico?",
   "alternativas": [
    "Iniciar insulina, mantendo dieta e atividade física",
    "Indicar parto imediato pela falha terapêutica",
@@ -8201,7 +8249,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-e0773428",
@@ -8407,7 +8456,7 @@
  {
   "id": "med-542ac6be",
   "area": "Endocrinologia",
-  "enunciado": "Mulher de 22 anos com síndrome dos ovários policísticos tem hirsutismo, acne e ciclos irregulares. Não deseja engravidar. Tem IMC de 24 kg/m², PA normal, não fuma e não tem história de enxaqueca com aura, trombose ou doença hepática.\n\nQual é o tratamento farmacológico de primeira linha?",
+  "enunciado": "\"Queria resolver os pelos e as espinhas, e a menstruação vem quando quer\", conta uma estudante de 22 anos com diagnóstico de síndrome dos ovários policísticos. Não pretende engravidar nos próximos anos. IMC de 24 kg/m², PA 116/72 mmHg; não fuma e não tem história de enxaqueca com aura, trombose ou doença hepática.\n\nQual é o tratamento farmacológico de primeira linha para as queixas dela?",
   "alternativas": [
    "Anticoncepcional hormonal combinado",
    "Clomifeno em dose baixa contínua",
@@ -8416,7 +8465,7 @@
    "Espironolactona isolada, sem contracepção"
   ],
   "correta": 0,
-  "explicacao": "Para a mulher com síndrome dos ovários policísticos que não deseja engravidar, o anticoncepcional combinado é a primeira linha para hirsutismo, acne e irregularidade menstrual: o estrogênio aumenta a SHBG, reduzindo a testosterona livre, o progestagênio suprime o LH e a produção ovariana de androgênios, e o esquema regulariza o sangramento e protege o endométrio. Mudanças no estilo de vida são associadas. A espironolactona pode ser acrescentada, mas é teratogênica (feminização de fetos masculinos) e exige contracepção eficaz. Letrozol e clomifeno são indutores de ovulação, e levotiroxina não tem indicação sem hipotireoidismo.",
+  "explicacao": "Para a mulher com síndrome dos ovários policísticos que não deseja engravidar, o anticoncepcional combinado é a primeira linha para hirsutismo, acne e irregularidade menstrual: o estrogênio aumenta a SHBG, reduzindo a testosterona livre, o progestagênio suprime o LH e a produção ovariana de androgênios, e o esquema regulariza o sangramento e protege o endométrio. Mudanças no estilo de vida são associadas. A espironolactona pode ser acrescentada, mas é teratogênica (feminização de fetos masculinos) e exige contracepção eficaz. Letrozol e clomifeno são indutores de ovulação, e levotiroxina não tem indicação sem hipotireoidismo. Para lembrar: a síndrome foi descrita por Stein e Leventhal em 1935, em mulheres com amenorreia, hirsutismo e ovários aumentados.",
   "tema": "sindrome-dos-ovarios-policisticos",
   "subtema": "sindrome-dos-ovarios-policisticos.tratamento",
   "especialidade": "endocrinologia",
@@ -8424,7 +8473,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-09a76aca",
@@ -8891,7 +8941,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-a9008204",
@@ -8910,10 +8961,11 @@
   "subtema": "niveis-de-prevencao-e-rastreamento.vieses-do-rastreamento",
   "especialidade": "epidemiologia",
   "disciplina": "Epidemiologia",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-493147f8",
@@ -8958,7 +9010,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-531f0276",
@@ -8980,12 +9033,13 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-8c7e976e",
   "area": "Epidemiologia",
-  "enunciado": "Em um ensaio clínico randomizado hipotético com seguimento de 5 anos, a incidência de infarto foi de 10% no grupo placebo e de 6% no grupo que recebeu um novo medicamento.\n\nQuais são a redução absoluta do risco, a redução relativa do risco e o número necessário para tratar?",
+  "enunciado": "O material de divulgação de um novo medicamento destaca: \"40% menos infartos\". O dado vem de um ensaio clínico randomizado hipotético, com seguimento de 5 anos, em que a incidência de infarto foi de 10% no grupo placebo e de 6% no grupo tratado.\n\nQuais são a redução absoluta do risco, a redução relativa do risco e o número necessário para tratar?",
   "alternativas": [
    "4%, 40% e 25",
    "4%, 40% e 10",
@@ -9002,12 +9056,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-ff88f049",
   "area": "Epidemiologia",
-  "enunciado": "Um novo tratamento prolonga a sobrevida de pacientes com uma doença crônica, mas não a cura. A ocorrência de casos novos não se altera.\n\nO que se espera que aconteça com a prevalência e a incidência?",
+  "enunciado": "Com a terapia antirretroviral combinada, pessoas que vivem com HIV passaram a sobreviver por décadas, embora o tratamento não cure a infecção. Suponha uma região em que o número de infecções novas por ano tenha se mantido estável depois da introdução desse tratamento.\n\nO que se espera que aconteça com a prevalência e a incidência da infecção nessa região?",
   "alternativas": [
    "A prevalência cai e a incidência aumenta",
    "A prevalência aumenta e a incidência não muda",
@@ -9024,7 +9079,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-e47f85c9",
@@ -9046,7 +9102,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-ed01885b",
@@ -9390,7 +9447,7 @@
  {
   "id": "med-583a2e29",
   "area": "Farmacologia",
-  "enunciado": "Homem de 48 anos em tratamento para dependência de álcool usa dissulfiram há 1 mês, com boa adesão e consentimento informado. Ao beber cerveja em uma festa, apresenta rubor facial, cefaleia pulsátil, náuseas, vômitos, taquicardia e hipotensão.\n\nQual mecanismo explica essa reação?",
+  "enunciado": "Minutos depois de tomar dois copos de cerveja numa festa, um homem de 48 anos apresenta rubor facial, cefaleia pulsátil, náuseas, vômitos, taquicardia e hipotensão. Ele está em tratamento para dependência de álcool e usa dissulfiram há 1 mês, com boa adesão e consentimento informado.\n\nQual mecanismo explica essa reação?",
   "alternativas": [
    "Indução da álcool desidrogenase, com excesso de etanol",
    "Antagonismo de receptores opioides, com bloqueio do reforço",
@@ -9399,7 +9456,7 @@
    "Agonismo GABA-A, potencializando a depressão do SNC"
   ],
   "correta": 3,
-  "explicacao": "O etanol é oxidado pela álcool desidrogenase em acetaldeído, que a aldeído desidrogenase converte em acetato. O dissulfiram inibe irreversivelmente a aldeído desidrogenase; se a pessoa bebe, o acetaldeído se acumula e provoca a reação aversiva (efeito antabuse): rubor, cefaleia, náuseas, vômitos, taquicardia, hipotensão e, em casos graves, arritmias. Por isso só deve ser usado com consentimento e adesão do paciente, que precisa conhecer esse risco. O antagonismo opioide é o mecanismo da naltrexona; a modulação do sistema glutamatérgico (NMDA) é atribuída ao acamprosato; nenhum desses causa reação ao álcool.",
+  "explicacao": "O etanol é oxidado pela álcool desidrogenase em acetaldeído, que a aldeído desidrogenase converte em acetato. O dissulfiram inibe irreversivelmente a aldeído desidrogenase; se a pessoa bebe, o acetaldeído se acumula e provoca a reação aversiva (efeito antabuse): rubor, cefaleia, náuseas, vômitos, taquicardia, hipotensão e, em casos graves, arritmias. Por isso só deve ser usado com consentimento e adesão do paciente, que precisa conhecer esse risco. O antagonismo opioide é o mecanismo da naltrexona; a modulação do sistema glutamatérgico (NMDA) é atribuída ao acamprosato; nenhum desses causa reação ao álcool. Para lembrar: o efeito do dissulfiram com o álcool foi notado por acaso, em 1948, por pesquisadores dinamarqueses que testavam a droga como vermífugo e passaram mal numa confraternização.",
   "tema": "dependencia-quimica",
   "subtema": "dependencia-quimica.alcool",
   "especialidade": "farmacologia",
@@ -9407,7 +9464,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-3f697d67",
@@ -9679,7 +9737,7 @@
  {
   "id": "med-3a3a9037",
   "area": "Fisiologia",
-  "enunciado": "Na infiltração de lidocaína para suturar um corte no dedo, o paciente perde primeiro a dor e a sensação térmica, depois o tato, e só com doses maiores surgiria fraqueza motora. A lidocaína bloqueia canais de sódio voltagem-dependentes pelo lado interno da membrana, com maior afinidade pelos canais abertos e inativados.\n\nQual alternativa explica a ordem do bloqueio?",
+  "enunciado": "Na infiltração de lidocaína para suturar um corte no dedo, o paciente perde primeiro a dor e a sensação térmica, depois o tato, e só com doses maiores surgiria fraqueza motora. A lidocaína bloqueia canais de sódio voltagem-dependentes pelo lado interno da membrana, com maior afinidade pelos canais abertos e inativados.\n\nO que explica essa ordem de bloqueio?",
   "alternativas": [
    "A lidocaína bloqueia canais de potássio, que são mais abundantes nas fibras que conduzem dor e temperatura",
    "Fibras finas (Aδ e C) precisam de menos anestésico para parar de conduzir que as fibras motoras Aα, calibrosas",
@@ -9688,15 +9746,16 @@
    "A lidocaína impede a liberação de acetilcolina, e a placa motora é a última estrutura a ser alcançada"
   ],
   "correta": 1,
-  "explicacao": "A sensibilidade das fibras aos anestésicos locais é inversamente relacionada ao diâmetro: fibras finas (Aδ, mielinizadas finas, e C, amielínicas) param de conduzir com menor concentração e menor extensão de axônio exposta do que as Aβ (tato) e Aα (motoras), calibrosas. Além disso, o bloqueio é dependente de uso: fibras que disparam em alta frequência (dor) têm mais canais abertos/inativados, que são o alvo preferencial. As fibras Aα são mielinizadas; as C é que são amielínicas. A lidocaína age em canais de Na⁺, não de K⁺, e não atua na liberação de acetilcolina.",
+  "explicacao": "A sensibilidade das fibras aos anestésicos locais é inversamente relacionada ao diâmetro: fibras finas (Aδ, mielinizadas finas, e C, amielínicas) param de conduzir com menor concentração e menor extensão de axônio exposta do que as Aβ (tato) e Aα (motoras), calibrosas. Além disso, o bloqueio é dependente de uso: fibras que disparam em alta frequência (dor) têm mais canais abertos/inativados, que são o alvo preferencial. As fibras Aα são mielinizadas; as C é que são amielínicas. A lidocaína age em canais de Na⁺, não de K⁺, e não atua na liberação de acetilcolina. Para lembrar: a lidocaína foi sintetizada em 1943 pelos suecos Nils Löfgren e Bengt Lundqvist, como alternativa mais segura aos anestésicos do tipo éster.",
   "tema": "potencial-de-acao",
   "subtema": "potencial-de-acao.conducao-e-sinapse",
   "especialidade": "fisiologia",
   "disciplina": "Fisiologia",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-b6919425",
@@ -9718,7 +9777,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-be4fc97c",
@@ -9763,12 +9823,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-1102aafe",
   "area": "Fisiologia",
-  "enunciado": "A ivabradina reduz a frequência cardíaca sem alterar a contratilidade miocárdica, pois diminui a inclinação da despolarização diastólica (fase 4) das células do nó sinusal.\n\nQual corrente iônica ela inibe?",
+  "enunciado": "No ambulatório de insuficiência cardíaca, um paciente com fração de ejeção de 30%, em ritmo sinusal, mantém FC de 82 bpm apesar da dose máxima tolerada de carvedilol. O cardiologista associa ivabradina, que reduz a frequência cardíaca sem alterar a contratilidade, por diminuir a inclinação da despolarização diastólica (fase 4) das células do nó sinusal.\n\nQual corrente iônica a ivabradina inibe?",
   "alternativas": [
    "Corrente rápida de Na⁺, responsável pela fase 0 do miócito",
    "Corrente retificadora tardia de K⁺ (IKr), da repolarização",
@@ -9777,7 +9838,7 @@
    "Corrente de K⁺ ativada pela acetilcolina (IK-ACh)"
   ],
   "correta": 2,
-  "explicacao": "Nas células do nó sinusal, a despolarização diastólica espontânea (fase 4) começa com a corrente If, de entrada predominante de Na⁺ através de canais HCN, que se abrem com a hiperpolarização no fim da repolarização e são modulados pelo AMPc; depois entram correntes de Ca²⁺ tipo T e L. A ivabradina bloqueia os canais HCN (If) e reduz a frequência sem efeito inotrópico, diferentemente dos betabloqueadores e dos bloqueadores de canais de cálcio. A fase 0 nodal depende do Ca²⁺ tipo L; a do miócito, do Na⁺ rápido. IKr e IK-ACh são correntes de saída de K⁺; bloqueá-las não reduz a inclinação da fase 4 da forma descrita.",
+  "explicacao": "Nas células do nó sinusal, a despolarização diastólica espontânea (fase 4) começa com a corrente If, de entrada predominante de Na⁺ através de canais HCN, que se abrem com a hiperpolarização no fim da repolarização e são modulados pelo AMPc; depois entram correntes de Ca²⁺ tipo T e L. A ivabradina bloqueia os canais HCN (If) e reduz a frequência sem efeito inotrópico, diferentemente dos betabloqueadores e dos bloqueadores de canais de cálcio. A fase 0 nodal depende do Ca²⁺ tipo L; a do miócito, do Na⁺ rápido. IKr e IK-ACh são correntes de saída de K⁺; bloqueá-las não reduz a inclinação da fase 4 da forma descrita. Para lembrar: a corrente foi apelidada de \"funny\" (engraçada) por ser uma corrente de entrada ativada por hiperpolarização, comportamento inesperado quando foi descrita, no fim da década de 1970.",
   "tema": "fisiologia-cardiovascular",
   "subtema": "fisiologia-cardiovascular.eletrofisiologia-cardiaca",
   "especialidade": "fisiologia",
@@ -9785,7 +9846,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-eb7e0737",
@@ -9807,7 +9869,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-3503596b",
@@ -9829,12 +9892,13 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-77d18a71",
   "area": "Fisiologia",
-  "enunciado": "Homem de 30 anos é trazido ao pronto-socorro sonolento, com pupilas mióticas e frequência respiratória de 6 irpm, após uso de heroína. Respira ar ambiente (FiO2 0,21), ao nível do mar (pressão barométrica 760 mmHg; pressão de vapor d'água 47 mmHg). Gasometria arterial: pH 7,17; PaCO2 80 mmHg; PaO2 45 mmHg; HCO3⁻ 28 mEq/L. A radiografia de tórax é normal. Após naloxona intravenosa, a frequência respiratória sobe para 16 irpm e a sonolência melhora.\n\nUse a equação do gás alveolar simplificada: PAO2 = FiO2 × (Patm − PH2O) − PaCO2/0,8.\n\nQual é o gradiente alveoloarterial de O2 e a interpretação da hipoxemia?",
+  "enunciado": "Encontrado pelos amigos após uso de heroína, um homem de 30 anos chega ao pronto-socorro sonolento, com pupilas mióticas e frequência respiratória de 6 irpm. Respira ar ambiente (FiO2 0,21), ao nível do mar (pressão barométrica 760 mmHg; pressão de vapor d'água 47 mmHg). Gasometria arterial: pH 7,17; PaCO2 80 mmHg; PaO2 45 mmHg; HCO3⁻ 28 mEq/L. A radiografia de tórax é normal. Após naloxona intravenosa, a frequência respiratória sobe para 16 irpm e a sonolência melhora.\n\nUse a equação do gás alveolar simplificada: PAO2 = FiO2 × (Patm − PH2O) − PaCO2/0,8.\n\nQual é o gradiente alveoloarterial de O2 e a interpretação da hipoxemia?",
   "alternativas": [
    "Cerca de 55 mmHg; hipoxemia por shunt intrapulmonar verdadeiro",
    "Cerca de 5 mmHg; hipoxemia por distúrbio de difusão alveolocapilar",
@@ -9851,7 +9915,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-e1e014ea",
@@ -9873,12 +9938,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-58ec4e37",
   "area": "Fisiologia",
-  "enunciado": "Dois pacientes usam diuréticos: um recebe furosemida e o outro, hidroclorotiazida. Ambos desenvolvem hipocalemia, mas a excreção urinária de cálcio muda em sentidos opostos.\n\nQual alternativa relaciona corretamente o local de ação e o efeito sobre a calciúria?",
+  "enunciado": "Dois pacientes usam diuréticos: um recebe furosemida e o outro, hidroclorotiazida. Ambos desenvolvem hipocalemia, mas a excreção urinária de cálcio muda em sentidos opostos.\n\nOnde age cada diurético e qual é o efeito de cada um sobre a calciúria?",
   "alternativas": [
    "Furosemida inibe o NCC no túbulo distal e reduz a calciúria; tiazida inibe o NKCC2 na alça e a aumenta",
    "Furosemida inibe o NKCC2 na alça e reduz a calciúria; tiazida inibe o NCC no túbulo distal e a aumenta",
@@ -9895,7 +9961,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-37577463",
@@ -9937,10 +10004,11 @@
   "subtema": "fisiologia-renal.filtracao-glomerular",
   "especialidade": "fisiologia",
   "disciplina": "Fisiologia",
-  "dificuldade": 1,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-cf281d29",
@@ -10304,7 +10372,7 @@
  {
   "id": "med-b99f62ec",
   "area": "Embriologia",
-  "enunciado": "Mulher de 26 anos descobre a gravidez e relata uso de isotretinoína oral para acne até cerca de cinco semanas após a data provável da concepção. Ela pergunta em que fase o embrião é mais vulnerável a malformações estruturais maiores.\n\nQual é a resposta correta?",
+  "enunciado": "\"Doutora, eu tomei o remédio da acne até umas cinco semanas depois de engravidar. Será que fez mal ao bebê?\" — pergunta, na primeira consulta de pré-natal, uma mulher de 26 anos que usou isotretinoína oral até cerca de cinco semanas após a data provável da concepção. Antes de falar do risco específico do fármaco, o médico explica em que fase do desenvolvimento o embrião é mais vulnerável a malformações estruturais maiores.\n\nQue período ele deve apontar?",
   "alternativas": [
    "Da 3ª à 8ª semana após a fecundação, período da organogênese",
    "Nas duas primeiras semanas, quando os teratógenos causam malformações maiores",
@@ -10313,7 +10381,7 @@
    "Nas semanas finais da gestação, durante a maturação dos pulmões"
   ],
   "correta": 0,
-  "explicacao": "O período embrionário (3ª à 8ª semana após a fecundação) corresponde à organogênese e é o de maior sensibilidade a teratógenos para malformações estruturais maiores; cada órgão tem sua janela crítica (tubo neural, coração, membros, palato). Nas duas primeiras semanas vale em geral a regra do \"tudo ou nada\": a exposição causa morte do concepto ou nenhuma alteração, porque as células ainda são totipotentes. No período fetal (a partir da 9ª semana) predominam alterações funcionais, de crescimento e malformações menores. A isotretinoína é teratógeno potente (anomalias craniofaciais, cardíacas, do SNC e do timo) e exige contracepção eficaz.",
+  "explicacao": "O período embrionário (3ª à 8ª semana após a fecundação) corresponde à organogênese e é o de maior sensibilidade a teratógenos para malformações estruturais maiores; cada órgão tem sua janela crítica (tubo neural, coração, membros, palato). Nas duas primeiras semanas vale em geral a regra do \"tudo ou nada\": a exposição causa morte do concepto ou nenhuma alteração, porque as células ainda são totipotentes. No período fetal (a partir da 9ª semana) predominam alterações funcionais, de crescimento e malformações menores. A isotretinoína é teratógeno potente (anomalias craniofaciais, cardíacas, do SNC e do timo) e exige contracepção eficaz. Para lembrar: no Brasil, a isotretinoína oral é retinoide de uso sistêmico da lista C2 da Portaria SVS/MS 344/1998, dispensada com notificação de receita especial e termo de consentimento.",
   "tema": "embriologia-geral",
   "subtema": "embriologia-geral.malformacoes-congenitas",
   "especialidade": "histologia-embriologia",
@@ -10321,7 +10389,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-5fcf00b4",
@@ -10858,12 +10927,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-148dbc1b",
   "area": "Farmacologia",
-  "enunciado": "Homem de 40 anos em programa de manutenção com metadona ingeriu, há duas horas, o triplo da dose habitual. Chega sonolento, com FR de 6 irpm, miose e SpO2 de 84%. Após naloxona intravenosa, desperta e a FR sobe para 16 irpm. Uma hora depois, está alerta e pede para ir embora; o plantonista considera dar alta.\n\nQual é a avaliação correta?",
+  "enunciado": "Numa UPA, um homem de 40 anos em programa de manutenção com metadona chega sonolento, com FR de 6 irpm, miose e SpO2 de 84%, duas horas depois de ingerir o triplo da dose habitual. Após naloxona intravenosa, desperta e a FR sobe para 16 irpm. Uma hora depois, está alerta e pede para ir embora; o plantonista considera dar alta.\n\nComo avaliar a intenção de dar alta nesse momento?",
   "alternativas": [
    "Alta inadequada: o efeito da naloxona dura menos que o da metadona, e a depressão respiratória pode voltar",
    "Alta inadequada: a naloxona tem efeito agonista próprio e causa depressão respiratória tardia",
@@ -10877,10 +10947,11 @@
   "subtema": "intoxicacoes-exogenas.benzodiazepinicos-e-opioides",
   "especialidade": "medicina-de-urgencia",
   "disciplina": "Farmacologia",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-566f3132",
@@ -12356,7 +12427,7 @@
  {
   "id": "med-98f1a271",
   "area": "Gastroenterologia",
-  "enunciado": "Mulher de 67 anos, com colelitíase conhecida, chega com febre de 39 °C com calafrios, icterícia e dor em hipocôndrio direito há 2 dias. Nas últimas horas ficou sonolenta e confusa. PA 82/50 mmHg após 1 L de cristaloide, FC 124 bpm. Bilirrubina total 6,8 mg/dL (direta 5,5), fosfatase alcalina e GGT elevadas. A ultrassonografia mostra colédoco de 11 mm com cálculo distal.\n\nQual é o diagnóstico e a conduta prioritária?",
+  "enunciado": "Sonolenta e confusa nas últimas horas, uma mulher de 67 anos com colelitíase conhecida é trazida pela família ao pronto-socorro. Há 2 dias tem febre de 39 °C com calafrios, icterícia e dor em hipocôndrio direito. PA 82/50 mmHg após 1 L de cristaloide, FC 124 bpm. Bilirrubina total 6,8 mg/dL (direta 5,5), fosfatase alcalina e GGT elevadas; lipase normal. A ultrassonografia mostra colédoco de 11 mm com cálculo distal.\n\nQual é o diagnóstico e a conduta prioritária?",
   "alternativas": [
    "Colangite aguda grave; antibiótico, suporte e drenagem biliar urgente por CPRE",
    "Pancreatite aguda biliar; jejum, hidratação e reavaliação em 48 horas",
@@ -12365,7 +12436,7 @@
    "Colecistite aguda; colecistectomia videolaparoscópica nas primeiras 72 horas"
   ],
   "correta": 0,
-  "explicacao": "Febre, icterícia e dor em hipocôndrio direito formam a tríade de Charcot; somadas a hipotensão e confusão mental, compõem a pêntade de Reynolds, que indica colangite aguda grave (grau III de Tóquio, pela disfunção cardiovascular e neurológica). A conduta é suporte hemodinâmico, antibiótico de amplo espectro e drenagem biliar urgente, preferencialmente endoscópica por CPRE com papilotomia e extração do cálculo ou prótese. A cirurgia aberta de urgência em paciente séptico tem mortalidade muito maior que a drenagem endoscópica; a colecistectomia é feita depois, com o paciente estabilizado. Não há dados de pancreatite, e o quadro não é leve.",
+  "explicacao": "Febre, icterícia e dor em hipocôndrio direito formam a tríade de Charcot; somadas a hipotensão e confusão mental, compõem a pêntade de Reynolds, que indica colangite aguda grave (grau III de Tóquio, pela disfunção cardiovascular e neurológica). A conduta é suporte hemodinâmico, antibiótico de amplo espectro e drenagem biliar urgente, preferencialmente endoscópica por CPRE com papilotomia e extração do cálculo ou prótese. A cirurgia aberta de urgência em paciente séptico tem mortalidade muito maior que a drenagem endoscópica; a colecistectomia é feita depois, com o paciente estabilizado. Não há dados de pancreatite, e o quadro não é leve. Para lembrar: Charcot descreveu a tríade em 1877; Reynolds e Dargan acrescentaram hipotensão e confusão em 1959, formando a pêntade.",
   "tema": "doencas-biliares",
   "subtema": "doencas-biliares.colangite-aguda",
   "especialidade": "gastroenterologia",
@@ -12373,12 +12444,13 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-36451307",
   "area": "Gastroenterologia",
-  "enunciado": "Mulher de 44 anos teve dois episódios de cólica biliar no último mês. Hoje está assintomática, afebril e anictérica. Exames: bilirrubina total 2,4 mg/dL, fosfatase alcalina 2,5 vezes o limite superior e GGT elevada; amilase e lipase normais. A ultrassonografia mostra múltiplos cálculos pequenos na vesícula, sem espessamento da parede, e colédoco de 5 mm, sem cálculo visível. Ela será submetida a colecistectomia videolaparoscópica eletiva nas próximas semanas.\n\nConforme a estratificação de risco da American Society for Gastrointestinal Endoscopy (ASGE, 2019), qual é a conduta mais adequada em relação ao colédoco?",
+  "enunciado": "Na consulta pré-operatória para colecistectomia videolaparoscópica eletiva, uma mulher de 44 anos conta ter tido dois episódios de cólica biliar no último mês. Hoje está assintomática, afebril e anictérica. Exames: bilirrubina total 2,4 mg/dL, fosfatase alcalina 2,5 vezes o limite superior e GGT elevada; amilase e lipase normais. A ultrassonografia mostra múltiplos cálculos pequenos na vesícula, sem espessamento da parede, e colédoco de 5 mm, sem cálculo visível.\n\nConforme a estratificação de risco da American Society for Gastrointestinal Endoscopy (ASGE, 2019), qual é a conduta mais adequada em relação ao colédoco?",
   "alternativas": [
    "Alto risco; realizar exploração aberta do colédoco na colecistectomia",
    "Alto risco; realizar CPRE terapêutica antes da colecistectomia",
@@ -12395,7 +12467,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-0e2abf33",
@@ -12937,7 +13010,7 @@
  {
   "id": "med-706ed4ec",
   "area": "Gastroenterologia",
-  "enunciado": "Mulher de 35 anos, assintomática, relata que o pai teve adenocarcinoma de cólon diagnosticado aos 48 anos; não há outros casos de câncer na família. O tumor do pai foi avaliado por imuno-histoquímica, com expressão preservada de MLH1, MSH2, MSH6 e PMS2.\n\nSegundo as recomendações habituais para risco aumentado por história familiar, quando ela deve iniciar a colonoscopia e com que intervalo, se o exame for normal?",
+  "enunciado": "\"Meu pai teve câncer de intestino aos 48 anos. Quando eu devo fazer o meu exame?\", pergunta, na UBS, uma mulher de 35 anos, assintomática. Não há outros casos de câncer na família. O tumor do pai foi avaliado por imuno-histoquímica, com expressão preservada de MLH1, MSH2, MSH6 e PMS2.\n\nSegundo as recomendações habituais para risco aumentado por história familiar, quando ela deve iniciar a colonoscopia e com que intervalo, se o exame for normal?",
   "alternativas": [
    "Imediatamente, repetindo a cada 1 a 2 anos",
    "Aos 45 anos, repetindo a cada 10 anos",
@@ -12954,7 +13027,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-e68f35d5",
@@ -14298,16 +14372,16 @@
  {
   "id": "med-9199dd4b",
   "area": "Fisiologia",
-  "enunciado": "Num experimento, um neurônio é exposto à ouabaína, que bloqueia a Na⁺/K⁺-ATPase. Logo após a aplicação, o potencial de repouso fica apenas alguns milivolts menos negativo; ao longo das horas seguintes, porém, a célula despolariza progressivamente e perde a excitabilidade.\n\nQual é a explicação?",
+  "enunciado": "Num experimento, um neurônio é exposto à ouabaína, que bloqueia a Na⁺/K⁺-ATPase. Logo após a aplicação, o potencial de repouso fica apenas alguns milivolts menos negativo; ao longo das horas seguintes, porém, a célula despolariza progressivamente e perde a excitabilidade.\n\nO que explica a diferença entre o efeito imediato e o tardio?",
   "alternativas": [
-   "A contribuição eletrogênica direta da bomba é pequena; seu papel é manter os gradientes, que se dissipam aos poucos",
+   "A bomba gera diretamente só alguns mV; seu papel é manter os gradientes, que se dissipam aos poucos",
    "O potencial de repouso depende do Cl⁻, transportado ativamente pela mesma ATPase que a ouabaína bloqueia",
    "A ouabaína abre canais de K⁺ de vazamento, que no início compensam a perda da bomba e hiperpolarizam",
    "O repouso depende de canais de Na⁺ voltagem-dependentes abertos, que a ouabaína fecha lentamente",
    "A bomba gera quase todo o potencial de repouso, mas a ouabaína demora horas para se ligar à subunidade α"
   ],
   "correta": 0,
-  "explicacao": "O potencial de repouso é gerado principalmente pela difusão de K⁺ através de canais de vazamento, a favor do gradiente de concentração, como descreve a equação de Goldman. A Na⁺/K⁺-ATPase troca 3 Na⁺ por 2 K⁺ e, por ser eletrogênica, contribui diretamente com apenas alguns milivolts; seu papel essencial é manter os gradientes de Na⁺ e K⁺. Bloqueada a bomba, o efeito imediato é pequeno, mas os gradientes se dissipam lentamente, e a célula despolariza até perder a capacidade de gerar potenciais de ação. A ouabaína age rapidamente sobre a subunidade α. A bomba não transporta Cl⁻, e o fármaco não abre canais de vazamento. Os canais de Na⁺ voltagem-dependentes estão, em sua maioria, fechados no repouso.",
+  "explicacao": "O potencial de repouso é gerado principalmente pela difusão de K⁺ através de canais de vazamento, a favor do gradiente de concentração, como descreve a equação de Goldman. A Na⁺/K⁺-ATPase troca 3 Na⁺ por 2 K⁺ e, por ser eletrogênica, contribui diretamente com apenas alguns milivolts; seu papel essencial é manter os gradientes de Na⁺ e K⁺. Bloqueada a bomba, o efeito imediato é pequeno, mas os gradientes se dissipam lentamente, e a célula despolariza até perder a capacidade de gerar potenciais de ação. A ouabaína age rapidamente sobre a subunidade α. A bomba não transporta Cl⁻, e o fármaco não abre canais de vazamento. Os canais de Na⁺ voltagem-dependentes estão, em sua maioria, fechados no repouso. Para lembrar: Jens Skou descobriu a Na⁺/K⁺-ATPase em nervos de caranguejo, em 1957, e recebeu por isso o Nobel de Química de 1997.",
   "tema": "potencial-de-acao",
   "subtema": "potencial-de-acao.potencial-de-repouso",
   "especialidade": "fisiologia",
@@ -14315,7 +14389,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-6ffa3341",
@@ -14365,7 +14440,7 @@
  {
   "id": "med-881bb12a",
   "area": "Farmacologia",
-  "enunciado": "Num experimento com animal anestesiado, a injeção intravenosa de adrenalina em dose moderada eleva a pressão arterial média. Após pré-tratamento com fentolamina, a mesma dose de adrenalina passa a reduzir a pressão arterial média. Com noradrenalina, após a fentolamina, a elevação da pressão desaparece, mas não há queda.\n\nQual é a explicação?",
+  "enunciado": "Num experimento com animal anestesiado, a injeção intravenosa de adrenalina em dose moderada eleva a pressão arterial média. Após pré-tratamento com fentolamina, a mesma dose de adrenalina passa a reduzir a pressão arterial média. Com noradrenalina, após a fentolamina, a elevação da pressão desaparece, mas não há queda.\n\nO que explica a inversão do efeito da adrenalina, que não ocorre com a noradrenalina?",
   "alternativas": [
    "A fentolamina bloqueia os β1 cardíacos, e a queda do débito cardíaco predomina após a adrenalina",
    "A fentolamina converte receptores α1 em β2 na musculatura lisa das arteríolas musculares",
@@ -14382,7 +14457,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-88e77003",
@@ -14404,7 +14480,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-f2dd8aa2",
@@ -14448,7 +14525,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-6cb270ec",
@@ -14470,7 +14548,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-6d9dc3e2",
@@ -14484,7 +14563,7 @@
    "16 vezes"
   ],
   "correta": 4,
-  "explicacao": "Pela lei de Poiseuille, a resistência é R = 8ηL/(πr⁴): inversamente proporcional à quarta potência do raio. Com o raio reduzido à metade, r⁴ cai para 1/16, e a resistência sobe 16 vezes. Dobrar a resistência seria o efeito de dobrar o comprimento ou a viscosidade; 4 vezes corresponderia, erroneamente, à área (r²); 8 vezes, ao volume (r³). É por essa dependência do raio que pequenas mudanças no tônus das arteríolas controlam a resistência periférica total e a distribuição do fluxo.",
+  "explicacao": "Pela lei de Poiseuille, a resistência é R = 8ηL/(πr⁴): inversamente proporcional à quarta potência do raio. Com o raio reduzido à metade, r⁴ cai para 1/16, e a resistência sobe 16 vezes. Dobrar a resistência seria o efeito de dobrar o comprimento ou a viscosidade; 4 vezes corresponderia, erroneamente, à área (r²); 8 vezes, ao volume (r³). É por essa dependência do raio que pequenas mudanças no tônus das arteríolas controlam a resistência periférica total e a distribuição do fluxo. Para lembrar: Jean Poiseuille era médico e estudou o escoamento em tubos finos, na década de 1840, justamente para entender o fluxo de sangue nos capilares.",
   "tema": "fisiologia-cardiovascular",
   "subtema": "fisiologia-cardiovascular.controle-da-pressao-arterial",
   "especialidade": "fisiologia",
@@ -14492,7 +14571,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-9d2d5a14",
@@ -14536,17 +14616,18 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-8b89e5c9",
   "area": "Fisiologia",
-  "enunciado": "Numa aula prática, o professor compara dois pacientes em repouso, ao nível do mar. A paciente 1, de 30 anos, tem anemia ferropriva grave por menorragia: hemoglobina de 7 g/dL, PaO₂ de 95 mmHg e SaO₂ de 98%, e o oxímetro de pulso marca 98%. O paciente 2, de 68 anos, tem DPOC estável com policitemia secundária: hemoglobina de 15 g/dL, PaO₂ de 50 mmHg e SaO₂ de 85%. O professor pede que os alunos calculem o conteúdo arterial de oxigênio (CaO₂) de cada um, usando a fórmula CaO₂ = (1,34 × Hb × SaO₂) + (0,003 × PaO₂), com resultado em mL de O₂ por dL de sangue, e discutam por que a paciente 1, com oximetria \"normal\", se cansa ao subir um lance de escadas.\n\nQual alternativa está correta?",
+  "enunciado": "Numa aula prática, o professor compara dois pacientes em repouso, ao nível do mar. A paciente 1, de 30 anos, tem anemia ferropriva grave por menorragia: hemoglobina de 7 g/dL, PaO₂ de 95 mmHg e SaO₂ de 98%, e o oxímetro de pulso marca 98%. O paciente 2, de 68 anos, tem DPOC estável com policitemia secundária: hemoglobina de 15 g/dL, PaO₂ de 50 mmHg e SaO₂ de 85%. O professor pede que os alunos calculem o conteúdo arterial de oxigênio (CaO₂) de cada um, usando a fórmula CaO₂ = (1,34 × Hb × SaO₂) + (0,003 × PaO₂), em mL de O₂ por dL de sangue, e discutam por que a paciente 1, com oximetria \"normal\", se cansa ao subir um lance de escadas.\n\nQuais são os valores de CaO₂ e a conclusão fisiológica correta?",
   "alternativas": [
    "CaO₂ ≈ 12,1 mL/dL na paciente 1 e ≈ 17,2 mL/dL no paciente 2; a PaO₂ normal garante o transporte",
    "CaO₂ ≈ 9,5 mL/dL na paciente 1 e ≈ 12,8 mL/dL no paciente 2; o O₂ dissolvido compensa a anemia",
    "CaO₂ ≈ 17,2 mL/dL na paciente 1 e ≈ 9,5 mL/dL no paciente 2; a hipoxemia é o fator mais limitante",
-   "CaO₂ ≈ 9,5 mL/dL na paciente 1 e ≈ 17,2 mL/dL no paciente 2; a oximetria normal não reflete a quantidade de O₂",
+   "CaO₂ ≈ 9,5 mL/dL na paciente 1 e ≈ 17,2 mL/dL no paciente 2; a SaO₂ normal não mede o conteúdo de O₂",
    "CaO₂ ≈ 9,5 mL/dL na paciente 1 e ≈ 17,2 mL/dL no paciente 2; a anemia reduz a PaO₂ e a SaO₂"
   ],
   "correta": 3,
@@ -14558,7 +14639,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-fd6ca8f7",
@@ -14602,7 +14684,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-37ce43f1",
@@ -14652,7 +14735,7 @@
  {
   "id": "med-ccf4acdf",
   "area": "Endocrinologia",
-  "enunciado": "A mesma carga de glicose provoca liberação de insulina bem maior quando é ingerida do que quando é infundida por via intravenosa de modo a reproduzir a mesma curva glicêmica.\n\nQual é a explicação?",
+  "enunciado": "Num experimento clássico de fisiologia, voluntários recebem glicose por via oral e, em outro dia, glicose intravenosa em infusão ajustada para reproduzir exatamente a mesma curva glicêmica. A liberação de insulina é bem maior quando a glicose é ingerida.\n\nQual fenômeno explica essa diferença?",
   "alternativas": [
    "A colecistocinina aumenta a sensibilidade hepática à insulina e reduz a necessidade de secreção",
    "GLP-1 (células L) e GIP (células K), liberados pelo intestino, potencializam a secreção de insulina",
@@ -14661,7 +14744,7 @@
    "A secretina liberada pelo duodeno estimula diretamente as células β, independentemente da glicemia"
   ],
   "correta": 1,
-  "explicacao": "É o efeito incretina: a chegada de nutrientes ao intestino libera GLP-1 (células L do íleo e do cólon) e GIP (células K do duodeno e do jejuno), que ampliam a secreção de insulina de forma dependente da glicose. Como o experimento reproduz a mesma glicemia pelas duas vias, a diferença não pode ser atribuída a picos glicêmicos. A secretina estimula o bicarbonato pancreático, não as células β de forma relevante. A ativação simpática inibe a insulina por receptores α2, e os β2 a estimulam. A colecistocinina age sobre a vesícula e o pâncreas exócrino.",
+  "explicacao": "É o efeito incretina: a chegada de nutrientes ao intestino libera GLP-1 (células L do íleo e do cólon) e GIP (células K do duodeno e do jejuno), que ampliam a secreção de insulina de forma dependente da glicose. Como o experimento reproduz a mesma glicemia pelas duas vias, a diferença não pode ser atribuída a picos glicêmicos. A secretina estimula o bicarbonato pancreático, não as células β de forma relevante. A ativação simpática inibe a insulina por receptores α2, e os β2 a estimulam. A colecistocinina age sobre a vesícula e o pâncreas exócrino. Para lembrar: o efeito incretina responde por cerca de metade ou mais da insulina secretada após uma refeição e é a base dos análogos de GLP-1 e dos inibidores da DPP-4.",
   "tema": "fisiologia-gastrointestinal",
   "subtema": "fisiologia-gastrointestinal.hormonios-gastrointestinais",
   "especialidade": "endocrinologia",
@@ -14669,7 +14752,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-2e764096",
@@ -15174,7 +15258,7 @@
    "Músculo liso da parede intestinal"
   ],
   "correta": 3,
-  "explicacao": "Os neurônios dos plexos entéricos derivam da crista neural, que migra ao longo do intestino no sentido craniocaudal; se a migração para antes, o segmento distal fica aganglionar e não relaxa, como na doença de Hirschsprung. Da crista neural também derivam a medula da suprarrenal (células cromafins), os gânglios sensitivos e autonômicos, as células de Schwann, os melanócitos, as leptomeninges e grande parte dos ossos e da cartilagem da face. A adeno-hipófise vem do ectoderma oral (bolsa de Rathke); o epitélio folicular da tireoide, do endoderma; o músculo liso intestinal, do mesoderma esplâncnico; a micróglia, de precursores mesodérmicos do saco vitelino.",
+  "explicacao": "Os neurônios dos plexos entéricos derivam da crista neural, que migra ao longo do intestino no sentido craniocaudal; se a migração para antes, o segmento distal fica aganglionar e não relaxa, como na doença de Hirschsprung. Da crista neural também derivam a medula da suprarrenal (células cromafins), os gânglios sensitivos e autonômicos, as células de Schwann, os melanócitos, as leptomeninges e grande parte dos ossos e da cartilagem da face. A adeno-hipófise vem do ectoderma oral (bolsa de Rathke); o epitélio folicular da tireoide, do endoderma; o músculo liso intestinal, do mesoderma esplâncnico; a micróglia, de precursores mesodérmicos do saco vitelino. Para lembrar: Harald Hirschsprung, pediatra dinamarquês, descreveu a doença em 1886, mas a causa (aganglionose) só foi reconhecida na década de 1940.",
   "tema": "embriologia-geral",
   "subtema": "embriologia-geral.neurulacao",
   "especialidade": "histologia-embriologia",
@@ -15182,7 +15266,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-8731ef92",
@@ -15227,7 +15312,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-6447b432",
@@ -15255,7 +15341,7 @@
  {
   "id": "med-66a7f40b",
   "area": "Embriologia",
-  "enunciado": "O sangue da veia umbilical, o mais oxigenado do feto, tem PO₂ de apenas cerca de 30 a 35 mmHg, bem abaixo da PO₂ arterial de um adulto. Mesmo assim, sua saturação de oxigênio chega a cerca de 80%.\n\nQual fator explica essa captação eficiente de oxigênio na placenta?",
+  "enunciado": "Numa aula sobre circulação fetal, o professor mostra que o sangue da veia umbilical, o mais oxigenado do feto, tem PO₂ de apenas 30 a 35 mmHg, bem abaixo da PO₂ arterial de um adulto. Mesmo assim, sua saturação de oxigênio chega a cerca de 80%.\n\nQue propriedade do sangue fetal explica essa captação eficiente de oxigênio na placenta?",
   "alternativas": [
    "A hemoglobina fetal liga-se pouco ao 2,3-BPG e tem maior afinidade pelo oxigênio",
    "O sangue fetal tem pH mais alto que o materno, o que desvia a curva para a direita",
@@ -15264,7 +15350,7 @@
    "A hemoglobina fetal é formada por cadeias α e β, iguais às da hemoglobina adulta"
   ],
   "correta": 0,
-  "explicacao": "A hemoglobina fetal (HbF, α2γ2) tem cadeias γ que se ligam pouco ao 2,3-bifosfoglicerato; com menos 2,3-BPG ligado, a afinidade pelo O₂ é maior e a curva de dissociação fica desviada para a esquerda (P50 menor). Assim, na PO₂ baixa da placenta, a HbF capta O₂ da hemoglobina materna. Somam-se a isso a concentração alta de hemoglobina fetal e o efeito Bohr duplo (o sangue materno recebe CO₂ e acidifica, liberando O₂). Mais 2,3-BPG ligado reduziria a afinidade. O oxigênio atravessa a placenta por difusão simples. A HbA tem cadeias β, e não γ. Um pH mais alto desviaria a curva para a esquerda, e não para a direita.",
+  "explicacao": "A hemoglobina fetal (HbF, α2γ2) tem cadeias γ que se ligam pouco ao 2,3-bifosfoglicerato; com menos 2,3-BPG ligado, a afinidade pelo O₂ é maior e a curva de dissociação fica desviada para a esquerda (P50 menor). Assim, na PO₂ baixa da placenta, a HbF capta O₂ da hemoglobina materna. Somam-se a isso a concentração alta de hemoglobina fetal e o efeito Bohr duplo (o sangue materno recebe CO₂ e acidifica, liberando O₂). Mais 2,3-BPG ligado reduziria a afinidade. O oxigênio atravessa a placenta por difusão simples. A HbA tem cadeias β, e não γ. Um pH mais alto desviaria a curva para a esquerda, e não para a direita. Para lembrar: a hidroxiureia usada na doença falciforme age em parte aumentando a produção de HbF, que não polimeriza.",
   "tema": "circulacao-fetal",
   "subtema": "circulacao-fetal.shunts-fetais",
   "especialidade": "histologia-embriologia",
@@ -15272,7 +15358,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-296ca7a9",
@@ -15827,7 +15914,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-11aa4230",
@@ -15965,7 +16053,7 @@
  {
   "id": "med-bc3ca448",
   "area": "Farmacologia",
-  "enunciado": "Mulher de 52 anos, com prótese valvar mitral mecânica, usa varfarina 5 mg/dia há 4 anos, com INR estável entre 2,5 e 3,5. Há 6 dias, iniciou sulfametoxazol-trimetoprima para cistite, prescrito em pronto atendimento. Hoje refere sangramento gengival discreto ao escovar os dentes e equimoses nos braços. Não tem sangramento ativo importante; hemoglobina estável e sinais vitais normais. INR de 7,6. Não mudou a dieta nem outros medicamentos. Um colega sugere, após resolver o episódio, trocar definitivamente a varfarina por rivaroxabana, \"para evitar interações\".\n\nQual alternativa explica a elevação do INR e avalia corretamente a sugestão?",
+  "enunciado": "Sangramento gengival discreto ao escovar os dentes e equimoses nos braços levam ao ambulatório de anticoagulação uma mulher de 52 anos com prótese valvar mitral mecânica. Usa varfarina 5 mg/dia há 4 anos, com INR estável entre 2,5 e 3,5, e há 6 dias iniciou sulfametoxazol-trimetoprima para cistite, prescrito em pronto atendimento. Não tem sangramento importante; hemoglobina estável e sinais vitais normais. INR de 7,6. Não mudou a dieta nem outros medicamentos. Um colega sugere, após resolver o episódio, trocar definitivamente a varfarina por rivaroxabana, \"para evitar interações\".\n\nO que explica a elevação do INR e como avaliar a sugestão do colega?",
   "alternativas": [
    "O sulfametoxazol inibe o CYP2C9, que metaboliza a S-varfarina; a rivaroxabana é contraindicada em prótese mecânica",
    "A trimetoprima inibe diretamente a vitamina K epóxido redutase; a troca por rivaroxabana é segura nesse caso",
@@ -15982,7 +16070,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-7b8efe2d",
@@ -16565,7 +16654,7 @@
  {
   "id": "med-bb7177e5",
   "area": "Farmacologia",
-  "enunciado": "Adolescente com asma persistente, em uso regular de budesonida inalatória por dispositivo pressurizado, desenvolve placas esbranquiçadas e removíveis na mucosa oral.\n\nQual orientação reduz esse efeito adverso?",
+  "enunciado": "Na consulta de retorno, a mãe de um adolescente de 14 anos com asma persistente conta que ele usa budesonida em aerossol dosimetrado, disparado direto na boca, duas vezes ao dia, e que há uma semana surgiram placas esbranquiçadas na boca. Ao exame, as placas saem ao raspar com a espátula, deixando base avermelhada. A asma está controlada, sem despertares noturnos nem uso de resgate.\n\nQue orientação reduz esse efeito adverso sem comprometer o controle da asma?",
   "alternativas": [
    "Usar espaçador e enxaguar a boca após cada inalação",
    "Suspender o corticoide e usar só salbutamol de resgate",
@@ -16582,7 +16671,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-61d6b9b8",
@@ -16676,7 +16766,7 @@
  {
   "id": "med-c31b50df",
   "area": "Fisiologia",
-  "enunciado": "Homem de 70 anos, com DPOC grave, em exacerbação, recebe no transporte oxigênio por máscara com reservatório a 15 L/min. Chega sonolento; a SpO2 subiu de 82% para 99%, e a PaCO2, de 55 para 78 mmHg.\n\nSobre o mecanismo dessa piora, analise:\nI. O excesso de oxigênio desfaz a vasoconstrição pulmonar hipóxica, aumentando a perfusão de alvéolos mal ventilados e o espaço morto fisiológico.\nII. Pelo efeito Haldane, a hemoglobina mais oxigenada tem menor afinidade pelo CO2, o que contribui para elevar a PaCO2.\nIII. A principal explicação é a supressão completa do estímulo hipóxico, com apneia de origem central.\n\nEstá correto o que se afirma em:",
+  "enunciado": "Durante o transporte do SAMU, um homem de 70 anos com DPOC grave, em exacerbação, recebe oxigênio por máscara com reservatório a 15 L/min. Chega ao hospital sonolento; a SpO2 subiu de 82% para 99%, e a PaCO2, de 55 para 78 mmHg, com FR de 22 irpm.\n\nSobre o mecanismo dessa piora, analise:\nI. O excesso de oxigênio desfaz a vasoconstrição pulmonar hipóxica, aumentando a perfusão de alvéolos mal ventilados e o espaço morto fisiológico.\nII. Pelo efeito Haldane, a hemoglobina mais oxigenada tem menor afinidade pelo CO2, o que contribui para elevar a PaCO2.\nIII. A principal explicação é a supressão completa do estímulo hipóxico, com apneia de origem central.\n\nEstá correto o que se afirma em:",
   "alternativas": [
    "I e II, apenas",
    "II e III, apenas",
@@ -16693,7 +16783,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-76941ca8",
@@ -16943,7 +17034,7 @@
  {
   "id": "med-a987b17c",
   "area": "Endocrinologia",
-  "enunciado": "Mulher de 38 anos, com IMC de 22 kg/m², recebeu diagnóstico de diabetes há 1 ano e foi tratada com metformina e, depois, gliclazida. Apesar da boa adesão, a HbA1c subiu de 7,2% para 9,4%, com perda de 4 kg. Nunca teve cetoacidose. Tem hipotireoidismo por tireoidite de Hashimoto.\n\nQual exame melhor esclarece o tipo de diabetes?",
+  "enunciado": "\"Faço a dieta, tomo os remédios certinho e o açúcar só sobe\", queixa-se uma professora de 38 anos, com IMC de 22 kg/m², que recebeu o diagnóstico de diabetes há 1 ano. Foi tratada com metformina e, depois, gliclazida; mesmo com boa adesão, a HbA1c subiu de 7,2% para 9,4%, com perda de 4 kg. Nunca teve cetoacidose. Tem hipotireoidismo por tireoidite de Hashimoto.\n\nQual exame melhor esclarece o tipo de diabetes?",
   "alternativas": [
    "Teste oral de tolerância à glicose com 75 g de glicose anidra",
    "Cortisol salivar noturno, para excluir síndrome de Cushing",
@@ -16960,7 +17051,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-15cb23bb",
@@ -17033,7 +17125,7 @@
  {
   "id": "med-be8ea94c",
   "area": "Endocrinologia",
-  "enunciado": "Mulher de 78 anos, com hipotireoidismo diagnosticado há anos, abandonou a levotiroxina há 6 meses. No inverno, é trazida por sonolência progressiva após infecção urinária. Exame: Glasgow 10, temperatura axilar 34,2 °C, FC 48 bpm, PA 92/60 mmHg, FR 10 irpm, pele seca e fria, edema facial sem cacifo e reflexos com fase de relaxamento lentificada. Exames: sódio 124 mEq/L; glicemia 62 mg/dL; PaCO2 58 mmHg; TSH 86 mUI/L; T4 livre indetectável. Não há dosagem de cortisol disponível no momento.\n\nAlém de suporte ventilatório, aquecimento passivo, correção da glicemia e tratamento da infecção, qual é a conduta farmacológica inicial?",
+  "enunciado": "Numa madrugada de inverno, a neta traz ao pronto-socorro uma senhora de 78 anos, cada vez mais sonolenta desde uma infecção urinária. Ela tem hipotireoidismo há anos, mas abandonou a levotiroxina há 6 meses. Exame: Glasgow 10, temperatura axilar 34,2 °C, FC 48 bpm, PA 92/60 mmHg, FR 10 irpm, pele seca e fria, edema facial sem cacifo e reflexos com fase de relaxamento lentificada. Exames: sódio 124 mEq/L; glicemia 62 mg/dL; PaCO2 58 mmHg; TSH 86 mUI/L; T4 livre indetectável. Não há dosagem de cortisol disponível no momento.\n\nAlém de suporte ventilatório, aquecimento passivo, correção da glicemia e tratamento da infecção, qual é a conduta farmacológica inicial?",
   "alternativas": [
    "Levotiroxina intravenosa isolada, adiando corticoide até sair o cortisol",
    "Levotiroxina oral na dose habitual, com reajuste da dose em 6 semanas",
@@ -17050,7 +17142,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-b7a8eac6",
@@ -17099,24 +17192,25 @@
  {
   "id": "med-33edaa9d",
   "area": "Fisiologia",
-  "enunciado": "Homem de 74 anos, com insuficiência cardíaca e hipertensão, usa enalapril 20 mg duas vezes ao dia e furosemida 40 mg/dia, com creatinina basal de 1,2 mg/dL. Por dor lombar, automedica-se com diclofenaco há 5 dias. Num período de calor, com baixa ingestão de água, apresenta tontura e redução da diurese. PA de 100/60 mmHg. Exames: creatinina 2,9 mg/dL; potássio 5,8 mEq/L; sódio urinário baixo; sedimento urinário sem cilindros ou hematúria. Nega vômitos, diarreia ou exame recente com contraste iodado, e a ultrassonografia mostra rins de tamanho normal, sem hidronefrose.\n\nQual mecanismo hemodinâmico glomerular explica a queda da filtração?",
+  "enunciado": "Num período de calor, com baixa ingestão de água, um homem de 74 anos procura a UPA por tontura e redução da diurese. Tem insuficiência cardíaca e hipertensão, usa enalapril 20 mg duas vezes ao dia e furosemida 40 mg/dia, e há 5 dias se automedica com diclofenaco por dor lombar. Creatinina basal de 1,2 mg/dL. PA 100/60 mmHg, mucosas secas. Exames: creatinina 2,9 mg/dL; ureia 130 mg/dL; potássio 5,8 mEq/L, com ECG sem alterações; fração de excreção de sódio de 0,4%; sedimento urinário sem cilindros ou hematúria. Nega exame recente com contraste iodado, e a ultrassonografia mostra rins de tamanho normal, sem hidronefrose.\n\nComo classificar essa lesão renal aguda e o que deve ser feito primeiro?",
   "alternativas": [
-   "Vasoconstrição da arteríola aferente pelo AINE e perda da constrição eferente pelo IECA",
-   "Obstrução tubular por cristais de diclofenaco precipitados em urina ácida",
-   "Lesão direta dos podócitos pelo IECA, com perda da barreira de filtração",
-   "Vasodilatação da arteríola aferente pelo AINE e vasoconstrição da eferente pelo IECA",
-   "Aumento da pressão hidrostática na cápsula de Bowman causado pela furosemida"
+   "Pré-renal; suspender o AINE, pausar IECA e diurético e repor volume com cautela",
+   "Renal por necrose tubular aguda; indicar hemodiálise de urgência pela hipercalemia",
+   "Pós-renal por obstrução; passar sonda vesical e solicitar urografia excretora",
+   "Renal por nefrite intersticial ao AINE; iniciar prednisona e manter o IECA",
+   "Pré-renal; dobrar a furosemida para restaurar a diurese e manter o AINE"
   ],
   "correta": 0,
-  "explicacao": "Em estados de baixo volume circulante efetivo (diurético, calor, insuficiência cardíaca), a filtração glomerular é mantida por dois ajustes: prostaglandinas dilatam a arteríola aferente, e a angiotensina II contrai a eferente. O AINE bloqueia a síntese de prostaglandinas, e a arteríola aferente se contrai; o IECA reduz a angiotensina II, e a eferente se dilata. A pressão intraglomerular despenca, e a TFG cai de forma hemodinâmica (sódio urinário baixo, sedimento limpo), com hipercalemia favorecida pelo IECA e pela menor oferta distal de sódio. A alternativa com vasodilatação aferente inverte os efeitos. Cristais não são mecanismo do diclofenaco; a furosemida não obstrui a via urinária; o IECA não lesa podócitos, ao contrário, reduz a proteinúria. A conduta é suspender o AINE, ajustar diurético e IECA temporariamente e repor volume com cautela. Para lembrar: a combinação diurético + IECA/BRA + AINE é conhecida em inglês como \"triple whammy\" (golpe triplo).",
+  "explicacao": "A lesão é pré-renal (hemodinâmica): fração de excreção de sódio abaixo de 1%, relação ureia/creatinina elevada, sedimento limpo e rins sem obstrução, num contexto de volume circulante reduzido (calor, pouca água, diurético, insuficiência cardíaca). Nessa situação, a filtração depende de prostaglandinas que dilatam a arteríola aferente e da angiotensina II que contrai a eferente; o AINE retira a primeira, e o IECA, a segunda. A conduta inicial é retirar os fatores agressores (suspender o AINE, pausar temporariamente IECA e diurético) e repor volume com cautela, monitorando a congestão e o potássio. Necrose tubular aguda daria sódio urinário alto (FENa acima de 2%) e cilindros granulosos \"marrom-barrentos\", e a hipercalemia de 5,8 mEq/L sem alteração no ECG não exige diálise de urgência. A ultrassonografia sem hidronefrose afasta causa pós-renal. Nefrite intersticial costuma trazer leucocitúria, cilindros leucocitários ou eosinofilúria, ausentes aqui. Aumentar o diurético e manter o AINE agravaria a hipoperfusão. Para lembrar: a combinação diurético + IECA/BRA + AINE é conhecida em inglês como \"triple whammy\" (golpe triplo).",
   "tema": "lesao-renal-aguda",
   "subtema": "lesao-renal-aguda.classificacao-pre-renal-renal-e-pos-renal",
   "especialidade": "fisiologia",
   "disciplina": "Fisiologia",
-  "dificuldade": 3,
+  "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-38ecdc50",
@@ -17499,7 +17593,7 @@
  {
   "id": "med-8033cbe1",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 42 anos tem úlceras duodenais recorrentes há 2 anos, apesar do uso de IBP e da erradicação documentada do Helicobacter pylori. Nega uso de AINE. A endoscopia atual mostra úlceras múltiplas no bulbo, na terceira porção do duodeno e no jejuno proximal, com pregas gástricas espessadas. Relata diarreia crônica, que melhora com o IBP. O irmão foi operado de hiperparatireoidismo e trata um prolactinoma. Exames: cálcio sérico 11,2 mg/dL; gastrina sérica em jejum de 1.200 pg/mL (referência < 100), colhida após suspensão temporária e supervisionada do IBP, com pH gástrico de 1,5.\n\nQual é o diagnóstico mais provável?",
+  "enunciado": "Encaminhado à gastroenterologia por úlceras duodenais recorrentes há 2 anos, apesar do uso de IBP e da erradicação documentada do Helicobacter pylori, um homem de 42 anos nega uso de AINE. A endoscopia atual mostra úlceras múltiplas no bulbo, na terceira porção do duodeno e no jejuno proximal, com pregas gástricas espessadas. Relata diarreia crônica, que melhora com o IBP. O irmão foi operado de hiperparatireoidismo e trata um prolactinoma. Exames: cálcio sérico 11,2 mg/dL; gastrina sérica em jejum de 1.200 pg/mL (referência < 100), colhida após suspensão temporária e supervisionada do IBP, com pH gástrico de 1,5.\n\nQual é o diagnóstico mais provável?",
   "alternativas": [
    "Gastrite atrófica autoimune, com hipergastrinemia secundária à acloridria",
    "Gastrinoma (Zollinger-Ellison) associado a neoplasia endócrina múltipla tipo 1",
@@ -17516,7 +17610,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-01929dac",
@@ -17544,7 +17639,7 @@
  {
   "id": "med-254d6a49",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 30 anos, após uma noite de consumo excessivo de álcool, teve múltiplos episódios de vômitos e, em seguida, hematêmese de pequeno volume. Está estável, sem dor torácica, sem enfisema subcutâneo e com hemoglobina normal. A endoscopia mostra laceração longitudinal superficial da mucosa na junção esofagogástrica, sem sangramento ativo.\n\nQual é o diagnóstico e a conduta?",
+  "enunciado": "Depois de uma noite de consumo excessivo de álcool, um rapaz de 30 anos teve múltiplos episódios de vômitos e, em seguida, hematêmese de pequeno volume. Está estável, sem dor torácica, sem enfisema subcutâneo e com hemoglobina normal. A endoscopia mostra laceração longitudinal superficial da mucosa na junção esofagogástrica, sem sangramento ativo.\n\nQual é o diagnóstico e como conduzir?",
   "alternativas": [
    "Úlcera duodenal; erradicação empírica do H. pylori sem biópsia",
    "Varizes esofágicas; ligadura elástica e betabloqueador não seletivo",
@@ -17561,7 +17656,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-7c38d09c",
@@ -17632,7 +17728,7 @@
  {
   "id": "med-7f3c11a1",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 45 anos tem HBsAg reagente há mais de 2 anos. Exames atuais: HBeAg não reagente; anti-HBe reagente; HBV-DNA de 85.000 UI/mL; ALT persistentemente 2 a 3 vezes acima do limite superior em três dosagens ao longo de 6 meses; elastografia hepática com rigidez compatível com fibrose moderada, sem cirrose. Sorologias para hepatites C e D e para HIV negativas; não consome álcool; IMC 24 kg/m². Está assintomático e sem estigmas de hepatopatia crônica; plaquetas de 210.000/mm³, albumina normal e ultrassonografia com fígado de contornos regulares, sem sinais de hipertensão portal.\n\nComo classificar a fase da infecção e qual é a conduta?",
+  "enunciado": "No ambulatório de hepatites virais, um homem de 45 anos com HBsAg reagente há mais de 2 anos traz exames atuais: HBeAg não reagente; anti-HBe reagente; HBV-DNA de 85.000 UI/mL; ALT persistentemente 2 a 3 vezes acima do limite superior em três dosagens ao longo de 6 meses; elastografia hepática com rigidez compatível com fibrose moderada, sem cirrose. Sorologias para hepatites C e D e para HIV negativas; não consome álcool; IMC 24 kg/m². Está assintomático e sem estigmas de hepatopatia crônica; plaquetas de 210.000/mm³, albumina normal e ultrassonografia com fígado de contornos regulares, sem sinais de hipertensão portal.\n\nComo classificar a fase da infecção e qual é a conduta?",
   "alternativas": [
    "Hepatite B aguda em resolução; repetir sorologias em 6 meses",
    "Infecção crônica HBeAg-negativa (portador inativo); apenas monitorar",
@@ -17649,12 +17745,13 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-0befa2dd",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 56 anos, com cirrose por álcool, abstinente há 1 ano, vem à consulta. Não há sinais de encefalopatia. Tem ascite volumosa, que exigiu paracentese de alívio no mês passado apesar dos diuréticos. Exames: bilirrubina total 2,5 mg/dL; albumina 2,6 g/dL; RNI 1,9.\n\nQual é a pontuação e a classe de Child-Pugh?",
+  "enunciado": "No ambulatório de hepatologia, um homem de 56 anos com cirrose por álcool, abstinente há 1 ano, vem à consulta de rotina. Não há sinais de encefalopatia. Tem ascite volumosa, que exigiu paracentese de alívio no mês passado apesar dos diuréticos. Exames: bilirrubina total 2,5 mg/dL; albumina 2,6 g/dL; RNI 1,9.\n\nQual é a pontuação e a classe de Child-Pugh?",
   "alternativas": [
    "10 pontos; Child-Pugh B",
    "11 pontos; Child-Pugh B",
@@ -17671,7 +17768,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-67c1a646",
@@ -17693,12 +17791,13 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-c43c369b",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 58 anos, com cirrose alcoólica Child-Pugh C e ascite tensa, tem elevação da creatinina de 1,0 para 2,4 mg/dL em 5 dias. Não está em choque (PA 100/60 mmHg), não recebeu nefrotóxicos nem contraste, e os diuréticos foram suspensos. Recebeu albumina intravenosa 1 g/kg/dia por 2 dias, mas a creatinina está em 2,5 mg/dL. Urina: sódio inferior a 10 mEq/L, proteinúria inferior a 500 mg/dia e ausência de hematúria. A diurese caiu para cerca de 400 mL/24 h. A ultrassonografia renal é normal, sem hidronefrose. A paracentese diagnóstica mostra 120 polimorfonucleares/mm³.\n\nQual é o diagnóstico e o tratamento farmacológico indicado?",
+  "enunciado": "Internado por descompensação ascítica, um homem de 58 anos com cirrose alcoólica Child-Pugh C e ascite tensa tem elevação da creatinina de 1,0 para 2,4 mg/dL em 5 dias. Não está em choque (PA 100/60 mmHg), não recebeu nefrotóxicos nem contraste, e os diuréticos foram suspensos. Recebeu albumina intravenosa 1 g/kg/dia por 2 dias, mas a creatinina está em 2,5 mg/dL. Urina: sódio inferior a 10 mEq/L, proteinúria inferior a 500 mg/dia e ausência de hematúria. A diurese caiu para cerca de 400 mL/24 h. A ultrassonografia renal é normal, sem hidronefrose. A paracentese diagnóstica mostra 120 polimorfonucleares/mm³.\n\nQual é o diagnóstico e o tratamento farmacológico indicado?",
   "alternativas": [
    "Glomerulonefrite por IgA da cirrose; pulsoterapia com metilprednisolona",
    "Lesão pré-renal por diurético; manter somente a albumina por mais 7 dias",
@@ -17707,7 +17806,7 @@
    "Síndrome hepatorrenal com lesão renal aguda; terlipressina associada à albumina"
   ],
   "correta": 4,
-  "explicacao": "Lesão renal aguda em cirrótico com ascite, sem choque, sem nefrotóxicos, sem resposta à suspensão dos diuréticos e à expansão com albumina por 48 horas, sem proteinúria ou hematúria significativas e com rins normais à ultrassonografia, preenche os critérios de síndrome hepatorrenal com lesão renal aguda. O mecanismo é vasodilatação esplâncnica intensa com vasoconstrição renal compensatória. O tratamento é um vasoconstritor, preferencialmente terlipressina, associado à albumina (noradrenalina é alternativa em terapia intensiva); o tratamento definitivo é o transplante hepático. O sódio urinário baixo e o sedimento sem cilindros não favorecem necrose tubular, e a falta de resposta à albumina afasta lesão pré-renal simples. Não há hematúria nem proteinúria que sugiram glomerulopatia. Furosemida agrava a hipovolemia efetiva. A PBE foi excluída (menos de 250 polimorfonucleares/mm³).",
+  "explicacao": "Lesão renal aguda em cirrótico com ascite, sem choque, sem nefrotóxicos, sem resposta à suspensão dos diuréticos e à expansão com albumina por 48 horas, sem proteinúria ou hematúria significativas e com rins normais à ultrassonografia, preenche os critérios de síndrome hepatorrenal com lesão renal aguda. O mecanismo é vasodilatação esplâncnica intensa com vasoconstrição renal compensatória. O tratamento é um vasoconstritor, preferencialmente terlipressina, associado à albumina (noradrenalina é alternativa em terapia intensiva); o tratamento definitivo é o transplante hepático. O sódio urinário baixo e o sedimento sem cilindros não favorecem necrose tubular, e a falta de resposta à albumina afasta lesão pré-renal simples. Não há hematúria nem proteinúria que sugiram glomerulopatia. Furosemida agrava a hipovolemia efetiva. A PBE foi excluída (menos de 250 polimorfonucleares/mm³). Para lembrar: rins de pacientes com síndrome hepatorrenal voltam a funcionar quando transplantados para receptores sem cirrose — prova de que o defeito é funcional.",
   "tema": "cirrose-hepatica",
   "subtema": "cirrose-hepatica.ascite-e-peritonite-bacteriana-espontanea",
   "especialidade": "gastroenterologia",
@@ -17715,7 +17814,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-458a2b2c",
@@ -17743,7 +17843,7 @@
  {
   "id": "med-0f55bc24",
   "area": "Gastroenterologia",
-  "enunciado": "Mulher de 55 anos é internada com pancreatite aguda biliar. No segundo dia, apresenta febre de 39 °C, calafrios e icterícia; bilirrubina total 6,0 mg/dL, com predomínio de direta. A ultrassonografia mostra colédoco dilatado (11 mm), com imagem sugestiva de cálculo distal, e vesícula com múltiplos cálculos. Está com PA 110/70 mmHg após hidratação e já recebe antibiótico.\n\nQual é a conduta em relação à via biliar?",
+  "enunciado": "No segundo dia de internação por pancreatite aguda biliar, uma mulher de 55 anos apresenta febre de 39 °C, calafrios e icterícia; bilirrubina total 6,0 mg/dL, com predomínio de direta. A ultrassonografia mostra colédoco dilatado (11 mm), com imagem sugestiva de cálculo distal, e vesícula com múltiplos cálculos. Está com PA 110/70 mmHg após hidratação e já recebe antibiótico.\n\nQual é a conduta em relação à via biliar?",
   "alternativas": [
    "Colecistectomia de urgência nas primeiras horas, sem abordar o colédoco",
    "CPRE com papilotomia e remoção do cálculo nas primeiras 24 horas",
@@ -17760,7 +17860,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-ce3fa57d",
@@ -18075,7 +18176,7 @@
  {
   "id": "med-fa13129c",
   "area": "Farmacologia",
-  "enunciado": "Mulher de 60 anos, com artrite reumatoide controlada com metotrexato 20 mg por semana e ácido fólico, recebeu sulfametoxazol-trimetoprima para infecção urinária há 10 dias. Agora tem febre, úlceras orais dolorosas e fraqueza. Exames: Hb 8,1 g/dL; leucócitos 1.200/mm³ (neutrófilos 400/mm³); plaquetas 45.000/mm³; creatinina normal.\n\nQual é a explicação e a conduta mais adequada?",
+  "enunciado": "Febre, úlceras orais dolorosas e fraqueza trazem ao pronto-socorro uma mulher de 60 anos com artrite reumatoide controlada com metotrexato 20 mg por semana e ácido fólico. Há 10 dias, recebeu sulfametoxazol-trimetoprima para infecção urinária. Exames: Hb 8,1 g/dL; leucócitos 1.200/mm³ (neutrófilos 400/mm³); plaquetas 45.000/mm³; creatinina normal. As articulações estão sem sinovite.\n\nQual é a causa provável da pancitopenia e o que deve ser feito?",
   "alternativas": [
    "Síndrome de Felty por atividade da artrite reumatoide; indicar esplenectomia",
    "Aplasia medular pela infecção urinária; filgrastim e manter o metotrexato",
@@ -18092,7 +18193,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-a7777b09",
@@ -18657,16 +18759,16 @@
  {
   "id": "med-905e7f6e",
   "area": "Farmacologia",
-  "enunciado": "Adolescente de 16 anos com doença de Chagas aguda de transmissão oral iniciou benznidazol. No 10º dia de uso, surge exantema maculopapular pruriginoso, difuso, sem febre, adenomegalia, lesões de mucosas ou descolamento de pele. Hemograma e aminotransferases normais.\n\nQual é a interpretação e a conduta mais adequada?",
+  "enunciado": "Adolescente de 16 anos, com doença de Chagas aguda adquirida num surto de transmissão oral ligado a açaí, iniciou benznidazol. No 10º dia de uso, surge exantema maculopapular pruriginoso, difuso, sem febre, adenomegalia, lesões de mucosas ou descolamento de pele. Hemograma e aminotransferases normais.\n\nComo interpretar a lesão e o que fazer com o tratamento?",
   "alternativas": [
    "Síndrome de Stevens-Johnson; suspender definitivamente e trocar por nifurtimox",
    "Reação de Jarisch-Herxheimer pela lise dos parasitos; suspender por 48 horas",
    "Reativação da doença com lesões cutâneas parasitárias; dobrar a dose do fármaco",
-   "Dermatite pelo benznidazol, efeito adverso mais comum; anti-histamínico, mantendo o fármaco",
+   "Farmacodermia leve pelo benznidazol; anti-histamínico, mantendo o fármaco",
    "Farmacodermia que contraindica qualquer tripanocida; tratar apenas com suporte"
   ],
   "correta": 3,
-  "explicacao": "A dermatite (exantema pruriginoso, em geral entre a 1ª e a 3ª semana) é o efeito adverso mais frequente do benznidazol. Nas formas leves, como esta, sem febre, adenomegalia, acometimento de mucosas ou descolamento, mantém-se o tratamento e controlam-se os sintomas com anti-histamínico (ou corticoide em casos moderados); a suspensão é reservada às reações graves ou com sinais sistêmicos. Não há critérios de Stevens-Johnson; lesões cutâneas por reativação ocorrem em imunossuprimidos, não sob tratamento; a reação de Jarisch-Herxheimer é típica do tratamento de espiroquetoses; e a farmacodermia leve não contraindica tripanocidas. Outros efeitos a vigiar são neuropatia periférica, mais tardia, e leucopenia, motivo do hemograma de controle.",
+  "explicacao": "A dermatite (exantema pruriginoso, em geral entre a 1ª e a 3ª semana) é o efeito adverso mais frequente do benznidazol. Nas formas leves, como esta, sem febre, adenomegalia, acometimento de mucosas ou descolamento, mantém-se o tratamento e controlam-se os sintomas com anti-histamínico (ou corticoide em casos moderados); a suspensão é reservada às reações graves ou com sinais sistêmicos. Não há critérios de Stevens-Johnson; lesões cutâneas por reativação ocorrem em imunossuprimidos, não sob tratamento; a reação de Jarisch-Herxheimer é típica do tratamento de espiroquetoses; e a farmacodermia leve não contraindica tripanocidas. Outros efeitos a vigiar são neuropatia periférica, mais tardia, e leucopenia, motivo do hemograma de controle. Para lembrar: Carlos Chagas descreveu em 1909 o agente, o vetor e a doença — feito raro na história da medicina.",
   "tema": "doenca-de-chagas",
   "subtema": "doenca-de-chagas.fase-aguda",
   "especialidade": "farmacologia",
@@ -18674,7 +18776,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-62c42fae",
@@ -18857,7 +18960,7 @@
  {
   "id": "med-d387c2c8",
   "area": "Farmacologia",
-  "enunciado": "Homem de 40 anos, no 2º mês de poliquimioterapia única para hanseníase multibacilar, refere cansaço e dispneia aos esforços. Ao exame, lábios e extremidades arroxeados; a oximetria de pulso mostra SpO2 de 88%, mas a gasometria arterial tem PaO2 de 95 mmHg. A hemoglobina caiu de 14 para 11 g/dL.\n\nQual fármaco do esquema é o responsável mais provável e por qual mecanismo?",
+  "enunciado": "Lábios e extremidades arroxeados chamam a atenção da enfermeira do ambulatório de hanseníase. O paciente, de 40 anos, está no 2º mês da poliquimioterapia única para a forma multibacilar e refere cansaço e dispneia aos esforços. A oximetria de pulso mostra SpO2 de 88%, mas a gasometria arterial tem PaO2 de 95 mmHg. A hemoglobina caiu de 14 para 11 g/dL.\n\nQual fármaco do esquema é o responsável mais provável e por qual mecanismo?",
   "alternativas": [
    "Dapsona, por metemoglobinemia e hemólise oxidativa",
    "Clofazimina, por pigmentação que falseia a oximetria",
@@ -18874,7 +18977,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-aa8d7a92",
@@ -19013,7 +19117,7 @@
  {
   "id": "med-73c67008",
   "area": "Farmacologia",
-  "enunciado": "Mulher de 25 anos, com epilepsia focal controlada com carbamazepina, usa anticoncepcional oral combinado de baixa dose e engravidou sem ter esquecido comprimidos.\n\nQual interação explica a falha contraceptiva?",
+  "enunciado": "\"Tomei a pílula todos os dias, sem esquecer nenhuma\", garante uma mulher de 25 anos ao receber o resultado positivo do beta-hCG. Ela tem epilepsia focal controlada com carbamazepina 400 mg duas vezes ao dia há 3 anos e usa anticoncepcional oral combinado de baixa dose. Não teve vômitos nem diarreia e não usa outros medicamentos.\n\nQual interação explica a falha contraceptiva?",
   "alternativas": [
    "Indução do CYP3A4 pela carbamazepina, acelerando o metabolismo dos hormônios",
    "Aumento da excreção renal do progestagênio pela carbamazepina",
@@ -19022,7 +19126,7 @@
    "Inibição do CYP3A4 pela carbamazepina, com acúmulo do etinilestradiol"
   ],
   "correta": 0,
-  "explicacao": "A carbamazepina é indutora enzimática (CYP3A4, entre outras) e acelera o metabolismo hepático do etinilestradiol e dos progestagênios, reduzindo seus níveis e a eficácia contraceptiva; o mesmo ocorre com fenitoína, fenobarbital, oxcarbazepina e topiramato em doses altas. Nessas pacientes preferem-se métodos não afetados, como DIU de cobre, DIU com levonorgestrel ou acetato de medroxiprogesterona injetável. Ela não é inibidora enzimática (papel do valproato); a interação não se dá por absorção intestinal nem por excreção renal; e o aumento da fração livre não explicaria redução do efeito.",
+  "explicacao": "A carbamazepina é indutora enzimática (CYP3A4, entre outras) e acelera o metabolismo hepático do etinilestradiol e dos progestagênios, reduzindo seus níveis e a eficácia contraceptiva; o mesmo ocorre com fenitoína, fenobarbital, oxcarbazepina e topiramato em doses altas. Nessas pacientes preferem-se métodos não afetados, como DIU de cobre, DIU com levonorgestrel ou acetato de medroxiprogesterona injetável. Ela não é inibidora enzimática (papel do valproato); a interação não se dá por absorção intestinal nem por excreção renal; e o aumento da fração livre não explicaria redução do efeito. Para lembrar: com a lamotrigina ocorre o inverso — é o etinilestradiol que reduz os níveis do anticonvulsivante e pode descompensar as crises.",
   "tema": "epilepsia",
   "subtema": null,
   "especialidade": "farmacologia",
@@ -19030,7 +19134,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-95333eb7",
@@ -19146,7 +19251,7 @@
  {
   "id": "med-931c0f01",
   "area": "Genética",
-  "enunciado": "Menino de 7 anos tem fotossensibilidade intensa desde o 1º ano de vida, efélides abundantes em áreas expostas e já teve dois carcinomas espinocelulares na face.\n\nQual defeito molecular é o mais provável?",
+  "enunciado": "No ambulatório de dermatologia pediátrica, um menino de 7 anos tem fotossensibilidade intensa desde o 1º ano de vida, com queimaduras solares após exposições mínimas, efélides abundantes em áreas expostas e já teve dois carcinomas espinocelulares na face. Não há ataxia nem infecções de repetição.\n\nQual defeito molecular é o mais provável?",
   "alternativas": [
    "Falha do reparo por excisão de nucleotídeos dos dímeros de pirimidina",
    "Mutação em BRCA2, com falha da recombinação homóloga",
@@ -19155,7 +19260,7 @@
    "Mutação germinativa em PTCH1, com ativação da via Hedgehog"
   ],
   "correta": 0,
-  "explicacao": "O quadro é de xeroderma pigmentoso, doença autossômica recessiva em que falha o reparo por excisão de nucleotídeos, sistema que remove os dímeros de pirimidina (principalmente de timina) formados pela radiação ultravioleta; o acúmulo de mutações leva a fotossensibilidade, alterações pigmentares precoces e cânceres de pele (espinocelular, basocelular e melanoma) já na infância. O defeito de mismatch repair causa a síndrome de Lynch (câncer colorretal e de endométrio); PTCH1 germinativo causa a síndrome de Gorlin, com múltiplos basocelulares, mas sem fotossensibilidade extrema; BRCA2 predispõe a câncer de mama, ovário e próstata; e o ATM mutado causa ataxia-telangiectasia, com ataxia, imunodeficiência e linfomas.",
+  "explicacao": "O quadro é de xeroderma pigmentoso, doença autossômica recessiva em que falha o reparo por excisão de nucleotídeos, sistema que remove os dímeros de pirimidina (principalmente de timina) formados pela radiação ultravioleta; o acúmulo de mutações leva a fotossensibilidade, alterações pigmentares precoces e cânceres de pele (espinocelular, basocelular e melanoma) já na infância. O defeito de mismatch repair causa a síndrome de Lynch (câncer colorretal e de endométrio); PTCH1 germinativo causa a síndrome de Gorlin, com múltiplos basocelulares, mas sem fotossensibilidade extrema; BRCA2 predispõe a câncer de mama, ovário e próstata; e o ATM mutado causa ataxia-telangiectasia, com ataxia, imunodeficiência e linfomas. Para lembrar: o povoado de Araras, em Goiás, tem uma das maiores concentrações de xeroderma pigmentoso do mundo, atribuída a efeito fundador.",
   "tema": "cancer-de-pele",
   "subtema": "cancer-de-pele.carcinoma-espinocelular",
   "especialidade": "genetica",
@@ -19163,7 +19268,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-80b84ab2",
@@ -19390,7 +19496,7 @@
  {
   "id": "med-9ea4e970",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 68 anos tem icterícia progressiva há 6 semanas, com prurido, colúria, acolia fecal e emagrecimento de 7 kg, sem dor abdominal ou febre. Ao exame, palpa-se a vesícula biliar distendida e indolor no hipocôndrio direito.\n\nQual é a hipótese mais provável?",
+  "enunciado": "Há 6 semanas, a pele e os olhos de um aposentado de 68 anos amarelam progressivamente. Ele tem prurido, urina escura, fezes claras e perdeu 7 kg, sem dor abdominal ou febre. Ao exame, palpa-se a vesícula biliar distendida e indolor no hipocôndrio direito.\n\nQual é a principal hipótese para essa icterícia obstrutiva?",
   "alternativas": [
    "Síndrome de Mirizzi, com compressão do ducto hepático comum",
    "Neoplasia periampular, como o adenocarcinoma de cabeça de pâncreas",
@@ -19407,7 +19513,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-50dcddbf",
@@ -19878,7 +19985,7 @@
  {
   "id": "med-f9f0c00d",
   "area": "Gastroenterologia",
-  "enunciado": "Homem de 67 anos é internado com endocardite de valva aórtica, e as hemoculturas identificam Streptococcus gallolyticus (antigo S. bovis biotipo I). Não tem queixas gastrointestinais e nunca fez rastreamento de câncer.\n\nAlém do tratamento da endocardite, qual investigação está indicada?",
+  "enunciado": "As hemoculturas de um homem de 67 anos, internado com endocardite de valva aórtica, identificam Streptococcus gallolyticus (antigo S. bovis biotipo I). Ele não tem queixas gastrointestinais, não tem anemia e nunca fez rastreamento de câncer.\n\nAlém do tratamento da endocardite, qual investigação está indicada?",
   "alternativas": [
    "Colonoscopia, pela associação com neoplasia colorretal",
    "Endoscopia digestiva alta, para pesquisar H. pylori",
@@ -19895,7 +20002,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-5129386f",
@@ -20257,7 +20365,7 @@
  {
   "id": "med-1f37696a",
   "area": "Fisiologia",
-  "enunciado": "Puérpera relata que, ao ouvir o choro do bebê, sente o leite 'descer' e às vezes gotejar da mama, e que, em momentos de muita ansiedade, o leite parece não sair.\n\nQual hormônio é responsável por esse reflexo de ejeção?",
+  "enunciado": "No alojamento conjunto, uma puérpera de 3 dias conta que, ao ouvir o choro do bebê, sente o leite \"descer\" e às vezes gotejar da mama, mesmo antes de ele pegar o peito. Nos momentos de muita ansiedade, porém, o leite \"parece não sair\", embora as mamas estejam cheias.\n\nQual hormônio é responsável por esse reflexo de ejeção?",
   "alternativas": [
    "Lactogênio placentário",
    "Ocitocina",
@@ -20274,7 +20382,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-64f282d0",
@@ -21479,7 +21588,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-5823a1b0",
@@ -21596,7 +21706,7 @@
  {
   "id": "med-5219d597",
   "area": "Endocrinologia",
-  "enunciado": "Mulher de 26 anos com síndrome dos ovários policísticos, obesidade central e acantose nigricans tem testosterona total apenas discretamente aumentada, mas testosterona livre bem elevada.\n\nQual mecanismo liga a resistência à insulina ao hiperandrogenismo dessa paciente?",
+  "enunciado": "Uma mulher de 26 anos com síndrome dos ovários policísticos tem circunferência abdominal de 98 cm e placas aveludadas e escurecidas na nuca e nas axilas (acantose nigricans). A testosterona total está apenas discretamente aumentada, mas a testosterona livre está bem elevada. A glicemia de jejum é normal, e a insulina de jejum, elevada.\n\nQual mecanismo liga a resistência à insulina ao hiperandrogenismo dessa paciente?",
   "alternativas": [
    "Hiperinsulinemia eleva a SHBG hepática, que transporta mais androgênio para os tecidos",
    "Hiperinsulinemia estimula a teca ovariana e reduz a SHBG hepática, elevando o androgênio livre",
@@ -21613,7 +21723,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-bf92807e",
@@ -22081,7 +22192,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-09dc145f",
@@ -22103,7 +22215,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-01f72721",
@@ -22148,7 +22261,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-f4f25b6a",
@@ -22170,7 +22284,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-ea57b41c",
@@ -22215,7 +22330,8 @@
   "dificuldade": 1,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-1cb0424c",
@@ -22237,7 +22353,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-0819ba28",
@@ -22259,7 +22376,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-4e2f8af4",
@@ -22304,7 +22422,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-66fc697b",
@@ -22326,7 +22445,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-6f53bf1b",
@@ -22370,7 +22490,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-6d1d96eb",
@@ -22392,7 +22513,8 @@
   "dificuldade": 2,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-2c95f520",
@@ -22414,7 +22536,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-ca9abbaa",
@@ -22708,7 +22831,7 @@
  {
   "id": "med-229a29a6",
   "area": "Farmacologia",
-  "enunciado": "Homem de 32 anos com dependência de heroína (uso diário, última dose há 4 horas) procura tratamento e recebe a primeira dose de buprenorfina sublingual. Cerca de 30 minutos depois, apresenta de forma súbita sudorese, bocejos, lacrimejamento, rinorreia, piloereção, midríase, cólicas e diarreia.\n\nQual mecanismo explica esse quadro?",
+  "enunciado": "No CAPS AD, um homem de 32 anos com dependência de heroína (uso diário, última dose há 4 horas, ainda sem sinais de abstinência) recebe a primeira dose de buprenorfina sublingual. Cerca de 30 minutos depois, apresenta de forma súbita sudorese, bocejos, lacrimejamento, rinorreia, piloereção, midríase, cólicas e diarreia.\n\nQual mecanismo explica esse quadro?",
   "alternativas": [
    "Houve reação alérgica à buprenorfina, com liberação maciça de histamina",
    "O agonista parcial de alta afinidade deslocou o opioide pleno do receptor mu",
@@ -22725,7 +22848,8 @@
   "dificuldade": 3,
   "fonte": "autoral",
   "ano": null,
-  "prova": null
+  "prova": null,
+  "revisado": "2026-09"
  },
  {
   "id": "med-449ed79e",
