@@ -1,0 +1,928 @@
+{
+ "grupos": [
+  {
+   "id": "qs-febris",
+   "titulo": "Doenças febris da Amazônia",
+   "doencas": [
+    "Malária",
+    "Dengue",
+    "Chikungunya",
+    "Zika",
+    "Oropouche",
+    "Febre amarela",
+    "Leptospirose",
+    "Hepatite A",
+    "Febre tifoide"
+   ],
+   "perguntas": [
+    {
+     "txt": "É transmitida por inseto vetor?",
+     "sim": [
+      "Malária",
+      "Dengue",
+      "Chikungunya",
+      "Zika",
+      "Oropouche",
+      "Febre amarela"
+     ]
+    },
+    {
+     "txt": "O agente é um vírus?",
+     "sim": [
+      "Dengue",
+      "Chikungunya",
+      "Zika",
+      "Oropouche",
+      "Febre amarela",
+      "Hepatite A"
+     ]
+    },
+    {
+     "txt": "O agente é uma bactéria?",
+     "sim": [
+      "Leptospirose",
+      "Febre tifoide"
+     ]
+    },
+    {
+     "txt": "O agente é um protozoário?",
+     "sim": [
+      "Malária"
+     ]
+    },
+    {
+     "txt": "O vetor principal é o Aedes aegypti?",
+     "sim": [
+      "Dengue",
+      "Chikungunya",
+      "Zika"
+     ]
+    },
+    {
+     "txt": "É transmitida pelo maruim (Culicoides)?",
+     "sim": [
+      "Oropouche"
+     ]
+    },
+    {
+     "txt": "Transmissão fecal-oral (água ou alimento)?",
+     "sim": [
+      "Hepatite A",
+      "Febre tifoide"
+     ]
+    },
+    {
+     "txt": "Ligada à urina de rato e a enchentes?",
+     "sim": [
+      "Leptospirose"
+     ]
+    },
+    {
+     "txt": "Diagnóstico clássico pela gota espessa?",
+     "sim": [
+      "Malária"
+     ]
+    },
+    {
+     "txt": "Artralgia intensa que pode durar meses?",
+     "sim": [
+      "Chikungunya"
+     ]
+    },
+    {
+     "txt": "Exantema pruriginoso com conjuntivite é típico?",
+     "sim": [
+      "Zika"
+     ]
+    },
+    {
+     "txt": "Dor forte na panturrilha é típica?",
+     "sim": [
+      "Leptospirose"
+     ]
+    },
+    {
+     "txt": "Febre com bradicardia relativa (Faget)?",
+     "sim": [
+      "Febre amarela",
+      "Febre tifoide"
+     ]
+    },
+    {
+     "txt": "Maior risco é o extravasamento plasmático?",
+     "sim": [
+      "Dengue"
+     ]
+    }
+   ],
+   "notas": {
+    "Malária": "Febre em picos com calafrios; gota espessa confirma. P. vivax predomina na Amazônia.",
+    "Dengue": "Febre, dor retro-orbital e mialgia. Risco maior na defervescência, por extravasamento plasmático.",
+    "Chikungunya": "Febre alta com artralgia intensa e simétrica, que pode durar meses.",
+    "Zika": "Febre baixa, exantema pruriginoso e conjuntivite. Na gestação, causa microcefalia.",
+    "Oropouche": "Febre, cefaleia e mialgia semelhantes à dengue; transmitida pelo maruim (Culicoides paraensis).",
+    "Febre amarela": "Forma grave com icterícia, hemorragia e sinal de Faget. Prevenida por vacina.",
+    "Leptospirose": "Após enchentes: febre, mialgia na panturrilha e sufusão conjuntival; forma de Weil com icterícia.",
+    "Hepatite A": "Transmissão fecal-oral; icterícia após pródromo febril. Autolimitada e com vacina no PNI.",
+    "Febre tifoide": "Salmonella Typhi: febre prolongada, bradicardia relativa, roséolas e hepatoesplenomegalia."
+   }
+  },
+  {
+   "id": "qs-exantematicas",
+   "titulo": "Doenças exantemáticas da infância",
+   "doencas": [
+    "Sarampo",
+    "Rubéola",
+    "Varicela",
+    "Eritema infeccioso",
+    "Exantema súbito",
+    "Escarlatina",
+    "Mão-pé-boca",
+    "Doença de Kawasaki"
+   ],
+   "perguntas": [
+    {
+     "txt": "O agente é um vírus?",
+     "sim": [
+      "Sarampo",
+      "Rubéola",
+      "Varicela",
+      "Eritema infeccioso",
+      "Exantema súbito",
+      "Mão-pé-boca"
+     ]
+    },
+    {
+     "txt": "O agente é uma bactéria?",
+     "sim": [
+      "Escarlatina"
+     ]
+    },
+    {
+     "txt": "Tem vacina no calendário do PNI?",
+     "sim": [
+      "Sarampo",
+      "Rubéola",
+      "Varicela"
+     ]
+    },
+    {
+     "txt": "O exantema é vesicular?",
+     "sim": [
+      "Varicela",
+      "Mão-pé-boca"
+     ]
+    },
+    {
+     "txt": "Lesões em estágios diferentes ao mesmo tempo?",
+     "sim": [
+      "Varicela"
+     ]
+    },
+    {
+     "txt": "Tem manchas de Koplik?",
+     "sim": [
+      "Sarampo"
+     ]
+    },
+    {
+     "txt": "O exantema surge quando a febre cede?",
+     "sim": [
+      "Exantema súbito"
+     ]
+    },
+    {
+     "txt": "Face esbofeteada é típica?",
+     "sim": [
+      "Eritema infeccioso"
+     ]
+    },
+    {
+     "txt": "Língua em framboesa é típica?",
+     "sim": [
+      "Escarlatina",
+      "Doença de Kawasaki"
+     ]
+    },
+    {
+     "txt": "Risco de aneurisma coronariano?",
+     "sim": [
+      "Doença de Kawasaki"
+     ]
+    },
+    {
+     "txt": "Linfonodos retroauriculares e occipitais?",
+     "sim": [
+      "Rubéola"
+     ]
+    },
+    {
+     "txt": "Causada pelo parvovírus B19?",
+     "sim": [
+      "Eritema infeccioso"
+     ]
+    },
+    {
+     "txt": "Vesículas na boca, nas mãos e nos pés?",
+     "sim": [
+      "Mão-pé-boca"
+     ]
+    }
+   ],
+   "notas": {
+    "Sarampo": "Tosse, coriza e conjuntivite; manchas de Koplik e exantema craniocaudal. Vacina tríplice viral.",
+    "Rubéola": "Exantema leve com linfonodos retroauriculares e occipitais. Grave na gestação (síndrome congênita).",
+    "Varicela": "Vesículas pruriginosas em vários estágios ao mesmo tempo (polimorfismo regional).",
+    "Eritema infeccioso": "Parvovírus B19: face esbofeteada e depois exantema rendilhado nos membros.",
+    "Exantema súbito": "Herpesvírus 6: 3 dias de febre alta; o exantema aparece quando a febre cede.",
+    "Escarlatina": "Estreptococo do grupo A: exantema áspero (lixa), língua em framboesa e sinal de Pastia.",
+    "Mão-pé-boca": "Coxsackie: vesículas na boca, nas mãos e nos pés; comum em creches.",
+    "Doença de Kawasaki": "Febre ≥ 5 dias, conjuntivite, lábios fissurados; risco de aneurisma coronariano. Trata com imunoglobulina."
+   }
+  },
+  {
+   "id": "qs-dortoracica",
+   "titulo": "Causas de dor torácica",
+   "doencas": [
+    "Infarto agudo do miocárdio",
+    "Angina estável",
+    "Dissecção de aorta",
+    "Tromboembolismo pulmonar",
+    "Pneumotórax",
+    "Pericardite aguda",
+    "Doença do refluxo",
+    "Costocondrite",
+    "Pneumonia"
+   ],
+   "perguntas": [
+    {
+     "txt": "Tem origem cardíaca?",
+     "sim": [
+      "Infarto agudo do miocárdio",
+      "Angina estável",
+      "Pericardite aguda"
+     ]
+    },
+    {
+     "txt": "Troponina elevada é a regra?",
+     "sim": [
+      "Infarto agudo do miocárdio"
+     ]
+    },
+    {
+     "txt": "Dor aos esforços que alivia em repouso?",
+     "sim": [
+      "Angina estável"
+     ]
+    },
+    {
+     "txt": "Dor rasgando que irradia para o dorso?",
+     "sim": [
+      "Dissecção de aorta"
+     ]
+    },
+    {
+     "txt": "Diferença de pulso ou PA entre os braços?",
+     "sim": [
+      "Dissecção de aorta"
+     ]
+    },
+    {
+     "txt": "Ligada a TVP e imobilização?",
+     "sim": [
+      "Tromboembolismo pulmonar"
+     ]
+    },
+    {
+     "txt": "Murmúrio abolido com timpanismo?",
+     "sim": [
+      "Pneumotórax"
+     ]
+    },
+    {
+     "txt": "Melhora ao inclinar o tronco para frente?",
+     "sim": [
+      "Pericardite aguda"
+     ]
+    },
+    {
+     "txt": "Supra de ST difuso com infra de PR?",
+     "sim": [
+      "Pericardite aguda"
+     ]
+    },
+    {
+     "txt": "Pirose que piora ao deitar após comer?",
+     "sim": [
+      "Doença do refluxo"
+     ]
+    },
+    {
+     "txt": "Dor reproduzida à palpação do tórax?",
+     "sim": [
+      "Costocondrite"
+     ]
+    },
+    {
+     "txt": "Febre e tosse produtiva?",
+     "sim": [
+      "Pneumonia"
+     ]
+    },
+    {
+     "txt": "Dor pleurítica (piora ao inspirar)?",
+     "sim": [
+      "Tromboembolismo pulmonar",
+      "Pneumotórax",
+      "Pericardite aguda",
+      "Pneumonia"
+     ]
+    }
+   ],
+   "notas": {
+    "Infarto agudo do miocárdio": "Dor em aperto > 20 min, com troponina elevada. ECG em até 10 min da chegada.",
+    "Angina estável": "Dor aos esforços que alivia com repouso ou nitrato em poucos minutos.",
+    "Dissecção de aorta": "Dor súbita, rasgando, para o dorso; assimetria de pulsos. Não anticoagular.",
+    "Tromboembolismo pulmonar": "Dispneia súbita, taquicardia e dor pleurítica; angio-TC confirma.",
+    "Pneumotórax": "Dor súbita e dispneia; murmúrio abolido e timpanismo. Hipertensivo: descompressão imediata.",
+    "Pericardite aguda": "Dor que melhora ao inclinar para frente; atrito pericárdico e supra de ST difuso.",
+    "Doença do refluxo": "Pirose e regurgitação, pioram deitado após refeições; melhoram com IBP.",
+    "Costocondrite": "Dor reproduzida à palpação das junções costocondrais; benigna.",
+    "Pneumonia": "Febre, tosse produtiva e dor pleurítica, com consolidação na radiografia."
+   }
+  },
+  {
+   "id": "qs-anemias",
+   "titulo": "Anemias",
+   "doencas": [
+    "Ferropriva",
+    "Deficiência de B12",
+    "Deficiência de folato",
+    "Anemia de doença crônica",
+    "Talassemia beta menor",
+    "Anemia falciforme",
+    "Esferocitose hereditária",
+    "Deficiência de G6PD",
+    "Anemia aplásica",
+    "Hemolítica autoimune"
+   ],
+   "perguntas": [
+    {
+     "txt": "É microcítica?",
+     "sim": [
+      "Ferropriva",
+      "Talassemia beta menor"
+     ]
+    },
+    {
+     "txt": "É macrocítica?",
+     "sim": [
+      "Deficiência de B12",
+      "Deficiência de folato"
+     ]
+    },
+    {
+     "txt": "Ferritina baixa?",
+     "sim": [
+      "Ferropriva"
+     ]
+    },
+    {
+     "txt": "Ferro baixo com ferritina normal ou alta?",
+     "sim": [
+      "Anemia de doença crônica"
+     ]
+    },
+    {
+     "txt": "Causa sintomas neurológicos?",
+     "sim": [
+      "Deficiência de B12"
+     ]
+    },
+    {
+     "txt": "É hereditária?",
+     "sim": [
+      "Talassemia beta menor",
+      "Anemia falciforme",
+      "Esferocitose hereditária",
+      "Deficiência de G6PD"
+     ]
+    },
+    {
+     "txt": "HbA2 aumentada na eletroforese?",
+     "sim": [
+      "Talassemia beta menor"
+     ]
+    },
+    {
+     "txt": "Crises vaso-oclusivas dolorosas?",
+     "sim": [
+      "Anemia falciforme"
+     ]
+    },
+    {
+     "txt": "Hemólise após primaquina, sulfas ou fava?",
+     "sim": [
+      "Deficiência de G6PD"
+     ]
+    },
+    {
+     "txt": "Esferócitos no sangue periférico?",
+     "sim": [
+      "Esferocitose hereditária",
+      "Hemolítica autoimune"
+     ]
+    },
+    {
+     "txt": "Coombs direto positivo?",
+     "sim": [
+      "Hemolítica autoimune"
+     ]
+    },
+    {
+     "txt": "Pancitopenia com medula hipocelular?",
+     "sim": [
+      "Anemia aplásica"
+     ]
+    }
+   ],
+   "notas": {
+    "Ferropriva": "Microcítica e hipocrômica, ferritina baixa. Em adulto, investigar sangramento digestivo.",
+    "Deficiência de B12": "Macrocítica com sintomas neurológicos; causa clássica: anemia perniciosa.",
+    "Deficiência de folato": "Macrocítica sem sintomas neurológicos; etilismo, gestação e má alimentação.",
+    "Anemia de doença crônica": "Normocítica, ferro baixo com ferritina normal ou alta (hepcidina elevada).",
+    "Talassemia beta menor": "Microcitose acentuada com Hb pouco baixa e HbA2 aumentada; ferritina normal.",
+    "Anemia falciforme": "HbS: crises vaso-oclusivas, hemólise e asplenia funcional. Triada no teste do pezinho.",
+    "Esferocitose hereditária": "Esferócitos, CHCM alto e esplenomegalia; Coombs negativo.",
+    "Deficiência de G6PD": "Hemólise após oxidantes (primaquina, sulfas, fava); corpúsculos de Heinz.",
+    "Anemia aplásica": "Pancitopenia com medula hipocelular na biópsia; reticulócitos baixos.",
+    "Hemolítica autoimune": "Anticorpos contra hemácias: Coombs direto positivo e esferócitos. Trata com corticoide."
+   }
+  },
+  {
+   "id": "qs-hepatites",
+   "titulo": "Hepatites virais e outras hepatopatias",
+   "doencas": [
+    "Hepatite A",
+    "Hepatite B",
+    "Hepatite C",
+    "Hepatite D",
+    "Hepatite E",
+    "Hepatite autoimune",
+    "Hepatite alcoólica",
+    "Hepatite por paracetamol",
+    "Doença de Wilson"
+   ],
+   "perguntas": [
+    {
+     "txt": "É causada por vírus?",
+     "sim": [
+      "Hepatite A",
+      "Hepatite B",
+      "Hepatite C",
+      "Hepatite D",
+      "Hepatite E"
+     ]
+    },
+    {
+     "txt": "Transmissão fecal-oral?",
+     "sim": [
+      "Hepatite A",
+      "Hepatite E"
+     ]
+    },
+    {
+     "txt": "Transmissão sexual ou parenteral?",
+     "sim": [
+      "Hepatite B",
+      "Hepatite C",
+      "Hepatite D"
+     ]
+    },
+    {
+     "txt": "Tem vacina no calendário do PNI?",
+     "sim": [
+      "Hepatite A",
+      "Hepatite B"
+     ]
+    },
+    {
+     "txt": "O vírus é de DNA?",
+     "sim": [
+      "Hepatite B"
+     ]
+    },
+    {
+     "txt": "Só infecta quem já tem o vírus B?",
+     "sim": [
+      "Hepatite D"
+     ]
+    },
+    {
+     "txt": "Antivirais de ação direta curam > 95%?",
+     "sim": [
+      "Hepatite C"
+     ]
+    },
+    {
+     "txt": "Especialmente grave em gestantes?",
+     "sim": [
+      "Hepatite E"
+     ]
+    },
+    {
+     "txt": "Anticorpo antimúsculo liso e IgG alta?",
+     "sim": [
+      "Hepatite autoimune"
+     ]
+    },
+    {
+     "txt": "AST/ALT maior que 2?",
+     "sim": [
+      "Hepatite alcoólica"
+     ]
+    },
+    {
+     "txt": "Antídoto é a N-acetilcisteína?",
+     "sim": [
+      "Hepatite por paracetamol"
+     ]
+    },
+    {
+     "txt": "Anel de Kayser-Fleischer?",
+     "sim": [
+      "Doença de Wilson"
+     ]
+    },
+    {
+     "txt": "É doença genética?",
+     "sim": [
+      "Doença de Wilson"
+     ]
+    }
+   ],
+   "notas": {
+    "Hepatite A": "Fecal-oral, aguda e autolimitada; não cronifica. Vacina no PNI aos 15 meses.",
+    "Hepatite B": "Vírus de DNA, transmissão sexual, parenteral e vertical. Vacina ao nascer.",
+    "Hepatite C": "Parenteral; cronifica na maioria. Antivirais de ação direta curam > 95%.",
+    "Hepatite D": "Vírus defectivo: só infecta quem tem HBV. Relevante na Amazônia ocidental.",
+    "Hepatite E": "Fecal-oral, em geral autolimitada, mas grave em gestantes.",
+    "Hepatite autoimune": "Mulheres jovens, IgG alta e anticorpo antimúsculo liso; responde a corticoide.",
+    "Hepatite alcoólica": "AST/ALT > 2, com AST raramente > 300; icterícia em etilista pesado.",
+    "Hepatite por paracetamol": "Lesão aguda com transaminases muito altas; antídoto: N-acetilcisteína.",
+    "Doença de Wilson": "Acúmulo de cobre: ceruloplasmina baixa e anel de Kayser-Fleischer."
+   }
+  },
+  {
+   "id": "qs-pneumonias",
+   "titulo": "Pneumonias por agente",
+   "doencas": [
+    "Pneumococo",
+    "Haemophilus influenzae",
+    "Staphylococcus aureus",
+    "Klebsiella",
+    "Pseudomonas",
+    "Mycoplasma",
+    "Legionella",
+    "Pneumocystis",
+    "Anaeróbios"
+   ],
+   "perguntas": [
+    {
+     "txt": "Causa mais comum de pneumonia comunitária?",
+     "sim": [
+      "Pneumococo"
+     ]
+    },
+    {
+     "txt": "É um agente atípico?",
+     "sim": [
+      "Mycoplasma",
+      "Legionella"
+     ]
+    },
+    {
+     "txt": "É bactéria Gram-positiva?",
+     "sim": [
+      "Pneumococo",
+      "Staphylococcus aureus"
+     ]
+    },
+    {
+     "txt": "É bactéria Gram-negativa?",
+     "sim": [
+      "Haemophilus influenzae",
+      "Klebsiella",
+      "Pseudomonas",
+      "Legionella"
+     ]
+    },
+    {
+     "txt": "É um fungo?",
+     "sim": [
+      "Pneumocystis"
+     ]
+    },
+    {
+     "txt": "Diplococo lanceolado?",
+     "sim": [
+      "Pneumococo"
+     ]
+    },
+    {
+     "txt": "Pneumatoceles após gripe (influenza)?",
+     "sim": [
+      "Staphylococcus aureus"
+     ]
+    },
+    {
+     "txt": "Escarro em geleia de groselha?",
+     "sim": [
+      "Klebsiella"
+     ]
+    },
+    {
+     "txt": "Típica em fibrose cística e hospitalar?",
+     "sim": [
+      "Pseudomonas"
+     ]
+    },
+    {
+     "txt": "Hiponatremia e ligada a ar-condicionado?",
+     "sim": [
+      "Legionella"
+     ]
+    },
+    {
+     "txt": "Aglutininas frias e miringite bolhosa?",
+     "sim": [
+      "Mycoplasma"
+     ]
+    },
+    {
+     "txt": "Típica de HIV com CD4 < 200?",
+     "sim": [
+      "Pneumocystis"
+     ]
+    },
+    {
+     "txt": "Escarro pútrido após aspiração?",
+     "sim": [
+      "Anaeróbios"
+     ]
+    },
+    {
+     "txt": "Cocobacilo comum na DPOC?",
+     "sim": [
+      "Haemophilus influenzae"
+     ]
+    }
+   ],
+   "notas": {
+    "Pneumococo": "Principal causa de pneumonia comunitária; diplococo Gram-positivo; consolidação lobar.",
+    "Haemophilus influenzae": "Cocobacilo Gram-negativo, comum em DPOC e tabagistas.",
+    "Staphylococcus aureus": "Pós-influenza e em usuários de drogas IV; pneumatoceles e abscessos.",
+    "Klebsiella": "Etilistas e diabéticos; escarro em geleia de groselha e abaulamento de cisura.",
+    "Pseudomonas": "Hospitalar, ventilação mecânica, fibrose cística e bronquiectasias.",
+    "Mycoplasma": "Atípica em jovens; aglutininas frias e miringite bolhosa. Betalactâmico não age.",
+    "Legionella": "Atípica grave: diarreia, hiponatremia; ar-condicionado. Antígeno urinário.",
+    "Pneumocystis": "Fungo em HIV com CD4 < 200; hipoxemia e infiltrado intersticial. Trata com SMX-TMP.",
+    "Anaeróbios": "Após aspiração (etilismo, disfagia); escarro pútrido e abscesso pulmonar."
+   }
+  },
+  {
+   "id": "qs-tireoide",
+   "titulo": "Doenças da tireoide",
+   "doencas": [
+    "Doença de Graves",
+    "Tireoidite de Hashimoto",
+    "Tireoidite subaguda",
+    "Bócio multinodular tóxico",
+    "Adenoma tóxico",
+    "Carcinoma papilífero",
+    "Carcinoma medular",
+    "Tireoidite pós-parto",
+    "Carcinoma anaplásico"
+   ],
+   "perguntas": [
+    {
+     "txt": "Pode causar tireotoxicose?",
+     "sim": [
+      "Doença de Graves",
+      "Tireoidite subaguda",
+      "Bócio multinodular tóxico",
+      "Adenoma tóxico",
+      "Tireoidite pós-parto"
+     ]
+    },
+    {
+     "txt": "É autoimune?",
+     "sim": [
+      "Doença de Graves",
+      "Tireoidite de Hashimoto",
+      "Tireoidite pós-parto"
+     ]
+    },
+    {
+     "txt": "Principal causa de hipotireoidismo?",
+     "sim": [
+      "Tireoidite de Hashimoto"
+     ]
+    },
+    {
+     "txt": "Oftalmopatia e mixedema pré-tibial?",
+     "sim": [
+      "Doença de Graves"
+     ]
+    },
+    {
+     "txt": "Tireoide dolorosa após virose?",
+     "sim": [
+      "Tireoidite subaguda"
+     ]
+    },
+    {
+     "txt": "Captação de iodo radioativo baixa?",
+     "sim": [
+      "Tireoidite subaguda",
+      "Tireoidite pós-parto"
+     ]
+    },
+    {
+     "txt": "Nódulo único hipercaptante (quente)?",
+     "sim": [
+      "Adenoma tóxico"
+     ]
+    },
+    {
+     "txt": "Vários nódulos autônomos em idoso?",
+     "sim": [
+      "Bócio multinodular tóxico"
+     ]
+    },
+    {
+     "txt": "É uma neoplasia maligna?",
+     "sim": [
+      "Carcinoma papilífero",
+      "Carcinoma medular",
+      "Carcinoma anaplásico"
+     ]
+    },
+    {
+     "txt": "Corpos psamomatosos na histologia?",
+     "sim": [
+      "Carcinoma papilífero"
+     ]
+    },
+    {
+     "txt": "Calcitonina elevada?",
+     "sim": [
+      "Carcinoma medular"
+     ]
+    },
+    {
+     "txt": "Associado à NEM 2?",
+     "sim": [
+      "Carcinoma medular"
+     ]
+    },
+    {
+     "txt": "Crescimento muito rápido em idoso?",
+     "sim": [
+      "Carcinoma anaplásico"
+     ]
+    },
+    {
+     "txt": "Surge até 1 ano após o parto?",
+     "sim": [
+      "Tireoidite pós-parto"
+     ]
+    }
+   ],
+   "notas": {
+    "Doença de Graves": "Autoimune (TRAb): hipertireoidismo, bócio difuso, oftalmopatia e mixedema pré-tibial.",
+    "Tireoidite de Hashimoto": "Principal causa de hipotireoidismo onde há iodo suficiente; anti-TPO positivo.",
+    "Tireoidite subaguda": "De Quervain: tireoide dolorosa após virose, VHS alta, captação baixa.",
+    "Bócio multinodular tóxico": "Idosos: vários nódulos autônomos causando hipertireoidismo.",
+    "Adenoma tóxico": "Doença de Plummer: nódulo único quente que suprime o resto da glândula.",
+    "Carcinoma papilífero": "Câncer de tireoide mais comum; corpos psamomatosos, disseminação linfática.",
+    "Carcinoma medular": "Células C: calcitonina elevada; pode ser familiar (NEM 2, gene RET).",
+    "Tireoidite pós-parto": "Autoimune, até 1 ano após o parto; tireotoxicose e depois hipotireoidismo.",
+    "Carcinoma anaplásico": "Idosos, massa cervical de crescimento muito rápido; prognóstico muito ruim."
+   }
+  },
+  {
+   "id": "qs-icterneo",
+   "titulo": "Causas de icterícia neonatal",
+   "doencas": [
+    "Icterícia fisiológica",
+    "Icterícia do leite materno",
+    "Isoimunização Rh",
+    "Incompatibilidade ABO",
+    "Deficiência de G6PD",
+    "Esferocitose hereditária",
+    "Atresia de vias biliares",
+    "Síndrome de Crigler-Najjar",
+    "Hipotireoidismo congênito"
+   ],
+   "perguntas": [
+    {
+     "txt": "Surge nas primeiras 24 h de vida?",
+     "sim": [
+      "Isoimunização Rh",
+      "Incompatibilidade ABO"
+     ]
+    },
+    {
+     "txt": "É causa hemolítica?",
+     "sim": [
+      "Isoimunização Rh",
+      "Incompatibilidade ABO",
+      "Deficiência de G6PD",
+      "Esferocitose hereditária"
+     ]
+    },
+    {
+     "txt": "Mãe Rh negativo sensibilizada?",
+     "sim": [
+      "Isoimunização Rh"
+     ]
+    },
+    {
+     "txt": "Mãe tipo O e RN A ou B?",
+     "sim": [
+      "Incompatibilidade ABO"
+     ]
+    },
+    {
+     "txt": "É hereditária (genética)?",
+     "sim": [
+      "Deficiência de G6PD",
+      "Esferocitose hereditária",
+      "Síndrome de Crigler-Najjar"
+     ]
+    },
+    {
+     "txt": "É deficiência de uma enzima?",
+     "sim": [
+      "Deficiência de G6PD",
+      "Síndrome de Crigler-Najjar"
+     ]
+    },
+    {
+     "txt": "Hemólise após naftalina ou sulfas?",
+     "sim": [
+      "Deficiência de G6PD"
+     ]
+    },
+    {
+     "txt": "Falta genética da UGT1A1?",
+     "sim": [
+      "Síndrome de Crigler-Najjar"
+     ]
+    },
+    {
+     "txt": "Bilirrubina direta (conjugada) elevada?",
+     "sim": [
+      "Atresia de vias biliares"
+     ]
+    },
+    {
+     "txt": "Tratada com a cirurgia de Kasai?",
+     "sim": [
+      "Atresia de vias biliares"
+     ]
+    },
+    {
+     "txt": "Após 24 h e some em até 2 semanas?",
+     "sim": [
+      "Icterícia fisiológica"
+     ]
+    },
+    {
+     "txt": "Ligada à amamentação, após a 1ª semana?",
+     "sim": [
+      "Icterícia do leite materno"
+     ]
+    },
+    {
+     "txt": "TSH elevado no teste do pezinho?",
+     "sim": [
+      "Hipotireoidismo congênito"
+     ]
+    }
+   ],
+   "notas": {
+    "Icterícia fisiológica": "Surge após 24 h, pico no 3º–5º dia e some em até 2 semanas no RN saudável.",
+    "Icterícia do leite materno": "Após a 1ª semana em RN bem, mamando e ganhando peso; manter o aleitamento.",
+    "Isoimunização Rh": "Mãe Rh- sensibilizada: hemólise grave, icterícia < 24 h, hidropsia. Prevenção: imunoglobulina anti-D.",
+    "Incompatibilidade ABO": "Mãe O e RN A ou B; hemólise em geral mais leve que a do Rh, já no 1º filho.",
+    "Deficiência de G6PD": "Hemólise após oxidantes (naftalina, sulfas); ligada ao X, mais em meninos.",
+    "Esferocitose hereditária": "Hemólise com esferócitos e história familiar; pode exigir exsanguineotransfusão.",
+    "Atresia de vias biliares": "Colestase com acolia e colúria; cirurgia de Kasai antes de 60 dias de vida.",
+    "Síndrome de Crigler-Najjar": "Falta genética da UGT1A1: bilirrubina indireta muito alta e risco de kernicterus.",
+    "Hipotireoidismo congênito": "Icterícia prolongada, hérnia umbilical e macroglossia; TSH alto no pezinho."
+   }
+  }
+ ]
+}

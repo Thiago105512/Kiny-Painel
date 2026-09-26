@@ -1,0 +1,1802 @@
+[
+ {
+  "id": "tr-001",
+  "nome": "Sofia, 8 meses",
+  "avatar": "bebe",
+  "queixa": "Tosse, nariz entupido e tá cansadinha. Mama menos.",
+  "sinais": {
+   "PA": null,
+   "FC": 150,
+   "FR": 50,
+   "SatO2": 93,
+   "Tax": 37.6,
+   "dor": null,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "SatO2 baixa (< 95%)",
+  "porque": "Bronquiolite com SatO2 93%: baixa = amarelo. Vigiar esforço respiratório.",
+  "fluxograma": "Dispneia em criança"
+ },
+ {
+  "id": "tr-002",
+  "nome": "Deise, 36 anos",
+  "avatar": "mulher",
+  "queixa": "Queimei a mão no óleo quente da fritura.",
+  "sinais": {
+   "PA": "120x80",
+   "FC": 94,
+   "FR": 18,
+   "SatO2": 99,
+   "Tax": 36.5,
+   "dor": 6,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "Dor moderada (5–7)",
+  "porque": "Queimadura pequena com dor 6/10: amarelo. Com dor 8 ou mais, seria laranja.",
+  "fluxograma": "Queimaduras"
+ },
+ {
+  "id": "tr-003",
+  "nome": "Érica, 31 anos",
+  "avatar": "mulher",
+  "queixa": "Acho que é dengue: febre de 38,9, dor no corpo e atrás dos olhos.",
+  "sinais": {
+   "PA": "120x80",
+   "FC": 98,
+   "FR": 18,
+   "SatO2": 99,
+   "Tax": 38.9,
+   "dor": 4,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "Quente (38,5–40,9 °C)",
+  "porque": "Febre 38,9 °C = quente: amarelo. Sem sinais de alarme, mas a febre já define a cor.",
+  "fluxograma": "Mal-estar em adulto"
+ },
+ {
+  "id": "tr-004",
+  "nome": "Roberto, 48 anos",
+  "avatar": "homem",
+  "queixa": "Travou as costas carregando rancho ontem. Dói um pouco.",
+  "sinais": {
+   "PA": "130x80",
+   "FC": 80,
+   "FR": 16,
+   "SatO2": 99,
+   "Tax": 36.6,
+   "dor": 4,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "verde",
+  "discriminador": "Dor leve recente",
+  "porque": "Lombalgia com dor 4/10 e início ontem: verde.",
+  "fluxograma": "Dor lombar"
+ },
+ {
+  "id": "tr-005",
+  "nome": "Genésio, 66 anos",
+  "avatar": "idoso",
+  "queixa": "Vim só renovar a receita do remédio da pressão.",
+  "sinais": {
+   "PA": "138x88",
+   "FC": 76,
+   "FR": 16,
+   "SatO2": 98,
+   "Tax": 36.4,
+   "dor": 0,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "azul",
+  "discriminador": "Sem discriminadores (não urgente)",
+  "porque": "Sem queixa aguda e sinais estáveis: azul. Pode ir para a UBS.",
+  "fluxograma": "Mal-estar em adulto"
+ },
+ {
+  "id": "tr-006",
+  "nome": "Ravi, 3 anos",
+  "avatar": "crianca",
+  "queixa": "Ele tá se tremendo todo e não para! Tava com febre.",
+  "sinais": {
+   "PA": null,
+   "FC": 162,
+   "FR": 30,
+   "SatO2": 88,
+   "Tax": 39.4,
+   "dor": null,
+   "glasgow": null,
+   "HGT": null
+  },
+  "cor": "vermelho",
+  "discriminador": "Convulsionando",
+  "porque": "Crise convulsiva em curso é sempre vermelho, independente da causa (aqui, febre).",
+  "fluxograma": "Convulsões"
+ },
+ {
+  "id": "tr-007",
+  "nome": "Carlos, 58 anos",
+  "avatar": "homem",
+  "queixa": "Sou diabético. A glicemia deu 400 no aparelho de casa.",
+  "sinais": {
+   "PA": "140x90",
+   "FC": 88,
+   "FR": 16,
+   "SatO2": 98,
+   "Tax": 36.6,
+   "dor": 0,
+   "glasgow": 15,
+   "HGT": 410
+  },
+  "cor": "amarelo",
+  "discriminador": "Hiperglicemia (HGT > 300 mg/dL)",
+  "porque": "HGT alto sem sinais de cetose (sem vômito nem Kussmaul): amarelo.",
+  "fluxograma": "Diabetes"
+ },
+ {
+  "id": "tr-008",
+  "nome": "Moisés, 46 anos",
+  "avatar": "homem",
+  "queixa": "Coriza e tosse há 2 dias. Queria ver se é gripe.",
+  "sinais": {
+   "PA": "120x80",
+   "FC": 80,
+   "FR": 16,
+   "SatO2": 98,
+   "Tax": 37.0,
+   "dor": 0,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "verde",
+  "discriminador": "Problema recente (< 7 dias)",
+  "porque": "Sintoma recente sem febre, dor ou falta de ar: verde.",
+  "fluxograma": "Mal-estar em adulto"
+ },
+ {
+  "id": "tr-009",
+  "nome": "Railson, 22 anos",
+  "avatar": "homem",
+  "queixa": "Caiu de moto. Tá engasgando com sangue na boca, fazendo barulho.",
+  "sinais": {
+   "PA": "110x70",
+   "FC": 124,
+   "FR": 34,
+   "SatO2": 84,
+   "Tax": 36.2,
+   "dor": null,
+   "glasgow": 9,
+   "HGT": null
+  },
+  "cor": "vermelho",
+  "discriminador": "Via aérea comprometida",
+  "porque": "Trauma de face com ruído e sangue na via aérea. Via aérea é a 1ª prioridade (A do ABCDE).",
+  "fluxograma": "Grande traumatismo"
+ },
+ {
+  "id": "tr-010",
+  "nome": "Ruan, 16 anos",
+  "avatar": "homem",
+  "queixa": "Levei uma bolada na cabeça e apaguei uns segundos. Já tô bem.",
+  "sinais": {
+   "PA": "120x70",
+   "FC": 80,
+   "FR": 16,
+   "SatO2": 99,
+   "Tax": 36.5,
+   "dor": 3,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "História de inconsciência",
+  "porque": "Armadilha: está bem agora, mas perdeu a consciência após trauma. Isso já é amarelo.",
+  "fluxograma": "Traumatismo cranioencefálico"
+ },
+ {
+  "id": "tr-011",
+  "nome": "Adriana, 27 anos",
+  "avatar": "gestante",
+  "queixa": "Grávida de 10 semanas. Vomito o dia todo, não paro nada.",
+  "sinais": {
+   "PA": "110x70",
+   "FC": 100,
+   "FR": 18,
+   "SatO2": 99,
+   "Tax": 36.7,
+   "dor": 2,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "Vômitos persistentes",
+  "porque": "Vômitos persistentes na gestação (hiperêmese): amarelo.",
+  "fluxograma": "Gravidez"
+ },
+ {
+  "id": "tr-012",
+  "nome": "Raimundo, 58 anos",
+  "avatar": "homem",
+  "queixa": "Dor forte no peito e tô todo suado, frio, sem força.",
+  "sinais": {
+   "PA": "78x50",
+   "FC": 118,
+   "FR": 24,
+   "SatO2": 92,
+   "Tax": 36.1,
+   "dor": 9,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "vermelho",
+  "discriminador": "Choque",
+  "porque": "Dor precordial daria laranja, mas há choque (provável IAM com choque cardiogênico): vermelho.",
+  "fluxograma": "Dor torácica"
+ },
+ {
+  "id": "tr-013",
+  "nome": "Rosilene, 30 anos",
+  "avatar": "mulher",
+  "queixa": "Dor do lado das costas, não aguento, já vomitei de tanta dor.",
+  "sinais": {
+   "PA": "130x80",
+   "FC": 92,
+   "FR": 18,
+   "SatO2": 98,
+   "Tax": 36.7,
+   "dor": 9,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "laranja",
+  "discriminador": "Dor intensa (8–10)",
+  "porque": "Armadilha: sinais vitais normais, mas dor 9/10 já é laranja (provável cólica renal).",
+  "fluxograma": "Dor abdominal em adulto"
+ },
+ {
+  "id": "tr-014",
+  "nome": "Luana, 23 anos",
+  "avatar": "mulher",
+  "queixa": "Tô com dengue. Hoje fiquei gelada, tonta, quase desmaiei.",
+  "sinais": {
+   "PA": "70x50",
+   "FC": 132,
+   "FR": 26,
+   "SatO2": 95,
+   "Tax": 36.0,
+   "dor": 6,
+   "glasgow": 14,
+   "HGT": null
+  },
+  "cor": "vermelho",
+  "discriminador": "Choque",
+  "porque": "Dengue grave: hipotensão, taquicardia e pele fria. A febre sumiu, mas é a fase crítica.",
+  "fluxograma": "Mal-estar em adulto"
+ },
+ {
+  "id": "tr-015",
+  "nome": "Heitor, 7 anos",
+  "avatar": "crianca",
+  "queixa": "Vomita tudo desde cedo, até água. Já foram umas 6 vezes.",
+  "sinais": {
+   "PA": null,
+   "FC": 118,
+   "FR": 22,
+   "SatO2": 99,
+   "Tax": 37.2,
+   "dor": 3,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "Vômitos persistentes",
+  "porque": "Vômitos que não param: amarelo, pelo risco de desidratação.",
+  "fluxograma": "Diarreia e vômitos"
+ },
+ {
+  "id": "tr-016",
+  "nome": "Lucineide, 42 anos",
+  "avatar": "mulher",
+  "queixa": "Dor de cabeça há 2 dias que não passa com dipirona.",
+  "sinais": {
+   "PA": "130x80",
+   "FC": 80,
+   "FR": 16,
+   "SatO2": 99,
+   "Tax": 36.5,
+   "dor": 6,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "Dor moderada (5–7)",
+  "porque": "Cefaleia com dor 6/10, sem sinais neurológicos: moderada = amarelo.",
+  "fluxograma": "Cefaleia"
+ },
+ {
+  "id": "tr-017",
+  "nome": "Evandro, 29 anos",
+  "avatar": "homem",
+  "queixa": "Dor de dente desde ontem, latejando um pouco.",
+  "sinais": {
+   "PA": "120x80",
+   "FC": 80,
+   "FR": 16,
+   "SatO2": 99,
+   "Tax": 36.6,
+   "dor": 4,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "verde",
+  "discriminador": "Dor leve recente",
+  "porque": "Dor 4/10 com início recente: verde.",
+  "fluxograma": "Problemas dentários"
+ },
+ {
+  "id": "tr-018",
+  "nome": "Edivaldo, 60 anos",
+  "avatar": "homem",
+  "queixa": "Diabético, tomou insulina e não comeu. Tá suando e confuso.",
+  "sinais": {
+   "PA": "130x80",
+   "FC": 104,
+   "FR": 18,
+   "SatO2": 98,
+   "Tax": 36.2,
+   "dor": 0,
+   "glasgow": 14,
+   "HGT": 42
+  },
+  "cor": "laranja",
+  "discriminador": "Hipoglicemia (HGT < 54 mg/dL)",
+  "porque": "HGT 42: hipoglicemia. Confusão melhora com glicose. Sempre medir HGT em alteração de consciência.",
+  "fluxograma": "Diabetes"
+ },
+ {
+  "id": "tr-019",
+  "nome": "Sebastião, 50 anos",
+  "avatar": "homem",
+  "queixa": "Dor forte na lombar desde ontem, quando peguei peso.",
+  "sinais": {
+   "PA": "130x80",
+   "FC": 84,
+   "FR": 16,
+   "SatO2": 98,
+   "Tax": 36.5,
+   "dor": 6,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "Dor moderada (5–7)",
+  "porque": "Dor 6/10 é moderada: amarelo. Sem déficit neurológico nem sinais de gravidade.",
+  "fluxograma": "Dor lombar"
+ },
+ {
+  "id": "tr-020",
+  "nome": "Rafael, 30 anos",
+  "avatar": "homem",
+  "queixa": "Vim mostrar o exame que o doutor pediu.",
+  "sinais": {
+   "PA": "120x80",
+   "FC": 72,
+   "FR": 14,
+   "SatO2": 99,
+   "Tax": 36.5,
+   "dor": 0,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "azul",
+  "discriminador": "Sem discriminadores (não urgente)",
+  "porque": "Demanda administrativa sem queixa: azul.",
+  "fluxograma": "Mal-estar em adulto"
+ },
+ {
+  "id": "tr-021",
+  "nome": "Davi, 4 anos",
+  "avatar": "crianca",
+  "queixa": "Tá chorando de dor no ouvido desde a madrugada.",
+  "sinais": {
+   "PA": null,
+   "FC": 120,
+   "FR": 24,
+   "SatO2": 99,
+   "Tax": 38.0,
+   "dor": 6,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "Dor moderada (5–7)",
+  "porque": "Otite com dor 6/10: moderada = amarelo. Febre de 38,0 sozinha não subiria a cor.",
+  "fluxograma": "Problemas de ouvido"
+ },
+ {
+  "id": "tr-022",
+  "nome": "Silvana, 57 anos",
+  "avatar": "mulher",
+  "queixa": "Bati o braço na porta e ficou roxo.",
+  "sinais": {
+   "PA": "130x80",
+   "FC": 78,
+   "FR": 16,
+   "SatO2": 99,
+   "Tax": 36.4,
+   "dor": 3,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "verde",
+  "discriminador": "Dor leve recente",
+  "porque": "Hematoma com dor leve e movimento normal: verde.",
+  "fluxograma": "Problemas em extremidades"
+ },
+ {
+  "id": "tr-023",
+  "nome": "Enzo, 4 meses",
+  "avatar": "bebe",
+  "queixa": "Ele tá quietinho demais, não acorda pra mamar e tá frio.",
+  "sinais": {
+   "PA": null,
+   "FC": 190,
+   "FR": 60,
+   "SatO2": 91,
+   "Tax": 35.5,
+   "dor": null,
+   "glasgow": null,
+   "HGT": null
+  },
+  "cor": "vermelho",
+  "discriminador": "Choque",
+  "porque": "Armadilha: bebê \"calmo\" com FC 190, frio e hipoativo está em choque (provável sepse).",
+  "fluxograma": "Mal-estar em criança"
+ },
+ {
+  "id": "tr-024",
+  "nome": "Joana, 45 anos",
+  "avatar": "mulher",
+  "queixa": "Caí na escada do flutuante e o punho ficou torto.",
+  "sinais": {
+   "PA": "130x80",
+   "FC": 90,
+   "FR": 18,
+   "SatO2": 99,
+   "Tax": 36.5,
+   "dor": 6,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "Dor moderada (5–7)",
+  "porque": "Provável fratura, mas a dor é 6/10: moderada = amarelo. Imobilizar e analgesia.",
+  "fluxograma": "Problemas em extremidades"
+ },
+ {
+  "id": "tr-025",
+  "nome": "Isabelly, 3 anos",
+  "avatar": "crianca",
+  "queixa": "Vomitou 2 vezes e tá com cocô mole. Mas tá brincando.",
+  "sinais": {
+   "PA": null,
+   "FC": 110,
+   "FR": 24,
+   "SatO2": 99,
+   "Tax": 37.2,
+   "dor": null,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "verde",
+  "discriminador": "Vômitos",
+  "porque": "Vômitos que não são persistentes, criança ativa e hidratada: verde.",
+  "fluxograma": "Diarreia e vômitos"
+ },
+ {
+  "id": "tr-026",
+  "nome": "Gerson, 71 anos",
+  "avatar": "idoso",
+  "queixa": "Dor de cabeça faz tempo, todo dia um pouquinho. Hoje tá igual.",
+  "sinais": {
+   "PA": "130x80",
+   "FC": 72,
+   "FR": 16,
+   "SatO2": 98,
+   "Tax": 36.5,
+   "dor": 2,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "azul",
+  "discriminador": "Problema não recente, sem piora",
+  "porque": "Armadilha: \"dor de cabeça\" assusta, mas é antiga, leve e sem mudança: azul.",
+  "fluxograma": "Cefaleia"
+ },
+ {
+  "id": "tr-027",
+  "nome": "Célia, 34 anos",
+  "avatar": "mulher",
+  "queixa": "Preciso de atestado. Tive diarreia semana passada, já passou.",
+  "sinais": {
+   "PA": "110x70",
+   "FC": 74,
+   "FR": 14,
+   "SatO2": 99,
+   "Tax": 36.5,
+   "dor": 0,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "azul",
+  "discriminador": "Sem discriminadores (não urgente)",
+  "porque": "Problema já resolvido, sem sintomas agora: azul.",
+  "fluxograma": "Diarreia e vômitos"
+ },
+ {
+  "id": "tr-028",
+  "nome": "Lorena, 1 ano",
+  "avatar": "bebe",
+  "queixa": "Caiu do sofá, chorou na hora e já tá brincando. Tô desesperada!",
+  "sinais": {
+   "PA": null,
+   "FC": 120,
+   "FR": 28,
+   "SatO2": 99,
+   "Tax": 36.6,
+   "dor": null,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "verde",
+  "discriminador": "Problema recente (< 7 dias)",
+  "porque": "Armadilha: mãe aflita, mas o bebê chorou logo, está ativo e sem perda de consciência: verde.",
+  "fluxograma": "Traumatismo cranioencefálico"
+ },
+ {
+  "id": "tr-029",
+  "nome": "Marcos, 44 anos",
+  "avatar": "homem",
+  "queixa": "Dor de cabeça que veio de repente. A pior da minha vida.",
+  "sinais": {
+   "PA": "160x95",
+   "FC": 90,
+   "FR": 18,
+   "SatO2": 98,
+   "Tax": 36.6,
+   "dor": 10,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "laranja",
+  "discriminador": "Dor intensa (8–10)",
+  "porque": "Dor 10/10 = laranja. Cefaleia súbita \"a pior da vida\" lembra hemorragia subaracnoide.",
+  "fluxograma": "Cefaleia"
+ },
+ {
+  "id": "tr-030",
+  "nome": "Jefferson, 28 anos",
+  "avatar": "homem",
+  "queixa": "Febrezinha e dor no corpo desde ontem.",
+  "sinais": {
+   "PA": "120x80",
+   "FC": 88,
+   "FR": 16,
+   "SatO2": 99,
+   "Tax": 37.9,
+   "dor": 2,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "verde",
+  "discriminador": "Febril (37,5–38,4 °C)",
+  "porque": "Tax 37,9 °C: febril, abaixo de 38,5. Sem outros achados: verde.",
+  "fluxograma": "Mal-estar em adulto"
+ },
+ {
+  "id": "tr-031",
+  "nome": "Pâmela, 17 anos",
+  "avatar": "mulher",
+  "queixa": "Tenho uma verruga na mão faz uns meses.",
+  "sinais": {
+   "PA": "110x70",
+   "FC": 76,
+   "FR": 14,
+   "SatO2": 99,
+   "Tax": 36.4,
+   "dor": 0,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "azul",
+  "discriminador": "Problema não recente, sem piora",
+  "porque": "Lesão antiga, sem dor ou inflamação: azul.",
+  "fluxograma": "Erupções cutâneas"
+ },
+ {
+  "id": "tr-032",
+  "nome": "Deusimar, 45 anos",
+  "avatar": "mulher",
+  "queixa": "Minha asma atacou. Não consigo nem falar...",
+  "sinais": {
+   "PA": "140x90",
+   "FC": 138,
+   "FR": 36,
+   "SatO2": 84,
+   "Tax": 36.8,
+   "dor": null,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "vermelho",
+  "discriminador": "Respiração inadequada",
+  "porque": "Asma grave: fala entrecortada, FR 36 e SatO2 84%. Esforço que não mantém a oxigenação.",
+  "fluxograma": "Asma"
+ },
+ {
+  "id": "tr-033",
+  "nome": "Kleber, 25 anos",
+  "avatar": "homem",
+  "queixa": "Desloquei o ombro no futebol. A dor tá horrível.",
+  "sinais": {
+   "PA": "130x80",
+   "FC": 104,
+   "FR": 20,
+   "SatO2": 99,
+   "Tax": 36.5,
+   "dor": 9,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "laranja",
+  "discriminador": "Dor intensa (8–10)",
+  "porque": "Luxação com dor 9/10: dor intensa = laranja, mesmo com sinais vitais bons.",
+  "fluxograma": "Problemas em extremidades"
+ },
+ {
+  "id": "tr-034",
+  "nome": "Neide, 47 anos",
+  "avatar": "mulher",
+  "queixa": "Quero tomar a vacina da febre amarela, vou viajar.",
+  "sinais": {
+   "PA": "120x80",
+   "FC": 74,
+   "FR": 14,
+   "SatO2": 99,
+   "Tax": 36.5,
+   "dor": 0,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "azul",
+  "discriminador": "Sem discriminadores (não urgente)",
+  "porque": "Sem queixa clínica: azul. Encaminhar para a sala de vacina.",
+  "fluxograma": "Mal-estar em adulto"
+ },
+ {
+  "id": "tr-035",
+  "nome": "Thiago, 21 anos",
+  "avatar": "homem",
+  "queixa": "Dor em volta do umbigo que desceu pro lado direito.",
+  "sinais": {
+   "PA": "120x80",
+   "FC": 96,
+   "FR": 18,
+   "SatO2": 99,
+   "Tax": 37.8,
+   "dor": 6,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "Dor moderada (5–7)",
+  "porque": "Dor 6/10: amarelo. A história lembra apendicite, mas a cor segue o discriminador.",
+  "fluxograma": "Dor abdominal em adulto"
+ },
+ {
+  "id": "tr-036",
+  "nome": "Elielson, 33 anos",
+  "avatar": "homem",
+  "queixa": "Jararaca picou meu pé. Tá inchando e doendo muito.",
+  "sinais": {
+   "PA": "130x80",
+   "FC": 98,
+   "FR": 20,
+   "SatO2": 98,
+   "Tax": 36.7,
+   "dor": 9,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "laranja",
+  "discriminador": "Dor intensa (8–10)",
+  "porque": "Sinais vitais estáveis, mas dor 9/10: laranja. Soro antiofídico sem demora.",
+  "fluxograma": "Mordeduras e picadas"
+ },
+ {
+  "id": "tr-037",
+  "nome": "Priscila, 24 anos",
+  "avatar": "gestante",
+  "queixa": "Grávida de 32 semanas. A barriga endurece e dói nas costas.",
+  "sinais": {
+   "PA": "120x70",
+   "FC": 90,
+   "FR": 18,
+   "SatO2": 99,
+   "Tax": 36.6,
+   "dor": 5,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "Dor moderada (5–7)",
+  "porque": "Dor 5/10 = moderada: amarelo. Avaliar trabalho de parto prematuro.",
+  "fluxograma": "Gravidez"
+ },
+ {
+  "id": "tr-038",
+  "nome": "Nazaré, 72 anos",
+  "avatar": "idosa",
+  "queixa": "Tosse e cansaço há 3 dias.",
+  "sinais": {
+   "PA": "130x80",
+   "FC": 96,
+   "FR": 22,
+   "SatO2": 93,
+   "Tax": 37.8,
+   "dor": 2,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "SatO2 baixa (< 95%)",
+  "porque": "SatO2 93%: baixa (90–94%) = amarelo. Abaixo de 90% seria laranja.",
+  "fluxograma": "Dispneia em adulto"
+ },
+ {
+  "id": "tr-039",
+  "nome": "Socorro, 48 anos",
+  "avatar": "mulher",
+  "queixa": "O coração disparou do nada. Tá batendo aqui na garganta.",
+  "sinais": {
+   "PA": "110x70",
+   "FC": 168,
+   "FR": 20,
+   "SatO2": 97,
+   "Tax": 36.5,
+   "dor": 2,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "laranja",
+  "discriminador": "Pulso anormal",
+  "porque": "FC 168 em repouso é pulso anormal: laranja. Fazer ECG logo (provável taquiarritmia).",
+  "fluxograma": "Palpitações"
+ },
+ {
+  "id": "tr-040",
+  "nome": "Zé Carlos, 52 anos",
+  "avatar": "homem",
+  "queixa": "Uma abelha me picou no braço. Tá vermelho e coçando.",
+  "sinais": {
+   "PA": "130x80",
+   "FC": 82,
+   "FR": 16,
+   "SatO2": 99,
+   "Tax": 36.6,
+   "dor": 2,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "verde",
+  "discriminador": "Dor leve recente",
+  "porque": "Reação local, sem falta de ar ou inchaço no rosto: verde.",
+  "fluxograma": "Mordeduras e picadas"
+ },
+ {
+  "id": "tr-041",
+  "nome": "Maria das Graças, 67 anos",
+  "avatar": "idosa",
+  "queixa": "A boca entortou e o braço direito não mexe desde agora cedo.",
+  "sinais": {
+   "PA": "180x100",
+   "FC": 84,
+   "FR": 18,
+   "SatO2": 96,
+   "Tax": 36.4,
+   "dor": 0,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "laranja",
+  "discriminador": "Déficit neurológico agudo",
+  "porque": "Suspeita de AVC: déficit focal agudo é laranja. Tempo é cérebro (janela de trombólise).",
+  "fluxograma": "Mal-estar em adulto"
+ },
+ {
+  "id": "tr-042",
+  "nome": "Cláudio, 31 anos",
+  "avatar": "homem",
+  "queixa": "Dor no ouvido desde ontem depois de tomar banho de rio.",
+  "sinais": {
+   "PA": "120x80",
+   "FC": 76,
+   "FR": 14,
+   "SatO2": 99,
+   "Tax": 36.6,
+   "dor": 3,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "verde",
+  "discriminador": "Dor leve recente",
+  "porque": "Dor 3/10 com início recente: verde.",
+  "fluxograma": "Problemas de ouvido"
+ },
+ {
+  "id": "tr-043",
+  "nome": "Nilzete, 39 anos",
+  "avatar": "mulher",
+  "queixa": "Cortei a mão no vidro. Já apertei com pano e não para de sangrar.",
+  "sinais": {
+   "PA": "120x80",
+   "FC": 92,
+   "FR": 18,
+   "SatO2": 99,
+   "Tax": 36.4,
+   "dor": 4,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "Hemorragia menor incontrolável",
+  "porque": "Sangramento pequeno que não para com compressão: amarelo. Se fosse em jato, vermelho.",
+  "fluxograma": "Feridas"
+ },
+ {
+  "id": "tr-044",
+  "nome": "Erisvaldo, 40 anos",
+  "avatar": "homem",
+  "queixa": "Cortei a coxa com o terçado. O sangue tá jorrando!",
+  "sinais": {
+   "PA": "90x50",
+   "FC": 124,
+   "FR": 24,
+   "SatO2": 97,
+   "Tax": 36.3,
+   "dor": 8,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "vermelho",
+  "discriminador": "Hemorragia exsanguinante",
+  "porque": "Sangue em jato que não para com pressão: lesão arterial. Controle do sangramento é imediato.",
+  "fluxograma": "Feridas"
+ },
+ {
+  "id": "tr-045",
+  "nome": "Wellington, 17 anos",
+  "avatar": "homem",
+  "queixa": "Sou diabético. Vomitando, respirando fundo, hálito de fruta.",
+  "sinais": {
+   "PA": "100x60",
+   "FC": 118,
+   "FR": 30,
+   "SatO2": 98,
+   "Tax": 36.9,
+   "dor": 5,
+   "glasgow": 15,
+   "HGT": 480
+  },
+  "cor": "laranja",
+  "discriminador": "Hiperglicemia com cetose",
+  "porque": "HGT alto com respiração de Kussmaul e hálito cetônico: cetoacidose. Laranja.",
+  "fluxograma": "Diabetes"
+ },
+ {
+  "id": "tr-046",
+  "nome": "Paulo Sérgio, 40 anos",
+  "avatar": "homem",
+  "queixa": "Tenho um furúnculo na perna que tá doendo.",
+  "sinais": {
+   "PA": "130x80",
+   "FC": 80,
+   "FR": 16,
+   "SatO2": 99,
+   "Tax": 37.1,
+   "dor": 3,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "verde",
+  "discriminador": "Infecção local",
+  "porque": "Abscesso pequeno, sem febre alta nem sinais sistêmicos: verde.",
+  "fluxograma": "Infecções locais e abscessos"
+ },
+ {
+  "id": "tr-047",
+  "nome": "Josué, 35 anos",
+  "avatar": "homem",
+  "queixa": "Pisei numa arraia no igarapé. A dor tá insuportável!",
+  "sinais": {
+   "PA": "140x90",
+   "FC": 108,
+   "FR": 22,
+   "SatO2": 98,
+   "Tax": 36.6,
+   "dor": 10,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "laranja",
+  "discriminador": "Dor intensa (8–10)",
+  "porque": "Picada de arraia causa dor muito intensa. Dor 10/10 = laranja. Água morna alivia.",
+  "fluxograma": "Mordeduras e picadas"
+ },
+ {
+  "id": "tr-048",
+  "nome": "Tainá, 8 anos",
+  "avatar": "crianca",
+  "queixa": "Derrubou a panela de água quente no braço.",
+  "sinais": {
+   "PA": null,
+   "FC": 130,
+   "FR": 26,
+   "SatO2": 99,
+   "Tax": 36.8,
+   "dor": 9,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "laranja",
+  "discriminador": "Dor intensa (8–10)",
+  "porque": "Queimadura com dor 9/10: laranja. Analgesia e resfriar com água corrente.",
+  "fluxograma": "Queimaduras"
+ },
+ {
+  "id": "tr-049",
+  "nome": "Valdeci, 38 anos",
+  "avatar": "homem",
+  "queixa": "Febre com tremedeira dia sim, dia não. Trabalho no garimpo.",
+  "sinais": {
+   "PA": "120x70",
+   "FC": 104,
+   "FR": 20,
+   "SatO2": 97,
+   "Tax": 39.2,
+   "dor": 3,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "Quente (38,5–40,9 °C)",
+  "porque": "Febre ≥ 38,5 °C = quente: amarelo. Garimpo + febre periódica: pedir gota espessa (malária).",
+  "fluxograma": "Mal-estar em adulto"
+ },
+ {
+  "id": "tr-050",
+  "nome": "Benedito, 62 anos",
+  "avatar": "idoso",
+  "queixa": "Cobra picou ele na roça. A perna inchou e agora tá mole e suando frio.",
+  "sinais": {
+   "PA": "70x40",
+   "FC": 130,
+   "FR": 26,
+   "SatO2": 93,
+   "Tax": 35.9,
+   "dor": 9,
+   "glasgow": 13,
+   "HGT": null
+  },
+  "cor": "vermelho",
+  "discriminador": "Choque",
+  "porque": "Acidente ofídico com choque. A dor intensa daria laranja, mas o choque vem antes: vermelho.",
+  "fluxograma": "Mordeduras e picadas"
+ },
+ {
+  "id": "tr-051",
+  "nome": "Iracema, 41 anos",
+  "avatar": "mulher",
+  "queixa": "Tá com malária. Hoje começou a falar coisa sem sentido.",
+  "sinais": {
+   "PA": "110x70",
+   "FC": 112,
+   "FR": 22,
+   "SatO2": 96,
+   "Tax": 39.8,
+   "dor": 3,
+   "glasgow": 13,
+   "HGT": null
+  },
+  "cor": "laranja",
+  "discriminador": "Alteração do nível de consciência",
+  "porque": "Glasgow 13 em quem tem malária: sinal de gravidade. A consciência alterada define o laranja.",
+  "fluxograma": "Mal-estar em adulto"
+ },
+ {
+  "id": "tr-052",
+  "nome": "Luiz, 80 anos",
+  "avatar": "idoso",
+  "queixa": "Febre e tosse com catarro amarelo há 2 dias.",
+  "sinais": {
+   "PA": "130x80",
+   "FC": 100,
+   "FR": 22,
+   "SatO2": 95,
+   "Tax": 38.8,
+   "dor": 2,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "Quente (38,5–40,9 °C)",
+  "porque": "Temperatura 38,8 °C = quente: amarelo. SatO2 95% ainda não é baixa.",
+  "fluxograma": "Mal-estar em adulto"
+ },
+ {
+  "id": "tr-053",
+  "nome": "Jucimara, 34 anos",
+  "avatar": "mulher",
+  "queixa": "Comi camarão. A garganta tá fechando e o rosto inchou todo.",
+  "sinais": {
+   "PA": "80x50",
+   "FC": 128,
+   "FR": 30,
+   "SatO2": 89,
+   "Tax": 36.7,
+   "dor": 5,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "vermelho",
+  "discriminador": "Estridor / via aérea comprometida",
+  "porque": "Anafilaxia com estridor: a via aérea pode fechar em minutos. Adrenalina imediata.",
+  "fluxograma": "Alergia"
+ },
+ {
+  "id": "tr-054",
+  "nome": "Igor, 26 anos",
+  "avatar": "homem",
+  "queixa": "Meu cabelo tá caindo muito faz uns 3 meses.",
+  "sinais": {
+   "PA": "120x80",
+   "FC": 70,
+   "FR": 14,
+   "SatO2": 99,
+   "Tax": 36.4,
+   "dor": 0,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "azul",
+  "discriminador": "Problema não recente, sem piora",
+  "porque": "Queixa crônica e estável: azul.",
+  "fluxograma": "Mal-estar em adulto"
+ },
+ {
+  "id": "tr-055",
+  "nome": "Ana Clara, 2 anos",
+  "avatar": "crianca",
+  "queixa": "Ela tá bem calminha, só dorme. Nem chora mais.",
+  "sinais": {
+   "PA": null,
+   "FC": 160,
+   "FR": 36,
+   "SatO2": 96,
+   "Tax": 39.0,
+   "dor": null,
+   "glasgow": 13,
+   "HGT": null
+  },
+  "cor": "laranja",
+  "discriminador": "Alteração do nível de consciência",
+  "porque": "Armadilha: criança \"quieta demais\" com febre é sonolência, não calma. Consciência alterada = laranja.",
+  "fluxograma": "Mal-estar em criança"
+ },
+ {
+  "id": "tr-056",
+  "nome": "Samara, 20 anos",
+  "avatar": "mulher",
+  "queixa": "Tô com chiado no peito, a bombinha não tá resolvendo.",
+  "sinais": {
+   "PA": "120x80",
+   "FC": 104,
+   "FR": 24,
+   "SatO2": 94,
+   "Tax": 36.7,
+   "dor": 0,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "SatO2 baixa (< 95%)",
+  "porque": "Asma com SatO2 94% e fala normal: amarelo. Reavaliar após nebulização.",
+  "fluxograma": "Asma"
+ },
+ {
+  "id": "tr-057",
+  "nome": "Pedro, 6 anos",
+  "avatar": "crianca",
+  "queixa": "Febre muito alta, o termômetro deu mais de 41!",
+  "sinais": {
+   "PA": null,
+   "FC": 150,
+   "FR": 30,
+   "SatO2": 97,
+   "Tax": 41.2,
+   "dor": 3,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "laranja",
+  "discriminador": "Muito quente (≥ 41 °C)",
+  "porque": "Temperatura ≥ 41 °C é \"muito quente\": laranja. Entre 38,5 e 41 seria amarelo.",
+  "fluxograma": "Mal-estar em criança"
+ },
+ {
+  "id": "tr-058",
+  "nome": "Josiane, 29 anos",
+  "avatar": "mulher",
+  "queixa": "O cachorro do vizinho mordeu minha perna.",
+  "sinais": {
+   "PA": "120x80",
+   "FC": 92,
+   "FR": 18,
+   "SatO2": 99,
+   "Tax": 36.6,
+   "dor": 5,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "Dor moderada (5–7)",
+  "porque": "Mordedura com dor 5/10: moderada = amarelo. Lembrar da profilaxia da raiva.",
+  "fluxograma": "Mordeduras e picadas"
+ },
+ {
+  "id": "tr-059",
+  "nome": "Marinalva, 33 anos",
+  "avatar": "mulher",
+  "queixa": "Ai, vou morrer! Torci o pé na calçada, socorro!",
+  "sinais": {
+   "PA": "130x80",
+   "FC": 96,
+   "FR": 20,
+   "SatO2": 99,
+   "Tax": 36.5,
+   "dor": 3,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "verde",
+  "discriminador": "Dor leve recente",
+  "porque": "Armadilha: queixa dramática, mas dor 3/10 e sinais normais. Sem discriminador maior: verde.",
+  "fluxograma": "Problemas em extremidades"
+ },
+ {
+  "id": "tr-060",
+  "nome": "Osmar, 74 anos",
+  "avatar": "idoso",
+  "queixa": "Não consigo urinar desde ontem. A barriga tá estufada.",
+  "sinais": {
+   "PA": "150x90",
+   "FC": 92,
+   "FR": 18,
+   "SatO2": 97,
+   "Tax": 36.6,
+   "dor": 7,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "Dor moderada (5–7)",
+  "porque": "Retenção urinária com dor 7/10: moderada = amarelo. Sondagem alivia rápido.",
+  "fluxograma": "Problemas urinários"
+ },
+ {
+  "id": "tr-061",
+  "nome": "Cleidiane, 55 anos",
+  "avatar": "mulher",
+  "queixa": "Falta de ar há 2 dias, tossindo muito catarro.",
+  "sinais": {
+   "PA": "130x80",
+   "FC": 108,
+   "FR": 28,
+   "SatO2": 88,
+   "Tax": 38.2,
+   "dor": 3,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "laranja",
+  "discriminador": "SatO2 muito baixa (< 90%)",
+  "porque": "SatO2 88% em ar ambiente é muito baixa: laranja, mesmo sem outros sinais graves.",
+  "fluxograma": "Dispneia em adulto"
+ },
+ {
+  "id": "tr-062",
+  "nome": "Adenor, 76 anos",
+  "avatar": "idoso",
+  "queixa": "Dor na barriga que vai pras costas. Não é nada, minha filha que trouxe.",
+  "sinais": {
+   "PA": "130x80",
+   "FC": 88,
+   "FR": 18,
+   "SatO2": 97,
+   "Tax": 36.5,
+   "dor": 6,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "laranja",
+  "discriminador": "Dor irradiada para as costas",
+  "porque": "Armadilha: idoso com sinais normais. Dor abdominal irradiada ao dorso pode ser aneurisma de aorta.",
+  "fluxograma": "Dor abdominal em adulto"
+ },
+ {
+  "id": "tr-063",
+  "nome": "Jéssica, 19 anos",
+  "avatar": "mulher",
+  "queixa": "Dengue há 4 dias. A febre passou, mas agora a barriga dói demais.",
+  "sinais": {
+   "PA": "110x70",
+   "FC": 100,
+   "FR": 20,
+   "SatO2": 98,
+   "Tax": 36.8,
+   "dor": 8,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "laranja",
+  "discriminador": "Dor intensa (8–10)",
+  "porque": "Armadilha: a febre sumiu, mas dor abdominal intensa é sinal de alarme da dengue. Dor 8 = laranja.",
+  "fluxograma": "Dor abdominal em adulto"
+ },
+ {
+  "id": "tr-064",
+  "nome": "Raimunda, 28 anos",
+  "avatar": "gestante",
+  "queixa": "Grávida de 7 meses. Dor de cabeça forte e vendo pontinhos brilhando.",
+  "sinais": {
+   "PA": "168x112",
+   "FC": 96,
+   "FR": 18,
+   "SatO2": 98,
+   "Tax": 36.6,
+   "dor": 8,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "laranja",
+  "discriminador": "Dor intensa (8–10)",
+  "porque": "Dor intensa = laranja. Gestante com cefaleia, escotomas e PA alta: pensar em pré-eclâmpsia grave.",
+  "fluxograma": "Cefaleia"
+ },
+ {
+  "id": "tr-065",
+  "nome": "Joelma, 9 anos",
+  "avatar": "crianca",
+  "queixa": "Ela tem umas manchas brancas no rosto há meses.",
+  "sinais": {
+   "PA": null,
+   "FC": 90,
+   "FR": 18,
+   "SatO2": 99,
+   "Tax": 36.5,
+   "dor": 0,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "azul",
+  "discriminador": "Problema não recente, sem piora",
+  "porque": "Manchas antigas, sem sintomas agudos: azul. Avaliar na UBS.",
+  "fluxograma": "Erupções cutâneas"
+ },
+ {
+  "id": "tr-066",
+  "nome": "Dorival, 55 anos",
+  "avatar": "homem",
+  "queixa": "Faço curativo todo dia aqui. Hoje é dia de trocar.",
+  "sinais": {
+   "PA": "130x80",
+   "FC": 78,
+   "FR": 16,
+   "SatO2": 98,
+   "Tax": 36.6,
+   "dor": 1,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "azul",
+  "discriminador": "Sem discriminadores (não urgente)",
+  "porque": "Curativo programado, sem sinais de infecção: azul.",
+  "fluxograma": "Feridas"
+ },
+ {
+  "id": "tr-067",
+  "nome": "Gleiciane, 12 anos",
+  "avatar": "crianca",
+  "queixa": "O cabelo dela enrolou no motor do barco. Tá sangrando muito da cabeça!",
+  "sinais": {
+   "PA": "80x40",
+   "FC": 142,
+   "FR": 28,
+   "SatO2": 95,
+   "Tax": 35.8,
+   "dor": 10,
+   "glasgow": 14,
+   "HGT": null
+  },
+  "cor": "vermelho",
+  "discriminador": "Hemorragia exsanguinante",
+  "porque": "Escalpelamento com sangramento que não para e sinais de choque. Risco de morte: sala vermelha já.",
+  "fluxograma": "Feridas"
+ },
+ {
+  "id": "tr-068",
+  "nome": "Dona Zefa, 84 anos",
+  "avatar": "idosa",
+  "queixa": "Ela só tá fraca, meio caidinha. Não reclama de nada.",
+  "sinais": {
+   "PA": "120x70",
+   "FC": 102,
+   "FR": 20,
+   "SatO2": 96,
+   "Tax": 38.6,
+   "dor": 0,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "Quente (38,5–40,9 °C)",
+  "porque": "Armadilha: queixa vaga, mas Tax 38,6 °C = amarelo. Idoso infectado nem sempre tem sintomas típicos.",
+  "fluxograma": "Mal-estar em adulto"
+ },
+ {
+  "id": "tr-069",
+  "nome": "Oziel, 27 anos",
+  "avatar": "homem",
+  "queixa": "Tá com malária e começou a se debater agora, com os olhos virados.",
+  "sinais": {
+   "PA": "100x60",
+   "FC": 136,
+   "FR": 28,
+   "SatO2": 91,
+   "Tax": 40.2,
+   "dor": null,
+   "glasgow": null,
+   "HGT": null
+  },
+  "cor": "vermelho",
+  "discriminador": "Convulsionando",
+  "porque": "Convulsão ativa em paciente com malária: pensar em malária grave (cerebral).",
+  "fluxograma": "Convulsões"
+ },
+ {
+  "id": "tr-070",
+  "nome": "Kelly, 26 anos",
+  "avatar": "mulher",
+  "queixa": "Tô com dengue. Nada para no estômago, já vomitei umas 8 vezes.",
+  "sinais": {
+   "PA": "110x70",
+   "FC": 98,
+   "FR": 18,
+   "SatO2": 98,
+   "Tax": 37.4,
+   "dor": 4,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "Vômitos persistentes",
+  "porque": "Vômitos persistentes: amarelo. Na dengue, também é sinal de alarme: hidratar e reavaliar.",
+  "fluxograma": "Diarreia e vômitos"
+ },
+ {
+  "id": "tr-071",
+  "nome": "Francisca, 81 anos",
+  "avatar": "idosa",
+  "queixa": "Cansaço muito forte, os lábios tão roxos e ela não responde direito.",
+  "sinais": {
+   "PA": "100x60",
+   "FC": 118,
+   "FR": 38,
+   "SatO2": 80,
+   "Tax": 37.9,
+   "dor": null,
+   "glasgow": 12,
+   "HGT": null
+  },
+  "cor": "vermelho",
+  "discriminador": "Respiração inadequada",
+  "porque": "FR 38, SatO2 80% e cianose: falência respiratória. Não espere a febre para agir.",
+  "fluxograma": "Dispneia em adulto"
+ },
+ {
+  "id": "tr-072",
+  "nome": "Manoel, 70 anos",
+  "avatar": "idoso",
+  "queixa": "Vomitou muito sangue e ficou branco que nem papel.",
+  "sinais": {
+   "PA": "76x40",
+   "FC": 128,
+   "FR": 26,
+   "SatO2": 94,
+   "Tax": 35.8,
+   "dor": 4,
+   "glasgow": 14,
+   "HGT": null
+  },
+  "cor": "vermelho",
+  "discriminador": "Choque",
+  "porque": "Hemorragia digestiva alta com hipotensão e taquicardia. Choque hipovolêmico.",
+  "fluxograma": "Hemorragia digestiva"
+ },
+ {
+  "id": "tr-073",
+  "nome": "Kauã, 9 anos",
+  "avatar": "crianca",
+  "queixa": "Tiraram ele do rio desacordado. Tá roxinho e respirando fraquinho.",
+  "sinais": {
+   "PA": null,
+   "FC": 48,
+   "FR": 6,
+   "SatO2": 78,
+   "Tax": 35.2,
+   "dor": null,
+   "glasgow": 8,
+   "HGT": null
+  },
+  "cor": "vermelho",
+  "discriminador": "Respiração inadequada",
+  "porque": "Afogamento com FR 6 e SatO2 78%: a respiração não sustenta a vida. Atendimento imediato.",
+  "fluxograma": "Dispneia em criança"
+ },
+ {
+  "id": "tr-074",
+  "nome": "Antônio, 70 anos",
+  "avatar": "idoso",
+  "queixa": "Caiu da rede, bateu a cabeça e ficou meio confuso.",
+  "sinais": {
+   "PA": "150x90",
+   "FC": 80,
+   "FR": 18,
+   "SatO2": 97,
+   "Tax": 36.5,
+   "dor": 3,
+   "glasgow": 13,
+   "HGT": null
+  },
+  "cor": "laranja",
+  "discriminador": "Alteração do nível de consciência",
+  "porque": "Glasgow 13 após trauma craniano: laranja. Idoso tem mais risco de hematoma.",
+  "fluxograma": "Traumatismo cranioencefálico"
+ },
+ {
+  "id": "tr-075",
+  "nome": "Francinaldo, 34 anos",
+  "avatar": "homem",
+  "queixa": "Depois da gripe, dói o peito quando eu respiro fundo.",
+  "sinais": {
+   "PA": "120x80",
+   "FC": 90,
+   "FR": 20,
+   "SatO2": 97,
+   "Tax": 37.6,
+   "dor": 5,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "Dor pleurítica",
+  "porque": "Dor que piora com a respiração é pleurítica: amarelo. Dor em aperto (precordial) seria laranja.",
+  "fluxograma": "Dor torácica"
+ },
+ {
+  "id": "tr-076",
+  "nome": "Gabriel, 11 anos",
+  "avatar": "crianca",
+  "queixa": "Pipocou umas bolinhas no braço que coçam depois do carapanã.",
+  "sinais": {
+   "PA": null,
+   "FC": 90,
+   "FR": 18,
+   "SatO2": 99,
+   "Tax": 36.5,
+   "dor": 1,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "verde",
+  "discriminador": "Problema recente (< 7 dias)",
+  "porque": "Lesões de pele recentes, sem febre nem sinais de alergia grave: verde.",
+  "fluxograma": "Erupções cutâneas"
+ },
+ {
+  "id": "tr-077",
+  "nome": "Alessandra, 25 anos",
+  "avatar": "mulher",
+  "queixa": "Dor de garganta pra engolir desde anteontem.",
+  "sinais": {
+   "PA": "110x70",
+   "FC": 84,
+   "FR": 16,
+   "SatO2": 99,
+   "Tax": 37.3,
+   "dor": 3,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "verde",
+  "discriminador": "Dor leve recente",
+  "porque": "Dor 3/10 com início há 2 dias: dor leve recente = verde.",
+  "fluxograma": "Dor de garganta"
+ },
+ {
+  "id": "tr-078",
+  "nome": "Keila, 22 anos",
+  "avatar": "mulher",
+  "queixa": "O olho tá vermelho e remelando desde hoje cedo.",
+  "sinais": {
+   "PA": "110x70",
+   "FC": 76,
+   "FR": 14,
+   "SatO2": 99,
+   "Tax": 36.5,
+   "dor": 1,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "verde",
+  "discriminador": "Olho vermelho",
+  "porque": "Olho vermelho sem trauma, dor intensa ou perda de visão: verde (provável conjuntivite).",
+  "fluxograma": "Problemas oftalmológicos"
+ },
+ {
+  "id": "tr-079",
+  "nome": "Mirian, 35 anos",
+  "avatar": "mulher",
+  "queixa": "Ardência pra urinar desde ontem e vontade toda hora.",
+  "sinais": {
+   "PA": "120x80",
+   "FC": 80,
+   "FR": 16,
+   "SatO2": 99,
+   "Tax": 37.2,
+   "dor": 3,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "verde",
+  "discriminador": "Dor leve recente",
+  "porque": "Provável cistite, sem febre alta nem dor lombar: verde.",
+  "fluxograma": "Problemas urinários"
+ },
+ {
+  "id": "tr-080",
+  "nome": "Caio, 10 anos",
+  "avatar": "crianca",
+  "queixa": "Caiu da bicicleta. O joelho inchou e ele não quer pisar.",
+  "sinais": {
+   "PA": null,
+   "FC": 104,
+   "FR": 20,
+   "SatO2": 99,
+   "Tax": 36.6,
+   "dor": 7,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "Dor moderada (5–7)",
+  "porque": "Dor 7/10 ainda é moderada: amarelo. A partir de 8, laranja.",
+  "fluxograma": "Problemas em extremidades"
+ },
+ {
+  "id": "tr-081",
+  "nome": "Rayane, 26 anos",
+  "avatar": "mulher",
+  "queixa": "Tô com falta de ar e as mãos formigando depois de uma briga em casa.",
+  "sinais": {
+   "PA": "130x80",
+   "FC": 102,
+   "FR": 24,
+   "SatO2": 99,
+   "Tax": 36.6,
+   "dor": 0,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "verde",
+  "discriminador": "Problema recente (< 7 dias)",
+  "porque": "Armadilha: parece grave, mas SatO2 99% e sem dor ou alteração de consciência. Crise de ansiedade: verde.",
+  "fluxograma": "Dispneia em adulto"
+ },
+ {
+  "id": "tr-082",
+  "nome": "Thaís, 23 anos",
+  "avatar": "gestante",
+  "queixa": "Grávida de 20 semanas. Corrimento e coceira há uns dias.",
+  "sinais": {
+   "PA": "110x70",
+   "FC": 84,
+   "FR": 16,
+   "SatO2": 99,
+   "Tax": 36.5,
+   "dor": 1,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "verde",
+  "discriminador": "Problema recente (< 7 dias)",
+  "porque": "Gestante sem sangramento, dor ou PA alta. Queixa recente e leve: verde.",
+  "fluxograma": "Gravidez"
+ },
+ {
+  "id": "tr-083",
+  "nome": "Hellen, 30 anos",
+  "avatar": "mulher",
+  "queixa": "Febre de 38 e dor atrás dos olhos desde ontem. Será dengue?",
+  "sinais": {
+   "PA": "120x80",
+   "FC": 90,
+   "FR": 16,
+   "SatO2": 99,
+   "Tax": 38.0,
+   "dor": 3,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "verde",
+  "discriminador": "Febril (37,5–38,4 °C)",
+  "porque": "Suspeita de dengue sem sinais de alarme e Tax 38,0 (abaixo de 38,5): verde.",
+  "fluxograma": "Mal-estar em adulto"
+ },
+ {
+  "id": "tr-084",
+  "nome": "Yasmin, 12 anos",
+  "avatar": "crianca",
+  "queixa": "Quase se afogou na praia da Ponta Negra. Tá tossindo muito.",
+  "sinais": {
+   "PA": "110x70",
+   "FC": 118,
+   "FR": 32,
+   "SatO2": 89,
+   "Tax": 36.4,
+   "dor": 2,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "laranja",
+  "discriminador": "SatO2 muito baixa (< 90%)",
+  "porque": "Afogamento com SatO2 89%: muito baixa. Consciente e falando, mas precisa de O2 já.",
+  "fluxograma": "Dispneia em criança"
+ },
+ {
+  "id": "tr-085",
+  "nome": "Ivanilda, 19 anos",
+  "avatar": "gestante",
+  "queixa": "Grávida de 8 meses. Tá se batendo toda, tendo uma convulsão!",
+  "sinais": {
+   "PA": "170x115",
+   "FC": 124,
+   "FR": 24,
+   "SatO2": 93,
+   "Tax": 36.9,
+   "dor": null,
+   "glasgow": null,
+   "HGT": null
+  },
+  "cor": "vermelho",
+  "discriminador": "Convulsionando",
+  "porque": "Gestante convulsionando com PA alta: eclâmpsia. Vermelho e sulfato de magnésio.",
+  "fluxograma": "Convulsões"
+ },
+ {
+  "id": "tr-086",
+  "nome": "Aldenora, 63 anos",
+  "avatar": "idosa",
+  "queixa": "Dor no joelho faz mais de um ano. Hoje tá igual.",
+  "sinais": {
+   "PA": "130x80",
+   "FC": 74,
+   "FR": 16,
+   "SatO2": 98,
+   "Tax": 36.4,
+   "dor": 3,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "azul",
+  "discriminador": "Problema não recente, sem piora",
+  "porque": "Dor leve crônica, sem mudança: não é \"recente\", então azul.",
+  "fluxograma": "Problemas em extremidades"
+ },
+ {
+  "id": "tr-087",
+  "nome": "Bianca, 19 anos",
+  "avatar": "mulher",
+  "queixa": "Virei o pé no vôlei ontem. Tá um pouco inchado.",
+  "sinais": {
+   "PA": "110x70",
+   "FC": 78,
+   "FR": 16,
+   "SatO2": 99,
+   "Tax": 36.4,
+   "dor": 4,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "verde",
+  "discriminador": "Dor leve recente",
+  "porque": "Dor 4/10 ainda é leve (1–4): verde. Com dor 5 seria amarelo.",
+  "fluxograma": "Problemas em extremidades"
+ },
+ {
+  "id": "tr-088",
+  "nome": "Luciano, 37 anos",
+  "avatar": "homem",
+  "queixa": "Cortei o dedo com a faca. Já parou de sangrar.",
+  "sinais": {
+   "PA": "120x80",
+   "FC": 80,
+   "FR": 16,
+   "SatO2": 99,
+   "Tax": 36.5,
+   "dor": 2,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "verde",
+  "discriminador": "Dor leve recente",
+  "porque": "Ferida pequena, sangramento controlado, dor 2/10: verde.",
+  "fluxograma": "Feridas"
+ },
+ {
+  "id": "tr-089",
+  "nome": "Miguel, 5 anos",
+  "avatar": "crianca",
+  "queixa": "Febre alta desde ontem, deu 39 e pouco. Tá comendo pouco.",
+  "sinais": {
+   "PA": null,
+   "FC": 130,
+   "FR": 26,
+   "SatO2": 98,
+   "Tax": 39.3,
+   "dor": 2,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "amarelo",
+  "discriminador": "Quente (38,5–40,9 °C)",
+  "porque": "Febre ≥ 38,5 °C com criança ativa: quente = amarelo.",
+  "fluxograma": "Mal-estar em criança"
+ },
+ {
+  "id": "tr-090",
+  "nome": "Tarcísio, 52 anos",
+  "avatar": "homem",
+  "queixa": "Dor no peito em aperto, que corre pro braço esquerdo, há meia hora.",
+  "sinais": {
+   "PA": "150x90",
+   "FC": 96,
+   "FR": 18,
+   "SatO2": 97,
+   "Tax": 36.6,
+   "dor": 6,
+   "glasgow": 15,
+   "HGT": null
+  },
+  "cor": "laranja",
+  "discriminador": "Dor precordial",
+  "porque": "Dor sugestiva de origem cardíaca é laranja mesmo com dor moderada e sinais vitais normais. ECG em 10 min.",
+  "fluxograma": "Dor torácica"
+ }
+]

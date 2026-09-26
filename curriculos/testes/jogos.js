@@ -8,7 +8,7 @@ let falhas = 0; const ok = (c, m) => { console.log((c ? '  ✓ ' : '  ✗ ') + m
   const p = await b.newPage({ viewport: { width: 390, height: 840 } }); p.on('pageerror', e => errs.push(e.message));
   await p.goto(URL + '#/jogos'); await p.waitForTimeout(700);
   console.log('1) Lista');
-  ok(await p.locator('.jg-cartao').count() === 7, '7 jogos rápidos na lista (sem objetivo definido)');
+  ok(await p.locator('.jg-cartao').count() >= 12, 'jogos na lista (' + await p.locator('.jg-cartao').count() + ')');
   console.log('2) Três vidas: errar 3 vezes encerra');
   await p.goto(URL + '#/jogos/vidas'); await p.waitForTimeout(300); await p.evaluate(() => fecharFolha()); await p.click('[data-act="jg-comecar"]'); await p.waitForTimeout(200);
   for (let k = 0; k < 3; k++) { await p.evaluate(() => { const q = qPorId(JG.rodadas[JG.i].qid); document.querySelector(`[data-act="jg-alt"][data-i="${(q.c + 1) % q.o.length}"]`).click(); }); await p.waitForTimeout(120);

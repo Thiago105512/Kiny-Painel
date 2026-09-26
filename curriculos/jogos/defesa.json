@@ -1,0 +1,992 @@
+{
+ "armas": [
+  {
+   "id": "sem-antibiotico",
+   "nome": "Sem antibiótico (suporte)",
+   "classe": "Conduta",
+   "cor": "#9E9E9E"
+  },
+  {
+   "id": "drenagem-cirurgia",
+   "nome": "Drenagem/cirurgia",
+   "classe": "Conduta",
+   "cor": "#795548"
+  },
+  {
+   "id": "amoxicilina",
+   "nome": "Amoxicilina",
+   "classe": "Penicilina",
+   "cor": "#42A5F5"
+  },
+  {
+   "id": "amoxicilina-clavulanato",
+   "nome": "Amoxicilina-clavulanato",
+   "classe": "Penicilina + inibidor de betalactamase",
+   "cor": "#1E88E5"
+  },
+  {
+   "id": "penicilina-g-benzatina",
+   "nome": "Penicilina G benzatina",
+   "classe": "Penicilina",
+   "cor": "#1565C0"
+  },
+  {
+   "id": "penicilina-g-cristalina",
+   "nome": "Penicilina G cristalina",
+   "classe": "Penicilina",
+   "cor": "#0D47A1"
+  },
+  {
+   "id": "oxacilina",
+   "nome": "Oxacilina",
+   "classe": "Penicilina antiestafilocócica",
+   "cor": "#26C6DA"
+  },
+  {
+   "id": "cefalexina",
+   "nome": "Cefalexina",
+   "classe": "Cefalosporina 1ª geração",
+   "cor": "#66BB6A"
+  },
+  {
+   "id": "ceftriaxona",
+   "nome": "Ceftriaxona",
+   "classe": "Cefalosporina 3ª geração",
+   "cor": "#2E7D32"
+  },
+  {
+   "id": "piperacilina-tazobactam",
+   "nome": "Piperacilina-tazobactam",
+   "classe": "Penicilina antipseudomonas + inibidor",
+   "cor": "#00897B"
+  },
+  {
+   "id": "meropenem",
+   "nome": "Meropenem",
+   "classe": "Carbapenêmico",
+   "cor": "#C62828"
+  },
+  {
+   "id": "vancomicina",
+   "nome": "Vancomicina",
+   "classe": "Glicopeptídeo",
+   "cor": "#AD1457"
+  },
+  {
+   "id": "metronidazol",
+   "nome": "Metronidazol",
+   "classe": "Nitroimidazol",
+   "cor": "#8E24AA"
+  },
+  {
+   "id": "doxiciclina",
+   "nome": "Doxiciclina",
+   "classe": "Tetraciclina",
+   "cor": "#F9A825"
+  },
+  {
+   "id": "azitromicina",
+   "nome": "Azitromicina",
+   "classe": "Macrolídeo",
+   "cor": "#FB8C00"
+  },
+  {
+   "id": "nitrofurantoina",
+   "nome": "Nitrofurantoína",
+   "classe": "Nitrofurano",
+   "cor": "#FDD835"
+  },
+  {
+   "id": "sulfametoxazol-trimetoprima",
+   "nome": "Sulfametoxazol-trimetoprima",
+   "classe": "Sulfonamida + inibidor de folato",
+   "cor": "#EF6C00"
+  },
+  {
+   "id": "ciprofloxacino",
+   "nome": "Ciprofloxacino",
+   "classe": "Fluoroquinolona",
+   "cor": "#D84315"
+  },
+  {
+   "id": "esquema-ripe",
+   "nome": "Esquema RIPE",
+   "classe": "Antituberculosos",
+   "cor": "#5D4037"
+  },
+  {
+   "id": "pqt-u",
+   "nome": "PQT-U",
+   "classe": "Poliquimioterapia da hanseníase",
+   "cor": "#6D4C41"
+  },
+  {
+   "id": "oseltamivir",
+   "nome": "Oseltamivir",
+   "classe": "Antiviral (inibidor de neuraminidase)",
+   "cor": "#00ACC1"
+  },
+  {
+   "id": "aciclovir",
+   "nome": "Aciclovir",
+   "classe": "Antiviral (análogo de nucleosídeo)",
+   "cor": "#0097A7"
+  },
+  {
+   "id": "nistatina",
+   "nome": "Nistatina",
+   "classe": "Antifúngico poliênico tópico",
+   "cor": "#C0CA33"
+  },
+  {
+   "id": "fluconazol",
+   "nome": "Fluconazol",
+   "classe": "Antifúngico azólico",
+   "cor": "#9CCC65"
+  },
+  {
+   "id": "anfotericina-b",
+   "nome": "Anfotericina B",
+   "classe": "Antifúngico poliênico sistêmico",
+   "cor": "#FFB300"
+  },
+  {
+   "id": "benznidazol",
+   "nome": "Benznidazol",
+   "classe": "Antiprotozoário (tripanossomicida)",
+   "cor": "#EC407A"
+  },
+  {
+   "id": "artemeter-lumefantrina",
+   "nome": "Artemeter+lumefantrina",
+   "classe": "Antimalárico (ACT)",
+   "cor": "#D81B60"
+  },
+  {
+   "id": "cloroquina-primaquina",
+   "nome": "Cloroquina+primaquina",
+   "classe": "Antimalárico",
+   "cor": "#E53935"
+  },
+  {
+   "id": "antimoniato-meglumina",
+   "nome": "Antimoniato de meglumina",
+   "classe": "Antimonial pentavalente",
+   "cor": "#7E57C2"
+  },
+  {
+   "id": "pentamidina",
+   "nome": "Pentamidina",
+   "classe": "Diamidina aromática",
+   "cor": "#5E35B1"
+  },
+  {
+   "id": "albendazol",
+   "nome": "Albendazol",
+   "classe": "Benzimidazol (anti-helmíntico)",
+   "cor": "#8D6E63"
+  },
+  {
+   "id": "ivermectina",
+   "nome": "Ivermectina",
+   "classe": "Avermectina (anti-helmíntico)",
+   "cor": "#A1887F"
+  }
+ ],
+ "invasores": [
+  {
+   "id": "inv-001",
+   "fase": 1,
+   "tipo": "bacteria",
+   "nome": "Faringite estreptocócica",
+   "detalhe": "Criança de 8 anos, febre, exsudato amigdaliano, sem tosse, teste rápido positivo",
+   "certa": "penicilina-g-benzatina",
+   "aceitaveis": [
+    "amoxicilina"
+   ],
+   "porque": "S. pyogenes segue 100% sensível à penicilina. Benzatina IM dose única (ou amoxicilina 10 dias) previne febre reumática.",
+   "armadilha": "Azitromicina: só na alergia à penicilina; há resistência crescente do estreptococo a macrolídeos."
+  },
+  {
+   "id": "inv-002",
+   "fase": 1,
+   "tipo": "virus",
+   "nome": "Resfriado comum",
+   "detalhe": "Adulto com coriza, espirros e tosse leve há 3 dias, afebril",
+   "certa": "sem-antibiotico",
+   "aceitaveis": [],
+   "porque": "Infecção viral autolimitada (rinovírus). Hidratação, lavagem nasal e sintomáticos. Antibiótico não encurta nem previne complicações.",
+   "armadilha": "Amoxicilina: secreção nasal amarelada não indica infecção bacteriana."
+  },
+  {
+   "id": "inv-003",
+   "fase": 1,
+   "tipo": "bacteria",
+   "nome": "Sífilis primária",
+   "detalhe": "Úlcera genital única, indolor, de fundo limpo; VDRL 1:32",
+   "certa": "penicilina-g-benzatina",
+   "aceitaveis": [],
+   "porque": "Sífilis recente (primária, secundária, latente precoce): penicilina G benzatina 2,4 milhões UI IM dose única (PCDT IST).",
+   "armadilha": "Doxiciclina: alternativa apenas na alergia à penicilina, fora da gestação."
+  },
+  {
+   "id": "inv-004",
+   "fase": 1,
+   "tipo": "bacteria",
+   "nome": "Cistite não complicada",
+   "detalhe": "Mulher de 25 anos, não gestante, disúria e polaciúria, sem febre ou dor lombar",
+   "certa": "nitrofurantoina",
+   "aceitaveis": [],
+   "porque": "Nitrofurantoína 5 dias (ou fosfomicina) é 1ª linha: boa sensibilidade da E. coli e pouco dano colateral à microbiota.",
+   "armadilha": "Ciprofloxacino: reservar para pielonefrite; resistência alta e efeitos adversos graves."
+  },
+  {
+   "id": "inv-005",
+   "fase": 1,
+   "tipo": "fungo",
+   "nome": "Candidíase oral (sapinho)",
+   "detalhe": "Lactente de 2 meses com placas brancas removíveis na língua e mucosa jugal",
+   "certa": "nistatina",
+   "aceitaveis": [],
+   "porque": "Candidíase oral do lactente: nistatina suspensão oral tópica 4x/dia por 7 a 14 dias.",
+   "armadilha": "Fluconazol: reservar para casos refratários ou imunossuprimidos."
+  },
+  {
+   "id": "inv-006",
+   "fase": 1,
+   "tipo": "virus",
+   "nome": "Síndrome gripal em gestante",
+   "detalhe": "Gestante de 20 semanas, febre súbita, tosse, mialgia há 1 dia",
+   "certa": "oseltamivir",
+   "aceitaveis": [],
+   "porque": "Gestante é grupo de risco: oseltamivir 75 mg 12/12 h por 5 dias, idealmente até 48 h, sem esperar exame (MS).",
+   "armadilha": "Azitromicina: influenza é viral; ATB só se houver pneumonia bacteriana secundária."
+  },
+  {
+   "id": "inv-007",
+   "fase": 1,
+   "tipo": "virus",
+   "nome": "Herpes-zóster",
+   "detalhe": "Idoso de 70 anos, vesículas dolorosas em faixa torácica unilateral há 48 h",
+   "certa": "aciclovir",
+   "aceitaveis": [],
+   "porque": "Antiviral nas primeiras 72 h reduz dor aguda e duração das lesões, sobretudo em idosos (aciclovir 800 mg 5x/dia, 7 dias)."
+  },
+  {
+   "id": "inv-008",
+   "fase": 1,
+   "tipo": "helminto",
+   "nome": "Ancilostomíase",
+   "detalhe": "Criança com anemia ferropriva; EPF com ovos de ancilostomídeo",
+   "certa": "albendazol",
+   "aceitaveis": [],
+   "porque": "Albendazol 400 mg dose única é o tratamento de escolha para ancilostomídeos; tratar também a anemia com ferro.",
+   "armadilha": "Ivermectina: eficácia baixa contra ancilostomídeos."
+  },
+  {
+   "id": "inv-009",
+   "fase": 1,
+   "tipo": "helminto",
+   "nome": "Estrongiloidíase",
+   "detalhe": "Diarreia e eosinofilia; larvas rabditoides de Strongyloides nas fezes",
+   "certa": "ivermectina",
+   "aceitaveis": [],
+   "porque": "Ivermectina 200 mcg/kg é a droga de escolha contra Strongyloides stercoralis, com cura bem superior à do albendazol.",
+   "armadilha": "Albendazol: taxa de cura bem menor contra Strongyloides."
+  },
+  {
+   "id": "inv-010",
+   "fase": 1,
+   "tipo": "protozoario",
+   "nome": "Malária vivax",
+   "detalhe": "Manaus, febre com calafrios em dias alternados; gota espessa: P. vivax",
+   "certa": "cloroquina-primaquina",
+   "aceitaveis": [],
+   "porque": "Cloroquina 3 dias (esquizonticida) + primaquina 7 dias (elimina hipnozoítos e evita recaída). Guia de malária do MS.",
+   "armadilha": "Artemeter+lumefantrina: esquema para P. falciparum; sozinho não elimina hipnozoítos do vivax."
+  },
+  {
+   "id": "inv-011",
+   "fase": 1,
+   "tipo": "protozoario",
+   "nome": "Malária falciparum não grave",
+   "detalhe": "Garimpeiro, febre alta; gota espessa: P. falciparum, sem sinais de gravidade",
+   "certa": "artemeter-lumefantrina",
+   "aceitaveis": [],
+   "porque": "P. falciparum não complicado: artemeter+lumefantrina 3 dias + primaquina em dose única (gametocitocida).",
+   "armadilha": "Cloroquina+primaquina: o P. falciparum é resistente à cloroquina na Amazônia."
+  },
+  {
+   "id": "inv-012",
+   "fase": 1,
+   "tipo": "bacteria",
+   "nome": "Tuberculose pulmonar",
+   "detalhe": "Tosse há 4 semanas, emagrecimento; TRM-TB detectável, sem resistência à rifampicina",
+   "certa": "esquema-ripe",
+   "aceitaveis": [],
+   "porque": "Esquema básico: 2 meses de RIPE (rifampicina, isoniazida, pirazinamida, etambutol) + 4 meses de RI.",
+   "armadilha": "Ciprofloxacino: quinolona em monoterapia gera resistência e não é esquema para TB."
+  },
+  {
+   "id": "inv-013",
+   "fase": 1,
+   "tipo": "bacteria",
+   "nome": "Hanseníase multibacilar",
+   "detalhe": "Múltiplas placas hipoestésicas e espessamento do nervo ulnar",
+   "certa": "pqt-u",
+   "aceitaveis": [],
+   "porque": "Mais de 5 lesões ou nervo acometido: PQT-U (rifampicina, dapsona, clofazimina) por 12 doses mensais supervisionadas.",
+   "armadilha": "Esquema RIPE: é para tuberculose; hanseníase usa PQT-U."
+  },
+  {
+   "id": "inv-014",
+   "fase": 1,
+   "tipo": "virus",
+   "nome": "Diarreia aguda aquosa",
+   "detalhe": "Criança de 3 anos, 4 evacuações líquidas/dia, sem sangue, hidratada",
+   "certa": "sem-antibiotico",
+   "aceitaveis": [],
+   "porque": "Maioria viral e autolimitada. Plano A: soro de reidratação oral, manter alimentação e zinco. Antibiótico só se disenteria ou cólera.",
+   "armadilha": "Metronidazol: não há indicação sem amebíase ou giardíase comprovada."
+  },
+  {
+   "id": "inv-015",
+   "fase": 1,
+   "tipo": "bacteria",
+   "nome": "Abscesso cutâneo simples",
+   "detalhe": "Nódulo flutuante de 3 cm na coxa, sem febre nem celulite ao redor",
+   "certa": "drenagem-cirurgia",
+   "aceitaveis": [],
+   "porque": "Coleção purulenta se resolve com incisão e drenagem. Antibiótico fica para abscessos extensos, sinais sistêmicos ou imunossupressão.",
+   "armadilha": "Cefalexina: antibiótico não penetra bem na coleção e não substitui a drenagem."
+  },
+  {
+   "id": "inv-016",
+   "fase": 1,
+   "tipo": "bacteria",
+   "nome": "Otite média aguda",
+   "detalhe": "Criança de 2 anos, otalgia, febre, tímpano abaulado; sem antibiótico recente",
+   "certa": "amoxicilina",
+   "aceitaveis": [],
+   "porque": "Amoxicilina em dose alta (80 a 90 mg/kg/dia) é 1ª escolha: cobre bem pneumococo, principal agente.",
+   "armadilha": "Amoxicilina-clavulanato: reservar para falha, ATB nos últimos 30 dias ou otite com conjuntivite."
+  },
+  {
+   "id": "inv-017",
+   "fase": 1,
+   "tipo": "bacteria",
+   "nome": "Meningite bacteriana",
+   "detalhe": "Adulto de 30 anos, febre, rigidez de nuca, líquor turvo com neutrófilos",
+   "certa": "ceftriaxona",
+   "aceitaveis": [],
+   "porque": "Empírico no adulto imunocompetente: ceftriaxona 2 g 12/12 h (+ dexametasona). Não atrasar o ATB por exames.",
+   "armadilha": "Vancomicina: associar só se suspeita de pneumococo resistente; sozinha não cobre meningococo."
+  },
+  {
+   "id": "inv-018",
+   "fase": 1,
+   "tipo": "bacteria",
+   "nome": "Pneumonia comunitária leve",
+   "detalhe": "Adulto de 35 anos, sem comorbidades, CURB-65 = 0, tratamento ambulatorial",
+   "certa": "amoxicilina",
+   "aceitaveis": [
+    "azitromicina",
+    "doxiciclina"
+   ],
+   "porque": "PAC ambulatorial sem comorbidades: amoxicilina ou macrolídeo (doxiciclina como alternativa), por 5 a 7 dias.",
+   "armadilha": "Ciprofloxacino: fraco contra pneumococo; quinolona respiratória fica para comorbidades."
+  },
+  {
+   "id": "inv-019",
+   "fase": 1,
+   "tipo": "protozoario",
+   "nome": "Amebíase intestinal",
+   "detalhe": "Disenteria com cólica; trofozoítos de E. histolytica nas fezes",
+   "certa": "metronidazol",
+   "aceitaveis": [],
+   "porque": "Amebíase invasiva: metronidazol (tecidual) por 7 a 10 dias, seguido de amebicida luminal.",
+   "armadilha": "Albendazol: sem ação contra Entamoeba histolytica."
+  },
+  {
+   "id": "inv-020",
+   "fase": 1,
+   "tipo": "protozoario",
+   "nome": "Tricomoníase",
+   "detalhe": "Corrimento amarelo-esverdeado bolhoso, colo em framboesa",
+   "certa": "metronidazol",
+   "aceitaveis": [],
+   "porque": "Trichomonas vaginalis: metronidazol 2 g VO dose única ou 500 mg 12/12 h por 7 dias; tratar parceria sexual.",
+   "armadilha": "Fluconazol: antifúngico, sem ação contra protozoário."
+  },
+  {
+   "id": "inv-021",
+   "fase": 1,
+   "tipo": "bacteria",
+   "nome": "Vaginose bacteriana",
+   "detalhe": "Corrimento acinzentado, odor de peixe, teste das aminas positivo, pH > 4,5",
+   "certa": "metronidazol",
+   "aceitaveis": [],
+   "porque": "Metronidazol 500 mg 12/12 h por 7 dias (oral ou gel vaginal). Não é IST: não se trata a parceria.",
+   "armadilha": "Fluconazol: trata candidíase, não a disbiose por Gardnerella."
+  },
+  {
+   "id": "inv-022",
+   "fase": 1,
+   "tipo": "fungo",
+   "nome": "Candidíase vulvovaginal",
+   "detalhe": "Corrimento branco grumoso, prurido intenso, pH vaginal < 4,5",
+   "certa": "fluconazol",
+   "aceitaveis": [
+    "nistatina"
+   ],
+   "porque": "Fluconazol 150 mg VO dose única ou azólico/nistatina creme vaginal por 7 a 14 dias; ambos 1ª linha no PCDT IST.",
+   "armadilha": "Metronidazol: trata vaginose e tricomoníase; pode até precipitar candidíase."
+  },
+  {
+   "id": "inv-023",
+   "fase": 1,
+   "tipo": "virus",
+   "nome": "Bronquiolite viral",
+   "detalhe": "Lactente de 6 meses, coriza e sibilos, SpO2 95%, mamando bem",
+   "certa": "sem-antibiotico",
+   "aceitaveis": [],
+   "porque": "Doença viral (VSR). Suporte: lavagem nasal, hidratação e O2 se SpO2 < 90-92%. Sem ATB, corticoide ou broncodilatador de rotina.",
+   "armadilha": "Azitromicina: não altera o curso da bronquiolite."
+  },
+  {
+   "id": "inv-024",
+   "fase": 1,
+   "tipo": "bacteria",
+   "nome": "Celulite não purulenta",
+   "detalhe": "Placa quente e eritematosa na perna, sem abscesso, sem sinais sistêmicos",
+   "certa": "cefalexina",
+   "aceitaveis": [
+    "amoxicilina-clavulanato"
+   ],
+   "porque": "Celulite leve: tratamento oral contra estreptococo e S. aureus sensível. Cefalexina 500 mg 6/6 h por 5 a 7 dias.",
+   "armadilha": "Vancomicina: celulite leve sem risco de MRSA não precisa de ATB venoso."
+  },
+  {
+   "id": "inv-025",
+   "fase": 1,
+   "tipo": "virus",
+   "nome": "Dengue sem sinais de alarme",
+   "detalhe": "Febre, mialgia, dor retro-orbitária, prova do laço negativa, sem alarme",
+   "certa": "sem-antibiotico",
+   "aceitaveis": [],
+   "porque": "Grupo A: hidratação oral vigorosa, dipirona ou paracetamol. Evitar AINE e AAS. Retorno no fim da febre.",
+   "armadilha": "Doxiciclina: não trata arbovirose; só se leptospirose for a hipótese."
+  },
+  {
+   "id": "inv-026",
+   "fase": 2,
+   "tipo": "protozoario",
+   "nome": "Leishmaniose cutânea no Amazonas",
+   "detalhe": "Úlcera de bordas elevadas na perna, Manaus; PCR: L. (V.) guyanensis",
+   "certa": "pentamidina",
+   "aceitaveis": [],
+   "porque": "No AM predomina L. guyanensis, que responde melhor ao isetionato de pentamidina (esquema curto, IM) que ao antimonial.",
+   "armadilha": "Antimoniato de meglumina: resposta pior contra L. guyanensis e mais toxicidade."
+  },
+  {
+   "id": "inv-027",
+   "fase": 2,
+   "tipo": "protozoario",
+   "nome": "Leishmaniose cutânea braziliensis",
+   "detalhe": "Úlcera indolor, adulto hígido do Pará; PCR: L. (V.) braziliensis",
+   "certa": "antimoniato-meglumina",
+   "aceitaveis": [],
+   "porque": "L. braziliensis: antimoniato de meglumina 10 a 20 mg Sb/kg/dia por 20 dias segue como 1ª escolha fora de contraindicações.",
+   "armadilha": "Pentamidina: preferida para L. guyanensis; contra L. braziliensis a resposta é inferior."
+  },
+  {
+   "id": "inv-028",
+   "fase": 2,
+   "tipo": "protozoario",
+   "nome": "Calazar na gestante",
+   "detalhe": "Gestante com febre, hepatoesplenomegalia e pancitopenia; rK39 +",
+   "certa": "anfotericina-b",
+   "aceitaveis": [],
+   "porque": "Leishmaniose visceral na gestação: anfotericina B lipossomal. O antimonial é contraindicado (tóxico e abortivo).",
+   "armadilha": "Antimoniato de meglumina: contraindicado na gestação."
+  },
+  {
+   "id": "inv-029",
+   "fase": 2,
+   "tipo": "protozoario",
+   "nome": "Doença de Chagas aguda oral",
+   "detalhe": "Surto familiar após açaí artesanal; febre, edema; tripomastigotas no sangue",
+   "certa": "benznidazol",
+   "aceitaveis": [],
+   "porque": "Toda forma aguda deve ser tratada: benznidazol 5 mg/kg/dia (adulto) por 60 dias. Notificação imediata.",
+   "armadilha": "Albendazol: anti-helmíntico, sem ação contra Trypanosoma cruzi."
+  },
+  {
+   "id": "inv-030",
+   "fase": 2,
+   "tipo": "virus",
+   "nome": "Febre do Oropouche",
+   "detalhe": "Manaus, febre, cefaleia intensa, mialgia; RT-PCR para OROV positivo",
+   "certa": "sem-antibiotico",
+   "aceitaveis": [],
+   "porque": "Arbovirose sem antiviral específico: repouso, hidratação, analgésicos. Atenção a recidiva de sintomas e a gestantes.",
+   "armadilha": "Doxiciclina: vírus não responde a ATB."
+  },
+  {
+   "id": "inv-031",
+   "fase": 2,
+   "tipo": "bacteria",
+   "nome": "Neurossífilis",
+   "detalhe": "HIV+, uveíte e VDRL reagente no líquor",
+   "certa": "penicilina-g-cristalina",
+   "aceitaveis": [],
+   "porque": "Neurossífilis (inclui sífilis ocular): penicilina G cristalina 18 a 24 milhões UI/dia IV por 14 dias.",
+   "armadilha": "Penicilina G benzatina: não atinge nível treponemicida no líquor."
+  },
+  {
+   "id": "inv-032",
+   "fase": 2,
+   "tipo": "bacteria",
+   "nome": "Sífilis latente na gestante",
+   "detalhe": "Gestante de 14 semanas, VDRL 1:8, teste treponêmico +, tempo desconhecido",
+   "certa": "penicilina-g-benzatina",
+   "aceitaveis": [],
+   "porque": "Latente tardia ou de duração ignorada: benzatina 2,4 milhões UI/semana por 3 semanas. Única que trata o feto.",
+   "armadilha": "Ceftriaxona: não é considerada tratamento adequado na gestante; o RN seria tratado como exposto."
+  },
+  {
+   "id": "inv-033",
+   "fase": 2,
+   "tipo": "bacteria",
+   "nome": "Bacteriúria assintomática gestante",
+   "detalhe": "16 semanas, assintomática; urocultura > 100 mil UFC de E. coli sensível",
+   "certa": "cefalexina",
+   "aceitaveis": [
+    "nitrofurantoina",
+    "amoxicilina",
+    "amoxicilina-clavulanato"
+   ],
+   "porque": "Na gestação a bacteriúria assintomática deve ser tratada (previne pielonefrite e parto prematuro), guiada pelo antibiograma.",
+   "armadilha": "Sem antibiótico: é justamente a exceção em que se trata. Ciprofloxacino: evitado na gestação."
+  },
+  {
+   "id": "inv-034",
+   "fase": 2,
+   "tipo": "bacteria",
+   "nome": "Pielonefrite aguda",
+   "detalhe": "Febre 39 °C, dor lombar e vômitos; sem fatores de risco para multirresistente",
+   "certa": "ceftriaxona",
+   "aceitaveis": [],
+   "porque": "Pielonefrite com vômitos exige terapia parenteral inicial: ceftriaxona 1 g/dia, depois VO conforme cultura.",
+   "armadilha": "Meropenem: reservar para ESBL ou sepse com risco de multirresistência."
+  },
+  {
+   "id": "inv-035",
+   "fase": 2,
+   "tipo": "fungo",
+   "nome": "Criptococose meníngea",
+   "detalhe": "HIV com CD4 40, cefaleia há 2 semanas; tinta nanquim positiva no líquor",
+   "certa": "anfotericina-b",
+   "aceitaveis": [],
+   "porque": "Indução com anfotericina B (+ flucitosina) e controle da pressão liquórica; fluconazol só na consolidação.",
+   "armadilha": "Fluconazol: isolado na indução tem mortalidade maior."
+  },
+  {
+   "id": "inv-036",
+   "fase": 2,
+   "tipo": "fungo",
+   "nome": "Pneumocistose",
+   "detalhe": "HIV com CD4 90, dispneia progressiva, LDH alta, infiltrado intersticial bilateral",
+   "certa": "sulfametoxazol-trimetoprima",
+   "aceitaveis": [],
+   "porque": "Pneumocystis jirovecii: SMX-TMP em dose alta por 21 dias (+ corticoide se PaO2 < 70 mmHg).",
+   "armadilha": "Pentamidina: alternativa de 2ª linha, mais tóxica."
+  },
+  {
+   "id": "inv-037",
+   "fase": 2,
+   "tipo": "virus",
+   "nome": "Encefalite herpética",
+   "detalhe": "Febre, confusão e crise focal; RM com lesão em lobo temporal",
+   "certa": "aciclovir",
+   "aceitaveis": [],
+   "porque": "Suspeitou, iniciar aciclovir IV 10 mg/kg 8/8 h imediatamente; atraso aumenta mortalidade e sequelas.",
+   "armadilha": "Ceftriaxona: cobre meningite bacteriana, não o HSV."
+  },
+  {
+   "id": "inv-038",
+   "fase": 2,
+   "tipo": "bacteria",
+   "nome": "Colite por C. difficile",
+   "detalhe": "Diarreia após clindamicina, toxina A/B positiva, leucócitos 18 mil",
+   "certa": "vancomicina",
+   "aceitaveis": [],
+   "porque": "Vancomicina ORAL 125 mg 6/6 h por 10 dias é 1ª linha; suspender o antibiótico causador se possível.",
+   "armadilha": "Metronidazol: inferior à vancomicina oral, sobretudo em forma grave."
+  },
+  {
+   "id": "inv-039",
+   "fase": 2,
+   "tipo": "bacteria",
+   "nome": "Uretrite por clamídia",
+   "detalhe": "Homem com disúria e secreção mucoide; NAAT para C. trachomatis positivo",
+   "certa": "azitromicina",
+   "aceitaveis": [
+    "doxiciclina"
+   ],
+   "porque": "Chlamydia trachomatis: azitromicina 1 g VO dose única ou doxiciclina 100 mg 12/12 h por 7 dias. Tratar parcerias.",
+   "armadilha": "Ceftriaxona: cobre gonococo, mas não clamídia (bactéria intracelular)."
+  },
+  {
+   "id": "inv-040",
+   "fase": 2,
+   "tipo": "bacteria",
+   "nome": "Leptospirose grave",
+   "detalhe": "Após enchente: icterícia rubínica, oligúria e sufusão conjuntival",
+   "certa": "ceftriaxona",
+   "aceitaveis": [
+    "penicilina-g-cristalina"
+   ],
+   "porque": "Forma grave (Weil): internar e iniciar penicilina G cristalina ou ceftriaxona IV, além de suporte renal.",
+   "armadilha": "Doxiciclina: via oral é só para forma leve ambulatorial."
+  },
+  {
+   "id": "inv-041",
+   "fase": 2,
+   "tipo": "bacteria",
+   "nome": "Leptospirose leve",
+   "detalhe": "Febre e dor em panturrilhas após enchente, sem sinais de alerta",
+   "certa": "doxiciclina",
+   "aceitaveis": [
+    "amoxicilina"
+   ],
+   "porque": "Fase precoce ambulatorial: doxiciclina 100 mg 12/12 h ou amoxicilina 500 mg 8/8 h por 5 a 7 dias.",
+   "armadilha": "Sem antibiótico: iniciar ATB cedo reduz a chance de evolução para forma grave."
+  },
+  {
+   "id": "inv-042",
+   "fase": 2,
+   "tipo": "bacteria",
+   "nome": "Febre maculosa",
+   "detalhe": "Febre, exantema palmoplantar após picada de carrapato em área rural",
+   "certa": "doxiciclina",
+   "aceitaveis": [],
+   "porque": "Rickettsia rickettsii: doxiciclina em qualquer idade, iniciada já na suspeita. Atraso eleva muito a letalidade.",
+   "armadilha": "Amoxicilina: betalactâmicos não agem contra riquétsias intracelulares."
+  },
+  {
+   "id": "inv-043",
+   "fase": 2,
+   "tipo": "virus",
+   "nome": "Mononucleose infecciosa",
+   "detalhe": "Adolescente, faringite, linfonodos cervicais, esplenomegalia, linfócitos atípicos",
+   "certa": "sem-antibiotico",
+   "aceitaveis": [],
+   "porque": "Epstein-Barr: suporte e evitar esporte de contato por risco de ruptura esplênica.",
+   "armadilha": "Amoxicilina: não trata EBV e causa exantema na maioria dos casos."
+  },
+  {
+   "id": "inv-044",
+   "fase": 2,
+   "tipo": "virus",
+   "nome": "Varicela em criança hígida",
+   "detalhe": "Criança de 5 anos, sem comorbidades, vesículas em estágios diferentes",
+   "certa": "sem-antibiotico",
+   "aceitaveis": [],
+   "porque": "Criança saudável < 12 anos: sintomáticos, cortar unhas, evitar AAS. Aciclovir para > 12 anos, doença crônica ou imunossupressão.",
+   "armadilha": "Aciclovir: benefício pequeno na criança hígida; não é rotina."
+  },
+  {
+   "id": "inv-045",
+   "fase": 2,
+   "tipo": "protozoario",
+   "nome": "Toxoplasmose ganglionar",
+   "detalhe": "Mulher imunocompetente, não gestante; linfonodos cervicais, IgM e IgG +",
+   "certa": "sem-antibiotico",
+   "aceitaveis": [],
+   "porque": "Forma linfonodal no imunocompetente é autolimitada. Tratar só se gestante, imunossuprimido, ocular ou sintomas graves.",
+   "armadilha": "SMX-TMP: reservado para retinocoroidite ou imunossuprimidos."
+  },
+  {
+   "id": "inv-046",
+   "fase": 2,
+   "tipo": "bacteria",
+   "nome": "Hanseníase paucibacilar",
+   "detalhe": "Duas manchas hipocrômicas hipoestésicas; baciloscopia negativa",
+   "certa": "pqt-u",
+   "aceitaveis": [],
+   "porque": "Até 5 lesões e baciloscopia negativa: PQT-U por 6 doses mensais (rifampicina, dapsona e clofazimina).",
+   "armadilha": "Doxiciclina: não é tratamento para Mycobacterium leprae."
+  },
+  {
+   "id": "inv-047",
+   "fase": 2,
+   "tipo": "helminto",
+   "nome": "Larva migrans cutânea",
+   "detalhe": "Lesão serpiginosa e pruriginosa no pé após andar descalço na areia",
+   "certa": "ivermectina",
+   "aceitaveis": [
+    "albendazol"
+   ],
+   "porque": "Bicho-geográfico (Ancylostoma de cão/gato): ivermectina dose única ou albendazol 3 dias.",
+   "armadilha": "Fluconazol: não é micose, é larva de helminto."
+  },
+  {
+   "id": "inv-048",
+   "fase": 2,
+   "tipo": "helminto",
+   "nome": "Oxiuríase",
+   "detalhe": "Criança com prurido anal noturno; ovos na fita gomada",
+   "certa": "albendazol",
+   "aceitaveis": [],
+   "porque": "Enterobius vermicularis: albendazol 400 mg, repetir em 2 semanas; tratar contactantes e reforçar higiene.",
+   "armadilha": "Ivermectina: menos eficaz contra Enterobius."
+  },
+  {
+   "id": "inv-049",
+   "fase": 2,
+   "tipo": "bacteria",
+   "nome": "Coqueluche",
+   "detalhe": "Lactente de 2 meses, tosse paroxística, cianose e apneia",
+   "certa": "azitromicina",
+   "aceitaveis": [],
+   "porque": "Bordetella pertussis: azitromicina (1ª escolha em < 6 meses). Quimioprofilaxia de contatos.",
+   "armadilha": "SMX-TMP: contraindicado antes de 2 meses (kernicterus)."
+  },
+  {
+   "id": "inv-050",
+   "fase": 2,
+   "tipo": "bacteria",
+   "nome": "Bacteremia por MRSA",
+   "detalhe": "Hemocultura: S. aureus resistente à oxacilina; febre associada a cateter",
+   "certa": "vancomicina",
+   "aceitaveis": [],
+   "porque": "MRSA invasivo: vancomicina IV, retirar o cateter e fazer ecocardiograma.",
+   "armadilha": "Oxacilina: por definição inativa contra MRSA."
+  },
+  {
+   "id": "inv-051",
+   "fase": 3,
+   "tipo": "bacteria",
+   "nome": "Bacteriúria assintomática idosa",
+   "detalhe": "Idosa de 75 anos, sem sintomas urinários; urocultura > 100 mil UFC de E. coli",
+   "certa": "sem-antibiotico",
+   "aceitaveis": [],
+   "porque": "Fora da gestação e de procedimento urológico, bacteriúria assintomática não se trata: não reduz desfechos e seleciona resistência.",
+   "armadilha": "Nitrofurantoína: parece 'inofensiva', mas tratar colonização só gera resistência e efeitos adversos."
+  },
+  {
+   "id": "inv-052",
+   "fase": 3,
+   "tipo": "bacteria",
+   "nome": "Descalonar: MSSA na hemocultura",
+   "detalhe": "Em vancomicina; hemocultura: S. aureus sensível à oxacilina",
+   "certa": "oxacilina",
+   "aceitaveis": [],
+   "porque": "Para MSSA, betalactâmico antiestafilocócico (oxacilina) é superior à vancomicina: descalonar assim que sair o antibiograma.",
+   "armadilha": "Vancomicina: manter é pior para MSSA (mais falha e mortalidade)."
+  },
+  {
+   "id": "inv-053",
+   "fase": 3,
+   "tipo": "virus",
+   "nome": "Rinossinusite viral",
+   "detalhe": "Congestão e rinorreia purulenta há 5 dias, melhorando, sem febre alta",
+   "certa": "sem-antibiotico",
+   "aceitaveis": [],
+   "porque": "Menos de 10 dias e melhorando: quase sempre viral. Lavagem nasal e sintomáticos; secreção purulenta não indica bactéria.",
+   "armadilha": "Amoxicilina: só se > 10 dias, piora bifásica ou febre alta com dor facial."
+  },
+  {
+   "id": "inv-054",
+   "fase": 3,
+   "tipo": "bacteria",
+   "nome": "Empiema pleural",
+   "detalhe": "PAC com derrame loculado; toracocentese: pus, pH 6,9",
+   "certa": "drenagem-cirurgia",
+   "aceitaveis": [],
+   "porque": "Empiema exige drenagem torácica (ou videotoracoscopia). O antibiótico acompanha, mas sem drenar não há cura.",
+   "armadilha": "Meropenem: escalar ATB não resolve coleção não drenada."
+  },
+  {
+   "id": "inv-055",
+   "fase": 3,
+   "tipo": "bacteria",
+   "nome": "Sepse urinária por ESBL",
+   "detalhe": "Pielonefrite com choque; urocultura: E. coli produtora de ESBL",
+   "certa": "meropenem",
+   "aceitaveis": [],
+   "porque": "ESBL com infecção grave: carbapenêmico é o tratamento de escolha.",
+   "armadilha": "Piperacilina-tazobactam: maior mortalidade que o meropenem em bacteremia por ESBL (MERINO)."
+  },
+  {
+   "id": "inv-056",
+   "fase": 3,
+   "tipo": "bacteria",
+   "nome": "Poupar carbapenêmico na PAV",
+   "detalhe": "PAV por P. aeruginosa sensível a pip-tazo e meropenem; paciente estável",
+   "certa": "piperacilina-tazobactam",
+   "aceitaveis": [],
+   "porque": "Com antibiograma sensível, prefira o antipseudomonas de menor espectro e poupe carbapenêmico para evitar resistência.",
+   "armadilha": "Meropenem: eficaz, mas desnecessário; pressiona surgimento de KPC e Pseudomonas resistente."
+  },
+  {
+   "id": "inv-057",
+   "fase": 3,
+   "tipo": "protozoario",
+   "nome": "Abscesso hepático amebiano",
+   "detalhe": "Febre e dor em hipocôndrio direito; abscesso de 5 cm, sorologia amebiana +",
+   "certa": "metronidazol",
+   "aceitaveis": [],
+   "porque": "Metronidazol cura a maioria sem punção, seguido de amebicida luminal. Drenar só se risco de ruptura ou sem resposta.",
+   "armadilha": "Drenagem/cirurgia: não é rotina no abscesso amebiano (diferente do piogênico)."
+  },
+  {
+   "id": "inv-058",
+   "fase": 3,
+   "tipo": "protozoario",
+   "nome": "Malária mista",
+   "detalhe": "Gota espessa com P. falciparum e P. vivax, sem sinais de gravidade",
+   "certa": "artemeter-lumefantrina",
+   "aceitaveis": [],
+   "porque": "Mista: tratar como falciparum (artemeter+lumefantrina 3 dias) e associar primaquina 7 dias para os hipnozoítos do vivax.",
+   "armadilha": "Cloroquina+primaquina: deixa o P. falciparum sem cobertura."
+  },
+  {
+   "id": "inv-059",
+   "fase": 3,
+   "tipo": "virus",
+   "nome": "Faringite viral",
+   "detalhe": "Dor de garganta com tosse, coriza, rouquidão e conjuntivite; Centor 0",
+   "certa": "sem-antibiotico",
+   "aceitaveis": [],
+   "porque": "Tosse, coriza e conjuntivite sugerem vírus (adenovírus). Centor baixo: nem testar nem tratar com ATB.",
+   "armadilha": "Penicilina G benzatina: sem estreptococo não há o que prevenir."
+  },
+  {
+   "id": "inv-060",
+   "fase": 3,
+   "tipo": "virus",
+   "nome": "Bronquite aguda",
+   "detalhe": "Adulto hígido, tosse produtiva há 10 dias, afebril, ausculta e sinais vitais normais",
+   "certa": "sem-antibiotico",
+   "aceitaveis": [],
+   "porque": "Bronquite aguda é viral e a tosse pode durar até 3 semanas. Expectoração colorida não justifica ATB.",
+   "armadilha": "Azitromicina: não encurta a tosse e seleciona pneumococo resistente."
+  },
+  {
+   "id": "inv-061",
+   "fase": 3,
+   "tipo": "bacteria",
+   "nome": "Fasciíte necrosante",
+   "detalhe": "Dor desproporcional, bolhas hemorrágicas, crepitação e hipotensão",
+   "certa": "drenagem-cirurgia",
+   "aceitaveis": [],
+   "porque": "Emergência cirúrgica: desbridamento amplo imediato define a sobrevida; ATB de amplo espectro vem junto, não no lugar.",
+   "armadilha": "Meropenem: sem desbridamento, a mortalidade continua altíssima."
+  },
+  {
+   "id": "inv-062",
+   "fase": 3,
+   "tipo": "fungo",
+   "nome": "Candidúria assintomática",
+   "detalhe": "Paciente com sonda vesical, sem febre ou sintomas; urina com Candida",
+   "certa": "sem-antibiotico",
+   "aceitaveis": [],
+   "porque": "Candidúria assintomática é colonização: retirar ou trocar a sonda. Tratar só neutropênicos ou antes de procedimento urológico.",
+   "armadilha": "Fluconazol: tratar colonização seleciona Candida resistente."
+  },
+  {
+   "id": "inv-063",
+   "fase": 3,
+   "tipo": "fungo",
+   "nome": "Esofagite por Candida",
+   "detalhe": "HIV com CD4 120, odinofagia; EDA com placas brancas no esôfago",
+   "certa": "fluconazol",
+   "aceitaveis": [],
+   "porque": "Candidíase esofágica exige tratamento sistêmico: fluconazol VO por 14 a 21 dias.",
+   "armadilha": "Nistatina: ação tópica, não atinge adequadamente o esôfago."
+  },
+  {
+   "id": "inv-064",
+   "fase": 3,
+   "tipo": "fungo",
+   "nome": "Mucormicose rinocerebral",
+   "detalhe": "Diabético em cetoacidose, necrose negra no palato e edema periorbitário",
+   "certa": "anfotericina-b",
+   "aceitaveis": [
+    "drenagem-cirurgia"
+   ],
+   "porque": "Tripé: anfotericina B lipossomal em dose alta + desbridamento cirúrgico agressivo + correção da cetoacidose.",
+   "armadilha": "Fluconazol: Mucorales são intrinsecamente resistentes."
+  },
+  {
+   "id": "inv-065",
+   "fase": 3,
+   "tipo": "fungo",
+   "nome": "Histoplasmose disseminada",
+   "detalhe": "HIV com CD4 30, febre, pancitopenia e hepatoesplenomegalia; antígeno +",
+   "certa": "anfotericina-b",
+   "aceitaveis": [],
+   "porque": "Forma disseminada grave: indução com anfotericina B lipossomal e depois itraconazol.",
+   "armadilha": "Fluconazol: pouca atividade contra Histoplasma."
+  },
+  {
+   "id": "inv-066",
+   "fase": 3,
+   "tipo": "bacteria",
+   "nome": "Shigelose na criança",
+   "detalhe": "Criança com disenteria e febre, sem toxemia; tratamento ambulatorial",
+   "certa": "ciprofloxacino",
+   "aceitaveis": [
+    "azitromicina"
+   ],
+   "porque": "Diarreia com sangue na criança: ciprofloxacino VO 3 dias (MS/OMS); azitromicina é alternativa.",
+   "armadilha": "SMX-TMP: alta resistência da Shigella; não usar empiricamente."
+  },
+  {
+   "id": "inv-067",
+   "fase": 3,
+   "tipo": "bacteria",
+   "nome": "E. coli produtora de Shiga",
+   "detalhe": "Diarreia sanguinolenta sem febre; STEC (O157) confirmada",
+   "certa": "sem-antibiotico",
+   "aceitaveis": [],
+   "porque": "Antibiótico aumenta liberação da toxina e o risco de síndrome hemolítico-urêmica. Hidratação e vigilância renal.",
+   "armadilha": "Ciprofloxacino: certo na shigelose, perigoso na STEC."
+  },
+  {
+   "id": "inv-068",
+   "fase": 3,
+   "tipo": "virus",
+   "nome": "SRAG por influenza tardia",
+   "detalhe": "Internado por SRAG no 5º dia de sintomas; influenza A detectada",
+   "certa": "oseltamivir",
+   "aceitaveis": [],
+   "porque": "Na SRAG o oseltamivir está indicado mesmo após 48 h do início dos sintomas, pois ainda reduz mortalidade.",
+   "armadilha": "Sem antibiótico: a janela de 48 h não se aplica a casos graves hospitalizados."
+  },
+  {
+   "id": "inv-069",
+   "fase": 3,
+   "tipo": "bacteria",
+   "nome": "Prevenção de febre reumática",
+   "detalhe": "Jovem com cardite reumática prévia; profilaxia secundária",
+   "certa": "penicilina-g-benzatina",
+   "aceitaveis": [],
+   "porque": "Profilaxia secundária: penicilina G benzatina IM a cada 21 dias, por anos, conforme o grau de cardite.",
+   "armadilha": "Amoxicilina: não é esquema de profilaxia; a adesão à benzatina é o que protege."
+  },
+  {
+   "id": "inv-070",
+   "fase": 3,
+   "tipo": "bacteria",
+   "nome": "Neurossífilis congênita",
+   "detalhe": "RN de mãe não tratada, VDRL reagente no líquor",
+   "certa": "penicilina-g-cristalina",
+   "aceitaveis": [],
+   "porque": "Sífilis congênita com neurossífilis: penicilina G cristalina IV por 10 dias.",
+   "armadilha": "Penicilina G benzatina: dose única só para RN assintomático com exames normais."
+  }
+ ]
+}

@@ -1,0 +1,2411 @@
+[
+ {
+  "id": "em-01",
+  "titulo": "Colapso na sala de espera",
+  "paciente": "Jorge, 62 anos",
+  "avatar": "homem",
+  "cenario": "Jorge aguardava atendimento por dor no peito. De repente, cai da cadeira e não responde.",
+  "diagnostico": "Parada cardiorrespiratória em fibrilação ventricular",
+  "inicio": "e1",
+  "etapas": {
+   "e1": {
+    "texto": "Não responde, sem respiração normal e sem pulso. As pás do monitor mostram ritmo caótico.",
+    "vitais": {
+     "FC": 0,
+     "PA": "0x0",
+     "SatO2": 0,
+     "FR": 0,
+     "ritmo": "fv"
+    },
+    "acoes": [
+     {
+      "txt": "Iniciar RCP de alta qualidade e desfibrilar já",
+      "vai": "e2",
+      "nota": "Certo. FV é ritmo chocável: RCP imediata e choque o mais cedo possível.",
+      "pontos": 10
+     },
+     {
+      "txt": "Medir a glicemia capilar antes de tudo",
+      "vai": "e1b",
+      "nota": "Atraso. Cada minuto sem RCP e sem choque reduz a sobrevida.",
+      "pontos": -10
+     },
+     {
+      "txt": "Amiodarona 300 mg IV antes do choque",
+      "vai": "e1b",
+      "nota": "Errado. Antiarrítmico vem depois do 3º choque, não no lugar dele.",
+      "pontos": -5
+     },
+     {
+      "txt": "Intubar antes de começar compressões",
+      "vai": "e1b",
+      "nota": "Errado. Via aérea avançada não pode atrasar compressões e choque.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e1b": {
+    "texto": "Dois minutos se passaram sem choque. O monitor segue em fibrilação ventricular.",
+    "vitais": {
+     "FC": 0,
+     "PA": "0x0",
+     "SatO2": 0,
+     "FR": 0,
+     "ritmo": "fv"
+    },
+    "acoes": [
+     {
+      "txt": "Choque agora e RCP por 2 minutos",
+      "vai": "e2",
+      "nota": "Recuperou. Ainda há chance: choque e compressões sem pausas longas.",
+      "pontos": 5
+     },
+     {
+      "txt": "Choque sincronizado (cardioversão)",
+      "vai": "f-ruim",
+      "nota": "Errado. Na FV não há QRS para sincronizar: o choque pode não sair.",
+      "pontos": -10
+     },
+     {
+      "txt": "Adrenalina IV e aguardar sem compressões",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Sem compressões, a droga não circula.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e2": {
+    "texto": "Após 1 choque e 2 min de RCP, o ritmo continua FV. Acesso venoso pronto.",
+    "vitais": {
+     "FC": 0,
+     "PA": "0x0",
+     "SatO2": 0,
+     "FR": 0,
+     "ritmo": "fv"
+    },
+    "acoes": [
+     {
+      "txt": "Novo choque, RCP e adrenalina 1 mg IV",
+      "vai": "e3",
+      "nota": "Certo. No ritmo chocável, adrenalina após o 2º choque, a cada 3–5 min.",
+      "pontos": 10
+     },
+     {
+      "txt": "Parar 30 segundos para palpar pulso",
+      "vai": "e2b",
+      "nota": "Inadequado. Checagem de pulso deve durar menos de 10 s.",
+      "pontos": -5
+     },
+     {
+      "txt": "Pausar compressões para intubar",
+      "vai": "e2b",
+      "nota": "Inadequado. Priorize compressões; bolsa-máscara basta por ora.",
+      "pontos": -5
+     }
+    ]
+   },
+   "e2b": {
+    "texto": "A pausa foi longa. Ritmo ainda em FV, e a equipe aguarda sua ordem.",
+    "vitais": {
+     "FC": 0,
+     "PA": "0x0",
+     "SatO2": 0,
+     "FR": 0,
+     "ritmo": "fv"
+    },
+    "acoes": [
+     {
+      "txt": "Choque, retomar RCP e adrenalina 1 mg IV",
+      "vai": "e3",
+      "nota": "Retomou o algoritmo. Minimize pausas daqui em diante.",
+      "pontos": 5
+     },
+     {
+      "txt": "Declarar óbito agora",
+      "vai": "f-ruim",
+      "nota": "Precoce. FV mantida com causas não tratadas ainda merece reanimação.",
+      "pontos": -10
+     },
+     {
+      "txt": "Bicarbonato de sódio de rotina",
+      "vai": "f-ruim",
+      "nota": "Sem benefício de rotina na PCR; só em situações específicas.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e3": {
+    "texto": "Terceiro choque aplicado. Após 2 min, o ritmo persiste em FV.",
+    "vitais": {
+     "FC": 0,
+     "PA": "0x0",
+     "SatO2": 0,
+     "FR": 0,
+     "ritmo": "fv"
+    },
+    "acoes": [
+     {
+      "txt": "Choque e amiodarona 300 mg IV",
+      "vai": "e4",
+      "nota": "Certo. FV refratária: amiodarona 300 mg (2ª dose 150 mg).",
+      "pontos": 10
+     },
+     {
+      "txt": "Choque e lidocaína IV",
+      "vai": "e4",
+      "nota": "Aceitável. Lidocaína é alternativa à amiodarona.",
+      "pontos": 5
+     },
+     {
+      "txt": "Suspender a reanimação",
+      "vai": "f-ruim",
+      "nota": "Precoce. Ainda há ritmo chocável e opções de tratamento.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e4": {
+    "texto": "Após o choque, surge ritmo organizado com pulso. Retorno da circulação!",
+    "vitais": {
+     "FC": 98,
+     "PA": "86x52",
+     "SatO2": 93,
+     "FR": 14,
+     "ritmo": "sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "ECG, PAM ≥65, SatO2 92–98% e cateterismo",
+      "vai": "f-bom",
+      "nota": "Certo. Cuidado pós-PCR: evite hipotensão e hipóxia, trate a causa.",
+      "pontos": 10
+     },
+     {
+      "txt": "O2 a 100% contínuo, sem alvo de saturação",
+      "vai": "f-parcial",
+      "nota": "Hiperóxia prolongada pode piorar a lesão. Alvo: SatO2 92–98%.",
+      "pontos": -5
+     },
+     {
+      "txt": "Transferir para a enfermaria",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Pós-PCR exige UTI, monitor e reperfusão coronária.",
+      "pontos": -10
+     }
+    ]
+   }
+  },
+  "finais": {
+   "f-bom": {
+    "tipo": "bom",
+    "texto": "Jorge tinha supra de ST, foi à hemodinâmica e recebeu stent. Teve controle de temperatura na UTI e alta sem sequelas."
+   },
+   "f-parcial": {
+    "tipo": "parcial",
+    "texto": "Jorge sobreviveu, mas o pós-PCR sem alvos claros prolongou a UTI e deixou déficit cognitivo leve."
+   },
+   "f-ruim": {
+    "tipo": "ruim",
+    "texto": "Atrasos no choque e pausas longas: Jorge não recuperou a circulação."
+   }
+  },
+  "debriefing": [
+   "FV/TV sem pulso: RCP imediata e choque o mais cedo possível.",
+   "Adrenalina 1 mg a cada 3–5 min após o 2º choque; amiodarona 300 mg após o 3º.",
+   "Compressões: 100–120/min, 5–6 cm, retorno total do tórax, pausas <10 s.",
+   "Pós-RCE: PAM ≥65, SatO2 92–98%, ECG, controle de temperatura e cateterismo se indicado."
+  ],
+  "referencia": "AHA 2025 / ACLS"
+ },
+ {
+  "id": "em-02",
+  "titulo": "Dor no peito no interior",
+  "paciente": "Raimundo, 58 anos",
+  "avatar": "homem",
+  "cenario": "Hospital de um município do interior do Amazonas. Dor em aperto no peito há 2 h, com suor frio. Hemodinâmica só em Manaus.",
+  "diagnostico": "Infarto agudo do miocárdio com supradesnivelamento do ST (parede anterior)",
+  "inicio": "e1",
+  "etapas": {
+   "e1": {
+    "texto": "Raimundo é hipertenso e fumante. A dor irradia para o braço esquerdo.",
+    "vitais": {
+     "FC": 96,
+     "PA": "150x90",
+     "SatO2": 95,
+     "FR": 20,
+     "ritmo": "sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "ECG de 12 derivações em até 10 minutos",
+      "vai": "e2",
+      "nota": "Certo. Na dor torácica, o ECG precoce define a conduta.",
+      "pontos": 10
+     },
+     {
+      "txt": "Colher troponina e esperar o resultado",
+      "vai": "e1b",
+      "nota": "Inadequado. No supra de ST, não se espera troponina para reperfundir.",
+      "pontos": -5
+     },
+     {
+      "txt": "Omeprazol IV e reavaliar depois",
+      "vai": "e1b",
+      "nota": "Inadequado. Dor típica exige ECG antes de pensar em causas gástricas.",
+      "pontos": -5
+     },
+     {
+      "txt": "Alta com analgésico",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Dor torácica típica não pode sair sem ECG.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e1b": {
+    "texto": "Passaram-se 40 minutos. A dor continua forte e a troponina ainda não saiu.",
+    "vitais": {
+     "FC": 106,
+     "PA": "140x86",
+     "SatO2": 95,
+     "FR": 22,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Fazer o ECG agora",
+      "vai": "e2",
+      "nota": "Recuperou, mas 40 min de músculo cardíaco foram perdidos.",
+      "pontos": 5
+     },
+     {
+      "txt": "Continuar aguardando a troponina",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Tempo é miocárdio.",
+      "pontos": -10
+     },
+     {
+      "txt": "Morfina e observar",
+      "vai": "f-ruim",
+      "nota": "Mascarar a dor sem diagnóstico atrasa a reperfusão.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e2": {
+    "texto": "ECG: supradesnivelamento do ST de V1 a V4. Dor há 2h30.",
+    "vitais": {
+     "FC": 100,
+     "PA": "146x88",
+     "SatO2": 95,
+     "FR": 20,
+     "ritmo": "sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "AAS 300 mg + clopidogrel e ativar reperfusão",
+      "vai": "e3",
+      "nota": "Certo. Antiagregação dupla e decisão imediata sobre reperfusão.",
+      "pontos": 10
+     },
+     {
+      "txt": "Só oxigênio e observar",
+      "vai": "e2b",
+      "nota": "Inadequado. O2 só se SatO2 <90%; o essencial é reperfundir.",
+      "pontos": -5
+     },
+     {
+      "txt": "Heparina e internar na enfermaria",
+      "vai": "e2b",
+      "nota": "Inadequado. Sem reperfusão, o infarto se completa.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e2b": {
+    "texto": "A dor persiste e surgem extrassístoles. O supra de ST continua.",
+    "vitais": {
+     "FC": 112,
+     "PA": "138x84",
+     "SatO2": 94,
+     "FR": 22,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "AAS + clopidogrel e decidir a reperfusão já",
+      "vai": "e3",
+      "nota": "Recuperou. Ainda dentro da janela de 12 h.",
+      "pontos": 5
+     },
+     {
+      "txt": "Aguardar curva de troponina",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Supra de ST com dor é indicação de reperfusão imediata.",
+      "pontos": -10
+     },
+     {
+      "txt": "Diazepam para ansiedade",
+      "vai": "f-ruim",
+      "nota": "Tratar ansiedade não trata o infarto.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e3": {
+    "texto": "A transferência para angioplastia em Manaus levaria mais de 120 min. Sem contraindicações a fibrinolítico.",
+    "vitais": {
+     "FC": 98,
+     "PA": "140x86",
+     "SatO2": 96,
+     "FR": 20,
+     "ritmo": "sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Fibrinólise (tenecteplase) em até 30 min",
+      "vai": "e4",
+      "nota": "Certo. Se a angioplastia demora >120 min, fibrinólise é a escolha.",
+      "pontos": 10
+     },
+     {
+      "txt": "Transferir sem fibrinólise, mesmo com atraso",
+      "vai": "e3b",
+      "nota": "Inadequado. O atraso >120 min anula a vantagem da angioplastia.",
+      "pontos": -5
+     },
+     {
+      "txt": "Aguardar vaga de UTI sem reperfundir",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Reperfusão não espera leito.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e3b": {
+    "texto": "Após 4 h de viagem, Raimundo chega a Manaus com dor e hipotensão.",
+    "vitais": {
+     "FC": 116,
+     "PA": "98x64",
+     "SatO2": 93,
+     "FR": 24,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Angioplastia primária imediata",
+      "vai": "f-parcial",
+      "nota": "Correto agora, mas o atraso custou músculo cardíaco.",
+      "pontos": 5
+     },
+     {
+      "txt": "Esperar estabilizar para cateterismo eletivo",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Instabilidade no IAM pede cateterismo de urgência.",
+      "pontos": -10
+     },
+     {
+      "txt": "Heparina e cateterismo em 48 h",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Supra de ST com dor não pode esperar.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e4": {
+    "texto": "60–90 min após o fibrinolítico: dor aliviou e o supra de ST caiu mais de 50%.",
+    "vitais": {
+     "FC": 84,
+     "PA": "130x80",
+     "SatO2": 97,
+     "FR": 18,
+     "ritmo": "sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Transferir para cateterismo em 2 a 24 h",
+      "vai": "f-bom",
+      "nota": "Certo. Estratégia fármaco-invasiva: cateterismo mesmo com sucesso.",
+      "pontos": 10
+     },
+     {
+      "txt": "Alta em 48 h sem cateterismo",
+      "vai": "f-parcial",
+      "nota": "Inadequado. Há risco de reoclusão sem estudo coronário.",
+      "pontos": -5
+     },
+     {
+      "txt": "Repetir o fibrinolítico",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Houve sucesso; repetir só aumenta o risco de sangramento.",
+      "pontos": -10
+     }
+    ]
+   }
+  },
+  "finais": {
+   "f-bom": {
+    "tipo": "bom",
+    "texto": "Raimundo recebeu stent na artéria descendente anterior em Manaus. Função cardíaca preservada e alta em 4 dias."
+   },
+   "f-parcial": {
+    "tipo": "parcial",
+    "texto": "Raimundo sobreviveu, mas ficou com disfunção do ventrículo esquerdo e insuficiência cardíaca."
+   },
+   "f-ruim": {
+    "tipo": "ruim",
+    "texto": "Sem reperfusão a tempo, Raimundo evoluiu com choque cardiogênico e óbito."
+   }
+  },
+  "debriefing": [
+   "ECG em até 10 min na dor torácica; não espere troponina se há supra de ST.",
+   "Angioplastia primária se porta-balão ≤120 min; senão, fibrinólise em até 30 min.",
+   "Após fibrinólise: cateterismo em 2–24 h, ou imediato se falhar (resgate).",
+   "O2 só se SatO2 <90%. AAS + inibidor P2Y12 o quanto antes."
+  ],
+  "referencia": "Diretriz SBC IAM com supra de ST / AHA-ACC 2025 SCA"
+ },
+ {
+  "id": "em-03",
+  "titulo": "Reação na UPA",
+  "paciente": "Ana, 28 anos",
+  "avatar": "mulher",
+  "cenario": "Minutos após receber dipirona IM na UPA, Ana tem placas vermelhas no corpo, voz rouca e falta de ar.",
+  "diagnostico": "Anafilaxia com choque",
+  "inicio": "e1",
+  "etapas": {
+   "e1": {
+    "texto": "Urticária difusa, lábios inchados, sibilos e tontura. Pele fria.",
+    "vitais": {
+     "FC": 128,
+     "PA": "80x50",
+     "SatO2": 90,
+     "FR": 30,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Adrenalina 0,5 mg IM na coxa",
+      "vai": "e2",
+      "nota": "Certo. Adrenalina IM (1 mg/mL, 0,01 mg/kg, máx. 0,5 mg) é a 1ª droga.",
+      "pontos": 10
+     },
+     {
+      "txt": "Anti-histamínico e corticoide IV",
+      "vai": "e1b",
+      "nota": "Errado. Não tratam o choque nem o edema de via aérea.",
+      "pontos": -10
+     },
+     {
+      "txt": "Adrenalina 1 mg IV em bolus",
+      "vai": "e1b",
+      "nota": "Perigoso. Bolus IV de 1 mg (dose de PCR) causa arritmias graves.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e1b": {
+    "texto": "Ana piora: estridor, sonolência e pressão ainda mais baixa.",
+    "vitais": {
+     "FC": 142,
+     "PA": "68x40",
+     "SatO2": 85,
+     "FR": 34,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Adrenalina IM, O2 e deitar com pernas elevadas",
+      "vai": "e2",
+      "nota": "Recuperou. Adrenalina IM sem demora, mesmo atrasada.",
+      "pontos": 5
+     },
+     {
+      "txt": "Aguardar o efeito do corticoide",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Corticoide demora horas e não reverte o choque.",
+      "pontos": -10
+     },
+     {
+      "txt": "Sentar a paciente para respirar melhor",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Em choque, ficar de pé ou sentada pode levar à parada.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e2": {
+    "texto": "Após a adrenalina IM, leve melhora. Ainda hipotensa e com sibilos.",
+    "vitais": {
+     "FC": 118,
+     "PA": "88x56",
+     "SatO2": 93,
+     "FR": 26,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Deitar, O2 e cristaloide 20 mL/kg rápido",
+      "vai": "e4",
+      "nota": "Certo. Anafilaxia causa grande perda de volume para os tecidos.",
+      "pontos": 10
+     },
+     {
+      "txt": "Nada mais, só observar",
+      "vai": "e2b",
+      "nota": "Inadequado. Choque sem volume tende a voltar.",
+      "pontos": -5
+     },
+     {
+      "txt": "Adrenalina 1 mg IV em bolus",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Adrenalina IV só em infusão, monitorizada.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e2b": {
+    "texto": "Dez minutos depois, a pressão volta a cair.",
+    "vitais": {
+     "FC": 132,
+     "PA": "76x46",
+     "SatO2": 91,
+     "FR": 28,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Repetir adrenalina IM e dar cristaloide",
+      "vai": "e3",
+      "nota": "Recuperou. Adrenalina IM pode ser repetida a cada 5–15 min.",
+      "pontos": 5
+     },
+     {
+      "txt": "Salbutamol inalatório isolado",
+      "vai": "f-ruim",
+      "nota": "Inadequado. Ajuda o broncoespasmo, mas não trata o choque.",
+      "pontos": -5
+     },
+     {
+      "txt": "Corticoide e aguardar",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Não é tratamento de 1ª linha.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e3": {
+    "texto": "Após 2 doses IM e 2 L de cristaloide, a pressão segue baixa.",
+    "vitais": {
+     "FC": 124,
+     "PA": "82x48",
+     "SatO2": 93,
+     "FR": 26,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Infusão contínua de adrenalina IV monitorizada",
+      "vai": "e4",
+      "nota": "Certo. Anafilaxia refratária: adrenalina em infusão e ajuda da UTI.",
+      "pontos": 10
+     },
+     {
+      "txt": "Terceira dose de adrenalina IM",
+      "vai": "e4",
+      "nota": "Aceitável, mas após 2 doses sem resposta a infusão IV é preferível.",
+      "pontos": 5
+     },
+     {
+      "txt": "Aguardar mais 30 minutos",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Choque refratário não melhora sozinho.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e4": {
+    "texto": "Ana melhora: pressão normal, sem sibilos, urticária diminuindo.",
+    "vitais": {
+     "FC": 96,
+     "PA": "112x70",
+     "SatO2": 97,
+     "FR": 18,
+     "ritmo": "sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Observar ≥6 h, registrar alergia e prescrever adrenalina",
+      "vai": "f-bom",
+      "nota": "Certo. Risco de reação bifásica; alta com plano e encaminhamento.",
+      "pontos": 10
+     },
+     {
+      "txt": "Internar em observação e registrar a alergia",
+      "vai": "f-bom",
+      "nota": "Aceitável. Faltou prescrever adrenalina autoinjetável e orientar.",
+      "pontos": 5
+     },
+     {
+      "txt": "Alta em 1 hora com anti-histamínico",
+      "vai": "f-parcial",
+      "nota": "Inadequado. Precoce demais e sem plano para nova reação.",
+      "pontos": -5
+     }
+    ]
+   }
+  },
+  "finais": {
+   "f-bom": {
+    "tipo": "bom",
+    "texto": "Ana recebeu alta no dia seguinte, com alergia à dipirona registrada e encaminhamento ao alergista."
+   },
+   "f-parcial": {
+    "tipo": "parcial",
+    "texto": "Ana voltou à noite com nova reação (bifásica). Foi tratada, mas o risco era evitável."
+   },
+   "f-ruim": {
+    "tipo": "ruim",
+    "texto": "Sem adrenalina a tempo, Ana evoluiu com edema de glote e parada cardíaca."
+   }
+  },
+  "debriefing": [
+   "Adrenalina IM na coxa é a 1ª e principal droga: 0,01 mg/kg (máx. 0,5 mg), repetir em 5–15 min.",
+   "Anti-histamínico e corticoide não substituem a adrenalina.",
+   "Paciente deitado com pernas elevadas, O2 e cristaloide rápido.",
+   "Refratária após 2 doses IM: adrenalina em infusão IV contínua.",
+   "Observar, registrar a alergia e orientar sobre reação bifásica."
+  ],
+  "referencia": "WAO 2020 / ASBAI Anafilaxia"
+ },
+ {
+  "id": "em-04",
+  "titulo": "Febre e confusão na idosa",
+  "paciente": "Dona Maria, 74 anos",
+  "avatar": "idosa",
+  "cenario": "Dona Maria tem ardor para urinar há 3 dias. Hoje está confusa, com febre e dor nas costas à direita.",
+  "diagnostico": "Choque séptico de foco urinário (pielonefrite obstrutiva)",
+  "inicio": "e1",
+  "etapas": {
+   "e1": {
+    "texto": "Temperatura 38,9 °C, pele moteada, confusa. Giordano positivo à direita.",
+    "vitais": {
+     "FC": 118,
+     "PA": "82x44",
+     "SatO2": 93,
+     "FR": 26,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Lactato, hemoculturas, antibiótico e 30 mL/kg",
+      "vai": "e2",
+      "nota": "Certo. Pacote da 1ª hora: culturas, antibiótico e cristaloide.",
+      "pontos": 10
+     },
+     {
+      "txt": "Aguardar a urocultura para escolher antibiótico",
+      "vai": "e1b",
+      "nota": "Perigoso. Antibiótico empírico deve sair em até 1 h.",
+      "pontos": -10
+     },
+     {
+      "txt": "Dipirona e reavaliar em 2 horas",
+      "vai": "e1b",
+      "nota": "Inadequado. Tratar a febre não trata a sepse.",
+      "pontos": -5
+     }
+    ]
+   },
+   "e1b": {
+    "texto": "Uma hora depois: mais sonolenta, pressão menor, lactato 5 mmol/L.",
+    "vitais": {
+     "FC": 128,
+     "PA": "74x40",
+     "SatO2": 91,
+     "FR": 30,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Culturas, antibiótico e 30 mL/kg agora",
+      "vai": "e2",
+      "nota": "Recuperou, mas cada hora de atraso no antibiótico aumenta a mortalidade.",
+      "pontos": 5
+     },
+     {
+      "txt": "Continuar aguardando exames",
+      "vai": "f-ruim",
+      "nota": "Perigoso. O choque progride.",
+      "pontos": -10
+     },
+     {
+      "txt": "Só hidrocortisona IV",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Corticoide não substitui antibiótico nem volume.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e2": {
+    "texto": "Após 30 mL/kg de cristaloide, a PAM segue abaixo de 65 mmHg. Lactato 4.",
+    "vitais": {
+     "FC": 116,
+     "PA": "84x46",
+     "SatO2": 94,
+     "FR": 24,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Noradrenalina para PAM ≥65 mmHg",
+      "vai": "e3",
+      "nota": "Certo. Vasopressor de 1ª escolha; pode iniciar em veia periférica.",
+      "pontos": 10
+     },
+     {
+      "txt": "Mais 3 L de cristaloide sem reavaliar",
+      "vai": "e2b",
+      "nota": "Inadequado. Volume guiado por resposta; excesso causa congestão.",
+      "pontos": -5
+     },
+     {
+      "txt": "Dopamina como primeira escolha",
+      "vai": "e2b",
+      "nota": "Inadequado. Dopamina causa mais arritmias que noradrenalina.",
+      "pontos": -5
+     }
+    ]
+   },
+   "e2b": {
+    "texto": "Surgem estertores nos pulmões e a saturação cai. Pressão ainda baixa.",
+    "vitais": {
+     "FC": 124,
+     "PA": "80x42",
+     "SatO2": 88,
+     "FR": 32,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Parar volume, O2 e iniciar noradrenalina",
+      "vai": "e3",
+      "nota": "Recuperou. Vasopressor para PAM ≥65 e suporte ventilatório.",
+      "pontos": 5
+     },
+     {
+      "txt": "Mais volume para subir a pressão",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Piora o edema pulmonar.",
+      "pontos": -10
+     },
+     {
+      "txt": "Furosemida IV em bolus",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Diurético em choque agrava a hipotensão.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e3": {
+    "texto": "Com noradrenalina, PAM 70. Ultrassom: cálculo no ureter e rim direito dilatado.",
+    "vitais": {
+     "FC": 98,
+     "PA": "104x54",
+     "SatO2": 95,
+     "FR": 22,
+     "ritmo": "sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Desobstrução urológica de urgência",
+      "vai": "f-bom",
+      "nota": "Certo. Controle do foco: rim obstruído infectado precisa de drenagem.",
+      "pontos": 10
+     },
+     {
+      "txt": "Só manter o antibiótico",
+      "vai": "f-parcial",
+      "nota": "Inadequado. Sem drenar o foco, a sepse tende a persistir.",
+      "pontos": -5
+     },
+     {
+      "txt": "Trocar o antibiótico todo dia",
+      "vai": "f-parcial",
+      "nota": "Inadequado. O problema é o foco obstruído, não o antibiótico.",
+      "pontos": -5
+     }
+    ]
+   }
+  },
+  "finais": {
+   "f-bom": {
+    "tipo": "bom",
+    "texto": "Após cateter duplo J, Dona Maria saiu da noradrenalina em 48 h e teve alta em uma semana."
+   },
+   "f-parcial": {
+    "tipo": "parcial",
+    "texto": "Dona Maria ficou dias na UTI e teve lesão renal até a drenagem ser feita."
+   },
+   "f-ruim": {
+    "tipo": "ruim",
+    "texto": "O choque progrediu para falência de múltiplos órgãos e óbito."
+   }
+  },
+  "debriefing": [
+   "Pacote da 1ª hora: lactato, hemoculturas, antibiótico, 30 mL/kg de cristaloide se hipotensão ou lactato ≥4.",
+   "Noradrenalina é o vasopressor de 1ª escolha; alvo PAM ≥65 mmHg.",
+   "Reavalie a resposta ao volume; excesso de fluido causa congestão.",
+   "Controle do foco: drenar, desobstruir ou retirar a fonte o quanto antes."
+  ],
+  "referencia": "Surviving Sepsis Campaign 2021 / ILAS"
+ },
+ {
+  "id": "em-05",
+  "titulo": "Jovem com vômitos e respiração funda",
+  "paciente": "Lucas, 19 anos",
+  "avatar": "homem",
+  "cenario": "Lucas tem diabetes tipo 1 e parou a insulina há 3 dias. Vômitos, dor abdominal e respiração rápida e profunda.",
+  "diagnostico": "Cetoacidose diabética com hipocalemia",
+  "inicio": "e1",
+  "etapas": {
+   "e1": {
+    "texto": "Glicemia 480 mg/dL, pH 7,10, bicarbonato 8, cetonemia positiva. Mucosas secas.",
+    "vitais": {
+     "FC": 124,
+     "PA": "96x60",
+     "SatO2": 98,
+     "FR": 30,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "SF 0,9% 1 a 1,5 L na 1ª hora",
+      "vai": "e2",
+      "nota": "Certo. Hidratação é a 1ª medida e já reduz a glicemia.",
+      "pontos": 10
+     },
+     {
+      "txt": "Insulina regular IV em bolus antes de tudo",
+      "vai": "e1b",
+      "nota": "Perigoso. Insulina sem saber o potássio pode causar hipocalemia grave.",
+      "pontos": -10
+     },
+     {
+      "txt": "Bicarbonato IV para corrigir o pH",
+      "vai": "e1b",
+      "nota": "Inadequado. Só se pH <6,9; e empurra o potássio para dentro da célula.",
+      "pontos": -5
+     }
+    ]
+   },
+   "e1b": {
+    "texto": "O potássio caiu para 2,6 mEq/L. Lucas está fraco e com extrassístoles.",
+    "vitais": {
+     "FC": 118,
+     "PA": "94x58",
+     "SatO2": 98,
+     "FR": 28,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Suspender insulina, repor KCl IV e hidratar",
+      "vai": "e3",
+      "nota": "Recuperou. K+ baixo é perigoso: repor antes de continuar a insulina.",
+      "pontos": 5
+     },
+     {
+      "txt": "Aumentar a insulina",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Derruba ainda mais o potássio: risco de arritmia fatal.",
+      "pontos": -10
+     },
+     {
+      "txt": "Dar mais bicarbonato",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Piora a hipocalemia.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e2": {
+    "texto": "Após 1 L de SF, sai o potássio: 3,1 mEq/L. Diurese presente.",
+    "vitais": {
+     "FC": 112,
+     "PA": "104x64",
+     "SatO2": 98,
+     "FR": 28,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Repor KCl IV e adiar insulina até K+ ≥3,5",
+      "vai": "e3",
+      "nota": "Certo. Com K+ <3,5 a insulina espera; reponha o potássio antes.",
+      "pontos": 10
+     },
+     {
+      "txt": "Iniciar insulina 0,1 U/kg/h já",
+      "vai": "e1b",
+      "nota": "Perigoso. Com K+ 3,1 a insulina leva à hipocalemia grave.",
+      "pontos": -10
+     },
+     {
+      "txt": "Não repor potássio, pois ele já está no soro",
+      "vai": "e1b",
+      "nota": "Errado. O SF 0,9% não tem potássio.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e3": {
+    "texto": "Com a reposição, o potássio está em 3,8 mEq/L. Glicemia ainda 400 mg/dL.",
+    "vitais": {
+     "FC": 106,
+     "PA": "110x70",
+     "SatO2": 98,
+     "FR": 26,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Insulina regular IV contínua 0,1 U/kg/h",
+      "vai": "e4",
+      "nota": "Certo. Insulina em bomba, mantendo K+ entre 4 e 5 com reposição.",
+      "pontos": 10
+     },
+     {
+      "txt": "Insulina NPH SC em dose alta",
+      "vai": "f-parcial",
+      "nota": "Inadequado. Absorção imprevisível no desidratado; prefira IV.",
+      "pontos": -5
+     },
+     {
+      "txt": "Não usar insulina: a glicemia já cai com soro",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Sem insulina, a cetose não resolve.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e4": {
+    "texto": "Horas depois: glicemia 240 mg/dL, pH 7,25 e bicarbonato 14. Ainda há acidose.",
+    "vitais": {
+     "FC": 96,
+     "PA": "116x72",
+     "SatO2": 98,
+     "FR": 22,
+     "ritmo": "sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Associar SG 5% e manter a insulina IV",
+      "vai": "f-bom",
+      "nota": "Certo. A glicose evita hipoglicemia enquanto a insulina fecha a acidose.",
+      "pontos": 10
+     },
+     {
+      "txt": "Desligar a insulina IV, pois a glicemia caiu",
+      "vai": "f-ruim",
+      "nota": "Perigoso. A acidose volta; o alvo é resolver a cetose, não a glicemia.",
+      "pontos": -10
+     },
+     {
+      "txt": "Passar para SC e desligar a bomba na hora",
+      "vai": "f-parcial",
+      "nota": "Inadequado. A acidose não resolveu e falta sobreposição de 1–2 h.",
+      "pontos": -5
+     }
+    ]
+   }
+  },
+  "finais": {
+   "f-bom": {
+    "tipo": "bom",
+    "texto": "A acidose resolveu em 16 h. Lucas passou para insulina SC com sobreposição e recebeu educação em diabetes."
+   },
+   "f-parcial": {
+    "tipo": "parcial",
+    "texto": "A cetoacidose voltou e Lucas passou mais 2 dias internado."
+   },
+   "f-ruim": {
+    "tipo": "ruim",
+    "texto": "Lucas teve arritmia grave por hipocalemia e foi para a UTI em estado crítico."
+   }
+  },
+  "debriefing": [
+   "Hidratação com SF 0,9% é a 1ª medida.",
+   "Potássio antes da insulina: se K+ <3,5, repor e adiar a insulina.",
+   "Insulina regular IV 0,1 U/kg/h; com glicemia ~250, associar soro glicosado.",
+   "Bicarbonato só se pH <6,9.",
+   "Resolução: pH >7,3, bicarbonato ≥15 ou ânion gap normal; sobrepor SC por 1–2 h."
+  ],
+  "referencia": "ADA 2024 Hyperglycemic Crises / SBD 2025"
+ },
+ {
+  "id": "em-06",
+  "titulo": "Chiado que não passa",
+  "paciente": "Pedro, 7 anos",
+  "avatar": "crianca",
+  "cenario": "Pedro tem asma e tosse há 2 dias. Hoje fala só palavras soltas e usa a musculatura do pescoço para respirar.",
+  "diagnostico": "Crise asmática grave na criança",
+  "inicio": "e1",
+  "etapas": {
+   "e1": {
+    "texto": "Tiragem intercostal, sibilos difusos, agitado. Não consegue completar frases.",
+    "vitais": {
+     "FC": 140,
+     "PA": "100x60",
+     "SatO2": 88,
+     "FR": 44,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "O2 + salbutamol/ipratrópio seriados + corticoide",
+      "vai": "e2",
+      "nota": "Certo. Broncodilatador a cada 20 min na 1ª hora e corticoide cedo.",
+      "pontos": 10
+     },
+     {
+      "txt": "Radiografia de tórax antes de tratar",
+      "vai": "e1b",
+      "nota": "Inadequado. Crise grave se trata primeiro; RX só se suspeita de complicação.",
+      "pontos": -5
+     },
+     {
+      "txt": "Diazepam para acalmar a criança",
+      "vai": "e1b",
+      "nota": "Perigoso. Sedar asmático grave deprime a respiração.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e1b": {
+    "texto": "Pedro piora: mais cansado, saturação caindo.",
+    "vitais": {
+     "FC": 152,
+     "PA": "102x62",
+     "SatO2": 85,
+     "FR": 50,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "O2, salbutamol + ipratrópio e corticoide agora",
+      "vai": "e2",
+      "nota": "Recuperou. Tratamento imediato ainda muda o desfecho.",
+      "pontos": 5
+     },
+     {
+      "txt": "Esperar o resultado do RX",
+      "vai": "f-ruim",
+      "nota": "Perigoso. A criança se cansa e para de respirar.",
+      "pontos": -10
+     },
+     {
+      "txt": "Mais sedativo",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Pode levar à parada respiratória.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e2": {
+    "texto": "Após 1 h de tratamento, melhora pequena. Ainda com esforço importante.",
+    "vitais": {
+     "FC": 144,
+     "PA": "104x64",
+     "SatO2": 90,
+     "FR": 42,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Sulfato de magnésio IV 40–50 mg/kg em 20 min",
+      "vai": "e3",
+      "nota": "Certo. Crise grave sem resposta na 1ª hora: MgSO4 IV (máx. 2 g).",
+      "pontos": 10
+     },
+     {
+      "txt": "Aminofilina IV de rotina",
+      "vai": "e2b",
+      "nota": "Inadequado. Pouco benefício e muitos efeitos adversos.",
+      "pontos": -5
+     },
+     {
+      "txt": "Antibiótico empírico",
+      "vai": "e2b",
+      "nota": "Inadequado. Sem sinal de infecção bacteriana.",
+      "pontos": -5
+     },
+     {
+      "txt": "Alta com bombinha para casa",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Criança ainda em crise grave.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e2b": {
+    "texto": "Pedro está sonolento e com o tórax mais silencioso.",
+    "vitais": {
+     "FC": 158,
+     "PA": "100x60",
+     "SatO2": 87,
+     "FR": 46,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "MgSO4 IV, nebulização contínua e chamar a UTI",
+      "vai": "e3",
+      "nota": "Recuperou. Tórax silencioso e sonolência são sinais de alarme.",
+      "pontos": 5
+     },
+     {
+      "txt": "Mais aminofilina",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Risco de arritmia e convulsão sem ganho.",
+      "pontos": -10
+     },
+     {
+      "txt": "Sedativo para dormir",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Pode causar parada respiratória.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e3": {
+    "texto": "Uma hora após o magnésio: fala frases, saturação melhor com O2.",
+    "vitais": {
+     "FC": 122,
+     "PA": "102x62",
+     "SatO2": 95,
+     "FR": 30,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Internar, espaçar salbutamol e manter corticoide",
+      "vai": "f-bom",
+      "nota": "Certo. Internar, espaçar inalações e planejar a alta com controle.",
+      "pontos": 10
+     },
+     {
+      "txt": "Alta imediata sem corticoide",
+      "vai": "f-parcial",
+      "nota": "Inadequado. Alta cedo e sem corticoide leva à recaída.",
+      "pontos": -5
+     },
+     {
+      "txt": "Suspender O2 e broncodilatador agora",
+      "vai": "f-parcial",
+      "nota": "Inadequado. A melhora ainda é recente.",
+      "pontos": -5
+     }
+    ]
+   }
+  },
+  "finais": {
+   "f-bom": {
+    "tipo": "bom",
+    "texto": "Pedro teve alta em 2 dias com corticoide oral, corticoide inalatório e plano escrito para crises."
+   },
+   "f-parcial": {
+    "tipo": "parcial",
+    "texto": "Pedro voltou em 24 h com nova crise e precisou reinternar."
+   },
+   "f-ruim": {
+    "tipo": "ruim",
+    "texto": "Pedro evoluiu com insuficiência respiratória e precisou de intubação na UTI."
+   }
+  },
+  "debriefing": [
+   "Sinais de gravidade: fala palavras soltas, tiragem, SatO2 <92%, sonolência, tórax silencioso.",
+   "O2 (alvo 94–98%), salbutamol a cada 20 min e ipratrópio na 1ª hora.",
+   "Corticoide sistêmico na 1ª hora.",
+   "Sem resposta: sulfato de magnésio IV. Evite sedativos."
+  ],
+  "referencia": "GINA 2025 / SBP"
+ },
+ {
+  "id": "em-07",
+  "titulo": "Moto contra o poste",
+  "paciente": "Carlos, 25 anos",
+  "avatar": "homem",
+  "cenario": "Motociclista bateu em um poste. Chega à sala vermelha agitado, com dor no lado esquerdo do tórax.",
+  "diagnostico": "Pneumotórax hipertensivo traumático",
+  "inicio": "e1",
+  "etapas": {
+   "e1": {
+    "texto": "Murmúrio abolido e hipertimpanismo à esquerda, jugulares ingurgitadas, traqueia desviada à direita.",
+    "vitais": {
+     "FC": 132,
+     "PA": "78x50",
+     "SatO2": 84,
+     "FR": 36,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Descompressão imediata no 5º EIC, linha axilar média",
+      "vai": "e2",
+      "nota": "Certo. Diagnóstico é clínico: descomprimir já, com agulha ou dedo.",
+      "pontos": 10
+     },
+     {
+      "txt": "Radiografia de tórax para confirmar",
+      "vai": "e1b",
+      "nota": "Perigoso. Pneumotórax hipertensivo não espera exame de imagem.",
+      "pontos": -10
+     },
+     {
+      "txt": "Intubar e ventilar com pressão positiva",
+      "vai": "e1b",
+      "nota": "Perigoso. Ventilação positiva aumenta a tensão no tórax.",
+      "pontos": -10
+     },
+     {
+      "txt": "Cristaloide 2 L rápido",
+      "vai": "e1b",
+      "nota": "Inadequado. O choque é obstrutivo: volume não resolve.",
+      "pontos": -5
+     }
+    ]
+   },
+   "e1b": {
+    "texto": "Carlos fica pálido e confuso. Pulso fino, quase sem pressão.",
+    "vitais": {
+     "FC": 148,
+     "PA": "60x34",
+     "SatO2": 76,
+     "FR": 40,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Descomprimir o tórax agora",
+      "vai": "e2",
+      "nota": "Recuperou no limite. A descompressão reverte o choque obstrutivo.",
+      "pontos": 5
+     },
+     {
+      "txt": "Continuar aguardando o RX",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Evolui para parada em AESP.",
+      "pontos": -10
+     },
+     {
+      "txt": "Adrenalina IV",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Não trata a causa obstrutiva.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e2": {
+    "texto": "Saída de ar sob pressão. Carlos melhora rápido.",
+    "vitais": {
+     "FC": 112,
+     "PA": "104x66",
+     "SatO2": 93,
+     "FR": 26,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Drenagem torácica em selo d'água",
+      "vai": "e3",
+      "nota": "Certo. A descompressão é ponte: o tratamento definitivo é o dreno.",
+      "pontos": 10
+     },
+     {
+      "txt": "Deixar só a agulha e mandar para a TC",
+      "vai": "e2b",
+      "nota": "Inadequado. Agulha dobra ou sai; o pneumotórax volta.",
+      "pontos": -5
+     },
+     {
+      "txt": "Retirar a agulha e observar",
+      "vai": "e2b",
+      "nota": "Inadequado. Sem dreno, a tensão se refaz.",
+      "pontos": -5
+     }
+    ]
+   },
+   "e2b": {
+    "texto": "Minutos depois, a pressão volta a cair e a saturação despenca.",
+    "vitais": {
+     "FC": 128,
+     "PA": "84x54",
+     "SatO2": 86,
+     "FR": 34,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Nova descompressão e dreno torácico",
+      "vai": "e3",
+      "nota": "Recuperou. Agora com drenagem definitiva.",
+      "pontos": 5
+     },
+     {
+      "txt": "Observar mais um pouco",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Recidiva de hipertensivo leva à parada.",
+      "pontos": -10
+     },
+     {
+      "txt": "Mais volume sem drenar",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Não resolve a obstrução.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e3": {
+    "texto": "Dreno saiu ar e 300 mL de sangue. Carlos está estável.",
+    "vitais": {
+     "FC": 100,
+     "PA": "112x70",
+     "SatO2": 96,
+     "FR": 20,
+     "ritmo": "sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Reavaliar ABCDE, RX de controle, e-FAST e analgesia",
+      "vai": "f-bom",
+      "nota": "Certo. Reavaliação primária completa após cada intervenção.",
+      "pontos": 10
+     },
+     {
+      "txt": "Clampear o dreno para evitar perda de sangue",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Dreno clampeado pode recriar o hipertensivo.",
+      "pontos": -10
+     },
+     {
+      "txt": "Alta em 2 horas",
+      "vai": "f-parcial",
+      "nota": "Inadequado. Trauma torácico com dreno exige internação.",
+      "pontos": -5
+     }
+    ]
+   }
+  },
+  "finais": {
+   "f-bom": {
+    "tipo": "bom",
+    "texto": "Carlos ficou 4 dias com dreno, o pulmão expandiu e ele teve alta sem outras lesões graves."
+   },
+   "f-parcial": {
+    "tipo": "parcial",
+    "texto": "Carlos voltou com o pulmão colabado e precisou de nova drenagem."
+   },
+   "f-ruim": {
+    "tipo": "ruim",
+    "texto": "Sem descompressão a tempo, Carlos evoluiu para parada em AESP."
+   }
+  },
+  "debriefing": [
+   "Pneumotórax hipertensivo é diagnóstico clínico: não espere RX.",
+   "Adulto: descompressão no 4º–5º EIC, linha axilar média (ou toracostomia digital).",
+   "O tratamento definitivo é a drenagem torácica em selo d'água.",
+   "Ventilação com pressão positiva piora o hipertensivo não drenado."
+  ],
+  "referencia": "ATLS 10ª edição"
+ },
+ {
+  "id": "em-08",
+  "titulo": "Fala enrolada de repente",
+  "paciente": "Dona Tereza, 68 anos",
+  "avatar": "idosa",
+  "cenario": "Às 14h a família viu a boca torta e fraqueza no braço direito. Estava bem às 13h30. Chega às 14h40.",
+  "diagnostico": "AVC isquêmico agudo (artéria cerebral média esquerda)",
+  "inicio": "e1",
+  "etapas": {
+   "e1": {
+    "texto": "Afasia, hemiparesia direita. NIHSS 10. Pulso irregular. Último momento bem: 13h30.",
+    "vitais": {
+     "FC": 92,
+     "PA": "196x108",
+     "SatO2": 96,
+     "FR": 18,
+     "ritmo": "fa"
+    },
+    "acoes": [
+     {
+      "txt": "Glicemia capilar e TC de crânio sem contraste já",
+      "vai": "e2",
+      "nota": "Certo. Excluir hipoglicemia e sangramento o mais rápido possível.",
+      "pontos": 10
+     },
+     {
+      "txt": "Nifedipino sublingual para baixar a PA",
+      "vai": "e1b",
+      "nota": "Perigoso. Queda brusca da PA amplia a área isquêmica.",
+      "pontos": -10
+     },
+     {
+      "txt": "AAS 300 mg antes da TC",
+      "vai": "e1b",
+      "nota": "Perigoso. Sem TC, pode ser hemorragia; e contraindica trombólise.",
+      "pontos": -10
+     },
+     {
+      "txt": "Aguardar coagulograma antes da TC",
+      "vai": "e1b",
+      "nota": "Inadequado. Sem anticoagulante em uso, não se espera exame.",
+      "pontos": -5
+     }
+    ]
+   },
+   "e1b": {
+    "texto": "Tempo perdido: o déficit piorou e agora são 15h40.",
+    "vitais": {
+     "FC": 96,
+     "PA": "188x104",
+     "SatO2": 95,
+     "FR": 18,
+     "ritmo": "fa"
+    },
+    "acoes": [
+     {
+      "txt": "Glicemia e TC de crânio agora",
+      "vai": "e2",
+      "nota": "Recuperou. Ainda dentro da janela de 4,5 h.",
+      "pontos": 5
+     },
+     {
+      "txt": "Esperar a família trazer os exames antigos",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Tempo é cérebro.",
+      "pontos": -10
+     },
+     {
+      "txt": "Heparina plena empírica",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Não é tratamento do AVC agudo e aumenta sangramento.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e2": {
+    "texto": "TC sem sangramento. Glicemia 132. Pressão ainda alta.",
+    "vitais": {
+     "FC": 94,
+     "PA": "196x108",
+     "SatO2": 96,
+     "FR": 18,
+     "ritmo": "fa"
+    },
+    "acoes": [
+     {
+      "txt": "Anti-hipertensivo IV até PA <185x110",
+      "vai": "e3",
+      "nota": "Certo. Para trombolisar, a PA deve estar abaixo de 185x110.",
+      "pontos": 10
+     },
+     {
+      "txt": "Trombolisar com a PA 196x108",
+      "vai": "f-ruim",
+      "nota": "Perigoso. PA acima do limite aumenta o risco de hemorragia.",
+      "pontos": -10
+     },
+     {
+      "txt": "Desistir da trombólise pela PA alta",
+      "vai": "f-parcial",
+      "nota": "Inadequado. PA alta se controla; não é motivo para perder a janela.",
+      "pontos": -5
+     }
+    ]
+   },
+   "e3": {
+    "texto": "PA 176x98 após anti-hipertensivo IV. São 2h45 do início dos sintomas.",
+    "vitais": {
+     "FC": 90,
+     "PA": "176x98",
+     "SatO2": 96,
+     "FR": 18,
+     "ritmo": "fa"
+    },
+    "acoes": [
+     {
+      "txt": "Trombólise IV e angio-TC para trombectomia",
+      "vai": "e4",
+      "nota": "Certo. Trombolítico na janela de 4,5 h e busca de oclusão de grande vaso.",
+      "pontos": 10
+     },
+     {
+      "txt": "Esperar ressonância para confirmar",
+      "vai": "e3b",
+      "nota": "Inadequado. TC sem sangramento basta para trombolisar.",
+      "pontos": -5
+     },
+     {
+      "txt": "AAS e heparina em vez da trombólise",
+      "vai": "f-parcial",
+      "nota": "Inadequado. Perde o benefício da reperfusão.",
+      "pontos": -5
+     }
+    ]
+   },
+   "e3b": {
+    "texto": "A ressonância atrasou 1 hora. Já são 3h50 do início.",
+    "vitais": {
+     "FC": 92,
+     "PA": "178x100",
+     "SatO2": 96,
+     "FR": 18,
+     "ritmo": "fa"
+    },
+    "acoes": [
+     {
+      "txt": "Trombolisar agora e pedir angio-TC",
+      "vai": "e4",
+      "nota": "Recuperou. Ainda na janela, mas com menos benefício.",
+      "pontos": 5
+     },
+     {
+      "txt": "Esperar laudo formal da ressonância",
+      "vai": "f-parcial",
+      "nota": "Inadequado. A janela de 4,5 h se fecha.",
+      "pontos": -10
+     },
+     {
+      "txt": "Iniciar AAS e internar",
+      "vai": "f-parcial",
+      "nota": "Inadequado. Perde a reperfusão.",
+      "pontos": -5
+     }
+    ]
+   },
+   "e4": {
+    "texto": "Angio-TC: oclusão da artéria cerebral média esquerda (M1). Trombolítico infundido.",
+    "vitais": {
+     "FC": 88,
+     "PA": "170x94",
+     "SatO2": 96,
+     "FR": 18,
+     "ritmo": "fa"
+    },
+    "acoes": [
+     {
+      "txt": "Trombectomia e PA <180x105 nas 24 h",
+      "vai": "f-bom",
+      "nota": "Certo. Oclusão de grande vaso: trombectomia soma benefício.",
+      "pontos": 10
+     },
+     {
+      "txt": "AAS e heparina logo após a trombólise",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Antitrombóticos só após 24 h e TC de controle.",
+      "pontos": -10
+     },
+     {
+      "txt": "Deixar a PA livre após a trombólise",
+      "vai": "f-ruim",
+      "nota": "Perigoso. PA >180x105 após trombólise aumenta hemorragia.",
+      "pontos": -10
+     }
+    ]
+   }
+  },
+  "finais": {
+   "f-bom": {
+    "tipo": "bom",
+    "texto": "Após a trombectomia, a fala voltou. Dona Tereza iniciou anticoagulação pela FA no tempo certo e teve alta andando."
+   },
+   "f-parcial": {
+    "tipo": "parcial",
+    "texto": "Dona Tereza sobreviveu, mas ficou com afasia e fraqueza do braço direito."
+   },
+   "f-ruim": {
+    "tipo": "ruim",
+    "texto": "Dona Tereza teve transformação hemorrágica e ficou com sequelas graves."
+   }
+  },
+  "debriefing": [
+   "Glicemia e TC sem contraste imediatas; o horário que vale é o último momento bem.",
+   "Trombólise IV até 4,5 h com PA <185x110 antes e <180x105 nas 24 h seguintes.",
+   "Oclusão de grande vaso: trombectomia mecânica, mesmo após trombólise.",
+   "Sem antitrombóticos nas 24 h após trombólise. Não baixar PA com nifedipino SL."
+  ],
+  "referencia": "AHA/ASA AVC isquêmico agudo 2026 / SBDCV / Linha de cuidado AVC – MS"
+ },
+ {
+  "id": "em-09",
+  "titulo": "Sangramento após o parto",
+  "paciente": "Joana, 30 anos",
+  "avatar": "gestante",
+  "cenario": "Parto vaginal há 20 minutos, placenta saiu completa. Sangramento vaginal volumoso e contínuo.",
+  "diagnostico": "Hemorragia pós-parto por atonia uterina",
+  "inicio": "e1",
+  "etapas": {
+   "e1": {
+    "texto": "Útero amolecido acima da cicatriz umbilical. Perda estimada de 800 mL. Índice de choque 1,3.",
+    "vitais": {
+     "FC": 118,
+     "PA": "90x58",
+     "SatO2": 97,
+     "FR": 22,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Pedir ajuda, massagem uterina, ocitocina IV, 2 acessos",
+      "vai": "e2",
+      "nota": "Certo. Hora de ouro: medidas simultâneas e rápidas.",
+      "pontos": 10
+     },
+     {
+      "txt": "Aguardar para ver se o sangramento para",
+      "vai": "e1b",
+      "nota": "Perigoso. A hemorragia pós-parto mata em poucas horas.",
+      "pontos": -10
+     },
+     {
+      "txt": "Só soro e observar",
+      "vai": "e1b",
+      "nota": "Inadequado. Sem uterotônico, o útero continua atônico.",
+      "pontos": -5
+     }
+    ]
+   },
+   "e1b": {
+    "texto": "Perda já de 1.500 mL. Joana está pálida e sonolenta.",
+    "vitais": {
+     "FC": 136,
+     "PA": "76x44",
+     "SatO2": 96,
+     "FR": 26,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Massagem, ocitocina, ácido tranexâmico e sangue",
+      "vai": "e2b",
+      "nota": "Recuperou. Tudo ao mesmo tempo, com protocolo de transfusão.",
+      "pontos": 5
+     },
+     {
+      "txt": "Aguardar o hemograma",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Transfusão na HPP grave é decisão clínica.",
+      "pontos": -10
+     },
+     {
+      "txt": "Dopamina para subir a pressão",
+      "vai": "f-ruim",
+      "nota": "Perigoso. O choque é hemorrágico: precisa de sangue.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e2": {
+    "texto": "Ocitocina em curso. O útero contrai parcialmente, mas o sangramento continua.",
+    "vitais": {
+     "FC": 122,
+     "PA": "88x54",
+     "SatO2": 97,
+     "FR": 22,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Ácido tranexâmico 1 g IV em 10 minutos",
+      "vai": "e3",
+      "nota": "Certo. Até 3 h do parto, reduz morte por sangramento.",
+      "pontos": 10
+     },
+     {
+      "txt": "Suspender a ocitocina: não funcionou",
+      "vai": "e2b",
+      "nota": "Inadequado. Mantenha a ocitocina e associe outras medidas.",
+      "pontos": -5
+     },
+     {
+      "txt": "Esperar a hemoglobina para decidir",
+      "vai": "e2b",
+      "nota": "Inadequado. A hemoglobina cai tarde na hemorragia aguda.",
+      "pontos": -5
+     }
+    ]
+   },
+   "e2b": {
+    "texto": "O sangramento continua. Pressão caindo, extremidades frias.",
+    "vitais": {
+     "FC": 132,
+     "PA": "80x48",
+     "SatO2": 96,
+     "FR": 24,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Ácido tranexâmico IV e hemoderivados",
+      "vai": "e3",
+      "nota": "Recuperou. Tranexâmico cedo e reposição com sangue.",
+      "pontos": 5
+     },
+     {
+      "txt": "Cristaloide 4 L sem hemoderivados",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Excesso de cristaloide piora a coagulopatia.",
+      "pontos": -10
+     },
+     {
+      "txt": "Esperar a próxima avaliação",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Cada minuto conta.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e3": {
+    "texto": "Ainda há sangramento moderado com útero pouco contraído. Joana não é hipertensa.",
+    "vitais": {
+     "FC": 120,
+     "PA": "90x56",
+     "SatO2": 97,
+     "FR": 22,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Metilergometrina ou misoprostol; balão se persistir",
+      "vai": "e4",
+      "nota": "Certo. Uterotônicos de 2ª linha e tamponamento com balão.",
+      "pontos": 10
+     },
+     {
+      "txt": "Histerectomia imediata como primeira medida",
+      "vai": "f-parcial",
+      "nota": "Inadequado. Cirurgia vem após falha das medidas menos invasivas.",
+      "pontos": -5
+     },
+     {
+      "txt": "Mais cristaloide e nada mais",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Não trata a atonia.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e4": {
+    "texto": "Útero bem contraído, sangramento cessou. Joana está mais corada.",
+    "vitais": {
+     "FC": 98,
+     "PA": "102x64",
+     "SatO2": 98,
+     "FR": 18,
+     "ritmo": "sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Monitorar, manter ocitocina e rever os 4 Ts",
+      "vai": "f-bom",
+      "nota": "Certo. Vigilância intensiva e busca de trauma, tecido e coagulopatia.",
+      "pontos": 10
+     },
+     {
+      "txt": "Enfermaria comum sem monitorização",
+      "vai": "f-parcial",
+      "nota": "Inadequado. Risco de novo sangramento nas próximas horas.",
+      "pontos": -5
+     },
+     {
+      "txt": "Alta em 6 horas",
+      "vai": "f-parcial",
+      "nota": "Inadequado. HPP grave exige observação prolongada.",
+      "pontos": -5
+     }
+    ]
+   }
+  },
+  "finais": {
+   "f-bom": {
+    "tipo": "bom",
+    "texto": "Joana recebeu 2 bolsas de sangue, não precisou de cirurgia e foi para casa com o bebê em 3 dias."
+   },
+   "f-parcial": {
+    "tipo": "parcial",
+    "texto": "Joana sobreviveu, mas precisou de reintervenção e UTI."
+   },
+   "f-ruim": {
+    "tipo": "ruim",
+    "texto": "Joana evoluiu com choque hemorrágico grave e coagulopatia. Uma morte materna evitável."
+   }
+  },
+  "debriefing": [
+   "Causas: 4 Ts – tônus (atonia, a mais comum), trauma, tecido e trombina.",
+   "Atonia: massagem uterina bimanual e ocitocina IV imediatas.",
+   "Ácido tranexâmico 1 g IV em 10 min nas primeiras 3 h; pode repetir.",
+   "Índice de choque (FC/PAS) ≥1 sinaliza perda grave: pense em transfusão.",
+   "2ª linha: metilergometrina (evitar se hipertensa), misoprostol, balão."
+  ],
+  "referencia": "OMS 2023 HPP / MS – Estratégia Zero Morte Materna por Hemorragia (OPAS)"
+ },
+ {
+  "id": "em-10",
+  "titulo": "Picada no roçado",
+  "paciente": "Seu Benedito, 55 anos",
+  "avatar": "homem",
+  "cenario": "Agricultor ribeirinho picado no pé por cobra há 2 h, no roçado. A família amarrou um pano apertado na perna.",
+  "diagnostico": "Acidente botrópico (jararaca) moderado",
+  "inicio": "e1",
+  "etapas": {
+   "e1": {
+    "texto": "Pé e perna inchados até o joelho, dor intensa, gengiva sangrando. Tempo de coagulação: incoagulável.",
+    "vitais": {
+     "FC": 104,
+     "PA": "132x84",
+     "SatO2": 97,
+     "FR": 20,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Retirar o garrote, hidratar e soro antibotrópico IV",
+      "vai": "e2",
+      "nota": "Certo. O soro específico IV é o tratamento; garrote piora a lesão.",
+      "pontos": 10
+     },
+     {
+      "txt": "Cortar e sugar o local da picada",
+      "vai": "e1b",
+      "nota": "Perigoso. Aumenta sangramento e infecção, sem remover veneno.",
+      "pontos": -10
+     },
+     {
+      "txt": "Manter o garrote e aguardar exames",
+      "vai": "e1b",
+      "nota": "Perigoso. Garrote concentra o veneno e favorece necrose.",
+      "pontos": -10
+     },
+     {
+      "txt": "Soro antiveneno só se piorar",
+      "vai": "e1b",
+      "nota": "Inadequado. Já há sangramento e edema: soro indicado agora.",
+      "pontos": -5
+     }
+    ]
+   },
+   "e1b": {
+    "texto": "Uma hora depois: mais sangramento, urina escura e pouca diurese.",
+    "vitais": {
+     "FC": 118,
+     "PA": "100x62",
+     "SatO2": 96,
+     "FR": 22,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Tirar o garrote, soro antibotrópico IV e hidratar",
+      "vai": "e2",
+      "nota": "Recuperou. Ainda há tempo de neutralizar o veneno circulante.",
+      "pontos": 5
+     },
+     {
+      "txt": "Plasma fresco sem soro antiveneno",
+      "vai": "f-ruim",
+      "nota": "Perigoso. O veneno consome os fatores de novo.",
+      "pontos": -10
+     },
+     {
+      "txt": "Transferir sem aplicar o soro",
+      "vai": "f-ruim",
+      "nota": "Perigoso. O soro deve ser dado onde houver.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e2": {
+    "texto": "Durante a infusão do soro, surgem placas vermelhas e coceira. Sem hipotensão.",
+    "vitais": {
+     "FC": 112,
+     "PA": "124x78",
+     "SatO2": 96,
+     "FR": 22,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Pausar, tratar a reação e reiniciar o soro",
+      "vai": "e3",
+      "nota": "Certo. Trate a reação (adrenalina se anafilaxia) e complete o soro.",
+      "pontos": 10
+     },
+     {
+      "txt": "Suspender o soro definitivamente",
+      "vai": "e2b",
+      "nota": "Perigoso. Sem a dose completa, o envenenamento progride.",
+      "pontos": -10
+     },
+     {
+      "txt": "Ignorar e acelerar a infusão",
+      "vai": "e2b",
+      "nota": "Inadequado. A reação pode evoluir para anafilaxia.",
+      "pontos": -5
+     }
+    ]
+   },
+   "e2b": {
+    "texto": "O sangramento gengival persiste e a diurese está baixa.",
+    "vitais": {
+     "FC": 116,
+     "PA": "104x66",
+     "SatO2": 95,
+     "FR": 22,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Controlar a reação e completar o soro",
+      "vai": "e3",
+      "nota": "Recuperou. A dose completa é essencial.",
+      "pontos": 5
+     },
+     {
+      "txt": "Transfundir plasma sem soro",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Não neutraliza o veneno.",
+      "pontos": -10
+     },
+     {
+      "txt": "Aguardar melhora espontânea",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Risco de lesão renal e hemorragia grave.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e3": {
+    "texto": "Soro completo. Dor e edema importantes no membro; diurese ainda limítrofe.",
+    "vitais": {
+     "FC": 98,
+     "PA": "122x76",
+     "SatO2": 97,
+     "FR": 18,
+     "ritmo": "sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Hidratar, elevar o membro, analgesia e TC em 24 h",
+      "vai": "f-bom",
+      "nota": "Certo. Diurese adequada protege o rim; TC mostra a resposta ao soro.",
+      "pontos": 10
+     },
+     {
+      "txt": "Anti-inflamatório (AINE) para a dor",
+      "vai": "f-parcial",
+      "nota": "Inadequado. AINE piora o risco renal e de sangramento.",
+      "pontos": -5
+     },
+     {
+      "txt": "Antibiótico profilático de rotina",
+      "vai": "f-parcial",
+      "nota": "Inadequado. Antibiótico só se houver infecção ou abscesso.",
+      "pontos": -5
+     }
+    ]
+   }
+  },
+  "finais": {
+   "f-bom": {
+    "tipo": "bom",
+    "texto": "Em 24 h a coagulação normalizou, a função renal foi preservada e Seu Benedito voltou ao roçado sem sequelas."
+   },
+   "f-parcial": {
+    "tipo": "parcial",
+    "texto": "Seu Benedito teve lesão renal e abscesso na perna, com internação prolongada."
+   },
+   "f-ruim": {
+    "tipo": "ruim",
+    "texto": "Sem soro a tempo, Seu Benedito evoluiu com insuficiência renal e hemorragia grave."
+   }
+  },
+  "debriefing": [
+   "Não usar garrote, não cortar nem sugar. Elevar o membro e hidratar.",
+   "Soro antibotrópico IV conforme gravidade: leve 3, moderado 6, grave 12 ampolas (MS).",
+   "Tempo de coagulação guia o diagnóstico e o controle (repetir em 24 h).",
+   "Reação ao soro: pausar, tratar e completar a dose. Pré-medicação não é rotina."
+  ],
+  "referencia": "MS – Guia de Vigilância em Saúde / Manual de acidentes por animais peçonhentos"
+ },
+ {
+  "id": "em-11",
+  "titulo": "Quinto dia de febre",
+  "paciente": "Luana, 24 anos",
+  "avatar": "mulher",
+  "cenario": "Manaus, época de chuvas. Febre há 5 dias que passou ontem. Hoje: dor abdominal forte, vômitos e tontura ao levantar.",
+  "diagnostico": "Dengue grave com choque (grupo D)",
+  "inicio": "e1",
+  "etapas": {
+   "e1": {
+    "texto": "Extremidades frias, enchimento capilar lento, pulso fino. Pressão convergente.",
+    "vitais": {
+     "FC": 124,
+     "PA": "90x78",
+     "SatO2": 97,
+     "FR": 24,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "SF 0,9% 20 mL/kg em 20 min e hematócrito",
+      "vai": "e2",
+      "nota": "Certo. Grupo D: expansão rápida e reavaliação contínua.",
+      "pontos": 10
+     },
+     {
+      "txt": "Hidratação oral e retorno em 24 h",
+      "vai": "e1b",
+      "nota": "Perigoso. Com sinais de choque, a hidratação é venosa e imediata.",
+      "pontos": -10
+     },
+     {
+      "txt": "Dipirona e aguardar o hemograma",
+      "vai": "e1b",
+      "nota": "Inadequado. O choque se trata antes do resultado.",
+      "pontos": -5
+     },
+     {
+      "txt": "Anti-inflamatório para a dor",
+      "vai": "e1b",
+      "nota": "Perigoso. AINE e AAS são contraindicados na dengue.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e1b": {
+    "texto": "Uma hora depois: pulso quase impalpável, sonolenta, sem urinar.",
+    "vitais": {
+     "FC": 138,
+     "PA": "80x70",
+     "SatO2": 96,
+     "FR": 26,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "SF 0,9% 20 mL/kg em 20 min e leito de UTI",
+      "vai": "e2",
+      "nota": "Recuperou. Choque na dengue responde bem ao volume precoce.",
+      "pontos": 5
+     },
+     {
+      "txt": "Transfundir plaquetas",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Plaquetopenia não é a causa do choque.",
+      "pontos": -10
+     },
+     {
+      "txt": "Aguardar a sorologia",
+      "vai": "f-ruim",
+      "nota": "Perigoso. O diagnóstico é clínico; o choque não espera.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e2": {
+    "texto": "Após a 1ª expansão, melhora pequena. Hematócrito 48% (subiu). Plaquetas 30 mil, sem sangramento.",
+    "vitais": {
+     "FC": 128,
+     "PA": "94x74",
+     "SatO2": 97,
+     "FR": 24,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Repetir 20 mL/kg e reavaliar (até 3 vezes)",
+      "vai": "e3",
+      "nota": "Certo. Hematócrito subindo indica extravasamento: mais volume.",
+      "pontos": 10
+     },
+     {
+      "txt": "Transfundir plaquetas",
+      "vai": "e2b",
+      "nota": "Perigoso. Sem sangramento, não há indicação.",
+      "pontos": -10
+     },
+     {
+      "txt": "Parar o soro: já recebeu volume",
+      "vai": "e2b",
+      "nota": "Inadequado. Ainda em choque, precisa de nova expansão.",
+      "pontos": -5
+     }
+    ]
+   },
+   "e2b": {
+    "texto": "A pressão cai de novo e a diurese não aparece.",
+    "vitais": {
+     "FC": 140,
+     "PA": "78x68",
+     "SatO2": 96,
+     "FR": 26,
+     "ritmo": "taqui-sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Nova expansão 20 mL/kg e UTI",
+      "vai": "e3",
+      "nota": "Recuperou. Volume e vigilância intensiva.",
+      "pontos": 5
+     },
+     {
+      "txt": "Furosemida para fazer urinar",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Diurético no choque piora a perfusão.",
+      "pontos": -10
+     },
+     {
+      "txt": "Mais plaquetas",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Não trata o extravasamento plasmático.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e3": {
+    "texto": "Após nova expansão: pulso cheio, diurese presente. Hematócrito 42%.",
+    "vitais": {
+     "FC": 96,
+     "PA": "108x70",
+     "SatO2": 98,
+     "FR": 20,
+     "ritmo": "sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Reduzir o soro aos poucos e reavaliar",
+      "vai": "f-bom",
+      "nota": "Certo. Passe à manutenção (grupo C), com reavaliação clínica e de hematócrito.",
+      "pontos": 10
+     },
+     {
+      "txt": "Manter expansão rápida por horas",
+      "vai": "f-parcial",
+      "nota": "Inadequado. Excesso de volume causa derrames e edema pulmonar.",
+      "pontos": -5
+     },
+     {
+      "txt": "Suspender o soro e dar alta",
+      "vai": "f-ruim",
+      "nota": "Perigoso. A fase crítica ainda não acabou.",
+      "pontos": -10
+     }
+    ]
+   }
+  },
+  "finais": {
+   "f-bom": {
+    "tipo": "bom",
+    "texto": "Luana passou a fase crítica em 48 h, reabsorveu o líquido e teve alta com orientações."
+   },
+   "f-parcial": {
+    "tipo": "parcial",
+    "texto": "Luana teve derrame pleural e congestão pulmonar e precisou de UTI."
+   },
+   "f-ruim": {
+    "tipo": "ruim",
+    "texto": "O choque se prolongou e Luana evoluiu com falência de órgãos."
+   }
+  },
+  "debriefing": [
+   "Defervescência (dias 3–7) é a fase crítica: atenção aos sinais de alarme.",
+   "Choque (grupo D): SF 0,9% 20 mL/kg em 20 min, até 3 vezes, com reavaliação.",
+   "Hematócrito subindo = extravasamento; caindo com choque = pense em sangramento.",
+   "Plaquetas não se transfundem por número. Nada de AAS ou AINE."
+  ],
+  "referencia": "MS – Dengue: diagnóstico e manejo clínico, 2024"
+ },
+ {
+  "id": "em-12",
+  "titulo": "Fraqueza no paciente renal",
+  "paciente": "Seu Antônio, 70 anos",
+  "avatar": "idoso",
+  "cenario": "Seu Antônio faz hemodiálise e faltou às duas últimas sessões. Chega com fraqueza nas pernas e mal-estar.",
+  "diagnostico": "Hipercalemia grave com alteração eletrocardiográfica",
+  "inicio": "e1",
+  "etapas": {
+   "e1": {
+    "texto": "Potássio 7,8 mEq/L. ECG: onda T apiculada, QRS largo e frequência baixa.",
+    "vitais": {
+     "FC": 44,
+     "PA": "100x60",
+     "SatO2": 95,
+     "FR": 18,
+     "ritmo": "bradi"
+    },
+    "acoes": [
+     {
+      "txt": "Gluconato de cálcio 10% IV",
+      "vai": "e2",
+      "nota": "Certo. Cálcio estabiliza a membrana do miocárdio em minutos.",
+      "pontos": 10
+     },
+     {
+      "txt": "Resina de troca oral e aguardar",
+      "vai": "e1b",
+      "nota": "Inadequado. Age em horas; o ECG exige ação imediata.",
+      "pontos": -5
+     },
+     {
+      "txt": "Repetir o potássio para confirmar",
+      "vai": "e1b",
+      "nota": "Perigoso. ECG alterado já confirma a urgência.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e1b": {
+    "texto": "O QRS alarga ainda mais e a frequência cai.",
+    "vitais": {
+     "FC": 32,
+     "PA": "78x44",
+     "SatO2": 93,
+     "FR": 18,
+     "ritmo": "bradi"
+    },
+    "acoes": [
+     {
+      "txt": "Gluconato de cálcio 10% IV agora",
+      "vai": "e2",
+      "nota": "Recuperou. Cálcio primeiro, sempre que o ECG estiver alterado.",
+      "pontos": 5
+     },
+     {
+      "txt": "Esperar o resultado do novo potássio",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Evolui para FV ou assistolia.",
+      "pontos": -10
+     },
+     {
+      "txt": "Bicarbonato IV isolado",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Efeito fraco e lento sem acidose importante.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e2": {
+    "texto": "O QRS estreitou e a frequência subiu. O potássio ainda é 7,8.",
+    "vitais": {
+     "FC": 62,
+     "PA": "110x68",
+     "SatO2": 96,
+     "FR": 18,
+     "ritmo": "sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Insulina regular 10 U IV + glicose e salbutamol",
+      "vai": "e3",
+      "nota": "Certo. Desloca o potássio para dentro das células.",
+      "pontos": 10
+     },
+     {
+      "txt": "Considerar resolvido: o ECG melhorou",
+      "vai": "e2b",
+      "nota": "Perigoso. O cálcio protege, mas não baixa o potássio e dura pouco.",
+      "pontos": -10
+     },
+     {
+      "txt": "Furosemida IV em paciente anúrico",
+      "vai": "e2b",
+      "nota": "Inadequado. Sem diurese, não há efeito.",
+      "pontos": -5
+     }
+    ]
+   },
+   "e2b": {
+    "texto": "Trinta minutos depois, o QRS volta a alargar.",
+    "vitais": {
+     "FC": 48,
+     "PA": "96x58",
+     "SatO2": 95,
+     "FR": 18,
+     "ritmo": "bradi"
+    },
+    "acoes": [
+     {
+      "txt": "Repetir cálcio e fazer insulina + glicose",
+      "vai": "e3",
+      "nota": "Recuperou. Cálcio pode ser repetido; agora desloque o potássio.",
+      "pontos": 5
+     },
+     {
+      "txt": "Não fazer nada",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Risco de parada.",
+      "pontos": -10
+     },
+     {
+      "txt": "Só resina de troca oral",
+      "vai": "f-ruim",
+      "nota": "Perigoso. Lenta demais para o momento.",
+      "pontos": -10
+     }
+    ]
+   },
+   "e3": {
+    "texto": "Uma hora depois: potássio 6,4 mEq/L e ECG melhor. Glicemia 110.",
+    "vitais": {
+     "FC": 76,
+     "PA": "118x72",
+     "SatO2": 97,
+     "FR": 16,
+     "ritmo": "sinusal"
+    },
+    "acoes": [
+     {
+      "txt": "Hemodiálise de urgência e vigiar glicemia",
+      "vai": "f-bom",
+      "nota": "Certo. Diálise remove o potássio; insulina pode causar hipoglicemia.",
+      "pontos": 10
+     },
+     {
+      "txt": "Alta: o potássio caiu",
+      "vai": "f-ruim",
+      "nota": "Perigoso. O efeito da insulina passa e o potássio volta a subir.",
+      "pontos": -10
+     },
+     {
+      "txt": "Só resina e observar",
+      "vai": "f-parcial",
+      "nota": "Inadequado. No dialítico, o tratamento definitivo é a diálise.",
+      "pontos": -5
+     }
+    ]
+   }
+  },
+  "finais": {
+   "f-bom": {
+    "tipo": "bom",
+    "texto": "Após a diálise, o potássio foi a 4,6 e o ECG normalizou. Seu Antônio voltou à rotina de sessões."
+   },
+   "f-parcial": {
+    "tipo": "parcial",
+    "texto": "O potássio voltou a subir e Seu Antônio precisou de diálise de urgência à noite."
+   },
+   "f-ruim": {
+    "tipo": "ruim",
+    "texto": "Seu Antônio evoluiu com fibrilação ventricular e parada cardíaca."
+   }
+  },
+  "debriefing": [
+   "Hipercalemia com ECG alterado: cálcio IV primeiro, repetir se o ECG não melhora.",
+   "Deslocar K+ para a célula: insulina regular 10 U IV com glicose e salbutamol.",
+   "Remover K+: hemodiálise (dialítico), diurético ou resinas.",
+   "Vigie a glicemia após insulina: risco de hipoglicemia."
+  ],
+  "referencia": "KDIGO / AHA 2025 – situações especiais do ACLS"
+ }
+]

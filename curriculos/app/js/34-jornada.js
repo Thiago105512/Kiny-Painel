@@ -30,9 +30,11 @@ const MISSOES = [
   { id: "pil3", txt: "Ler 3 pílulas de estudo", meta: 3, v: J => J.dia.pil, precisa: () => PILULAS.some(pilDoObjetivo) },
   { id: "caso", txt: "Resolver o Caso do dia", meta: 1, v: J => J.dia.caso, precisa: () => typeof casosDoDia === "function" && casosDoDia().length > 0 },
   { id: "termo", txt: "Jogar o Termo do dia", meta: 1, v: J => J.dia.termo, precisa: () => typeof palavrasTermo === "function" && palavrasTermo().length > 0 },
+  { id: "plantao", txt: "Fazer um Plantão no PS", meta: 1, v: J => J.dia.plantao || 0, precisa: () => (DADOS.jogos?.triagem || []).length > 0 && soMedJ() },
   { id: "rel5", txt: "Fazer 5 acertos seguidos no Contra o relógio", meta: 5, v: J => J.dia.rel },
   { id: "xp150", txt: "Ganhar 150 XP hoje", meta: 150, v: J => J.dia.xp },
 ];
+const soMedJ = () => !objetivo() || ["medicina", "residencia"].includes(objetivo());
 const hashTxt = s => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
 function missoesDoDia() {
   const d = hoje(), ok = MISSOES.filter(m => !m.precisa || m.precisa());
@@ -67,6 +69,12 @@ const CONQUISTAS = [
   { id: "miss", nome: "Missão cumprida", desc: "Completar as 3 missões de um dia", arte: "escudo", cor: "#15803D", ok: J => (J.cont.diasMissao || 0) >= 1 },
   { id: "miss7", nome: "Agente especial", desc: "Completar as missões em 7 dias", arte: "escudo", cor: "#6D28D9", ok: J => (J.cont.diasMissao || 0) >= 7 },
   { id: "interno", nome: "Bem-vindo ao internato", desc: "Chegar ao nível Interno", arte: "estetoscopio", cor: "#0F766E", ok: J => J.xp >= 800 },
+  { id: "plantao", nome: "Classificação perfeita", desc: "Acertar as 12 cores de um Plantão no PS", arte: "ambulancia", cor: "#DC2626", ok: J => (J.cont.plantaoPerfeito || 0) >= 1 },
+  { id: "salvo", nome: "Mãos de ouro", desc: "Salvar um paciente em Salve o paciente", arte: "pulso", cor: "#059669", ok: J => (J.cont.salvos || 0) >= 1 },
+  { id: "salvo5", nome: "Sala vermelha", desc: "Salvar 5 pacientes", arte: "coracao", cor: "#B42318", ok: J => (J.cont.salvos || 0) >= 5 },
+  { id: "defesa20", nome: "Guardião dos antibióticos", desc: "Neutralizar 20 invasores numa partida de Defesa", arte: "escudo", cor: "#7C3AED", ok: J => (J.cont.defesaMax || 0) >= 20 },
+  { id: "milhao", nome: "Milionário (de mentirinha)", desc: "Ganhar o milhão no Rumo ao Milhão", arte: "alvo", cor: "#CA8A04", ok: J => (J.cont.milhao || 0) >= 1 },
+  { id: "cascata", nome: "Fisiopatologista", desc: "Montar 3 cascatas sem erro", arte: "gota", cor: "#0891B2", ok: J => (J.cont.cascataPerfeita || 0) >= 3 },
   { id: "r1", nome: "Aprovado na residência", desc: "Chegar ao nível R1", arte: "escudo", cor: "#C0265F", ok: J => J.xp >= 1400 },
 ];
 function medalha(c, ganha, tam = "g") {

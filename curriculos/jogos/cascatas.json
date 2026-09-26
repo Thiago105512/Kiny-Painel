@@ -1,0 +1,555 @@
+[
+ {
+  "id": "cs-01",
+  "titulo": "Sistema renina-angiotensina-aldosterona",
+  "area": "fisiologia",
+  "nivel": 1,
+  "passos": [
+   "Queda da perfusão renal ou do Na+ na mácula densa",
+   "Células justaglomerulares liberam renina",
+   "Renina converte angiotensinogênio em angiotensina I",
+   "ECA (pulmão) converte angiotensina I em II",
+   "Angiotensina II estimula a secreção de aldosterona",
+   "Aldosterona reabsorve Na+ e água no ducto coletor",
+   "Volemia e pressão arterial sobem"
+  ],
+  "explicacao": "O angiotensinogênio vem do fígado e a ECA está no endotélio, sobretudo pulmonar. IECA e BRA bloqueiam o eixo; espironolactona bloqueia a aldosterona."
+ },
+ {
+  "id": "cs-02",
+  "titulo": "Coagulação: via comum",
+  "area": "fisiologia",
+  "nivel": 2,
+  "passos": [
+   "Fator X é ativado em Xa",
+   "Xa se une ao Va: complexo protrombinase",
+   "Protrombina (II) é convertida em trombina",
+   "Trombina cliva fibrinogênio em fibrina",
+   "Monômeros de fibrina se polimerizam",
+   "Fator XIIIa estabiliza a fibrina (ligações cruzadas)"
+  ],
+  "explicacao": "As vias intrínseca (TTPa) e extrínseca (TP) convergem no fator X. Rivaroxabana e apixabana inibem o Xa; dabigatrana inibe a trombina."
+ },
+ {
+  "id": "cs-03",
+  "titulo": "Potencial de ação do miócito ventricular",
+  "area": "fisiologia",
+  "nivel": 2,
+  "passos": [
+   "Repouso (fase 4) em cerca de -90 mV",
+   "Estímulo de célula vizinha atinge o limiar",
+   "Fase 0: abrem canais rápidos de Na+",
+   "Fase 1: saída transitória de K+",
+   "Fase 2: platô com entrada de Ca2+ (canal L)",
+   "Fase 3: saída de K+ repolariza a célula"
+  ],
+  "explicacao": "O platô prolonga o período refratário e impede a tetania cardíaca. Antiarrítmicos classe I agem na fase 0 e classe III prolongam a fase 3."
+ },
+ {
+  "id": "cs-04",
+  "titulo": "Ciclo do Plasmodium no ser humano",
+  "area": "microbiologia",
+  "nivel": 1,
+  "passos": [
+   "Anopheles fêmea inocula esporozoítos na pele",
+   "Esporozoítos invadem hepatócitos",
+   "Esquizogonia hepática gera merozoítos",
+   "Merozoítos invadem hemácias",
+   "Trofozoíto vira esquizonte na hemácia",
+   "Hemácias rompem e liberam merozoítos: febre",
+   "Parte vira gametócito, ingerido pelo mosquito"
+  ],
+  "explicacao": "No P. vivax, hipnozoítos ficam latentes no fígado e causam recaídas: por isso a primaquina (ou tafenoquina) entra no tratamento."
+ },
+ {
+  "id": "cs-05",
+  "titulo": "Doença de Chagas por via oral",
+  "area": "microbiologia",
+  "nivel": 2,
+  "passos": [
+   "Triatomíneo ou fezes contaminam açaí ou caldo de cana",
+   "Tripomastigotas metacíclicos são ingeridos",
+   "Parasitas invadem a mucosa gástrica",
+   "Na célula viram amastigotas e se multiplicam",
+   "Amastigotas viram tripomastigotas e rompem a célula",
+   "Tripomastigotas no sangue: fase aguda da doença"
+  ],
+  "explicacao": "É a principal forma de transmissão na Amazônia, com surtos familiares. Branqueamento/pasteurização do açaí previne. Tratar com benznidazol."
+ },
+ {
+  "id": "cs-06",
+  "titulo": "Síntese dos hormônios tireoidianos",
+  "area": "fisiologia",
+  "nivel": 2,
+  "passos": [
+   "Iodeto entra no tireócito pelo simportador NIS",
+   "Pendrina transporta o iodeto para o coloide",
+   "TPO oxida o iodo e iodina a tireoglobulina",
+   "TPO acopla MIT e DIT, formando T3 e T4",
+   "Tireoglobulina volta ao tireócito por endocitose",
+   "Proteólise libera T3 e T4 no sangue"
+  ],
+  "explicacao": "O TSH estimula todas as etapas. Metimazol e PTU inibem a TPO; o PTU também reduz a conversão periférica de T4 em T3."
+ },
+ {
+  "id": "cs-07",
+  "titulo": "Cetoacidose diabética",
+  "area": "fisiopatologia",
+  "nivel": 2,
+  "passos": [
+   "Deficiência absoluta de insulina",
+   "Lipólise aumentada libera ácidos graxos",
+   "Fígado oxida ácidos graxos em corpos cetônicos",
+   "Cetoácidos consomem o bicarbonato",
+   "Acidose metabólica com ânion gap elevado",
+   "Respiração de Kussmaul compensa a acidose"
+  ],
+  "explicacao": "Em paralelo, a hiperglicemia causa diurese osmótica e desidratação. Tratamento: volume, insulina e reposição de potássio."
+ },
+ {
+  "id": "cs-08",
+  "titulo": "Choque séptico",
+  "area": "fisiopatologia",
+  "nivel": 2,
+  "passos": [
+   "PAMPs do patógeno ativam receptores (TLR)",
+   "Liberação maciça de citocinas (TNF, IL-1, IL-6)",
+   "Óxido nítrico causa vasodilatação e extravasamento",
+   "Queda da resistência vascular: hipotensão",
+   "Hipoperfusão tecidual eleva o lactato",
+   "Disfunção de múltiplos órgãos"
+  ],
+  "explicacao": "Choque séptico: vasopressor para PAM ≥ 65 mmHg e lactato > 2 mmol/L apesar de volume. Antibiótico na 1ª hora; noradrenalina é a 1ª escolha."
+ },
+ {
+  "id": "cs-09",
+  "titulo": "Crise de asma alérgica",
+  "area": "fisiopatologia",
+  "nivel": 2,
+  "passos": [
+   "Célula dendrítica capta o alérgeno inalado",
+   "Linfócitos Th2 são ativados (IL-4, IL-5, IL-13)",
+   "Plasmócitos produzem IgE, que cobre os mastócitos",
+   "Nova exposição: alérgeno degranula o mastócito",
+   "Histamina e leucotrienos: broncoconstrição",
+   "Fase tardia: eosinófilos mantêm a inflamação"
+  ],
+  "explicacao": "Broncodilatador alivia a fase imediata; corticoide inalado controla a inflamação tardia e é a base do tratamento de manutenção."
+ },
+ {
+  "id": "cs-10",
+  "titulo": "Da aterosclerose ao infarto",
+  "area": "fisiopatologia",
+  "nivel": 1,
+  "passos": [
+   "Lesão endotelial (HAS, fumo, dislipidemia)",
+   "LDL entra na íntima e é oxidada",
+   "Macrófagos fagocitam o LDL oxidado",
+   "Células espumosas formam a estria gordurosa",
+   "Músculo liso migra e forma a capa fibrosa",
+   "Placa instável se rompe",
+   "Trombo oclusivo causa necrose: IAM"
+  ],
+  "explicacao": "Placas com capa fina e núcleo lipídico grande rompem mais. Estatina estabiliza a placa; AAS e reperfusão tratam o trombo."
+ },
+ {
+  "id": "cs-11",
+  "titulo": "Cirrose até a ascite",
+  "area": "fisiopatologia",
+  "nivel": 3,
+  "passos": [
+   "Fibrose distorce os sinusoides hepáticos",
+   "Maior resistência gera hipertensão portal",
+   "Vasodilatação esplâncnica (óxido nítrico)",
+   "Queda do volume arterial efetivo",
+   "Ativação do SRAA, simpático e ADH",
+   "Rins retêm sódio e água",
+   "Líquido extravasa para o peritônio: ascite"
+  ],
+  "explicacao": "GASA ≥ 1,1 g/dL indica ascite por hipertensão portal. Tratamento: restrição de sódio, espironolactona ± furosemida, paracentese."
+ },
+ {
+  "id": "cs-12",
+  "titulo": "Formação da urina no néfron",
+  "area": "fisiologia",
+  "nivel": 1,
+  "passos": [
+   "Filtração do plasma no glomérulo",
+   "Túbulo proximal reabsorve ~65% do Na+ e a glicose",
+   "Ramo descendente de Henle reabsorve água",
+   "Ramo ascendente espesso: cotransporte Na-K-2Cl",
+   "Túbulo distal reabsorve NaCl e cálcio",
+   "Ducto coletor ajusta água (ADH) e Na+ (aldosterona)"
+  ],
+  "explicacao": "Cada segmento é alvo de um diurético: acetazolamida (proximal), furosemida (alça), tiazídico (distal), espironolactona (coletor)."
+ },
+ {
+  "id": "cs-13",
+  "titulo": "Digestão e absorção de gordura",
+  "area": "fisiologia",
+  "nivel": 1,
+  "passos": [
+   "Lipases lingual e gástrica iniciam a digestão",
+   "Bile emulsifica a gordura no duodeno",
+   "Lipase pancreática gera ácidos graxos e monoglicerídeos",
+   "Micelas levam os lipídios à borda em escova",
+   "Enterócito ressintetiza triglicerídeos",
+   "Triglicerídeos são empacotados em quilomícrons",
+   "Quilomícrons entram nos linfáticos (lácteos)"
+  ],
+  "explicacao": "Falta de bile ou de lipase pancreática causa esteatorreia e deficiência de vitaminas lipossolúveis (A, D, E, K)."
+ },
+ {
+  "id": "cs-14",
+  "titulo": "Resposta imune humoral adaptativa",
+  "area": "fisiologia",
+  "nivel": 2,
+  "passos": [
+   "Célula dendrítica captura o antígeno no tecido",
+   "Migra ao linfonodo e apresenta via MHC II",
+   "Linfócito T CD4+ é ativado",
+   "T auxiliar ativa o linfócito B específico",
+   "Linfócito B prolifera e vira plasmócito",
+   "Plasmócitos secretam anticorpos",
+   "Anticorpos neutralizam e opsonizam o antígeno"
+  ],
+  "explicacao": "Também surgem linfócitos B de memória, base da resposta mais rápida na reexposição e do efeito das vacinas."
+ },
+ {
+  "id": "cs-15",
+  "titulo": "Hemostasia primária",
+  "area": "fisiologia",
+  "nivel": 1,
+  "passos": [
+   "Lesão endotelial expõe o colágeno",
+   "vWF liga a plaqueta ao colágeno (GP Ib)",
+   "Plaquetas se ativam e mudam de forma",
+   "Liberam ADP e tromboxano A2",
+   "Novas plaquetas são recrutadas",
+   "GP IIb/IIIa liga fibrinogênio: tampão plaquetário"
+  ],
+  "explicacao": "AAS bloqueia o tromboxano A2; clopidogrel bloqueia o receptor de ADP. Doença de von Willebrand prejudica a adesão."
+ },
+ {
+  "id": "cs-16",
+  "titulo": "ACLS na fibrilação ventricular",
+  "area": "procedimento",
+  "nivel": 2,
+  "passos": [
+   "Confirmar PCR e iniciar RCP de alta qualidade",
+   "Monitor/desfibrilador mostra FV",
+   "1º choque (bifásico 120–200 J)",
+   "RCP imediata por 2 minutos",
+   "Ritmo ainda chocável: 2º choque",
+   "Adrenalina 1 mg IV/IO após o 2º choque",
+   "Amiodarona 300 mg após o 3º choque"
+  ],
+  "explicacao": "Adrenalina se repete a cada 3–5 min; amiodarona 2ª dose de 150 mg. Nunca interromper a RCP por mais de 10 s."
+ },
+ {
+  "id": "cs-17",
+  "titulo": "Sequência rápida de intubação",
+  "area": "procedimento",
+  "nivel": 2,
+  "passos": [
+   "Preparar material, monitor e plano B",
+   "Pré-oxigenar com O2 a 100% por 3 minutos",
+   "Otimizar hemodinâmica (pré-tratamento)",
+   "Indução com hipnótico (etomidato, cetamina)",
+   "Bloqueador neuromuscular (succinilcolina, rocurônio)",
+   "Laringoscopia e passagem do tubo",
+   "Confirmar posição com capnografia"
+  ],
+  "explicacao": "Na SRI, hipnótico e bloqueador são dados em sequência imediata, sem ventilar com bolsa se possível. Capnografia é o padrão-ouro de confirmação."
+ },
+ {
+  "id": "cs-18",
+  "titulo": "Atendimento inicial ao trauma (XABCDE)",
+  "area": "procedimento",
+  "nivel": 1,
+  "passos": [
+   "X: conter hemorragia exsanguinante",
+   "A: via aérea com proteção da coluna cervical",
+   "B: respiração e ventilação",
+   "C: circulação e controle de sangramento",
+   "D: avaliação neurológica (Glasgow, pupilas)",
+   "E: exposição e prevenção de hipotermia"
+  ],
+  "explicacao": "Só se passa à etapa seguinte após tratar o problema encontrado. O X (torniquete, compressão) entrou no PHTLS por matar em minutos."
+ },
+ {
+  "id": "cs-19",
+  "titulo": "Ciclo menstrual",
+  "area": "fisiologia",
+  "nivel": 1,
+  "passos": [
+   "Dia 1: menstruação, hormônios ovarianos baixos",
+   "FSH recruta folículos (fase folicular)",
+   "Folículo dominante eleva o estradiol",
+   "Pico de LH",
+   "Ovulação cerca de 36 h após o início do pico",
+   "Corpo lúteo secreta progesterona (fase lútea)",
+   "Sem gravidez, o corpo lúteo regride"
+  ],
+  "explicacao": "A fase lútea dura cerca de 14 dias e é a mais constante. Com gravidez, o hCG mantém o corpo lúteo."
+ },
+ {
+  "id": "cs-20",
+  "titulo": "Mecanismo do parto (cefálico)",
+  "area": "clinica",
+  "nivel": 2,
+  "passos": [
+   "Insinuação (com flexão da cabeça)",
+   "Descida pela pelve",
+   "Rotação interna",
+   "Desprendimento da cabeça (deflexão)",
+   "Rotação externa (restituição)",
+   "Desprendimento dos ombros e do corpo"
+  ],
+  "explicacao": "São os tempos do mecanismo de parto na apresentação cefálica fletida. A rotação interna leva o occipício ao púbis."
+ },
+ {
+  "id": "cs-21",
+  "titulo": "Períodos clínicos do parto",
+  "area": "clinica",
+  "nivel": 1,
+  "passos": [
+   "Fase latente: contrações irregulares",
+   "Dilatação (fase ativa)",
+   "Expulsão do feto",
+   "Dequitação (saída da placenta)",
+   "Greenberg: 1ª hora pós-parto"
+  ],
+  "explicacao": "O 4º período (Greenberg) é o de maior risco de hemorragia pós-parto. Ocitocina 10 UI IM logo após o nascimento é a profilaxia."
+ },
+ {
+  "id": "cs-22",
+  "titulo": "Desenvolvimento embrionário inicial",
+  "area": "embriologia",
+  "nivel": 1,
+  "passos": [
+   "Fecundação na ampola da tuba: zigoto",
+   "Clivagem em blastômeros",
+   "Mórula",
+   "Blastocisto (embrioblasto e trofoblasto)",
+   "Implantação no endométrio (6º–7º dia)",
+   "Disco bilaminar (epiblasto e hipoblasto)",
+   "Gastrulação: disco trilaminar"
+  ],
+  "explicacao": "A gastrulação, na 3ª semana, forma ectoderma, mesoderma e endoderma a partir do epiblasto, pela linha primitiva."
+ },
+ {
+  "id": "cs-23",
+  "titulo": "Eritropoiese",
+  "area": "fisiologia",
+  "nivel": 2,
+  "passos": [
+   "Hipóxia renal estimula a liberação de EPO",
+   "EPO age nas progenitoras eritroides",
+   "Proeritroblasto",
+   "Eritroblastos sintetizam hemoglobina",
+   "Núcleo é expulso",
+   "Reticulócito sai para o sangue",
+   "Amadurece em hemácia em 1–2 dias"
+  ],
+  "explicacao": "Reticulócitos altos indicam medula respondendo (hemólise, sangramento). Na doença renal crônica falta EPO: anemia normocítica."
+ },
+ {
+  "id": "cs-24",
+  "titulo": "Metabolismo da bilirrubina",
+  "area": "fisiologia",
+  "nivel": 1,
+  "passos": [
+   "Macrófagos degradam hemácias senescentes",
+   "Heme-oxigenase converte heme em biliverdina",
+   "Biliverdina vira bilirrubina não conjugada",
+   "Liga-se à albumina e chega ao fígado",
+   "UGT1A1 conjuga com ácido glicurônico",
+   "Bilirrubina conjugada é excretada na bile",
+   "Bactérias formam urobilinogênio e estercobilina"
+  ],
+  "explicacao": "Hemólise eleva a indireta; obstrução biliar eleva a direta, com colúria e acolia. Gilbert: redução leve da UGT1A1."
+ },
+ {
+  "id": "cs-25",
+  "titulo": "Contração do músculo esquelético",
+  "area": "fisiologia",
+  "nivel": 2,
+  "passos": [
+   "Neurônio motor libera acetilcolina",
+   "ACh ativa receptores nicotínicos da placa",
+   "Potencial de ação percorre os túbulos T",
+   "Receptor DHP abre o RyR: Ca2+ sai do retículo",
+   "Ca2+ liga a troponina C e expõe a actina",
+   "Pontes cruzadas de miosina deslizam os filamentos"
+  ],
+  "explicacao": "O relaxamento exige ATP e recaptação do Ca2+ pela SERCA. Na miastenia gravis, anticorpos bloqueiam o receptor nicotínico."
+ },
+ {
+  "id": "cs-26",
+  "titulo": "Secreção de insulina pela célula beta",
+  "area": "fisiologia",
+  "nivel": 2,
+  "passos": [
+   "Glicose entra na célula beta (GLUT2)",
+   "Metabolismo da glicose eleva o ATP",
+   "ATP fecha canais de K+ sensíveis a ATP",
+   "Membrana despolariza",
+   "Canais de Ca2+ voltagem-dependentes se abrem",
+   "Entrada de Ca2+ dispara exocitose de insulina"
+  ],
+  "explicacao": "Sulfonilureias fecham o canal de K-ATP sem depender da glicose, por isso causam hipoglicemia."
+ },
+ {
+  "id": "cs-27",
+  "titulo": "Caminho de um fármaco oral",
+  "area": "farmacologia",
+  "nivel": 1,
+  "passos": [
+   "Comprimido se desintegra e dissolve no TGI",
+   "Absorção pela mucosa intestinal",
+   "Veia porta leva ao fígado: 1ª passagem",
+   "Chega à circulação sistêmica",
+   "Distribui-se aos tecidos e ao sítio de ação",
+   "Eliminação renal do fármaco e metabólitos"
+  ],
+  "explicacao": "O efeito de primeira passagem reduz a biodisponibilidade oral. Vias sublingual e IV escapam dele."
+ },
+ {
+  "id": "cs-28",
+  "titulo": "Ação do omeprazol",
+  "area": "farmacologia",
+  "nivel": 2,
+  "passos": [
+   "Pró-fármaco é absorvido e chega à célula parietal",
+   "Acumula-se nos canalículos ácidos",
+   "Meio ácido o converte na forma ativa",
+   "Liga-se de forma covalente à H+/K+-ATPase",
+   "Bloqueia a etapa final da secreção ácida"
+  ],
+  "explicacao": "Por precisar de ácido para ativar, deve ser tomado 30–60 min antes do café da manhã. O efeito dura até a síntese de novas bombas."
+ },
+ {
+  "id": "cs-29",
+  "titulo": "Intoxicação por paracetamol",
+  "area": "farmacologia",
+  "nivel": 3,
+  "passos": [
+   "Dose tóxica satura glicuronidação e sulfatação",
+   "Mais fármaco vai ao citocromo CYP2E1",
+   "Forma-se o metabólito tóxico NAPQI",
+   "NAPQI esgota a glutationa hepática",
+   "NAPQI se liga às proteínas do hepatócito",
+   "Necrose centrolobular (zona 3)"
+  ],
+  "explicacao": "N-acetilcisteína repõe a glutationa; é mais eficaz nas primeiras 8 h. Use o nomograma de Rumack-Matthew."
+ },
+ {
+  "id": "cs-30",
+  "titulo": "Replicação do HIV",
+  "area": "microbiologia",
+  "nivel": 2,
+  "passos": [
+   "gp120 liga CD4 e correceptor (CCR5/CXCR4)",
+   "gp41 faz a fusão do envelope",
+   "Transcriptase reversa: RNA vira DNA",
+   "Integrase insere o DNA viral no genoma",
+   "Transcrição e tradução de proteínas virais",
+   "Montagem e brotamento na membrana",
+   "Protease cliva poliproteínas: vírion maduro"
+  ],
+  "explicacao": "Cada etapa é alvo de antirretrovirais: tenofovir (TR), dolutegravir (integrase), inibidores de protease, maraviroque (CCR5)."
+ },
+ {
+  "id": "cs-31",
+  "titulo": "Ciclo da Leishmania no ser humano",
+  "area": "microbiologia",
+  "nivel": 2,
+  "passos": [
+   "Flebotomíneo fêmea inocula promastigotas",
+   "Macrófagos fagocitam as promastigotas",
+   "Viram amastigotas no fagolisossomo",
+   "Amastigotas se multiplicam e rompem o macrófago",
+   "Infectam novos macrófagos",
+   "Flebotomíneo ingere macrófagos infectados"
+  ],
+  "explicacao": "Na Amazônia predomina a leishmaniose tegumentar (L. guyanensis, L. braziliensis). O mosquito-palha pica ao entardecer."
+ },
+ {
+  "id": "cs-32",
+  "titulo": "Ciclo do Ascaris lumbricoides",
+  "area": "microbiologia",
+  "nivel": 1,
+  "passos": [
+   "Ingestão de ovos embrionados",
+   "Larvas eclodem no intestino delgado",
+   "Atravessam a parede e vão ao fígado pelo sangue",
+   "Chegam aos pulmões (síndrome de Löffler)",
+   "Sobem pelos brônquios e são deglutidas",
+   "Viram vermes adultos no intestino delgado",
+   "Fêmeas eliminam ovos nas fezes"
+  ],
+  "explicacao": "O ciclo pulmonar explica tosse e eosinofilia (Löffler). Albendazol 400 mg dose única é o tratamento."
+ },
+ {
+  "id": "cs-33",
+  "titulo": "Neurulação",
+  "area": "embriologia",
+  "nivel": 2,
+  "passos": [
+   "Notocorda induz o ectoderma acima dela",
+   "Forma-se a placa neural",
+   "Bordas se elevam: pregas e sulco neural",
+   "Pregas se fundem: tubo neural",
+   "Neuróporo cranial fecha (cerca do dia 25)",
+   "Neuróporo caudal fecha (cerca do dia 28)"
+  ],
+  "explicacao": "Falha no fechamento cranial causa anencefalia; no caudal, espinha bífida. Ácido fólico antes da concepção previne."
+ },
+ {
+  "id": "cs-34",
+  "titulo": "Cadeia de sobrevivência na PCR",
+  "area": "clinica",
+  "nivel": 1,
+  "passos": [
+   "Reconhecer a PCR e acionar o SAMU (192)",
+   "RCP precoce de alta qualidade",
+   "Desfibrilação rápida (DEA)",
+   "Suporte avançado de vida",
+   "Cuidados pós-PCR",
+   "Recuperação e reabilitação"
+  ],
+  "explicacao": "Cadeia extra-hospitalar da AHA. Cada minuto sem RCP e desfibrilação reduz muito a chance de sobreviver à FV."
+ },
+ {
+  "id": "cs-35",
+  "titulo": "Punção venosa periférica",
+  "area": "procedimento",
+  "nivel": 1,
+  "passos": [
+   "Higienizar as mãos e identificar o paciente",
+   "Garrotear acima do local escolhido",
+   "Antissepsia da pele",
+   "Puncionar com o bisel para cima",
+   "Confirmar refluxo de sangue",
+   "Soltar o garrote",
+   "Fixar o cateter e descartar a agulha"
+  ],
+  "explicacao": "Não palpe o local após a antissepsia. Descarte a agulha direto na caixa de perfurocortantes, sem reencapar."
+ },
+ {
+  "id": "cs-36",
+  "titulo": "Pré-eclâmpsia",
+  "area": "fisiopatologia",
+  "nivel": 3,
+  "passos": [
+   "Invasão trofoblástica falha nas artérias espiraladas",
+   "Isquemia placentária",
+   "Placenta libera sFlt-1 (antiangiogênico)",
+   "Disfunção endotelial materna",
+   "HAS e proteinúria após 20 semanas",
+   "Formas graves: HELLP ou eclâmpsia"
+  ],
+  "explicacao": "AAS em baixa dose e cálcio previnem em gestantes de risco. Sulfato de magnésio previne e trata a eclâmpsia."
+ }
+]

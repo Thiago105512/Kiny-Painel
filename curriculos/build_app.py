@@ -117,7 +117,17 @@ if __name__ == "__main__":
     def _jogo(nome):
         arq = AQUI / "jogos" / nome
         return json.loads(arq.read_text(encoding="utf-8")) if arq.exists() else []
-    dados["jogos"] = {"casos": _jogo("casos-dia.json"), "termo": _jogo("termo.json"), "pares": _jogo("pares.json")}
+    dados["jogos"] = {"casos": _jogo("casos-dia.json"), "termo": _jogo("termo.json"), "pares": _jogo("pares.json"),
+                      "triagem": _jogo("triagem.json"), "emergencias": _jogo("emergencias.json"), "cascatas": _jogo("cascatas.json"),
+                      "defesa": _jogo("defesa.json") or {}, "quemsou": _jogo("quemsou.json") or {}}
+    for c in dados["jogos"]["emergencias"]:   # todo "vai" precisa apontar para uma etapa ou um final
+        alvos = set(c.get("etapas", {})) | set(c.get("finais", {}))
+        if c.get("inicio") not in c.get("etapas", {}) or any(a.get("vai") not in alvos for e in c["etapas"].values() for a in e.get("acoes", [])):
+            erros.append(f"jogos/emergencias.json: {c.get('id')} tem ação apontando para etapa inexistente")
+    _armas = {a["id"] for a in dados["jogos"]["defesa"].get("armas", [])}
+    for i in dados["jogos"]["defesa"].get("invasores", []):
+        if i.get("certa") not in _armas or any(x not in _armas for x in i.get("aceitaveis", [])):
+            erros.append(f"jogos/defesa.json: {i.get('id')} aponta para arma inexistente")
     for c in dados["jogos"]["casos"]:
         if len(c.get("pistas", [])) != 5 or c.get("diagnostico") not in c.get("opcoes", []) or len(c["opcoes"]) != 6:
             erros.append(f"jogos/casos-dia.json: {c.get('id')} precisa de 5 pistas e 6 opções com o diagnóstico")
@@ -171,4 +181,4 @@ if __name__ == "__main__":
     kb = len(html.encode("utf-8")) // 1024
     print(f"app.html gerado ({kb} KB): questões {sum(map(len, banco.values()))}, temas {len(mapa.get('temas', []))}, "
           f"assuntos ENEM {sum(len(d.get('assuntos', [])) for a in enem.get('areas', []) for d in a.get('disciplinas', []))}, "
-          f"casos {len(dados['casos'])}, matrizes {len(dados['grades'])}, pílulas {len(dados['pilulas'])}, piadas {len(dados['humor'])}, jogos {sum(len(v) for v in dados['jogos'].values())}, imagens {len(dados['imagens'])}")
+          f"casos {len(dados['casos'])}, matrizes {len(dados['grades'])}, pílulas {len(dados['pilulas'])}, piadas {len(dados['humor'])}, jogos {sum(len(v) if isinstance(v, list) else len(v.get('invasores', v.get('grupos', []))) for v in dados['jogos'].values())}, imagens {len(dados['imagens'])}")

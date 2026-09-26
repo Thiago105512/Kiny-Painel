@@ -17,12 +17,16 @@ const JOGOS = [
   { id: "linha", curto: "Ponha a história da Medicina em ordem", nome: "Linha do tempo", arte: "calendario", cor: "#6D28D9", desc: "Toque nos marcos da história do mais antigo ao mais recente. Cinco rodadas." },
 ];
 const TEMPO_RELOGIO = 90;
+const GRUPOS_JOGOS = [["plantao", "Simulações de plantão", "Você no comando: pacientes, monitor e decisões."], ["raciocinio", "Raciocínio clínico", "Pistas, perguntas e mecanismos."],
+  ["imagem", "Memória, imagem e palavras", "Mapas, traçados, pares e palavras."], ["rapidos", "Desafios de perguntas", "Contra o tempo, com vidas ou valendo um milhão."]];
+const GRUPO_JOGO = { triagem: "plantao", emergencia: "plantao", defesa: "plantao", quemsou: "raciocinio", cascata: "raciocinio", linha: "raciocinio",
+  ecg: "imagem", anatomia: "imagem", pares: "imagem", caca: "imagem", relogio: "rapidos", vidas: "rapidos", vf: "rapidos", milhao: "rapidos" };
 const JG = { id: null };
 let _jgTimer = null;
 
 /* ---------- Material de cada jogo ---------- */
 const NEGATIVA = /EXCETO|INCORRET|\bNÃO\b|não é|errad|falsa/i;
-const poolJogo = () => questoes().filter(q => q.src === "banco" && doObjetivo(q) && Array.isArray(q.o) && q.o.length >= 4 && !q.img && !q.serie);
+const poolJogo = () => questoes().filter(q => q.src === "banco" && (objetivo() ? doObjetivo(q) : ["medicina", "residencia"].includes(q.t)) && Array.isArray(q.o) && q.o.length >= 4 && !q.img && !q.serie);
 /** Marcos com ano, de um só domínio por partida (o do objetivo; sem objetivo, Medicina primeiro). */
 function marcosHistoria() {
   const todos = PILULAS.filter(p => p.ano && p.titulo && pilDoObjetivo(p));
@@ -157,8 +161,8 @@ rota("/jogos", () => {
     html: `${cartaoJornada()}
       ${lista.some(j => j.diario) ? `<section><h2 class="sec">Desafios de hoje</h2><div class="jg-hoje">${lista.filter(j => j.diario).map(j => { const feito = j.diario();
         return `<a class="jg-desafio ${feito ? "feito" : ""}" href="#/jogos/${j.id}" style="--h:${j.cor}">${ilustra(j.arte, j.cor, "g")}<b>${esc(j.nome)}</b><span class="pill ${feito ? "ok" : "warn"}">${feito ? "✓ Feito hoje" : "Novo hoje"}</span></a>`; }).join("")}</div></section>` : ""}
-      <section><h2 class="sec">Jogos rápidos</h2><div class="jg-lista">${lista.filter(j => !j.diario).map(j => `<a class="jg-cartao" href="#/jogos/${j.id}" style="--h:${j.cor}">${ilustra(j.arte, j.cor, "g")}<div>
-      <b>${esc(j.nome)}</b><small>${esc(j.curto || j.desc)}</small>${D.rec[j.id] ? `<span class="pill">Recorde: ${D.rec[j.id]} pontos</span>` : ""}</div></a>`).join("")}</div></section>` };
+      ${GRUPOS_JOGOS.map(([g, tit, sub]) => { const js = lista.filter(j => !j.diario && (GRUPO_JOGO[j.id] || "rapidos") === g); return js.length ? `<section><h2 class="sec">${tit}</h2><p class="muted" style="margin:-4px 0 10px">${sub}</p><div class="jg-lista">${js.map(j => `<a class="jg-cartao" href="#/jogos/${j.id}" style="--h:${j.cor}">${ilustra(j.arte, j.cor, "g")}<div>
+      <b>${esc(j.nome)}</b><small>${esc(j.curto || j.desc)}</small>${D.rec[j.id] ? `<span class="pill">Recorde: ${D.rec[j.id]} pontos</span>` : ""}</div></a>`).join("")}</div></section>` : ""; }).join("")}` };
 });
 rota("/jogos/:id", ({ id }) => {
   const j = JOGOS.find(x => x.id === id); if (!j || !jogoDisponivel(j)) return paginaNaoEncontrada();
