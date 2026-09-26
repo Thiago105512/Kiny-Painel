@@ -91,7 +91,7 @@ function render(opts = {}) {
   const crumbs = pg.crumbs?.length ? `<nav class="crumbs" aria-label="Você está em">${pg.crumbs.map(([t, h], i) => (i ? '<span aria-hidden="true">›</span>' : "") + (h ? `<a href="${h}">${esc(t)}</a>` : `<span>${esc(t)}</span>`)).join("")}</nav>` : "";
   document.body.style.setProperty("--sec", pg.cor || SECAO_VISUAL[pg.secao]?.[1] || "#2340B8");
   const ilu = pg.ilu ?? iluSecao(pg.secao);
-  const titulo = pg.titulo ? `<div class="titulo${ilu ? " com-figura" : ""}">${ilu}<div class="titulo-tx"><h1>${esc(pg.titulo)}</h1>${pg.sub ? `<div class="sub">${pg.sub}</div>` : ""}</div>${pg.acoes ? `<div class="linha">${pg.acoes}</div>` : ""}</div>` : "";
+  const titulo = pg.titulo ? `<div class="titulo${ilu ? " com-figura" : ""}${pg.titulo.length > 44 ? " longo" : ""}">${ilu}<div class="titulo-tx"><h1>${esc(pg.titulo)}</h1>${pg.sub ? `<div class="sub">${pg.sub}</div>` : ""}</div>${pg.acoes ? `<div class="linha">${pg.acoes}</div>` : ""}</div>` : "";
   const fab = IA.disponivel() && pg.secao !== "assistente" ? `<button class="btn azul fab" data-act="ia-abrir" aria-label="Abrir assistente de estudo">${icone("ia")} Assistente</button>` : "";
   $("#view").innerHTML = crumbs + titulo + (pg.html || "") + fab;
   document.title = (pg.titulo ? pg.titulo + " · " : "") + "Gabarito Amazonas";

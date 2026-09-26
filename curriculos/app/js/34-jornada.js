@@ -111,12 +111,14 @@ function conferirConquistas(J) {
 /** Comemoração: folha com o mascote em festa e confete. */
 const FILA_CELEBRA = [];
 const emAndamento = () => (typeof JG !== "undefined" && JG.id && !JG.fim && JG.rodadas?.length && location.hash.startsWith("#/jogos/")) || (PL.ativo && !PL.fim);
+/** Comemoração: cartão flutuante com o mascote (ou a medalha) e confete. Some sozinho e não bloqueia a tela. */
 function celebrar(msg, conq = null) {
   if (emAndamento()) { FILA_CELEBRA.push([msg, conq]); return; }   // não interrompe jogo nem sessão: comemora no fim
-  if (document.querySelector(".folha")) { toast(msg); return; }
-  abrirFolha(`<div class="celebra">${conq ? medalha(conq, true, "xg") : mascote("festa", 140)}<p class="celebra-tit">${esc(msg)}</p>${conq ? `<p class="muted">${esc(conq.desc)}</p>` : ""}
-    <button class="btn grande" data-act="fechar-folha">Continuar</button></div>`);
-  setTimeout(() => confete(document.querySelector(".celebra-tit"), 30), 80);
+  const el = document.createElement("div"); el.className = "celebra-flutuante"; el.setAttribute("role", "status");
+  el.innerHTML = `${conq ? medalha(conq, true, "g") : mascote("festa", 72, "")}<div><b>${esc(msg)}</b>${conq ? `<small>${esc(conq.desc)}</small>` : ""}</div>`;
+  const pilha = document.querySelectorAll(".celebra-flutuante").length; el.style.setProperty("--n", pilha);
+  document.body.appendChild(el); setTimeout(() => confete(el, 24), 60);
+  setTimeout(() => { el.classList.add("sai"); setTimeout(() => el.remove(), 500); }, 4800);
 }
 
 /* ---------- Cartão compacto (Início e Jogos) e página ---------- */

@@ -136,5 +136,6 @@ node curriculos/testes/humor.js      # Pausa para rir: cartão, sem repetição,
 node curriculos/testes/jogos.js      # Jogos: os 5 jogos do começo ao fim, recorde, caderno de erros, foco no objetivo
 node curriculos/testes/jornada.js    # Jornada (XP, níveis, missões, medalhas) e jogos novos: Caso do dia, Termo, Pares, Onde fica?
 node curriculos/testes/simulacoes.js # Plantão no PS, Salve o paciente, Defesa, Cascata, Quem sou eu?, Rumo ao Milhão, Caça-palavras
+node curriculos/testes/letras.js     # encaixe do texto: todas as telas, 360/390 px, letras Normal a Enorme (nada sai da caixa)
 node curriculos/testes/etapa2.js     # mapa mental, erros em lote, backup semanal, conferência da matriz
 ```
