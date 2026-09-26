@@ -51,10 +51,10 @@
   "titulo": "Carlos Chagas e a descoberta completa",
   "pergunta": "O que torna única a descoberta de Carlos Chagas em 1909, em Lassance (MG)?",
   "resposta": "Um só pesquisador descreveu agente, vetor, hospedeiros e a doença clínica, feito tido como único na medicina.",
-  "texto": "Trabalhando no combate à malária em Lassance, Carlos Chagas encontrou o barbeiro (triatomíneo) com protozoários, nomeou o parasita Trypanosoma cruzi em homenagem a Oswaldo Cruz e identificou a doença em pacientes, como a menina Berenice. Parte do ciclo foi corrigida depois: Brumpt (1912) mostrou que a transmissão ocorre pelas fezes do barbeiro, não pela picada. Foi indicado ao Nobel, mas não o recebeu.",
+  "texto": "Chagas estava em Lassance para combater a malária. Lá, encontrou protozoários no barbeiro (triatomíneo) e deu ao parasita o nome Trypanosoma cruzi, em homenagem a Oswaldo Cruz. Depois, identificou a doença em pacientes, como a menina Berenice. Parte do ciclo foi corrigida depois: Brumpt (1912) mostrou que a transmissão ocorre pelas fezes do barbeiro, não pela picada. Foi indicado ao Nobel, mas não o recebeu.",
   "porque": "Ajuda a lembrar a tríade agente (T. cruzi), vetor (triatomíneo) e doença (cardiopatia, megaesôfago, megacólon). Chagas é tema frequente de Medicina Tropical e Preventiva.",
   "ano": 1909,
-  "pessoa": "Carlos Ribeiro Justiniano Chagas",
+  "pessoa": "Carlos Justiniano Ribeiro Chagas",
   "vida": "1879–1934"
  },
  {
@@ -273,7 +273,7 @@
   "titulo": "Conferência de Alma-Ata",
   "pergunta": "Qual meta ficou marcada na Conferência de Alma-Ata, em 1978?",
   "resposta": "'Saúde para todos no ano 2000', tendo a atenção primária como estratégia central.",
-  "texto": "A Conferência Internacional sobre Cuidados Primários de Saúde, em Alma-Ata (então União Soviética, hoje Cazaquistão), definiu a atenção primária como cuidado essencial, acessível e primeiro contato com o sistema de saúde, com participação da comunidade.",
+  "texto": "A Conferência Internacional sobre Cuidados Primários de Saúde foi em Alma-Ata, então União Soviética, hoje Cazaquistão. Ela definiu a atenção primária como cuidado essencial e acessível, primeiro contato com o sistema de saúde, com participação da comunidade.",
   "porque": "Base conceitual da APS e da Estratégia Saúde da Família. Em 2018, a Declaração de Astana renovou esse compromisso.",
   "ano": 1978
  },
@@ -377,7 +377,7 @@
   "titulo": "Os dois sinais de Trousseau",
   "pergunta": "Quais são os dois sinais que levam o nome de Armand Trousseau?",
   "resposta": "O espasmo carpal da hipocalcemia e a tromboflebite migratória associada ao câncer.",
-  "texto": "Com o manguito insuflado acima da PA sistólica por até 3 minutos, a hipocalcemia provoca flexão do punho e das metacarpofalangianas (mão de parteiro). Trousseau também associou tromboflebite migratória a câncer visceral. Tradicionalmente conta-se que ele reconheceu o sinal em si mesmo, em 1867, antes de morrer de câncer gástrico.",
+  "texto": "Com o manguito insuflado acima da PA sistólica por até 3 minutos, a hipocalcemia provoca flexão do punho e das metacarpofalangianas (mão de parteiro). Trousseau também associou a tromboflebite migratória ao câncer visceral. Conta-se que, em 1867, ele reconheceu essa tromboflebite em si mesmo e morreu meses depois de câncer gástrico.",
   "porque": "Não confunda com Chvostek (contração facial ao percutir o nervo facial). Trousseau é mais específico para hipocalcemia.",
   "ano": 1867
  },
@@ -465,7 +465,7 @@
   "titulo": "Fórmula de Parkland",
   "pergunta": "Como é distribuído o volume calculado pela fórmula de Parkland nas primeiras 24 horas?",
   "resposta": "Metade nas primeiras 8 horas, contadas a partir da queimadura, e metade nas 16 horas seguintes.",
-  "texto": "Parkland: 4 mL × peso (kg) × % SCQ de Ringer lactato. Desde a 10ª edição, o ATLS inicia com 2 mL/kg/%SCQ no adulto, 3 mL na criança e 4 mL na queimadura elétrica; a 11ª edição (2025) reforça que o cálculo é só estimativa inicial. A infusão é ajustada pela diurese: 0,5 mL/kg/h no adulto, 1 mL/kg/h na criança e 1 a 1,5 mL/kg/h na queimadura elétrica.",
+  "texto": "Parkland: 4 mL × peso (kg) × % SCQ de Ringer lactato. O ATLS inicia com menos: 2 mL/kg/%SCQ no adulto, 3 mL na criança e 4 mL na queimadura elétrica. O cálculo é só a estimativa inicial. A infusão é ajustada pela diurese: 0,5 mL/kg/h no adulto, 1 mL/kg/h na criança e 1 a 1,5 mL/kg/h na queimadura elétrica.",
   "porque": "Pegadinha: as 8 horas contam da hora da queimadura, não da chegada ao hospital. Se chegou 2 h depois, a primeira metade vai em 6 h.",
   "exemplo": "Adulto de 70 kg, 40% SCQ, Parkland 4 mL: 11.200 mL em 24 h; 5.600 mL nas primeiras 8 h."
  },
@@ -490,8 +490,8 @@
   "titulo": "CHA₂DS₂-VASc",
   "pergunta": "O que significa cada letra do CHA₂DS₂-VASc na fibrilação atrial e quais itens valem 2 pontos?",
   "resposta": "ICC, HAS, Idade ≥ 75 (2), Diabetes, AVC/AIT/embolia (2), doença Vascular, idade 65–74 e sexo feminino.",
-  "texto": "C = insuficiência cardíaca; H = hipertensão; A₂ = idade ≥ 75 anos (2 pontos); D = diabetes; S₂ = AVC, AIT ou tromboembolismo prévio (2 pontos); V = doença vascular (IAM, doença arterial periférica, placa aórtica); A = 65–74 anos; Sc = sexo feminino. Anticoagula-se com ≥ 2 em homens e ≥ 3 em mulheres; considera-se com 1 ou 2, respectivamente.",
-  "porque": "Os subscritos marcam os itens de 2 pontos. A ESC (2024) e a Diretriz Brasileira de FA (SBC, 2025) adotaram o CHA₂DS₂-VA, sem o sexo: anticoagula-se com ≥ 2 e considera-se com 1."
+  "texto": "C: insuficiência cardíaca. H: hipertensão. A₂: idade ≥ 75 anos (2 pontos). D: diabetes. S₂: AVC, AIT ou tromboembolismo prévio (2 pontos). V: doença vascular (IAM, doença arterial periférica, placa aórtica). A: 65 a 74 anos. Sc: sexo feminino. Anticoagula-se com ≥ 2 em homens e ≥ 3 em mulheres.",
+  "porque": "Os subscritos marcam os itens de 2 pontos. Atenção: a ESC (2024) e a Diretriz Brasileira de FA (SBC, 2025) trocaram pelo CHA₂DS₂-VA, sem o sexo. Nele, anticoagula-se com ≥ 2 e individualiza-se com 1."
  },
  {
   "id": "pil-f100a025",
@@ -553,7 +553,7 @@
   "pergunta": "Quais são os 4 Ts das causas de hemorragia pós-parto e qual é o mais comum?",
   "resposta": "Tônus, Trauma, Tecido e Trombina; a atonia uterina (tônus) é a causa mais comum.",
   "texto": "Tônus = atonia uterina; Trauma = lacerações, rotura uterina, inversão; Tecido = restos placentários ou acretismo; Trombina = coagulopatias. A prevenção universal é a ocitocina 10 UI IM logo após o nascimento.",
-  "porque": "Na atonia, primeiro massagem uterina bimanual e uterotônicos (ocitocina, depois metilergometrina se não houver hipertensão, misoprostol) e ácido tranexâmico nas primeiras 3 horas."
+  "porque": "Na atonia: massagem uterina e uterotônicos (ocitocina; depois metilergometrina, se não houver hipertensão; misoprostol). Em toda HPP: ácido tranexâmico o quanto antes, até 3 horas após o parto."
  },
  {
   "id": "pil-5c1d3e94",
@@ -589,7 +589,7 @@
   "pergunta": "Que sinais da intoxicação por organofosforados o mnemônico DUMBELS resume?",
   "resposta": "Diarreia, Urina (incontinência), Miose, Bradicardia/Broncorreia, Êmese, Lacrimejamento e Salivação.",
   "texto": "Organofosforados e carbamatos inibem a acetilcolinesterase e acumulam acetilcolina: efeitos muscarínicos (DUMBELS), nicotínicos (fasciculações, fraqueza) e no SNC. O tratamento é atropina até secar as secreções brônquicas, mais pralidoxima nos organofosforados.",
-  "porque": "O alvo da atropina é a secreção brônquica, não a pupila. No Brasil, o 'chumbinho' (agrotóxico clandestino usado como raticida, em geral aldicarbe, às vezes organofosforado) é causa comum."
+  "porque": "O alvo da atropina é a secreção brônquica, não a pupila. No Brasil, o 'chumbinho' (raticida clandestino) é causa comum; contém carbamatos (aldicarbe, carbofurano) ou organofosforados (terbufós)."
  },
  {
   "id": "pil-d2907835",
@@ -613,7 +613,7 @@
   "pergunta": "Qual a diferença de cariótipo e de feto entre mola hidatiforme completa e parcial?",
   "resposta": "Completa: diploide (geralmente 46,XX, só DNA paterno) e sem feto. Parcial: triploide (69 cromossomos) com feto ou partes fetais.",
   "texto": "A completa surge quando um óvulo sem material genético é fecundado; tem hCG muito alto, útero maior que o esperado e maior risco de neoplasia trofoblástica. A parcial vem de óvulo fecundado por dois espermatozoides; feto malformado, hCG menos elevado e risco menor.",
-  "porque": "Seguimento com hCG seriado até negativar é obrigatório nas duas. Contracepção eficaz durante o seguimento."
+  "porque": "Seguimento com hCG seriado é obrigatório nas duas: até negativar e por mais um período depois. Contracepção eficaz durante o seguimento."
  },
  {
   "id": "pil-0e2a20c0",
@@ -637,7 +637,7 @@
   "pergunta": "Após uma infecção de garganta, como o tempo até a hematúria separa GNPE de nefropatia por IgA?",
   "resposta": "GNPE: 1 a 3 semanas depois da faringite, com C3 baixo. IgA: 1 a 2 dias depois (junto à infecção), complemento normal.",
   "texto": "Glomerulonefrite pós-estreptocócica: latência de cerca de 10 dias após faringite (3 a 6 semanas após impetigo), edema, hipertensão, C3 baixo que normaliza em até 8 semanas. Nefropatia por IgA (doença de Berger): hematúria macroscópica 'sinfaringítica', episódios recorrentes, complemento normal.",
-  "porque": "Se o C3 não normalizar em 8 semanas, não é GNPE simples: pense em glomerulonefrite membranoproliferativa."
+  "porque": "Se o C3 não normalizar em 8 semanas, não é GNPE simples: pense em glomerulopatia C3, glomerulonefrite membranoproliferativa ou lúpus."
  },
  {
   "id": "pil-59756c5f",
@@ -721,7 +721,7 @@
   "pergunta": "Qual corrimento tem pH vaginal normal (≤ 4,5): vaginose bacteriana, candidíase ou tricomoníase?",
   "resposta": "A candidíase; vaginose e tricomoníase têm pH > 4,5.",
   "texto": "Vaginose (Gardnerella e anaeróbios): corrimento acinzentado, odor de peixe, teste das aminas positivo, clue cells; metronidazol. Candidíase: corrimento grumoso, prurido, hifas e pseudo-hifas; azólicos. Tricomoníase: corrimento amarelo-esverdeado bolhoso, colo em framboesa; é IST e o parceiro também é tratado.",
-  "porque": "Vaginose não é IST e o parceiro não precisa ser tratado de rotina. Critérios de Amsel: 3 de 4 para vaginose."
+  "porque": "Pelo protocolo brasileiro, o parceiro não é tratado de rotina na vaginose. Mas estudos recentes sugerem transmissão sexual, e tratar o parceiro reduziu recaídas. Critérios de Amsel: 3 de 4 para vaginose."
  },
  {
   "id": "pil-a2478289",
@@ -745,7 +745,7 @@
   "pergunta": "Quais as diferenças clínicas entre leishmaniose tegumentar e visceral?",
   "resposta": "Tegumentar: úlcera cutânea indolor de bordas elevadas. Visceral: febre, hepatoesplenomegalia e pancitopenia.",
   "texto": "Ambas transmitidas por flebotomíneos. Tegumentar: no Brasil, principal agente é a L. braziliensis; úlcera 'em moldura', pode acometer mucosa nasal anos depois. Visceral: L. infantum, reservatório urbano no cão, doença sistêmica grave, pode ser fatal sem tratamento.",
-  "porque": "Tratamento: antimoniato de meglumina é o clássico; a anfotericina B lipossomal é preferida em gestantes, casos graves, idosos e pacientes com insuficiência renal ou cardíaca."
+  "porque": "Tratamento: o antimoniato de meglumina é o clássico. A anfotericina B lipossomal é preferida em gestantes, casos graves, menores de 1 ano, maiores de 50 anos e em insuficiência renal, hepática ou cardíaca. O SUS discute ampliar seu uso na forma visceral."
  },
  {
   "id": "pil-d40ca0df",
@@ -877,7 +877,7 @@
   "titulo": "Hiponatremia: devagar com o sódio",
   "pergunta": "Qual a principal complicação de corrigir rápido uma hiponatremia crônica?",
   "resposta": "Síndrome de desmielinização osmótica (mielinólise pontina).",
-  "texto": "O limite usual é de 8 a 10 mEq/L nas primeiras 24 horas (menos nos pacientes de alto risco: alcoolistas, desnutridos, hipocalêmicos). Mnemônico inglês: 'from low to high, your pons will die'. O inverso, baixar sódio rápido demais, causa edema cerebral.",
+  "texto": "O limite usual é de 8 a 10 mEq/L nas primeiras 24 horas, menos nos pacientes de alto risco (alcoolistas, desnutridos, hipocalêmicos). Mnemônico inglês: 'from low to high, your pons will die'. No sentido oposto, baixar rápido demais o sódio de uma hipernatremia crônica causa edema cerebral.",
   "porque": "Hiponatremia grave sintomática (convulsão, coma) recebe salina hipertônica em bolus, mas o limite diário vale do mesmo jeito."
  },
  {
@@ -901,7 +901,7 @@
   "titulo": "Pneumotórax hipertensivo: sem radiografia",
   "pergunta": "Diante de suspeita de pneumotórax hipertensivo, deve-se pedir radiografia antes de descomprimir?",
   "resposta": "Não. O diagnóstico é clínico e a descompressão é imediata.",
-  "texto": "Sinais: dispneia, hipotensão, turgência jugular, murmúrio abolido e hipertimpanismo do lado afetado, desvio de traqueia. Desde a 10ª edição, o ATLS recomenda no adulto punção no 4º/5º espaço intercostal, anterior à linha axilar média (na criança, 2º espaço na linha hemiclavicular); a 11ª edição (2025) valoriza também a toracostomia digital. Depois, drenagem torácica em selo d'água.",
+  "texto": "Sinais: dispneia, hipotensão, turgência jugular, murmúrio abolido e hipertimpanismo do lado afetado, desvio de traqueia. No adulto, o ATLS indica punção no 4º ou 5º espaço intercostal, logo à frente da linha axilar média. Na criança, 2º espaço na linha hemiclavicular. A 11ª edição (2025) valoriza também a toracostomia digital. Depois, drenagem torácica em selo d'água.",
   "porque": "Pedir radiografia nesse cenário é a alternativa errada clássica. Cuidado também com o local: o antigo 2º espaço no adulto foi substituído."
  },
  {
@@ -961,7 +961,7 @@
   "titulo": "Bastonetes de Auer",
   "pergunta": "Bastonetes de Auer no sangue periférico indicam qual leucemia?",
   "resposta": "Leucemia mieloide aguda; não aparecem na linfoide aguda.",
-  "texto": "Os bastonetes de Auer são grânulos azurófilos fundidos, típicos da linhagem mieloide. São abundantes na leucemia promielocítica aguda (LMA M3), associada à t(15;17) e a CIVD, tratada com ácido transretinoico (ATRA).",
+  "texto": "Os bastonetes de Auer são grânulos azurófilos fundidos, típicos da linhagem mieloide. São abundantes na leucemia promielocítica aguda (LMA M3), associada à t(15;17) e à CIVD. Ela é tratada com ácido transretinoico (ATRA), hoje em geral junto com trióxido de arsênio.",
   "porque": "Na infância predomina a LLA (pico entre 2 e 5 anos). LMA com CIVD = pense em promielocítica: emergência hematológica."
  },
  {
