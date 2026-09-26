@@ -217,7 +217,7 @@
   "cor": "amarelo",
   "discriminador": "Vômitos persistentes",
   "porque": "Vômitos persistentes na gestação (hiperêmese): amarelo.",
-  "fluxograma": "Gravidez"
+  "fluxograma": "Diarreia e vômitos"
  },
  {
   "id": "tr-012",
@@ -515,7 +515,7 @@
    "HGT": null
   },
   "cor": "azul",
-  "discriminador": "Problema não recente, sem piora",
+  "discriminador": "Sem discriminadores (problema não recente)",
   "porque": "Armadilha: \"dor de cabeça\" assusta, mas é antiga, leve e sem mudança: azul.",
   "fluxograma": "Cefaleia"
  },
@@ -575,8 +575,8 @@
    "HGT": null
   },
   "cor": "laranja",
-  "discriminador": "Dor intensa (8–10)",
-  "porque": "Dor 10/10 = laranja. Cefaleia súbita \"a pior da vida\" lembra hemorragia subaracnoide.",
+  "discriminador": "Início abrupto (súbito)",
+  "porque": "Cefaleia de início abrupto (segundos a minutos) é laranja mesmo se a dor fosse menor. \"A pior da vida\": pensar em hemorragia subaracnoide.",
   "fluxograma": "Cefaleia"
  },
  {
@@ -595,8 +595,8 @@
    "HGT": null
   },
   "cor": "verde",
-  "discriminador": "Febril (37,5–38,4 °C)",
-  "porque": "Tax 37,9 °C: febril, abaixo de 38,5. Sem outros achados: verde.",
+  "discriminador": "Subfebril (37,5–38,4 °C)",
+  "porque": "Tax 37,9 °C: subfebril (37,5–38,4). Sem outros achados: verde.",
   "fluxograma": "Mal-estar em adulto"
  },
  {
@@ -615,7 +615,7 @@
    "HGT": null
   },
   "cor": "azul",
-  "discriminador": "Problema não recente, sem piora",
+  "discriminador": "Sem discriminadores (problema não recente)",
   "porque": "Lesão antiga, sem dor ou inflamação: azul.",
   "fluxograma": "Erupções cutâneas"
  },
@@ -715,8 +715,8 @@
    "HGT": null
   },
   "cor": "laranja",
-  "discriminador": "Dor intensa (8–10)",
-  "porque": "Sinais vitais estáveis, mas dor 9/10: laranja. Soro antiofídico sem demora.",
+  "discriminador": "Envenenamento de alta letalidade",
+  "porque": "Picada de cobra peçonhenta é laranja mesmo com sinais vitais estáveis (a dor 9/10 também daria). Soro antibotrópico sem demora.",
   "fluxograma": "Mordeduras e picadas"
  },
  {
@@ -1075,7 +1075,7 @@
    "HGT": null
   },
   "cor": "azul",
-  "discriminador": "Problema não recente, sem piora",
+  "discriminador": "Sem discriminadores (problema não recente)",
   "porque": "Queixa crônica e estável: azul.",
   "fluxograma": "Mal-estar em adulto"
  },
@@ -1136,7 +1136,7 @@
   },
   "cor": "laranja",
   "discriminador": "Muito quente (≥ 41 °C)",
-  "porque": "Temperatura ≥ 41 °C é \"muito quente\": laranja. Entre 38,5 e 41 seria amarelo.",
+  "porque": "Temperatura ≥ 41 °C é \"muito quente\": laranja. Entre 38,5 e 40,9 °C seria amarelo.",
   "fluxograma": "Mal-estar em criança"
  },
  {
@@ -1276,7 +1276,7 @@
   },
   "cor": "laranja",
   "discriminador": "Dor intensa (8–10)",
-  "porque": "Dor intensa = laranja. Gestante com cefaleia, escotomas e PA alta: pensar em pré-eclâmpsia grave.",
+  "porque": "Dor 8/10 = laranja. No ACCR obstétrico do MS, PA ≥ 160x110 ou PA alta com cefaleia/escotomas já é laranja: pré-eclâmpsia grave.",
   "fluxograma": "Cefaleia"
  },
  {
@@ -1295,7 +1295,7 @@
    "HGT": null
   },
   "cor": "azul",
-  "discriminador": "Problema não recente, sem piora",
+  "discriminador": "Sem discriminadores (problema não recente)",
   "porque": "Manchas antigas, sem sintomas agudos: azul. Avaliar na UBS.",
   "fluxograma": "Erupções cutâneas"
  },
@@ -1655,7 +1655,7 @@
    "HGT": null
   },
   "cor": "verde",
-  "discriminador": "Febril (37,5–38,4 °C)",
+  "discriminador": "Subfebril (37,5–38,4 °C)",
   "porque": "Suspeita de dengue sem sinais de alarme e Tax 38,0 (abaixo de 38,5): verde.",
   "fluxograma": "Mal-estar em adulto"
  },
@@ -1715,7 +1715,7 @@
    "HGT": null
   },
   "cor": "azul",
-  "discriminador": "Problema não recente, sem piora",
+  "discriminador": "Sem discriminadores (problema não recente)",
   "porque": "Dor leve crônica, sem mudança: não é \"recente\", então azul.",
   "fluxograma": "Problemas em extremidades"
  },
