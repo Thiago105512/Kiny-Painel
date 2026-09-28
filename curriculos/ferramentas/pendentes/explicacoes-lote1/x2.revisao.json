@@ -1,0 +1,288 @@
+[
+ {
+  "id": "res-b47a6ca4",
+  "problema": "Meta de tempo atribuída à ESC estava errada (ESC 2023: bolus em até 10 min do diagnóstico, não 30 min da chegada); frase de 72 palavras.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Trata-se de infarto com supradesnivelamento de ST anterior com cerca de 1h30 de evolução. A angioplastia primária é preferida quando pode ser feita em até 120 minutos do diagnóstico. Com atraso previsto de cerca de 3 horas, indica-se fibrinólise (por exemplo, tenecteplase, com AAS, clopidogrel e anticoagulante). A diretriz da SBC fixa a meta porta-agulha em até 30 minutos; a da ESC (2023) é mais estrita, com bolus em até 10 minutos do diagnóstico. Em seguida, transfere-se para cateterismo entre 2 e 24 horas (estratégia fármaco-invasiva), ou para angioplastia de resgate imediata se não houver critérios de reperfusão. O diagnóstico é eletrocardiográfico, e não se espera troponina para reperfundir. A fibrinólise tem maior benefício nas primeiras horas, e não depois de 12 horas. A angioplastia tardia sem reperfusão prévia desperdiça o miocárdio salvável. Para lembrar: metas de tempo no IAM com supra pela SBC: porta-agulha ≤ 30 minutos e porta-balão ≤ 90 minutos."
+  }
+ },
+ {
+  "id": "res-c5ce10eb",
+  "problema": "Classificação desatualizada: a Quinta Definição Universal de Infarto (ESC/ACC/AHA/WHF, 2026) substituiu \"tipo 1/tipo 2\" por infarto primário/secundário. Alternativas e explicação atualizadas (gabarito mantido); frase de 55 palavras dividida.",
+  "gravidade": "erro",
+  "campos": {
+   "alternativas": [
+    "Lesão miocárdica crônica estável; nenhuma conduta cardiológica específica além do controle pressórico ambulatorial",
+    "Infarto com supra de ST equivalente; fibrinólise após a terapia endoscópica da úlcera",
+    "Infarto secundário, por desequilíbrio oferta/demanda; tratar a hemorragia e a anemia, sem dupla antiagregação",
+    "Infarto primário (aterotrombótico) sem supra de ST; dupla antiagregação, heparina plena e cateterismo em 24 horas",
+    "Miocardite aguda desencadeada pela anemia; corticoide e ressonância cardíaca"
+   ],
+   "explicacao": "A troponina com curva de ascensão acima do percentil 99, com sintoma e alteração isquêmica no ECG, define infarto. Aqui, a hemorragia digestiva com anemia grave, hipotensão e taquicardia reduz a oferta e aumenta a demanda de oxigênio, sem sinal de doença coronária aguda. Pela Quinta Definição Universal de Infarto (ESC/ACC/AHA/WHF, 2026), é um infarto secundário, o antigo tipo 2 da Quarta Definição (2018). O tratamento é corrigir a causa: hemostasia endoscópica, IBP, reposição volêmica e transfusão. Dupla antiagregação e anticoagulação agravariam o sangramento e não estão indicadas; a investigação coronária pode ser feita depois, conforme a evolução. Lesão crônica teria troponina estável, sem subida e descida. Não há supradesnivelamento, e fibrinolítico em sangramento ativo é contraindicação absoluta. Nada sugere miocardite. Para lembrar: o infarto primário (antigo tipo 1) nasce na própria coronária, como na ruptura de placa; o secundário (antigo tipo 2) nasce de outra doença aguda que desequilibra oferta e demanda."
+  }
+ },
+ {
+  "id": "res-d3fd6332",
+  "problema": "Citação imprecisa: não há diretriz da SBC de 2023 para IAM com supra; o ano se refere só à ESC.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "O traçado atual mostra elevação do ponto J e do segmento ST de cerca de 3 mm (0,3 mV), retificada e contínua com a onda T. A redução de 4 para 3 mm corresponde a apenas 25%, abaixo dos 50% esperados em 60 a 90 minutos, e a dor persiste: são critérios de falha da fibrinólise. A conduta é a angioplastia de resgate imediata (diretriz da ESC de 2023 e diretriz da SBC). Repetir o fibrinolítico não traz benefício e aumenta o sangramento. A estratégia farmacoinvasiva, com cateterismo entre 2 e 24 horas, vale apenas para a fibrinólise bem-sucedida. Suspender o anticoagulante e aguardar a troponina, ou adiar o cateterismo com nitrato, prolonga a oclusão e amplia a necrose. Para lembrar: os critérios de reperfusão são redução do ST de pelo menos 50%, alívio da dor e arritmia de reperfusão, como o ritmo idioventricular acelerado."
+  }
+ },
+ {
+  "id": "med-2ceefc88",
+  "problema": "\"Para lembrar\" desviava para investigação de angiodisplasia no cólon (a do caso é jejunal) em vez do conceito cobrado; frase de 45 palavras dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "A síndrome de Heyde associa estenose aórtica, sangramento por angiodisplasias intestinais e doença de von Willebrand adquirida tipo 2A. O fluxo turbulento e de alto cisalhamento pela valva estenótica desenrola os multímeros grandes do fator de von Willebrand, que passam a ser clivados pela ADAMTS13. Sem esses multímeros, as angiodisplasias sangram mais. A troca valvar remove a causa: os multímeros se normalizam e os sangramentos costumam cessar. O ferro corrige a anemia, mas não a causa. A desmopressina tem efeito transitório e não serve como tratamento crônico. A ressecção intestinal é paliativa, pois as angiodisplasias costumam ser múltiplas e recidivam. A anticoagulação pioraria o sangramento. Para lembrar: a doença de von Willebrand adquirida da estenose aórtica depende do cisalhamento na valva; por isso se corrige com a troca valvar, cirúrgica ou por cateter."
+  }
+ },
+ {
+  "id": "res-a2a61a9c",
+  "problema": "Frase de 80 palavras com as regras de duração da profilaxia; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "A diretriz brasileira para febre reumática define a duração da profilaxia secundária pela gravidade. Sem cardite: até os 21 anos ou 5 anos após o último surto, valendo o que for mais longo. Com cardite prévia e sem sequela valvar (ou com insuficiência mitral leve residual): até os 25 anos ou 10 anos após o último surto. Com lesão valvar residual moderada ou grave: até os 40 anos ou por toda a vida; após cirurgia valvar, por toda a vida. O intervalo PR prolongado é critério menor de Jones e, isoladamente, não caracteriza cardite. Sem cardite, compara-se 9 + 5 = 14 anos com 21 anos, e prevalece o maior, 21 anos. Parar aos 14 aplicaria apenas a regra dos 5 anos. Dezoito anos não corresponde a nenhum critério. Vinte e cinco anos seria a regra da cardite sem sequela, e 40 anos, a da lesão valvar residual. Para lembrar: a profilaxia secundária com penicilina benzatina é a medida de maior impacto para evitar a progressão para cardiopatia reumática crônica."
+  }
+ },
+ {
+  "id": "res-f01797a3",
+  "problema": "Frase de 55 palavras sobre o eco com dobutamina; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "O quadro é de estenose aórtica de baixo fluxo e baixo gradiente com FE reduzida: área ≤ 1,0 cm², mas gradiente < 40 mmHg e Vmax < 4 m/s, com volume sistólico indexado < 35 mL/m². Nessa situação, a Diretriz Brasileira de Valvopatias recomenda ecocardiograma com dobutamina em baixa dose. Se o fluxo aumenta e a área permanece ≤ 1,0 cm² com gradiente ≥ 40 mmHg (ou Vmax ≥ 4 m/s), a estenose é grave verdadeira e há indicação de intervenção. Se a área aumenta, trata-se de pseudoestenose por disfunção miocárdica. A área isolada não confirma gravidade, e o gradiente baixo não a exclui. A valvoplastia por balão é apenas ponte, e vasodilatadores são perigosos na estenose grave."
+  }
+ },
+ {
+  "id": "med-37e5f52a",
+  "problema": "Ponto de corte para drenagem (\"3–4 cm\") não corresponde às diretrizes: ASCRS 2020 usa 3 cm e WSES 2020, 4–5 cm; explicitada a divergência.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Na classificação de Hinchey, o estágio I é o abscesso pericólico (ou mesentérico), o II é o abscesso pélvico, intra-abdominal distante ou retroperitoneal, o III é a peritonite purulenta generalizada e o IV, a peritonite fecal. Abscesso pericólico de 6 cm corresponde a Hinchey I. Em paciente estável, abscessos grandes devem ser drenados por via percutânea guiada por imagem, com antibioticoterapia venosa. O corte varia entre diretrizes: a partir de 3 cm pela ASCRS (2020) e de 4 a 5 cm pela WSES (2020); abaixo disso, o antibiótico isolado costuma bastar. Com 6 cm, a drenagem é indicada por ambas. Tratamento ambulatorial é reservado à diverticulite não complicada. Cirurgia de urgência fica para peritonite generalizada (III e IV) ou falha do tratamento conservador. Para lembrar: após o episódio complicado, faça colonoscopia em 6 a 8 semanas para excluir câncer; na fase aguda, colonoscopia e enema baritado são evitados."
+  }
+ },
+ {
+  "id": "med-a721759f",
+  "problema": "Duas frases de 47 e 56 palavras; divididas.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "O sinal de Chilaiditi é a interposição de uma alça de cólon, geralmente o ângulo hepático ou o transverso, entre o fígado e a hemicúpula direita. As haustrações dentro do gás e o paciente sem dor nem peritonite o distinguem do pneumoperitônio, evitando laparotomias desnecessárias. No pneumoperitônio, o gás livre desenha uma faixa em crescente, sem pregas, e o quadro clínico é de abdome agudo. O abscesso subfrênico vem com febre, dor e nível hidroaéreo. A pneumatose aparece como gás na parede das alças, em pacientes graves. A hérnia diafragmática traumática exige história de trauma e costuma ocorrer à esquerda. Para lembrar: se o paciente não puder ficar em pé, peça radiografia em decúbito lateral esquerdo com raios horizontais; o sinal de Rigler (parede da alça visível dos dois lados) também indica pneumoperitônio."
+  }
+ },
+ {
+  "id": "med-cd890272",
+  "problema": "Frases de 49 e 53 palavras; divididas.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "A tríade de Rigler — obstrução de delgado, pneumobilia e cálculo ectópico — define o íleo biliar. Um cálculo grande passa da vesícula ao duodeno por uma fístula colecistoduodenal e impacta no íleo terminal, o ponto mais estreito do delgado. É típico de idosas com litíase de longa data. O tratamento é cirúrgico: enterotomia proximal ao ponto de impactação para retirar o cálculo, inspecionando o restante do intestino à procura de outros. A correção da fístula e a colecistectomia ficam para um segundo tempo ou para casos selecionados, pois a cirurgia em um só tempo é mais longa e mórbida nessas pacientes. A CPRE não alcança o íleo. O volvo de delgado não produz pneumobilia nem cálculo ectópico, e não há cirurgia prévia que justifique bridas. A síndrome de Mirizzi é compressão extrínseca do ducto hepático, com icterícia, e não obstrução intestinal. Para lembrar: quando o cálculo impacta no duodeno ou no piloro, causando obstrução gástrica, o quadro recebe o nome de síndrome de Bouveret."
+  }
+ },
+ {
+  "id": "res-073914ec",
+  "problema": "\"Para lembrar\" com corte de drenagem impreciso (3–4 cm); ASCRS usa 3 cm e WSES 4–5 cm. Frase de 45 palavras dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "O quadro clínico e a tomografia mostram diverticulite aguda do sigmoide complicada por abscesso. Na classificação de Hinchey, o estágio I é o abscesso pericólico ou mesocólico, confinado junto ao segmento inflamado, como neste caso. O estágio II é o abscesso à distância (pélvico, intra-abdominal ou retroperitoneal); o III, a peritonite purulenta generalizada; e o IV, a peritonite fecal. Não há pneumoperitônio nem líquido livre, o que afasta os estágios III e IV. A presença de coleção exclui a forma não complicada. Para lembrar: abscessos pequenos (abaixo de 3 cm pela ASCRS, ou de 4 a 5 cm pela WSES) costumam responder a antibiótico; os maiores pedem drenagem percutânea guiada por TC."
+  }
+ },
+ {
+  "id": "res-7d30dd37",
+  "problema": "Corte de drenagem impreciso (3–4 cm); explicitadas ASCRS (3 cm) e WSES (4–5 cm). Frase longa dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Abscessos diverticulares grandes, em paciente estável, devem ser tratados com antibiótico intravenoso e drenagem percutânea guiada por tomografia ou ultrassonografia. O corte é a partir de 3 cm pela ASCRS e de 4 a 5 cm pela WSES; a coleção de 5 cm atinge ambos. A drenagem evita cirurgia de urgência e, muitas vezes, estoma. Abscessos pequenos podem responder só ao antibiótico; aqui, a febre e a leucocitose também exigem internação e tratamento venoso. A operação de Hartmann fica para peritonite generalizada, instabilidade ou falha da drenagem. A colonoscopia é contraindicada na fase aguda, pelo risco de perfuração. A lavagem laparoscópica foi estudada para peritonite purulenta, não para abscesso localizado."
+  }
+ },
+ {
+  "id": "med-81eeaac1",
+  "problema": "Frase de 53 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "A pileflebite é a tromboflebite séptica da veia porta ou de suas tributárias. É complicação rara e grave de infecções intra-abdominais drenadas pelo sistema porta, como apendicite e diverticulite. Cursa com febre alta com calafrios, dor em hipocôndrio direito e icterícia, trombo (com ou sem gás) na veia mesentérica superior e na porta e abscessos hepáticos piogênicos. O tratamento é antibioticoterapia prolongada, drenagem de coleções e, em muitos casos, anticoagulação. A colangite exigiria obstrução biliar, que não foi descrita. A síndrome de Budd-Chiari envolve as veias hepáticas, e não o sistema porta. O abscesso subfrênico não explica o trombo portal com gás. A hepatite medicamentosa não gera trombose nem abscessos. Para lembrar: os germes habituais são Gram-negativos entéricos e anaeróbios; bacteremia por Bacteroides fragilis com febre após apendicite ou diverticulite deve lembrar pileflebite."
+  }
+ },
+ {
+  "id": "med-95f825a2",
+  "problema": "Frase de 47 palavras dividida; distrator do nervo femoral não era comentado.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "A distensão inicial do apêndice obstruído estimula fibras aferentes viscerais que acompanham o simpático e entram na medula em torno de T10, o mesmo segmento do dermátomo umbilical. Como o apêndice deriva do intestino médio, sua dor visceral é mal localizada e referida à linha média periumbilical. Quando a inflamação atinge o peritônio parietal, de inervação somática, a dor passa a ser bem localizada na fossa ilíaca direita e piora com movimento e tosse. Essa é a explicação da fase tardia, não da inicial. O vago não conduz a dor visceral abdominal. O sinal do psoas indica apêndice retrocecal e não explica a dor periumbilical. O nervo femoral não tem relação com o apêndice nem com o umbigo. Para lembrar: intestino anterior dói no epigástrio, médio na região periumbilical e posterior no hipogástrio."
+  }
+ },
+ {
+  "id": "med-fecadcb5",
+  "problema": "Frase de 54 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Em toda mulher em idade reprodutiva com dor abdominal aguda, sobretudo com atraso menstrual, a dosagem de beta-hCG é obrigatória e deve vir primeiro. Ela identifica a gravidez ectópica, principal diagnóstico diferencial com risco de vida. Também orienta o exame de imagem: na gestante, prefere-se a ultrassonografia, e a tomografia deve ser evitada. A amilase e a lipase avaliam pancreatite, pouco provável com dor em fossa ilíaca direita. O CA-125 não tem papel no abdome agudo. A proteína C-reativa ajuda a avaliar inflamação, mas não afasta a ectópica nem define a conduta. Para lembrar: na mulher em idade fértil com dor abdominal, “é gravidez até prova em contrário”."
+  }
+ },
+ {
+  "id": "res-71768130",
+  "problema": "Pista no comando: pergunta \"Qual exame\" com duas alternativas que não são exames (antibiótico; observação). Comando trocado por \"próximo passo\"; gabarito mantido.",
+  "gravidade": "melhoria",
+  "campos": {
+   "enunciado": "A emergência obstétrica recebe uma gestante de 27 anos, com 24 semanas, que tem dor abdominal há 18 horas: começou no epigástrio e agora está localizada no flanco direito, com náuseas e anorexia. Tax 37,9 °C, FC 104 bpm; dor à palpação do flanco direito, sem peritonite difusa; útero sem atividade e batimentos fetais normais. Leucócitos 16.000/mm³ com desvio à esquerda; PCR 9,8 mg/dL; urina tipo 1 normal. Nega disúria, perda de líquido ou sangramento vaginal. A ultrassonografia abdominal não visualizou o apêndice e não mostrou alterações renais ou biliares. O hospital dispõe de ressonância magnética.\n\nQual deve ser o próximo passo?"
+  }
+ },
+ {
+  "id": "res-c570bc3a",
+  "problema": "\"Para lembrar\" trazia outro tema (PAS pediátrico, imagem na gestação); trocado por limitação do próprio escore de Alvarado.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Somando: migração da dor (1) + náuseas (1) + dor em fossa ilíaca direita (2) + descompressão dolorosa (1) + leucocitose (2) + neutrofilia > 75% (1) = 8 pontos. Não pontuam a anorexia (apetite preservado) nem a febre (37,0 °C, abaixo de 37,3 °C). Quem chega a 9 ou 10 somou esses itens ausentes; 6 ou 7 resultam de esquecer a pontuação dupla da dor em fossa ilíaca direita ou da leucocitose. Escore ≥ 7 indica alta probabilidade de apendicite aguda, e o paciente deve ser avaliado para apendicectomia; escores intermediários favorecem observação e exame de imagem. Para lembrar: o Alvarado é melhor para afastar do que para confirmar; escore baixo (menor que 5) torna a apendicite improvável, mas escore alto não dispensa a avaliação do cirurgião."
+  }
+ },
+ {
+  "id": "med-2c428287",
+  "problema": "Frase de 48 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "No câncer de reto, a ressonância magnética de pelve com protocolo dedicado é o exame de escolha para o estadiamento locorregional. Ela avalia a profundidade de invasão, a relação do tumor com a fáscia mesorretal (margem circunferencial prevista), os linfonodos, a invasão vascular extramural e a distância do esfíncter. Esses dados definem a necessidade de terapia neoadjuvante antes da excisão total do mesorreto. A tomografia de tórax e abdome avalia doença à distância, e não o detalhe locorregional. A ecoendoscopia é alternativa em tumores iniciais. PET-CT não é rotina, o enema opaco não estadia, e os marcadores têm papel prognóstico e de seguimento."
+  }
+ },
+ {
+  "id": "res-53bbbde7",
+  "problema": "Frase de 58 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "A descompressão endoscópica resolve o episódio agudo do volvo de sigmoide sem sinais de sofrimento, mas não corrige a causa. No megacólon chagásico, a destruição dos plexos mioentéricos deixa o sigmoide dilatado e alongado, com mesossigmoide de base estreita. A recidiva após a descompressão isolada ocorre em cerca de metade dos casos, muitas vezes já com necrose. Por isso, em paciente com condições clínicas, indicam-se preparo e cirurgia eletiva na mesma internação, com ressecção do segmento redundante. No megacólon chagásico, usam-se técnicas como a retossigmoidectomia com abaixamento colorretal (operação de Duhamel-Haddad), que também trata o megarreto. Dar alta com laxativos deixa o paciente exposto à recidiva. A neostigmina trata a pseudo-obstrução colônica aguda (síndrome de Ogilvie) e não previne torção mecânica. A vigilância endoscópica não modifica o risco de novo volvo. A colostomia sem ressecção fica para pacientes sem condições de cirurgia maior e não é a conduta preferencial em quem pode ser operado."
+  }
+ },
+ {
+  "id": "res-7fe3921e",
+  "problema": "Frase de 65 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Na úlcera gástrica perfurada, diferentemente da duodenal, uma parcela das lesões corresponde a adenocarcinoma, sobretudo em pacientes mais velhos e em úlceras do antro e da pequena curvatura. Por isso, as bordas devem ser biopsiadas durante a cirurgia, ou a úlcera ressecada, quando pequena e em posição favorável. A cicatrização é controlada por endoscopia com novas biópsias após cerca de 6 a 8 semanas. O uso de anti-inflamatório não afasta câncer. A gastrectomia de princípio, sem diagnóstico, submete o paciente com peritonite a cirurgia extensa e desnecessária na maioria dos casos; se a biópsia mostrar câncer, o tratamento oncológico é planejado depois. A vagotomia deixou de ser rotina desde a era dos inibidores de bomba de prótons e da erradicação do H. pylori. Adiar o fechamento mantém o extravasamento e a peritonite. Completam o tratamento o inibidor de bomba de prótons, a suspensão do anti-inflamatório, a pesquisa e a erradicação do H. pylori e a cessação do tabagismo."
+  }
+ },
+ {
+  "id": "med-d9b87bb9",
+  "problema": "Frase de 47 palavras com os distratores; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "A colecistite acalculosa acomete pacientes críticos (grandes queimados, politraumatizados, sépticos, em ventilação mecânica, jejum prolongado, nutrição parenteral e uso de vasopressores), por estase biliar e isquemia da parede; evolui com frequência para gangrena e perfuração, com mortalidade elevada. Em paciente instável, a colecistostomia percutânea guiada por imagem, associada a antibiótico, é a conduta de escolha, e a colecistectomia fica para quem tem condições clínicas. Esperar uma semana com antibiótico isolado expõe ao risco de perfuração. Não há dilatação das vias biliares que sugira colangite obstrutiva. A colestase da nutrição parenteral não explica febre, dor localizada, parede espessada e líquido perivesicular. E a simples distensão por jejum não produziria esse quadro inflamatório."
+  }
+ },
+ {
+  "id": "res-1de200a6",
+  "problema": "Dado desatualizado: na diretriz conjunta europeia de 2022 (ESGAR/EAES/EFISDS/ESGE) o fator de risco etário passou de 50 para mais de 60 anos, e etnia asiática entrou na lista; faltava o \"Para lembrar\" explícito.",
+  "gravidade": "erro",
+  "campos": {
+   "explicacao": "A imagem fixa à parede, que não produz sombra nem se desloca com o decúbito, corresponde a pólipo da vesícula biliar, e não a cálculo. O tamanho é o principal fator de risco para malignidade. Pólipos de 10 mm ou mais têm risco relevante de adenoma ou adenocarcinoma, e a diretriz conjunta europeia (ESGAR/EAES/EFISDS/ESGE, 2022) indica colecistectomia, mesmo em assintomáticos. Pólipos menores que 10 mm são seguidos por ultrassonografia seriada, o que não se aplica aqui. O ácido ursodesoxicólico dissolve alguns cálculos de colesterol, não pólipos. Deixar sem seguimento um pólipo de 12 mm ignora o risco neoplásico. A colecistostomia é drenagem temporária da colecistite aguda em pacientes graves e sem condições cirúrgicas. Para lembrar: pela diretriz de 2022, pólipos de 6 a 9 mm também são operados se houver fator de risco (idade acima de 60 anos, colangite esclerosante primária, etnia asiática ou pólipo séssil). O crescimento de 2 mm ou mais em até 2 anos também indica cirurgia."
+  }
+ },
+ {
+  "id": "res-85bf277a",
+  "problema": "\"Para lembrar\" era curiosidade histórica sobre Murphy; trocado pelos critérios diagnósticos de Tóquio 2018. Frase de 44 palavras dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "O quadro é típico de colecistite aguda litiásica: dor persistente em hipocôndrio direito, febre, Murphy positivo e leucocitose. A ultrassonografia é o exame inicial de escolha: é acessível, não usa radiação e mostra cálculos, espessamento da parede, líquido perivesicular e Murphy ultrassonográfico. A cintilografia é o exame mais acurado, mas não é o inicial. A TC é menos sensível para cálculos. A colangiorressonância e a CPRE são para suspeita de coledocolitíase, e aqui não há colestase. A radiografia simples tem baixo rendimento. Para lembrar: pelos critérios de Tóquio 2018, o diagnóstico definitivo exige sinal inflamatório local (Murphy, dor ou massa em hipocôndrio direito), sinal sistêmico (febre, leucocitose ou PCR elevada) e imagem compatível."
+  }
+ },
+ {
+  "id": "med-9bc86e19",
+  "problema": "\"Para lembrar\" tratava do exame físico, não da cirurgia cobrada; substituído.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "O tratamento padrão é a piloromiotomia extramucosa de Ramstedt, aberta ou laparoscópica: incisa-se longitudinalmente a serosa e o músculo hipertrofiado e afastam-se as fibras até a submucosa abaular, sem abrir a mucosa; a perfuração mucosa é a complicação a evitar. A cirurgia é curativa, e a alimentação é reiniciada em poucas horas. Ressecção gástrica ou gastrojejunostomia seriam desnecessariamente agressivas; a dilatação por balão não é tratamento padrão; e a abertura de toda a parede, como numa piloroplastia, não é necessária nem desejável. Para lembrar: a mucosa íntegra abaulando pela incisão confirma a miotomia completa; se a mucosa for perfurada, a lesão deve ser reconhecida e suturada no mesmo ato."
+  }
+ },
+ {
+  "id": "med-1325df9d",
+  "problema": "Frase de 46 palavras com os distratores; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "A hérnia obturadora ocorre pelo canal obturatório e é típica de mulheres idosas, muito magras e multíparas (pelve mais larga e perda da gordura pré-peritoneal); como não forma abaulamento visível, costuma manifestar-se como obstrução de delgado sem causa aparente. A compressão do nervo obturatório causa dor ou parestesia na face medial da coxa, que piora com extensão, adução e rotação medial do quadril (sinal de Howship-Romberg); a tomografia confirma, e o tratamento é cirúrgico. A hérnia femoral seria palpável abaixo do ligamento inguinal e não comprime o nervo femoral. A de Spiegel aparece na linha semilunar, na parede anterior. A neoplasia de ceco não produz dor neuropática na coxa. E a hérnia de Petit se localiza no triângulo lombar inferior. Para lembrar: pela epidemiologia, a hérnia obturadora ganhou o apelido de 'hérnia da velhinha magra' (little old lady's hernia)."
+  }
+ },
+ {
+  "id": "med-e07388d0",
+  "problema": "\"Para lembrar\" tratava da hérnia de Richter (distrator), não do conceito cobrado; trocado por quadro dos epônimos.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "A hérnia de Littré é a que contém um divertículo de Meckel no saco herniário, descrita pelo cirurgião francês Alexis Littré em 1700. A hérnia de Amyand contém o apêndice cecal numa hérnia inguinal; a de Garengeot, o apêndice numa hérnia femoral. A hérnia de Richter é o pinçamento apenas da borda antimesentérica da alça, que pode estrangular sem obstrução completa. A hérnia de Spiegel ocorre através da fáscia de Spiegel, na linha semilunar, lateral ao músculo reto do abdome. Para lembrar: Littré contém divertículo de Meckel; Amyand, o apêndice numa hérnia inguinal; de Garengeot, o apêndice numa hérnia femoral."
+  }
+ },
+ {
+  "id": "med-46be64dd",
+  "problema": "Frase de 46 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Alças centrais com pregas (válvulas coniventes) que cruzam toda a largura da luz, formando o aspecto de pilha de moedas, identificam o intestino delgado. As haustrações do cólon são mais espessas e espaçadas e não atravessam toda a alça, e o cólon ocupa a periferia do abdome. Níveis hidroaéreos em degraus com ausência de gás distal indicam obstrução mecânica completa do delgado. No íleo paralítico há distensão difusa de delgado e cólon, com gás até o reto. Na obstrução colônica e na síndrome de Ogilvie predomina a distensão do cólon; o volvo de ceco mostra grande alça cecal ectópica."
+  }
+ },
+ {
+  "id": "med-48dfe129",
+  "problema": "Frases de 49 e 50 palavras; divididas.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Na obstrução de delgado por bridas sem sinais de gravidade, o contraste hidrossolúvel (como o diatrizoato de meglumina) tem valor diagnóstico e prognóstico. Se chegar ao cólon em até 24 horas, prediz com alta acurácia a resolução sem cirurgia; se não chegar, indica maior chance de necessidade de operação. Por sua hiperosmolaridade, pode também reduzir o edema da parede e o tempo de internação. Chegada ao cólon é o oposto de obstrução completa. Não há relação com estrangulamento, que é avaliado clinicamente e por tomografia. O bário é evitado na obstrução, pelo risco de impactação e de peritonite grave se houver perfuração. A neostigmina é tratamento da pseudo-obstrução colônica, não da obstrução por bridas."
+  }
+ },
+ {
+  "id": "med-50dcddbf",
+  "problema": "Frase de 51 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Na obstrução do cólon com válvula ileocecal competente (intestino delgado não distendido), forma-se uma alça fechada: o gás não reflui para o íleo, e o cólon se distende progressivamente. Pela lei de Laplace, o ceco, de maior diâmetro, sofre a maior tensão de parede. Diâmetro acima de 10 a 12 cm, sobretudo com dor e defesa na fossa ilíaca direita, indica isquemia iminente e risco de perfuração. Isso exige descompressão cirúrgica de urgência, em geral ressecção do tumor com colostomia. A pseudo-obstrução não tem lesão mecânica, e a tomografia mostra uma massa. O delgado não está dilatado, e o problema é colônico. O volvo de sigmoide dá imagem em grão de café, sem massa estenosante. O preparo intestinal oral é contraindicado na obstrução completa. Para lembrar: o câncer colorretal é a causa mais comum de obstrução do intestino grosso, e o ceco é o ponto que costuma perfurar."
+  }
+ },
+ {
+  "id": "res-162b9bc1",
+  "problema": "Pista de tamanho: a correta era a alternativa mais longa; encurtada sem mudar o sentido. Frase de 54 palavras dividida e \"Para lembrar\" acrescentado.",
+  "gravidade": "melhoria",
+  "campos": {
+   "alternativas": [
+    "O diagnóstico não pode ser firmado, pois a lipase não atingiu três vezes o limite superior",
+    "O diagnóstico está firmado por dor e tomografia, e a pancreatite é moderadamente grave",
+    "O diagnóstico está firmado, e a pancreatite é grave, pela presença de insuficiência renal",
+    "O diagnóstico está firmado, e a pancreatite é leve, pois não há necrose na tomografia",
+    "O diagnóstico exige os três critérios, e a gravidade só é definida após a tomografia de controle"
+   ],
+   "explicacao": "Pelo Atlanta revisado, o diagnóstico exige dois de três critérios: dor abdominal típica, amilase ou lipase ≥ 3 vezes o limite superior e achados de imagem característicos. Aqui, a enzima não atinge o corte, mas dor típica e TC compatível bastam. A gravidade é definida pela falência orgânica e pelas complicações. Há falência orgânica quando o escore de Marshall modificado é ≥ 2 em um sistema; creatinina entre 1,9 e 3,6 mg/dL pontua 2. Leve: sem falência nem complicações. Moderadamente grave: falência orgânica transitória (resolvida em até 48 horas) e/ou complicações locais ou sistêmicas. Grave: falência orgânica persistente (> 48 horas). A falência renal resolvida em 36 horas define a forma moderadamente grave; a ausência de necrose não torna o quadro leve. Para lembrar: no Atlanta revisado, quem define a gravidade é a duração da falência orgânica (corte de 48 horas), e não o aspecto tomográfico."
+  }
+ },
+ {
+  "id": "res-1a13baac",
+  "problema": "Frase de 47 palavras dividida; incluída a diretriz do ACG (2024) entre as referências vigentes.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Febre e leucocitose tardias com gás dentro de necrose encapsulada (walled-off necrosis, após 4 semanas) indicam necrose infectada. As diretrizes atuais (IAP/APA, AGA e ACG 2024) recomendam a abordagem escalonada (step-up). Primeiro, antibiótico que penetra na necrose (carbapenêmico, ou quinolona com metronidazol) e drenagem minimamente invasiva, percutânea ou endoscópica transmural. A necrosectomia, de preferência endoscópica ou por vídeo, fica para quem não melhora. Postergar a intervenção até o encapsulamento reduz a mortalidade. A necrosectomia aberta precoce tem mais complicações e mortalidade. A necrose infectada não se resolve sem tratamento, a punção é dispensável quando há gás e não há papel para ressecção pancreática. A via enteral deve ser mantida."
+  }
+ },
+ {
+  "id": "med-d15dba1c",
+  "problema": "Frase de 57 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "A queimadura de segundo grau profundo (espessura parcial profunda) atinge a derme reticular. A superfície é pálida ou mesclada, úmida ou seca, com bolhas rotas. A dor é menor que na superficial, pois parte das terminações nervosas foi destruída, mas a sensação de pressão persiste. O reenchimento capilar é lento, e os anexos (pelos) se soltam facilmente. Como restam poucos anexos para reepitelizar, a cicatrização leva mais de 3 semanas, com cicatriz hipertrófica e retração, e a excisão tangencial com enxerto costuma ser indicada. A de segundo grau superficial é rosada, úmida, muito dolorosa, com reenchimento rápido, e cicatriza em até 2 a 3 semanas. A de primeiro grau (como a queimadura solar) só atinge a epiderme, sem bolhas. A de terceiro grau forma escara branca ou marrom, seca, coriácea e insensível, e a escarotomia só se indica em lesões circunferenciais que restringem circulação ou ventilação. A de quarto grau atinge fáscia, músculo ou osso. Para lembrar: dor, cor e pelos distinguem as profundidades — quanto mais funda, menos dói e mais fácil o pelo sai."
+  }
+ },
+ {
+  "id": "med-5ad63c07",
+  "problema": "Frase de 46 palavras com os distratores; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Pneumotórax com fuga aérea maciça e persistente, que não se resolve com um ou dois drenos, enfisema subcutâneo e pneumomediastino extensos e hemoptise sugerem lesão de traqueia ou de brônquio principal, geralmente até 2,5 cm da carina no trauma fechado. O pulmão que \"cai\" para longe do hilo na radiografia, por perder a sustentação brônquica, é sinal clássico. A broncoscopia confirma a lesão e orienta a intubação seletiva, e o tratamento costuma ser o reparo cirúrgico. O pneumotórax hipertensivo recidivado seria tratado pela própria drenagem já instalada. A ruptura diafragmática mostra vísceras no tórax, sem fuga aérea. A lesão esofágica não explica borbulhamento maciço nem a falta de reexpansão. E a contusão pulmonar causa hipoxemia com opacidade parenquimatosa, não fuga aérea persistente. Para lembrar: o achado radiográfico recebe o nome de \"sinal do pulmão caído\" (fallen lung sign)."
+  }
+ },
+ {
+  "id": "med-3d00970c",
+  "problema": "Frase de 47 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Pápula ou nódulo de brilho perolado, com telangiectasias arboriformes e ulceração central (úlcera roedora), de crescimento lento, em área fotoexposta do terço superior da face, é a apresentação clássica do carcinoma basocelular nodular. É o câncer de pele mais comum; raramente dá metástases, mas pode ser localmente destrutivo. O carcinoma espinocelular costuma ser lesão queratósica, endurecida, de crescimento mais rápido e com potencial de metástase linfonodal. O ceratoacantoma cresce em semanas, com cratera central de queratina. A queratose seborreica é verrucosa e 'colada' na pele, e o melanoma nodular é, em geral, pigmentado."
+  }
+ },
+ {
+  "id": "med-80b84ab2",
+  "problema": "Frase de 54 palavras dividida; distrator da onicomicose não era comentado.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "O melanoma lentiginoso acral, localizado em palmas, plantas e aparelho ungueal, é o subtipo de melanoma mais frequente em pessoas negras e asiáticas, e não se relaciona à exposição solar. A melanoníquia longitudinal larga, irregular, única, em crescimento, com extensão do pigmento para a dobra periungueal (sinal de Hutchinson) exige biópsia da matriz ungueal. O hematoma subungueal costuma ter história de trauma, migra com o crescimento da unha e não pigmenta a dobra. A melanoníquia étnica é geralmente múltipla, em faixas estreitas e regulares. A onicomicose pigmentada costuma vir com espessamento e descolamento da lâmina. O sinal de Darier (urticação da lesão ao atrito) é da mastocitose, e o de Auspitz (sangramento puntiforme à curetagem), da psoríase. Para lembrar: Na dermatoscopia acral, o padrão paralelo da crista (pigmento nas cristas) sugere melanoma, enquanto o padrão paralelo do sulco é típico de nevo benigno."
+  }
+ }
+]

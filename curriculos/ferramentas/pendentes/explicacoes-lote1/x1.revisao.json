@@ -1,0 +1,332 @@
+[
+ {
+  "id": "med-3d3376ee",
+  "problema": "Frase inicial da explicação com 49 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "O óxido nitroso é cerca de 30 vezes mais solúvel no sangue que o nitrogênio. Por isso, entra nas cavidades fechadas com gás (alças intestinais distendidas, pneumotórax, pneumoencéfalo, ouvido médio, bolhas de gás intraoculares) muito mais rápido do que o nitrogênio consegue sair. Com isso, aumenta o volume ou a pressão dessas cavidades. Na obstrução intestinal, isso agrava a distensão, dificulta o fechamento da parede e pode comprometer a perfusão das alças. O óxido nitroso não é desencadeante de hipertermia maligna, papel dos halogenados e da succinilcolina. Sua baixa solubilidade no sangue confere indução e despertar rápidos. A nefrotoxicidade por flúor inorgânico foi associada ao metoxiflurano. Para lembrar: o óxido nitroso também oxida o cobalto da vitamina B12: uso prolongado ou repetido pode causar anemia megaloblástica e degeneração combinada subaguda."
+  }
+ },
+ {
+  "id": "med-59b6e1fe",
+  "problema": "Frase dos distratores com 53 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "A dose máxima é 4,5 mg/kg × 70 kg = 315 mg. Uma solução a 2% contém 2 g em 100 mL, isto é, 20 mg/mL; logo, 315 mg ÷ 20 mg/mL ≈ 15,7 mL. O valor de 31,5 mL corresponde ao erro de tratar a solução como se fosse a 1% (10 mg/mL). Já 24,5 mL resulta de usar a dose máxima com vasoconstritor (7 mg/kg = 490 mg). Por fim, 157 mL seria o volume de uma solução a 0,2%; e 7,9 mL, o de uma solução a 4%. A adrenalina associada reduz a absorção sistêmica e permite dose maior, e não deve ser usada em extremidades com circulação terminal comprometida. Ultrapassar a dose máxima expõe à intoxicação por anestésico local: gosto metálico, parestesia perioral, zumbido, convulsões e depressão cardiovascular. Para lembrar: para converter porcentagem em mg/mL, multiplique por 10 (2% = 20 mg/mL)."
+  }
+ },
+ {
+  "id": "med-85689f50",
+  "problema": "Frase dos distratores com 48 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "O sugamadex é uma gama-ciclodextrina modificada que encapsula o rocurônio (e o vecurônio) no plasma, formando um complexo inativo excretado pelo rim; reverte até bloqueios profundos, rapidamente e sem efeitos muscarínicos. A neostigmina é um inibidor da acetilcolinesterase que aumenta a acetilcolina na placa motora, mas só reverte bloqueios parciais e exige associação com atropina ou glicopirrolato para evitar bradicardia e hipersecreção. A atropina, isoladamente, é apenas um antimuscarínico; o dantroleno trata a hipertermia maligna; e o flumazenil antagoniza benzodiazepínicos. O sugamadex não reverte bloqueadores benzilisoquinolínicos, como o cisatracúrio, nem a succinilcolina."
+  }
+ },
+ {
+  "id": "med-bec113ce",
+  "problema": "Chamava a noradrenalina de 'alternativa em estudo'; o consenso internacional de 2018 já a aceita como alternativa à fenilefrina.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "A hipotensão decorre do bloqueio simpático, e a bradicardia indica que o bloqueio atingiu as fibras cardioaceleradoras (T1–T4). Na cesariana, a fenilefrina é o vasopressor de primeira linha para a hipotensão com frequência normal ou alta, pois preserva melhor o equilíbrio ácido-base fetal; porém, por ser agonista alfa puro, causa bradicardia reflexa. Com frequência de 54 bpm, prefere-se a efedrina, que tem ação beta e eleva a frequência, ou associa-se anticolinérgico (atropina ou glicopirrolato). A noradrenalina em doses baixas é alternativa aceita pelo consenso internacional de 2018, pois tem leve ação beta e causa menos bradicardia que a fenilefrina. A fenilefrina não acelera o coração — tende a reduzir a frequência. Não há sinais de anafilaxia (prurido, broncoespasmo, lesões de pele). A nitroglicerina pioraria a hipotensão. A hipotensão materna prolongada reduz o fluxo uteroplacentário e causa náusea, vômitos e sofrimento fetal, e deve ser tratada prontamente. Para lembrar: hipotensão com taquicardia → fenilefrina; hipotensão com bradicardia → efedrina ou anticolinérgico."
+  }
+ },
+ {
+  "id": "med-d834f9a1",
+  "problema": "Frase de mecanismo com 46 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Após denervação (lesão medular, AVC, doenças neuromusculares), grandes queimaduras, esmagamento ou imobilização prolongada, surgem receptores nicotínicos extrajuncionais e imaturos em toda a membrana muscular. A succinilcolina, agonista despolarizante, ativa todos eles e provoca efluxo maciço de potássio, com hiperpotassemia capaz de causar arritmias e parada cardíaca. O risco começa cerca de 24 a 72 horas após a lesão e persiste por meses. Na sequência rápida, usa-se rocurônio em dose alta, que tem início rápido e pode ser revertido com sugamadex. O rocurônio não desencadeia hipertermia maligna (a succinilcolina e os halogenados, sim) nem causa bradicardia importante; a liberação de histamina não é o problema central da succinilcolina; e o cisatracúrio não libera potássio. Para lembrar: a succinilcolina é o único bloqueador despolarizante em uso clínico, e sua ação curta se deve à hidrólise pela pseudocolinesterase plasmática."
+  }
+ },
+ {
+  "id": "res-1221f1a4",
+  "problema": "Abertura idêntica à de med-cef46338 no mesmo lote ('Na consulta pré-anestésica para colecistectomia videolaparoscópica eletiva'); cenário trocado para herniorrafia, sem mudar o gabarito.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Na classificação do estado físico da ASA, doença sistêmica leve e sem limitação funcional é ASA II; os exemplos oficiais incluem hipertensão e diabetes bem controlados e obesidade com IMC entre 30 e 40 kg/m². ASA III exige doença sistêmica grave, com limitação funcional (por exemplo, diabetes mal controlado, IMC ≥ 40 kg/m², DPOC). ASA I é o paciente saudável, e ASA IV é doença grave com ameaça constante à vida. O sufixo E indica cirurgia de emergência, o que não se aplica a uma herniorrafia eletiva. Para lembrar: não confunda os extremos: ASA V é o moribundo que não sobrevive sem a cirurgia; ASA VI é o paciente em morte encefálica, doador de órgãos.",
+   "enunciado": "Encaminhado para herniorrafia inguinal eletiva, um comerciante de 54 anos informa, na consulta pré-anestésica, hipertensão e diabetes tipo 2 tratados com losartana e metformina, com PA de 128/80 mmHg e hemoglobina glicada de 6,8%. O IMC é de 33 kg/m², não há lesão de órgão-alvo, e ele sobe dois lances de escada sem dispneia ou dor torácica. Nunca teve complicações anestésicas.\n\nComo ele se classifica pelo estado físico da ASA?"
+  }
+ },
+ {
+  "id": "res-6125be35",
+  "problema": "Distratores de 10,5 e 28 mL explicados de forma vaga ('erros de conversão'); explicitada a origem de cada um.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "A dose máxima de lidocaína é de cerca de 7 mg/kg com vasoconstritor (a epinefrina reduz a absorção sistêmica) e de 4,5 mg/kg sem ele. Para 60 kg: 7 × 60 = 420 mg. Solução a 2% contém 2 g em 100 mL, ou seja, 20 mg/mL; logo, 420 ÷ 20 = 21 mL. O valor de 13,5 mL corresponde ao limite sem epinefrina (270 mg). O de 42 mL resultaria de considerar a solução a 1% (10 mg/mL). O de 10,5 mL corresponderia a uma solução a 4% (40 mg/mL). O de 28 mL equivaleria a 560 mg, cerca de 9,3 mg/kg, acima do limite."
+  }
+ },
+ {
+  "id": "res-cf4c2058",
+  "problema": "Não mencionava a divergência com a diretriz pediátrica europeia (ESAIC 2022: claros 1 h, leite materno 3 h); acrescentada, deixando claro que a questão cobra a ASA. Frase inicial de 54 palavras dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "As recomendações de jejum pré-operatório da Sociedade Americana de Anestesiologistas (ASA) são adotadas no Brasil para procedimentos eletivos em pacientes saudáveis. Os prazos são: líquidos claros até 2 horas antes, leite materno até 4 horas, fórmula infantil e leite não humano até 6 horas, refeição leve até 6 horas e refeição gordurosa ou com carne até 8 horas. O leite materno esvazia do estômago mais rápido que a fórmula, por isso o intervalo é menor. Uma hora é tempo insuficiente para qualquer leite. Duas horas é o prazo dos líquidos claros, como água e soluções com carboidrato. Seis horas é o prazo da fórmula e da refeição leve, e 8 horas, o de refeições gordurosas. Jejum prolongado além do necessário em lactentes aumenta o risco de desidratação, hipoglicemia e irritabilidade. A diretriz pediátrica europeia (ESAIC, 2022) é mais liberal: líquidos claros até 1 hora e leite materno até 3 horas antes. Como o enunciado cobra a regra da ASA, vale aqui o prazo de 4 horas. Para lembrar: a sequência 2-4-6-8 (claros, materno, fórmula, gordura) resume a regra."
+  }
+ },
+ {
+  "id": "med-f2dd8aa2",
+  "problema": "Cenário usa neostigmina com TOF de 2 respostas sem comentar que a diretriz da ASA de 2023 prefere sugamadex no bloqueio moderado; nuance acrescentada.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "A neostigmina inibe a acetilcolinesterase e aumenta a acetilcolina na placa motora, onde ela compete com o rocurônio pelos receptores nicotínicos. Mas o aumento de acetilcolina é generalizado: nos receptores muscarínicos provoca bradicardia (M2), broncoespasmo e broncorreia, salivação e aumento do peristaltismo (M3). O glicopirrolato, antimuscarínico, bloqueia esses efeitos sem interferir nos receptores nicotínicos, preservando a reversão. Ele não potencializa a neostigmina na placa. A neostigmina não é antagonista direto do rocurônio: age indiretamente, pelo excesso de acetilcolina. O glicopirrolato é amônio quaternário e praticamente não atravessa a barreira hematoencefálica, por isso causa menos efeitos centrais que a atropina. A neostigmina não é agonista β1. Pela diretriz da ASA de 2023 sobre bloqueio neuromuscular, com duas respostas ao TOF (bloqueio moderado) sugere-se preferir o sugamadex. A neostigmina é alternativa razoável no bloqueio mínimo (quatro respostas, com relação TOF entre 0,4 e 0,9). Para lembrar: o sugamadex reverte o rocurônio por encapsulamento e dispensa o antimuscarínico, pois não aumenta a acetilcolina."
+  }
+ },
+ {
+  "id": "res-d75606bb",
+  "problema": "Frase inicial do enunciado com 50 palavras; dividida sem mudar conteúdo.",
+  "gravidade": "melhoria",
+  "campos": {
+   "enunciado": "Uma agricultora de 45 anos tem prótese valvar mecânica mitral há 8 anos e usa varfarina. Cansada das idas ao laboratório, que fica a 40 km de casa, e de ver o RNI \"sempre fora da faixa\", ela pergunta ao cardiologista se pode trocar para dabigatrana, que uma vizinha usa. A função renal é normal.\n\nO que responder a ela?"
+  }
+ },
+ {
+  "id": "med-39f39dea",
+  "problema": "Lista de fármacos a evitar na FA pré-excitada incompleta (faltavam betabloqueador, diltiazem e amiodarona IV); 'Para lembrar' repetia a primeira frase. Frase inicial longa dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Na pré-excitação, o impulso atrial chega ao ventrículo precocemente por uma via acessória (feixe de Kent), sem o retardo fisiológico do nó AV. Assim, o PR fica curto (< 0,12 s) e a ativação inicial lenta, célula a célula, gera a onda delta e alarga o QRS. Com taquicardias associadas, configura-se a síndrome de Wolff-Parkinson-White. O potássio normal afasta hipercalemia; o ritmo é sinusal, e não juncional; o bloqueio de 1º grau exigiria PR longo; o Brugada mostra supradesnivelamento de ST em V1–V2. Na fibrilação atrial pré-excitada, evitam-se os fármacos que bloqueiam o nó AV (adenosina, verapamil, diltiazem, digoxina, betabloqueadores e amiodarona intravenosa), e a ablação da via é o tratamento definitivo. Para lembrar: pré-excitação no ECG sem sintomas é o padrão de WPW; só se fala em síndrome de WPW quando há taquiarritmias associadas."
+  }
+ },
+ {
+  "id": "med-4dfc208f",
+  "problema": "Frase de conduta com 54 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "O quadro é de torsades de pointes: taquicardia ventricular polimórfica em paciente com QT longo adquirido, favorecido por macrolídeo, ondansetrona, hipocalemia e hipomagnesemia. O sulfato de magnésio intravenoso é o tratamento de primeira linha mesmo com magnésio normal, junto com a suspensão dos fármacos que alongam o QT e a correção do potássio. Nos casos refratários, aumenta-se a frequência cardíaca (isoproterenol ou estimulação temporária) para encurtar o QT. A desfibrilação é reservada à perda de pulso. Amiodarona, procainamida e sotalol prolongam ainda mais a repolarização e podem perpetuar a arritmia. A adenosina age no nó atrioventricular e não tem papel em taquicardia ventricular. Para lembrar: QTc acima de 500 ms eleva muito o risco de torsades; outros fármacos clássicos que alongam o QT: haloperidol, metadona, fluoroquinolonas e antiarrítmicos das classes IA e III."
+  }
+ },
+ {
+  "id": "med-75830378",
+  "problema": "Frase de leitura do traçado com 49 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Cada QRS é precedido por uma onda P positiva em DII (origem sinusal), o PR é constante de 0,16 s (quatro quadradinhos), o QRS é estreito. O intervalo RR é regular, de 0,80 s, ou seja, quatro quadrados grandes: FC = 300/4 = 75 bpm (ou 1.500/20 mm). O registro durante a queixa é, portanto, normal. Taquicardia sinusal exigiria FC acima de 100 bpm (RR menor que três quadrados grandes), e bradicardia, abaixo de 60 bpm. No ritmo juncional, a P some ou aparece invertida em DII, o que não ocorre aqui. O BAV de 1º grau exige PR acima de 0,20 s, e o PR deste traçado é normal. Para lembrar: no ritmo irregular (como na FA), não use 300 ÷ quadrados grandes: conte os QRS em 6 segundos (30 quadrados grandes) e multiplique por 10."
+  }
+ },
+ {
+  "id": "med-98e342ba",
+  "problema": "'Para lembrar' praticamente idêntico ao de med-ae7d4bf1 no mesmo lote; substituído por outro ponto do tema.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "O traçado mostra ondas F em \"dente de serrote\", sem linha isoelétrica entre elas, separadas por cerca de 0,20 s (um quadrado grande): frequência atrial de cerca de 300/min. Há um QRS estreito a cada quatro ondas F, com RR regular de 0,80 s: frequência ventricular de 75 bpm e condução 4:1. É um flutter atrial, cujo mecanismo mais comum é a macrorreentrada no átrio direito ao redor do anel tricúspide, tendo o istmo cavotricuspídeo como zona de condução lenta (alvo da ablação). A frequência de 150 bpm corresponderia à condução 2:1, não à deste traçado. Microrreentradas múltiplas e gatilhos nas veias pulmonares explicam a fibrilação atrial, que tem RR irregular. A taquicardia atrial ectópica tem P distintas com linha de base isoelétrica, e 150/min não corresponde ao intervalo entre as ondas F. Para lembrar: no flutter, a frequência ventricular costuma ser uma fração exata da atrial de cerca de 300/min: 150 bpm no bloqueio 2:1, 100 bpm no 3:1 e 75 bpm no 4:1."
+  }
+ },
+ {
+  "id": "med-c071fee4",
+  "problema": "Frase inicial com 46 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "No traçado, toda onda P é seguida de QRS, e o PR é fixo e longo, de 0,32 s (oito quadradinhos), acima do limite de 0,20 s: BAV de 1º grau. Trata-se, na verdade, de um atraso da condução no nó atrioventricular, sem ondas P bloqueadas. Em paciente assintomático, não há indicação de marca-passo nem contraindicação à cirurgia; o betabloqueador pode contribuir, e basta seguimento. No Mobitz I, o PR aumenta progressivamente até uma P não conduzir; no Mobitz II, surgem P bloqueadas sem alongamento prévio do PR; no BAV total, P e QRS não têm relação. A pré-excitação tem o oposto: PR curto (menor que 0,12 s) e onda delta. Para lembrar: no BAV de 1º grau nenhuma P fica sem QRS; o \"bloqueio\" é só um PR longo."
+  }
+ },
+ {
+  "id": "med-c7928f64",
+  "problema": "Frase de leitura do traçado com 58 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "O traçado alterna um batimento sinusal normal (P, PR normal e QRS estreito) com um complexo precoce, largo e bizarro, sem P precedente e com T de polaridade oposta: extrassístoles ventriculares em bigeminismo. Cada extrassístole é seguida de pausa compensatória completa (o intervalo entre os dois sinusais que a cercam é o dobro do RR sinusal, cerca de 1,6 s). O batimento precoce gera pouco volume sistólico, daí o déficit de pulso. A causa provável é intoxicação digitálica: a piora renal reduz a excreção da digoxina e a hipocalemia da furosemida aumenta a ligação do fármaco à Na⁺/K⁺-ATPase; náuseas e xantopsia completam o quadro. O mecanismo é a pós-despolarização tardia por sobrecarga de cálcio. O K⁺ está baixo, não alto, e as extrassístoles atriais teriam P precoce. No Mobitz II faltam QRS, enquanto aqui sobram. A TV sustentada teria complexos largos consecutivos, e a pré-excitação daria PR curto e onda delta. Para lembrar: arritmia grave ou hiperpotassemia na intoxicação digitálica indicam anticorpo antidigoxina (Fab); corrija hipocalemia e hipomagnesemia, que potencializam a toxicidade."
+  }
+ },
+ {
+  "id": "res-95e8c6e5",
+  "problema": "Frase sobre as condutas adequadas com 63 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "O traçado alterna um batimento sinusal normal com uma extrassístole ventricular precoce, de QRS largo e bizarro, sem P precedente e seguida de pausa compensatória: bigeminismo ventricular. Após infarto, os antiarrítmicos da classe IC (flecainida, propafenona) devem ser evitados: no estudo CAST (1989), encainida e flecainida suprimiram as extrassístoles, mas aumentaram a mortalidade de pacientes pós-infarto. As demais condutas são adequadas: o betabloqueador é a base do tratamento pós-infarto e o primeiro fármaco se houver sintomas. O Holter quantifica a carga de extrassístoles (cargas elevadas podem causar ou agravar disfunção ventricular). A espironolactona faz parte do tratamento da disfunção ventricular pós-infarto, com vigilância do potássio. E a FEVE deve ser reavaliada após a otimização clínica, para decidir sobre cardiodesfibrilador. Para lembrar: o CAST ensinou que suprimir a extrassístole não é o mesmo que tratar o paciente."
+  }
+ },
+ {
+  "id": "med-62c42fae",
+  "problema": "Duas frases da explicação com 47–50 palavras; divididas.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "A cardiopatia chagásica crônica tem como marcas o bloqueio de ramo direito com bloqueio divisional anterossuperior, extrassístoles ventriculares, alterações segmentares (sobretudo inferolaterais) e o aneurisma apical, local de estase onde se formam trombos murais. A doença de Chagas é causa importante de AVC cardioembólico no Brasil, mesmo sem fibrilação atrial. Com trombo documentado e infarto cortical, a prevenção secundária é feita com anticoagulação oral. Carótidas sem estenose e infarto cortical afastam aterotrombose de grande artéria e doença de pequenos vasos (que produz infartos lacunares). O Holter prolongado não mostrou fibrilação atrial, e betabloqueador não previne embolia. Por fim, não existe vasculite cerebral chagásica como mecanismo usual de AVC nem indicação de corticoide. Para lembrar: o aneurisma de ponta do ventrículo esquerdo é tão típico da cardiopatia chagásica que costuma ser chamado de \"lesão vorticilar\"."
+  }
+ },
+ {
+  "id": "med-494aee63",
+  "problema": "Não citava a versão vigente dos critérios (Duke-ISCVID 2023, adotada pela ESC 2023); 'Para lembrar' com maiúscula indevida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "São critérios maiores de Duke: hemoculturas positivas para microrganismo típico de endocardite (estreptococos do grupo viridans, S. gallolyticus, grupo HACEK, S. aureus, enterococos) em duas amostras separadas, e evidência de envolvimento endocárdico, como vegetação ao ecocardiograma. O paciente tem os dois, além de critérios menores (predisposição cardíaca e febre). O diagnóstico clínico definitivo exige dois maiores, ou um maior e três menores, ou cinco menores; a histologia é um critério patológico alternativo, não obrigatório. Fenômenos embólicos são critérios menores e não são necessários. A atualização Duke-ISCVID de 2023, adotada pela diretriz da ESC de 2023, mantém essa regra de classificação. Para lembrar: colha 3 pares de hemoculturas de sítios diferentes antes do antibiótico; o ecocardiograma transtorácico é o inicial, mas o transesofágico é superior para prótese, abscesso e vegetações pequenas."
+  }
+ },
+ {
+  "id": "med-90725107",
+  "problema": "Frase inicial com 55 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "A embolização de fragmentos de vegetações mitrais ou aórticas é complicação frequente da endocardite do lado esquerdo. O sistema nervoso central é o sítio sintomático mais comum e mais grave, em geral com AVC isquêmico no território da artéria cerebral média. Baço e rins também são atingidos com frequência, muitas vezes de forma silenciosa. O risco é maior com vegetações grandes (acima de 10 mm) e móveis, no folheto anterior da mitral, e nas primeiras duas semanas de antibioticoterapia — fatores que pesam na indicação de cirurgia precoce. Êmbolos pulmonares sépticos são típicos da endocardite tricúspide, como em usuários de drogas injetáveis. Membros, coronárias e mesentéricas são acometidos, mas com menor frequência."
+  }
+ },
+ {
+  "id": "med-b4fefd4f",
+  "problema": "Frase sobre grupos de alto risco com 65 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "A profilaxia antes de procedimentos dentários com manipulação gengival ou da região periapical, ou perfuração da mucosa, é restrita aos pacientes de alto risco. São eles os portadores de prótese valvar (mecânica, biológica ou transcateter) ou de material protético usado em plastia valvar e os que já tiveram endocardite. Também entram certas cardiopatias congênitas: cianóticas não corrigidas, ou corrigidas com material protético nos primeiros 6 meses ou com defeito residual adjacente ao material. Revascularização miocárdica, prolapso mitral, comunicação interatrial não operada e marca-passo não estão nesse grupo. O esquema habitual é amoxicilina 2 g por via oral 30 a 60 minutos antes. Para lembrar: a boa higiene bucal reduz mais bacteriemias do que qualquer profilaxia pontual."
+  }
+ },
+ {
+  "id": "med-d6c1eef5",
+  "problema": "Frase inicial com 48 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Na suspeita de endocardite com ecocardiograma transtorácico negativo ou inconclusivo, sobretudo em portador de prótese valvar, o ecocardiograma transesofágico é o próximo passo, pois tem sensibilidade muito maior para vegetações, abscessos perivalvares e deiscência protética. Muitos protocolos o indicam em todo paciente com prótese e suspeita de endocardite. Esperar 6 meses atrasaria o diagnóstico e o tratamento. A radiografia de tórax não avalia valvas. A tomografia de crânio só entra se houver sinais neurológicos. A cintilografia de perfusão investiga isquemia, não infecção valvar (quando se usa medicina nuclear, é o PET-CT com FDG, que ajuda justamente em próteses)."
+  }
+ },
+ {
+  "id": "res-c5d4d5db",
+  "problema": "'Para lembrar' repetia a primeira frase (e a questão med-773d7213 do lote tem vinheta quase idêntica); trocado por ponto novo (indicação cirúrgica na endocardite direita, ESC 2023). Frase inicial dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Em usuários de drogas injetáveis, a endocardite infecciosa acomete com frequência a valva tricúspide (sopro de regurgitação que aumenta à inspiração, sinal de Rivero-Carvallo). O principal agente é o Staphylococcus aureus, que causa quadro agudo e êmbolos sépticos pulmonares (nódulos cavitados). Os estreptococos do grupo viridans predominam na endocardite subaguda de valva nativa com lesão prévia após manipulação dentária; o enterococo associa-se a manipulação geniturinária em idosos; o S. epidermidis, a próteses valvares precoces; o S. gallolyticus, a neoplasia colorretal. Para lembrar: a endocardite tricúspide isolada costuma responder ao antibiótico; a cirurgia fica para casos selecionados, como insuficiência cardíaca direita refratária, infecção não controlada ou vegetação acima de 20 mm que persiste após embolias pulmonares recorrentes."
+  }
+ },
+ {
+  "id": "res-ed6f76cb",
+  "problema": "Dado impreciso: chamava o fechamento precoce da mitral de 'sinal de baixo débito'; é sinal de pressão diastólica do VE muito elevada na insuficiência aórtica aguda. Frase de 59 palavras dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Insuficiência cardíaca por regurgitação valvar aguda grave é a principal indicação de cirurgia na endocardite e a complicação que mais determina mortalidade. Aqui há edema pulmonar, taquicardia e fechamento precoce da mitral. Esse último sinal mostra que a pressão diastólica do ventrículo esquerdo, sem tempo para se adaptar, supera a do átrio esquerdo, como é típico da insuficiência aórtica aguda grave. Por isso, a troca valvar deve ser feita com urgência, sem aguardar o fim do antibiótico, que é mantido no pós-operatório. O balão intra-aórtico é contraindicado na insuficiência aórtica grave, pois a insuflação diastólica aumenta o refluxo. Anticoagulação não reduz vegetações e eleva o risco de hemorragia cerebral. O paciente está afebril, e o estreptococo sensível responde à ceftriaxona: o problema é mecânico, não de cobertura antimicrobiana."
+  }
+ },
+ {
+  "id": "med-08987ebd",
+  "problema": "Citava as diretrizes brasileiras sem ano; atualizado para a Diretriz Brasileira de HAS 2025 (que manteve os limites de MAPA).",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Pela Diretriz Brasileira de Hipertensão Arterial de 2025, que manteve os valores da edição de 2020, os limites de normalidade da MAPA são: 24 horas < 130/80 mmHg, vigília < 135/85 mmHg e sono < 120/70 mmHg. A paciente tem PA elevada no consultório e normal em todos os períodos da MAPA, o que define hipertensão do avental branco. Com baixo risco e sem lesão de órgão-alvo, a conduta é estilo de vida saudável e reavaliação periódica com medidas fora do consultório, pois há maior risco de evoluir para hipertensão sustentada. Hipertensão mascarada é o inverso (consultório normal, MAPA elevada). O descenso noturno está presente (cerca de 15%). A MAPA é justamente o exame que esclarece essa discordância."
+  }
+ },
+ {
+  "id": "med-3c8ab4b2",
+  "problema": "Frase de conduta com 45 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Na dissecção aguda de aorta, a meta é reduzir a força de ejeção (dP/dt) e a tensão sobre a parede, limitando a progressão da dissecção. Por isso, inicia-se betabloqueador intravenoso (esmolol, metoprolol ou labetalol), buscando FC ≤ 60 bpm e PAS entre 100 e 120 mmHg nos primeiros 20 minutos, se tolerado. Vasodilatadores (nitroprussiato, nitroglicerina) só são associados depois do betabloqueio, pois isoladamente causam taquicardia reflexa e aumentam o dP/dt. A regra de reduzir no máximo 25% na primeira hora vale para a maioria das emergências hipertensivas, mas não para dissecção aórtica. A hidralazina causa taquicardia reflexa. Anticoagulação e antiagregação são contraindicadas. O tipo A exige cirurgia de emergência. Para lembrar: a classificação de Stanford (1970) separa as dissecções que envolvem a aorta ascendente (tipo A, cirúrgica) das que não a envolvem (tipo B); a de DeBakey usa três tipos."
+  }
+ },
+ {
+  "id": "med-434a6dba",
+  "problema": "'Para lembrar' repetia a primeira frase; trocado pelo critério de Cornell.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Pelo critério de Sokolow-Lyon, a soma da onda S em V1 com a maior onda R em V5 ou V6 igual ou maior que 35 mm indica hipertrofia ventricular esquerda; aqui, 16 + 23 = 39 mm. O infradesnivelamento de ST com T invertida assimétrica nas derivações laterais é o padrão de \"strain\", secundário à sobrecarga, e não isquemia primária. A hipertrofia do ventrículo esquerdo é lesão de órgão-alvo e eleva o risco cardiovascular; o critério é específico, mas pouco sensível, e o ecocardiograma é mais preciso. O QRS de 0,09 s afasta bloqueio de ramo esquerdo; a hipertrofia direita aumentaria a onda R em V1. Para lembrar: o critério de Cornell (R em aVL + S em V3 acima de 28 mm no homem e de 20 mm na mulher) complementa o de Sokolow-Lyon, sobretudo em mulheres."
+  }
+ },
+ {
+  "id": "med-73b70439",
+  "problema": "Frase sobre colaterais com 53 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Na coarctação da aorta, geralmente logo após a origem da subclávia esquerda, a pressão é alta nos membros superiores e baixa nos inferiores, com pulsos femorais fracos e atrasados (atraso radiofemoral) e claudicação. O fluxo para a aorta distal chega por colaterais — ramos da subclávia (torácica interna, tronco tireocervical) para as artérias intercostais —, que se dilatam, ficam tortuosas e erodem a borda inferior das costelas (sinal de Roesler), geralmente da 3ª à 8ª. O fluxo colateral e pela área estenosada gera o sopro dorsal. A estenose de artéria renal não causa diferença de pulsos entre membros. Feocromocitoma e hiperaldosteronismo não produzem erosões costais. A arterite de Takayasu pode causar assimetria de pulsos, mas não afeta diretamente as costelas. Para lembrar: a coarctação associa-se com frequência à valva aórtica bicúspide e é a cardiopatia congênita mais típica da síndrome de Turner."
+  }
+ },
+ {
+  "id": "med-3734d3d6",
+  "problema": "Frase de conduta com 71 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Há congestão (ortopneia, crepitações, turgência jugular, edema: \"úmido\") e hipoperfusão (extremidades frias, sonolência, pressão de pulso estreita, oligúria, lactato alto, piora renal: \"frio\"), com hipotensão — perfil frio e úmido, em choque cardiogênico. A prioridade é restaurar a perfusão com inotrópico (como a dobutamina), associando noradrenalina se a pressão continuar baixa, e tratar a congestão com diurético intravenoso assim que a perfusão permitir, com monitorização intensiva. Em quem usa betabloqueador, a resposta à dobutamina pode ser menor, e a milrinona ou a levosimendana são alternativas quando a pressão permite. O betabloqueador deve ser suspenso ou reduzido nessa fase, e vasodilatadores ficam contraindicados pela hipotensão. O perfil quente e úmido, com pressão preservada, é o que responde a vasodilatador e diurético. Expansão volêmica agressiva pioraria a congestão, e aumentar o betabloqueador agravaria o baixo débito."
+  }
+ },
+ {
+  "id": "med-66e47af9",
+  "problema": "Frase das quatro classes com 55 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Na IC com fração de ejeção reduzida (≤ 40%), quatro classes reduzem mortalidade e hospitalizações e devem ser iniciadas e tituladas. São elas: inibidor do sistema renina-angiotensina (IECA, BRA ou, preferencialmente, sacubitril-valsartana no lugar do IECA), betabloqueador com evidência (carvedilol, bisoprolol ou succinato de metoprolol), antagonista mineralocorticoide (espironolactona) e inibidor de SGLT2 (dapagliflozina, empagliflozina), mesmo sem diabetes. Com potássio e função renal adequados, o paciente pode receber os três que faltam. Diuréticos e digoxina aliviam sintomas, mas não reduzem mortalidade. IECA com BRA aumenta hipercalemia e disfunção renal. Diltiazem e verapamil são contraindicados na FE reduzida. Ivabradina é opção adicional com FC ≥ 70 bpm já em betabloqueador em dose máxima tolerada."
+  }
+ },
+ {
+  "id": "med-a0c9b6e8",
+  "problema": "Maiúscula indevida após 'Para lembrar:'.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "A digoxina inibe a Na⁺/K⁺-ATPase do miócito: o Na⁺ intracelular sobe, o trocador Na⁺/Ca²⁺ remove menos cálcio e a contratilidade aumenta; ela também tem efeito vagal, que reduz a condução atrioventricular. O K⁺ compete com a digoxina pelo mesmo sítio na bomba; na hipocalemia, a ligação aumenta, e a toxicidade surge mesmo com níveis séricos habituais. Como a digoxina é eliminada sobretudo pelos rins, a piora da função renal a acumula. A intoxicação causa sintomas gastrointestinais, confusão, alterações visuais (xantopsia) e arritmias. A digoxina não é metabolizada de modo relevante pelo fígado, não bloqueia canais de cálcio nem estimula receptores β1, e a hipocalemia é um fator central, não irrelevante. Nos casos graves, usa-se o fragmento de anticorpo antidigoxina. Para lembrar: a janela terapêutica é estreita: na IC, níveis de 0,5 a 0,9 ng/mL bastam; amiodarona, verapamil e claritromicina elevam a digoxinemia, e a dose deve ser reduzida."
+  }
+ },
+ {
+  "id": "med-f39518d1",
+  "problema": "Frase de indicação com 59 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Na insuficiência cardíaca com FE de 35% ou menos, sintomática apesar do tratamento clínico otimizado, em ritmo sinusal e com bloqueio de ramo esquerdo e QRS de 150 ms ou mais, a terapia de ressincronização cardíaca é recomendação de classe I. Ela corrige a dissincronia entre septo e parede lateral, melhora a fração de ejeção, os sintomas e a sobrevida. A ivabradina só se aplica com FC sinusal de 70 bpm ou mais, e aqui a FC é 64 bpm. A digoxina alivia sintomas e reduz internações, mas não reduz mortalidade. Trocar um betabloqueador com benefício comprovado por outro equivalente não acrescenta nada. Hidralazina com nitrato é opção para quem não tolera o bloqueio do sistema renina-angiotensina ou, como adição, para pacientes autodeclarados negros, e ainda assim ficaria atrás da ressincronização nesse perfil. Para lembrar: na ressincronização, o trio que mais responde é “esquerdo, largo e sinusal” — BRE, QRS ≥ 150 ms e ritmo sinusal."
+  }
+ },
+ {
+  "id": "res-585a34a7",
+  "problema": "Frase inicial do enunciado com 50 palavras; dividida sem mudar conteúdo.",
+  "gravidade": "melhoria",
+  "campos": {
+   "enunciado": "Mesmo com as quatro classes de base da insuficiência cardíaca, um homem de 62 anos com cardiomiopatia dilatada idiopática, fração de ejeção de 30% e classe funcional II da NYHA mantém FC de 80 bpm em ritmo sinusal no ECG. No Holter de 24 horas, a média é de 78 bpm. Usa sacubitril-valsartana, espironolactona, dapagliflozina e carvedilol, com adesão completa; tentativas de aumentar o carvedilol provocaram hipotensão sintomática e tontura. PA de 102/64 mmHg, sem congestão. Potássio de 4,6 mEq/L e TFG estimada de 62 mL/min/1,73 m². Não usa outros fármacos que alterem a frequência cardíaca.\n\nQual é o próximo passo terapêutico com benefício comprovado?"
+  }
+ },
+ {
+  "id": "res-7f48af73",
+  "problema": "Frases longas no enunciado (52) e na explicação (47); divididas sem mudar conteúdo.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "A combinação de insuficiência cardíaca com fração de ejeção preservada em idoso, hipertrofia ao eco com baixa voltagem no ECG, strain com preservação apical, túnel do carpo bilateral, estenose do canal lombar, intolerância a anti-hipertensivos e troponina persistentemente alta sugere amiloidose cardíaca por transtirretina. O diagnóstico não invasivo combina a cintilografia óssea com pirofosfato (ou DPD/HMDP) de tecnécio, que mostra captação cardíaca intensa, com a exclusão de proteína monoclonal. Essa exclusão é feita por imunofixação sérica e urinária e dosagem de cadeias leves livres, pois a amiloidose AL também pode captar o traçador e exige tratamento urgente diferente. A biópsia endomiocárdica fica para casos discordantes. O teste genético distingue a forma hereditária da selvagem, mas vem depois da confirmação da amiloidose. Coronariografia e teste ergométrico não investigam a hipótese principal. Para lembrar: hipertrofia no eco com baixa voltagem no ECG é uma discordância que deve lembrar infiltração, e não hipertrofia muscular.",
+   "enunciado": "Um detalhe da história chama a atenção do cardiologista: o homem de 79 anos, com dispneia aos médios esforços e edema de membros inferiores há 8 meses, operou síndrome do túnel do carpo bilateral há 6 anos. Além disso, tem estenose do canal lombar e não tolera anti-hipertensivos, com tonturas mesmo em doses baixas. O ECG mostra baixa voltagem nas derivações periféricas, embora o ecocardiograma mostre paredes do ventrículo esquerdo de 17 mm, fração de ejeção de 55% e strain longitudinal reduzido nas porções basais, com relativa preservação do ápice. NT-proBNP elevado e troponina persistentemente pouco aumentada.\n\nQual é a investigação mais apropriada a seguir?"
+  }
+ },
+ {
+  "id": "res-c186fc7f",
+  "problema": "Frase dos distratores com 48 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Os betabloqueadores com benefício comprovado na ICFEr (carvedilol, bisoprolol, succinato de metoprolol) reduzem mortalidade e hospitalizações e integram a terapia quádrupla recomendada pela SBC, junto com IECA/BRA/sacubitril-valsartana, antagonista mineralocorticoide e inibidor de SGLT2. Devem ser iniciados em dose baixa em paciente euvolêmico e titulados até a dose-alvo. A digoxina reduz hospitalizações, mas não mortalidade. A ivabradina é reservada a pacientes em ritmo sinusal com FC ≥ 70 bpm apesar de betabloqueador em dose máxima tolerada, e reduz hospitalização, não mortalidade total. O anlodipino é neutro, e o diltiazem é contraindicado na ICFEr por efeito inotrópico negativo."
+  }
+ },
+ {
+  "id": "med-5acbb87f",
+  "problema": "Não mencionava que a Diretriz Brasileira de Dislipidemias 2025 recomenda a equação de Martin/Hopkins para o LDL-c calculado.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Pela fórmula de Friedewald, LDL-c = CT − HDL-c − TG/5 = 240 − 40 − 40 = 160 mg/dL. O termo TG/5 estima o colesterol das VLDL, supondo uma proporção fixa entre triglicerídeos e colesterol nessas partículas; com triglicerídeos ≥ 400 mg/dL (ou presença de quilomícrons), essa proporção deixa de valer e a estimativa fica inaceitável. O valor de 200 mg/dL é o colesterol não HDL (CT − HDL-c), e não o LDL-c. Dividir os triglicerídeos por 2,5 levaria a 120 mg/dL, e o HDL-c baixo ou o colesterol total alto não invalidam a fórmula. A Diretriz Brasileira de Dislipidemias de 2025 recomenda calcular o LDL-c pela equação de Martin/Hopkins, que usa um divisor variável conforme os triglicerídeos e o colesterol não HDL. A fórmula de Friedewald continua cobrada pela simplicidade. Para lembrar: com TG ≥ 400 mg/dL, use o colesterol não HDL como alvo (meta do LDL-c + 30 mg/dL) ou dose o LDL-c por método direto."
+  }
+ },
+ {
+  "id": "med-0f8c2dd2",
+  "problema": "'Para lembrar' com maiúscula indevida e frase truncada.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "É o padrão de Wellens: ondas T profundamente invertidas (ou bifásicas) em V2–V3, registradas no período sem dor após um episódio anginoso, com pouca ou nenhuma elevação de marcadores. Indica estenose crítica da porção proximal da artéria descendente anterior, com alto risco de infarto anterior extenso em poucos dias. O teste de esforço é contraindicado, pois pode precipitar o infarto; a conduta é a estratificação invasiva com cateterismo. A pericardite causa supradesnivelamento difuso do ST e infradesnivelamento do PR. A repolarização precoce tem supradesnivelamento com entalhe no ponto J, sem ondas T invertidas profundas. Não há supradesnivelamento que indique fibrinólise, e a parede é anterior. A hipercalemia causa ondas T apiculadas, e não invertidas. Para lembrar: outros padrões cobrados como \"equivalentes\" de oclusão coronariana são o de De Winter (T apiculadas com infra de ST ascendente em V1–V6) e os critérios de Sgarbossa no BRE."
+  }
+ },
+ {
+  "id": "med-572cbab3",
+  "problema": "Explicação dizia que o paciente era bradicárdico, dado ausente do enunciado.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "No infarto de ventrículo direito, o débito do VD depende muito da pré-carga. A hipotensão com pulmões limpos pede expansão volêmica cuidadosa com cristaloide e reavaliação a cada alíquota; se não houver resposta, associa-se inotrópico. Nitratos e morfina são venodilatadores e reduzem o retorno venoso, o que pode levar a hipotensão grave. A furosemida é contraindicada pelo mesmo motivo: a turgência jugular vem da falência do VD, não de excesso de volume. O betabloqueador venoso é contraindicado em paciente hipotenso, sobretudo no infarto inferior, que frequentemente cursa com bradicardia e bloqueios. Para lembrar: a tríade clínica do infarto de VD é hipotensão, turgência jugular e pulmões limpos."
+  }
+ },
+ {
+  "id": "med-a324e401",
+  "problema": "Frase com 58 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "O traçado, em ritmo sinusal, mostra elevação do ponto J e do segmento ST de cerca de 3 mm (0,3 mV), retificada (sem a concavidade habitual) e contínua com a onda T. Com dor típica, isso indica corrente de lesão subepicárdica (transmural), sugestiva de oclusão coronariana aguda. Porém, o diagnóstico de IAM com supra de ST exige elevação em pelo menos duas derivações contíguas, e uma derivação isolada de monitor também não permite localizar a parede. Por isso, o próximo passo é o ECG de 12 derivações em até 10 minutos da chegada (diretrizes da SBC e da AHA), para então decidir rapidamente a reperfusão. Aguardar troponina atrasa a reperfusão, e isquemia subendocárdica se manifesta por infradesnivelamento. A repolarização precoce tem ST côncavo, em jovens assintomáticos. A pericardite causa supra côncavo e difuso, com infra do PR e dor pleurítica. Iniciar fibrinolítico sem confirmar os critérios no ECG completo não é adequado. Para lembrar: \"tempo é músculo\"; o ECG de 12 derivações deve estar pronto nos primeiros 10 minutos."
+  }
+ },
+ {
+  "id": "med-f3825734",
+  "problema": "Frase inicial com 45 palavras; dividida.",
+  "gravidade": "melhoria",
+  "campos": {
+   "explicacao": "Infradesnivelamento de ST em V1 a V3, com ondas R amplas e T positivas, é a imagem em espelho de um supradesnivelamento na parede posterior (inferobasal) do ventrículo esquerdo. Esse é, em geral, o território da circunflexa ou da coronária direita, que as derivações convencionais não registram diretamente. Devem-se registrar V7, V8 e V9 (5º espaço intercostal nas linhas axilar posterior, escapular média e paravertebral esquerdas): supra de ST de 0,5 mm ou mais confirma infarto posterior, equivalente de infarto com supra, que exige reperfusão imediata. Classificá-lo como infarto sem supra atrasaria a reperfusão. V3R e V4R avaliam o ventrículo direito, cujo infarto acompanha o inferior e dá supra em V1, e não infra. Esperar a segunda troponina perde tempo de miocárdio. A hipertrofia ventricular dá ondas R amplas em V5 e V6, com alteração de repolarização lateral. Para lembrar: infra de V1 a V3 visto 'de cabeça para baixo' é supra posterior."
+  }
+ },
+ {
+  "id": "res-1562a607",
+  "problema": "Frase inicial do enunciado com 60 palavras; dividida sem mudar conteúdo.",
+  "gravidade": "melhoria",
+  "campos": {
+   "enunciado": "Quarto dia na unidade coronariana: um homem de 67 anos, internado por infarto com supradesnivelamento do ST em parede inferior (DII, DIII e aVF), por oclusão da coronária direita dominante, tratado com fibrinolítico por atraso no transporte e aguardando cateterismo. Estava estável até desenvolver subitamente dispneia intensa, ortopneia e estertores até os ápices, com PA 82/50 mmHg e SpO₂ 84%. Ausculta-se sopro sistólico suave no ápice, sem frêmito. A radiografia mostra edema pulmonar. O ecocardiograma à beira do leito mostra folheto posterior da mitral com movimento em chicote e regurgitação mitral grave, com septo interventricular íntegro e sem derrame pericárdico.\n\nQual complicação ocorreu, e como tratá-la?"
+  }
+ }
+]
