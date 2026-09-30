@@ -45,7 +45,7 @@ function paginaBiblioteca(aba) {
       <h2 class="sec">Salvas <span class="small muted">${minhas.length}</span></h2>
       ${tabela([{ t: "Questão" }, { t: "Trilha" }, { t: "Tema" }, { t: "" }], minhas.map(x => [`<a href="#/questoes/q/${esc(x.id)}">${esc((x.enunciado || x.q || "").slice(0, 100))}</a>`, esc(TRILHAS[x.t]?.curto || x.t), x.tema ? linkTema(x.tema) : "—", `<button class="btn mini sec" data-act="q-del" data-id="${esc(x.id)}">Excluir</button>`]), { vaziaMsg: "Nenhuma questão sua ainda. Cadastre acima ou gere com o assistente dentro de um tema." })}`;
   } else if (aba === "dados") {
-    corpo = `<div class="faixa"><p class="small">${store.naConta ? "Seus dados ficam na sua conta Claude e sincronizam entre aparelhos." : "Seus dados estão só neste navegador. Faça backups para não perdê-los."}</p></div>
+    corpo = `${blocoNuvem()}<div class="faixa"><p class="small">${NUVEM.disponivel() ? (NUVEM.estado().tipo === "google" ? "Seus dados ficam na sua conta Google e sincronizam entre aparelhos." : "Seus dados estão guardados para este aparelho. Entre com o Google para usar em outros aparelhos.") : store.naConta ? "Seus dados ficam na sua conta Claude e sincronizam entre aparelhos." : "Seus dados estão só neste navegador. Faça backups para não perdê-los."}</p></div>
       ${blocoBackups()}
       <details class="filtros"><summary>Backup manual (${DOWNLOADS ? "baixar, copiar ou restaurar" : "copiar o texto ou restaurar"})</summary><div class="pilha" style="margin-top:10px">
         <p class="small muted" style="margin:0">${DOWNLOADS ? "Baixe o arquivo do backup e guarde fora deste navegador (e-mail, Drive)." : "Toque em Copiar e cole o texto do backup num lugar seguro (e-mail para você mesma, bloco de notas, Drive). Para voltar, cole o texto em \"Ou cole um backup\"."}</p>
@@ -95,3 +95,14 @@ ACOES["bk-colar"] = () => restaurar($("#bk-txt").value);
 MUDANCAS["bk-arquivo"] = async el => { const f = el.files[0]; if (f) restaurar(await f.text()); };
 ACOES["zerar-conf"] = () => abrirFolha(`<h2 class="sec">Zerar progresso?</h2><p>Respostas, erros, revisões, flashcards, simulados, plano e tempo de estudo serão apagados. Não tem volta — faça um backup antes.</p><div class="linha"><button class="btn sec" data-act="fechar-folha">Cancelar</button><button class="btn perigo" data-act="zerar-ok">Zerar</button></div>`);
 ACOES["zerar-ok"] = () => { store.zerar([...Object.keys(TRILHAS).map(docProg), "dias", "erros", ...blocosCards(), "revisoes", "simulados", "plano", "guia"]); fecharFolha(); toast("Progresso zerado"); ir("#/"); };
+
+/** Conta Google (só no site público com Firebase): entrar para sincronizar entre aparelhos. */
+function blocoNuvem() {
+  if (!NUVEM.disponivel()) return "";
+  const e = NUVEM.estado();
+  if (e.tipo === "google") return `<section class="caixa"><h2 class="sec">Sua conta</h2><p>Conectada como <b>${esc(e.nome || e.email)}</b>${e.nome && e.email ? ` (${esc(e.email)})` : ""}. O progresso aparece em qualquer aparelho em que você entrar com esta conta.</p><div class="linha"><button class="btn sec" data-act="nuvem-sair">Sair desta conta</button></div></section>`;
+  return `<section class="caixa"><h2 class="sec">Usar em outros aparelhos</h2><p>Entre com sua conta Google para ver o mesmo progresso no celular e no computador. O que você já fez aqui continua valendo.</p><div class="linha"><button class="btn azul grande" data-act="nuvem-entrar">Entrar com Google</button></div><p class="small muted" id="nuvem-msg" role="status"></p></section>`;
+}
+ACOES["nuvem-entrar"] = async el => { el.disabled = true; const m = await NUVEM.entrarGoogle(); el.disabled = false; const s = document.getElementById("nuvem-msg"); if (m && s) s.textContent = m; };
+ACOES["nuvem-sair"] = () => abrirFolha(`<h2 class="sec">Sair da conta Google?</h2><p>Neste aparelho o app volta a guardar só localmente. Seus dados continuam salvos na conta.</p><div class="linha"><button class="btn sec" data-act="fechar-folha">Cancelar</button><button class="btn perigo" data-act="nuvem-sair-ok">Sair</button></div>`);
+ACOES["nuvem-sair-ok"] = () => NUVEM.sair();

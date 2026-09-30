@@ -1,0 +1,35 @@
+rules_version = '2';
+// Regras do Firestore do Gabarito Amazonas (versão pública, GitHub Pages).
+// Cole no console: Firestore Database → Regras → Publicar.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Progresso de cada pessoa: só ela lê e grava (login anônimo ou Google).
+    match /data/users/{uid}/{resto=**} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+
+    // "Reportar problema" numa questão: qualquer pessoa conectada pode criar; ninguém lê pelo app.
+    // (A dona do app lê pelo console do Firebase.)
+    match /reportes/{id} {
+      allow create: if request.auth != null
+        && request.resource.data.keys().hasOnly(['qid', 'motivo', 'texto', 'ts'])
+        && request.resource.data.qid is string && request.resource.data.qid.size() <= 40
+        && request.resource.data.motivo is string && request.resource.data.motivo.size() <= 40
+        && request.resource.data.texto is string && request.resource.data.texto.size() <= 600
+        && request.resource.data.ts is int;
+    }
+
+    // Calibração anônima (acertou/errou por questão): cada aparelho grava o seu documento.
+    match /calibracao/{anon} {
+      allow create, update: if request.auth != null
+        && request.resource.data.keys().hasOnly(['q', 'ts'])
+        && request.resource.data.q is map && request.resource.data.q.size() <= 5000;
+    }
+
+    // Totais da calibração: leitura pública; gravação só pelo console (dona do app).
+    match /calibracao_total/{id} {
+      allow read: if true;
+    }
+  }
+}

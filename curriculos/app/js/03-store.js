@@ -149,7 +149,7 @@ const store = (() => {
       try {
         await db.doc(`data/users/${uid}/${nome}`).set(corpo);
         guardarBase(nome, corpo); docs[nome]._sync = corpo._ts; guardarLocal(nome); falhas = 0;
-        status("salvo na sua conta");
+        status(textoSalvo());
       } catch (e) {
         const cota = e?.code === "quota_exceeded";
         status(cota ? "limite de armazenamento atingido" : "sem conexão — salvo neste aparelho");
@@ -161,6 +161,7 @@ const store = (() => {
     if (pend[nome]) { pend[nome] = false; gravar(nome); }
   }
   function descarregar() { const l = [...sujos]; sujos.clear(); l.forEach(gravar); }
+  const textoSalvo = () => NUVEM.disponivel() && NUVEM.estado().tipo !== "google" ? "salvo na nuvem (este aparelho)" : "salvo na sua conta";
   function status(t) { const el = document.getElementById("sync"); if (el) el.textContent = t; }
   function aviso(t) { if (typeof toast === "function") toast(t, 8000); }
 
@@ -186,7 +187,8 @@ const store = (() => {
   async function conectar() {
     listaLocal().forEach(doc);
     migrarLocalV1();
-    const use = window.claude && window.claude.use;
+    // No Claude: armazenamento do artefato. Fora dele (site público): Firebase, se configurado.
+    const use = (window.claude && window.claude.use) || await NUVEM.use();
     if (!use) { status("salvando neste aparelho"); return; }
     try {
       const [u, d] = await Promise.all([use("user"), use("db")]);
@@ -201,7 +203,7 @@ const store = (() => {
       // O que só existe aqui (ou mudou fora do ar) sobe para a conta
       Object.keys(docs).forEach(n => { if (!remotos[n] && ((docs[n]._ts || 0) > 0)) sujos.add(n); });
       descarregar();
-      status("salvo na sua conta");
+      status(textoSalvo());
       if (mudouAlgo && aoMudarRemoto) aoMudarRemoto();
       acompanhar();
     } catch (e) { db = null; status("salvando neste aparelho"); }

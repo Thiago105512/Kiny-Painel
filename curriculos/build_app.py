@@ -132,6 +132,9 @@ if __name__ == "__main__":
     }
     validar_pilulas(dados["pilulas"], catalogo_temas(mapa, enem))
     # Humor (Pausa para rir): humor/*.json = [{id, texto, tipo, dominio}]
+    # Firebase da versão pública (dados/firebase.json = configuração Web do projeto; a apiKey é pública por natureza,
+    # a proteção vem das regras em firestore.rules). Sem o arquivo, o site público salva só no aparelho.
+    dados["firebase"] = ler("dados/firebase.json", {}) or None
     dados["humor"] = [h for arq in sorted((AQUI / "humor").glob("*.json")) for h in json.loads(arq.read_text(encoding="utf-8"))] if (AQUI / "humor").exists() else []
     # Jogos: casos-dia.json, termo.json, pares.json (cada um opcional)
     def _jogo(nome):

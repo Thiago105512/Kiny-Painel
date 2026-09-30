@@ -696,7 +696,7 @@ table,th,td,.num{overflow-wrap:normal}
 /* grades de cartões: a coluna mínima cresce com a letra (com letra grande, uma coluna só) */
 .medalhas{grid-template-columns:repeat(auto-fill,minmax(min(100%,calc(112px * var(--k))),1fr))}
 .niveis{grid-template-columns:repeat(auto-fill,minmax(min(100%,calc(120px * var(--k))),1fr))}
-.quem-cartas{grid-template-columns:repeat(auto-fill,minmax(min(100%,calc(150px * var(--k))),1fr))}
+.quem-cartas{grid-template-columns:repeat(auto-fill,minmax(min(100%,calc(170px * var(--k))),1fr))}
 .jg-linha{grid-template-columns:minmax(0,1fr)}
 .jg-marco{flex-wrap:wrap}.jg-marco>span:last-child{flex:1 1 0;min-width:auto}
 .jg-marco b{font-size:min(calc(16px * var(--k)),6vw)}
