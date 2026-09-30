@@ -207,6 +207,11 @@ if __name__ == "__main__":
     html = html.replace("/*DADOS*/", dados_js, 1)
     html = html.replace("/*CODIGO*/", js.replace("</script", "<\\/script"), 1)
     (AQUI / "app.html").write_text(html, encoding="utf-8")
+    # Cópia para o GitHub Pages (site público, sem conta): docs/index.html na raiz do repositório
+    site = AQUI.parent / "docs"
+    site.mkdir(exist_ok=True)
+    (site / "index.html").write_text(html, encoding="utf-8")
+    (site / ".nojekyll").write_text("", encoding="utf-8")
     kb = len(html.encode("utf-8")) // 1024
     print(f"app.html gerado ({kb} KB): questões {sum(map(len, banco.values()))}, temas {len(mapa.get('temas', []))}, "
           f"assuntos ENEM {sum(len(d.get('assuntos', [])) for a in enem.get('areas', []) for d in a.get('disciplinas', []))}, "
