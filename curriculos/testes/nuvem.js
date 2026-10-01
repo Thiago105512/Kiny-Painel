@@ -29,7 +29,7 @@ const MOCK = `
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 } });
   await ctx.route('https://www.gstatic.com/**', r => r.fulfill({ contentType: 'text/javascript', body: /app-compat/.test(r.request().url()) ? MOCK : '' }));
   await ctx.route(u => u.href.split('#')[0] === URL.split('#')[0], async r => {
-    const res = await r.fetch(); const body = (await res.text()).replace('"firebase":null', '"firebase":' + JSON.stringify(CFG));
+    const res = await r.fetch(); const body = (await res.text()).replace(/"firebase":(null|\{[^{}]*\})/, '"firebase":' + JSON.stringify(CFG));
     r.fulfill({ response: res, body });
   });
   const p = await ctx.newPage(); p.on('pageerror', e => errs.push(e.message));
