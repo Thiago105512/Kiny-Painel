@@ -41,12 +41,17 @@ const IC = {
   estudar: "M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z",
   busca: "M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM21 21l-5-5",
   curso: "M2 9l10-5 10 5-10 5zM6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5M22 9v6",
+  areas: "M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z",
+  direito: "M12 4v16M7 20h10M5 7h14M5 7l-3 6a3 3 0 0 0 6 0zM19 7l-3 6a3 3 0 0 0 6 0z",
+  concursos: "M4 8h16v12H4zM9 8V5h6v3M4 13h16",
 };
-const icone = n => `<svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="${IC[n] || ""}"/></svg>`;
+/* "Áreas": quatro quadradinhos coloridos (as cores das áreas), para se destacar na barra. */
+const ICONE_AREAS = `<svg class="icone ic-areas" viewBox="0 0 24 24" aria-hidden="true"><rect class="q1" x="3" y="3" width="8" height="8" rx="2.2"/><rect class="q2" x="13" y="3" width="8" height="8" rx="2.2"/><rect class="q3" x="3" y="13" width="8" height="8" rx="2.2"/><rect class="q4" x="13" y="13" width="8" height="8" rx="2.2"/></svg>`;
+const icone = n => n === "areas" ? ICONE_AREAS : `<svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="${IC[n] || ""}"/></svg>`;
 
 /* Navegação em grupos: o que estudar, praticar, revisar e organizar */
 const GRUPOS_NAV_BASE = [
-  ["", [["inicio", "#/", "Início"], ["curso", "#/curso", "Meu curso"]]],
+  ["", [["inicio", "#/", "Início"], ["areas", "#/areas", "Áreas de estudo"], ["curso", "#/curso", "Meu curso"]]],
   ["Estudar", [["estudar", "#/estudar", "Pílulas de estudo"], ["medicina", "#/medicina", "Medicina"], ["enem", "#/enem", "ENEM e vestibulares"]]],
   ["Praticar", [["questoes", "#/questoes", "Questões"], ["simulados", "#/simulados", "Simulados"], ["casos", "#/casos", "Casos clínicos"], ["jogos", "#/jogos", "Jogos"]]],
   ["Revisar", [["revisoes", "#/revisoes", "Revisões"], ["flashcards", "#/flashcards", "Flashcards"]]],
@@ -54,9 +59,12 @@ const GRUPOS_NAV_BASE = [
 ];
 /** O menu segue o objetivo do perfil: o que não é do objetivo não aparece (nem em "Outras áreas"). */
 const FORA_DO_OBJETIVO = { medicina: ["enem"], residencia: ["enem", "curso"], enem: ["medicina", "casos", "curso"], direito: ["medicina", "enem", "casos"], oab: ["medicina", "enem", "casos", "curso"] };
+/* Sempre pelo objetivo de CONTEÚDO (Vestibulares segue as regras do ENEM). */
+const foraDoObjetivo = () => FORA_DO_OBJETIVO[objetivo()] || [];
 function gruposNav() {
-  const fora = FORA_DO_OBJETIVO[store.doc("perfil").objetivo] || [];
-  return GRUPOS_NAV_BASE.map(([n, it]) => [n, it.filter(x => !fora.includes(x[0]))]).filter(([, it]) => it.length);
+  const fora = foraDoObjetivo();
+  const nomeEnem = { enem: "ENEM", vestibulares: "Vestibulares" }[objetivoEscolhido()];
+  return GRUPOS_NAV_BASE.map(([n, it]) => [n, it.filter(x => !fora.includes(x[0])).map(x => x[0] === "enem" && nomeEnem ? [x[0], x[1], nomeEnem] : x)]).filter(([, it]) => it.length);
 }
 /** Autocompletar global de temas (datalist): só temas do objetivo; remontado quando o objetivo muda. */
 let _dlObj;
@@ -67,25 +75,40 @@ function montarListaTemas() {
 }
 let GRUPOS_NAV = GRUPOS_NAV_BASE;
 const NAV = GRUPOS_NAV_BASE.flatMap(g => g[1]);
-const INFERIOR_POR_OBJ = { medicina: ["inicio", "curso", "medicina", "revisoes"], residencia: ["inicio", "questoes", "simulados", "revisoes"], enem: ["inicio", "enem", "questoes", "revisoes"], direito: ["inicio", "curso", "questoes", "revisoes"], oab: ["inicio", "questoes", "simulados", "revisoes"] };
-let INFERIOR = ["inicio", "medicina", "enem", "revisoes"];
-const CURTO = { enem: "ENEM", curso: "Curso" };
+/* Barra de baixo (celular): 5 botões fixos — Início · área atual · Áreas · Revisões · Mais.
+   O 2º botão leva à página principal do objetivo escolhido, com o ícone e o nome dele
+   (sem objetivo: "Estudar"). "Meu curso", Questões, Simulados etc. ficam no "Mais". */
+const AREA_DO_OBJ = {
+  medicina: { k: "medicina", h: "#/medicina", t: "Medicina", ic: "medicina" },
+  residencia: { k: "medicina", h: "#/medicina", t: "Residência", ic: "medicina" },
+  enem: { k: "enem", h: "#/enem", t: "ENEM", ic: "enem" },
+  vestibulares: { k: "enem", h: "#/enem", t: "Vestibular", ic: "enem" },
+  direito: { k: "questoes", h: "#/questoes", t: "Direito", ic: "direito" },
+  oab: { k: "questoes", h: "#/questoes", t: "OAB", ic: "direito" },
+};
+const areaAtual = () => AREA_DO_OBJ[objetivoEscolhido()] || { k: "estudar", h: "#/estudar", t: "Estudar", ic: "estudar" };
+let INFERIOR = ["inicio", "estudar", "areas", "revisoes"];
+const CURTO = { enem: "ENEM", curso: "Curso", areas: "Áreas" };
 
 function desenharNav(secao) {
   montarListaTemas();
   /* Boas-vindas (antes de escolher o objetivo): sem menu, para não mostrar conteúdo de nenhuma área. */
   if (secao === "boas-vindas") { $("#nav-lateral").innerHTML = ""; $("#nav-inferior").innerHTML = ""; return; }
-  GRUPOS_NAV = gruposNav(); INFERIOR = INFERIOR_POR_OBJ[store.doc("perfil").objetivo] || ["inicio", "medicina", "enem", "revisoes"];
+  const ar = areaAtual();
+  GRUPOS_NAV = gruposNav(); INFERIOR = ["inicio", ar.k, "areas", "revisoes"];
   const n = pendencias().total;
   const badge = k => k === "revisoes" && n ? `<span class="n" aria-label="${n} pendentes">${n}</span>` : "";
   $("#nav-lateral").innerHTML = GRUPOS_NAV.map(([g, itens]) => (g ? `<div class="grupo">${g}</div>` : "") +
     itens.map(([k, h, t]) => `<a href="${h}" ${k === secao ? 'aria-current="page"' : ""}>${icone(k)}<span>${t}</span>${badge(k)}</a>`).join("")).join("");
-  $("#nav-inferior").innerHTML = INFERIOR.map(k => { const [, h, t] = NAV.find(x => x[0] === k);
-    return `<a href="${h}" ${k === secao ? 'aria-current="page"' : ""}>${icone(k)}<span>${CURTO[k] || t}</span>${badge(k)}</a>`; }).join("")
+  $("#nav-inferior").innerHTML = INFERIOR.map(k => {
+    if (k === ar.k) { const nome = OBJETIVOS[objetivoEscolhido()] || "Estudar";
+      return `<a href="${ar.h}" class="area-atual" data-area="${esc(objetivoEscolhido() || "")}" aria-label="${esc(objetivoEscolhido() ? nome + " (área que você estuda agora)" : "Estudar")}" ${k === secao ? 'aria-current="page"' : ""}>${icone(ar.ic)}<span>${esc(ar.t)}</span></a>`; }
+    const [, h, t] = NAV.find(x => x[0] === k);
+    return `<a href="${h}" ${k === secao ? 'aria-current="page"' : ""}${k === "areas" ? ' aria-label="Áreas de estudo: trocar de área"' : ""}>${icone(k)}<span>${CURTO[k] || t}</span>${badge(k)}</a>`; }).join("")
     + `<button data-act="menu-mais" ${INFERIOR.includes(secao) ? "" : 'aria-current="page"'}>${icone("mais")}<span>Mais</span></button>`;
 }
 ACOES["menu-mais"] = () => abrirFolha(GRUPOS_NAV.map(([g, itens]) => {
-  const extra = g === "Estudar" && !(FORA_DO_OBJETIVO[store.doc("perfil").objetivo] || []).includes("enem") ? [["enem", "#/redacao", "Redação"]] : g === "Revisar" ? [["questoes", "#/erros", "Caderno de erros"]] : [];
+  const extra = g === "Estudar" && !foraDoObjetivo().includes("enem") ? [["enem", "#/redacao", "Redação"]] : g === "Revisar" ? [["questoes", "#/erros", "Caderno de erros"]] : [];
   const lista = itens.concat(extra).filter(([k, h]) => !INFERIOR.includes(k) || extra.some(x => x[1] === h));
   return lista.length ? `<div class="menu-grupo"><h3>${g || "Principal"}</h3><div class="links-lista">${lista.map(([k, h, t]) => `<a href="${h}" data-act="fechar-folha"><span class="linha" style="flex-wrap:nowrap">${icone(k)}${t}</span></a>`).join("")}</div></div>` : "";
 }).join(""), { titulo: "Menu" });

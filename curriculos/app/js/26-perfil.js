@@ -41,7 +41,8 @@ FORMS["convite"] = () => {
    ============================================================ */
 const BV = { passo: "objetivo", obj: null, fac: null };
 const OBJ_BV = [["medicina", "Medicina", "Graduação: matérias da faculdade, casos e questões"], ["residencia", "Residência médica", "Provas de residência e revisão por grandes áreas"],
-  ["enem", "ENEM e vestibulares", "Questões, redação e matérias do ensino médio"], ["direito", "Direito ou OAB", "Graduação em Direito e Exame de Ordem"]];
+  ["enem", "ENEM", "Questões, redação e matérias do ensino médio"],
+  ["vestibulares", "Vestibulares", "PSC/UFAM, SIS/UEA e Macro/UEA — por enquanto com as questões no estilo ENEM, que cobrem os mesmos conteúdos"], ["direito", "Direito ou OAB", "Graduação em Direito e Exame de Ordem"]];
 function precisaBoasVindas() {
   const P = store.doc("perfil");
   return !P.objetivo && !P.boasVindas && !P.nome && !P.faculdade && !temDados();

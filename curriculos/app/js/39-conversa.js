@@ -54,7 +54,7 @@ function ctxQuestaoCV(q, ordem, esc) {
 }
 function instrucoesCV() {
   const o = objetivo(), tr = trilhasDoObjetivo();
-  const area = o === "enem" ? "ENEM e vestibulares" : o === "direito" || o === "oab" ? "Direito e Exame da OAB" : tr.includes("medicina") || !o ? "Medicina e Residência Médica" : "estudos";
+  const area = objetivoEscolhido() === "vestibulares" ? "vestibulares (PSC/UFAM, SIS/UEA e Macro/UEA, no estilo ENEM)" : o === "enem" ? "ENEM e vestibulares" : o === "direito" || o === "oab" ? "Direito e Exame da OAB" : tr.includes("medicina") || !o ? "Medicina e Residência Médica" : "estudos";
   const SIS = `Você é um tutor de ${area} conversando por voz com uma estudante brasileira. Suas respostas serão LIDAS EM VOZ ALTA.
 Regras:
 - Português do Brasil. Respostas curtas: no máximo cerca de 120 palavras, a não ser que ela peça mais.

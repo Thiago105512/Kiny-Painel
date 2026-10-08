@@ -52,6 +52,8 @@ const ARTE = {
   chama: "M12 21c-3.9 0-6.5-2.6-6.5-6.2 0-3.4 2.3-5.4 3.6-8 .6 1.8 1.6 2.8 2.9 3.3C12 7 13.5 4.6 15.8 3c-.3 3.2 2.7 5.6 2.7 10.6 0 4.3-2.8 7.4-6.5 7.4zM12 21c-1.6 0-2.8-1.2-2.8-2.9 0-1.9 1.6-2.9 2.8-4.6 1.2 1.7 2.8 2.7 2.8 4.6 0 1.7-1.2 2.9-2.8 2.9z",
   alvo: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 16.5a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9zM12 12h.01",
   relogio: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7v5l3.5 2",
+  maleta: "M4 8h16v12H4zM9 8V5h6v3M4 13h16",
+  grade: "M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z",
 };
 /** Cor de cada grande área (tons de caneta e marca-texto). */
 const COR_AREA = {
@@ -73,7 +75,7 @@ const COR_PIL = { curiosidade: "#D97706", data: "#0F766E", pessoa: "#6D28D9", co
 const SECAO_VISUAL = {
   inicio: ["sorriso", "#2340B8"], medicina: ["estetoscopio", "#C0265F"], casos: ["pessoa", "#C0265F"], questoes: ["alvo", "#2340B8"],
   simulados: ["relogio", "#B45309"], flashcards: ["lampada", "#D97706"], revisoes: ["calendario", "#6D28D9"], estudar: ["lupa", "#15803D"],
-  enem: ["livro", "#2340B8"], curso: ["livro", "#0F766E"], desempenho: ["grafico", "#B45309"], plano: ["calendario", "#0F766E"], biblioteca: ["livro", "#6D28D9"], jogos: ["controle", "#0F766E"],
+  areas: ["grade", "#2340B8"], enem: ["livro", "#2340B8"], curso: ["livro", "#0F766E"], desempenho: ["grafico", "#B45309"], plano: ["calendario", "#0F766E"], biblioteca: ["livro", "#6D28D9"], jogos: ["controle", "#0F766E"],
 };
 const iluSecao = (s, tam = "g") => SECAO_VISUAL[s] ? ilustra(SECAO_VISUAL[s][0], SECAO_VISUAL[s][1], tam) : "";
 const areaDaEsp = id => AREAS_MED.find(a => (a.especialidades || []).some(e => e.id === id))?.id;

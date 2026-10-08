@@ -77,7 +77,7 @@ const medirContraste = () => {
   for (const esquema of ['light', 'dark']) {
     const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, colorScheme: esquema }); const p = await ctx.newPage();
     await p.goto(URL + '#/'); await p.waitForTimeout(500);
-    for (const r of ['/', '/questoes', '/jogos', '/jornada', '/casos', '/casos/caso-malaria-vivax', '/medicina', '/estudar', '/revisoes', '/biblioteca', '/simulados', '/desempenho', '/curso',
+    for (const r of ['/', '/questoes', '/jogos', '/jornada', '/casos', '/casos/caso-malaria-vivax', '/medicina', '/estudar', '/revisoes', '/biblioteca', '/simulados', '/desempenho', '/curso', '/areas', '/concursos', '/concursos/saude',
       'jogo:triagem', 'jogo:termo', 'jogo:milhao', 'jogo:quemsou', 'jogo:emergencia', 'jogo:vidas', 'jogo:caso', 'jogo:caca', 'jogo:pares', 'jogo:defesa', 'jogo:cascata']) {
       if (r.startsWith('jogo:')) await p.evaluate(id => { location.hash = '#/jogos/' + id; JG.modoNovo = 'treino'; iniciarJogo(id); if (id === 'termo') { 'SOPRO'.split('').forEach(termoTecla); termoTecla('ENTER'); } }, r.slice(5));
       else await p.evaluate(r => { location.hash = '#' + r; }, r);

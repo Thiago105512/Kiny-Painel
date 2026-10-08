@@ -21,9 +21,11 @@ curriculos/
       06-ui.js            roteador, layout, componentes e o player de questões compartilhado
       10-inicio.js … 23-busca.js   uma página/módulo por arquivo
       38-navegacao.js     voltar: histórico do app, botão "← Destino", folhas e player no voltar do celular, anterior/próxima nas listas, gesto da borda
+      40-areas.js         Áreas de estudo (#/areas): trocar o objetivo com um toque; Concursos (em breve) com subáreas, cargos/blocos e "Tenho interesse"
       39-conversa.js      Modo conversa (#/conversa): tirar dúvidas por voz com o assistente (ditado do teclado, resposta lida em voz alta)
       99-main.js          inicialização e contagem do tempo de estudo
   dados/
+    concursos.json      ← Concursos (em breve): subáreas → cargos (CNU com blocos temáticos e fonte). Só categorias, sem editais/datas/vagas
     instituicoes.json   ← faculdades (UFAM, UEA, FAMETRO, Nilton Lins, Afya) + fontes oficiais a importar
     grades/<id>.json    ← matrizes OFICIAIS (uma por instituição/curso/versão): UFAM Medicina 2025/2; demais pendentes
     medicina/mapa.json  ← Área → Especialidade → Tema (128 temas, subtemas, objetivos, resumo)
@@ -143,5 +145,7 @@ node curriculos/testes/familias.js   # questões irmãs (mesmo quadro por outro 
 node curriculos/testes/etapa2.js     # mapa mental, erros em lote, backup semanal, conferência da matriz
 node curriculos/testes/interacao.js  # Ouvir (voz simulada), descartar alternativas, grau de certeza, sequência de acertos, flashcards com gesto, vibração, marca-texto
 node curriculos/testes/navegacao.js  # voltar: botão "← Destino", goBack fecha folha e pausa o player ("Continuar sessão"), anterior/próxima na lista filtrada, rolagem restaurada, fins de sessão, gesto da borda, Alt+←/Backspace
+node curriculos/testes/areas.js     # barra Início · área atual · Áreas · Revisões · Mais; #/areas troca o objetivo (Medicina não vê ENEM; ENEM e Vestibulares veem as 278 do ENEM); Concursos/CNU em breve com "Tenho interesse" sem trocar o objetivo; Curso no Mais; encaixe 360/390, claro/escuro
+node curriculos/testes/botoes.js    # links internos em texto viram chips: sem sublinhado e ≥ 44 px nas páginas principais (Medicina e ENEM), externos com ↗, letra Enorme a 360 px, contraste
 node curriculos/testes/conversa.js   # Modo conversa: entradas só com IA, contexto da questão no prompt, histórico em turnos, markdown limpo, leitura automática, Repetir/Mais devagar/Outro jeito/Parar, cancelar ao sair, erros, 🎤 só se houver reconhecimento, encaixe 360/390 com letra 1 e 1,7
 ```

@@ -113,6 +113,25 @@ def validar_pilulas(pils, temas):
     if erros: sys.exit("Pílulas inválidas:\n" + "\n".join(erros[:40]))
 
 
+def validar_concursos(c):
+    """Concursos: ids únicos e em formato de slug, nomes presentes, pelo menos um cargo por subárea."""
+    ok_id = lambda x: isinstance(x, str) and re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", x)
+    subs = c.get("subareas") if isinstance(c, dict) else None
+    if not isinstance(subs, list):
+        erros.append("dados/concursos.json: falta a lista 'subareas'"); return
+    vistos = set()
+    for s in subs:
+        onde = f"dados/concursos.json ({s.get('id')})"
+        if not ok_id(s.get("id")) or s["id"] in vistos: erros.append(f"{onde}: id de subárea inválido ou repetido")
+        vistos.add(s.get("id"))
+        if not s.get("nome"): erros.append(f"{onde}: falta nome")
+        cargos = s.get("cargos") or []
+        if not cargos: erros.append(f"{onde}: subárea sem cargos")
+        ids = [x.get("id") for x in cargos]
+        if len(ids) != len(set(ids)) or not all(ok_id(i) for i in ids): erros.append(f"{onde}: id de cargo inválido ou repetido")
+        if not all(x.get("nome") for x in cargos): erros.append(f"{onde}: cargo sem nome")
+
+
 if __name__ == "__main__":
     banco = {t: ler(f"questoes/{t}.json", []) for t in TRILHAS}
     mapa = ler("dados/medicina/mapa.json", {})
@@ -131,6 +150,9 @@ if __name__ == "__main__":
         "pilulas": [p for arq in sorted((AQUI / "pilulas").glob("*.json")) for p in json.loads(arq.read_text(encoding="utf-8"))] if (AQUI / "pilulas").exists() else [],
     }
     validar_pilulas(dados["pilulas"], catalogo_temas(mapa, enem))
+    # Concursos (em breve): subáreas → cargos. Só categorias genéricas (sem edital, data, banca, salário ou vaga).
+    dados["concursos"] = ler("dados/concursos.json", {"subareas": []})
+    validar_concursos(dados["concursos"])
     # Humor (Pausa para rir): humor/*.json = [{id, texto, tipo, dominio}]
     # Firebase da versão pública (dados/firebase.json = configuração Web do projeto; a apiKey é pública por natureza,
     # a proteção vem das regras em firestore.rules). Sem o arquivo, o site público salva só no aparelho.

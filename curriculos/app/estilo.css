@@ -65,9 +65,10 @@ main{flex:1;min-width:0;padding-inline:16px;padding-block:14px 90px}
 @media (min-width:861px){.folha{left:auto;right:16px;bottom:16px;width:min(480px,calc(100vw - 32px));border-radius:14px;border:1px solid var(--line)}}
 
 /* ---------- Tipografia e blocos ---------- */
-.crumbs{display:flex;flex-wrap:wrap;gap:4px;font:calc(13px * var(--k)) var(--mono);color:var(--muted);margin-bottom:8px}
-.crumbs a{color:var(--muted);text-decoration:none;display:inline-block;padding:12px 4px;margin:-12px -4px}   /* área de toque de ~44 px sem aumentar a linha */
-.crumbs a:hover{color:var(--pen);text-decoration:underline}
+.crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font:calc(13px * var(--k)) var(--mono);color:var(--muted);margin-bottom:8px}
+/* Crumbs como chips pequenos (não parecem "link suspeito"); 44 px de altura para o toque */
+.crumbs a{display:inline-flex;align-items:center;min-height:44px;max-width:100%;padding:4px 12px;border:1px solid var(--line);border-radius:999px;background:var(--sheet);color:var(--ink2);text-decoration:none;overflow-wrap:break-word}
+.crumbs a:hover{color:var(--pen);border-color:var(--pen)}
 .crumbs span[aria-hidden]{opacity:.6}
 /* Cada seção tem sua cor (--sec, definida pelo render): cabeçalho em faixa colorida com figura, títulos coloridos. */
 body{--sec:var(--pen);--sec-tx:color-mix(in oklab,var(--sec) var(--pct-h),var(--ink));--sec-soft:color-mix(in oklab,var(--sec) 11%,var(--sheet));--sec-linha:color-mix(in oklab,var(--sec) 35%,var(--line))}
@@ -679,7 +680,7 @@ body{overflow-wrap:break-word;-webkit-hyphens:auto;hyphens:auto}
 input,textarea,select,.mono,code,pre,.num{-webkit-hyphens:manual;hyphens:manual}
 table,th,td,.num{overflow-wrap:normal}
 .tabs{flex-wrap:wrap;overflow:visible;row-gap:0}
-.tabs button,.tabs a{white-space:normal;padding:10px 10px}
+.tabs button,.tabs a{white-space:normal;padding:10px 10px;min-height:44px}
 .pill{white-space:normal;max-width:100%;text-align:left}
 .campos{grid-template-columns:repeat(auto-fit,minmax(min(100%,calc(150px * var(--k))),1fr))}
 .campo{min-width:0}.campo input,.campo select,.campo textarea{width:100%;min-width:0;max-width:100%}
@@ -852,3 +853,64 @@ table,th,td,.num{overflow-wrap:normal}
 .cv-perguntar{flex:1 1 180px;min-height:56px;font-size:calc(19px * var(--k))}
 .cv-mic{flex:0 1 auto;min-height:56px;font-size:calc(16px * var(--k))}
 .cv-dica{margin:0;color:var(--ink2);font-size:calc(14px * var(--k))}
+
+/* ---------- Áreas de estudo (#/areas) e Concursos (em breve) ---------- */
+.area-nota{margin:0 0 12px;color:var(--ink2)}
+.areas-lista,.cargos-lista{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:12px;margin-bottom:14px}
+.cargo-card{display:grid;gap:10px;padding:14px 16px;background:var(--sheet);border:2px solid var(--line);border-radius:14px}
+.cargo-card a{display:block;min-height:44px;color:var(--ink);text-decoration:none}
+.cargo-card a b{display:block;font-size:calc(17px * var(--k));overflow-wrap:anywhere}
+.cargo-card a small{display:block;color:var(--muted);font-size:calc(14px * var(--k))}
+.btn.interesse{min-height:44px;justify-self:start;max-width:100%;white-space:normal}
+.em-breve-aviso{margin-bottom:14px}
+.inferior .area-atual span{font-weight:700}
+
+/* ---------- Links internos em texto viram botões (chips) ----------
+   Link sublinhado no meio do texto "parece link suspeito": todo link de navegação interna
+   (#/…, ou "#" com ação) sem classe própria, fora dos componentes que já são cartões/listas,
+   vira um chip — fundo suave, borda, cantos arredondados, sem sublinhado, ≥ 44 px, quebra em linhas. */
+:where(#view,#camada) a:where([href^="#"]){text-decoration:none}
+:where(#view,#camada) a[href^="#"]:not([class]):not(:where(.links-lista,.lista-q,.mosaico,.atalhos,.linha-tempo,.kpi,.arvore,.tabs,.crumbs,.area-card,.cargo-card,.cartao-caso,.jg-cartao,.desafio,.painel-nivel,.pil-link,.jornada-card,.jg-desafio,h1,h2,h3,.nav-voltar) a){
+  display:inline-flex;align-items:center;gap:4px;min-height:44px;max-width:100%;margin:2px 0;padding:6px 12px;vertical-align:middle;
+  border:1px solid color-mix(in oklab,var(--pen) 40%,var(--line));border-radius:12px;background:var(--pen-soft);color:var(--pen);
+  font-weight:600;line-height:1.3;white-space:normal;overflow-wrap:break-word;text-align:left;text-decoration:none}
+:where(#view,#camada) a[href^="#"]:not([class]):not(:where(.links-lista,.lista-q,.mosaico,.atalhos,.linha-tempo,.kpi,.arvore,.tabs,.crumbs,.area-card,.cargo-card,.cartao-caso,.jg-cartao,.desafio,.painel-nivel,.pil-link,.jornada-card,.jg-desafio,h1,h2,h3,.nav-voltar) a):hover{border-color:var(--pen)}
+:where(#view,#camada) a[href^="#"]:not([class]):focus-visible{outline:3px solid var(--pen);outline-offset:2px}
+/* Títulos de seção que são link (ENEM: "Linguagens…") e nós do mapa: sem sublinhado e com área de toque de 44 px */
+:where(h2,h3) a[href^="#"]{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+.arvore .no a{display:inline-flex;align-items:center;min-height:44px}
+/* Links externos continuam como link, com ↗ dizendo que abrem fora do app */
+:where(#view,#camada) a[target="_blank"]::after{content:" ↗";text-decoration:none;display:inline-block;margin-left:2px}
+
+/* Cartões de área: cor própria (--h), ilustração, faixa colorida à esquerda, sombra suave.
+   Texto colorido = --h misturado com --ink (--pct-h) → ≥ 4,5:1 nos dois temas. */
+.area-card{--fundo:color-mix(in oklab,var(--h,var(--pen)) 7%,var(--sheet));display:flex;flex-wrap:wrap;gap:14px;align-items:center;width:100%;min-height:96px;padding:16px 16px 16px 20px;
+  background-color:var(--fundo);border:1px solid color-mix(in oklab,var(--h,var(--pen)) 30%,var(--line));border-radius:16px;box-shadow:inset 6px 0 0 color-mix(in srgb,var(--h,var(--pen)),#fff var(--ilu-luz)),0 1px 2px rgb(0 0 0 / .06),0 4px 14px -6px rgb(0 0 0 / .18);
+  text-align:left;color:var(--ink);text-decoration:none;cursor:pointer;font:inherit;-webkit-tap-highlight-color:transparent;transition:transform .14s ease,box-shadow .14s ease,border-color .14s ease}
+.area-card:hover{border-color:color-mix(in srgb,var(--h,var(--pen)),#fff var(--ilu-luz))}
+.area-card:active{transform:scale(.97);box-shadow:inset 6px 0 0 color-mix(in srgb,var(--h,var(--pen)),#fff var(--ilu-luz)),0 0 0 4px color-mix(in oklab,var(--h,var(--pen)) 25%,transparent)}
+.area-card:focus-visible{outline:3px solid var(--pen);outline-offset:3px}
+.area-card>div{flex:1 1 10em;min-width:0;display:grid;gap:3px;justify-items:start}
+.area-card b{display:block;font-size:calc(18px * var(--k));line-height:1.25;overflow-wrap:break-word;color:color-mix(in oklab,var(--h,var(--pen)) var(--pct-h),var(--ink))}
+.area-card small{display:block;color:var(--ink2);font-size:calc(14px * var(--k));line-height:1.4;overflow-wrap:break-word}
+.area-card .ilu{box-shadow:0 2px 8px -3px rgb(0 0 0 / .25)}
+.area-card .pill{white-space:normal}
+/* Área atual: fundo mais forte, borda na cor da área e selo "✓ Você está aqui" */
+.area-card[aria-current="true"]{--fundo:color-mix(in oklab,var(--h) 14%,var(--sheet));border:3px solid color-mix(in srgb,var(--h),#fff var(--ilu-luz));padding:14px 14px 14px 18px}
+.selo-aqui{display:inline-flex;align-items:center;gap:5px;font:700 calc(13px * var(--k))/1.2 var(--display);padding:4px 10px;border-radius:999px;background:color-mix(in oklab,var(--h,var(--pen)) var(--pct-h),var(--ink));color:var(--sheet);letter-spacing:.01em}
+/* "Em breve": selo discreto com relógio, cartão de borda tracejada */
+.selo-breve{display:inline-flex;align-items:center;gap:5px;font:700 calc(13px * var(--k))/1.2 var(--display);padding:4px 10px;border-radius:999px;background:var(--warn-soft);color:var(--warn);border:1px solid color-mix(in oklab,var(--warn) 45%,transparent)}
+.selo-breve svg{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round}
+.area-card.em-breve{border-style:dashed}
+.area-card.destaque{border-width:3px;border-color:color-mix(in srgb,var(--h,var(--pen)),#fff var(--ilu-luz))}
+@media (prefers-reduced-motion:reduce){.area-card{transition:none}.area-card:active{transform:none}}
+
+/* Barra de baixo: item ativo com "pílula" atrás do ícone; ícone de Áreas com 4 quadradinhos coloridos */
+.inferior a>*,.inferior button>*{position:relative;z-index:1}
+.inferior [aria-current="page"]::before{content:"";position:absolute;z-index:0;top:5px;left:50%;width:min(60px,80%);height:min(calc(30px * var(--k)),36px);transform:translateX(-50%);border-radius:999px;background:var(--pen-soft)}
+.inferior [aria-current="page"] span{font-weight:700}
+.ic-areas rect{stroke:none}
+.ic-areas .q1{fill:color-mix(in srgb,#C0265F,#fff var(--ilu-luz))}
+.ic-areas .q2{fill:color-mix(in srgb,#2340B8,#fff var(--ilu-luz))}
+.ic-areas .q3{fill:color-mix(in srgb,#0F766E,#fff var(--ilu-luz))}
+.ic-areas .q4{fill:color-mix(in srgb,#B45309,#fff var(--ilu-luz))}

@@ -15,7 +15,10 @@ let falhas = 0; const ok = (c, m) => { console.log((c ? '  ✓ ' : '  ✗ ') + m
   ok(await p.$eval('#cv-obj', e => e.value) === 'medicina', 'convite já sugere o objetivo Medicina');
   await p.selectOption('#cv-per', '3'); await p.click('form[data-form="convite"] button'); await p.waitForTimeout(300);
   const nav = await p.evaluate(() => [...document.querySelectorAll('#nav-inferior a span')].map(s => s.textContent));
-  ok(nav.includes('Curso') && !nav.includes('ENEM'), 'menu inferior focado em Medicina: ' + nav.join(', '));
+  // A barra agora é Início · área atual · Áreas · Revisões · Mais; "Meu curso" fica no Mais (ver areas.js)
+  ok(nav.includes('Medicina') && !nav.includes('ENEM'), 'menu inferior focado em Medicina: ' + nav.join(', '));
+  await p.evaluate(() => ACOES['menu-mais']()); await p.waitForTimeout(100);
+  ok(await p.$('#camada a[href="#/curso"]') !== null, '"Meu curso" acessível pelo Mais'); await p.evaluate(() => fecharFolha());
   await go('#/questoes'); ok(await p.evaluate(() => filtrarQuestoes(FQ).every(q => ['medicina', 'residencia'].includes(q.t))), 'questões só de Medicina e Residência');
   ok(await p.evaluate(() => PILULAS.filter(doDominio).every(x => x.dominio === 'medicina') && !document.querySelector('[data-act="pil-dom"]')), 'pílulas só de Medicina, sem chips de outras áreas');
   await go('#/busca/lei'); ok(await p.evaluate(() => !/Direito|ENEM ·/.test(document.querySelector('main').innerText)), 'busca não mostra conteúdo de outras áreas');

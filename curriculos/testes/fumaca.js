@@ -7,7 +7,7 @@ const rotas=['/','/medicina','/medicina/inst/ufam','/medicina/inst/uea','/medici
  '/tema/hipertensao-arterial','/tema/hipertensao-arterial/questoes','/tema/hipertensao-arterial/flashcards','/tema/hipertensao-arterial/casos','/tema/hipertensao-arterial/notas','/tema/hipertensao-arterial/materiais','/tema/hipertensao-arterial/erros','/tema/hipertensao-arterial/desempenho',
  '/enem','/enem/matematica','/enem/matematica/matematica','/redacao','/redacao/escrever','/redacao/historico','/redacao/guia','/redacao/repertorios',
  '/questoes','/erros','/flashcards','/flashcards/estudar','/revisoes','/revisoes/erros','/casos','/casos/caso-malaria-vivax','/jogos','/jornada','/jogos/caso','/jogos/termo','/jogos/pares','/jogos/anatomia','/jogos/relogio','/jogos/triagem','/jogos/defesa','/jogos/milhao','/jogos/cascata','/jogos/quemsou','/jogos/caca','/jogos/emergencia','/simulados','/plano','/desempenho',
- '/biblioteca','/biblioteca/guia','/biblioteca/questoes','/biblioteca/dados','/busca/insuficiencia%20cardiaca','/conversa','/rota-inexistente'];
+ '/biblioteca','/biblioteca/guia','/biblioteca/questoes','/biblioteca/dados','/busca/insuficiencia%20cardiaca','/conversa','/areas','/concursos','/concursos/saude','/concursos/saude/medico','/concursos/cnu','/rota-inexistente'];
 (async()=>{const b=await chromium.launch(process.env.CHROMIUM?{executablePath:process.env.CHROMIUM}:{});
 for (const vp of [{width:390,height:844},{width:768,height:1024},{width:1280,height:900}]){
  const p=await b.newPage({viewport:vp});const errs=[];p.on('pageerror',e=>errs.push(e.message));

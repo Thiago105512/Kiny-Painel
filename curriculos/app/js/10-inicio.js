@@ -38,7 +38,7 @@ function sugestaoPratica() {
   const fraca = listaPor(agregados().por.disc, 3).sort((a, b) => a.p - b.p)[0];
   const novas = questoes().filter(q => doObjetivo(q) && statusQ(q).chave === "nao" && (!fraca || q.disc === fraca.k));
   return fraca && novas.length >= 5 ? { tit: `Praticar ${fraca.k}`, det: `seu ponto mais fraco (${Math.round(fraca.p * 100)}%) · ${novas.length} questões novas`, disc: fraca.k }
-    : { tit: "Praticar 10 questões novas", det: `${questoes().filter(q => doObjetivo(q) && statusQ(q).chave === "nao").length} ainda não respondidas${objetivo() ? " em " + OBJETIVOS[objetivo()] : " no banco"}` };
+    : { tit: "Praticar 10 questões novas", det: `${questoes().filter(q => doObjetivo(q) && statusQ(q).chave === "nao").length} ainda não respondidas${objetivoEscolhido() ? " em " + OBJETIVOS[objetivoEscolhido()] : " no banco"}` };
 }
 const saudacao = () => { const h = new Date().getHours(); return h < 12 ? "Bom dia" : h < 18 ? "Boa tarde" : "Boa noite"; };
 

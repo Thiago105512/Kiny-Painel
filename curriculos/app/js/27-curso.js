@@ -11,8 +11,16 @@ const SIT = {
   reprovada: ["Reprovada", "bad"], dispensada: ["Dispensada", "ok"], trancada: ["Trancada", ""],
 };
 const TIPO_AVAL = { prova: "Prova", pratica: "Prova prática", trabalho: "Trabalho", seminario: "Seminário", apresentacao: "Apresentação", exercicio: "Lista de exercícios", outro: "Outro" };
-const OBJETIVOS = { medicina: "Medicina — graduação", residencia: "Residência médica", enem: "ENEM e vestibulares", direito: "Direito — graduação", oab: "OAB" };
-const objetivo = () => store.doc("perfil").objetivo || null;
+const OBJETIVOS = { medicina: "Medicina — graduação", residencia: "Residência médica", enem: "ENEM", vestibulares: "Vestibulares (PSC/UFAM, SIS/UEA, Macro/UEA)", direito: "Direito — graduação", oab: "OAB" };
+/** Objetivos que usam o conteúdo de outro: Vestibulares (PSC/UFAM, SIS/UEA, Macro/UEA) ainda não tem banco próprio
+    e usa o do ENEM (mesma matriz, mesmas questões). UFAM e UEA aqui são só rótulo, nada se mistura. */
+const OBJ_CONTEUDO = { vestibulares: "enem" };
+/** O que a pessoa escolheu no perfil (para rótulos: "Vestibulares"). */
+const objetivoEscolhido = () => store.doc("perfil").objetivo || null;
+/** O objetivo de CONTEÚDO, usado por todos os filtros do app (Vestibulares → "enem"). */
+const objetivo = () => { const o = objetivoEscolhido(); return OBJ_CONTEUDO[o] || o; };
+/** Nome curto do objetivo escolhido, para frases ("Agora você está estudando Medicina"). */
+const NOME_CURTO_OBJ = { medicina: "Medicina", residencia: "Residência médica", enem: "ENEM", vestibulares: "Vestibulares", direito: "Direito", oab: "OAB" };
 /** Trilha rápida de questões correspondente ao objetivo ("med" junta Medicina e Residência). */
 const trilhaDoObjetivo = () => ({ residencia: "residencia", oab: "oab" })[objetivo()] || "";   // o resto já vem filtrado pelo objetivo
 /** Trilhas e domínios de conteúdo do objetivo (sem objetivo: tudo). */

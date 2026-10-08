@@ -1,0 +1,164 @@
+{
+  "_sobre": "Concursos (área 'em breve'): subáreas e cargos principais. Para ampliar, acrescente cargos em 'cargos' (id único dentro da subárea, só letras minúsculas, números e hífen). Sem editais, datas, bancas, salários ou vagas: só categorias genéricas. Subárea com 'destaque' aparece primeiro e em evidência; 'rotuloItens' troca o nome da lista (ex.: Blocos temáticos); 'fonte' registra de onde veio a lista (só texto, sem link) e 'fonteCurta' é o que aparece na tela.",
+  "subareas": [
+    {
+      "id": "cnu",
+      "nome": "CNU — Concurso Nacional Unificado",
+      "destaque": true,
+      "descricao": "Concurso federal unificado: a inscrição é por bloco temático",
+      "rotuloItens": "Blocos temáticos (2ª edição)",
+      "fonte": "Edital CNU 2025 (2ª edição, CPNU 2), Ministério da Gestão e da Inovação em Serviços Públicos — gov.br/gestao/pt-br/concursonacional (notícias de 30/06/2025 e da divisão dos blocos, jun/2025)",
+      "fonteCurta": "edital CNU 2025 (2ª edição)",
+      "cargos": [
+        {
+          "id": "bloco-1",
+          "nome": "Seguridade Social: Saúde, Assistência Social e Previdência"
+        },
+        {
+          "id": "bloco-2",
+          "nome": "Cultura e Educação"
+        },
+        {
+          "id": "bloco-3",
+          "nome": "Ciências, Dados e Tecnologia"
+        },
+        {
+          "id": "bloco-4",
+          "nome": "Engenharias e Arquitetura"
+        },
+        {
+          "id": "bloco-5",
+          "nome": "Administração"
+        },
+        {
+          "id": "bloco-6",
+          "nome": "Desenvolvimento Socioeconômico"
+        },
+        {
+          "id": "bloco-7",
+          "nome": "Justiça e Defesa"
+        },
+        {
+          "id": "bloco-8",
+          "nome": "Nível intermediário: Saúde"
+        },
+        {
+          "id": "bloco-9",
+          "nome": "Nível intermediário: Regulação"
+        }
+      ]
+    },
+    {
+      "id": "saude",
+      "nome": "Saúde",
+      "descricao": "Cargos da área da saúde em prefeituras, estados e hospitais públicos",
+      "cargos": [
+        {
+          "id": "medico",
+          "nome": "Médico(a)"
+        },
+        {
+          "id": "enfermeiro",
+          "nome": "Enfermeiro(a)"
+        },
+        {
+          "id": "tecnico-enfermagem",
+          "nome": "Técnico(a) de Enfermagem"
+        }
+      ]
+    },
+    {
+      "id": "tribunais-mp",
+      "nome": "Tribunais e Ministério Público",
+      "descricao": "Carreiras do Judiciário e do Ministério Público",
+      "cargos": [
+        {
+          "id": "analista-judiciario",
+          "nome": "Analista Judiciário"
+        },
+        {
+          "id": "tecnico-judiciario",
+          "nome": "Técnico Judiciário"
+        }
+      ]
+    },
+    {
+      "id": "policial-seguranca",
+      "nome": "Policial e Segurança",
+      "descricao": "Polícias Civil e Militar",
+      "cargos": [
+        {
+          "id": "agente-investigador",
+          "nome": "Agente/Investigador de Polícia"
+        },
+        {
+          "id": "delegado",
+          "nome": "Delegado(a)"
+        },
+        {
+          "id": "policial-militar",
+          "nome": "Policial Militar"
+        }
+      ]
+    },
+    {
+      "id": "fiscal-controle",
+      "nome": "Fiscal e Controle",
+      "descricao": "Fiscalização de tributos e controle das contas públicas",
+      "cargos": [
+        {
+          "id": "auditor-fiscal",
+          "nome": "Auditor(a) Fiscal"
+        }
+      ]
+    },
+    {
+      "id": "educacao",
+      "nome": "Educação",
+      "descricao": "Redes públicas de ensino",
+      "cargos": [
+        {
+          "id": "professor-educacao-basica",
+          "nome": "Professor(a) da Educação Básica"
+        }
+      ]
+    },
+    {
+      "id": "administrativo",
+      "nome": "Administrativo",
+      "descricao": "Apoio administrativo em órgãos públicos",
+      "cargos": [
+        {
+          "id": "assistente-administrativo",
+          "nome": "Assistente Administrativo"
+        },
+        {
+          "id": "analista-administrativo",
+          "nome": "Analista Administrativo"
+        }
+      ]
+    },
+    {
+      "id": "bancarios",
+      "nome": "Bancários",
+      "descricao": "Bancos públicos",
+      "cargos": [
+        {
+          "id": "escriturario",
+          "nome": "Escriturário / Agente Comercial"
+        }
+      ]
+    },
+    {
+      "id": "legislativo",
+      "nome": "Legislativo",
+      "descricao": "Câmaras municipais, assembleias e Congresso",
+      "cargos": [
+        {
+          "id": "analista-legislativo",
+          "nome": "Analista Legislativo"
+        }
+      ]
+    }
+  ]
+}
