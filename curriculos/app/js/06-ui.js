@@ -19,6 +19,8 @@ const caminhoAtual = () => (location.hash || "#/").slice(1) || "/";
 /** Navega para h. Dentro de uma folha, a página nova toma o lugar da folha no histórico (ver 38-navegacao). */
 function ir(h) { navegarPara(h); }
 let PAGINA = null; // última página renderizada (contexto para a IA)
+/** Chamados a cada render com o caminho novo (ex.: o Modo conversa cancela o pedido ao sair da tela). */
+const AO_RENDER = [];
 
 /* ---------- Ícones (traço simples) ---------- */
 const IC = {
@@ -96,6 +98,7 @@ function render(opts = {}) {
   catch (e) { console.error(e); pg = { secao: "", titulo: "Algo deu errado nesta página", html: `<div class="aviso">A página não pôde ser montada (${esc(e.message)}). Seus dados não foram afetados. <a href="#/">Voltar ao início</a></div>` }; }
   if (typeof pg === "string") pg = { html: pg };
   PAGINA = pg;
+  AO_RENDER.forEach(f => { try { f(cam); } catch (e) { console.error(e); } });
   try { desenharNav(pg.secao); } catch (e) { console.error(e); }
   /* Crumb para o próprio endereço (o player fica em #/questoes) sai do player em vez de não fazer nada. */
   const crumbs = pg.crumbs?.length ? `<nav class="crumbs" aria-label="Você está em">${pg.crumbs.map(([t, h], i) => (i ? '<span aria-hidden="true">›</span>' : "") + (h ? `<a href="${esc(h)}"${h === location.hash ? ' data-act="crumb-aqui"' : ""}>${esc(t)}</a>` : `<span>${esc(t)}</span>`)).join("")}</nav>` : "";
@@ -288,7 +291,7 @@ function htmlPlayer() {
       ${PL.resp ? (PL.ids.length === 1 && botaoProxLista()) || `<button class="btn" data-act="pl-prox">${PL.i < PL.ids.length - 1 ? "Próxima" : "Concluir"}</button>` : `<button class="btn" data-act="pl-confirmar" ${PL.esc === null ? "disabled" : ""}>Confirmar</button>${(PL.ids.length === 1 && botaoProxLista(true)) || `<button class="btn sec" data-act="pl-pular">Pular</button>`}`}
       ${PL.resp ? `<button class="btn sec mini" data-act="pl-flag" data-f="m" aria-pressed="${st.marcada}">${st.marcada ? "★ Marcada" : "☆ Marcar"}</button>
       <button class="btn sec mini" data-act="pl-flag" data-f="r" aria-pressed="${st.revisar}">${st.revisar ? "↻ Revisar" : "Revisar depois"}</button>` : ""}
-      ${PL.resp ? `<button class="btn sec mini" data-act="pl-card">+ Flashcard</button>${IA.disponivel() ? `<button class="btn sec mini" data-act="pl-ia">Explicar com IA</button>` : ""}<button class="btn sec mini" data-act="reportar" data-q="${esc(q.id)}">Reportar problema</button>` : ""}
+      ${PL.resp ? `<button class="btn sec mini" data-act="pl-card">+ Flashcard</button>${IA.disponivel() ? `<button class="btn sec mini" data-act="pl-ia">Explicar com IA</button>` : ""}${conversaDisponivel() ? `<button class="btn sec mini" data-act="cv-questao"><span aria-hidden="true">🗣️</span> Tirar dúvida por voz</button>` : ""}<button class="btn sec mini" data-act="reportar" data-q="${esc(q.id)}">Reportar problema</button>` : ""}
       ${PL.ids.length > 1 ? `<button class="btn sec mini dir" data-act="pl-encerrar">Encerrar sessão</button>` : ""}
     </div></article><p class="small muted so-teclado">Atalhos: A–E escolhem · Enter confirma/avança · clique numa frase do enunciado para destacá-la</p>`;
 }

@@ -70,6 +70,7 @@ const IA = (() => {
     const ctx = contexto();
     const temTema = !!PAGINA?.ctx?.tema;
     abrirFolha(`<h2 class="sec">${icone("ia")} Assistente de estudo</h2>
+      ${conversaDisponivel() ? `<button class="btn azul grande cv-entrar" data-act="cv-abrir"><span aria-hidden="true">🗣️</span> Modo conversa <small>tire dúvidas falando</small></button>` : ""}
       <p class="ia-ctx">${ctx ? esc(ctx.split("\n").slice(0, 3).join(" · ")).slice(0, 260) : "Sem contexto: abra um tema, disciplina ou questão para respostas mais precisas."}</p>
       <div class="chips" style="margin:10px 0">${ACOES_IA.filter(([k]) => temTema || ["explicar", "resumo", "relacionar", "plano"].includes(k) || k === "questoes").map(([k, t]) => `<button class="chip" data-act="ia-acao" data-v="${k}">${t}</button>`).join("")}</div>
       <form data-form="ia-pergunta" class="linha"><input type="text" id="ia-q" placeholder="Pergunte algo sobre este conteúdo" style="flex:1" required><button class="btn">Perguntar</button></form>
@@ -169,6 +170,11 @@ const IA = (() => {
     const r = await sample(`${SISTEMA}\n\n${pedido}`, { onText: ({ text }) => onText && onText(text), signal: ctrl.signal, cache: false, ...(opts.images ? { images: opts.images } : {}) });
     return r.text;
   }
+  /** Conversa (Modo conversa, 39-conversa): turnos [{role, content}] começando e terminando em "user"; sem cache. */
+  async function conversar(turnos, { onText, signal } = {}) {
+    if (!sample) throw { code: "not_granted" };
+    return sample(turnos, { onText: ({ text }) => onText && onText(text), signal, cache: false });
+  }
   const limites = async () => { try { return sample ? await sample.limits() : null; } catch (e) { return null; } };
-  return { iniciar, disponivel, contexto, explicarQuestao, texto, json, livre, limites, mensagemErro, abrir };
+  return { iniciar, disponivel, contexto, explicarQuestao, texto, json, livre, conversar, limites, mensagemErro, abrir };
 })();

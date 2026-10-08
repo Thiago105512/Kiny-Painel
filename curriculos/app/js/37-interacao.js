@@ -35,6 +35,7 @@ function pedacosFala(t) {
 function partesLeitura(id) {
   const k = id.indexOf(":"), tipo = k < 0 ? id : id.slice(0, k), ref = k < 0 ? "" : id.slice(k + 1);
   if (tipo === "amostra") return [{ t: "Esta é a velocidade da leitura em voz alta." }];
+  if (tipo === "cv") { const u = ultimaRespostaCV(); return u ? [{ t: u, sel: "#cv-ult" }] : []; }   // Modo conversa (39-conversa)
   if (tipo === "pl") {
     const q = qPorId(PL.ids[PL.i]); if (!q || PL.fim) return [];
     if (!PL.resp) return [{ t: q.q, sel: "#pl .enunciado" }, ...PL.ordem.map((i, pos) => ({ t: `Alternativa ${LETRAS[pos]}${PL.desc.has(i) ? ", descartada" : ""}: ${q.o[i]}`, sel: `#pl [data-act="pl-alt"][data-i="${i}"]` }))];
@@ -65,17 +66,18 @@ function partesLeitura(id) {
 function escolherVoz() {
   try { const vs = speechSynthesis.getVoices() || []; return vs.find(v => /^pt[-_]BR$/i.test(v.lang)) || vs.find(v => /^pt\b/i.test(v.lang)) || null; } catch (e) { return null; }
 }
-function falar(id) {
+/** opts.vel: velocidade só desta leitura (padrão: a da folha "Aa"); opts.aoFim: chamado se a leitura terminar sozinha (não ao parar). */
+function falar(id, opts = {}) {
   pararVoz();
   if (!vozDisponivel()) return;
   const partes = partesLeitura(id).flatMap(p => pedacosFala(p.t).map(t => ({ t, sel: p.sel })));
   if (!partes.length) return;
-  const ger = ++VOZ.ger, voz = escolherVoz(), vel = velVoz();
+  const ger = ++VOZ.ger, voz = escolherVoz(), vel = opts.vel || velVoz();
   VOZ.id = id;
   VOZ.fila = partes.map((p, k) => {
     const u = new SpeechSynthesisUtterance(p.t); u.lang = "pt-BR"; if (voz) u.voice = voz; u.rate = vel;
     u.onstart = () => { if (ger === VOZ.ger) destacarLeitura(p.sel || null); };
-    u.onend = u.onerror = () => { if (ger === VOZ.ger && k === partes.length - 1) pararVoz(); };
+    u.onend = u.onerror = () => { if (ger === VOZ.ger && k === partes.length - 1) { pararVoz(); opts.aoFim?.(); } };
     return u;   // guardadas em VOZ.fila: sem referência, alguns navegadores descartam a fala no meio
   });
   try { VOZ.fila.forEach(u => speechSynthesis.speak(u)); } catch (e) { pararVoz(); return; }

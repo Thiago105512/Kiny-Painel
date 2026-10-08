@@ -831,6 +831,38 @@ table,th,td,.num{overflow-wrap:normal}
 /* Início: temas estudados hoje, um por linha (os links têm área de toque alta) */
 .estudados-hoje{display:grid;gap:2px;margin:0}
 
+/* ---------- Modo conversa (39-conversa): letra grande, poucos elementos, alvos ≥ 48 px ---------- */
+.cv-entrar{width:100%;flex-wrap:wrap;min-height:56px;font-size:min(calc(18px * var(--k)),6vw);margin:0 0 12px}
+.cv-entrar small{font-weight:500;font-size:.8em;opacity:.95}
+.cv{display:grid;gap:14px;max-width:760px}
+.cv-sobre{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;background:var(--sheet);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.cv-assunto{margin:0;flex:1 1 220px;min-width:0;display:grid;gap:2px;font-size:calc(16px * var(--k));line-height:1.35}
+.cv-assunto span{color:var(--ink2);font-size:calc(14px * var(--k))}
+.cv-sobre .btn{min-height:48px;font-size:calc(15px * var(--k))}
+.cv-hist{display:grid;gap:12px}
+.cv-vazio{margin:0;color:var(--ink2);font-size:calc(17px * var(--k));line-height:1.45}
+.cv-b{border-radius:16px;padding:12px 14px;border:1px solid var(--line);min-width:0;scroll-margin-top:calc(var(--topo-h,60px) + 12px)}
+.cv-b.eu{background:var(--pen-soft);border-color:color-mix(in oklab,var(--pen) 35%,var(--line));margin-left:min(12%,48px)}
+.cv-b.ia{background:var(--sheet);margin-right:min(6%,24px);border-left:5px solid var(--pen)}
+.cv-quem{display:block;font:700 calc(14px * var(--k))/1.2 var(--display);color:var(--ink2);margin-bottom:4px}
+.cv-tx{margin:0;font:400 calc(18px * var(--k))/1.5 var(--display);white-space:pre-wrap;overflow-wrap:break-word}
+.cv-b.pendente .cv-tx{color:var(--ink2)}
+@media (prefers-reduced-motion:no-preference){.cv-b.pendente .cv-quem::after{content:" …";animation:cv-pisca 1.2s steps(2) infinite}}
+@keyframes cv-pisca{50%{opacity:0}}
+.cv-erro{display:grid;gap:8px;font-size:calc(16px * var(--k));margin:0}
+.cv-erro p{margin:0}
+.cv-acoes{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,calc(150px * var(--k))),1fr))}
+.cv-acoes .btn{display:block;min-height:52px;font-size:calc(16px * var(--k));line-height:1.25;padding:10px 8px}
+.cv-voz{font-size:calc(16px * var(--k));margin-top:6px}
+.cv-form{display:grid;gap:8px;background:var(--sheet);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.cv-lab{font:700 calc(15px * var(--k)) var(--display);color:var(--ink)}
+#cv-q{font:400 calc(18px * var(--k))/1.45 var(--display);min-height:calc(3.2em + 20px);padding:10px 12px;border:2px solid var(--ink2);border-radius:10px}
+#cv-q:focus-visible{outline:3px solid var(--pen);outline-offset:2px}
+.cv-envio{display:flex;flex-wrap:wrap;gap:10px}
+.cv-perguntar{flex:1 1 180px;min-height:56px;font-size:calc(19px * var(--k))}
+.cv-mic{flex:0 1 auto;min-height:56px;font-size:calc(16px * var(--k))}
+.cv-dica{margin:0;color:var(--ink2);font-size:calc(14px * var(--k))}
+
 </style>
 
 <header class="topo">
@@ -1694,6 +1726,7 @@ const IA = (() => {
     const ctx = contexto();
     const temTema = !!PAGINA?.ctx?.tema;
     abrirFolha(`<h2 class="sec">${icone("ia")} Assistente de estudo</h2>
+      ${conversaDisponivel() ? `<button class="btn azul grande cv-entrar" data-act="cv-abrir"><span aria-hidden="true">🗣️</span> Modo conversa <small>tire dúvidas falando</small></button>` : ""}
       <p class="ia-ctx">${ctx ? esc(ctx.split("\n").slice(0, 3).join(" · ")).slice(0, 260) : "Sem contexto: abra um tema, disciplina ou questão para respostas mais precisas."}</p>
       <div class="chips" style="margin:10px 0">${ACOES_IA.filter(([k]) => temTema || ["explicar", "resumo", "relacionar", "plano"].includes(k) || k === "questoes").map(([k, t]) => `<button class="chip" data-act="ia-acao" data-v="${k}">${t}</button>`).join("")}</div>
       <form data-form="ia-pergunta" class="linha"><input type="text" id="ia-q" placeholder="Pergunte algo sobre este conteúdo" style="flex:1" required><button class="btn">Perguntar</button></form>
@@ -1793,8 +1826,13 @@ const IA = (() => {
     const r = await sample(`${SISTEMA}\n\n${pedido}`, { onText: ({ text }) => onText && onText(text), signal: ctrl.signal, cache: false, ...(opts.images ? { images: opts.images } : {}) });
     return r.text;
   }
+  /** Conversa (Modo conversa, 39-conversa): turnos [{role, content}] começando e terminando em "user"; sem cache. */
+  async function conversar(turnos, { onText, signal } = {}) {
+    if (!sample) throw { code: "not_granted" };
+    return sample(turnos, { onText: ({ text }) => onText && onText(text), signal, cache: false });
+  }
   const limites = async () => { try { return sample ? await sample.limits() : null; } catch (e) { return null; } };
-  return { iniciar, disponivel, contexto, explicarQuestao, texto, json, livre, limites, mensagemErro, abrir };
+  return { iniciar, disponivel, contexto, explicarQuestao, texto, json, livre, conversar, limites, mensagemErro, abrir };
 })();
 
 /* ---- 06-ui.js ---- */
@@ -1819,6 +1857,8 @@ const caminhoAtual = () => (location.hash || "#/").slice(1) || "/";
 /** Navega para h. Dentro de uma folha, a página nova toma o lugar da folha no histórico (ver 38-navegacao). */
 function ir(h) { navegarPara(h); }
 let PAGINA = null; // última página renderizada (contexto para a IA)
+/** Chamados a cada render com o caminho novo (ex.: o Modo conversa cancela o pedido ao sair da tela). */
+const AO_RENDER = [];
 
 /* ---------- Ícones (traço simples) ---------- */
 const IC = {
@@ -1896,6 +1936,7 @@ function render(opts = {}) {
   catch (e) { console.error(e); pg = { secao: "", titulo: "Algo deu errado nesta página", html: `<div class="aviso">A página não pôde ser montada (${esc(e.message)}). Seus dados não foram afetados. <a href="#/">Voltar ao início</a></div>` }; }
   if (typeof pg === "string") pg = { html: pg };
   PAGINA = pg;
+  AO_RENDER.forEach(f => { try { f(cam); } catch (e) { console.error(e); } });
   try { desenharNav(pg.secao); } catch (e) { console.error(e); }
   /* Crumb para o próprio endereço (o player fica em #/questoes) sai do player em vez de não fazer nada. */
   const crumbs = pg.crumbs?.length ? `<nav class="crumbs" aria-label="Você está em">${pg.crumbs.map(([t, h], i) => (i ? '<span aria-hidden="true">›</span>' : "") + (h ? `<a href="${esc(h)}"${h === location.hash ? ' data-act="crumb-aqui"' : ""}>${esc(t)}</a>` : `<span>${esc(t)}</span>`)).join("")}</nav>` : "";
@@ -2088,7 +2129,7 @@ function htmlPlayer() {
       ${PL.resp ? (PL.ids.length === 1 && botaoProxLista()) || `<button class="btn" data-act="pl-prox">${PL.i < PL.ids.length - 1 ? "Próxima" : "Concluir"}</button>` : `<button class="btn" data-act="pl-confirmar" ${PL.esc === null ? "disabled" : ""}>Confirmar</button>${(PL.ids.length === 1 && botaoProxLista(true)) || `<button class="btn sec" data-act="pl-pular">Pular</button>`}`}
       ${PL.resp ? `<button class="btn sec mini" data-act="pl-flag" data-f="m" aria-pressed="${st.marcada}">${st.marcada ? "★ Marcada" : "☆ Marcar"}</button>
       <button class="btn sec mini" data-act="pl-flag" data-f="r" aria-pressed="${st.revisar}">${st.revisar ? "↻ Revisar" : "Revisar depois"}</button>` : ""}
-      ${PL.resp ? `<button class="btn sec mini" data-act="pl-card">+ Flashcard</button>${IA.disponivel() ? `<button class="btn sec mini" data-act="pl-ia">Explicar com IA</button>` : ""}<button class="btn sec mini" data-act="reportar" data-q="${esc(q.id)}">Reportar problema</button>` : ""}
+      ${PL.resp ? `<button class="btn sec mini" data-act="pl-card">+ Flashcard</button>${IA.disponivel() ? `<button class="btn sec mini" data-act="pl-ia">Explicar com IA</button>` : ""}${conversaDisponivel() ? `<button class="btn sec mini" data-act="cv-questao"><span aria-hidden="true">🗣️</span> Tirar dúvida por voz</button>` : ""}<button class="btn sec mini" data-act="reportar" data-q="${esc(q.id)}">Reportar problema</button>` : ""}
       ${PL.ids.length > 1 ? `<button class="btn sec mini dir" data-act="pl-encerrar">Encerrar sessão</button>` : ""}
     </div></article><p class="small muted so-teclado">Atalhos: A–E escolhem · Enter confirma/avança · clique numa frase do enunciado para destacá-la</p>`;
 }
@@ -6061,6 +6102,7 @@ function pedacosFala(t) {
 function partesLeitura(id) {
   const k = id.indexOf(":"), tipo = k < 0 ? id : id.slice(0, k), ref = k < 0 ? "" : id.slice(k + 1);
   if (tipo === "amostra") return [{ t: "Esta é a velocidade da leitura em voz alta." }];
+  if (tipo === "cv") { const u = ultimaRespostaCV(); return u ? [{ t: u, sel: "#cv-ult" }] : []; }   // Modo conversa (39-conversa)
   if (tipo === "pl") {
     const q = qPorId(PL.ids[PL.i]); if (!q || PL.fim) return [];
     if (!PL.resp) return [{ t: q.q, sel: "#pl .enunciado" }, ...PL.ordem.map((i, pos) => ({ t: `Alternativa ${LETRAS[pos]}${PL.desc.has(i) ? ", descartada" : ""}: ${q.o[i]}`, sel: `#pl [data-act="pl-alt"][data-i="${i}"]` }))];
@@ -6091,17 +6133,18 @@ function partesLeitura(id) {
 function escolherVoz() {
   try { const vs = speechSynthesis.getVoices() || []; return vs.find(v => /^pt[-_]BR$/i.test(v.lang)) || vs.find(v => /^pt\b/i.test(v.lang)) || null; } catch (e) { return null; }
 }
-function falar(id) {
+/** opts.vel: velocidade só desta leitura (padrão: a da folha "Aa"); opts.aoFim: chamado se a leitura terminar sozinha (não ao parar). */
+function falar(id, opts = {}) {
   pararVoz();
   if (!vozDisponivel()) return;
   const partes = partesLeitura(id).flatMap(p => pedacosFala(p.t).map(t => ({ t, sel: p.sel })));
   if (!partes.length) return;
-  const ger = ++VOZ.ger, voz = escolherVoz(), vel = velVoz();
+  const ger = ++VOZ.ger, voz = escolherVoz(), vel = opts.vel || velVoz();
   VOZ.id = id;
   VOZ.fila = partes.map((p, k) => {
     const u = new SpeechSynthesisUtterance(p.t); u.lang = "pt-BR"; if (voz) u.voice = voz; u.rate = vel;
     u.onstart = () => { if (ger === VOZ.ger) destacarLeitura(p.sel || null); };
-    u.onend = u.onerror = () => { if (ger === VOZ.ger && k === partes.length - 1) pararVoz(); };
+    u.onend = u.onerror = () => { if (ger === VOZ.ger && k === partes.length - 1) { pararVoz(); opts.aoFim?.(); } };
     return u;   // guardadas em VOZ.fila: sem referência, alguns navegadores descartam a fala no meio
   });
   try { VOZ.fila.forEach(u => speechSynthesis.speak(u)); } catch (e) { pararVoz(); return; }
@@ -6540,6 +6583,260 @@ ACOES["q-lista-voltar"] = () => {
   if (NAVS.idx === L.idxLista + 1 && NAVS.pilha[L.idxLista]?.h === L.h) { guardarRolagem(); history.back(); }
   else ir(L.h);
 };
+
+/* ---- 39-conversa.js ---- */
+/* ============================================================
+   39-conversa — Modo conversa (#/conversa): tirar dúvidas por voz com o assistente.
+   · Entradas: botão "Modo conversa" no Assistente (05-ia) e "Tirar dúvida por voz" no player
+     depois de responder (06-ui), que leva a questão (enunciado, alternativas, gabarito, explicação).
+   · Fala: o iframe do Claude bloqueia o microfone, então a entrada é o ditado do teclado do celular.
+     Se o navegador tiver SpeechRecognition, aparece um 🎤; ao primeiro erro ele some até recarregar.
+   · Resposta em streaming, limpa de markdown, lida em voz alta ao terminar (leitura de 37-interacao),
+     com Repetir, Mais devagar/Normal, Explicar de outro jeito e Parar.
+   · O sample não tem memória: cada pedido leva as instruções + contexto no 1º turno e as últimas trocas.
+   ============================================================ */
+const CV = { turns: [], ctx: null, ctrl: null, n: 0, gerando: false, parcial: "", erro: null, negado: false,
+  rascunho: "", micOff: false, rec: null, ouvindo: false, abrindo: false, rolou: false };
+const MAX_TROCAS_CV = 10;
+/** Códigos em que o recurso some nesta visualização (nunca pedir de novo). */
+const NEGADO_CV = ["not_granted", "sampling_disabled", "not_declared", "capability_disabled", "capability_removed"];
+const conversaDisponivel = () => IA.disponivel() && !CV.negado;
+const vozCVLigada = () => store.doc("perfil").cvVoz !== false;   // padrão: ligada
+const lentoCV = () => ls.get("gab2:cv-lento", false) === true;
+const velCV = () => lentoCV() ? Math.round(Math.min(velVoz(), 1) * 75) / 100 : velVoz();
+const ultimaRespostaCV = () => [...CV.turns].reverse().find(t => t.role === "assistant")?.content || "";
+const SRecCV = () => window.SpeechRecognition || window.webkitSpeechRecognition;
+const micCV = () => !CV.micOff && typeof SRecCV() === "function";
+const rolarCV = el => el?.scrollIntoView({ block: "start", behavior: semMovimento() ? "auto" : "smooth" });
+
+/** Texto limpo para mostrar e para ler: sem **, #, listas, tabelas, links, crases. */
+function limparMd(t) {
+  return String(t || "")
+    .replace(/```[\w-]*\n?/g, "").replace(/`([^`]*)`/g, "$1")
+    .replace(/!?\[([^\]]*)\]\([^)]*\)/g, "$1")
+    .replace(/^[ \t]*#{1,6}[ \t]*/gm, "").replace(/^[ \t]*>[ \t]?/gm, "")
+    .replace(/^[ \t]*([-*_])([ \t]*\1){2,}[ \t]*$/gm, "")                           // linha horizontal
+    .replace(/^[ \t]*\|?[ \t]*:?-{2,}:?[ \t]*(\|[ \t]*:?-{2,}:?[ \t]*)*\|?[ \t]*$/gm, "")   // separador de tabela
+    .replace(/^[ \t]*\|(.*)\|[ \t]*$/gm, (m, c) => c.split("|").map(s => s.trim()).filter(Boolean).join(", ") + ".")
+    .replace(/^[ \t]*(?:[-*+•]|\d{1,2}[.)])[ \t]+(.*)$/gm, (m, it) => it + (/[.!?:;,]$/.test(it.trim()) ? "" : "."))   // item de lista vira frase
+    .replace(/(\*\*|__)(.+?)\1/g, "$2")
+    .replace(/(^|[^\w*])\*(?!\s)([^*\n]+?)\*(?!\w)/g, "$1$2")
+    .replace(/(^|[^\w_])_(?!\s)([^_\n]+?)_(?!\w)/g, "$1$2")
+    .replace(/\*+/g, "").replace(/[ \t]+\n/g, "\n").replace(/\n{3,}/g, "\n\n").trim();
+}
+
+/* ---------- Contexto ---------- */
+function areaQuestaoCV(q) {
+  const t = TEMAS[q.tema], esp = t?.especialidades?.[0];
+  return (esp && ESPECIALIDADES[esp]?.nome) || (t?.dominio === "enem" ? ENEM_DISC[t.disciplinaId]?.nome || t.areaNome : null) || t?.nome || TRILHAS[q.t]?.curto || "estudo";
+}
+function ctxQuestaoCV(q, ordem, esc) {
+  const O = Array.isArray(ordem) && ordem.length === 5 ? ordem.slice() : [0, 1, 2, 3, 4], letra = i => LETRAS[O.indexOf(i)];
+  const texto = [`Questão de ${areaQuestaoCV(q)}${q.tema && TEMAS[q.tema] ? " (tema: " + TEMAS[q.tema].nome + ")" : ""}:`, q.q,
+    "Alternativas, na ordem em que a estudante viu:", ...O.map((j, k) => `${LETRAS[k]}) ${q.o[j]}`),
+    `Gabarito: ${letra(q.c)}) ${q.o[q.c]}`,
+    esc != null && q.o[esc] != null ? `A estudante marcou ${letra(esc)}) ${q.o[esc]} e ${esc === q.c ? "acertou" : "errou"}.` : "",
+    `Explicação do banco de questões: ${q.e || "sem explicação cadastrada."}`].filter(Boolean).join("\n");
+  return { chave: "q:" + q.id, qid: q.id, sobre: `Sobre: questão de ${areaQuestaoCV(q)}`, detalhe: q.q.length > 90 ? q.q.slice(0, 88).trim() + "…" : q.q, texto };
+}
+function instrucoesCV() {
+  const o = objetivo(), tr = trilhasDoObjetivo();
+  const area = o === "enem" ? "ENEM e vestibulares" : o === "direito" || o === "oab" ? "Direito e Exame da OAB" : tr.includes("medicina") || !o ? "Medicina e Residência Médica" : "estudos";
+  const SIS = `Você é um tutor de ${area} conversando por voz com uma estudante brasileira. Suas respostas serão LIDAS EM VOZ ALTA.
+Regras:
+- Português do Brasil. Respostas curtas: no máximo cerca de 120 palavras, a não ser que ela peça mais.
+- Frases curtas e simples, como numa conversa. Sem markdown: sem asteriscos, sem títulos, sem tabelas, sem listas longas (no máximo três itens, ditos em frase corrida).
+- Escreva números e siglas de um jeito fácil de falar; use números por extenso quando ajudar a fala.
+- Não invente. Se não souber, diga que não sabe.
+- Se a dúvida for sobre a questão do contexto, use o gabarito e a explicação fornecidos.
+${area.startsWith("Medicina") ? "- Condutas clínicas são educacionais, para prova, e não orientação médica real.\n" : ""}- Termine com uma pergunta curta para checar se ela entendeu, ou com uma sugestão de próximo passo.`;
+  return `${SIS}\n\nCONTEXTO\n${CV.ctx?.texto || "Conversa livre, sem questão específica."}\n\nA conversa com a estudante começa a seguir.`;
+}
+/** Turnos do pedido: instruções + contexto no 1º turno; depois as últimas ~10 trocas (começando em "user"). */
+function turnosCV() {
+  let hist = CV.turns.slice(-MAX_TROCAS_CV * 2);
+  while (hist.length && hist[0].role !== "user") hist = hist.slice(1);
+  return [{ role: "user", content: instrucoesCV() }, ...hist.map(t => ({ role: t.role, content: String(t.content).slice(0, 4000) }))];
+}
+
+/* ---------- Conversa ---------- */
+function novaConversa(ctx) {
+  CV.n++; CV.ctrl?.abort(); CV.ctrl = null; pararVoz();
+  Object.assign(CV, { turns: [], ctx: ctx || null, gerando: false, parcial: "", erro: null });
+}
+function enviarCV(conteudo, mostrar) {
+  conteudo = String(conteudo || "").trim();
+  if (!conteudo || !conversaDisponivel()) return;
+  CV.turns.push({ role: "user", content: conteudo.slice(0, 2000), ...(mostrar ? { mostrar } : {}) });
+  pedirCV();
+}
+async function pedirCV() {
+  if (CV.turns.at(-1)?.role !== "user") return;
+  CV.ctrl?.abort(); pararVoz();   // um pedido de cada vez: o anterior é cancelado
+  const n = ++CV.n, ctrl = CV.ctrl = new AbortController();
+  Object.assign(CV, { gerando: true, parcial: "", erro: null, rolou: false });
+  redesenharCV(); rolarCV($("#cv-ult"));
+  try {
+    const r = await IA.conversar(turnosCV(), { signal: ctrl.signal, onText: t => {
+      if (n !== CV.n) return;
+      CV.parcial = limparMd(t);
+      const el = $("#cv-ult .cv-tx"); if (el) el.textContent = CV.parcial;
+    } });
+    if (n !== CV.n) return;
+    CV.turns.push({ role: "assistant", content: (limparMd(r?.text) || "…") + (r?.truncated ? " (A resposta foi cortada. Peça para continuar.)" : "") });
+    Object.assign(CV, { gerando: false, parcial: "", ctrl: null });
+    redesenharCV(); rolarCV($("#cv-ult"));
+    if (vozCVLigada() && vozDisponivel()) lerCV(); else focarCampoCV(true);
+  } catch (e) {
+    if (n !== CV.n) return;
+    Object.assign(CV, { gerando: false, ctrl: null });
+    const c = e?.code, parcial = limparMd(e?.text || CV.parcial); CV.parcial = "";
+    if (NEGADO_CV.includes(c)) { CV.negado = true; render(); return; }
+    if (c === "cancelled") { if (parcial) CV.turns.push({ role: "assistant", content: parcial + " (interrompida)" }); }
+    else if (c === "rate_limited") CV.erro = { msg: "Muitas perguntas seguidas, espere um pouco e pergunte de novo." };
+    else CV.erro = { msg: "Não consegui responder agora.", repetir: true };
+    redesenharCV();
+    if (CV.erro) $("#cv-hist .cv-erro")?.focus({ preventScroll: true });
+  }
+}
+function lerCV() { if (ultimaRespostaCV()) falar("cv", { vel: velCV(), aoFim: () => focarCampoCV(true) }); }
+const LIBERA_CV = ["pointerdown", "touchstart", "mousedown", "click", "keydown", "blur"];
+/** Foco de volta no campo. semTeclado: só leva o foco (readonly até o próximo toque/tecla), sem abrir o teclado. */
+function focarCampoCV(semTeclado) {
+  const t = $("#cv-q"), a = document.activeElement; if (!t || a === t) return;
+  if (a && a !== document.body && !$("#cv")?.contains(a)) return;   // não rouba o foco de outro lugar
+  if (semTeclado) {
+    t.readOnly = true;
+    const soltar = () => { t.readOnly = false; LIBERA_CV.forEach(ev => t.removeEventListener(ev, soltar)); };
+    LIBERA_CV.forEach(ev => t.addEventListener(ev, soltar));
+  }
+  t.focus({ preventScroll: true });
+}
+
+/* ---------- Tela ---------- */
+rota("/conversa", () => paginaConversa());
+function paginaConversa() {
+  const base = { secao: "assistente", titulo: "Modo conversa", rotulo: "Conversa", voltar: true, ilu: "" };
+  if (!conversaDisponivel()) return { ...base, html: vazio(CV.negado ? "O assistente não foi autorizado nesta visualização, então o Modo conversa fica desligado." : "O Modo conversa precisa do assistente do Claude, que não está disponível aqui.", `<a class="btn" href="#/">Ir para o início</a>`) };
+  setTimeout(depoisDeAbrirCV, 0);
+  const ctx = CV.ctx;
+  return { ...base, html: `<section class="cv" id="cv">
+    <div class="cv-sobre"><p class="cv-assunto"><b>${esc(ctx?.sobre || "Conversa livre")}</b>${ctx?.detalhe ? `<span>${esc(ctx.detalhe)}</span>` : ""}</p>
+      <button class="btn sec" data-act="cv-limpar">Trocar assunto / limpar</button></div>
+    <div class="cv-hist" id="cv-hist" aria-live="polite" aria-busy="${CV.gerando}">${htmlHistCV()}</div>
+    <div id="cv-ctrl">${htmlCtrlCV()}</div>
+    <form class="cv-form" data-form="cv-enviar">
+      <label class="cv-lab" for="cv-q">Sua dúvida</label>
+      <textarea id="cv-q" data-act="cv-campo" rows="3" maxlength="2000" enterkeyhint="send" autocomplete="off" autocapitalize="sentences" placeholder="Fale ou digite sua dúvida" aria-describedby="cv-dica">${esc(CV.rascunho)}</textarea>
+      <div class="cv-envio"><button type="submit" class="btn azul cv-perguntar" data-act="cv-perguntar">Perguntar</button>${htmlMicCV()}</div>
+      <p class="cv-dica" id="cv-dica">${CV.micOff ? "Use o microfone do teclado para falar." : "Para falar, toque no 🎤 do teclado."}</p>
+    </form></section>` };
+}
+const htmlMicCV = () => micCV() ? `<button type="button" class="btn sec cv-mic" id="cv-mic" data-act="cv-mic" aria-pressed="${CV.ouvindo}"><span aria-hidden="true">🎤</span> ${CV.ouvindo ? "Ouvindo… toque para parar" : "Falar"}</button>` : "";
+function htmlHistCV() {
+  const balao = (quem, tx, ult, pend) => `<div class="cv-b ${quem === "user" ? "eu" : "ia"}${pend ? " pendente" : ""}"${ult ? ' id="cv-ult"' : ""}><span class="cv-quem">${quem === "user" ? "Você" : "Assistente"}</span><p class="cv-tx">${esc(tx)}</p></div>`;
+  const ultIA = CV.gerando ? -1 : CV.turns.map(t => t.role).lastIndexOf("assistant");
+  let h = CV.turns.map((t, i) => balao(t.role, t.mostrar || t.content, i === ultIA)).join("");
+  if (CV.gerando) h += balao("assistant", CV.parcial || "Pensando…", true, true);
+  if (CV.erro) h += `<div class="aviso cv-erro" role="alert" tabindex="-1"><p>${esc(CV.erro.msg)}</p>${CV.erro.repetir ? `<button class="btn azul" data-act="cv-tentar">Tentar de novo</button>` : ""}</div>`;
+  return h || `<p class="cv-vazio">${CV.ctx?.qid ? "Pergunte o que ficou de dúvida nesta questão. Por exemplo: por que a minha resposta está errada?" : "Pergunte qualquer dúvida de estudo. Por exemplo: qual a diferença entre sensibilidade e especificidade?"}</p>`;
+}
+function htmlCtrlCV() {
+  const voz = vozDisponivel(), lento = lentoCV();
+  const parar = `<button class="btn sec" data-act="cv-parar"><span aria-hidden="true">⏹</span> Parar</button>`;
+  let b = "";
+  if (CV.gerando) b = parar;
+  else if (ultimaRespostaCV()) b = (voz ? `<button class="btn sec" data-act="cv-repetir"><span aria-hidden="true">🔁</span> Repetir</button>
+      <button class="btn sec" data-act="cv-lento" aria-pressed="${lento}">${lento ? `<span aria-hidden="true">🐇</span> Normal` : `<span aria-hidden="true">🐢</span> Mais devagar`}</button>` : "")
+    + `<button class="btn sec" data-act="cv-outro"><span aria-hidden="true">🔄</span> Explicar de outro jeito</button>` + (voz ? parar : "");
+  const chave = voz ? `<label class="check cv-voz"><input type="checkbox" role="switch" data-chg="cv-voz" ${vozCVLigada() ? "checked" : ""}><span>Ler respostas em voz alta</span></label>` : "";
+  return (b ? `<div class="cv-acoes">${b}</div>` : "") + chave;
+}
+/** Redesenha só o histórico e os controles (o campo e o teclado ficam como estão). */
+function redesenharCV() {
+  const h = $("#cv-hist"), c = $("#cv-ctrl"); if (!h || !c) return;
+  const f = document.activeElement, act = c.contains(f) ? f.dataset.act : null;
+  h.setAttribute("aria-busy", String(CV.gerando)); h.innerHTML = htmlHistCV(); c.innerHTML = htmlCtrlCV();
+  if (act) (c.querySelector(`[data-act="${act}"]`) || c.querySelector("button"))?.focus({ preventScroll: true });
+}
+function depoisDeAbrirCV() {
+  if (!$("#cv")) return;
+  if (CV.abrindo) { CV.abrindo = false; $("#cv-q")?.focus({ preventScroll: true }); }
+  const u = $("#cv-ult"); if (u) u.scrollIntoView({ block: "start" });
+}
+
+/* ---------- Entradas ---------- */
+function abrirConversa(ctx) {
+  if (!conversaDisponivel()) return;
+  if (ctx ? ctx.chave !== CV.ctx?.chave : !CV.turns.length && !CV.gerando) novaConversa(ctx);
+  CV.abrindo = true;
+  ir("#/conversa");
+  /* Dentro da folha do Assistente a tela é desenhada na hora: focar ainda no toque abre o teclado no iPhone. */
+  const t = $("#cv-q"); if (t) { CV.abrindo = false; t.focus({ preventScroll: true }); }
+}
+ACOES["cv-abrir"] = () => {
+  const q = PL.ativo && PL.resp && document.getElementById("pl") ? qPorId(PL.ids[PL.i]) : null;
+  if (q) return abrirConversa(ctxQuestaoCV(q, PL.ordem, PL.esc));
+  const tema = PAGINA?.ctx?.tema;
+  if (tema && TEMAS[tema]) return abrirConversa({ chave: "tema:" + tema, sobre: "Sobre: " + TEMAS[tema].nome, texto: IA.contexto() });
+  abrirConversa(null);
+};
+ACOES["cv-questao"] = () => { const q = qPorId(PL.ids[PL.i]); if (!q || !PL.resp) return; pararVoz(); abrirConversa(ctxQuestaoCV(q, PL.ordem, PL.esc)); };
+
+/* ---------- Ações da tela ---------- */
+ACOES["cv-perguntar"] = () => {
+  const t = $("#cv-q"); if (!t) return;
+  const v = t.value.trim();
+  if (!v) { t.readOnly = false; t.focus(); return; }   // campo vazio: o toque leva ao campo (o teclado sobe)
+  t.value = ""; CV.rascunho = "";
+  if (document.activeElement === t) t.blur();   // o teclado desce e a resposta fica à vista
+  pararMicCV(); enviarCV(v);
+};
+FORMS["cv-enviar"] = () => ACOES["cv-perguntar"]();
+ACOES["cv-tentar"] = () => { if (!CV.gerando) pedirCV(); };   // uma tentativa por toque, nunca em laço
+ACOES["cv-limpar"] = () => { pararMicCV(); novaConversa(null); CV.rascunho = ""; render(); const t = $("#cv-q"); if (t) { t.value = ""; t.focus({ preventScroll: true }); } toast("Conversa nova"); };
+ACOES["cv-repetir"] = () => { pararVoz(); lerCV(); };
+ACOES["cv-lento"] = () => { ls.set("gab2:cv-lento", !lentoCV()); redesenharCV(); pararVoz(); if (vozDisponivel()) lerCV(); };
+ACOES["cv-outro"] = () => { if (!ultimaRespostaCV()) return; pararVoz();
+  enviarCV("Não entendi bem. Explique a sua última resposta de outro jeito, mais simples, usando uma analogia do dia a dia. Continue curto.", "Explique de outro jeito, mais simples, por favor."); };
+ACOES["cv-parar"] = () => { pararVoz(); if (CV.gerando) CV.ctrl?.abort(); };
+MUDANCAS["cv-voz"] = el => { const P = store.doc("perfil"); P.cvVoz = !!el.checked; store.mudou("perfil"); if (!el.checked) pararVoz(); toast(el.checked ? "Respostas lidas em voz alta" : "Leitura das respostas desligada"); };
+document.addEventListener("input", e => { if (e.target?.id === "cv-q") CV.rascunho = e.target.value; });
+/* Enter envia (Shift+Enter quebra a linha); no celular é a tecla "Enviar" do teclado. */
+document.addEventListener("keydown", e => {
+  if (e.target?.id !== "cv-q" || e.key !== "Enter" || e.shiftKey || e.isComposing) return;
+  e.preventDefault(); ACOES["cv-perguntar"]();
+});
+
+/* ---------- Microfone (só se o navegador permitir; senão, o ditado do teclado) ---------- */
+function pararMicCV() { const r = CV.rec; if (!r) return; CV.rec = null; CV.ouvindo = false; r.onerror = r.onend = r.onresult = null; try { r.abort(); } catch (e) { } atualizarMicCV(); }
+function atualizarMicCV() { const b = $("#cv-mic"); if (b) b.outerHTML = htmlMicCV(); }
+function micFalhouCV() {
+  const r = CV.rec; CV.rec = null; CV.ouvindo = false; CV.micOff = true;   // some até recarregar: nunca insistir
+  if (r) { r.onerror = r.onend = r.onresult = null; try { r.abort(); } catch (e) { } }
+  $("#cv-mic")?.remove();
+  const d = $("#cv-dica"); if (d) d.textContent = "Use o microfone do teclado para falar.";
+  toast("Use o microfone do teclado para falar");
+}
+ACOES["cv-mic"] = () => {
+  if (CV.rec) { try { CV.rec.stop(); } catch (e) { pararMicCV(); } return; }
+  const SR = SRecCV(); if (!micCV()) return;
+  let r; try { r = new SR(); r.lang = "pt-BR"; r.interimResults = true; r.continuous = false; r.maxAlternatives = 1; } catch (e) { micFalhouCV(); return; }
+  const antes = CV.rascunho.trim() ? CV.rascunho.trim() + " " : "";
+  r.onresult = ev => { let s = ""; for (const res of ev.results) s += res[0]?.transcript || ""; CV.rascunho = antes + s.trim(); const t = $("#cv-q"); if (t) t.value = CV.rascunho; };
+  r.onerror = () => micFalhouCV();
+  r.onend = () => { if (CV.rec !== r) return; CV.rec = null; CV.ouvindo = false; atualizarMicCV(); if (CV.rascunho.trim()) $("#cv-q")?.focus({ preventScroll: true }); };
+  pararVoz(); CV.rec = r;
+  try { r.start(); CV.ouvindo = true; atualizarMicCV(); } catch (e) { micFalhouCV(); }
+};
+
+/* ---------- Saída da tela: cancela o pedido, o microfone e a leitura da conversa ---------- */
+AO_RENDER.push(cam => {
+  if (cam === "/conversa") return;
+  if (CV.ctrl) CV.ctrl.abort();
+  pararMicCV();
+  if (VOZ.id === "cv") pararVoz();
+});
 
 /* ---- 99-main.js ---- */
 /* ============================================================
