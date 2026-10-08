@@ -139,4 +139,5 @@ node curriculos/testes/simulacoes.js # Plantão no PS, Salve o paciente, Defesa,
 node curriculos/testes/letras.js     # encaixe do texto: todas as telas, 360/390 px, letras Normal a Enorme (nada sai da caixa)
 node curriculos/testes/familias.js   # questões irmãs (mesmo quadro por outro ângulo) nunca caem juntas na sessão nem no simulado
 node curriculos/testes/etapa2.js     # mapa mental, erros em lote, backup semanal, conferência da matriz
+node curriculos/testes/interacao.js  # Ouvir (voz simulada), descartar alternativas, grau de certeza, sequência de acertos, flashcards com gesto, vibração, marca-texto
 ```

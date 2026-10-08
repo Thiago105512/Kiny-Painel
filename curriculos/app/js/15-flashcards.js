@@ -38,7 +38,7 @@ ACOES["cards-dos-erros"] = () => {
 };
 
 /* ---------- Sessão de estudo ---------- */
-const FC = { chave: null, fila: [], i: 0, mostrar: false, feitos: [] };
+const FC = { chave: null, fila: [], i: 0, mostrar: false, feitos: [], virou: false };
 function paginaEstudoCards(temaId) {
   const chave = temaId || "*";
   const venc = cards().filter(c => vencido(c.srs) && cardDoObjetivo(c) && (!temaId || c.tema === temaId)).map(c => c.id);
@@ -53,25 +53,27 @@ function paginaEstudoCards(temaId) {
   const c = cardPorId(FC.fila[FC.i]);
   if (!c) { FC.i++; return paginaEstudoCards(temaId); }
   const rot = [[0, "Errei"], [1, "Difícil"], [2, "Bom"], [3, "Fácil"]];
+  const virou = FC.virou; FC.virou = false;   // animação de virar só logo depois do toque
   return {
     secao: "flashcards", crumbs, titulo: `Card ${FC.i + 1} de ${FC.fila.length}`,
-    html: `<div class="fc" id="fc"><div class="small muted">${c.tema ? linkTema(c.tema) : "sem tema"}${c.subtema ? " · " + esc(nomeSubtema(c.tema, c.subtema) || "") : ""} · ${esc(ORIGEM_CARD[c.origem] || c.origem)}</div>
-      <div class="frente">${esc(c.frente)}</div>${FC.mostrar ? `<div class="verso">${esc(c.verso)}</div>` : ""}</div>
-      <div style="margin-top:12px">${FC.mostrar ? `<div class="notas">${rot.map(([n, t]) => `<button class="btn ${n === 0 ? "perigo" : n === 2 ? "azul" : "sec"}" data-act="fc-nota" data-n="${n}">${t}<small>${previaIntervalo(c.srs, n)} d</small></button>`).join("")}</div>`
+    html: `<div class="fc${virou ? " virou" : ""}${FC.mostrar ? " aberto" : ""}" id="fc"><div class="fc-topo"><span class="small muted">${c.tema ? linkTema(c.tema) : "sem tema"}${c.subtema ? " · " + esc(nomeSubtema(c.tema, c.subtema) || "") : ""} · ${esc(ORIGEM_CARD[c.origem] || c.origem)}</span>${botaoOuvir("fc")}</div>
+      <div class="frente">${esc(c.frente)}</div>${FC.mostrar ? `<div class="verso">${esc(c.verso)}</div>` : `<p class="fc-toque small muted">Toque no cartão para virar</p>`}</div>
+      <div style="margin-top:12px">${FC.mostrar ? `<p class="fc-dica small muted"><span>← Esqueci</span><span>deslize o cartão</span><span>Lembrei →</span></p><div class="notas">${rot.map(([n, t]) => `<button class="btn ${n === 0 ? "perigo" : n === 2 ? "azul" : "sec"}" data-act="fc-nota" data-n="${n}">${t}<small>${previaIntervalo(c.srs, n)} d</small></button>`).join("")}</div>`
         : `<button class="btn" style="width:100%" data-act="fc-mostrar">Mostrar resposta (espaço)</button>`}</div>
-      <p class="small muted">Atalhos: espaço mostra · 1 errei · 2 difícil · 3 bom · 4 fácil</p>`,
+      <p class="small muted so-teclado">Atalhos: espaço mostra · 1 errei · 2 difícil · 3 bom · 4 fácil · ← esqueci · → lembrei</p>`,
     ctx: { tema: c.tema, texto: "Flashcard em estudo: " + c.frente },
   };
 }
 rota("/flashcards/estudar", () => paginaEstudoCards(null));
 rota("/flashcards/estudar/:tema", p => paginaEstudoCards(p.tema));
-ACOES["fc-mostrar"] = () => { FC.mostrar = true; atualizar(); };
-ACOES["fc-nota"] = el => { const n = +el.dataset.n; avaliarCard(FC.fila[FC.i], n); FC.feitos.push(n); FC.i++; FC.mostrar = false; atualizar(); };
+ACOES["fc-mostrar"] = () => { FC.mostrar = true; FC.virou = true; atualizar(); };
+ACOES["fc-nota"] = el => { pararVoz(); const n = +el.dataset.n; avaliarCard(FC.fila[FC.i], n); FC.feitos.push(n); FC.i++; FC.mostrar = false; atualizar(); };
 ACOES["fc-reiniciar"] = () => { FC.chave = null; atualizar(); };
 document.addEventListener("keydown", e => {
   if (!document.getElementById("fc") || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName) || $("#camada").innerHTML) return;
   if (e.key === " " && !FC.mostrar) { e.preventDefault(); ACOES["fc-mostrar"](); }
   else if (FC.mostrar && ["1", "2", "3", "4"].includes(e.key)) ACOES["fc-nota"]({ dataset: { n: +e.key - 1 } });
+  else if (FC.mostrar && (e.key === "ArrowRight" || e.key === "ArrowLeft") && !/^(BUTTON|A)$/.test(e.target.tagName)) { e.preventDefault(); ACOES["fc-nota"]({ dataset: { n: e.key === "ArrowRight" ? 2 : 0 } }); }
 });
 
 /* ---------- Criar / editar ---------- */

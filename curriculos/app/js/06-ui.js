@@ -106,6 +106,7 @@ function render(opts = {}) {
   document.title = (pg.titulo ? pg.titulo + " · " : "") + "Gabarito Amazonas";
   if (opts.topo) { window.scrollTo(0, 0); $("#view").focus({ preventScroll: true }); }
   else if (foco) restaurarFoco(foco);
+  reaplicarLeitura();
 }
 /* Foco preservado entre re-renderizações: quem usa teclado ou leitor de tela não volta ao topo
    (passando pelo menu) a cada toque. O elemento é reencontrado pelo data-act e seus dados. */
@@ -141,11 +142,13 @@ aplicarTemaCor(ls.get("gab2:tema", "auto"));
 function htmlAparencia() {
   const k = ls.get("gab2:letra", 1.25), tc = ls.get("gab2:tema", "auto");
   return `<div class="pilha aparencia"><span class="lab">Tamanho da letra</span><div class="aparencia-opcoes">${TAM_LETRA.map(([v, n], i) => `<button class="btn ${v === k ? "azul" : "sec"}" data-act="letra-set" data-v="${v}" aria-pressed="${v === k}" style="font-size:${[16, 19, 22, 26][i]}px">${n}</button>`).join("")}</div>
-    <span class="lab">Cores</span><div class="aparencia-opcoes">${TEMAS_COR.map(([v, n]) => `<button class="btn ${v === tc ? "azul" : "sec"}" data-act="tema-cor" data-v="${v}" aria-pressed="${v === tc}">${n}</button>`).join("")}</div></div>`;
+    <span class="lab">Cores</span><div class="aparencia-opcoes">${TEMAS_COR.map(([v, n]) => `<button class="btn ${v === tc ? "azul" : "sec"}" data-act="tema-cor" data-v="${v}" aria-pressed="${v === tc}">${n}</button>`).join("")}</div>
+    ${htmlVozSom()}</div>`;
 }
-ACOES.letra = () => abrirFolha(htmlAparencia(), { titulo: "Letra e cores" });
-ACOES["letra-set"] = el => { const k = +el.dataset.v, nome = TAM_LETRA.find(x => x[0] === k)?.[1]; if (!nome) return; ls.set("gab2:letra", k); aplicarLetra(k); abrirFolha(htmlAparencia(), { titulo: "Letra e cores" }); $(`#camada [data-act="letra-set"][data-v="${k}"]`)?.focus(); toast("Letra: " + nome); };
-ACOES["tema-cor"] = el => { const t = el.dataset.v; ls.set("gab2:tema", t); aplicarTemaCor(t); abrirFolha(htmlAparencia(), { titulo: "Letra e cores" }); $(`#camada [data-act="tema-cor"][data-v="${t}"]`)?.focus(); };
+const TIT_APARENCIA = "Letra, cores e som";
+ACOES.letra = () => abrirFolha(htmlAparencia(), { titulo: TIT_APARENCIA });
+ACOES["letra-set"] = el => { const k = +el.dataset.v, nome = TAM_LETRA.find(x => x[0] === k)?.[1]; if (!nome) return; ls.set("gab2:letra", k); aplicarLetra(k); abrirFolha(htmlAparencia(), { titulo: TIT_APARENCIA }); $(`#camada [data-act="letra-set"][data-v="${k}"]`)?.focus(); toast("Letra: " + nome); };
+ACOES["tema-cor"] = el => { const t = el.dataset.v; ls.set("gab2:tema", t); aplicarTemaCor(t); abrirFolha(htmlAparencia(), { titulo: TIT_APARENCIA }); $(`#camada [data-act="tema-cor"][data-v="${t}"]`)?.focus(); };
 /** Selo do nível da questão (definido pelo banco): barrinhas + nome, com cor. */
 const seloNivel = (d, curto = false) => DIFICULDADE[d] ? `<span class="nivel n${d}" title="Nível da questão: ${DIFICULDADE[d]}"><i></i><i></i><i></i>${curto ? "" : "Nível: "}${DIFICULDADE[d]}</span>` : "";
 const pill = (t, cls = "") => `<span class="pill ${cls}">${esc(t)}</span>`;
@@ -193,13 +196,14 @@ document.addEventListener("keydown", e => {
   if (PL.ativo && document.getElementById("pl")) teclaPlayer(e);
   else if (SIM.fase === "prova" && document.getElementById("prova")) teclaProva(e);
 });
-window.addEventListener("hashchange", () => { fecharFolha(); render({ topo: true }); });
+window.addEventListener("hashchange", () => { fecharFolha(); pararVoz(); render({ topo: true }); });
 
 /* ============================================================
    Player de questões — usado em Questões, Tema, Revisões, Caderno de erros.
    Registra resposta, tempo, erro e oferece flashcard / IA.
    ============================================================ */
-const PL = { ativo: false, chave: null, ids: [], i: 0, ordem: [], esc: null, resp: false, t0: 0, origem: "pratica", res: [], aoFim: null, ia: "", fim: false };
+const PL = { ativo: false, chave: null, ids: [], i: 0, ordem: [], esc: null, resp: false, t0: 0, origem: "pratica", res: [], aoFim: null, ia: "", fim: false,
+  desc: new Set(), cert: null, marcas: new Set(), seq: 0 };   // descartadas, grau de certeza, frases marcadas, acertos seguidos
 /* Sessões em andamento de outras telas ficam guardadas por chave: abrir uma questão avulsa
    (pela busca, por exemplo) não descarta a sessão de 20 questões que estava pela metade. */
 const SALVOS = {};
@@ -222,11 +226,13 @@ function iniciarPlayer(chave, ids, origem = "pratica", aoFim = null) {
   if (PL.chave !== chave) guardarSessao();
   /* Caderno de erros: cada erro vencido é tocado (sem cortar irmãs de família, que ficariam vencidas para sempre). */
   ids = ordenarSeries(ids, false, origem !== "erro");
-  Object.assign(PL, { festa: false, ativo: true, chave, ids: ids.slice(), i: 0, esc: null, resp: false, origem, res: [], aoFim, ia: "", fim: false, msgFim: "" });
+  Object.assign(PL, { festa: false, ativo: true, chave, ids: ids.slice(), i: 0, esc: null, resp: false, origem, res: [], aoFim, ia: "", fim: false, msgFim: "", seq: 0 });
   delete SALVOS[chave];
   prepararQuestao();
 }
-function prepararQuestao() { PL.ordem = embaralhar([0, 1, 2, 3, 4]); PL.esc = null; PL.resp = false; PL.t0 = Date.now(); PL.ia = ""; }
+function prepararQuestao() { pararVoz(); PL.ordem = embaralhar([0, 1, 2, 3, 4]); PL.esc = null; PL.resp = false; PL.t0 = Date.now(); PL.ia = ""; PL.desc = new Set(); PL.cert = null; PL.marcas = new Set(); PL.seqNovo = false; }
+/** Grau de certeza (opcional), escolhido entre a alternativa e o Confirmar. Gravado na tentativa (6º campo). */
+const CERTEZA = [[3, "Tenho certeza"], [2, "Acho que sim"], [1, "Chutei"]];
 function playerAtivo(chave) {
   if (PL.ativo && PL.chave === chave) return true;
   const s = SALVOS[chave]; if (!s) return false;
@@ -253,16 +259,22 @@ function htmlPlayer() {
   const st = statusQ(q);
   const alts = PL.ordem.map((i, pos) => {
     let s = ""; if (PL.resp) { if (i === q.c) s = "ok"; else if (i === PL.esc) s = "bad"; } else if (i === PL.esc) s = "sel";
-    return `<li><button class="alt" data-act="pl-alt" data-i="${i}" data-s="${s}" ${PL.resp ? "disabled" : ""}><span class="bolha">${LETRAS[pos]}</span><span>${esc(q.o[i])}</span></button></li>`;
+    const fora = !PL.resp && PL.desc.has(i);   // descartada: esmaecida, riscada e fora de escolha até ser restaurada
+    return `<li class="alt-li"><button class="alt${fora ? " descartada" : ""}" data-act="pl-alt" data-i="${i}" data-s="${s}" ${PL.resp || fora ? "disabled" : ""}><span class="bolha">${LETRAS[pos]}</span><span>${esc(q.o[i])}</span></button>${PL.resp ? "" :
+      `<button class="alt-x" data-act="pl-desc" data-i="${i}" aria-label="Descartar alternativa ${LETRAS[pos]}" aria-pressed="${fora}" title="${fora ? "Restaurar" : "Descartar"}"><span aria-hidden="true">${fora ? "↺" : "✕"}</span></button>`}</li>`;
   }).join("");
+  const ferr = botaoOuvir("pl") + (PL.seq >= 3 ? `<span class="pl-seq${PL.seqNovo ? " novo" : ""}" title="Acertos seguidos nesta sessão"><span aria-hidden="true">🔥</span> ${PL.seq} seguidas</span>` : "");
   const letra = i => LETRAS[PL.ordem.indexOf(i)];
   const ok = PL.esc === q.c;
   return `<article class="caixa questao" id="pl">
     <div class="linha entre" style="margin-bottom:12px"><b>${PL.ids.length > 1 ? `Questão ${PL.i + 1} de ${PL.ids.length}` : "Questão"}${q.serie ? `<br><span class="small muted">Caso em ${q.partes} partes · parte ${q.parte}</span>` : ""}</b>${seloNivel(q.dif)}</div>
-    <p class="enunciado">${esc(q.q)}</p>${q.img ? figuraImg(q.img) : ""}
+    ${ferr ? `<div class="pl-ferr">${ferr}</div>` : ""}
+    <p class="enunciado">${frasesEnunciado(q.q, PL.marcas)}</p>${q.img ? figuraImg(q.img) : ""}
     <ol class="alts">${alts}</ol>
+    ${!PL.resp && PL.esc !== null ? `<div class="certeza" role="group" aria-labelledby="cert-lab"><span class="lab" id="cert-lab">Sua certeza <small>(opcional)</small></span><div class="chips">${CERTEZA.map(([v, t]) => `<button class="chip" data-act="pl-cert" data-v="${v}" aria-pressed="${PL.cert === v}">${t}</button>`).join("")}</div></div>` : ""}
     ${PL.resp ? `<div class="retorno"><p class="veredito ${ok ? "ok" : "bad"}" tabindex="-1">${ok ? `<span class="festa">✓ ${esc(PL.frase || "Certo")}</span>` : `Errado · gabarito ${letra(q.c)}`}${PL.ms ? ` · ${mmss(PL.ms)}` : ""}</p>${!ok && PL.frase ? `<p class="small muted" style="margin:0 0 6px">${esc(PL.frase)}</p>` : ""}${htmlExplicacao(q.e)}
       <p class="small muted com-ilu" style="margin:8px 0 0;gap:8px">${q.tema ? iluTema(q.tema, "p") : ""}<span>${[TRILHAS[q.t]?.curto || q.t, q.ae && nomeAreaEnem(q.ae), q.ae && q.disc].filter(Boolean).map(esc).join(" · ")}${q.tema ? " · " + linkTema(q.tema) : ""}${q.src !== "banco" ? " · " + (q.src === "ia" ? "gerada por IA" : "minha") : ""}${st.n > 1 ? ` · você já acertou ${st.ac} de ${st.n}` : ""}${q.rev ? ` · revisada em ${esc(mesAno(q.rev))}` : ""}${acertoGeral(q) ? " · " + esc(acertoGeral(q)) : ""}</span></p>
+      ${ok && PL.cert === 1 ? `<p class="small muted" style="margin:8px 0 0">Acertou no chute: a questão volta mais cedo pelo <a href="#/erros">caderno de erros</a>.</p>` : ""}
       ${!ok ? `<p class="small muted" style="margin:8px 0 0">Registrado no <a href="#/erros">caderno de erros</a> com revisão amanhã.</p>${irmaDe(q) ? `<div class="acoes"><button class="btn sec" data-act="pl-irma">Treinar este ponto de novo</button></div>` : ""}` : ""}
       ${PL.ia ? `<h3>Assistente</h3><div class="ia-txt" id="pl-ia">${esc(PL.ia)}</div>` : ""}</div>` : ""}
     <div class="acoes">
@@ -271,7 +283,7 @@ function htmlPlayer() {
       <button class="btn sec mini" data-act="pl-flag" data-f="r" aria-pressed="${st.revisar}">${st.revisar ? "↻ Revisar" : "Revisar depois"}</button>` : ""}
       ${PL.resp ? `<button class="btn sec mini" data-act="pl-card">+ Flashcard</button>${IA.disponivel() ? `<button class="btn sec mini" data-act="pl-ia">Explicar com IA</button>` : ""}<button class="btn sec mini" data-act="reportar" data-q="${esc(q.id)}">Reportar problema</button>` : ""}
       ${PL.ids.length > 1 ? `<button class="btn sec mini dir" data-act="pl-encerrar">Encerrar sessão</button>` : ""}
-    </div></article><p class="small muted so-teclado">Atalhos: A–E escolhem · Enter confirma/avança</p>`;
+    </div></article><p class="small muted so-teclado">Atalhos: A–E escolhem · Enter confirma/avança · clique numa frase do enunciado para destacá-la</p>`;
 }
 const mesAno = s => { const [a, m] = String(s).split("-"); return m ? new Date(+a, +m - 1, 15).toLocaleDateString("pt-BR", { month: "short", year: "numeric" }) : s; };
 /** Questão irmã: mesmo subtema (ou tema), fora da sessão, de preferência ainda não respondida. */
@@ -294,24 +306,39 @@ FORMS["reportar"] = async f => {
   const foi = await store.publicar("reportes/" + id, corpo);
   fecharFolha(); toast(foi ? "Obrigado! Problema enviado para revisão" : "Problema anotado neste aparelho");
 };
-ACOES["pl-alt"] = el => { if (PL.resp) return; PL.esc = +el.dataset.i; atualizar(); };
+ACOES["pl-alt"] = el => { if (PL.resp || PL.desc.has(+el.dataset.i)) return; PL.esc = +el.dataset.i; atualizar(); };
+/** Descartar (✕) / restaurar (↺) uma alternativa. Não muda a pontuação; some depois de confirmar. */
+ACOES["pl-desc"] = el => {
+  if (PL.resp) return; const i = +el.dataset.i;
+  if (PL.desc.has(i)) PL.desc.delete(i);
+  else { if (PL.desc.size >= 4) { toast("Deixe ao menos uma alternativa"); return; } PL.desc.add(i); if (PL.esc === i) { PL.esc = null; PL.cert = null; } }
+  atualizar();
+};
+ACOES["pl-cert"] = el => { if (PL.resp) return; const v = +el.dataset.v; PL.cert = PL.cert === v ? null : v; atualizar(); };
+/** Marca-texto: tocar numa frase do enunciado alterna o destaque (só nesta questão). */
+ACOES["pl-marca"] = el => { const n = +el.dataset.n; if (PL.marcas.has(n)) PL.marcas.delete(n); else PL.marcas.add(n); el.classList.toggle("marcada", PL.marcas.has(n)); };
 ACOES["pl-confirmar"] = () => {
   if (PL.esc === null || PL.resp) return;
+  pararVoz();
   const q = qPorId(PL.ids[PL.i]); PL.ms = Date.now() - PL.t0; PL.resp = true;
-  const ok = registrarResposta(q, PL.esc, PL.ms, PL.origem);
-  PL.res.push({ id: q.id, ok, ms: PL.ms, tema: q.tema }); PL.frase = sorteio(ok ? ELOGIOS : ANIMO); atualizar();
+  const ok = registrarResposta(q, PL.esc, PL.ms, PL.origem, PL.cert);
+  PL.res.push({ id: q.id, ok, ms: PL.ms, tema: q.tema, cert: PL.cert }); PL.frase = sorteio(ok ? ELOGIOS : ANIMO);
+  PL.seq = ok ? (PL.seq || 0) + 1 : 0; PL.seqNovo = ok && PL.seq >= 3;
+  atualizar(); PL.seqNovo = false;
+  som(ok ? "ok" : "erro");   // som e vibração (se ligados)
   if (ok) confete(document.querySelector("#pl .veredito"));
+  if (ok && PL.seq % 5 === 0) celebrar(`${PL.seq} acertos seguidos!`, null, true);   // comemoração leve, sem bloquear a tela
 };
-ACOES["pl-prox"] = () => { if (PL.i < PL.ids.length - 1) { PL.i++; prepararQuestao(); } else { PL.fim = true; PL.msgFim = PL.aoFim ? PL.aoFim(PL.res) : ""; } atualizar(); document.getElementById("pl")?.scrollIntoView({ block: "start" }); };
-ACOES["pl-pular"] = () => { if (PL.i < PL.ids.length - 1) { PL.i++; prepararQuestao(); } else { PL.fim = true; PL.msgFim = PL.aoFim ? PL.aoFim(PL.res) : ""; } atualizar(); };
+ACOES["pl-prox"] = () => { pararVoz(); if (PL.i < PL.ids.length - 1) { PL.i++; prepararQuestao(); } else { PL.fim = true; PL.msgFim = PL.aoFim ? PL.aoFim(PL.res) : ""; } atualizar(); document.getElementById("pl")?.scrollIntoView({ block: "start" }); };
+ACOES["pl-pular"] = () => { pararVoz(); if (PL.i < PL.ids.length - 1) { PL.i++; prepararQuestao(); } else { PL.fim = true; PL.msgFim = PL.aoFim ? PL.aoFim(PL.res) : ""; } atualizar(); };
 ACOES["pl-flag"] = el => { const q = qPorId(PL.ids[PL.i]); const v = alternarFlag(q, el.dataset.f); toast(el.dataset.f === "m" ? (v ? "Questão marcada" : "Marcação removida") : (v ? "Adicionada a revisar" : "Removida de revisar")); atualizar(); };
 ACOES["pl-card"] = () => { const q = qPorId(PL.ids[PL.i]); if (cards().some(c => c.ref === q.id)) { toast("Esta questão já tem flashcard"); return; } const id = cardDeQuestao(q, PL.esc === q.c ? "questao" : "erro"); const E = store.doc("erros"); if (E.itens[q.id]) { E.itens[q.id].card = id; store.mudou("erros"); } toast("Flashcard criado — revisão a partir de hoje"); };
 ACOES["pl-ia"] = () => { const q = qPorId(PL.ids[PL.i]); IA.explicarQuestao(q, PL.esc, PL.ordem, t => { PL.ia = t; const el = document.getElementById("pl-ia"); if (el) el.textContent = t; else atualizar(); }); };
-ACOES["pl-sair"] = () => { PL.ativo = false; atualizar(); };
-ACOES["pl-encerrar"] = () => { if (!PL.res.length) { PL.ativo = false; } else { PL.fim = true; PL.msgFim = PL.aoFim ? PL.aoFim(PL.res) : ""; } atualizar(); };
+ACOES["pl-sair"] = () => { pararVoz(); PL.ativo = false; atualizar(); };
+ACOES["pl-encerrar"] = () => { pararVoz(); if (!PL.res.length) { PL.ativo = false; } else { PL.fim = true; PL.msgFim = PL.aoFim ? PL.aoFim(PL.res) : ""; } atualizar(); };
 function teclaPlayer(e) {
   if (PL.fim) return;
   const i = LETRAS.indexOf(e.key.toUpperCase());
-  if (i >= 0 && !PL.resp) { PL.esc = PL.ordem[i]; atualizar(); }
+  if (i >= 0 && !PL.resp) { if (PL.desc.has(PL.ordem[i])) return; PL.esc = PL.ordem[i]; atualizar(); }
   else if (e.key === "Enter") { e.preventDefault(); PL.resp ? ACOES["pl-prox"]() : ACOES["pl-confirmar"](); }
 }

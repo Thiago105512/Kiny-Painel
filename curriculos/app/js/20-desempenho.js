@@ -44,6 +44,7 @@ rota("/desempenho", () => {
       <div class="kpis"><div class="kpi"><b>${ag.n ? pct(ag.ac, ag.n) + "%" : "—"}</b><span>acerto geral</span></div><div class="kpi"><b>${ag.n}</b><span>respostas</span></div>
         <div class="kpi"><b>${ag.vistas}<small class="muted" style="font-size:calc(13px * var(--k))"> / ${questoes().filter(filtro).length}</small></b><span>questões vistas</span></div><div class="kpi"><b>${horas(segTotal)}</b><span>tempo de estudo</span></div></div>
       <section><h2 class="sec">Onde melhorar</h2>${abas([["disciplina", "Disciplinas"], ["tema", "Temas"], ...(verMed ? [["especialidade", "Especialidades"]] : []), ["nivel", "Nível"], ...(verEnem ? [["enem", "ENEM"]] : [])], DV.aba, "dv-aba")}${tab}</section>
+      ${blocoCerteza(filtro)}
       <section><h2 class="sec">Questões nos últimos 14 dias</h2>${blocoEvolucao(14)}</section>
       ${temTempo ? `<section><h2 class="sec">Minutos de estudo</h2>${colunasTempo()}</section>` : ""}
       ${sem ? `<section><h2 class="sec">Por semana</h2>${sem}</section>` : ""}

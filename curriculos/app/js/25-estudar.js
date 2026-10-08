@@ -53,11 +53,11 @@ function cartaoPilula(p, { sessao = false } = {}) {
   const aberta = EST.aberta[p.id], v = vistasPil()[p.id], [nomeTipo] = TIPOS_PIL[p.tipo] || [p.tipo];
   const qs = p.tema ? questoes().filter(q => q.tema === p.tema && doObjetivo(q)).length : 0;
   return `<article class="caixa pilula" id="pil">
-    <div class="linha entre" style="margin-bottom:10px"><span class="com-ilu" style="gap:8px">${iluPil(p.tipo, "p")}<span class="pill azul">${esc(nomeTipo)}</span></span><span class="small muted">${esc(p.area)}${p.ano != null && p.tipo === "data" ? " · " + anoTxt(p.ano) : ""}</span></div>
+    <div class="linha entre" style="margin-bottom:10px"><span class="com-ilu" style="gap:8px">${iluPil(p.tipo, "p")}<span class="pill azul">${esc(nomeTipo)}</span></span><span class="small muted">${esc(p.area)}${p.ano != null && p.tipo === "data" ? " · " + anoTxt(p.ano) : ""}</span>${botaoOuvir("pil:" + p.id)}</div>
     <h2 class="pil-tit">${esc(p.titulo)}</h2>
     <p class="pil-perg">${esc(p.pergunta)}</p>
     ${aberta ? `<div class="pil-resp"><p class="pil-r">${esc(p.resposta)}</p>
-        <p class="leitura">${esc(p.texto)}</p>
+        <p class="leitura pil-texto">${esc(p.texto)}</p>
         ${p.pessoa ? `<p class="small muted" style="margin:-4px 0 10px">${esc(p.pessoa)}${p.vida ? " (" + esc(p.vida) + ")" : ""}</p>` : ""}
         <div class="pil-porque"><b>Por que importa</b><p>${esc(p.porque)}</p></div>
         ${p.exemplo ? `<div class="pil-porque"><b>Exemplo</b><p>${esc(p.exemplo)}</p></div>` : ""}
@@ -137,8 +137,9 @@ ACOES["pil-sessao"] = el => {
   if (!ids.length) { toast("Nenhuma pílula disponível"); return; }
   ids.forEach(i => delete EST.aberta[i]); EST.sessao = { ids, i: 0, res: [] }; ir("#/estudar"); atualizar();
 };
-ACOES["pil-sair"] = () => { EST.sessao = null; ir("#/estudar"); atualizar(); };
+ACOES["pil-sair"] = () => { pararVoz(); EST.sessao = null; ir("#/estudar"); atualizar(); };
 ACOES["pil-sabia"] = el => {
+  pararVoz();
   const p = PIL[el.dataset.id], sabia = el.dataset.v === "1", V = store.doc("pilulas");
   V.v[p.id] = [Date.now(), sabia ? 1 : 0]; store.mudou("pilulas"); jornada("pilula");
   if (!sabia && !cards().some(c => c.ref === p.id)) criarCard({ frente: p.pergunta, verso: `${p.resposta}\n\n${p.texto}\n\nPor que importa: ${p.porque}`, tema: p.tema, origem: "pilula", ref: p.id, dif: 2 });

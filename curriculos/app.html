@@ -212,8 +212,9 @@ td a:not(.btn),.tarefa .o>a:not(.btn),.small a[href^="#/tema/"],.sub a[href^="#/
 .fc{background:var(--sheet);border:1px solid var(--line);border-radius:12px;padding:22px;min-height:180px;display:grid;align-content:start;gap:12px}
 .fc .frente{font:400 calc(19px * var(--k))/1.5 var(--read);white-space:pre-wrap}
 .fc .verso{font:400 calc(17px * var(--k))/1.55 var(--read);white-space:pre-wrap;border-top:1px dashed var(--line);padding-top:12px}
-.notas{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.notas .btn{flex-direction:column;gap:0;min-height:52px}
+/* 4 botões lado a lado; com letra Muito grande/Enorme no celular, 2 × 2 (nada sai da tela). */
+.notas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,calc(58px * var(--k))),1fr));gap:8px}
+.notas .btn{flex-direction:column;gap:0;min-height:52px;padding-inline:6px;min-width:0}
 .notas small{font:calc(13px * var(--k)) var(--mono);opacity:.8}
 
 /* ---------- Caso clínico ---------- */
@@ -529,7 +530,7 @@ details.mais>summary{cursor:pointer;color:var(--pen);font-weight:600;font-size:c
 .pares-grade .lab{margin:0 0 2px}
 @media (max-width:600px){.pares-grade{grid-template-columns:minmax(0,1fr);gap:14px}.par-item{min-height:48px}}
 .pares-grade>div{display:grid;gap:8px;align-content:start}
-.par-item{min-width:0;hyphens:auto;min-height:58px;padding:8px 6px;border-radius:12px;border:2px solid var(--line);background:var(--sheet);color:var(--ink);font:600 min(calc(14.5px * var(--k)),6.2vw)/1.3 var(--display);cursor:pointer;text-align:center}
+.par-item{min-width:0;hyphens:auto;min-height:58px;padding:8px 6px;border-radius:12px;border:2px solid var(--line);background:var(--sheet);color:var(--ink);font:600 min(calc(14.5px * var(--k)),5.5vw)/1.3 var(--display);cursor:pointer;text-align:center}   /* 5,5vw: "esternocleidomastóideo" cabe inteiro numa linha a 360 px com letra Enorme */
 .par-item[data-s="sel"]{border-color:#0369A1;background:color-mix(in oklab,#0369A1 14%,var(--sheet));box-shadow:0 0 0 3px color-mix(in oklab,#0369A1 30%,transparent)}
 .par-item[data-s="ok"]{border-color:var(--ok);background:var(--ok-soft);opacity:.75}
 .par-item[data-s="bad"]{border-color:var(--bad);background:var(--bad-soft)}
@@ -754,6 +755,54 @@ table,th,td,.num{overflow-wrap:normal}
 .aparencia-opcoes .btn{min-height:48px;white-space:normal;text-align:center}
 /* Simulado: "Abandonar" longe de "Entregar", com confirmação na página. */
 .sim-abandonar{margin-top:36px;padding-top:16px;border-top:1px solid var(--line2, rgba(128,128,128,.3))}
+
+/* == Interação (37-interacao): ouvir, descartar, certeza, sequência, marca-texto, gesto == */
+:root{--marca-bg:#FFE45C;--marca-tx:#1A1E24}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--marca-bg:#E9C94A;--marca-tx:#13161B}}
+:root[data-theme="dark"]{--marca-bg:#E9C94A;--marca-tx:#13161B}
+/* Ouvir: botão discreto; o trecho que está sendo lido ganha um contorno azul (sem mexer no layout). */
+.ouvir{white-space:nowrap}
+.ouvir.ativo{background:var(--pen-soft);border-color:var(--pen);color:var(--ink)}
+.lendo{outline:3px solid var(--pen);outline-offset:3px;border-radius:6px}
+/* Barra do player: Ouvir à esquerda, sequência de acertos à direita. */
+.pl-ferr{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:-4px 0 12px}
+.pl-seq{margin-left:auto;display:inline-flex;align-items:center;gap:4px;min-height:36px;padding:4px 12px;border-radius:999px;background:var(--warn-soft);color:var(--warn);border:1px solid color-mix(in oklab,var(--warn) 45%,transparent);font:700 calc(14px * var(--k)) var(--display);white-space:nowrap}
+@media (prefers-reduced-motion:no-preference){.pl-seq.novo{animation:pulo .5s ease-out}}
+/* Descartar alternativa: ✕ ao lado; a descartada fica esmaecida e riscada (só no player). */
+/* Palavra longa com letra Enorme (ex.: "Pseudoestratificado"): o ✕ desce para baixo da alternativa em vez de empurrá-la para fora da tela. */
+#pl .alts{grid-template-columns:minmax(0,1fr)}
+.alts .alt-li{display:flex;flex-wrap:wrap;gap:6px;align-items:stretch;min-width:0}
+.alt-li .alt{flex:1 1 calc(100% - 50px);min-width:min-content;max-width:100%}
+.alt-li .alt-x{margin-left:auto}
+.alt-x{flex:none;width:44px;min-height:44px;padding:0;display:grid;place-items:center;border:1px solid var(--line);border-radius:8px;background:transparent;color:var(--muted);font:600 calc(16px * var(--kt))/1 var(--display);cursor:pointer}
+.alt-x:hover{border-color:var(--bad);color:var(--bad)}
+.alt-x[aria-pressed="true"]{border-style:dashed;color:var(--ink2)}
+#pl .alt.descartada{opacity:.5;text-decoration:line-through;border-style:dashed}
+/* Grau de certeza (opcional) entre a escolha e o Confirmar. */
+.certeza{margin-top:14px}
+.certeza .lab small{font-weight:400;text-transform:none;letter-spacing:0}
+/* Marca-texto: frases do enunciado tocáveis; destaque amarelo com texto escuro nos dois temas (≥ 12:1). */
+.enunciado .frase{cursor:pointer;border-radius:3px}
+.enunciado .frase.marcada{background:var(--marca-bg);color:var(--marca-tx);-webkit-box-decoration-break:clone;box-decoration-break:clone;box-shadow:0 0 0 2px var(--marca-bg)}
+/* Flashcard: tocar vira, deslizar avalia (verde = lembrei, vermelho = esqueci). */
+.fc{position:relative;touch-action:pan-y;cursor:pointer}
+.fc-topo{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.fc-toque{margin:0}
+.fc.arrastando{-webkit-user-select:none;user-select:none}
+.fc[data-puxa="dir"]{border-color:var(--ok);background:color-mix(in oklab,var(--ok-soft) calc(var(--f,0) * 100%),var(--sheet));box-shadow:0 0 0 3px var(--ok)}
+.fc[data-puxa="esq"]{border-color:var(--bad);background:color-mix(in oklab,var(--bad-soft) calc(var(--f,0) * 100%),var(--sheet));box-shadow:0 0 0 3px var(--bad)}
+.fc[data-puxa]::before{content:attr(data-rot);position:absolute;top:-14px;padding:4px 12px;border-radius:999px;font:700 calc(15px * var(--k))/1.2 var(--display);color:var(--on-acc);pointer-events:none;z-index:1}
+.fc[data-puxa="dir"]::before{left:16px;background:var(--ok)}
+.fc[data-puxa="esq"]::before{right:16px;background:var(--bad)}
+.fc-dica{display:flex;justify-content:space-between;gap:8px;margin:0 0 8px}
+.fc-dica span:first-child{color:var(--bad)}
+.fc-dica span:last-child{color:color-mix(in oklab,var(--ok) 85%,var(--ink))}
+@media (prefers-reduced-motion:no-preference){
+  .fc.virou{animation:virar .32s ease-out}
+  .fc:not(.arrastando){transition:transform .2s ease,background-color .2s}
+  .fc.sai{transition:transform .18s ease-in}
+}
+@keyframes virar{from{transform:perspective(900px) rotateY(-80deg);opacity:.4}to{transform:none;opacity:1}}
 
 </style>
 
@@ -1363,13 +1412,15 @@ function alternarFlag(q, flag) {
   p[flag] = p[flag] ? 0 : 1; store.mudou(docProg(q.t)); return p[flag];
 }
 
-/** Registra uma tentativa. origem: pratica | tema | simulado | revisao | erro */
-function registrarResposta(q, resp, ms, origem) {
+/** Registra uma tentativa. origem: pratica | tema | simulado | revisao | erro
+    cert (opcional): grau de certeza 3 tenho certeza · 2 acho que sim · 1 chutei — vai como 6º campo da tentativa. */
+function registrarResposta(q, resp, ms, origem, cert) {
   const ok = resp === q.c, agora = Date.now();
   const d = store.doc(docProg(q.t)); const p = d.q[q.id] = d.q[q.id] || { n: 0, ac: 0, h: [], m: 0, r: 0 };
   p.n++; if (ok) p.ac++;
   if (p.n === 1) p.f = ok ? 1 : 0;   // 1ª tentativa: é ela que mede a dificuldade real da questão
-  p.h.push([agora, resp, ok ? 1 : 0, Math.round(ms || 0), origem]); if (p.h.length > 12) p.h = p.h.slice(-12);
+  const t = [agora, resp, ok ? 1 : 0, Math.round(ms || 0), origem]; if (CERTEZAS.includes(cert)) t.push(cert);
+  p.h.push(t); if (p.h.length > 12) p.h = p.h.slice(-12);
   store.mudou(docProg(q.t));
   const dia = diaDe(hoje()); dia.q++; if (ok) dia.ac++; if (q.tema && !dia.temas.includes(q.tema)) dia.temas.push(q.tema); store.mudou("dias");
   if (typeof jornada === "function") jornada("questao", { ok });
@@ -1380,6 +1431,14 @@ function registrarResposta(q, resp, ms, origem) {
     E.itens[q.id] = { qid: q.id, tema: q.tema, ts: agora, resp, n: (prev?.n || 0) + 1,
       motivo: prev?.motivo || null, motivoSugerido: motivoSugerido(q, ms, prev), coment: prev?.coment || "", card: prev?.card || null,
       srs: agendar(prev?.srs && origem === "erro" ? prev.srs : null, 0), status: "aberto" };
+    store.mudou("erros");
+  } else if (cert === 1) {
+    // Acertou no chute: não conta como aprendido. Erro aberto → revisão mais cedo (não avança a etapa);
+    // sem erro aberto → entra no caderno com o motivo "Acertou no chute" e revisão amanhã.
+    const prev = E.itens[q.id];
+    if (prev && prev.status === "aberto") { prev.srs = agendar(prev.srs, 1); prev.chute = 1; }
+    else E.itens[q.id] = { qid: q.id, tema: q.tema, ts: agora, resp, n: prev?.n || 0, motivo: "Acertou no chute", motivoSugerido: "Acertou no chute",
+      coment: prev?.coment || "", card: prev?.card || null, srs: agendar(null, 0), status: "aberto", chute: 1 };
     store.mudou("erros");
   } else if (E.itens[q.id] && E.itens[q.id].status === "aberto" && (origem === "erro" || origem === "revisao")) {
     const e = E.itens[q.id]; e.srs = agendar(e.srs, 2); if (e.srs.etapa >= 2) e.status = "resolvido"; store.mudou("erros");
@@ -1392,7 +1451,8 @@ function motivoSugerido(q, ms, prev) {
   if (ms && ms > 240000) return "Muito tempo — dúvida de conteúdo ou interpretação";
   return "Conteúdo";
 }
-const MOTIVOS = ["Lacuna de conteúdo", "Desatenção / leitura apressada", "Interpretação do enunciado", "Chute", "Confundi conceitos parecidos", "Falta de tempo"];
+const MOTIVOS = ["Lacuna de conteúdo", "Desatenção / leitura apressada", "Interpretação do enunciado", "Chute", "Acertou no chute", "Confundi conceitos parecidos", "Falta de tempo"];
+const CERTEZAS = [1, 2, 3];
 
 /* ---------- Dia de estudo (StudySession agregada por dia) ---------- */
 function diaDe(iso) { const D = store.doc("dias"); return D.d[iso] = Object.assign({ q: 0, ac: 0, seg: 0, temas: [] }, D.d[iso] || {}); }
@@ -1819,6 +1879,7 @@ function render(opts = {}) {
   document.title = (pg.titulo ? pg.titulo + " · " : "") + "Gabarito Amazonas";
   if (opts.topo) { window.scrollTo(0, 0); $("#view").focus({ preventScroll: true }); }
   else if (foco) restaurarFoco(foco);
+  reaplicarLeitura();
 }
 /* Foco preservado entre re-renderizações: quem usa teclado ou leitor de tela não volta ao topo
    (passando pelo menu) a cada toque. O elemento é reencontrado pelo data-act e seus dados. */
@@ -1854,11 +1915,13 @@ aplicarTemaCor(ls.get("gab2:tema", "auto"));
 function htmlAparencia() {
   const k = ls.get("gab2:letra", 1.25), tc = ls.get("gab2:tema", "auto");
   return `<div class="pilha aparencia"><span class="lab">Tamanho da letra</span><div class="aparencia-opcoes">${TAM_LETRA.map(([v, n], i) => `<button class="btn ${v === k ? "azul" : "sec"}" data-act="letra-set" data-v="${v}" aria-pressed="${v === k}" style="font-size:${[16, 19, 22, 26][i]}px">${n}</button>`).join("")}</div>
-    <span class="lab">Cores</span><div class="aparencia-opcoes">${TEMAS_COR.map(([v, n]) => `<button class="btn ${v === tc ? "azul" : "sec"}" data-act="tema-cor" data-v="${v}" aria-pressed="${v === tc}">${n}</button>`).join("")}</div></div>`;
+    <span class="lab">Cores</span><div class="aparencia-opcoes">${TEMAS_COR.map(([v, n]) => `<button class="btn ${v === tc ? "azul" : "sec"}" data-act="tema-cor" data-v="${v}" aria-pressed="${v === tc}">${n}</button>`).join("")}</div>
+    ${htmlVozSom()}</div>`;
 }
-ACOES.letra = () => abrirFolha(htmlAparencia(), { titulo: "Letra e cores" });
-ACOES["letra-set"] = el => { const k = +el.dataset.v, nome = TAM_LETRA.find(x => x[0] === k)?.[1]; if (!nome) return; ls.set("gab2:letra", k); aplicarLetra(k); abrirFolha(htmlAparencia(), { titulo: "Letra e cores" }); $(`#camada [data-act="letra-set"][data-v="${k}"]`)?.focus(); toast("Letra: " + nome); };
-ACOES["tema-cor"] = el => { const t = el.dataset.v; ls.set("gab2:tema", t); aplicarTemaCor(t); abrirFolha(htmlAparencia(), { titulo: "Letra e cores" }); $(`#camada [data-act="tema-cor"][data-v="${t}"]`)?.focus(); };
+const TIT_APARENCIA = "Letra, cores e som";
+ACOES.letra = () => abrirFolha(htmlAparencia(), { titulo: TIT_APARENCIA });
+ACOES["letra-set"] = el => { const k = +el.dataset.v, nome = TAM_LETRA.find(x => x[0] === k)?.[1]; if (!nome) return; ls.set("gab2:letra", k); aplicarLetra(k); abrirFolha(htmlAparencia(), { titulo: TIT_APARENCIA }); $(`#camada [data-act="letra-set"][data-v="${k}"]`)?.focus(); toast("Letra: " + nome); };
+ACOES["tema-cor"] = el => { const t = el.dataset.v; ls.set("gab2:tema", t); aplicarTemaCor(t); abrirFolha(htmlAparencia(), { titulo: TIT_APARENCIA }); $(`#camada [data-act="tema-cor"][data-v="${t}"]`)?.focus(); };
 /** Selo do nível da questão (definido pelo banco): barrinhas + nome, com cor. */
 const seloNivel = (d, curto = false) => DIFICULDADE[d] ? `<span class="nivel n${d}" title="Nível da questão: ${DIFICULDADE[d]}"><i></i><i></i><i></i>${curto ? "" : "Nível: "}${DIFICULDADE[d]}</span>` : "";
 const pill = (t, cls = "") => `<span class="pill ${cls}">${esc(t)}</span>`;
@@ -1906,13 +1969,14 @@ document.addEventListener("keydown", e => {
   if (PL.ativo && document.getElementById("pl")) teclaPlayer(e);
   else if (SIM.fase === "prova" && document.getElementById("prova")) teclaProva(e);
 });
-window.addEventListener("hashchange", () => { fecharFolha(); render({ topo: true }); });
+window.addEventListener("hashchange", () => { fecharFolha(); pararVoz(); render({ topo: true }); });
 
 /* ============================================================
    Player de questões — usado em Questões, Tema, Revisões, Caderno de erros.
    Registra resposta, tempo, erro e oferece flashcard / IA.
    ============================================================ */
-const PL = { ativo: false, chave: null, ids: [], i: 0, ordem: [], esc: null, resp: false, t0: 0, origem: "pratica", res: [], aoFim: null, ia: "", fim: false };
+const PL = { ativo: false, chave: null, ids: [], i: 0, ordem: [], esc: null, resp: false, t0: 0, origem: "pratica", res: [], aoFim: null, ia: "", fim: false,
+  desc: new Set(), cert: null, marcas: new Set(), seq: 0 };   // descartadas, grau de certeza, frases marcadas, acertos seguidos
 /* Sessões em andamento de outras telas ficam guardadas por chave: abrir uma questão avulsa
    (pela busca, por exemplo) não descarta a sessão de 20 questões que estava pela metade. */
 const SALVOS = {};
@@ -1935,11 +1999,13 @@ function iniciarPlayer(chave, ids, origem = "pratica", aoFim = null) {
   if (PL.chave !== chave) guardarSessao();
   /* Caderno de erros: cada erro vencido é tocado (sem cortar irmãs de família, que ficariam vencidas para sempre). */
   ids = ordenarSeries(ids, false, origem !== "erro");
-  Object.assign(PL, { festa: false, ativo: true, chave, ids: ids.slice(), i: 0, esc: null, resp: false, origem, res: [], aoFim, ia: "", fim: false, msgFim: "" });
+  Object.assign(PL, { festa: false, ativo: true, chave, ids: ids.slice(), i: 0, esc: null, resp: false, origem, res: [], aoFim, ia: "", fim: false, msgFim: "", seq: 0 });
   delete SALVOS[chave];
   prepararQuestao();
 }
-function prepararQuestao() { PL.ordem = embaralhar([0, 1, 2, 3, 4]); PL.esc = null; PL.resp = false; PL.t0 = Date.now(); PL.ia = ""; }
+function prepararQuestao() { pararVoz(); PL.ordem = embaralhar([0, 1, 2, 3, 4]); PL.esc = null; PL.resp = false; PL.t0 = Date.now(); PL.ia = ""; PL.desc = new Set(); PL.cert = null; PL.marcas = new Set(); PL.seqNovo = false; }
+/** Grau de certeza (opcional), escolhido entre a alternativa e o Confirmar. Gravado na tentativa (6º campo). */
+const CERTEZA = [[3, "Tenho certeza"], [2, "Acho que sim"], [1, "Chutei"]];
 function playerAtivo(chave) {
   if (PL.ativo && PL.chave === chave) return true;
   const s = SALVOS[chave]; if (!s) return false;
@@ -1966,16 +2032,22 @@ function htmlPlayer() {
   const st = statusQ(q);
   const alts = PL.ordem.map((i, pos) => {
     let s = ""; if (PL.resp) { if (i === q.c) s = "ok"; else if (i === PL.esc) s = "bad"; } else if (i === PL.esc) s = "sel";
-    return `<li><button class="alt" data-act="pl-alt" data-i="${i}" data-s="${s}" ${PL.resp ? "disabled" : ""}><span class="bolha">${LETRAS[pos]}</span><span>${esc(q.o[i])}</span></button></li>`;
+    const fora = !PL.resp && PL.desc.has(i);   // descartada: esmaecida, riscada e fora de escolha até ser restaurada
+    return `<li class="alt-li"><button class="alt${fora ? " descartada" : ""}" data-act="pl-alt" data-i="${i}" data-s="${s}" ${PL.resp || fora ? "disabled" : ""}><span class="bolha">${LETRAS[pos]}</span><span>${esc(q.o[i])}</span></button>${PL.resp ? "" :
+      `<button class="alt-x" data-act="pl-desc" data-i="${i}" aria-label="Descartar alternativa ${LETRAS[pos]}" aria-pressed="${fora}" title="${fora ? "Restaurar" : "Descartar"}"><span aria-hidden="true">${fora ? "↺" : "✕"}</span></button>`}</li>`;
   }).join("");
+  const ferr = botaoOuvir("pl") + (PL.seq >= 3 ? `<span class="pl-seq${PL.seqNovo ? " novo" : ""}" title="Acertos seguidos nesta sessão"><span aria-hidden="true">🔥</span> ${PL.seq} seguidas</span>` : "");
   const letra = i => LETRAS[PL.ordem.indexOf(i)];
   const ok = PL.esc === q.c;
   return `<article class="caixa questao" id="pl">
     <div class="linha entre" style="margin-bottom:12px"><b>${PL.ids.length > 1 ? `Questão ${PL.i + 1} de ${PL.ids.length}` : "Questão"}${q.serie ? `<br><span class="small muted">Caso em ${q.partes} partes · parte ${q.parte}</span>` : ""}</b>${seloNivel(q.dif)}</div>
-    <p class="enunciado">${esc(q.q)}</p>${q.img ? figuraImg(q.img) : ""}
+    ${ferr ? `<div class="pl-ferr">${ferr}</div>` : ""}
+    <p class="enunciado">${frasesEnunciado(q.q, PL.marcas)}</p>${q.img ? figuraImg(q.img) : ""}
     <ol class="alts">${alts}</ol>
+    ${!PL.resp && PL.esc !== null ? `<div class="certeza" role="group" aria-labelledby="cert-lab"><span class="lab" id="cert-lab">Sua certeza <small>(opcional)</small></span><div class="chips">${CERTEZA.map(([v, t]) => `<button class="chip" data-act="pl-cert" data-v="${v}" aria-pressed="${PL.cert === v}">${t}</button>`).join("")}</div></div>` : ""}
     ${PL.resp ? `<div class="retorno"><p class="veredito ${ok ? "ok" : "bad"}" tabindex="-1">${ok ? `<span class="festa">✓ ${esc(PL.frase || "Certo")}</span>` : `Errado · gabarito ${letra(q.c)}`}${PL.ms ? ` · ${mmss(PL.ms)}` : ""}</p>${!ok && PL.frase ? `<p class="small muted" style="margin:0 0 6px">${esc(PL.frase)}</p>` : ""}${htmlExplicacao(q.e)}
       <p class="small muted com-ilu" style="margin:8px 0 0;gap:8px">${q.tema ? iluTema(q.tema, "p") : ""}<span>${[TRILHAS[q.t]?.curto || q.t, q.ae && nomeAreaEnem(q.ae), q.ae && q.disc].filter(Boolean).map(esc).join(" · ")}${q.tema ? " · " + linkTema(q.tema) : ""}${q.src !== "banco" ? " · " + (q.src === "ia" ? "gerada por IA" : "minha") : ""}${st.n > 1 ? ` · você já acertou ${st.ac} de ${st.n}` : ""}${q.rev ? ` · revisada em ${esc(mesAno(q.rev))}` : ""}${acertoGeral(q) ? " · " + esc(acertoGeral(q)) : ""}</span></p>
+      ${ok && PL.cert === 1 ? `<p class="small muted" style="margin:8px 0 0">Acertou no chute: a questão volta mais cedo pelo <a href="#/erros">caderno de erros</a>.</p>` : ""}
       ${!ok ? `<p class="small muted" style="margin:8px 0 0">Registrado no <a href="#/erros">caderno de erros</a> com revisão amanhã.</p>${irmaDe(q) ? `<div class="acoes"><button class="btn sec" data-act="pl-irma">Treinar este ponto de novo</button></div>` : ""}` : ""}
       ${PL.ia ? `<h3>Assistente</h3><div class="ia-txt" id="pl-ia">${esc(PL.ia)}</div>` : ""}</div>` : ""}
     <div class="acoes">
@@ -1984,7 +2056,7 @@ function htmlPlayer() {
       <button class="btn sec mini" data-act="pl-flag" data-f="r" aria-pressed="${st.revisar}">${st.revisar ? "↻ Revisar" : "Revisar depois"}</button>` : ""}
       ${PL.resp ? `<button class="btn sec mini" data-act="pl-card">+ Flashcard</button>${IA.disponivel() ? `<button class="btn sec mini" data-act="pl-ia">Explicar com IA</button>` : ""}<button class="btn sec mini" data-act="reportar" data-q="${esc(q.id)}">Reportar problema</button>` : ""}
       ${PL.ids.length > 1 ? `<button class="btn sec mini dir" data-act="pl-encerrar">Encerrar sessão</button>` : ""}
-    </div></article><p class="small muted so-teclado">Atalhos: A–E escolhem · Enter confirma/avança</p>`;
+    </div></article><p class="small muted so-teclado">Atalhos: A–E escolhem · Enter confirma/avança · clique numa frase do enunciado para destacá-la</p>`;
 }
 const mesAno = s => { const [a, m] = String(s).split("-"); return m ? new Date(+a, +m - 1, 15).toLocaleDateString("pt-BR", { month: "short", year: "numeric" }) : s; };
 /** Questão irmã: mesmo subtema (ou tema), fora da sessão, de preferência ainda não respondida. */
@@ -2007,25 +2079,40 @@ FORMS["reportar"] = async f => {
   const foi = await store.publicar("reportes/" + id, corpo);
   fecharFolha(); toast(foi ? "Obrigado! Problema enviado para revisão" : "Problema anotado neste aparelho");
 };
-ACOES["pl-alt"] = el => { if (PL.resp) return; PL.esc = +el.dataset.i; atualizar(); };
+ACOES["pl-alt"] = el => { if (PL.resp || PL.desc.has(+el.dataset.i)) return; PL.esc = +el.dataset.i; atualizar(); };
+/** Descartar (✕) / restaurar (↺) uma alternativa. Não muda a pontuação; some depois de confirmar. */
+ACOES["pl-desc"] = el => {
+  if (PL.resp) return; const i = +el.dataset.i;
+  if (PL.desc.has(i)) PL.desc.delete(i);
+  else { if (PL.desc.size >= 4) { toast("Deixe ao menos uma alternativa"); return; } PL.desc.add(i); if (PL.esc === i) { PL.esc = null; PL.cert = null; } }
+  atualizar();
+};
+ACOES["pl-cert"] = el => { if (PL.resp) return; const v = +el.dataset.v; PL.cert = PL.cert === v ? null : v; atualizar(); };
+/** Marca-texto: tocar numa frase do enunciado alterna o destaque (só nesta questão). */
+ACOES["pl-marca"] = el => { const n = +el.dataset.n; if (PL.marcas.has(n)) PL.marcas.delete(n); else PL.marcas.add(n); el.classList.toggle("marcada", PL.marcas.has(n)); };
 ACOES["pl-confirmar"] = () => {
   if (PL.esc === null || PL.resp) return;
+  pararVoz();
   const q = qPorId(PL.ids[PL.i]); PL.ms = Date.now() - PL.t0; PL.resp = true;
-  const ok = registrarResposta(q, PL.esc, PL.ms, PL.origem);
-  PL.res.push({ id: q.id, ok, ms: PL.ms, tema: q.tema }); PL.frase = sorteio(ok ? ELOGIOS : ANIMO); atualizar();
+  const ok = registrarResposta(q, PL.esc, PL.ms, PL.origem, PL.cert);
+  PL.res.push({ id: q.id, ok, ms: PL.ms, tema: q.tema, cert: PL.cert }); PL.frase = sorteio(ok ? ELOGIOS : ANIMO);
+  PL.seq = ok ? (PL.seq || 0) + 1 : 0; PL.seqNovo = ok && PL.seq >= 3;
+  atualizar(); PL.seqNovo = false;
+  som(ok ? "ok" : "erro");   // som e vibração (se ligados)
   if (ok) confete(document.querySelector("#pl .veredito"));
+  if (ok && PL.seq % 5 === 0) celebrar(`${PL.seq} acertos seguidos!`, null, true);   // comemoração leve, sem bloquear a tela
 };
-ACOES["pl-prox"] = () => { if (PL.i < PL.ids.length - 1) { PL.i++; prepararQuestao(); } else { PL.fim = true; PL.msgFim = PL.aoFim ? PL.aoFim(PL.res) : ""; } atualizar(); document.getElementById("pl")?.scrollIntoView({ block: "start" }); };
-ACOES["pl-pular"] = () => { if (PL.i < PL.ids.length - 1) { PL.i++; prepararQuestao(); } else { PL.fim = true; PL.msgFim = PL.aoFim ? PL.aoFim(PL.res) : ""; } atualizar(); };
+ACOES["pl-prox"] = () => { pararVoz(); if (PL.i < PL.ids.length - 1) { PL.i++; prepararQuestao(); } else { PL.fim = true; PL.msgFim = PL.aoFim ? PL.aoFim(PL.res) : ""; } atualizar(); document.getElementById("pl")?.scrollIntoView({ block: "start" }); };
+ACOES["pl-pular"] = () => { pararVoz(); if (PL.i < PL.ids.length - 1) { PL.i++; prepararQuestao(); } else { PL.fim = true; PL.msgFim = PL.aoFim ? PL.aoFim(PL.res) : ""; } atualizar(); };
 ACOES["pl-flag"] = el => { const q = qPorId(PL.ids[PL.i]); const v = alternarFlag(q, el.dataset.f); toast(el.dataset.f === "m" ? (v ? "Questão marcada" : "Marcação removida") : (v ? "Adicionada a revisar" : "Removida de revisar")); atualizar(); };
 ACOES["pl-card"] = () => { const q = qPorId(PL.ids[PL.i]); if (cards().some(c => c.ref === q.id)) { toast("Esta questão já tem flashcard"); return; } const id = cardDeQuestao(q, PL.esc === q.c ? "questao" : "erro"); const E = store.doc("erros"); if (E.itens[q.id]) { E.itens[q.id].card = id; store.mudou("erros"); } toast("Flashcard criado — revisão a partir de hoje"); };
 ACOES["pl-ia"] = () => { const q = qPorId(PL.ids[PL.i]); IA.explicarQuestao(q, PL.esc, PL.ordem, t => { PL.ia = t; const el = document.getElementById("pl-ia"); if (el) el.textContent = t; else atualizar(); }); };
-ACOES["pl-sair"] = () => { PL.ativo = false; atualizar(); };
-ACOES["pl-encerrar"] = () => { if (!PL.res.length) { PL.ativo = false; } else { PL.fim = true; PL.msgFim = PL.aoFim ? PL.aoFim(PL.res) : ""; } atualizar(); };
+ACOES["pl-sair"] = () => { pararVoz(); PL.ativo = false; atualizar(); };
+ACOES["pl-encerrar"] = () => { pararVoz(); if (!PL.res.length) { PL.ativo = false; } else { PL.fim = true; PL.msgFim = PL.aoFim ? PL.aoFim(PL.res) : ""; } atualizar(); };
 function teclaPlayer(e) {
   if (PL.fim) return;
   const i = LETRAS.indexOf(e.key.toUpperCase());
-  if (i >= 0 && !PL.resp) { PL.esc = PL.ordem[i]; atualizar(); }
+  if (i >= 0 && !PL.resp) { if (PL.desc.has(PL.ordem[i])) return; PL.esc = PL.ordem[i]; atualizar(); }
   else if (e.key === "Enter") { e.preventDefault(); PL.resp ? ACOES["pl-prox"]() : ACOES["pl-confirmar"](); }
 }
 
@@ -3170,7 +3257,7 @@ rota("/questoes/q/:id", ({ id }) => {
     sub: `${esc(TRILHAS[q.t]?.nome || q.t)}${q.ae ? " · " + esc(nomeAreaEnem(q.ae)) + (q.disc ? " · " + esc(q.disc) : "") : ""} · ${q.tema ? linkTema(q.tema) : esc(q.a)}${q.subtema ? " · " + esc(nomeSubtema(q.tema, q.subtema) || "") : ""} · fonte: ${esc(q.fonte || q.src)}${q.ano ? " · " + esc(q.ano) : ""}${q.prova ? " · " + esc(q.prova) : ""}`,
     html: `${htmlPlayer()}
       <h2 class="sec">Histórico de tentativas</h2>${tabela([{ t: "Quando" }, { t: "Sua resposta" }, { t: "Resultado" }, { t: "Tempo", num: 1 }, { t: "Origem" }], hist, { vaziaMsg: "Nenhuma tentativa ainda." })}
-      ${E ? `<h2 class="sec">No caderno de erros</h2><p>${pill(E.status === "aberto" ? "aberto" : "resolvido", E.status === "aberto" ? "bad" : "ok")} Errou ${E.n}× · motivo: ${esc(E.motivo || E.motivoSugerido + " (sugerido)")} · próxima revisão ${dataBR(E.srs?.prox)}</p><button class="btn sec mini" data-act="erro-detalhe" data-q="${esc(id)}">Editar registro do erro</button>` : ""}`,
+      ${E ? `<h2 class="sec">No caderno de erros</h2><p>${pill(E.status === "aberto" ? "aberto" : "resolvido", E.status === "aberto" ? "bad" : "ok")} ${E.n ? `Errou ${E.n}× · ` : ""}motivo: ${esc(E.motivo || E.motivoSugerido + " (sugerido)")} · próxima revisão ${dataBR(E.srs?.prox)}</p><button class="btn sec mini" data-act="erro-detalhe" data-q="${esc(id)}">Editar registro do erro</button>` : ""}`,
     ctx: { questao: id, tema: q.tema },
   };
 });
@@ -3266,7 +3353,7 @@ ACOES["cards-dos-erros"] = () => {
 };
 
 /* ---------- Sessão de estudo ---------- */
-const FC = { chave: null, fila: [], i: 0, mostrar: false, feitos: [] };
+const FC = { chave: null, fila: [], i: 0, mostrar: false, feitos: [], virou: false };
 function paginaEstudoCards(temaId) {
   const chave = temaId || "*";
   const venc = cards().filter(c => vencido(c.srs) && cardDoObjetivo(c) && (!temaId || c.tema === temaId)).map(c => c.id);
@@ -3281,25 +3368,27 @@ function paginaEstudoCards(temaId) {
   const c = cardPorId(FC.fila[FC.i]);
   if (!c) { FC.i++; return paginaEstudoCards(temaId); }
   const rot = [[0, "Errei"], [1, "Difícil"], [2, "Bom"], [3, "Fácil"]];
+  const virou = FC.virou; FC.virou = false;   // animação de virar só logo depois do toque
   return {
     secao: "flashcards", crumbs, titulo: `Card ${FC.i + 1} de ${FC.fila.length}`,
-    html: `<div class="fc" id="fc"><div class="small muted">${c.tema ? linkTema(c.tema) : "sem tema"}${c.subtema ? " · " + esc(nomeSubtema(c.tema, c.subtema) || "") : ""} · ${esc(ORIGEM_CARD[c.origem] || c.origem)}</div>
-      <div class="frente">${esc(c.frente)}</div>${FC.mostrar ? `<div class="verso">${esc(c.verso)}</div>` : ""}</div>
-      <div style="margin-top:12px">${FC.mostrar ? `<div class="notas">${rot.map(([n, t]) => `<button class="btn ${n === 0 ? "perigo" : n === 2 ? "azul" : "sec"}" data-act="fc-nota" data-n="${n}">${t}<small>${previaIntervalo(c.srs, n)} d</small></button>`).join("")}</div>`
+    html: `<div class="fc${virou ? " virou" : ""}${FC.mostrar ? " aberto" : ""}" id="fc"><div class="fc-topo"><span class="small muted">${c.tema ? linkTema(c.tema) : "sem tema"}${c.subtema ? " · " + esc(nomeSubtema(c.tema, c.subtema) || "") : ""} · ${esc(ORIGEM_CARD[c.origem] || c.origem)}</span>${botaoOuvir("fc")}</div>
+      <div class="frente">${esc(c.frente)}</div>${FC.mostrar ? `<div class="verso">${esc(c.verso)}</div>` : `<p class="fc-toque small muted">Toque no cartão para virar</p>`}</div>
+      <div style="margin-top:12px">${FC.mostrar ? `<p class="fc-dica small muted"><span>← Esqueci</span><span>deslize o cartão</span><span>Lembrei →</span></p><div class="notas">${rot.map(([n, t]) => `<button class="btn ${n === 0 ? "perigo" : n === 2 ? "azul" : "sec"}" data-act="fc-nota" data-n="${n}">${t}<small>${previaIntervalo(c.srs, n)} d</small></button>`).join("")}</div>`
         : `<button class="btn" style="width:100%" data-act="fc-mostrar">Mostrar resposta (espaço)</button>`}</div>
-      <p class="small muted">Atalhos: espaço mostra · 1 errei · 2 difícil · 3 bom · 4 fácil</p>`,
+      <p class="small muted so-teclado">Atalhos: espaço mostra · 1 errei · 2 difícil · 3 bom · 4 fácil · ← esqueci · → lembrei</p>`,
     ctx: { tema: c.tema, texto: "Flashcard em estudo: " + c.frente },
   };
 }
 rota("/flashcards/estudar", () => paginaEstudoCards(null));
 rota("/flashcards/estudar/:tema", p => paginaEstudoCards(p.tema));
-ACOES["fc-mostrar"] = () => { FC.mostrar = true; atualizar(); };
-ACOES["fc-nota"] = el => { const n = +el.dataset.n; avaliarCard(FC.fila[FC.i], n); FC.feitos.push(n); FC.i++; FC.mostrar = false; atualizar(); };
+ACOES["fc-mostrar"] = () => { FC.mostrar = true; FC.virou = true; atualizar(); };
+ACOES["fc-nota"] = el => { pararVoz(); const n = +el.dataset.n; avaliarCard(FC.fila[FC.i], n); FC.feitos.push(n); FC.i++; FC.mostrar = false; atualizar(); };
 ACOES["fc-reiniciar"] = () => { FC.chave = null; atualizar(); };
 document.addEventListener("keydown", e => {
   if (!document.getElementById("fc") || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName) || $("#camada").innerHTML) return;
   if (e.key === " " && !FC.mostrar) { e.preventDefault(); ACOES["fc-mostrar"](); }
   else if (FC.mostrar && ["1", "2", "3", "4"].includes(e.key)) ACOES["fc-nota"]({ dataset: { n: +e.key - 1 } });
+  else if (FC.mostrar && (e.key === "ArrowRight" || e.key === "ArrowLeft") && !/^(BUTTON|A)$/.test(e.target.tagName)) { e.preventDefault(); ACOES["fc-nota"]({ dataset: { n: e.key === "ArrowRight" ? 2 : 0 } }); }
 });
 
 /* ---------- Criar / editar ---------- */
@@ -3478,13 +3567,13 @@ rota("/casos/:id", ({ id }) => {
   const val = v => Array.isArray(v) ? `<ul>${v.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : `<p class="leitura" style="margin:0">${esc(v || "—")}</p>`;
   const cab = (k, t) => `<h3>${ilustra(...VISUAL_CASO[k], "p")}${t}</h3>`, estilo = k => `style="--h:${VISUAL_CASO[k][1]}"`;
   const vit = k => k === "exameFisico" && rv.has(k) ? (v => v.length ? `<div class="vitais">${v.map(([a, b]) => `<span class="vital"><b>${a}</b> ${esc(b)}</span>`).join("")}</div>` : "")(sinaisVitais(c[k])) : "";
-  const sec = ([k, t]) => c[k] == null || (Array.isArray(c[k]) && !c[k].length) ? "" : `<div class="caso-sec" ${estilo(k)}>${cab(k, t)}${vit(k)}${rv.has(k) ? val(c[k]) : `<button class="btn sec mini" data-act="caso-revelar" data-id="${esc(id)}" data-k="${k}">Mostrar ${t.toLowerCase()}</button>`}</div>`;
+  const sec = ([k, t]) => c[k] == null || (Array.isArray(c[k]) && !c[k].length) ? "" : `<div class="caso-sec" data-k="${k}" ${estilo(k)}>${cab(k, t)}${vit(k)}${rv.has(k) ? val(c[k]) : `<button class="btn sec mini" data-act="caso-revelar" data-id="${esc(id)}" data-k="${k}">Mostrar ${t.toLowerCase()}</button>`}</div>`;
   return {
     secao: "casos", crumbs: [["Casos clínicos", "#/casos"]], titulo: c.titulo, ilu: iluEsp(c.espId, "g"), cor: corCaso(c),
     sub: `${c.temaId ? linkTema(c.temaId) + " · " : ""}${esc(ESPECIALIDADES[c.espId]?.nome || c.especialidade || "")} · ${esc(c.disciplina || "")} · ${DIFICULDADE[c.dificuldade] || ""}`,
-    acoes: `<button class="btn sec mini" data-act="caso-tudo" data-id="${esc(id)}">Revelar tudo</button>`,
+    acoes: `${botaoOuvir("caso:" + id)}<button class="btn sec mini" data-act="caso-tudo" data-id="${esc(id)}">Revelar tudo</button>`,
     html: `<div class="aviso">${AVISO_CASO}</div><article class="caixa">${SECOES_CASO.map(sec).join("")}
-      ${(c.perguntas || []).length ? `<div class="caso-sec" ${estilo("perguntas")}>${cab("perguntas", "Perguntas")}${c.perguntas.map((p, i) => `<div style="margin-bottom:10px"><p style="margin:0 0 4px;font-weight:600">${i + 1}. ${esc(p.pergunta)}</p>${rv.has("p" + i) ? `<p class="leitura" style="margin:0;color:var(--ink2)">${esc(p.resposta)}</p>` : `<button class="btn sec mini" data-act="caso-revelar" data-id="${esc(id)}" data-k="p${i}">Ver resposta</button>`}</div>`).join("")}</div>` : ""}
+      ${(c.perguntas || []).length ? `<div class="caso-sec" data-k="perguntas" ${estilo("perguntas")}>${cab("perguntas", "Perguntas")}${c.perguntas.map((p, i) => `<div style="margin-bottom:10px"><p style="margin:0 0 4px;font-weight:600">${i + 1}. ${esc(p.pergunta)}</p>${rv.has("p" + i) ? `<p class="leitura" style="margin:0;color:var(--ink2)">${esc(p.resposta)}</p>` : `<button class="btn sec mini" data-act="caso-revelar" data-id="${esc(id)}" data-k="p${i}">Ver resposta</button>`}</div>`).join("")}</div>` : ""}
       ${SECOES_FIM.map(sec).join("")}
       ${(c.referencias || []).length && rv.has("discussao") ? `<div class="caso-sec" ${estilo("referencias")}>${cab("referencias", "Referências")}${val(c.referencias)}</div>` : ""}</article>
       <div class="acoes">${c.temaId ? `<a class="btn sec" href="#/tema/${encodeURIComponent(c.temaId)}">Estudar o tema</a>` : ""}${c.src !== "banco" ? `<button class="btn perigo mini" data-act="caso-excluir" data-id="${esc(id)}">Excluir caso</button>` : ""}</div>`,
@@ -3822,6 +3911,7 @@ rota("/desempenho", () => {
       <div class="kpis"><div class="kpi"><b>${ag.n ? pct(ag.ac, ag.n) + "%" : "—"}</b><span>acerto geral</span></div><div class="kpi"><b>${ag.n}</b><span>respostas</span></div>
         <div class="kpi"><b>${ag.vistas}<small class="muted" style="font-size:calc(13px * var(--k))"> / ${questoes().filter(filtro).length}</small></b><span>questões vistas</span></div><div class="kpi"><b>${horas(segTotal)}</b><span>tempo de estudo</span></div></div>
       <section><h2 class="sec">Onde melhorar</h2>${abas([["disciplina", "Disciplinas"], ["tema", "Temas"], ...(verMed ? [["especialidade", "Especialidades"]] : []), ["nivel", "Nível"], ...(verEnem ? [["enem", "ENEM"]] : [])], DV.aba, "dv-aba")}${tab}</section>
+      ${blocoCerteza(filtro)}
       <section><h2 class="sec">Questões nos últimos 14 dias</h2>${blocoEvolucao(14)}</section>
       ${temTempo ? `<section><h2 class="sec">Minutos de estudo</h2>${colunasTempo()}</section>` : ""}
       ${sem ? `<section><h2 class="sec">Por semana</h2>${sem}</section>` : ""}
@@ -4218,11 +4308,11 @@ function cartaoPilula(p, { sessao = false } = {}) {
   const aberta = EST.aberta[p.id], v = vistasPil()[p.id], [nomeTipo] = TIPOS_PIL[p.tipo] || [p.tipo];
   const qs = p.tema ? questoes().filter(q => q.tema === p.tema && doObjetivo(q)).length : 0;
   return `<article class="caixa pilula" id="pil">
-    <div class="linha entre" style="margin-bottom:10px"><span class="com-ilu" style="gap:8px">${iluPil(p.tipo, "p")}<span class="pill azul">${esc(nomeTipo)}</span></span><span class="small muted">${esc(p.area)}${p.ano != null && p.tipo === "data" ? " · " + anoTxt(p.ano) : ""}</span></div>
+    <div class="linha entre" style="margin-bottom:10px"><span class="com-ilu" style="gap:8px">${iluPil(p.tipo, "p")}<span class="pill azul">${esc(nomeTipo)}</span></span><span class="small muted">${esc(p.area)}${p.ano != null && p.tipo === "data" ? " · " + anoTxt(p.ano) : ""}</span>${botaoOuvir("pil:" + p.id)}</div>
     <h2 class="pil-tit">${esc(p.titulo)}</h2>
     <p class="pil-perg">${esc(p.pergunta)}</p>
     ${aberta ? `<div class="pil-resp"><p class="pil-r">${esc(p.resposta)}</p>
-        <p class="leitura">${esc(p.texto)}</p>
+        <p class="leitura pil-texto">${esc(p.texto)}</p>
         ${p.pessoa ? `<p class="small muted" style="margin:-4px 0 10px">${esc(p.pessoa)}${p.vida ? " (" + esc(p.vida) + ")" : ""}</p>` : ""}
         <div class="pil-porque"><b>Por que importa</b><p>${esc(p.porque)}</p></div>
         ${p.exemplo ? `<div class="pil-porque"><b>Exemplo</b><p>${esc(p.exemplo)}</p></div>` : ""}
@@ -4302,8 +4392,9 @@ ACOES["pil-sessao"] = el => {
   if (!ids.length) { toast("Nenhuma pílula disponível"); return; }
   ids.forEach(i => delete EST.aberta[i]); EST.sessao = { ids, i: 0, res: [] }; ir("#/estudar"); atualizar();
 };
-ACOES["pil-sair"] = () => { EST.sessao = null; ir("#/estudar"); atualizar(); };
+ACOES["pil-sair"] = () => { pararVoz(); EST.sessao = null; ir("#/estudar"); atualizar(); };
 ACOES["pil-sabia"] = el => {
+  pararVoz();
   const p = PIL[el.dataset.id], sabia = el.dataset.v === "1", V = store.doc("pilulas");
   V.v[p.id] = [Date.now(), sabia ? 1 : 0]; store.mudou("pilulas"); jornada("pilula");
   if (!sabia && !cards().some(c => c.ref === p.id)) criarCard({ frente: p.pergunta, verso: `${p.resposta}\n\n${p.texto}\n\nPor que importa: ${p.porque}`, tema: p.tema, origem: "pilula", ref: p.id, dif: 2 });
@@ -5049,7 +5140,7 @@ function telaFim(j) {
 rota("/jogos", () => {
   const D = store.doc("jogos"), lista = JOGOS.filter(jogoDisponivel);
   return { secao: "jogos", titulo: "Jogos", sub: "Estudar também pode ser divertido. Tudo com questões e conteúdos do seu foco de estudo.",
-    acoes: `<button class="btn sec mini" data-act="jg-som">${store.doc("jogos").som ? "Sons: ligados" : "Sons: desligados"}</button>`,
+    acoes: `<button class="btn sec mini" data-act="jg-som">${store.doc("jogos").som ? "Som e vibração: ligados" : "Som e vibração: desligados"}</button>`,
     html: `${cartaoJornada()}
       ${lista.some(j => j.diario) ? `<section><h2 class="sec">Desafios de hoje</h2><div class="jg-hoje">${lista.filter(j => j.diario).map(j => { const feito = j.diario();
         return `<a class="jg-desafio ${feito ? "feito" : ""}" href="#/jogos/${j.id}" style="--h:${j.cor}">${ilustra(j.arte, j.cor, "g")}<b>${esc(j.nome)}</b><span class="pill ${feito ? "ok" : "warn"}">${feito ? "✓ Feito hoje" : "Novo hoje"}</span></a>`; }).join("")}</div></section>` : ""}
@@ -5097,8 +5188,14 @@ ACOES["jg-marco"] = el => {
 const FORMAS = ["M12 3 22 20H2z", "M12 2 22 12 12 22 2 12z", "M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20z", "M3 3h18v18H3z", "M12 2l3 7 7 .6-5.3 4.7L18.3 22 12 18.2 5.7 22l1.6-7.7L2 9.6 9 9z"];
 const formaAlt = pos => `<span class="forma forma-${pos}" aria-label="${LETRAS[pos]}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${FORMAS[pos]}"/></svg><b>${LETRAS[pos]}</b></span>`;
 let _audio = null;
+/** Som e vibração (um só ajuste): vibra curto no acerto e duas vezes no erro, se o aparelho permitir. */
+function vibrar(tipo) {
+  const padrao = tipo === "ok" ? 30 : tipo === "erro" ? [60, 90, 60] : tipo === "festa" ? [30, 60, 30] : null;
+  try { if (padrao && typeof navigator.vibrate === "function") navigator.vibrate(padrao); } catch (e) { /* sem vibração */ }
+}
 function som(tipo) {
   if (!store.doc("jogos").som) return;
+  vibrar(tipo);
   try {
     _audio = _audio || new (window.AudioContext || window.webkitAudioContext)();
     const notas = { ok: [660, 880], erro: [220, 180], fim: [523, 659, 784], festa: [523, 659, 784, 1047], tecla: [440] }[tipo] || [440];
@@ -5234,8 +5331,8 @@ function conferirConquistas(J) {
 const FILA_CELEBRA = [];
 const emAndamento = () => (typeof JG !== "undefined" && JG.id && !JG.fim && JG.rodadas?.length && location.hash.startsWith("#/jogos/")) || (PL.ativo && !PL.fim && !!document.getElementById("pl"));   // saiu do player pela navegação: não segura a fila
 /** Comemoração: cartão flutuante com o mascote (ou a medalha) e confete. Some sozinho e não bloqueia a tela. */
-function celebrar(msg, conq = null) {
-  if (emAndamento()) { FILA_CELEBRA.push([msg, conq]); return; }   // não interrompe jogo nem sessão: comemora no fim
+function celebrar(msg, conq = null, agora = false) {
+  if (!agora && emAndamento()) { FILA_CELEBRA.push([msg, conq]); return; }   // não interrompe jogo nem sessão: comemora no fim
   const el = document.createElement("div"); el.className = "celebra-flutuante"; el.setAttribute("role", "status");
   el.innerHTML = `${conq ? medalha(conq, true, "g") : mascote("festa", 72, "")}<div><b>${esc(msg)}</b>${conq ? `<small>${esc(conq.desc)}</small>` : ""}</div>`;
   const pilha = document.querySelectorAll(".celebra-flutuante").length; el.style.setProperty("--n", pilha);
@@ -5860,6 +5957,193 @@ ACOES["cp-letra"] = el => {
 };
 
 JOGOS.push(jogoTriagem, jogoEmerg, jogoDefesa, jogoMilhao, jogoCascata, jogoQuem, jogoCaca);
+
+/* ---- 37-interacao.js ---- */
+/* ============================================================
+   37-interacao — recursos de interação e acessibilidade:
+   · Ouvir: leitura em voz alta (speechSynthesis, voz pt-BR) no player de questões,
+     nos flashcards, nas pílulas e no caso clínico, com destaque do trecho lido;
+   · ajustes de velocidade da leitura e de "Som e vibração" na folha do botão "Aa";
+   · marca-texto no enunciado (frases tocáveis) e "Certeza × acerto" no Desempenho;
+   · flashcards com gesto: tocar vira, deslizar → lembrei / ← esqueci.
+   O player (06-ui) usa: botaoOuvir, frasesEnunciado, pararVoz, reaplicarLeitura.
+   ============================================================ */
+
+/* ---------- Ouvir (leitura em voz alta) ---------- */
+const VOZ = { id: null, ger: 0, sel: null, fila: [] };
+const vozDisponivel = () => { try { return !!window.speechSynthesis && typeof window.SpeechSynthesisUtterance === "function"; } catch (e) { return false; } };
+const VEL_VOZ = [[0.8, "Mais lenta"], [1, "Normal"], [1.2, "Mais rápida"]];
+const velVoz = () => { const v = +ls.get("gab2:voz-vel", 1); return VEL_VOZ.some(x => x[0] === v) ? v : 1; };
+/** Botão "Ouvir" (some se o navegador não lê em voz alta). Tocar de novo para a leitura. */
+function botaoOuvir(id) {
+  if (!vozDisponivel()) return "";
+  const lendo = VOZ.id === id;
+  return `<button class="btn sec mini ouvir${lendo ? " ativo" : ""}" data-act="ouvir" data-v="${esc(id)}">${rotuloOuvir(lendo)}</button>`;
+}
+const rotuloOuvir = lendo => lendo ? `<span aria-hidden="true">⏹</span> Parar leitura` : `<span aria-hidden="true">🔊</span> Ouvir`;
+function marcarBotoesVoz() {
+  document.querySelectorAll('[data-act="ouvir"]').forEach(b => { const lendo = VOZ.id === b.dataset.v; b.classList.toggle("ativo", lendo); b.innerHTML = rotuloOuvir(lendo); });
+}
+/** Pedaços curtos (frases até ~220 caracteres): alguns navegadores cortam falas longas. */
+function pedacosFala(t) {
+  const s = String(t || "").replace(/\s+/g, " ").trim(); if (!s) return [];
+  const out = []; let atual = "";
+  for (const f of s.match(/[^.!?;:]+[.!?;:]*\s*/g) || [s]) { if (atual && (atual + f).length > 220) { out.push(atual.trim()); atual = ""; } atual += f; }
+  if (atual.trim()) out.push(atual.trim());
+  return out;
+}
+/** O que ler em cada tela: [{t: texto, sel: elemento a destacar}]. */
+function partesLeitura(id) {
+  const k = id.indexOf(":"), tipo = k < 0 ? id : id.slice(0, k), ref = k < 0 ? "" : id.slice(k + 1);
+  if (tipo === "amostra") return [{ t: "Esta é a velocidade da leitura em voz alta." }];
+  if (tipo === "pl") {
+    const q = qPorId(PL.ids[PL.i]); if (!q || PL.fim) return [];
+    if (!PL.resp) return [{ t: q.q, sel: "#pl .enunciado" }, ...PL.ordem.map((i, pos) => ({ t: `Alternativa ${LETRAS[pos]}${PL.desc.has(i) ? ", descartada" : ""}: ${q.o[i]}`, sel: `#pl [data-act="pl-alt"][data-i="${i}"]` }))];
+    const [corpo, ...resto] = String(q.e || "Sem explicação cadastrada.").split(/\s*Para lembrar:\s*/), letra = LETRAS[PL.ordem.indexOf(q.c)];
+    return [{ t: PL.esc === q.c ? `Certo. Alternativa ${letra}: ${q.o[q.c]}.` : `Errado. A resposta certa é a alternativa ${letra}: ${q.o[q.c]}.`, sel: "#pl .veredito" },
+      { t: "Por quê: " + corpo, sel: "#pl .explica" }, ...(resto.length ? [{ t: "Para lembrar: " + resto.join(" "), sel: "#pl .lembrar" }] : [])];
+  }
+  if (tipo === "fc") {
+    const c = cardPorId(FC.fila[FC.i]); if (!c) return [];
+    return [{ t: c.frente, sel: "#fc .frente" }, ...(FC.mostrar ? [{ t: "Resposta: " + c.verso, sel: "#fc .verso" }] : [])];
+  }
+  if (tipo === "pil") {
+    const p = PIL[ref]; if (!p) return [];
+    const out = [{ t: p.titulo + ".", sel: "#pil .pil-tit" }, { t: p.pergunta, sel: "#pil .pil-perg" }];
+    if (EST.aberta[ref]) out.push({ t: "Resposta: " + p.resposta, sel: "#pil .pil-r" }, { t: p.texto, sel: "#pil .pil-texto" }, { t: "Por que importa: " + p.porque, sel: "#pil .pil-porque" }, ...(p.exemplo ? [{ t: "Exemplo: " + p.exemplo }] : []));
+    return out;
+  }
+  if (tipo === "caso") {
+    const c = casoPorId(ref), rv = REVELADO[ref]; if (!c || !rv) return [];
+    const txt = v => Array.isArray(v) ? v.join(". ") : String(v || "");
+    const sec = ([kk, t]) => rv.has(kk) && c[kk] != null && txt(c[kk]) ? [{ t: `${t}: ${txt(c[kk])}`, sel: `.caso-sec[data-k="${kk}"]` }] : [];
+    return [{ t: c.titulo + "." }, ...SECOES_CASO.flatMap(sec),
+      ...(c.perguntas || []).map((p, i) => ({ t: `Pergunta ${i + 1}: ${p.pergunta}${rv.has("p" + i) ? " Resposta: " + p.resposta : ""}`, sel: '.caso-sec[data-k="perguntas"]' })),
+      ...SECOES_FIM.flatMap(sec)];
+  }
+  return [];
+}
+function escolherVoz() {
+  try { const vs = speechSynthesis.getVoices() || []; return vs.find(v => /^pt[-_]BR$/i.test(v.lang)) || vs.find(v => /^pt\b/i.test(v.lang)) || null; } catch (e) { return null; }
+}
+function falar(id) {
+  pararVoz();
+  if (!vozDisponivel()) return;
+  const partes = partesLeitura(id).flatMap(p => pedacosFala(p.t).map(t => ({ t, sel: p.sel })));
+  if (!partes.length) return;
+  const ger = ++VOZ.ger, voz = escolherVoz(), vel = velVoz();
+  VOZ.id = id;
+  VOZ.fila = partes.map((p, k) => {
+    const u = new SpeechSynthesisUtterance(p.t); u.lang = "pt-BR"; if (voz) u.voice = voz; u.rate = vel;
+    u.onstart = () => { if (ger === VOZ.ger) destacarLeitura(p.sel || null); };
+    u.onend = u.onerror = () => { if (ger === VOZ.ger && k === partes.length - 1) pararVoz(); };
+    return u;   // guardadas em VOZ.fila: sem referência, alguns navegadores descartam a fala no meio
+  });
+  try { VOZ.fila.forEach(u => speechSynthesis.speak(u)); } catch (e) { pararVoz(); return; }
+  marcarBotoesVoz();
+}
+/** Para a leitura (ao tocar de novo, trocar de questão/card/pílula ou de página). */
+function pararVoz() {
+  VOZ.ger++; const tinha = VOZ.id; VOZ.id = null; VOZ.fila = []; destacarLeitura(null);
+  try { if (vozDisponivel() && (tinha || speechSynthesis.speaking || speechSynthesis.pending)) speechSynthesis.cancel(); } catch (e) { }
+  if (tinha) marcarBotoesVoz();
+}
+function destacarLeitura(sel) {
+  VOZ.sel = sel;
+  document.querySelectorAll(".lendo").forEach(e => e.classList.remove("lendo"));
+  if (sel) document.querySelector(sel)?.classList.add("lendo");
+}
+/** Depois de redesenhar a tela, o trecho que está sendo lido continua destacado. */
+function reaplicarLeitura() { if (VOZ.id && VOZ.sel) document.querySelector(VOZ.sel)?.classList.add("lendo"); }
+ACOES.ouvir = el => { const id = el.dataset.v; if (VOZ.id === id) pararVoz(); else falar(id); };
+
+/* Folha "Aa": velocidade da leitura e Som e vibração (o mesmo ajuste dos jogos). */
+function htmlVozSom() {
+  const vel = velVoz(), somOn = !!store.doc("jogos").som;
+  return `${vozDisponivel() ? `<span class="lab">Leitura em voz alta</span><div class="aparencia-opcoes">${VEL_VOZ.map(([v, n]) => `<button class="btn ${v === vel ? "azul" : "sec"}" data-act="voz-vel" data-v="${v}" aria-pressed="${v === vel}">${n}</button>`).join("")}</div>` : ""}
+    <span class="lab">Som e vibração</span><div class="aparencia-opcoes">${[[1, "Ligados"], [0, "Desligados"]].map(([v, n]) => `<button class="btn ${!!v === somOn ? "azul" : "sec"}" data-act="som-set" data-v="${v}" aria-pressed="${!!v === somOn}">${n}</button>`).join("")}</div>`;
+}
+ACOES["voz-vel"] = el => {
+  const v = +el.dataset.v, nome = VEL_VOZ.find(x => x[0] === v)?.[1]; if (!nome) return;
+  ls.set("gab2:voz-vel", v); abrirFolha(htmlAparencia(), { titulo: TIT_APARENCIA }); $(`#camada [data-act="voz-vel"][data-v="${v}"]`)?.focus();
+  falar("amostra"); toast("Leitura: " + nome);
+};
+ACOES["som-set"] = el => {
+  const D = store.doc("jogos"), v = el.dataset.v === "1"; D.som = v; store.mudou("jogos");
+  abrirFolha(htmlAparencia(), { titulo: TIT_APARENCIA }); $(`#camada [data-act="som-set"][data-v="${el.dataset.v}"]`)?.focus();
+  if (v) som("ok"); toast(v ? "Som e vibração ligados" : "Som e vibração desligados");
+};
+
+/* ---------- Marca-texto no enunciado ---------- */
+/** Enunciado em frases tocáveis; as marcadas ficam com fundo amarelo. Espaços e quebras ficam fora do destaque. */
+function frasesEnunciado(t, marcas = new Set()) {
+  const partes = String(t || "").match(/[\s\S]+?(?:[.!?…]+["”’)\]]*(?=\s|$)|\n+|$)/g) || [];
+  let n = 0;
+  return partes.map(p => {
+    const [, ini, corpo, fim] = p.match(/^(\s*)([\s\S]*?)(\s*)$/);
+    if (!corpo) return esc(p);
+    const k = n++;
+    return `${esc(ini)}<span class="frase${marcas.has(k) ? " marcada" : ""}" data-act="pl-marca" data-n="${k}">${esc(corpo)}</span>${esc(fim)}`;
+  }).join("");
+}
+
+/* ---------- Certeza × acerto (Desempenho) ---------- */
+function certezaXAcerto(filtro = () => true) {
+  const c = { 3: { n: 0, ac: 0 }, 2: { n: 0, ac: 0 }, 1: { n: 0, ac: 0 } };
+  for (const q of questoes()) {
+    if (!filtro(q)) continue; const p = progDe(q); if (!p?.h) continue;
+    for (const h of p.h) if (c[h[5]]) { c[h[5]].n++; c[h[5]].ac += h[2] ? 1 : 0; }
+  }
+  return c;
+}
+function blocoCerteza(filtro) {
+  const c = certezaXAcerto(filtro), linhas = CERTEZA.filter(([v]) => c[v].n);
+  if (!linhas.length) return "";
+  const cert = c[3], alerta = cert.n >= 5 && cert.ac / cert.n < 0.8;
+  return `<section><h2 class="sec">Certeza × acerto</h2><div class="barras">${linhas.map(([v, t]) => barra(t, c[v].ac, c[v].n)).join("")}</div>
+    <p class="small muted">${alerta ? "Quando você tem certeza, ainda erra bastante: vale revisar com calma os conceitos que parecem óbvios." : "O ideal é acertar quase tudo quando tem certeza. Acertos no chute voltam mais cedo para revisão."}</p></section>`;
+}
+
+/* ---------- Flashcards: tocar vira, deslizar avalia ---------- */
+const GESTO = { ativo: false, arrastou: false, id: null, x0: 0, y0: 0, dx: 0, horiz: null };
+const limiteGesto = fc => Math.min(120, fc.offsetWidth * 0.3);
+document.addEventListener("pointerdown", e => {
+  const fc = e.target.closest?.("#fc"); if (!fc || e.target.closest("a,button") || e.button > 0) return;
+  Object.assign(GESTO, { ativo: true, arrastou: false, id: e.pointerId, x0: e.clientX, y0: e.clientY, dx: 0, horiz: null });
+});
+document.addEventListener("pointermove", e => {
+  if (!GESTO.ativo || e.pointerId !== GESTO.id) return;
+  const fc = document.getElementById("fc"); if (!fc) { GESTO.ativo = false; return; }
+  const dx = e.clientX - GESTO.x0, dy = e.clientY - GESTO.y0;
+  if (GESTO.horiz === null && Math.hypot(dx, dy) > 10) GESTO.horiz = Math.abs(dx) > Math.abs(dy);
+  if (!GESTO.horiz || !FC.mostrar) return;   // só depois de ver a resposta; arrasto vertical é rolagem
+  GESTO.arrastou = true; GESTO.dx = dx; fc.classList.add("arrastando");
+  fc.style.transform = `translateX(${dx}px)` + (semMovimento() ? "" : ` rotate(${dx / 30}deg)`);
+  const f = Math.min(1, Math.abs(dx) / limiteGesto(fc));
+  if (Math.abs(dx) > 12) { fc.dataset.puxa = dx > 0 ? "dir" : "esq"; fc.dataset.rot = dx > 0 ? "✓ Lembrei" : "✗ Esqueci"; } else fc.removeAttribute("data-puxa");
+  fc.style.setProperty("--f", f.toFixed(2));
+});
+function soltarGesto(e) {
+  if (!GESTO.ativo || e.pointerId !== GESTO.id) return;
+  GESTO.ativo = false;
+  const fc = document.getElementById("fc"); if (!fc || !GESTO.arrastou) return;
+  const dx = GESTO.dx, i = FC.i;
+  fc.classList.remove("arrastando");
+  if (e.type === "pointerup" && Math.abs(dx) >= limiteGesto(fc)) {
+    const n = dx > 0 ? 2 : 0, avaliar = () => { if (FC.i !== i || !FC.mostrar) return; ACOES["fc-nota"]({ dataset: { n } }); toast(n ? "Lembrei — volta mais tarde" : "Esqueci — volta amanhã", 1600); };
+    if (semMovimento()) avaliar();
+    else { fc.classList.add("sai"); fc.style.transform = `translateX(${dx > 0 ? 110 : -110}vw) rotate(${dx > 0 ? 12 : -12}deg)`; setTimeout(avaliar, 180); }
+  } else { fc.style.transform = ""; fc.removeAttribute("data-puxa"); fc.style.removeProperty("--f"); }
+}
+document.addEventListener("pointerup", soltarGesto);
+document.addEventListener("pointercancel", soltarGesto);
+/* Toque (ou clique) no cartão vira; links e botões dentro dele funcionam normalmente. */
+document.addEventListener("click", e => {
+  const fc = e.target.closest?.("#fc"); if (!fc || e.target.closest("a,button")) return;
+  if (GESTO.arrastou) { GESTO.arrastou = false; return; }
+  if (String(window.getSelection?.() || "").length) return;   // selecionando texto
+  FC.mostrar = !FC.mostrar; FC.virou = true; atualizar();
+});
 
 /* ---- 99-main.js ---- */
 /* ============================================================

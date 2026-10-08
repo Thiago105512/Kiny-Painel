@@ -117,8 +117,8 @@ function conferirConquistas(J) {
 const FILA_CELEBRA = [];
 const emAndamento = () => (typeof JG !== "undefined" && JG.id && !JG.fim && JG.rodadas?.length && location.hash.startsWith("#/jogos/")) || (PL.ativo && !PL.fim && !!document.getElementById("pl"));   // saiu do player pela navegação: não segura a fila
 /** Comemoração: cartão flutuante com o mascote (ou a medalha) e confete. Some sozinho e não bloqueia a tela. */
-function celebrar(msg, conq = null) {
-  if (emAndamento()) { FILA_CELEBRA.push([msg, conq]); return; }   // não interrompe jogo nem sessão: comemora no fim
+function celebrar(msg, conq = null, agora = false) {
+  if (!agora && emAndamento()) { FILA_CELEBRA.push([msg, conq]); return; }   // não interrompe jogo nem sessão: comemora no fim
   const el = document.createElement("div"); el.className = "celebra-flutuante"; el.setAttribute("role", "status");
   el.innerHTML = `${conq ? medalha(conq, true, "g") : mascote("festa", 72, "")}<div><b>${esc(msg)}</b>${conq ? `<small>${esc(conq.desc)}</small>` : ""}</div>`;
   const pilha = document.querySelectorAll(".celebra-flutuante").length; el.style.setProperty("--n", pilha);

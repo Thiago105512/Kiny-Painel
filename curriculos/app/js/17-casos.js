@@ -45,13 +45,13 @@ rota("/casos/:id", ({ id }) => {
   const val = v => Array.isArray(v) ? `<ul>${v.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : `<p class="leitura" style="margin:0">${esc(v || "—")}</p>`;
   const cab = (k, t) => `<h3>${ilustra(...VISUAL_CASO[k], "p")}${t}</h3>`, estilo = k => `style="--h:${VISUAL_CASO[k][1]}"`;
   const vit = k => k === "exameFisico" && rv.has(k) ? (v => v.length ? `<div class="vitais">${v.map(([a, b]) => `<span class="vital"><b>${a}</b> ${esc(b)}</span>`).join("")}</div>` : "")(sinaisVitais(c[k])) : "";
-  const sec = ([k, t]) => c[k] == null || (Array.isArray(c[k]) && !c[k].length) ? "" : `<div class="caso-sec" ${estilo(k)}>${cab(k, t)}${vit(k)}${rv.has(k) ? val(c[k]) : `<button class="btn sec mini" data-act="caso-revelar" data-id="${esc(id)}" data-k="${k}">Mostrar ${t.toLowerCase()}</button>`}</div>`;
+  const sec = ([k, t]) => c[k] == null || (Array.isArray(c[k]) && !c[k].length) ? "" : `<div class="caso-sec" data-k="${k}" ${estilo(k)}>${cab(k, t)}${vit(k)}${rv.has(k) ? val(c[k]) : `<button class="btn sec mini" data-act="caso-revelar" data-id="${esc(id)}" data-k="${k}">Mostrar ${t.toLowerCase()}</button>`}</div>`;
   return {
     secao: "casos", crumbs: [["Casos clínicos", "#/casos"]], titulo: c.titulo, ilu: iluEsp(c.espId, "g"), cor: corCaso(c),
     sub: `${c.temaId ? linkTema(c.temaId) + " · " : ""}${esc(ESPECIALIDADES[c.espId]?.nome || c.especialidade || "")} · ${esc(c.disciplina || "")} · ${DIFICULDADE[c.dificuldade] || ""}`,
-    acoes: `<button class="btn sec mini" data-act="caso-tudo" data-id="${esc(id)}">Revelar tudo</button>`,
+    acoes: `${botaoOuvir("caso:" + id)}<button class="btn sec mini" data-act="caso-tudo" data-id="${esc(id)}">Revelar tudo</button>`,
     html: `<div class="aviso">${AVISO_CASO}</div><article class="caixa">${SECOES_CASO.map(sec).join("")}
-      ${(c.perguntas || []).length ? `<div class="caso-sec" ${estilo("perguntas")}>${cab("perguntas", "Perguntas")}${c.perguntas.map((p, i) => `<div style="margin-bottom:10px"><p style="margin:0 0 4px;font-weight:600">${i + 1}. ${esc(p.pergunta)}</p>${rv.has("p" + i) ? `<p class="leitura" style="margin:0;color:var(--ink2)">${esc(p.resposta)}</p>` : `<button class="btn sec mini" data-act="caso-revelar" data-id="${esc(id)}" data-k="p${i}">Ver resposta</button>`}</div>`).join("")}</div>` : ""}
+      ${(c.perguntas || []).length ? `<div class="caso-sec" data-k="perguntas" ${estilo("perguntas")}>${cab("perguntas", "Perguntas")}${c.perguntas.map((p, i) => `<div style="margin-bottom:10px"><p style="margin:0 0 4px;font-weight:600">${i + 1}. ${esc(p.pergunta)}</p>${rv.has("p" + i) ? `<p class="leitura" style="margin:0;color:var(--ink2)">${esc(p.resposta)}</p>` : `<button class="btn sec mini" data-act="caso-revelar" data-id="${esc(id)}" data-k="p${i}">Ver resposta</button>`}</div>`).join("")}</div>` : ""}
       ${SECOES_FIM.map(sec).join("")}
       ${(c.referencias || []).length && rv.has("discussao") ? `<div class="caso-sec" ${estilo("referencias")}>${cab("referencias", "Referências")}${val(c.referencias)}</div>` : ""}</article>
       <div class="acoes">${c.temaId ? `<a class="btn sec" href="#/tema/${encodeURIComponent(c.temaId)}">Estudar o tema</a>` : ""}${c.src !== "banco" ? `<button class="btn perigo mini" data-act="caso-excluir" data-id="${esc(id)}">Excluir caso</button>` : ""}</div>`,

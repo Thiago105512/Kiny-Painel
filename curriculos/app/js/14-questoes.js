@@ -119,7 +119,7 @@ rota("/questoes/q/:id", ({ id }) => {
     sub: `${esc(TRILHAS[q.t]?.nome || q.t)}${q.ae ? " · " + esc(nomeAreaEnem(q.ae)) + (q.disc ? " · " + esc(q.disc) : "") : ""} · ${q.tema ? linkTema(q.tema) : esc(q.a)}${q.subtema ? " · " + esc(nomeSubtema(q.tema, q.subtema) || "") : ""} · fonte: ${esc(q.fonte || q.src)}${q.ano ? " · " + esc(q.ano) : ""}${q.prova ? " · " + esc(q.prova) : ""}`,
     html: `${htmlPlayer()}
       <h2 class="sec">Histórico de tentativas</h2>${tabela([{ t: "Quando" }, { t: "Sua resposta" }, { t: "Resultado" }, { t: "Tempo", num: 1 }, { t: "Origem" }], hist, { vaziaMsg: "Nenhuma tentativa ainda." })}
-      ${E ? `<h2 class="sec">No caderno de erros</h2><p>${pill(E.status === "aberto" ? "aberto" : "resolvido", E.status === "aberto" ? "bad" : "ok")} Errou ${E.n}× · motivo: ${esc(E.motivo || E.motivoSugerido + " (sugerido)")} · próxima revisão ${dataBR(E.srs?.prox)}</p><button class="btn sec mini" data-act="erro-detalhe" data-q="${esc(id)}">Editar registro do erro</button>` : ""}`,
+      ${E ? `<h2 class="sec">No caderno de erros</h2><p>${pill(E.status === "aberto" ? "aberto" : "resolvido", E.status === "aberto" ? "bad" : "ok")} ${E.n ? `Errou ${E.n}× · ` : ""}motivo: ${esc(E.motivo || E.motivoSugerido + " (sugerido)")} · próxima revisão ${dataBR(E.srs?.prox)}</p><button class="btn sec mini" data-act="erro-detalhe" data-q="${esc(id)}">Editar registro do erro</button>` : ""}`,
     ctx: { questao: id, tema: q.tema },
   };
 });

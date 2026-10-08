@@ -51,13 +51,15 @@ function alternarFlag(q, flag) {
   p[flag] = p[flag] ? 0 : 1; store.mudou(docProg(q.t)); return p[flag];
 }
 
-/** Registra uma tentativa. origem: pratica | tema | simulado | revisao | erro */
-function registrarResposta(q, resp, ms, origem) {
+/** Registra uma tentativa. origem: pratica | tema | simulado | revisao | erro
+    cert (opcional): grau de certeza 3 tenho certeza · 2 acho que sim · 1 chutei — vai como 6º campo da tentativa. */
+function registrarResposta(q, resp, ms, origem, cert) {
   const ok = resp === q.c, agora = Date.now();
   const d = store.doc(docProg(q.t)); const p = d.q[q.id] = d.q[q.id] || { n: 0, ac: 0, h: [], m: 0, r: 0 };
   p.n++; if (ok) p.ac++;
   if (p.n === 1) p.f = ok ? 1 : 0;   // 1ª tentativa: é ela que mede a dificuldade real da questão
-  p.h.push([agora, resp, ok ? 1 : 0, Math.round(ms || 0), origem]); if (p.h.length > 12) p.h = p.h.slice(-12);
+  const t = [agora, resp, ok ? 1 : 0, Math.round(ms || 0), origem]; if (CERTEZAS.includes(cert)) t.push(cert);
+  p.h.push(t); if (p.h.length > 12) p.h = p.h.slice(-12);
   store.mudou(docProg(q.t));
   const dia = diaDe(hoje()); dia.q++; if (ok) dia.ac++; if (q.tema && !dia.temas.includes(q.tema)) dia.temas.push(q.tema); store.mudou("dias");
   if (typeof jornada === "function") jornada("questao", { ok });
@@ -68,6 +70,14 @@ function registrarResposta(q, resp, ms, origem) {
     E.itens[q.id] = { qid: q.id, tema: q.tema, ts: agora, resp, n: (prev?.n || 0) + 1,
       motivo: prev?.motivo || null, motivoSugerido: motivoSugerido(q, ms, prev), coment: prev?.coment || "", card: prev?.card || null,
       srs: agendar(prev?.srs && origem === "erro" ? prev.srs : null, 0), status: "aberto" };
+    store.mudou("erros");
+  } else if (cert === 1) {
+    // Acertou no chute: não conta como aprendido. Erro aberto → revisão mais cedo (não avança a etapa);
+    // sem erro aberto → entra no caderno com o motivo "Acertou no chute" e revisão amanhã.
+    const prev = E.itens[q.id];
+    if (prev && prev.status === "aberto") { prev.srs = agendar(prev.srs, 1); prev.chute = 1; }
+    else E.itens[q.id] = { qid: q.id, tema: q.tema, ts: agora, resp, n: prev?.n || 0, motivo: "Acertou no chute", motivoSugerido: "Acertou no chute",
+      coment: prev?.coment || "", card: prev?.card || null, srs: agendar(null, 0), status: "aberto", chute: 1 };
     store.mudou("erros");
   } else if (E.itens[q.id] && E.itens[q.id].status === "aberto" && (origem === "erro" || origem === "revisao")) {
     const e = E.itens[q.id]; e.srs = agendar(e.srs, 2); if (e.srs.etapa >= 2) e.status = "resolvido"; store.mudou("erros");
@@ -80,7 +90,8 @@ function motivoSugerido(q, ms, prev) {
   if (ms && ms > 240000) return "Muito tempo — dúvida de conteúdo ou interpretação";
   return "Conteúdo";
 }
-const MOTIVOS = ["Lacuna de conteúdo", "Desatenção / leitura apressada", "Interpretação do enunciado", "Chute", "Confundi conceitos parecidos", "Falta de tempo"];
+const MOTIVOS = ["Lacuna de conteúdo", "Desatenção / leitura apressada", "Interpretação do enunciado", "Chute", "Acertou no chute", "Confundi conceitos parecidos", "Falta de tempo"];
+const CERTEZAS = [1, 2, 3];
 
 /* ---------- Dia de estudo (StudySession agregada por dia) ---------- */
 function diaDe(iso) { const D = store.doc("dias"); return D.d[iso] = Object.assign({ q: 0, ac: 0, seg: 0, temas: [] }, D.d[iso] || {}); }

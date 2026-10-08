@@ -169,7 +169,7 @@ function telaFim(j) {
 rota("/jogos", () => {
   const D = store.doc("jogos"), lista = JOGOS.filter(jogoDisponivel);
   return { secao: "jogos", titulo: "Jogos", sub: "Estudar também pode ser divertido. Tudo com questões e conteúdos do seu foco de estudo.",
-    acoes: `<button class="btn sec mini" data-act="jg-som">${store.doc("jogos").som ? "Sons: ligados" : "Sons: desligados"}</button>`,
+    acoes: `<button class="btn sec mini" data-act="jg-som">${store.doc("jogos").som ? "Som e vibração: ligados" : "Som e vibração: desligados"}</button>`,
     html: `${cartaoJornada()}
       ${lista.some(j => j.diario) ? `<section><h2 class="sec">Desafios de hoje</h2><div class="jg-hoje">${lista.filter(j => j.diario).map(j => { const feito = j.diario();
         return `<a class="jg-desafio ${feito ? "feito" : ""}" href="#/jogos/${j.id}" style="--h:${j.cor}">${ilustra(j.arte, j.cor, "g")}<b>${esc(j.nome)}</b><span class="pill ${feito ? "ok" : "warn"}">${feito ? "✓ Feito hoje" : "Novo hoje"}</span></a>`; }).join("")}</div></section>` : ""}
@@ -217,8 +217,14 @@ ACOES["jg-marco"] = el => {
 const FORMAS = ["M12 3 22 20H2z", "M12 2 22 12 12 22 2 12z", "M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20z", "M3 3h18v18H3z", "M12 2l3 7 7 .6-5.3 4.7L18.3 22 12 18.2 5.7 22l1.6-7.7L2 9.6 9 9z"];
 const formaAlt = pos => `<span class="forma forma-${pos}" aria-label="${LETRAS[pos]}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${FORMAS[pos]}"/></svg><b>${LETRAS[pos]}</b></span>`;
 let _audio = null;
+/** Som e vibração (um só ajuste): vibra curto no acerto e duas vezes no erro, se o aparelho permitir. */
+function vibrar(tipo) {
+  const padrao = tipo === "ok" ? 30 : tipo === "erro" ? [60, 90, 60] : tipo === "festa" ? [30, 60, 30] : null;
+  try { if (padrao && typeof navigator.vibrate === "function") navigator.vibrate(padrao); } catch (e) { /* sem vibração */ }
+}
 function som(tipo) {
   if (!store.doc("jogos").som) return;
+  vibrar(tipo);
   try {
     _audio = _audio || new (window.AudioContext || window.webkitAudioContext)();
     const notas = { ok: [660, 880], erro: [220, 180], fim: [523, 659, 784], festa: [523, 659, 784, 1047], tecla: [440] }[tipo] || [440];
