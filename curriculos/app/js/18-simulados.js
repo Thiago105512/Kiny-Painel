@@ -126,6 +126,7 @@ rota("/simulados", () => {
     const ff = FORMATO[SIM.tReal] || {}, p = SIM.ac / SIM.ids.length;
     const linhas = Object.entries(SIM.areas).map(([a, [x, n]]) => ({ a, x, n })).sort((a, b) => a.x / a.n - b.x / b.n);
     const lista = SIM.ids.map((id, k) => ({ k, q: qPorId(id), r: SIM.resp[id] })).filter(x => x.q && (!SIM.soErros || x.r !== x.q.c));
+    registrarLista("sim", lista.map(x => x.q.id));   // "Abrir questão" ganha anterior/próxima dentro da correção
     return { secao: "simulados", titulo: "Resultado do simulado", sub: esc(SIM.filtrosTxt || ""),
       html: `<div class="kpis"><div class="kpi"><b>${SIM.ac}/${SIM.ids.length}</b><span>acertos</span></div><div class="kpi"><b>${Math.round(p * 100)}%</b><span>aproveitamento</span></div><div class="kpi"><b>${SIM.ids.length - SIM.ac}</b><span>erros e brancos</span></div><div class="kpi"><b>${mmss(SIM.seg * 1000)}</b><span>tempo${SIM.limite ? " de " + mmss(SIM.limite) : ""}</span></div>
         ${ff.corte ? `<div class="kpi"><b style="color:${p >= ff.corte ? "var(--ok)" : "var(--bad)"}">${p >= ff.corte ? "Acima" : "Abaixo"}</b><span>do corte de ${Math.round(ff.corte * 100)}%</span></div>` : ""}</div>
@@ -133,8 +134,8 @@ rota("/simulados", () => {
         <section><h2 class="sec">Por assunto</h2><div class="barras">${Object.entries(SIM.temas || {}).sort((a, b) => a[1][0] / a[1][1] - b[1][0] / b[1][1]).slice(0, 10).map(([t, [x, n]]) => barra(linkTema(t), x, n)).join("") || `<p class="muted">—</p>`}</div></section></div>
         <h2 class="sec">Correção <label class="check" style="font:500 calc(14px * var(--k)) var(--display);padding:0"><input type="checkbox" data-chg="sim-soerros" ${SIM.soErros ? "checked" : ""}><span>só erros e brancos</span></label></h2>
         ${lista.map(({ k, q, r }) => `<div class="caso-sec"><div class="small muted">Questão ${k + 1} · ${q.tema ? linkTema(q.tema) : esc(q.a)}${SIM.tq?.[q.id] ? " · " + mmss(SIM.tq[q.id]) : ""}</div><p class="leitura" style="margin:6px 0">${esc(q.q)}</p>
-          <p style="margin:2px 0;color:${r === q.c ? "var(--ok)" : "var(--bad)"}">${r === undefined ? "Em branco" : "Sua resposta: " + esc(q.o[r])}${r === q.c ? " ✓" : ""}</p>${r !== q.c ? `<p style="margin:2px 0;color:var(--ok)">Gabarito: ${esc(q.o[q.c])}</p>` : ""}<p class="small" style="color:var(--ink2)">${esc(q.e || "")}</p></div>`).join("") || `<p class="muted">Nenhum erro. Excelente!</p>`}
-        <div class="acoes"><button class="btn" data-act="sim-novo">Novo simulado</button><a class="btn sec" href="#/erros">Caderno de erros</a></div>` };
+          <p style="margin:2px 0;color:${r === q.c ? "var(--ok)" : "var(--bad)"}">${r === undefined ? "Em branco" : "Sua resposta: " + esc(q.o[r])}${r === q.c ? " ✓" : ""}</p>${r !== q.c ? `<p style="margin:2px 0;color:var(--ok)">Gabarito: ${esc(q.o[q.c])}</p>` : ""}<p class="small" style="color:var(--ink2)">${esc(q.e || "")}</p><a class="btn sec mini" href="#/questoes/q/${esc(q.id)}" data-qlista="sim" aria-label="Abrir a questão ${k + 1}">Abrir questão ${k + 1} ›</a></div>`).join("") || `<p class="muted">Nenhum erro. Excelente!</p>`}
+        <div class="acoes"><button class="btn" data-act="sim-novo">Fazer outro simulado</button><a class="btn sec" href="#/erros">Caderno de erros</a><a class="btn sec" href="#/">Ir para o Início</a></div>` };
   }
   // Configuração
   const disp = SIM.modo === "prova" ? questoes().filter(q => q.t === SIM.t).length : poolPersonalizado().length, n = Math.min(SIM.n, disp);

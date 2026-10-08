@@ -62,7 +62,7 @@ function paginaTema(id, aba) {
         ${errsAb.length ? linhaSecao("Erros deste tema", `${errsAb.length} em aberto no caderno`, `<a class="btn mini" href="#/revisoes/erros/${enc}">Refazer</a>`) : ""}
         ${med ? linhaSecao("Casos clínicos", casos.length ? casos.map(c => esc(c.titulo)).join(" · ") : "nenhum ainda", casos.length ? `<a class="btn mini sec" href="#/casos/${esc(casos[0].id)}">Abrir</a>` : "") : ""}
       </div>
-      ${qs.length ? `<details class="mais" style="margin-top:12px" ${QPAG > 20 ? "open" : ""}><summary>Ver as ${qs.length} questões</summary>${listaQuestoes(qs, QPAG, true)}</details>` : ""}
+      ${qs.length ? `<details class="mais" style="margin-top:12px" ${QPAG > 20 || CTXQ?.h === location.hash ? "open" : ""}><summary>Ver as ${qs.length} questões</summary>${listaQuestoes(qs, QPAG, true)}</details>` : ""}
       ${cs.length ? `<details class="mais"><summary>Ver os ${cs.length} flashcards</summary>${tabelaCards(cs)}</details>` : ""}`;
     }
   }
@@ -111,8 +111,10 @@ ENTRADAS.nota = el => {
 function listaQuestoes(qs, limite = 20, paginar = false) {
   if (!qs.length) return vazio("Nenhuma questão com esses critérios.");
   const cls = { correta: "ok", incorreta: "bad", nao: "" };
-  return `<div class="lista-q">${qs.slice(0, limite).map(q => { const s = statusQ(q);
-    return `<a href="#/questoes/q/${esc(q.id)}"><span class="txt">${esc(q.q)}</span><span class="meta">${pill(s.nome, cls[s.chave])}${s.marcada ? "<span>★ marcada</span>" : ""}<span>${esc(q.tema ? nomeTema(q.tema) : q.a)}</span>${seloNivel(q.dif, true)}</span></a>`; }).join("")}</div>`
+  /* A lista fica registrada: a questão aberta dela ganha "Anterior · N de M · Próxima" (38-navegacao). */
+  const chave = registrarLista(caminhoAtual(), (paginar ? qs : qs.slice(0, limite)).map(q => q.id));
+  return `<div class="lista-q" data-lista="${esc(chave)}">${qs.slice(0, limite).map(q => { const s = statusQ(q);
+    return `<a href="#/questoes/q/${esc(q.id)}"${CTXQ?.foco === q.id && CTXQ.h === location.hash ? ' class="lq-vista"' : ""}><span class="txt">${esc(q.q)}</span><span class="meta">${pill(s.nome, cls[s.chave])}${s.marcada ? "<span>★ marcada</span>" : ""}<span>${esc(q.tema ? nomeTema(q.tema) : q.a)}</span>${seloNivel(q.dif, true)}</span></a>`; }).join("")}</div>`
     + (qs.length > limite ? (paginar ? `<div class="acoes"><button class="btn sec" data-act="lq-mais">Mostrar mais (${qs.length - limite} restantes)</button></div>` : `<p class="small muted">Mostrando ${limite} de ${qs.length}.</p>`) : "");
 }
 

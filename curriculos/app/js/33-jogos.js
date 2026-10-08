@@ -163,7 +163,7 @@ function telaFim(j) {
     <div class="kpi"><b>${JG.melhorSeq}</b><span>melhor sequência</span></div><div class="kpi"><b>${rec}</b><span>seu recorde</span></div></div>
     <div class="acoes"><button class="btn grande" data-act="jg-comecar" data-id="${j.id}">Jogar de novo</button>
     ${JG.errados.length ? `<button class="btn sec" data-act="praticar-ids" data-ids="${JG.errados.join(",")}" data-ctx="erros do jogo">${JG.errados.length === 1 ? "Rever a que errei" : `Rever as ${JG.errados.length} que errei`}</button>` : ""}
-    <a class="btn sec" href="#/jogos">Outros jogos</a></div></div>`;
+    <a class="btn sec" href="#/jogos">Outros jogos</a><a class="btn sec" href="#/">Ir para o Início</a></div></div>`;
 }
 
 rota("/jogos", () => {

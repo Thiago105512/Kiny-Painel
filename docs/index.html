@@ -804,6 +804,33 @@ table,th,td,.num{overflow-wrap:normal}
 }
 @keyframes virar{from{transform:perspective(900px) rotateY(-80deg);opacity:.4}to{transform:none;opacity:1}}
 
+/* ---------- Navegação: voltar grande, anterior/próxima, sessão pausada, gesto de borda (38-navegacao) ---------- */
+.nav-voltar{margin:0 0 8px}
+.btn.voltar{min-height:48px;padding:8px 16px 8px 12px;font:700 calc(16px * var(--k))/1.2 var(--display);color:var(--ink);background:var(--sheet);border:2px solid var(--ink2);border-radius:10px;max-width:100%;text-align:left}
+.btn.voltar span[aria-hidden]{font-size:1.25em;line-height:1}
+.btn.voltar:hover{border-color:var(--pen);color:var(--pen)}
+:focus-visible{outline:3px solid var(--pen);outline-offset:2px}
+.qnav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;margin:0 0 12px}
+.qnav .btn{min-height:48px;font-size:calc(15px * var(--k));padding-inline:10px}
+.qnav .btn:last-child{justify-self:end}
+.qnav-pos{font:700 calc(15px * var(--k)) var(--display);color:var(--ink);text-align:center;white-space:nowrap}
+@media (max-width:420px){.qnav{grid-template-columns:1fr 1fr}.qnav-pos{grid-column:1 / -1;grid-row:1}.qnav .btn:first-of-type{justify-self:stretch}.qnav .btn:last-child{justify-self:stretch}}
+.faixa.continuar{border:2px solid var(--pen);background:var(--pen-soft);margin:0 0 16px}
+.ja-resp{border-left-color:var(--pen);background:var(--pen-soft)}
+.ja-resp>div{flex:1;min-width:0}
+.ja-resp details summary{min-height:44px;display:flex;align-items:center;font-weight:700;cursor:pointer}
+.fim-acoes .btn{flex:1 1 200px}
+.lista-q a.lq-vista{box-shadow:inset 5px 0 0 var(--pen);background:var(--pen-soft)}
+.gesto-voltar{position:fixed;left:0;top:45%;z-index:60;display:grid;place-items:center;gap:0;width:64px;height:64px;border-radius:0 32px 32px 0;background:var(--ink);color:var(--paper);
+  transform:translateX(calc(-100% + var(--f,0) * 100%));opacity:0;pointer-events:none;font:700 calc(13px * var(--k)) var(--display)}
+.gesto-voltar span{font-size:26px;line-height:1}
+.gesto-voltar small{font-size:11px}
+.gesto-voltar.ativa{opacity:calc(.4 + var(--f,0) * .6)}
+.gesto-voltar.pronta{background:var(--pen);color:var(--on-acc)}
+
+/* Início: temas estudados hoje, um por linha (os links têm área de toque alta) */
+.estudados-hoje{display:grid;gap:2px;margin:0}
+
 </style>
 
 <header class="topo">
@@ -1789,7 +1816,8 @@ function casar(caminho) {
   return null;
 }
 const caminhoAtual = () => (location.hash || "#/").slice(1) || "/";
-function ir(h) { if (location.hash === h) render(); else location.hash = h; }
+/** Navega para h. Dentro de uma folha, a página nova toma o lugar da folha no histórico (ver 38-navegacao). */
+function ir(h) { navegarPara(h); }
 let PAGINA = null; // última página renderizada (contexto para a IA)
 
 /* ---------- Ícones (traço simples) ---------- */
@@ -1869,13 +1897,15 @@ function render(opts = {}) {
   if (typeof pg === "string") pg = { html: pg };
   PAGINA = pg;
   try { desenharNav(pg.secao); } catch (e) { console.error(e); }
-  const crumbs = pg.crumbs?.length ? `<nav class="crumbs" aria-label="Você está em">${pg.crumbs.map(([t, h], i) => (i ? '<span aria-hidden="true">›</span>' : "") + (h ? `<a href="${esc(h)}">${esc(t)}</a>` : `<span>${esc(t)}</span>`)).join("")}</nav>` : "";
+  /* Crumb para o próprio endereço (o player fica em #/questoes) sai do player em vez de não fazer nada. */
+  const crumbs = pg.crumbs?.length ? `<nav class="crumbs" aria-label="Você está em">${pg.crumbs.map(([t, h], i) => (i ? '<span aria-hidden="true">›</span>' : "") + (h ? `<a href="${esc(h)}"${h === location.hash ? ' data-act="crumb-aqui"' : ""}>${esc(t)}</a>` : `<span>${esc(t)}</span>`)).join("")}</nav>` : "";
   document.body.style.setProperty("--sec", pg.cor || SECAO_VISUAL[pg.secao]?.[1] || "#2340B8");
   const ilu = pg.ilu ?? iluSecao(pg.secao);
   const titulo = pg.titulo ? `<div class="titulo${ilu ? " com-figura" : ""}${pg.titulo.length > 44 ? " longo" : ""}">${ilu}<div class="titulo-tx"><h1>${esc(pg.titulo)}</h1>${pg.sub ? `<div class="sub">${pg.sub}</div>` : ""}</div>${pg.acoes ? `<div class="linha">${pg.acoes}</div>` : ""}</div>` : "";
   const fab = IA.disponivel() && pg.secao !== "assistente" ? `<button class="btn azul fab" data-act="ia-abrir" aria-label="Abrir assistente de estudo">${icone("ia")} Assistente</button>` : "";
   const foco = opts.topo ? null : chaveDoFoco();
-  $("#view").innerHTML = crumbs + titulo + (pg.html || "") + fab;
+  registrarPagina(pg);
+  $("#view").innerHTML = htmlVoltar(pg) + crumbs + titulo + faixaSessaoPausada(pg) + (pg.html || "") + fab;
   document.title = (pg.titulo ? pg.titulo + " · " : "") + "Gabarito Amazonas";
   if (opts.topo) { window.scrollTo(0, 0); $("#view").focus({ preventScroll: true }); }
   else if (foco) restaurarFoco(foco);
@@ -1897,7 +1927,7 @@ function restaurarFoco(sel) {
   alvo.focus({ preventScroll: true });
 }
 const atualizar = () => render();
-function paginaNaoEncontrada() { return { titulo: "Página não encontrada", html: vazio("Este endereço não existe mais.", `<a class="btn" href="#/">Ir para o início</a>`) }; }
+function paginaNaoEncontrada() { return { titulo: "Página não encontrada", voltar: true, html: vazio("Este endereço não existe mais.", `<a class="btn" href="#/">Ir para o início</a>`) }; }
 
 /* ---------- Componentes ---------- */
 const vazio = (txt, botoes = "") => `<div class="vazio">${mascote("pensando", 64, "")}<div><p>${txt}</p>${botoes ? `<div class="linha">${botoes}</div>` : ""}</div></div>`;
@@ -1944,10 +1974,11 @@ function toast(msg, ms = 2600) {
   document.body.appendChild(t); setTimeout(() => t.remove(), ms);
 }
 function abrirFolha(html, { titulo } = {}) {
+  if (!folhaAberta()) marcarFolhaAberta();   // o voltar do celular fecha a folha (38-navegacao)
   $("#camada").innerHTML = `<div class="folha-fundo" data-act="fechar-folha"></div><div class="folha" role="dialog" aria-modal="true" ${titulo ? `aria-label="${esc(titulo)}"` : ""}><button class="btn sec mini fechar-x" data-act="fechar-folha" aria-label="Fechar">✕</button>${titulo ? `<h2 class="sec">${esc(titulo)}</h2>` : ""}${html}</div>`;
   $("#camada .folha").querySelector("input,textarea,select")?.focus();
 }
-function fecharFolha() { $("#camada").innerHTML = ""; }
+function fecharFolha() { fecharFolhaNav(); }
 ACOES["fechar-folha"] = () => fecharFolha();
 
 /* ---------- Delegação de eventos ---------- */
@@ -1969,7 +2000,7 @@ document.addEventListener("keydown", e => {
   if (PL.ativo && document.getElementById("pl")) teclaPlayer(e);
   else if (SIM.fase === "prova" && document.getElementById("prova")) teclaProva(e);
 });
-window.addEventListener("hashchange", () => { fecharFolha(); pararVoz(); render({ topo: true }); });
+/* Troca de endereço (hashchange) e voltar/avançar (popstate): ver 38-navegacao. */
 
 /* ============================================================
    Player de questões — usado em Questões, Tema, Revisões, Caderno de erros.
@@ -1980,7 +2011,7 @@ const PL = { ativo: false, chave: null, ids: [], i: 0, ordem: [], esc: null, res
 /* Sessões em andamento de outras telas ficam guardadas por chave: abrir uma questão avulsa
    (pela busca, por exemplo) não descarta a sessão de 20 questões que estava pela metade. */
 const SALVOS = {};
-const guardarSessao = () => { if (PL.ativo && !PL.fim && PL.ids.length > 1) SALVOS[PL.chave] = { ...PL }; };
+const guardarSessao = () => { if (PL.ativo && !PL.fim && PL.ids.length > 1) SALVOS[PL.chave] = { ...PL, desc: new Set(PL.desc), marcas: new Set(PL.marcas) }; };
 /** Casos em sequência: as partes de um mesmo caso ficam juntas e em ordem. completar = puxa as partes que faltam
     (não é usado na prática: nada de questões em sequência para conteúdo novo). familia = deixa só uma questão por família. */
 function ordenarSeries(ids, completar, familia = true) {
@@ -1997,18 +2028,21 @@ function ordenarSeries(ids, completar, familia = true) {
 }
 function iniciarPlayer(chave, ids, origem = "pratica", aoFim = null) {
   if (PL.chave !== chave) guardarSessao();
+  const deOnde = { h: location.hash || "#/", rot: NAVS.pilha[NAVS.idx]?.rot || "" };
   /* Caderno de erros: cada erro vencido é tocado (sem cortar irmãs de família, que ficariam vencidas para sempre). */
   ids = ordenarSeries(ids, false, origem !== "erro");
-  Object.assign(PL, { festa: false, ativo: true, chave, ids: ids.slice(), i: 0, esc: null, resp: false, origem, res: [], aoFim, ia: "", fim: false, msgFim: "", seq: 0 });
+  Object.assign(PL, { festa: false, ativo: true, pausada: false, chave, ids: ids.slice(), i: 0, esc: null, resp: false, origem, res: [], aoFim, ia: "", fim: false, msgFim: "", seq: 0, deOnde, rotulo: null });
   delete SALVOS[chave];
   prepararQuestao();
+  marcarEntradaPlayer(chave);
 }
 function prepararQuestao() { pararVoz(); PL.ordem = embaralhar([0, 1, 2, 3, 4]); PL.esc = null; PL.resp = false; PL.t0 = Date.now(); PL.ia = ""; PL.desc = new Set(); PL.cert = null; PL.marcas = new Set(); PL.seqNovo = false; }
 /** Grau de certeza (opcional), escolhido entre a alternativa e o Confirmar. Gravado na tentativa (6º campo). */
 const CERTEZA = [[3, "Tenho certeza"], [2, "Acho que sim"], [1, "Chutei"]];
+/** Sessão desta chave na tela? Pausada (pelo voltar) só volta pelo "Continuar sessão". */
 function playerAtivo(chave) {
-  if (PL.ativo && PL.chave === chave) return true;
-  const s = SALVOS[chave]; if (!s) return false;
+  if (PL.ativo && PL.chave === chave) return !PL.pausada;
+  const s = SALVOS[chave]; if (!s || s.pausada) return false;
   guardarSessao(); Object.assign(PL, s); delete SALVOS[chave]; return true;
 }
 /** Explicação em caixa colorida; o gancho "Para lembrar:" vira um destaque à parte. */
@@ -2025,7 +2059,7 @@ function htmlPlayer() {
       <div class="kpis"><div class="kpi"><b>${ac}/${n}</b><span>acertos</span></div><div class="kpi"><b>${pct(ac, n)}%</b><span>aproveitamento</span></div>
       <div class="kpi"><b>${mmss(PL.res.reduce((s, r) => s + r.ms, 0) / Math.max(1, n))}</b><span>tempo médio</span></div></div>
       ${PL.msgFim ? `<p class="aviso info">${PL.msgFim}</p>` : ""}${n >= 5 ? cardHumor() : ""}
-      <div class="acoes"><button class="btn sec" data-act="pl-sair">Fechar</button>${PL.res.some(r => !r.ok) ? `<a class="btn" href="#/erros">Ver caderno de erros</a>` : ""}</div></div>`;
+      ${acoesFimSessao()}</div>`;
   }
   const q = qPorId(PL.ids[PL.i]);
   if (!q) return `<div class="caixa">${vazio("Esta questão não está mais disponível.")}<div class="acoes"><button class="btn" data-act="pl-pular">${PL.i < PL.ids.length - 1 ? "Próxima" : "Concluir"}</button><button class="btn sec" data-act="pl-encerrar">Encerrar sessão</button></div></div>`;
@@ -2051,7 +2085,7 @@ function htmlPlayer() {
       ${!ok ? `<p class="small muted" style="margin:8px 0 0">Registrado no <a href="#/erros">caderno de erros</a> com revisão amanhã.</p>${irmaDe(q) ? `<div class="acoes"><button class="btn sec" data-act="pl-irma">Treinar este ponto de novo</button></div>` : ""}` : ""}
       ${PL.ia ? `<h3>Assistente</h3><div class="ia-txt" id="pl-ia">${esc(PL.ia)}</div>` : ""}</div>` : ""}
     <div class="acoes">
-      ${PL.resp ? `<button class="btn" data-act="pl-prox">${PL.i < PL.ids.length - 1 ? "Próxima" : "Concluir"}</button>` : `<button class="btn" data-act="pl-confirmar" ${PL.esc === null ? "disabled" : ""}>Confirmar</button><button class="btn sec" data-act="pl-pular">Pular</button>`}
+      ${PL.resp ? (PL.ids.length === 1 && botaoProxLista()) || `<button class="btn" data-act="pl-prox">${PL.i < PL.ids.length - 1 ? "Próxima" : "Concluir"}</button>` : `<button class="btn" data-act="pl-confirmar" ${PL.esc === null ? "disabled" : ""}>Confirmar</button>${(PL.ids.length === 1 && botaoProxLista(true)) || `<button class="btn sec" data-act="pl-pular">Pular</button>`}`}
       ${PL.resp ? `<button class="btn sec mini" data-act="pl-flag" data-f="m" aria-pressed="${st.marcada}">${st.marcada ? "★ Marcada" : "☆ Marcar"}</button>
       <button class="btn sec mini" data-act="pl-flag" data-f="r" aria-pressed="${st.revisar}">${st.revisar ? "↻ Revisar" : "Revisar depois"}</button>` : ""}
       ${PL.resp ? `<button class="btn sec mini" data-act="pl-card">+ Flashcard</button>${IA.disponivel() ? `<button class="btn sec mini" data-act="pl-ia">Explicar com IA</button>` : ""}<button class="btn sec mini" data-act="reportar" data-q="${esc(q.id)}">Reportar problema</button>` : ""}
@@ -2107,7 +2141,27 @@ ACOES["pl-pular"] = () => { pararVoz(); if (PL.i < PL.ids.length - 1) { PL.i++; 
 ACOES["pl-flag"] = el => { const q = qPorId(PL.ids[PL.i]); const v = alternarFlag(q, el.dataset.f); toast(el.dataset.f === "m" ? (v ? "Questão marcada" : "Marcação removida") : (v ? "Adicionada a revisar" : "Removida de revisar")); atualizar(); };
 ACOES["pl-card"] = () => { const q = qPorId(PL.ids[PL.i]); if (cards().some(c => c.ref === q.id)) { toast("Esta questão já tem flashcard"); return; } const id = cardDeQuestao(q, PL.esc === q.c ? "questao" : "erro"); const E = store.doc("erros"); if (E.itens[q.id]) { E.itens[q.id].card = id; store.mudou("erros"); } toast("Flashcard criado — revisão a partir de hoje"); };
 ACOES["pl-ia"] = () => { const q = qPorId(PL.ids[PL.i]); IA.explicarQuestao(q, PL.esc, PL.ordem, t => { PL.ia = t; const el = document.getElementById("pl-ia"); if (el) el.textContent = t; else atualizar(); }); };
-ACOES["pl-sair"] = () => { pararVoz(); PL.ativo = false; atualizar(); };
+/** Fim de sessão: "Voltar para onde eu estava" (data-h = página onde a sessão começou; "hist" = página anterior). */
+ACOES["pl-sair"] = el => { pararVoz(); PL.ativo = false; const h = el?.dataset?.h;
+  if (h === "hist") voltar(); else if (h && h !== location.hash) ir(h); else render({ topo: true }); };
+ACOES["pl-inicio"] = () => { pararVoz(); PL.ativo = false; ir("#/"); };
+/** "Fazer mais": outra rodada do mesmo tipo (filtro, tema) ou, nas revisões, as outras revisões. */
+ACOES["pl-mais"] = () => {
+  pararVoz(); const [tipo, ...r] = String(PL.chave).split(":"), ref = r.join(":"); PL.ativo = false;
+  if (tipo === "banco" && PL.rotulo === "Praticando questões filtradas" && filtrarQuestoes(FQ).length) return ACOES["praticar-filtro"]();
+  if (tipo === "tema" && TEMAS[ref]) { const novas = questoes().some(q => q.tema === ref && statusQ(q).chave === "nao"); return ACOES["tema-praticar"]({ dataset: { t: ref, m: novas ? "novas" : "todas" } }); }
+  if (tipo === "rev" || tipo === "erros") return ir("#/revisoes");
+  ACOES["inicio-praticar"]({ dataset: { disc: "" } });
+};
+function acoesFimSessao() {
+  const [tipo] = String(PL.chave).split(":"), so1 = PL.ids.length <= 1, de = PL.deOnde || {};
+  const deInicio = de.h === "#/" || de.h === "";
+  const voltarH = so1 ? "hist" : de.h || "";
+  const mais = tipo === "rev" || tipo === "erros" ? "Ver outras revisões" : "Fazer mais questões";
+  return `<div class="acoes fim-acoes"><button class="btn azul" data-act="pl-sair" data-h="${esc(voltarH)}">Voltar para onde eu estava</button>
+    <button class="btn sec" data-act="pl-mais">${mais}</button>${deInicio && !so1 ? "" : `<button class="btn sec" data-act="pl-inicio">Ir para o Início</button>`}
+    ${PL.res.some(r => !r.ok) ? `<a class="btn sec" href="#/erros">Ver caderno de erros</a>` : ""}</div>`;
+}
 ACOES["pl-encerrar"] = () => { pararVoz(); if (!PL.res.length) { PL.ativo = false; } else { PL.fim = true; PL.msgFim = PL.aoFim ? PL.aoFim(PL.res) : ""; } atualizar(); };
 function teclaPlayer(e) {
   if (PL.fim) return;
@@ -2476,8 +2530,9 @@ rota("/", () => {
         ${anel(d.q ? pct(d.ac, d.q) : 0, "#C0265F", `<b>${d.q ? pct(d.ac, d.q) + "%" : "—"}</b><small>acerto</small>`, "Acerto")}</div>
       <div class="painel-linha"><div><span class="lab">Sequência · ${seq} ${seq === 1 ? "dia" : "dias"}</span>${semanaBolinhas()}</div>
         <a class="painel-nivel" href="#/jornada"><span class="lab">Nível ${nv.n} · ${esc(nv.nome)}</span><div class="xp-barra"><i style="width:${nv.pct}%"></i></div><small>${J.xp} XP${nv.prox ? ` · faltam ${nv.prox - J.xp}` : ""}</small></a></div>
-      ${estudados.length ? `<p class="small" style="margin:0"><span class="muted">Estudado hoje:</span> ${estudados.slice(0, 3).map(linkTema).join(", ")}${estudados.length > 3 ? ` <span class="muted">e mais ${estudados.length - 3}</span>` : ""}</p>` : ""}
+      ${estudados.length ? `<div class="small estudados-hoje"><span class="muted">Estudado hoje:</span>${estudados.slice(0, 3).map(t => `<span>${linkTema(t)}</span>`).join("")}${estudados.length > 3 ? `<span class="muted">e mais ${estudados.length - 3}</span>` : ""}</div>` : ""}
     </section>
+    ${blocoContinuar()}
     <section class="hero com-ilu">${ilustra(prox ? (/Revisar|revis/i.test(prox.tit) ? "relogio" : /flashcard/i.test(prox.tit) ? "livro" : /Prova|Trabalho|Semin|Apresenta/i.test(prox.tit) ? "calendario" : "alvo") : "estetoscopio", "#2340B8", "xg")}<div><span class="lab">Próximo passo</span>
       ${prox ? `<p class="hero-tit">${esc(prox.tit)}</p><p class="small muted" style="margin:0">${esc(prox.det)}${tarefas.length > 1 ? ` · depois: mais ${tarefas.length - 1}` : ""}</p><a class="btn azul grande" href="${esc(prox.href)}">${prox.bt}</a>`
         : `<p class="hero-tit">${esc(sug.tit)}</p><p class="small muted" style="margin:0">Nada pendente para hoje · ${esc(sug.det)}</p><button class="btn azul grande" data-act="inicio-praticar" data-disc="${esc(sug.disc || "")}">Começar</button>`}
@@ -3015,7 +3070,7 @@ function paginaTema(id, aba) {
         ${errsAb.length ? linhaSecao("Erros deste tema", `${errsAb.length} em aberto no caderno`, `<a class="btn mini" href="#/revisoes/erros/${enc}">Refazer</a>`) : ""}
         ${med ? linhaSecao("Casos clínicos", casos.length ? casos.map(c => esc(c.titulo)).join(" · ") : "nenhum ainda", casos.length ? `<a class="btn mini sec" href="#/casos/${esc(casos[0].id)}">Abrir</a>` : "") : ""}
       </div>
-      ${qs.length ? `<details class="mais" style="margin-top:12px" ${QPAG > 20 ? "open" : ""}><summary>Ver as ${qs.length} questões</summary>${listaQuestoes(qs, QPAG, true)}</details>` : ""}
+      ${qs.length ? `<details class="mais" style="margin-top:12px" ${QPAG > 20 || CTXQ?.h === location.hash ? "open" : ""}><summary>Ver as ${qs.length} questões</summary>${listaQuestoes(qs, QPAG, true)}</details>` : ""}
       ${cs.length ? `<details class="mais"><summary>Ver os ${cs.length} flashcards</summary>${tabelaCards(cs)}</details>` : ""}`;
     }
   }
@@ -3064,8 +3119,10 @@ ENTRADAS.nota = el => {
 function listaQuestoes(qs, limite = 20, paginar = false) {
   if (!qs.length) return vazio("Nenhuma questão com esses critérios.");
   const cls = { correta: "ok", incorreta: "bad", nao: "" };
-  return `<div class="lista-q">${qs.slice(0, limite).map(q => { const s = statusQ(q);
-    return `<a href="#/questoes/q/${esc(q.id)}"><span class="txt">${esc(q.q)}</span><span class="meta">${pill(s.nome, cls[s.chave])}${s.marcada ? "<span>★ marcada</span>" : ""}<span>${esc(q.tema ? nomeTema(q.tema) : q.a)}</span>${seloNivel(q.dif, true)}</span></a>`; }).join("")}</div>`
+  /* A lista fica registrada: a questão aberta dela ganha "Anterior · N de M · Próxima" (38-navegacao). */
+  const chave = registrarLista(caminhoAtual(), (paginar ? qs : qs.slice(0, limite)).map(q => q.id));
+  return `<div class="lista-q" data-lista="${esc(chave)}">${qs.slice(0, limite).map(q => { const s = statusQ(q);
+    return `<a href="#/questoes/q/${esc(q.id)}"${CTXQ?.foco === q.id && CTXQ.h === location.hash ? ' class="lq-vista"' : ""}><span class="txt">${esc(q.q)}</span><span class="meta">${pill(s.nome, cls[s.chave])}${s.marcada ? "<span>★ marcada</span>" : ""}<span>${esc(q.tema ? nomeTema(q.tema) : q.a)}</span>${seloNivel(q.dif, true)}</span></a>`; }).join("")}</div>`
     + (qs.length > limite ? (paginar ? `<div class="acoes"><button class="btn sec" data-act="lq-mais">Mostrar mais (${qs.length - limite} restantes)</button></div>` : `<p class="small muted">Mostrando ${limite} de ${qs.length}.</p>`) : "");
 }
 
@@ -3250,12 +3307,17 @@ ACOES["praticar-ids"] = el => praticar(embaralhar(el.dataset.ids.split(",").filt
 rota("/questoes/q/:id", ({ id }) => {
   const q = qPorId(id); if (!q) return paginaNaoEncontrada();
   if (!playerAtivo("q:" + id)) iniciarPlayer("q:" + id, [id], "pratica");
-  const p = progDe(q), E = store.doc("erros").itens[id];
+  const p = progDe(q), E = store.doc("erros").itens[id], L = ctxLista(id);
+  /* Já respondida: diz isso logo de cara e deixa ver o gabarito sem responder de novo. */
+  const ult = p?.h?.at(-1), jaResp = p?.n && !PL.resp ? `<div class="aviso info ja-resp"><div><p style="margin:0"><b>Você já respondeu esta questão ${p.n === 1 ? "uma vez" : p.n + " vezes"}</b>${p.n > 1 ? ` · acertou ${p.ac}` : ""}${ult ? ` · última: ${ult[2] ? "certa" : "errada"} em ${esc(new Date(ult[0]).toLocaleDateString("pt-BR"))}` : ""}. Pode responder de novo.</p>
+      <details class="mais"><summary>Ver gabarito e explicação</summary><p style="margin:8px 0"><b>Resposta certa:</b> ${esc(q.o[q.c])}</p>${htmlExplicacao(q.e)}</details></div></div>` : "";
   const hist = (p?.h || []).slice().reverse().map(h => [new Date(h[0]).toLocaleString("pt-BR"), h[1] == null ? "—" : esc(q.o[h[1]] || "—"), h[2] ? pill("certa", "ok") : pill("errada", "bad"), h[3] ? mmss(h[3]) : "—", esc({ pratica: "prática", tema: "tema", simulado: "simulado", revisao: "revisão", erro: "caderno de erros", v1: "versão anterior", inicio: "questão relâmpago", jogo: "jogo" }[h[4]] || h[4] || "")]);
   return {
-    secao: "questoes", crumbs: [["Questões", "#/questoes"]], titulo: "Questão",
+    secao: "questoes", crumbs: [["Questões", "#/questoes"]], titulo: L ? `Questão ${L.i + 1} de ${L.n}` : "Questão", rotulo: "Questão",
+    voltar: L ? { act: "q-lista-voltar", rot: "Voltar para a lista" } : true,
     sub: `${esc(TRILHAS[q.t]?.nome || q.t)}${q.ae ? " · " + esc(nomeAreaEnem(q.ae)) + (q.disc ? " · " + esc(q.disc) : "") : ""} · ${q.tema ? linkTema(q.tema) : esc(q.a)}${q.subtema ? " · " + esc(nomeSubtema(q.tema, q.subtema) || "") : ""} · fonte: ${esc(q.fonte || q.src)}${q.ano ? " · " + esc(q.ano) : ""}${q.prova ? " · " + esc(q.prova) : ""}`,
-    html: `${htmlPlayer()}
+    html: `${barraLista(id)}${jaResp}${htmlPlayer()}
+      ${L ? `<div class="acoes"><button class="btn sec" data-act="q-lista-voltar">Voltar para a lista</button></div>` : ""}
       <h2 class="sec">Histórico de tentativas</h2>${tabela([{ t: "Quando" }, { t: "Sua resposta" }, { t: "Resultado" }, { t: "Tempo", num: 1 }, { t: "Origem" }], hist, { vaziaMsg: "Nenhuma tentativa ainda." })}
       ${E ? `<h2 class="sec">No caderno de erros</h2><p>${pill(E.status === "aberto" ? "aberto" : "resolvido", E.status === "aberto" ? "bad" : "ok")} ${E.n ? `Errou ${E.n}× · ` : ""}motivo: ${esc(E.motivo || E.motivoSugerido + " (sugerido)")} · próxima revisão ${dataBR(E.srs?.prox)}</p><button class="btn sec mini" data-act="erro-detalhe" data-q="${esc(id)}">Editar registro do erro</button>` : ""}`,
     ctx: { questao: id, tema: q.tema },
@@ -3269,6 +3331,7 @@ ACOES["erros-mais"] = () => { EPAG += 30; atualizar(); };
 function tabelaErros(errs) {
   const l = errs.filter(e => qPorId(e.qid)).sort((a, b) => (a.srs?.prox || "").localeCompare(b.srs?.prox || ""));
   if (!l.length) return vazio("Nenhum erro com esses filtros.");
+  registrarLista("erros", l.map(e => e.qid));
   return `<div class="lista-q">${l.slice(0, EPAG).map(e => { const q = qPorId(e.qid);
     return `<a href="#" data-act="erro-detalhe" data-q="${esc(q.id)}"><span class="txt">${esc(q.q)}</span><span class="meta">${e.status === "aberto" ? (vencido(e.srs) ? pill("revisar hoje", "bad") : `<span>revisão ${quando(e.srs?.prox)}</span>`) : pill("resolvido", "ok")}<span>${esc(e.tema ? nomeTema(e.tema) : q.a)}</span><span>${esc(e.motivo || e.motivoSugerido || "")}</span></span></a>`; }).join("")}</div>${l.length > EPAG ? `<div class="acoes"><button class="btn sec" data-act="erros-mais">Mostrar mais (${l.length - EPAG} restantes)</button></div>` : ""}`;
 }
@@ -3302,6 +3365,7 @@ ACOES["erro-detalhe"] = el => {
       <label class="campo"><span class="lab">Comentário pessoal</span><textarea id="er-com" rows="3" placeholder="O que eu confundi? Como lembrar?">${esc(e.coment || "")}</textarea></label>
       <div class="linha"><button class="btn">Salvar</button>${e.card ? pill("flashcard criado", "ok") : `<button class="btn sec" type="button" data-act="erro-card" data-q="${esc(q.id)}">Gerar flashcard</button>`}
       <button class="btn sec" type="button" data-act="erro-refazer" data-q="${esc(q.id)}">Refazer agora</button>
+      ${LISTAS_Q.erros?.ids.includes(q.id) ? `<a class="btn sec" href="#/questoes/q/${esc(q.id)}" data-qlista="erros">Abrir questão</a>` : ""}
       <button class="btn sec" type="button" data-act="erro-status" data-q="${esc(q.id)}">${e.status === "aberto" ? "Marcar resolvido" : "Reabrir"}</button></div>
       <p class="small muted">Próxima revisão: ${dataBR(e.srs?.prox)} · errou ${e.n}×</p></form>`);
 };
@@ -3363,7 +3427,7 @@ function paginaEstudoCards(temaId) {
   if (!FC.fila.length) return { secao: "flashcards", crumbs, titulo: "Estudar flashcards", html: vazio("Nenhum card vencido agora. Volte mais tarde ou crie novos.", `<a class="btn sec" href="#/flashcards">Voltar</a>`) };
   if (FC.i >= FC.fila.length) {
     const n = FC.feitos.length, ok = FC.feitos.filter(x => x >= 2).length;
-    return { secao: "flashcards", crumbs, titulo: "Sessão concluída", html: `<div class="kpis"><div class="kpi"><b>${n}</b><span>cards revisados</span></div><div class="kpi"><b>${pct(ok, n)}%</b><span>lembrei (bom/fácil)</span></div></div><div class="acoes"><a class="btn" href="#/revisoes">Outras revisões</a><button class="btn sec" data-act="fc-reiniciar">Nova sessão</button></div>` };
+    return { secao: "flashcards", crumbs, titulo: "Sessão concluída", html: `<div class="kpis"><div class="kpi"><b>${n}</b><span>cards revisados</span></div><div class="kpi"><b>${pct(ok, n)}%</b><span>lembrei (bom/fácil)</span></div></div><div class="acoes"><a class="btn" href="#/revisoes">Outras revisões</a><button class="btn sec" data-act="fc-reiniciar">Nova sessão</button><a class="btn sec" href="#/">Ir para o Início</a></div>` };
   }
   const c = cardPorId(FC.fila[FC.i]);
   if (!c) { FC.i++; return paginaEstudoCards(temaId); }
@@ -3732,6 +3796,7 @@ rota("/simulados", () => {
     const ff = FORMATO[SIM.tReal] || {}, p = SIM.ac / SIM.ids.length;
     const linhas = Object.entries(SIM.areas).map(([a, [x, n]]) => ({ a, x, n })).sort((a, b) => a.x / a.n - b.x / b.n);
     const lista = SIM.ids.map((id, k) => ({ k, q: qPorId(id), r: SIM.resp[id] })).filter(x => x.q && (!SIM.soErros || x.r !== x.q.c));
+    registrarLista("sim", lista.map(x => x.q.id));   // "Abrir questão" ganha anterior/próxima dentro da correção
     return { secao: "simulados", titulo: "Resultado do simulado", sub: esc(SIM.filtrosTxt || ""),
       html: `<div class="kpis"><div class="kpi"><b>${SIM.ac}/${SIM.ids.length}</b><span>acertos</span></div><div class="kpi"><b>${Math.round(p * 100)}%</b><span>aproveitamento</span></div><div class="kpi"><b>${SIM.ids.length - SIM.ac}</b><span>erros e brancos</span></div><div class="kpi"><b>${mmss(SIM.seg * 1000)}</b><span>tempo${SIM.limite ? " de " + mmss(SIM.limite) : ""}</span></div>
         ${ff.corte ? `<div class="kpi"><b style="color:${p >= ff.corte ? "var(--ok)" : "var(--bad)"}">${p >= ff.corte ? "Acima" : "Abaixo"}</b><span>do corte de ${Math.round(ff.corte * 100)}%</span></div>` : ""}</div>
@@ -3739,8 +3804,8 @@ rota("/simulados", () => {
         <section><h2 class="sec">Por assunto</h2><div class="barras">${Object.entries(SIM.temas || {}).sort((a, b) => a[1][0] / a[1][1] - b[1][0] / b[1][1]).slice(0, 10).map(([t, [x, n]]) => barra(linkTema(t), x, n)).join("") || `<p class="muted">—</p>`}</div></section></div>
         <h2 class="sec">Correção <label class="check" style="font:500 calc(14px * var(--k)) var(--display);padding:0"><input type="checkbox" data-chg="sim-soerros" ${SIM.soErros ? "checked" : ""}><span>só erros e brancos</span></label></h2>
         ${lista.map(({ k, q, r }) => `<div class="caso-sec"><div class="small muted">Questão ${k + 1} · ${q.tema ? linkTema(q.tema) : esc(q.a)}${SIM.tq?.[q.id] ? " · " + mmss(SIM.tq[q.id]) : ""}</div><p class="leitura" style="margin:6px 0">${esc(q.q)}</p>
-          <p style="margin:2px 0;color:${r === q.c ? "var(--ok)" : "var(--bad)"}">${r === undefined ? "Em branco" : "Sua resposta: " + esc(q.o[r])}${r === q.c ? " ✓" : ""}</p>${r !== q.c ? `<p style="margin:2px 0;color:var(--ok)">Gabarito: ${esc(q.o[q.c])}</p>` : ""}<p class="small" style="color:var(--ink2)">${esc(q.e || "")}</p></div>`).join("") || `<p class="muted">Nenhum erro. Excelente!</p>`}
-        <div class="acoes"><button class="btn" data-act="sim-novo">Novo simulado</button><a class="btn sec" href="#/erros">Caderno de erros</a></div>` };
+          <p style="margin:2px 0;color:${r === q.c ? "var(--ok)" : "var(--bad)"}">${r === undefined ? "Em branco" : "Sua resposta: " + esc(q.o[r])}${r === q.c ? " ✓" : ""}</p>${r !== q.c ? `<p style="margin:2px 0;color:var(--ok)">Gabarito: ${esc(q.o[q.c])}</p>` : ""}<p class="small" style="color:var(--ink2)">${esc(q.e || "")}</p><a class="btn sec mini" href="#/questoes/q/${esc(q.id)}" data-qlista="sim" aria-label="Abrir a questão ${k + 1}">Abrir questão ${k + 1} ›</a></div>`).join("") || `<p class="muted">Nenhum erro. Excelente!</p>`}
+        <div class="acoes"><button class="btn" data-act="sim-novo">Fazer outro simulado</button><a class="btn sec" href="#/erros">Caderno de erros</a><a class="btn sec" href="#/">Ir para o Início</a></div>` };
   }
   // Configuração
   const disp = SIM.modo === "prova" ? questoes().filter(q => q.t === SIM.t).length : poolPersonalizado().length, n = Math.min(SIM.n, disp);
@@ -4142,7 +4207,7 @@ const BUSCA_MIN = 2;   // busca vazia (ou só espaço/1 letra) não lista o app 
 FORMS.busca = () => { const q = $("#busca-global").value.trim(); if (norm(q).replace(/[^a-z0-9]/g, "").length >= BUSCA_MIN) ir("#/busca/" + encodeURIComponent(q)); else toast("Digite pelo menos 2 letras para buscar"); };
 rota("/busca", () => paginaBuscaVazia(""));
 function paginaBuscaVazia(q) {
-  return { secao: "", titulo: "Busca", html: vazio(`${q ? `“${esc(q)}” é curto demais. ` : ""}Digite pelo menos 2 letras no campo de busca, lá em cima (ex.: “IC” ou “insuficiência”).`) };
+  return { secao: "", titulo: "Busca", voltar: true, html: vazio(`${q ? `“${esc(q)}” é curto demais. ` : ""}Digite pelo menos 2 letras no campo de busca, lá em cima (ex.: “IC” ou “insuficiência”).`) };
 }
 /** Casa no começo de palavra (“enem” não casa com o meio de outra palavra). */
 const reBusca = n => new RegExp("(^|[^a-z0-9])" + n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
@@ -4167,7 +4232,7 @@ rota("/busca/:q", ({ q }) => {
   const total = temas.length + esps.length + itens.length + qs.length + cs.length + casos.length + notas.length + mats.length + reps.length + discRef.length + pils.length;
   const sec = (titulo, n, html) => n ? `<section><h2 class="sec">${titulo} <span class="small muted">${n}</span></h2>${html}</section>` : "";
   return {
-    secao: "", titulo: `Busca: “${q}”`, sub: plural(total, "resultado", "resultados"),
+    secao: "", titulo: `Busca: “${q}”`, rotulo: "Busca", voltar: true, sub: plural(total, "resultado", "resultados"),
     html: total ? [
       sec("Temas", temas.length, tabela([{ t: "Tema" }, { t: "Especialidade / área" }, { t: "Disciplinas relacionadas" }, { t: "Questões", num: 1 }], temas.slice(0, 30).map(t => [linkTema(t.id), esc(t.dominio === "enem" ? "ENEM · " + t.areaNome : (t.especialidades || []).map(e => ESPECIALIDADES[e]?.nome).filter(Boolean).join(", ")), `<span class="small">${(t.disciplinas || []).map(esc).join(", ")}</span>`, questoes().filter(x => x.tema === t.id && doObjetivo(x)).length]))),
       sec("Especialidades", esps.length, `<div class="chips">${esps.map(e => `<a class="chip" href="#/medicina/esp/${esc(e.id)}">${esc(e.nome)}</a>`).join("")}</div>`),
@@ -4374,7 +4439,7 @@ function paginaSessao() {
     return { secao: "estudar", crumbs: [["Estudar", "#/estudar"]], titulo: "Sessão concluída",
       html: `<div class="caixa"><div class="kpis"><div class="kpi"><b>${sab}/${S.ids.length}</b><span>você sabia</span></div><div class="kpi"><b>${S.ids.length - sab}</b><span>viraram flashcards</span></div></div>
         <p class="small muted">O que você não sabia volta amanhã nos flashcards. Para fixar, pratique agora com questões dos mesmos temas.</p>
-        <div class="acoes">${qids.length ? `<button class="btn azul" data-act="praticar-ids" data-ids="${esc(qids.join(","))}" data-ctx="temas das pílulas">Praticar ${Math.min(qids.length, 10)} questões</button>` : ""}<button class="btn sec" data-act="pil-sessao">Mais 5 pílulas</button><button class="btn sec" data-act="pil-sair">Voltar</button></div></div>` };
+        <div class="acoes">${qids.length ? `<button class="btn azul" data-act="praticar-ids" data-ids="${esc(qids.join(","))}" data-ctx="temas das pílulas">Praticar ${Math.min(qids.length, 10)} questões</button>` : ""}<button class="btn sec" data-act="pil-sessao">Mais 5 pílulas</button><button class="btn sec" data-act="pil-sair">Voltar para Estudar</button><a class="btn sec" href="#/">Ir para o Início</a></div></div>` };
   }
   const p = PIL[S.ids[S.i]];
   return { secao: "estudar", crumbs: [["Estudar", "#/estudar"]], titulo: `Pílula ${S.i + 1} de ${S.ids.length}`,
@@ -5134,7 +5199,7 @@ function telaFim(j) {
     <div class="kpi"><b>${JG.melhorSeq}</b><span>melhor sequência</span></div><div class="kpi"><b>${rec}</b><span>seu recorde</span></div></div>
     <div class="acoes"><button class="btn grande" data-act="jg-comecar" data-id="${j.id}">Jogar de novo</button>
     ${JG.errados.length ? `<button class="btn sec" data-act="praticar-ids" data-ids="${JG.errados.join(",")}" data-ctx="erros do jogo">${JG.errados.length === 1 ? "Rever a que errei" : `Rever as ${JG.errados.length} que errei`}</button>` : ""}
-    <a class="btn sec" href="#/jogos">Outros jogos</a></div></div>`;
+    <a class="btn sec" href="#/jogos">Outros jogos</a><a class="btn sec" href="#/">Ir para o Início</a></div></div>`;
 }
 
 rota("/jogos", () => {
@@ -6144,6 +6209,337 @@ document.addEventListener("click", e => {
   if (String(window.getSelection?.() || "").length) return;   // selecionando texto
   FC.mostrar = !FC.mostrar; FC.virou = true; atualizar();
 });
+
+/* ---- 38-navegacao.js ---- */
+/* ============================================================
+   38-navegacao — voltar fácil, em qualquer tela:
+   · histórico interno do app (cada entrada sabe o endereço, o rótulo e a rolagem);
+   · botão "← Destino" grande no topo das páginas internas (06-ui chama htmlVoltar);
+   · voltar do celular/navegador: fecha a folha aberta, pausa o player (a sessão fica
+     guardada e aparece "Continuar sessão"), restaura a rolagem das listas;
+   · questão aberta de uma lista: "‹ Anterior · N de M · Próxima ›" e "Voltar para a lista";
+   · deslizar da borda esquerda para a direita = voltar; Alt+← e Backspace (fora de campos).
+   ============================================================ */
+try { history.scrollRestoration = "manual"; } catch (e) { }
+/** pilha[idx] = { h: endereço, rot: rótulo curto, y: rolagem ao sair }. idx vem de history.state.nav. */
+const NAVS = { idx: 0, pilha: {}, y: 0, ignorar: null, renderizado: null };
+(function () {
+  const s = history.state;
+  if (s && Number.isInteger(s.nav)) NAVS.idx = s.nav;
+  else try { history.replaceState({ nav: 0 }, ""); } catch (e) { }
+  NAVS.pilha[NAVS.idx] = { h: location.hash || "#/" };
+})();
+addEventListener("scroll", () => { NAVS.y = scrollY; }, { passive: true });
+const folhaAberta = () => !!$("#camada")?.innerHTML;
+const ROT_MAX = 24;
+const rotCurto = t => { t = String(t || "").trim(); return t && t.length <= ROT_MAX ? t : "Voltar"; };
+
+/** Nova entrada no histórico do app (o "futuro" depois dela é descartado). */
+function novaEntrada(extra = {}) {
+  const novo = NAVS.idx + 1;
+  Object.keys(NAVS.pilha).forEach(k => { if (+k >= novo) delete NAVS.pilha[k]; });
+  NAVS.pilha[novo] = { h: location.hash || "#/", ...extra };
+  NAVS.idx = novo;
+  return novo;
+}
+function guardarRolagem() { const e = NAVS.pilha[NAVS.idx]; if (e) e.y = NAVS.y; }
+
+/* ---------- Folhas: abrir empurra um estado; o voltar do celular fecha a folha ---------- */
+let _focoAntesFolha = null;
+function marcarFolhaAberta() {
+  _focoAntesFolha = document.activeElement && document.activeElement !== document.body ? document.activeElement : null;
+  if (history.state?.tipo === "folha") return;   // reaberta antes do history.back() pendente
+  guardarRolagem();
+  try { history.pushState({ nav: novaEntrada({ folha: true, rot: NAVS.pilha[NAVS.idx]?.rot }), tipo: "folha" }, ""); } catch (e) { }
+}
+/** Fecha só a camada (sem mexer no histórico): usado quando a própria navegação já tira a folha. */
+function fecharFolhaDom() { $("#camada").innerHTML = ""; }
+/** Fechar pelo ✕, pelo fundo, por Esc ou por um formulário: tira a entrada da folha do histórico. */
+function fecharFolhaNav() {
+  const aberta = folhaAberta(); fecharFolhaDom();
+  if (!aberta) return;
+  const f = _focoAntesFolha; _focoAntesFolha = null;
+  if (f && document.contains(f)) try { f.focus({ preventScroll: true }); } catch (e) { }
+  if (history.state?.tipo !== "folha") return;
+  const idx = NAVS.idx;
+  /* Adiado: se o código em seguida navegar (ir), a entrada da folha já foi trocada e nada é desfeito. */
+  setTimeout(() => {
+    if (history.state?.tipo !== "folha" || history.state.nav !== idx || folhaAberta()) return;
+    NAVS.ignorar = { de: idx, ate: Date.now() + 1500 }; history.back();
+  }, 0);
+}
+/** Troca a entrada atual por outro endereço (sem criar entrada nova): folha → página, anterior/próxima. */
+function substituirEntrada(h) {
+  guardarRolagem();
+  try { history.replaceState({ nav: NAVS.idx }, "", h); } catch (e) { location.hash = h; return; }
+  NAVS.pilha[NAVS.idx] = { h };
+  fecharFolhaDom(); pararVoz(); render({ topo: true }); depoisDeNavegar(false);
+}
+/** ir() do app: dentro de uma folha, a página nova toma o lugar da folha no histórico. */
+function navegarPara(h) {
+  if (history.state?.tipo === "folha") { if (location.hash === h) { fecharFolhaNav(); render(); } else substituirEntrada(h); return; }
+  if (location.hash === h) render(); else location.hash = h;
+}
+/* Links dentro da folha (menu "Mais", tema, questão…) também trocam a entrada da folha. */
+addEventListener("click", e => {
+  const a = e.target.closest?.('a[href^="#/"]'); if (!a || e.defaultPrevented || e.button > 0 || e.ctrlKey || e.metaKey || e.shiftKey) return;
+  registrarListaDoClique(a);
+  if (!a.closest("#camada") || history.state?.tipo !== "folha") return;
+  e.preventDefault(); e.stopPropagation();
+  const h = a.getAttribute("href"); if (h === location.hash) { fecharFolhaNav(); render(); } else substituirEntrada(h);
+}, true);
+
+/* ---------- Player: voltar pausa a sessão (fica guardada) ---------- */
+/** Ao sair do player pelo voltar: sessão pela metade fica pausada; terminada (ou de uma questão só) é fechada. */
+function pausarSeVisivel() {
+  if (!PL.ativo || !(document.getElementById("pl") || document.getElementById("pl-fim"))) return false;
+  if (PL.fim || PL.ids.length <= 1) { PL.ativo = false; return true; }
+  PL.pausada = true; pararVoz(); return true;
+}
+/** Sessão começada sem trocar de endereço (Praticar na lista, no tema, na revisão): ganha uma entrada
+    própria, para o voltar do celular sair do player e não da página. */
+function marcarEntradaPlayer(chave) {
+  const h = location.hash;
+  Promise.resolve().then(() => {
+    if (!PL.ativo || PL.chave !== chave || PL.ids.length <= 1 || location.hash !== h || history.state?.tipo) return;
+    guardarRolagem();
+    try { history.pushState({ nav: novaEntrada({ player: true, rot: "Sessão de questões" }), tipo: "player" }, ""); } catch (e) { return; }
+    const nv = document.querySelector("#view .nav-voltar"); if (nv && PAGINA) nv.outerHTML = htmlVoltar(PAGINA);   // agora "voltar" sai do player
+  });
+}
+/** Endereços onde cada sessão aparece. */
+function casaSessao(chave, cam) {
+  const [tipo, ...r] = String(chave).split(":"), ref = r.join(":");
+  if (tipo === "banco") return cam === "/questoes";
+  if (tipo === "tema") return cam === `/tema/${ref}/praticar` || cam === `/tema/${ref}/questoes`;
+  if (tipo === "rev") return cam === "/revisoes/tema/" + ref;
+  if (tipo === "erros") return cam === "/revisoes/erros/" + ref;
+  return false;
+}
+function hrefSessao(chave) {
+  const [tipo, ...r] = String(chave).split(":"), ref = encodeURIComponent(r.join(":"));
+  return { banco: "#/questoes", tema: `#/tema/${ref}/praticar`, rev: "#/revisoes/tema/" + ref, erros: "#/revisoes/erros/" + ref }[tipo] || null;
+}
+/** Sessões pela metade que não estão na tela: a atual (pausada ou deixada para trás) e as guardadas. */
+function sessoesAbertas() {
+  const out = [], ok = s => s && s.ativo !== false && !s.fim && s.ids?.length > 1 && hrefSessao(s.chave);
+  if (ok(PL)) out.push(PL);   // só é chamado no Início, onde o player nunca está
+  Object.values(SALVOS).forEach(s => { if (ok(s) && s.chave !== PL.chave) out.push(s); });
+  return out;
+}
+const descSessao = s => `${esc(s.rotulo || (String(s.chave).startsWith("rev:") ? "Revisão de tema" : String(s.chave).startsWith("erros:") ? "Refazer erros" : "Sessão de questões"))} · questão ${s.i + 1} de ${s.ids.length}`;
+/** Faixa "Continuar sessão" na página da sessão pausada. */
+function faixaSessaoPausada(pg) {
+  if (/id="pl"/.test(pg?.html || "")) return "";
+  const cam = caminhoAtual().split("?")[0];
+  const s = [PL, ...Object.values(SALVOS)].find(x => x && x.ativo !== false && x.pausada && !x.fim && x.ids?.length > 1 && casaSessao(x.chave, cam));
+  if (!s) return "";
+  return `<div class="faixa continuar" role="region" aria-label="Sessão pausada"><p><b>Sessão pausada</b><br><span class="small">${descSessao(s)}</span></p>
+    <span class="linha"><button class="btn azul" data-act="pl-continuar" data-c="${esc(s.chave)}">Continuar sessão</button><button class="btn sec" data-act="pl-descartar" data-c="${esc(s.chave)}">Encerrar</button></span></div>`;
+}
+/** Início: "Continuar de onde parou" (sessões, simulado e jogo pela metade). */
+function blocoContinuar() {
+  const itens = sessoesAbertas().map(s => `<div class="tarefa"><div class="o">${descSessao(s)}</div><button class="btn mini azul" data-act="pl-continuar" data-c="${esc(s.chave)}">Continuar</button></div>`);
+  if (typeof SIM !== "undefined" && SIM.fase === "prova") itens.push(`<div class="tarefa"><div class="o">Simulado em andamento · questão ${SIM.i + 1} de ${SIM.ids.length}</div><a class="btn mini azul" href="#/simulados">Continuar</a></div>`);
+  if (typeof JG !== "undefined" && JG.id && JG.rodadas?.length && !JG.fim) { const j = JOGOS.find(x => x.id === JG.id); if (j) itens.push(`<div class="tarefa"><div class="o">Jogo: ${esc(j.nome)}</div><a class="btn mini azul" href="#/jogos/${esc(j.id)}">Continuar</a></div>`); }
+  return itens.length ? `<section><h2 class="sec">Continuar de onde parou</h2><div class="tarefas">${itens.join("")}</div></section>` : "";
+}
+ACOES["pl-continuar"] = el => {
+  const c = el.dataset.c;
+  if (PL.chave !== c || !PL.ativo) { const s = SALVOS[c]; if (!s) { toast("Esta sessão já terminou"); atualizar(); return; } guardarSessao(); Object.assign(PL, s); delete SALVOS[c]; }
+  PL.ativo = true; PL.pausada = false; if (!PL.resp) PL.t0 = Date.now();   // o tempo pausado não conta
+  const h = hrefSessao(c);
+  if (h && !casaSessao(c, caminhoAtual().split("?")[0])) ir(h); else { render({ topo: true }); marcarEntradaPlayer(c); }
+};
+ACOES["pl-descartar"] = el => {
+  const c = el.dataset.c;
+  if (PL.chave === c) PL.ativo = false; delete SALVOS[c];
+  toast("Sessão encerrada. As respostas dadas continuam registradas."); atualizar();
+};
+
+/* ---------- Voltar: botão, gesto, teclado ---------- */
+/** Para onde o voltar leva: a página anterior do app (histórico) ou a página-mãe (último crumb com link). */
+function alvoVoltar(pg = PAGINA) {
+  if (pg?.voltar && typeof pg.voltar === "object" && pg.voltar.act) return { act: pg.voltar.act, rot: pg.voltar.rot };
+  const ant = NAVS.pilha[NAVS.idx - 1];
+  if (ant && ant.h) return { hist: true, rot: ant.rot || "Voltar" };
+  const cr = (pg?.crumbs || []).filter(c => c[1]).pop();
+  if (cr) return { h: cr[1], rot: cr[0] };
+  if (caminhoAtual() !== "/") return { h: "#/", rot: "Início" };
+  return null;
+}
+/** Botão grande do topo: só nas páginas internas (com crumbs ou com pg.voltar). */
+function htmlVoltar(pg) {
+  if (pg.semVoltar || !(pg.crumbs?.length || pg.voltar)) return "";
+  const a = alvoVoltar(pg); if (!a) return "";
+  const rot = a.act ? a.rot : rotCurto(a.rot), destino = a.act ? a.rot.replace(/^Voltar para /, "") : rot === "Voltar" ? "a página anterior" : rot;
+  return `<div class="nav-voltar"><button type="button" class="btn sec voltar" data-act="${esc(a.act || "voltar")}" aria-label="Voltar para ${esc(destino)}"><span aria-hidden="true">←</span> ${esc(rot)}</button></div>`;
+}
+function voltar() {
+  if (folhaAberta()) { fecharFolhaNav(); return true; }
+  const a = alvoVoltar(PAGINA); if (!a) return false;
+  if (a.act && ACOES[a.act]) { ACOES[a.act]({ dataset: {} }); return true; }
+  pausarSeVisivel();
+  if (a.hist) { guardarRolagem(); history.back(); }
+  else { const h = a.h; if (h === location.hash) render({ topo: true }); else ir(h); }
+  return true;
+}
+ACOES.voltar = () => voltar();
+/* Crumb que aponta para o próprio endereço (o player fica em #/questoes): sai do player. */
+ACOES["crumb-aqui"] = () => { pausarSeVisivel(); render({ topo: true }); };
+
+/* ---------- Eventos do histórico ---------- */
+function restaurarRolagem(idx) {
+  const y = NAVS.pilha[idx]?.y;
+  if (y > 0) { window.scrollTo(0, y); requestAnimationFrame(() => window.scrollTo(0, y)); }
+}
+/** Depois de desenhar uma página: na lista de onde a questão foi aberta, rola até a última vista. */
+function depoisDeNavegar(travessia) {
+  const L = CTXQ;
+  if (L && L.h === location.hash && caminhoAtual() !== "/questoes/q/" + L.foco) {
+    const a = document.querySelector(`#view a[href="#/questoes/q/${CSS.escape(L.foco)}"]`);
+    const andou = L.foco !== L.aberta;
+    L.aberta = L.foco;
+    if (a && (andou || !travessia)) { a.scrollIntoView({ block: "center" }); a.focus({ preventScroll: true }); a.classList.add("lq-vista"); return; }
+  }
+  if (travessia) restaurarRolagem(NAVS.idx);
+}
+addEventListener("popstate", e => {
+  const s = e.state;
+  if (!s || !Number.isInteger(s.nav)) return;   // navegação nova por âncora: o hashchange cuida
+  const de = NAVS.idx, para = s.nav; if (de === para) return;
+  guardarRolagem(); NAVS.idx = para;
+  if (!NAVS.pilha[para]) NAVS.pilha[para] = { h: location.hash };
+  const ig = NAVS.ignorar; NAVS.ignorar = null;
+  if (ig && ig.de === de && para === de - 1 && Date.now() < ig.ate) return;   // o próprio app tirou a folha
+  const mesmo = location.hash === NAVS.renderizado;
+  if (folhaAberta()) { if (mesmo) { const f = _focoAntesFolha; fecharFolhaDom(); if (f && document.contains(f)) f.focus({ preventScroll: true }); return; } fecharFolhaDom(); }
+  pausarSeVisivel();
+  /* Entrada velha de folha (a folha já foi fechada): pula para a próxima no mesmo sentido. */
+  if (s.tipo === "folha" && mesmo) { history.go(para < de ? -1 : 1); return; }
+  if (mesmo) { pararVoz(); render({ topo: true }); depoisDeNavegar(true); }
+  /* senão o hashchange desenha a página */
+});
+addEventListener("hashchange", () => {
+  const s = history.state; let travessia = false;
+  if (s && Number.isInteger(s.nav)) {
+    if (s.nav !== NAVS.idx) { guardarRolagem(); NAVS.idx = s.nav; pausarSeVisivel(); }
+    if (!NAVS.pilha[NAVS.idx]) NAVS.pilha[NAVS.idx] = { h: location.hash };
+    travessia = true;
+  } else {
+    guardarRolagem();
+    const novo = novaEntrada();
+    try { history.replaceState({ nav: novo }, ""); } catch (e) { }
+  }
+  fecharFolhaDom(); pararVoz(); render({ topo: true }); depoisDeNavegar(travessia);
+});
+/** Chamado pelo render: guarda o endereço e o rótulo da entrada atual. */
+function registrarPagina(pg) {
+  NAVS.renderizado = location.hash;
+  const e = NAVS.pilha[NAVS.idx] = NAVS.pilha[NAVS.idx] || {}, h = location.hash || "#/", outro = e.h !== h;
+  e.h = h;
+  /* Player numa página que já tinha rótulo (lista → Praticar): a entrada da lista guarda o nome da lista. */
+  if (/id="pl"/.test(pg.html || "") && PL.ativo && !PL.fim && PL.ids.length > 1) { if (e.player || !e.rot || outro) e.rot = "Sessão de questões"; }
+  else e.rot = caminhoAtual() === "/" ? "Início" : rotCurto(pg.rotulo || pg.titulo);
+}
+
+/* ---------- Gesto: deslizar da borda esquerda para a direita ---------- */
+const GV = { on: false, x0: 0, y0: 0, dx: 0, dir: null };
+const BORDA = 24, LIMIAR_GV = 80;
+function rolaDeLado(el) {
+  for (let x = el; x && x !== document.body; x = x.parentElement) {
+    if (x.scrollWidth > x.clientWidth + 2 && /(auto|scroll)/.test(getComputedStyle(x).overflowX)) return true;
+  }
+  return false;
+}
+function dicaGesto() {
+  let d = document.getElementById("gesto-voltar");
+  if (!d) { d = document.createElement("div"); d.id = "gesto-voltar"; d.className = "gesto-voltar"; d.setAttribute("aria-hidden", "true"); d.innerHTML = `<span>←</span><small>Voltar</small>`; document.body.appendChild(d); }
+  return d;
+}
+addEventListener("touchstart", e => {
+  GV.on = false;
+  if (e.touches.length !== 1) return;
+  const t = e.touches[0];
+  if (t.clientX > BORDA || e.target.closest?.("#fc, .tabela-wrap, input, textarea, select, [data-sem-gesto]") || rolaDeLado(e.target)) return;
+  Object.assign(GV, { on: true, x0: t.clientX, y0: t.clientY, dx: 0, dir: null });
+}, { passive: true });
+addEventListener("touchmove", e => {
+  if (!GV.on) return;
+  const t = e.touches[0], dx = t.clientX - GV.x0, dy = t.clientY - GV.y0;
+  if (GV.dir === null && Math.hypot(dx, dy) > 10) GV.dir = dx > Math.abs(dy) * 1.2 ? "h" : "v";
+  if (GV.dir === "v") { GV.on = false; dicaGesto().classList.remove("ativa", "pronta"); return; }
+  if (GV.dir !== "h") return;
+  GV.dx = dx;
+  const d = dicaGesto(), f = Math.max(0, Math.min(1, dx / LIMIAR_GV));
+  d.classList.add("ativa"); d.classList.toggle("pronta", dx >= LIMIAR_GV);
+  d.style.setProperty("--f", f.toFixed(2));
+}, { passive: true });
+function fimGesto(e) {
+  if (!GV.on) return;
+  GV.on = false;
+  const d = document.getElementById("gesto-voltar"); if (d) d.classList.remove("ativa", "pronta");
+  if (e.type === "touchend" && GV.dir === "h" && GV.dx >= LIMIAR_GV) voltar();
+}
+addEventListener("touchend", fimGesto, { passive: true });
+addEventListener("touchcancel", fimGesto, { passive: true });
+
+/* ---------- Teclado: Alt+← e Backspace fora de campos ---------- */
+document.addEventListener("keydown", e => {
+  const campo = /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName) || e.target.isContentEditable;
+  if (e.altKey && e.key === "ArrowLeft" && !e.ctrlKey && !e.metaKey && !e.shiftKey) { e.preventDefault(); voltar(); return; }
+  if (e.key === "Backspace" && !campo && !e.altKey && !e.ctrlKey && !e.metaKey && !location.hash.startsWith("#/jogos/termo")) { e.preventDefault(); voltar(); }
+});
+
+/* ---------- Questão aberta de uma lista: anterior / próxima / voltar para a lista ---------- */
+/** Listas de questões desenhadas (por chave): ids na ordem da tela e o endereço da lista. */
+const LISTAS_Q = {};
+let CTXQ = null;   // { ids, h, rot, idxLista, foco, aberta }
+function registrarLista(chave, ids) { LISTAS_Q[chave] = { ids: ids.slice(), h: location.hash }; return chave; }
+function registrarListaDoClique(a) {
+  const m = (a.getAttribute("href") || "").match(/^#\/questoes\/q\/(.+)$/); if (!m) return;
+  const k = a.closest("[data-lista]")?.dataset.lista || a.dataset.qlista; if (!k || !LISTAS_Q[k]) return;
+  const id = decodeURIComponent(m[1]), L = LISTAS_Q[k]; if (!L.ids.includes(id)) return;
+  const naFolha = history.state?.tipo === "folha";
+  CTXQ = { ids: L.ids, h: L.h, k, rot: NAVS.pilha[naFolha ? NAVS.idx - 1 : NAVS.idx]?.rot || "lista", idxLista: naFolha ? NAVS.idx - 1 : NAVS.idx, foco: id, aberta: id };
+}
+/** Contexto válido só se a questão foi aberta da lista (entrada logo depois dela). */
+function ctxLista(id) {
+  const L = CTXQ;
+  if (!L || !L.ids.includes(id) || NAVS.idx !== L.idxLista + 1) return null;
+  L.foco = id; return { ...L, i: L.ids.indexOf(id), n: L.ids.length };
+}
+function barraLista(id) {
+  const L = ctxLista(id); if (!L) return "";
+  return `<nav class="qnav" aria-label="Questões da lista"><button class="btn sec" data-act="q-lista" data-d="-1" ${L.i ? "" : "disabled"} aria-label="Questão anterior da lista">‹ Anterior</button>
+    <span class="qnav-pos" aria-live="polite">${L.i + 1} de ${L.n}</span>
+    <button class="btn sec" data-act="q-lista" data-d="1" ${L.i < L.n - 1 ? "" : "disabled"} aria-label="Próxima questão da lista">Próxima ›</button></nav>`;
+}
+/** Depois de responder uma questão avulsa da lista: o botão principal leva à próxima da lista. */
+function botaoProxLista(pular = false) {
+  const m = caminhoAtual().match(/^\/questoes\/q\/(.+)$/); if (!m) return "";
+  const L = ctxLista(decodeURIComponent(m[1])); if (!L) return "";
+  if (pular) return L.i < L.n - 1 ? `<button class="btn sec" data-act="q-lista" data-d="1">Pular ›</button>` : "";
+  return L.i < L.n - 1 ? `<button class="btn" data-act="q-lista" data-d="1">Próxima da lista ›</button>` : `<button class="btn" data-act="q-lista-voltar">Voltar para a lista</button>`;
+}
+ACOES["q-lista"] = el => {
+  const m = caminhoAtual().match(/^\/questoes\/q\/(.+)$/); if (!m) return;
+  const L = ctxLista(decodeURIComponent(m[1])); if (!L) return;
+  const j = L.i + +el.dataset.d; if (j < 0 || j >= L.n) return;
+  CTXQ.foco = L.ids[j];
+  substituirEntrada("#/questoes/q/" + encodeURIComponent(L.ids[j]));   // sem nova entrada: o voltar leva direto à lista
+  document.querySelector(`.qnav [data-act="q-lista"][data-d="${el.dataset.d}"]:not([disabled])`)?.focus({ preventScroll: true });
+};
+ACOES["q-lista-voltar"] = () => {
+  const L = CTXQ; if (!L) { voltar(); return; }
+  /* Lista paginada ("Mostrar mais"): a questão vista por último precisa estar na tela. */
+  const i = L.ids.indexOf(L.foco);
+  if (L.h === "#/questoes" || /^#\/tema\//.test(L.h)) QPAG = Math.max(QPAG, Math.ceil((i + 1) / 20) * 20);
+  if (L.k === "erros" && typeof EPAG !== "undefined") EPAG = Math.max(EPAG, Math.ceil((i + 1) / 30) * 30);
+  if (PL.ativo && PL.ids.length <= 1) PL.ativo = false;
+  if (NAVS.idx === L.idxLista + 1 && NAVS.pilha[L.idxLista]?.h === L.h) { guardarRolagem(); history.back(); }
+  else ir(L.h);
+};
 
 /* ---- 99-main.js ---- */
 /* ============================================================

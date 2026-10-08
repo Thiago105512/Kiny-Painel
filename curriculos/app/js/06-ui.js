@@ -16,7 +16,8 @@ function casar(caminho) {
   return null;
 }
 const caminhoAtual = () => (location.hash || "#/").slice(1) || "/";
-function ir(h) { if (location.hash === h) render(); else location.hash = h; }
+/** Navega para h. Dentro de uma folha, a página nova toma o lugar da folha no histórico (ver 38-navegacao). */
+function ir(h) { navegarPara(h); }
 let PAGINA = null; // última página renderizada (contexto para a IA)
 
 /* ---------- Ícones (traço simples) ---------- */
@@ -96,13 +97,15 @@ function render(opts = {}) {
   if (typeof pg === "string") pg = { html: pg };
   PAGINA = pg;
   try { desenharNav(pg.secao); } catch (e) { console.error(e); }
-  const crumbs = pg.crumbs?.length ? `<nav class="crumbs" aria-label="Você está em">${pg.crumbs.map(([t, h], i) => (i ? '<span aria-hidden="true">›</span>' : "") + (h ? `<a href="${esc(h)}">${esc(t)}</a>` : `<span>${esc(t)}</span>`)).join("")}</nav>` : "";
+  /* Crumb para o próprio endereço (o player fica em #/questoes) sai do player em vez de não fazer nada. */
+  const crumbs = pg.crumbs?.length ? `<nav class="crumbs" aria-label="Você está em">${pg.crumbs.map(([t, h], i) => (i ? '<span aria-hidden="true">›</span>' : "") + (h ? `<a href="${esc(h)}"${h === location.hash ? ' data-act="crumb-aqui"' : ""}>${esc(t)}</a>` : `<span>${esc(t)}</span>`)).join("")}</nav>` : "";
   document.body.style.setProperty("--sec", pg.cor || SECAO_VISUAL[pg.secao]?.[1] || "#2340B8");
   const ilu = pg.ilu ?? iluSecao(pg.secao);
   const titulo = pg.titulo ? `<div class="titulo${ilu ? " com-figura" : ""}${pg.titulo.length > 44 ? " longo" : ""}">${ilu}<div class="titulo-tx"><h1>${esc(pg.titulo)}</h1>${pg.sub ? `<div class="sub">${pg.sub}</div>` : ""}</div>${pg.acoes ? `<div class="linha">${pg.acoes}</div>` : ""}</div>` : "";
   const fab = IA.disponivel() && pg.secao !== "assistente" ? `<button class="btn azul fab" data-act="ia-abrir" aria-label="Abrir assistente de estudo">${icone("ia")} Assistente</button>` : "";
   const foco = opts.topo ? null : chaveDoFoco();
-  $("#view").innerHTML = crumbs + titulo + (pg.html || "") + fab;
+  registrarPagina(pg);
+  $("#view").innerHTML = htmlVoltar(pg) + crumbs + titulo + faixaSessaoPausada(pg) + (pg.html || "") + fab;
   document.title = (pg.titulo ? pg.titulo + " · " : "") + "Gabarito Amazonas";
   if (opts.topo) { window.scrollTo(0, 0); $("#view").focus({ preventScroll: true }); }
   else if (foco) restaurarFoco(foco);
@@ -124,7 +127,7 @@ function restaurarFoco(sel) {
   alvo.focus({ preventScroll: true });
 }
 const atualizar = () => render();
-function paginaNaoEncontrada() { return { titulo: "Página não encontrada", html: vazio("Este endereço não existe mais.", `<a class="btn" href="#/">Ir para o início</a>`) }; }
+function paginaNaoEncontrada() { return { titulo: "Página não encontrada", voltar: true, html: vazio("Este endereço não existe mais.", `<a class="btn" href="#/">Ir para o início</a>`) }; }
 
 /* ---------- Componentes ---------- */
 const vazio = (txt, botoes = "") => `<div class="vazio">${mascote("pensando", 64, "")}<div><p>${txt}</p>${botoes ? `<div class="linha">${botoes}</div>` : ""}</div></div>`;
@@ -171,10 +174,11 @@ function toast(msg, ms = 2600) {
   document.body.appendChild(t); setTimeout(() => t.remove(), ms);
 }
 function abrirFolha(html, { titulo } = {}) {
+  if (!folhaAberta()) marcarFolhaAberta();   // o voltar do celular fecha a folha (38-navegacao)
   $("#camada").innerHTML = `<div class="folha-fundo" data-act="fechar-folha"></div><div class="folha" role="dialog" aria-modal="true" ${titulo ? `aria-label="${esc(titulo)}"` : ""}><button class="btn sec mini fechar-x" data-act="fechar-folha" aria-label="Fechar">✕</button>${titulo ? `<h2 class="sec">${esc(titulo)}</h2>` : ""}${html}</div>`;
   $("#camada .folha").querySelector("input,textarea,select")?.focus();
 }
-function fecharFolha() { $("#camada").innerHTML = ""; }
+function fecharFolha() { fecharFolhaNav(); }
 ACOES["fechar-folha"] = () => fecharFolha();
 
 /* ---------- Delegação de eventos ---------- */
@@ -196,7 +200,7 @@ document.addEventListener("keydown", e => {
   if (PL.ativo && document.getElementById("pl")) teclaPlayer(e);
   else if (SIM.fase === "prova" && document.getElementById("prova")) teclaProva(e);
 });
-window.addEventListener("hashchange", () => { fecharFolha(); pararVoz(); render({ topo: true }); });
+/* Troca de endereço (hashchange) e voltar/avançar (popstate): ver 38-navegacao. */
 
 /* ============================================================
    Player de questões — usado em Questões, Tema, Revisões, Caderno de erros.
@@ -207,7 +211,7 @@ const PL = { ativo: false, chave: null, ids: [], i: 0, ordem: [], esc: null, res
 /* Sessões em andamento de outras telas ficam guardadas por chave: abrir uma questão avulsa
    (pela busca, por exemplo) não descarta a sessão de 20 questões que estava pela metade. */
 const SALVOS = {};
-const guardarSessao = () => { if (PL.ativo && !PL.fim && PL.ids.length > 1) SALVOS[PL.chave] = { ...PL }; };
+const guardarSessao = () => { if (PL.ativo && !PL.fim && PL.ids.length > 1) SALVOS[PL.chave] = { ...PL, desc: new Set(PL.desc), marcas: new Set(PL.marcas) }; };
 /** Casos em sequência: as partes de um mesmo caso ficam juntas e em ordem. completar = puxa as partes que faltam
     (não é usado na prática: nada de questões em sequência para conteúdo novo). familia = deixa só uma questão por família. */
 function ordenarSeries(ids, completar, familia = true) {
@@ -224,18 +228,21 @@ function ordenarSeries(ids, completar, familia = true) {
 }
 function iniciarPlayer(chave, ids, origem = "pratica", aoFim = null) {
   if (PL.chave !== chave) guardarSessao();
+  const deOnde = { h: location.hash || "#/", rot: NAVS.pilha[NAVS.idx]?.rot || "" };
   /* Caderno de erros: cada erro vencido é tocado (sem cortar irmãs de família, que ficariam vencidas para sempre). */
   ids = ordenarSeries(ids, false, origem !== "erro");
-  Object.assign(PL, { festa: false, ativo: true, chave, ids: ids.slice(), i: 0, esc: null, resp: false, origem, res: [], aoFim, ia: "", fim: false, msgFim: "", seq: 0 });
+  Object.assign(PL, { festa: false, ativo: true, pausada: false, chave, ids: ids.slice(), i: 0, esc: null, resp: false, origem, res: [], aoFim, ia: "", fim: false, msgFim: "", seq: 0, deOnde, rotulo: null });
   delete SALVOS[chave];
   prepararQuestao();
+  marcarEntradaPlayer(chave);
 }
 function prepararQuestao() { pararVoz(); PL.ordem = embaralhar([0, 1, 2, 3, 4]); PL.esc = null; PL.resp = false; PL.t0 = Date.now(); PL.ia = ""; PL.desc = new Set(); PL.cert = null; PL.marcas = new Set(); PL.seqNovo = false; }
 /** Grau de certeza (opcional), escolhido entre a alternativa e o Confirmar. Gravado na tentativa (6º campo). */
 const CERTEZA = [[3, "Tenho certeza"], [2, "Acho que sim"], [1, "Chutei"]];
+/** Sessão desta chave na tela? Pausada (pelo voltar) só volta pelo "Continuar sessão". */
 function playerAtivo(chave) {
-  if (PL.ativo && PL.chave === chave) return true;
-  const s = SALVOS[chave]; if (!s) return false;
+  if (PL.ativo && PL.chave === chave) return !PL.pausada;
+  const s = SALVOS[chave]; if (!s || s.pausada) return false;
   guardarSessao(); Object.assign(PL, s); delete SALVOS[chave]; return true;
 }
 /** Explicação em caixa colorida; o gancho "Para lembrar:" vira um destaque à parte. */
@@ -252,7 +259,7 @@ function htmlPlayer() {
       <div class="kpis"><div class="kpi"><b>${ac}/${n}</b><span>acertos</span></div><div class="kpi"><b>${pct(ac, n)}%</b><span>aproveitamento</span></div>
       <div class="kpi"><b>${mmss(PL.res.reduce((s, r) => s + r.ms, 0) / Math.max(1, n))}</b><span>tempo médio</span></div></div>
       ${PL.msgFim ? `<p class="aviso info">${PL.msgFim}</p>` : ""}${n >= 5 ? cardHumor() : ""}
-      <div class="acoes"><button class="btn sec" data-act="pl-sair">Fechar</button>${PL.res.some(r => !r.ok) ? `<a class="btn" href="#/erros">Ver caderno de erros</a>` : ""}</div></div>`;
+      ${acoesFimSessao()}</div>`;
   }
   const q = qPorId(PL.ids[PL.i]);
   if (!q) return `<div class="caixa">${vazio("Esta questão não está mais disponível.")}<div class="acoes"><button class="btn" data-act="pl-pular">${PL.i < PL.ids.length - 1 ? "Próxima" : "Concluir"}</button><button class="btn sec" data-act="pl-encerrar">Encerrar sessão</button></div></div>`;
@@ -278,7 +285,7 @@ function htmlPlayer() {
       ${!ok ? `<p class="small muted" style="margin:8px 0 0">Registrado no <a href="#/erros">caderno de erros</a> com revisão amanhã.</p>${irmaDe(q) ? `<div class="acoes"><button class="btn sec" data-act="pl-irma">Treinar este ponto de novo</button></div>` : ""}` : ""}
       ${PL.ia ? `<h3>Assistente</h3><div class="ia-txt" id="pl-ia">${esc(PL.ia)}</div>` : ""}</div>` : ""}
     <div class="acoes">
-      ${PL.resp ? `<button class="btn" data-act="pl-prox">${PL.i < PL.ids.length - 1 ? "Próxima" : "Concluir"}</button>` : `<button class="btn" data-act="pl-confirmar" ${PL.esc === null ? "disabled" : ""}>Confirmar</button><button class="btn sec" data-act="pl-pular">Pular</button>`}
+      ${PL.resp ? (PL.ids.length === 1 && botaoProxLista()) || `<button class="btn" data-act="pl-prox">${PL.i < PL.ids.length - 1 ? "Próxima" : "Concluir"}</button>` : `<button class="btn" data-act="pl-confirmar" ${PL.esc === null ? "disabled" : ""}>Confirmar</button>${(PL.ids.length === 1 && botaoProxLista(true)) || `<button class="btn sec" data-act="pl-pular">Pular</button>`}`}
       ${PL.resp ? `<button class="btn sec mini" data-act="pl-flag" data-f="m" aria-pressed="${st.marcada}">${st.marcada ? "★ Marcada" : "☆ Marcar"}</button>
       <button class="btn sec mini" data-act="pl-flag" data-f="r" aria-pressed="${st.revisar}">${st.revisar ? "↻ Revisar" : "Revisar depois"}</button>` : ""}
       ${PL.resp ? `<button class="btn sec mini" data-act="pl-card">+ Flashcard</button>${IA.disponivel() ? `<button class="btn sec mini" data-act="pl-ia">Explicar com IA</button>` : ""}<button class="btn sec mini" data-act="reportar" data-q="${esc(q.id)}">Reportar problema</button>` : ""}
@@ -334,7 +341,27 @@ ACOES["pl-pular"] = () => { pararVoz(); if (PL.i < PL.ids.length - 1) { PL.i++; 
 ACOES["pl-flag"] = el => { const q = qPorId(PL.ids[PL.i]); const v = alternarFlag(q, el.dataset.f); toast(el.dataset.f === "m" ? (v ? "Questão marcada" : "Marcação removida") : (v ? "Adicionada a revisar" : "Removida de revisar")); atualizar(); };
 ACOES["pl-card"] = () => { const q = qPorId(PL.ids[PL.i]); if (cards().some(c => c.ref === q.id)) { toast("Esta questão já tem flashcard"); return; } const id = cardDeQuestao(q, PL.esc === q.c ? "questao" : "erro"); const E = store.doc("erros"); if (E.itens[q.id]) { E.itens[q.id].card = id; store.mudou("erros"); } toast("Flashcard criado — revisão a partir de hoje"); };
 ACOES["pl-ia"] = () => { const q = qPorId(PL.ids[PL.i]); IA.explicarQuestao(q, PL.esc, PL.ordem, t => { PL.ia = t; const el = document.getElementById("pl-ia"); if (el) el.textContent = t; else atualizar(); }); };
-ACOES["pl-sair"] = () => { pararVoz(); PL.ativo = false; atualizar(); };
+/** Fim de sessão: "Voltar para onde eu estava" (data-h = página onde a sessão começou; "hist" = página anterior). */
+ACOES["pl-sair"] = el => { pararVoz(); PL.ativo = false; const h = el?.dataset?.h;
+  if (h === "hist") voltar(); else if (h && h !== location.hash) ir(h); else render({ topo: true }); };
+ACOES["pl-inicio"] = () => { pararVoz(); PL.ativo = false; ir("#/"); };
+/** "Fazer mais": outra rodada do mesmo tipo (filtro, tema) ou, nas revisões, as outras revisões. */
+ACOES["pl-mais"] = () => {
+  pararVoz(); const [tipo, ...r] = String(PL.chave).split(":"), ref = r.join(":"); PL.ativo = false;
+  if (tipo === "banco" && PL.rotulo === "Praticando questões filtradas" && filtrarQuestoes(FQ).length) return ACOES["praticar-filtro"]();
+  if (tipo === "tema" && TEMAS[ref]) { const novas = questoes().some(q => q.tema === ref && statusQ(q).chave === "nao"); return ACOES["tema-praticar"]({ dataset: { t: ref, m: novas ? "novas" : "todas" } }); }
+  if (tipo === "rev" || tipo === "erros") return ir("#/revisoes");
+  ACOES["inicio-praticar"]({ dataset: { disc: "" } });
+};
+function acoesFimSessao() {
+  const [tipo] = String(PL.chave).split(":"), so1 = PL.ids.length <= 1, de = PL.deOnde || {};
+  const deInicio = de.h === "#/" || de.h === "";
+  const voltarH = so1 ? "hist" : de.h || "";
+  const mais = tipo === "rev" || tipo === "erros" ? "Ver outras revisões" : "Fazer mais questões";
+  return `<div class="acoes fim-acoes"><button class="btn azul" data-act="pl-sair" data-h="${esc(voltarH)}">Voltar para onde eu estava</button>
+    <button class="btn sec" data-act="pl-mais">${mais}</button>${deInicio && !so1 ? "" : `<button class="btn sec" data-act="pl-inicio">Ir para o Início</button>`}
+    ${PL.res.some(r => !r.ok) ? `<a class="btn sec" href="#/erros">Ver caderno de erros</a>` : ""}</div>`;
+}
 ACOES["pl-encerrar"] = () => { pararVoz(); if (!PL.res.length) { PL.ativo = false; } else { PL.fim = true; PL.msgFim = PL.aoFim ? PL.aoFim(PL.res) : ""; } atualizar(); };
 function teclaPlayer(e) {
   if (PL.fim) return;

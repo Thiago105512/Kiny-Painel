@@ -6,7 +6,7 @@ const BUSCA_MIN = 2;   // busca vazia (ou só espaço/1 letra) não lista o app 
 FORMS.busca = () => { const q = $("#busca-global").value.trim(); if (norm(q).replace(/[^a-z0-9]/g, "").length >= BUSCA_MIN) ir("#/busca/" + encodeURIComponent(q)); else toast("Digite pelo menos 2 letras para buscar"); };
 rota("/busca", () => paginaBuscaVazia(""));
 function paginaBuscaVazia(q) {
-  return { secao: "", titulo: "Busca", html: vazio(`${q ? `“${esc(q)}” é curto demais. ` : ""}Digite pelo menos 2 letras no campo de busca, lá em cima (ex.: “IC” ou “insuficiência”).`) };
+  return { secao: "", titulo: "Busca", voltar: true, html: vazio(`${q ? `“${esc(q)}” é curto demais. ` : ""}Digite pelo menos 2 letras no campo de busca, lá em cima (ex.: “IC” ou “insuficiência”).`) };
 }
 /** Casa no começo de palavra (“enem” não casa com o meio de outra palavra). */
 const reBusca = n => new RegExp("(^|[^a-z0-9])" + n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
@@ -31,7 +31,7 @@ rota("/busca/:q", ({ q }) => {
   const total = temas.length + esps.length + itens.length + qs.length + cs.length + casos.length + notas.length + mats.length + reps.length + discRef.length + pils.length;
   const sec = (titulo, n, html) => n ? `<section><h2 class="sec">${titulo} <span class="small muted">${n}</span></h2>${html}</section>` : "";
   return {
-    secao: "", titulo: `Busca: “${q}”`, sub: plural(total, "resultado", "resultados"),
+    secao: "", titulo: `Busca: “${q}”`, rotulo: "Busca", voltar: true, sub: plural(total, "resultado", "resultados"),
     html: total ? [
       sec("Temas", temas.length, tabela([{ t: "Tema" }, { t: "Especialidade / área" }, { t: "Disciplinas relacionadas" }, { t: "Questões", num: 1 }], temas.slice(0, 30).map(t => [linkTema(t.id), esc(t.dominio === "enem" ? "ENEM · " + t.areaNome : (t.especialidades || []).map(e => ESPECIALIDADES[e]?.nome).filter(Boolean).join(", ")), `<span class="small">${(t.disciplinas || []).map(esc).join(", ")}</span>`, questoes().filter(x => x.tema === t.id && doObjetivo(x)).length]))),
       sec("Especialidades", esps.length, `<div class="chips">${esps.map(e => `<a class="chip" href="#/medicina/esp/${esc(e.id)}">${esc(e.nome)}</a>`).join("")}</div>`),

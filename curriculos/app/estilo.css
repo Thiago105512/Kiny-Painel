@@ -793,3 +793,30 @@ table,th,td,.num{overflow-wrap:normal}
   .fc.sai{transition:transform .18s ease-in}
 }
 @keyframes virar{from{transform:perspective(900px) rotateY(-80deg);opacity:.4}to{transform:none;opacity:1}}
+
+/* ---------- Navegação: voltar grande, anterior/próxima, sessão pausada, gesto de borda (38-navegacao) ---------- */
+.nav-voltar{margin:0 0 8px}
+.btn.voltar{min-height:48px;padding:8px 16px 8px 12px;font:700 calc(16px * var(--k))/1.2 var(--display);color:var(--ink);background:var(--sheet);border:2px solid var(--ink2);border-radius:10px;max-width:100%;text-align:left}
+.btn.voltar span[aria-hidden]{font-size:1.25em;line-height:1}
+.btn.voltar:hover{border-color:var(--pen);color:var(--pen)}
+:focus-visible{outline:3px solid var(--pen);outline-offset:2px}
+.qnav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;margin:0 0 12px}
+.qnav .btn{min-height:48px;font-size:calc(15px * var(--k));padding-inline:10px}
+.qnav .btn:last-child{justify-self:end}
+.qnav-pos{font:700 calc(15px * var(--k)) var(--display);color:var(--ink);text-align:center;white-space:nowrap}
+@media (max-width:420px){.qnav{grid-template-columns:1fr 1fr}.qnav-pos{grid-column:1 / -1;grid-row:1}.qnav .btn:first-of-type{justify-self:stretch}.qnav .btn:last-child{justify-self:stretch}}
+.faixa.continuar{border:2px solid var(--pen);background:var(--pen-soft);margin:0 0 16px}
+.ja-resp{border-left-color:var(--pen);background:var(--pen-soft)}
+.ja-resp>div{flex:1;min-width:0}
+.ja-resp details summary{min-height:44px;display:flex;align-items:center;font-weight:700;cursor:pointer}
+.fim-acoes .btn{flex:1 1 200px}
+.lista-q a.lq-vista{box-shadow:inset 5px 0 0 var(--pen);background:var(--pen-soft)}
+.gesto-voltar{position:fixed;left:0;top:45%;z-index:60;display:grid;place-items:center;gap:0;width:64px;height:64px;border-radius:0 32px 32px 0;background:var(--ink);color:var(--paper);
+  transform:translateX(calc(-100% + var(--f,0) * 100%));opacity:0;pointer-events:none;font:700 calc(13px * var(--k)) var(--display)}
+.gesto-voltar span{font-size:26px;line-height:1}
+.gesto-voltar small{font-size:11px}
+.gesto-voltar.ativa{opacity:calc(.4 + var(--f,0) * .6)}
+.gesto-voltar.pronta{background:var(--pen);color:var(--on-acc)}
+
+/* Início: temas estudados hoje, um por linha (os links têm área de toque alta) */
+.estudados-hoje{display:grid;gap:2px;margin:0}

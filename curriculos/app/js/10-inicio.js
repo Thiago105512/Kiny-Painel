@@ -126,8 +126,9 @@ rota("/", () => {
         ${anel(d.q ? pct(d.ac, d.q) : 0, "#C0265F", `<b>${d.q ? pct(d.ac, d.q) + "%" : "—"}</b><small>acerto</small>`, "Acerto")}</div>
       <div class="painel-linha"><div><span class="lab">Sequência · ${seq} ${seq === 1 ? "dia" : "dias"}</span>${semanaBolinhas()}</div>
         <a class="painel-nivel" href="#/jornada"><span class="lab">Nível ${nv.n} · ${esc(nv.nome)}</span><div class="xp-barra"><i style="width:${nv.pct}%"></i></div><small>${J.xp} XP${nv.prox ? ` · faltam ${nv.prox - J.xp}` : ""}</small></a></div>
-      ${estudados.length ? `<p class="small" style="margin:0"><span class="muted">Estudado hoje:</span> ${estudados.slice(0, 3).map(linkTema).join(", ")}${estudados.length > 3 ? ` <span class="muted">e mais ${estudados.length - 3}</span>` : ""}</p>` : ""}
+      ${estudados.length ? `<div class="small estudados-hoje"><span class="muted">Estudado hoje:</span>${estudados.slice(0, 3).map(t => `<span>${linkTema(t)}</span>`).join("")}${estudados.length > 3 ? `<span class="muted">e mais ${estudados.length - 3}</span>` : ""}</div>` : ""}
     </section>
+    ${blocoContinuar()}
     <section class="hero com-ilu">${ilustra(prox ? (/Revisar|revis/i.test(prox.tit) ? "relogio" : /flashcard/i.test(prox.tit) ? "livro" : /Prova|Trabalho|Semin|Apresenta/i.test(prox.tit) ? "calendario" : "alvo") : "estetoscopio", "#2340B8", "xg")}<div><span class="lab">Próximo passo</span>
       ${prox ? `<p class="hero-tit">${esc(prox.tit)}</p><p class="small muted" style="margin:0">${esc(prox.det)}${tarefas.length > 1 ? ` · depois: mais ${tarefas.length - 1}` : ""}</p><a class="btn azul grande" href="${esc(prox.href)}">${prox.bt}</a>`
         : `<p class="hero-tit">${esc(sug.tit)}</p><p class="small muted" style="margin:0">Nada pendente para hoje · ${esc(sug.det)}</p><button class="btn azul grande" data-act="inicio-praticar" data-disc="${esc(sug.disc || "")}">Começar</button>`}

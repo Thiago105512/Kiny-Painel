@@ -112,12 +112,17 @@ ACOES["praticar-ids"] = el => praticar(embaralhar(el.dataset.ids.split(",").filt
 rota("/questoes/q/:id", ({ id }) => {
   const q = qPorId(id); if (!q) return paginaNaoEncontrada();
   if (!playerAtivo("q:" + id)) iniciarPlayer("q:" + id, [id], "pratica");
-  const p = progDe(q), E = store.doc("erros").itens[id];
+  const p = progDe(q), E = store.doc("erros").itens[id], L = ctxLista(id);
+  /* Já respondida: diz isso logo de cara e deixa ver o gabarito sem responder de novo. */
+  const ult = p?.h?.at(-1), jaResp = p?.n && !PL.resp ? `<div class="aviso info ja-resp"><div><p style="margin:0"><b>Você já respondeu esta questão ${p.n === 1 ? "uma vez" : p.n + " vezes"}</b>${p.n > 1 ? ` · acertou ${p.ac}` : ""}${ult ? ` · última: ${ult[2] ? "certa" : "errada"} em ${esc(new Date(ult[0]).toLocaleDateString("pt-BR"))}` : ""}. Pode responder de novo.</p>
+      <details class="mais"><summary>Ver gabarito e explicação</summary><p style="margin:8px 0"><b>Resposta certa:</b> ${esc(q.o[q.c])}</p>${htmlExplicacao(q.e)}</details></div></div>` : "";
   const hist = (p?.h || []).slice().reverse().map(h => [new Date(h[0]).toLocaleString("pt-BR"), h[1] == null ? "—" : esc(q.o[h[1]] || "—"), h[2] ? pill("certa", "ok") : pill("errada", "bad"), h[3] ? mmss(h[3]) : "—", esc({ pratica: "prática", tema: "tema", simulado: "simulado", revisao: "revisão", erro: "caderno de erros", v1: "versão anterior", inicio: "questão relâmpago", jogo: "jogo" }[h[4]] || h[4] || "")]);
   return {
-    secao: "questoes", crumbs: [["Questões", "#/questoes"]], titulo: "Questão",
+    secao: "questoes", crumbs: [["Questões", "#/questoes"]], titulo: L ? `Questão ${L.i + 1} de ${L.n}` : "Questão", rotulo: "Questão",
+    voltar: L ? { act: "q-lista-voltar", rot: "Voltar para a lista" } : true,
     sub: `${esc(TRILHAS[q.t]?.nome || q.t)}${q.ae ? " · " + esc(nomeAreaEnem(q.ae)) + (q.disc ? " · " + esc(q.disc) : "") : ""} · ${q.tema ? linkTema(q.tema) : esc(q.a)}${q.subtema ? " · " + esc(nomeSubtema(q.tema, q.subtema) || "") : ""} · fonte: ${esc(q.fonte || q.src)}${q.ano ? " · " + esc(q.ano) : ""}${q.prova ? " · " + esc(q.prova) : ""}`,
-    html: `${htmlPlayer()}
+    html: `${barraLista(id)}${jaResp}${htmlPlayer()}
+      ${L ? `<div class="acoes"><button class="btn sec" data-act="q-lista-voltar">Voltar para a lista</button></div>` : ""}
       <h2 class="sec">Histórico de tentativas</h2>${tabela([{ t: "Quando" }, { t: "Sua resposta" }, { t: "Resultado" }, { t: "Tempo", num: 1 }, { t: "Origem" }], hist, { vaziaMsg: "Nenhuma tentativa ainda." })}
       ${E ? `<h2 class="sec">No caderno de erros</h2><p>${pill(E.status === "aberto" ? "aberto" : "resolvido", E.status === "aberto" ? "bad" : "ok")} ${E.n ? `Errou ${E.n}× · ` : ""}motivo: ${esc(E.motivo || E.motivoSugerido + " (sugerido)")} · próxima revisão ${dataBR(E.srs?.prox)}</p><button class="btn sec mini" data-act="erro-detalhe" data-q="${esc(id)}">Editar registro do erro</button>` : ""}`,
     ctx: { questao: id, tema: q.tema },
@@ -131,6 +136,7 @@ ACOES["erros-mais"] = () => { EPAG += 30; atualizar(); };
 function tabelaErros(errs) {
   const l = errs.filter(e => qPorId(e.qid)).sort((a, b) => (a.srs?.prox || "").localeCompare(b.srs?.prox || ""));
   if (!l.length) return vazio("Nenhum erro com esses filtros.");
+  registrarLista("erros", l.map(e => e.qid));
   return `<div class="lista-q">${l.slice(0, EPAG).map(e => { const q = qPorId(e.qid);
     return `<a href="#" data-act="erro-detalhe" data-q="${esc(q.id)}"><span class="txt">${esc(q.q)}</span><span class="meta">${e.status === "aberto" ? (vencido(e.srs) ? pill("revisar hoje", "bad") : `<span>revisão ${quando(e.srs?.prox)}</span>`) : pill("resolvido", "ok")}<span>${esc(e.tema ? nomeTema(e.tema) : q.a)}</span><span>${esc(e.motivo || e.motivoSugerido || "")}</span></span></a>`; }).join("")}</div>${l.length > EPAG ? `<div class="acoes"><button class="btn sec" data-act="erros-mais">Mostrar mais (${l.length - EPAG} restantes)</button></div>` : ""}`;
 }
@@ -164,6 +170,7 @@ ACOES["erro-detalhe"] = el => {
       <label class="campo"><span class="lab">Comentário pessoal</span><textarea id="er-com" rows="3" placeholder="O que eu confundi? Como lembrar?">${esc(e.coment || "")}</textarea></label>
       <div class="linha"><button class="btn">Salvar</button>${e.card ? pill("flashcard criado", "ok") : `<button class="btn sec" type="button" data-act="erro-card" data-q="${esc(q.id)}">Gerar flashcard</button>`}
       <button class="btn sec" type="button" data-act="erro-refazer" data-q="${esc(q.id)}">Refazer agora</button>
+      ${LISTAS_Q.erros?.ids.includes(q.id) ? `<a class="btn sec" href="#/questoes/q/${esc(q.id)}" data-qlista="erros">Abrir questão</a>` : ""}
       <button class="btn sec" type="button" data-act="erro-status" data-q="${esc(q.id)}">${e.status === "aberto" ? "Marcar resolvido" : "Reabrir"}</button></div>
       <p class="small muted">Próxima revisão: ${dataBR(e.srs?.prox)} · errou ${e.n}×</p></form>`);
 };

@@ -20,6 +20,7 @@ curriculos/
       05-ia.js            assistente com contexto automático da página
       06-ui.js            roteador, layout, componentes e o player de questões compartilhado
       10-inicio.js … 23-busca.js   uma página/módulo por arquivo
+      38-navegacao.js     voltar: histórico do app, botão "← Destino", folhas e player no voltar do celular, anterior/próxima nas listas, gesto da borda
       99-main.js          inicialização e contagem do tempo de estudo
   dados/
     instituicoes.json   ← faculdades (UFAM, UEA, FAMETRO, Nilton Lins, Afya) + fontes oficiais a importar
@@ -140,4 +141,5 @@ node curriculos/testes/letras.js     # encaixe do texto: todas as telas, 360/390
 node curriculos/testes/familias.js   # questões irmãs (mesmo quadro por outro ângulo) nunca caem juntas na sessão nem no simulado
 node curriculos/testes/etapa2.js     # mapa mental, erros em lote, backup semanal, conferência da matriz
 node curriculos/testes/interacao.js  # Ouvir (voz simulada), descartar alternativas, grau de certeza, sequência de acertos, flashcards com gesto, vibração, marca-texto
+node curriculos/testes/navegacao.js  # voltar: botão "← Destino", goBack fecha folha e pausa o player ("Continuar sessão"), anterior/próxima na lista filtrada, rolagem restaurada, fins de sessão, gesto da borda, Alt+←/Backspace
 ```

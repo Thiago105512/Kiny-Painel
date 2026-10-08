@@ -119,7 +119,7 @@ function paginaSessao() {
     return { secao: "estudar", crumbs: [["Estudar", "#/estudar"]], titulo: "Sessão concluída",
       html: `<div class="caixa"><div class="kpis"><div class="kpi"><b>${sab}/${S.ids.length}</b><span>você sabia</span></div><div class="kpi"><b>${S.ids.length - sab}</b><span>viraram flashcards</span></div></div>
         <p class="small muted">O que você não sabia volta amanhã nos flashcards. Para fixar, pratique agora com questões dos mesmos temas.</p>
-        <div class="acoes">${qids.length ? `<button class="btn azul" data-act="praticar-ids" data-ids="${esc(qids.join(","))}" data-ctx="temas das pílulas">Praticar ${Math.min(qids.length, 10)} questões</button>` : ""}<button class="btn sec" data-act="pil-sessao">Mais 5 pílulas</button><button class="btn sec" data-act="pil-sair">Voltar</button></div></div>` };
+        <div class="acoes">${qids.length ? `<button class="btn azul" data-act="praticar-ids" data-ids="${esc(qids.join(","))}" data-ctx="temas das pílulas">Praticar ${Math.min(qids.length, 10)} questões</button>` : ""}<button class="btn sec" data-act="pil-sessao">Mais 5 pílulas</button><button class="btn sec" data-act="pil-sair">Voltar para Estudar</button><a class="btn sec" href="#/">Ir para o Início</a></div></div>` };
   }
   const p = PIL[S.ids[S.i]];
   return { secao: "estudar", crumbs: [["Estudar", "#/estudar"]], titulo: `Pílula ${S.i + 1} de ${S.ids.length}`,

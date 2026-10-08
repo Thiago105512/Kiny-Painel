@@ -48,7 +48,7 @@ function paginaEstudoCards(temaId) {
   if (!FC.fila.length) return { secao: "flashcards", crumbs, titulo: "Estudar flashcards", html: vazio("Nenhum card vencido agora. Volte mais tarde ou crie novos.", `<a class="btn sec" href="#/flashcards">Voltar</a>`) };
   if (FC.i >= FC.fila.length) {
     const n = FC.feitos.length, ok = FC.feitos.filter(x => x >= 2).length;
-    return { secao: "flashcards", crumbs, titulo: "Sessão concluída", html: `<div class="kpis"><div class="kpi"><b>${n}</b><span>cards revisados</span></div><div class="kpi"><b>${pct(ok, n)}%</b><span>lembrei (bom/fácil)</span></div></div><div class="acoes"><a class="btn" href="#/revisoes">Outras revisões</a><button class="btn sec" data-act="fc-reiniciar">Nova sessão</button></div>` };
+    return { secao: "flashcards", crumbs, titulo: "Sessão concluída", html: `<div class="kpis"><div class="kpi"><b>${n}</b><span>cards revisados</span></div><div class="kpi"><b>${pct(ok, n)}%</b><span>lembrei (bom/fácil)</span></div></div><div class="acoes"><a class="btn" href="#/revisoes">Outras revisões</a><button class="btn sec" data-act="fc-reiniciar">Nova sessão</button><a class="btn sec" href="#/">Ir para o Início</a></div>` };
   }
   const c = cardPorId(FC.fila[FC.i]);
   if (!c) { FC.i++; return paginaEstudoCards(temaId); }
