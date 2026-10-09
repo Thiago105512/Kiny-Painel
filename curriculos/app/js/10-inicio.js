@@ -24,13 +24,18 @@ function linhaFaculdade() {
 /** Lista de pendências em ordem de prioridade: revisões vencidas, erros, flashcards, plano. */
 function tarefasDoDia() {
   const pend = pendencias(), T = [];
+  // Prova em até 14 dias com sessão do plano para hoje (42-provas): é o próximo passo
+  const ps = typeof sessaoProvaHoje === "function" ? sessaoProvaHoje(14) : null;
+  if (ps) T.push({ tit: `Estudar para ${ps.pv.nome}`, det: `${ps.n === 1 ? "a prova é amanhã" : `faltam ${ps.n} dias`} · ${ps.dia.tipo === "vespera" ? "véspera leve" : nomesUnidades(ps.dia.u, 2)} · ${plural(ps.dia.nq, "questão", "questões")}`, href: "#/provas/" + encodeURIComponent(ps.pv.id), act: "prova-estudar", id: ps.pv.id, bt: "Estudar" });
+  // Sessões antigas de "revisão até a data" (Meu curso) de uma prova que já tem o plano de hoje não se repetem
+  const comPlano = new Set(typeof provasFuturas === "function" ? provasFuturas().filter(pv => diaDeHoje(pv)).map(pv => pv.id) : []);
   // Provas e trabalhos nos próximos 3 dias vêm primeiro
   proximasAvals(3).forEach(a => { const g = minhaGrade(), n = diasAte(a.data);
     T.push({ tit: `${TIPO_AVAL[a.tipo] || "Avaliação"}${a.titulo ? ": " + a.titulo : nomeItem(g, a.disc) ? " de " + nomeItem(g, a.disc) : ""} ${n === 0 ? "hoje" : n === 1 ? "amanhã" : `em ${n} dias`}`, det: a.data ? dataBR(a.data) + (a.hora ? " " + a.hora : "") : "", href: `#/curso/aval/${encodeURIComponent(a.id)}`, bt: "Ver" }); });
   pend.temas.sort((a, b) => a.srs.prox.localeCompare(b.srs.prox)).forEach(t => T.push({ tit: `Revisar ${nomeTema(t.id)}`, det: `revisão ${quando(t.srs.prox)} · ~15 min`, href: `#/revisoes/tema/${encodeURIComponent(t.id)}`, bt: "Revisar", link: linkTema(t.id) }));
   if (pend.erros.length) T.push({ tit: `Refazer ${plural(pend.erros.length, "questão", "questões")} que você errou`, det: "caderno de erros", href: "#/revisoes/erros", bt: "Refazer" });
   if (pend.cards.length) T.push({ tit: `Estudar ${plural(pend.cards.length, "flashcard", "flashcards")}`, det: `~${Math.max(2, Math.round(pend.cards.length / 3))} min`, href: "#/flashcards/estudar", bt: "Estudar" });
-  Object.values(store.doc("plano").itens).filter(p => p.data === hoje() && !p.feito).forEach(p => T.push({ tit: p.titulo || nomeTema(p.tema) || p.disciplina || "Estudo planejado", det: ["planejado", p.min && p.min + " min", p.nq && p.nq + " questões"].filter(Boolean).join(" · "), href: p.tema ? "#/tema/" + encodeURIComponent(p.tema) : "#/plano", bt: "Abrir" }));
+  Object.values(store.doc("plano").itens).filter(p => p.data === hoje() && !p.feito && !comPlano.has(p.aval)).forEach(p => T.push({ tit: p.titulo || nomeTema(p.tema) || p.disciplina || "Estudo planejado", det: ["planejado", p.min && p.min + " min", p.nq && p.nq + " questões"].filter(Boolean).join(" · "), href: p.tema ? "#/tema/" + encodeURIComponent(p.tema) : "#/plano", bt: "Abrir" }));
   return T;
 }
 /** Sugestão quando não há pendências: questões novas do ponto mais fraco (ou do banco todo). */
@@ -40,6 +45,8 @@ function sugestaoPratica() {
   return fraca && novas.length >= 5 ? { tit: `Praticar ${fraca.k}`, det: `seu ponto mais fraco (${Math.round(fraca.p * 100)}%) · ${novas.length} questões novas`, disc: fraca.k }
     : { tit: "Praticar 10 questões novas", det: `${questoes().filter(q => doObjetivo(q) && statusQ(q).chave === "nao").length} ainda não respondidas${objetivoEscolhido() ? " em " + OBJETIVOS[objetivoEscolhido()] : " no banco"}` };
 }
+/** Botão de uma tarefa: ação direta (ex.: abre a sessão do plano da prova) ou link. */
+const botaoTarefa = (t, cls) => t.act ? `<button class="${cls}" data-act="${esc(t.act)}" data-id="${esc(t.id || "")}">${esc(t.bt)}</button>` : `<a class="${cls}" href="${esc(t.href)}">${t.bt}</a>`;
 const saudacao = () => { const h = new Date().getHours(); return h < 12 ? "Bom dia" : h < 18 ? "Boa tarde" : "Boa noite"; };
 
 /* ---------- Peças do Início ---------- */
@@ -129,8 +136,9 @@ rota("/", () => {
       ${estudados.length ? `<div class="small estudados-hoje"><span class="muted">Estudado hoje:</span>${estudados.slice(0, 3).map(t => `<span>${linkTema(t)}</span>`).join("")}${estudados.length > 3 ? `<span class="muted">e mais ${estudados.length - 3}</span>` : ""}</div>` : ""}
     </section>
     ${blocoContinuar()}
+    ${typeof cartaoProvas === "function" ? cartaoProvas() : ""}
     <section class="hero com-ilu">${ilustra(prox ? (/Revisar|revis/i.test(prox.tit) ? "relogio" : /flashcard/i.test(prox.tit) ? "livro" : /Prova|Trabalho|Semin|Apresenta/i.test(prox.tit) ? "calendario" : "alvo") : "estetoscopio", "#2340B8", "xg")}<div><span class="lab">Próximo passo</span>
-      ${prox ? `<p class="hero-tit">${esc(prox.tit)}</p><p class="small muted" style="margin:0">${esc(prox.det)}${tarefas.length > 1 ? ` · depois: mais ${tarefas.length - 1}` : ""}</p><a class="btn azul grande" href="${esc(prox.href)}">${prox.bt}</a>`
+      ${prox ? `<p class="hero-tit">${esc(prox.tit)}</p><p class="small muted" style="margin:0">${esc(prox.det)}${tarefas.length > 1 ? ` · depois: mais ${tarefas.length - 1}` : ""}</p>${botaoTarefa(prox, "btn azul grande")}`
         : `<p class="hero-tit">${esc(sug.tit)}</p><p class="small muted" style="margin:0">Nada pendente para hoje · ${esc(sug.det)}</p><button class="btn azul grande" data-act="inicio-praticar" data-disc="${esc(sug.disc || "")}">Começar</button>`}
     </div></section>
     ${cardRelampago()}
@@ -142,7 +150,8 @@ rota("/", () => {
       ${verMed ? `<a href="#/casos" style="--h:#C0265F">${ilustra("estetoscopio", "#C0265F", "m")}<b>Casos clínicos</b><small>${todosCasos().length} casos</small></a>` : ""}
       <a href="#/jogos" class="largo" style="--h:#DC2626">${ilustra("controle", "#DC2626", "m")}<b>Jogos</b><small>Plantão no PS, Salve o paciente, Caso do dia e mais</small></a>
     </div></section>
-    ${tarefas.length > 1 ? `<section><h2 class="sec">Também para hoje</h2><div class="tarefas">${tarefas.slice(1, 5).map(t => `<div class="tarefa"><div class="o">${t.link ? "Revisar " + t.link : esc(t.tit)}<small>${esc(t.det)}</small></div><a class="btn mini sec" href="${esc(t.href)}">${t.bt}</a></div>`).join("")}</div>${tarefas.length > 5 ? `<p class="small"><a href="#/revisoes">Ver todas as ${tarefas.length}</a></p>` : ""}</section>` : ""}
+    ${typeof conviteProvas === "function" ? conviteProvas() : ""}
+    ${tarefas.length > 1 ? `<section><h2 class="sec">Também para hoje</h2><div class="tarefas">${tarefas.slice(1, 5).map(t => `<div class="tarefa"><div class="o">${t.link ? "Revisar " + t.link : esc(t.tit)}<small>${esc(t.det)}</small></div>${botaoTarefa(t, "btn mini sec")}</div>`).join("")}</div>${tarefas.length > 5 ? `<p class="small"><a href="#/revisoes">Ver todas as ${tarefas.length}</a></p>` : ""}</section>` : ""}
     ${novato && passos.length ? `<section><h2 class="sec">Primeiros passos</h2><div class="tarefas">${passos.join("")}</div></section>`
       : `${verMed ? `<section><h2 class="sec">Sua faculdade</h2>${linhaFaculdade()}</section>` : ""}
         ${fracas.length ? `<section><h2 class="sec">Onde focar <a class="small" href="#/desempenho">ver desempenho</a></h2><div class="barras">${fracas.map(x => barra(esc(x.k), x.ac, x.n)).join("")}</div></section>` : ""}`}

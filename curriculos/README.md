@@ -22,6 +22,7 @@ curriculos/
       10-inicio.js … 23-busca.js   uma página/módulo por arquivo
       38-navegacao.js     voltar: histórico do app, botão "← Destino", folhas e player no voltar do celular, anterior/próxima nas listas, gesto da borda
       40-areas.js         Áreas de estudo (#/areas): trocar o objetivo com um toque; Concursos (em breve) com subáreas, cargos/blocos e "Tenho interesse"
+      41-duelo.js         Duelo ao vivo (#/duelo): mesmas questões ao mesmo tempo com uma amiga, pela presença da sala (room); sem sala ou sem ninguém, Desafiar o fantasma
       39-conversa.js      Modo conversa (#/conversa): tirar dúvidas por voz com o assistente (ditado do teclado, resposta lida em voz alta)
       99-main.js          inicialização e contagem do tempo de estudo
   dados/
@@ -148,4 +149,6 @@ node curriculos/testes/navegacao.js  # voltar: botão "← Destino", goBack fech
 node curriculos/testes/areas.js     # barra Início · área atual · Áreas · Revisões · Mais; #/areas troca o objetivo (Medicina não vê ENEM; ENEM e Vestibulares veem as 278 do ENEM); Concursos/CNU em breve com "Tenho interesse" sem trocar o objetivo; Curso no Mais; encaixe 360/390, claro/escuro
 node curriculos/testes/botoes.js    # links internos em texto viram chips: sem sublinhado e ≥ 44 px nas páginas principais (Medicina e ENEM), externos com ↗, letra Enorme a 360 px, contraste
 node curriculos/testes/conversa.js   # Modo conversa: entradas só com IA, contexto da questão no prompt, histórico em turnos, markdown limpo, leitura automática, Repetir/Mais devagar/Outro jeito/Parar, cancelar ao sair, erros, 🎤 só se houver reconhecimento, encaixe 360/390 com letra 1 e 1,7
+node curriculos/testes/duelo.js      # Duelo ao vivo com sala simulada (BroadcastChannel entre 2 páginas): criar, entrar com código, 3-2-1 sincronizado, mesmas questões e ordem, placar ao vivo, pódio, saída de jogador, revanche, fantasma sem sala, dados maliciosos, encaixe 360/390 com letra 1 e 1,7
+node curriculos/testes/provas.js     # Contagem regressiva das provas: cadastro com data (recusa sem data), hoje/amanhã/N dias com relógio simulado, cartão do Início (mais próxima + 2), passadas somem sem riscado, avaliação de Meu curso na contagem, plano até a véspera priorizando temas fracos, recálculo (data/atraso), Próximo passo, Medicina × ENEM, encaixe 360/390 com letra 1 e 1,7, contraste
 ```

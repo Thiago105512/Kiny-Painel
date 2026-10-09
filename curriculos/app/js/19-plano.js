@@ -3,7 +3,8 @@
    Cada item: disciplina, tema, tempo previsto, nº de questões, revisão, concluído.
    ============================================================ */
 const PV = { vista: "semana", data: null };   // null = hoje (resolvido a cada abertura)
-const itensPlano = () => Object.values(store.doc("plano").itens);
+/* As provas de "Minhas provas" (42-provas) moram no mesmo mapa, com tipo "prova" e sem data de item: ficam fora das listas. */
+const itensPlano = () => Object.values(store.doc("plano").itens).filter(p => p && p.tipo !== "prova");
 const inicioSemana = iso => { const d = new Date(iso + "T12:00"); return somaDias(iso, -((d.getDay() + 6) % 7)); };
 function linhaPlano(p) {
   return `<div class="linha entre" style="flex-wrap:nowrap;padding:6px 0;border-bottom:1px solid var(--line2)">
@@ -33,7 +34,7 @@ rota("/plano", () => {
   const semana = todos.filter(p => p.data >= inicioSemana(hoje()) && p.data <= somaDias(inicioSemana(hoje()), 6));
   return {
     secao: "plano", titulo: "Planejamento", sub: semana.length ? `Esta semana: ${semana.filter(p => p.feito).length} de ${semana.length} concluídos · ${horas(semana.reduce((s, p) => s + (+p.min || 0), 0) * 60)} previstos` : "",
-    acoes: `<button class="btn sec mini" data-act="plano-novo" data-d="${PV.vista === "dia" ? PV.data : hoje()}">+ Adicionar</button>`,
+    acoes: `<a class="btn sec mini" href="#/provas">Minhas provas</a><button class="btn sec mini" data-act="plano-novo" data-d="${PV.vista === "dia" ? PV.data : hoje()}">+ Adicionar</button>`,
     html: `${abas([["dia", "Dia"], ["semana", "Semana"], ["mes", "Mês"]], PV.vista, "plano-vista")}
       <div class="linha entre" style="margin-bottom:10px;flex-wrap:nowrap"><b>${esc(titulo)}</b><span class="linha" style="flex-wrap:nowrap"><button class="btn sec mini" data-act="plano-mover" data-n="-${passo}" aria-label="Anterior">‹</button><button class="btn sec mini" data-act="plano-hoje">Hoje</button><button class="btn sec mini" data-act="plano-mover" data-n="${passo}" aria-label="Próximo">›</button></span></div>
       ${corpo}`,

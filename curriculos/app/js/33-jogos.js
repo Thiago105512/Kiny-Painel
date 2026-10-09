@@ -170,7 +170,7 @@ rota("/jogos", () => {
   const D = store.doc("jogos"), lista = JOGOS.filter(jogoDisponivel);
   return { secao: "jogos", titulo: "Jogos", sub: "Estudar também pode ser divertido. Tudo com questões e conteúdos do seu foco de estudo.",
     acoes: `<button class="btn sec mini" data-act="jg-som">${store.doc("jogos").som ? "Som e vibração: ligados" : "Som e vibração: desligados"}</button>`,
-    html: `${cartaoJornada()}
+    html: `${cartaoJornada()}${typeof cartaoDuelo === "function" ? cartaoDuelo() : ""}
       ${lista.some(j => j.diario) ? `<section><h2 class="sec">Desafios de hoje</h2><div class="jg-hoje">${lista.filter(j => j.diario).map(j => { const feito = j.diario();
         return `<a class="jg-desafio ${feito ? "feito" : ""}" href="#/jogos/${j.id}" style="--h:${j.cor}">${ilustra(j.arte, j.cor, "g")}<b>${esc(j.nome)}</b><span class="pill ${feito ? "ok" : "warn"}">${feito ? "✓ Feito hoje" : "Novo hoje"}</span></a>`; }).join("")}</div></section>` : ""}
       ${GRUPOS_JOGOS.map(([g, tit, sub]) => { const js = lista.filter(j => !j.diario && (GRUPO_JOGO[j.id] || "rapidos") === g); return js.length ? `<section><h2 class="sec">${tit}</h2><p class="muted" style="margin:-4px 0 10px">${sub}</p><div class="jg-lista">${js.map(j => `<a class="jg-cartao" href="#/jogos/${j.id}" style="--h:${j.cor}">${ilustra(j.arte, j.cor, "g")}<div>

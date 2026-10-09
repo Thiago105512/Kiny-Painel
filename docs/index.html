@@ -925,6 +925,133 @@ table,th,td,.num{overflow-wrap:normal}
 .ic-areas .q3{fill:color-mix(in srgb,#0F766E,#fff var(--ilu-luz))}
 .ic-areas .q4{fill:color-mix(in srgb,#B45309,#fff var(--ilu-luz))}
 
+/* == provas == */
+/* Contagem regressiva das provas (42-provas): cor pela proximidade — até 3 dias vermelho, até 7 âmbar, depois azul. */
+[data-nivel="perto"]{--pvc:var(--bad);--pvs:var(--bad-soft)}
+[data-nivel="meio"]{--pvc:var(--warn);--pvs:var(--warn-soft)}
+[data-nivel="longe"]{--pvc:var(--pen);--pvs:var(--pen-soft)}
+.pv-cartao{margin:14px 0;padding:16px;border-radius:16px;background:var(--pvs,var(--pen-soft));border:2px solid var(--pvc,var(--pen));display:grid;gap:10px;justify-items:start;min-width:0}
+.pv-cartao .lab{margin:0;color:var(--pvc)}
+.pv-cartao-pg{margin-top:0}
+.pv-nome{margin:0;font:700 calc(19px * var(--kt))/1.25 var(--display);overflow-wrap:anywhere;color:var(--ink)}
+.pv-nome small{display:block;font:500 calc(14px * var(--k))/1.4 var(--display);color:var(--ink2)}
+.pv-num{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin:0;color:var(--pvc);font:700 calc(20px * var(--kt))/1.1 var(--display)}
+.pv-num b{font:800 calc(64px * var(--kt))/.95 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.pv-grande{margin:0;color:var(--pvc);font:800 calc(34px * var(--kt))/1.1 var(--display);overflow-wrap:anywhere}
+.pv-grande span{display:inline-block}
+.pv-plano{display:grid;gap:4px;width:100%}
+.pv-plano .small{color:var(--ink)}
+.pv-plano .meter{height:12px;border-radius:6px;background:color-mix(in oklab,var(--track) 70%,var(--sheet))}
+.pv-plano .meter i{border-radius:6px}
+.pv-proximas{display:grid;gap:8px;width:100%;margin-top:4px}
+.pv-proximas .lab{color:var(--ink2)}
+.pv-prox{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:2px 10px;min-height:48px;padding:8px 12px;border-radius:10px;background:var(--sheet);border:1px solid var(--line);border-left:5px solid var(--pvc);color:var(--ink);text-decoration:none}
+.pv-prox b{font-size:calc(15px * var(--k));overflow-wrap:anywhere;min-width:0}
+.pv-prox small{font-size:calc(14px * var(--k));color:var(--ink2);font-weight:600}
+.pv-convite{margin:14px 0;padding:14px 16px;border-radius:14px;background:var(--sheet);border:1px dashed var(--pen);display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;justify-content:space-between}
+.pv-convite p{margin:0;flex:1 1 12em;min-width:0}
+.pv-convite .small{color:var(--ink2)}
+.pv-lista{display:grid;gap:10px}
+.pv-item{display:flex;align-items:center;gap:14px;min-height:64px;padding:10px 14px;border-radius:12px;background:var(--sheet);border:1px solid var(--line);border-left:6px solid var(--pvc);color:var(--ink);text-decoration:none}
+.pv-dias{flex:none;display:grid;justify-items:center;min-width:calc(64px * var(--kt));padding:6px 8px;border-radius:10px;background:var(--pvs);color:var(--pvc);line-height:1}
+.pv-dias b{font:800 calc(26px * var(--kt))/1 var(--display)}
+.pv-dias small{font:600 calc(13px * var(--k))/1.2 var(--display)}
+.pv-item-tx{flex:1;min-width:0;display:grid;gap:2px}
+.pv-item-tx b{font-size:calc(16px * var(--k));overflow-wrap:anywhere}
+.pv-item-tx small{color:var(--ink2);font-size:calc(13px * var(--k))}
+@media (max-width:420px){.pv-item{flex-wrap:wrap}}
+.pv-hoje{margin:14px 0;padding:14px 16px;border-radius:14px;background:var(--pen-soft);border:2px solid var(--pen);display:grid;gap:6px;justify-items:start}
+.pv-hoje .lab{margin:0;color:var(--pen)}
+.pv-hoje-tit{margin:0;font:700 calc(18px * var(--kt))/1.3 var(--display);overflow-wrap:anywhere}
+.pv-hoje .small{margin:0;color:var(--ink2)}
+.pv-ok{margin:14px 0;padding:12px 14px;border-radius:10px;background:var(--ok-soft);border:1px solid var(--ok);color:var(--ink);font-weight:600}
+.pv-dia .o b{color:var(--ink)}
+.pv-feito summary{font-size:calc(15px * var(--k))}
+.pv-unidades{display:flex;flex-wrap:wrap;gap:8px}
+.pv-unidades a,.pv-unidades span{display:inline-flex;align-items:center;min-height:44px;max-width:100%;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--sheet);color:var(--ink);text-decoration:none;font-size:calc(14px * var(--k));overflow-wrap:anywhere}
+.pv-unidades a{border-color:color-mix(in oklab,var(--pen) 45%,var(--line));color:var(--pen)}
+.pv-confirmar{margin:0 0 14px;padding:14px 16px;border-radius:12px;background:var(--bad-soft);border:2px solid var(--bad);display:grid;gap:10px}
+.pv-confirmar p{margin:0;color:var(--ink)}
+.btn.perigo-tx{color:var(--bad);border-color:color-mix(in oklab,var(--bad) 50%,var(--line))}
+.pv-form input[type="date"]{min-height:56px;font-size:calc(20px * var(--k));padding:8px 12px;border-radius:10px;border:2px solid var(--line);background:var(--sheet)}
+.pv-form input[type="date"][aria-invalid="true"]{border-color:var(--bad)}
+.pv-form input[type="text"],.pv-form select{min-height:48px}
+.pv-erro{margin:-4px 0 0;color:var(--bad);font-weight:700}
+.pv-erro:empty{display:none}
+.pv-sug{display:flex;flex-wrap:wrap;gap:8px}
+.pv-sug-bloco{display:grid;gap:6px;margin-top:-4px}
+.pv-sug .btn{white-space:normal;text-align:left}
+.pv-temas{border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:0;min-width:0;background:var(--sheet)}
+.pv-temas legend{padding:0 6px}
+.pv-temas details{border-top:1px solid var(--line2)}
+.pv-temas summary{cursor:pointer;min-height:44px;display:flex;align-items:center;gap:6px;font-weight:700;font-size:calc(15px * var(--k))}
+.pv-temas summary small{font-weight:400;color:var(--muted)}
+.pv-temas .check span{overflow-wrap:anywhere;min-width:0}
+
+/* == duelo == */
+.du-hub{margin:12px 0}
+.du-cartao{border-left-width:8px;padding:18px 16px;background:linear-gradient(120deg,color-mix(in oklab,var(--h) 10%,var(--sheet)),var(--sheet))}
+.du-cartao b{font-size:calc(20px * var(--k))}
+.du-anuncio{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.du-opcoes{display:grid;gap:10px;width:100%;grid-template-columns:minmax(0,1fr)}
+.du-opcoes .btn{width:100%;margin:0;min-height:56px;white-space:normal}
+.du-form .chips{display:flex;flex-wrap:wrap;gap:8px}
+.du-form .chip{font-size:calc(15px * var(--k));min-height:48px;padding:8px 16px}
+.du-form .chip[aria-pressed="true"]{background:var(--pen);border-color:var(--pen);color:var(--on-acc);font-weight:700}
+.du-campo{font-size:calc(18px * var(--k));min-height:52px;padding:10px 12px;border-width:2px}
+.du-campo-codigo{font:700 calc(28px * var(--kt)) var(--mono);letter-spacing:.3em;text-transform:uppercase;text-align:center;max-width:12ch}
+.du-espera,.du-contagem{display:grid;gap:10px}
+.du-codigo{margin:0;font:800 calc(44px * var(--kt))/1.1 var(--mono);letter-spacing:.18em;color:var(--sec-tx);overflow-wrap:anywhere}
+.du-cod-mini{font-family:var(--mono);letter-spacing:.12em}
+.du-instrucao{margin:0;font:600 calc(16px * var(--k))/1.45 var(--display)}
+.du-sala{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.du-sala li{display:flex;align-items:center;gap:10px;min-height:52px;padding:8px 14px;border-radius:12px;border:1px solid var(--line);background:var(--sheet)}
+.du-sala li.eu{border:2px solid var(--pen);background:var(--pen-soft)}
+.du-nome{flex:1;min-width:0;display:grid;gap:2px}
+.du-nome b{font:700 calc(16px * var(--k))/1.3 var(--display);overflow-wrap:anywhere}
+.du-nome b small,.du-nome small{font:500 calc(13px * var(--k)) var(--display);color:var(--ink2)}
+.du-conta{margin:0;text-align:center;font:800 calc(96px * var(--kt))/1 var(--display);color:var(--sec-tx)}
+@media (prefers-reduced-motion:no-preference){.du-conta{animation:pulo .5s ease-out}}
+.du-topo{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin:0 0 10px;padding:10px 14px;border-radius:12px;background:var(--sec-soft);border:1px solid var(--sec-linha);font:600 calc(16px * var(--k)) var(--display)}
+.du-topo b{font-size:calc(20px * var(--kt))}
+.du-tempo-barra{flex:1 0 100%;height:10px;border-radius:999px;background:var(--track);overflow:hidden}
+.du-tempo-barra i{display:block;height:100%;background:var(--sec);border-radius:999px;transition:width .2s linear}
+@media (prefers-reduced-motion:reduce){.du-tempo-barra i{transition:none}}
+.du-ao-vivo{margin:0 0 12px}
+.du-ao-vivo .lab{margin:0 0 6px}
+.du-placar{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.du-placar li{display:flex;align-items:center;gap:10px;min-height:48px;padding:6px 12px;border-radius:12px;border:1px solid var(--line);background:var(--sheet)}
+.du-placar li.eu{border:2px solid var(--pen)}
+.du-placar li.lider{background:var(--warn-soft);border-color:var(--warn)}
+.du-placar li.saiu .du-nome b{text-decoration:none;color:var(--ink2)}
+.du-pos{flex:none;min-width:2em;text-align:center;font:700 calc(16px * var(--k)) var(--mono);color:var(--ink)}
+.du-pts{flex:none;text-align:right;font:600 calc(13px * var(--k)) var(--display);color:var(--ink2)}
+.du-pts b{display:block;font:800 calc(20px * var(--kt))/1.1 var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+.du-podio{container-type:inline-size;display:grid;gap:12px}
+.du-podio h2.sec{margin-top:0}
+.du-degraus{list-style:none;margin:0;padding:0;display:grid;gap:8px;grid-template-columns:minmax(0,1fr)}
+.du-degraus li{position:relative;display:grid;gap:2px;padding:12px 14px 12px 64px;min-height:64px;border-radius:14px;border:1px solid var(--line);background:var(--sheet);overflow:hidden}
+.du-degraus li.d1{border:2px solid var(--warn);background:var(--warn-soft);min-height:84px}
+.du-degraus li.eu{box-shadow:inset 0 0 0 2px var(--pen)}
+.du-degraus .du-medalha{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:calc(32px * var(--kt));line-height:1}
+.du-degraus b{font:800 calc(18px * var(--k))/1.25 var(--display);overflow-wrap:anywhere}
+.du-degraus li.d1 b{font-size:calc(22px * var(--k))}
+.du-degraus span:not(.du-medalha){font:700 calc(16px * var(--k)) var(--display);color:var(--ink)}
+.du-degraus small{font-size:calc(13px * var(--k));color:var(--ink2)}
+.du-degraus i{display:none}
+@container (min-width:36em){
+  .du-degraus{grid-template-columns:repeat(3,minmax(0,1fr));align-items:end}
+  .du-degraus li{padding:14px;text-align:center;justify-items:center;min-height:0}
+  .du-degraus li.d1{order:2;min-height:0;padding-top:24px}.du-degraus li.d2{order:1}.du-degraus li.d3{order:3}
+  .du-degraus .du-medalha{position:static;transform:none}
+  .du-degraus i{display:block;width:100%;margin-top:6px;border-radius:8px 8px 0 0;background:var(--sec-soft);font:800 calc(20px * var(--kt)) var(--display);font-style:normal;color:var(--sec-tx);padding:6px 0}
+  .du-degraus li.d1 i{height:5em}.du-degraus li.d2 i{height:3.4em}.du-degraus li.d3 i{height:2.2em}
+}
+/* palavras longas (ex.: "glicuronidação") com letra Enorme a 360 px: quebram com hífen dentro da alternativa */
+#du-jogo .alts{grid-template-columns:minmax(0,1fr)}
+#du-jogo .alt>span:last-child{min-width:0;overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
+#du-jogo .enunciado,#du-jogo .leitura{overflow-wrap:break-word;hyphens:auto;-webkit-hyphens:auto}
+
 </style>
 
 <header class="topo">
@@ -2556,13 +2683,18 @@ function linhaFaculdade() {
 /** Lista de pendências em ordem de prioridade: revisões vencidas, erros, flashcards, plano. */
 function tarefasDoDia() {
   const pend = pendencias(), T = [];
+  // Prova em até 14 dias com sessão do plano para hoje (42-provas): é o próximo passo
+  const ps = typeof sessaoProvaHoje === "function" ? sessaoProvaHoje(14) : null;
+  if (ps) T.push({ tit: `Estudar para ${ps.pv.nome}`, det: `${ps.n === 1 ? "a prova é amanhã" : `faltam ${ps.n} dias`} · ${ps.dia.tipo === "vespera" ? "véspera leve" : nomesUnidades(ps.dia.u, 2)} · ${plural(ps.dia.nq, "questão", "questões")}`, href: "#/provas/" + encodeURIComponent(ps.pv.id), act: "prova-estudar", id: ps.pv.id, bt: "Estudar" });
+  // Sessões antigas de "revisão até a data" (Meu curso) de uma prova que já tem o plano de hoje não se repetem
+  const comPlano = new Set(typeof provasFuturas === "function" ? provasFuturas().filter(pv => diaDeHoje(pv)).map(pv => pv.id) : []);
   // Provas e trabalhos nos próximos 3 dias vêm primeiro
   proximasAvals(3).forEach(a => { const g = minhaGrade(), n = diasAte(a.data);
     T.push({ tit: `${TIPO_AVAL[a.tipo] || "Avaliação"}${a.titulo ? ": " + a.titulo : nomeItem(g, a.disc) ? " de " + nomeItem(g, a.disc) : ""} ${n === 0 ? "hoje" : n === 1 ? "amanhã" : `em ${n} dias`}`, det: a.data ? dataBR(a.data) + (a.hora ? " " + a.hora : "") : "", href: `#/curso/aval/${encodeURIComponent(a.id)}`, bt: "Ver" }); });
   pend.temas.sort((a, b) => a.srs.prox.localeCompare(b.srs.prox)).forEach(t => T.push({ tit: `Revisar ${nomeTema(t.id)}`, det: `revisão ${quando(t.srs.prox)} · ~15 min`, href: `#/revisoes/tema/${encodeURIComponent(t.id)}`, bt: "Revisar", link: linkTema(t.id) }));
   if (pend.erros.length) T.push({ tit: `Refazer ${plural(pend.erros.length, "questão", "questões")} que você errou`, det: "caderno de erros", href: "#/revisoes/erros", bt: "Refazer" });
   if (pend.cards.length) T.push({ tit: `Estudar ${plural(pend.cards.length, "flashcard", "flashcards")}`, det: `~${Math.max(2, Math.round(pend.cards.length / 3))} min`, href: "#/flashcards/estudar", bt: "Estudar" });
-  Object.values(store.doc("plano").itens).filter(p => p.data === hoje() && !p.feito).forEach(p => T.push({ tit: p.titulo || nomeTema(p.tema) || p.disciplina || "Estudo planejado", det: ["planejado", p.min && p.min + " min", p.nq && p.nq + " questões"].filter(Boolean).join(" · "), href: p.tema ? "#/tema/" + encodeURIComponent(p.tema) : "#/plano", bt: "Abrir" }));
+  Object.values(store.doc("plano").itens).filter(p => p.data === hoje() && !p.feito && !comPlano.has(p.aval)).forEach(p => T.push({ tit: p.titulo || nomeTema(p.tema) || p.disciplina || "Estudo planejado", det: ["planejado", p.min && p.min + " min", p.nq && p.nq + " questões"].filter(Boolean).join(" · "), href: p.tema ? "#/tema/" + encodeURIComponent(p.tema) : "#/plano", bt: "Abrir" }));
   return T;
 }
 /** Sugestão quando não há pendências: questões novas do ponto mais fraco (ou do banco todo). */
@@ -2572,6 +2704,8 @@ function sugestaoPratica() {
   return fraca && novas.length >= 5 ? { tit: `Praticar ${fraca.k}`, det: `seu ponto mais fraco (${Math.round(fraca.p * 100)}%) · ${novas.length} questões novas`, disc: fraca.k }
     : { tit: "Praticar 10 questões novas", det: `${questoes().filter(q => doObjetivo(q) && statusQ(q).chave === "nao").length} ainda não respondidas${objetivoEscolhido() ? " em " + OBJETIVOS[objetivoEscolhido()] : " no banco"}` };
 }
+/** Botão de uma tarefa: ação direta (ex.: abre a sessão do plano da prova) ou link. */
+const botaoTarefa = (t, cls) => t.act ? `<button class="${cls}" data-act="${esc(t.act)}" data-id="${esc(t.id || "")}">${esc(t.bt)}</button>` : `<a class="${cls}" href="${esc(t.href)}">${t.bt}</a>`;
 const saudacao = () => { const h = new Date().getHours(); return h < 12 ? "Bom dia" : h < 18 ? "Boa tarde" : "Boa noite"; };
 
 /* ---------- Peças do Início ---------- */
@@ -2661,8 +2795,9 @@ rota("/", () => {
       ${estudados.length ? `<div class="small estudados-hoje"><span class="muted">Estudado hoje:</span>${estudados.slice(0, 3).map(t => `<span>${linkTema(t)}</span>`).join("")}${estudados.length > 3 ? `<span class="muted">e mais ${estudados.length - 3}</span>` : ""}</div>` : ""}
     </section>
     ${blocoContinuar()}
+    ${typeof cartaoProvas === "function" ? cartaoProvas() : ""}
     <section class="hero com-ilu">${ilustra(prox ? (/Revisar|revis/i.test(prox.tit) ? "relogio" : /flashcard/i.test(prox.tit) ? "livro" : /Prova|Trabalho|Semin|Apresenta/i.test(prox.tit) ? "calendario" : "alvo") : "estetoscopio", "#2340B8", "xg")}<div><span class="lab">Próximo passo</span>
-      ${prox ? `<p class="hero-tit">${esc(prox.tit)}</p><p class="small muted" style="margin:0">${esc(prox.det)}${tarefas.length > 1 ? ` · depois: mais ${tarefas.length - 1}` : ""}</p><a class="btn azul grande" href="${esc(prox.href)}">${prox.bt}</a>`
+      ${prox ? `<p class="hero-tit">${esc(prox.tit)}</p><p class="small muted" style="margin:0">${esc(prox.det)}${tarefas.length > 1 ? ` · depois: mais ${tarefas.length - 1}` : ""}</p>${botaoTarefa(prox, "btn azul grande")}`
         : `<p class="hero-tit">${esc(sug.tit)}</p><p class="small muted" style="margin:0">Nada pendente para hoje · ${esc(sug.det)}</p><button class="btn azul grande" data-act="inicio-praticar" data-disc="${esc(sug.disc || "")}">Começar</button>`}
     </div></section>
     ${cardRelampago()}
@@ -2674,7 +2809,8 @@ rota("/", () => {
       ${verMed ? `<a href="#/casos" style="--h:#C0265F">${ilustra("estetoscopio", "#C0265F", "m")}<b>Casos clínicos</b><small>${todosCasos().length} casos</small></a>` : ""}
       <a href="#/jogos" class="largo" style="--h:#DC2626">${ilustra("controle", "#DC2626", "m")}<b>Jogos</b><small>Plantão no PS, Salve o paciente, Caso do dia e mais</small></a>
     </div></section>
-    ${tarefas.length > 1 ? `<section><h2 class="sec">Também para hoje</h2><div class="tarefas">${tarefas.slice(1, 5).map(t => `<div class="tarefa"><div class="o">${t.link ? "Revisar " + t.link : esc(t.tit)}<small>${esc(t.det)}</small></div><a class="btn mini sec" href="${esc(t.href)}">${t.bt}</a></div>`).join("")}</div>${tarefas.length > 5 ? `<p class="small"><a href="#/revisoes">Ver todas as ${tarefas.length}</a></p>` : ""}</section>` : ""}
+    ${typeof conviteProvas === "function" ? conviteProvas() : ""}
+    ${tarefas.length > 1 ? `<section><h2 class="sec">Também para hoje</h2><div class="tarefas">${tarefas.slice(1, 5).map(t => `<div class="tarefa"><div class="o">${t.link ? "Revisar " + t.link : esc(t.tit)}<small>${esc(t.det)}</small></div>${botaoTarefa(t, "btn mini sec")}</div>`).join("")}</div>${tarefas.length > 5 ? `<p class="small"><a href="#/revisoes">Ver todas as ${tarefas.length}</a></p>` : ""}</section>` : ""}
     ${novato && passos.length ? `<section><h2 class="sec">Primeiros passos</h2><div class="tarefas">${passos.join("")}</div></section>`
       : `${verMed ? `<section><h2 class="sec">Sua faculdade</h2>${linhaFaculdade()}</section>` : ""}
         ${fracas.length ? `<section><h2 class="sec">Onde focar <a class="small" href="#/desempenho">ver desempenho</a></h2><div class="barras">${fracas.map(x => barra(esc(x.k), x.ac, x.n)).join("")}</div></section>` : ""}`}
@@ -3992,7 +4128,8 @@ function teclaProva(e) {
    Cada item: disciplina, tema, tempo previsto, nº de questões, revisão, concluído.
    ============================================================ */
 const PV = { vista: "semana", data: null };   // null = hoje (resolvido a cada abertura)
-const itensPlano = () => Object.values(store.doc("plano").itens);
+/* As provas de "Minhas provas" (42-provas) moram no mesmo mapa, com tipo "prova" e sem data de item: ficam fora das listas. */
+const itensPlano = () => Object.values(store.doc("plano").itens).filter(p => p && p.tipo !== "prova");
 const inicioSemana = iso => { const d = new Date(iso + "T12:00"); return somaDias(iso, -((d.getDay() + 6) % 7)); };
 function linhaPlano(p) {
   return `<div class="linha entre" style="flex-wrap:nowrap;padding:6px 0;border-bottom:1px solid var(--line2)">
@@ -4022,7 +4159,7 @@ rota("/plano", () => {
   const semana = todos.filter(p => p.data >= inicioSemana(hoje()) && p.data <= somaDias(inicioSemana(hoje()), 6));
   return {
     secao: "plano", titulo: "Planejamento", sub: semana.length ? `Esta semana: ${semana.filter(p => p.feito).length} de ${semana.length} concluídos · ${horas(semana.reduce((s, p) => s + (+p.min || 0), 0) * 60)} previstos` : "",
-    acoes: `<button class="btn sec mini" data-act="plano-novo" data-d="${PV.vista === "dia" ? PV.data : hoje()}">+ Adicionar</button>`,
+    acoes: `<a class="btn sec mini" href="#/provas">Minhas provas</a><button class="btn sec mini" data-act="plano-novo" data-d="${PV.vista === "dia" ? PV.data : hoje()}">+ Adicionar</button>`,
     html: `${abas([["dia", "Dia"], ["semana", "Semana"], ["mes", "Mês"]], PV.vista, "plano-vista")}
       <div class="linha entre" style="margin-bottom:10px;flex-wrap:nowrap"><b>${esc(titulo)}</b><span class="linha" style="flex-wrap:nowrap"><button class="btn sec mini" data-act="plano-mover" data-n="-${passo}" aria-label="Anterior">‹</button><button class="btn sec mini" data-act="plano-hoje">Hoje</button><button class="btn sec mini" data-act="plano-mover" data-n="${passo}" aria-label="Próximo">›</button></span></div>
       ${corpo}`,
@@ -4905,7 +5042,7 @@ rota("/curso/aval/:id", ({ id }) => {
   const g = minhaGrade(), rev = Object.values(store.doc("plano").itens).filter(p => p.aval === id).sort((x, y) => x.data.localeCompare(y.data));
   return { secao: "curso", crumbs: [["Meu curso", "#/curso"], ["Provas e trabalhos", "#/curso/agenda"]], titulo: `${TIPO_AVAL[a.tipo] || "Avaliação"}${a.titulo ? ": " + a.titulo : ""}`,
     sub: [a.data && `${dataBR(a.data)}${a.hora ? " " + a.hora : ""} (${quando(a.data)})`, nomeItem(g, a.disc), lerPeso(a.peso) !== 1 && "peso " + fmtNota(lerPeso(a.peso))].filter(Boolean).map(esc).join(" · "),
-    acoes: `<button class="btn sec mini" data-act="aval-editar" data-id="${esc(id)}">Editar</button><button class="btn sec mini perigo" data-act="aval-del" data-id="${esc(id)}">Apagar</button>`,
+    acoes: `${a.data >= hoje() && !a.feito && ["prova", "pratica"].includes(a.tipo || "prova") ? `<a class="btn mini azul" href="#/provas/${encodeURIComponent(id)}">Contagem e plano</a>` : ""}<button class="btn sec mini" data-act="aval-editar" data-id="${esc(id)}">Editar</button><button class="btn sec mini perigo" data-act="aval-del" data-id="${esc(id)}">Apagar</button>`,
     html: `${a.conteudo ? `<section class="caixa"><h2 class="sec">Conteúdo</h2><p class="leitura">${esc(a.conteudo)}</p></section>` : ""}
       <section class="caixa"><h2 class="sec">Revisão até a data</h2>${rev.length ? `<div class="tarefas">${rev.map(p => `<div class="tarefa"><div class="o" style="${p.feito ? "text-decoration:line-through;color:var(--muted)" : ""}">${esc(p.titulo)}<small>${dataBR(p.data)} · ${plural(p.nq, "questão", "questões")}</small></div></div>`).join("")}</div>` : `<p class="muted">Sem sessões de revisão${(a.temas || []).length ? "" : " (a disciplina não tem temas vinculados)"}.</p>`}
         ${(a.temas || []).length && a.data >= hoje() ? `<div class="acoes"><button class="btn sec mini" data-act="aval-rev" data-id="${esc(id)}">${rev.length ? "Refazer revisão" : "Montar revisão"}</button>${IA.disponivel() ? `<a class="btn sec mini" href="#/curso/ajuda/nova/revisao/${esc(id)}">Pedir resumo à IA</a>` : ""}</div>` : ""}</section>
@@ -5348,7 +5485,7 @@ rota("/jogos", () => {
   const D = store.doc("jogos"), lista = JOGOS.filter(jogoDisponivel);
   return { secao: "jogos", titulo: "Jogos", sub: "Estudar também pode ser divertido. Tudo com questões e conteúdos do seu foco de estudo.",
     acoes: `<button class="btn sec mini" data-act="jg-som">${store.doc("jogos").som ? "Som e vibração: ligados" : "Som e vibração: desligados"}</button>`,
-    html: `${cartaoJornada()}
+    html: `${cartaoJornada()}${typeof cartaoDuelo === "function" ? cartaoDuelo() : ""}
       ${lista.some(j => j.diario) ? `<section><h2 class="sec">Desafios de hoje</h2><div class="jg-hoje">${lista.filter(j => j.diario).map(j => { const feito = j.diario();
         return `<a class="jg-desafio ${feito ? "feito" : ""}" href="#/jogos/${j.id}" style="--h:${j.cor}">${ilustra(j.arte, j.cor, "g")}<b>${esc(j.nome)}</b><span class="pill ${feito ? "ok" : "warn"}">${feito ? "✓ Feito hoje" : "Novo hoje"}</span></a>`; }).join("")}</div></section>` : ""}
       ${GRUPOS_JOGOS.map(([g, tit, sub]) => { const js = lista.filter(j => !j.diario && (GRUPO_JOGO[j.id] || "rapidos") === g); return js.length ? `<section><h2 class="sec">${tit}</h2><p class="muted" style="margin:-4px 0 10px">${sub}</p><div class="jg-lista">${js.map(j => `<a class="jg-cartao" href="#/jogos/${j.id}" style="--h:${j.cor}">${ilustra(j.arte, j.cor, "g")}<div>
@@ -7025,6 +7162,839 @@ ACOES["conc-interesse"] = el => {
   P.interessesConcursos = on ? [...lista, ch] : lista; store.mudou("perfil");
   toast(on ? `Anotado: interesse em ${C.nome}` : `Interesse em ${C.nome} removido`); atualizar();
 };
+
+/* ---- 41-duelo.js ---- */
+/* ============================================================
+   41-duelo — Duelo ao vivo (#/duelo): as mesmas questões, ao mesmo tempo,
+   com uma amiga que abre o mesmo app. Placar ao vivo, 20 s por questão,
+   pontos por acerto + bônus de rapidez, pódio no fim.
+
+   Tudo pela PRESENÇA da sala (capability "room"): qualquer pessoa na sala pode
+   publicar a própria presença e todos recebem por onPeers. Não usamos emit/on
+   (tópicos de evento são só de quem pode editar o artefato; a amiga que entra
+   pelo link não é). Cada jogador publica:
+     {duelo: código, papel: "anfitriao"|"jogador", apelido, area, r (rodada),
+      ids (só a anfitriã), estado: esperando|contando|jogando|fim, inicio, i, pontos, acertos, fimEm}
+   Quem lê valida tudo (código, ids existentes no banco e da área do perfil,
+   números dentro dos limites, apelido curto) e mostra só com esc().
+   Contagem 3-2-1: cada um conta 3 s a partir do momento em que RECEBE o
+   "contando" da anfitriã (relógios diferentes não atrapalham).
+   Sem sala (null) ou sem ninguém em 2 min: "Desafiar o fantasma" — as mesmas
+   regras contra o próprio desempenho anterior (store.doc("jogos").duelos).
+   ============================================================ */
+const DUELO = { tempo: 20000, conta: 3000, espera: 120000, maxPts: 150, ns: [5, 10, 15], leitura: 3500 };
+const DU_ALFA = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";   // sem 0/O, 1/I/L: fácil de ditar e de ler
+const DU_ESTADOS = ["esperando", "contando", "jogando", "fim"];
+const DU_AREA_NOME = { medicina: "Medicina", residencia: "Residência", enem: "ENEM", direito: "Direito", oab: "OAB" };
+const DU = { fase: "inicio", modo: null, papel: null, id: "", apelido: "", n: 10, area: "", ids: [], r: 0 };
+let _duRoom, _duRoomP = null, _duTimer = null, _duEspera = null, _duLiderEm = 0;
+
+/* ---------- Sala (room): carregada só quando o Duelo é aberto ---------- */
+function salaDuelo() {
+  if (_duRoomP) return _duRoomP;
+  _duRoomP = (async () => {
+    try {
+      const use = window.claude && window.claude.use; if (typeof use !== "function") return null;
+      const r = await Promise.race([use.call(window.claude, "room"), new Promise(ok => setTimeout(() => ok(null), 5000))]);
+      return r && typeof r.presence === "function" && typeof r.onPeers === "function" ? r : null;
+    } catch (e) { return null; }
+  })().then(r => {
+    _duRoom = r;
+    if (r) try { r.onPeers(aoMudarSala, () => { _duRoom = null; if (DU.modo === "vivo" && DU.fase !== "fim") anunciarDuelo("A sala ao vivo caiu. O seu jogo continua."); }); } catch (e) { _duRoom = null; }
+    if (caminhoAtual() === "/duelo" && DU.fase === "inicio") atualizar();
+    return _duRoom;
+  });
+  return _duRoomP;
+}
+const salaOk = () => !!_duRoom;
+
+/* ---------- Validação do que chega dos outros (dados não confiáveis) ---------- */
+const intEntre = (x, a, b) => Number.isInteger(x) && x >= a && x <= b ? x : null;
+/** Caracteres de controle e invisíveis (direção de texto, largura zero…): fora do apelido. Montado por código-ponto. */
+const DU_INVIS = new RegExp("[" + [[0, 0x1f], [0x7f, 0x9f], [0xad, 0xad], [0x61c, 0x61c], [0x180e, 0x180e], [0x200b, 0x200c], [0x200e, 0x200f], [0x2028, 0x202e], [0x2060, 0x206f], [0xfeff, 0xfeff], [0xfff9, 0xfffb]]
+  .map(([a, b]) => { const h = n => "\\u" + n.toString(16).padStart(4, "0"); return h(a) + "-" + h(b); }).join("") + "]", "g");
+/** Apelido: sem caracteres de controle/invisíveis, espaços simples, até 16 caracteres (emoji inteiro). */
+function limparApelido(s) {
+  if (typeof s !== "string") return "";
+  const t = s.slice(0, 200).replace(DU_INVIS, "").replace(/\s+/g, " ").trim();
+  return Array.from(t).slice(0, 16).join("").trim();
+}
+const codigoValido = c => typeof c === "string" && c.length === 4 && [...c].every(x => DU_ALFA.includes(x));
+/** Lista de questões da anfitriã: 5, 10 ou 15 ids distintos que existem no banco. Qualquer coisa fora disso → null. */
+function idsValidos(ids) {
+  if (!Array.isArray(ids) || !DUELO.ns.includes(ids.length)) return null;
+  const vistos = new Set();
+  for (const x of ids) {
+    if (typeof x !== "string" || x.length > 64 || vistos.has(x)) return null;
+    const q = qPorId(x); if (!q || q.src !== "banco" || !Array.isArray(q.o) || q.o.length < 2 || q.o.length > 5) return null;
+    vistos.add(x);
+  }
+  return ids.slice();
+}
+function lerJogador(peer) {
+  const p = peer && peer.presence; if (!p || typeof p !== "object") return null;
+  if (!codigoValido(p.duelo)) return null;
+  const papel = p.papel === "anfitriao" || p.papel === "jogador" ? p.papel : null; if (!papel) return null;
+  const ids = papel === "anfitriao" ? idsValidos(p.ids) : null, n = ids ? ids.length : 15;
+  const num = x => typeof x === "number" && isFinite(x) ? x : 0;
+  return { peer: String(peer.peer || "").slice(0, 80), id: p.duelo, papel, ids, apelido: limparApelido(p.apelido) || "Jogador",
+    area: typeof p.area === "string" && /^[a-z]{1,20}$/.test(p.area) ? p.area : "", estado: DU_ESTADOS.includes(p.estado) ? p.estado : "esperando",
+    r: intEntre(p.r, 0, 9999) ?? 0, i: intEntre(p.i, 0, n) ?? 0, pontos: intEntre(p.pontos, 0, n * DUELO.maxPts) ?? 0, acertos: intEntre(p.acertos, 0, n) ?? 0,
+    inicio: num(p.inicio), fimEm: num(p.fimEm), revanche: p.revanche === true, guest: !!peer.guest };
+}
+
+/* ---------- Questões: do objetivo, fáceis/médias, curtas, de preferência inéditas ---------- */
+const areaDuelo = () => objetivo() || "medicina";
+function poolDuelo() {
+  const P = poolJogo().filter(q => q.o.length <= 5);
+  const curtas = P.filter(q => (q.dif || 2) <= 2 && q.q.length <= 360);
+  return curtas.length >= 15 ? curtas : P;
+}
+const dueloDisponivel = () => poolDuelo().length >= 15;
+function montarIdsDuelo(n) {
+  const P = poolDuelo(), novas = embaralhar(P.filter(q => statusQ(q).chave === "nao")), velhas = embaralhar(P.filter(q => statusQ(q).chave !== "nao"));
+  const out = [], fam = new Set();
+  for (const q of novas.concat(velhas)) { if (out.length >= n) break; if (q.familia) { if (fam.has(q.familia)) continue; fam.add(q.familia); } out.push(q.id); }
+  return out;
+}
+/** Ordem das alternativas igual para todos: sorteio com semente = código + rodada + questão. */
+function ordemDuelo(qid, n) {
+  let s = hashTxt(`${DU.id}:${DU.r}:${qid}`) || 1;
+  const rnd = () => { s = (s + 0x6D2B79F5) >>> 0; let t = s; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  const a = [...Array(n).keys()];
+  for (let i = n - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+  return a;
+}
+const pontosDe = (ok, ms) => ok ? 100 + Math.round(50 * Math.max(0, 1 - ms / DUELO.tempo)) : 0;
+
+/* ---------- Estado e presença ---------- */
+function zerarRodada() { Object.assign(DU, { i: 0, resp: null, tq: 0, pontos: 0, acertos: 0, porQ: [], fimEm: 0, jogou: false, contou: false, festejou: false, saiu: {}, lider: null, aviso5: -1, verErros: false, inicio: 0, convite: false, querRevanche: false, aviso: "" }); }
+function zerarDuelo() { pararTiqueDuelo(); clearTimeout(_duEspera); Object.assign(DU, { fase: "inicio", modo: null, papel: null, id: "", ids: [], r: 0, area: "", outros: {}, ninguem: false, erro: "", fantasma: null, hostVisto: false, procurandoDesde: 0 }); zerarRodada(); }
+zerarDuelo();
+const estadoDuelo = () => ({ sala: "esperando", procurando: "esperando", contando: "contando", jogando: "jogando", fim: "fim" })[DU.fase] || "esperando";
+function publicarDuelo() {
+  if (!_duRoom || DU.modo !== "vivo" || !DU.id) return;
+  try {
+    _duRoom.presence({ duelo: DU.id, papel: DU.papel, apelido: DU.apelido, area: DU.area, r: DU.r, estado: estadoDuelo(), ids: DU.papel === "anfitriao" ? DU.ids : null,
+      inicio: DU.inicio || null, i: DU.i, pontos: DU.pontos, acertos: DU.acertos, fimEm: DU.fimEm || null, revanche: DU.fase === "fim" && !!DU.querRevanche }).catch(() => { });
+  } catch (e) { }
+}
+function sairDaSala() {
+  if (!_duRoom) return;
+  try { _duRoom.presence({ duelo: null, papel: null, apelido: null, area: null, r: null, estado: null, ids: null, inicio: null, i: null, pontos: null, acertos: null, fimEm: null, revanche: null }).catch(() => { }); } catch (e) { }
+}
+/** Leitor de tela: uma região só, fora da página (não é refeita a cada render), e só para o que importa. */
+function anunciarDuelo(txt) {
+  let el = document.getElementById("du-anuncio");
+  if (!el) { el = document.createElement("p"); el.id = "du-anuncio"; el.className = "du-anuncio"; el.setAttribute("aria-live", "polite"); el.setAttribute("role", "status"); document.body.appendChild(el); }
+  el.textContent = ""; setTimeout(() => { el.textContent = txt; }, 60);
+}
+const anfitria = () => Object.values(DU.outros).find(j => j.papel === "anfitriao");
+/** Jogadores desta rodada que já estão no jogo (ou no fim). */
+const naPartida = j => j.r === DU.r && j.estado !== "esperando";
+
+function aoMudarSala(ch) {
+  if (DU.modo !== "vivo" || !DU.id) return;
+  const novos = {};
+  for (const peer of ch.peers || []) {
+    if (!peer || peer.sameTab || (peer.kind && peer.kind !== "viewer")) continue;
+    const j = lerJogador(peer); if (j && j.id === DU.id) novos[j.peer] = j;
+  }
+  // Quem estava e sumiu (fechou o app ou saiu do duelo): "X saiu", o duelo continua para os outros.
+  for (const [k, j] of Object.entries(DU.outros)) if (!novos[k]) {
+    DU.saiu[k] = j;
+    if (DU.fase !== "inicio") { anunciarDuelo(`${j.apelido} saiu do duelo.`); toast(`${j.apelido} saiu do duelo`); }
+  }
+  for (const k of Object.keys(novos)) delete DU.saiu[k];
+  DU.outros = novos;
+  reagirDuelo();
+}
+
+/** Decide o que fazer com o que os outros publicaram. */
+function reagirDuelo() {
+  const h = anfitria(), aqui = caminhoAtual() === "/duelo";
+  if (DU.papel === "jogador") {
+    if (!h) {
+      if (DU.hostVisto && (DU.fase === "sala" || DU.fase === "procurando")) { DU.fase = "procurando"; DU.erro = "A anfitriã saiu e o duelo foi cancelado."; DU.hostVisto = false; if (aqui) atualizar(); return; }
+    } else {
+      // Entrando, ou chamado para a revanche
+      const novaRodada = h.r !== DU.r && h.estado === "esperando";
+      if (DU.fase === "procurando" || (DU.fase === "fim" && novaRodada && DU.querRevanche)) {
+        const erro = h.ids ? erroArea(h) : "Este duelo chegou com dados inválidos. Peça para a anfitriã criar outro.";
+        if (erro) { DU.erro = erro; if (aqui) atualizar(); return; }
+        if (DU.fase === "procurando" && h.estado !== "esperando") { DU.erro = "Este duelo já começou. Espere a próxima rodada ou peça uma revanche."; if (aqui) atualizar(); return; }
+        Object.assign(DU, { ids: h.ids, r: h.r, area: h.area, n: h.ids.length, fase: "sala", erro: "", hostVisto: true }); zerarRodada();
+        publicarDuelo(); anunciarDuelo("Você entrou no duelo. Esperando a anfitriã começar."); if (aqui) atualizar(); return;
+      }
+      if (DU.fase === "fim" && novaRodada && !DU.convite) { DU.convite = true; if (aqui) atualizar(); return; }
+      if (DU.fase === "sala" && h.r === DU.r && (h.estado === "contando" || h.estado === "jogando")) { comecarContagem(); return; }
+      if (DU.fase === "sala" && h.ids && h.r !== DU.r && h.estado === "esperando" && !erroArea(h)) { Object.assign(DU, { ids: h.ids, r: h.r, n: h.ids.length }); zerarRodada(); publicarDuelo(); }
+    }
+  }
+  if (DU.fase === "sala" && DU.papel === "anfitriao" && Object.keys(DU.outros).length) DU.ninguem = false;
+  if (!aqui) return;
+  if (DU.fase === "sala" || DU.fase === "procurando" || DU.fase === "fim") { atualizar(); if (DU.fase === "fim") conferirVitoria(); }
+  else if (DU.fase === "jogando" || DU.fase === "contando") atualizarPlacar();
+}
+function erroArea(h) {
+  const o = objetivo();
+  if (o && h.area && h.area !== o) return `Este duelo é de ${DU_AREA_NOME[h.area] || "outra área"} e o seu perfil está em ${DU_AREA_NOME[o] || o}. Para entrar, troque a área em Áreas de estudo.`;
+  if (!h.ids.every(id => doObjetivo(qPorId(id)))) return "Este duelo tem questões de outra área de estudo. Peça para a anfitriã criar outro.";
+  return "";
+}
+
+/* ---------- Fantasma: o seu desempenho anterior (ou a sua média) ---------- */
+function historicoDuelos() { const D = store.doc("jogos"); return (Array.isArray(D.duelos) ? D.duelos : []).filter(h => h && Array.isArray(h.pts) && h.pts.length); }
+function montarFantasma() {
+  const ult = historicoDuelos().filter(h => h.area === DU.area).pop(), n = DU.ids.length;
+  const lim = (x, a, b, d) => typeof x === "number" && isFinite(x) ? Math.max(a, Math.min(b, Math.round(x))) : d;
+  if (ult) {
+    const k = i => i % ult.pts.length;
+    return { nome: "Fantasma", desc: `o seu duelo de ${dataBR(ult.d)}`, plano: DU.ids.map((_, i) => ({ pts: lim(ult.pts[k(i)], 0, DUELO.maxPts, 0), ms: lim(ult.ms?.[k(i)], 1500, DUELO.tempo, 9000) })) };
+  }
+  // Sem histórico: média de acerto nos temas destas questões (ou geral) e o ritmo médio dela.
+  const temas = new Set(DU.ids.map(id => qPorId(id)?.tema).filter(Boolean));
+  let n0 = 0, ac = 0; const tempos = [];
+  for (const q of questoes()) { if (!temas.has(q.tema)) continue; const p = progDe(q); if (!p?.n) continue; n0 += p.n; ac += p.ac; (p.h || []).forEach(t => { if (t[3] > 0) tempos.push(t[3]); }); }
+  if (n0 < 5) { const d = Object.values(store.doc("dias").d); const q = d.reduce((s, x) => s + (x.q || 0), 0), a = d.reduce((s, x) => s + (x.ac || 0), 0); if (q >= 5) { n0 = q; ac = a; } }
+  const taxa = n0 >= 5 ? ac / n0 : 0.6, ritmo = lim(tempos.length ? tempos.reduce((s, x) => s + x, 0) / tempos.length : 9000, 4000, 18000, 9000);
+  const plano = DU.ids.map(qid => { const ok = hashTxt(DU.id + ":" + qid) % 100 < Math.round(taxa * 100); return { pts: pontosDe(ok, ritmo), ms: ritmo }; });
+  return { nome: "Fantasma", desc: `a sua média: ${Math.round(taxa * 100)}% de acerto, ${Math.round(ritmo / 1000)} s por questão`, plano };
+}
+/** Onde o fantasma está agora: responde cada questão no tempo dele e "lê" a explicação por alguns segundos. */
+function estadoFantasma() {
+  const F = DU.fantasma; if (!F) return null;
+  const decorrido = DU.inicio ? Date.now() - DU.inicio : 0; let t = 0, feitas = 0, pontos = 0, acertos = 0;
+  for (const x of F.plano) { t += x.ms; if (t > decorrido) break; feitas++; pontos += x.pts; if (x.pts > 0) acertos++; t += DUELO.leitura; }
+  const n = F.plano.length;
+  return { peer: "fantasma", apelido: "Fantasma", fantasma: true, i: Math.min(feitas, n - 1), feitas, pontos, acertos, estado: feitas >= n ? "fim" : "jogando" };
+}
+
+/* ---------- Placar ---------- */
+function jogadoresDuelo() {
+  const n = DU.ids.length, eu = { peer: "eu", eu: true, apelido: DU.modo === "vivo" ? DU.apelido : "Você", i: DU.i, pontos: DU.pontos, acertos: DU.acertos, estado: estadoDuelo(), feitas: DU.porQ.length };
+  const lista = [eu];
+  if (DU.modo === "fantasma") { const f = estadoFantasma(); if (f) lista.push(f); }
+  else {
+    Object.values(DU.outros).filter(naPartida).forEach(j => lista.push({ ...j, pontos: Math.min(j.pontos, n * DUELO.maxPts), acertos: Math.min(j.acertos, n), i: Math.min(j.i, n - 1) }));
+    Object.values(DU.saiu).filter(naPartida).forEach(j => lista.push({ ...j, saiu: true, pontos: Math.min(j.pontos, n * DUELO.maxPts), i: Math.min(j.i, n - 1) }));
+  }
+  return lista.sort((a, b) => b.pontos - a.pontos || (b.eu ? 1 : 0) - (a.eu ? 1 : 0));
+}
+const nomeJog = j => j.eu ? (DU.modo === "vivo" ? `${esc(j.apelido)} <small>(você)</small>` : "Você") : j.fantasma ? `<span aria-hidden="true">👻</span> Fantasma` : esc(j.apelido);
+function situacaoJog(j) {
+  if (j.saiu) return "saiu";
+  if (j.estado === "fim") return "terminou";
+  if (j.estado === "contando") return "preparando";
+  return `questão ${Math.min(j.i + 1, DU.ids.length)} de ${DU.ids.length}`;
+}
+function htmlPlacar() {
+  const L = jogadoresDuelo(), top = L[0]?.pontos || 0, lider = top > 0 && L.filter(j => j.pontos === top).length === 1 ? L[0] : null;
+  return `<ol class="du-placar">${L.map((j, k) => `<li class="${j.eu ? "eu" : ""}${j === lider ? " lider" : ""}${j.saiu ? " saiu" : ""}">
+    <span class="du-pos" aria-hidden="true">${j === lider ? "👑" : k + 1 + "º"}</span><span class="du-nome"><b>${nomeJog(j)}</b><small>${situacaoJog(j)}${j === lider ? " · lidera" : ""}</small></span>
+    <span class="du-pts"><b>${j.pontos}</b> <small>${j.pontos === 1 ? "ponto" : "pontos"}</small></span></li>`).join("")}</ol>`;
+}
+/** Só o placar (sem refazer a página): chamado quando os outros avançam ou quando o fantasma responde. */
+function atualizarPlacar() {
+  const el = document.getElementById("du-placar"); if (el) el.innerHTML = htmlPlacar();
+  // Mudança de liderança: um aviso falado, no máximo a cada 4 s (sem tagarelar a cada ponto).
+  const L = jogadoresDuelo(), top = L[0]?.pontos || 0, lider = top > 0 && L.filter(j => j.pontos === top).length === 1 ? L[0] : null, chave = lider ? lider.peer : null;
+  if (chave && chave !== DU.lider && Date.now() - _duLiderEm > 4000 && DU.fase === "jogando") {
+    _duLiderEm = Date.now(); anunciarDuelo(lider.eu ? "Você assumiu a liderança." : `${lider.fantasma ? "O fantasma" : lider.apelido} assumiu a liderança.`);
+  }
+  if (chave) DU.lider = chave;
+  const pod = document.getElementById("du-podio"); if (pod && DU.fase === "fim" && DU.modo === "fantasma") { pod.outerHTML = htmlPodio(); conferirVitoria(); }
+}
+
+/* ---------- Relógio: contagem 3-2-1, 20 s por questão, fantasma ---------- */
+function tiqueDuelo() {
+  const agora = Date.now();
+  if (DU.fase === "contando") {
+    const s = Math.max(1, Math.ceil((DU.inicio - agora) / 1000)), el = document.getElementById("du-conta");
+    if (el && el.textContent !== String(s)) el.textContent = s;
+    if (agora >= DU.inicio) comecarJogo();
+    return;
+  }
+  if (DU.fase === "jogando") {
+    if (DU.resp == null) {
+      const resta = Math.max(0, DUELO.tempo - (agora - DU.tq)), seg = Math.ceil(resta / 1000);
+      const el = document.getElementById("du-tempo"); if (el) { el.textContent = seg + " s"; el.classList.toggle("pouco", seg <= 5); }
+      const b = document.getElementById("du-barra"); if (b) b.style.width = (100 * resta / DUELO.tempo).toFixed(1) + "%";
+      if (seg <= 5 && DU.aviso5 !== DU.i) { DU.aviso5 = DU.i; anunciarDuelo("Faltam 5 segundos."); }
+      if (resta <= 0) { responderDuelo(-1); return; }
+    }
+    if (DU.modo === "fantasma") { const f = estadoFantasma(), k = f ? f.feitas : 0; if (k !== DU._fk) { DU._fk = k; atualizarPlacar(); } }
+    return;
+  }
+  if (DU.fase === "fim" && DU.modo === "fantasma") { const f = estadoFantasma(); if (f && f.feitas !== DU._fk) { DU._fk = f.feitas; atualizarPlacar(); } if (!f || f.estado === "fim") pararTiqueDuelo(); return; }
+  pararTiqueDuelo();
+}
+function iniciarTiqueDuelo() { pararTiqueDuelo(); _duTimer = setInterval(tiqueDuelo, 200); }
+function pararTiqueDuelo() { if (_duTimer) { clearInterval(_duTimer); _duTimer = null; } }
+
+function comecarContagem() {
+  if (DU.fase === "contando" || DU.fase === "jogando") return;
+  zerarRodada(); DU.fase = "contando"; DU.inicio = Date.now() + DUELO.conta;
+  publicarDuelo(); anunciarDuelo("O duelo vai começar em 3 segundos.");
+  if (caminhoAtual() === "/duelo") render({ topo: true }); else ir("#/duelo");
+  iniciarTiqueDuelo();
+}
+function comecarJogo() {
+  DU.fase = "jogando"; DU.i = 0; DU.resp = null; DU.tq = Date.now(); DU._fk = 0;
+  if (DU.modo === "fantasma") DU.inicio = Date.now();
+  publicarDuelo(); if (caminhoAtual() === "/duelo") render({ topo: true });
+  iniciarTiqueDuelo(); focarQuestaoDuelo();
+}
+const focarQuestaoDuelo = () => setTimeout(() => document.querySelector('#du-jogo [data-act="du-alt"]')?.focus({ preventScroll: true }), 0);
+function responderDuelo(k) {
+  if (DU.fase !== "jogando" || DU.resp != null) return;
+  const q = qPorId(DU.ids[DU.i]); if (!q) return;
+  const ms = Math.min(DUELO.tempo, Date.now() - DU.tq), ok = k === q.c, pts = k >= 0 ? pontosDe(ok, ms) : 0;
+  DU.resp = k; DU.pontos += pts; if (ok) DU.acertos++;
+  DU.porQ.push({ qid: q.id, ok: ok ? 1 : 0, pts, ms });
+  if (k >= 0) { DU.jogou = true; registrarResposta(q, k, ms, "jogo"); }
+  som(ok ? "ok" : "erro"); publicarDuelo();
+  if (caminhoAtual() === "/duelo") render();
+  setTimeout(() => { const v = document.querySelector("#du-jogo .veredito"); if (v) { v.focus({ preventScroll: true }); if (ok) confete(v); } }, 0);
+}
+function proximaDuelo() {
+  if (DU.fase !== "jogando" || DU.resp == null) return;
+  if (DU.i + 1 >= DU.ids.length) { terminarDuelo(); return; }
+  DU.i++; DU.resp = null; DU.tq = Date.now(); publicarDuelo(); render({ topo: true }); focarQuestaoDuelo();
+}
+function terminarDuelo() {
+  DU.fase = "fim"; DU.fimEm = Date.now(); publicarDuelo();
+  if (DU.jogou && !DU.contou) {
+    DU.contou = true;
+    const D = store.doc("jogos"); D.n.duelo = (D.n.duelo || 0) + 1;
+    if (DU.pontos > (D.rec.duelo || 0)) D.rec.duelo = DU.pontos;
+    D.duelos = (Array.isArray(D.duelos) ? D.duelos : []).concat([{ d: hoje(), ts: Date.now(), area: DU.area, modo: DU.modo, n: DU.ids.length, pts: DU.porQ.map(x => x.pts), ms: DU.porQ.map(x => x.ms), ok: DU.porQ.map(x => x.ok) }]).slice(-20);
+    store.mudou("jogos");
+    jornada("jogo", { acertos: DU.acertos });
+  }
+  if (DU.modo === "vivo" || estadoFantasma()?.estado !== "fim") iniciarTiqueDuelo(); else pararTiqueDuelo();
+  if (caminhoAtual() === "/duelo") render({ topo: true });
+  const L = jogadoresDuelo(); som(L[0]?.eu ? "festa" : "fim");
+  setTimeout(() => { confete(document.querySelector("#du-podio h2"), 26); soltarCelebracoes(); conferirVitoria(); }, 80);
+  anunciarDuelo(`Fim! Você fez ${plural(DU.pontos, "ponto", "pontos")} e acertou ${DU.acertos} de ${DU.ids.length}.`);
+}
+/** Todos terminaram e ela ficou em 1º: comemoração (cartão flutuante, não bloqueia; confete respeita "reduzir movimento"). */
+function conferirVitoria() {
+  if (DU.festejou || DU.fase !== "fim") return;
+  const L = jogadoresDuelo(); if (L.length < 2 || L.some(j => j.estado !== "fim" && !j.saiu)) return;
+  DU.festejou = true;
+  if (L[0].eu && L[0].pontos > (L[1]?.pontos || 0)) { som("festa"); celebrar(DU.modo === "fantasma" ? "Você venceu o fantasma!" : "Você venceu o duelo!", null, true); }
+}
+
+/* ---------- Telas ---------- */
+function htmlPodio() {
+  const L = jogadoresDuelo(), degraus = L.slice(0, 3), resto = L.slice(3), n = DU.ids.length, alguemJogando = L.some(j => j.estado !== "fim" && !j.saiu);
+  const msg = L[0]?.eu && !alguemJogando && L.length > 1 && L[0].pontos > L[1].pontos ? "Você venceu!" : alguemJogando ? "Você terminou!" : "Fim do duelo";
+  return `<section class="caixa du-podio" id="du-podio"><h2 class="sec com-ilu" style="gap:10px">${mascote(L[0]?.eu ? "festa" : "feliz", 72)}${msg}</h2>
+    <ol class="du-degraus" aria-label="Pódio">${degraus.map(j => { const pos = L.indexOf(j) + 1;
+      return `<li class="d${pos}${j.eu ? " eu" : ""}"><span class="du-medalha" aria-hidden="true">${["🥇", "🥈", "🥉"][pos - 1]}</span><b>${nomeJog(j)}</b><span>${plural(j.pontos, "ponto", "pontos")}</span><small>${pos}º lugar${j.saiu ? " · saiu" : j.estado !== "fim" ? " · ainda jogando" : ""}</small><i aria-hidden="true">${pos}</i></li>`; }).join("")}</ol>
+    ${resto.length ? `<ol class="du-placar" start="4">${resto.map(j => `<li><span class="du-pos" aria-hidden="true">${L.indexOf(j) + 1}º</span><span class="du-nome"><b>${nomeJog(j)}</b><small>${situacaoJog(j)}</small></span><span class="du-pts"><b>${j.pontos}</b></span></li>`).join("")}</ol>` : ""}
+    ${alguemJogando ? `<p class="aviso info">${L.filter(j => j.estado !== "fim" && !j.saiu).map(j => `${j.fantasma ? "O fantasma" : nomeJog(j)} ainda está na questão ${Math.min(j.i + 1, n)}`).join(" · ")}. O pódio se atualiza sozinho.</p>` : ""}
+    <div class="kpis"><div class="kpi"><b>${DU.pontos}</b><span>seus pontos</span></div><div class="kpi"><b>${DU.acertos}/${n}</b><span>acertos</span></div>
+    <div class="kpi"><b>${mmss(DU.porQ.reduce((s, x) => s + x.ms, 0) / Math.max(1, DU.porQ.length))}</b><span>tempo médio</span></div></div></section>`;
+}
+function telaQuestaoDuelo() {
+  const qid = DU.ids[DU.i], q = qPorId(qid), n = DU.ids.length; if (!q) return vazio("Esta questão não está disponível.");
+  const respondeu = DU.resp != null, ordem = ordemDuelo(qid, q.o.length), ult = DU.porQ[DU.porQ.length - 1];
+  const resta = respondeu ? 0 : Math.max(0, DUELO.tempo - (Date.now() - DU.tq));
+  const alts = ordem.map((i, pos) => { const s = !respondeu ? "" : i === q.c ? "ok" : i === DU.resp ? "bad" : "";
+    return `<li><button class="alt" data-act="du-alt" data-i="${i}" data-s="${s}" ${respondeu ? "disabled" : ""}>${formaAlt(pos)}<span>${esc(q.o[i])}</span></button></li>`; }).join("");
+  const ok = respondeu && DU.resp === q.c, letra = LETRAS[ordem.indexOf(q.c)];
+  const volta = respondeu ? `<div class="retorno"><p class="veredito ${ok ? "ok" : "bad"}" tabindex="-1">${ok ? `✓ ${esc(sorteio(ELOGIOS))} +${ult.pts} pontos` : DU.resp < 0 ? "Tempo esgotado" : "Não foi dessa vez"}</p>
+      ${ok ? "" : `<p class="leitura" style="margin:0 0 8px"><b>Resposta certa (${letra}):</b> ${esc(q.o[q.c])}</p>`}
+      <div class="explica"><h3>${ilustra("livro", "#2340B8", "p")}Por quê</h3><p class="leitura">${esc(explicacaoCurta(q.e))}</p></div>
+      <div class="acoes"><button class="btn grande" data-act="du-prox">${DU.i + 1 < n ? "Próxima questão" : "Ver o pódio"}</button></div></div>` : "";
+  return `<div class="du-topo"><span>Questão <b>${DU.i + 1}</b> de ${n}</span><span id="du-tempo" class="jg-tempo${resta <= 5000 && !respondeu ? " pouco" : ""}">${respondeu ? "—" : Math.ceil(resta / 1000) + " s"}</span>
+      <div class="du-tempo-barra" aria-hidden="true"><i id="du-barra" style="width:${(100 * resta / DUELO.tempo).toFixed(1)}%"></i></div></div>
+    <section class="du-ao-vivo" aria-label="Placar ao vivo"><h2 class="lab">Placar ao vivo</h2><div id="du-placar">${htmlPlacar()}</div></section>
+    <div class="caixa" id="du-jogo"><div class="linha entre" style="margin-bottom:8px">${nivelQ(q)}</div><p class="enunciado">${esc(q.q)}</p><ol class="alts alts-jogo">${alts}</ol>${volta}</div>`;
+}
+/** Explicação curta: as primeiras frases (até ~260 caracteres), sem o "Para lembrar". */
+function explicacaoCurta(e) {
+  const corpo = String(e || "Sem explicação cadastrada.").split(/\s*Para lembrar:\s*/)[0], frases = corpo.match(/[^.!?]+[.!?]+(\s+|$)/g) || [corpo];
+  let out = ""; for (const f of frases) { if (out && (out + f).length > 260) break; out += f; }
+  return (out || corpo).trim().slice(0, 400);
+}
+function listaSala() {
+  const eu = `<li class="eu"><span class="du-nome"><b>${esc(DU.apelido)} <small>(você)</small></b><small>${DU.papel === "anfitriao" ? "anfitriã" : "pronta"}</small></span></li>`;
+  const outros = Object.values(DU.outros).sort((a, b) => (a.papel === "anfitriao" ? -1 : 0) - (b.papel === "anfitriao" ? -1 : 0)).map(j =>
+    `<li><span class="du-nome"><b>${esc(j.apelido)}</b><small>${j.papel === "anfitriao" ? "anfitriã" : j.r === DU.r && j.estado === "esperando" ? "pronta" : j.estado === "fim" ? (DU.papel === "anfitriao" ? "quer revanche?" : "no pódio") : "jogando"}</small></span></li>`).join("");
+  return `<ul class="du-sala" aria-label="Quem está no duelo">${eu}${outros}</ul>`;
+}
+const prontosNaSala = () => Object.values(DU.outros).filter(j => j.r === DU.r && j.estado === "esperando");
+const codigoFalado = c => [...c].join(" ");
+const chipsN = () => `<div class="chips" role="group" aria-label="Número de questões">${DUELO.ns.map(n => `<button type="button" class="chip" data-act="du-n" data-v="${n}" aria-pressed="${n === DU.n}">${n} questões</button>`).join("")}</div>`;
+const apelidoPadrao = () => DU.apelido || limparApelido(ls.get("gab2:duelo-apelido", "")) || "";
+
+function paginaDuelo() {
+  const base = { secao: "jogos", crumbs: [["Jogos", "#/jogos"]], titulo: DU.modo === "fantasma" && ["contando", "jogando", "fim"].includes(DU.fase) ? "Contra o fantasma" : "Duelo ao vivo", ilu: ilustra("escudo", "#B42318", "g"), cor: "#B42318" };
+  const nomeArea = DU_AREA_NOME[DU.area || areaDuelo()] || "seu foco";
+  if (!dueloDisponivel()) return { ...base, html: vazio("Ainda não há questões suficientes da sua área para um duelo.", `<a class="btn" href="#/jogos">Voltar aos jogos</a>`) };
+  const sair = `<div class="acoes"><button class="btn sec mini" data-act="du-sair">Sair do duelo</button></div>`;
+  switch (DU.fase) {
+    case "config": {
+      const vivo = DU.modo === "vivo";
+      return { ...base, sub: vivo ? "Crie a sala e chame uma amiga." : "Jogue contra o seu próprio desempenho.", html: `<form class="caixa pilha du-form" data-form="du-criar">
+        <span class="lab">Quantas questões?</span>${chipsN()}
+        <p class="small muted" style="margin:0">Questões de ${esc(nomeArea)}, níveis fácil e médio · 20 s cada · acerto vale 100 pontos + até 50 de rapidez.</p>
+        ${vivo ? `<label class="campo"><span class="lab">Seu apelido no duelo</span><input type="text" id="du-apelido" class="du-campo" maxlength="16" autocomplete="off" value="${esc(apelidoPadrao())}" placeholder="Ex.: Kiny" aria-describedby="du-ap-ajuda"></label>
+        <p class="small muted" id="du-ap-ajuda" style="margin:0">Aparece para quem jogar com você. Use um apelido, não precisa ser o seu nome.</p>` : ""}
+        <button class="btn grande azul">${vivo ? "Criar duelo" : "Começar contra o fantasma"}</button></form>
+        <div class="acoes"><button class="btn sec" data-act="du-voltar">Voltar</button></div>` };
+    }
+    case "entrar":
+      return { ...base, sub: "Digite o código que a sua amiga está vendo.", html: `<form class="caixa pilha du-form" data-form="du-entrar">
+        <label class="campo"><span class="lab">Código do duelo</span><input type="text" id="du-codigo" class="du-campo du-campo-codigo" maxlength="4" autocomplete="off" autocapitalize="characters" spellcheck="false" inputmode="text" placeholder="XXXX" value="${esc(DU.codigoDigitado || "")}"></label>
+        <label class="campo"><span class="lab">Seu apelido no duelo</span><input type="text" id="du-apelido" class="du-campo" maxlength="16" autocomplete="off" value="${esc(apelidoPadrao())}" placeholder="Ex.: Ana"></label>
+        ${DU.erro ? `<p class="aviso" role="alert">${esc(DU.erro)}</p>` : ""}
+        <button class="btn grande azul">Entrar</button></form><div class="acoes"><button class="btn sec" data-act="du-voltar">Voltar</button></div>` };
+    case "procurando": {
+      const demorou = Date.now() - DU.procurandoDesde > DUELO.espera;
+      return { ...base, sub: `Código ${esc(DU.id)}`, html: `<div class="caixa du-espera">${DU.erro ? `<p class="aviso" role="alert">${esc(DU.erro)}</p>` : `${falaMascote(`Procurando o duelo <b class="du-cod-mini">${esc(DU.id)}</b>…`, "pensando")}<p class="muted">Confira se a sua amiga está com a tela do duelo aberta e se o código está certo.</p>`}
+        ${demorou && !DU.erro ? `<p class="aviso">Não achamos esse duelo. Enquanto isso, que tal desafiar o fantasma?</p>` : ""}
+        <div class="acoes"><button class="btn sec" data-act="du-entrar">Digitar outro código</button><button class="btn sec" data-act="du-fantasma">Desafiar o fantasma <span aria-hidden="true">👻</span></button></div></div>${sair}` };
+    }
+    case "sala": {
+      const host = DU.papel === "anfitriao", prontos = prontosNaSala().length;
+      return { ...base, sub: host ? "Sala criada. Chame a sua amiga!" : "Você está na sala.", html: `<div class="caixa du-espera">
+        ${host ? `<p class="lab">Código do duelo</p><p class="du-codigo" aria-label="Código: ${esc(codigoFalado(DU.id))}">${esc(DU.id)}</p>
+          <p class="du-instrucao">Peça para sua amiga abrir este mesmo app e tocar em <b>Jogos → Duelo ao vivo → Entrar com código</b> e digitar <b>${esc(DU.id)}</b>.</p>`
+        : `${falaMascote("Tudo pronto! Esperando a anfitriã tocar em Começar.", "feliz")}`}
+        <p class="small muted">${plural(DU.ids.length, "questão", "questões")} de ${esc(DU_AREA_NOME[DU.area] || "")} · 20 s cada · mesma ordem para todas</p>
+        <h2 class="lab">Quem está aqui</h2>${listaSala()}
+        ${host && DU.ninguem && !Object.keys(DU.outros).length ? `<p class="aviso" role="status">Ninguém entrou ainda. Quer jogar estas mesmas questões contra o fantasma?</p>` : ""}
+        <div class="acoes">${host ? `<button class="btn grande azul" data-act="du-comecar" ${prontos ? "" : "disabled"}>${prontos ? "Começar" : "Começar (esperando alguém entrar)"}</button>` : ""}
+          ${host ? `<button class="btn sec" data-act="du-fantasma" data-mesmas="1">Desafiar o fantasma <span aria-hidden="true">👻</span></button>` : ""}</div></div>${sair}` };
+    }
+    case "contando":
+      return { ...base, html: `<div class="caixa du-contagem"><p class="lab">${DU.modo === "fantasma" ? "Contra o fantasma" : "Prepare-se!"}</p><p id="du-conta" class="du-conta" aria-hidden="true">${Math.max(1, Math.ceil((DU.inicio - Date.now()) / 1000))}</p>
+        <p class="du-instrucao">${plural(DU.ids.length, "questão", "questões")} · 20 s cada</p></div>
+        <section class="du-ao-vivo" aria-label="Quem joga"><h2 class="lab">Quem joga</h2><div id="du-placar">${htmlPlacar()}</div></section>` };
+    case "jogando":
+      return { ...base, html: telaQuestaoDuelo() + sair };
+    case "fim": {
+      const erradas = DU.porQ.filter(x => !x.ok).map(x => x.qid).filter(qPorId), host = DU.papel === "anfitriao";
+      const querem = DU.modo === "vivo" && host ? Object.values(DU.outros).filter(j => j.r === DU.r && j.revanche) : [];
+      return { ...base, html: `${htmlPodio()}
+        ${DU.modo === "fantasma" && DU.fantasma ? `<p class="small muted">O fantasma repetiu ${esc(DU.fantasma.desc)}.</p>` : ""}
+        ${querem.length ? `<p class="aviso info" role="status">${querem.map(j => esc(j.apelido)).join(" e ")} ${querem.length > 1 ? "querem" : "quer"} revanche!</p>` : ""}
+        ${DU.convite ? `<p class="aviso info" role="status">A anfitriã abriu a revanche! Toque em Revanche para entrar.</p>` : ""}
+        ${DU.querRevanche && !DU.convite && !host && DU.modo === "vivo" ? `<p class="aviso info" role="status">Esperando a anfitriã abrir a revanche…</p>` : ""}
+        <div class="acoes"><button class="btn grande azul" data-act="du-revanche">Revanche</button>
+          ${erradas.length ? `<button class="btn sec" data-act="du-errei" aria-expanded="${!!DU.verErros}">${DU.verErros ? "Esconder as que errei" : erradas.length === 1 ? "Ver a questão que errei" : `Ver as ${erradas.length} questões que errei`}</button>` : ""}
+          <a class="btn sec" href="#/jogos" data-act="du-jogos">Voltar aos jogos</a></div>
+        ${DU.verErros && erradas.length ? `<section><h2 class="sec">Questões que errei</h2>${listaQuestoes(erradas.map(qPorId), 15)}</section>` : ""}` };
+    }
+    default: {
+      const carregando = _duRoom === undefined;
+      return { ...base, sub: "As mesmas questões, ao mesmo tempo, com uma amiga. Placar ao vivo!", html: `<div class="caixa jg-intro">
+        ${falaMascote("Desafie uma amiga: mesmas questões, mesma ordem, 20 segundos cada. Quem acerta mais rápido leva!", "feliz")}
+        <p class="small muted" style="margin:0">Questões de ${esc(nomeArea)} · você escolhe 5, 10 ou 15.</p>
+        ${carregando ? `<p class="muted" role="status">Procurando a sala ao vivo…</p>` : !salaOk() ? `<p class="aviso">O duelo ao vivo precisa do app aberto pelo link do Claude, com a sala ao vivo ligada. Aqui você pode desafiar o fantasma: o seu próprio desempenho.</p>` : ""}
+        <div class="du-opcoes">
+          ${salaOk() || carregando ? `<button class="btn grande azul" data-act="du-criar">Criar duelo</button><button class="btn grande" data-act="du-entrar">Entrar com código</button>` : ""}
+          <button class="btn grande ${salaOk() || carregando ? "sec" : "azul"}" data-act="du-fantasma">Desafiar o fantasma <span aria-hidden="true">👻</span></button></div></div>
+        ${historicoDuelos().length ? `<p class="small muted">Seu recorde no duelo: ${plural(store.doc("jogos").rec.duelo || 0, "ponto", "pontos")} · ${plural(historicoDuelos().length, "partida guardada", "partidas guardadas")} para o fantasma.</p>` : ""}` };
+    }
+  }
+}
+rota("/duelo", () => { if (_duRoom === undefined) salaDuelo(); return paginaDuelo(); });
+
+/** Cartão grande no hub de Jogos. */
+const cartaoDuelo = () => dueloDisponivel() ? `<section class="du-hub"><a class="jg-cartao du-cartao" href="#/duelo" style="--h:#B42318">${ilustra("escudo", "#B42318", "g")}<div>
+  <b>Duelo ao vivo <span aria-hidden="true">⚔️</span></b><small>Chame uma amiga: as mesmas questões ao mesmo tempo, com placar ao vivo. Sozinha? Enfrente o seu fantasma.</small>
+  ${store.doc("jogos").rec.duelo ? `<span class="pill">Recorde: ${plural(store.doc("jogos").rec.duelo, "ponto", "pontos")}</span>` : ""}</div></a></section>` : "";
+
+/* ---------- Ações ---------- */
+function novoCodigo() { let c = ""; for (let i = 0; i < 4; i++) c += DU_ALFA[Math.floor(Math.random() * DU_ALFA.length)]; return c; }
+ACOES["du-criar"] = async () => { const r = await salaDuelo(); if (!r) { toast("O duelo ao vivo não está disponível aqui. Desafie o fantasma!"); atualizar(); return; } zerarDuelo(); Object.assign(DU, { fase: "config", modo: "vivo" }); atualizar(); };
+ACOES["du-fantasma"] = el => {
+  if (el?.dataset?.mesmas && DU.ids.length) { sairDaSala(); clearTimeout(_duEspera); Object.assign(DU, { modo: "fantasma", papel: null, outros: {} }); DU.fantasma = montarFantasma(); comecarContagem(); return; }
+  zerarDuelo(); Object.assign(DU, { fase: "config", modo: "fantasma" }); atualizar();
+};
+ACOES["du-entrar"] = async () => { sairDaSala(); zerarDuelo(); DU.codigoDigitado = ""; DU.fase = "entrar"; atualizar(); setTimeout(() => document.getElementById("du-codigo")?.focus(), 0); const r = await salaDuelo(); if (!r && DU.fase === "entrar") { DU.fase = "inicio"; atualizar(); } };
+ACOES["du-voltar"] = () => { sairDaSala(); zerarDuelo(); atualizar(); };
+ACOES["du-n"] = el => { const n = +el.dataset.v; if (!DUELO.ns.includes(n)) return; DU.n = n; document.querySelectorAll('[data-act="du-n"]').forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.v === n))); };
+FORMS["du-criar"] = () => {
+  const n = DUELO.ns.includes(DU.n) ? DU.n : 10;
+  Object.assign(DU, { area: areaDuelo(), r: 0, ids: montarIdsDuelo(n), outros: {}, ninguem: false }); zerarRodada();
+  if (DU.ids.length < n) { toast("Não há questões suficientes da sua área."); return; }
+  if (DU.modo === "fantasma") { DU.id = novoCodigo(); DU.fantasma = montarFantasma(); comecarContagem(); return; }
+  const ap = limparApelido($("#du-apelido")?.value); if (!ap) { toast("Escolha um apelido"); $("#du-apelido")?.focus(); return; }
+  ls.set("gab2:duelo-apelido", ap);
+  Object.assign(DU, { apelido: ap, papel: "anfitriao", id: novoCodigo(), fase: "sala" });
+  publicarDuelo(); atualizar(); anunciarDuelo(`Duelo criado. Código ${codigoFalado(DU.id)}.`);
+  clearTimeout(_duEspera);
+  _duEspera = setTimeout(() => { if (DU.fase === "sala" && DU.papel === "anfitriao" && !Object.keys(DU.outros).length) { DU.ninguem = true; anunciarDuelo("Ninguém entrou ainda. Você pode desafiar o fantasma."); if (caminhoAtual() === "/duelo") atualizar(); } }, DUELO.espera);
+  reagirDuelo();
+};
+FORMS["du-entrar"] = () => {
+  const cod = String($("#du-codigo")?.value || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 4), ap = limparApelido($("#du-apelido")?.value);
+  DU.codigoDigitado = cod; if (ap) DU.apelido = ap;   // o que ela digitou continua no campo se houver aviso
+  if (!codigoValido(cod)) { DU.erro = "O código tem 4 letras ou números (sem O, I nem L). Confira com a sua amiga."; atualizar(); $("#du-codigo")?.focus(); return; }
+  if (!ap) { DU.erro = "Escolha um apelido."; atualizar(); $("#du-apelido")?.focus(); return; }
+  ls.set("gab2:duelo-apelido", ap);
+  Object.assign(DU, { modo: "vivo", papel: "jogador", id: cod, apelido: ap, fase: "procurando", erro: "", procurandoDesde: Date.now(), area: areaDuelo() });
+  publicarDuelo(); atualizar(); anunciarDuelo(`Procurando o duelo ${codigoFalado(cod)}.`);
+  setTimeout(() => { if (DU.fase === "procurando" && DU.id === cod && caminhoAtual() === "/duelo") atualizar(); }, DUELO.espera + 100);
+  if (_duRoom) aoMudarSala({ peers: _duRoom.peers() });
+};
+ACOES["du-comecar"] = () => { if (DU.papel !== "anfitriao" || DU.fase !== "sala" || !prontosNaSala().length) return; clearTimeout(_duEspera); comecarContagem(); };
+ACOES["du-alt"] = el => responderDuelo(+el.dataset.i);
+ACOES["du-prox"] = () => proximaDuelo();
+ACOES["du-sair"] = () => { sairDaSala(); zerarDuelo(); render({ topo: true }); };
+ACOES["du-jogos"] = () => { if (DU.fase === "fim") { sairDaSala(); zerarDuelo(); } };
+ACOES["du-errei"] = () => { DU.verErros = !DU.verErros; atualizar(); if (DU.verErros) setTimeout(() => document.querySelector("#view .lista-q a")?.focus(), 0); };
+ACOES["du-revanche"] = () => {
+  if (DU.modo === "fantasma") { const n = DU.ids.length; DU.ids = montarIdsDuelo(n); DU.r++; DU.fantasma = montarFantasma(); comecarContagem(); return; }
+  if (DU.papel === "anfitriao") {
+    const n = DU.ids.length; Object.assign(DU, { ids: montarIdsDuelo(n), r: DU.r + 1, fase: "sala", ninguem: false }); zerarRodada();
+    publicarDuelo(); render({ topo: true }); anunciarDuelo("Revanche aberta. Quando todas estiverem prontas, toque em Começar."); return;
+  }
+  DU.querRevanche = true; DU.convite = false; publicarDuelo(); reagirDuelo(); if (DU.fase === "fim") atualizar();
+};
+/* Teclado: A–E escolhem, Enter vai para a próxima (fora de campos e com nenhuma folha aberta). */
+document.addEventListener("keydown", e => {
+  if (DU.fase !== "jogando" || caminhoAtual() !== "/duelo" || e.ctrlKey || e.metaKey || e.altKey || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName) || $("#camada").innerHTML) return;
+  if ((e.key === "Enter" || e.key === " ") && /^(BUTTON|A)$/.test(e.target.tagName)) return;
+  const pos = LETRAS.indexOf(e.key.toUpperCase());
+  if (pos >= 0 && DU.resp == null) { const q = qPorId(DU.ids[DU.i]); const ordem = q && ordemDuelo(q.id, q.o.length); if (ordem && pos < ordem.length) { e.preventDefault(); responderDuelo(ordem[pos]); } }
+  else if (e.key === "Enter" && DU.resp != null) { e.preventDefault(); proximaDuelo(); }
+});
+/* Fechar o app no meio: a presença some sozinha (a sala limpa quem sai); aqui só paramos o relógio. */
+addEventListener("pagehide", () => { pararTiqueDuelo(); });
+
+/* ---- 42-provas.js ---- */
+/* ============================================================
+   42-provas — "Minhas provas": contagem regressiva e plano automático até a prova.
+   Fontes de provas:
+     (a) avaliações de Meu curso (tipo prova / prova prática) com data futura — academico.aval[id];
+     (b) provas cadastradas aqui — store.doc("plano").itens["pv…"] = {id, tipo:"prova", nome, dataProva, temas[], peso, dom, obj, criado, prep}.
+         Ficam no mapa "itens" do plano porque a sincronização mescla esse mapa ITEM A ITEM (03-store, mesclarMapa):
+         editar uma prova num aparelho não apaga outra criada no outro. Não têm campo "data", então não entram
+         nas listas do Planejamento (19-plano filtra tipo "prova"), nas pendências (04-estudo) nem no Início como item do plano.
+   Plano de cada prova: prep = {chave, calc, dias:[{d, tipo, u:[unidades], nq}], feitos:{AAAA-MM-DD:{tipo, u, nq}}}.
+     Recalculado quando muda a data, os temas, a meta diária ou o dia (o que ficou para trás é redistribuído).
+   Unidade de estudo: id de tema (Medicina e ENEM), "d:<disciplina do ENEM>" ou "disc:<nome>" (Direito/OAB).
+   Datas: sempre as que a pessoa informar. O app nunca preenche data oficial de prova.
+   ============================================================ */
+const PROVA_TIPOS_CURSO = ["prova", "pratica"];
+const DOM_OBJ = { medicina: "medicina", residencia: "medicina", enem: "enem", direito: "direito", oab: "direito" };
+const domProva = () => DOM_OBJ[objetivo()] || null;
+const IMPORTANCIA = [[1, "Normal"], [2, "Alta"], [3, "Muito alta"]];
+const PROVAS_UI = { confirmar: null };   // id da prova com a exclusão aguardando confirmação (na própria página)
+
+/* ---------- Fontes ---------- */
+const registrosProva = () => Object.values(store.doc("plano").itens).filter(r => r && r.tipo === "prova");
+const provaVisivel = r => !domProva() || !r.dom || r.dom === domProva();
+function vmMinha(r) { return { id: r.id, origem: "minha", nome: r.nome || "Prova", data: r.dataProva || null, temas: Array.isArray(r.temas) ? r.temas : [], peso: +r.peso || 1, rec: r, salvar: () => store.mudou("plano") }; }
+function vmAval(a) {
+  const g = minhaGrade(), disc = nomeItem(g, a.disc);
+  return { id: a.id, origem: "curso", nome: a.titulo || `${TIPO_AVAL[a.tipo] || "Prova"}${disc ? " de " + disc : ""}`, disc, data: a.data || null, temas: Array.isArray(a.temas) ? a.temas : [], peso: 1, rec: a, salvar: () => store.mudou("academico") };
+}
+/** Provas do curso só aparecem quando "Meu curso" é do objetivo (Medicina/Direito), nunca para ENEM. */
+const cursoNoObjetivo = () => !foraDoObjetivo().includes("curso") && !!objetivo();
+function todasProvas() {
+  const minhas = registrosProva().filter(provaVisivel).map(vmMinha);
+  const curso = cursoNoObjetivo() ? avals().filter(a => !a.feito && a.data && PROVA_TIPOS_CURSO.includes(a.tipo || "prova")).map(vmAval) : [];
+  return [...minhas, ...curso].filter(p => p.data).sort((a, b) => a.data.localeCompare(b.data) || a.nome.localeCompare(b.nome, "pt"));
+}
+/** Só as que ainda vão acontecer (hoje inclusive). Provas passadas saem (nunca riscadas). */
+const provasFuturas = () => todasProvas().filter(p => p.data >= hoje());
+function provaPorId(id) {
+  const r = store.doc("plano").itens[id]; if (r && r.tipo === "prova") return vmMinha(r);
+  const a = acad().aval[id]; return a && cursoNoObjetivo() ? vmAval(a) : null;
+}
+
+/* ---------- Unidades de estudo e desempenho ---------- */
+function nomeUnidade(u) {
+  if (u.startsWith("d:")) return ENEM_DISC[u.slice(2)]?.nome || u.slice(2);
+  if (u.startsWith("disc:")) return u.slice(5);
+  return nomeTema(u);
+}
+const _qu = { k: null, m: {} };
+/** Questões do objetivo de uma unidade (com cache por render). */
+function questoesUnidade(u) {
+  const chave = questoes().length + "|" + objetivo();
+  if (_qu.k !== chave) { _qu.k = chave; _qu.m = {}; }
+  if (_qu.m[u]) return _qu.m[u];
+  const Q = questoes().filter(doObjetivo);
+  let r;
+  if (u.startsWith("d:")) { const d = u.slice(2), nome = norm(ENEM_DISC[d]?.nome || ""); r = Q.filter(q => q.t === "enem" && (TEMAS[q.tema]?.disciplinaId === d || (!TEMAS[q.tema] && norm(q.disc) === nome))); }
+  else if (u.startsWith("disc:")) r = Q.filter(q => q.disc === u.slice(5));
+  else r = Q.filter(q => q.tema === u);
+  return _qu.m[u] = r;
+}
+/** Força na unidade (0 = fraca, 1 = forte). Sem estudo conta como fraca (0,3); com poucas respostas, suavizado. */
+function forcaUnidade(u) {
+  let n = 0, ac = 0;
+  questoesUnidade(u).forEach(q => { const p = progDe(q); if (p?.n) { n += p.n; ac += p.ac; } });
+  const revisto = TEMAS[u] && store.doc("revisoes").temas[u];
+  return { n, ac, score: n ? (ac + 1) / (n + 2) : revisto ? 0.55 : 0.3 };
+}
+/** Unidades que a prova pode ter, conforme o objetivo do perfil (para o formulário). */
+function unidadesDoObjetivo() {
+  const o = objetivo();
+  if (o === "medicina" || o === "residencia") return Object.values(TEMAS).filter(t => t.dominio !== "enem" && temaDoObjetivo(t)).map(t => t.id);
+  if (o === "enem") return Object.keys(ENEM_DISC).map(d => "d:" + d);
+  if (o === "direito" || o === "oab") return unicos(questoes().filter(doObjetivo).map(q => q.disc)).map(d => "disc:" + d);
+  return [];
+}
+/** Prova sem temas: os pontos fracos gerais do objetivo (e, na Medicina, os temas do período). */
+function unidadesPadrao() {
+  const o = objetivo(), ordem = l => l.map(u => [u, forcaUnidade(u)]).sort((a, b) => a[1].score - b[1].score).map(x => x[0]);
+  if (o === "medicina" || o === "residencia") {
+    const fracos = listaPor(agregados().por.tema, 1).sort((a, b) => a.p - b.p).map(x => x.k).filter(t => TEMAS[t] && temaDoObjetivo(TEMAS[t]));
+    const g = minhaGrade(), per = store.doc("perfil").periodo;
+    const doPeriodo = g && o === "medicina" ? itensGrade(g).filter(i => !per || i.periodo === per).flatMap(temasDoItem).filter(t => TEMAS[t]) : [];
+    let l = unicos([...fracos.slice(0, 8), ...doPeriodo]).filter(t => questoesUnidade(t).length);
+    if (!l.length) l = unidadesDoObjetivo().map(t => [t, questoesUnidade(t).length]).sort((a, b) => b[1] - a[1]).slice(0, 10).map(x => x[0]);
+    return ordem(l).slice(0, 12);
+  }
+  return ordem(unidadesDoObjetivo().filter(u => questoesUnidade(u).length)).slice(0, 12);
+}
+const unidadesDe = pv => { const l = (pv.temas || []).filter(u => typeof u === "string" && u); return l.length ? l : unidadesPadrao(); };
+
+/* ---------- Plano até a prova ---------- */
+const metaQ = pv => { const m = store.doc("perfil").metas?.questoes || 20; return Math.max(5, Math.min(80, Math.round(m * ({ 2: 1.25, 3: 1.5 }[pv.peso] || 1)))); };
+/** Reparte a lista em k partes contíguas de tamanhos quase iguais (mantém a ordem de prioridade). */
+function repartir(l, k) { const out = [], base = Math.floor(l.length / k), extra = l.length % k; let i = 0; for (let j = 0; j < k; j++) { const n = base + (j < extra ? 1 : 0); out.push(l.slice(i, i + n)); i += n; } return out; }
+/** Dias de hoje (ou amanhã, se hoje já foi feito) até a véspera:
+    1º estudo dos temas que faltam, piores primeiro; perto da data, revisão do que já foi visto; véspera leve (erros + flashcards). */
+function gerarPlano(pv, feitos) {
+  const H = hoje(), vesp = somaDias(pv.data, -1), ini = feitos[H] ? somaDias(H, 1) : H, dias = [];
+  if (pv.data <= H || ini > vesp) return dias;
+  const n = diasAte(vesp) - diasAte(ini) + 1, meta = metaQ(pv), todas = unidadesDe(pv);
+  const F = {}; todas.forEach(u => { F[u] = forcaUnidade(u).score; });
+  const pior = (a, b) => F[a] - F[b] || todas.indexOf(a) - todas.indexOf(b);
+  const vistas = new Set(Object.entries(feitos).filter(([d]) => d < pv.data).flatMap(([, f]) => f.u || []));
+  const faltam = todas.filter(u => !vistas.has(u)).sort(pior), revisar = todas.slice().sort(pior);
+  const antes = n - 1, R = antes >= 4 ? Math.max(1, Math.round(antes / 4)) : 0, E = antes - R;
+  const dia = (k, tipo, u, nq) => dias.push({ d: somaDias(ini, k), tipo, u, nq });
+  if (E > 0) {
+    const fila = faltam.length ? faltam : revisar;
+    if (fila.length >= E) repartir(fila, E).forEach((u, k) => dia(k, faltam.length ? "estudo" : "reforco", u, meta));
+    else for (let k = 0; k < E; k++) dia(k, k < fila.length && faltam.length ? "estudo" : "reforco", [fila[k % fila.length]], meta);
+  }
+  if (R > 0) (revisar.length >= R ? repartir(revisar, R) : Array.from({ length: R }, (_, k) => [revisar[k % revisar.length]])).forEach((u, k) => dia(E + k, "revisao", u, meta));
+  dia(antes, "vespera", revisar, Math.max(5, Math.round(meta / 2)));
+  return dias.filter(x => x.u.length && x.u[0]);
+}
+/** Plano atual da prova (recalcula e grava quando muda a data, os temas, a meta ou o dia). */
+function prepDe(pv) {
+  if (!pv.data || pv.data < hoje()) return pv.rec.prep || { dias: [], feitos: {} };
+  const chave = [pv.data, (pv.temas || []).join(","), metaQ(pv), objetivo()].join("|");
+  let p = pv.rec.prep;
+  if (!p || typeof p !== "object" || p.chave !== chave || p.calc !== hoje() || !Array.isArray(p.dias)) {
+    const feitos = p && typeof p.feitos === "object" && p.feitos ? p.feitos : {};
+    p = pv.rec.prep = { chave, calc: hoje(), feitos, dias: [] };
+    p.dias = gerarPlano(pv, feitos); pv.salvar();
+  }
+  conferirHoje(pv, p);
+  return p;
+}
+const inicioDoDia = () => new Date(hoje() + "T00:00:00").getTime();
+/** Respostas dadas hoje em questões das unidades. */
+function respondidasHoje(us) { const t0 = inicioDoDia(); let n = 0; unicos(us.flatMap(u => questoesUnidade(u))).forEach(q => { (progDe(q)?.h || []).forEach(h => { if (h[0] >= t0) n++; }); }); return n; }
+const disponiveis = us => unicos(us.flatMap(u => questoesUnidade(u).map(q => q.id))).length;
+/** O dia de hoje conta como feito quando ela respondeu (hoje) as questões previstas nas unidades do dia. */
+function conferirHoje(pv, p) {
+  const d = p.dias.find(x => x.d === hoje()); if (!d || p.feitos[d.d]) return;
+  const alvo = Math.max(1, Math.min(d.nq, disponiveis(d.u)));
+  if (disponiveis(d.u) && respondidasHoje(d.u) >= alvo) { p.feitos[d.d] = { tipo: d.tipo, u: d.u, nq: d.nq }; pv.salvar(); }
+}
+const diaDeHoje = (pv, p = prepDe(pv)) => p.dias.find(x => x.d === hoje() && !p.feitos[x.d]) || null;
+/** Quanto do plano já foi cumprido: dias feitos ÷ (feitos + que faltam). */
+function progressoPlano(pv, p = prepDe(pv)) {
+  const feitos = Object.keys(p.feitos || {}).filter(d => d < pv.data).length, faltam = p.dias.filter(x => !p.feitos[x.d]).length;
+  return { feitos, total: feitos + faltam, pct: pct(feitos, feitos + faltam) };
+}
+/** Questões da sessão do dia: erradas e não vistas primeiro; na véspera, os erros abertos. */
+function idsDoDia(pv, dia) {
+  const qs = unicos(dia.u.flatMap(u => questoesUnidade(u).map(q => q.id))).map(qPorId).filter(Boolean), E = store.doc("erros").itens;
+  const peso = q => { const s = statusQ(q), p = progDe(q); return (E[q.id]?.status === "aberto" ? -1 : 0) + (s.chave === "incorreta" ? 0 : s.chave === "nao" ? (dia.tipo === "vespera" ? 2 : 1) : 3 + (p?.h?.at(-1)?.[0] || 0) / 1e13); };
+  return embaralhar(qs).sort((a, b) => peso(a) - peso(b)).slice(0, dia.nq).map(q => q.id);
+}
+const TIPO_DIA = { estudo: "Estudo", reforco: "Reforço dos pontos fracos", revisao: "Revisão do que já viu", vespera: "Véspera leve: erros e flashcards" };
+const nomesUnidades = (us, max = 3) => { const n = us.map(nomeUnidade); return n.length > max ? `${n.slice(0, max).join(", ")} e mais ${n.length - max}` : n.join(", ").replace(/, ([^,]*)$/, " e $1"); };
+function marcarDiaFeito(id, d) {
+  const pv = provaPorId(id); if (!pv) return; const p = prepDe(pv), dia = p.dias.find(x => x.d === d) || { tipo: "estudo", u: [], nq: 0 };
+  p.feitos[d] = { tipo: dia.tipo, u: dia.u, nq: dia.nq }; pv.salvar();
+}
+ACOES["prova-estudar"] = el => {
+  const pv = provaPorId(el.dataset.id); if (!pv) return;
+  const dia = diaDeHoje(pv);
+  if (!dia) { toast(diasAte(pv.data) <= 0 ? "Hoje é o dia da prova. Boa prova!" : "A sessão de hoje já foi feita. Veja o plano."); ir("#/provas/" + encodeURIComponent(pv.id)); return; }
+  const ids = idsDoDia(pv, dia);
+  if (!ids.length) { toast("Ainda não há questões destes temas. Estude pelo resumo e marque o dia como feito."); ir(TEMAS[dia.u[0]] ? "#/tema/" + encodeURIComponent(dia.u[0]) : "#/provas/" + encodeURIComponent(pv.id)); return; }
+  const id = pv.id, d = dia.d;
+  iniciarPlayer("banco", ids, "pratica", res => {
+    if (res.length < Math.ceil(ids.length / 2)) return `Você respondeu ${res.length} de ${ids.length}. Responda pelo menos ${Math.ceil(ids.length / 2)} para concluir o dia do plano.`;
+    marcarDiaFeito(id, d); return `Dia do plano para ${provaPorId(id)?.nome || "a prova"} concluído.`;
+  });
+  PL.rotulo = `${pv.nome}: ${dia.tipo === "vespera" ? "véspera" : nomesUnidades(dia.u, 2)}`; ir("#/questoes");
+};
+ACOES["prova-dia-feito"] = el => { marcarDiaFeito(el.dataset.id, el.dataset.d); toast("Dia marcado como feito"); atualizar(); };
+
+/* ---------- Contagem: peças visuais ---------- */
+const nivelProva = n => n <= 3 ? "perto" : n <= 7 ? "meio" : "longe";
+const textoFaltam = n => n === 0 ? "É hoje! Boa prova" : n === 1 ? "É amanhã" : `Faltam ${n} dias`;
+function contagemGrande(pv) {
+  const n = diasAte(pv.data);
+  return n <= 1 ? `<p class="pv-grande">${n === 0 ? "É hoje! <span>Boa prova</span>" : "É amanhã"}</p>`
+    : `<p class="pv-num"><span>Faltam</span><b>${n}</b><span>dias</span></p>`;
+}
+const quandoCurto = n => n === 0 ? "hoje" : n === 1 ? "amanhã" : `em ${n} dias`;
+function linhaProvaMenor(pv) {
+  const n = diasAte(pv.data);
+  return `<a class="pv-prox" data-nivel="${nivelProva(n)}" href="#/provas/${encodeURIComponent(pv.id)}"><b>${esc(pv.nome)}</b><small>${quandoCurto(n)} · ${dataBR(pv.data)}</small></a>`;
+}
+/** Sem provas: convite curto no Início (pode ser dispensado; a dispensa fica no perfil). */
+function conviteProvas() {
+  if (!objetivo() || provasFuturas().length || store.doc("perfil").provasConviteOff) return "";
+  return `<section class="pv-convite" aria-label="Contagem regressiva das provas"><p><b>Cadastre sua próxima prova</b><br><span class="small">O app conta os dias e monta um plano até a data.</span></p>
+    <div class="linha"><a class="btn azul" href="#/provas/nova">Cadastrar prova</a><button class="btn sec" data-act="provas-convite-off">Agora não</button></div></section>`;
+}
+/** Cartão do Início: a prova mais próxima em destaque e as 2 seguintes menores. */
+function cartaoProvas() {
+  if (!objetivo()) return "";
+  const L = provasFuturas(); if (!L.length) return "";
+  const [a, ...resto] = L, n = diasAte(a.data), p = prepDe(a), pr = progressoPlano(a, p);
+  return `<section class="pv-cartao" data-nivel="${nivelProva(n)}" aria-label="Contagem regressiva: ${esc(a.nome)}, ${textoFaltam(n)}">
+    <span class="lab">Contagem regressiva</span>
+    <p class="pv-nome">${esc(a.nome)}<small>${dataBR(a.data)}${a.origem === "curso" ? " · Meu curso" : ""}</small></p>
+    ${contagemGrande(a)}
+    ${n > 0 && pr.total ? `<div class="pv-plano"><span class="small">Plano: ${pr.feitos} de ${plural(pr.total, "dia feito", "dias feitos")}</span>${medidor(pr.pct, "ok")}</div>` : ""}
+    <div class="linha">${n > 0 ? `<button class="btn azul grande" data-act="prova-estudar" data-id="${esc(a.id)}">Estudar para esta prova</button>` : ""}<a class="btn sec" href="#/provas">Minhas provas</a></div>
+    ${resto.length ? `<div class="pv-proximas"><span class="lab">Depois</span>${resto.slice(0, 2).map(linhaProvaMenor).join("")}</div>` : ""}
+  </section>`;
+}
+ACOES["provas-convite-off"] = () => { const P = store.doc("perfil"); P.provasConviteOff = true; store.mudou("perfil"); toast("Tudo bem. Cadastre quando quiser em Planejamento → Minhas provas."); atualizar(); };
+/** Para o "Próximo passo": a sessão de hoje da prova mais próxima em até `lim` dias. */
+function sessaoProvaHoje(lim = 14) {
+  for (const pv of provasFuturas()) { const n = diasAte(pv.data); if (n < 1 || n > lim) continue; const dia = diaDeHoje(pv); if (dia) return { pv, dia, n }; }
+  return null;
+}
+
+/* ---------- Páginas ---------- */
+const CRUMB_PROVAS = ["Minhas provas", "#/provas"];
+rota("/provas", () => {
+  const T = todasProvas(), fut = T.filter(p => p.data >= hoje()), pas = T.filter(p => p.data < hoje()).reverse();
+  const item = pv => { const n = diasAte(pv.data), pr = progressoPlano(pv);
+    return `<a class="pv-item" data-nivel="${nivelProva(n)}" href="#/provas/${encodeURIComponent(pv.id)}"><span class="pv-dias">${n === 0 ? "<b>Hoje</b>" : n === 1 ? "<b>Amanhã</b>" : `<b>${n}</b><small>dias</small>`}</span>
+      <span class="pv-item-tx"><b>${esc(pv.nome)}</b><small>${dataBR(pv.data)}${pv.origem === "curso" ? " · Meu curso" : ""}${pr.total ? ` · plano ${pr.feitos}/${pr.total}` : ""}</small></span></a>`; };
+  return {
+    secao: "plano", crumbs: [["Planejamento", "#/plano"]], titulo: "Minhas provas", sub: fut.length ? `${plural(fut.length, "prova marcada", "provas marcadas")}` : "Conte os dias e estude com um plano até a data",
+    acoes: `<a class="btn azul" href="#/provas/nova">+ Nova prova</a>`,
+    html: `${fut.length ? `<div class="pv-lista">${fut.map(item).join("")}</div>` : vazio("Nenhuma prova marcada. Cadastre a próxima: você informa a data e o app monta o plano até lá.", `<a class="btn azul" href="#/provas/nova">Cadastrar prova</a>`)}
+      ${pas.length ? `<details class="mais"><summary>Já passaram (${pas.length})</summary><div class="tarefas">${pas.slice(0, 30).map(pv => `<div class="tarefa"><div class="o">${esc(pv.nome)}<small>${dataBR(pv.data)}</small></div><a class="btn mini sec" href="#/provas/${encodeURIComponent(pv.id)}">Ver</a></div>`).join("")}</div></details>` : ""}
+      <p class="small muted">As datas são sempre as que você informa. Confira o edital ou o calendário oficial da sua prova.${cursoNoObjetivo() ? " Provas de Meu curso entram aqui sozinhas." : ""}</p>`,
+  };
+});
+/* Formulário (página, não folha: a lista de temas é longa e precisa caber com letra enorme). */
+function sugestoesProva() {
+  const o = objetivo(), oe = objetivoEscolhido(), S = [], P = store.doc("perfil");
+  if (o === "medicina" || o === "residencia" || o === "direito") {
+    const g = minhaGrade(), cursando = g && o !== "residencia" ? itensGrade(g).filter(x => sitDe(x) === "cursando") : [];
+    if (cursando.length) cursando.slice(0, 8).forEach(it => S.push([`Prova de ${it.nome}`, `Prova de ${it.nome}`, temasDoItem(it).filter(t => TEMAS[t] && temaDoObjetivo(TEMAS[t]))]));
+    else S.push(["Prova de (disciplina)", "Prova de ", []]);
+  }
+  if (o === "medicina" || o === "residencia") { const inst = P.faculdade && instPorId(P.faculdade); S.push(inst ? [`Residência — ${inst.sigla}`, `Residência — ${inst.sigla}`, []] : ["Residência — (instituição)", "Residência — ", []]); }
+  if (o === "enem") ["ENEM", "PSC/UFAM", "SIS/UEA", "Macro/UEA"].forEach(n => S.push([n, n, []]));
+  if (oe === "oab") S.push(["OAB — 1ª fase", "OAB — 1ª fase", []]);
+  if ((P.interessesConcursos || []).some(x => String(x).startsWith("cnu"))) S.push(["CNU", "CNU", []]);
+  return S;
+}
+function grupoUnidades() {
+  const o = objetivo(), us = unidadesDoObjetivo();
+  if (o === "medicina" || o === "residencia") {
+    const area = t => ESPECIALIDADES[(TEMAS[t].especialidades || [])[0]]?.areaNome || "Outros temas";
+    return Object.entries(porChave(us, area)).sort((a, b) => a[0].localeCompare(b[0], "pt")).map(([g, l]) => [g, ordenarPt(l, nomeTema)]);
+  }
+  if (o === "enem") return ENEM_AREAS.map(a => [a.nome, (a.disciplinas || []).map(d => "d:" + d.id)]);
+  return us.length ? [["Disciplinas", ordenarPt(us, nomeUnidade)]] : [];
+}
+function formProva(r) {
+  const sel = new Set(r?.temas || []), grupos = grupoUnidades(), sug = r ? [] : sugestoesProva();
+  const marcados = grupos.reduce((s, [, l]) => s + l.filter(u => sel.has(u)).length, 0);
+  return `<form class="pilha pv-form" data-form="prova-salvar" data-id="${esc(r?.id || "")}" novalidate>
+    <label class="campo"><span class="lab">Nome da prova</span><input type="text" id="pv-nome" maxlength="80" value="${esc(r?.nome || "")}" placeholder="Ex.: ${esc(objetivo() === "enem" ? "ENEM" : "Prova de Anatomia")}" autocomplete="off"></label>
+    ${sug.length ? `<div class="pv-sug-bloco"><span class="lab">Sugestões · toque para preencher</span><div class="pv-sug">${sug.slice(0, 4).map(([rot, nome, us]) => `<button type="button" class="btn sec" data-act="prova-sug" data-nome="${esc(nome)}" data-u="${esc(us.join(","))}">${esc(rot)}</button>`).join("")}</div>
+      ${sug.length > 4 ? `<details class="mais"><summary>Mais sugestões (${sug.length - 4})</summary><div class="pv-sug">${sug.slice(4).map(([rot, nome, us]) => `<button type="button" class="btn sec" data-act="prova-sug" data-nome="${esc(nome)}" data-u="${esc(us.join(","))}">${esc(rot)}</button>`).join("")}</div></details>` : ""}</div>` : ""}
+    <label class="campo pv-data"><span class="lab">Data da prova</span><input type="date" id="pv-data" value="${esc(r?.dataProva || "")}" min="${hoje()}" aria-describedby="pv-erro"></label>
+    <p id="pv-erro" class="pv-erro" role="alert"></p>
+    <label class="campo"><span class="lab">Importância (opcional)</span><select id="pv-peso">${opcoes(IMPORTANCIA, r?.peso || 1)}</select></label>
+    ${grupos.length ? `<fieldset class="pv-temas"><legend class="lab">${objetivo() === "enem" ? "Áreas e disciplinas" : "Temas"} (opcional) · <span id="pv-n">${marcados}</span> escolhidos</legend>
+      <p class="small muted">Sem temas, o plano usa seus pontos fracos.</p>
+      ${grupos.map(([g, l]) => `<details ${l.some(u => sel.has(u)) || grupos.length <= 5 ? "open" : ""}><summary>${esc(g)} <small>(${l.length})</small></summary>${l.map(u => `<label class="check"><input type="checkbox" name="pv-u" value="${esc(u)}" data-chg="prova-u" ${sel.has(u) ? "checked" : ""}><span>${esc(nomeUnidade(u))}</span></label>`).join("")}</details>`).join("")}</fieldset>` : ""}
+    <button class="btn azul grande">${r ? "Salvar mudanças" : "Salvar prova"}</button></form>`;
+}
+const contarU = () => { const n = document.getElementById("pv-n"); if (n) n.textContent = document.querySelectorAll('input[name="pv-u"]:checked').length; };
+MUDANCAS["prova-u"] = contarU;
+ACOES["prova-sug"] = el => {
+  const nome = $("#pv-nome"); nome.value = el.dataset.nome;
+  const us = (el.dataset.u || "").split(",").filter(Boolean);
+  if (us.length) { document.querySelectorAll('input[name="pv-u"]').forEach(c => { c.checked = us.includes(c.value); if (c.checked) c.closest("details")?.setAttribute("open", ""); }); contarU(); }
+  if (/ $/.test(el.dataset.nome)) { nome.focus(); nome.setSelectionRange(nome.value.length, nome.value.length); } else $("#pv-data").focus();
+};
+rota("/provas/nova", () => ({ secao: "plano", crumbs: [CRUMB_PROVAS], titulo: "Nova prova", sub: "Você informa a data; o app conta os dias e monta o plano.", html: objetivo() ? formProva(null) : vazio("Escolha primeiro a sua área de estudo.", `<a class="btn" href="#/areas">Áreas de estudo</a>`) }));
+rota("/provas/:id/editar", ({ id }) => {
+  const r = store.doc("plano").itens[id]; if (!r || r.tipo !== "prova") return paginaNaoEncontrada();
+  return { secao: "plano", crumbs: [CRUMB_PROVAS, [r.nome || "Prova", "#/provas/" + encodeURIComponent(id)]], titulo: "Editar prova", html: formProva(r) };
+});
+FORMS["prova-salvar"] = f => {
+  const nome = $("#pv-nome").value.trim() || "Prova", data = $("#pv-data").value, erro = $("#pv-erro"), campo = $("#pv-data");
+  const falha = msg => { erro.textContent = msg; campo.setAttribute("aria-invalid", "true"); campo.focus(); toast(msg); };
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(data)) return falha("Informe a data da prova para salvar.");
+  if (data < hoje()) return falha("Essa data já passou. Escolha a data da próxima prova.");
+  const P = store.doc("plano"), id = f.dataset.id || novoId("pv"), velho = P.itens[id] || {};
+  const temas = [...document.querySelectorAll('input[name="pv-u"]:checked')].map(c => c.value);
+  P.itens[id] = { ...velho, id, tipo: "prova", nome, dataProva: data, temas, peso: +$("#pv-peso").value || 1, dom: velho.dom || domProva(), obj: velho.obj || objetivoEscolhido(), criado: velho.criado || Date.now() };
+  store.mudou("plano"); toast(f.dataset.id ? "Prova atualizada · plano recalculado" : "Prova salva · plano montado");
+  ir("#/provas/" + encodeURIComponent(id));
+};
+function linhaDia(pv, x, hojeAqui) {
+  const dt = new Date(x.d + "T12:00").toLocaleDateString("pt-BR", { weekday: "short", day: "2-digit", month: "2-digit" });
+  return `<div class="tarefa pv-dia" data-tipo="${esc(x.tipo)}"><div class="o"><b>${hojeAqui ? "Hoje" : esc(dt)}</b> · ${esc(TIPO_DIA[x.tipo] || "Estudo")}<small>${esc(nomesUnidades(x.u))} · ${plural(x.nq, "questão", "questões")}</small></div></div>`;
+}
+rota("/provas/:id", ({ id }) => {
+  const pv = provaPorId(id); if (!pv) return paginaNaoEncontrada();
+  const n = diasAte(pv.data), p = prepDe(pv), pr = progressoPlano(pv, p), dHoje = diaDeHoje(pv, p);
+  const proximos = p.dias.filter(x => !p.feitos[x.d] && x.d > hoje()), feitos = Object.entries(p.feitos || {}).filter(([d]) => d < pv.data).sort((a, b) => b[0].localeCompare(a[0]));
+  const cardsHoje = pendencias().cards.length;
+  const acoes = pv.origem === "minha" ? `<a class="btn sec" href="#/provas/${encodeURIComponent(id)}/editar">Editar</a><button class="btn sec perigo-tx" data-act="prova-excluir" data-id="${esc(id)}">Excluir</button>`
+    : `<button class="btn sec" data-act="aval-editar" data-id="${esc(id)}">Editar data e temas</button><a class="btn sec" href="#/curso/aval/${encodeURIComponent(id)}">Em Meu curso</a>`;
+  const confirmar = PROVAS_UI.confirmar === id ? `<div class="pv-confirmar" role="alert"><p><b>Excluir “${esc(pv.nome)}”?</b> O plano desta prova também sai. Não dá para desfazer.</p>
+    <div class="linha"><button class="btn perigo" data-act="prova-excluir-ok" data-id="${esc(id)}">Sim, excluir</button><button class="btn sec" data-act="prova-excluir-nao">Cancelar</button></div></div>` : "";
+  const blocoHoje = n <= 0 ? "" : dHoje ? `<section class="pv-hoje"><span class="lab">Hoje · ${esc(TIPO_DIA[dHoje.tipo] || "Estudo")}</span><p class="pv-hoje-tit">${esc(nomesUnidades(dHoje.u, 4))}</p><p class="small">${plural(dHoje.nq, "questão", "questões")}${dHoje.tipo === "vespera" ? " · erros abertos primeiro" : " · as erradas e as novas primeiro"}</p>
+      <div class="linha"><button class="btn azul grande" data-act="prova-estudar" data-id="${esc(id)}">Estudar hoje</button>${dHoje.tipo === "vespera" && cardsHoje ? `<a class="btn sec" href="#/flashcards/estudar">Flashcards (${cardsHoje})</a>` : ""}<button class="btn sec" data-act="prova-dia-feito" data-id="${esc(id)}" data-d="${hoje()}">Já fiz hoje</button></div></section>`
+    : p.feitos[hoje()] ? `<p class="pv-ok" role="status">✓ Sessão de hoje feita. Amanhã o plano continua.</p>` : "";
+  const unidades = unidadesDe(pv), semTemas = !pv.temas.length;
+  return {
+    secao: "plano", crumbs: [CRUMB_PROVAS], titulo: pv.nome,
+    sub: [dataBR(pv.data), pv.origem === "curso" ? "Meu curso" : "", pv.peso > 1 ? "importância " + IMPORTANCIA.find(x => x[0] === pv.peso)?.[1].toLowerCase() : ""].filter(Boolean).join(" · "),
+    acoes,
+    html: `${confirmar}
+      ${n < 0 ? `<div class="vazio"><p>Esta prova já passou (${dataBR(pv.data)}).</p></div>` : `<section class="pv-cartao pv-cartao-pg" data-nivel="${nivelProva(n)}">${contagemGrande(pv)}
+        ${pr.total ? `<div class="pv-plano"><span class="small">Plano: ${pr.feitos} de ${plural(pr.total, "dia feito", "dias feitos")}</span>${medidor(pr.pct, "ok")}</div>` : ""}</section>`}
+      ${blocoHoje}
+      ${n > 0 ? `<section><h2 class="sec">Próximos dias</h2>${proximos.length ? `<div class="tarefas">${proximos.map(x => linhaDia(pv, x)).join("")}</div>` : `<p class="muted">${n === 1 && !dHoje ? "Amanhã é a prova: descanse e durma bem." : "Nada mais até a prova."}</p>`}</section>` : ""}
+      ${feitos.length ? `<details class="mais pv-feito"><summary>Feito (${feitos.length})</summary><div class="tarefas">${feitos.map(([d, f]) => linhaDia(pv, { d, ...f, u: f.u || [] })).join("")}</div></details>` : ""}
+      <section><h2 class="sec">${objetivo() === "enem" ? "Áreas e disciplinas" : "Temas"}</h2>
+        ${semTemas ? `<p class="small">Esta prova não tem temas escolhidos. O plano usa seus pontos fracos${objetivoEscolhido() ? " em " + esc(NOME_CURTO_OBJ[objetivoEscolhido()] || "") : ""}:</p>` : ""}
+        <div class="pv-unidades">${unidades.map(u => TEMAS[u] ? `<a href="#/tema/${encodeURIComponent(u)}">${esc(nomeUnidade(u))}</a>` : `<span>${esc(nomeUnidade(u))}</span>`).join("")}</div></section>
+      <p class="small muted">O plano vai até a véspera: primeiro os temas em que você está pior ou ainda não estudou, revisão do que já viu perto da data e uma véspera leve. Se um dia ficar para trás, o que faltou é redistribuído nos dias seguintes.</p>`,
+    ctx: { prova: pv.nome },
+  };
+});
+ACOES["prova-excluir"] = el => { PROVAS_UI.confirmar = el.dataset.id; atualizar(); setTimeout(() => document.querySelector(".pv-confirmar .btn")?.focus(), 30); };
+ACOES["prova-excluir-nao"] = () => { PROVAS_UI.confirmar = null; atualizar(); };
+ACOES["prova-excluir-ok"] = el => { const P = store.doc("plano"), r = P.itens[el.dataset.id]; PROVAS_UI.confirmar = null; if (!r || r.tipo !== "prova") return; delete P.itens[el.dataset.id]; store.mudou("plano"); toast("Prova excluída"); ir("#/provas"); };
 
 /* ---- 99-main.js ---- */
 /* ============================================================
